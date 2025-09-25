@@ -1,0 +1,177 @@
+#ifndef NBResizable__H
+#define NBResizable__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description DAE_FunctionAttributes_FUNCTION__ATTRIBUTES__desc;
+
+extern struct record_description DAE_FunctionBuiltin_FUNCTION__BUILTIN__desc;
+
+extern struct record_description DAE_FunctionParallelism_FP__NON__PARALLEL__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NBEquation_Iterator_EMPTY__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFComponent_COMPONENT__desc;
+
+extern struct record_description NFComponentRef_EMPTY__desc;
+
+extern struct record_description NFExpression_CALL__desc;
+
+extern struct record_description NFExpression_CREF__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFExpression_MULTARY__desc;
+
+extern struct record_description NFFlatten_FunctionTreeImpl_Tree_EMPTY__desc;
+
+extern struct record_description NFFunction_Function_FUNCTION__desc;
+
+extern struct record_description NFInstNode_InstNode_COMPONENT__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description NFType_INTEGER__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NBResizable_constraintsToString omc_NBResizable_constraintsToString
+
+
+#define boxptr_NBResizable_parametersToString omc_NBResizable_parametersToString
+
+
+#define boxptr_NBResizable_distancesToString omc_NBResizable_distancesToString
+
+
+#define boxptr_NBResizable_occurencesToString omc_NBResizable_occurencesToString
+
+
+#define boxptr_NBResizable_optimalValuesToString omc_NBResizable_optimalValuesToString
+
+
+#define boxptr_NBResizable_updateDimension omc_NBResizable_updateDimension
+
+
+#define boxptr_NBResizable_checkConstraint omc_NBResizable_checkConstraint
+
+
+#define boxptr_NBResizable_fixConstraints omc_NBResizable_fixConstraints
+
+
+#define boxptr_NBResizable_computeOptimalValues omc_NBResizable_computeOptimalValues
+
+
+#define boxptr_NBResizable_invertConstraintParameterMap omc_NBResizable_invertConstraintParameterMap
+
+
+#define boxptr_NBResizable_setInitialValues omc_NBResizable_setInitialValues
+
+
+#define boxptr_NBResizable_getInitialValues omc_NBResizable_getInitialValues
+
+
+#define boxptr_NBResizable_addConstraint omc_NBResizable_addConstraint
+
+
+#define boxptr_NBResizable_addVariableConstraint omc_NBResizable_addVariableConstraint
+
+
+#define boxptr_NBResizable_getShift omc_NBResizable_getShift
+
+
+#define boxptr_NBResizable_findOptimalValue omc_NBResizable_findOptimalValue
+
+
+#define boxptr_NBResizable_collectVars omc_NBResizable_collectVars
+
+
+#define boxptr_NBResizable_addOccurence omc_NBResizable_addOccurence
+
+
+#define boxptr_NBResizable_collectOccurencesSubscriptExp omc_NBResizable_collectOccurencesSubscriptExp
+
+
+#define boxptr_NBResizable_collectOccurencesSubscript omc_NBResizable_collectOccurencesSubscript
+
+
+#define boxptr_NBResizable_collectOccurences omc_NBResizable_collectOccurences
+
+
+#define boxptr_NBResizable_collectResizables omc_NBResizable_collectResizables
+
+
+#define boxptr_NBResizable_getVarReplacements omc_NBResizable_getVarReplacements
+
+
+#define boxptr_NBResizable_getResizableIterators omc_NBResizable_getResizableIterators
+
+
+#define boxptr_NBResizable_findOptimalResizableValues omc_NBResizable_findOptimalResizableValues
+
+
+DLLDirection
+modelica_string omc_NBResizable_orderString(threadData_t *threadData, modelica_integer _eo);
+DLLDirection
+modelica_metatype boxptr_NBResizable_orderString(threadData_t *threadData, modelica_metatype _eo);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResizable_orderString,2,0) {(void*) boxptr_NBResizable_orderString,0}};
+#define boxvar_NBResizable_orderString MMC_REFSTRUCTLIT(boxvar_lit_NBResizable_orderString)
+
+
+DLLDirection
+modelica_boolean omc_NBResizable_orderFailed(threadData_t *threadData, modelica_integer _eo);
+DLLDirection
+modelica_metatype boxptr_NBResizable_orderFailed(threadData_t *threadData, modelica_metatype _eo);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResizable_orderFailed,2,0) {(void*) boxptr_NBResizable_orderFailed,0}};
+#define boxvar_NBResizable_orderFailed MMC_REFSTRUCTLIT(boxvar_lit_NBResizable_orderFailed)
+
+
+DLLDirection
+modelica_metatype omc_NBResizable_detect(threadData_t *threadData, modelica_metatype _eqn, modelica_metatype _cref_to_solve);
+#define boxptr_NBResizable_detect omc_NBResizable_detect
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResizable_detect,2,0) {(void*) boxptr_NBResizable_detect,0}};
+#define boxvar_NBResizable_detect MMC_REFSTRUCTLIT(boxvar_lit_NBResizable_detect)
+
+
+DLLDirection
+modelica_metatype omc_NBResizable_resize(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype *out_varData);
+#define boxptr_NBResizable_resize omc_NBResizable_resize
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResizable_resize,2,0) {(void*) boxptr_NBResizable_resize,0}};
+#define boxvar_NBResizable_resize MMC_REFSTRUCTLIT(boxvar_lit_NBResizable_resize)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

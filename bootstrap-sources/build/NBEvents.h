@@ -1,0 +1,453 @@
+#ifndef NBEvents__H
+#define NBEvents__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_InnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description Absyn_Path_QUALIFIED__desc;
+
+extern struct record_description BackendDAE_TimeEvent_SAMPLE__TIME__EVENT__desc;
+
+extern struct record_description BackendDAE_ZeroCrossing_ZERO__CROSSING__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_FunctionAttributes_FUNCTION__ATTRIBUTES__desc;
+
+extern struct record_description DAE_FunctionBuiltin_FUNCTION__BUILTIN__desc;
+
+extern struct record_description DAE_FunctionParallelism_FP__NON__PARALLEL__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NBEquation_Iterator_EMPTY__desc;
+
+extern struct record_description NBEvents_Bucket_BUCKET__desc;
+
+extern struct record_description NBEvents_CompositeEvent_COMPOSITE__EVENT__desc;
+
+extern struct record_description NBEvents_Condition_CONDITION__desc;
+
+extern struct record_description NBEvents_EventInfo_EVENT__INFO__desc;
+
+extern struct record_description NBEvents_StateEvent_STATE__EVENT__desc;
+
+extern struct record_description NBEvents_TimeEvent_SAMPLE__desc;
+
+extern struct record_description NBEvents_TimeEvent_SINGLE__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFClass_PARTIAL__BUILTIN__desc;
+
+extern struct record_description NFClass_Prefixes_PREFIXES__desc;
+
+extern struct record_description NFClassTree_ClassTree_FLAT__TREE__desc;
+
+extern struct record_description NFComponent_COMPONENT__desc;
+
+extern struct record_description NFComponent_TYPE__ATTRIBUTE__desc;
+
+extern struct record_description NFComponentRef_CREF__desc;
+
+extern struct record_description NFComponentRef_EMPTY__desc;
+
+extern struct record_description NFDuplicateTree_Tree_EMPTY__desc;
+
+extern struct record_description NFExpression_BOOLEAN__desc;
+
+extern struct record_description NFExpression_CALL__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFFunction_Function_FUNCTION__desc;
+
+extern struct record_description NFInstNode_CachedData_FUNCTION__desc;
+
+extern struct record_description NFInstNode_InstNode_CLASS__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_COMPONENT__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNodeType_BUILTIN__CLASS__desc;
+
+extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
+
+extern struct record_description NFLookupTree_Entry_COMPONENT__desc;
+
+extern struct record_description NFLookupTree_Tree_EMPTY__desc;
+
+extern struct record_description NFLookupTree_Tree_LEAF__desc;
+
+extern struct record_description NFLookupTree_Tree_NODE__desc;
+
+extern struct record_description NFModifier_Modifier_NOMOD__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description NFRestriction_TYPE__desc;
+
+extern struct record_description NFType_BOOLEAN__desc;
+
+extern struct record_description NFType_ENUMERATION__desc;
+
+extern struct record_description NFType_INTEGER__desc;
+
+extern struct record_description NFType_REAL__desc;
+
+extern struct record_description NFType_STRING__desc;
+
+extern struct record_description SCode_ClassDef_PARTS__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SCode_Element_CLASS__desc;
+
+extern struct record_description SCode_Encapsulated_NOT__ENCAPSULATED__desc;
+
+extern struct record_description SCode_Final_NOT__FINAL__desc;
+
+extern struct record_description SCode_Partial_NOT__PARTIAL__desc;
+
+extern struct record_description SCode_Prefixes_PREFIXES__desc;
+
+extern struct record_description SCode_Redeclare_NOT__REDECLARE__desc;
+
+extern struct record_description SCode_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description SCode_Restriction_R__TYPE__desc;
+
+extern struct record_description SCode_Visibility_PUBLIC__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NBEvents_containsTimeTraverseCref omc_NBEvents_containsTimeTraverseCref
+
+
+#define boxptr_NBEvents_containsTimeTraverseExp omc_NBEvents_containsTimeTraverseExp
+
+
+#define boxptr_NBEvents_collectEvents omc_NBEvents_collectEvents
+
+
+#define boxptr_NBEvents_eventsDefault omc_NBEvents_eventsDefault
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_Condition_setRelationIndex(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcond, modelica_integer _index);
+DLLDirection
+modelica_metatype boxptr_NBEvents_Condition_setRelationIndex(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcond, modelica_metatype _index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_Condition_setRelationIndex,2,0) {(void*) boxptr_NBEvents_Condition_setRelationIndex,0}};
+#define boxvar_NBEvents_Condition_setRelationIndex MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_Condition_setRelationIndex)
+
+
+DLLDirection
+modelica_integer omc_NBEvents_Condition_size(threadData_t *threadData, modelica_metatype _cond);
+DLLDirection
+modelica_metatype boxptr_NBEvents_Condition_size(threadData_t *threadData, modelica_metatype _cond);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_Condition_size,2,0) {(void*) boxptr_NBEvents_Condition_size,0}};
+#define boxvar_NBEvents_Condition_size MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_Condition_size)
+
+
+DLLDirection
+modelica_boolean omc_NBEvents_Condition_isEqual(threadData_t *threadData, modelica_metatype _cond1, modelica_metatype _cond2);
+DLLDirection
+modelica_metatype boxptr_NBEvents_Condition_isEqual(threadData_t *threadData, modelica_metatype _cond1, modelica_metatype _cond2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_Condition_isEqual,2,0) {(void*) boxptr_NBEvents_Condition_isEqual,0}};
+#define boxvar_NBEvents_Condition_isEqual MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_Condition_isEqual)
+
+
+DLLDirection
+modelica_integer omc_NBEvents_Condition_hash(threadData_t *threadData, modelica_metatype _cond);
+DLLDirection
+modelica_metatype boxptr_NBEvents_Condition_hash(threadData_t *threadData, modelica_metatype _cond);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_Condition_hash,2,0) {(void*) boxptr_NBEvents_Condition_hash,0}};
+#define boxvar_NBEvents_Condition_hash MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_Condition_hash)
+
+
+DLLDirection
+modelica_string omc_NBEvents_Condition_toString(threadData_t *threadData, modelica_metatype _cond);
+#define boxptr_NBEvents_Condition_toString omc_NBEvents_Condition_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_Condition_toString,2,0) {(void*) boxptr_NBEvents_Condition_toString,0}};
+#define boxvar_NBEvents_Condition_toString MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_Condition_toString)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_CompositeEvent_add(threadData_t *threadData, modelica_metatype _cond, modelica_metatype _iter, modelica_metatype __omcQ_24in_5Fbucket, modelica_boolean _createEqn, modelica_metatype *out_bucket);
+DLLDirection
+modelica_metatype boxptr_NBEvents_CompositeEvent_add(threadData_t *threadData, modelica_metatype _cond, modelica_metatype _iter, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _createEqn, modelica_metatype *out_bucket);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_CompositeEvent_add,2,0) {(void*) boxptr_NBEvents_CompositeEvent_add,0}};
+#define boxvar_NBEvents_CompositeEvent_add MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_CompositeEvent_add)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_CompositeEvent_checkDirectComposite(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcall, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _iter, modelica_boolean _createEqn, modelica_metatype *out_exp, modelica_metatype *out_bucket, modelica_boolean *out_failed);
+DLLDirection
+modelica_metatype boxptr_NBEvents_CompositeEvent_checkDirectComposite(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcall, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _iter, modelica_metatype _createEqn, modelica_metatype *out_exp, modelica_metatype *out_bucket, modelica_metatype *out_failed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_CompositeEvent_checkDirectComposite,2,0) {(void*) boxptr_NBEvents_CompositeEvent_checkDirectComposite,0}};
+#define boxvar_NBEvents_CompositeEvent_checkDirectComposite MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_CompositeEvent_checkDirectComposite)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_CompositeEvent_create(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _iter, modelica_boolean _createEqn, modelica_metatype *out_bucket, modelica_boolean *out_failed);
+DLLDirection
+modelica_metatype boxptr_NBEvents_CompositeEvent_create(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _iter, modelica_metatype _createEqn, modelica_metatype *out_bucket, modelica_metatype *out_failed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_CompositeEvent_create,2,0) {(void*) boxptr_NBEvents_CompositeEvent_create,0}};
+#define boxvar_NBEvents_CompositeEvent_create MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_CompositeEvent_create)
+
+
+DLLDirection
+modelica_boolean omc_NBEvents_CompositeEvent_indexGt(threadData_t *threadData, modelica_metatype _tpl1, modelica_metatype _tpl2);
+DLLDirection
+modelica_metatype boxptr_NBEvents_CompositeEvent_indexGt(threadData_t *threadData, modelica_metatype _tpl1, modelica_metatype _tpl2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_CompositeEvent_indexGt,2,0) {(void*) boxptr_NBEvents_CompositeEvent_indexGt,0}};
+#define boxvar_NBEvents_CompositeEvent_indexGt MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_CompositeEvent_indexGt)
+
+
+DLLDirection
+modelica_string omc_NBEvents_CompositeEvent_toString(threadData_t *threadData, modelica_metatype _cev);
+#define boxptr_NBEvents_CompositeEvent_toString omc_NBEvents_CompositeEvent_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_CompositeEvent_toString,2,0) {(void*) boxptr_NBEvents_CompositeEvent_toString,0}};
+#define boxvar_NBEvents_CompositeEvent_toString MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_CompositeEvent_toString)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_StateEvent_convert(threadData_t *threadData, modelica_metatype _sev_tpl, modelica_metatype _equation_map);
+#define boxptr_NBEvents_StateEvent_convert omc_NBEvents_StateEvent_convert
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_convert,2,0) {(void*) boxptr_NBEvents_StateEvent_convert,0}};
+#define boxvar_NBEvents_StateEvent_convert MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_convert)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_StateEvent_create(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _iter, modelica_metatype _eqn, modelica_boolean _createEqn, modelica_metatype *out_bucket);
+DLLDirection
+modelica_metatype boxptr_NBEvents_StateEvent_create(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _iter, modelica_metatype _eqn, modelica_metatype _createEqn, modelica_metatype *out_bucket);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_create,2,0) {(void*) boxptr_NBEvents_StateEvent_create,0}};
+#define boxvar_NBEvents_StateEvent_create MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_create)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_StateEvent_fromStatement(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fstmt, modelica_metatype _bucket_ptr, modelica_metatype _eqn, modelica_metatype _variables, modelica_metatype _funcTree, modelica_metatype _frames);
+#define boxptr_NBEvents_StateEvent_fromStatement omc_NBEvents_StateEvent_fromStatement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_fromStatement,2,0) {(void*) boxptr_NBEvents_StateEvent_fromStatement,0}};
+#define boxvar_NBEvents_StateEvent_fromStatement MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_fromStatement)
+
+
+DLLDirection
+modelica_boolean omc_NBEvents_StateEvent_indexGt(threadData_t *threadData, modelica_metatype _tpl1, modelica_metatype _tpl2);
+DLLDirection
+modelica_metatype boxptr_NBEvents_StateEvent_indexGt(threadData_t *threadData, modelica_metatype _tpl1, modelica_metatype _tpl2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_indexGt,2,0) {(void*) boxptr_NBEvents_StateEvent_indexGt,0}};
+#define boxvar_NBEvents_StateEvent_indexGt MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_indexGt)
+
+
+DLLDirection
+modelica_string omc_NBEvents_StateEvent_toStringList(threadData_t *threadData, modelica_metatype _events_lst);
+#define boxptr_NBEvents_StateEvent_toStringList omc_NBEvents_StateEvent_toStringList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_toStringList,2,0) {(void*) boxptr_NBEvents_StateEvent_toStringList,0}};
+#define boxvar_NBEvents_StateEvent_toStringList MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_toStringList)
+
+
+DLLDirection
+modelica_string omc_NBEvents_StateEvent_toString(threadData_t *threadData, modelica_metatype _sev);
+#define boxptr_NBEvents_StateEvent_toString omc_NBEvents_StateEvent_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_toString,2,0) {(void*) boxptr_NBEvents_StateEvent_toString,0}};
+#define boxvar_NBEvents_StateEvent_toString MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_StateEvent_toString)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_TimeEvent_convert(threadData_t *threadData, modelica_metatype _timeEvent);
+#define boxptr_NBEvents_TimeEvent_convert omc_NBEvents_TimeEvent_convert
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_convert,2,0) {(void*) boxptr_NBEvents_TimeEvent_convert,0}};
+#define boxvar_NBEvents_TimeEvent_convert MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_convert)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_TimeEvent_setIndex(threadData_t *threadData, modelica_metatype __omcQ_24in_5FtimeEvent, modelica_integer _index);
+DLLDirection
+modelica_metatype boxptr_NBEvents_TimeEvent_setIndex(threadData_t *threadData, modelica_metatype __omcQ_24in_5FtimeEvent, modelica_metatype _index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_setIndex,2,0) {(void*) boxptr_NBEvents_TimeEvent_setIndex,0}};
+#define boxvar_NBEvents_TimeEvent_setIndex MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_setIndex)
+
+
+DLLDirection
+modelica_integer omc_NBEvents_TimeEvent_getIndex(threadData_t *threadData, modelica_metatype _timeEvent);
+DLLDirection
+modelica_metatype boxptr_NBEvents_TimeEvent_getIndex(threadData_t *threadData, modelica_metatype _timeEvent);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_getIndex,2,0) {(void*) boxptr_NBEvents_TimeEvent_getIndex,0}};
+#define boxvar_NBEvents_TimeEvent_getIndex MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_getIndex)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_TimeEvent_createSampleTraverse(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _clocked, modelica_metatype *out_bucket);
+#define boxptr_NBEvents_TimeEvent_createSampleTraverse omc_NBEvents_TimeEvent_createSampleTraverse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_createSampleTraverse,2,0) {(void*) boxptr_NBEvents_TimeEvent_createSampleTraverse,0}};
+#define boxvar_NBEvents_TimeEvent_createSampleTraverse MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_createSampleTraverse)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_TimeEvent_createSample(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcall, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype *out_bucket, modelica_boolean *out_failed, modelica_boolean *out_clocked);
+DLLDirection
+modelica_metatype boxptr_NBEvents_TimeEvent_createSample(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcall, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype *out_bucket, modelica_metatype *out_failed, modelica_metatype *out_clocked);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_createSample,2,0) {(void*) boxptr_NBEvents_TimeEvent_createSample,0}};
+#define boxvar_NBEvents_TimeEvent_createSample MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_createSample)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_TimeEvent_createSingleOrSample(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _iter, modelica_metatype _eqn, modelica_metatype _funcTree, modelica_metatype *out_bucket, modelica_boolean *out_failed);
+DLLDirection
+modelica_metatype boxptr_NBEvents_TimeEvent_createSingleOrSample(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _iter, modelica_metatype _eqn, modelica_metatype _funcTree, modelica_metatype *out_bucket, modelica_metatype *out_failed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_createSingleOrSample,2,0) {(void*) boxptr_NBEvents_TimeEvent_createSingleOrSample,0}};
+#define boxvar_NBEvents_TimeEvent_createSingleOrSample MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_createSingleOrSample)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_TimeEvent_create(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _iter, modelica_metatype _eqn, modelica_metatype _funcTree, modelica_boolean _createEqn, modelica_metatype *out_bucket, modelica_boolean *out_failed);
+DLLDirection
+modelica_metatype boxptr_NBEvents_TimeEvent_create(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fbucket, modelica_metatype _iter, modelica_metatype _eqn, modelica_metatype _funcTree, modelica_metatype _createEqn, modelica_metatype *out_bucket, modelica_metatype *out_failed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_create,2,0) {(void*) boxptr_NBEvents_TimeEvent_create,0}};
+#define boxvar_NBEvents_TimeEvent_create MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_create)
+
+
+DLLDirection
+modelica_boolean omc_NBEvents_TimeEvent_indexGt(threadData_t *threadData, modelica_metatype _tev1, modelica_metatype _tev2);
+DLLDirection
+modelica_metatype boxptr_NBEvents_TimeEvent_indexGt(threadData_t *threadData, modelica_metatype _tev1, modelica_metatype _tev2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_indexGt,2,0) {(void*) boxptr_NBEvents_TimeEvent_indexGt,0}};
+#define boxvar_NBEvents_TimeEvent_indexGt MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_indexGt)
+
+
+DLLDirection
+modelica_boolean omc_NBEvents_TimeEvent_isEqual(threadData_t *threadData, modelica_metatype _tev1, modelica_metatype _tev2);
+DLLDirection
+modelica_metatype boxptr_NBEvents_TimeEvent_isEqual(threadData_t *threadData, modelica_metatype _tev1, modelica_metatype _tev2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_isEqual,2,0) {(void*) boxptr_NBEvents_TimeEvent_isEqual,0}};
+#define boxvar_NBEvents_TimeEvent_isEqual MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_isEqual)
+
+
+DLLDirection
+modelica_integer omc_NBEvents_TimeEvent_hash(threadData_t *threadData, modelica_metatype _tev);
+DLLDirection
+modelica_metatype boxptr_NBEvents_TimeEvent_hash(threadData_t *threadData, modelica_metatype _tev);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_hash,2,0) {(void*) boxptr_NBEvents_TimeEvent_hash,0}};
+#define boxvar_NBEvents_TimeEvent_hash MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_hash)
+
+
+DLLDirection
+modelica_string omc_NBEvents_TimeEvent_toStringList(threadData_t *threadData, modelica_metatype _events_lst);
+#define boxptr_NBEvents_TimeEvent_toStringList omc_NBEvents_TimeEvent_toStringList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_toStringList,2,0) {(void*) boxptr_NBEvents_TimeEvent_toStringList,0}};
+#define boxvar_NBEvents_TimeEvent_toStringList MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_toStringList)
+
+
+DLLDirection
+modelica_string omc_NBEvents_TimeEvent_toString(threadData_t *threadData, modelica_metatype _timeEvent, modelica_boolean _printIndex);
+DLLDirection
+modelica_metatype boxptr_NBEvents_TimeEvent_toString(threadData_t *threadData, modelica_metatype _timeEvent, modelica_metatype _printIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_toString,2,0) {(void*) boxptr_NBEvents_TimeEvent_toString,0}};
+#define boxvar_NBEvents_TimeEvent_toString MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_toString)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_EventInfo_convert(threadData_t *threadData, modelica_metatype _eventInfo, modelica_metatype _equation_map, modelica_metatype *out_relations, modelica_metatype *out_timeEvents);
+#define boxptr_NBEvents_EventInfo_convert omc_NBEvents_EventInfo_convert
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_convert,2,0) {(void*) boxptr_NBEvents_EventInfo_convert,0}};
+#define boxvar_NBEvents_EventInfo_convert MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_convert)
+
+
+DLLDirection
+modelica_boolean omc_NBEvents_EventInfo_isEmpty(threadData_t *threadData, modelica_metatype _eventInfo);
+DLLDirection
+modelica_metatype boxptr_NBEvents_EventInfo_isEmpty(threadData_t *threadData, modelica_metatype _eventInfo);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_isEmpty,2,0) {(void*) boxptr_NBEvents_EventInfo_isEmpty,0}};
+#define boxvar_NBEvents_EventInfo_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_isEmpty)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_EventInfo_empty(threadData_t *threadData);
+#define boxptr_NBEvents_EventInfo_empty omc_NBEvents_EventInfo_empty
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_empty,2,0) {(void*) boxptr_NBEvents_EventInfo_empty,0}};
+#define boxvar_NBEvents_EventInfo_empty MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_empty)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_EventInfo_createAuxStatements(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fnew_5Fstmts, modelica_metatype _bucket_ptr, modelica_metatype _variables);
+#define boxptr_NBEvents_EventInfo_createAuxStatements omc_NBEvents_EventInfo_createAuxStatements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_createAuxStatements,2,0) {(void*) boxptr_NBEvents_EventInfo_createAuxStatements,0}};
+#define boxvar_NBEvents_EventInfo_createAuxStatements MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_createAuxStatements)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_EventInfo_createAux(threadData_t *threadData, modelica_metatype _cond, modelica_metatype _aux_var, modelica_metatype _variables, modelica_metatype _idx, modelica_metatype __omcQ_24in_5Fauxiliary_5Fvars, modelica_metatype __omcQ_24in_5Fauxiliary_5Feqns, modelica_metatype *out_auxiliary_eqns);
+#define boxptr_NBEvents_EventInfo_createAux omc_NBEvents_EventInfo_createAux
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_createAux,2,0) {(void*) boxptr_NBEvents_EventInfo_createAux,0}};
+#define boxvar_NBEvents_EventInfo_createAux MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_createAux)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_EventInfo_create(threadData_t *threadData, modelica_metatype _bucket, modelica_metatype _variables, modelica_metatype _idx, modelica_metatype *out_auxiliary_vars, modelica_metatype *out_auxiliary_eqns);
+#define boxptr_NBEvents_EventInfo_create omc_NBEvents_EventInfo_create
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_create,2,0) {(void*) boxptr_NBEvents_EventInfo_create,0}};
+#define boxvar_NBEvents_EventInfo_create MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_create)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_EventInfo_toLists(threadData_t *threadData, modelica_metatype _eventInfo, modelica_metatype *out_cev_lst, modelica_metatype *out_sev_lst);
+#define boxptr_NBEvents_EventInfo_toLists omc_NBEvents_EventInfo_toLists
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_toLists,2,0) {(void*) boxptr_NBEvents_EventInfo_toLists,0}};
+#define boxvar_NBEvents_EventInfo_toLists MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_toLists)
+
+
+#define boxptr_NBEvents_EventInfo_toString_tplString omc_NBEvents_EventInfo_toString_tplString
+
+
+DLLDirection
+modelica_string omc_NBEvents_EventInfo_toString(threadData_t *threadData, modelica_metatype _eventInfo);
+#define boxptr_NBEvents_EventInfo_toString omc_NBEvents_EventInfo_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_toString,2,0) {(void*) boxptr_NBEvents_EventInfo_toString,0}};
+#define boxvar_NBEvents_EventInfo_toString MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_toString)
+
+
+DLLDirection
+modelica_fnptr omc_NBEvents_getModule(threadData_t *threadData);
+#define boxptr_NBEvents_getModule omc_NBEvents_getModule
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_getModule,2,0) {(void*) boxptr_NBEvents_getModule,0}};
+#define boxvar_NBEvents_getModule MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_getModule)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
+#define boxptr_NBEvents_main omc_NBEvents_main
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_main,2,0) {(void*) boxptr_NBEvents_main,0}};
+#define boxvar_NBEvents_main MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_main)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

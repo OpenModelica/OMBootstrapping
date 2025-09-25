@@ -1,0 +1,403 @@
+#ifndef NBackendDAE__H
+#define NBackendDAE__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description DAE_Expand_EXPAND__desc;
+
+extern struct record_description DAE_InlineType_AFTER__INDEX__RED__INLINE__desc;
+
+extern struct record_description DAE_InlineType_BUILTIN__EARLY__INLINE__desc;
+
+extern struct record_description DAE_InlineType_DEFAULT__INLINE__desc;
+
+extern struct record_description DAE_InlineType_EARLY__INLINE__desc;
+
+extern struct record_description DAE_InlineType_NORM__INLINE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__LIST__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Gettext_TranslatableContent_notrans__desc;
+
+extern struct record_description NBEquation_EqData_EQ__DATA__SIM__desc;
+
+extern struct record_description NBEquation_Equation_ALGORITHM__desc;
+
+extern struct record_description NBEquation_Equation_ARRAY__EQUATION__desc;
+
+extern struct record_description NBEquation_Equation_FOR__EQUATION__desc;
+
+extern struct record_description NBEquation_Equation_IF__EQUATION__desc;
+
+extern struct record_description NBEquation_Equation_RECORD__EQUATION__desc;
+
+extern struct record_description NBEquation_Equation_SCALAR__EQUATION__desc;
+
+extern struct record_description NBEquation_Equation_WHEN__EQUATION__desc;
+
+extern struct record_description NBEquation_IfEquationBody_IF__EQUATION__BODY__desc;
+
+extern struct record_description NBEquation_Iterator_SINGLE__desc;
+
+extern struct record_description NBEquation_WhenEquationBody_WHEN__EQUATION__BODY__desc;
+
+extern struct record_description NBEquation_WhenStatement_ASSERT__desc;
+
+extern struct record_description NBEquation_WhenStatement_ASSIGN__desc;
+
+extern struct record_description NBEquation_WhenStatement_NORETCALL__desc;
+
+extern struct record_description NBEquation_WhenStatement_REINIT__desc;
+
+extern struct record_description NBEquation_WhenStatement_TERMINATE__desc;
+
+extern struct record_description NBStrongComponent_CountCollector_COUNT__COLLECTOR__desc;
+
+extern struct record_description NBVariable_VarData_VAR__DATA__SIM__desc;
+
+extern struct record_description NBackendDAE_MAIN__desc;
+
+extern struct record_description NFAlgorithm_ALGORITHM__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFBackendExtension_Annotations_ANNOTATIONS__desc;
+
+extern struct record_description NFBackendExtension_BackendInfo_BACKEND__INFO__desc;
+
+extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_ALGEBRAIC__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_CLOCK__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_CONSTANT__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_DISCRETE__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_EXTOBJ__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_FRONTEND__DUMMY__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_PARAMETER__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_RECORD__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_STATE__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFComponentRef_EMPTY__desc;
+
+extern struct record_description NFExpression_CREF__desc;
+
+extern struct record_description NFExpression_END__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_VAR__NODE__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description NFStatement_NORETCALL__desc;
+
+extern struct record_description NFType_ANY__desc;
+
+extern struct record_description NFType_INTEGER__desc;
+
+extern struct record_description NFVariable_VARIABLE__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_checkLoweredCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _set);
+#define boxptr_NBackendDAE_checkLoweredCref omc_NBackendDAE_checkLoweredCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCref,2,0) {(void*) boxptr_NBackendDAE_checkLoweredCref,0}};
+#define boxvar_NBackendDAE_checkLoweredCref MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCref)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_checkLoweredCrefExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _set);
+#define boxptr_NBackendDAE_checkLoweredCrefExp omc_NBackendDAE_checkLoweredCrefExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefExp,2,0) {(void*) boxptr_NBackendDAE_checkLoweredCrefExp,0}};
+#define boxvar_NBackendDAE_checkLoweredCrefExp MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefExp)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_checkLoweredCrefEqn(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn);
+#define boxptr_NBackendDAE_checkLoweredCrefEqn omc_NBackendDAE_checkLoweredCrefEqn
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefEqn,2,0) {(void*) boxptr_NBackendDAE_checkLoweredCrefEqn,0}};
+#define boxvar_NBackendDAE_checkLoweredCrefEqn MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefEqn)
+
+
+DLLDirection
+void omc_NBackendDAE_checkLoweredCrefVar(threadData_t *threadData, modelica_metatype _var);
+#define boxptr_NBackendDAE_checkLoweredCrefVar omc_NBackendDAE_checkLoweredCrefVar
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefVar,2,0) {(void*) boxptr_NBackendDAE_checkLoweredCrefVar,0}};
+#define boxvar_NBackendDAE_checkLoweredCrefVar MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefVar)
+
+
+DLLDirection
+void omc_NBackendDAE_debugLowering(threadData_t *threadData, modelica_metatype _bdae);
+#define boxptr_NBackendDAE_debugLowering omc_NBackendDAE_debugLowering
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_debugLowering,2,0) {(void*) boxptr_NBackendDAE_debugLowering,0}};
+#define boxvar_NBackendDAE_debugLowering MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_debugLowering)
+
+
+DLLDirection
+void omc_NBackendDAE_debugFollowEquations(threadData_t *threadData, modelica_metatype _bdae, modelica_metatype _eq_filter_opt, modelica_string _str);
+#define boxptr_NBackendDAE_debugFollowEquations omc_NBackendDAE_debugFollowEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_debugFollowEquations,2,0) {(void*) boxptr_NBackendDAE_debugFollowEquations,0}};
+#define boxvar_NBackendDAE_debugFollowEquations MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_debugFollowEquations)
+
+
+DLLDirection
+void omc_NBackendDAE_strongcomponentinfo(threadData_t *threadData, modelica_string _phase, modelica_metatype _systems);
+#define boxptr_NBackendDAE_strongcomponentinfo omc_NBackendDAE_strongcomponentinfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_strongcomponentinfo,2,0) {(void*) boxptr_NBackendDAE_strongcomponentinfo,0}};
+#define boxvar_NBackendDAE_strongcomponentinfo MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_strongcomponentinfo)
+
+
+DLLDirection
+void omc_NBackendDAE_backenddaeinfo(threadData_t *threadData, modelica_metatype _bdae);
+#define boxptr_NBackendDAE_backenddaeinfo omc_NBackendDAE_backenddaeinfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_backenddaeinfo,2,0) {(void*) boxptr_NBackendDAE_backenddaeinfo,0}};
+#define boxvar_NBackendDAE_backenddaeinfo MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_backenddaeinfo)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lowerFunctions(threadData_t *threadData, modelica_metatype __omcQ_24in_5FfuncTree);
+#define boxptr_NBackendDAE_lowerFunctions omc_NBackendDAE_lowerFunctions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerFunctions,2,0) {(void*) boxptr_NBackendDAE_lowerFunctions,0}};
+#define boxvar_NBackendDAE_lowerFunctions MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerFunctions)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lowerIteratorExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NBackendDAE_lowerIteratorExp omc_NBackendDAE_lowerIteratorExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIteratorExp,2,0) {(void*) boxptr_NBackendDAE_lowerIteratorExp,0}};
+#define boxvar_NBackendDAE_lowerIteratorExp MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIteratorExp)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lowerIteratorCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fiterator);
+#define boxptr_NBackendDAE_lowerIteratorCref omc_NBackendDAE_lowerIteratorCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIteratorCref,2,0) {(void*) boxptr_NBackendDAE_lowerIteratorCref,0}};
+#define boxvar_NBackendDAE_lowerIteratorCref MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIteratorCref)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lowerIterator(threadData_t *threadData, modelica_metatype _iterator);
+#define boxptr_NBackendDAE_lowerIterator omc_NBackendDAE_lowerIterator
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIterator,2,0) {(void*) boxptr_NBackendDAE_lowerIterator,0}};
+#define boxvar_NBackendDAE_lowerIterator MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIterator)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lowerEquationIterators(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn, modelica_metatype _variables, modelica_metatype _set);
+#define boxptr_NBackendDAE_lowerEquationIterators omc_NBackendDAE_lowerEquationIterators
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerEquationIterators,2,0) {(void*) boxptr_NBackendDAE_lowerEquationIterators,0}};
+#define boxvar_NBackendDAE_lowerEquationIterators MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerEquationIterators)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lowerComponentReferenceInstNode(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _var);
+#define boxptr_NBackendDAE_lowerComponentReferenceInstNode omc_NBackendDAE_lowerComponentReferenceInstNode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceInstNode,2,0) {(void*) boxptr_NBackendDAE_lowerComponentReferenceInstNode,0}};
+#define boxvar_NBackendDAE_lowerComponentReferenceInstNode MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceInstNode)
+
+
+#define boxptr_NBackendDAE_lowerInstNode omc_NBackendDAE_lowerInstNode
+
+
+#define boxptr_NBackendDAE_collectIterator omc_NBackendDAE_collectIterator
+
+
+#define boxptr_NBackendDAE_collectIterators omc_NBackendDAE_collectIterators
+
+
+#define boxptr_NBackendDAE_lowerDimension omc_NBackendDAE_lowerDimension
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lowerComponentReference(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _variables, modelica_boolean _complete);
+DLLDirection
+modelica_metatype boxptr_NBackendDAE_lowerComponentReference(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _variables, modelica_metatype _complete);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReference,2,0) {(void*) boxptr_NBackendDAE_lowerComponentReference,0}};
+#define boxvar_NBackendDAE_lowerComponentReference MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReference)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lowerComponentReferenceExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _variables, modelica_boolean _complete);
+DLLDirection
+modelica_metatype boxptr_NBackendDAE_lowerComponentReferenceExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _variables, modelica_metatype _complete);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceExp,2,0) {(void*) boxptr_NBackendDAE_lowerComponentReferenceExp,0}};
+#define boxvar_NBackendDAE_lowerComponentReferenceExp MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceExp)
+
+
+#define boxptr_NBackendDAE_lowerComponentReferences omc_NBackendDAE_lowerComponentReferences
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lowerEquationAttributes(threadData_t *threadData, modelica_metatype _ty, modelica_boolean _init);
+DLLDirection
+modelica_metatype boxptr_NBackendDAE_lowerEquationAttributes(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _init);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerEquationAttributes,2,0) {(void*) boxptr_NBackendDAE_lowerEquationAttributes,0}};
+#define boxvar_NBackendDAE_lowerEquationAttributes MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerEquationAttributes)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lowerAlgorithm(threadData_t *threadData, modelica_metatype _alg, modelica_boolean _init);
+DLLDirection
+modelica_metatype boxptr_NBackendDAE_lowerAlgorithm(threadData_t *threadData, modelica_metatype _alg, modelica_metatype _init);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerAlgorithm,2,0) {(void*) boxptr_NBackendDAE_lowerAlgorithm,0}};
+#define boxvar_NBackendDAE_lowerAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerAlgorithm)
+
+
+#define boxptr_NBackendDAE_lowerWhenBranchStatement omc_NBackendDAE_lowerWhenBranchStatement
+
+
+#define boxptr_NBackendDAE_lowerWhenBranchBody omc_NBackendDAE_lowerWhenBranchBody
+
+
+#define boxptr_NBackendDAE_lowerWhenBranch omc_NBackendDAE_lowerWhenBranch
+
+
+#define boxptr_NBackendDAE_lowerWhenEquationBody omc_NBackendDAE_lowerWhenEquationBody
+
+
+#define boxptr_NBackendDAE_lowerEquationsAndAlgorithms omc_NBackendDAE_lowerEquationsAndAlgorithms
+
+
+#define boxptr_NBackendDAE_lowerEquationData omc_NBackendDAE_lowerEquationData
+
+
+DLLDirection
+void omc_NBackendDAE_lowerRecordChildren(threadData_t *threadData, modelica_metatype _var_ptr, modelica_metatype _variables);
+#define boxptr_NBackendDAE_lowerRecordChildren omc_NBackendDAE_lowerRecordChildren
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerRecordChildren,2,0) {(void*) boxptr_NBackendDAE_lowerRecordChildren,0}};
+#define boxvar_NBackendDAE_lowerRecordChildren MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerRecordChildren)
+
+
+#define boxptr_NBackendDAE_collectVariableBindingIterators omc_NBackendDAE_collectVariableBindingIterators
+
+
+#define boxptr_NBackendDAE_lowerVariableKind omc_NBackendDAE_lowerVariableKind
+
+
+#define boxptr_NBackendDAE_lowerVariable omc_NBackendDAE_lowerVariable
+
+
+#define boxptr_NBackendDAE_lowerVariableData omc_NBackendDAE_lowerVariableData
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_getLoopResiduals(threadData_t *threadData, modelica_metatype _bdae);
+#define boxptr_NBackendDAE_getLoopResiduals omc_NBackendDAE_getLoopResiduals
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_getLoopResiduals,2,0) {(void*) boxptr_NBackendDAE_getLoopResiduals,0}};
+#define boxvar_NBackendDAE_getLoopResiduals MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_getLoopResiduals)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_removeStream(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
+#define boxptr_NBackendDAE_removeStream omc_NBackendDAE_removeStream
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_removeStream,2,0) {(void*) boxptr_NBackendDAE_removeStream,0}};
+#define boxvar_NBackendDAE_removeStream MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_removeStream)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_simplify(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_boolean _init);
+DLLDirection
+modelica_metatype boxptr_NBackendDAE_simplify(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _init);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_simplify,2,0) {(void*) boxptr_NBackendDAE_simplify,0}};
+#define boxvar_NBackendDAE_simplify MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_simplify)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_applyModules(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _modules, modelica_metatype _eq_filter_opt, modelica_integer _clock_idx, modelica_metatype *out_module_clocks);
+DLLDirection
+modelica_metatype boxptr_NBackendDAE_applyModules(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _modules, modelica_metatype _eq_filter_opt, modelica_metatype _clock_idx, modelica_metatype *out_module_clocks);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_applyModules,2,0) {(void*) boxptr_NBackendDAE_applyModules,0}};
+#define boxvar_NBackendDAE_applyModules MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_applyModules)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
+#define boxptr_NBackendDAE_main omc_NBackendDAE_main
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_main,2,0) {(void*) boxptr_NBackendDAE_main,0}};
+#define boxvar_NBackendDAE_main MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_main)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_lower(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _funcTree);
+#define boxptr_NBackendDAE_lower omc_NBackendDAE_lower
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lower,2,0) {(void*) boxptr_NBackendDAE_lower,0}};
+#define boxvar_NBackendDAE_lower MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lower)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_sizes(threadData_t *threadData, modelica_metatype _bdae, modelica_metatype *out_eqnSizes);
+#define boxptr_NBackendDAE_sizes omc_NBackendDAE_sizes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_sizes,2,0) {(void*) boxptr_NBackendDAE_sizes,0}};
+#define boxvar_NBackendDAE_sizes MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_sizes)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_getFunctionTree(threadData_t *threadData, modelica_metatype _bdae);
+#define boxptr_NBackendDAE_getFunctionTree omc_NBackendDAE_getFunctionTree
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_getFunctionTree,2,0) {(void*) boxptr_NBackendDAE_getFunctionTree,0}};
+#define boxvar_NBackendDAE_getFunctionTree MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_getFunctionTree)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_setVarData(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _varData);
+#define boxptr_NBackendDAE_setVarData omc_NBackendDAE_setVarData
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_setVarData,2,0) {(void*) boxptr_NBackendDAE_setVarData,0}};
+#define boxvar_NBackendDAE_setVarData MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_setVarData)
+
+
+DLLDirection
+modelica_metatype omc_NBackendDAE_getVarData(threadData_t *threadData, modelica_metatype _bdae);
+#define boxptr_NBackendDAE_getVarData omc_NBackendDAE_getVarData
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_getVarData,2,0) {(void*) boxptr_NBackendDAE_getVarData,0}};
+#define boxvar_NBackendDAE_getVarData MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_getVarData)
+
+
+DLLDirection
+modelica_string omc_NBackendDAE_toString(threadData_t *threadData, modelica_metatype _bdae, modelica_string __omcQ_24in_5Fstr);
+#define boxptr_NBackendDAE_toString omc_NBackendDAE_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_toString,2,0) {(void*) boxptr_NBackendDAE_toString,0}};
+#define boxvar_NBackendDAE_toString MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_toString)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

@@ -1,0 +1,256 @@
+#ifndef TotalModelDebug__H
+#define TotalModelDebug__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+
+DLLDirection
+modelica_metatype omc_TotalModelDebug_saveClassDef(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fdef, modelica_metatype _used);
+#define boxptr_TotalModelDebug_saveClassDef omc_TotalModelDebug_saveClassDef
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_saveClassDef,2,0) {(void*) boxptr_TotalModelDebug_saveClassDef,0}};
+#define boxvar_TotalModelDebug_saveClassDef MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_saveClassDef)
+
+
+DLLDirection
+modelica_metatype omc_TotalModelDebug_saveElement(threadData_t *threadData, modelica_metatype _element, modelica_metatype _used, modelica_metatype __omcQ_24in_5Felements);
+#define boxptr_TotalModelDebug_saveElement omc_TotalModelDebug_saveElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_saveElement,2,0) {(void*) boxptr_TotalModelDebug_saveElement,0}};
+#define boxvar_TotalModelDebug_saveElement MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_saveElement)
+
+
+DLLDirection
+modelica_metatype omc_TotalModelDebug_saveElements(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _used);
+#define boxptr_TotalModelDebug_saveElements omc_TotalModelDebug_saveElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_saveElements,2,0) {(void*) boxptr_TotalModelDebug_saveElements,0}};
+#define boxvar_TotalModelDebug_saveElements MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_saveElements)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseAnnotation(threadData_t *threadData, modelica_metatype _ann, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseAnnotation omc_TotalModelDebug_analyseAnnotation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseAnnotation,2,0) {(void*) boxptr_TotalModelDebug_analyseAnnotation,0}};
+#define boxvar_TotalModelDebug_analyseAnnotation MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseAnnotation)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseComment(threadData_t *threadData, modelica_metatype _comment, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseComment omc_TotalModelDebug_analyseComment
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseComment,2,0) {(void*) boxptr_TotalModelDebug_analyseComment,0}};
+#define boxvar_TotalModelDebug_analyseComment MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseComment)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseCref(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _used, modelica_boolean _includeLast);
+DLLDirection
+void boxptr_TotalModelDebug_analyseCref(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _used, modelica_metatype _includeLast);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseCref,2,0) {(void*) boxptr_TotalModelDebug_analyseCref,0}};
+#define boxvar_TotalModelDebug_analyseCref MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseCref)
+
+
+DLLDirection
+modelica_metatype omc_TotalModelDebug_analyseExpTraverse(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fused, modelica_metatype *out_used);
+#define boxptr_TotalModelDebug_analyseExpTraverse omc_TotalModelDebug_analyseExpTraverse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseExpTraverse,2,0) {(void*) boxptr_TotalModelDebug_analyseExpTraverse,0}};
+#define boxvar_TotalModelDebug_analyseExpTraverse MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseExpTraverse)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseExp(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseExp omc_TotalModelDebug_analyseExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseExp,2,0) {(void*) boxptr_TotalModelDebug_analyseExp,0}};
+#define boxvar_TotalModelDebug_analyseExp MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseExp)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseExpList(threadData_t *threadData, modelica_metatype _expl, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseExpList omc_TotalModelDebug_analyseExpList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseExpList,2,0) {(void*) boxptr_TotalModelDebug_analyseExpList,0}};
+#define boxvar_TotalModelDebug_analyseExpList MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseExpList)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseExpOpt(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseExpOpt omc_TotalModelDebug_analyseExpOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseExpOpt,2,0) {(void*) boxptr_TotalModelDebug_analyseExpOpt,0}};
+#define boxvar_TotalModelDebug_analyseExpOpt MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseExpOpt)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseSubscript(threadData_t *threadData, modelica_metatype _sub, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseSubscript omc_TotalModelDebug_analyseSubscript
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseSubscript,2,0) {(void*) boxptr_TotalModelDebug_analyseSubscript,0}};
+#define boxvar_TotalModelDebug_analyseSubscript MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseSubscript)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseSubscripts(threadData_t *threadData, modelica_metatype _subs, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseSubscripts omc_TotalModelDebug_analyseSubscripts
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseSubscripts,2,0) {(void*) boxptr_TotalModelDebug_analyseSubscripts,0}};
+#define boxvar_TotalModelDebug_analyseSubscripts MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseSubscripts)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseDims(threadData_t *threadData, modelica_metatype _subs, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseDims omc_TotalModelDebug_analyseDims
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseDims,2,0) {(void*) boxptr_TotalModelDebug_analyseDims,0}};
+#define boxvar_TotalModelDebug_analyseDims MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseDims)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseStatement(threadData_t *threadData, modelica_metatype _stmt, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseStatement omc_TotalModelDebug_analyseStatement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseStatement,2,0) {(void*) boxptr_TotalModelDebug_analyseStatement,0}};
+#define boxvar_TotalModelDebug_analyseStatement MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseStatement)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseStatements(threadData_t *threadData, modelica_metatype _stmts, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseStatements omc_TotalModelDebug_analyseStatements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseStatements,2,0) {(void*) boxptr_TotalModelDebug_analyseStatements,0}};
+#define boxvar_TotalModelDebug_analyseStatements MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseStatements)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseAlgorithm(threadData_t *threadData, modelica_metatype _alg, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseAlgorithm omc_TotalModelDebug_analyseAlgorithm
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseAlgorithm,2,0) {(void*) boxptr_TotalModelDebug_analyseAlgorithm,0}};
+#define boxvar_TotalModelDebug_analyseAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseAlgorithm)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseAlgorithms(threadData_t *threadData, modelica_metatype _algs, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseAlgorithms omc_TotalModelDebug_analyseAlgorithms
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseAlgorithms,2,0) {(void*) boxptr_TotalModelDebug_analyseAlgorithms,0}};
+#define boxvar_TotalModelDebug_analyseAlgorithms MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseAlgorithms)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseEquation(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseEquation omc_TotalModelDebug_analyseEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseEquation,2,0) {(void*) boxptr_TotalModelDebug_analyseEquation,0}};
+#define boxvar_TotalModelDebug_analyseEquation MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseEquation)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseEquations(threadData_t *threadData, modelica_metatype _eqs, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseEquations omc_TotalModelDebug_analyseEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseEquations,2,0) {(void*) boxptr_TotalModelDebug_analyseEquations,0}};
+#define boxvar_TotalModelDebug_analyseEquations MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseEquations)
+
+
+DLLDirection
+void omc_TotalModelDebug_analysePath(threadData_t *threadData, modelica_metatype _path, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analysePath omc_TotalModelDebug_analysePath
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analysePath,2,0) {(void*) boxptr_TotalModelDebug_analysePath,0}};
+#define boxvar_TotalModelDebug_analysePath MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analysePath)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseTypeSpec(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseTypeSpec omc_TotalModelDebug_analyseTypeSpec
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseTypeSpec,2,0) {(void*) boxptr_TotalModelDebug_analyseTypeSpec,0}};
+#define boxvar_TotalModelDebug_analyseTypeSpec MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseTypeSpec)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseMod(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseMod omc_TotalModelDebug_analyseMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseMod,2,0) {(void*) boxptr_TotalModelDebug_analyseMod,0}};
+#define boxvar_TotalModelDebug_analyseMod MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseMod)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseConstrainClass(threadData_t *threadData, modelica_metatype _cc, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseConstrainClass omc_TotalModelDebug_analyseConstrainClass
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseConstrainClass,2,0) {(void*) boxptr_TotalModelDebug_analyseConstrainClass,0}};
+#define boxvar_TotalModelDebug_analyseConstrainClass MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseConstrainClass)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseReplaceable(threadData_t *threadData, modelica_metatype _repl, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseReplaceable omc_TotalModelDebug_analyseReplaceable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseReplaceable,2,0) {(void*) boxptr_TotalModelDebug_analyseReplaceable,0}};
+#define boxvar_TotalModelDebug_analyseReplaceable MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseReplaceable)
+
+
+DLLDirection
+void omc_TotalModelDebug_analysePrefixes(threadData_t *threadData, modelica_metatype _prefixes, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analysePrefixes omc_TotalModelDebug_analysePrefixes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analysePrefixes,2,0) {(void*) boxptr_TotalModelDebug_analysePrefixes,0}};
+#define boxvar_TotalModelDebug_analysePrefixes MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analysePrefixes)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseAttributes(threadData_t *threadData, modelica_metatype _attributes, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseAttributes omc_TotalModelDebug_analyseAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseAttributes,2,0) {(void*) boxptr_TotalModelDebug_analyseAttributes,0}};
+#define boxvar_TotalModelDebug_analyseAttributes MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseAttributes)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseOperatorRecord(threadData_t *threadData, modelica_metatype _element, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseOperatorRecord omc_TotalModelDebug_analyseOperatorRecord
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseOperatorRecord,2,0) {(void*) boxptr_TotalModelDebug_analyseOperatorRecord,0}};
+#define boxvar_TotalModelDebug_analyseOperatorRecord MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseOperatorRecord)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseExternalDecl(threadData_t *threadData, modelica_metatype _extDecl, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseExternalDecl omc_TotalModelDebug_analyseExternalDecl
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseExternalDecl,2,0) {(void*) boxptr_TotalModelDebug_analyseExternalDecl,0}};
+#define boxvar_TotalModelDebug_analyseExternalDecl MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseExternalDecl)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseClassDef(threadData_t *threadData, modelica_metatype _def, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseClassDef omc_TotalModelDebug_analyseClassDef
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseClassDef,2,0) {(void*) boxptr_TotalModelDebug_analyseClassDef,0}};
+#define boxvar_TotalModelDebug_analyseClassDef MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseClassDef)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseImport(threadData_t *threadData, modelica_metatype _imp, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseImport omc_TotalModelDebug_analyseImport
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseImport,2,0) {(void*) boxptr_TotalModelDebug_analyseImport,0}};
+#define boxvar_TotalModelDebug_analyseImport MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseImport)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseElement(threadData_t *threadData, modelica_metatype _element, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseElement omc_TotalModelDebug_analyseElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseElement,2,0) {(void*) boxptr_TotalModelDebug_analyseElement,0}};
+#define boxvar_TotalModelDebug_analyseElement MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseElement)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseElements(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseElements omc_TotalModelDebug_analyseElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseElements,2,0) {(void*) boxptr_TotalModelDebug_analyseElements,0}};
+#define boxvar_TotalModelDebug_analyseElements MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseElements)
+
+
+DLLDirection
+void omc_TotalModelDebug_analyseProgram(threadData_t *threadData, modelica_metatype _program, modelica_metatype _used);
+#define boxptr_TotalModelDebug_analyseProgram omc_TotalModelDebug_analyseProgram
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseProgram,2,0) {(void*) boxptr_TotalModelDebug_analyseProgram,0}};
+#define boxvar_TotalModelDebug_analyseProgram MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_analyseProgram)
+
+
+DLLDirection
+modelica_metatype omc_TotalModelDebug_getTotalModel(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype _classPath);
+#define boxptr_TotalModelDebug_getTotalModel omc_TotalModelDebug_getTotalModel
+static const MMC_DEFSTRUCTLIT(boxvar_lit_TotalModelDebug_getTotalModel,2,0) {(void*) boxptr_TotalModelDebug_getTotalModel,0}};
+#define boxvar_TotalModelDebug_getTotalModel MMC_REFSTRUCTLIT(boxvar_lit_TotalModelDebug_getTotalModel)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

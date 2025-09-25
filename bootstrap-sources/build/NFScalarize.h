@@ -1,0 +1,184 @@
+#ifndef NFScalarize__H
+#define NFScalarize__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFEquation_ARRAY__EQUALITY__desc;
+
+extern struct record_description NFEquation_EQUALITY__desc;
+
+extern struct record_description NFEquation_IF__desc;
+
+extern struct record_description NFEquation_WHEN__desc;
+
+extern struct record_description NFExpressionIterator_NONE__ITERATOR__desc;
+
+extern struct record_description NFStatement_FOR__desc;
+
+extern struct record_description NFStatement_IF__desc;
+
+extern struct record_description NFStatement_WHEN__desc;
+
+extern struct record_description NFStatement_WHILE__desc;
+
+extern struct record_description NFVariable_VARIABLE__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_boolean omc_NFScalarize_variableHasForcedScalarAttribute(threadData_t *threadData, modelica_metatype _var);
+DLLDirection
+modelica_metatype boxptr_NFScalarize_variableHasForcedScalarAttribute(threadData_t *threadData, modelica_metatype _var);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_variableHasForcedScalarAttribute,2,0) {(void*) boxptr_NFScalarize_variableHasForcedScalarAttribute,0}};
+#define boxvar_NFScalarize_variableHasForcedScalarAttribute MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_variableHasForcedScalarAttribute)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeWhenStatement(threadData_t *threadData, modelica_metatype _branches, modelica_metatype _source, modelica_metatype __omcQ_24in_5Fstatements);
+#define boxptr_NFScalarize_scalarizeWhenStatement omc_NFScalarize_scalarizeWhenStatement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeWhenStatement,2,0) {(void*) boxptr_NFScalarize_scalarizeWhenStatement,0}};
+#define boxvar_NFScalarize_scalarizeWhenStatement MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeWhenStatement)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeIfStatement(threadData_t *threadData, modelica_metatype _branches, modelica_metatype _source, modelica_metatype __omcQ_24in_5Fstatements);
+#define boxptr_NFScalarize_scalarizeIfStatement omc_NFScalarize_scalarizeIfStatement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeIfStatement,2,0) {(void*) boxptr_NFScalarize_scalarizeIfStatement,0}};
+#define boxvar_NFScalarize_scalarizeIfStatement MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeIfStatement)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeStatement(threadData_t *threadData, modelica_metatype _stmt, modelica_metatype __omcQ_24in_5Fstatements);
+#define boxptr_NFScalarize_scalarizeStatement omc_NFScalarize_scalarizeStatement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeStatement,2,0) {(void*) boxptr_NFScalarize_scalarizeStatement,0}};
+#define boxvar_NFScalarize_scalarizeStatement MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeStatement)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeStatements(threadData_t *threadData, modelica_metatype _stmts);
+#define boxptr_NFScalarize_scalarizeStatements omc_NFScalarize_scalarizeStatements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeStatements,2,0) {(void*) boxptr_NFScalarize_scalarizeStatements,0}};
+#define boxvar_NFScalarize_scalarizeStatements MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeStatements)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeAlgorithm(threadData_t *threadData, modelica_metatype __omcQ_24in_5Falg);
+#define boxptr_NFScalarize_scalarizeAlgorithm omc_NFScalarize_scalarizeAlgorithm
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeAlgorithm,2,0) {(void*) boxptr_NFScalarize_scalarizeAlgorithm,0}};
+#define boxvar_NFScalarize_scalarizeAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeAlgorithm)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeWhenEquation(threadData_t *threadData, modelica_metatype _branches, modelica_metatype _scope, modelica_metatype _source, modelica_metatype __omcQ_24in_5Fequations);
+#define boxptr_NFScalarize_scalarizeWhenEquation omc_NFScalarize_scalarizeWhenEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeWhenEquation,2,0) {(void*) boxptr_NFScalarize_scalarizeWhenEquation,0}};
+#define boxvar_NFScalarize_scalarizeWhenEquation MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeWhenEquation)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeIfEquation(threadData_t *threadData, modelica_metatype _branches, modelica_metatype _scope, modelica_metatype _source, modelica_metatype __omcQ_24in_5Fequations);
+#define boxptr_NFScalarize_scalarizeIfEquation omc_NFScalarize_scalarizeIfEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeIfEquation,2,0) {(void*) boxptr_NFScalarize_scalarizeIfEquation,0}};
+#define boxvar_NFScalarize_scalarizeIfEquation MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeIfEquation)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeEquation(threadData_t *threadData, modelica_metatype _eq, modelica_metatype __omcQ_24in_5Fequations, modelica_boolean _forceScalarize);
+DLLDirection
+modelica_metatype boxptr_NFScalarize_scalarizeEquation(threadData_t *threadData, modelica_metatype _eq, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype _forceScalarize);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeEquation,2,0) {(void*) boxptr_NFScalarize_scalarizeEquation,0}};
+#define boxvar_NFScalarize_scalarizeEquation MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeEquation)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeEquations(threadData_t *threadData, modelica_metatype _eql, modelica_boolean _forceScalarize);
+DLLDirection
+modelica_metatype boxptr_NFScalarize_scalarizeEquations(threadData_t *threadData, modelica_metatype _eql, modelica_metatype _forceScalarize);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeEquations,2,0) {(void*) boxptr_NFScalarize_scalarizeEquations,0}};
+#define boxvar_NFScalarize_scalarizeEquations MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeEquations)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_expandComplexCref__traverser(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFScalarize_expandComplexCref__traverser omc_NFScalarize_expandComplexCref__traverser
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_expandComplexCref__traverser,2,0) {(void*) boxptr_NFScalarize_expandComplexCref__traverser,0}};
+#define boxvar_NFScalarize_expandComplexCref__traverser MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_expandComplexCref__traverser)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_expandComplexCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFScalarize_expandComplexCref omc_NFScalarize_expandComplexCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_expandComplexCref,2,0) {(void*) boxptr_NFScalarize_expandComplexCref,0}};
+#define boxvar_NFScalarize_expandComplexCref MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_expandComplexCref)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_nextTypeAttributes(threadData_t *threadData, modelica_metatype _names, modelica_metatype _iters);
+#define boxptr_NFScalarize_nextTypeAttributes omc_NFScalarize_nextTypeAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_nextTypeAttributes,2,0) {(void*) boxptr_NFScalarize_nextTypeAttributes,0}};
+#define boxvar_NFScalarize_nextTypeAttributes MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_nextTypeAttributes)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeTypeAttributes(threadData_t *threadData, modelica_metatype _attrs, modelica_metatype *out_iters);
+#define boxptr_NFScalarize_scalarizeTypeAttributes omc_NFScalarize_scalarizeTypeAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeTypeAttributes,2,0) {(void*) boxptr_NFScalarize_scalarizeTypeAttributes,0}};
+#define boxvar_NFScalarize_scalarizeTypeAttributes MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeTypeAttributes)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeComplexVariable(threadData_t *threadData, modelica_metatype _var, modelica_metatype __omcQ_24in_5Fvars);
+#define boxptr_NFScalarize_scalarizeComplexVariable omc_NFScalarize_scalarizeComplexVariable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeComplexVariable,2,0) {(void*) boxptr_NFScalarize_scalarizeComplexVariable,0}};
+#define boxvar_NFScalarize_scalarizeComplexVariable MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeComplexVariable)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeBackendVariable(threadData_t *threadData, modelica_metatype _var, modelica_metatype _indices, modelica_metatype __omcQ_24in_5Fvars);
+#define boxptr_NFScalarize_scalarizeBackendVariable omc_NFScalarize_scalarizeBackendVariable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeBackendVariable,2,0) {(void*) boxptr_NFScalarize_scalarizeBackendVariable,0}};
+#define boxvar_NFScalarize_scalarizeBackendVariable MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeBackendVariable)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeVariable(threadData_t *threadData, modelica_metatype _var, modelica_metatype __omcQ_24in_5Fvars, modelica_boolean _forceScalarize);
+DLLDirection
+modelica_metatype boxptr_NFScalarize_scalarizeVariable(threadData_t *threadData, modelica_metatype _var, modelica_metatype __omcQ_24in_5Fvars, modelica_metatype _forceScalarize);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeVariable,2,0) {(void*) boxptr_NFScalarize_scalarizeVariable,0}};
+#define boxvar_NFScalarize_scalarizeVariable MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeVariable)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarizeVariables(threadData_t *threadData, modelica_metatype _vars, modelica_boolean _forceScalarize);
+DLLDirection
+modelica_metatype boxptr_NFScalarize_scalarizeVariables(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _forceScalarize);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeVariables,2,0) {(void*) boxptr_NFScalarize_scalarizeVariables,0}};
+#define boxvar_NFScalarize_scalarizeVariables MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarizeVariables)
+
+
+DLLDirection
+modelica_metatype omc_NFScalarize_scalarize(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel);
+#define boxptr_NFScalarize_scalarize omc_NFScalarize_scalarize
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFScalarize_scalarize,2,0) {(void*) boxptr_NFScalarize_scalarize,0}};
+#define boxvar_NFScalarize_scalarize MMC_REFSTRUCTLIT(boxvar_lit_NFScalarize_scalarize)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

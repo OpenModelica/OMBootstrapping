@@ -1,0 +1,167 @@
+#ifndef ReduceDAE__H
+#define ReduceDAE__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_FunctionArgs_FUNCTIONARGS__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_PARAM__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_Exp_IFEXP__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Exp_UNARY__desc;
+
+extern struct record_description DAE_Operator_POW__desc;
+
+extern struct record_description DAE_Operator_UMINUS__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__FOR__desc;
+
+extern struct record_description DAE_Statement_STMT__IF__desc;
+
+extern struct record_description DAE_Statement_STMT__WHEN__desc;
+
+extern struct record_description DAE_Statement_STMT__WHILE__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description DAE_VarDirection_BIDIR__desc;
+
+extern struct record_description DAE_VarInnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__REAL__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SimCode_LinearSystem_LINEARSYSTEM__desc;
+
+extern struct record_description SimCode_NonlinearSystem_NONLINEARSYSTEM__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__ALGORITHM__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__LINEAR__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__MIXED__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__NONLINEAR__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__RESIDUAL__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__SIMPLE__ASSIGN__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__WHEN__desc;
+
+extern struct record_description SimCodeVar_AliasVariable_NOALIAS__desc;
+
+extern struct record_description SimCodeVar_Causality_LOCAL__desc;
+
+extern struct record_description SimCodeVar_SimVar_SIMVAR__desc;
+
+extern struct record_description SimCodeVar_SimVars_SIMVARS__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_ReduceDAE_createBackendLabelVars(threadData_t *threadData, modelica_metatype _modelInfo);
+#define boxptr_ReduceDAE_createBackendLabelVars omc_ReduceDAE_createBackendLabelVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ReduceDAE_createBackendLabelVars,2,0) {(void*) boxptr_ReduceDAE_createBackendLabelVars,0}};
+#define boxvar_ReduceDAE_createBackendLabelVars MMC_REFSTRUCTLIT(boxvar_lit_ReduceDAE_createBackendLabelVars)
+
+
+#define boxptr_ReduceDAE_StringDelimit2Int omc_ReduceDAE_StringDelimit2Int
+
+
+#define boxptr_ReduceDAE_makeReduceList omc_ReduceDAE_makeReduceList
+
+
+#define boxptr_ReduceDAE_multiply omc_ReduceDAE_multiply
+
+
+#define boxptr_ReduceDAE_linearizeExp omc_ReduceDAE_linearizeExp
+
+
+#define boxptr_ReduceDAE_addLabelToExpForLinearization omc_ReduceDAE_addLabelToExpForLinearization
+
+
+#define boxptr_ReduceDAE_addLabelToLinearEquationSystems omc_ReduceDAE_addLabelToLinearEquationSystems
+
+
+#define boxptr_ReduceDAE_addLabelToAlgorithms omc_ReduceDAE_addLabelToAlgorithms
+
+
+#define boxptr_ReduceDAE_addLabelToEquations omc_ReduceDAE_addLabelToEquations
+
+
+#define boxptr_ReduceDAE_meanValueReplacements2 omc_ReduceDAE_meanValueReplacements2
+
+
+#define boxptr_ReduceDAE_meanValueReplacements omc_ReduceDAE_meanValueReplacements
+
+
+DLLDirection
+modelica_metatype omc_ReduceDAE_reduceTerms(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inModelInfo, modelica_metatype _inArgs, modelica_metatype *out_outModelInfo);
+#define boxptr_ReduceDAE_reduceTerms omc_ReduceDAE_reduceTerms
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ReduceDAE_reduceTerms,2,0) {(void*) boxptr_ReduceDAE_reduceTerms,0}};
+#define boxvar_ReduceDAE_reduceTerms MMC_REFSTRUCTLIT(boxvar_lit_ReduceDAE_reduceTerms)
+
+
+DLLDirection
+modelica_metatype omc_ReduceDAE_buildLabels(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inModelInfo, modelica_metatype _reduceList, modelica_metatype _inArgs, modelica_metatype *out_outModelInfo);
+#define boxptr_ReduceDAE_buildLabels omc_ReduceDAE_buildLabels
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ReduceDAE_buildLabels,2,0) {(void*) boxptr_ReduceDAE_buildLabels,0}};
+#define boxvar_ReduceDAE_buildLabels MMC_REFSTRUCTLIT(boxvar_lit_ReduceDAE_buildLabels)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

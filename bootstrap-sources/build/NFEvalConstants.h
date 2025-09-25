@@ -1,0 +1,223 @@
+#ifndef NFEvalConstants__H
+#define NFEvalConstants__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFCeval_EvalTarget_EVAL__TARGET__desc;
+
+extern struct record_description NFEquation_ARRAY__EQUALITY__desc;
+
+extern struct record_description NFEquation_ASSERT__desc;
+
+extern struct record_description NFEquation_Branch_BRANCH__desc;
+
+extern struct record_description NFEquation_EQUALITY__desc;
+
+extern struct record_description NFEvalConstants_EvalSettings_SETTINGS__desc;
+
+extern struct record_description NFExpression_CREF__desc;
+
+extern struct record_description NFExpression_IF__desc;
+
+extern struct record_description NFFlatten_Prefix_PREFIX__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFStatement_ASSERT__desc;
+
+extern struct record_description NFStatement_ASSIGNMENT__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+void omc_NFEvalConstants_evaluateRecordDeclarationField(threadData_t *threadData, modelica_metatype _fieldNode, modelica_metatype _recordNode);
+#define boxptr_NFEvalConstants_evaluateRecordDeclarationField omc_NFEvalConstants_evaluateRecordDeclarationField
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateRecordDeclarationField,2,0) {(void*) boxptr_NFEvalConstants_evaluateRecordDeclarationField,0}};
+#define boxvar_NFEvalConstants_evaluateRecordDeclarationField MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateRecordDeclarationField)
+
+
+DLLDirection
+void omc_NFEvalConstants_evaluateRecordDeclaration(threadData_t *threadData, modelica_metatype _recordNode);
+#define boxptr_NFEvalConstants_evaluateRecordDeclaration omc_NFEvalConstants_evaluateRecordDeclaration
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateRecordDeclaration,2,0) {(void*) boxptr_NFEvalConstants_evaluateRecordDeclaration,0}};
+#define boxvar_NFEvalConstants_evaluateRecordDeclaration MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateRecordDeclaration)
+
+
+DLLDirection
+modelica_boolean omc_NFEvalConstants_isLocalFunctionVariable(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _fnNode);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_isLocalFunctionVariable(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _fnNode);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_isLocalFunctionVariable,2,0) {(void*) boxptr_NFEvalConstants_isLocalFunctionVariable,0}};
+#define boxvar_NFEvalConstants_isLocalFunctionVariable MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_isLocalFunctionVariable)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateFuncExpTraverser(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _fnNode, modelica_boolean _evaluateAll, modelica_boolean _changed, modelica_boolean *out_outChanged);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateFuncExpTraverser(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _fnNode, modelica_metatype _evaluateAll, modelica_metatype _changed, modelica_metatype *out_outChanged);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateFuncExpTraverser,2,0) {(void*) boxptr_NFEvalConstants_evaluateFuncExpTraverser,0}};
+#define boxvar_NFEvalConstants_evaluateFuncExpTraverser MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateFuncExpTraverser)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateFuncExp(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _fnNode, modelica_boolean _evaluateAll);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateFuncExp(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _fnNode, modelica_metatype _evaluateAll);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateFuncExp,2,0) {(void*) boxptr_NFEvalConstants_evaluateFuncExp,0}};
+#define boxvar_NFEvalConstants_evaluateFuncExp MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateFuncExp)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateFunction(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ffunc);
+#define boxptr_NFEvalConstants_evaluateFunction omc_NFEvalConstants_evaluateFunction
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateFunction,2,0) {(void*) boxptr_NFEvalConstants_evaluateFunction,0}};
+#define boxvar_NFEvalConstants_evaluateFunction MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateFunction)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateStmtBranch(threadData_t *threadData, modelica_metatype _branch, modelica_metatype _info, modelica_boolean _ignoreFailure);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateStmtBranch(threadData_t *threadData, modelica_metatype _branch, modelica_metatype _info, modelica_metatype _ignoreFailure);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateStmtBranch,2,0) {(void*) boxptr_NFEvalConstants_evaluateStmtBranch,0}};
+#define boxvar_NFEvalConstants_evaluateStmtBranch MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateStmtBranch)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateStatement(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fstmt, modelica_boolean _ignoreFailure);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateStatement(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fstmt, modelica_metatype _ignoreFailure);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateStatement,2,0) {(void*) boxptr_NFEvalConstants_evaluateStatement,0}};
+#define boxvar_NFEvalConstants_evaluateStatement MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateStatement)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateStatements(threadData_t *threadData, modelica_metatype _stmts, modelica_boolean _ignoreFailure);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateStatements(threadData_t *threadData, modelica_metatype _stmts, modelica_metatype _ignoreFailure);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateStatements,2,0) {(void*) boxptr_NFEvalConstants_evaluateStatements,0}};
+#define boxvar_NFEvalConstants_evaluateStatements MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateStatements)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateAlgorithm(threadData_t *threadData, modelica_metatype __omcQ_24in_5Falg);
+#define boxptr_NFEvalConstants_evaluateAlgorithm omc_NFEvalConstants_evaluateAlgorithm
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateAlgorithm,2,0) {(void*) boxptr_NFEvalConstants_evaluateAlgorithm,0}};
+#define boxvar_NFEvalConstants_evaluateAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateAlgorithm)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateAlgorithms(threadData_t *threadData, modelica_metatype _algs);
+#define boxptr_NFEvalConstants_evaluateAlgorithms omc_NFEvalConstants_evaluateAlgorithms
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateAlgorithms,2,0) {(void*) boxptr_NFEvalConstants_evaluateAlgorithms,0}};
+#define boxvar_NFEvalConstants_evaluateAlgorithms MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateAlgorithms)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateEqBranch(threadData_t *threadData, modelica_metatype _branch, modelica_metatype _info, modelica_boolean _ignoreFailure);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateEqBranch(threadData_t *threadData, modelica_metatype _branch, modelica_metatype _info, modelica_metatype _ignoreFailure);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateEqBranch,2,0) {(void*) boxptr_NFEvalConstants_evaluateEqBranch,0}};
+#define boxvar_NFEvalConstants_evaluateEqBranch MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateEqBranch)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateEquation(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feq, modelica_boolean _ignoreFailure);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateEquation(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feq, modelica_metatype _ignoreFailure);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateEquation,2,0) {(void*) boxptr_NFEvalConstants_evaluateEquation,0}};
+#define boxvar_NFEvalConstants_evaluateEquation MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateEquation)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateEquations(threadData_t *threadData, modelica_metatype _eql, modelica_boolean _ignoreFailure);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateEquations(threadData_t *threadData, modelica_metatype _eql, modelica_metatype _ignoreFailure);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateEquations,2,0) {(void*) boxptr_NFEvalConstants_evaluateEquations,0}};
+#define boxvar_NFEvalConstants_evaluateEquations MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateEquations)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateIfExp(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _info, modelica_boolean *out_outChanged);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateIfExp(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _info, modelica_metatype *out_outChanged);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateIfExp,2,0) {(void*) boxptr_NFEvalConstants_evaluateIfExp,0}};
+#define boxvar_NFEvalConstants_evaluateIfExp MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateIfExp)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateDimension(threadData_t *threadData, modelica_metatype _dim, modelica_metatype _info);
+#define boxptr_NFEvalConstants_evaluateDimension omc_NFEvalConstants_evaluateDimension
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateDimension,2,0) {(void*) boxptr_NFEvalConstants_evaluateDimension,0}};
+#define boxvar_NFEvalConstants_evaluateDimension MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateDimension)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateType(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fty, modelica_metatype _info);
+#define boxptr_NFEvalConstants_evaluateType omc_NFEvalConstants_evaluateType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateType,2,0) {(void*) boxptr_NFEvalConstants_evaluateType,0}};
+#define boxvar_NFEvalConstants_evaluateType MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateType)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateExpTraverser(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _info, modelica_boolean _changed, modelica_boolean _ignoreFailure, modelica_boolean *out_outChanged);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateExpTraverser(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _info, modelica_metatype _changed, modelica_metatype _ignoreFailure, modelica_metatype *out_outChanged);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateExpTraverser,2,0) {(void*) boxptr_NFEvalConstants_evaluateExpTraverser,0}};
+#define boxvar_NFEvalConstants_evaluateExpTraverser MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateExpTraverser)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateExp(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _info, modelica_boolean _ignoreFailure);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateExp(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _info, modelica_metatype _ignoreFailure);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateExp,2,0) {(void*) boxptr_NFEvalConstants_evaluateExp,0}};
+#define boxvar_NFEvalConstants_evaluateExp MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateExp)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateTypeAttribute(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fattribute, modelica_metatype _prefix, modelica_integer _context);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateTypeAttribute(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fattribute, modelica_metatype _prefix, modelica_metatype _context);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateTypeAttribute,2,0) {(void*) boxptr_NFEvalConstants_evaluateTypeAttribute,0}};
+#define boxvar_NFEvalConstants_evaluateTypeAttribute MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateTypeAttribute)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateBinding(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbinding, modelica_metatype _prefix, modelica_boolean _structural, modelica_integer _context);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateBinding(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbinding, modelica_metatype _prefix, modelica_metatype _structural, modelica_metatype _context);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateBinding,2,0) {(void*) boxptr_NFEvalConstants_evaluateBinding,0}};
+#define boxvar_NFEvalConstants_evaluateBinding MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateBinding)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluateVariable(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fvar, modelica_integer _context, modelica_metatype _settings);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluateVariable(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fvar, modelica_metatype _context, modelica_metatype _settings);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateVariable,2,0) {(void*) boxptr_NFEvalConstants_evaluateVariable,0}};
+#define boxvar_NFEvalConstants_evaluateVariable MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluateVariable)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalConstants_evaluate(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel, modelica_integer _context);
+DLLDirection
+modelica_metatype boxptr_NFEvalConstants_evaluate(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel, modelica_metatype _context);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluate,2,0) {(void*) boxptr_NFEvalConstants_evaluate,0}};
+#define boxvar_NFEvalConstants_evaluate MMC_REFSTRUCTLIT(boxvar_lit_NFEvalConstants_evaluate)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

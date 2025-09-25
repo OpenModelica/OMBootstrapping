@@ -1,0 +1,226 @@
+#ifndef HpcOmMemory__H
+#define HpcOmMemory__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_IndexType_ABSOLUTE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__QUAL__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_Subscript_INDEX__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description GraphML_ArrowType_ARROWNONE__desc;
+
+extern struct record_description GraphML_ArrowType_ARROWSTANDART__desc;
+
+extern struct record_description GraphML_AttributeTarget_TARGET__NODE__desc;
+
+extern struct record_description GraphML_FontStyle_FONTPLAIN__desc;
+
+extern struct record_description GraphML_LineType_LINE__desc;
+
+extern struct record_description GraphML_NodeLabel_NODELABEL__INTERNAL__desc;
+
+extern struct record_description GraphML_ShapeType_ELLIPSE__desc;
+
+extern struct record_description HpcOmMemory_CacheLineEntry_CACHELINEENTRY__desc;
+
+extern struct record_description HpcOmMemory_CacheLineMap_CACHELINEMAP__desc;
+
+extern struct record_description HpcOmMemory_CacheMap_CACHEMAP__desc;
+
+extern struct record_description HpcOmMemory_CacheMap_UNIFORM__CACHEMAP__desc;
+
+extern struct record_description HpcOmMemory_CacheMapMeta_CACHEMAPMETA__desc;
+
+extern struct record_description HpcOmMemory_PartlyFilledCacheLine_PARTLYFILLEDCACHELINE__LEVEL__desc;
+
+extern struct record_description HpcOmMemory_PartlyFilledCacheLine_PARTLYFILLEDCACHELINE__THREAD__desc;
+
+extern struct record_description HpcOmMemory_ScVarInfo_SCVARINFO__desc;
+
+extern struct record_description HpcOmSimCode_MemoryMap_MEMORYMAP__ARRAY__desc;
+
+extern struct record_description HpcOmTaskGraph_GraphDumpOptions_GRAPHDUMPOPTIONS__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_HpcOmMemory_getCacheVariablesOfCacheMap omc_HpcOmMemory_getCacheVariablesOfCacheMap
+
+
+#define boxptr_HpcOmMemory_getAllCacheLinesOfCacheMap omc_HpcOmMemory_getAllCacheLinesOfCacheMap
+
+
+#define boxptr_HpcOmMemory_getCacheLineMapOfPartlyFilledCacheLine omc_HpcOmMemory_getCacheLineMapOfPartlyFilledCacheLine
+
+
+#define boxptr_HpcOmMemory_getTaskListTasks omc_HpcOmMemory_getTaskListTasks
+
+
+#define boxptr_HpcOmMemory_removeSubscripts omc_HpcOmMemory_removeSubscripts
+
+
+#define boxptr_HpcOmMemory_getDimStringOfDimElement omc_HpcOmMemory_getDimStringOfDimElement
+
+
+DLLDirection
+modelica_metatype omc_HpcOmMemory_expandCrefWithDims(threadData_t *threadData, modelica_metatype _iCref, modelica_metatype _iDims);
+#define boxptr_HpcOmMemory_expandCrefWithDims omc_HpcOmMemory_expandCrefWithDims
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmMemory_expandCrefWithDims,2,0) {(void*) boxptr_HpcOmMemory_expandCrefWithDims,0}};
+#define boxvar_HpcOmMemory_expandCrefWithDims MMC_REFSTRUCTLIT(boxvar_lit_HpcOmMemory_expandCrefWithDims)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmMemory_expandCref(threadData_t *threadData, modelica_metatype _iCref, modelica_metatype _iNumArrayElems);
+#define boxptr_HpcOmMemory_expandCref omc_HpcOmMemory_expandCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmMemory_expandCref,2,0) {(void*) boxptr_HpcOmMemory_expandCref,0}};
+#define boxvar_HpcOmMemory_expandCref MMC_REFSTRUCTLIT(boxvar_lit_HpcOmMemory_expandCref)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmMemory_getSubscriptListOfArrayCref(threadData_t *threadData, modelica_metatype _iCref, modelica_metatype _iNumArrayElems);
+#define boxptr_HpcOmMemory_getSubscriptListOfArrayCref omc_HpcOmMemory_getSubscriptListOfArrayCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmMemory_getSubscriptListOfArrayCref,2,0) {(void*) boxptr_HpcOmMemory_getSubscriptListOfArrayCref,0}};
+#define boxvar_HpcOmMemory_getSubscriptListOfArrayCref MMC_REFSTRUCTLIT(boxvar_lit_HpcOmMemory_getSubscriptListOfArrayCref)
+
+
+#define boxptr_HpcOmMemory_printSimCodeVarTypes omc_HpcOmMemory_printSimCodeVarTypes
+
+
+#define boxptr_HpcOmMemory_printScVarInfos omc_HpcOmMemory_printScVarInfos
+
+
+#define boxptr_HpcOmMemory_printSccNodeMapping omc_HpcOmMemory_printSccNodeMapping
+
+
+#define boxptr_HpcOmMemory_printEqSimCodeVarMapping omc_HpcOmMemory_printEqSimCodeVarMapping
+
+
+#define boxptr_HpcOmMemory_printCacheLineTaskMapping omc_HpcOmMemory_printCacheLineTaskMapping
+
+
+#define boxptr_HpcOmMemory_printScVarTaskMapping omc_HpcOmMemory_printScVarTaskMapping
+
+
+#define boxptr_HpcOmMemory_printNodeSimCodeVarMapping omc_HpcOmMemory_printNodeSimCodeVarMapping
+
+
+#define boxptr_HpcOmMemory_dumpSimCodeVar omc_HpcOmMemory_dumpSimCodeVar
+
+
+#define boxptr_HpcOmMemory_cacheLineEntryToStringClean omc_HpcOmMemory_cacheLineEntryToStringClean
+
+
+#define boxptr_HpcOmMemory_cacheLineEntryToString omc_HpcOmMemory_cacheLineEntryToString
+
+
+#define boxptr_HpcOmMemory_printCacheLineMapClean omc_HpcOmMemory_printCacheLineMapClean
+
+
+#define boxptr_HpcOmMemory_printCacheLineMap omc_HpcOmMemory_printCacheLineMap
+
+
+#define boxptr_HpcOmMemory_printCacheMap omc_HpcOmMemory_printCacheMap
+
+
+#define boxptr_HpcOmMemory_appendCacheLineEntryToGraph omc_HpcOmMemory_appendCacheLineEntryToGraph
+
+
+#define boxptr_HpcOmMemory_appendCacheLineMapToGraph omc_HpcOmMemory_appendCacheLineMapToGraph
+
+
+#define boxptr_HpcOmMemory_appendUnmappedVariablesToGraph omc_HpcOmMemory_appendUnmappedVariablesToGraph
+
+
+#define boxptr_HpcOmMemory_appendTaskVarEdgesToGraph omc_HpcOmMemory_appendTaskVarEdgesToGraph
+
+
+#define boxptr_HpcOmMemory_getTaskSimVarMapping omc_HpcOmMemory_getTaskSimVarMapping
+
+
+#define boxptr_HpcOmMemory_getCacheLineTaskMapping0 omc_HpcOmMemory_getCacheLineTaskMapping0
+
+
+#define boxptr_HpcOmMemory_getModifiedVarName omc_HpcOmMemory_getModifiedVarName
+
+
+#define boxptr_HpcOmMemory_flattenEqSimCodeVarMapping omc_HpcOmMemory_flattenEqSimCodeVarMapping
+
+
+#define boxptr_HpcOmMemory_getSimCodeVarNodeMapping0 omc_HpcOmMemory_getSimCodeVarNodeMapping0
+
+
+#define boxptr_HpcOmMemory_createMemoryMapTraverse0 omc_HpcOmMemory_createMemoryMapTraverse0
+
+
+#define boxptr_HpcOmMemory_getEqSCVarMapping0 omc_HpcOmMemory_getEqSCVarMapping0
+
+
+#define boxptr_HpcOmMemory_getEqSCVarMappingByEqSystem omc_HpcOmMemory_getEqSCVarMappingByEqSystem
+
+
+#define boxptr_HpcOmMemory_getEqSCVarMapping omc_HpcOmMemory_getEqSCVarMapping
+
+
+#define boxptr_HpcOmMemory_transposeScVarTaskMapping omc_HpcOmMemory_transposeScVarTaskMapping
+
+
+#define boxptr_HpcOmMemory_getNotOptimizedVarsByCacheLineMapping0 omc_HpcOmMemory_getNotOptimizedVarsByCacheLineMapping0
+
+
+#define boxptr_HpcOmMemory_getNotOptimizedVarsByCacheLineMapping omc_HpcOmMemory_getNotOptimizedVarsByCacheLineMapping
+
+
+#define boxptr_HpcOmMemory_reverseCacheLineMapEntries omc_HpcOmMemory_reverseCacheLineMapEntries
+
+
+#define boxptr_HpcOmMemory_createCacheMapFromThreadAndSharedCLs omc_HpcOmMemory_createCacheMapFromThreadAndSharedCLs
+
+
+#define boxptr_HpcOmMemory_createSharedClLevelFix omc_HpcOmMemory_createSharedClLevelFix
+
+
+#define boxptr_HpcOmMemory_createVarInfos omc_HpcOmMemory_createVarInfos
+
+
+#define boxptr_HpcOmMemory_createCacheMapLevelOptimizedForTask omc_HpcOmMemory_createCacheMapLevelOptimizedForTask
+
+
+#define boxptr_HpcOmMemory_createCacheMapLevelOptimized0 omc_HpcOmMemory_createCacheMapLevelOptimized0
+
+
+DLLDirection
+modelica_metatype omc_HpcOmMemory_createMemoryMap(threadData_t *threadData, modelica_metatype _iModelInfo, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarToIndexMapping, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphT, modelica_metatype _iTaskGraphMeta, modelica_metatype _iEqSystems, modelica_string _iFileNamePrefix, modelica_metatype _iSchedulerInfo, modelica_metatype _iSchedule, modelica_metatype _iSccSimEqMapping, modelica_metatype _iCriticalPaths, modelica_metatype _iCriticalPathsWoC, modelica_string _iCriticalPathInfo, modelica_integer _iNumberOfThreads, modelica_metatype _iAllComponents, modelica_boolean _isInitial, modelica_metatype *out_oVarToArrayIndexMapping, modelica_metatype *out_oVarToIndexMapping);
+DLLDirection
+modelica_metatype boxptr_HpcOmMemory_createMemoryMap(threadData_t *threadData, modelica_metatype _iModelInfo, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarToIndexMapping, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphT, modelica_metatype _iTaskGraphMeta, modelica_metatype _iEqSystems, modelica_metatype _iFileNamePrefix, modelica_metatype _iSchedulerInfo, modelica_metatype _iSchedule, modelica_metatype _iSccSimEqMapping, modelica_metatype _iCriticalPaths, modelica_metatype _iCriticalPathsWoC, modelica_metatype _iCriticalPathInfo, modelica_metatype _iNumberOfThreads, modelica_metatype _iAllComponents, modelica_metatype _isInitial, modelica_metatype *out_oVarToArrayIndexMapping, modelica_metatype *out_oVarToIndexMapping);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmMemory_createMemoryMap,2,0) {(void*) boxptr_HpcOmMemory_createMemoryMap,0}};
+#define boxvar_HpcOmMemory_createMemoryMap MMC_REFSTRUCTLIT(boxvar_lit_HpcOmMemory_createMemoryMap)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

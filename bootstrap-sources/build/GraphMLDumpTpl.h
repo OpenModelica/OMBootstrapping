@@ -1,0 +1,177 @@
+#ifndef GraphMLDumpTpl__H
+#define GraphMLDumpTpl__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Tpl_BlockType_BT__INDENT__desc;
+
+extern struct record_description Tpl_IterOptions_ITER__OPTIONS__desc;
+
+extern struct record_description Tpl_StringToken_ST__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__NEW__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
+
+extern struct record_description Tpl_Text_MEM__TEXT__desc;
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpShapeType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_shape);
+#define boxptr_GraphMLDumpTpl_dumpShapeType omc_GraphMLDumpTpl_dumpShapeType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpShapeType,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpShapeType,0}};
+#define boxvar_GraphMLDumpTpl_dumpShapeType MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpShapeType)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpArrowType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_arrowType);
+#define boxptr_GraphMLDumpTpl_dumpArrowType omc_GraphMLDumpTpl_dumpArrowType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpArrowType,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpArrowType,0}};
+#define boxvar_GraphMLDumpTpl_dumpArrowType MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpArrowType)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpLineType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_lineType);
+#define boxptr_GraphMLDumpTpl_dumpLineType omc_GraphMLDumpTpl_dumpLineType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpLineType,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpLineType,0}};
+#define boxvar_GraphMLDumpTpl_dumpLineType MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpLineType)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpFontStyle(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fontStyle);
+#define boxptr_GraphMLDumpTpl_dumpFontStyle omc_GraphMLDumpTpl_dumpFontStyle
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpFontStyle,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpFontStyle,0}};
+#define boxvar_GraphMLDumpTpl_dumpFontStyle MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpFontStyle)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpColorOpt(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_colorOpt);
+#define boxptr_GraphMLDumpTpl_dumpColorOpt omc_GraphMLDumpTpl_dumpColorOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpColorOpt,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpColorOpt,0}};
+#define boxvar_GraphMLDumpTpl_dumpColorOpt MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpColorOpt)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpDirected(threadData_t *threadData, modelica_metatype _in_txt, modelica_boolean _in_a_directed);
+DLLDirection
+modelica_metatype boxptr_GraphMLDumpTpl_dumpDirected(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_directed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpDirected,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpDirected,0}};
+#define boxvar_GraphMLDumpTpl_dumpDirected MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpDirected)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpAttTarget(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_target);
+#define boxptr_GraphMLDumpTpl_dumpAttTarget omc_GraphMLDumpTpl_dumpAttTarget
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpAttTarget,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpAttTarget,0}};
+#define boxvar_GraphMLDumpTpl_dumpAttTarget MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpAttTarget)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpAttType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
+#define boxptr_GraphMLDumpTpl_dumpAttType omc_GraphMLDumpTpl_dumpAttType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpAttType,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpAttType,0}};
+#define boxvar_GraphMLDumpTpl_dumpAttType MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpAttType)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpAttDef(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_attribute);
+#define boxptr_GraphMLDumpTpl_dumpAttDef omc_GraphMLDumpTpl_dumpAttDef
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpAttDef,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpAttDef,0}};
+#define boxvar_GraphMLDumpTpl_dumpAttDef MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpAttDef)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpAttKey(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_key, modelica_metatype _in_a_graphAttributes);
+#define boxptr_GraphMLDumpTpl_dumpAttKey omc_GraphMLDumpTpl_dumpAttKey
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpAttKey,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpAttKey,0}};
+#define boxvar_GraphMLDumpTpl_dumpAttKey MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpAttKey)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpNodeLabel(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_nodeLabel);
+#define boxptr_GraphMLDumpTpl_dumpNodeLabel omc_GraphMLDumpTpl_dumpNodeLabel
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpNodeLabel,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpNodeLabel,0}};
+#define boxvar_GraphMLDumpTpl_dumpNodeLabel MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpNodeLabel)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpEdgeLabel(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_edgeLabel);
+#define boxptr_GraphMLDumpTpl_dumpEdgeLabel omc_GraphMLDumpTpl_dumpEdgeLabel
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpEdgeLabel,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpEdgeLabel,0}};
+#define boxvar_GraphMLDumpTpl_dumpEdgeLabel MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpEdgeLabel)
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpEdge(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_edge, modelica_string _in_a_graphEdgeKey, modelica_metatype _in_a_graphAttributes);
+#define boxptr_GraphMLDumpTpl_dumpEdge omc_GraphMLDumpTpl_dumpEdge
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpEdge,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpEdge,0}};
+#define boxvar_GraphMLDumpTpl_dumpEdge MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpEdge)
+
+
+#define boxptr_GraphMLDumpTpl_lm__18 omc_GraphMLDumpTpl_lm__18
+
+
+#define boxptr_GraphMLDumpTpl_lm__17 omc_GraphMLDumpTpl_lm__17
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpNode(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_node, modelica_metatype _in_a_allGraphs, modelica_metatype _in_a_allNodes, modelica_string _in_a_graphNodeKey, modelica_metatype _in_a_graphAttributes);
+#define boxptr_GraphMLDumpTpl_dumpNode omc_GraphMLDumpTpl_dumpNode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpNode,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpNode,0}};
+#define boxvar_GraphMLDumpTpl_dumpNode MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpNode)
+
+
+#define boxptr_GraphMLDumpTpl_fun__13 omc_GraphMLDumpTpl_fun__13
+
+
+#define boxptr_GraphMLDumpTpl_lm__12 omc_GraphMLDumpTpl_lm__12
+
+
+#define boxptr_GraphMLDumpTpl_lm__11 omc_GraphMLDumpTpl_lm__11
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpGraph(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_graph, modelica_metatype _in_a_allGraphs, modelica_metatype _in_a_allNodes, modelica_string _in_a_edgeDesc, modelica_string _in_a_graphNodeKey, modelica_metatype _in_a_graphAttributes);
+#define boxptr_GraphMLDumpTpl_dumpGraph omc_GraphMLDumpTpl_dumpGraph
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpGraph,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpGraph,0}};
+#define boxvar_GraphMLDumpTpl_dumpGraph MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpGraph)
+
+
+#define boxptr_GraphMLDumpTpl_lm__9 omc_GraphMLDumpTpl_lm__9
+
+
+#define boxptr_GraphMLDumpTpl_lm__8 omc_GraphMLDumpTpl_lm__8
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpGraphInfoInternal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_graphInfo);
+#define boxptr_GraphMLDumpTpl_dumpGraphInfoInternal omc_GraphMLDumpTpl_dumpGraphInfoInternal
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpGraphInfoInternal,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpGraphInfoInternal,0}};
+#define boxvar_GraphMLDumpTpl_dumpGraphInfoInternal MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpGraphInfoInternal)
+
+
+#define boxptr_GraphMLDumpTpl_lm__6 omc_GraphMLDumpTpl_lm__6
+
+
+#define boxptr_GraphMLDumpTpl_lm__5 omc_GraphMLDumpTpl_lm__5
+
+
+DLLDirection
+modelica_metatype omc_GraphMLDumpTpl_dumpGraphInfo(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_graphInfo, modelica_string _a_fileName);
+#define boxptr_GraphMLDumpTpl_dumpGraphInfo omc_GraphMLDumpTpl_dumpGraphInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpGraphInfo,2,0) {(void*) boxptr_GraphMLDumpTpl_dumpGraphInfo,0}};
+#define boxvar_GraphMLDumpTpl_dumpGraphInfo MMC_REFSTRUCTLIT(boxvar_lit_GraphMLDumpTpl_dumpGraphInfo)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

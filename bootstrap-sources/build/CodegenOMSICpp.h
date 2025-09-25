@@ -1,0 +1,69 @@
+#ifndef CodegenOMSICpp__H
+#define CodegenOMSICpp__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Tpl_IterOptions_ITER__OPTIONS__desc;
+
+extern struct record_description Tpl_StringToken_ST__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__NEW__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
+
+extern struct record_description Tpl_Text_MEM__TEXT__desc;
+
+
+DLLDirection
+modelica_metatype omc_CodegenOMSICpp_simulationOMSUCPPMainRunScript(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_string _in_a_preRunCommandLinux, modelica_string _in_a_preRunCommandWindows, modelica_string _in_a_execCommandLinux, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace);
+#define boxptr_CodegenOMSICpp_simulationOMSUCPPMainRunScript omc_CodegenOMSICpp_simulationOMSUCPPMainRunScript
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSICpp_simulationOMSUCPPMainRunScript,2,0) {(void*) boxptr_CodegenOMSICpp_simulationOMSUCPPMainRunScript,0}};
+#define boxvar_CodegenOMSICpp_simulationOMSUCPPMainRunScript MMC_REFSTRUCTLIT(boxvar_lit_CodegenOMSICpp_simulationOMSUCPPMainRunScript)
+
+
+#define boxptr_CodegenOMSICpp_fun__53 omc_CodegenOMSICpp_fun__53
+
+
+#define boxptr_CodegenOMSICpp_lm__51 omc_CodegenOMSICpp_lm__51
+
+
+#define boxptr_CodegenOMSICpp_fun__49 omc_CodegenOMSICpp_fun__49
+
+
+#define boxptr_CodegenOMSICpp_fun__48 omc_CodegenOMSICpp_fun__48
+
+
+DLLDirection
+modelica_metatype omc_CodegenOMSICpp_translateModel(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_string _a_FMUVersion, modelica_string _a_FMUType);
+#define boxptr_CodegenOMSICpp_translateModel omc_CodegenOMSICpp_translateModel
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSICpp_translateModel,2,0) {(void*) boxptr_CodegenOMSICpp_translateModel,0}};
+#define boxvar_CodegenOMSICpp_translateModel MMC_REFSTRUCTLIT(boxvar_lit_CodegenOMSICpp_translateModel)
+
+
+#define boxptr_CodegenOMSICpp_fun__46 omc_CodegenOMSICpp_fun__46
+
+#ifdef __cplusplus
+}
+#endif
+#endif

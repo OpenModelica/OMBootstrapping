@@ -5,37 +5,273 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-DLLExport
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description RewriteRules_Bind_BACKEND__BIND__desc;
+
+extern struct record_description RewriteRules_Bind_FRONTEND__BIND__desc;
+
+extern struct record_description RewriteRules_Rule_BACKEND__RULE__desc;
+
+extern struct record_description RewriteRules_Rule_FRONTEND__RULE__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_RewriteRules_stmtsToRules omc_RewriteRules_stmtsToRules
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_getRulesBackEnd(threadData_t *threadData, modelica_metatype _inRules);
+#define boxptr_RewriteRules_getRulesBackEnd omc_RewriteRules_getRulesBackEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_getRulesBackEnd,2,0) {(void*) boxptr_RewriteRules_getRulesBackEnd,0}};
+#define boxvar_RewriteRules_getRulesBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_getRulesBackEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_getRulesFrontEnd(threadData_t *threadData, modelica_metatype _inRules);
+#define boxptr_RewriteRules_getRulesFrontEnd omc_RewriteRules_getRulesFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_getRulesFrontEnd,2,0) {(void*) boxptr_RewriteRules_getRulesFrontEnd,0}};
+#define boxvar_RewriteRules_getRulesFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_getRulesFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_getAllRules(threadData_t *threadData);
+#define boxptr_RewriteRules_getAllRules omc_RewriteRules_getAllRules
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_getAllRules,2,0) {(void*) boxptr_RewriteRules_getAllRules,0}};
+#define boxvar_RewriteRules_getAllRules MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_getAllRules)
+
+
+DLLDirection
 void omc_RewriteRules_clearRules(threadData_t *threadData);
 #define boxptr_RewriteRules_clearRules omc_RewriteRules_clearRules
 static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_clearRules,2,0) {(void*) boxptr_RewriteRules_clearRules,0}};
 #define boxvar_RewriteRules_clearRules MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_clearRules)
-DLLExport
+
+
+DLLDirection
+void omc_RewriteRules_loadRulesFromFile(threadData_t *threadData, modelica_string _inFile);
+#define boxptr_RewriteRules_loadRulesFromFile omc_RewriteRules_loadRulesFromFile
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_loadRulesFromFile,2,0) {(void*) boxptr_RewriteRules_loadRulesFromFile,0}};
+#define boxvar_RewriteRules_loadRulesFromFile MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_loadRulesFromFile)
+
+
+DLLDirection
+modelica_boolean omc_RewriteRules_noRewriteRulesBackEnd(threadData_t *threadData);
+DLLDirection
+modelica_metatype boxptr_RewriteRules_noRewriteRulesBackEnd(threadData_t *threadData);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_noRewriteRulesBackEnd,2,0) {(void*) boxptr_RewriteRules_noRewriteRulesBackEnd,0}};
+#define boxvar_RewriteRules_noRewriteRulesBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_noRewriteRulesBackEnd)
+
+
+DLLDirection
+modelica_boolean omc_RewriteRules_noRewriteRulesFrontEnd(threadData_t *threadData);
+DLLDirection
+modelica_metatype boxptr_RewriteRules_noRewriteRulesFrontEnd(threadData_t *threadData);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_noRewriteRulesFrontEnd,2,0) {(void*) boxptr_RewriteRules_noRewriteRulesFrontEnd,0}};
+#define boxvar_RewriteRules_noRewriteRulesFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_noRewriteRulesFrontEnd)
+
+
+DLLDirection
+modelica_boolean omc_RewriteRules_noRewriteRules(threadData_t *threadData);
+DLLDirection
+modelica_metatype boxptr_RewriteRules_noRewriteRules(threadData_t *threadData);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_noRewriteRules,2,0) {(void*) boxptr_RewriteRules_noRewriteRules,0}};
+#define boxvar_RewriteRules_noRewriteRules MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_noRewriteRules)
+
+
+DLLDirection
 void omc_RewriteRules_loadRules(threadData_t *threadData);
 #define boxptr_RewriteRules_loadRules omc_RewriteRules_loadRules
 static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_loadRules,2,0) {(void*) boxptr_RewriteRules_loadRules,0}};
 #define boxvar_RewriteRules_loadRules MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_loadRules)
-DLLExport
-modelica_boolean omc_RewriteRules_noRewriteRulesBackEnd(threadData_t *threadData);
-DLLExport
-modelica_metatype boxptr_RewriteRules_noRewriteRulesBackEnd(threadData_t *threadData);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_noRewriteRulesBackEnd,2,0) {(void*) boxptr_RewriteRules_noRewriteRulesBackEnd,0}};
-#define boxvar_RewriteRules_noRewriteRulesBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_noRewriteRulesBackEnd)
-DLLExport
-modelica_boolean omc_RewriteRules_noRewriteRulesFrontEnd(threadData_t *threadData);
-DLLExport
-modelica_metatype boxptr_RewriteRules_noRewriteRulesFrontEnd(threadData_t *threadData);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_noRewriteRulesFrontEnd,2,0) {(void*) boxptr_RewriteRules_noRewriteRulesFrontEnd,0}};
-#define boxvar_RewriteRules_noRewriteRulesFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_noRewriteRulesFrontEnd)
-DLLExport
+
+
+DLLDirection
+modelica_boolean omc_RewriteRules_isPlaceHolderBackEnd(threadData_t *threadData, modelica_metatype _inExp);
+DLLDirection
+modelica_metatype boxptr_RewriteRules_isPlaceHolderBackEnd(threadData_t *threadData, modelica_metatype _inExp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_isPlaceHolderBackEnd,2,0) {(void*) boxptr_RewriteRules_isPlaceHolderBackEnd,0}};
+#define boxvar_RewriteRules_isPlaceHolderBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_isPlaceHolderBackEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchesExpLstLstBackEnd(threadData_t *threadData, modelica_metatype _inExps1, modelica_metatype _inExps2, modelica_metatype _inAcc);
+#define boxptr_RewriteRules_matchesExpLstLstBackEnd omc_RewriteRules_matchesExpLstLstBackEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpLstLstBackEnd,2,0) {(void*) boxptr_RewriteRules_matchesExpLstLstBackEnd,0}};
+#define boxvar_RewriteRules_matchesExpLstLstBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpLstLstBackEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchesExpLstBackEnd(threadData_t *threadData, modelica_metatype _inExps1, modelica_metatype _inExps2, modelica_metatype _inAcc);
+#define boxptr_RewriteRules_matchesExpLstBackEnd omc_RewriteRules_matchesExpLstBackEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpLstBackEnd,2,0) {(void*) boxptr_RewriteRules_matchesExpLstBackEnd,0}};
+#define boxvar_RewriteRules_matchesExpLstBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpLstBackEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchesExpOptBackEnd(threadData_t *threadData, modelica_metatype _inOExp1, modelica_metatype _inOExp2, modelica_metatype _inAcc);
+#define boxptr_RewriteRules_matchesExpOptBackEnd omc_RewriteRules_matchesExpOptBackEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpOptBackEnd,2,0) {(void*) boxptr_RewriteRules_matchesExpOptBackEnd,0}};
+#define boxvar_RewriteRules_matchesExpOptBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpOptBackEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inUnifyWith, modelica_metatype _inAcc);
+#define boxptr_RewriteRules_matchesBackEnd omc_RewriteRules_matchesBackEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchesBackEnd,2,0) {(void*) boxptr_RewriteRules_matchesBackEnd,0}};
+#define boxvar_RewriteRules_matchesBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchesBackEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_replaceBindBackEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inBinds);
+#define boxptr_RewriteRules_replaceBindBackEnd omc_RewriteRules_replaceBindBackEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_replaceBindBackEnd,2,0) {(void*) boxptr_RewriteRules_replaceBindBackEnd,0}};
+#define boxvar_RewriteRules_replaceBindBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_replaceBindBackEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_replaceBindsBackEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inBinds, modelica_metatype *out_outBinds);
+#define boxptr_RewriteRules_replaceBindsBackEnd omc_RewriteRules_replaceBindsBackEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_replaceBindsBackEnd,2,0) {(void*) boxptr_RewriteRules_replaceBindsBackEnd,0}};
+#define boxvar_RewriteRules_replaceBindsBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_replaceBindsBackEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_rewriteExpBackEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inBinds);
+#define boxptr_RewriteRules_rewriteExpBackEnd omc_RewriteRules_rewriteExpBackEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_rewriteExpBackEnd,2,0) {(void*) boxptr_RewriteRules_rewriteExpBackEnd,0}};
+#define boxvar_RewriteRules_rewriteExpBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_rewriteExpBackEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchAndRewriteExpBackEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inRules, modelica_boolean *out_changed);
+DLLDirection
+modelica_metatype boxptr_RewriteRules_matchAndRewriteExpBackEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inRules, modelica_metatype *out_changed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchAndRewriteExpBackEnd,2,0) {(void*) boxptr_RewriteRules_matchAndRewriteExpBackEnd,0}};
+#define boxvar_RewriteRules_matchAndRewriteExpBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchAndRewriteExpBackEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_rewriteBackEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_boolean *out_isChanged);
+DLLDirection
+modelica_metatype boxptr_RewriteRules_rewriteBackEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype *out_isChanged);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_rewriteBackEnd,2,0) {(void*) boxptr_RewriteRules_rewriteBackEnd,0}};
+#define boxvar_RewriteRules_rewriteBackEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_rewriteBackEnd)
+
+
+DLLDirection
+modelica_boolean omc_RewriteRules_isPlaceHolderFrontEnd(threadData_t *threadData, modelica_metatype _inExp);
+DLLDirection
+modelica_metatype boxptr_RewriteRules_isPlaceHolderFrontEnd(threadData_t *threadData, modelica_metatype _inExp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_isPlaceHolderFrontEnd,2,0) {(void*) boxptr_RewriteRules_isPlaceHolderFrontEnd,0}};
+#define boxvar_RewriteRules_isPlaceHolderFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_isPlaceHolderFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchesExpLstLstFrontEnd(threadData_t *threadData, modelica_metatype _inExps1, modelica_metatype _inExps2, modelica_metatype _inAcc);
+#define boxptr_RewriteRules_matchesExpLstLstFrontEnd omc_RewriteRules_matchesExpLstLstFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpLstLstFrontEnd,2,0) {(void*) boxptr_RewriteRules_matchesExpLstLstFrontEnd,0}};
+#define boxvar_RewriteRules_matchesExpLstLstFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpLstLstFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchesNargsFrontEnd(threadData_t *threadData, modelica_metatype _inNargs1, modelica_metatype _inNargs2, modelica_metatype _inAcc);
+#define boxptr_RewriteRules_matchesNargsFrontEnd omc_RewriteRules_matchesNargsFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchesNargsFrontEnd,2,0) {(void*) boxptr_RewriteRules_matchesNargsFrontEnd,0}};
+#define boxvar_RewriteRules_matchesNargsFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchesNargsFrontEnd)
+
+
+DLLDirection
+modelica_boolean omc_RewriteRules_inNargComp(threadData_t *threadData, modelica_metatype _inNarg1, modelica_metatype _inNarg2);
+DLLDirection
+modelica_metatype boxptr_RewriteRules_inNargComp(threadData_t *threadData, modelica_metatype _inNarg1, modelica_metatype _inNarg2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_inNargComp,2,0) {(void*) boxptr_RewriteRules_inNargComp,0}};
+#define boxvar_RewriteRules_inNargComp MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_inNargComp)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_sortNargsFrontEnd(threadData_t *threadData, modelica_metatype _inNargs);
+#define boxptr_RewriteRules_sortNargsFrontEnd omc_RewriteRules_sortNargsFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_sortNargsFrontEnd,2,0) {(void*) boxptr_RewriteRules_sortNargsFrontEnd,0}};
+#define boxvar_RewriteRules_sortNargsFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_sortNargsFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchesFargsFrontEnd(threadData_t *threadData, modelica_metatype _inFargs1, modelica_metatype _inFargs2, modelica_metatype _inAcc);
+#define boxptr_RewriteRules_matchesFargsFrontEnd omc_RewriteRules_matchesFargsFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchesFargsFrontEnd,2,0) {(void*) boxptr_RewriteRules_matchesFargsFrontEnd,0}};
+#define boxvar_RewriteRules_matchesFargsFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchesFargsFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchesExpLstFrontEnd(threadData_t *threadData, modelica_metatype _inExps1, modelica_metatype _inExps2, modelica_metatype _inAcc);
+#define boxptr_RewriteRules_matchesExpLstFrontEnd omc_RewriteRules_matchesExpLstFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpLstFrontEnd,2,0) {(void*) boxptr_RewriteRules_matchesExpLstFrontEnd,0}};
+#define boxvar_RewriteRules_matchesExpLstFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpLstFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchesExpOptFrontEnd(threadData_t *threadData, modelica_metatype _inOExp1, modelica_metatype _inOExp2, modelica_metatype _inAcc);
+#define boxptr_RewriteRules_matchesExpOptFrontEnd omc_RewriteRules_matchesExpOptFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpOptFrontEnd,2,0) {(void*) boxptr_RewriteRules_matchesExpOptFrontEnd,0}};
+#define boxvar_RewriteRules_matchesExpOptFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchesExpOptFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inUnifyWith, modelica_metatype _inAcc);
+#define boxptr_RewriteRules_matchesFrontEnd omc_RewriteRules_matchesFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchesFrontEnd,2,0) {(void*) boxptr_RewriteRules_matchesFrontEnd,0}};
+#define boxvar_RewriteRules_matchesFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchesFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_replaceBindFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inBinds);
+#define boxptr_RewriteRules_replaceBindFrontEnd omc_RewriteRules_replaceBindFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_replaceBindFrontEnd,2,0) {(void*) boxptr_RewriteRules_replaceBindFrontEnd,0}};
+#define boxvar_RewriteRules_replaceBindFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_replaceBindFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_replaceBindsFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inBinds, modelica_metatype *out_outBinds);
+#define boxptr_RewriteRules_replaceBindsFrontEnd omc_RewriteRules_replaceBindsFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_replaceBindsFrontEnd,2,0) {(void*) boxptr_RewriteRules_replaceBindsFrontEnd,0}};
+#define boxvar_RewriteRules_replaceBindsFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_replaceBindsFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_rewriteExpFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inBinds);
+#define boxptr_RewriteRules_rewriteExpFrontEnd omc_RewriteRules_rewriteExpFrontEnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_rewriteExpFrontEnd,2,0) {(void*) boxptr_RewriteRules_rewriteExpFrontEnd,0}};
+#define boxvar_RewriteRules_rewriteExpFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_rewriteExpFrontEnd)
+
+
+DLLDirection
+modelica_metatype omc_RewriteRules_matchAndRewriteExpFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inRules, modelica_boolean *out_changed);
+DLLDirection
+modelica_metatype boxptr_RewriteRules_matchAndRewriteExpFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inRules, modelica_metatype *out_changed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_matchAndRewriteExpFrontEnd,2,0) {(void*) boxptr_RewriteRules_matchAndRewriteExpFrontEnd,0}};
+#define boxvar_RewriteRules_matchAndRewriteExpFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_matchAndRewriteExpFrontEnd)
+
+
+DLLDirection
 modelica_metatype omc_RewriteRules_rewriteFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_boolean *out_isChanged);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_RewriteRules_rewriteFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype *out_isChanged);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_RewriteRules_rewriteFrontEnd,2,0) {(void*) boxptr_RewriteRules_rewriteFrontEnd,0}};
 #define boxvar_RewriteRules_rewriteFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_RewriteRules_rewriteFrontEnd)
+
 #ifdef __cplusplus
 }
 #endif

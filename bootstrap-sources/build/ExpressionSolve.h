@@ -1,0 +1,173 @@
+#ifndef ExpressionSolve__H
+#define ExpressionSolve__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description Absyn_Path_QUALIFIED__desc;
+
+extern struct record_description BackendDAE_Equation_ALGORITHM__desc;
+
+extern struct record_description BackendDAE_Equation_IF__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_SOLVED__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_UNKNOWN__EQUATION__KIND__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_Jacobian_EMPTY__JACOBIAN__desc;
+
+extern struct record_description BackendDAE_JacobianType_JAC__NONLINEAR__desc;
+
+extern struct record_description BackendDAE_Matching_MATCHING__desc;
+
+extern struct record_description BackendDAE_StrongComponent_EQUATIONSYSTEM__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_CAST__desc;
+
+extern struct record_description DAE_Exp_ENUM__LITERAL__desc;
+
+extern struct record_description DAE_Exp_IFEXP__desc;
+
+extern struct record_description DAE_Exp_LBINARY__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Exp_RELATION__desc;
+
+extern struct record_description DAE_Exp_SCONST__desc;
+
+extern struct record_description DAE_Expand_EXPAND__desc;
+
+extern struct record_description DAE_InlineType_DEFAULT__INLINE__desc;
+
+extern struct record_description DAE_InlineType_NORM__INLINE__desc;
+
+extern struct record_description DAE_Operator_ADD__desc;
+
+extern struct record_description DAE_Operator_AND__desc;
+
+extern struct record_description DAE_Operator_EQUAL__desc;
+
+extern struct record_description DAE_Operator_GREATEREQ__desc;
+
+extern struct record_description DAE_Operator_LESS__desc;
+
+extern struct record_description DAE_Operator_LESSEQ__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSERT__desc;
+
+extern struct record_description DAE_Type_T__BOOL__desc;
+
+extern struct record_description DAE_Type_T__INTEGER__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_Type_T__STRING__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_ExpressionSolve_absDiff omc_ExpressionSolve_absDiff
+
+
+#define boxptr_ExpressionSolve_helpInvCos3 omc_ExpressionSolve_helpInvCos3
+
+
+#define boxptr_ExpressionSolve_makeInitialGuess3 omc_ExpressionSolve_makeInitialGuess3
+
+
+#define boxptr_ExpressionSolve_makeInitialGuess2 omc_ExpressionSolve_makeInitialGuess2
+
+
+#define boxptr_ExpressionSolve_makeInitialGuess omc_ExpressionSolve_makeInitialGuess
+
+
+#define boxptr_ExpressionSolve_makeDomainAssert omc_ExpressionSolve_makeDomainAssert
+
+
+#define boxptr_ExpressionSolve_makeProductLstSort2 omc_ExpressionSolve_makeProductLstSort2
+
+
+#define boxptr_ExpressionSolve_makeProductLstSort omc_ExpressionSolve_makeProductLstSort
+
+
+#define boxptr_ExpressionSolve_simplifyBinaryMulCoeff omc_ExpressionSolve_simplifyBinaryMulCoeff
+
+
+DLLDirection
+modelica_metatype omc_ExpressionSolve_collectX(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp3, modelica_boolean _expand, modelica_metatype *out_outRhs);
+DLLDirection
+modelica_metatype boxptr_ExpressionSolve_collectX(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp3, modelica_metatype _expand, modelica_metatype *out_outRhs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_collectX,2,0) {(void*) boxptr_ExpressionSolve_collectX,0}};
+#define boxvar_ExpressionSolve_collectX MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSolve_collectX)
+
+
+#define boxptr_ExpressionSolve_expAddX2 omc_ExpressionSolve_expAddX2
+
+
+#define boxptr_ExpressionSolve_expAddX omc_ExpressionSolve_expAddX
+
+
+DLLDirection
+modelica_metatype omc_ExpressionSolve_preprocessingSolve(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fx, modelica_metatype __omcQ_24in_5Fy, modelica_metatype _inExp3, modelica_metatype _optCond, modelica_metatype _functions, modelica_metatype _uniqueEqIndex, modelica_integer _idepth, modelica_boolean _doInline, modelica_metatype *out_y, modelica_metatype *out_eqnForNewVars, modelica_metatype *out_newVarsCrefs, modelica_integer *out_depth);
+DLLDirection
+modelica_metatype boxptr_ExpressionSolve_preprocessingSolve(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fx, modelica_metatype __omcQ_24in_5Fy, modelica_metatype _inExp3, modelica_metatype _optCond, modelica_metatype _functions, modelica_metatype _uniqueEqIndex, modelica_metatype _idepth, modelica_metatype _doInline, modelica_metatype *out_y, modelica_metatype *out_eqnForNewVars, modelica_metatype *out_newVarsCrefs, modelica_metatype *out_depth);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_preprocessingSolve,2,0) {(void*) boxptr_ExpressionSolve_preprocessingSolve,0}};
+#define boxvar_ExpressionSolve_preprocessingSolve MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSolve_preprocessingSolve)
+
+
+#define boxptr_ExpressionSolve_generateAssertType omc_ExpressionSolve_generateAssertType
+
+
+DLLDirection
+modelica_metatype omc_ExpressionSolve_solve2(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2, modelica_metatype _inExp3, modelica_metatype _functions, modelica_metatype _uniqueEqIndex, modelica_boolean _doInline, modelica_boolean _isContinuousIntegration, modelica_metatype *out_outAsserts, modelica_metatype *out_eqnForNewVars, modelica_metatype *out_newVarsCrefs);
+DLLDirection
+modelica_metatype boxptr_ExpressionSolve_solve2(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2, modelica_metatype _inExp3, modelica_metatype _functions, modelica_metatype _uniqueEqIndex, modelica_metatype _doInline, modelica_metatype _isContinuousIntegration, modelica_metatype *out_outAsserts, modelica_metatype *out_eqnForNewVars, modelica_metatype *out_newVarsCrefs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_solve2,2,0) {(void*) boxptr_ExpressionSolve_solve2,0}};
+#define boxvar_ExpressionSolve_solve2 MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSolve_solve2)
+
+
+DLLDirection
+modelica_metatype omc_ExpressionSolve_solve(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2, modelica_metatype _inExp3, modelica_metatype _functions, modelica_metatype *out_outAsserts);
+#define boxptr_ExpressionSolve_solve omc_ExpressionSolve_solve
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_solve,2,0) {(void*) boxptr_ExpressionSolve_solve,0}};
+#define boxvar_ExpressionSolve_solve MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSolve_solve)
+
+
+#define boxptr_ExpressionSolve_printTryToSolve omc_ExpressionSolve_printTryToSolve
+
+
+DLLDirection
+modelica_metatype omc_ExpressionSolve_solveSimpleEquations(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fdae);
+#define boxptr_ExpressionSolve_solveSimpleEquations omc_ExpressionSolve_solveSimpleEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_solveSimpleEquations,2,0) {(void*) boxptr_ExpressionSolve_solveSimpleEquations,0}};
+#define boxvar_ExpressionSolve_solveSimpleEquations MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSolve_solveSimpleEquations)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

@@ -5,14 +5,204 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-DLLExport
+
+extern struct record_description Absyn_AlgorithmItem_ALGORITHMITEM__desc;
+
+extern struct record_description Absyn_Annotation_ANNOTATION__desc;
+
+extern struct record_description Absyn_ClassDef_DERIVED__desc;
+
+extern struct record_description Absyn_ClassDef_PARTS__desc;
+
+extern struct record_description Absyn_ClassPart_ALGORITHMS__desc;
+
+extern struct record_description Absyn_ClassPart_EQUATIONS__desc;
+
+extern struct record_description Absyn_ClassPart_INITIALALGORITHMS__desc;
+
+extern struct record_description Absyn_ClassPart_INITIALEQUATIONS__desc;
+
+extern struct record_description Absyn_ClassPart_PROTECTED__desc;
+
+extern struct record_description Absyn_ClassPart_PUBLIC__desc;
+
+extern struct record_description Absyn_Comment_COMMENT__desc;
+
+extern struct record_description Absyn_ComponentItem_COMPONENTITEM__desc;
+
+extern struct record_description Absyn_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description Absyn_ComponentRef_CREF__QUAL__desc;
+
+extern struct record_description Absyn_ConstrainClass_CONSTRAINCLASS__desc;
+
+extern struct record_description Absyn_Each_NON__EACH__desc;
+
+extern struct record_description Absyn_Element_ELEMENT__desc;
+
+extern struct record_description Absyn_ElementArg_MODIFICATION__desc;
+
+extern struct record_description Absyn_ElementItem_ELEMENTITEM__desc;
+
+extern struct record_description Absyn_ElementSpec_CLASSDEF__desc;
+
+extern struct record_description Absyn_ElementSpec_COMPONENTS__desc;
+
+extern struct record_description Absyn_EqMod_EQMOD__desc;
+
+extern struct record_description Absyn_EqMod_NOMOD__desc;
+
+extern struct record_description Absyn_EquationItem_EQUATIONITEM__desc;
+
+extern struct record_description Absyn_Exp_ARRAY__desc;
+
+extern struct record_description Absyn_Exp_BOOL__desc;
+
+extern struct record_description Absyn_Exp_CALL__desc;
+
+extern struct record_description Absyn_Exp_CREF__desc;
+
+extern struct record_description Absyn_Exp_INTEGER__desc;
+
+extern struct record_description Absyn_Exp_REAL__desc;
+
+extern struct record_description Absyn_FunctionArgs_FUNCTIONARGS__desc;
+
+extern struct record_description Absyn_Modification_CLASSMOD__desc;
+
+extern struct record_description Absyn_NamedArg_NAMEDARG__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description Absyn_TypeSpec_TPATH__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_Refactor_fixPaths omc_Refactor_fixPaths
+
+
+#define boxptr_Refactor_addContext omc_Refactor_addContext
+
+
+#define boxptr_Refactor_matrixToArray omc_Refactor_matrixToArray
+
+
+#define boxptr_Refactor_setDefaultLineInList omc_Refactor_setDefaultLineInList
+
+
+#define boxptr_Refactor_setDefaultFillColor omc_Refactor_setDefaultFillColor
+
+
+#define boxptr_Refactor_removeFillPatternInList omc_Refactor_removeFillPatternInList
+
+
+#define boxptr_Refactor_insertFillPatternInList omc_Refactor_insertFillPatternInList
+
+
+#define boxptr_Refactor_cleanStyleAttrs2 omc_Refactor_cleanStyleAttrs2
+
+
+#define boxptr_Refactor_cleanStyleAttrs omc_Refactor_cleanStyleAttrs
+
+
+#define boxptr_Refactor_transAnnLstToNamedArgs omc_Refactor_transAnnLstToNamedArgs
+
+
+#define boxptr_Refactor_transAnnLstToCalls omc_Refactor_transAnnLstToCalls
+
+
+#define boxptr_Refactor_getCoordSysAnn omc_Refactor_getCoordSysAnn
+
+
+#define boxptr_Refactor_transformClassAnnList omc_Refactor_transformClassAnnList
+
+
+#define boxptr_Refactor_transformConnectAnnList omc_Refactor_transformConnectAnnList
+
+
+#define boxptr_Refactor_getCoordsFromLayerArgs omc_Refactor_getCoordsFromLayerArgs
+
+
+#define boxptr_Refactor_getExtentModification omc_Refactor_getExtentModification
+
+
+#define boxptr_Refactor_getCoordsFromCoordSysArgs omc_Refactor_getCoordsFromCoordSysArgs
+
+
+#define boxptr_Refactor_getCoordsInAnnList omc_Refactor_getCoordsInAnnList
+
+
+#define boxptr_Refactor_getCoordsInClass omc_Refactor_getCoordsInClass
+
+
+#define boxptr_Refactor_getCoordsInPath omc_Refactor_getCoordsInPath
+
+
+#define boxptr_Refactor_getDiagramTransformation omc_Refactor_getDiagramTransformation
+
+
+#define boxptr_Refactor_getIconTransformation omc_Refactor_getIconTransformation
+
+
+#define boxptr_Refactor_getRotationDegree omc_Refactor_getRotationDegree
+
+
+#define boxptr_Refactor_getRestrictionInClass omc_Refactor_getRestrictionInClass
+
+
+#define boxptr_Refactor_getRestrictionFromPath omc_Refactor_getRestrictionFromPath
+
+
+#define boxptr_Refactor_transformComponentAnnList omc_Refactor_transformComponentAnnList
+
+
+#define boxptr_Refactor_refactorGraphAnnInComponentItem omc_Refactor_refactorGraphAnnInComponentItem
+
+
+#define boxptr_Refactor_refactorGraphAnnInElSpec omc_Refactor_refactorGraphAnnInElSpec
+
+
+#define boxptr_Refactor_refactorConstrainClass omc_Refactor_refactorConstrainClass
+
+
+#define boxptr_Refactor_refactorGraphAnnInElement omc_Refactor_refactorGraphAnnInElement
+
+
+#define boxptr_Refactor_refactorGraphAnnInAlgItem omc_Refactor_refactorGraphAnnInAlgItem
+
+
+#define boxptr_Refactor_refactorGraphAnnInEqItem omc_Refactor_refactorGraphAnnInEqItem
+
+
+#define boxptr_Refactor_refactorGraphAnnInElItem omc_Refactor_refactorGraphAnnInElItem
+
+
+#define boxptr_Refactor_refactorGraphAnnInContentList omc_Refactor_refactorGraphAnnInContentList
+
+
+#define boxptr_Refactor_refactorGraphAnnInClassPart omc_Refactor_refactorGraphAnnInClassPart
+
+
+#define boxptr_Refactor_refactorGraphAnnInClassParts omc_Refactor_refactorGraphAnnInClassParts
+
+
+#define boxptr_Refactor_refactorGraphAnnInClassDef omc_Refactor_refactorGraphAnnInClassDef
+
+
+#define boxptr_Refactor_refactorGraphAnnInClass omc_Refactor_refactorGraphAnnInClass
+
+
+DLLDirection
 modelica_metatype omc_Refactor_refactorGraphicalAnnotation(threadData_t *threadData, modelica_metatype _wholeAST, modelica_metatype _classToRefactor);
 #define boxptr_Refactor_refactorGraphicalAnnotation omc_Refactor_refactorGraphicalAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Refactor_refactorGraphicalAnnotation,2,0) {(void*) boxptr_Refactor_refactorGraphicalAnnotation,0}};
 #define boxvar_Refactor_refactorGraphicalAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Refactor_refactorGraphicalAnnotation)
+
 #ifdef __cplusplus
 }
 #endif

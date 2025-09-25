@@ -1,0 +1,505 @@
+#ifndef NFSimplifyExp__H
+#define NFSimplifyExp__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description DAE_FunctionAttributes_FUNCTION__ATTRIBUTES__desc;
+
+extern struct record_description DAE_FunctionBuiltin_FUNCTION__BUILTIN__desc;
+
+extern struct record_description DAE_FunctionParallelism_FP__NON__PARALLEL__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFCall_TYPED__ARRAY__CONSTRUCTOR__desc;
+
+extern struct record_description NFCeval_EvalTarget_EVAL__TARGET__desc;
+
+extern struct record_description NFComponent_COMPONENT__desc;
+
+extern struct record_description NFExpression_BINARY__desc;
+
+extern struct record_description NFExpression_BOX__desc;
+
+extern struct record_description NFExpression_CALL__desc;
+
+extern struct record_description NFExpression_CAST__desc;
+
+extern struct record_description NFExpression_EMPTY__desc;
+
+extern struct record_description NFExpression_IF__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFExpression_LBINARY__desc;
+
+extern struct record_description NFExpression_LUNARY__desc;
+
+extern struct record_description NFExpression_MULTARY__desc;
+
+extern struct record_description NFExpression_RANGE__desc;
+
+extern struct record_description NFExpression_REAL__desc;
+
+extern struct record_description NFExpression_RELATION__desc;
+
+extern struct record_description NFExpression_SIZE__desc;
+
+extern struct record_description NFExpression_SUBSCRIPTED__EXP__desc;
+
+extern struct record_description NFExpression_UNBOX__desc;
+
+extern struct record_description NFFunction_Function_FUNCTION__desc;
+
+extern struct record_description NFInstNode_InstNode_COMPONENT__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
+
+extern struct record_description NFOperator_OPERATOR__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description NFSubscript_INDEX__desc;
+
+extern struct record_description NFType_ARRAY__desc;
+
+extern struct record_description NFType_INTEGER__desc;
+
+extern struct record_description NFType_REAL__desc;
+
+extern struct record_description NFType_STRING__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFSimplifyExp_simplifyURIToFilename omc_NFSimplifyExp_simplifyURIToFilename
+
+
+#define boxptr_NFSimplifyExp_removeTrivialScalarProduct omc_NFSimplifyExp_removeTrivialScalarProduct
+
+
+#define boxptr_NFSimplifyExp_combineBinariesSubscript omc_NFSimplifyExp_combineBinariesSubscript
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_splitMultary(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFSimplifyExp_splitMultary omc_NFSimplifyExp_splitMultary
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_splitMultary,2,0) {(void*) boxptr_NFSimplifyExp_splitMultary,0}};
+#define boxvar_NFSimplifyExp_splitMultary MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_splitMultary)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_combineBinaries(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFSimplifyExp_combineBinaries omc_NFSimplifyExp_combineBinaries
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_combineBinaries,2,0) {(void*) boxptr_NFSimplifyExp_combineBinaries,0}};
+#define boxvar_NFSimplifyExp_combineBinaries MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_combineBinaries)
+
+
+#define boxptr_NFSimplifyExp_cancelTermsInMultary omc_NFSimplifyExp_cancelTermsInMultary
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_combineConstantNumbers(threadData_t *threadData, modelica_metatype _const, modelica_metatype _inv_const, modelica_integer _mcl, modelica_metatype _ty);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_combineConstantNumbers(threadData_t *threadData, modelica_metatype _const, modelica_metatype _inv_const, modelica_metatype _mcl, modelica_metatype _ty);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_combineConstantNumbers,2,0) {(void*) boxptr_NFSimplifyExp_combineConstantNumbers,0}};
+#define boxvar_NFSimplifyExp_combineConstantNumbers MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_combineConstantNumbers)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyRecordElement(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFSimplifyExp_simplifyRecordElement omc_NFSimplifyExp_simplifyRecordElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyRecordElement,2,0) {(void*) boxptr_NFSimplifyExp_simplifyRecordElement,0}};
+#define boxvar_NFSimplifyExp_simplifyRecordElement MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyRecordElement)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyTupleElement(threadData_t *threadData, modelica_metatype __omcQ_24in_5FtupleExp);
+#define boxptr_NFSimplifyExp_simplifyTupleElement omc_NFSimplifyExp_simplifyTupleElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyTupleElement,2,0) {(void*) boxptr_NFSimplifyExp_simplifyTupleElement,0}};
+#define boxvar_NFSimplifyExp_simplifyTupleElement MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyTupleElement)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifySubscriptedExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5FsubscriptedExp);
+#define boxptr_NFSimplifyExp_simplifySubscriptedExp omc_NFSimplifyExp_simplifySubscriptedExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifySubscriptedExp,2,0) {(void*) boxptr_NFSimplifyExp_simplifySubscriptedExp,0}};
+#define boxvar_NFSimplifyExp_simplifySubscriptedExp MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifySubscriptedExp)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyCast(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _ty);
+#define boxptr_NFSimplifyExp_simplifyCast omc_NFSimplifyExp_simplifyCast
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyCast,2,0) {(void*) boxptr_NFSimplifyExp_simplifyCast,0}};
+#define boxvar_NFSimplifyExp_simplifyCast MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyCast)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyIf(threadData_t *threadData, modelica_metatype __omcQ_24in_5FifExp);
+#define boxptr_NFSimplifyExp_simplifyIf omc_NFSimplifyExp_simplifyIf
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyIf,2,0) {(void*) boxptr_NFSimplifyExp_simplifyIf,0}};
+#define boxvar_NFSimplifyExp_simplifyIf MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyIf)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyRelation(threadData_t *threadData, modelica_metatype __omcQ_24in_5FrelationExp);
+#define boxptr_NFSimplifyExp_simplifyRelation omc_NFSimplifyExp_simplifyRelation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyRelation,2,0) {(void*) boxptr_NFSimplifyExp_simplifyRelation,0}};
+#define boxvar_NFSimplifyExp_simplifyRelation MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyRelation)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyLogicUnary(threadData_t *threadData, modelica_metatype __omcQ_24in_5FunaryExp);
+#define boxptr_NFSimplifyExp_simplifyLogicUnary omc_NFSimplifyExp_simplifyLogicUnary
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyLogicUnary,2,0) {(void*) boxptr_NFSimplifyExp_simplifyLogicUnary,0}};
+#define boxvar_NFSimplifyExp_simplifyLogicUnary MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyLogicUnary)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyLogicBinaryOr(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _op, modelica_metatype _exp2);
+#define boxptr_NFSimplifyExp_simplifyLogicBinaryOr omc_NFSimplifyExp_simplifyLogicBinaryOr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyLogicBinaryOr,2,0) {(void*) boxptr_NFSimplifyExp_simplifyLogicBinaryOr,0}};
+#define boxvar_NFSimplifyExp_simplifyLogicBinaryOr MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyLogicBinaryOr)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyLogicBinaryAnd(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _op, modelica_metatype _exp2);
+#define boxptr_NFSimplifyExp_simplifyLogicBinaryAnd omc_NFSimplifyExp_simplifyLogicBinaryAnd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyLogicBinaryAnd,2,0) {(void*) boxptr_NFSimplifyExp_simplifyLogicBinaryAnd,0}};
+#define boxvar_NFSimplifyExp_simplifyLogicBinaryAnd MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyLogicBinaryAnd)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyLogicBinary(threadData_t *threadData, modelica_metatype __omcQ_24in_5FbinaryExp);
+#define boxptr_NFSimplifyExp_simplifyLogicBinary omc_NFSimplifyExp_simplifyLogicBinary
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyLogicBinary,2,0) {(void*) boxptr_NFSimplifyExp_simplifyLogicBinary,0}};
+#define boxvar_NFSimplifyExp_simplifyLogicBinary MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyLogicBinary)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyUnarySign(threadData_t *threadData, modelica_metatype __omcQ_24in_5FunaryExp, modelica_boolean _isNegative);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplifyUnarySign(threadData_t *threadData, modelica_metatype __omcQ_24in_5FunaryExp, modelica_metatype _isNegative);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyUnarySign,2,0) {(void*) boxptr_NFSimplifyExp_simplifyUnarySign,0}};
+#define boxvar_NFSimplifyExp_simplifyUnarySign MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyUnarySign)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyUnaryOp(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _op);
+#define boxptr_NFSimplifyExp_simplifyUnaryOp omc_NFSimplifyExp_simplifyUnaryOp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyUnaryOp,2,0) {(void*) boxptr_NFSimplifyExp_simplifyUnaryOp,0}};
+#define boxvar_NFSimplifyExp_simplifyUnaryOp MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyUnaryOp)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyUnary(threadData_t *threadData, modelica_metatype __omcQ_24in_5FunaryExp);
+#define boxptr_NFSimplifyExp_simplifyUnary omc_NFSimplifyExp_simplifyUnary
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyUnary,2,0) {(void*) boxptr_NFSimplifyExp_simplifyUnary,0}};
+#define boxvar_NFSimplifyExp_simplifyUnary MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyUnary)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyBinaryEW(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _op, modelica_metatype _exp2);
+#define boxptr_NFSimplifyExp_simplifyBinaryEW omc_NFSimplifyExp_simplifyBinaryEW
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryEW,2,0) {(void*) boxptr_NFSimplifyExp_simplifyBinaryEW,0}};
+#define boxvar_NFSimplifyExp_simplifyBinaryEW MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryEW)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyBinaryPow(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _op, modelica_metatype _exp2);
+#define boxptr_NFSimplifyExp_simplifyBinaryPow omc_NFSimplifyExp_simplifyBinaryPow
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryPow,2,0) {(void*) boxptr_NFSimplifyExp_simplifyBinaryPow,0}};
+#define boxvar_NFSimplifyExp_simplifyBinaryPow MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryPow)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyBinaryDiv(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _op, modelica_metatype _exp2);
+#define boxptr_NFSimplifyExp_simplifyBinaryDiv omc_NFSimplifyExp_simplifyBinaryDiv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryDiv,2,0) {(void*) boxptr_NFSimplifyExp_simplifyBinaryDiv,0}};
+#define boxvar_NFSimplifyExp_simplifyBinaryDiv MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryDiv)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyBinaryMul(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _op, modelica_metatype _exp2, modelica_boolean _switched);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplifyBinaryMul(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _op, modelica_metatype _exp2, modelica_metatype _switched);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryMul,2,0) {(void*) boxptr_NFSimplifyExp_simplifyBinaryMul,0}};
+#define boxvar_NFSimplifyExp_simplifyBinaryMul MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryMul)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyBinarySub(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _op, modelica_metatype _exp2);
+#define boxptr_NFSimplifyExp_simplifyBinarySub omc_NFSimplifyExp_simplifyBinarySub
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinarySub,2,0) {(void*) boxptr_NFSimplifyExp_simplifyBinarySub,0}};
+#define boxvar_NFSimplifyExp_simplifyBinarySub MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinarySub)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyBinaryAdd(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _op, modelica_metatype _exp2);
+#define boxptr_NFSimplifyExp_simplifyBinaryAdd omc_NFSimplifyExp_simplifyBinaryAdd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryAdd,2,0) {(void*) boxptr_NFSimplifyExp_simplifyBinaryAdd,0}};
+#define boxvar_NFSimplifyExp_simplifyBinaryAdd MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryAdd)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyBinaryOp(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _op, modelica_metatype _exp2);
+#define boxptr_NFSimplifyExp_simplifyBinaryOp omc_NFSimplifyExp_simplifyBinaryOp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryOp,2,0) {(void*) boxptr_NFSimplifyExp_simplifyBinaryOp,0}};
+#define boxvar_NFSimplifyExp_simplifyBinaryOp MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinaryOp)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyBinary(threadData_t *threadData, modelica_metatype __omcQ_24in_5FbinaryExp);
+#define boxptr_NFSimplifyExp_simplifyBinary omc_NFSimplifyExp_simplifyBinary
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinary,2,0) {(void*) boxptr_NFSimplifyExp_simplifyBinary,0}};
+#define boxvar_NFSimplifyExp_simplifyBinary MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBinary)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyMultarySigns(threadData_t *threadData, modelica_metatype _arguments, modelica_metatype _inv_arguments, modelica_integer _mcl, modelica_metatype *out_new_inv_arguments, modelica_boolean *out_isNegative);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplifyMultarySigns(threadData_t *threadData, modelica_metatype _arguments, modelica_metatype _inv_arguments, modelica_metatype _mcl, modelica_metatype *out_new_inv_arguments, modelica_metatype *out_isNegative);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyMultarySigns,2,0) {(void*) boxptr_NFSimplifyExp_simplifyMultarySigns,0}};
+#define boxvar_NFSimplifyExp_simplifyMultarySigns MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyMultarySigns)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyMultary(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFSimplifyExp_simplifyMultary omc_NFSimplifyExp_simplifyMultary
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyMultary,2,0) {(void*) boxptr_NFSimplifyExp_simplifyMultary,0}};
+#define boxvar_NFSimplifyExp_simplifyMultary MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyMultary)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifySize(threadData_t *threadData, modelica_metatype __omcQ_24in_5FsizeExp);
+#define boxptr_NFSimplifyExp_simplifySize omc_NFSimplifyExp_simplifySize
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifySize,2,0) {(void*) boxptr_NFSimplifyExp_simplifySize,0}};
+#define boxvar_NFSimplifyExp_simplifySize MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifySize)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyReduction2(threadData_t *threadData, modelica_string _name, modelica_metatype _exp, modelica_metatype _iterators);
+#define boxptr_NFSimplifyExp_simplifyReduction2 omc_NFSimplifyExp_simplifyReduction2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyReduction2,2,0) {(void*) boxptr_NFSimplifyExp_simplifyReduction2,0}};
+#define boxvar_NFSimplifyExp_simplifyReduction2 MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyReduction2)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyReduction(threadData_t *threadData, modelica_metatype _call);
+#define boxptr_NFSimplifyExp_simplifyReduction omc_NFSimplifyExp_simplifyReduction
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyReduction,2,0) {(void*) boxptr_NFSimplifyExp_simplifyReduction,0}};
+#define boxvar_NFSimplifyExp_simplifyReduction MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyReduction)
+
+
+DLLDirection
+modelica_boolean omc_NFSimplifyExp_isIteratorSubscriptedArray(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _iterator);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_isIteratorSubscriptedArray(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _iterator);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_isIteratorSubscriptedArray,2,0) {(void*) boxptr_NFSimplifyExp_isIteratorSubscriptedArray,0}};
+#define boxvar_NFSimplifyExp_isIteratorSubscriptedArray MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_isIteratorSubscriptedArray)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyArrayConstructor(threadData_t *threadData, modelica_metatype _call);
+#define boxptr_NFSimplifyExp_simplifyArrayConstructor omc_NFSimplifyExp_simplifyArrayConstructor
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyArrayConstructor,2,0) {(void*) boxptr_NFSimplifyExp_simplifyArrayConstructor,0}};
+#define boxvar_NFSimplifyExp_simplifyArrayConstructor MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyArrayConstructor)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyDer(threadData_t *threadData, modelica_metatype _arg, modelica_metatype _call);
+#define boxptr_NFSimplifyExp_simplifyDer omc_NFSimplifyExp_simplifyDer
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyDer,2,0) {(void*) boxptr_NFSimplifyExp_simplifyDer,0}};
+#define boxvar_NFSimplifyExp_simplifyDer MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyDer)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyDelay(threadData_t *threadData, modelica_metatype _args, modelica_metatype _call);
+#define boxptr_NFSimplifyExp_simplifyDelay omc_NFSimplifyExp_simplifyDelay
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyDelay,2,0) {(void*) boxptr_NFSimplifyExp_simplifyDelay,0}};
+#define boxvar_NFSimplifyExp_simplifyDelay MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyDelay)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyHomotopy(threadData_t *threadData, modelica_metatype _args, modelica_metatype _call);
+#define boxptr_NFSimplifyExp_simplifyHomotopy omc_NFSimplifyExp_simplifyHomotopy
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyHomotopy,2,0) {(void*) boxptr_NFSimplifyExp_simplifyHomotopy,0}};
+#define boxvar_NFSimplifyExp_simplifyHomotopy MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyHomotopy)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyFill(threadData_t *threadData, modelica_metatype _fillArg, modelica_metatype _dimArgs, modelica_metatype _call, modelica_boolean _expand);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplifyFill(threadData_t *threadData, modelica_metatype _fillArg, modelica_metatype _dimArgs, modelica_metatype _call, modelica_metatype _expand);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyFill,2,0) {(void*) boxptr_NFSimplifyExp_simplifyFill,0}};
+#define boxvar_NFSimplifyExp_simplifyFill MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyFill)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyVector(threadData_t *threadData, modelica_metatype _arg, modelica_metatype _call);
+#define boxptr_NFSimplifyExp_simplifyVector omc_NFSimplifyExp_simplifyVector
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyVector,2,0) {(void*) boxptr_NFSimplifyExp_simplifyVector,0}};
+#define boxvar_NFSimplifyExp_simplifyVector MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyVector)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyTranspose(threadData_t *threadData, modelica_metatype _arg, modelica_metatype _call, modelica_boolean _expand);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplifyTranspose(threadData_t *threadData, modelica_metatype _arg, modelica_metatype _call, modelica_metatype _expand);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyTranspose,2,0) {(void*) boxptr_NFSimplifyExp_simplifyTranspose,0}};
+#define boxvar_NFSimplifyExp_simplifyTranspose MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyTranspose)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyReducedArrayConstructor(threadData_t *threadData, modelica_metatype _arg, modelica_metatype _call);
+#define boxptr_NFSimplifyExp_simplifyReducedArrayConstructor omc_NFSimplifyExp_simplifyReducedArrayConstructor
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyReducedArrayConstructor,2,0) {(void*) boxptr_NFSimplifyExp_simplifyReducedArrayConstructor,0}};
+#define boxvar_NFSimplifyExp_simplifyReducedArrayConstructor MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyReducedArrayConstructor)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifySumProduct(threadData_t *threadData, modelica_metatype _arg, modelica_metatype _call, modelica_boolean _expand, modelica_boolean _isSum);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplifySumProduct(threadData_t *threadData, modelica_metatype _arg, modelica_metatype _call, modelica_metatype _expand, modelica_metatype _isSum);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifySumProduct,2,0) {(void*) boxptr_NFSimplifyExp_simplifySumProduct,0}};
+#define boxvar_NFSimplifyExp_simplifySumProduct MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifySumProduct)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_removePositiveMax(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFSimplifyExp_removePositiveMax omc_NFSimplifyExp_removePositiveMax
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_removePositiveMax,2,0) {(void*) boxptr_NFSimplifyExp_removePositiveMax,0}};
+#define boxvar_NFSimplifyExp_removePositiveMax MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_removePositiveMax)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_removeInStreamDiv(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFSimplifyExp_removeInStreamDiv omc_NFSimplifyExp_removeInStreamDiv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_removeInStreamDiv,2,0) {(void*) boxptr_NFSimplifyExp_removeInStreamDiv,0}};
+#define boxvar_NFSimplifyExp_removeInStreamDiv MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_removeInStreamDiv)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_removeStream(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFSimplifyExp_removeStream omc_NFSimplifyExp_removeStream
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_removeStream,2,0) {(void*) boxptr_NFSimplifyExp_removeStream,0}};
+#define boxvar_NFSimplifyExp_removeStream MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_removeStream)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyInStreamDiv(threadData_t *threadData, modelica_metatype _args, modelica_metatype _call, modelica_boolean _removeStream);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplifyInStreamDiv(threadData_t *threadData, modelica_metatype _args, modelica_metatype _call, modelica_metatype _removeStream);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyInStreamDiv,2,0) {(void*) boxptr_NFSimplifyExp_simplifyInStreamDiv,0}};
+#define boxvar_NFSimplifyExp_simplifyInStreamDiv MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyInStreamDiv)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyPositiveMax(threadData_t *threadData, modelica_metatype _args, modelica_metatype _call);
+#define boxptr_NFSimplifyExp_simplifyPositiveMax omc_NFSimplifyExp_simplifyPositiveMax
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyPositiveMax,2,0) {(void*) boxptr_NFSimplifyExp_simplifyPositiveMax,0}};
+#define boxvar_NFSimplifyExp_simplifyPositiveMax MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyPositiveMax)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyMinMax(threadData_t *threadData, modelica_metatype _args, modelica_metatype _call, modelica_boolean _isMin);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplifyMinMax(threadData_t *threadData, modelica_metatype _args, modelica_metatype _call, modelica_metatype _isMin);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyMinMax,2,0) {(void*) boxptr_NFSimplifyExp_simplifyMinMax,0}};
+#define boxvar_NFSimplifyExp_simplifyMinMax MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyMinMax)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifySemiLinear(threadData_t *threadData, modelica_metatype _args, modelica_metatype _call);
+#define boxptr_NFSimplifyExp_simplifySemiLinear omc_NFSimplifyExp_simplifySemiLinear
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifySemiLinear,2,0) {(void*) boxptr_NFSimplifyExp_simplifySemiLinear,0}};
+#define boxvar_NFSimplifyExp_simplifySemiLinear MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifySemiLinear)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyBuiltinCall(threadData_t *threadData, modelica_metatype _name, modelica_metatype _args, modelica_metatype _call, modelica_boolean _expand);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplifyBuiltinCall(threadData_t *threadData, modelica_metatype _name, modelica_metatype _args, modelica_metatype _call, modelica_metatype _expand);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBuiltinCall,2,0) {(void*) boxptr_NFSimplifyExp_simplifyBuiltinCall,0}};
+#define boxvar_NFSimplifyExp_simplifyBuiltinCall MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyBuiltinCall)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyCall2(threadData_t *threadData, modelica_metatype _call);
+#define boxptr_NFSimplifyExp_simplifyCall2 omc_NFSimplifyExp_simplifyCall2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyCall2,2,0) {(void*) boxptr_NFSimplifyExp_simplifyCall2,0}};
+#define boxvar_NFSimplifyExp_simplifyCall2 MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyCall2)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyCall(threadData_t *threadData, modelica_metatype __omcQ_24in_5FcallExp);
+#define boxptr_NFSimplifyExp_simplifyCall omc_NFSimplifyExp_simplifyCall
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyCall,2,0) {(void*) boxptr_NFSimplifyExp_simplifyCall,0}};
+#define boxvar_NFSimplifyExp_simplifyCall MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyCall)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyRange(threadData_t *threadData, modelica_metatype _range);
+#define boxptr_NFSimplifyExp_simplifyRange omc_NFSimplifyExp_simplifyRange
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyRange,2,0) {(void*) boxptr_NFSimplifyExp_simplifyRange,0}};
+#define boxvar_NFSimplifyExp_simplifyRange MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyRange)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplify(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_boolean _includeScope);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplify(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _includeScope);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplify,2,0) {(void*) boxptr_NFSimplifyExp_simplify,0}};
+#define boxvar_NFSimplifyExp_simplify MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplify)
+
+
+DLLDirection
+modelica_metatype omc_NFSimplifyExp_simplifyDump(threadData_t *threadData, modelica_metatype _exp, modelica_boolean _includeScope, modelica_string _name, modelica_string _indent);
+DLLDirection
+modelica_metatype boxptr_NFSimplifyExp_simplifyDump(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _includeScope, modelica_metatype _name, modelica_metatype _indent);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyDump,2,0) {(void*) boxptr_NFSimplifyExp_simplifyDump,0}};
+#define boxvar_NFSimplifyExp_simplifyDump MMC_REFSTRUCTLIT(boxvar_lit_NFSimplifyExp_simplifyDump)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

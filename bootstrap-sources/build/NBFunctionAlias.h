@@ -1,0 +1,112 @@
+#ifndef NBFunctionAlias__H
+#define NBFunctionAlias__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NBEquation_Iterator_EMPTY__desc;
+
+extern struct record_description NBFunctionAlias_Call__Aux_CALL__AUX__desc;
+
+extern struct record_description NBFunctionAlias_Call__Id_CALL__ID__desc;
+
+extern struct record_description NFComponentRef_WILD__desc;
+
+extern struct record_description NFExpression_TUPLE__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NBFunctionAlias_addClockedAlias omc_NBFunctionAlias_addClockedAlias
+
+
+#define boxptr_NBFunctionAlias_filterFrames_collectFrames omc_NBFunctionAlias_filterFrames_collectFrames
+
+
+#define boxptr_NBFunctionAlias_filterFrames omc_NBFunctionAlias_filterFrames
+
+
+#define boxptr_NBFunctionAlias_functionAliasDefault omc_NBFunctionAlias_functionAliasDefault
+
+
+DLLDirection
+modelica_metatype omc_NBFunctionAlias_Call__Aux_createName(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _iter, modelica_metatype _aux_index, modelica_boolean _init);
+DLLDirection
+modelica_metatype boxptr_NBFunctionAlias_Call__Aux_createName(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _iter, modelica_metatype _aux_index, modelica_metatype _init);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_createName,2,0) {(void*) boxptr_NBFunctionAlias_Call__Aux_createName,0}};
+#define boxvar_NBFunctionAlias_Call__Aux_createName MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_createName)
+
+
+#define boxptr_NBFunctionAlias_Call__Aux_getVars_getVarsExp omc_NBFunctionAlias_Call__Aux_getVars_getVarsExp
+
+
+DLLDirection
+modelica_metatype omc_NBFunctionAlias_Call__Aux_getVars(threadData_t *threadData, modelica_metatype _aux);
+#define boxptr_NBFunctionAlias_Call__Aux_getVars omc_NBFunctionAlias_Call__Aux_getVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_getVars,2,0) {(void*) boxptr_NBFunctionAlias_Call__Aux_getVars,0}};
+#define boxvar_NBFunctionAlias_Call__Aux_getVars MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_getVars)
+
+
+DLLDirection
+modelica_string omc_NBFunctionAlias_Call__Aux_toString(threadData_t *threadData, modelica_metatype _aux);
+#define boxptr_NBFunctionAlias_Call__Aux_toString omc_NBFunctionAlias_Call__Aux_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_toString,2,0) {(void*) boxptr_NBFunctionAlias_Call__Aux_toString,0}};
+#define boxvar_NBFunctionAlias_Call__Aux_toString MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_toString)
+
+
+DLLDirection
+modelica_boolean omc_NBFunctionAlias_Call__Id_isEqual(threadData_t *threadData, modelica_metatype _id1, modelica_metatype _id2);
+DLLDirection
+modelica_metatype boxptr_NBFunctionAlias_Call__Id_isEqual(threadData_t *threadData, modelica_metatype _id1, modelica_metatype _id2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_isEqual,2,0) {(void*) boxptr_NBFunctionAlias_Call__Id_isEqual,0}};
+#define boxvar_NBFunctionAlias_Call__Id_isEqual MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_isEqual)
+
+
+DLLDirection
+modelica_integer omc_NBFunctionAlias_Call__Id_hash(threadData_t *threadData, modelica_metatype _id);
+DLLDirection
+modelica_metatype boxptr_NBFunctionAlias_Call__Id_hash(threadData_t *threadData, modelica_metatype _id);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_hash,2,0) {(void*) boxptr_NBFunctionAlias_Call__Id_hash,0}};
+#define boxvar_NBFunctionAlias_Call__Id_hash MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_hash)
+
+
+DLLDirection
+modelica_string omc_NBFunctionAlias_Call__Id_toString(threadData_t *threadData, modelica_metatype _id);
+#define boxptr_NBFunctionAlias_Call__Id_toString omc_NBFunctionAlias_Call__Id_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_toString,2,0) {(void*) boxptr_NBFunctionAlias_Call__Id_toString,0}};
+#define boxvar_NBFunctionAlias_Call__Id_toString MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_toString)
+
+
+DLLDirection
+modelica_fnptr omc_NBFunctionAlias_getModule(threadData_t *threadData);
+#define boxptr_NBFunctionAlias_getModule omc_NBFunctionAlias_getModule
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_getModule,2,0) {(void*) boxptr_NBFunctionAlias_getModule,0}};
+#define boxvar_NBFunctionAlias_getModule MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_getModule)
+
+
+DLLDirection
+modelica_metatype omc_NBFunctionAlias_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
+#define boxptr_NBFunctionAlias_main omc_NBFunctionAlias_main
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_main,2,0) {(void*) boxptr_NBFunctionAlias_main,0}};
+#define boxvar_NBFunctionAlias_main MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_main)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

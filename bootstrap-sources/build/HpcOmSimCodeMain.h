@@ -1,0 +1,83 @@
+#ifndef HpcOmSimCodeMain__H
+#define HpcOmSimCodeMain__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description HpcOmSimCode_HpcOmData_HPCOMDATA__desc;
+
+extern struct record_description HpcOmTaskGraph_GraphDumpOptions_GRAPHDUMPOPTIONS__desc;
+
+
+DLLDirection
+void omc_HpcOmSimCodeMain_outputTimeBenchmark(threadData_t *threadData, modelica_metatype _graphData, modelica_metatype _dae);
+#define boxptr_HpcOmSimCodeMain_outputTimeBenchmark omc_HpcOmSimCodeMain_outputTimeBenchmark
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_outputTimeBenchmark,2,0) {(void*) boxptr_HpcOmSimCodeMain_outputTimeBenchmark,0}};
+#define boxvar_HpcOmSimCodeMain_outputTimeBenchmark MMC_REFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_outputTimeBenchmark)
+
+
+#define boxptr_HpcOmSimCodeMain_GRS__newGraph omc_HpcOmSimCodeMain_GRS__newGraph
+
+
+DLLDirection
+modelica_metatype omc_HpcOmSimCodeMain_applyGRSForLevelFixSchedulerLevel(threadData_t *threadData, modelica_metatype _iTaskGraphMeta, modelica_metatype _iContractedTasks, modelica_integer _iCriticalSize, modelica_metatype _iSortedLevelTasks, modelica_integer _iCurrentSmallTask, modelica_metatype _iCurrentBigTask, modelica_metatype _iContractedLevelfixTasks);
+DLLDirection
+modelica_metatype boxptr_HpcOmSimCodeMain_applyGRSForLevelFixSchedulerLevel(threadData_t *threadData, modelica_metatype _iTaskGraphMeta, modelica_metatype _iContractedTasks, modelica_metatype _iCriticalSize, modelica_metatype _iSortedLevelTasks, modelica_metatype _iCurrentSmallTask, modelica_metatype _iCurrentBigTask, modelica_metatype _iContractedLevelfixTasks);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_applyGRSForLevelFixSchedulerLevel,2,0) {(void*) boxptr_HpcOmSimCodeMain_applyGRSForLevelFixSchedulerLevel,0}};
+#define boxvar_HpcOmSimCodeMain_applyGRSForLevelFixSchedulerLevel MMC_REFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_applyGRSForLevelFixSchedulerLevel)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmSimCodeMain_applyGRSForLevelFixScheduler(threadData_t *threadData, modelica_metatype _iTaskGraphMeta, modelica_metatype _iContractedTasks, modelica_metatype _iLevelNodes, modelica_metatype _iContractedLevelfixTasks);
+#define boxptr_HpcOmSimCodeMain_applyGRSForLevelFixScheduler omc_HpcOmSimCodeMain_applyGRSForLevelFixScheduler
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_applyGRSForLevelFixScheduler,2,0) {(void*) boxptr_HpcOmSimCodeMain_applyGRSForLevelFixScheduler,0}};
+#define boxvar_HpcOmSimCodeMain_applyGRSForLevelFixScheduler MMC_REFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_applyGRSForLevelFixScheduler)
+
+
+#define boxptr_HpcOmSimCodeMain_applyGRSForScheduler omc_HpcOmSimCodeMain_applyGRSForScheduler
+
+
+DLLDirection
+modelica_metatype omc_HpcOmSimCodeMain_applyGRS(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype *out_oTaskGraphMeta);
+#define boxptr_HpcOmSimCodeMain_applyGRS omc_HpcOmSimCodeMain_applyGRS
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_applyGRS,2,0) {(void*) boxptr_HpcOmSimCodeMain_applyGRS,0}};
+#define boxvar_HpcOmSimCodeMain_applyGRS MMC_REFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_applyGRS)
+
+
+#define boxptr_HpcOmSimCodeMain_createAndExportInitialSystemTaskGraph omc_HpcOmSimCodeMain_createAndExportInitialSystemTaskGraph
+
+
+DLLDirection
+modelica_metatype omc_HpcOmSimCodeMain_createSimCode(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_metatype _inInitDAE, modelica_metatype _inInitDAE_lambda0, modelica_metatype _inRemovedInitialEquationLst, modelica_metatype _inClassName, modelica_string _filenamePrefix, modelica_string _inString11, modelica_metatype _functions, modelica_metatype _externalFunctionIncludes, modelica_metatype _includeDirs, modelica_metatype _libs, modelica_metatype _libPaths, modelica_metatype _program, modelica_metatype _simSettingsOpt, modelica_metatype _recordDecls, modelica_metatype _literals, modelica_metatype _args);
+#define boxptr_HpcOmSimCodeMain_createSimCode omc_HpcOmSimCodeMain_createSimCode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_createSimCode,2,0) {(void*) boxptr_HpcOmSimCodeMain_createSimCode,0}};
+#define boxvar_HpcOmSimCodeMain_createSimCode MMC_REFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_createSimCode)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

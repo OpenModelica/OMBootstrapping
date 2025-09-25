@@ -1,0 +1,524 @@
+#ifndef NFClassTree__H
+#define NFClassTree__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFClassTree_ClassTree_EXPANDED__TREE__desc;
+
+extern struct record_description NFClassTree_ClassTree_FLAT__TREE__desc;
+
+extern struct record_description NFClassTree_ClassTree_INSTANTIATED__TREE__desc;
+
+extern struct record_description NFClassTree_ClassTree_PARTIAL__TREE__desc;
+
+extern struct record_description NFComponent_TYPE__ATTRIBUTE__desc;
+
+extern struct record_description NFDuplicateTree_Entry_ENTRY__desc;
+
+extern struct record_description NFDuplicateTree_Tree_EMPTY__desc;
+
+extern struct record_description NFImport_CONFLICTING__IMPORT__desc;
+
+extern struct record_description NFImport_UNRESOLVED__IMPORT__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_INNER__OUTER__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_REF__NODE__desc;
+
+extern struct record_description NFInstNode_InstNodeType_BASE__CLASS__desc;
+
+extern struct record_description NFInstNode_InstNodeType_NORMAL__CLASS__desc;
+
+extern struct record_description NFLookupTree_Entry_CLASS__desc;
+
+extern struct record_description NFLookupTree_Entry_COMPONENT__desc;
+
+extern struct record_description NFLookupTree_Entry_IMPORT__desc;
+
+extern struct record_description NFLookupTree_Tree_EMPTY__desc;
+
+extern struct record_description NFLookupTree_Tree_LEAF__desc;
+
+extern struct record_description NFLookupTree_Tree_NODE__desc;
+
+extern struct record_description NFModifier_Modifier_NOMOD__desc;
+
+extern struct record_description NFType_BOOLEAN__desc;
+
+extern struct record_description NFType_STRING__desc;
+
+extern struct record_description SCodeDump_SCodeDumpOptions_OPTIONS__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFClassTree_ClassTree_checkOuterClass omc_NFClassTree_ClassTree_checkOuterClass
+
+
+#define boxptr_NFClassTree_ClassTree_linkInnerOuter omc_NFClassTree_ClassTree_linkInnerOuter
+
+
+#define boxptr_NFClassTree_ClassTree_replaceDuplicates4 omc_NFClassTree_ClassTree_replaceDuplicates4
+
+
+#define boxptr_NFClassTree_ClassTree_replaceDuplicates3 omc_NFClassTree_ClassTree_replaceDuplicates3
+
+
+#define boxptr_NFClassTree_ClassTree_replaceDuplicates2 omc_NFClassTree_ClassTree_replaceDuplicates2
+
+
+#define boxptr_NFClassTree_ClassTree_getRedeclareChain omc_NFClassTree_ClassTree_getRedeclareChain
+
+
+#define boxptr_NFClassTree_ClassTree_mapRedeclareChain omc_NFClassTree_ClassTree_mapRedeclareChain
+
+
+#define boxptr_NFClassTree_ClassTree_enumerateDuplicates4 omc_NFClassTree_ClassTree_enumerateDuplicates4
+
+
+#define boxptr_NFClassTree_ClassTree_enumerateDuplicates3 omc_NFClassTree_ClassTree_enumerateDuplicates3
+
+
+#define boxptr_NFClassTree_ClassTree_enumerateDuplicates2 omc_NFClassTree_ClassTree_enumerateDuplicates2
+
+
+#define boxptr_NFClassTree_ClassTree_enumerateDuplicates omc_NFClassTree_ClassTree_enumerateDuplicates
+
+
+#define boxptr_NFClassTree_ClassTree_joinDuplicates omc_NFClassTree_ClassTree_joinDuplicates
+
+
+#define boxptr_NFClassTree_ClassTree_addInheritedElementConflict omc_NFClassTree_ClassTree_addInheritedElementConflict
+
+
+#define boxptr_NFClassTree_ClassTree_resolveDuplicateEntriesPtr omc_NFClassTree_ClassTree_resolveDuplicateEntriesPtr
+
+
+#define boxptr_NFClassTree_ClassTree_resolveEntryPtr omc_NFClassTree_ClassTree_resolveEntryPtr
+
+
+#define boxptr_NFClassTree_ClassTree_addDuplicateConflict omc_NFClassTree_ClassTree_addDuplicateConflict
+
+
+#define boxptr_NFClassTree_ClassTree_addDuplicate omc_NFClassTree_ClassTree_addDuplicate
+
+
+#define boxptr_NFClassTree_ClassTree_addImportConflict omc_NFClassTree_ClassTree_addImportConflict
+
+
+#define boxptr_NFClassTree_ClassTree_addEnumConflict omc_NFClassTree_ClassTree_addEnumConflict
+
+
+#define boxptr_NFClassTree_ClassTree_findLocalConflictElement omc_NFClassTree_ClassTree_findLocalConflictElement
+
+
+#define boxptr_NFClassTree_ClassTree_addLocalElementConflict omc_NFClassTree_ClassTree_addLocalElementConflict
+
+
+#define boxptr_NFClassTree_ClassTree_addLocalElement omc_NFClassTree_ClassTree_addLocalElement
+
+
+#define boxptr_NFClassTree_ClassTree_lookupTree omc_NFClassTree_ClassTree_lookupTree
+
+
+#define boxptr_NFClassTree_ClassTree_getDuplicates omc_NFClassTree_ClassTree_getDuplicates
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_replaceClass(threadData_t *threadData, modelica_metatype _node, modelica_metatype __omcQ_24in_5Ftree);
+#define boxptr_NFClassTree_ClassTree_replaceClass omc_NFClassTree_ClassTree_replaceClass
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_replaceClass,2,0) {(void*) boxptr_NFClassTree_ClassTree_replaceClass,0}};
+#define boxvar_NFClassTree_ClassTree_replaceClass MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_replaceClass)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_appendClasses2(threadData_t *threadData, modelica_metatype _clsNodes, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype __omcQ_24in_5Fclasses, modelica_metatype *out_classes);
+#define boxptr_NFClassTree_ClassTree_appendClasses2 omc_NFClassTree_ClassTree_appendClasses2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_appendClasses2,2,0) {(void*) boxptr_NFClassTree_ClassTree_appendClasses2,0}};
+#define boxvar_NFClassTree_ClassTree_appendClasses2 MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_appendClasses2)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_appendClasses(threadData_t *threadData, modelica_metatype _clsNodes, modelica_metatype __omcQ_24in_5Ftree);
+#define boxptr_NFClassTree_ClassTree_appendClasses omc_NFClassTree_ClassTree_appendClasses
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_appendClasses,2,0) {(void*) boxptr_NFClassTree_ClassTree_appendClasses,0}};
+#define boxvar_NFClassTree_ClassTree_appendClasses MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_appendClasses)
+
+
+DLLDirection
+modelica_boolean omc_NFClassTree_ClassTree_isEmptyTree(threadData_t *threadData, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_isEmptyTree(threadData_t *threadData, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_isEmptyTree,2,0) {(void*) boxptr_NFClassTree_ClassTree_isEmptyTree,0}};
+#define boxvar_NFClassTree_ClassTree_isEmptyTree MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_isEmptyTree)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_getImports(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_NFClassTree_ClassTree_getImports omc_NFClassTree_ClassTree_getImports
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_getImports,2,0) {(void*) boxptr_NFClassTree_ClassTree_getImports,0}};
+#define boxvar_NFClassTree_ClassTree_getImports MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_getImports)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_getComponents(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_NFClassTree_ClassTree_getComponents omc_NFClassTree_ClassTree_getComponents
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_getComponents,2,0) {(void*) boxptr_NFClassTree_ClassTree_getComponents,0}};
+#define boxvar_NFClassTree_ClassTree_getComponents MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_getComponents)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_getExtends(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_NFClassTree_ClassTree_getExtends omc_NFClassTree_ClassTree_getExtends
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_getExtends,2,0) {(void*) boxptr_NFClassTree_ClassTree_getExtends,0}};
+#define boxvar_NFClassTree_ClassTree_getExtends MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_getExtends)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_getClasses(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_NFClassTree_ClassTree_getClasses omc_NFClassTree_ClassTree_getClasses
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_getClasses,2,0) {(void*) boxptr_NFClassTree_ClassTree_getClasses,0}};
+#define boxvar_NFClassTree_ClassTree_getClasses MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_getClasses)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_enumerateComponents2(threadData_t *threadData, modelica_string _name, modelica_metatype _entry, modelica_metatype _comps, modelica_metatype __omcQ_24in_5Fcomponents);
+#define boxptr_NFClassTree_ClassTree_enumerateComponents2 omc_NFClassTree_ClassTree_enumerateComponents2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_enumerateComponents2,2,0) {(void*) boxptr_NFClassTree_ClassTree_enumerateComponents2,0}};
+#define boxvar_NFClassTree_ClassTree_enumerateComponents2 MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_enumerateComponents2)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_enumerateComponents(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_NFClassTree_ClassTree_enumerateComponents omc_NFClassTree_ClassTree_enumerateComponents
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_enumerateComponents,2,0) {(void*) boxptr_NFClassTree_ClassTree_enumerateComponents,0}};
+#define boxvar_NFClassTree_ClassTree_enumerateComponents MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_enumerateComponents)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_setClassExtends(threadData_t *threadData, modelica_metatype _extNode, modelica_metatype __omcQ_24in_5Ftree);
+#define boxptr_NFClassTree_ClassTree_setClassExtends omc_NFClassTree_ClassTree_setClassExtends
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_setClassExtends,2,0) {(void*) boxptr_NFClassTree_ClassTree_setClassExtends,0}};
+#define boxvar_NFClassTree_ClassTree_setClassExtends MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_setClassExtends)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_getRedeclaredNode(threadData_t *threadData, modelica_string _name, modelica_metatype _tree);
+#define boxptr_NFClassTree_ClassTree_getRedeclaredNode omc_NFClassTree_ClassTree_getRedeclaredNode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_getRedeclaredNode,2,0) {(void*) boxptr_NFClassTree_ClassTree_getRedeclaredNode,0}};
+#define boxvar_NFClassTree_ClassTree_getRedeclaredNode MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_getRedeclaredNode)
+
+
+DLLDirection
+modelica_boolean omc_NFClassTree_ClassTree_isIdentical(threadData_t *threadData, modelica_metatype _tree1, modelica_metatype _tree2);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_isIdentical(threadData_t *threadData, modelica_metatype _tree1, modelica_metatype _tree2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_isIdentical,2,0) {(void*) boxptr_NFClassTree_ClassTree_isIdentical,0}};
+#define boxvar_NFClassTree_ClassTree_isIdentical MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_isIdentical)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_checkDuplicates2(threadData_t *threadData, modelica_string _name, modelica_metatype _entry, modelica_metatype __omcQ_24in_5Ftree);
+#define boxptr_NFClassTree_ClassTree_checkDuplicates2 omc_NFClassTree_ClassTree_checkDuplicates2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_checkDuplicates2,2,0) {(void*) boxptr_NFClassTree_ClassTree_checkDuplicates2,0}};
+#define boxvar_NFClassTree_ClassTree_checkDuplicates2 MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_checkDuplicates2)
+
+
+DLLDirection
+void omc_NFClassTree_ClassTree_checkDuplicates(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_NFClassTree_ClassTree_checkDuplicates omc_NFClassTree_ClassTree_checkDuplicates
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_checkDuplicates,2,0) {(void*) boxptr_NFClassTree_ClassTree_checkDuplicates,0}};
+#define boxvar_NFClassTree_ClassTree_checkDuplicates MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_checkDuplicates)
+
+
+DLLDirection
+modelica_integer omc_NFClassTree_ClassTree_recursiveElementCount(threadData_t *threadData, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_recursiveElementCount(threadData_t *threadData, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_recursiveElementCount,2,0) {(void*) boxptr_NFClassTree_ClassTree_recursiveElementCount,0}};
+#define boxvar_NFClassTree_ClassTree_recursiveElementCount MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_recursiveElementCount)
+
+
+DLLDirection
+modelica_integer omc_NFClassTree_ClassTree_extendsCount(threadData_t *threadData, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_extendsCount(threadData_t *threadData, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_extendsCount,2,0) {(void*) boxptr_NFClassTree_ClassTree_extendsCount,0}};
+#define boxvar_NFClassTree_ClassTree_extendsCount MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_extendsCount)
+
+
+DLLDirection
+modelica_integer omc_NFClassTree_ClassTree_componentCount(threadData_t *threadData, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_componentCount(threadData_t *threadData, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_componentCount,2,0) {(void*) boxptr_NFClassTree_ClassTree_componentCount,0}};
+#define boxvar_NFClassTree_ClassTree_componentCount MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_componentCount)
+
+
+DLLDirection
+modelica_integer omc_NFClassTree_ClassTree_classCount(threadData_t *threadData, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_classCount(threadData_t *threadData, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_classCount,2,0) {(void*) boxptr_NFClassTree_ClassTree_classCount,0}};
+#define boxvar_NFClassTree_ClassTree_classCount MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_classCount)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_findComponent(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
+#define boxptr_NFClassTree_ClassTree_findComponent omc_NFClassTree_ClassTree_findComponent
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_findComponent,2,0) {(void*) boxptr_NFClassTree_ClassTree_findComponent,0}};
+#define boxvar_NFClassTree_ClassTree_findComponent MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_findComponent)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_foldComponents(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func, modelica_metatype __omcQ_24in_5Farg);
+#define boxptr_NFClassTree_ClassTree_foldComponents omc_NFClassTree_ClassTree_foldComponents
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_foldComponents,2,0) {(void*) boxptr_NFClassTree_ClassTree_foldComponents,0}};
+#define boxvar_NFClassTree_ClassTree_foldComponents MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_foldComponents)
+
+
+DLLDirection
+void omc_NFClassTree_ClassTree_applyComponents(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
+#define boxptr_NFClassTree_ClassTree_applyComponents omc_NFClassTree_ClassTree_applyComponents
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_applyComponents,2,0) {(void*) boxptr_NFClassTree_ClassTree_applyComponents,0}};
+#define boxvar_NFClassTree_ClassTree_applyComponents MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_applyComponents)
+
+
+DLLDirection
+void omc_NFClassTree_ClassTree_applyLocalComponents(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
+#define boxptr_NFClassTree_ClassTree_applyLocalComponents omc_NFClassTree_ClassTree_applyLocalComponents
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_applyLocalComponents,2,0) {(void*) boxptr_NFClassTree_ClassTree_applyLocalComponents,0}};
+#define boxvar_NFClassTree_ClassTree_applyLocalComponents MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_applyLocalComponents)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_mapFoldExtends(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func, modelica_metatype __omcQ_24in_5Farg);
+#define boxptr_NFClassTree_ClassTree_mapFoldExtends omc_NFClassTree_ClassTree_mapFoldExtends
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_mapFoldExtends,2,0) {(void*) boxptr_NFClassTree_ClassTree_mapFoldExtends,0}};
+#define boxvar_NFClassTree_ClassTree_mapFoldExtends MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_mapFoldExtends)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_foldExtends(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func, modelica_metatype __omcQ_24in_5Farg);
+#define boxptr_NFClassTree_ClassTree_foldExtends omc_NFClassTree_ClassTree_foldExtends
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_foldExtends,2,0) {(void*) boxptr_NFClassTree_ClassTree_foldExtends,0}};
+#define boxvar_NFClassTree_ClassTree_foldExtends MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_foldExtends)
+
+
+DLLDirection
+void omc_NFClassTree_ClassTree_mapExtends(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
+#define boxptr_NFClassTree_ClassTree_mapExtends omc_NFClassTree_ClassTree_mapExtends
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_mapExtends,2,0) {(void*) boxptr_NFClassTree_ClassTree_mapExtends,0}};
+#define boxvar_NFClassTree_ClassTree_mapExtends MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_mapExtends)
+
+
+DLLDirection
+void omc_NFClassTree_ClassTree_applyExtends(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
+#define boxptr_NFClassTree_ClassTree_applyExtends omc_NFClassTree_ClassTree_applyExtends
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_applyExtends,2,0) {(void*) boxptr_NFClassTree_ClassTree_applyExtends,0}};
+#define boxvar_NFClassTree_ClassTree_applyExtends MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_applyExtends)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_foldClasses(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func, modelica_metatype __omcQ_24in_5Farg);
+#define boxptr_NFClassTree_ClassTree_foldClasses omc_NFClassTree_ClassTree_foldClasses
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_foldClasses,2,0) {(void*) boxptr_NFClassTree_ClassTree_foldClasses,0}};
+#define boxvar_NFClassTree_ClassTree_foldClasses MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_foldClasses)
+
+
+DLLDirection
+void omc_NFClassTree_ClassTree_mapClasses(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
+#define boxptr_NFClassTree_ClassTree_mapClasses omc_NFClassTree_ClassTree_mapClasses
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_mapClasses,2,0) {(void*) boxptr_NFClassTree_ClassTree_mapClasses,0}};
+#define boxvar_NFClassTree_ClassTree_mapClasses MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_mapClasses)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_nthComponent(threadData_t *threadData, modelica_integer _index, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_nthComponent(threadData_t *threadData, modelica_metatype _index, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_nthComponent,2,0) {(void*) boxptr_NFClassTree_ClassTree_nthComponent,0}};
+#define boxvar_NFClassTree_ClassTree_nthComponent MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_nthComponent)
+
+
+DLLDirection
+modelica_integer omc_NFClassTree_ClassTree_lookupComponentIndex(threadData_t *threadData, modelica_string _name, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_lookupComponentIndex(threadData_t *threadData, modelica_metatype _name, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_lookupComponentIndex,2,0) {(void*) boxptr_NFClassTree_ClassTree_lookupComponentIndex,0}};
+#define boxvar_NFClassTree_ClassTree_lookupComponentIndex MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_lookupComponentIndex)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_lookupElementsPtr(threadData_t *threadData, modelica_string _name, modelica_metatype _tree);
+#define boxptr_NFClassTree_ClassTree_lookupElementsPtr omc_NFClassTree_ClassTree_lookupElementsPtr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_lookupElementsPtr,2,0) {(void*) boxptr_NFClassTree_ClassTree_lookupElementsPtr,0}};
+#define boxvar_NFClassTree_ClassTree_lookupElementsPtr MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_lookupElementsPtr)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_lookupElementPtr(threadData_t *threadData, modelica_string _name, modelica_metatype _tree);
+#define boxptr_NFClassTree_ClassTree_lookupElementPtr omc_NFClassTree_ClassTree_lookupElementPtr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_lookupElementPtr,2,0) {(void*) boxptr_NFClassTree_ClassTree_lookupElementPtr,0}};
+#define boxvar_NFClassTree_ClassTree_lookupElementPtr MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_lookupElementPtr)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_lookupElement(threadData_t *threadData, modelica_string _name, modelica_metatype _tree, modelica_boolean *out_isImport);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_lookupElement(threadData_t *threadData, modelica_metatype _name, modelica_metatype _tree, modelica_metatype *out_isImport);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_lookupElement,2,0) {(void*) boxptr_NFClassTree_ClassTree_lookupElement,0}};
+#define boxvar_NFClassTree_ClassTree_lookupElement MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_lookupElement)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_flattenLookupTree2(threadData_t *threadData, modelica_string _key, modelica_metatype _entry, modelica_metatype _offsets);
+#define boxptr_NFClassTree_ClassTree_flattenLookupTree2 omc_NFClassTree_ClassTree_flattenLookupTree2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_flattenLookupTree2,2,0) {(void*) boxptr_NFClassTree_ClassTree_flattenLookupTree2,0}};
+#define boxvar_NFClassTree_ClassTree_flattenLookupTree2 MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_flattenLookupTree2)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_flattenLookupTree(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _offsets);
+#define boxptr_NFClassTree_ClassTree_flattenLookupTree omc_NFClassTree_ClassTree_flattenLookupTree
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_flattenLookupTree,2,0) {(void*) boxptr_NFClassTree_ClassTree_flattenLookupTree,0}};
+#define boxvar_NFClassTree_ClassTree_flattenLookupTree MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_flattenLookupTree)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_createFlatOffsets(threadData_t *threadData, modelica_integer _elementCount, modelica_metatype _duplicates);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_createFlatOffsets(threadData_t *threadData, modelica_metatype _elementCount, modelica_metatype _duplicates);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_createFlatOffsets,2,0) {(void*) boxptr_NFClassTree_ClassTree_createFlatOffsets,0}};
+#define boxvar_NFClassTree_ClassTree_createFlatOffsets MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_createFlatOffsets)
+
+
+DLLDirection
+void omc_NFClassTree_ClassTree_flattenElementsWithOffset(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _flatElements, modelica_metatype _offsets);
+#define boxptr_NFClassTree_ClassTree_flattenElementsWithOffset omc_NFClassTree_ClassTree_flattenElementsWithOffset
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_flattenElementsWithOffset,2,0) {(void*) boxptr_NFClassTree_ClassTree_flattenElementsWithOffset,0}};
+#define boxvar_NFClassTree_ClassTree_flattenElementsWithOffset MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_flattenElementsWithOffset)
+
+
+DLLDirection
+void omc_NFClassTree_ClassTree_flattenElements(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _flatElements);
+#define boxptr_NFClassTree_ClassTree_flattenElements omc_NFClassTree_ClassTree_flattenElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_flattenElements,2,0) {(void*) boxptr_NFClassTree_ClassTree_flattenElements,0}};
+#define boxvar_NFClassTree_ClassTree_flattenElements MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_flattenElements)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_flatten(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree);
+#define boxptr_NFClassTree_ClassTree_flatten omc_NFClassTree_ClassTree_flatten
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_flatten,2,0) {(void*) boxptr_NFClassTree_ClassTree_flatten,0}};
+#define boxvar_NFClassTree_ClassTree_flatten MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_flatten)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_appendComponentsToFlatTree(threadData_t *threadData, modelica_metatype _components, modelica_metatype __omcQ_24in_5Ftree);
+#define boxptr_NFClassTree_ClassTree_appendComponentsToFlatTree omc_NFClassTree_ClassTree_appendComponentsToFlatTree
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_appendComponentsToFlatTree,2,0) {(void*) boxptr_NFClassTree_ClassTree_appendComponentsToFlatTree,0}};
+#define boxvar_NFClassTree_ClassTree_appendComponentsToFlatTree MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_appendComponentsToFlatTree)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_appendComponentsToInstTree(threadData_t *threadData, modelica_metatype _components, modelica_metatype __omcQ_24in_5Ftree);
+#define boxptr_NFClassTree_ClassTree_appendComponentsToInstTree omc_NFClassTree_ClassTree_appendComponentsToInstTree
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_appendComponentsToInstTree,2,0) {(void*) boxptr_NFClassTree_ClassTree_appendComponentsToInstTree,0}};
+#define boxvar_NFClassTree_ClassTree_appendComponentsToInstTree MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_appendComponentsToInstTree)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_replaceDuplicates(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree);
+#define boxptr_NFClassTree_ClassTree_replaceDuplicates omc_NFClassTree_ClassTree_replaceDuplicates
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_replaceDuplicates,2,0) {(void*) boxptr_NFClassTree_ClassTree_replaceDuplicates,0}};
+#define boxvar_NFClassTree_ClassTree_replaceDuplicates MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_replaceDuplicates)
+
+
+DLLDirection
+void omc_NFClassTree_ClassTree_mapRedeclareChains(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
+#define boxptr_NFClassTree_ClassTree_mapRedeclareChains omc_NFClassTree_ClassTree_mapRedeclareChains
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_mapRedeclareChains,2,0) {(void*) boxptr_NFClassTree_ClassTree_mapRedeclareChains,0}};
+#define boxvar_NFClassTree_ClassTree_mapRedeclareChains MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_mapRedeclareChains)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_clone(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_NFClassTree_ClassTree_clone omc_NFClassTree_ClassTree_clone
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_clone,2,0) {(void*) boxptr_NFClassTree_ClassTree_clone,0}};
+#define boxvar_NFClassTree_ClassTree_clone MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_clone)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_fromRecordConstructor(threadData_t *threadData, modelica_metatype _fields, modelica_metatype _out);
+#define boxptr_NFClassTree_ClassTree_fromRecordConstructor omc_NFClassTree_ClassTree_fromRecordConstructor
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_fromRecordConstructor,2,0) {(void*) boxptr_NFClassTree_ClassTree_fromRecordConstructor,0}};
+#define boxvar_NFClassTree_ClassTree_fromRecordConstructor MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_fromRecordConstructor)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_instantiate(threadData_t *threadData, modelica_metatype __omcQ_24in_5FclsNode, modelica_metatype __omcQ_24in_5Finstance, modelica_metatype _scope, modelica_metatype *out_instance, modelica_integer *out_classCount, modelica_integer *out_compCount);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_instantiate(threadData_t *threadData, modelica_metatype __omcQ_24in_5FclsNode, modelica_metatype __omcQ_24in_5Finstance, modelica_metatype _scope, modelica_metatype *out_instance, modelica_metatype *out_classCount, modelica_metatype *out_compCount);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_instantiate,2,0) {(void*) boxptr_NFClassTree_ClassTree_instantiate,0}};
+#define boxvar_NFClassTree_ClassTree_instantiate MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_instantiate)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_expand(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree);
+#define boxptr_NFClassTree_ClassTree_expand omc_NFClassTree_ClassTree_expand
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_expand,2,0) {(void*) boxptr_NFClassTree_ClassTree_expand,0}};
+#define boxvar_NFClassTree_ClassTree_expand MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_expand)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_addElementsToFlatTree(threadData_t *threadData, modelica_metatype _elements, modelica_metatype __omcQ_24in_5Ftree);
+#define boxptr_NFClassTree_ClassTree_addElementsToFlatTree omc_NFClassTree_ClassTree_addElementsToFlatTree
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_addElementsToFlatTree,2,0) {(void*) boxptr_NFClassTree_ClassTree_addElementsToFlatTree,0}};
+#define boxvar_NFClassTree_ClassTree_addElementsToFlatTree MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_addElementsToFlatTree)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_fromEnumeration(threadData_t *threadData, modelica_metatype _literals, modelica_metatype _enumType, modelica_metatype _enumClass);
+#define boxptr_NFClassTree_ClassTree_fromEnumeration omc_NFClassTree_ClassTree_fromEnumeration
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_fromEnumeration,2,0) {(void*) boxptr_NFClassTree_ClassTree_fromEnumeration,0}};
+#define boxvar_NFClassTree_ClassTree_fromEnumeration MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_fromEnumeration)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_initImports(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _parent);
+#define boxptr_NFClassTree_ClassTree_initImports omc_NFClassTree_ClassTree_initImports
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_initImports,2,0) {(void*) boxptr_NFClassTree_ClassTree_initImports,0}};
+#define boxvar_NFClassTree_ClassTree_initImports MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_initImports)
+
+
+DLLDirection
+modelica_metatype omc_NFClassTree_ClassTree_fromSCode(threadData_t *threadData, modelica_metatype _elements, modelica_boolean _isClassExtends, modelica_metatype _parent);
+DLLDirection
+modelica_metatype boxptr_NFClassTree_ClassTree_fromSCode(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _isClassExtends, modelica_metatype _parent);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_fromSCode,2,0) {(void*) boxptr_NFClassTree_ClassTree_fromSCode,0}};
+#define boxvar_NFClassTree_ClassTree_fromSCode MMC_REFSTRUCTLIT(boxvar_lit_NFClassTree_ClassTree_fromSCode)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

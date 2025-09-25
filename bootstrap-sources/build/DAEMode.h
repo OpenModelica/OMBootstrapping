@@ -1,0 +1,81 @@
+#ifndef DAEMode__H
+#define DAEMode__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_SOLVED__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_AUX__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_DISCRETE__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_DYNAMIC__EQUATION__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_IndexType_NORMAL__desc;
+
+extern struct record_description BackendDAE_VarKind_ALG__STATE__desc;
+
+extern struct record_description BackendDAE_VarKind_DAE__AUX__VAR__desc;
+
+extern struct record_description DAEMode_TraverseEqnAryFold_TRAVERSER__CREATE__DAE__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_DAEMode_setNonStateVarAlgState omc_DAEMode_setNonStateVarAlgState
+
+
+#define boxptr_DAEMode_addVarsGlobalData omc_DAEMode_addVarsGlobalData
+
+
+#define boxptr_DAEMode_traverserStrongComponents omc_DAEMode_traverserStrongComponents
+
+
+#define boxptr_DAEMode_createDAEmodeEqSystem omc_DAEMode_createDAEmodeEqSystem
+
+
+DLLDirection
+modelica_metatype omc_DAEMode_createDAEmodeBDAE(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_DAEMode_createDAEmodeBDAE omc_DAEMode_createDAEmodeBDAE
+static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEMode_createDAEmodeBDAE,2,0) {(void*) boxptr_DAEMode_createDAEmodeBDAE,0}};
+#define boxvar_DAEMode_createDAEmodeBDAE MMC_REFSTRUCTLIT(boxvar_lit_DAEMode_createDAEmodeBDAE)
+
+
+#define boxptr_DAEMode_getPostOptModulesDAEString omc_DAEMode_getPostOptModulesDAEString
+
+
+DLLDirection
+modelica_metatype omc_DAEMode_getEqSystemDAEmode(threadData_t *threadData, modelica_metatype _inDAE, modelica_string _fileNamePrefix, modelica_metatype _strPreOptModules, modelica_metatype _strmatchingAlgorithm, modelica_metatype _strdaeHandler, modelica_metatype _strPostOptModules, modelica_metatype *out_outInitDAE, modelica_metatype *out_outInitDAE_lambda0_option, modelica_metatype *out_outRemovedInitialEquationLst);
+#define boxptr_DAEMode_getEqSystemDAEmode omc_DAEMode_getEqSystemDAEmode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEMode_getEqSystemDAEmode,2,0) {(void*) boxptr_DAEMode_getEqSystemDAEmode,0}};
+#define boxvar_DAEMode_getEqSystemDAEmode MMC_REFSTRUCTLIT(boxvar_lit_DAEMode_getEqSystemDAEmode)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

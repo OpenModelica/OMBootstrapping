@@ -1,0 +1,158 @@
+#ifndef BlockCallRewrite__H
+#define BlockCallRewrite__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_ClassDef_PARTS__desc;
+
+extern struct record_description Absyn_ClassPart_ALGORITHMS__desc;
+
+extern struct record_description Absyn_ClassPart_CONSTRAINTS__desc;
+
+extern struct record_description Absyn_ClassPart_EQUATIONS__desc;
+
+extern struct record_description Absyn_ClassPart_EXTERNAL__desc;
+
+extern struct record_description Absyn_ClassPart_INITIALALGORITHMS__desc;
+
+extern struct record_description Absyn_ClassPart_INITIALEQUATIONS__desc;
+
+extern struct record_description Absyn_ClassPart_PROTECTED__desc;
+
+extern struct record_description Absyn_ClassPart_PUBLIC__desc;
+
+extern struct record_description Absyn_Component_COMPONENT__desc;
+
+extern struct record_description Absyn_ComponentItem_COMPONENTITEM__desc;
+
+extern struct record_description Absyn_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description Absyn_ComponentRef_CREF__QUAL__desc;
+
+extern struct record_description Absyn_Direction_BIDIR__desc;
+
+extern struct record_description Absyn_Each_NON__EACH__desc;
+
+extern struct record_description Absyn_Element_ELEMENT__desc;
+
+extern struct record_description Absyn_ElementArg_MODIFICATION__desc;
+
+extern struct record_description Absyn_ElementAttributes_ATTR__desc;
+
+extern struct record_description Absyn_ElementItem_ELEMENTITEM__desc;
+
+extern struct record_description Absyn_ElementSpec_COMPONENTS__desc;
+
+extern struct record_description Absyn_EqMod_EQMOD__desc;
+
+extern struct record_description Absyn_EqMod_NOMOD__desc;
+
+extern struct record_description Absyn_Equation_EQ__CONNECT__desc;
+
+extern struct record_description Absyn_Equation_EQ__EQUALS__desc;
+
+extern struct record_description Absyn_Equation_EQ__FAILURE__desc;
+
+extern struct record_description Absyn_Equation_EQ__FOR__desc;
+
+extern struct record_description Absyn_Equation_EQ__IF__desc;
+
+extern struct record_description Absyn_Equation_EQ__NORETCALL__desc;
+
+extern struct record_description Absyn_Equation_EQ__PDE__desc;
+
+extern struct record_description Absyn_Equation_EQ__WHEN__E__desc;
+
+extern struct record_description Absyn_EquationItem_EQUATIONITEM__desc;
+
+extern struct record_description Absyn_EquationItem_EQUATIONITEMCOMMENT__desc;
+
+extern struct record_description Absyn_Exp_BINARY__desc;
+
+extern struct record_description Absyn_Exp_CREF__desc;
+
+extern struct record_description Absyn_Exp_IFEXP__desc;
+
+extern struct record_description Absyn_Exp_LBINARY__desc;
+
+extern struct record_description Absyn_Exp_LUNARY__desc;
+
+extern struct record_description Absyn_Exp_UNARY__desc;
+
+extern struct record_description Absyn_InnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description Absyn_IsField_NONFIELD__desc;
+
+extern struct record_description Absyn_Modification_CLASSMOD__desc;
+
+extern struct record_description Absyn_Parallelism_NON__PARALLEL__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description Absyn_TypeSpec_TPATH__desc;
+
+extern struct record_description Absyn_Variability_VAR__desc;
+
+extern struct record_description Dump_DumpOptions_DUMPOPTIONS__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_BlockCallRewrite_matchNamedArgClass omc_BlockCallRewrite_matchNamedArgClass
+
+
+#define boxptr_BlockCallRewrite_matchNamedArgsClass omc_BlockCallRewrite_matchNamedArgsClass
+
+
+#define boxptr_BlockCallRewrite_matchVarArgs omc_BlockCallRewrite_matchVarArgs
+
+
+#define boxptr_BlockCallRewrite_matchParamArgs omc_BlockCallRewrite_matchParamArgs
+
+
+#define boxptr_BlockCallRewrite_matchArgsElems omc_BlockCallRewrite_matchArgsElems
+
+
+#define boxptr_BlockCallRewrite_matchArgsClass omc_BlockCallRewrite_matchArgsClass
+
+
+#define boxptr_BlockCallRewrite_parseArgs omc_BlockCallRewrite_parseArgs
+
+
+#define boxptr_BlockCallRewrite_parseClassDef omc_BlockCallRewrite_parseClassDef
+
+
+DLLDirection
+modelica_metatype omc_BlockCallRewrite_parseClass(threadData_t *threadData, modelica_metatype _in_class, modelica_metatype _defs);
+#define boxptr_BlockCallRewrite_parseClass omc_BlockCallRewrite_parseClass
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BlockCallRewrite_parseClass,2,0) {(void*) boxptr_BlockCallRewrite_parseClass,0}};
+#define boxvar_BlockCallRewrite_parseClass MMC_REFSTRUCTLIT(boxvar_lit_BlockCallRewrite_parseClass)
+
+
+DLLDirection
+modelica_metatype omc_BlockCallRewrite_parseClasses(threadData_t *threadData, modelica_metatype _classes, modelica_metatype _defs);
+#define boxptr_BlockCallRewrite_parseClasses omc_BlockCallRewrite_parseClasses
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BlockCallRewrite_parseClasses,2,0) {(void*) boxptr_BlockCallRewrite_parseClasses,0}};
+#define boxvar_BlockCallRewrite_parseClasses MMC_REFSTRUCTLIT(boxvar_lit_BlockCallRewrite_parseClasses)
+
+
+#define boxptr_BlockCallRewrite_parseProgram omc_BlockCallRewrite_parseProgram
+
+
+DLLDirection
+modelica_metatype omc_BlockCallRewrite_rewriteBlockCall(threadData_t *threadData, modelica_metatype _inPg, modelica_metatype _inDefs);
+#define boxptr_BlockCallRewrite_rewriteBlockCall omc_BlockCallRewrite_rewriteBlockCall
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BlockCallRewrite_rewriteBlockCall,2,0) {(void*) boxptr_BlockCallRewrite_rewriteBlockCall,0}};
+#define boxvar_BlockCallRewrite_rewriteBlockCall MMC_REFSTRUCTLIT(boxvar_lit_BlockCallRewrite_rewriteBlockCall)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

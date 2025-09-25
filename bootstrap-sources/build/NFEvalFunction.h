@@ -1,0 +1,178 @@
+#ifndef NFEvalFunction__H
+#define NFEvalFunction__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFCeval_EvalTarget_EVAL__TARGET__desc;
+
+extern struct record_description NFExpression_CALL__desc;
+
+extern struct record_description NFExpression_CREF__desc;
+
+extern struct record_description NFExpression_EMPTY__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFExpression_STRING__desc;
+
+extern struct record_description NFExpression_TUPLE__desc;
+
+extern struct record_description NFInstNode_InstNode_ITERATOR__NODE__desc;
+
+extern struct record_description NFType_NORETCALL__desc;
+
+extern struct record_description NFType_TUPLE__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFEvalFunction_checkExtReturnValue omc_NFEvalFunction_checkExtReturnValue
+
+
+#define boxptr_NFEvalFunction_getExternalOutputResult omc_NFEvalFunction_getExternalOutputResult
+
+
+#define boxptr_NFEvalFunction_makeExternalResult omc_NFEvalFunction_makeExternalResult
+
+
+#define boxptr_NFEvalFunction_makeExternalArg omc_NFEvalFunction_makeExternalArg
+
+
+#define boxptr_NFEvalFunction_mapExternalArgs omc_NFEvalFunction_mapExternalArgs
+
+
+#define boxptr_NFEvalFunction_parseExternalAnnotationExp omc_NFEvalFunction_parseExternalAnnotationExp
+
+
+#define boxptr_NFEvalFunction_parseExternalAnnotation omc_NFEvalFunction_parseExternalAnnotation
+
+
+DLLDirection
+void omc_NFEvalFunction_clearLibraryCache(threadData_t *threadData);
+#define boxptr_NFEvalFunction_clearLibraryCache omc_NFEvalFunction_clearLibraryCache
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_clearLibraryCache,2,0) {(void*) boxptr_NFEvalFunction_clearLibraryCache,0}};
+#define boxvar_NFEvalFunction_clearLibraryCache MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunction_clearLibraryCache)
+
+
+#define boxptr_NFEvalFunction_evaluateExternal3 omc_NFEvalFunction_evaluateExternal3
+
+
+#define boxptr_NFEvalFunction_evaluateExternal2 omc_NFEvalFunction_evaluateExternal2
+
+
+#define boxptr_NFEvalFunction_assignRecord omc_NFEvalFunction_assignRecord
+
+
+#define boxptr_NFEvalFunction_assignExp omc_NFEvalFunction_assignExp
+
+
+#define boxptr_NFEvalFunction_assignArrayElement omc_NFEvalFunction_assignArrayElement
+
+
+#define boxptr_NFEvalFunction_assignSubscriptedVariable omc_NFEvalFunction_assignSubscriptedVariable
+
+
+DLLDirection
+void omc_NFEvalFunction_assignVariable(threadData_t *threadData, modelica_metatype _variable, modelica_metatype _value);
+#define boxptr_NFEvalFunction_assignVariable omc_NFEvalFunction_assignVariable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_assignVariable,2,0) {(void*) boxptr_NFEvalFunction_assignVariable,0}};
+#define boxvar_NFEvalFunction_assignVariable MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunction_assignVariable)
+
+
+#define boxptr_NFEvalFunction_assertAssignedOutput omc_NFEvalFunction_assertAssignedOutput
+
+
+#define boxptr_NFEvalFunction_createResult omc_NFEvalFunction_createResult
+
+
+#define boxptr_NFEvalFunction_optimizeStatement omc_NFEvalFunction_optimizeStatement
+
+
+#define boxptr_NFEvalFunction_optimizeBody omc_NFEvalFunction_optimizeBody
+
+
+#define boxptr_NFEvalFunction_mergeFunctionApplicationArgs omc_NFEvalFunction_mergeFunctionApplicationArgs
+
+
+#define boxptr_NFEvalFunction_evaluateReplacement2 omc_NFEvalFunction_evaluateReplacement2
+
+
+#define boxptr_NFEvalFunction_evaluateReplacement omc_NFEvalFunction_evaluateReplacement
+
+
+#define boxptr_NFEvalFunction_applyReplacementCall omc_NFEvalFunction_applyReplacementCall
+
+
+#define boxptr_NFEvalFunction_applyReplacementCref omc_NFEvalFunction_applyReplacementCref
+
+
+#define boxptr_NFEvalFunction_applyReplacements2 omc_NFEvalFunction_applyReplacements2
+
+
+#define boxptr_NFEvalFunction_applyReplacements omc_NFEvalFunction_applyReplacements
+
+
+#define boxptr_NFEvalFunction_applyBindingReplacement omc_NFEvalFunction_applyBindingReplacement
+
+
+#define boxptr_NFEvalFunction_applyReplacementsDim omc_NFEvalFunction_applyReplacementsDim
+
+
+DLLDirection
+modelica_metatype omc_NFEvalFunction_evaluateRecordConstructor(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _ty, modelica_metatype _args, modelica_boolean _evaluate);
+DLLDirection
+modelica_metatype boxptr_NFEvalFunction_evaluateRecordConstructor(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _ty, modelica_metatype _args, modelica_metatype _evaluate);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateRecordConstructor,2,0) {(void*) boxptr_NFEvalFunction_evaluateRecordConstructor,0}};
+#define boxvar_NFEvalFunction_evaluateRecordConstructor MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateRecordConstructor)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalFunction_evaluateExternal(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _args, modelica_metatype _target);
+#define boxptr_NFEvalFunction_evaluateExternal omc_NFEvalFunction_evaluateExternal
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateExternal,2,0) {(void*) boxptr_NFEvalFunction_evaluateExternal,0}};
+#define boxvar_NFEvalFunction_evaluateExternal MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateExternal)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalFunction_evaluateNormal(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _args, modelica_integer _context);
+DLLDirection
+modelica_metatype boxptr_NFEvalFunction_evaluateNormal(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _args, modelica_metatype _context);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateNormal,2,0) {(void*) boxptr_NFEvalFunction_evaluateNormal,0}};
+#define boxvar_NFEvalFunction_evaluateNormal MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateNormal)
+
+
+DLLDirection
+modelica_metatype omc_NFEvalFunction_evaluate(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _args, modelica_metatype _target);
+#define boxptr_NFEvalFunction_evaluate omc_NFEvalFunction_evaluate
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluate,2,0) {(void*) boxptr_NFEvalFunction_evaluate,0}};
+#define boxvar_NFEvalFunction_evaluate MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluate)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

@@ -1,0 +1,82 @@
+#ifndef CheckModel__H
+#define CheckModel__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description DAE_Element_EQUATION__desc;
+
+extern struct record_description DAE_Expand_EXPAND__desc;
+
+extern struct record_description DAE_Expand_NOT__EXPAND__desc;
+
+extern struct record_description DAE_Subscript_WHOLEDIM__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+
+#define boxptr_CheckModel_getcr omc_CheckModel_getcr
+
+
+#define boxptr_CheckModel_traversingComponentRefFinder omc_CheckModel_traversingComponentRefFinder
+
+
+#define boxptr_CheckModel_statementElseOutputs omc_CheckModel_statementElseOutputs
+
+
+#define boxptr_CheckModel_statementOutputs omc_CheckModel_statementOutputs
+
+
+DLLDirection
+modelica_metatype omc_CheckModel_algorithmStatementListOutputs(threadData_t *threadData, modelica_metatype _inStmts, modelica_metatype _inCrefExpansion);
+#define boxptr_CheckModel_algorithmStatementListOutputs omc_CheckModel_algorithmStatementListOutputs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CheckModel_algorithmStatementListOutputs,2,0) {(void*) boxptr_CheckModel_algorithmStatementListOutputs,0}};
+#define boxvar_CheckModel_algorithmStatementListOutputs MMC_REFSTRUCTLIT(boxvar_lit_CheckModel_algorithmStatementListOutputs)
+
+
+#define boxptr_CheckModel_algorithmOutputs omc_CheckModel_algorithmOutputs
+
+
+DLLDirection
+modelica_boolean omc_CheckModel_isCrefListAlgorithmOutput(threadData_t *threadData, modelica_metatype _crefList, modelica_metatype _inAlgorithm, modelica_metatype _inSource, modelica_metatype _inCrefExpansionRule);
+DLLDirection
+modelica_metatype boxptr_CheckModel_isCrefListAlgorithmOutput(threadData_t *threadData, modelica_metatype _crefList, modelica_metatype _inAlgorithm, modelica_metatype _inSource, modelica_metatype _inCrefExpansionRule);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CheckModel_isCrefListAlgorithmOutput,2,0) {(void*) boxptr_CheckModel_isCrefListAlgorithmOutput,0}};
+#define boxvar_CheckModel_isCrefListAlgorithmOutput MMC_REFSTRUCTLIT(boxvar_lit_CheckModel_isCrefListAlgorithmOutput)
+
+
+DLLDirection
+modelica_metatype omc_CheckModel_checkAndGetAlgorithmOutputs(threadData_t *threadData, modelica_metatype _inAlgorithm, modelica_metatype _inSource, modelica_metatype _inCrefExpansionRule);
+#define boxptr_CheckModel_checkAndGetAlgorithmOutputs omc_CheckModel_checkAndGetAlgorithmOutputs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CheckModel_checkAndGetAlgorithmOutputs,2,0) {(void*) boxptr_CheckModel_checkAndGetAlgorithmOutputs,0}};
+#define boxvar_CheckModel_checkAndGetAlgorithmOutputs MMC_REFSTRUCTLIT(boxvar_lit_CheckModel_checkAndGetAlgorithmOutputs)
+
+
+#define boxptr_CheckModel_countVarEqnSize omc_CheckModel_countVarEqnSize
+
+
+DLLDirection
+modelica_integer omc_CheckModel_checkModel(threadData_t *threadData, modelica_metatype _inDAELst, modelica_integer *out_eqnSize, modelica_integer *out_simpleEqnSize);
+DLLDirection
+modelica_metatype boxptr_CheckModel_checkModel(threadData_t *threadData, modelica_metatype _inDAELst, modelica_metatype *out_eqnSize, modelica_metatype *out_simpleEqnSize);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CheckModel_checkModel,2,0) {(void*) boxptr_CheckModel_checkModel,0}};
+#define boxvar_CheckModel_checkModel MMC_REFSTRUCTLIT(boxvar_lit_CheckModel_checkModel)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

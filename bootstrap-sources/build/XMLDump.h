@@ -1,0 +1,245 @@
+#ifndef XMLDump__H
+#define XMLDump__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description BackendDAE_IndexType_NORMAL__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_CallAttributes_CALL__ATTR__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_Constraint_CONSTRAINT__EXPS__desc;
+
+extern struct record_description DAE_Element_ALGORITHM__desc;
+
+extern struct record_description DAE_Element_CONSTRAINT__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description DAE_TailCall_NO__TAIL__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_XMLDump_unparseCommentOptionNoAnnotation omc_XMLDump_unparseCommentOptionNoAnnotation
+
+
+#define boxptr_XMLDump_unaryopSymbol omc_XMLDump_unaryopSymbol
+
+
+#define boxptr_XMLDump_relopSymbol omc_XMLDump_relopSymbol
+
+
+#define boxptr_XMLDump_lunaryopSymbol omc_XMLDump_lunaryopSymbol
+
+
+#define boxptr_XMLDump_lbinopSymbol omc_XMLDump_lbinopSymbol
+
+
+#define boxptr_XMLDump_getDerName omc_XMLDump_getDerName
+
+
+#define boxptr_XMLDump_getIndex omc_XMLDump_getIndex
+
+
+#define boxptr_XMLDump_printIndexAndDerName omc_XMLDump_printIndexAndDerName
+
+
+#define boxptr_XMLDump_dumpVariable omc_XMLDump_dumpVariable
+
+
+#define boxptr_XMLDump_dumpTypeStr omc_XMLDump_dumpTypeStr
+
+
+#define boxptr_XMLDump_dumpDimension omc_XMLDump_dumpDimension
+
+
+#define boxptr_XMLDump_dumpStrVoidTag omc_XMLDump_dumpStrVoidTag
+
+
+#define boxptr_XMLDump_dumpStrTagContent omc_XMLDump_dumpStrTagContent
+
+
+#define boxptr_XMLDump_dumpStrTagAttrNoChild omc_XMLDump_dumpStrTagAttrNoChild
+
+
+#define boxptr_XMLDump_dumpStrOpenTagAttr omc_XMLDump_dumpStrOpenTagAttr
+
+
+#define boxptr_XMLDump_dumpStrOpenTag omc_XMLDump_dumpStrOpenTag
+
+
+#define boxptr_XMLDump_dumpStrMathMLVariable omc_XMLDump_dumpStrMathMLVariable
+
+
+#define boxptr_XMLDump_dumpStrMathMLNumberAttr omc_XMLDump_dumpStrMathMLNumberAttr
+
+
+#define boxptr_XMLDump_dumpStrMathMLNumber omc_XMLDump_dumpStrMathMLNumber
+
+
+#define boxptr_XMLDump_dumpStreamStr omc_XMLDump_dumpStreamStr
+
+
+#define boxptr_XMLDump_dumpStrCloseTag omc_XMLDump_dumpStrCloseTag
+
+
+#define boxptr_XMLDump_transformModelicaIdentifierToXMLElementTag omc_XMLDump_transformModelicaIdentifierToXMLElementTag
+
+
+#define boxptr_XMLDump_dumpRow omc_XMLDump_dumpRow
+
+
+#define boxptr_XMLDump_dumpOptionDAEStateSelect omc_XMLDump_dumpOptionDAEStateSelect
+
+
+#define boxptr_XMLDump_dumpMatchingWork omc_XMLDump_dumpMatchingWork
+
+
+#define boxptr_XMLDump_dumpMatching omc_XMLDump_dumpMatching
+
+
+#define boxptr_XMLDump_dumpLstIntAttr omc_XMLDump_dumpLstIntAttr
+
+
+#define boxptr_XMLDump_dumpLstInt omc_XMLDump_dumpLstInt
+
+
+#define boxptr_XMLDump_printExpStr omc_XMLDump_printExpStr
+
+
+#define boxptr_XMLDump_dumpListSeparator omc_XMLDump_dumpListSeparator
+
+
+#define boxptr_XMLDump_dumpList omc_XMLDump_dumpList
+
+
+#define boxptr_XMLDump_dumpKind omc_XMLDump_dumpKind
+
+
+#define boxptr_XMLDump_dumpAdjacencyMatrix2 omc_XMLDump_dumpAdjacencyMatrix2
+
+
+#define boxptr_XMLDump_dumpAdjacencyMatrix omc_XMLDump_dumpAdjacencyMatrix
+
+
+#define boxptr_XMLDump_dumpFunctions3 omc_XMLDump_dumpFunctions3
+
+
+#define boxptr_XMLDump_dumpFunctions2 omc_XMLDump_dumpFunctions2
+
+
+#define boxptr_XMLDump_dumpFunctions omc_XMLDump_dumpFunctions
+
+
+#define boxptr_XMLDump_dumpFlowStr omc_XMLDump_dumpFlowStr
+
+
+#define boxptr_XMLDump_dumpExtObjCls2 omc_XMLDump_dumpExtObjCls2
+
+
+#define boxptr_XMLDump_dumpExtObjCls omc_XMLDump_dumpExtObjCls
+
+
+#define boxptr_XMLDump_dumpExp2 omc_XMLDump_dumpExp2
+
+
+#define boxptr_XMLDump_dumpDirectionStr omc_XMLDump_dumpDirectionStr
+
+
+#define boxptr_XMLDump_getOrderedEqs2 omc_XMLDump_getOrderedEqs2
+
+
+#define boxptr_XMLDump_getOrderedEqsandVars omc_XMLDump_getOrderedEqsandVars
+
+
+#define boxptr_XMLDump_getEqsList omc_XMLDump_getEqsList
+
+
+#define boxptr_XMLDump_getOrderedVars omc_XMLDump_getOrderedVars
+
+
+DLLDirection
+void omc_XMLDump_dumpBackendDAE(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_boolean _addOriginalAdjacencyMatrix, modelica_boolean _addSolvingInfo, modelica_boolean _addMathMLCode, modelica_boolean _dumpResiduals, modelica_boolean _dumpSolvedEquations);
+DLLDirection
+void boxptr_XMLDump_dumpBackendDAE(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_metatype _addOriginalAdjacencyMatrix, modelica_metatype _addSolvingInfo, modelica_metatype _addMathMLCode, modelica_metatype _dumpResiduals, modelica_metatype _dumpSolvedEquations);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_XMLDump_dumpBackendDAE,2,0) {(void*) boxptr_XMLDump_dumpBackendDAE,0}};
+#define boxvar_XMLDump_dumpBackendDAE MMC_REFSTRUCTLIT(boxvar_lit_XMLDump_dumpBackendDAE)
+
+
+DLLDirection
+modelica_metatype omc_XMLDump_dumpDAEXML(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_XMLDump_dumpDAEXML omc_XMLDump_dumpDAEXML
+static const MMC_DEFSTRUCTLIT(boxvar_lit_XMLDump_dumpDAEXML,2,0) {(void*) boxptr_XMLDump_dumpDAEXML,0}};
+#define boxvar_XMLDump_dumpDAEXML MMC_REFSTRUCTLIT(boxvar_lit_XMLDump_dumpDAEXML)
+
+
+#define boxptr_XMLDump_dumpDAEInstDims2 omc_XMLDump_dumpDAEInstDims2
+
+
+#define boxptr_XMLDump_dumpDAEInstDims omc_XMLDump_dumpDAEInstDims
+
+
+#define boxptr_XMLDump_dumpCrefIdxLst2 omc_XMLDump_dumpCrefIdxLst2
+
+
+#define boxptr_XMLDump_dumpCrefIdxLst omc_XMLDump_dumpCrefIdxLst
+
+
+#define boxptr_XMLDump_dumpComponentsWork omc_XMLDump_dumpComponentsWork
+
+
+#define boxptr_XMLDump_dumpComponents omc_XMLDump_dumpComponents
+
+
+#define boxptr_XMLDump_dumpComment omc_XMLDump_dumpComment
+
+
+#define boxptr_XMLDump_dumpConstraints omc_XMLDump_dumpConstraints
+
+
+#define boxptr_XMLDump_dumpAbsynPathLst2 omc_XMLDump_dumpAbsynPathLst2
+
+
+#define boxptr_XMLDump_dumpAbsynPathLst omc_XMLDump_dumpAbsynPathLst
+
+
+#define boxptr_XMLDump_binopSymbol2 omc_XMLDump_binopSymbol2
+
+
+#define boxptr_XMLDump_binopSymbol omc_XMLDump_binopSymbol
+
+#ifdef __cplusplus
+}
+#endif
+#endif

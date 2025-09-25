@@ -1,0 +1,161 @@
+#ifndef NFEnvExtends__H
+#define NFEnvExtends__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description Absyn_Path_QUALIFIED__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_NOTIFICATION__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFEnvExtends_ExtendsWrapper_NO__EXTENDS__desc;
+
+extern struct record_description NFEnvExtends_ExtendsWrapper_QUALIFIED__EXTENDS__desc;
+
+extern struct record_description NFEnvExtends_ExtendsWrapper_UNQUALIFIED__EXTENDS__desc;
+
+extern struct record_description NFSCodeEnv_ClassType_CLASS__EXTENDS__desc;
+
+extern struct record_description NFSCodeEnv_ClassType_USERDEFINED__desc;
+
+extern struct record_description NFSCodeEnv_Extends_EXTENDS__desc;
+
+extern struct record_description NFSCodeEnv_ExtendsTable_EXTENDS__TABLE__desc;
+
+extern struct record_description NFSCodeEnv_Frame_FRAME__desc;
+
+extern struct record_description NFSCodeEnv_Item_CLASS__desc;
+
+extern struct record_description NFSCodeLookup_RedeclareReplaceStrategy_IGNORE__REDECLARES__desc;
+
+extern struct record_description SCode_Element_CLASS__desc;
+
+extern struct record_description SCode_Element_EXTENDS__desc;
+
+extern struct record_description SCode_Visibility_PUBLIC__desc;
+
+extern struct record_description SCodeDump_SCodeDumpOptions_OPTIONS__desc;
+
+
+#define boxptr_NFEnvExtends_addClassExtendsInfoToEnv omc_NFEnvExtends_addClassExtendsInfoToEnv
+
+
+DLLDirection
+modelica_metatype omc_NFEnvExtends_extendEnvWithClassExtends(threadData_t *threadData, modelica_metatype _inClassExtends, modelica_metatype _inEnv);
+#define boxptr_NFEnvExtends_extendEnvWithClassExtends omc_NFEnvExtends_extendEnvWithClassExtends
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_extendEnvWithClassExtends,2,0) {(void*) boxptr_NFEnvExtends_extendEnvWithClassExtends,0}};
+#define boxvar_NFEnvExtends_extendEnvWithClassExtends MMC_REFSTRUCTLIT(boxvar_lit_NFEnvExtends_extendEnvWithClassExtends)
+
+
+#define boxptr_NFEnvExtends_lookupClassExtendsBaseClass omc_NFEnvExtends_lookupClassExtendsBaseClass
+
+
+#define boxptr_NFEnvExtends_updateClassExtends2 omc_NFEnvExtends_updateClassExtends2
+
+
+#define boxptr_NFEnvExtends_updateClassExtends omc_NFEnvExtends_updateClassExtends
+
+
+#define boxptr_NFEnvExtends_update3 omc_NFEnvExtends_update3
+
+
+#define boxptr_NFEnvExtends_update2 omc_NFEnvExtends_update2
+
+
+#define boxptr_NFEnvExtends_lookupQualifiedExtends2 omc_NFEnvExtends_lookupQualifiedExtends2
+
+
+#define boxptr_NFEnvExtends_lookupFullyQualified2 omc_NFEnvExtends_lookupFullyQualified2
+
+
+#define boxptr_NFEnvExtends_lookupFullyQualified omc_NFEnvExtends_lookupFullyQualified
+
+
+#define boxptr_NFEnvExtends_lookupInUnqualifiedImports omc_NFEnvExtends_lookupInUnqualifiedImports
+
+
+#define boxptr_NFEnvExtends_lookupInQualifiedImports omc_NFEnvExtends_lookupInQualifiedImports
+
+
+#define boxptr_NFEnvExtends_lookupInBaseClasses2 omc_NFEnvExtends_lookupInBaseClasses2
+
+
+#define boxptr_NFEnvExtends_lookupInBaseClasses omc_NFEnvExtends_lookupInBaseClasses
+
+
+#define boxptr_NFEnvExtends_printInheritedExtendsError omc_NFEnvExtends_printInheritedExtendsError
+
+
+DLLDirection
+void omc_NFEnvExtends_printExtendsError2(threadData_t *threadData, modelica_string _inError, modelica_metatype _inBaseClass, modelica_metatype _inPartPath, modelica_metatype _inEnv, modelica_metatype _inInfo);
+#define boxptr_NFEnvExtends_printExtendsError2 omc_NFEnvExtends_printExtendsError2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_printExtendsError2,2,0) {(void*) boxptr_NFEnvExtends_printExtendsError2,0}};
+#define boxvar_NFEnvExtends_printExtendsError2 MMC_REFSTRUCTLIT(boxvar_lit_NFEnvExtends_printExtendsError2)
+
+
+DLLDirection
+void omc_NFEnvExtends_printExtendsError(threadData_t *threadData, modelica_metatype _inErrorPath, modelica_metatype _inEnv, modelica_metatype _inInfo);
+#define boxptr_NFEnvExtends_printExtendsError omc_NFEnvExtends_printExtendsError
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_printExtendsError,2,0) {(void*) boxptr_NFEnvExtends_printExtendsError,0}};
+#define boxvar_NFEnvExtends_printExtendsError MMC_REFSTRUCTLIT(boxvar_lit_NFEnvExtends_printExtendsError)
+
+
+#define boxptr_NFEnvExtends_splitExtendsErrorPath omc_NFEnvExtends_splitExtendsErrorPath
+
+
+#define boxptr_NFEnvExtends_makeExtendsError omc_NFEnvExtends_makeExtendsError
+
+
+#define boxptr_NFEnvExtends_qualifyExtends2 omc_NFEnvExtends_qualifyExtends2
+
+
+#define boxptr_NFEnvExtends_qualifyExtends omc_NFEnvExtends_qualifyExtends
+
+
+#define boxptr_NFEnvExtends_qualifyExtendsList omc_NFEnvExtends_qualifyExtendsList
+
+
+#define boxptr_NFEnvExtends_qualifyLocalScope omc_NFEnvExtends_qualifyLocalScope
+
+
+#define boxptr_NFEnvExtends_qualify3 omc_NFEnvExtends_qualify3
+
+
+#define boxptr_NFEnvExtends_qualify2 omc_NFEnvExtends_qualify2
+
+
+DLLDirection
+modelica_metatype omc_NFEnvExtends_qualify(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFEnvExtends_qualify omc_NFEnvExtends_qualify
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_qualify,2,0) {(void*) boxptr_NFEnvExtends_qualify,0}};
+#define boxvar_NFEnvExtends_qualify MMC_REFSTRUCTLIT(boxvar_lit_NFEnvExtends_qualify)
+
+
+DLLDirection
+modelica_metatype omc_NFEnvExtends_update(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFEnvExtends_update omc_NFEnvExtends_update
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_update,2,0) {(void*) boxptr_NFEnvExtends_update,0}};
+#define boxvar_NFEnvExtends_update MMC_REFSTRUCTLIT(boxvar_lit_NFEnvExtends_update)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

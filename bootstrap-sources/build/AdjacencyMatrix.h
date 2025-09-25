@@ -1,0 +1,72 @@
+#ifndef AdjacencyMatrix__H
+#define AdjacencyMatrix__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+
+DLLDirection
+modelica_boolean omc_AdjacencyMatrix_isEmpty(threadData_t *threadData, modelica_metatype _m);
+DLLDirection
+modelica_metatype boxptr_AdjacencyMatrix_isEmpty(threadData_t *threadData, modelica_metatype _m);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_isEmpty,2,0) {(void*) boxptr_AdjacencyMatrix_isEmpty,0}};
+#define boxvar_AdjacencyMatrix_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_isEmpty)
+
+
+DLLDirection
+modelica_metatype omc_AdjacencyMatrix_absAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m);
+#define boxptr_AdjacencyMatrix_absAdjacencyMatrix omc_AdjacencyMatrix_absAdjacencyMatrix
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_absAdjacencyMatrix,2,0) {(void*) boxptr_AdjacencyMatrix_absAdjacencyMatrix,0}};
+#define boxvar_AdjacencyMatrix_absAdjacencyMatrix MMC_REFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_absAdjacencyMatrix)
+
+
+DLLDirection
+modelica_metatype omc_AdjacencyMatrix_transposeAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m, modelica_integer _nRowsMt);
+DLLDirection
+modelica_metatype boxptr_AdjacencyMatrix_transposeAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m, modelica_metatype _nRowsMt);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_transposeAdjacencyMatrix,2,0) {(void*) boxptr_AdjacencyMatrix_transposeAdjacencyMatrix,0}};
+#define boxvar_AdjacencyMatrix_transposeAdjacencyMatrix MMC_REFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_transposeAdjacencyMatrix)
+
+
+DLLDirection
+modelica_metatype omc_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m, modelica_integer _size, modelica_integer _index, modelica_metatype _skip, modelica_metatype _rowskip, modelica_metatype _mnew);
+DLLDirection
+modelica_metatype boxptr_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m, modelica_metatype _size, modelica_metatype _index, modelica_metatype _skip, modelica_metatype _rowskip, modelica_metatype _mnew);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix,2,0) {(void*) boxptr_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix,0}};
+#define boxvar_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix MMC_REFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix)
+
+
+DLLDirection
+modelica_metatype omc_AdjacencyMatrix_traverseAdjacencyMatrix(threadData_t *threadData, modelica_metatype _inM, modelica_fnptr _func, modelica_metatype _inTypeA, modelica_metatype *out_outTypeA);
+#define boxptr_AdjacencyMatrix_traverseAdjacencyMatrix omc_AdjacencyMatrix_traverseAdjacencyMatrix
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_traverseAdjacencyMatrix,2,0) {(void*) boxptr_AdjacencyMatrix_traverseAdjacencyMatrix,0}};
+#define boxvar_AdjacencyMatrix_traverseAdjacencyMatrix MMC_REFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_traverseAdjacencyMatrix)
+
+
+DLLDirection
+modelica_metatype omc_AdjacencyMatrix_copyAdjacencyMatrixT(threadData_t *threadData, modelica_metatype _inAdjacencyMatrix);
+#define boxptr_AdjacencyMatrix_copyAdjacencyMatrixT omc_AdjacencyMatrix_copyAdjacencyMatrixT
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_copyAdjacencyMatrixT,2,0) {(void*) boxptr_AdjacencyMatrix_copyAdjacencyMatrixT,0}};
+#define boxvar_AdjacencyMatrix_copyAdjacencyMatrixT MMC_REFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_copyAdjacencyMatrixT)
+
+
+DLLDirection
+modelica_metatype omc_AdjacencyMatrix_copyAdjacencyMatrix(threadData_t *threadData, modelica_metatype _inAdjacencyMatrix);
+#define boxptr_AdjacencyMatrix_copyAdjacencyMatrix omc_AdjacencyMatrix_copyAdjacencyMatrix
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_copyAdjacencyMatrix,2,0) {(void*) boxptr_AdjacencyMatrix_copyAdjacencyMatrix,0}};
+#define boxvar_AdjacencyMatrix_copyAdjacencyMatrix MMC_REFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_copyAdjacencyMatrix)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

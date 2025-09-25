@@ -1,0 +1,454 @@
+#ifndef NFFlatModel__H
+#define NFFlatModel__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BaseModelica_OutputFormat_OUTPUT__FORMAT__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__LIST__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Gettext_TranslatableContent_notrans__desc;
+
+extern struct record_description IOStream_IOStreamType_LIST__desc;
+
+extern struct record_description NFBackendExtension_Annotations_ANNOTATIONS__desc;
+
+extern struct record_description NFBackendExtension_BackendInfo_BACKEND__INFO__desc;
+
+extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_FRONTEND__DUMMY__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFVariable_VARIABLE__desc;
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_moveBindings(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel);
+#define boxptr_NFFlatModel_moveBindings omc_NFFlatModel_moveBindings
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_moveBindings,2,0) {(void*) boxptr_NFFlatModel_moveBindings,0}};
+#define boxvar_NFFlatModel_moveBindings MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_moveBindings)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_removeNonTopLevelDirections(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel);
+#define boxptr_NFFlatModel_removeNonTopLevelDirections omc_NFFlatModel_removeNonTopLevelDirections
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_removeNonTopLevelDirections,2,0) {(void*) boxptr_NFFlatModel_removeNonTopLevelDirections,0}};
+#define boxvar_NFFlatModel_removeNonTopLevelDirections MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_removeNonTopLevelDirections)
+
+
+DLLDirection
+modelica_boolean omc_NFFlatModel_hasArrayConnections(threadData_t *threadData, modelica_metatype _flatModel, modelica_integer _minSize);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_hasArrayConnections(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _minSize);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_hasArrayConnections,2,0) {(void*) boxptr_NFFlatModel_hasArrayConnections,0}};
+#define boxvar_NFFlatModel_hasArrayConnections MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_hasArrayConnections)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateAbsynCref2(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _nodes, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateAbsynCref2 omc_NFFlatModel_obfuscateAbsynCref2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAbsynCref2,2,0) {(void*) boxptr_NFFlatModel_obfuscateAbsynCref2,0}};
+#define boxvar_NFFlatModel_obfuscateAbsynCref2 MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAbsynCref2)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateAbsynCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _scope, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateAbsynCref omc_NFFlatModel_obfuscateAbsynCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAbsynCref,2,0) {(void*) boxptr_NFFlatModel_obfuscateAbsynCref,0}};
+#define boxvar_NFFlatModel_obfuscateAbsynCref MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAbsynCref)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateAbsynExpTraverse(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _scope, modelica_metatype __omcQ_24in_5FobfuscationMap, modelica_metatype *out_obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateAbsynExpTraverse omc_NFFlatModel_obfuscateAbsynExpTraverse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAbsynExpTraverse,2,0) {(void*) boxptr_NFFlatModel_obfuscateAbsynExpTraverse,0}};
+#define boxvar_NFFlatModel_obfuscateAbsynExpTraverse MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAbsynExpTraverse)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateAbsynExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _scope, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateAbsynExp omc_NFFlatModel_obfuscateAbsynExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAbsynExp,2,0) {(void*) boxptr_NFFlatModel_obfuscateAbsynExp,0}};
+#define boxvar_NFFlatModel_obfuscateAbsynExp MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAbsynExp)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateAbsynExpOpt(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _scope, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateAbsynExpOpt omc_NFFlatModel_obfuscateAbsynExpOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAbsynExpOpt,2,0) {(void*) boxptr_NFFlatModel_obfuscateAbsynExpOpt,0}};
+#define boxvar_NFFlatModel_obfuscateAbsynExpOpt MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAbsynExpOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateAnnotationSubMod(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _scope, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateAnnotationSubMod omc_NFFlatModel_obfuscateAnnotationSubMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAnnotationSubMod,2,0) {(void*) boxptr_NFFlatModel_obfuscateAnnotationSubMod,0}};
+#define boxvar_NFFlatModel_obfuscateAnnotationSubMod MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAnnotationSubMod)
+
+
+DLLDirection
+modelica_boolean omc_NFFlatModel_isAllowedAnnotation(threadData_t *threadData, modelica_metatype _mod);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_isAllowedAnnotation(threadData_t *threadData, modelica_metatype _mod);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_isAllowedAnnotation,2,0) {(void*) boxptr_NFFlatModel_isAllowedAnnotation,0}};
+#define boxvar_NFFlatModel_isAllowedAnnotation MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_isAllowedAnnotation)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateAnnotationMod(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _scope, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateAnnotationMod omc_NFFlatModel_obfuscateAnnotationMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAnnotationMod,2,0) {(void*) boxptr_NFFlatModel_obfuscateAnnotationMod,0}};
+#define boxvar_NFFlatModel_obfuscateAnnotationMod MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAnnotationMod)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateAnnotation(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fann, modelica_metatype _scope, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateAnnotation omc_NFFlatModel_obfuscateAnnotation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAnnotation,2,0) {(void*) boxptr_NFFlatModel_obfuscateAnnotation,0}};
+#define boxvar_NFFlatModel_obfuscateAnnotation MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAnnotation)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateAnnotationOpt(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fann, modelica_metatype _scope, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateAnnotationOpt omc_NFFlatModel_obfuscateAnnotationOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAnnotationOpt,2,0) {(void*) boxptr_NFFlatModel_obfuscateAnnotationOpt,0}};
+#define boxvar_NFFlatModel_obfuscateAnnotationOpt MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAnnotationOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateComment(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcomment, modelica_metatype _scope, modelica_metatype _obfuscationMap, modelica_boolean _stripComment);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_obfuscateComment(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcomment, modelica_metatype _scope, modelica_metatype _obfuscationMap, modelica_metatype _stripComment);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateComment,2,0) {(void*) boxptr_NFFlatModel_obfuscateComment,0}};
+#define boxvar_NFFlatModel_obfuscateComment MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateComment)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateCommentOpt(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcomment, modelica_metatype _scope, modelica_metatype _obfuscationMap, modelica_boolean _stripComment);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_obfuscateCommentOpt(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcomment, modelica_metatype _scope, modelica_metatype _obfuscationMap, modelica_metatype _stripComment);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateCommentOpt,2,0) {(void*) boxptr_NFFlatModel_obfuscateCommentOpt,0}};
+#define boxvar_NFFlatModel_obfuscateCommentOpt MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateCommentOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateSource(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsource, modelica_metatype _scope, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateSource omc_NFFlatModel_obfuscateSource
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateSource,2,0) {(void*) boxptr_NFFlatModel_obfuscateSource,0}};
+#define boxvar_NFFlatModel_obfuscateSource MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateSource)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateStatement(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fstmt, modelica_metatype _scope, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateStatement omc_NFFlatModel_obfuscateStatement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateStatement,2,0) {(void*) boxptr_NFFlatModel_obfuscateStatement,0}};
+#define boxvar_NFFlatModel_obfuscateStatement MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateStatement)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateAlgorithm(threadData_t *threadData, modelica_metatype __omcQ_24in_5Falg, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateAlgorithm omc_NFFlatModel_obfuscateAlgorithm
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAlgorithm,2,0) {(void*) boxptr_NFFlatModel_obfuscateAlgorithm,0}};
+#define boxvar_NFFlatModel_obfuscateAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateAlgorithm)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateEquation(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feq, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateEquation omc_NFFlatModel_obfuscateEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateEquation,2,0) {(void*) boxptr_NFFlatModel_obfuscateEquation,0}};
+#define boxvar_NFFlatModel_obfuscateEquation MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateEquation)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateExp__impl(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateExp__impl omc_NFFlatModel_obfuscateExp__impl
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateExp__impl,2,0) {(void*) boxptr_NFFlatModel_obfuscateExp__impl,0}};
+#define boxvar_NFFlatModel_obfuscateExp__impl MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateExp__impl)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateExpOpt(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateExpOpt omc_NFFlatModel_obfuscateExpOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateExpOpt,2,0) {(void*) boxptr_NFFlatModel_obfuscateExpOpt,0}};
+#define boxvar_NFFlatModel_obfuscateExpOpt MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateExpOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateExp omc_NFFlatModel_obfuscateExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateExp,2,0) {(void*) boxptr_NFFlatModel_obfuscateExp,0}};
+#define boxvar_NFFlatModel_obfuscateExp MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateExp)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _obfuscationMap, modelica_boolean *out_insideRecord);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_obfuscateCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _obfuscationMap, modelica_metatype *out_insideRecord);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateCref,2,0) {(void*) boxptr_NFFlatModel_obfuscateCref,0}};
+#define boxvar_NFFlatModel_obfuscateCref MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateCref)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscateVariable(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fvar, modelica_metatype _obfuscationMap);
+#define boxptr_NFFlatModel_obfuscateVariable omc_NFFlatModel_obfuscateVariable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateVariable,2,0) {(void*) boxptr_NFFlatModel_obfuscateVariable,0}};
+#define boxvar_NFFlatModel_obfuscateVariable MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscateVariable)
+
+
+DLLDirection
+void omc_NFFlatModel_addObfuscatedVariable(threadData_t *threadData, modelica_metatype _var, modelica_boolean _onlyEncrypted, modelica_metatype _obfuscationMap);
+DLLDirection
+void boxptr_NFFlatModel_addObfuscatedVariable(threadData_t *threadData, modelica_metatype _var, modelica_metatype _onlyEncrypted, modelica_metatype _obfuscationMap);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_addObfuscatedVariable,2,0) {(void*) boxptr_NFFlatModel_addObfuscatedVariable,0}};
+#define boxvar_NFFlatModel_addObfuscatedVariable MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_addObfuscatedVariable)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_obfuscate(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel);
+#define boxptr_NFFlatModel_obfuscate omc_NFFlatModel_obfuscate
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscate,2,0) {(void*) boxptr_NFFlatModel_obfuscate,0}};
+#define boxvar_NFFlatModel_obfuscate MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_obfuscate)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_typeFlatType(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fty);
+#define boxptr_NFFlatModel_typeFlatType omc_NFFlatModel_typeFlatType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_typeFlatType,2,0) {(void*) boxptr_NFFlatModel_typeFlatType,0}};
+#define boxvar_NFFlatModel_typeFlatType MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_typeFlatType)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_reconstructRecordInstance(threadData_t *threadData, modelica_metatype _recordName, modelica_metatype _variables);
+#define boxptr_NFFlatModel_reconstructRecordInstance omc_NFFlatModel_reconstructRecordInstance
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_reconstructRecordInstance,2,0) {(void*) boxptr_NFFlatModel_reconstructRecordInstance,0}};
+#define boxvar_NFFlatModel_reconstructRecordInstance MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_reconstructRecordInstance)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_reconstructRecordInstances(threadData_t *threadData, modelica_metatype _variables);
+#define boxptr_NFFlatModel_reconstructRecordInstances omc_NFFlatModel_reconstructRecordInstances
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_reconstructRecordInstances,2,0) {(void*) boxptr_NFFlatModel_reconstructRecordInstances,0}};
+#define boxvar_NFFlatModel_reconstructRecordInstances MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_reconstructRecordInstances)
+
+
+DLLDirection
+void omc_NFFlatModel_collectComponentFlatTypes(threadData_t *threadData, modelica_metatype _component, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectComponentFlatTypes omc_NFFlatModel_collectComponentFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectComponentFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectComponentFlatTypes,0}};
+#define boxvar_NFFlatModel_collectComponentFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectComponentFlatTypes)
+
+
+DLLDirection
+void omc_NFFlatModel_collectFunctionFlatTypes(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectFunctionFlatTypes omc_NFFlatModel_collectFunctionFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectFunctionFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectFunctionFlatTypes,0}};
+#define boxvar_NFFlatModel_collectFunctionFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectFunctionFlatTypes)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_collectExpFlatTypes__traverse(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Ftypes);
+#define boxptr_NFFlatModel_collectExpFlatTypes__traverse omc_NFFlatModel_collectExpFlatTypes__traverse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectExpFlatTypes__traverse,2,0) {(void*) boxptr_NFFlatModel_collectExpFlatTypes__traverse,0}};
+#define boxvar_NFFlatModel_collectExpFlatTypes__traverse MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectExpFlatTypes__traverse)
+
+
+DLLDirection
+void omc_NFFlatModel_collectExpFlatTypes(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectExpFlatTypes omc_NFFlatModel_collectExpFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectExpFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectExpFlatTypes,0}};
+#define boxvar_NFFlatModel_collectExpFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectExpFlatTypes)
+
+
+DLLDirection
+void omc_NFFlatModel_collectStmtBranchFlatTypes(threadData_t *threadData, modelica_metatype _branch, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectStmtBranchFlatTypes omc_NFFlatModel_collectStmtBranchFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectStmtBranchFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectStmtBranchFlatTypes,0}};
+#define boxvar_NFFlatModel_collectStmtBranchFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectStmtBranchFlatTypes)
+
+
+DLLDirection
+void omc_NFFlatModel_collectStatementFlatTypes(threadData_t *threadData, modelica_metatype _stmt, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectStatementFlatTypes omc_NFFlatModel_collectStatementFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectStatementFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectStatementFlatTypes,0}};
+#define boxvar_NFFlatModel_collectStatementFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectStatementFlatTypes)
+
+
+DLLDirection
+void omc_NFFlatModel_collectStatementsFlatTypes(threadData_t *threadData, modelica_metatype _statements, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectStatementsFlatTypes omc_NFFlatModel_collectStatementsFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectStatementsFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectStatementsFlatTypes,0}};
+#define boxvar_NFFlatModel_collectStatementsFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectStatementsFlatTypes)
+
+
+DLLDirection
+void omc_NFFlatModel_collectAlgorithmFlatTypes(threadData_t *threadData, modelica_metatype _alg, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectAlgorithmFlatTypes omc_NFFlatModel_collectAlgorithmFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectAlgorithmFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectAlgorithmFlatTypes,0}};
+#define boxvar_NFFlatModel_collectAlgorithmFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectAlgorithmFlatTypes)
+
+
+DLLDirection
+void omc_NFFlatModel_collectEqBranchFlatTypes(threadData_t *threadData, modelica_metatype _branch, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectEqBranchFlatTypes omc_NFFlatModel_collectEqBranchFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectEqBranchFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectEqBranchFlatTypes,0}};
+#define boxvar_NFFlatModel_collectEqBranchFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectEqBranchFlatTypes)
+
+
+DLLDirection
+void omc_NFFlatModel_collectEquationFlatTypes(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectEquationFlatTypes omc_NFFlatModel_collectEquationFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectEquationFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectEquationFlatTypes,0}};
+#define boxvar_NFFlatModel_collectEquationFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectEquationFlatTypes)
+
+
+DLLDirection
+void omc_NFFlatModel_collectBindingFlatTypes(threadData_t *threadData, modelica_metatype _binding, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectBindingFlatTypes omc_NFFlatModel_collectBindingFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectBindingFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectBindingFlatTypes,0}};
+#define boxvar_NFFlatModel_collectBindingFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectBindingFlatTypes)
+
+
+DLLDirection
+void omc_NFFlatModel_collectFlatType(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectFlatType omc_NFFlatModel_collectFlatType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectFlatType,2,0) {(void*) boxptr_NFFlatModel_collectFlatType,0}};
+#define boxvar_NFFlatModel_collectFlatType MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectFlatType)
+
+
+DLLDirection
+void omc_NFFlatModel_collectVariableFlatTypes(threadData_t *threadData, modelica_metatype _var, modelica_metatype _types);
+#define boxptr_NFFlatModel_collectVariableFlatTypes omc_NFFlatModel_collectVariableFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectVariableFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectVariableFlatTypes,0}};
+#define boxvar_NFFlatModel_collectVariableFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectVariableFlatTypes)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_collectFlatTypes(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions);
+#define boxptr_NFFlatModel_collectFlatTypes omc_NFFlatModel_collectFlatTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_collectFlatTypes,2,0) {(void*) boxptr_NFFlatModel_collectFlatTypes,0}};
+#define boxvar_NFFlatModel_collectFlatTypes MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_collectFlatTypes)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_appendFlatStream(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_boolean _printBindingTypes, modelica_metatype __omcQ_24in_5Fs);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_appendFlatStream(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_metatype _printBindingTypes, modelica_metatype __omcQ_24in_5Fs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_appendFlatStream,2,0) {(void*) boxptr_NFFlatModel_appendFlatStream,0}};
+#define boxvar_NFFlatModel_appendFlatStream MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_appendFlatStream)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_toFlatStream(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_boolean _printBindingTypes);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_toFlatStream(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_metatype _printBindingTypes);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_toFlatStream,2,0) {(void*) boxptr_NFFlatModel_toFlatStream,0}};
+#define boxvar_NFFlatModel_toFlatStream MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_toFlatStream)
+
+
+DLLDirection
+void omc_NFFlatModel_printFlatString(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_boolean _printBindingTypes);
+DLLDirection
+void boxptr_NFFlatModel_printFlatString(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_metatype _printBindingTypes);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_printFlatString,2,0) {(void*) boxptr_NFFlatModel_printFlatString,0}};
+#define boxvar_NFFlatModel_printFlatString MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_printFlatString)
+
+
+DLLDirection
+modelica_string omc_NFFlatModel_toFlatString(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_boolean _printBindingTypes);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_toFlatString(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_metatype _printBindingTypes);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_toFlatString,2,0) {(void*) boxptr_NFFlatModel_toFlatString,0}};
+#define boxvar_NFFlatModel_toFlatString MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_toFlatString)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_appendStream(threadData_t *threadData, modelica_metatype _flatModel, modelica_boolean _printBindingTypes, modelica_metatype __omcQ_24in_5Fs);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_appendStream(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _printBindingTypes, modelica_metatype __omcQ_24in_5Fs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_appendStream,2,0) {(void*) boxptr_NFFlatModel_appendStream,0}};
+#define boxvar_NFFlatModel_appendStream MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_appendStream)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_toStream(threadData_t *threadData, modelica_metatype _flatModel, modelica_boolean _printBindingTypes);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_toStream(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _printBindingTypes);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_toStream,2,0) {(void*) boxptr_NFFlatModel_toStream,0}};
+#define boxvar_NFFlatModel_toStream MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_toStream)
+
+
+DLLDirection
+void omc_NFFlatModel_printString(threadData_t *threadData, modelica_metatype _flatModel, modelica_boolean _printBindingTypes);
+DLLDirection
+void boxptr_NFFlatModel_printString(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _printBindingTypes);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_printString,2,0) {(void*) boxptr_NFFlatModel_printString,0}};
+#define boxvar_NFFlatModel_printString MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_printString)
+
+
+DLLDirection
+modelica_string omc_NFFlatModel_toString(threadData_t *threadData, modelica_metatype _flatModel, modelica_boolean _printBindingTypes);
+DLLDirection
+modelica_metatype boxptr_NFFlatModel_toString(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _printBindingTypes);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_toString,2,0) {(void*) boxptr_NFFlatModel_toString,0}};
+#define boxvar_NFFlatModel_toString MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_toString)
+
+
+DLLDirection
+modelica_string omc_NFFlatModel_className(threadData_t *threadData, modelica_metatype _flatModel);
+#define boxptr_NFFlatModel_className omc_NFFlatModel_className
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_className,2,0) {(void*) boxptr_NFFlatModel_className,0}};
+#define boxvar_NFFlatModel_className MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_className)
+
+
+DLLDirection
+modelica_string omc_NFFlatModel_fullName(threadData_t *threadData, modelica_metatype _flatModel);
+#define boxptr_NFFlatModel_fullName omc_NFFlatModel_fullName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_fullName,2,0) {(void*) boxptr_NFFlatModel_fullName,0}};
+#define boxvar_NFFlatModel_fullName MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_fullName)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_mapAlgorithms(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel, modelica_fnptr _fn);
+#define boxptr_NFFlatModel_mapAlgorithms omc_NFFlatModel_mapAlgorithms
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_mapAlgorithms,2,0) {(void*) boxptr_NFFlatModel_mapAlgorithms,0}};
+#define boxvar_NFFlatModel_mapAlgorithms MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_mapAlgorithms)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_mapEquations(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel, modelica_fnptr _fn);
+#define boxptr_NFFlatModel_mapEquations omc_NFFlatModel_mapEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_mapEquations,2,0) {(void*) boxptr_NFFlatModel_mapEquations,0}};
+#define boxvar_NFFlatModel_mapEquations MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_mapEquations)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModel_mapExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel, modelica_fnptr _fn);
+#define boxptr_NFFlatModel_mapExp omc_NFFlatModel_mapExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModel_mapExp,2,0) {(void*) boxptr_NFFlatModel_mapExp,0}};
+#define boxvar_NFFlatModel_mapExp MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModel_mapExp)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

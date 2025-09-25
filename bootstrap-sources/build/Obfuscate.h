@@ -1,0 +1,325 @@
+#ifndef Obfuscate__H
+#define Obfuscate__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Exp_STRING__desc;
+
+extern struct record_description Obfuscate_Env_ENV__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+
+DLLDirection
+modelica_boolean omc_Obfuscate_isBuiltinCall(threadData_t *threadData, modelica_metatype _callName, modelica_metatype _env);
+DLLDirection
+modelica_metatype boxptr_Obfuscate_isBuiltinCall(threadData_t *threadData, modelica_metatype _callName, modelica_metatype _env);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_isBuiltinCall,2,0) {(void*) boxptr_Obfuscate_isBuiltinCall,0}};
+#define boxvar_Obfuscate_isBuiltinCall MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_isBuiltinCall)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateStatement(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fstmt, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateStatement omc_Obfuscate_obfuscateStatement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateStatement,2,0) {(void*) boxptr_Obfuscate_obfuscateStatement,0}};
+#define boxvar_Obfuscate_obfuscateStatement MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateStatement)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateStatements(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fstmts, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateStatements omc_Obfuscate_obfuscateStatements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateStatements,2,0) {(void*) boxptr_Obfuscate_obfuscateStatements,0}};
+#define boxvar_Obfuscate_obfuscateStatements MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateStatements)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateAlgorithm(threadData_t *threadData, modelica_metatype __omcQ_24in_5Falg, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateAlgorithm omc_Obfuscate_obfuscateAlgorithm
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAlgorithm,2,0) {(void*) boxptr_Obfuscate_obfuscateAlgorithm,0}};
+#define boxvar_Obfuscate_obfuscateAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAlgorithm)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateMessage(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmessage, modelica_string _fnName);
+#define boxptr_Obfuscate_obfuscateMessage omc_Obfuscate_obfuscateMessage
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateMessage,2,0) {(void*) boxptr_Obfuscate_obfuscateMessage,0}};
+#define boxvar_Obfuscate_obfuscateMessage MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateMessage)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateEquation(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feq, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateEquation omc_Obfuscate_obfuscateEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateEquation,2,0) {(void*) boxptr_Obfuscate_obfuscateEquation,0}};
+#define boxvar_Obfuscate_obfuscateEquation MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateEquation)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateEquations(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feql, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateEquations omc_Obfuscate_obfuscateEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateEquations,2,0) {(void*) boxptr_Obfuscate_obfuscateEquations,0}};
+#define boxvar_Obfuscate_obfuscateEquations MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateEquations)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateExternalDecl(threadData_t *threadData, modelica_metatype __omcQ_24in_5FextDecl, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateExternalDecl omc_Obfuscate_obfuscateExternalDecl
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateExternalDecl,2,0) {(void*) boxptr_Obfuscate_obfuscateExternalDecl,0}};
+#define boxvar_Obfuscate_obfuscateExternalDecl MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateExternalDecl)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateArrayDims(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsubs, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateArrayDims omc_Obfuscate_obfuscateArrayDims
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateArrayDims,2,0) {(void*) boxptr_Obfuscate_obfuscateArrayDims,0}};
+#define boxvar_Obfuscate_obfuscateArrayDims MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateArrayDims)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateArrayDimsOpt(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fdims, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateArrayDimsOpt omc_Obfuscate_obfuscateArrayDimsOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateArrayDimsOpt,2,0) {(void*) boxptr_Obfuscate_obfuscateArrayDimsOpt,0}};
+#define boxvar_Obfuscate_obfuscateArrayDimsOpt MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateArrayDimsOpt)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateForIterator(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fiterator, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateForIterator omc_Obfuscate_obfuscateForIterator
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateForIterator,2,0) {(void*) boxptr_Obfuscate_obfuscateForIterator,0}};
+#define boxvar_Obfuscate_obfuscateForIterator MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateForIterator)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateNamedArg(threadData_t *threadData, modelica_metatype __omcQ_24in_5Farg, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateNamedArg omc_Obfuscate_obfuscateNamedArg
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateNamedArg,2,0) {(void*) boxptr_Obfuscate_obfuscateNamedArg,0}};
+#define boxvar_Obfuscate_obfuscateNamedArg MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateNamedArg)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateFunctionArgs(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fargs, modelica_metatype _fnName, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateFunctionArgs omc_Obfuscate_obfuscateFunctionArgs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateFunctionArgs,2,0) {(void*) boxptr_Obfuscate_obfuscateFunctionArgs,0}};
+#define boxvar_Obfuscate_obfuscateFunctionArgs MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateFunctionArgs)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateSubscript(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsub, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateSubscript omc_Obfuscate_obfuscateSubscript
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateSubscript,2,0) {(void*) boxptr_Obfuscate_obfuscateSubscript,0}};
+#define boxvar_Obfuscate_obfuscateSubscript MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateSubscript)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateSubscripts(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsubs, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateSubscripts omc_Obfuscate_obfuscateSubscripts
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateSubscripts,2,0) {(void*) boxptr_Obfuscate_obfuscateSubscripts,0}};
+#define boxvar_Obfuscate_obfuscateSubscripts MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateSubscripts)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _env, modelica_integer _etype, modelica_boolean _obfuscateSubs);
+DLLDirection
+modelica_metatype boxptr_Obfuscate_obfuscateCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _env, modelica_metatype _etype, modelica_metatype _obfuscateSubs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateCref,2,0) {(void*) boxptr_Obfuscate_obfuscateCref,0}};
+#define boxvar_Obfuscate_obfuscateCref MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateCref)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateExpTraverse(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fenv, modelica_metatype *out_env);
+#define boxptr_Obfuscate_obfuscateExpTraverse omc_Obfuscate_obfuscateExpTraverse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateExpTraverse,2,0) {(void*) boxptr_Obfuscate_obfuscateExpTraverse,0}};
+#define boxvar_Obfuscate_obfuscateExpTraverse MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateExpTraverse)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateExp omc_Obfuscate_obfuscateExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateExp,2,0) {(void*) boxptr_Obfuscate_obfuscateExp,0}};
+#define boxvar_Obfuscate_obfuscateExp MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateExp)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateExpOpt(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateExpOpt omc_Obfuscate_obfuscateExpOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateExpOpt,2,0) {(void*) boxptr_Obfuscate_obfuscateExpOpt,0}};
+#define boxvar_Obfuscate_obfuscateExpOpt MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateExpOpt)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateAnnotationSubMod(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _env, modelica_boolean _obfuscateName);
+DLLDirection
+modelica_metatype boxptr_Obfuscate_obfuscateAnnotationSubMod(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _env, modelica_metatype _obfuscateName);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAnnotationSubMod,2,0) {(void*) boxptr_Obfuscate_obfuscateAnnotationSubMod,0}};
+#define boxvar_Obfuscate_obfuscateAnnotationSubMod MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAnnotationSubMod)
+
+
+DLLDirection
+modelica_boolean omc_Obfuscate_isAllowedAnnotation(threadData_t *threadData, modelica_metatype _mod);
+DLLDirection
+modelica_metatype boxptr_Obfuscate_isAllowedAnnotation(threadData_t *threadData, modelica_metatype _mod);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_isAllowedAnnotation,2,0) {(void*) boxptr_Obfuscate_isAllowedAnnotation,0}};
+#define boxvar_Obfuscate_isAllowedAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_isAllowedAnnotation)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateAnnotationMod(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _env, modelica_boolean _obfuscateName, modelica_boolean _obfuscateBinding);
+DLLDirection
+modelica_metatype boxptr_Obfuscate_obfuscateAnnotationMod(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _env, modelica_metatype _obfuscateName, modelica_metatype _obfuscateBinding);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAnnotationMod,2,0) {(void*) boxptr_Obfuscate_obfuscateAnnotationMod,0}};
+#define boxvar_Obfuscate_obfuscateAnnotationMod MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAnnotationMod)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateAnnotation(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fann, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateAnnotation omc_Obfuscate_obfuscateAnnotation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAnnotation,2,0) {(void*) boxptr_Obfuscate_obfuscateAnnotation,0}};
+#define boxvar_Obfuscate_obfuscateAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAnnotation)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateAnnotationOpt(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fann, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateAnnotationOpt omc_Obfuscate_obfuscateAnnotationOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAnnotationOpt,2,0) {(void*) boxptr_Obfuscate_obfuscateAnnotationOpt,0}};
+#define boxvar_Obfuscate_obfuscateAnnotationOpt MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAnnotationOpt)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateComment(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcomment, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateComment omc_Obfuscate_obfuscateComment
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateComment,2,0) {(void*) boxptr_Obfuscate_obfuscateComment,0}};
+#define boxvar_Obfuscate_obfuscateComment MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateComment)
+
+
+DLLDirection
+modelica_string omc_Obfuscate_makeId(threadData_t *threadData, modelica_metatype _oldId, modelica_integer _index);
+DLLDirection
+modelica_metatype boxptr_Obfuscate_makeId(threadData_t *threadData, modelica_metatype _oldId, modelica_metatype _index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_makeId,2,0) {(void*) boxptr_Obfuscate_makeId,0}};
+#define boxvar_Obfuscate_makeId MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_makeId)
+
+
+DLLDirection
+modelica_boolean omc_Obfuscate_isBuiltinInContext(threadData_t *threadData, modelica_integer _expectedType, modelica_integer _actualType);
+DLLDirection
+modelica_metatype boxptr_Obfuscate_isBuiltinInContext(threadData_t *threadData, modelica_metatype _expectedType, modelica_metatype _actualType);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_isBuiltinInContext,2,0) {(void*) boxptr_Obfuscate_isBuiltinInContext,0}};
+#define boxvar_Obfuscate_isBuiltinInContext MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_isBuiltinInContext)
+
+
+DLLDirection
+modelica_string omc_Obfuscate_obfuscateIdentifier(threadData_t *threadData, modelica_string _id, modelica_metatype _env, modelica_integer _etype, modelica_integer *out_foundType);
+DLLDirection
+modelica_metatype boxptr_Obfuscate_obfuscateIdentifier(threadData_t *threadData, modelica_metatype _id, modelica_metatype _env, modelica_metatype _etype, modelica_metatype *out_foundType);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateIdentifier,2,0) {(void*) boxptr_Obfuscate_obfuscateIdentifier,0}};
+#define boxvar_Obfuscate_obfuscateIdentifier MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateIdentifier)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscatePath(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpath, modelica_metatype _env, modelica_integer _etype);
+DLLDirection
+modelica_metatype boxptr_Obfuscate_obfuscatePath(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpath, modelica_metatype _env, modelica_metatype _etype);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscatePath,2,0) {(void*) boxptr_Obfuscate_obfuscatePath,0}};
+#define boxvar_Obfuscate_obfuscatePath MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscatePath)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateSubMod(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateSubMod omc_Obfuscate_obfuscateSubMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateSubMod,2,0) {(void*) boxptr_Obfuscate_obfuscateSubMod,0}};
+#define boxvar_Obfuscate_obfuscateSubMod MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateSubMod)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateMod(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateMod omc_Obfuscate_obfuscateMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateMod,2,0) {(void*) boxptr_Obfuscate_obfuscateMod,0}};
+#define boxvar_Obfuscate_obfuscateMod MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateMod)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateAttributes(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fattributes, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateAttributes omc_Obfuscate_obfuscateAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAttributes,2,0) {(void*) boxptr_Obfuscate_obfuscateAttributes,0}};
+#define boxvar_Obfuscate_obfuscateAttributes MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateAttributes)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateReplaceable(threadData_t *threadData, modelica_metatype __omcQ_24in_5Frepl, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateReplaceable omc_Obfuscate_obfuscateReplaceable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateReplaceable,2,0) {(void*) boxptr_Obfuscate_obfuscateReplaceable,0}};
+#define boxvar_Obfuscate_obfuscateReplaceable MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateReplaceable)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscatePrefixes(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fprefixes, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscatePrefixes omc_Obfuscate_obfuscatePrefixes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscatePrefixes,2,0) {(void*) boxptr_Obfuscate_obfuscatePrefixes,0}};
+#define boxvar_Obfuscate_obfuscatePrefixes MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscatePrefixes)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateEnum(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fenum, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateEnum omc_Obfuscate_obfuscateEnum
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateEnum,2,0) {(void*) boxptr_Obfuscate_obfuscateEnum,0}};
+#define boxvar_Obfuscate_obfuscateEnum MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateEnum)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateTypeSpec(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fty, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateTypeSpec omc_Obfuscate_obfuscateTypeSpec
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateTypeSpec,2,0) {(void*) boxptr_Obfuscate_obfuscateTypeSpec,0}};
+#define boxvar_Obfuscate_obfuscateTypeSpec MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateTypeSpec)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateClassDef(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcdef, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateClassDef omc_Obfuscate_obfuscateClassDef
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateClassDef,2,0) {(void*) boxptr_Obfuscate_obfuscateClassDef,0}};
+#define boxvar_Obfuscate_obfuscateClassDef MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateClassDef)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateGroupImport(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fimp, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateGroupImport omc_Obfuscate_obfuscateGroupImport
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateGroupImport,2,0) {(void*) boxptr_Obfuscate_obfuscateGroupImport,0}};
+#define boxvar_Obfuscate_obfuscateGroupImport MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateGroupImport)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateImport(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fimp, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateImport omc_Obfuscate_obfuscateImport
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateImport,2,0) {(void*) boxptr_Obfuscate_obfuscateImport,0}};
+#define boxvar_Obfuscate_obfuscateImport MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateImport)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateElement(threadData_t *threadData, modelica_metatype __omcQ_24in_5Felement, modelica_metatype _env);
+#define boxptr_Obfuscate_obfuscateElement omc_Obfuscate_obfuscateElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateElement,2,0) {(void*) boxptr_Obfuscate_obfuscateElement,0}};
+#define boxvar_Obfuscate_obfuscateElement MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateElement)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_makeBuiltins(threadData_t *threadData);
+#define boxptr_Obfuscate_makeBuiltins omc_Obfuscate_makeBuiltins
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_makeBuiltins,2,0) {(void*) boxptr_Obfuscate_makeBuiltins,0}};
+#define boxvar_Obfuscate_makeBuiltins MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_makeBuiltins)
+
+
+DLLDirection
+modelica_metatype omc_Obfuscate_obfuscateProgram(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype __omcQ_24in_5FclassPath, modelica_metatype __omcQ_24in_5FclassComment, modelica_metatype *out_classPath, modelica_metatype *out_classComment, modelica_string *out_mapStr, modelica_metatype *out_mapping);
+#define boxptr_Obfuscate_obfuscateProgram omc_Obfuscate_obfuscateProgram
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateProgram,2,0) {(void*) boxptr_Obfuscate_obfuscateProgram,0}};
+#define boxvar_Obfuscate_obfuscateProgram MMC_REFSTRUCTLIT(boxvar_lit_Obfuscate_obfuscateProgram)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

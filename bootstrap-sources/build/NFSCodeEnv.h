@@ -1,0 +1,876 @@
+#ifndef NFSCodeEnv__H
+#define NFSCodeEnv__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Direction_BIDIR__desc;
+
+extern struct record_description Absyn_Import_NAMED__IMPORT__desc;
+
+extern struct record_description Absyn_InnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description Absyn_IsField_NONFIELD__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description Absyn_Path_QUALIFIED__desc;
+
+extern struct record_description Absyn_TypeSpec_TPATH__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFSCodeEnv_ClassType_BUILTIN__desc;
+
+extern struct record_description NFSCodeEnv_ClassType_USERDEFINED__desc;
+
+extern struct record_description NFSCodeEnv_EnvTree_Tree_EMPTY__desc;
+
+extern struct record_description NFSCodeEnv_EnvTree_Tree_LEAF__desc;
+
+extern struct record_description NFSCodeEnv_EnvTree_Tree_NODE__desc;
+
+extern struct record_description NFSCodeEnv_Extends_EXTENDS__desc;
+
+extern struct record_description NFSCodeEnv_ExtendsTable_EXTENDS__TABLE__desc;
+
+extern struct record_description NFSCodeEnv_Frame_FRAME__desc;
+
+extern struct record_description NFSCodeEnv_FrameType_ENCAPSULATED__SCOPE__desc;
+
+extern struct record_description NFSCodeEnv_FrameType_IMPLICIT__SCOPE__desc;
+
+extern struct record_description NFSCodeEnv_FrameType_NORMAL__SCOPE__desc;
+
+extern struct record_description NFSCodeEnv_ImportTable_IMPORT__TABLE__desc;
+
+extern struct record_description NFSCodeEnv_Item_ALIAS__desc;
+
+extern struct record_description NFSCodeEnv_Item_CLASS__desc;
+
+extern struct record_description NFSCodeEnv_Item_REDECLARED__ITEM__desc;
+
+extern struct record_description NFSCodeEnv_Item_VAR__desc;
+
+extern struct record_description NFSCodeEnv_Redeclaration_PROCESSED__MODIFIER__desc;
+
+extern struct record_description SCode_Attributes_ATTR__desc;
+
+extern struct record_description SCode_ClassDef_PARTS__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SCode_ConnectorType_POTENTIAL__desc;
+
+extern struct record_description SCode_Element_CLASS__desc;
+
+extern struct record_description SCode_Element_COMPONENT__desc;
+
+extern struct record_description SCode_Element_EXTENDS__desc;
+
+extern struct record_description SCode_Encapsulated_NOT__ENCAPSULATED__desc;
+
+extern struct record_description SCode_Final_NOT__FINAL__desc;
+
+extern struct record_description SCode_Mod_NOMOD__desc;
+
+extern struct record_description SCode_Parallelism_NON__PARALLEL__desc;
+
+extern struct record_description SCode_Partial_NOT__PARTIAL__desc;
+
+extern struct record_description SCode_Prefixes_PREFIXES__desc;
+
+extern struct record_description SCode_Redeclare_NOT__REDECLARE__desc;
+
+extern struct record_description SCode_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description SCode_Restriction_R__CLASS__desc;
+
+extern struct record_description SCode_Variability_CONST__desc;
+
+extern struct record_description SCode_Visibility_PROTECTED__desc;
+
+extern struct record_description SCode_Visibility_PUBLIC__desc;
+
+extern struct record_description SCodeDump_SCodeDumpOptions_OPTIONS__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFSCodeEnv_printImportTableStr omc_NFSCodeEnv_printImportTableStr
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_printRedeclarationStr(threadData_t *threadData, modelica_metatype _inRedeclare);
+#define boxptr_NFSCodeEnv_printRedeclarationStr omc_NFSCodeEnv_printRedeclarationStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_printRedeclarationStr,2,0) {(void*) boxptr_NFSCodeEnv_printRedeclarationStr,0}};
+#define boxvar_NFSCodeEnv_printRedeclarationStr MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_printRedeclarationStr)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_printExtendsStr(threadData_t *threadData, modelica_metatype _inExtends);
+#define boxptr_NFSCodeEnv_printExtendsStr omc_NFSCodeEnv_printExtendsStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_printExtendsStr,2,0) {(void*) boxptr_NFSCodeEnv_printExtendsStr,0}};
+#define boxvar_NFSCodeEnv_printExtendsStr MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_printExtendsStr)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_printExtendsTableStr(threadData_t *threadData, modelica_metatype _inExtendsTable);
+#define boxptr_NFSCodeEnv_printExtendsTableStr omc_NFSCodeEnv_printExtendsTableStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_printExtendsTableStr,2,0) {(void*) boxptr_NFSCodeEnv_printExtendsTableStr,0}};
+#define boxvar_NFSCodeEnv_printExtendsTableStr MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_printExtendsTableStr)
+
+
+#define boxptr_NFSCodeEnv_printFrameTypeStr omc_NFSCodeEnv_printFrameTypeStr
+
+
+#define boxptr_NFSCodeEnv_printFrameNameStr omc_NFSCodeEnv_printFrameNameStr
+
+
+#define boxptr_NFSCodeEnv_printFrameStr omc_NFSCodeEnv_printFrameStr
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_printEnvStr(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_printEnvStr omc_NFSCodeEnv_printEnvStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_printEnvStr,2,0) {(void*) boxptr_NFSCodeEnv_printEnvStr,0}};
+#define boxvar_NFSCodeEnv_printEnvStr MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_printEnvStr)
+
+
+#define boxptr_NFSCodeEnv_addDummyClassToTree omc_NFSCodeEnv_addDummyClassToTree
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_buildInitialEnv(threadData_t *threadData);
+#define boxptr_NFSCodeEnv_buildInitialEnv omc_NFSCodeEnv_buildInitialEnv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_buildInitialEnv,2,0) {(void*) boxptr_NFSCodeEnv_buildInitialEnv,0}};
+#define boxvar_NFSCodeEnv_buildInitialEnv MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_buildInitialEnv)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_getRedeclarationNameInfo(threadData_t *threadData, modelica_metatype _inRedeclare, modelica_metatype *out_outInfo);
+#define boxptr_NFSCodeEnv_getRedeclarationNameInfo omc_NFSCodeEnv_getRedeclarationNameInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getRedeclarationNameInfo,2,0) {(void*) boxptr_NFSCodeEnv_getRedeclarationNameInfo,0}};
+#define boxvar_NFSCodeEnv_getRedeclarationNameInfo MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getRedeclarationNameInfo)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getRedeclarationElement(threadData_t *threadData, modelica_metatype _inRedeclare);
+#define boxptr_NFSCodeEnv_getRedeclarationElement omc_NFSCodeEnv_getRedeclarationElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getRedeclarationElement,2,0) {(void*) boxptr_NFSCodeEnv_getRedeclarationElement,0}};
+#define boxvar_NFSCodeEnv_getRedeclarationElement MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getRedeclarationElement)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_prefixIdentWithEnv(threadData_t *threadData, modelica_string _inIdent, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_prefixIdentWithEnv omc_NFSCodeEnv_prefixIdentWithEnv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_prefixIdentWithEnv,2,0) {(void*) boxptr_NFSCodeEnv_prefixIdentWithEnv,0}};
+#define boxvar_NFSCodeEnv_prefixIdentWithEnv MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_prefixIdentWithEnv)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_mergeTypeSpecWithEnvPath(threadData_t *threadData, modelica_metatype _inTS, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_mergeTypeSpecWithEnvPath omc_NFSCodeEnv_mergeTypeSpecWithEnvPath
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_mergeTypeSpecWithEnvPath,2,0) {(void*) boxptr_NFSCodeEnv_mergeTypeSpecWithEnvPath,0}};
+#define boxvar_NFSCodeEnv_mergeTypeSpecWithEnvPath MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_mergeTypeSpecWithEnvPath)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_mergePathWithEnvPath(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_mergePathWithEnvPath omc_NFSCodeEnv_mergePathWithEnvPath
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_mergePathWithEnvPath,2,0) {(void*) boxptr_NFSCodeEnv_mergePathWithEnvPath,0}};
+#define boxvar_NFSCodeEnv_mergePathWithEnvPath MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_mergePathWithEnvPath)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_setEnvClsAndVars(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_setEnvClsAndVars omc_NFSCodeEnv_setEnvClsAndVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_setEnvClsAndVars,2,0) {(void*) boxptr_NFSCodeEnv_setEnvClsAndVars,0}};
+#define boxvar_NFSCodeEnv_setEnvClsAndVars MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_setEnvClsAndVars)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_setEnvExtendsTable(threadData_t *threadData, modelica_metatype _inExtendsTable, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_setEnvExtendsTable omc_NFSCodeEnv_setEnvExtendsTable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_setEnvExtendsTable,2,0) {(void*) boxptr_NFSCodeEnv_setEnvExtendsTable,0}};
+#define boxvar_NFSCodeEnv_setEnvExtendsTable MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_setEnvExtendsTable)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getDerivedClassRedeclares(threadData_t *threadData, modelica_string _inDerivedName, modelica_metatype _inTypeSpec, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_getDerivedClassRedeclares omc_NFSCodeEnv_getDerivedClassRedeclares
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getDerivedClassRedeclares,2,0) {(void*) boxptr_NFSCodeEnv_getDerivedClassRedeclares,0}};
+#define boxvar_NFSCodeEnv_getDerivedClassRedeclares MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getDerivedClassRedeclares)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getEnvExtendsFromTable(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_getEnvExtendsFromTable omc_NFSCodeEnv_getEnvExtendsFromTable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getEnvExtendsFromTable,2,0) {(void*) boxptr_NFSCodeEnv_getEnvExtendsFromTable,0}};
+#define boxvar_NFSCodeEnv_getEnvExtendsFromTable MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getEnvExtendsFromTable)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getEnvExtendsTable(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_getEnvExtendsTable omc_NFSCodeEnv_getEnvExtendsTable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getEnvExtendsTable,2,0) {(void*) boxptr_NFSCodeEnv_getEnvExtendsTable,0}};
+#define boxvar_NFSCodeEnv_getEnvExtendsTable MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getEnvExtendsTable)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_resolveRedeclaredItem(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inEnv, modelica_metatype *out_outEnv, modelica_metatype *out_outPreviousItem);
+#define boxptr_NFSCodeEnv_resolveRedeclaredItem omc_NFSCodeEnv_resolveRedeclaredItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_resolveRedeclaredItem,2,0) {(void*) boxptr_NFSCodeEnv_resolveRedeclaredItem,0}};
+#define boxvar_NFSCodeEnv_resolveRedeclaredItem MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_resolveRedeclaredItem)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getItemPrefixes(threadData_t *threadData, modelica_metatype _inItem);
+#define boxptr_NFSCodeEnv_getItemPrefixes omc_NFSCodeEnv_getItemPrefixes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getItemPrefixes,2,0) {(void*) boxptr_NFSCodeEnv_getItemPrefixes,0}};
+#define boxvar_NFSCodeEnv_getItemPrefixes MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getItemPrefixes)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_unmergeItemEnv(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_unmergeItemEnv omc_NFSCodeEnv_unmergeItemEnv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_unmergeItemEnv,2,0) {(void*) boxptr_NFSCodeEnv_unmergeItemEnv,0}};
+#define boxvar_NFSCodeEnv_unmergeItemEnv MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_unmergeItemEnv)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_mergeItemEnv(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_mergeItemEnv omc_NFSCodeEnv_mergeItemEnv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_mergeItemEnv,2,0) {(void*) boxptr_NFSCodeEnv_mergeItemEnv,0}};
+#define boxvar_NFSCodeEnv_mergeItemEnv MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_mergeItemEnv)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_setItemEnv(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inNewEnv);
+#define boxptr_NFSCodeEnv_setItemEnv omc_NFSCodeEnv_setItemEnv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_setItemEnv,2,0) {(void*) boxptr_NFSCodeEnv_setItemEnv,0}};
+#define boxvar_NFSCodeEnv_setItemEnv MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_setItemEnv)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getItemEnvNoFail(threadData_t *threadData, modelica_metatype _inItem);
+#define boxptr_NFSCodeEnv_getItemEnvNoFail omc_NFSCodeEnv_getItemEnvNoFail
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getItemEnvNoFail,2,0) {(void*) boxptr_NFSCodeEnv_getItemEnvNoFail,0}};
+#define boxvar_NFSCodeEnv_getItemEnvNoFail MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getItemEnvNoFail)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getItemEnv(threadData_t *threadData, modelica_metatype _inItem);
+#define boxptr_NFSCodeEnv_getItemEnv omc_NFSCodeEnv_getItemEnv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getItemEnv,2,0) {(void*) boxptr_NFSCodeEnv_getItemEnv,0}};
+#define boxvar_NFSCodeEnv_getItemEnv MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getItemEnv)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_getItemName(threadData_t *threadData, modelica_metatype _inItem);
+#define boxptr_NFSCodeEnv_getItemName omc_NFSCodeEnv_getItemName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getItemName,2,0) {(void*) boxptr_NFSCodeEnv_getItemName,0}};
+#define boxvar_NFSCodeEnv_getItemName MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getItemName)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_itemStr(threadData_t *threadData, modelica_metatype _inItem);
+#define boxptr_NFSCodeEnv_itemStr omc_NFSCodeEnv_itemStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_itemStr,2,0) {(void*) boxptr_NFSCodeEnv_itemStr,0}};
+#define boxvar_NFSCodeEnv_itemStr MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_itemStr)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getItemInfo(threadData_t *threadData, modelica_metatype _inItem);
+#define boxptr_NFSCodeEnv_getItemInfo omc_NFSCodeEnv_getItemInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getItemInfo,2,0) {(void*) boxptr_NFSCodeEnv_getItemInfo,0}};
+#define boxvar_NFSCodeEnv_getItemInfo MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getItemInfo)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_envEqualPrefix2(threadData_t *threadData, modelica_metatype _inEnv1, modelica_metatype _inEnv2, modelica_metatype _inAccumEnv);
+#define boxptr_NFSCodeEnv_envEqualPrefix2 omc_NFSCodeEnv_envEqualPrefix2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envEqualPrefix2,2,0) {(void*) boxptr_NFSCodeEnv_envEqualPrefix2,0}};
+#define boxvar_NFSCodeEnv_envEqualPrefix2 MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envEqualPrefix2)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_envEqualPrefix(threadData_t *threadData, modelica_metatype _inEnv1, modelica_metatype _inEnv2);
+#define boxptr_NFSCodeEnv_envEqualPrefix omc_NFSCodeEnv_envEqualPrefix
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envEqualPrefix,2,0) {(void*) boxptr_NFSCodeEnv_envEqualPrefix,0}};
+#define boxvar_NFSCodeEnv_envEqualPrefix MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envEqualPrefix)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_envScopeNames2(threadData_t *threadData, modelica_metatype _inEnv, modelica_metatype _inAccumNames);
+#define boxptr_NFSCodeEnv_envScopeNames2 omc_NFSCodeEnv_envScopeNames2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envScopeNames2,2,0) {(void*) boxptr_NFSCodeEnv_envScopeNames2,0}};
+#define boxvar_NFSCodeEnv_envScopeNames2 MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envScopeNames2)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_envScopeNames(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_envScopeNames omc_NFSCodeEnv_envScopeNames
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envScopeNames,2,0) {(void*) boxptr_NFSCodeEnv_envScopeNames,0}};
+#define boxvar_NFSCodeEnv_envScopeNames MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envScopeNames)
+
+
+DLLDirection
+modelica_boolean omc_NFSCodeEnv_envPrefixOf2(threadData_t *threadData, modelica_metatype _inPrefixEnv, modelica_metatype _inEnv);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_envPrefixOf2(threadData_t *threadData, modelica_metatype _inPrefixEnv, modelica_metatype _inEnv);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envPrefixOf2,2,0) {(void*) boxptr_NFSCodeEnv_envPrefixOf2,0}};
+#define boxvar_NFSCodeEnv_envPrefixOf2 MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envPrefixOf2)
+
+
+DLLDirection
+modelica_boolean omc_NFSCodeEnv_envPrefixOf(threadData_t *threadData, modelica_metatype _inPrefixEnv, modelica_metatype _inEnv);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_envPrefixOf(threadData_t *threadData, modelica_metatype _inPrefixEnv, modelica_metatype _inEnv);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envPrefixOf,2,0) {(void*) boxptr_NFSCodeEnv_envPrefixOf,0}};
+#define boxvar_NFSCodeEnv_envPrefixOf MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_envPrefixOf)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_getScopeName(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_getScopeName omc_NFSCodeEnv_getScopeName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getScopeName,2,0) {(void*) boxptr_NFSCodeEnv_getScopeName,0}};
+#define boxvar_NFSCodeEnv_getScopeName MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getScopeName)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getEnvPath(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_getEnvPath omc_NFSCodeEnv_getEnvPath
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getEnvPath,2,0) {(void*) boxptr_NFSCodeEnv_getEnvPath,0}};
+#define boxvar_NFSCodeEnv_getEnvPath MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getEnvPath)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_getEnvName(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_getEnvName omc_NFSCodeEnv_getEnvName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getEnvName,2,0) {(void*) boxptr_NFSCodeEnv_getEnvName,0}};
+#define boxvar_NFSCodeEnv_getEnvName MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getEnvName)
+
+
+#define boxptr_NFSCodeEnv_extendEnvWithElementItem omc_NFSCodeEnv_extendEnvWithElementItem
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_extendEnvWithMatch(threadData_t *threadData, modelica_metatype _inMatchExp, modelica_integer _iterIndex, modelica_metatype _inEnv);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_extendEnvWithMatch(threadData_t *threadData, modelica_metatype _inMatchExp, modelica_metatype _iterIndex, modelica_metatype _inEnv);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithMatch,2,0) {(void*) boxptr_NFSCodeEnv_extendEnvWithMatch,0}};
+#define boxvar_NFSCodeEnv_extendEnvWithMatch MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithMatch)
+
+
+#define boxptr_NFSCodeEnv_extendEnvWithIterator omc_NFSCodeEnv_extendEnvWithIterator
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_extendEnvWithIterators(threadData_t *threadData, modelica_metatype _inIterators, modelica_integer _iterIndex, modelica_metatype _inEnv);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_extendEnvWithIterators(threadData_t *threadData, modelica_metatype _inIterators, modelica_metatype _iterIndex, modelica_metatype _inEnv);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithIterators,2,0) {(void*) boxptr_NFSCodeEnv_extendEnvWithIterators,0}};
+#define boxvar_NFSCodeEnv_extendEnvWithIterators MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithIterators)
+
+
+DLLDirection
+void omc_NFSCodeEnv_checkUniqueQualifiedImport(threadData_t *threadData, modelica_metatype _inImport, modelica_metatype _inImports, modelica_metatype _inInfo);
+#define boxptr_NFSCodeEnv_checkUniqueQualifiedImport omc_NFSCodeEnv_checkUniqueQualifiedImport
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_checkUniqueQualifiedImport,2,0) {(void*) boxptr_NFSCodeEnv_checkUniqueQualifiedImport,0}};
+#define boxvar_NFSCodeEnv_checkUniqueQualifiedImport MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_checkUniqueQualifiedImport)
+
+
+#define boxptr_NFSCodeEnv_extendEnvWithElement omc_NFSCodeEnv_extendEnvWithElement
+
+
+#define boxptr_NFSCodeEnv_extendEnvWithClassComponents omc_NFSCodeEnv_extendEnvWithClassComponents
+
+
+#define boxptr_NFSCodeEnv_addElementRedeclarationToEnvExtendsTable omc_NFSCodeEnv_addElementRedeclarationToEnvExtendsTable
+
+
+#define boxptr_NFSCodeEnv_addExtendsToEnvExtendsTable omc_NFSCodeEnv_addExtendsToEnvExtendsTable
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_extendEnvWithExtends(threadData_t *threadData, modelica_metatype _inExtends, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_extendEnvWithExtends omc_NFSCodeEnv_extendEnvWithExtends
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithExtends,2,0) {(void*) boxptr_NFSCodeEnv_extendEnvWithExtends,0}};
+#define boxvar_NFSCodeEnv_extendEnvWithExtends MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithExtends)
+
+
+#define boxptr_NFSCodeEnv_translateQualifiedImportToNamed omc_NFSCodeEnv_translateQualifiedImportToNamed
+
+
+#define boxptr_NFSCodeEnv_extendEnvWithImport omc_NFSCodeEnv_extendEnvWithImport
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_updateItemInEnv(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inEnv, modelica_string _inItemName);
+#define boxptr_NFSCodeEnv_updateItemInEnv omc_NFSCodeEnv_updateItemInEnv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_updateItemInEnv,2,0) {(void*) boxptr_NFSCodeEnv_updateItemInEnv,0}};
+#define boxvar_NFSCodeEnv_updateItemInEnv MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_updateItemInEnv)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_extendEnvWithItemConflict(threadData_t *threadData, modelica_metatype _newItem, modelica_metatype _oldItem, modelica_string _name);
+#define boxptr_NFSCodeEnv_extendEnvWithItemConflict omc_NFSCodeEnv_extendEnvWithItemConflict
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithItemConflict,2,0) {(void*) boxptr_NFSCodeEnv_extendEnvWithItemConflict,0}};
+#define boxvar_NFSCodeEnv_extendEnvWithItemConflict MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithItemConflict)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_extendEnvWithItem(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inEnv, modelica_string _inItemName);
+#define boxptr_NFSCodeEnv_extendEnvWithItem omc_NFSCodeEnv_extendEnvWithItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithItem,2,0) {(void*) boxptr_NFSCodeEnv_extendEnvWithItem,0}};
+#define boxvar_NFSCodeEnv_extendEnvWithItem MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithItem)
+
+
+#define boxptr_NFSCodeEnv_extendEnvWithVar omc_NFSCodeEnv_extendEnvWithVar
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_makeClassEnvironment(threadData_t *threadData, modelica_metatype _inClassDefElement, modelica_boolean _inInModifierScope);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_makeClassEnvironment(threadData_t *threadData, modelica_metatype _inClassDefElement, modelica_metatype _inInModifierScope);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_makeClassEnvironment,2,0) {(void*) boxptr_NFSCodeEnv_makeClassEnvironment,0}};
+#define boxvar_NFSCodeEnv_makeClassEnvironment MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_makeClassEnvironment)
+
+
+#define boxptr_NFSCodeEnv_extendEnvWithClassDef omc_NFSCodeEnv_extendEnvWithClassDef
+
+
+DLLDirection
+modelica_boolean omc_NFSCodeEnv_isClassExtendsItem(threadData_t *threadData, modelica_metatype _inItem);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_isClassExtendsItem(threadData_t *threadData, modelica_metatype _inItem);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_isClassExtendsItem,2,0) {(void*) boxptr_NFSCodeEnv_isClassExtendsItem,0}};
+#define boxvar_NFSCodeEnv_isClassExtendsItem MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_isClassExtendsItem)
+
+
+DLLDirection
+modelica_boolean omc_NFSCodeEnv_isVarItem(threadData_t *threadData, modelica_metatype _inItem);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_isVarItem(threadData_t *threadData, modelica_metatype _inItem);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_isVarItem,2,0) {(void*) boxptr_NFSCodeEnv_isVarItem,0}};
+#define boxvar_NFSCodeEnv_isVarItem MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_isVarItem)
+
+
+DLLDirection
+modelica_boolean omc_NFSCodeEnv_isClassItem(threadData_t *threadData, modelica_metatype _inItem);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_isClassItem(threadData_t *threadData, modelica_metatype _inItem);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_isClassItem,2,0) {(void*) boxptr_NFSCodeEnv_isClassItem,0}};
+#define boxvar_NFSCodeEnv_isClassItem MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_isClassItem)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_linkItemUsage(threadData_t *threadData, modelica_metatype _inSrcItem, modelica_metatype _inDestItem);
+#define boxptr_NFSCodeEnv_linkItemUsage omc_NFSCodeEnv_linkItemUsage
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_linkItemUsage,2,0) {(void*) boxptr_NFSCodeEnv_linkItemUsage,0}};
+#define boxvar_NFSCodeEnv_linkItemUsage MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_linkItemUsage)
+
+
+DLLDirection
+modelica_boolean omc_NFSCodeEnv_isItemUsed(threadData_t *threadData, modelica_metatype _inItem);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_isItemUsed(threadData_t *threadData, modelica_metatype _inItem);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_isItemUsed,2,0) {(void*) boxptr_NFSCodeEnv_isItemUsed,0}};
+#define boxvar_NFSCodeEnv_isItemUsed MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_isItemUsed)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_setImportsInItemHidden(threadData_t *threadData, modelica_metatype _inItem, modelica_boolean _inHidden);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_setImportsInItemHidden(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inHidden);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_setImportsInItemHidden,2,0) {(void*) boxptr_NFSCodeEnv_setImportsInItemHidden,0}};
+#define boxvar_NFSCodeEnv_setImportsInItemHidden MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_setImportsInItemHidden)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_setImportTableHidden(threadData_t *threadData, modelica_metatype _inEnv, modelica_boolean _inHidden);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_setImportTableHidden(threadData_t *threadData, modelica_metatype _inEnv, modelica_metatype _inHidden);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_setImportTableHidden,2,0) {(void*) boxptr_NFSCodeEnv_setImportTableHidden,0}};
+#define boxvar_NFSCodeEnv_setImportTableHidden MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_setImportTableHidden)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_removeClsAndVarsFromFrame(threadData_t *threadData, modelica_metatype _inFrame, modelica_metatype *out_outClsAndVars);
+#define boxptr_NFSCodeEnv_removeClsAndVarsFromFrame omc_NFSCodeEnv_removeClsAndVarsFromFrame
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_removeClsAndVarsFromFrame,2,0) {(void*) boxptr_NFSCodeEnv_removeClsAndVarsFromFrame,0}};
+#define boxvar_NFSCodeEnv_removeClsAndVarsFromFrame MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_removeClsAndVarsFromFrame)
+
+
+#define boxptr_NFSCodeEnv_removeRedeclaresFromExtend omc_NFSCodeEnv_removeRedeclaresFromExtend
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_removeRedeclaresFromLocalScope(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_removeRedeclaresFromLocalScope omc_NFSCodeEnv_removeRedeclaresFromLocalScope
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_removeRedeclaresFromLocalScope,2,0) {(void*) boxptr_NFSCodeEnv_removeRedeclaresFromLocalScope,0}};
+#define boxvar_NFSCodeEnv_removeRedeclaresFromLocalScope MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_removeRedeclaresFromLocalScope)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_removeExtendFromLocalScope(threadData_t *threadData, modelica_metatype _inExtend, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_removeExtendFromLocalScope omc_NFSCodeEnv_removeExtendFromLocalScope
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_removeExtendFromLocalScope,2,0) {(void*) boxptr_NFSCodeEnv_removeExtendFromLocalScope,0}};
+#define boxvar_NFSCodeEnv_removeExtendFromLocalScope MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_removeExtendFromLocalScope)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_removeExtendsFromLocalScope(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_removeExtendsFromLocalScope omc_NFSCodeEnv_removeExtendsFromLocalScope
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_removeExtendsFromLocalScope,2,0) {(void*) boxptr_NFSCodeEnv_removeExtendsFromLocalScope,0}};
+#define boxvar_NFSCodeEnv_removeExtendsFromLocalScope MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_removeExtendsFromLocalScope)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_printClassType(threadData_t *threadData, modelica_metatype _inClassType);
+#define boxptr_NFSCodeEnv_printClassType omc_NFSCodeEnv_printClassType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_printClassType,2,0) {(void*) boxptr_NFSCodeEnv_printClassType,0}};
+#define boxvar_NFSCodeEnv_printClassType MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_printClassType)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getClassType(threadData_t *threadData, modelica_metatype _inClassDef);
+#define boxptr_NFSCodeEnv_getClassType omc_NFSCodeEnv_getClassType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getClassType,2,0) {(void*) boxptr_NFSCodeEnv_getClassType,0}};
+#define boxvar_NFSCodeEnv_getClassType MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getClassType)
+
+
+#define boxptr_NFSCodeEnv_extendEnvWithClass omc_NFSCodeEnv_extendEnvWithClass
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_extendEnvWithClasses(threadData_t *threadData, modelica_metatype _inClasses, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_extendEnvWithClasses omc_NFSCodeEnv_extendEnvWithClasses
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithClasses,2,0) {(void*) boxptr_NFSCodeEnv_extendEnvWithClasses,0}};
+#define boxvar_NFSCodeEnv_extendEnvWithClasses MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_extendEnvWithClasses)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_newVarItem(threadData_t *threadData, modelica_metatype _inVar, modelica_boolean _inIsUsed);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_newVarItem(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _inIsUsed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_newVarItem,2,0) {(void*) boxptr_NFSCodeEnv_newVarItem,0}};
+#define boxvar_NFSCodeEnv_newVarItem MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_newVarItem)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_newClassItem(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inEnv, modelica_metatype _inClassType);
+#define boxptr_NFSCodeEnv_newClassItem omc_NFSCodeEnv_newClassItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_newClassItem,2,0) {(void*) boxptr_NFSCodeEnv_newClassItem,0}};
+#define boxvar_NFSCodeEnv_newClassItem MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_newClassItem)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_newItem(threadData_t *threadData, modelica_metatype _inElement);
+#define boxptr_NFSCodeEnv_newItem omc_NFSCodeEnv_newItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_newItem,2,0) {(void*) boxptr_NFSCodeEnv_newItem,0}};
+#define boxvar_NFSCodeEnv_newItem MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_newItem)
+
+
+#define boxptr_NFSCodeEnv_newExtendsTable omc_NFSCodeEnv_newExtendsTable
+
+
+#define boxptr_NFSCodeEnv_newImportTable omc_NFSCodeEnv_newImportTable
+
+
+#define boxptr_NFSCodeEnv_newFrame omc_NFSCodeEnv_newFrame
+
+
+#define boxptr_NFSCodeEnv_getFrameType omc_NFSCodeEnv_getFrameType
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_getEnvTopScope(threadData_t *threadData, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_getEnvTopScope omc_NFSCodeEnv_getEnvTopScope
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getEnvTopScope,2,0) {(void*) boxptr_NFSCodeEnv_getEnvTopScope,0}};
+#define boxvar_NFSCodeEnv_getEnvTopScope MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_getEnvTopScope)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_enterFrame(threadData_t *threadData, modelica_metatype _inFrame, modelica_metatype _inEnv);
+#define boxptr_NFSCodeEnv_enterFrame omc_NFSCodeEnv_enterFrame
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_enterFrame,2,0) {(void*) boxptr_NFSCodeEnv_enterFrame,0}};
+#define boxvar_NFSCodeEnv_enterFrame MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_enterFrame)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_enterScopePath(threadData_t *threadData, modelica_metatype _inEnv, modelica_metatype _inPath);
+#define boxptr_NFSCodeEnv_enterScopePath omc_NFSCodeEnv_enterScopePath
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_enterScopePath,2,0) {(void*) boxptr_NFSCodeEnv_enterScopePath,0}};
+#define boxvar_NFSCodeEnv_enterScopePath MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_enterScopePath)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_enterScope(threadData_t *threadData, modelica_metatype _inEnv, modelica_string _inName);
+#define boxptr_NFSCodeEnv_enterScope omc_NFSCodeEnv_enterScope
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_enterScope,2,0) {(void*) boxptr_NFSCodeEnv_enterScope,0}};
+#define boxvar_NFSCodeEnv_enterScope MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_enterScope)
+
+
+#define boxptr_NFSCodeEnv_openScope omc_NFSCodeEnv_openScope
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_newEnvironment(threadData_t *threadData, modelica_metatype _inName);
+#define boxptr_NFSCodeEnv_newEnvironment omc_NFSCodeEnv_newEnvironment
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_newEnvironment,2,0) {(void*) boxptr_NFSCodeEnv_newEnvironment,0}};
+#define boxvar_NFSCodeEnv_newEnvironment MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_newEnvironment)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_add(threadData_t *threadData, modelica_metatype _inTree, modelica_string _inKey, modelica_metatype _inValue, modelica_fnptr _conflictFunc);
+#define boxptr_NFSCodeEnv_EnvTree_add omc_NFSCodeEnv_EnvTree_add
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_add,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_add,0}};
+#define boxvar_NFSCodeEnv_EnvTree_add MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_add)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_addConflictDefault(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_NFSCodeEnv_EnvTree_addConflictDefault omc_NFSCodeEnv_EnvTree_addConflictDefault
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_addConflictDefault,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_addConflictDefault,0}};
+#define boxvar_NFSCodeEnv_EnvTree_addConflictDefault MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_addConflictDefault)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_addConflictFail(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_NFSCodeEnv_EnvTree_addConflictFail omc_NFSCodeEnv_EnvTree_addConflictFail
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_addConflictFail,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_addConflictFail,0}};
+#define boxvar_NFSCodeEnv_EnvTree_addConflictFail MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_addConflictFail)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_addConflictKeep(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_NFSCodeEnv_EnvTree_addConflictKeep omc_NFSCodeEnv_EnvTree_addConflictKeep
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_addConflictKeep,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_addConflictKeep,0}};
+#define boxvar_NFSCodeEnv_EnvTree_addConflictKeep MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_addConflictKeep)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_addConflictReplace(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_NFSCodeEnv_EnvTree_addConflictReplace omc_NFSCodeEnv_EnvTree_addConflictReplace
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_addConflictReplace,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_addConflictReplace,0}};
+#define boxvar_NFSCodeEnv_EnvTree_addConflictReplace MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_addConflictReplace)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_addList(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _inValues, modelica_fnptr _conflictFunc);
+#define boxptr_NFSCodeEnv_EnvTree_addList omc_NFSCodeEnv_EnvTree_addList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_addList,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_addList,0}};
+#define boxvar_NFSCodeEnv_EnvTree_addList MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_addList)
+
+
+#define boxptr_NFSCodeEnv_EnvTree_balance omc_NFSCodeEnv_EnvTree_balance
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_fold(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc, modelica_metatype _inStartValue);
+#define boxptr_NFSCodeEnv_EnvTree_fold omc_NFSCodeEnv_EnvTree_fold
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_fold,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_fold,0}};
+#define boxvar_NFSCodeEnv_EnvTree_fold MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_fold)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_foldCond(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _foldFunc, modelica_metatype __omcQ_24in_5Fvalue);
+#define boxptr_NFSCodeEnv_EnvTree_foldCond omc_NFSCodeEnv_EnvTree_foldCond
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_foldCond,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_foldCond,0}};
+#define boxvar_NFSCodeEnv_EnvTree_foldCond MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_foldCond)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_fold__2(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _foldFunc, modelica_metatype __omcQ_24in_5FfoldArg1, modelica_metatype __omcQ_24in_5FfoldArg2, modelica_metatype *out_foldArg2);
+#define boxptr_NFSCodeEnv_EnvTree_fold__2 omc_NFSCodeEnv_EnvTree_fold__2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_fold__2,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_fold__2,0}};
+#define boxvar_NFSCodeEnv_EnvTree_fold__2 MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_fold__2)
+
+
+DLLDirection
+void omc_NFSCodeEnv_EnvTree_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
+#define boxptr_NFSCodeEnv_EnvTree_forEach omc_NFSCodeEnv_EnvTree_forEach
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_forEach,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_forEach,0}};
+#define boxvar_NFSCodeEnv_EnvTree_forEach MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_forEach)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_fromList(threadData_t *threadData, modelica_metatype _inValues, modelica_fnptr _conflictFunc);
+#define boxptr_NFSCodeEnv_EnvTree_fromList omc_NFSCodeEnv_EnvTree_fromList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_fromList,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_fromList,0}};
+#define boxvar_NFSCodeEnv_EnvTree_fromList MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_fromList)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_get(threadData_t *threadData, modelica_metatype _tree, modelica_string _key);
+#define boxptr_NFSCodeEnv_EnvTree_get omc_NFSCodeEnv_EnvTree_get
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_get,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_get,0}};
+#define boxvar_NFSCodeEnv_EnvTree_get MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_get)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_getOpt(threadData_t *threadData, modelica_metatype _tree, modelica_string _key);
+#define boxptr_NFSCodeEnv_EnvTree_getOpt omc_NFSCodeEnv_EnvTree_getOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_getOpt,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_getOpt,0}};
+#define boxvar_NFSCodeEnv_EnvTree_getOpt MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_getOpt)
+
+
+DLLDirection
+modelica_boolean omc_NFSCodeEnv_EnvTree_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_string _inKey);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_EnvTree_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_hasKey,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_hasKey,0}};
+#define boxvar_NFSCodeEnv_EnvTree_hasKey MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_hasKey)
+
+
+DLLDirection
+void omc_NFSCodeEnv_EnvTree_intersection(threadData_t *threadData);
+#define boxptr_NFSCodeEnv_EnvTree_intersection omc_NFSCodeEnv_EnvTree_intersection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_intersection,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_intersection,0}};
+#define boxvar_NFSCodeEnv_EnvTree_intersection MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_intersection)
+
+
+DLLDirection
+modelica_boolean omc_NFSCodeEnv_EnvTree_isEmpty(threadData_t *threadData, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_EnvTree_isEmpty(threadData_t *threadData, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_isEmpty,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_isEmpty,0}};
+#define boxvar_NFSCodeEnv_EnvTree_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_isEmpty)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_join(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _treeToJoin, modelica_fnptr _conflictFunc);
+#define boxptr_NFSCodeEnv_EnvTree_join omc_NFSCodeEnv_EnvTree_join
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_join,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_join,0}};
+#define boxvar_NFSCodeEnv_EnvTree_join MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_join)
+
+
+DLLDirection
+modelica_integer omc_NFSCodeEnv_EnvTree_keyCompare(threadData_t *threadData, modelica_string _inKey1, modelica_string _inKey2);
+DLLDirection
+modelica_metatype boxptr_NFSCodeEnv_EnvTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_keyCompare,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_keyCompare,0}};
+#define boxvar_NFSCodeEnv_EnvTree_keyCompare MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_keyCompare)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_EnvTree_keyStr(threadData_t *threadData, modelica_string _inKey);
+#define boxptr_NFSCodeEnv_EnvTree_keyStr omc_NFSCodeEnv_EnvTree_keyStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_keyStr,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_keyStr,0}};
+#define boxvar_NFSCodeEnv_EnvTree_keyStr MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_keyStr)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_listKeys(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_NFSCodeEnv_EnvTree_listKeys omc_NFSCodeEnv_EnvTree_listKeys
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_listKeys,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_listKeys,0}};
+#define boxvar_NFSCodeEnv_EnvTree_listKeys MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_listKeys)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_listKeysReverse(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_NFSCodeEnv_EnvTree_listKeysReverse omc_NFSCodeEnv_EnvTree_listKeysReverse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_listKeysReverse,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_listKeysReverse,0}};
+#define boxvar_NFSCodeEnv_EnvTree_listKeysReverse MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_listKeysReverse)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_listValues(threadData_t *threadData, modelica_metatype _tree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_NFSCodeEnv_EnvTree_listValues omc_NFSCodeEnv_EnvTree_listValues
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_listValues,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_listValues,0}};
+#define boxvar_NFSCodeEnv_EnvTree_listValues MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_listValues)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_map(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc);
+#define boxptr_NFSCodeEnv_EnvTree_map omc_NFSCodeEnv_EnvTree_map
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_map,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_map,0}};
+#define boxvar_NFSCodeEnv_EnvTree_map MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_map)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_mapFold(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc, modelica_metatype _inStartValue, modelica_metatype *out_outResult);
+#define boxptr_NFSCodeEnv_EnvTree_mapFold omc_NFSCodeEnv_EnvTree_mapFold
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_mapFold,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_mapFold,0}};
+#define boxvar_NFSCodeEnv_EnvTree_mapFold MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_mapFold)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_new(threadData_t *threadData);
+#define boxptr_NFSCodeEnv_EnvTree_new omc_NFSCodeEnv_EnvTree_new
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_new,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_new,0}};
+#define boxvar_NFSCodeEnv_EnvTree_new MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_new)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_EnvTree_printNodeStr(threadData_t *threadData, modelica_metatype _inNode);
+#define boxptr_NFSCodeEnv_EnvTree_printNodeStr omc_NFSCodeEnv_EnvTree_printNodeStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_printNodeStr,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_printNodeStr,0}};
+#define boxvar_NFSCodeEnv_EnvTree_printNodeStr MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_printNodeStr)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_EnvTree_printTreeStr(threadData_t *threadData, modelica_metatype _inTree);
+#define boxptr_NFSCodeEnv_EnvTree_printTreeStr omc_NFSCodeEnv_EnvTree_printTreeStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_printTreeStr,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_printTreeStr,0}};
+#define boxvar_NFSCodeEnv_EnvTree_printTreeStr MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_printTreeStr)
+
+
+#define boxptr_NFSCodeEnv_EnvTree_rotateLeft omc_NFSCodeEnv_EnvTree_rotateLeft
+
+
+#define boxptr_NFSCodeEnv_EnvTree_rotateRight omc_NFSCodeEnv_EnvTree_rotateRight
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_setTreeLeftRight(threadData_t *threadData, modelica_metatype _orig, modelica_metatype _left, modelica_metatype _right);
+#define boxptr_NFSCodeEnv_EnvTree_setTreeLeftRight omc_NFSCodeEnv_EnvTree_setTreeLeftRight
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_setTreeLeftRight,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_setTreeLeftRight,0}};
+#define boxvar_NFSCodeEnv_EnvTree_setTreeLeftRight MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_setTreeLeftRight)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_EnvTree_smallestKey(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_NFSCodeEnv_EnvTree_smallestKey omc_NFSCodeEnv_EnvTree_smallestKey
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_smallestKey,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_smallestKey,0}};
+#define boxvar_NFSCodeEnv_EnvTree_smallestKey MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_smallestKey)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_toList(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_NFSCodeEnv_EnvTree_toList omc_NFSCodeEnv_EnvTree_toList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_toList,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_toList,0}};
+#define boxvar_NFSCodeEnv_EnvTree_toList MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_toList)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeEnv_EnvTree_update(threadData_t *threadData, modelica_metatype _tree, modelica_string _key, modelica_metatype _value);
+#define boxptr_NFSCodeEnv_EnvTree_update omc_NFSCodeEnv_EnvTree_update
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_update,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_update,0}};
+#define boxvar_NFSCodeEnv_EnvTree_update MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_update)
+
+
+DLLDirection
+modelica_string omc_NFSCodeEnv_EnvTree_valueStr(threadData_t *threadData, modelica_metatype _inValue);
+#define boxptr_NFSCodeEnv_EnvTree_valueStr omc_NFSCodeEnv_EnvTree_valueStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_valueStr,2,0) {(void*) boxptr_NFSCodeEnv_EnvTree_valueStr,0}};
+#define boxvar_NFSCodeEnv_EnvTree_valueStr MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeEnv_EnvTree_valueStr)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

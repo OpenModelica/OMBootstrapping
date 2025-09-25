@@ -1,0 +1,249 @@
+#ifndef Tearing__H
+#define Tearing__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_EquationConstraints_EXACT__desc;
+
+extern struct record_description BackendDAE_IndexReduction_NO__INDEX__REDUCTION__desc;
+
+extern struct record_description BackendDAE_IndexType_NORMAL__desc;
+
+extern struct record_description BackendDAE_IndexType_SPARSE__desc;
+
+extern struct record_description BackendDAE_InnerEquation_INNEREQUATION__desc;
+
+extern struct record_description BackendDAE_InnerEquation_INNEREQUATIONCONSTRAINTS__desc;
+
+extern struct record_description BackendDAE_Jacobian_EMPTY__JACOBIAN__desc;
+
+extern struct record_description BackendDAE_Matching_MATCHING__desc;
+
+extern struct record_description BackendDAE_StrongComponent_TORNSYSTEM__desc;
+
+extern struct record_description BackendDAE_TearingSet_TEARINGSET__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_SCRIPTING__desc;
+
+extern struct record_description ErrorTypes_MessageType_SYMBOLIC__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_NOTIFICATION__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__LIST__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Gettext_TranslatableContent_notrans__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+extern struct record_description Tearing_TearingMethod_CELLIER__TEARING__desc;
+
+extern struct record_description Tearing_TearingMethod_MINIMAL__TEARING__desc;
+
+extern struct record_description Tearing_TearingMethod_OMC__TEARING__desc;
+
+extern struct record_description Tearing_TearingMethod_TOTAL__TEARING__desc;
+
+extern struct record_description Tearing_TearingMethod_USER__DEFINED__TEARING__desc;
+
+
+#define boxptr_Tearing_simpleMatching omc_Tearing_simpleMatching
+
+
+#define boxptr_Tearing_dumpMatchingList omc_Tearing_dumpMatchingList
+
+
+#define boxptr_Tearing_createTearingSets omc_Tearing_createTearingSets
+
+
+#define boxptr_Tearing_totalMatching omc_Tearing_totalMatching
+
+
+#define boxptr_Tearing_getUnassigned omc_Tearing_getUnassigned
+
+
+#define boxptr_Tearing_recursiveTearingCollect omc_Tearing_recursiveTearingCollect
+
+
+DLLDirection
+modelica_metatype omc_Tearing_recursiveTearing(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_Tearing_recursiveTearing omc_Tearing_recursiveTearing
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_recursiveTearing,2,0) {(void*) boxptr_Tearing_recursiveTearing,0}};
+#define boxvar_Tearing_recursiveTearing MMC_REFSTRUCTLIT(boxvar_lit_Tearing_recursiveTearing)
+
+
+#define boxptr_Tearing_getVarsOfEqnsWithMostVars omc_Tearing_getVarsOfEqnsWithMostVars
+
+
+#define boxptr_Tearing_deleteRowsFromAdjacencyMatrix omc_Tearing_deleteRowsFromAdjacencyMatrix
+
+
+#define boxptr_Tearing_deleteEntriesFromAdjacencyMatrix omc_Tearing_deleteEntriesFromAdjacencyMatrix
+
+
+#define boxptr_Tearing_selectFromList omc_Tearing_selectFromList
+
+
+#define boxptr_Tearing_selectFromList__rev omc_Tearing_selectFromList__rev
+
+
+#define boxptr_Tearing_maxListInt omc_Tearing_maxListInt
+
+
+#define boxptr_Tearing_countMultiples3 omc_Tearing_countMultiples3
+
+
+#define boxptr_Tearing_countMultiples2 omc_Tearing_countMultiples2
+
+
+#define boxptr_Tearing_countMultiples omc_Tearing_countMultiples
+
+
+#define boxptr_Tearing_markTVarsOrResiduals omc_Tearing_markTVarsOrResiduals
+
+
+#define boxptr_Tearing_assignInnerEquations omc_Tearing_assignInnerEquations
+
+
+#define boxptr_Tearing_makeAssignment omc_Tearing_makeAssignment
+
+
+#define boxptr_Tearing_traverseCollectiveEqnsforAssignable omc_Tearing_traverseCollectiveEqnsforAssignable
+
+
+#define boxptr_Tearing_traverseSingleEqnsforAssignable omc_Tearing_traverseSingleEqnsforAssignable
+
+
+#define boxptr_Tearing_selectCausalizingVars omc_Tearing_selectCausalizingVars
+
+
+#define boxptr_Tearing_selectMostCausalizingVars omc_Tearing_selectMostCausalizingVars
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__4 omc_Tearing_ModifiedCellierHeuristic__4
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__3 omc_Tearing_ModifiedCellierHeuristic__3
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__2__3__1 omc_Tearing_ModifiedCellierHeuristic__2__3__1
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__2__3 omc_Tearing_ModifiedCellierHeuristic__2__3
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__1__3 omc_Tearing_ModifiedCellierHeuristic__1__3
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__2__2 omc_Tearing_ModifiedCellierHeuristic__2__2
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__1__2 omc_Tearing_ModifiedCellierHeuristic__1__2
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__2__1 omc_Tearing_ModifiedCellierHeuristic__2__1
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__1__1 omc_Tearing_ModifiedCellierHeuristic__1__1
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__2 omc_Tearing_ModifiedCellierHeuristic__2
+
+
+#define boxptr_Tearing_ModifiedCellierHeuristic__1 omc_Tearing_ModifiedCellierHeuristic__1
+
+
+#define boxptr_Tearing_findCSE omc_Tearing_findCSE
+
+
+#define boxptr_Tearing_findDiscreteWarnTearingSelect omc_Tearing_findDiscreteWarnTearingSelect
+
+
+#define boxptr_Tearing_findDiscrete omc_Tearing_findDiscrete
+
+
+DLLDirection
+modelica_metatype omc_Tearing_deleteNegativeEntries(threadData_t *threadData, modelica_metatype _rowIn);
+#define boxptr_Tearing_deleteNegativeEntries omc_Tearing_deleteNegativeEntries
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_deleteNegativeEntries,2,0) {(void*) boxptr_Tearing_deleteNegativeEntries,0}};
+#define boxvar_Tearing_deleteNegativeEntries MMC_REFSTRUCTLIT(boxvar_lit_Tearing_deleteNegativeEntries)
+
+
+#define boxptr_Tearing_tearingSelect omc_Tearing_tearingSelect
+
+
+#define boxptr_Tearing_getTearingSetfromAssign omc_Tearing_getTearingSetfromAssign
+
+
+#define boxptr_Tearing_matchDiscreteVars omc_Tearing_matchDiscreteVars
+
+
+#define boxptr_Tearing_tearingBFS2 omc_Tearing_tearingBFS2
+
+
+#define boxptr_Tearing_sortEqnsSolvable omc_Tearing_sortEqnsSolvable
+
+
+#define boxptr_Tearing_removeMatched omc_Tearing_removeMatched
+
+
+#define boxptr_Tearing_findVareqns omc_Tearing_findVareqns
+
+
+DLLDirection
+modelica_boolean omc_Tearing_unsolvable(threadData_t *threadData, modelica_metatype _elem);
+DLLDirection
+modelica_metatype boxptr_Tearing_unsolvable(threadData_t *threadData, modelica_metatype _elem);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_unsolvable,2,0) {(void*) boxptr_Tearing_unsolvable,0}};
+#define boxvar_Tearing_unsolvable MMC_REFSTRUCTLIT(boxvar_lit_Tearing_unsolvable)
+
+
+#define boxptr_Tearing_getTearingMethod omc_Tearing_getTearingMethod
+
+
+DLLDirection
+modelica_metatype omc_Tearing_tearingSystem(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_Tearing_tearingSystem omc_Tearing_tearingSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_tearingSystem,2,0) {(void*) boxptr_Tearing_tearingSystem,0}};
+#define boxvar_Tearing_tearingSystem MMC_REFSTRUCTLIT(boxvar_lit_Tearing_tearingSystem)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

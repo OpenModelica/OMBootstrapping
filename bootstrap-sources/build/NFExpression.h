@@ -1,0 +1,2082 @@
+#ifndef NFExpression__H
+#define NFExpression__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description Absyn_Exp_ARRAY__desc;
+
+extern struct record_description Absyn_Exp_BINARY__desc;
+
+extern struct record_description Absyn_Exp_BOOL__desc;
+
+extern struct record_description Absyn_Exp_CREF__desc;
+
+extern struct record_description Absyn_Exp_END__desc;
+
+extern struct record_description Absyn_Exp_IFEXP__desc;
+
+extern struct record_description Absyn_Exp_INTEGER__desc;
+
+extern struct record_description Absyn_Exp_LBINARY__desc;
+
+extern struct record_description Absyn_Exp_LUNARY__desc;
+
+extern struct record_description Absyn_Exp_MATRIX__desc;
+
+extern struct record_description Absyn_Exp_PARTEVALFUNCTION__desc;
+
+extern struct record_description Absyn_Exp_RANGE__desc;
+
+extern struct record_description Absyn_Exp_REAL__desc;
+
+extern struct record_description Absyn_Exp_RELATION__desc;
+
+extern struct record_description Absyn_Exp_STRING__desc;
+
+extern struct record_description Absyn_Exp_TUPLE__desc;
+
+extern struct record_description Absyn_Exp_UNARY__desc;
+
+extern struct record_description Absyn_FunctionArgs_FUNCTIONARGS__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description DAE_CallAttributes_CALL__ATTR__desc;
+
+extern struct record_description DAE_Exp_ARRAY__desc;
+
+extern struct record_description DAE_Exp_ASUB__desc;
+
+extern struct record_description DAE_Exp_BCONST__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_BOX__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_CAST__desc;
+
+extern struct record_description DAE_Exp_CLKCONST__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_ENUM__LITERAL__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_Exp_IFEXP__desc;
+
+extern struct record_description DAE_Exp_LBINARY__desc;
+
+extern struct record_description DAE_Exp_LUNARY__desc;
+
+extern struct record_description DAE_Exp_METARECORDCALL__desc;
+
+extern struct record_description DAE_Exp_PARTEVALFUNCTION__desc;
+
+extern struct record_description DAE_Exp_RANGE__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Exp_RECORD__desc;
+
+extern struct record_description DAE_Exp_RELATION__desc;
+
+extern struct record_description DAE_Exp_RSUB__desc;
+
+extern struct record_description DAE_Exp_SCONST__desc;
+
+extern struct record_description DAE_Exp_SHARED__LITERAL__desc;
+
+extern struct record_description DAE_Exp_SIZE__desc;
+
+extern struct record_description DAE_Exp_TSUB__desc;
+
+extern struct record_description DAE_Exp_TUPLE__desc;
+
+extern struct record_description DAE_Exp_UNARY__desc;
+
+extern struct record_description DAE_Exp_UNBOX__desc;
+
+extern struct record_description DAE_FunctionAttributes_FUNCTION__ATTRIBUTES__desc;
+
+extern struct record_description DAE_FunctionBuiltin_FUNCTION__BUILTIN__desc;
+
+extern struct record_description DAE_FunctionParallelism_FP__NON__PARALLEL__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description DAE_TailCall_NO__TAIL__desc;
+
+extern struct record_description DAE_Type_T__STRING__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__LIST__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFCall_TYPED__ARRAY__CONSTRUCTOR__desc;
+
+extern struct record_description NFCall_TYPED__CALL__desc;
+
+extern struct record_description NFCeval_EvalTarget_EVAL__TARGET__desc;
+
+extern struct record_description NFComponent_COMPONENT__desc;
+
+extern struct record_description NFDimension_UNKNOWN__desc;
+
+extern struct record_description NFExpression_ARRAY__desc;
+
+extern struct record_description NFExpression_BINARY__desc;
+
+extern struct record_description NFExpression_BOOLEAN__desc;
+
+extern struct record_description NFExpression_BOX__desc;
+
+extern struct record_description NFExpression_CALL__desc;
+
+extern struct record_description NFExpression_CAST__desc;
+
+extern struct record_description NFExpression_CLKCONST__desc;
+
+extern struct record_description NFExpression_CREF__desc;
+
+extern struct record_description NFExpression_ENUM__LITERAL__desc;
+
+extern struct record_description NFExpression_IF__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFExpression_LBINARY__desc;
+
+extern struct record_description NFExpression_LUNARY__desc;
+
+extern struct record_description NFExpression_MATRIX__desc;
+
+extern struct record_description NFExpression_MUTABLE__desc;
+
+extern struct record_description NFExpression_RANGE__desc;
+
+extern struct record_description NFExpression_REAL__desc;
+
+extern struct record_description NFExpression_RECORD__desc;
+
+extern struct record_description NFExpression_RECORD__ELEMENT__desc;
+
+extern struct record_description NFExpression_RELATION__desc;
+
+extern struct record_description NFExpression_SHARED__LITERAL__desc;
+
+extern struct record_description NFExpression_SIZE__desc;
+
+extern struct record_description NFExpression_STRING__desc;
+
+extern struct record_description NFExpression_SUBSCRIPTED__EXP__desc;
+
+extern struct record_description NFExpression_TUPLE__desc;
+
+extern struct record_description NFExpression_TUPLE__ELEMENT__desc;
+
+extern struct record_description NFExpression_TYPENAME__desc;
+
+extern struct record_description NFExpression_UNARY__desc;
+
+extern struct record_description NFExpression_UNBOX__desc;
+
+extern struct record_description NFFunction_Function_FUNCTION__desc;
+
+extern struct record_description NFInstNode_InstNode_COMPONENT__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description NFSubscript_INDEX__desc;
+
+extern struct record_description NFType_ARRAY__desc;
+
+extern struct record_description NFType_BOOLEAN__desc;
+
+extern struct record_description NFType_CLOCK__desc;
+
+extern struct record_description NFType_ENUMERATION__desc;
+
+extern struct record_description NFType_FUNCTION__desc;
+
+extern struct record_description NFType_INTEGER__desc;
+
+extern struct record_description NFType_METABOXED__desc;
+
+extern struct record_description NFType_REAL__desc;
+
+extern struct record_description NFType_STRING__desc;
+
+extern struct record_description NFType_TUPLE__desc;
+
+extern struct record_description NFType_UNKNOWN__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+extern struct record_description Values_Value_BOOL__desc;
+
+extern struct record_description Values_Value_ENUM__LITERAL__desc;
+
+extern struct record_description Values_Value_INTEGER__desc;
+
+extern struct record_description Values_Value_REAL__desc;
+
+extern struct record_description Values_Value_RECORD__desc;
+
+extern struct record_description Values_Value_STRING__desc;
+
+
+#define boxptr_NFExpression_replaceResizableParameter_replaceWithBinding omc_NFExpression_replaceResizableParameter_replaceWithBinding
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_replaceResizableParameter(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFExpression_replaceResizableParameter omc_NFExpression_replaceResizableParameter
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_replaceResizableParameter,2,0) {(void*) boxptr_NFExpression_replaceResizableParameter,0}};
+#define boxvar_NFExpression_replaceResizableParameter MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_replaceResizableParameter)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_replaceLiteralArrayElements(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _map, modelica_metatype _idx_ptr);
+#define boxptr_NFExpression_replaceLiteralArrayElements omc_NFExpression_replaceLiteralArrayElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_replaceLiteralArrayElements,2,0) {(void*) boxptr_NFExpression_replaceLiteralArrayElements,0}};
+#define boxvar_NFExpression_replaceLiteralArrayElements MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_replaceLiteralArrayElements)
+
+
+#define boxptr_NFExpression_replaceLiteral_replace omc_NFExpression_replaceLiteral_replace
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_replaceLiteral(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _map, modelica_metatype _idx_ptr);
+#define boxptr_NFExpression_replaceLiteral omc_NFExpression_replaceLiteral
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_replaceLiteral,2,0) {(void*) boxptr_NFExpression_replaceLiteral,0}};
+#define boxvar_NFExpression_replaceLiteral MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_replaceLiteral)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeUnary(threadData_t *threadData, modelica_metatype _op, modelica_metatype _exp);
+#define boxptr_NFExpression_makeUnary omc_NFExpression_makeUnary
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeUnary,2,0) {(void*) boxptr_NFExpression_makeUnary,0}};
+#define boxvar_NFExpression_makeUnary MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeUnary)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_repairOperator(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFExpression_repairOperator omc_NFExpression_repairOperator
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_repairOperator,2,0) {(void*) boxptr_NFExpression_repairOperator,0}};
+#define boxvar_NFExpression_repairOperator MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_repairOperator)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_wrapCall(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_fnptr _fun);
+#define boxptr_NFExpression_wrapCall omc_NFExpression_wrapCall
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_wrapCall,2,0) {(void*) boxptr_NFExpression_wrapCall,0}};
+#define boxvar_NFExpression_wrapCall MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_wrapCall)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_tupleElements(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_tupleElements omc_NFExpression_tupleElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_tupleElements,2,0) {(void*) boxptr_NFExpression_tupleElements,0}};
+#define boxvar_NFExpression_tupleElements MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_tupleElements)
+
+
+#define boxptr_NFExpression_toJSON_dump__arg omc_NFExpression_toJSON_dump__arg
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_toJSON(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_toJSON omc_NFExpression_toJSON
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toJSON,2,0) {(void*) boxptr_NFExpression_toJSON,0}};
+#define boxvar_NFExpression_toJSON MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toJSON)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_clone(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFExpression_clone omc_NFExpression_clone
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_clone,2,0) {(void*) boxptr_NFExpression_clone,0}};
+#define boxvar_NFExpression_clone MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_clone)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isComponentExpression(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isComponentExpression(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isComponentExpression,2,0) {(void*) boxptr_NFExpression_isComponentExpression,0}};
+#define boxvar_NFExpression_isComponentExpression MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isComponentExpression)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isConnector(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isConnector(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isConnector,2,0) {(void*) boxptr_NFExpression_isConnector,0}};
+#define boxvar_NFExpression_isConnector MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isConnector)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isFunctionPointer(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isFunctionPointer(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isFunctionPointer,2,0) {(void*) boxptr_NFExpression_isFunctionPointer,0}};
+#define boxvar_NFExpression_isFunctionPointer MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isFunctionPointer)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapCrefScalars2(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _mapFn);
+#define boxptr_NFExpression_mapCrefScalars2 omc_NFExpression_mapCrefScalars2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapCrefScalars2,2,0) {(void*) boxptr_NFExpression_mapCrefScalars2,0}};
+#define boxvar_NFExpression_mapCrefScalars2 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapCrefScalars2)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapCrefScalars(threadData_t *threadData, modelica_metatype _crefExp, modelica_fnptr _mapFn);
+#define boxptr_NFExpression_mapCrefScalars omc_NFExpression_mapCrefScalars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapCrefScalars,2,0) {(void*) boxptr_NFExpression_mapCrefScalars,0}};
+#define boxvar_NFExpression_mapCrefScalars MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapCrefScalars)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapSplitExpressions3(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFExpression_mapSplitExpressions3 omc_NFExpression_mapSplitExpressions3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapSplitExpressions3,2,0) {(void*) boxptr_NFExpression_mapSplitExpressions3,0}};
+#define boxvar_NFExpression_mapSplitExpressions3 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapSplitExpressions3)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapSplitExpressions2(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _dimSizes, modelica_metatype _subExps, modelica_fnptr _func);
+#define boxptr_NFExpression_mapSplitExpressions2 omc_NFExpression_mapSplitExpressions2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapSplitExpressions2,2,0) {(void*) boxptr_NFExpression_mapSplitExpressions2,0}};
+#define boxvar_NFExpression_mapSplitExpressions2 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapSplitExpressions2)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_replaceSplitSubscripts2(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsubscript, modelica_metatype __omcQ_24in_5FsubRepls, modelica_metatype *out_subRepls);
+#define boxptr_NFExpression_replaceSplitSubscripts2 omc_NFExpression_replaceSplitSubscripts2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_replaceSplitSubscripts2,2,0) {(void*) boxptr_NFExpression_replaceSplitSubscripts2,0}};
+#define boxvar_NFExpression_replaceSplitSubscripts2 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_replaceSplitSubscripts2)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_replaceSplitSubscripts(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5FsubRepls, modelica_metatype *out_subRepls);
+#define boxptr_NFExpression_replaceSplitSubscripts omc_NFExpression_replaceSplitSubscripts
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_replaceSplitSubscripts,2,0) {(void*) boxptr_NFExpression_replaceSplitSubscripts,0}};
+#define boxvar_NFExpression_replaceSplitSubscripts MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_replaceSplitSubscripts)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapSplitExpressions(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_mapSplitExpressions omc_NFExpression_mapSplitExpressions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapSplitExpressions,2,0) {(void*) boxptr_NFExpression_mapSplitExpressions,0}};
+#define boxvar_NFExpression_mapSplitExpressions MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapSplitExpressions)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isSplitSubscriptedExp(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isSplitSubscriptedExp(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isSplitSubscriptedExp,2,0) {(void*) boxptr_NFExpression_isSplitSubscriptedExp,0}};
+#define boxvar_NFExpression_isSplitSubscriptedExp MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isSplitSubscriptedExp)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_expandNonListedSplitIndices(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _indicesToKeep);
+#define boxptr_NFExpression_expandNonListedSplitIndices omc_NFExpression_expandNonListedSplitIndices
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_expandNonListedSplitIndices,2,0) {(void*) boxptr_NFExpression_expandNonListedSplitIndices,0}};
+#define boxvar_NFExpression_expandNonListedSplitIndices MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_expandNonListedSplitIndices)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_expandSplitIndices(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_expandSplitIndices omc_NFExpression_expandSplitIndices
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_expandSplitIndices,2,0) {(void*) boxptr_NFExpression_expandSplitIndices,0}};
+#define boxvar_NFExpression_expandSplitIndices MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_expandSplitIndices)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_filterSplitIndices2(threadData_t *threadData, modelica_metatype _sub, modelica_metatype _node);
+DLLDirection
+modelica_metatype boxptr_NFExpression_filterSplitIndices2(threadData_t *threadData, modelica_metatype _sub, modelica_metatype _node);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_filterSplitIndices2,2,0) {(void*) boxptr_NFExpression_filterSplitIndices2,0}};
+#define boxvar_NFExpression_filterSplitIndices2 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_filterSplitIndices2)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_filterSplitIndices(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _node);
+#define boxptr_NFExpression_filterSplitIndices omc_NFExpression_filterSplitIndices
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_filterSplitIndices,2,0) {(void*) boxptr_NFExpression_filterSplitIndices,0}};
+#define boxvar_NFExpression_filterSplitIndices MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_filterSplitIndices)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isCrefEqualSet(threadData_t *threadData, modelica_metatype _exp, modelica_boolean __omcQ_24in_5Fb, modelica_metatype _set);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isCrefEqualSet(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Fb, modelica_metatype _set);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isCrefEqualSet,2,0) {(void*) boxptr_NFExpression_isCrefEqualSet,0}};
+#define boxvar_NFExpression_isCrefEqualSet MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isCrefEqualSet)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_containsCrefSet(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _set);
+DLLDirection
+modelica_metatype boxptr_NFExpression_containsCrefSet(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _set);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_containsCrefSet,2,0) {(void*) boxptr_NFExpression_containsCrefSet,0}};
+#define boxvar_NFExpression_containsCrefSet MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_containsCrefSet)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isCrefEqual(threadData_t *threadData, modelica_metatype _exp, modelica_boolean __omcQ_24in_5Fb, modelica_metatype _cref);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isCrefEqual(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Fb, modelica_metatype _cref);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isCrefEqual,2,0) {(void*) boxptr_NFExpression_isCrefEqual,0}};
+#define boxvar_NFExpression_isCrefEqual MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isCrefEqual)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_containsCref(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _cref);
+DLLDirection
+modelica_metatype boxptr_NFExpression_containsCref(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _cref);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_containsCref,2,0) {(void*) boxptr_NFExpression_containsCref,0}};
+#define boxvar_NFExpression_containsCref MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_containsCref)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isPure(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isPure(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isPure,2,0) {(void*) boxptr_NFExpression_isPure,0}};
+#define boxvar_NFExpression_isPure MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isPure)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_foldReduction2(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _ranges, modelica_metatype _iterators, modelica_metatype _foldExp, modelica_fnptr _mapFn, modelica_fnptr _foldFn);
+#define boxptr_NFExpression_foldReduction2 omc_NFExpression_foldReduction2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_foldReduction2,2,0) {(void*) boxptr_NFExpression_foldReduction2,0}};
+#define boxvar_NFExpression_foldReduction2 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_foldReduction2)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_foldReduction(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _iterators, modelica_metatype _foldExp, modelica_fnptr _mapFn, modelica_fnptr _foldFn);
+#define boxptr_NFExpression_foldReduction omc_NFExpression_foldReduction
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_foldReduction,2,0) {(void*) boxptr_NFExpression_foldReduction,0}};
+#define boxvar_NFExpression_foldReduction MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_foldReduction)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_createIterationRanges(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _iterators, modelica_metatype *out_ranges, modelica_metatype *out_iters);
+#define boxptr_NFExpression_createIterationRanges omc_NFExpression_createIterationRanges
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_createIterationRanges,2,0) {(void*) boxptr_NFExpression_createIterationRanges,0}};
+#define boxvar_NFExpression_createIterationRanges MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_createIterationRanges)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_nthEnumLiteral(threadData_t *threadData, modelica_metatype _ty, modelica_integer _n);
+DLLDirection
+modelica_metatype boxptr_NFExpression_nthEnumLiteral(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _n);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_nthEnumLiteral,2,0) {(void*) boxptr_NFExpression_nthEnumLiteral,0}};
+#define boxvar_NFExpression_nthEnumLiteral MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_nthEnumLiteral)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_retype(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFExpression_retype omc_NFExpression_retype
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_retype,2,0) {(void*) boxptr_NFExpression_retype,0}};
+#define boxvar_NFExpression_retype MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_retype)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_getRecordElements(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_getRecordElements omc_NFExpression_getRecordElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_getRecordElements,2,0) {(void*) boxptr_NFExpression_getRecordElements,0}};
+#define boxvar_NFExpression_getRecordElements MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_getRecordElements)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_nthRecordElement(threadData_t *threadData, modelica_integer _index, modelica_metatype _recordExp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_nthRecordElement(threadData_t *threadData, modelica_metatype _index, modelica_metatype _recordExp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_nthRecordElement,2,0) {(void*) boxptr_NFExpression_nthRecordElement,0}};
+#define boxvar_NFExpression_nthRecordElement MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_nthRecordElement)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_recordElement(threadData_t *threadData, modelica_string _elementName, modelica_metatype _recordExp);
+#define boxptr_NFExpression_recordElement omc_NFExpression_recordElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_recordElement,2,0) {(void*) boxptr_NFExpression_recordElement,0}};
+#define boxvar_NFExpression_recordElement MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_recordElement)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_tupleElement(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _ty, modelica_integer _index);
+DLLDirection
+modelica_metatype boxptr_NFExpression_tupleElement(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _ty, modelica_metatype _index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_tupleElement,2,0) {(void*) boxptr_NFExpression_tupleElement,0}};
+#define boxvar_NFExpression_tupleElement MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_tupleElement)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_toScalar(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_toScalar omc_NFExpression_toScalar
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toScalar,2,0) {(void*) boxptr_NFExpression_toScalar,0}};
+#define boxvar_NFExpression_toScalar MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toScalar)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_enumIndexExp(threadData_t *threadData, modelica_metatype _enumExp);
+#define boxptr_NFExpression_enumIndexExp omc_NFExpression_enumIndexExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_enumIndexExp,2,0) {(void*) boxptr_NFExpression_enumIndexExp,0}};
+#define boxvar_NFExpression_enumIndexExp MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_enumIndexExp)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isEnd(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isEnd(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isEnd,2,0) {(void*) boxptr_NFExpression_isEnd,0}};
+#define boxvar_NFExpression_isEnd MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isEnd)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isEmpty(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isEmpty(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isEmpty,2,0) {(void*) boxptr_NFExpression_isEmpty,0}};
+#define boxvar_NFExpression_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isEmpty)
+
+
+DLLDirection
+void omc_NFExpression_applyMutable(threadData_t *threadData, modelica_metatype _mutableExp, modelica_fnptr _func);
+#define boxptr_NFExpression_applyMutable omc_NFExpression_applyMutable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyMutable,2,0) {(void*) boxptr_NFExpression_applyMutable,0}};
+#define boxvar_NFExpression_applyMutable MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyMutable)
+
+
+DLLDirection
+void omc_NFExpression_updateMutable(threadData_t *threadData, modelica_metatype _mutableExp, modelica_metatype _value);
+#define boxptr_NFExpression_updateMutable omc_NFExpression_updateMutable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_updateMutable,2,0) {(void*) boxptr_NFExpression_updateMutable,0}};
+#define boxvar_NFExpression_updateMutable MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_updateMutable)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isMutable(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isMutable(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isMutable,2,0) {(void*) boxptr_NFExpression_isMutable,0}};
+#define boxvar_NFExpression_isMutable MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isMutable)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeImmutable(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_makeImmutable omc_NFExpression_makeImmutable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeImmutable,2,0) {(void*) boxptr_NFExpression_makeImmutable,0}};
+#define boxvar_NFExpression_makeImmutable MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeImmutable)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeMutable(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_makeMutable omc_NFExpression_makeMutable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeMutable,2,0) {(void*) boxptr_NFExpression_makeMutable,0}};
+#define boxvar_NFExpression_makeMutable MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeMutable)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_purityList(threadData_t *threadData, modelica_metatype _expl, modelica_integer __omcQ_24in_5Fpur);
+DLLDirection
+modelica_metatype boxptr_NFExpression_purityList(threadData_t *threadData, modelica_metatype _expl, modelica_metatype __omcQ_24in_5Fpur);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_purityList,2,0) {(void*) boxptr_NFExpression_purityList,0}};
+#define boxvar_NFExpression_purityList MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_purityList)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_purityArray(threadData_t *threadData, modelica_metatype _expl, modelica_integer __omcQ_24in_5Fpur);
+DLLDirection
+modelica_metatype boxptr_NFExpression_purityArray(threadData_t *threadData, modelica_metatype _expl, modelica_metatype __omcQ_24in_5Fpur);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_purityArray,2,0) {(void*) boxptr_NFExpression_purityArray,0}};
+#define boxvar_NFExpression_purityArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_purityArray)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_purity(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_purity(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_purity,2,0) {(void*) boxptr_NFExpression_purity,0}};
+#define boxvar_NFExpression_purity MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_purity)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_variabilityList(threadData_t *threadData, modelica_metatype _expl, modelica_integer __omcQ_24in_5Fvar);
+DLLDirection
+modelica_metatype boxptr_NFExpression_variabilityList(threadData_t *threadData, modelica_metatype _expl, modelica_metatype __omcQ_24in_5Fvar);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_variabilityList,2,0) {(void*) boxptr_NFExpression_variabilityList,0}};
+#define boxvar_NFExpression_variabilityList MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_variabilityList)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_variabilityArray(threadData_t *threadData, modelica_metatype _expl, modelica_integer __omcQ_24in_5Fvar);
+DLLDirection
+modelica_metatype boxptr_NFExpression_variabilityArray(threadData_t *threadData, modelica_metatype _expl, modelica_metatype __omcQ_24in_5Fvar);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_variabilityArray,2,0) {(void*) boxptr_NFExpression_variabilityArray,0}};
+#define boxvar_NFExpression_variabilityArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_variabilityArray)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_variability(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_variability(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_variability,2,0) {(void*) boxptr_NFExpression_variability,0}};
+#define boxvar_NFExpression_variability MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_variability)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_promote2(threadData_t *threadData, modelica_metatype _exp, modelica_boolean _isArray, modelica_integer _dims, modelica_metatype _types);
+DLLDirection
+modelica_metatype boxptr_NFExpression_promote2(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _isArray, modelica_metatype _dims, modelica_metatype _types);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_promote2,2,0) {(void*) boxptr_NFExpression_promote2,0}};
+#define boxvar_NFExpression_promote2 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_promote2)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_promote(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fe, modelica_metatype __omcQ_24in_5Fty, modelica_integer _n, modelica_metatype *out_ty);
+DLLDirection
+modelica_metatype boxptr_NFExpression_promote(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fe, modelica_metatype __omcQ_24in_5Fty, modelica_metatype _n, modelica_metatype *out_ty);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_promote,2,0) {(void*) boxptr_NFExpression_promote,0}};
+#define boxvar_NFExpression_promote MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_promote)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeIdentityMatrix(threadData_t *threadData, modelica_integer _n, modelica_metatype _elementType);
+DLLDirection
+modelica_metatype boxptr_NFExpression_makeIdentityMatrix(threadData_t *threadData, modelica_metatype _n, modelica_metatype _elementType);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeIdentityMatrix,2,0) {(void*) boxptr_NFExpression_makeIdentityMatrix,0}};
+#define boxvar_NFExpression_makeIdentityMatrix MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeIdentityMatrix)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_transposeArray(threadData_t *threadData, modelica_metatype _arrayExp);
+#define boxptr_NFExpression_transposeArray omc_NFExpression_transposeArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_transposeArray,2,0) {(void*) boxptr_NFExpression_transposeArray,0}};
+#define boxvar_NFExpression_transposeArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_transposeArray)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_hasArrayCall2(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_hasArrayCall2(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_hasArrayCall2,2,0) {(void*) boxptr_NFExpression_hasArrayCall2,0}};
+#define boxvar_NFExpression_hasArrayCall2 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_hasArrayCall2)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_hasArrayCall(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_hasArrayCall(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_hasArrayCall,2,0) {(void*) boxptr_NFExpression_hasArrayCall,0}};
+#define boxvar_NFExpression_hasArrayCall MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_hasArrayCall)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_arrayScalarElement(threadData_t *threadData, modelica_metatype _arrayExp);
+#define boxptr_NFExpression_arrayScalarElement omc_NFExpression_arrayScalarElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayScalarElement,2,0) {(void*) boxptr_NFExpression_arrayScalarElement,0}};
+#define boxvar_NFExpression_arrayScalarElement MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayScalarElement)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_arrayScalarElements__impl(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Felements);
+#define boxptr_NFExpression_arrayScalarElements__impl omc_NFExpression_arrayScalarElements__impl
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayScalarElements__impl,2,0) {(void*) boxptr_NFExpression_arrayScalarElements__impl,0}};
+#define boxvar_NFExpression_arrayScalarElements__impl MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayScalarElements__impl)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_arrayScalarElements(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_arrayScalarElements omc_NFExpression_arrayScalarElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayScalarElements,2,0) {(void*) boxptr_NFExpression_arrayScalarElements,0}};
+#define boxvar_NFExpression_arrayScalarElements MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayScalarElements)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_arrayElementList(threadData_t *threadData, modelica_metatype _array);
+#define boxptr_NFExpression_arrayElementList omc_NFExpression_arrayElementList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayElementList,2,0) {(void*) boxptr_NFExpression_arrayElementList,0}};
+#define boxvar_NFExpression_arrayElementList MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayElementList)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_arrayElements(threadData_t *threadData, modelica_metatype _array);
+#define boxptr_NFExpression_arrayElements omc_NFExpression_arrayElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayElements,2,0) {(void*) boxptr_NFExpression_arrayElements,0}};
+#define boxvar_NFExpression_arrayElements MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayElements)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_sliceRange(threadData_t *threadData, modelica_metatype __omcQ_24in_5Frange, modelica_metatype _slice);
+#define boxptr_NFExpression_sliceRange omc_NFExpression_sliceRange
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_sliceRange,2,0) {(void*) boxptr_NFExpression_sliceRange,0}};
+#define boxvar_NFExpression_sliceRange MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_sliceRange)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_revertRange(threadData_t *threadData, modelica_metatype __omcQ_24in_5Frange);
+#define boxptr_NFExpression_revertRange omc_NFExpression_revertRange
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_revertRange,2,0) {(void*) boxptr_NFExpression_revertRange,0}};
+#define boxvar_NFExpression_revertRange MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_revertRange)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_logicNegate(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_logicNegate omc_NFExpression_logicNegate
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_logicNegate,2,0) {(void*) boxptr_NFExpression_logicNegate,0}};
+#define boxvar_NFExpression_logicNegate MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_logicNegate)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_negate(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFExpression_negate omc_NFExpression_negate
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_negate,2,0) {(void*) boxptr_NFExpression_negate,0}};
+#define boxvar_NFExpression_negate MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_negate)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isNegated(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isNegated(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isNegated,2,0) {(void*) boxptr_NFExpression_isNegated,0}};
+#define boxvar_NFExpression_isNegated MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isNegated)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_unbox(threadData_t *threadData, modelica_metatype _boxedExp);
+#define boxptr_NFExpression_unbox omc_NFExpression_unbox
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_unbox,2,0) {(void*) boxptr_NFExpression_unbox,0}};
+#define boxvar_NFExpression_unbox MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_unbox)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_box(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_box omc_NFExpression_box
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_box,2,0) {(void*) boxptr_NFExpression_box,0}};
+#define boxvar_NFExpression_box MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_box)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeDefaultValue(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _min, modelica_metatype _max);
+#define boxptr_NFExpression_makeDefaultValue omc_NFExpression_makeDefaultValue
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeDefaultValue,2,0) {(void*) boxptr_NFExpression_makeDefaultValue,0}};
+#define boxvar_NFExpression_makeDefaultValue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeDefaultValue)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeMinValue(threadData_t *threadData, modelica_metatype _ty);
+#define boxptr_NFExpression_makeMinValue omc_NFExpression_makeMinValue
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeMinValue,2,0) {(void*) boxptr_NFExpression_makeMinValue,0}};
+#define boxvar_NFExpression_makeMinValue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeMinValue)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeMaxValue(threadData_t *threadData, modelica_metatype _ty);
+#define boxptr_NFExpression_makeMaxValue omc_NFExpression_makeMaxValue
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeMaxValue,2,0) {(void*) boxptr_NFExpression_makeMaxValue,0}};
+#define boxvar_NFExpression_makeMaxValue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeMaxValue)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeNaN(threadData_t *threadData, modelica_metatype _ty);
+#define boxptr_NFExpression_makeNaN omc_NFExpression_makeNaN
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeNaN,2,0) {(void*) boxptr_NFExpression_makeNaN,0}};
+#define boxvar_NFExpression_makeNaN MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeNaN)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeMinusOne(threadData_t *threadData, modelica_metatype _ty);
+#define boxptr_NFExpression_makeMinusOne omc_NFExpression_makeMinusOne
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeMinusOne,2,0) {(void*) boxptr_NFExpression_makeMinusOne,0}};
+#define boxvar_NFExpression_makeMinusOne MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeMinusOne)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeOne(threadData_t *threadData, modelica_metatype _ty);
+#define boxptr_NFExpression_makeOne omc_NFExpression_makeOne
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeOne,2,0) {(void*) boxptr_NFExpression_makeOne,0}};
+#define boxvar_NFExpression_makeOne MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeOne)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeOperatorRecordZero(threadData_t *threadData, modelica_metatype _recordNode);
+#define boxptr_NFExpression_makeOperatorRecordZero omc_NFExpression_makeOperatorRecordZero
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeOperatorRecordZero,2,0) {(void*) boxptr_NFExpression_makeOperatorRecordZero,0}};
+#define boxvar_NFExpression_makeOperatorRecordZero MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeOperatorRecordZero)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeZero(threadData_t *threadData, modelica_metatype _ty);
+#define boxptr_NFExpression_makeZero omc_NFExpression_makeZero
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeZero,2,0) {(void*) boxptr_NFExpression_makeZero,0}};
+#define boxvar_NFExpression_makeZero MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeZero)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_liftArrayList(threadData_t *threadData, modelica_metatype _dims, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype *out_arrayType);
+#define boxptr_NFExpression_liftArrayList omc_NFExpression_liftArrayList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_liftArrayList,2,0) {(void*) boxptr_NFExpression_liftArrayList,0}};
+#define boxvar_NFExpression_liftArrayList MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_liftArrayList)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_liftArray(threadData_t *threadData, modelica_metatype _dim, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype *out_arrayType);
+#define boxptr_NFExpression_liftArray omc_NFExpression_liftArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_liftArray,2,0) {(void*) boxptr_NFExpression_liftArray,0}};
+#define boxvar_NFExpression_liftArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_liftArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_fillArray__impl(threadData_t *threadData, modelica_integer _n, modelica_metatype _fillExp, modelica_metatype _ty, modelica_boolean _isLiteral, modelica_metatype *out_resultType);
+DLLDirection
+modelica_metatype boxptr_NFExpression_fillArray__impl(threadData_t *threadData, modelica_metatype _n, modelica_metatype _fillExp, modelica_metatype _ty, modelica_metatype _isLiteral, modelica_metatype *out_resultType);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_fillArray__impl,2,0) {(void*) boxptr_NFExpression_fillArray__impl,0}};
+#define boxvar_NFExpression_fillArray__impl MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_fillArray__impl)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_fillArray(threadData_t *threadData, modelica_integer _n, modelica_metatype _fillExp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_fillArray(threadData_t *threadData, modelica_metatype _n, modelica_metatype _fillExp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_fillArray,2,0) {(void*) boxptr_NFExpression_fillArray,0}};
+#define boxvar_NFExpression_fillArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_fillArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_fillArgs(threadData_t *threadData, modelica_metatype _fillExp, modelica_metatype _dims);
+#define boxptr_NFExpression_fillArgs omc_NFExpression_fillArgs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_fillArgs,2,0) {(void*) boxptr_NFExpression_fillArgs,0}};
+#define boxvar_NFExpression_fillArgs MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_fillArgs)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_fillType(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _fillExp);
+#define boxptr_NFExpression_fillType omc_NFExpression_fillType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_fillType,2,0) {(void*) boxptr_NFExpression_fillType,0}};
+#define boxvar_NFExpression_fillType MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_fillType)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isRecordOrRecordArray(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isRecordOrRecordArray(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isRecordOrRecordArray,2,0) {(void*) boxptr_NFExpression_isRecordOrRecordArray,0}};
+#define boxvar_NFExpression_isRecordOrRecordArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isRecordOrRecordArray)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isRecord(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isRecord(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isRecord,2,0) {(void*) boxptr_NFExpression_isRecord,0}};
+#define boxvar_NFExpression_isRecord MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isRecord)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isBoolean(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isBoolean(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isBoolean,2,0) {(void*) boxptr_NFExpression_isBoolean,0}};
+#define boxvar_NFExpression_isBoolean MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isBoolean)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isConstNumber(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isConstNumber(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isConstNumber,2,0) {(void*) boxptr_NFExpression_isConstNumber,0}};
+#define boxvar_NFExpression_isConstNumber MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isConstNumber)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isReal(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isReal(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isReal,2,0) {(void*) boxptr_NFExpression_isReal,0}};
+#define boxvar_NFExpression_isReal MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isReal)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isInteger(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isInteger(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isInteger,2,0) {(void*) boxptr_NFExpression_isInteger,0}};
+#define boxvar_NFExpression_isInteger MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isInteger)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isKnownSizeFill(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isKnownSizeFill(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isKnownSizeFill,2,0) {(void*) boxptr_NFExpression_isKnownSizeFill,0}};
+#define boxvar_NFExpression_isKnownSizeFill MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isKnownSizeFill)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isLiteralReplace(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isLiteralReplace(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isLiteralReplace,2,0) {(void*) boxptr_NFExpression_isLiteralReplace,0}};
+#define boxvar_NFExpression_isLiteralReplace MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isLiteralReplace)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isLiteral(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isLiteral(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isLiteral,2,0) {(void*) boxptr_NFExpression_isLiteral,0}};
+#define boxvar_NFExpression_isLiteral MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isLiteral)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isScalarLiteral(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isScalarLiteral(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isScalarLiteral,2,0) {(void*) boxptr_NFExpression_isScalarLiteral,0}};
+#define boxvar_NFExpression_isScalarLiteral MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isScalarLiteral)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isScalar(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isScalar(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isScalar,2,0) {(void*) boxptr_NFExpression_isScalar,0}};
+#define boxvar_NFExpression_isScalar MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isScalar)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isGreaterOrEqual(threadData_t *threadData, modelica_metatype _lhs, modelica_metatype _rhs);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isGreaterOrEqual(threadData_t *threadData, modelica_metatype _lhs, modelica_metatype _rhs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isGreaterOrEqual,2,0) {(void*) boxptr_NFExpression_isGreaterOrEqual,0}};
+#define boxvar_NFExpression_isGreaterOrEqual MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isGreaterOrEqual)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isNonNegative(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isNonNegative(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isNonNegative,2,0) {(void*) boxptr_NFExpression_isNonNegative,0}};
+#define boxvar_NFExpression_isNonNegative MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isNonNegative)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isNonPositive(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isNonPositive(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isNonPositive,2,0) {(void*) boxptr_NFExpression_isNonPositive,0}};
+#define boxvar_NFExpression_isNonPositive MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isNonPositive)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isNegative(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isNegative(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isNegative,2,0) {(void*) boxptr_NFExpression_isNegative,0}};
+#define boxvar_NFExpression_isNegative MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isNegative)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isPositive(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isPositive(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isPositive,2,0) {(void*) boxptr_NFExpression_isPositive,0}};
+#define boxvar_NFExpression_isPositive MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isPositive)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isNaN(threadData_t *threadData, modelica_metatype _nan);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isNaN(threadData_t *threadData, modelica_metatype _nan);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isNaN,2,0) {(void*) boxptr_NFExpression_isNaN,0}};
+#define boxvar_NFExpression_isNaN MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isNaN)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isMinusOne(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isMinusOne(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isMinusOne,2,0) {(void*) boxptr_NFExpression_isMinusOne,0}};
+#define boxvar_NFExpression_isMinusOne MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isMinusOne)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isOne(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isOne(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isOne,2,0) {(void*) boxptr_NFExpression_isOne,0}};
+#define boxvar_NFExpression_isOne MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isOne)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isNonZero(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isNonZero(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isNonZero,2,0) {(void*) boxptr_NFExpression_isNonZero,0}};
+#define boxvar_NFExpression_isNonZero MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isNonZero)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isZero(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isZero(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isZero,2,0) {(void*) boxptr_NFExpression_isZero,0}};
+#define boxvar_NFExpression_isZero MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isZero)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isSubstitute(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isSubstitute(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isSubstitute,2,0) {(void*) boxptr_NFExpression_isSubstitute,0}};
+#define boxvar_NFExpression_isSubstitute MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isSubstitute)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isTime(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isTime(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isTime,2,0) {(void*) boxptr_NFExpression_isTime,0}};
+#define boxvar_NFExpression_isTime MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isTime)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_containsAnyIterator(threadData_t *threadData, modelica_metatype _exp, modelica_integer _context);
+DLLDirection
+modelica_metatype boxptr_NFExpression_containsAnyIterator(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _context);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_containsAnyIterator,2,0) {(void*) boxptr_NFExpression_containsAnyIterator,0}};
+#define boxvar_NFExpression_containsAnyIterator MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_containsAnyIterator)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isIterator(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isIterator(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isIterator,2,0) {(void*) boxptr_NFExpression_isIterator,0}};
+#define boxvar_NFExpression_isIterator MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isIterator)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isResizableCref(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isResizableCref(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isResizableCref,2,0) {(void*) boxptr_NFExpression_isResizableCref,0}};
+#define boxvar_NFExpression_isResizableCref MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isResizableCref)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_extractCref(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Fcrefs);
+#define boxptr_NFExpression_extractCref omc_NFExpression_extractCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_extractCref,2,0) {(void*) boxptr_NFExpression_extractCref,0}};
+#define boxvar_NFExpression_extractCref MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_extractCref)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_extractCrefs(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_extractCrefs omc_NFExpression_extractCrefs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_extractCrefs,2,0) {(void*) boxptr_NFExpression_extractCrefs,0}};
+#define boxvar_NFExpression_extractCrefs MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_extractCrefs)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_toCref(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_toCref omc_NFExpression_toCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toCref,2,0) {(void*) boxptr_NFExpression_toCref,0}};
+#define boxvar_NFExpression_toCref MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toCref)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_fromCref(threadData_t *threadData, modelica_metatype _cref, modelica_boolean _includeScope);
+DLLDirection
+modelica_metatype boxptr_NFExpression_fromCref(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _includeScope);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_fromCref,2,0) {(void*) boxptr_NFExpression_fromCref,0}};
+#define boxvar_NFExpression_fromCref MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_fromCref)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_arrayAllEqual2(threadData_t *threadData, modelica_metatype _arrayExp, modelica_metatype _element);
+DLLDirection
+modelica_metatype boxptr_NFExpression_arrayAllEqual2(threadData_t *threadData, modelica_metatype _arrayExp, modelica_metatype _element);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayAllEqual2,2,0) {(void*) boxptr_NFExpression_arrayAllEqual2,0}};
+#define boxvar_NFExpression_arrayAllEqual2 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayAllEqual2)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_arrayAllEqual(threadData_t *threadData, modelica_metatype _arrayExp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_arrayAllEqual(threadData_t *threadData, modelica_metatype _arrayExp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayAllEqual,2,0) {(void*) boxptr_NFExpression_arrayAllEqual,0}};
+#define boxvar_NFExpression_arrayAllEqual MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayAllEqual)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_arrayFirstScalar(threadData_t *threadData, modelica_metatype _arrayExp);
+#define boxptr_NFExpression_arrayFirstScalar omc_NFExpression_arrayFirstScalar
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayFirstScalar,2,0) {(void*) boxptr_NFExpression_arrayFirstScalar,0}};
+#define boxvar_NFExpression_arrayFirstScalar MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayFirstScalar)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_containsShallow(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+DLLDirection
+modelica_metatype boxptr_NFExpression_containsShallow(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_containsShallow,2,0) {(void*) boxptr_NFExpression_containsShallow,0}};
+#define boxvar_NFExpression_containsShallow MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_containsShallow)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_listContains(threadData_t *threadData, modelica_metatype _expl, modelica_fnptr _func);
+DLLDirection
+modelica_metatype boxptr_NFExpression_listContains(threadData_t *threadData, modelica_metatype _expl, modelica_fnptr _func);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_listContains,2,0) {(void*) boxptr_NFExpression_listContains,0}};
+#define boxvar_NFExpression_listContains MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_listContains)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_arrayContains(threadData_t *threadData, modelica_metatype _expl, modelica_fnptr _func);
+DLLDirection
+modelica_metatype boxptr_NFExpression_arrayContains(threadData_t *threadData, modelica_metatype _expl, modelica_fnptr _func);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayContains,2,0) {(void*) boxptr_NFExpression_arrayContains,0}};
+#define boxvar_NFExpression_arrayContains MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayContains)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_contains(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+DLLDirection
+modelica_metatype boxptr_NFExpression_contains(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_contains,2,0) {(void*) boxptr_NFExpression_contains,0}};
+#define boxvar_NFExpression_contains MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_contains)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_containsOpt(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+DLLDirection
+modelica_metatype boxptr_NFExpression_containsOpt(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_containsOpt,2,0) {(void*) boxptr_NFExpression_containsOpt,0}};
+#define boxvar_NFExpression_containsOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_containsOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapFoldOptShallow(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func, modelica_metatype __omcQ_24in_5Farg, modelica_metatype *out_arg);
+#define boxptr_NFExpression_mapFoldOptShallow omc_NFExpression_mapFoldOptShallow
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapFoldOptShallow,2,0) {(void*) boxptr_NFExpression_mapFoldOptShallow,0}};
+#define boxvar_NFExpression_mapFoldOptShallow MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapFoldOptShallow)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapFoldShallow(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func, modelica_metatype __omcQ_24in_5Farg, modelica_metatype *out_arg);
+#define boxptr_NFExpression_mapFoldShallow omc_NFExpression_mapFoldShallow
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapFoldShallow,2,0) {(void*) boxptr_NFExpression_mapFoldShallow,0}};
+#define boxvar_NFExpression_mapFoldShallow MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapFoldShallow)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapFoldOpt(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func, modelica_metatype __omcQ_24in_5Farg, modelica_metatype *out_arg);
+#define boxptr_NFExpression_mapFoldOpt omc_NFExpression_mapFoldOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapFoldOpt,2,0) {(void*) boxptr_NFExpression_mapFoldOpt,0}};
+#define boxvar_NFExpression_mapFoldOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapFoldOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapFold(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func, modelica_metatype __omcQ_24in_5Farg, modelica_metatype *out_arg);
+#define boxptr_NFExpression_mapFold omc_NFExpression_mapFold
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapFold,2,0) {(void*) boxptr_NFExpression_mapFold,0}};
+#define boxvar_NFExpression_mapFold MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapFold)
+
+
+DLLDirection
+void omc_NFExpression_applyShallowOpt(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_applyShallowOpt omc_NFExpression_applyShallowOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyShallowOpt,2,0) {(void*) boxptr_NFExpression_applyShallowOpt,0}};
+#define boxvar_NFExpression_applyShallowOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyShallowOpt)
+
+
+DLLDirection
+void omc_NFExpression_applyShallow(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_applyShallow omc_NFExpression_applyShallow
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyShallow,2,0) {(void*) boxptr_NFExpression_applyShallow,0}};
+#define boxvar_NFExpression_applyShallow MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyShallow)
+
+
+DLLDirection
+void omc_NFExpression_applyListShallow(threadData_t *threadData, modelica_metatype _expl, modelica_fnptr _func);
+#define boxptr_NFExpression_applyListShallow omc_NFExpression_applyListShallow
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyListShallow,2,0) {(void*) boxptr_NFExpression_applyListShallow,0}};
+#define boxvar_NFExpression_applyListShallow MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyListShallow)
+
+
+DLLDirection
+void omc_NFExpression_applyArrayShallow(threadData_t *threadData, modelica_metatype _expl, modelica_fnptr _func);
+#define boxptr_NFExpression_applyArrayShallow omc_NFExpression_applyArrayShallow
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyArrayShallow,2,0) {(void*) boxptr_NFExpression_applyArrayShallow,0}};
+#define boxvar_NFExpression_applyArrayShallow MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyArrayShallow)
+
+
+DLLDirection
+void omc_NFExpression_apply(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_apply omc_NFExpression_apply
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_apply,2,0) {(void*) boxptr_NFExpression_apply,0}};
+#define boxvar_NFExpression_apply MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_apply)
+
+
+DLLDirection
+void omc_NFExpression_applyOpt(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_applyOpt omc_NFExpression_applyOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyOpt,2,0) {(void*) boxptr_NFExpression_applyOpt,0}};
+#define boxvar_NFExpression_applyOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyOpt)
+
+
+DLLDirection
+void omc_NFExpression_applyList(threadData_t *threadData, modelica_metatype _expl, modelica_fnptr _func);
+#define boxptr_NFExpression_applyList omc_NFExpression_applyList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyList,2,0) {(void*) boxptr_NFExpression_applyList,0}};
+#define boxvar_NFExpression_applyList MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyList)
+
+
+DLLDirection
+void omc_NFExpression_applyArray(threadData_t *threadData, modelica_metatype _expl, modelica_fnptr _func);
+#define boxptr_NFExpression_applyArray omc_NFExpression_applyArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyArray,2,0) {(void*) boxptr_NFExpression_applyArray,0}};
+#define boxvar_NFExpression_applyArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_fold(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func, modelica_metatype _arg);
+#define boxptr_NFExpression_fold omc_NFExpression_fold
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_fold,2,0) {(void*) boxptr_NFExpression_fold,0}};
+#define boxvar_NFExpression_fold MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_fold)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_foldOpt(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func, modelica_metatype _arg);
+#define boxptr_NFExpression_foldOpt omc_NFExpression_foldOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_foldOpt,2,0) {(void*) boxptr_NFExpression_foldOpt,0}};
+#define boxvar_NFExpression_foldOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_foldOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_foldList(threadData_t *threadData, modelica_metatype _expl, modelica_fnptr _func, modelica_metatype _arg);
+#define boxptr_NFExpression_foldList omc_NFExpression_foldList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_foldList,2,0) {(void*) boxptr_NFExpression_foldList,0}};
+#define boxvar_NFExpression_foldList MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_foldList)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_foldArray(threadData_t *threadData, modelica_metatype _expl, modelica_fnptr _func, modelica_metatype _arg);
+#define boxptr_NFExpression_foldArray omc_NFExpression_foldArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_foldArray,2,0) {(void*) boxptr_NFExpression_foldArray,0}};
+#define boxvar_NFExpression_foldArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_foldArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapArrayElements(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_mapArrayElements omc_NFExpression_mapArrayElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapArrayElements,2,0) {(void*) boxptr_NFExpression_mapArrayElements,0}};
+#define boxvar_NFExpression_mapArrayElements MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapArrayElements)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapShallowOpt(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_mapShallowOpt omc_NFExpression_mapShallowOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapShallowOpt,2,0) {(void*) boxptr_NFExpression_mapShallowOpt,0}};
+#define boxvar_NFExpression_mapShallowOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapShallowOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapShallow(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_mapShallow omc_NFExpression_mapShallow
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapShallow,2,0) {(void*) boxptr_NFExpression_mapShallow,0}};
+#define boxvar_NFExpression_mapShallow MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapShallow)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapReverse(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_fnptr _func);
+#define boxptr_NFExpression_mapReverse omc_NFExpression_mapReverse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapReverse,2,0) {(void*) boxptr_NFExpression_mapReverse,0}};
+#define boxvar_NFExpression_mapReverse MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapReverse)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_mapOpt(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_mapOpt omc_NFExpression_mapOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_mapOpt,2,0) {(void*) boxptr_NFExpression_mapOpt,0}};
+#define boxvar_NFExpression_mapOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_mapOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_fakeMap(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_fakeMap omc_NFExpression_fakeMap
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_fakeMap,2,0) {(void*) boxptr_NFExpression_fakeMap,0}};
+#define boxvar_NFExpression_fakeMap MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_fakeMap)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_map(threadData_t *threadData, modelica_metatype _exp, modelica_fnptr _func);
+#define boxptr_NFExpression_map omc_NFExpression_map
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_map,2,0) {(void*) boxptr_NFExpression_map,0}};
+#define boxvar_NFExpression_map MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_map)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_dimensions(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_dimensions omc_NFExpression_dimensions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_dimensions,2,0) {(void*) boxptr_NFExpression_dimensions,0}};
+#define boxvar_NFExpression_dimensions MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_dimensions)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_dimensionCount(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_dimensionCount(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_dimensionCount,2,0) {(void*) boxptr_NFExpression_dimensionCount,0}};
+#define boxvar_NFExpression_dimensionCount MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_dimensionCount)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_toDAEValueRecord(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _path, modelica_metatype _args);
+#define boxptr_NFExpression_toDAEValueRecord omc_NFExpression_toDAEValueRecord
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toDAEValueRecord,2,0) {(void*) boxptr_NFExpression_toDAEValueRecord,0}};
+#define boxvar_NFExpression_toDAEValueRecord MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toDAEValueRecord)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_toDAEValue(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_toDAEValue omc_NFExpression_toDAEValue
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toDAEValue,2,0) {(void*) boxptr_NFExpression_toDAEValue,0}};
+#define boxvar_NFExpression_toDAEValue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toDAEValue)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_toDAERecord(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _path, modelica_metatype _args);
+#define boxptr_NFExpression_toDAERecord omc_NFExpression_toDAERecord
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toDAERecord,2,0) {(void*) boxptr_NFExpression_toDAERecord,0}};
+#define boxvar_NFExpression_toDAERecord MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toDAERecord)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_toDAEMultaryArgs(threadData_t *threadData, modelica_metatype _arguments, modelica_metatype _operator);
+#define boxptr_NFExpression_toDAEMultaryArgs omc_NFExpression_toDAEMultaryArgs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toDAEMultaryArgs,2,0) {(void*) boxptr_NFExpression_toDAEMultaryArgs,0}};
+#define boxvar_NFExpression_toDAEMultaryArgs MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toDAEMultaryArgs)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_toDAEMultary(threadData_t *threadData, modelica_metatype _arguments, modelica_metatype _inv_arguments, modelica_metatype _operator);
+#define boxptr_NFExpression_toDAEMultary omc_NFExpression_toDAEMultary
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toDAEMultary,2,0) {(void*) boxptr_NFExpression_toDAEMultary,0}};
+#define boxvar_NFExpression_toDAEMultary MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toDAEMultary)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_toDAE(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_toDAE omc_NFExpression_toDAE
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toDAE,2,0) {(void*) boxptr_NFExpression_toDAE,0}};
+#define boxvar_NFExpression_toDAE MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toDAE)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_toAbsyn(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_toAbsyn omc_NFExpression_toAbsyn
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toAbsyn,2,0) {(void*) boxptr_NFExpression_toAbsyn,0}};
+#define boxvar_NFExpression_toAbsyn MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toAbsyn)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_computeNominal(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFExpression_computeNominal omc_NFExpression_computeNominal
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_computeNominal,2,0) {(void*) boxptr_NFExpression_computeNominal,0}};
+#define boxvar_NFExpression_computeNominal MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_computeNominal)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_getNominal(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFExpression_getNominal omc_NFExpression_getNominal
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_getNominal,2,0) {(void*) boxptr_NFExpression_getNominal,0}};
+#define boxvar_NFExpression_getNominal MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_getNominal)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_enumLiteralPath(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_enumLiteralPath omc_NFExpression_enumLiteralPath
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_enumLiteralPath,2,0) {(void*) boxptr_NFExpression_enumLiteralPath,0}};
+#define boxvar_NFExpression_enumLiteralPath MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_enumLiteralPath)
+
+
+DLLDirection
+modelica_string omc_NFExpression_getName(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_getName omc_NFExpression_getName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_getName,2,0) {(void*) boxptr_NFExpression_getName,0}};
+#define boxvar_NFExpression_getName MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_getName)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isNonAssociativeExp(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isNonAssociativeExp(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isNonAssociativeExp,2,0) {(void*) boxptr_NFExpression_isNonAssociativeExp,0}};
+#define boxvar_NFExpression_isNonAssociativeExp MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isNonAssociativeExp)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isAssociativeExp(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isAssociativeExp(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isAssociativeExp,2,0) {(void*) boxptr_NFExpression_isAssociativeExp,0}};
+#define boxvar_NFExpression_isAssociativeExp MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isAssociativeExp)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_priority(threadData_t *threadData, modelica_metatype _exp, modelica_boolean _lhs);
+DLLDirection
+modelica_metatype boxptr_NFExpression_priority(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _lhs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_priority,2,0) {(void*) boxptr_NFExpression_priority,0}};
+#define boxvar_NFExpression_priority MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_priority)
+
+
+DLLDirection
+modelica_string omc_NFExpression_multaryFlatString(threadData_t *threadData, modelica_metatype _arguments, modelica_metatype _exp, modelica_metatype _operator, modelica_metatype _format, modelica_boolean _parenthesize);
+DLLDirection
+modelica_metatype boxptr_NFExpression_multaryFlatString(threadData_t *threadData, modelica_metatype _arguments, modelica_metatype _exp, modelica_metatype _operator, modelica_metatype _format, modelica_metatype _parenthesize);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_multaryFlatString,2,0) {(void*) boxptr_NFExpression_multaryFlatString,0}};
+#define boxvar_NFExpression_multaryFlatString MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_multaryFlatString)
+
+
+DLLDirection
+modelica_string omc_NFExpression_multaryString(threadData_t *threadData, modelica_metatype _arguments, modelica_metatype _exp, modelica_metatype _operator, modelica_boolean _parenthesize);
+DLLDirection
+modelica_metatype boxptr_NFExpression_multaryString(threadData_t *threadData, modelica_metatype _arguments, modelica_metatype _exp, modelica_metatype _operator, modelica_metatype _parenthesize);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_multaryString,2,0) {(void*) boxptr_NFExpression_multaryString,0}};
+#define boxvar_NFExpression_multaryString MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_multaryString)
+
+
+DLLDirection
+modelica_string omc_NFExpression_operandFlatString(threadData_t *threadData, modelica_metatype _operand, modelica_metatype _operator, modelica_boolean _lhs, modelica_metatype _format);
+DLLDirection
+modelica_metatype boxptr_NFExpression_operandFlatString(threadData_t *threadData, modelica_metatype _operand, modelica_metatype _operator, modelica_metatype _lhs, modelica_metatype _format);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_operandFlatString,2,0) {(void*) boxptr_NFExpression_operandFlatString,0}};
+#define boxvar_NFExpression_operandFlatString MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_operandFlatString)
+
+
+DLLDirection
+modelica_string omc_NFExpression_operandString(threadData_t *threadData, modelica_metatype _operand, modelica_metatype _operator, modelica_boolean _lhs);
+DLLDirection
+modelica_metatype boxptr_NFExpression_operandString(threadData_t *threadData, modelica_metatype _operand, modelica_metatype _operator, modelica_metatype _lhs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_operandString,2,0) {(void*) boxptr_NFExpression_operandString,0}};
+#define boxvar_NFExpression_operandString MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_operandString)
+
+
+DLLDirection
+modelica_string omc_NFExpression_toFlatString(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _format);
+#define boxptr_NFExpression_toFlatString omc_NFExpression_toFlatString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toFlatString,2,0) {(void*) boxptr_NFExpression_toFlatString,0}};
+#define boxvar_NFExpression_toFlatString MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toFlatString)
+
+
+DLLDirection
+modelica_string omc_NFExpression_toString(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_toString omc_NFExpression_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toString,2,0) {(void*) boxptr_NFExpression_toString,0}};
+#define boxvar_NFExpression_toString MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toString)
+
+
+DLLDirection
+modelica_string omc_NFExpression_toStringTyped(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_toStringTyped omc_NFExpression_toStringTyped
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toStringTyped,2,0) {(void*) boxptr_NFExpression_toStringTyped,0}};
+#define boxvar_NFExpression_toStringTyped MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toStringTyped)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_toInteger(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_toInteger(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_toInteger,2,0) {(void*) boxptr_NFExpression_toInteger,0}};
+#define boxvar_NFExpression_toInteger MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_toInteger)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isIntegerValue(threadData_t *threadData, modelica_metatype _exp, modelica_integer _value);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isIntegerValue(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _value);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isIntegerValue,2,0) {(void*) boxptr_NFExpression_isIntegerValue,0}};
+#define boxvar_NFExpression_isIntegerValue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isIntegerValue)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeEnumLiterals(threadData_t *threadData, modelica_metatype _enumType);
+#define boxptr_NFExpression_makeEnumLiterals omc_NFExpression_makeEnumLiterals
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeEnumLiterals,2,0) {(void*) boxptr_NFExpression_makeEnumLiterals,0}};
+#define boxvar_NFExpression_makeEnumLiterals MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeEnumLiterals)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeEnumLiteral(threadData_t *threadData, modelica_metatype _enumType, modelica_integer _index);
+DLLDirection
+modelica_metatype boxptr_NFExpression_makeEnumLiteral(threadData_t *threadData, modelica_metatype _enumType, modelica_metatype _index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeEnumLiteral,2,0) {(void*) boxptr_NFExpression_makeEnumLiteral,0}};
+#define boxvar_NFExpression_makeEnumLiteral MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeEnumLiteral)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_arrayFromList__impl(threadData_t *threadData, modelica_metatype _inExps, modelica_metatype _elemTy, modelica_metatype _inDims);
+#define boxptr_NFExpression_arrayFromList__impl omc_NFExpression_arrayFromList__impl
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayFromList__impl,2,0) {(void*) boxptr_NFExpression_arrayFromList__impl,0}};
+#define boxvar_NFExpression_arrayFromList__impl MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayFromList__impl)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_arrayFromList(threadData_t *threadData, modelica_metatype _inExps, modelica_metatype _elemTy, modelica_metatype _inDims);
+#define boxptr_NFExpression_arrayFromList omc_NFExpression_arrayFromList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_arrayFromList,2,0) {(void*) boxptr_NFExpression_arrayFromList,0}};
+#define boxvar_NFExpression_arrayFromList MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_arrayFromList)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_containsIterator(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _iterator);
+DLLDirection
+modelica_metatype boxptr_NFExpression_containsIterator(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _iterator);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_containsIterator,2,0) {(void*) boxptr_NFExpression_containsIterator,0}};
+#define boxvar_NFExpression_containsIterator MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_containsIterator)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_replaceIterator2(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _iterator, modelica_metatype _iteratorValue);
+#define boxptr_NFExpression_replaceIterator2 omc_NFExpression_replaceIterator2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_replaceIterator2,2,0) {(void*) boxptr_NFExpression_replaceIterator2,0}};
+#define boxvar_NFExpression_replaceIterator2 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_replaceIterator2)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_replaceIterator(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _iterator, modelica_metatype _iteratorValue);
+#define boxptr_NFExpression_replaceIterator omc_NFExpression_replaceIterator
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_replaceIterator,2,0) {(void*) boxptr_NFExpression_replaceIterator,0}};
+#define boxvar_NFExpression_replaceIterator MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_replaceIterator)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeSubscriptedExp(threadData_t *threadData, modelica_metatype _subscripts, modelica_metatype _exp, modelica_boolean _backend);
+DLLDirection
+modelica_metatype boxptr_NFExpression_makeSubscriptedExp(threadData_t *threadData, modelica_metatype _subscripts, modelica_metatype _exp, modelica_metatype _backend);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeSubscriptedExp,2,0) {(void*) boxptr_NFExpression_makeSubscriptedExp,0}};
+#define boxvar_NFExpression_makeSubscriptedExp MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeSubscriptedExp)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applySubscriptIf(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _exp, modelica_metatype _restSubscripts, modelica_boolean _applyToScope);
+DLLDirection
+modelica_metatype boxptr_NFExpression_applySubscriptIf(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _exp, modelica_metatype _restSubscripts, modelica_metatype _applyToScope);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptIf,2,0) {(void*) boxptr_NFExpression_applySubscriptIf,0}};
+#define boxvar_NFExpression_applySubscriptIf MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptIf)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applyIndexSubscriptArrayConstructor(threadData_t *threadData, modelica_metatype _call, modelica_metatype _index);
+#define boxptr_NFExpression_applyIndexSubscriptArrayConstructor omc_NFExpression_applyIndexSubscriptArrayConstructor
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexSubscriptArrayConstructor,2,0) {(void*) boxptr_NFExpression_applyIndexSubscriptArrayConstructor,0}};
+#define boxvar_NFExpression_applyIndexSubscriptArrayConstructor MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexSubscriptArrayConstructor)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applySubscriptArrayConstructor(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _call, modelica_metatype _restSubscripts);
+#define boxptr_NFExpression_applySubscriptArrayConstructor omc_NFExpression_applySubscriptArrayConstructor
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptArrayConstructor,2,0) {(void*) boxptr_NFExpression_applySubscriptArrayConstructor,0}};
+#define boxvar_NFExpression_applySubscriptArrayConstructor MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptArrayConstructor)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applySubscriptCall(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _exp, modelica_metatype _restSubscripts, modelica_boolean _applyToScope);
+DLLDirection
+modelica_metatype boxptr_NFExpression_applySubscriptCall(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _exp, modelica_metatype _restSubscripts, modelica_metatype _applyToScope);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptCall,2,0) {(void*) boxptr_NFExpression_applySubscriptCall,0}};
+#define boxvar_NFExpression_applySubscriptCall MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptCall)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applyIndexSubscriptRange2(threadData_t *threadData, modelica_metatype _startExp, modelica_metatype _stepExp, modelica_metatype _stopExp, modelica_integer _index);
+DLLDirection
+modelica_metatype boxptr_NFExpression_applyIndexSubscriptRange2(threadData_t *threadData, modelica_metatype _startExp, modelica_metatype _stepExp, modelica_metatype _stopExp, modelica_metatype _index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexSubscriptRange2,2,0) {(void*) boxptr_NFExpression_applyIndexSubscriptRange2,0}};
+#define boxvar_NFExpression_applyIndexSubscriptRange2 MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexSubscriptRange2)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applyIndexSubscriptRange(threadData_t *threadData, modelica_metatype _rangeExp, modelica_metatype _index);
+#define boxptr_NFExpression_applyIndexSubscriptRange omc_NFExpression_applyIndexSubscriptRange
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexSubscriptRange,2,0) {(void*) boxptr_NFExpression_applyIndexSubscriptRange,0}};
+#define boxvar_NFExpression_applyIndexSubscriptRange MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexSubscriptRange)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applySubscriptRange(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _exp);
+#define boxptr_NFExpression_applySubscriptRange omc_NFExpression_applySubscriptRange
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptRange,2,0) {(void*) boxptr_NFExpression_applySubscriptRange,0}};
+#define boxvar_NFExpression_applySubscriptRange MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptRange)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applyIndexExpArray(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _index, modelica_metatype _restSubscripts);
+#define boxptr_NFExpression_applyIndexExpArray omc_NFExpression_applyIndexExpArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexExpArray,2,0) {(void*) boxptr_NFExpression_applyIndexExpArray,0}};
+#define boxvar_NFExpression_applyIndexExpArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexExpArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applyIndexSubscriptArray(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _index, modelica_metatype _restSubscripts);
+#define boxptr_NFExpression_applyIndexSubscriptArray omc_NFExpression_applyIndexSubscriptArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexSubscriptArray,2,0) {(void*) boxptr_NFExpression_applyIndexSubscriptArray,0}};
+#define boxvar_NFExpression_applyIndexSubscriptArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexSubscriptArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_typeSubscriptedArray(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _subscripts, modelica_metatype __omcQ_24in_5Fty, modelica_boolean __omcQ_24in_5Fliteral, modelica_boolean *out_literal);
+DLLDirection
+modelica_metatype boxptr_NFExpression_typeSubscriptedArray(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _subscripts, modelica_metatype __omcQ_24in_5Fty, modelica_metatype __omcQ_24in_5Fliteral, modelica_metatype *out_literal);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_typeSubscriptedArray,2,0) {(void*) boxptr_NFExpression_typeSubscriptedArray,0}};
+#define boxvar_NFExpression_typeSubscriptedArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_typeSubscriptedArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applySubscriptArray(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _exp, modelica_metatype _restSubscripts, modelica_boolean _applyToScope);
+DLLDirection
+modelica_metatype boxptr_NFExpression_applySubscriptArray(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _exp, modelica_metatype _restSubscripts, modelica_metatype _applyToScope);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptArray,2,0) {(void*) boxptr_NFExpression_applySubscriptArray,0}};
+#define boxvar_NFExpression_applySubscriptArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applyIndexSubscriptTypename(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _index);
+#define boxptr_NFExpression_applyIndexSubscriptTypename omc_NFExpression_applyIndexSubscriptTypename
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexSubscriptTypename,2,0) {(void*) boxptr_NFExpression_applyIndexSubscriptTypename,0}};
+#define boxvar_NFExpression_applyIndexSubscriptTypename MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyIndexSubscriptTypename)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applySubscriptTypename(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _ty);
+#define boxptr_NFExpression_applySubscriptTypename omc_NFExpression_applySubscriptTypename
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptTypename,2,0) {(void*) boxptr_NFExpression_applySubscriptTypename,0}};
+#define boxvar_NFExpression_applySubscriptTypename MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptTypename)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applySubscriptCref(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _cref, modelica_metatype _restSubscripts, modelica_boolean _applyToScope);
+DLLDirection
+modelica_metatype boxptr_NFExpression_applySubscriptCref(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _cref, modelica_metatype _restSubscripts, modelica_metatype _applyToScope);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptCref,2,0) {(void*) boxptr_NFExpression_applySubscriptCref,0}};
+#define boxvar_NFExpression_applySubscriptCref MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applySubscriptCref)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applySubscript(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _exp, modelica_metatype _restSubscripts, modelica_boolean _applyToScope);
+DLLDirection
+modelica_metatype boxptr_NFExpression_applySubscript(threadData_t *threadData, modelica_metatype _subscript, modelica_metatype _exp, modelica_metatype _restSubscripts, modelica_metatype _applyToScope);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applySubscript,2,0) {(void*) boxptr_NFExpression_applySubscript,0}};
+#define boxvar_NFExpression_applySubscript MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applySubscript)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applySubscripts(threadData_t *threadData, modelica_metatype _subscripts, modelica_metatype _exp, modelica_boolean _applyToScope);
+DLLDirection
+modelica_metatype boxptr_NFExpression_applySubscripts(threadData_t *threadData, modelica_metatype _subscripts, modelica_metatype _exp, modelica_metatype _applyToScope);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applySubscripts,2,0) {(void*) boxptr_NFExpression_applySubscripts,0}};
+#define boxvar_NFExpression_applySubscripts MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applySubscripts)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_rangeSize(threadData_t *threadData, modelica_metatype _range, modelica_boolean _resize);
+DLLDirection
+modelica_metatype boxptr_NFExpression_rangeSize(threadData_t *threadData, modelica_metatype _range, modelica_metatype _resize);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_rangeSize,2,0) {(void*) boxptr_NFExpression_rangeSize,0}};
+#define boxvar_NFExpression_rangeSize MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_rangeSize)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeTuple(threadData_t *threadData, modelica_metatype _expl);
+#define boxptr_NFExpression_makeTuple omc_NFExpression_makeTuple
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeTuple,2,0) {(void*) boxptr_NFExpression_makeTuple,0}};
+#define boxvar_NFExpression_makeTuple MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeTuple)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_getInteger(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_getInteger(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_getInteger,2,0) {(void*) boxptr_NFExpression_getInteger,0}};
+#define boxvar_NFExpression_getInteger MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_getInteger)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_getIntegerRange(threadData_t *threadData, modelica_metatype _range, modelica_integer *out_step, modelica_integer *out_stop);
+DLLDirection
+modelica_metatype boxptr_NFExpression_getIntegerRange(threadData_t *threadData, modelica_metatype _range, modelica_metatype *out_step, modelica_metatype *out_stop);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_getIntegerRange,2,0) {(void*) boxptr_NFExpression_getIntegerRange,0}};
+#define boxvar_NFExpression_getIntegerRange MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_getIntegerRange)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeIntegerRange(threadData_t *threadData, modelica_integer _start, modelica_integer _step, modelica_integer _stop);
+DLLDirection
+modelica_metatype boxptr_NFExpression_makeIntegerRange(threadData_t *threadData, modelica_metatype _start, modelica_metatype _step, modelica_metatype _stop);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeIntegerRange,2,0) {(void*) boxptr_NFExpression_makeIntegerRange,0}};
+#define boxvar_NFExpression_makeIntegerRange MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeIntegerRange)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeRange(threadData_t *threadData, modelica_metatype _start, modelica_metatype _step, modelica_metatype _stop);
+#define boxptr_NFExpression_makeRange omc_NFExpression_makeRange
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeRange,2,0) {(void*) boxptr_NFExpression_makeRange,0}};
+#define boxvar_NFExpression_makeRange MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeRange)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeRecord(threadData_t *threadData, modelica_metatype _recordName, modelica_metatype _recordType, modelica_metatype _fields);
+#define boxptr_NFExpression_makeRecord omc_NFExpression_makeRecord
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeRecord,2,0) {(void*) boxptr_NFExpression_makeRecord,0}};
+#define boxvar_NFExpression_makeRecord MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeRecord)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeExpArray(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _elementType, modelica_boolean _isLiteral);
+DLLDirection
+modelica_metatype boxptr_NFExpression_makeExpArray(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _elementType, modelica_metatype _isLiteral);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeExpArray,2,0) {(void*) boxptr_NFExpression_makeExpArray,0}};
+#define boxvar_NFExpression_makeExpArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeExpArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeRealMatrix(threadData_t *threadData, modelica_metatype _values);
+#define boxptr_NFExpression_makeRealMatrix omc_NFExpression_makeRealMatrix
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeRealMatrix,2,0) {(void*) boxptr_NFExpression_makeRealMatrix,0}};
+#define boxvar_NFExpression_makeRealMatrix MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeRealMatrix)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeRealArray(threadData_t *threadData, modelica_metatype _values);
+#define boxptr_NFExpression_makeRealArray omc_NFExpression_makeRealArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeRealArray,2,0) {(void*) boxptr_NFExpression_makeRealArray,0}};
+#define boxvar_NFExpression_makeRealArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeRealArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeIntegerArray(threadData_t *threadData, modelica_metatype _values);
+#define boxptr_NFExpression_makeIntegerArray omc_NFExpression_makeIntegerArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeIntegerArray,2,0) {(void*) boxptr_NFExpression_makeIntegerArray,0}};
+#define boxvar_NFExpression_makeIntegerArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeIntegerArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeEmptyArray(threadData_t *threadData, modelica_metatype _ty);
+#define boxptr_NFExpression_makeEmptyArray omc_NFExpression_makeEmptyArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeEmptyArray,2,0) {(void*) boxptr_NFExpression_makeEmptyArray,0}};
+#define boxvar_NFExpression_makeEmptyArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeEmptyArray)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeArrayCheckLiteral(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _expl);
+#define boxptr_NFExpression_makeArrayCheckLiteral omc_NFExpression_makeArrayCheckLiteral
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeArrayCheckLiteral,2,0) {(void*) boxptr_NFExpression_makeArrayCheckLiteral,0}};
+#define boxvar_NFExpression_makeArrayCheckLiteral MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeArrayCheckLiteral)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeArray(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _expl, modelica_boolean _literal);
+DLLDirection
+modelica_metatype boxptr_NFExpression_makeArray(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _expl, modelica_metatype _literal);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeArray,2,0) {(void*) boxptr_NFExpression_makeArray,0}};
+#define boxvar_NFExpression_makeArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeArray)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_booleanValue(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_booleanValue(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_booleanValue,2,0) {(void*) boxptr_NFExpression_booleanValue,0}};
+#define boxvar_NFExpression_booleanValue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_booleanValue)
+
+
+DLLDirection
+modelica_string omc_NFExpression_stringValue(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_stringValue omc_NFExpression_stringValue
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_stringValue,2,0) {(void*) boxptr_NFExpression_stringValue,0}};
+#define boxvar_NFExpression_stringValue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_stringValue)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeInteger(threadData_t *threadData, modelica_integer _value);
+DLLDirection
+modelica_metatype boxptr_NFExpression_makeInteger(threadData_t *threadData, modelica_metatype _value);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeInteger,2,0) {(void*) boxptr_NFExpression_makeInteger,0}};
+#define boxvar_NFExpression_makeInteger MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeInteger)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_integerValueOrDefault(threadData_t *threadData, modelica_metatype _exp, modelica_integer __omcQ_24in_5Fvalue);
+DLLDirection
+modelica_metatype boxptr_NFExpression_integerValueOrDefault(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Fvalue);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_integerValueOrDefault,2,0) {(void*) boxptr_NFExpression_integerValueOrDefault,0}};
+#define boxvar_NFExpression_integerValueOrDefault MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_integerValueOrDefault)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_integerValue(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_integerValue(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_integerValue,2,0) {(void*) boxptr_NFExpression_integerValue,0}};
+#define boxvar_NFExpression_integerValue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_integerValue)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_makeReal(threadData_t *threadData, modelica_real _value);
+DLLDirection
+modelica_metatype boxptr_NFExpression_makeReal(threadData_t *threadData, modelica_metatype _value);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_makeReal,2,0) {(void*) boxptr_NFExpression_makeReal,0}};
+#define boxvar_NFExpression_makeReal MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_makeReal)
+
+
+DLLDirection
+modelica_real omc_NFExpression_realValue(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_realValue(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_realValue,2,0) {(void*) boxptr_NFExpression_realValue,0}};
+#define boxvar_NFExpression_realValue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_realValue)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_typeCastGeneric(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _ty);
+#define boxptr_NFExpression_typeCastGeneric omc_NFExpression_typeCastGeneric
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_typeCastGeneric,2,0) {(void*) boxptr_NFExpression_typeCastGeneric,0}};
+#define boxvar_NFExpression_typeCastGeneric MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_typeCastGeneric)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_typeCast(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _ty);
+#define boxptr_NFExpression_typeCast omc_NFExpression_typeCast
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_typeCast,2,0) {(void*) boxptr_NFExpression_typeCast,0}};
+#define boxvar_NFExpression_typeCast MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_typeCast)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_typeCastOpt(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _ty);
+#define boxptr_NFExpression_typeCastOpt omc_NFExpression_typeCastOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_typeCastOpt,2,0) {(void*) boxptr_NFExpression_typeCastOpt,0}};
+#define boxvar_NFExpression_typeCastOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_typeCastOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_applyToType(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_fnptr _func);
+#define boxptr_NFExpression_applyToType omc_NFExpression_applyToType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_applyToType,2,0) {(void*) boxptr_NFExpression_applyToType,0}};
+#define boxvar_NFExpression_applyToType MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_applyToType)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_setType(threadData_t *threadData, modelica_metatype _ty, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFExpression_setType omc_NFExpression_setType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_setType,2,0) {(void*) boxptr_NFExpression_setType,0}};
+#define boxvar_NFExpression_setType MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_setType)
+
+
+DLLDirection
+modelica_metatype omc_NFExpression_typeOf(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFExpression_typeOf omc_NFExpression_typeOf
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_typeOf,2,0) {(void*) boxptr_NFExpression_typeOf,0}};
+#define boxvar_NFExpression_typeOf MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_typeOf)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_compareList(threadData_t *threadData, modelica_metatype _expl1, modelica_metatype _expl2);
+DLLDirection
+modelica_metatype boxptr_NFExpression_compareList(threadData_t *threadData, modelica_metatype _expl1, modelica_metatype _expl2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_compareList,2,0) {(void*) boxptr_NFExpression_compareList,0}};
+#define boxvar_NFExpression_compareList MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_compareList)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_compareOpt(threadData_t *threadData, modelica_metatype _expl1, modelica_metatype _expl2);
+DLLDirection
+modelica_metatype boxptr_NFExpression_compareOpt(threadData_t *threadData, modelica_metatype _expl1, modelica_metatype _expl2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_compareOpt,2,0) {(void*) boxptr_NFExpression_compareOpt,0}};
+#define boxvar_NFExpression_compareOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_compareOpt)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_compare(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _exp2);
+DLLDirection
+modelica_metatype boxptr_NFExpression_compare(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _exp2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_compare,2,0) {(void*) boxptr_NFExpression_compare,0}};
+#define boxvar_NFExpression_compare MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_compare)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isEqual(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _exp2);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isEqual(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _exp2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isEqual,2,0) {(void*) boxptr_NFExpression_isEqual,0}};
+#define boxvar_NFExpression_isEqual MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isEqual)
+
+
+DLLDirection
+modelica_integer omc_NFExpression_hash(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_hash(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_hash,2,0) {(void*) boxptr_NFExpression_hash,0}};
+#define boxvar_NFExpression_hash MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_hash)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isTrivialCref(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isTrivialCref(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isTrivialCref,2,0) {(void*) boxptr_NFExpression_isTrivialCref,0}};
+#define boxvar_NFExpression_isTrivialCref MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isTrivialCref)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isFalse(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isFalse(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isFalse,2,0) {(void*) boxptr_NFExpression_isFalse,0}};
+#define boxvar_NFExpression_isFalse MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isFalse)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isAllTrue(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isAllTrue(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isAllTrue,2,0) {(void*) boxptr_NFExpression_isAllTrue,0}};
+#define boxvar_NFExpression_isAllTrue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isAllTrue)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isTrue(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isTrue(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isTrue,2,0) {(void*) boxptr_NFExpression_isTrue,0}};
+#define boxvar_NFExpression_isTrue MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isTrue)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isCallNamed(threadData_t *threadData, modelica_metatype _exp, modelica_string _name);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isCallNamed(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _name);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isCallNamed,2,0) {(void*) boxptr_NFExpression_isCallNamed,0}};
+#define boxvar_NFExpression_isCallNamed MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isCallNamed)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isExternalCall(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isExternalCall(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isExternalCall,2,0) {(void*) boxptr_NFExpression_isExternalCall,0}};
+#define boxvar_NFExpression_isExternalCall MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isExternalCall)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isImpureCall(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isImpureCall(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isImpureCall,2,0) {(void*) boxptr_NFExpression_isImpureCall,0}};
+#define boxvar_NFExpression_isImpureCall MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isImpureCall)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isCall(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isCall(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isCall,2,0) {(void*) boxptr_NFExpression_isCall,0}};
+#define boxvar_NFExpression_isCall MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isCall)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isWildCref(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isWildCref(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isWildCref,2,0) {(void*) boxptr_NFExpression_isWildCref,0}};
+#define boxvar_NFExpression_isWildCref MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isWildCref)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isFunctionInputCref(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isFunctionInputCref(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isFunctionInputCref,2,0) {(void*) boxptr_NFExpression_isFunctionInputCref,0}};
+#define boxvar_NFExpression_isFunctionInputCref MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isFunctionInputCref)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isCref(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isCref(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isCref,2,0) {(void*) boxptr_NFExpression_isCref,0}};
+#define boxvar_NFExpression_isCref MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isCref)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isVector(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isVector(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isVector,2,0) {(void*) boxptr_NFExpression_isVector,0}};
+#define boxvar_NFExpression_isVector MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isVector)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isEmptyArray(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isEmptyArray(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isEmptyArray,2,0) {(void*) boxptr_NFExpression_isEmptyArray,0}};
+#define boxvar_NFExpression_isEmptyArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isEmptyArray)
+
+
+DLLDirection
+modelica_boolean omc_NFExpression_isArray(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NFExpression_isArray(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpression_isArray,2,0) {(void*) boxptr_NFExpression_isArray,0}};
+#define boxvar_NFExpression_isArray MMC_REFSTRUCTLIT(boxvar_lit_NFExpression_isArray)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

@@ -27,7 +27,7 @@ extern struct record_description Tpl_StringToken_ST__STRING__desc;
 extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_sActualMMParams(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_argValues);
 #define boxptr_TplCodegen_sActualMMParams omc_TplCodegen_sActualMMParams
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sActualMMParams,2,0) {(void*) boxptr_TplCodegen_sActualMMParams,0}};
@@ -37,14 +37,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sActualMMParams,2,0) {(void*
 #define boxptr_TplCodegen_lm__83 omc_TplCodegen_lm__83
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_sFunSignature(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_iargs, modelica_metatype _a_oargs);
 #define boxptr_TplCodegen_sFunSignature omc_TplCodegen_sFunSignature
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sFunSignature,2,0) {(void*) boxptr_TplCodegen_sFunSignature,0}};
 #define boxvar_TplCodegen_sFunSignature MMC_REFSTRUCTLIT(boxvar_lit_TplCodegen_sFunSignature)
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_sTypedIdents(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_args);
 #define boxptr_TplCodegen_sTypedIdents omc_TplCodegen_sTypedIdents
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sTypedIdents,2,0) {(void*) boxptr_TplCodegen_sTypedIdents,0}};
@@ -54,7 +54,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sTypedIdents,2,0) {(void*) b
 #define boxptr_TplCodegen_lm__80 omc_TplCodegen_lm__80
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_sConstStringToken(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it);
 #define boxptr_TplCodegen_sConstStringToken omc_TplCodegen_sConstStringToken
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sConstStringToken,2,0) {(void*) boxptr_TplCodegen_sConstStringToken,0}};
@@ -70,14 +70,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sConstStringToken,2,0) {(voi
 #define boxptr_TplCodegen_lm__74 omc_TplCodegen_lm__74
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_sTemplateDef(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it, modelica_string _in_a_templId);
 #define boxptr_TplCodegen_sTemplateDef omc_TplCodegen_sTemplateDef
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sTemplateDef,2,0) {(void*) boxptr_TplCodegen_sTemplateDef,0}};
 #define boxvar_TplCodegen_sTemplateDef MMC_REFSTRUCTLIT(boxvar_lit_TplCodegen_sTemplateDef)
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_sRecordTypeDef(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_id, modelica_metatype _a_fields);
 #define boxptr_TplCodegen_sRecordTypeDef omc_TplCodegen_sRecordTypeDef
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sRecordTypeDef,2,0) {(void*) boxptr_TplCodegen_sRecordTypeDef,0}};
@@ -90,7 +90,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sRecordTypeDef,2,0) {(void*)
 #define boxptr_TplCodegen_lm__70 omc_TplCodegen_lm__70
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_sASTDefType(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_id, modelica_metatype _a_info);
 #define boxptr_TplCodegen_sASTDefType omc_TplCodegen_sASTDefType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sASTDefType,2,0) {(void*) boxptr_TplCodegen_sASTDefType,0}};
@@ -109,7 +109,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sASTDefType,2,0) {(void*) bo
 #define boxptr_TplCodegen_lm__65 omc_TplCodegen_lm__65
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_sTemplPackage(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it);
 #define boxptr_TplCodegen_sTemplPackage omc_TplCodegen_sTemplPackage
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sTemplPackage,2,0) {(void*) boxptr_TplCodegen_sTemplPackage,0}};
@@ -125,7 +125,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_sTemplPackage,2,0) {(void*) 
 #define boxptr_TplCodegen_lm__61 omc_TplCodegen_lm__61
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_mmStatements(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_stmts);
 #define boxptr_TplCodegen_mmStatements omc_TplCodegen_mmStatements
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmStatements,2,0) {(void*) boxptr_TplCodegen_mmStatements,0}};
@@ -135,7 +135,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmStatements,2,0) {(void*) b
 #define boxptr_TplCodegen_lm__58 omc_TplCodegen_lm__58
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_mmMatchingExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it);
 #define boxptr_TplCodegen_mmMatchingExp omc_TplCodegen_mmMatchingExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmMatchingExp,2,0) {(void*) boxptr_TplCodegen_mmMatchingExp,0}};
@@ -151,7 +151,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmMatchingExp,2,0) {(void*) 
 #define boxptr_TplCodegen_lm__54 omc_TplCodegen_lm__54
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_mmExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it, modelica_string _in_a_assignStr);
 #define boxptr_TplCodegen_mmExp omc_TplCodegen_mmExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmExp,2,0) {(void*) boxptr_TplCodegen_mmExp,0}};
@@ -167,15 +167,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmExp,2,0) {(void*) boxptr_T
 #define boxptr_TplCodegen_lm__50 omc_TplCodegen_lm__50
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_mmEscapeStringConst(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_internalValue, modelica_boolean _a_escapeNewLine);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_TplCodegen_mmEscapeStringConst(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_internalValue, modelica_metatype _a_escapeNewLine);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmEscapeStringConst,2,0) {(void*) boxptr_TplCodegen_mmEscapeStringConst,0}};
 #define boxvar_TplCodegen_mmEscapeStringConst MMC_REFSTRUCTLIT(boxvar_lit_TplCodegen_mmEscapeStringConst)
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_mmStringTokenConstant(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it);
 #define boxptr_TplCodegen_mmStringTokenConstant omc_TplCodegen_mmStringTokenConstant
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmStringTokenConstant,2,0) {(void*) boxptr_TplCodegen_mmStringTokenConstant,0}};
@@ -185,7 +185,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmStringTokenConstant,2,0) {
 #define boxptr_TplCodegen_lm__44 omc_TplCodegen_lm__44
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_typeSig(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it);
 #define boxptr_TplCodegen_typeSig omc_TplCodegen_typeSig
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_typeSig,2,0) {(void*) boxptr_TplCodegen_typeSig,0}};
@@ -195,7 +195,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_typeSig,2,0) {(void*) boxptr
 #define boxptr_TplCodegen_lm__42 omc_TplCodegen_lm__42
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_typedIdentsEx(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_decls, modelica_string _a_typePrfx, modelica_string _a_idPrfx);
 #define boxptr_TplCodegen_typedIdentsEx omc_TplCodegen_typedIdentsEx
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_typedIdentsEx,2,0) {(void*) boxptr_TplCodegen_typedIdentsEx,0}};
@@ -205,7 +205,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_typedIdentsEx,2,0) {(void*) 
 #define boxptr_TplCodegen_lm__40 omc_TplCodegen_lm__40
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_typedIdents(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_decls);
 #define boxptr_TplCodegen_typedIdents omc_TplCodegen_typedIdents
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_typedIdents,2,0) {(void*) boxptr_TplCodegen_typedIdents,0}};
@@ -215,22 +215,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_typedIdents,2,0) {(void*) bo
 #define boxptr_TplCodegen_lm__38 omc_TplCodegen_lm__38
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_mmPublic(threadData_t *threadData, modelica_metatype _in_txt, modelica_boolean _in_a_it);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_TplCodegen_mmPublic(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmPublic,2,0) {(void*) boxptr_TplCodegen_mmPublic,0}};
 #define boxvar_TplCodegen_mmPublic MMC_REFSTRUCTLIT(boxvar_lit_TplCodegen_mmPublic)
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_pathIdent(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
 #define boxptr_TplCodegen_pathIdent omc_TplCodegen_pathIdent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_pathIdent,2,0) {(void*) boxptr_TplCodegen_pathIdent,0}};
 #define boxvar_TplCodegen_pathIdent MMC_REFSTRUCTLIT(boxvar_lit_TplCodegen_pathIdent)
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_inOutArgs(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_inArgs, modelica_metatype _a_outArgs);
 #define boxptr_TplCodegen_inOutArgs omc_TplCodegen_inOutArgs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_inOutArgs,2,0) {(void*) boxptr_TplCodegen_inOutArgs,0}};
@@ -258,7 +258,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_inOutArgs,2,0) {(void*) boxp
 #define boxptr_TplCodegen_fun__28 omc_TplCodegen_fun__28
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_mmForLoopFunBody(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_inArgs, modelica_metatype _a_outArgs, modelica_metatype _a_locals, modelica_string _a_idxName, modelica_string _a_arrName, modelica_string _a_eltName, modelica_metatype _a_statements);
 #define boxptr_TplCodegen_mmForLoopFunBody omc_TplCodegen_mmForLoopFunBody
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmForLoopFunBody,2,0) {(void*) boxptr_TplCodegen_mmForLoopFunBody,0}};
@@ -271,7 +271,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmForLoopFunBody,2,0) {(void
 #define boxptr_TplCodegen_fun__23 omc_TplCodegen_fun__23
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_mmMatchFunBody(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_inArgs, modelica_metatype _a_outArgs, modelica_metatype _a_locals, modelica_metatype _a_matchCases);
 #define boxptr_TplCodegen_mmMatchFunBody omc_TplCodegen_mmMatchFunBody
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmMatchFunBody,2,0) {(void*) boxptr_TplCodegen_mmMatchFunBody,0}};
@@ -305,7 +305,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmMatchFunBody,2,0) {(void*)
 #define boxptr_TplCodegen_lm__12 omc_TplCodegen_lm__12
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_mmDeclaration(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it);
 #define boxptr_TplCodegen_mmDeclaration omc_TplCodegen_mmDeclaration
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmDeclaration,2,0) {(void*) boxptr_TplCodegen_mmDeclaration,0}};
@@ -321,7 +321,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmDeclaration,2,0) {(void*) 
 #define boxptr_TplCodegen_fun__5 omc_TplCodegen_fun__5
 
 
-DLLExport
+DLLDirection
 modelica_metatype omc_TplCodegen_mmPackage(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it);
 #define boxptr_TplCodegen_mmPackage omc_TplCodegen_mmPackage
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplCodegen_mmPackage,2,0) {(void*) boxptr_TplCodegen_mmPackage,0}};

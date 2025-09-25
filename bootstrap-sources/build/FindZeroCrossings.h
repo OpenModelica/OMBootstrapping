@@ -1,0 +1,222 @@
+#ifndef FindZeroCrossings__H
+#define FindZeroCrossings__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNSPECIFIED__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_ALGORITHM__desc;
+
+extern struct record_description BackendDAE_Equation_ARRAY__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_COMPLEX__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_IF__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_RESIDUAL__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_SOLVED__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_WHEN__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_DYNAMIC__EQUATION__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_EventInfo_EVENT__INFO__desc;
+
+extern struct record_description BackendDAE_Jacobian_FULL__JACOBIAN__desc;
+
+extern struct record_description BackendDAE_Jacobian_GENERIC__JACOBIAN__desc;
+
+extern struct record_description BackendDAE_Matching_MATCHING__desc;
+
+extern struct record_description BackendDAE_SimIterator_SIM__ITERATOR__LIST__desc;
+
+extern struct record_description BackendDAE_SimIterator_SIM__ITERATOR__RANGE__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_DISCRETE__desc;
+
+extern struct record_description BackendDAE_WhenEquation_WHEN__STMTS__desc;
+
+extern struct record_description BackendDAE_ZeroCrossing_ZERO__CROSSING__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_Else_ELSE__desc;
+
+extern struct record_description DAE_Else_ELSEIF__desc;
+
+extern struct record_description DAE_Else_NOELSE__desc;
+
+extern struct record_description DAE_Exp_ARRAY__desc;
+
+extern struct record_description DAE_Exp_BCONST__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_Exp_LBINARY__desc;
+
+extern struct record_description DAE_Exp_LUNARY__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Exp_RELATION__desc;
+
+extern struct record_description DAE_Exp_SCONST__desc;
+
+extern struct record_description DAE_Expand_EXPAND__desc;
+
+extern struct record_description DAE_Operator_ADD__desc;
+
+extern struct record_description DAE_Operator_DIV__desc;
+
+extern struct record_description DAE_Operator_GREATER__desc;
+
+extern struct record_description DAE_Operator_MUL__desc;
+
+extern struct record_description DAE_Operator_SUB__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__ARR__desc;
+
+extern struct record_description DAE_Statement_STMT__FAILURE__desc;
+
+extern struct record_description DAE_Statement_STMT__FOR__desc;
+
+extern struct record_description DAE_Statement_STMT__IF__desc;
+
+extern struct record_description DAE_Statement_STMT__NORETCALL__desc;
+
+extern struct record_description DAE_Statement_STMT__PARFOR__desc;
+
+extern struct record_description DAE_Statement_STMT__TUPLE__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__WHEN__desc;
+
+extern struct record_description DAE_Statement_STMT__WHILE__desc;
+
+extern struct record_description DAE_Type_T__BOOL__desc;
+
+extern struct record_description DAE_Type_T__INTEGER__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_VarDirection_BIDIR__desc;
+
+extern struct record_description DAE_VarInnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__BOOL__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Gettext_TranslatableContent_notrans__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_FindZeroCrossings_createIterator omc_FindZeroCrossings_createIterator
+
+
+#define boxptr_FindZeroCrossings_createZeroCrossing omc_FindZeroCrossings_createZeroCrossing
+
+
+#define boxptr_FindZeroCrossings_createZeroCrossings omc_FindZeroCrossings_createZeroCrossings
+
+
+#define boxptr_FindZeroCrossings_traverseStmtsForExps omc_FindZeroCrossings_traverseStmtsForExps
+
+
+#define boxptr_FindZeroCrossings_traverseStmtsElseExps omc_FindZeroCrossings_traverseStmtsElseExps
+
+
+#define boxptr_FindZeroCrossings_traverseStmtsExps omc_FindZeroCrossings_traverseStmtsExps
+
+
+#define boxptr_FindZeroCrossings_getMinZeroCrossings omc_FindZeroCrossings_getMinZeroCrossings
+
+
+#define boxptr_FindZeroCrossings_mergeZeroCrossing omc_FindZeroCrossings_mergeZeroCrossing
+
+
+#define boxptr_FindZeroCrossings_mergeZeroCrossingIfEqual omc_FindZeroCrossings_mergeZeroCrossingIfEqual
+
+
+#define boxptr_FindZeroCrossings_mergeZeroCrossings omc_FindZeroCrossings_mergeZeroCrossings
+
+
+#define boxptr_FindZeroCrossings_replaceZeroCrossingsJacBackend omc_FindZeroCrossings_replaceZeroCrossingsJacBackend
+
+
+#define boxptr_FindZeroCrossings_replaceZCExpinSymJacobian omc_FindZeroCrossings_replaceZCExpinSymJacobian
+
+
+#define boxptr_FindZeroCrossings_replaceZCExpinFullJacobian omc_FindZeroCrossings_replaceZCExpinFullJacobian
+
+
+#define boxptr_FindZeroCrossings_findZeroCrossingsinJacobians omc_FindZeroCrossings_findZeroCrossingsinJacobians
+
+
+#define boxptr_FindZeroCrossings_findZeroCrossings1 omc_FindZeroCrossings_findZeroCrossings1
+
+
+DLLDirection
+modelica_metatype omc_FindZeroCrossings_findZeroCrossings(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_FindZeroCrossings_findZeroCrossings omc_FindZeroCrossings_findZeroCrossings
+static const MMC_DEFSTRUCTLIT(boxvar_lit_FindZeroCrossings_findZeroCrossings,2,0) {(void*) boxptr_FindZeroCrossings_findZeroCrossings,0}};
+#define boxvar_FindZeroCrossings_findZeroCrossings MMC_REFSTRUCTLIT(boxvar_lit_FindZeroCrossings_findZeroCrossings)
+
+
+#define boxptr_FindZeroCrossings_encapsulateWhenConditions__Equation omc_FindZeroCrossings_encapsulateWhenConditions__Equation
+
+
+DLLDirection
+modelica_metatype omc_FindZeroCrossings_encapsulateWhenConditions(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_FindZeroCrossings_encapsulateWhenConditions omc_FindZeroCrossings_encapsulateWhenConditions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_FindZeroCrossings_encapsulateWhenConditions,2,0) {(void*) boxptr_FindZeroCrossings_encapsulateWhenConditions,0}};
+#define boxvar_FindZeroCrossings_encapsulateWhenConditions MMC_REFSTRUCTLIT(boxvar_lit_FindZeroCrossings_encapsulateWhenConditions)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

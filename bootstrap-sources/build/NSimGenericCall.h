@@ -1,0 +1,161 @@
+#ifndef NSimGenericCall__H
+#define NSimGenericCall__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_SimIterator_SIM__ITERATOR__LIST__desc;
+
+extern struct record_description BackendDAE_SimIterator_SIM__ITERATOR__RANGE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFExpression_MULTARY__desc;
+
+extern struct record_description NSimGenericCall_IF__GENERIC__CALL__desc;
+
+extern struct record_description NSimGenericCall_SINGLE__GENERIC__CALL__desc;
+
+extern struct record_description NSimGenericCall_SimBranch_SIM__BRANCH__desc;
+
+extern struct record_description NSimGenericCall_SimBranch_SIM__BRANCH__STMT__desc;
+
+extern struct record_description NSimGenericCall_SimIterator_SIM__ITERATOR__LIST__desc;
+
+extern struct record_description NSimGenericCall_SimIterator_SIM__ITERATOR__RANGE__desc;
+
+extern struct record_description NSimGenericCall_WHEN__GENERIC__CALL__desc;
+
+extern struct record_description SimCode_SimBranch_SIM__BRANCH__desc;
+
+extern struct record_description SimCode_SimBranch_SIM__BRANCH__STMT__desc;
+
+extern struct record_description SimCode_SimGenericCall_IF__GENERIC__CALL__desc;
+
+extern struct record_description SimCode_SimGenericCall_SINGLE__GENERIC__CALL__desc;
+
+extern struct record_description SimCode_SimGenericCall_WHEN__GENERIC__CALL__desc;
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_SimBranch_convert(threadData_t *threadData, modelica_metatype _branch);
+#define boxptr_NSimGenericCall_SimBranch_convert omc_NSimGenericCall_SimBranch_convert
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimBranch_convert,2,0) {(void*) boxptr_NSimGenericCall_SimBranch_convert,0}};
+#define boxvar_NSimGenericCall_SimBranch_convert MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimBranch_convert)
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_SimBranch_fromWhenBody(threadData_t *threadData, modelica_metatype _when_body);
+#define boxptr_NSimGenericCall_SimBranch_fromWhenBody omc_NSimGenericCall_SimBranch_fromWhenBody
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimBranch_fromWhenBody,2,0) {(void*) boxptr_NSimGenericCall_SimBranch_fromWhenBody,0}};
+#define boxvar_NSimGenericCall_SimBranch_fromWhenBody MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimBranch_fromWhenBody)
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_SimBranch_fromIfBody(threadData_t *threadData, modelica_metatype _if_body);
+#define boxptr_NSimGenericCall_SimBranch_fromIfBody omc_NSimGenericCall_SimBranch_fromIfBody
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimBranch_fromIfBody,2,0) {(void*) boxptr_NSimGenericCall_SimBranch_fromIfBody,0}};
+#define boxvar_NSimGenericCall_SimBranch_fromIfBody MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimBranch_fromIfBody)
+
+
+DLLDirection
+modelica_string omc_NSimGenericCall_SimBranch_toString(threadData_t *threadData, modelica_metatype _branch);
+#define boxptr_NSimGenericCall_SimBranch_toString omc_NSimGenericCall_SimBranch_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimBranch_toString,2,0) {(void*) boxptr_NSimGenericCall_SimBranch_toString,0}};
+#define boxvar_NSimGenericCall_SimBranch_toString MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimBranch_toString)
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_SimBranch_mapShallow(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbranch, modelica_fnptr _func);
+#define boxptr_NSimGenericCall_SimBranch_mapShallow omc_NSimGenericCall_SimBranch_mapShallow
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimBranch_mapShallow,2,0) {(void*) boxptr_NSimGenericCall_SimBranch_mapShallow,0}};
+#define boxvar_NSimGenericCall_SimBranch_mapShallow MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimBranch_mapShallow)
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_SimIterator_convert_convertSubIterator(threadData_t *threadData, modelica_metatype _sub_iter);
+#define boxptr_NSimGenericCall_SimIterator_convert_convertSubIterator omc_NSimGenericCall_SimIterator_convert_convertSubIterator
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_convert_convertSubIterator,2,0) {(void*) boxptr_NSimGenericCall_SimIterator_convert_convertSubIterator,0}};
+#define boxvar_NSimGenericCall_SimIterator_convert_convertSubIterator MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_convert_convertSubIterator)
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_SimIterator_convert(threadData_t *threadData, modelica_metatype _iter);
+#define boxptr_NSimGenericCall_SimIterator_convert omc_NSimGenericCall_SimIterator_convert
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_convert,2,0) {(void*) boxptr_NSimGenericCall_SimIterator_convert,0}};
+#define boxvar_NSimGenericCall_SimIterator_convert MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_convert)
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_SimIterator_subIterators(threadData_t *threadData, modelica_metatype _iter);
+#define boxptr_NSimGenericCall_SimIterator_subIterators omc_NSimGenericCall_SimIterator_subIterators
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_subIterators,2,0) {(void*) boxptr_NSimGenericCall_SimIterator_subIterators,0}};
+#define boxvar_NSimGenericCall_SimIterator_subIterators MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_subIterators)
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_SimIterator_fromIterator(threadData_t *threadData, modelica_metatype _iter);
+#define boxptr_NSimGenericCall_SimIterator_fromIterator omc_NSimGenericCall_SimIterator_fromIterator
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_fromIterator,2,0) {(void*) boxptr_NSimGenericCall_SimIterator_fromIterator,0}};
+#define boxvar_NSimGenericCall_SimIterator_fromIterator MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_fromIterator)
+
+
+DLLDirection
+modelica_string omc_NSimGenericCall_SimIterator_toString_subIterString(threadData_t *threadData, modelica_metatype _sub_iter);
+#define boxptr_NSimGenericCall_SimIterator_toString_subIterString omc_NSimGenericCall_SimIterator_toString_subIterString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_toString_subIterString,2,0) {(void*) boxptr_NSimGenericCall_SimIterator_toString_subIterString,0}};
+#define boxvar_NSimGenericCall_SimIterator_toString_subIterString MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_toString_subIterString)
+
+
+DLLDirection
+modelica_string omc_NSimGenericCall_SimIterator_toString(threadData_t *threadData, modelica_metatype _iter);
+#define boxptr_NSimGenericCall_SimIterator_toString omc_NSimGenericCall_SimIterator_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_toString,2,0) {(void*) boxptr_NSimGenericCall_SimIterator_toString,0}};
+#define boxvar_NSimGenericCall_SimIterator_toString MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_SimIterator_toString)
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_convert(threadData_t *threadData, modelica_metatype _call);
+#define boxptr_NSimGenericCall_convert omc_NSimGenericCall_convert
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_convert,2,0) {(void*) boxptr_NSimGenericCall_convert,0}};
+#define boxvar_NSimGenericCall_convert MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_convert)
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_fromIdentifier(threadData_t *threadData, modelica_metatype _ident_tpl);
+#define boxptr_NSimGenericCall_fromIdentifier omc_NSimGenericCall_fromIdentifier
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_fromIdentifier,2,0) {(void*) boxptr_NSimGenericCall_fromIdentifier,0}};
+#define boxvar_NSimGenericCall_fromIdentifier MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_fromIdentifier)
+
+
+DLLDirection
+modelica_string omc_NSimGenericCall_toString(threadData_t *threadData, modelica_metatype _call);
+#define boxptr_NSimGenericCall_toString omc_NSimGenericCall_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_toString,2,0) {(void*) boxptr_NSimGenericCall_toString,0}};
+#define boxvar_NSimGenericCall_toString MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_toString)
+
+
+DLLDirection
+modelica_metatype omc_NSimGenericCall_mapShallow(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcall, modelica_fnptr _func);
+#define boxptr_NSimGenericCall_mapShallow omc_NSimGenericCall_mapShallow
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimGenericCall_mapShallow,2,0) {(void*) boxptr_NSimGenericCall_mapShallow,0}};
+#define boxvar_NSimGenericCall_mapShallow MMC_REFSTRUCTLIT(boxvar_lit_NSimGenericCall_mapShallow)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

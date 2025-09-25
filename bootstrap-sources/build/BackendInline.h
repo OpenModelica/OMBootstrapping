@@ -1,0 +1,166 @@
+#ifndef BackendInline__H
+#define BackendInline__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_ALGORITHM__desc;
+
+extern struct record_description BackendDAE_Equation_ARRAY__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_COMPLEX__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_FOR__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_IF__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_RESIDUAL__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_SOLVED__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_WHEN__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_UNKNOWN__EQUATION__KIND__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_TearingSelect_AVOID__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VariableArray_VARIABLE__ARRAY__desc;
+
+extern struct record_description BackendDAE_Variables_VARIABLES__desc;
+
+extern struct record_description BackendDAE_WhenEquation_WHEN__STMTS__desc;
+
+extern struct record_description BackendDAE_WhenOperator_ASSERT__desc;
+
+extern struct record_description BackendDAE_WhenOperator_ASSIGN__desc;
+
+extern struct record_description BackendDAE_WhenOperator_NORETCALL__desc;
+
+extern struct record_description BackendDAE_WhenOperator_REINIT__desc;
+
+extern struct record_description BackendDAE_WhenOperator_TERMINATE__desc;
+
+extern struct record_description BackendDAE_ZeroCrossing_ZERO__CROSSING__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_TSUB__desc;
+
+extern struct record_description DAE_InlineType_AFTER__INDEX__RED__INLINE__desc;
+
+extern struct record_description DAE_InlineType_NORM__INLINE__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_BackendInline_replaceArgs omc_BackendInline_replaceArgs
+
+
+#define boxptr_BackendInline_addReplacement omc_BackendInline_addReplacement
+
+
+#define boxptr_BackendInline_createEqnSysfromFunction omc_BackendInline_createEqnSysfromFunction
+
+
+#define boxptr_BackendInline_createReplacementVariables omc_BackendInline_createReplacementVariables
+
+
+#define boxptr_BackendInline_inlineCallsWork omc_BackendInline_inlineCallsWork
+
+
+DLLDirection
+modelica_metatype omc_BackendInline_inlineEqAppend__debug(threadData_t *threadData, modelica_metatype _inEquationOption, modelica_metatype _inElementList, modelica_metatype _iShared, modelica_metatype *out_outEqs, modelica_boolean *out_inlined, modelica_metatype *out_shared);
+DLLDirection
+modelica_metatype boxptr_BackendInline_inlineEqAppend__debug(threadData_t *threadData, modelica_metatype _inEquationOption, modelica_metatype _inElementList, modelica_metatype _iShared, modelica_metatype *out_outEqs, modelica_metatype *out_inlined, modelica_metatype *out_shared);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_inlineEqAppend__debug,2,0) {(void*) boxptr_BackendInline_inlineEqAppend__debug,0}};
+#define boxvar_BackendInline_inlineEqAppend__debug MMC_REFSTRUCTLIT(boxvar_lit_BackendInline_inlineEqAppend__debug)
+
+
+#define boxptr_BackendInline_inlineEquationSystemAppend omc_BackendInline_inlineEquationSystemAppend
+
+
+#define boxptr_BackendInline_inlineCallsBDAE omc_BackendInline_inlineCallsBDAE
+
+
+#define boxptr_BackendInline_inlineZeroCrossing omc_BackendInline_inlineZeroCrossing
+
+
+#define boxptr_BackendInline_inlineZeroCrossings omc_BackendInline_inlineZeroCrossings
+
+
+#define boxptr_BackendInline_inlineEventInfo omc_BackendInline_inlineEventInfo
+
+
+DLLDirection
+modelica_metatype omc_BackendInline_inlineEqs(threadData_t *threadData, modelica_metatype _inEqnsList, modelica_metatype _inFunctions, modelica_metatype _iAcc, modelica_boolean _iInlined, modelica_boolean *out_OInlined);
+DLLDirection
+modelica_metatype boxptr_BackendInline_inlineEqs(threadData_t *threadData, modelica_metatype _inEqnsList, modelica_metatype _inFunctions, modelica_metatype _iAcc, modelica_metatype _iInlined, modelica_metatype *out_OInlined);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_inlineEqs,2,0) {(void*) boxptr_BackendInline_inlineEqs,0}};
+#define boxvar_BackendInline_inlineEqs MMC_REFSTRUCTLIT(boxvar_lit_BackendInline_inlineEqs)
+
+
+DLLDirection
+modelica_metatype omc_BackendInline_inlineEq(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _fns, modelica_boolean *out_inlined);
+DLLDirection
+modelica_metatype boxptr_BackendInline_inlineEq(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _fns, modelica_metatype *out_inlined);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_inlineEq,2,0) {(void*) boxptr_BackendInline_inlineEq,0}};
+#define boxvar_BackendInline_inlineEq MMC_REFSTRUCTLIT(boxvar_lit_BackendInline_inlineEq)
+
+
+#define boxptr_BackendInline_inlineEquationSystem omc_BackendInline_inlineEquationSystem
+
+
+#define boxptr_BackendInline_inlineCalls omc_BackendInline_inlineCalls
+
+
+DLLDirection
+modelica_metatype omc_BackendInline_normalInlineFunction(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_BackendInline_normalInlineFunction omc_BackendInline_normalInlineFunction
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_normalInlineFunction,2,0) {(void*) boxptr_BackendInline_normalInlineFunction,0}};
+#define boxvar_BackendInline_normalInlineFunction MMC_REFSTRUCTLIT(boxvar_lit_BackendInline_normalInlineFunction)
+
+
+DLLDirection
+modelica_metatype omc_BackendInline_lateInlineFunction(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_BackendInline_lateInlineFunction omc_BackendInline_lateInlineFunction
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_lateInlineFunction,2,0) {(void*) boxptr_BackendInline_lateInlineFunction,0}};
+#define boxvar_BackendInline_lateInlineFunction MMC_REFSTRUCTLIT(boxvar_lit_BackendInline_lateInlineFunction)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

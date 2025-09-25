@@ -1,0 +1,70 @@
+#ifndef SymbolicImplicitSolver__H
+#define SymbolicImplicitSolver__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BackendDAEType_INLINESYSTEM__desc;
+
+extern struct record_description BackendDAE_InlineData_INLINE__DATA__desc;
+
+extern struct record_description BackendDAE_VarKind_ALG__STATE__desc;
+
+extern struct record_description BackendDAE_VarKind_ALG__STATE__OLD__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Operator_DIV__desc;
+
+extern struct record_description DAE_Operator_SUB__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+
+#define boxptr_SymbolicImplicitSolver_symSolverAppendStringToStates omc_SymbolicImplicitSolver_symSolverAppendStringToStates
+
+
+#define boxptr_SymbolicImplicitSolver_symSolverUpdateEqn omc_SymbolicImplicitSolver_symSolverUpdateEqn
+
+
+#define boxptr_SymbolicImplicitSolver_symSolverState omc_SymbolicImplicitSolver_symSolverState
+
+
+#define boxptr_SymbolicImplicitSolver_symSolverUpdateSyst omc_SymbolicImplicitSolver_symSolverUpdateSyst
+
+
+#define boxptr_SymbolicImplicitSolver_symSolverWork omc_SymbolicImplicitSolver_symSolverWork
+
+
+DLLDirection
+modelica_metatype omc_SymbolicImplicitSolver_symSolver(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_SymbolicImplicitSolver_symSolver omc_SymbolicImplicitSolver_symSolver
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SymbolicImplicitSolver_symSolver,2,0) {(void*) boxptr_SymbolicImplicitSolver_symSolver,0}};
+#define boxvar_SymbolicImplicitSolver_symSolver MMC_REFSTRUCTLIT(boxvar_lit_SymbolicImplicitSolver_symSolver)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

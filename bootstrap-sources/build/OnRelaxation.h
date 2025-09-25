@@ -1,0 +1,132 @@
+#ifndef OnRelaxation__H
+#define OnRelaxation__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_UNKNOWN__EQUATION__KIND__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_IndexType_ABSOLUTE__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_VARIABLE__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_VarDirection_BIDIR__desc;
+
+extern struct record_description DAE_VarInnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_OnRelaxation_naturalMatching2 omc_OnRelaxation_naturalMatching2
+
+
+#define boxptr_OnRelaxation_naturalMatching1 omc_OnRelaxation_naturalMatching1
+
+
+#define boxptr_OnRelaxation_naturalMatching omc_OnRelaxation_naturalMatching
+
+
+#define boxptr_OnRelaxation_aliasMatching omc_OnRelaxation_aliasMatching
+
+
+#define boxptr_OnRelaxation_vectorMatching omc_OnRelaxation_vectorMatching
+
+
+#define boxptr_OnRelaxation_unassignedLst omc_OnRelaxation_unassignedLst
+
+
+#define boxptr_OnRelaxation_addCrefandParentsToSet omc_OnRelaxation_addCrefandParentsToSet
+
+
+#define boxptr_OnRelaxation_sortVarsforOrder omc_OnRelaxation_sortVarsforOrder
+
+
+#define boxptr_OnRelaxation_transformJacToAdjacencyMatrix omc_OnRelaxation_transformJacToAdjacencyMatrix
+
+
+#define boxptr_OnRelaxation_transformJacToAdjacencyMatrix1 omc_OnRelaxation_transformJacToAdjacencyMatrix1
+
+
+#define boxptr_OnRelaxation_transformJacToAdjacencyMatrix2 omc_OnRelaxation_transformJacToAdjacencyMatrix2
+
+
+#define boxptr_OnRelaxation_makeDummyVar omc_OnRelaxation_makeDummyVar
+
+
+#define boxptr_OnRelaxation_mulRow omc_OnRelaxation_mulRow
+
+
+#define boxptr_OnRelaxation_dumpMatrix1 omc_OnRelaxation_dumpMatrix1
+
+
+#define boxptr_OnRelaxation_makeCrefExps omc_OnRelaxation_makeCrefExps
+
+
+#define boxptr_OnRelaxation_reduceOrphancMatrix1 omc_OnRelaxation_reduceOrphancMatrix1
+
+
+#define boxptr_OnRelaxation_reduceOrphancMatrix omc_OnRelaxation_reduceOrphancMatrix
+
+
+#define boxptr_OnRelaxation_getOrder omc_OnRelaxation_getOrder
+
+
+#define boxptr_OnRelaxation_getOrphansOrderEdvanced6 omc_OnRelaxation_getOrphansOrderEdvanced6
+
+
+#define boxptr_OnRelaxation_mergeOrphanParents omc_OnRelaxation_mergeOrphanParents
+
+
+#define boxptr_OnRelaxation_hasOrphanAdvanced omc_OnRelaxation_hasOrphanAdvanced
+
+
+#define boxptr_OnRelaxation_selectNonFlows omc_OnRelaxation_selectNonFlows
+
+
+#define boxptr_OnRelaxation_replaceEquationsAddNew omc_OnRelaxation_replaceEquationsAddNew
+
+
+#define boxptr_OnRelaxation_traverserExpreplaceFinalParameter omc_OnRelaxation_traverserExpreplaceFinalParameter
+
+
+#define boxptr_OnRelaxation_replaceFinalParameter omc_OnRelaxation_replaceFinalParameter
+
+
+DLLDirection
+modelica_metatype omc_OnRelaxation_relaxSystem(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_OnRelaxation_relaxSystem omc_OnRelaxation_relaxSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_OnRelaxation_relaxSystem,2,0) {(void*) boxptr_OnRelaxation_relaxSystem,0}};
+#define boxvar_OnRelaxation_relaxSystem MMC_REFSTRUCTLIT(boxvar_lit_OnRelaxation_relaxSystem)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

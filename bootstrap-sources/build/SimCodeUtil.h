@@ -5,68 +5,2052 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-DLLExport
-modelica_integer omc_SimCodeUtil_hashEqSystemMod(threadData_t *threadData, modelica_integer _eq, modelica_integer _mod);
-DLLExport
-modelica_metatype boxptr_SimCodeUtil_hashEqSystemMod(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _mod);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_hashEqSystemMod,2,0) {(void*) boxptr_SimCodeUtil_hashEqSystemMod,0}};
-#define boxvar_SimCodeUtil_hashEqSystemMod MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_hashEqSystemMod)
-DLLExport
-modelica_string omc_SimCodeUtil_getLocalValueReference(threadData_t *threadData, modelica_metatype _inSimVar, modelica_integer _inSimCode, modelica_metatype _inCrefToSimVarHT, modelica_boolean _inElimNegAliases);
-DLLExport
-modelica_metatype boxptr_SimCodeUtil_getLocalValueReference(threadData_t *threadData, modelica_metatype _inSimVar, modelica_metatype _inSimCode, modelica_metatype _inCrefToSimVarHT, modelica_metatype _inElimNegAliases);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getLocalValueReference,2,0) {(void*) boxptr_SimCodeUtil_getLocalValueReference,0}};
-#define boxvar_SimCodeUtil_getLocalValueReference MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getLocalValueReference)
-DLLExport
-modelica_string omc_SimCodeUtil_getValueReference(threadData_t *threadData, modelica_metatype _inSimVar, modelica_integer _inSimCode, modelica_boolean _inElimNegAliases);
-DLLExport
-modelica_metatype boxptr_SimCodeUtil_getValueReference(threadData_t *threadData, modelica_metatype _inSimVar, modelica_metatype _inSimCode, modelica_metatype _inElimNegAliases);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getValueReference,2,0) {(void*) boxptr_SimCodeUtil_getValueReference,0}};
-#define boxvar_SimCodeUtil_getValueReference MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getValueReference)
-DLLExport
+
+extern struct record_description Absyn_Msg_NO__MSG__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description AvlSetString_Tree_EMPTY__desc;
+
+extern struct record_description AvlTreeCRToInt_Tree_EMPTY__desc;
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BackendDAEType_ARRAYSYSTEM__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_SOLVED__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationConstraints_ALLOW__UNDERCONSTRAINED__desc;
+
+extern struct record_description BackendDAE_EquationKind_BINDING__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_INITIAL__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_UNKNOWN__EQUATION__KIND__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_IndexReduction_NO__INDEX__REDUCTION__desc;
+
+extern struct record_description BackendDAE_IndexType_ABSOLUTE__desc;
+
+extern struct record_description BackendDAE_IndexType_NORMAL__desc;
+
+extern struct record_description BackendDAE_Matching_MATCHING__desc;
+
+extern struct record_description BackendDAE_StrongComponent_SINGLEALGORITHM__desc;
+
+extern struct record_description BackendDAE_StrongComponent_SINGLEARRAY__desc;
+
+extern struct record_description BackendDAE_StrongComponent_SINGLECOMPLEXEQUATION__desc;
+
+extern struct record_description BackendDAE_StrongComponent_SINGLEEQUATION__desc;
+
+extern struct record_description BackendDAE_StrongComponent_SINGLEIFEQUATION__desc;
+
+extern struct record_description BackendDAE_StrongComponent_SINGLEWHENEQUATION__desc;
+
+extern struct record_description BackendDAE_VarKind_ALG__STATE__OLD__desc;
+
+extern struct record_description BackendDAE_VarKind_CLOCKED__STATE__desc;
+
+extern struct record_description BackendDAE_VarKind_JAC__TMP__VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_JAC__VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_LOOP__ITERATION__desc;
+
+extern struct record_description BackendDAE_VarKind_LOOP__SOLVED__desc;
+
+extern struct record_description BackendDAE_VarKind_SEED__VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_STATE__DER__desc;
+
+extern struct record_description BackendDAE_VarKind_VARIABLE__desc;
+
+extern struct record_description BackendDAE_ZeroCrossing_ZERO__CROSSING__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_CallAttributes_CALL__ATTR__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_Element_ALGORITHM__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_BCONST__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_CLKCONST__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_Exp_IFEXP__desc;
+
+extern struct record_description DAE_Exp_LBINARY__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Exp_RELATION__desc;
+
+extern struct record_description DAE_Exp_SCONST__desc;
+
+extern struct record_description DAE_InlineType_AFTER__INDEX__RED__INLINE__desc;
+
+extern struct record_description DAE_InlineType_NORM__INLINE__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description DAE_Operator_ADD__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__NORETCALL__desc;
+
+extern struct record_description DAE_Statement_STMT__TUPLE__ASSIGN__desc;
+
+extern struct record_description DAE_Subscript_INDEX__desc;
+
+extern struct record_description DAE_SymbolicOperation_LINEAR__SOLVED__desc;
+
+extern struct record_description DAE_TailCall_NO__TAIL__desc;
+
+extern struct record_description DAE_Type_T__ARRAY__desc;
+
+extern struct record_description DAE_Type_T__INTEGER__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_SYMBOLIC__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__LIST__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description HpcOmSimCode_HpcOmData_HPCOMDATA__desc;
+
+extern struct record_description NFUnit_Unit_UNIT__desc;
+
+extern struct record_description SimCode_BackendMapping_BACKENDMAPPING__desc;
+
+extern struct record_description SimCode_BackendMapping_NO__MAPPING__desc;
+
+extern struct record_description SimCode_BaseUnit_BASEUNIT__desc;
+
+extern struct record_description SimCode_BaseUnit_NOBASEUNIT__desc;
+
+extern struct record_description SimCode_ClockedPartition_CLOCKED__PARTITION__desc;
+
+extern struct record_description SimCode_DelayedExpression_DELAYED__EXPRESSIONS__desc;
+
+extern struct record_description SimCode_DerivativeMatrix_DERIVATIVE__MATRIX__desc;
+
+extern struct record_description SimCode_ExtObjInfo_EXTOBJINFO__desc;
+
+extern struct record_description SimCode_FileInfo_FILEINFO__desc;
+
+extern struct record_description SimCode_FmiDerivatives_FMIDERIVATIVES__desc;
+
+extern struct record_description SimCode_FmiDiscreteStates_FMIDISCRETESTATES__desc;
+
+extern struct record_description SimCode_FmiInitialUnknowns_FMIINITIALUNKNOWNS__desc;
+
+extern struct record_description SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc;
+
+extern struct record_description SimCode_FmiOutputs_FMIOUTPUTS__desc;
+
+extern struct record_description SimCode_FmiSimulationFlags_FMI__SIMULATION__FLAGS__desc;
+
+extern struct record_description SimCode_FmiSimulationFlags_FMI__SIMULATION__FLAGS__FILE__desc;
+
+extern struct record_description SimCode_FmiUnknown_FMIUNKNOWN__desc;
+
+extern struct record_description SimCode_JacobianColumn_JAC__COLUMN__desc;
+
+extern struct record_description SimCode_JacobianMatrix_JAC__MATRIX__desc;
+
+extern struct record_description SimCode_LinearSystem_LINEARSYSTEM__desc;
+
+extern struct record_description SimCode_ModelInfo_MODELINFO__desc;
+
+extern struct record_description SimCode_NonlinearSystem_NONLINEARSYSTEM__desc;
+
+extern struct record_description SimCode_OMSIData_OMSI__DATA__desc;
+
+extern struct record_description SimCode_OMSIFunction_OMSI__FUNCTION__desc;
+
+extern struct record_description SimCode_PartitionData_PARTITIONDATA__desc;
+
+extern struct record_description SimCode_SimCode_SIMCODE__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__ALGEBRAIC__SYSTEM__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__ALGORITHM__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__ALIAS__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__ARRAY__CALL__ASSIGN__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__FOR__EQUATION__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__FOR__LOOP__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__FOR__RESIDUAL__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__GENERIC__RESIDUAL__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__IFEQUATION__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__INVERSE__ALGORITHM__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__LINEAR__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__NONLINEAR__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__RESIDUAL__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__SIMPLE__ASSIGN__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__SIMPLE__ASSIGN__CONSTRAINTS__desc;
+
+extern struct record_description SimCode_SimEqSystem_SES__WHEN__desc;
+
+extern struct record_description SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc;
+
+extern struct record_description SimCode_SpatialDistributionInfo_SPATIAL__DISTRIBUTION__INFO__desc;
+
+extern struct record_description SimCode_StateSet_SES__STATESET__desc;
+
+extern struct record_description SimCode_SubPartition_SUBPARTITION__desc;
+
+extern struct record_description SimCode_UnitDefinition_UNITDEFINITION__desc;
+
+extern struct record_description SimCode_VarInfo_VARINFO__desc;
+
+extern struct record_description SimCodeFunction_Context_JACOBIAN__CONTEXT__desc;
+
+extern struct record_description SimCodeFunction_Context_OMSI__CONTEXT__desc;
+
+extern struct record_description SimCodeVar_AliasVariable_ALIAS__desc;
+
+extern struct record_description SimCodeVar_AliasVariable_NEGATEDALIAS__desc;
+
+extern struct record_description SimCodeVar_AliasVariable_NOALIAS__desc;
+
+extern struct record_description SimCodeVar_Causality_CALCULATED__PARAMETER__desc;
+
+extern struct record_description SimCodeVar_Causality_INPUT__desc;
+
+extern struct record_description SimCodeVar_Causality_LOCAL__desc;
+
+extern struct record_description SimCodeVar_Causality_NONECAUS__desc;
+
+extern struct record_description SimCodeVar_Causality_OUTPUT__desc;
+
+extern struct record_description SimCodeVar_Causality_PARAMETER__desc;
+
+extern struct record_description SimCodeVar_Initial_APPROX__desc;
+
+extern struct record_description SimCodeVar_Initial_CALCULATED__desc;
+
+extern struct record_description SimCodeVar_Initial_EXACT__desc;
+
+extern struct record_description SimCodeVar_Initial_NONE__INITIAL__desc;
+
+extern struct record_description SimCodeVar_SimVar_SIMVAR__desc;
+
+extern struct record_description SimCodeVar_SimVars_SIMVARS__desc;
+
+extern struct record_description SimCodeVar_Variability_CONSTANT__desc;
+
+extern struct record_description SimCodeVar_Variability_CONTINUOUS__desc;
+
+extern struct record_description SimCodeVar_Variability_DISCRETE__desc;
+
+extern struct record_description SimCodeVar_Variability_FIXED__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getExpNominal(threadData_t *threadData, modelica_metatype _expr);
+#define boxptr_SimCodeUtil_getExpNominal omc_SimCodeUtil_getExpNominal
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getExpNominal,2,0) {(void*) boxptr_SimCodeUtil_getExpNominal,0}};
+#define boxvar_SimCodeUtil_getExpNominal MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getExpNominal)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getCMakeVersion(threadData_t *threadData, modelica_string _pathToCMake);
+#define boxptr_SimCodeUtil_getCMakeVersion omc_SimCodeUtil_getCMakeVersion
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getCMakeVersion,2,0) {(void*) boxptr_SimCodeUtil_getCMakeVersion,0}};
+#define boxvar_SimCodeUtil_getCMakeVersion MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getCMakeVersion)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_make2CMakeInclude(threadData_t *threadData, modelica_metatype _includes);
+#define boxptr_SimCodeUtil_make2CMakeInclude omc_SimCodeUtil_make2CMakeInclude
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_make2CMakeInclude,2,0) {(void*) boxptr_SimCodeUtil_make2CMakeInclude,0}};
+#define boxvar_SimCodeUtil_make2CMakeInclude MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_make2CMakeInclude)
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_cvodeFmiFlagIsSet(threadData_t *threadData, modelica_metatype _fmiSimulationFlags);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_cvodeFmiFlagIsSet(threadData_t *threadData, modelica_metatype _fmiSimulationFlags);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_cvodeFmiFlagIsSet,2,0) {(void*) boxptr_SimCodeUtil_cvodeFmiFlagIsSet,0}};
+#define boxvar_SimCodeUtil_cvodeFmiFlagIsSet MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_cvodeFmiFlagIsSet)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getCmakeSundialsLinkCode(threadData_t *threadData, modelica_metatype _fmiSimulationFlags, modelica_string *out_cvodeDirectory);
+#define boxptr_SimCodeUtil_getCmakeSundialsLinkCode omc_SimCodeUtil_getCmakeSundialsLinkCode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getCmakeSundialsLinkCode,2,0) {(void*) boxptr_SimCodeUtil_getCmakeSundialsLinkCode,0}};
+#define boxvar_SimCodeUtil_getCmakeSundialsLinkCode MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getCmakeSundialsLinkCode)
+
+
+#define boxptr_SimCodeUtil_getCmakeLinkLibrariesCode_addDockerVol omc_SimCodeUtil_getCmakeLinkLibrariesCode_addDockerVol
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getCmakeLinkLibrariesCode(threadData_t *threadData, modelica_metatype _libs);
+#define boxptr_SimCodeUtil_getCmakeLinkLibrariesCode omc_SimCodeUtil_getCmakeLinkLibrariesCode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getCmakeLinkLibrariesCode,2,0) {(void*) boxptr_SimCodeUtil_getCmakeLinkLibrariesCode,0}};
+#define boxvar_SimCodeUtil_getCmakeLinkLibrariesCode MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getCmakeLinkLibrariesCode)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getCmakeCrossPlatformSuffixes(threadData_t *threadData);
+#define boxptr_SimCodeUtil_getCmakeCrossPlatformSuffixes omc_SimCodeUtil_getCmakeCrossPlatformSuffixes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getCmakeCrossPlatformSuffixes,2,0) {(void*) boxptr_SimCodeUtil_getCmakeCrossPlatformSuffixes,0}};
+#define boxvar_SimCodeUtil_getCmakeCrossPlatformSuffixes MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getCmakeCrossPlatformSuffixes)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getDirectoriesForDLLsFromLinkLibs(threadData_t *threadData, modelica_metatype _libsAndLinkDirs, modelica_metatype *out_outLibs);
+#define boxptr_SimCodeUtil_getDirectoriesForDLLsFromLinkLibs omc_SimCodeUtil_getDirectoriesForDLLsFromLinkLibs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getDirectoriesForDLLsFromLinkLibs,2,0) {(void*) boxptr_SimCodeUtil_getDirectoriesForDLLsFromLinkLibs,0}};
+#define boxvar_SimCodeUtil_getDirectoriesForDLLsFromLinkLibs MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getDirectoriesForDLLsFromLinkLibs)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_generateRunnerBatScript(threadData_t *threadData, modelica_metatype _code);
+#define boxptr_SimCodeUtil_generateRunnerBatScript omc_SimCodeUtil_generateRunnerBatScript
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_generateRunnerBatScript,2,0) {(void*) boxptr_SimCodeUtil_generateRunnerBatScript,0}};
+#define boxvar_SimCodeUtil_generateRunnerBatScript MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_generateRunnerBatScript)
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_isArrayVar(threadData_t *threadData, modelica_metatype _var);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_isArrayVar(threadData_t *threadData, modelica_metatype _var);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_isArrayVar,2,0) {(void*) boxptr_SimCodeUtil_isArrayVar,0}};
+#define boxvar_SimCodeUtil_isArrayVar MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_isArrayVar)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_selectNLEqSys(threadData_t *threadData, modelica_metatype _simEqSysIn);
+#define boxptr_SimCodeUtil_selectNLEqSys omc_SimCodeUtil_selectNLEqSys
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_selectNLEqSys,2,0) {(void*) boxptr_SimCodeUtil_selectNLEqSys,0}};
+#define boxvar_SimCodeUtil_selectNLEqSys MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_selectNLEqSys)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_unbalancedEqSystemPartition(threadData_t *threadData, modelica_metatype _inList, modelica_integer _maxLength);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_unbalancedEqSystemPartition(threadData_t *threadData, modelica_metatype _inList, modelica_metatype _maxLength);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_unbalancedEqSystemPartition,2,0) {(void*) boxptr_SimCodeUtil_unbalancedEqSystemPartition,0}};
+#define boxvar_SimCodeUtil_unbalancedEqSystemPartition MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_unbalancedEqSystemPartition)
+
+
+#define boxptr_SimCodeUtil_aliasSimEq omc_SimCodeUtil_aliasSimEq
+
+
+#define boxptr_SimCodeUtil_aliasSimEqs omc_SimCodeUtil_aliasSimEqs
+
+
+#define boxptr_SimCodeUtil_aliasSimEqSystems omc_SimCodeUtil_aliasSimEqSystems
+
+
+#define boxptr_SimCodeUtil_findResources omc_SimCodeUtil_findResources
+
+
+#define boxptr_SimCodeUtil_getResources omc_SimCodeUtil_getResources
+
+
+#define boxptr_SimCodeUtil_getValueReferenceMapping omc_SimCodeUtil_getValueReferenceMapping
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_lookupVRForRealOutputDerivative(threadData_t *threadData, modelica_metatype _cr, modelica_metatype _simCode, modelica_string _fmuType);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_lookupVRForRealOutputDerivative(threadData_t *threadData, modelica_metatype _cr, modelica_metatype _simCode, modelica_metatype _fmuType);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_lookupVRForRealOutputDerivative,2,0) {(void*) boxptr_SimCodeUtil_lookupVRForRealOutputDerivative,0}};
+#define boxvar_SimCodeUtil_lookupVRForRealOutputDerivative MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_lookupVRForRealOutputDerivative)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_lookupVR(threadData_t *threadData, modelica_metatype _cr, modelica_metatype _simCode);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_lookupVR(threadData_t *threadData, modelica_metatype _cr, modelica_metatype _simCode);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_lookupVR,2,0) {(void*) boxptr_SimCodeUtil_lookupVR,0}};
+#define boxvar_SimCodeUtil_lookupVR MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_lookupVR)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getNumContinuousEquations(threadData_t *threadData, modelica_metatype _eqns, modelica_integer _numStates);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getNumContinuousEquations(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _numStates);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getNumContinuousEquations,2,0) {(void*) boxptr_SimCodeUtil_getNumContinuousEquations,0}};
+#define boxvar_SimCodeUtil_getNumContinuousEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getNumContinuousEquations)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_sortSimpleAssignmentBasedOnLhs(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqs);
+#define boxptr_SimCodeUtil_sortSimpleAssignmentBasedOnLhs omc_SimCodeUtil_sortSimpleAssignmentBasedOnLhs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_sortSimpleAssignmentBasedOnLhs,2,0) {(void*) boxptr_SimCodeUtil_sortSimpleAssignmentBasedOnLhs,0}};
+#define boxvar_SimCodeUtil_sortSimpleAssignmentBasedOnLhs MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_sortSimpleAssignmentBasedOnLhs)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_filterScalarLiteralAssignments(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqs);
+#define boxptr_SimCodeUtil_filterScalarLiteralAssignments omc_SimCodeUtil_filterScalarLiteralAssignments
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_filterScalarLiteralAssignments,2,0) {(void*) boxptr_SimCodeUtil_filterScalarLiteralAssignments,0}};
+#define boxvar_SimCodeUtil_filterScalarLiteralAssignments MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_filterScalarLiteralAssignments)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_selectScalarLiteralAssignments(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqs);
+#define boxptr_SimCodeUtil_selectScalarLiteralAssignments omc_SimCodeUtil_selectScalarLiteralAssignments
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_selectScalarLiteralAssignments,2,0) {(void*) boxptr_SimCodeUtil_selectScalarLiteralAssignments,0}};
+#define boxvar_SimCodeUtil_selectScalarLiteralAssignments MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_selectScalarLiteralAssignments)
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_isScalarLiteralAssignment(threadData_t *threadData, modelica_metatype _eq);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_isScalarLiteralAssignment(threadData_t *threadData, modelica_metatype _eq);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_isScalarLiteralAssignment,2,0) {(void*) boxptr_SimCodeUtil_isScalarLiteralAssignment,0}};
+#define boxvar_SimCodeUtil_isScalarLiteralAssignment MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_isScalarLiteralAssignment)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getClockedPartitions(threadData_t *threadData, modelica_metatype _simcode);
+#define boxptr_SimCodeUtil_getClockedPartitions omc_SimCodeUtil_getClockedPartitions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getClockedPartitions,2,0) {(void*) boxptr_SimCodeUtil_getClockedPartitions,0}};
+#define boxvar_SimCodeUtil_getClockedPartitions MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getClockedPartitions)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_absoluteClockIdxForBaseClock(threadData_t *threadData, modelica_integer _baseClockIdx, modelica_metatype _allBaseClockPartitions);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_absoluteClockIdxForBaseClock(threadData_t *threadData, modelica_metatype _baseClockIdx, modelica_metatype _allBaseClockPartitions);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_absoluteClockIdxForBaseClock,2,0) {(void*) boxptr_SimCodeUtil_absoluteClockIdxForBaseClock,0}};
+#define boxvar_SimCodeUtil_absoluteClockIdxForBaseClock MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_absoluteClockIdxForBaseClock)
+
+
+DLLDirection
 modelica_metatype omc_SimCodeUtil_codegenExpSanityCheck(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fe, modelica_metatype _context);
 #define boxptr_SimCodeUtil_codegenExpSanityCheck omc_SimCodeUtil_codegenExpSanityCheck
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_codegenExpSanityCheck,2,0) {(void*) boxptr_SimCodeUtil_codegenExpSanityCheck,0}};
 #define boxvar_SimCodeUtil_codegenExpSanityCheck MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_codegenExpSanityCheck)
-DLLExport
-modelica_string omc_SimCodeUtil_localCref2Index(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inOMSIFunction);
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_localCref2Index(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inCrefToSimVarHT);
 #define boxptr_SimCodeUtil_localCref2Index omc_SimCodeUtil_localCref2Index
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_localCref2Index,2,0) {(void*) boxptr_SimCodeUtil_localCref2Index,0}};
 #define boxvar_SimCodeUtil_localCref2Index MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_localCref2Index)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_SimCodeUtil_localCref2SimVar(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inCrefToSimVarHT);
 #define boxptr_SimCodeUtil_localCref2SimVar omc_SimCodeUtil_localCref2SimVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_localCref2SimVar,2,0) {(void*) boxptr_SimCodeUtil_localCref2SimVar,0}};
 #define boxvar_SimCodeUtil_localCref2SimVar MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_localCref2SimVar)
-DLLExport
-modelica_metatype omc_SimCodeUtil_simVarFromHT(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _simCode);
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createJacContext(threadData_t *threadData, modelica_metatype _jacHT);
+#define boxptr_SimCodeUtil_createJacContext omc_SimCodeUtil_createJacContext
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createJacContext,2,0) {(void*) boxptr_SimCodeUtil_createJacContext,0}};
+#define boxvar_SimCodeUtil_createJacContext MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createJacContext)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_simVarFromHT(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _crefToSimVarHT);
 #define boxptr_SimCodeUtil_simVarFromHT omc_SimCodeUtil_simVarFromHT
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_simVarFromHT,2,0) {(void*) boxptr_SimCodeUtil_simVarFromHT,0}};
 #define boxvar_SimCodeUtil_simVarFromHT MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_simVarFromHT)
-DLLExport
-modelica_metatype omc_SimCodeUtil_cref2simvar(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inCrefToSimVarHT);
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_cref2simvar(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _simCode);
 #define boxptr_SimCodeUtil_cref2simvar omc_SimCodeUtil_cref2simvar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_cref2simvar,2,0) {(void*) boxptr_SimCodeUtil_cref2simvar,0}};
 #define boxvar_SimCodeUtil_cref2simvar MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_cref2simvar)
-DLLExport
-modelica_integer omc_SimCodeUtil_getSimCode(threadData_t *threadData);
-DLLExport
-modelica_metatype boxptr_SimCodeUtil_getSimCode(threadData_t *threadData);
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getSimCode(threadData_t *threadData);
+#define boxptr_SimCodeUtil_getSimCode omc_SimCodeUtil_getSimCode
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimCode,2,0) {(void*) boxptr_SimCodeUtil_getSimCode,0}};
 #define boxvar_SimCodeUtil_getSimCode MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimCode)
-DLLExport
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_nVariablesReal(threadData_t *threadData, modelica_metatype _varInfo);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_nVariablesReal(threadData_t *threadData, modelica_metatype _varInfo);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_nVariablesReal,2,0) {(void*) boxptr_SimCodeUtil_nVariablesReal,0}};
+#define boxvar_SimCodeUtil_nVariablesReal MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_nVariablesReal)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getFunctionIndex(threadData_t *threadData);
+#define boxptr_SimCodeUtil_getFunctionIndex omc_SimCodeUtil_getFunctionIndex
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFunctionIndex,2,0) {(void*) boxptr_SimCodeUtil_getFunctionIndex,0}};
+#define boxvar_SimCodeUtil_getFunctionIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFunctionIndex)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_addFunctionIndex(threadData_t *threadData, modelica_string _prefix, modelica_string _suffix);
+#define boxptr_SimCodeUtil_addFunctionIndex omc_SimCodeUtil_addFunctionIndex
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_addFunctionIndex,2,0) {(void*) boxptr_SimCodeUtil_addFunctionIndex,0}};
+#define boxvar_SimCodeUtil_addFunctionIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_addFunctionIndex)
+
+
+DLLDirection
+void omc_SimCodeUtil_resetFunctionIndex(threadData_t *threadData);
+#define boxptr_SimCodeUtil_resetFunctionIndex omc_SimCodeUtil_resetFunctionIndex
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_resetFunctionIndex,2,0) {(void*) boxptr_SimCodeUtil_resetFunctionIndex,0}};
+#define boxvar_SimCodeUtil_resetFunctionIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_resetFunctionIndex)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getInputIndex(threadData_t *threadData, modelica_metatype _var);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getInputIndex(threadData_t *threadData, modelica_metatype _var);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getInputIndex,2,0) {(void*) boxptr_SimCodeUtil_getInputIndex,0}};
+#define boxvar_SimCodeUtil_getInputIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getInputIndex)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getSimEqSystemsByIndexLst(threadData_t *threadData, modelica_metatype _idcs, modelica_metatype _allSes);
+#define boxptr_SimCodeUtil_getSimEqSystemsByIndexLst omc_SimCodeUtil_getSimEqSystemsByIndexLst
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimEqSystemsByIndexLst,2,0) {(void*) boxptr_SimCodeUtil_getSimEqSystemsByIndexLst,0}};
+#define boxvar_SimCodeUtil_getSimEqSystemsByIndexLst MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimEqSystemsByIndexLst)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_computeDependencies(threadData_t *threadData, modelica_metatype _eqs, modelica_metatype _cref);
+#define boxptr_SimCodeUtil_computeDependencies omc_SimCodeUtil_computeDependencies
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_computeDependencies,2,0) {(void*) boxptr_SimCodeUtil_computeDependencies,0}};
+#define boxvar_SimCodeUtil_computeDependencies MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_computeDependencies)
+
+
+#define boxptr_SimCodeUtil_computeDependenciesHelper omc_SimCodeUtil_computeDependenciesHelper
+
+
+#define boxptr_SimCodeUtil_getNLSysRHS omc_SimCodeUtil_getNLSysRHS
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getLocalValueReference(threadData_t *threadData, modelica_metatype _inSimVar, modelica_metatype _inSimCode, modelica_metatype _inCrefToSimVarHT, modelica_boolean _inElimNegAliases);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getLocalValueReference(threadData_t *threadData, modelica_metatype _inSimVar, modelica_metatype _inSimCode, modelica_metatype _inCrefToSimVarHT, modelica_metatype _inElimNegAliases);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getLocalValueReference,2,0) {(void*) boxptr_SimCodeUtil_getLocalValueReference,0}};
+#define boxvar_SimCodeUtil_getLocalValueReference MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getLocalValueReference)
+
+
+#define boxptr_SimCodeUtil_getDefaultValueReference omc_SimCodeUtil_getDefaultValueReference
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getValueReference(threadData_t *threadData, modelica_metatype _inSimVar, modelica_metatype _inSimCode, modelica_boolean _inElimNegAliases);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getValueReference(threadData_t *threadData, modelica_metatype _inSimVar, modelica_metatype _inSimCode, modelica_metatype _inElimNegAliases);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getValueReference,2,0) {(void*) boxptr_SimCodeUtil_getValueReference,0}};
+#define boxvar_SimCodeUtil_getValueReference MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getValueReference)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getVariableFMIIndex(threadData_t *threadData, modelica_metatype _inVar);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getVariableFMIIndex(threadData_t *threadData, modelica_metatype _inVar);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVariableFMIIndex,2,0) {(void*) boxptr_SimCodeUtil_getVariableFMIIndex,0}};
+#define boxvar_SimCodeUtil_getVariableFMIIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVariableFMIIndex)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getVariableIndex(threadData_t *threadData, modelica_metatype _inVar);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getVariableIndex(threadData_t *threadData, modelica_metatype _inVar);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVariableIndex,2,0) {(void*) boxptr_SimCodeUtil_getVariableIndex,0}};
+#define boxvar_SimCodeUtil_getVariableIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVariableIndex)
+
+
+#define boxptr_SimCodeUtil_getScalarVars omc_SimCodeUtil_getScalarVars
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getScalarElements(threadData_t *threadData, modelica_metatype _var);
+#define boxptr_SimCodeUtil_getScalarElements omc_SimCodeUtil_getScalarElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getScalarElements,2,0) {(void*) boxptr_SimCodeUtil_getScalarElements,0}};
+#define boxvar_SimCodeUtil_getScalarElements MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getScalarElements)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getStateSimVarIndexFromIndex(threadData_t *threadData, modelica_metatype _inStateVars, modelica_integer _inIndex);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getStateSimVarIndexFromIndex(threadData_t *threadData, modelica_metatype _inStateVars, modelica_metatype _inIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getStateSimVarIndexFromIndex,2,0) {(void*) boxptr_SimCodeUtil_getStateSimVarIndexFromIndex,0}};
+#define boxvar_SimCodeUtil_getStateSimVarIndexFromIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getStateSimVarIndexFromIndex)
+
+
+#define boxptr_SimCodeUtil_mergeSparsePatter omc_SimCodeUtil_mergeSparsePatter
+
+
+#define boxptr_SimCodeUtil_translateSparsePatterCref2DerCref omc_SimCodeUtil_translateSparsePatterCref2DerCref
+
+
+#define boxptr_SimCodeUtil_translateSparsePatterInts2FMIUnknown omc_SimCodeUtil_translateSparsePatterInts2FMIUnknown
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getAllParamSimVars(threadData_t *threadData, modelica_metatype _inModelInfo);
+#define boxptr_SimCodeUtil_getAllParamSimVars omc_SimCodeUtil_getAllParamSimVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getAllParamSimVars,2,0) {(void*) boxptr_SimCodeUtil_getAllParamSimVars,0}};
+#define boxvar_SimCodeUtil_getAllParamSimVars MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getAllParamSimVars)
+
+
+#define boxptr_SimCodeUtil_dumpFmiInitialUnknownsDependencies omc_SimCodeUtil_dumpFmiInitialUnknownsDependencies
+
+
+#define boxptr_SimCodeUtil_getDepAndIndepVarsForInitialUnknowns omc_SimCodeUtil_getDepAndIndepVarsForInitialUnknowns
+
+
+#define boxptr_SimCodeUtil_getDependentAndIndepentVarsForJacobian omc_SimCodeUtil_getDependentAndIndepentVarsForJacobian
+
+
+#define boxptr_SimCodeUtil_getFmiInitialUnknowns omc_SimCodeUtil_getFmiInitialUnknowns
+
+
+#define boxptr_SimCodeUtil_getCrefFromSimVar omc_SimCodeUtil_getCrefFromSimVar
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createFMIModelStructure(threadData_t *threadData, modelica_metatype _inSymjacs, modelica_metatype _inModelInfo, modelica_integer _inUniqueEqIndex, modelica_metatype _inInitDAE, modelica_metatype _inSimDAE, modelica_metatype *out_outFmiModelStructure, modelica_metatype *out_outModelInfo, modelica_metatype *out_symJacs, modelica_integer *out_uniqueEqIndex);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createFMIModelStructure(threadData_t *threadData, modelica_metatype _inSymjacs, modelica_metatype _inModelInfo, modelica_metatype _inUniqueEqIndex, modelica_metatype _inInitDAE, modelica_metatype _inSimDAE, modelica_metatype *out_outFmiModelStructure, modelica_metatype *out_outModelInfo, modelica_metatype *out_symJacs, modelica_metatype *out_uniqueEqIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createFMIModelStructure,2,0) {(void*) boxptr_SimCodeUtil_createFMIModelStructure,0}};
+#define boxvar_SimCodeUtil_createFMIModelStructure MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createFMIModelStructure)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createFMISimulationFlags(threadData_t *threadData, modelica_boolean _printWarning);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createFMISimulationFlags(threadData_t *threadData, modelica_metatype _printWarning);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createFMISimulationFlags,2,0) {(void*) boxptr_SimCodeUtil_createFMISimulationFlags,0}};
+#define boxvar_SimCodeUtil_createFMISimulationFlags MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createFMISimulationFlags)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_derivativeMatrixString(threadData_t *threadData, modelica_metatype _matrix);
+#define boxptr_SimCodeUtil_derivativeMatrixString omc_SimCodeUtil_derivativeMatrixString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_derivativeMatrixString,2,0) {(void*) boxptr_SimCodeUtil_derivativeMatrixString,0}};
+#define boxvar_SimCodeUtil_derivativeMatrixString MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_derivativeMatrixString)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_omsiFuncEqnString(threadData_t *threadData, modelica_metatype _omsiFunc);
+#define boxptr_SimCodeUtil_omsiFuncEqnString omc_SimCodeUtil_omsiFuncEqnString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_omsiFuncEqnString,2,0) {(void*) boxptr_SimCodeUtil_omsiFuncEqnString,0}};
+#define boxvar_SimCodeUtil_omsiFuncEqnString MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_omsiFuncEqnString)
+
+
+DLLDirection
+void omc_SimCodeUtil_dumpOMSIFunc(threadData_t *threadData, modelica_metatype _omsiFunc, modelica_string _head);
+#define boxptr_SimCodeUtil_dumpOMSIFunc omc_SimCodeUtil_dumpOMSIFunc
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpOMSIFunc,2,0) {(void*) boxptr_SimCodeUtil_dumpOMSIFunc,0}};
+#define boxvar_SimCodeUtil_dumpOMSIFunc MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpOMSIFunc)
+
+
+DLLDirection
+void omc_SimCodeUtil_dumpOMSIData(threadData_t *threadData, modelica_metatype _omsiData, modelica_string _head);
+#define boxptr_SimCodeUtil_dumpOMSIData omc_SimCodeUtil_dumpOMSIData
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpOMSIData,2,0) {(void*) boxptr_SimCodeUtil_dumpOMSIData,0}};
+#define boxvar_SimCodeUtil_dumpOMSIData MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpOMSIData)
+
+
+#define boxptr_SimCodeUtil_dumpVarMapping omc_SimCodeUtil_dumpVarMapping
+
+
+#define boxptr_SimCodeUtil_dumpEqMapping omc_SimCodeUtil_dumpEqMapping
+
+
+#define boxptr_SimCodeUtil_dumpBackendMapping omc_SimCodeUtil_dumpBackendMapping
+
+
+DLLDirection
+void omc_SimCodeUtil_dumpIdxScVarMapping(threadData_t *threadData, modelica_metatype _iMapping);
+#define boxptr_SimCodeUtil_dumpIdxScVarMapping omc_SimCodeUtil_dumpIdxScVarMapping
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpIdxScVarMapping,2,0) {(void*) boxptr_SimCodeUtil_dumpIdxScVarMapping,0}};
+#define boxvar_SimCodeUtil_dumpIdxScVarMapping MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpIdxScVarMapping)
+
+
+#define boxptr_SimCodeUtil_getDaeEqsNotPartOfOdeSystem4 omc_SimCodeUtil_getDaeEqsNotPartOfOdeSystem4
+
+
+#define boxptr_SimCodeUtil_getDaeEqsNotPartOfOdeSystem3 omc_SimCodeUtil_getDaeEqsNotPartOfOdeSystem3
+
+
+#define boxptr_SimCodeUtil_getDaeEqsNotPartOfOdeSystem2 omc_SimCodeUtil_getDaeEqsNotPartOfOdeSystem2
+
+
+#define boxptr_SimCodeUtil_getDaeEqsNotPartOfOdeSystem1 omc_SimCodeUtil_getDaeEqsNotPartOfOdeSystem1
+
+
+#define boxptr_SimCodeUtil_getDaeEqsNotPartOfOdeSystem0 omc_SimCodeUtil_getDaeEqsNotPartOfOdeSystem0
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getDaeEqsNotPartOfOdeSystem(threadData_t *threadData, modelica_metatype _iSimCode);
+#define boxptr_SimCodeUtil_getDaeEqsNotPartOfOdeSystem omc_SimCodeUtil_getDaeEqsNotPartOfOdeSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getDaeEqsNotPartOfOdeSystem,2,0) {(void*) boxptr_SimCodeUtil_getDaeEqsNotPartOfOdeSystem,0}};
+#define boxvar_SimCodeUtil_getDaeEqsNotPartOfOdeSystem MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getDaeEqsNotPartOfOdeSystem)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getRemovedEquationSimEqSysIdxes(threadData_t *threadData, modelica_metatype _simCode);
+#define boxptr_SimCodeUtil_getRemovedEquationSimEqSysIdxes omc_SimCodeUtil_getRemovedEquationSimEqSysIdxes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getRemovedEquationSimEqSysIdxes,2,0) {(void*) boxptr_SimCodeUtil_getRemovedEquationSimEqSysIdxes,0}};
+#define boxvar_SimCodeUtil_getRemovedEquationSimEqSysIdxes MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getRemovedEquationSimEqSysIdxes)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getMixedindex(threadData_t *threadData, modelica_metatype _simEqSys);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getMixedindex(threadData_t *threadData, modelica_metatype _simEqSys);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getMixedindex,2,0) {(void*) boxptr_SimCodeUtil_getMixedindex,0}};
+#define boxvar_SimCodeUtil_getMixedindex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getMixedindex)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getNLSindex(threadData_t *threadData, modelica_metatype _simEqSys);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getNLSindex(threadData_t *threadData, modelica_metatype _simEqSys);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getNLSindex,2,0) {(void*) boxptr_SimCodeUtil_getNLSindex,0}};
+#define boxvar_SimCodeUtil_getNLSindex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getNLSindex)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getLSindex(threadData_t *threadData, modelica_metatype _simEqSys);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getLSindex(threadData_t *threadData, modelica_metatype _simEqSys);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getLSindex,2,0) {(void*) boxptr_SimCodeUtil_getLSindex,0}};
+#define boxvar_SimCodeUtil_getLSindex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getLSindex)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getMaxSimEqSystemIndex(threadData_t *threadData, modelica_metatype _simCode);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getMaxSimEqSystemIndex(threadData_t *threadData, modelica_metatype _simCode);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getMaxSimEqSystemIndex,2,0) {(void*) boxptr_SimCodeUtil_getMaxSimEqSystemIndex,0}};
+#define boxvar_SimCodeUtil_getMaxSimEqSystemIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getMaxSimEqSystemIndex)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_replaceSimEqSysIndex(threadData_t *threadData, modelica_metatype _simEqSysIn, modelica_integer _inputIndex);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_replaceSimEqSysIndex(threadData_t *threadData, modelica_metatype _simEqSysIn, modelica_metatype _inputIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_replaceSimEqSysIndex,2,0) {(void*) boxptr_SimCodeUtil_replaceSimEqSysIndex,0}};
+#define boxvar_SimCodeUtil_replaceSimEqSysIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_replaceSimEqSysIndex)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_replaceModelInfo(threadData_t *threadData, modelica_metatype _modelInfoIn, modelica_metatype _simCodeIn);
+#define boxptr_SimCodeUtil_replaceModelInfo omc_SimCodeUtil_replaceModelInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_replaceModelInfo,2,0) {(void*) boxptr_SimCodeUtil_replaceModelInfo,0}};
+#define boxvar_SimCodeUtil_replaceModelInfo MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_replaceModelInfo)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_replaceODEandALLequations(threadData_t *threadData, modelica_metatype _allEqs, modelica_metatype _odeEqs, modelica_metatype _simCodeIn);
+#define boxptr_SimCodeUtil_replaceODEandALLequations omc_SimCodeUtil_replaceODEandALLequations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_replaceODEandALLequations,2,0) {(void*) boxptr_SimCodeUtil_replaceODEandALLequations,0}};
+#define boxvar_SimCodeUtil_replaceODEandALLequations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_replaceODEandALLequations)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_addSimEqSysToInitialEquations(threadData_t *threadData, modelica_metatype _simEqSys, modelica_metatype _simCodeIn);
+#define boxptr_SimCodeUtil_addSimEqSysToInitialEquations omc_SimCodeUtil_addSimEqSysToInitialEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_addSimEqSysToInitialEquations,2,0) {(void*) boxptr_SimCodeUtil_addSimEqSysToInitialEquations,0}};
+#define boxvar_SimCodeUtil_addSimEqSysToInitialEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_addSimEqSysToInitialEquations)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_addSimEqSysToODEquations(threadData_t *threadData, modelica_metatype _simEqSys, modelica_integer _sysIdx, modelica_metatype _simCodeIn);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_addSimEqSysToODEquations(threadData_t *threadData, modelica_metatype _simEqSys, modelica_metatype _sysIdx, modelica_metatype _simCodeIn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_addSimEqSysToODEquations,2,0) {(void*) boxptr_SimCodeUtil_addSimEqSysToODEquations,0}};
+#define boxvar_SimCodeUtil_addSimEqSysToODEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_addSimEqSysToODEquations)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_addSimVarToAlgVars(threadData_t *threadData, modelica_metatype _simVar, modelica_metatype _simCodeIn);
+#define boxptr_SimCodeUtil_addSimVarToAlgVars omc_SimCodeUtil_addSimVarToAlgVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_addSimVarToAlgVars,2,0) {(void*) boxptr_SimCodeUtil_addSimVarToAlgVars,0}};
+#define boxvar_SimCodeUtil_addSimVarToAlgVars MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_addSimVarToAlgVars)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_replaceSimVarIndex(threadData_t *threadData, modelica_integer _idx, modelica_metatype _simVarIn);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_replaceSimVarIndex(threadData_t *threadData, modelica_metatype _idx, modelica_metatype _simVarIn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_replaceSimVarIndex,2,0) {(void*) boxptr_SimCodeUtil_replaceSimVarIndex,0}};
+#define boxvar_SimCodeUtil_replaceSimVarIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_replaceSimVarIndex)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_replaceSimVarName(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _simVarIn);
+#define boxptr_SimCodeUtil_replaceSimVarName omc_SimCodeUtil_replaceSimVarName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_replaceSimVarName,2,0) {(void*) boxptr_SimCodeUtil_replaceSimVarName,0}};
+#define boxvar_SimCodeUtil_replaceSimVarName MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_replaceSimVarName)
+
+
+#define boxptr_SimCodeUtil_getSimEqSystemCrefsLHS omc_SimCodeUtil_getSimEqSystemCrefsLHS
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getAssignedCrefsOfSimEq(threadData_t *threadData, modelica_integer _idx, modelica_metatype _simCode);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getAssignedCrefsOfSimEq(threadData_t *threadData, modelica_metatype _idx, modelica_metatype _simCode);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getAssignedCrefsOfSimEq,2,0) {(void*) boxptr_SimCodeUtil_getAssignedCrefsOfSimEq,0}};
+#define boxvar_SimCodeUtil_getAssignedCrefsOfSimEq MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getAssignedCrefsOfSimEq)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getAssignedSimEqSysIdx(threadData_t *threadData, modelica_integer _simVarIdx, modelica_metatype _map);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getAssignedSimEqSysIdx(threadData_t *threadData, modelica_metatype _simVarIdx, modelica_metatype _map);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getAssignedSimEqSysIdx,2,0) {(void*) boxptr_SimCodeUtil_getAssignedSimEqSysIdx,0}};
+#define boxvar_SimCodeUtil_getAssignedSimEqSysIdx MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getAssignedSimEqSysIdx)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getReqSimEqsForSimVar(threadData_t *threadData, modelica_integer _simVar, modelica_metatype _map);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getReqSimEqsForSimVar(threadData_t *threadData, modelica_metatype _simVar, modelica_metatype _map);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getReqSimEqsForSimVar,2,0) {(void*) boxptr_SimCodeUtil_getReqSimEqsForSimVar,0}};
+#define boxvar_SimCodeUtil_getReqSimEqsForSimVar MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getReqSimEqsForSimVar)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getSimVarMappingOfBackendMapping(threadData_t *threadData, modelica_metatype _iBackendMappingOpt);
+#define boxptr_SimCodeUtil_getSimVarMappingOfBackendMapping omc_SimCodeUtil_getSimVarMappingOfBackendMapping
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimVarMappingOfBackendMapping,2,0) {(void*) boxptr_SimCodeUtil_getSimVarMappingOfBackendMapping,0}};
+#define boxvar_SimCodeUtil_getSimVarMappingOfBackendMapping MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimVarMappingOfBackendMapping)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getSimEqSysForIndex(threadData_t *threadData, modelica_integer _idx, modelica_metatype _allSimEqs);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getSimEqSysForIndex(threadData_t *threadData, modelica_metatype _idx, modelica_metatype _allSimEqs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimEqSysForIndex,2,0) {(void*) boxptr_SimCodeUtil_getSimEqSysForIndex,0}};
+#define boxvar_SimCodeUtil_getSimEqSysForIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimEqSysForIndex)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getReqSimEqSysForSimVar(threadData_t *threadData, modelica_integer _simVar, modelica_metatype _simCode);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getReqSimEqSysForSimVar(threadData_t *threadData, modelica_metatype _simVar, modelica_metatype _simCode);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getReqSimEqSysForSimVar,2,0) {(void*) boxptr_SimCodeUtil_getReqSimEqSysForSimVar,0}};
+#define boxvar_SimCodeUtil_getReqSimEqSysForSimVar MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getReqSimEqSysForSimVar)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getSimEqsOfSimVar(threadData_t *threadData, modelica_integer _simVar, modelica_metatype _map, modelica_integer _opt);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getSimEqsOfSimVar(threadData_t *threadData, modelica_metatype _simVar, modelica_metatype _map, modelica_metatype _opt);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimEqsOfSimVar,2,0) {(void*) boxptr_SimCodeUtil_getSimEqsOfSimVar,0}};
+#define boxvar_SimCodeUtil_getSimEqsOfSimVar MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimEqsOfSimVar)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getSimVarsInSimEq(threadData_t *threadData, modelica_integer _simEq, modelica_metatype _map, modelica_integer _opt);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getSimVarsInSimEq(threadData_t *threadData, modelica_metatype _simEq, modelica_metatype _map, modelica_metatype _opt);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimVarsInSimEq,2,0) {(void*) boxptr_SimCodeUtil_getSimVarsInSimEq,0}};
+#define boxvar_SimCodeUtil_getSimVarsInSimEq MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimVarsInSimEq)
+
+
+#define boxptr_SimCodeUtil_setEqMapping omc_SimCodeUtil_setEqMapping
+
+
+#define boxptr_SimCodeUtil_makeVarMapTuple omc_SimCodeUtil_makeVarMapTuple
+
+
+#define boxptr_SimCodeUtil_setBackendVarMapping omc_SimCodeUtil_setBackendVarMapping
+
+
+#define boxptr_SimCodeUtil_appendAdjacencyMatrices omc_SimCodeUtil_appendAdjacencyMatrices
+
+
+#define boxptr_SimCodeUtil_setUpBackendMapping omc_SimCodeUtil_setUpBackendMapping
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_equationIndexEqual(threadData_t *threadData, modelica_metatype _eq1, modelica_metatype _eq2);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_equationIndexEqual(threadData_t *threadData, modelica_metatype _eq1, modelica_metatype _eq2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_equationIndexEqual,2,0) {(void*) boxptr_SimCodeUtil_equationIndexEqual,0}};
+#define boxvar_SimCodeUtil_equationIndexEqual MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_equationIndexEqual)
+
+
+#define boxptr_SimCodeUtil_getEnumerationTypesHelper omc_SimCodeUtil_getEnumerationTypesHelper
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getEnumerationTypes(threadData_t *threadData, modelica_metatype _inVars);
+#define boxptr_SimCodeUtil_getEnumerationTypes omc_SimCodeUtil_getEnumerationTypes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getEnumerationTypes,2,0) {(void*) boxptr_SimCodeUtil_getEnumerationTypes,0}};
+#define boxvar_SimCodeUtil_getEnumerationTypes MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getEnumerationTypes)
+
+
+#define boxptr_SimCodeUtil_createAllSCVarMapping1 omc_SimCodeUtil_createAllSCVarMapping1
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createIdxSCVarMapping(threadData_t *threadData, modelica_metatype _simVars);
+#define boxptr_SimCodeUtil_createIdxSCVarMapping omc_SimCodeUtil_createIdxSCVarMapping
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createIdxSCVarMapping,2,0) {(void*) boxptr_SimCodeUtil_createIdxSCVarMapping,0}};
+#define boxvar_SimCodeUtil_createIdxSCVarMapping MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createIdxSCVarMapping)
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_isVarIndexListConsecutive(threadData_t *threadData, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarName);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_isVarIndexListConsecutive(threadData_t *threadData, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarName);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_isVarIndexListConsecutive,2,0) {(void*) boxptr_SimCodeUtil_isVarIndexListConsecutive,0}};
+#define boxvar_SimCodeUtil_isVarIndexListConsecutive MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_isVarIndexListConsecutive)
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_providesDirectionalDerivative(threadData_t *threadData, modelica_metatype _inSimCode);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_providesDirectionalDerivative(threadData_t *threadData, modelica_metatype _inSimCode);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_providesDirectionalDerivative,2,0) {(void*) boxptr_SimCodeUtil_providesDirectionalDerivative,0}};
+#define boxvar_SimCodeUtil_providesDirectionalDerivative MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_providesDirectionalDerivative)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getVarIndexByMapping(threadData_t *threadData, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarName, modelica_boolean _iColumnMajor, modelica_string _iIndexForUndefinedReferences);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getVarIndexByMapping(threadData_t *threadData, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarName, modelica_metatype _iColumnMajor, modelica_metatype _iIndexForUndefinedReferences);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVarIndexByMapping,2,0) {(void*) boxptr_SimCodeUtil_getVarIndexByMapping,0}};
+#define boxvar_SimCodeUtil_getVarIndexByMapping MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVarIndexByMapping)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getVarIndexListByMapping(threadData_t *threadData, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarName, modelica_boolean _iColumnMajor, modelica_string _iIndexForUndefinedReferences);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getVarIndexListByMapping(threadData_t *threadData, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarName, modelica_metatype _iColumnMajor, modelica_metatype _iIndexForUndefinedReferences);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVarIndexListByMapping,2,0) {(void*) boxptr_SimCodeUtil_getVarIndexListByMapping,0}};
+#define boxvar_SimCodeUtil_getVarIndexListByMapping MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVarIndexListByMapping)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_addVarToArrayIndexMapping(threadData_t *threadData, modelica_metatype _iVar, modelica_integer _iVarType, modelica_metatype __omcQ_24in_5FcurrentVarIndices, modelica_metatype __omcQ_24in_5FvarToArrayIndexMapping, modelica_metatype __omcQ_24in_5FvarToIndexMapping, modelica_metatype *out_varToArrayIndexMapping, modelica_metatype *out_varToIndexMapping);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_addVarToArrayIndexMapping(threadData_t *threadData, modelica_metatype _iVar, modelica_metatype _iVarType, modelica_metatype __omcQ_24in_5FcurrentVarIndices, modelica_metatype __omcQ_24in_5FvarToArrayIndexMapping, modelica_metatype __omcQ_24in_5FvarToIndexMapping, modelica_metatype *out_varToArrayIndexMapping, modelica_metatype *out_varToIndexMapping);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_addVarToArrayIndexMapping,2,0) {(void*) boxptr_SimCodeUtil_addVarToArrayIndexMapping,0}};
+#define boxvar_SimCodeUtil_addVarToArrayIndexMapping MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_addVarToArrayIndexMapping)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_addVarToArrayIndexMappings(threadData_t *threadData, modelica_metatype _vars, modelica_integer _iVarType, modelica_metatype __omcQ_24in_5FcurrentVarIndices, modelica_metatype __omcQ_24in_5FvarToArrayIndexMapping, modelica_metatype __omcQ_24in_5FvarToIndexMapping, modelica_metatype *out_varToArrayIndexMapping, modelica_metatype *out_varToIndexMapping);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_addVarToArrayIndexMappings(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _iVarType, modelica_metatype __omcQ_24in_5FcurrentVarIndices, modelica_metatype __omcQ_24in_5FvarToArrayIndexMapping, modelica_metatype __omcQ_24in_5FvarToIndexMapping, modelica_metatype *out_varToArrayIndexMapping, modelica_metatype *out_varToIndexMapping);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_addVarToArrayIndexMappings,2,0) {(void*) boxptr_SimCodeUtil_addVarToArrayIndexMappings,0}};
+#define boxvar_SimCodeUtil_addVarToArrayIndexMappings MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_addVarToArrayIndexMappings)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createVarToArrayIndexMapping(threadData_t *threadData, modelica_metatype _iModelInfo, modelica_metatype *out_oVarToIndexMapping);
+#define boxptr_SimCodeUtil_createVarToArrayIndexMapping omc_SimCodeUtil_createVarToArrayIndexMapping
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createVarToArrayIndexMapping,2,0) {(void*) boxptr_SimCodeUtil_createVarToArrayIndexMapping,0}};
+#define boxvar_SimCodeUtil_createVarToArrayIndexMapping MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createVarToArrayIndexMapping)
+
+
+#define boxptr_SimCodeUtil_getHideResult omc_SimCodeUtil_getHideResult
+
+
+#define boxptr_SimCodeUtil_eqSystemWCET omc_SimCodeUtil_eqSystemWCET
+
+
+#define boxptr_SimCodeUtil_setSimCodeLiterals omc_SimCodeUtil_setSimCodeLiterals
+
+
+#define boxptr_SimCodeUtil_traverseExpsEqSystem omc_SimCodeUtil_traverseExpsEqSystem
+
+
+#define boxptr_SimCodeUtil_traverseExpsEqSystems omc_SimCodeUtil_traverseExpsEqSystems
+
+
+#define boxptr_SimCodeUtil_traverseExpsEqSystemsList omc_SimCodeUtil_traverseExpsEqSystemsList
+
+
+#define boxptr_SimCodeUtil_traverseExpsSubPartition omc_SimCodeUtil_traverseExpsSubPartition
+
+
+#define boxptr_SimCodeUtil_traverseExpsPartition omc_SimCodeUtil_traverseExpsPartition
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_traverseExpsSimCode(threadData_t *threadData, modelica_metatype _simCode, modelica_fnptr _func, modelica_metatype _ia, modelica_metatype *out_oa);
+#define boxptr_SimCodeUtil_traverseExpsSimCode omc_SimCodeUtil_traverseExpsSimCode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_traverseExpsSimCode,2,0) {(void*) boxptr_SimCodeUtil_traverseExpsSimCode,0}};
+#define boxvar_SimCodeUtil_traverseExpsSimCode MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_traverseExpsSimCode)
+
+
+#define boxptr_SimCodeUtil_calcPriority omc_SimCodeUtil_calcPriority
+
+
+#define boxptr_SimCodeUtil_makeEqualLengthLists2 omc_SimCodeUtil_makeEqualLengthLists2
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_fileName2fileIndex(threadData_t *threadData, modelica_string _inFileName, modelica_metatype _inFiles);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_fileName2fileIndex(threadData_t *threadData, modelica_metatype _inFileName, modelica_metatype _inFiles);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_fileName2fileIndex,2,0) {(void*) boxptr_SimCodeUtil_fileName2fileIndex,0}};
+#define boxvar_SimCodeUtil_fileName2fileIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_fileName2fileIndex)
+
+
+#define boxptr_SimCodeUtil_getFilesFromAbsynInfo omc_SimCodeUtil_getFilesFromAbsynInfo
+
+
+#define boxptr_SimCodeUtil_getFilesFromDAEElementSource omc_SimCodeUtil_getFilesFromDAEElementSource
+
+
+#define boxptr_SimCodeUtil_collectAllFiles omc_SimCodeUtil_collectAllFiles
+
+
+#define boxptr_SimCodeUtil_getFilesFromJacobianMatrix omc_SimCodeUtil_getFilesFromJacobianMatrix
+
+
+#define boxptr_SimCodeUtil_getFilesFromJacobianMatrices omc_SimCodeUtil_getFilesFromJacobianMatrices
+
+
+#define boxptr_SimCodeUtil_getFilesFromExtObjInfo omc_SimCodeUtil_getFilesFromExtObjInfo
+
+
+#define boxptr_SimCodeUtil_getFilesFromWhenOperators omc_SimCodeUtil_getFilesFromWhenOperators
+
+
+#define boxptr_SimCodeUtil_getFilesFromStatements omc_SimCodeUtil_getFilesFromStatements
+
+
+#define boxptr_SimCodeUtil_getFilesFromStatementsElseWhen omc_SimCodeUtil_getFilesFromStatementsElseWhen
+
+
+#define boxptr_SimCodeUtil_getFilesFromStatementsElse omc_SimCodeUtil_getFilesFromStatementsElse
+
+
+#define boxptr_SimCodeUtil_getFilesFromSimEqSystems omc_SimCodeUtil_getFilesFromSimEqSystems
+
+
+#define boxptr_SimCodeUtil_getFilesFromSimEqSystem omc_SimCodeUtil_getFilesFromSimEqSystem
+
+
+#define boxptr_SimCodeUtil_getFilesFromSimEqSystemOpt omc_SimCodeUtil_getFilesFromSimEqSystemOpt
+
+
+#define boxptr_SimCodeUtil_getFilesFromFunctions omc_SimCodeUtil_getFilesFromFunctions
+
+
+#define boxptr_SimCodeUtil_getFilesFromSimVars omc_SimCodeUtil_getFilesFromSimVars
+
+
+#define boxptr_SimCodeUtil_getFilesFromSimVar omc_SimCodeUtil_getFilesFromSimVar
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_countDynamicExternalFunctions(threadData_t *threadData, modelica_metatype _inFncLst);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_countDynamicExternalFunctions(threadData_t *threadData, modelica_metatype _inFncLst);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_countDynamicExternalFunctions,2,0) {(void*) boxptr_SimCodeUtil_countDynamicExternalFunctions,0}};
+#define boxvar_SimCodeUtil_countDynamicExternalFunctions MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_countDynamicExternalFunctions)
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_compareSimVarTupleIndexGt(threadData_t *threadData, modelica_metatype _var1, modelica_metatype _var2);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_compareSimVarTupleIndexGt(threadData_t *threadData, modelica_metatype _var1, modelica_metatype _var2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_compareSimVarTupleIndexGt,2,0) {(void*) boxptr_SimCodeUtil_compareSimVarTupleIndexGt,0}};
+#define boxvar_SimCodeUtil_compareSimVarTupleIndexGt MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_compareSimVarTupleIndexGt)
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_compareVarIndexGt(threadData_t *threadData, modelica_metatype _var1, modelica_metatype _var2);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_compareVarIndexGt(threadData_t *threadData, modelica_metatype _var1, modelica_metatype _var2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_compareVarIndexGt,2,0) {(void*) boxptr_SimCodeUtil_compareVarIndexGt,0}};
+#define boxvar_SimCodeUtil_compareVarIndexGt MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_compareVarIndexGt)
+
+
+#define boxptr_SimCodeUtil_setFirstOrderInSecondOrderVarIndex omc_SimCodeUtil_setFirstOrderInSecondOrderVarIndex
+
+
+#define boxptr_SimCodeUtil_locateDerAndSerachOtherSide omc_SimCodeUtil_locateDerAndSerachOtherSide
+
+
+#define boxptr_SimCodeUtil_makeCallDerExp omc_SimCodeUtil_makeCallDerExp
+
+
+#define boxptr_SimCodeUtil_flattenEqns omc_SimCodeUtil_flattenEqns
+
+
+#define boxptr_SimCodeUtil_setVariableDerIndex2 omc_SimCodeUtil_setVariableDerIndex2
+
+
+#define boxptr_SimCodeUtil_setVariableDerIndex omc_SimCodeUtil_setVariableDerIndex
+
+
+#define boxptr_SimCodeUtil_adjustStatesForInlineSolver omc_SimCodeUtil_adjustStatesForInlineSolver
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_simEqSystemIndex(threadData_t *threadData, modelica_metatype _eq);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_simEqSystemIndex(threadData_t *threadData, modelica_metatype _eq);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_simEqSystemIndex,2,0) {(void*) boxptr_SimCodeUtil_simEqSystemIndex,0}};
+#define boxvar_SimCodeUtil_simEqSystemIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_simEqSystemIndex)
+
+
+DLLDirection
 modelica_metatype omc_SimCodeUtil_eqInfo(threadData_t *threadData, modelica_metatype _eq);
 #define boxptr_SimCodeUtil_eqInfo omc_SimCodeUtil_eqInfo
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_eqInfo,2,0) {(void*) boxptr_SimCodeUtil_eqInfo,0}};
 #define boxvar_SimCodeUtil_eqInfo MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_eqInfo)
-DLLExport
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_functionPath(threadData_t *threadData, modelica_metatype _fn);
+#define boxptr_SimCodeUtil_functionPath omc_SimCodeUtil_functionPath
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_functionPath,2,0) {(void*) boxptr_SimCodeUtil_functionPath,0}};
+#define boxvar_SimCodeUtil_functionPath MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_functionPath)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_functionInfo(threadData_t *threadData, modelica_metatype _fn);
+#define boxptr_SimCodeUtil_functionInfo omc_SimCodeUtil_functionInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_functionInfo,2,0) {(void*) boxptr_SimCodeUtil_functionInfo,0}};
+#define boxvar_SimCodeUtil_functionInfo MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_functionInfo)
+
+
+#define boxptr_SimCodeUtil_getNominalValue omc_SimCodeUtil_getNominalValue
+
+
+#define boxptr_SimCodeUtil_getStartValue omc_SimCodeUtil_getStartValue
+
+
+#define boxptr_SimCodeUtil_getMinMaxValues omc_SimCodeUtil_getMinMaxValues
+
+
+#define boxptr_SimCodeUtil_extractVarUnitStr omc_SimCodeUtil_extractVarUnitStr
+
+
+#define boxptr_SimCodeUtil_extractVarUnit omc_SimCodeUtil_extractVarUnit
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getMatchingExpsList(threadData_t *threadData, modelica_metatype _inExps, modelica_fnptr _inFn);
+#define boxptr_SimCodeUtil_getMatchingExpsList omc_SimCodeUtil_getMatchingExpsList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getMatchingExpsList,2,0) {(void*) boxptr_SimCodeUtil_getMatchingExpsList,0}};
+#define boxvar_SimCodeUtil_getMatchingExpsList MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getMatchingExpsList)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_traversingdlowvarToSimvar(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fvar, modelica_metatype _inTpl, modelica_metatype *out_outTpl);
+#define boxptr_SimCodeUtil_traversingdlowvarToSimvar omc_SimCodeUtil_traversingdlowvarToSimvar
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_traversingdlowvarToSimvar,2,0) {(void*) boxptr_SimCodeUtil_traversingdlowvarToSimvar,0}};
+#define boxvar_SimCodeUtil_traversingdlowvarToSimvar MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_traversingdlowvarToSimvar)
+
+
+#define boxptr_SimCodeUtil_traversingdlowvarToSimvarFold omc_SimCodeUtil_traversingdlowvarToSimvarFold
+
+
+#define boxptr_SimCodeUtil_updateStartValue omc_SimCodeUtil_updateStartValue
+
+
+#define boxptr_SimCodeUtil_startValueIsConstOrDefault omc_SimCodeUtil_startValueIsConstOrDefault
+
+
+#define boxptr_SimCodeUtil_setDefaultStartValue omc_SimCodeUtil_setDefaultStartValue
+
+
+#define boxptr_SimCodeUtil_getVariabilityAttribute omc_SimCodeUtil_getVariabilityAttribute
+
+
+#define boxptr_SimCodeUtil_dlowvarToSimvar omc_SimCodeUtil_dlowvarToSimvar
+
+
+#define boxptr_SimCodeUtil_unparseCommentOptionNoAnnotationNoQuote omc_SimCodeUtil_unparseCommentOptionNoAnnotationNoQuote
+
+
+#define boxptr_SimCodeUtil_getAliasVar1 omc_SimCodeUtil_getAliasVar1
+
+
+#define boxptr_SimCodeUtil_getAliasVar omc_SimCodeUtil_getAliasVar
+
+
+#define boxptr_SimCodeUtil_getArraySimVars omc_SimCodeUtil_getArraySimVars
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createCrefToSimVarHT(threadData_t *threadData, modelica_metatype _modelInfo);
+#define boxptr_SimCodeUtil_createCrefToSimVarHT omc_SimCodeUtil_createCrefToSimVarHT
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createCrefToSimVarHT,2,0) {(void*) boxptr_SimCodeUtil_createCrefToSimVarHT,0}};
+#define boxvar_SimCodeUtil_createCrefToSimVarHT MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createCrefToSimVarHT)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_transformUnitToBaseUnit(threadData_t *threadData, modelica_metatype _unit);
+#define boxptr_SimCodeUtil_transformUnitToBaseUnit omc_SimCodeUtil_transformUnitToBaseUnit
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_transformUnitToBaseUnit,2,0) {(void*) boxptr_SimCodeUtil_transformUnitToBaseUnit,0}};
+#define boxvar_SimCodeUtil_transformUnitToBaseUnit MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_transformUnitToBaseUnit)
+
+
+#define boxptr_SimCodeUtil_getFmiUnitDefinitionsHelper omc_SimCodeUtil_getFmiUnitDefinitionsHelper
+
+
+#define boxptr_SimCodeUtil_getFmiUnitDefinitions omc_SimCodeUtil_getFmiUnitDefinitions
+
+
+#define boxptr_SimCodeUtil_setVariableIndexHelper2 omc_SimCodeUtil_setVariableIndexHelper2
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_setVariableIndexHelper(threadData_t *threadData, modelica_metatype _inVars, modelica_integer _inIndex, modelica_integer _inFMIIndex, modelica_integer *out_outIndex, modelica_integer *out_outFMIIndex);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_setVariableIndexHelper(threadData_t *threadData, modelica_metatype _inVars, modelica_metatype _inIndex, modelica_metatype _inFMIIndex, modelica_metatype *out_outIndex, modelica_metatype *out_outFMIIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_setVariableIndexHelper,2,0) {(void*) boxptr_SimCodeUtil_setVariableIndexHelper,0}};
+#define boxvar_SimCodeUtil_setVariableIndexHelper MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_setVariableIndexHelper)
+
+
+#define boxptr_SimCodeUtil_setVariableIndex omc_SimCodeUtil_setVariableIndex
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_rewriteIndex(threadData_t *threadData, modelica_metatype _inVars, modelica_integer __omcQ_24in_5Findex, modelica_integer *out_index);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_rewriteIndex(threadData_t *threadData, modelica_metatype _inVars, modelica_metatype __omcQ_24in_5Findex, modelica_metatype *out_index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_rewriteIndex,2,0) {(void*) boxptr_SimCodeUtil_rewriteIndex,0}};
+#define boxvar_SimCodeUtil_rewriteIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_rewriteIndex)
+
+
+#define boxptr_SimCodeUtil_fixIndex omc_SimCodeUtil_fixIndex
+
+
+#define boxptr_SimCodeUtil_collectArrayFirstVars omc_SimCodeUtil_collectArrayFirstVars
+
+
+#define boxptr_SimCodeUtil_addSimVarArrayCref omc_SimCodeUtil_addSimVarArrayCref
+
+
+#define boxptr_SimCodeUtil_setArrayElementnoFirst omc_SimCodeUtil_setArrayElementnoFirst
+
+
+#define boxptr_SimCodeUtil_extendIncompleteArray omc_SimCodeUtil_extendIncompleteArray
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_simVarCompareByCrefSubsAtEndlLexical(threadData_t *threadData, modelica_metatype _var1, modelica_metatype _var2);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_simVarCompareByCrefSubsAtEndlLexical(threadData_t *threadData, modelica_metatype _var1, modelica_metatype _var2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_simVarCompareByCrefSubsAtEndlLexical,2,0) {(void*) boxptr_SimCodeUtil_simVarCompareByCrefSubsAtEndlLexical,0}};
+#define boxvar_SimCodeUtil_simVarCompareByCrefSubsAtEndlLexical MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_simVarCompareByCrefSubsAtEndlLexical)
+
+
+#define boxptr_SimCodeUtil_sortSimvars omc_SimCodeUtil_sortSimvars
+
+
+DLLDirection
+void omc_SimCodeUtil_dumpSimCodeDebug(threadData_t *threadData, modelica_metatype _simCode);
+#define boxptr_SimCodeUtil_dumpSimCodeDebug omc_SimCodeUtil_dumpSimCodeDebug
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpSimCodeDebug,2,0) {(void*) boxptr_SimCodeUtil_dumpSimCodeDebug,0}};
+#define boxvar_SimCodeUtil_dumpSimCodeDebug MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpSimCodeDebug)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_dumpSimCodeDAEmodeDataString(threadData_t *threadData, modelica_metatype _inDaeModedata);
+#define boxptr_SimCodeUtil_dumpSimCodeDAEmodeDataString omc_SimCodeUtil_dumpSimCodeDAEmodeDataString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpSimCodeDAEmodeDataString,2,0) {(void*) boxptr_SimCodeUtil_dumpSimCodeDAEmodeDataString,0}};
+#define boxvar_SimCodeUtil_dumpSimCodeDAEmodeDataString MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpSimCodeDAEmodeDataString)
+
+
+#define boxptr_SimCodeUtil_subPartitionString omc_SimCodeUtil_subPartitionString
+
+
+#define boxptr_SimCodeUtil_dumpClockPartition omc_SimCodeUtil_dumpClockPartition
+
+
+#define boxptr_SimCodeUtil_extObjInfoString omc_SimCodeUtil_extObjInfoString
+
+
+#define boxptr_SimCodeUtil_dumpJacobianMatrix omc_SimCodeUtil_dumpJacobianMatrix
+
+
+#define boxptr_SimCodeUtil_dumpJacobianMatrixLst omc_SimCodeUtil_dumpJacobianMatrixLst
+
+
+#define boxptr_SimCodeUtil_dumpWhenOps omc_SimCodeUtil_dumpWhenOps
+
+
+#define boxptr_SimCodeUtil_dumpSimJac omc_SimCodeUtil_dumpSimJac
+
+
+DLLDirection
+void omc_SimCodeUtil_dumpSimEqSystem(threadData_t *threadData, modelica_metatype _eqSysIn);
+#define boxptr_SimCodeUtil_dumpSimEqSystem omc_SimCodeUtil_dumpSimEqSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpSimEqSystem,2,0) {(void*) boxptr_SimCodeUtil_dumpSimEqSystem,0}};
+#define boxvar_SimCodeUtil_dumpSimEqSystem MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpSimEqSystem)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_simEqSystemString(threadData_t *threadData, modelica_metatype _eqSysIn);
+#define boxptr_SimCodeUtil_simEqSystemString omc_SimCodeUtil_simEqSystemString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_simEqSystemString,2,0) {(void*) boxptr_SimCodeUtil_simEqSystemString,0}};
+#define boxvar_SimCodeUtil_simEqSystemString MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_simEqSystemString)
+
+
+DLLDirection
+void omc_SimCodeUtil_dumpSimEqSystemLst(threadData_t *threadData, modelica_metatype _eqSysLstIn, modelica_string _delimiter);
+#define boxptr_SimCodeUtil_dumpSimEqSystemLst omc_SimCodeUtil_dumpSimEqSystemLst
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpSimEqSystemLst,2,0) {(void*) boxptr_SimCodeUtil_dumpSimEqSystemLst,0}};
+#define boxvar_SimCodeUtil_dumpSimEqSystemLst MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpSimEqSystemLst)
+
+
+#define boxptr_SimCodeUtil_dumpFunctions omc_SimCodeUtil_dumpFunctions
+
+
+DLLDirection
+void omc_SimCodeUtil_dumpModelInfo(threadData_t *threadData, modelica_metatype _modelInfo);
+#define boxptr_SimCodeUtil_dumpModelInfo omc_SimCodeUtil_dumpModelInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpModelInfo,2,0) {(void*) boxptr_SimCodeUtil_dumpModelInfo,0}};
+#define boxvar_SimCodeUtil_dumpModelInfo MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpModelInfo)
+
+
+#define boxptr_SimCodeUtil_dumpVariablesString omc_SimCodeUtil_dumpVariablesString
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_printVarLstCrefs(threadData_t *threadData, modelica_metatype _inVars);
+#define boxptr_SimCodeUtil_printVarLstCrefs omc_SimCodeUtil_printVarLstCrefs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_printVarLstCrefs,2,0) {(void*) boxptr_SimCodeUtil_printVarLstCrefs,0}};
+#define boxvar_SimCodeUtil_printVarLstCrefs MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_printVarLstCrefs)
+
+
+DLLDirection
+void omc_SimCodeUtil_dumpVarLst(threadData_t *threadData, modelica_metatype _varLst, modelica_string _header);
+#define boxptr_SimCodeUtil_dumpVarLst omc_SimCodeUtil_dumpVarLst
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpVarLst,2,0) {(void*) boxptr_SimCodeUtil_dumpVarLst,0}};
+#define boxvar_SimCodeUtil_dumpVarLst MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_dumpVarLst)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_simVarString(threadData_t *threadData, modelica_metatype _inVar);
+#define boxptr_SimCodeUtil_simVarString omc_SimCodeUtil_simVarString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_simVarString,2,0) {(void*) boxptr_SimCodeUtil_simVarString,0}};
+#define boxvar_SimCodeUtil_simVarString MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_simVarString)
+
+
+#define boxptr_SimCodeUtil_derVarFromStateVar omc_SimCodeUtil_derVarFromStateVar
+
+
+#define boxptr_SimCodeUtil_extractVarFromVar2 omc_SimCodeUtil_extractVarFromVar2
+
+
+#define boxptr_SimCodeUtil_getExportVar omc_SimCodeUtil_getExportVar
+
+
+#define boxptr_SimCodeUtil_extractVarFromVar omc_SimCodeUtil_extractVarFromVar
+
+
+#define boxptr_SimCodeUtil_simBranchString_simBranchBodyString omc_SimCodeUtil_simBranchString_simBranchBodyString
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_simBranchString(threadData_t *threadData, modelica_metatype _branch);
+#define boxptr_SimCodeUtil_simBranchString omc_SimCodeUtil_simBranchString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_simBranchString,2,0) {(void*) boxptr_SimCodeUtil_simBranchString,0}};
+#define boxvar_SimCodeUtil_simBranchString MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_simBranchString)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_simGenericCallString(threadData_t *threadData, modelica_metatype _call);
+#define boxptr_SimCodeUtil_simGenericCallString omc_SimCodeUtil_simGenericCallString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_simGenericCallString,2,0) {(void*) boxptr_SimCodeUtil_simGenericCallString,0}};
+#define boxvar_SimCodeUtil_simGenericCallString MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_simGenericCallString)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getFmiInitialAttributeStr(threadData_t *threadData, modelica_metatype _simVar);
+#define boxptr_SimCodeUtil_getFmiInitialAttributeStr omc_SimCodeUtil_getFmiInitialAttributeStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFmiInitialAttributeStr,2,0) {(void*) boxptr_SimCodeUtil_getFmiInitialAttributeStr,0}};
+#define boxvar_SimCodeUtil_getFmiInitialAttributeStr MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFmiInitialAttributeStr)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getDefaultFmiInitialAttribute(threadData_t *threadData, modelica_metatype _variability, modelica_metatype _causality);
+#define boxptr_SimCodeUtil_getDefaultFmiInitialAttribute omc_SimCodeUtil_getDefaultFmiInitialAttribute
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getDefaultFmiInitialAttribute,2,0) {(void*) boxptr_SimCodeUtil_getDefaultFmiInitialAttribute,0}};
+#define boxvar_SimCodeUtil_getDefaultFmiInitialAttribute MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getDefaultFmiInitialAttribute)
+
+
+#define boxptr_SimCodeUtil_extractVarsFromList omc_SimCodeUtil_extractVarsFromList
+
+
+#define boxptr_SimCodeUtil_createVars omc_SimCodeUtil_createVars
+
+
+#define boxptr_SimCodeUtil_setVarKindForStates omc_SimCodeUtil_setVarKindForStates
+
+
+#define boxptr_SimCodeUtil_replaceCrefWithStartValue omc_SimCodeUtil_replaceCrefWithStartValue
+
+
+#define boxptr_SimCodeUtil_preCalculateStartValues1 omc_SimCodeUtil_preCalculateStartValues1
+
+
+#define boxptr_SimCodeUtil_preCalculateStartValues omc_SimCodeUtil_preCalculateStartValues
+
+
+#define boxptr_SimCodeUtil_evaluateVariableAttributes omc_SimCodeUtil_evaluateVariableAttributes
+
+
+#define boxptr_SimCodeUtil_evaluateStartValues omc_SimCodeUtil_evaluateStartValues
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createModelInfo(threadData_t *threadData, modelica_metatype _class_, modelica_metatype _program, modelica_metatype _dlow, modelica_metatype _inInitDAE, modelica_metatype _functions, modelica_metatype _labels, modelica_integer _numStateSets, modelica_integer _numSpatialDistributions, modelica_string _fileDir, modelica_integer _nSubClock, modelica_metatype _tempVars);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createModelInfo(threadData_t *threadData, modelica_metatype _class_, modelica_metatype _program, modelica_metatype _dlow, modelica_metatype _inInitDAE, modelica_metatype _functions, modelica_metatype _labels, modelica_metatype _numStateSets, modelica_metatype _numSpatialDistributions, modelica_metatype _fileDir, modelica_metatype _nSubClock, modelica_metatype _tempVars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createModelInfo,2,0) {(void*) boxptr_SimCodeUtil_createModelInfo,0}};
+#define boxvar_SimCodeUtil_createModelInfo MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createModelInfo)
+
+
+#define boxptr_SimCodeUtil_createVarAsserts omc_SimCodeUtil_createVarAsserts
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createInitialAssignmentsFromMax(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _inTpl, modelica_metatype *out_outTpl);
+#define boxptr_SimCodeUtil_createInitialAssignmentsFromMax omc_SimCodeUtil_createInitialAssignmentsFromMax
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createInitialAssignmentsFromMax,2,0) {(void*) boxptr_SimCodeUtil_createInitialAssignmentsFromMax,0}};
+#define boxvar_SimCodeUtil_createInitialAssignmentsFromMax MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createInitialAssignmentsFromMax)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createInitialAssignmentsFromMin(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _inTpl, modelica_metatype *out_outTpl);
+#define boxptr_SimCodeUtil_createInitialAssignmentsFromMin omc_SimCodeUtil_createInitialAssignmentsFromMin
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createInitialAssignmentsFromMin,2,0) {(void*) boxptr_SimCodeUtil_createInitialAssignmentsFromMin,0}};
+#define boxvar_SimCodeUtil_createInitialAssignmentsFromMin MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createInitialAssignmentsFromMin)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createInitialAssignmentsFromNominal(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _inTpl, modelica_metatype *out_outTpl);
+#define boxptr_SimCodeUtil_createInitialAssignmentsFromNominal omc_SimCodeUtil_createInitialAssignmentsFromNominal
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createInitialAssignmentsFromNominal,2,0) {(void*) boxptr_SimCodeUtil_createInitialAssignmentsFromNominal,0}};
+#define boxvar_SimCodeUtil_createInitialAssignmentsFromNominal MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createInitialAssignmentsFromNominal)
+
+
+#define boxptr_SimCodeUtil_createInitialAssignmentsFromStart omc_SimCodeUtil_createInitialAssignmentsFromStart
+
+
+#define boxptr_SimCodeUtil_createSimEqsForGlobalKnownVars omc_SimCodeUtil_createSimEqsForGlobalKnownVars
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_createParameterEquations(threadData_t *threadData, modelica_integer _inUniqueEqIndex, modelica_metatype _acc, modelica_metatype _globalKnownVars, modelica_metatype *out_outParameterEquations, modelica_integer *out_nFixedParameters);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createParameterEquations(threadData_t *threadData, modelica_metatype _inUniqueEqIndex, modelica_metatype _acc, modelica_metatype _globalKnownVars, modelica_metatype *out_outParameterEquations, modelica_metatype *out_nFixedParameters);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createParameterEquations,2,0) {(void*) boxptr_SimCodeUtil_createParameterEquations,0}};
+#define boxvar_SimCodeUtil_createParameterEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createParameterEquations)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createMaxValueEquations(threadData_t *threadData, modelica_metatype _syst, modelica_metatype _shared, modelica_metatype _acc);
+#define boxptr_SimCodeUtil_createMaxValueEquations omc_SimCodeUtil_createMaxValueEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createMaxValueEquations,2,0) {(void*) boxptr_SimCodeUtil_createMaxValueEquations,0}};
+#define boxvar_SimCodeUtil_createMaxValueEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createMaxValueEquations)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createMinValueEquations(threadData_t *threadData, modelica_metatype _syst, modelica_metatype _shared, modelica_metatype _acc);
+#define boxptr_SimCodeUtil_createMinValueEquations omc_SimCodeUtil_createMinValueEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createMinValueEquations,2,0) {(void*) boxptr_SimCodeUtil_createMinValueEquations,0}};
+#define boxvar_SimCodeUtil_createMinValueEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createMinValueEquations)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createNominalValueEquations(threadData_t *threadData, modelica_metatype _syst, modelica_metatype _shared, modelica_metatype _acc);
+#define boxptr_SimCodeUtil_createNominalValueEquations omc_SimCodeUtil_createNominalValueEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createNominalValueEquations,2,0) {(void*) boxptr_SimCodeUtil_createNominalValueEquations,0}};
+#define boxvar_SimCodeUtil_createNominalValueEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createNominalValueEquations)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createValueEquationsShared(threadData_t *threadData, modelica_metatype _shared, modelica_fnptr _valueFunction, modelica_metatype _acc);
+#define boxptr_SimCodeUtil_createValueEquationsShared omc_SimCodeUtil_createValueEquationsShared
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createValueEquationsShared,2,0) {(void*) boxptr_SimCodeUtil_createValueEquationsShared,0}};
+#define boxvar_SimCodeUtil_createValueEquationsShared MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createValueEquationsShared)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createStartValueEquations(threadData_t *threadData, modelica_metatype _syst, modelica_metatype _shared, modelica_metatype _acc);
+#define boxptr_SimCodeUtil_createStartValueEquations omc_SimCodeUtil_createStartValueEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createStartValueEquations,2,0) {(void*) boxptr_SimCodeUtil_createStartValueEquations,0}};
+#define boxvar_SimCodeUtil_createStartValueEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createStartValueEquations)
+
+
+#define boxptr_SimCodeUtil_traverseAliasVarsToSimEqSystem omc_SimCodeUtil_traverseAliasVarsToSimEqSystem
+
+
+#define boxptr_SimCodeUtil_traverseKnVarsToSimEqSystem omc_SimCodeUtil_traverseKnVarsToSimEqSystem
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createInitialEquations__lambda0(threadData_t *threadData, modelica_metatype _inInitDAE, modelica_integer _iuniqueEqIndex, modelica_metatype _itempvars, modelica_integer *out_ouniqueEqIndex, modelica_metatype *out_otempvars);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createInitialEquations__lambda0(threadData_t *threadData, modelica_metatype _inInitDAE, modelica_metatype _iuniqueEqIndex, modelica_metatype _itempvars, modelica_metatype *out_ouniqueEqIndex, modelica_metatype *out_otempvars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createInitialEquations__lambda0,2,0) {(void*) boxptr_SimCodeUtil_createInitialEquations__lambda0,0}};
+#define boxvar_SimCodeUtil_createInitialEquations__lambda0 MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createInitialEquations__lambda0)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createInitialEquations(threadData_t *threadData, modelica_metatype _inInitDAE, modelica_integer _iuniqueEqIndex, modelica_metatype _itempvars, modelica_integer *out_ouniqueEqIndex, modelica_metatype *out_otempvars);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createInitialEquations(threadData_t *threadData, modelica_metatype _inInitDAE, modelica_metatype _iuniqueEqIndex, modelica_metatype _itempvars, modelica_metatype *out_ouniqueEqIndex, modelica_metatype *out_otempvars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createInitialEquations,2,0) {(void*) boxptr_SimCodeUtil_createInitialEquations,0}};
+#define boxvar_SimCodeUtil_createInitialEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createInitialEquations)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createEquationsfromList(threadData_t *threadData, modelica_metatype _inEquations, modelica_metatype _inVars, modelica_integer _iuniqueEqIndex, modelica_metatype _itempvars, modelica_metatype _iextra, modelica_boolean _genDiscrete, modelica_boolean _includeWhen, modelica_boolean _skipDiscInZc, modelica_boolean _skipDiscInAlgorithm, modelica_integer *out_ouniqueEqIndex, modelica_metatype *out_otempvars);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createEquationsfromList(threadData_t *threadData, modelica_metatype _inEquations, modelica_metatype _inVars, modelica_metatype _iuniqueEqIndex, modelica_metatype _itempvars, modelica_metatype _iextra, modelica_metatype _genDiscrete, modelica_metatype _includeWhen, modelica_metatype _skipDiscInZc, modelica_metatype _skipDiscInAlgorithm, modelica_metatype *out_ouniqueEqIndex, modelica_metatype *out_otempvars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createEquationsfromList,2,0) {(void*) boxptr_SimCodeUtil_createEquationsfromList,0}};
+#define boxvar_SimCodeUtil_createEquationsfromList MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createEquationsfromList)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createEquationsfromBackendDAE(threadData_t *threadData, modelica_metatype _inBDAE, modelica_integer _iuniqueEqIndex, modelica_metatype _itempvars, modelica_boolean _genDiscrete, modelica_boolean _includeWhen, modelica_boolean _skipDiscInZc, modelica_boolean _skipDiscInAlgorithm, modelica_integer *out_uniqueEqIndex, modelica_metatype *out_tempvars);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createEquationsfromBackendDAE(threadData_t *threadData, modelica_metatype _inBDAE, modelica_metatype _iuniqueEqIndex, modelica_metatype _itempvars, modelica_metatype _genDiscrete, modelica_metatype _includeWhen, modelica_metatype _skipDiscInZc, modelica_metatype _skipDiscInAlgorithm, modelica_metatype *out_uniqueEqIndex, modelica_metatype *out_tempvars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createEquationsfromBackendDAE,2,0) {(void*) boxptr_SimCodeUtil_createEquationsfromBackendDAE,0}};
+#define boxvar_SimCodeUtil_createEquationsfromBackendDAE MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createEquationsfromBackendDAE)
+
+
+#define boxptr_SimCodeUtil_jacToSimjac omc_SimCodeUtil_jacToSimjac
+
+
+#define boxptr_SimCodeUtil_traversingisVarDiscreteCrefFinder omc_SimCodeUtil_traversingisVarDiscreteCrefFinder
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_extractDiscreteModelVars(threadData_t *threadData, modelica_metatype _syst, modelica_metatype _shared, modelica_metatype _acc);
+#define boxptr_SimCodeUtil_extractDiscreteModelVars omc_SimCodeUtil_extractDiscreteModelVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractDiscreteModelVars,2,0) {(void*) boxptr_SimCodeUtil_extractDiscreteModelVars,0}};
+#define boxvar_SimCodeUtil_extractDiscreteModelVars MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractDiscreteModelVars)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_traversedlowEqToSimEqSystem(threadData_t *threadData, modelica_metatype _inEq, modelica_metatype _inTpl, modelica_metatype *out_outTpl);
+#define boxptr_SimCodeUtil_traversedlowEqToSimEqSystem omc_SimCodeUtil_traversedlowEqToSimEqSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_traversedlowEqToSimEqSystem,2,0) {(void*) boxptr_SimCodeUtil_traversedlowEqToSimEqSystem,0}};
+#define boxvar_SimCodeUtil_traversedlowEqToSimEqSystem MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_traversedlowEqToSimEqSystem)
+
+
+#define boxptr_SimCodeUtil_createAlgorithmAndEquationAsserts omc_SimCodeUtil_createAlgorithmAndEquationAsserts
+
+
+#define boxptr_SimCodeUtil_extractExtObjInfo2 omc_SimCodeUtil_extractExtObjInfo2
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createExtObjInfo(threadData_t *threadData, modelica_metatype _shared);
+#define boxptr_SimCodeUtil_createExtObjInfo omc_SimCodeUtil_createExtObjInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createExtObjInfo,2,0) {(void*) boxptr_SimCodeUtil_createExtObjInfo,0}};
+#define boxvar_SimCodeUtil_createExtObjInfo MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createExtObjInfo)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_extractSpatialDistributionInfoExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5FcallExp, modelica_metatype __omcQ_24in_5FspatialInfo, modelica_metatype _maxIndex_ptr, modelica_metatype *out_spatialInfo);
+#define boxptr_SimCodeUtil_extractSpatialDistributionInfoExp omc_SimCodeUtil_extractSpatialDistributionInfoExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractSpatialDistributionInfoExp,2,0) {(void*) boxptr_SimCodeUtil_extractSpatialDistributionInfoExp,0}};
+#define boxvar_SimCodeUtil_extractSpatialDistributionInfoExp MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractSpatialDistributionInfoExp)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_extractSpatialDistributionInfo(threadData_t *threadData, modelica_metatype _dlow);
+#define boxptr_SimCodeUtil_extractSpatialDistributionInfo omc_SimCodeUtil_extractSpatialDistributionInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractSpatialDistributionInfo,2,0) {(void*) boxptr_SimCodeUtil_extractSpatialDistributionInfo,0}};
+#define boxvar_SimCodeUtil_extractSpatialDistributionInfo MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractSpatialDistributionInfo)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_extractIdAndExpFromDelayExp(threadData_t *threadData, modelica_metatype _delayCallExp);
+#define boxptr_SimCodeUtil_extractIdAndExpFromDelayExp omc_SimCodeUtil_extractIdAndExpFromDelayExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractIdAndExpFromDelayExp,2,0) {(void*) boxptr_SimCodeUtil_extractIdAndExpFromDelayExp,0}};
+#define boxvar_SimCodeUtil_extractIdAndExpFromDelayExp MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractIdAndExpFromDelayExp)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_extractJacobianDelayedExpressions(threadData_t *threadData, modelica_metatype __omcQ_24in_5FdelayedExps, modelica_integer __omcQ_24in_5FmaxDelayedExpIndex, modelica_metatype __omcQ_24in_5FSymJacs, modelica_integer *out_maxDelayedExpIndex, modelica_metatype *out_SymJacs);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_extractJacobianDelayedExpressions(threadData_t *threadData, modelica_metatype __omcQ_24in_5FdelayedExps, modelica_metatype __omcQ_24in_5FmaxDelayedExpIndex, modelica_metatype __omcQ_24in_5FSymJacs, modelica_metatype *out_maxDelayedExpIndex, modelica_metatype *out_SymJacs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractJacobianDelayedExpressions,2,0) {(void*) boxptr_SimCodeUtil_extractJacobianDelayedExpressions,0}};
+#define boxvar_SimCodeUtil_extractJacobianDelayedExpressions MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractJacobianDelayedExpressions)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_extractDelayedExpressions(threadData_t *threadData, modelica_metatype _dlow, modelica_integer *out_maxDelayedExpIndex);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_extractDelayedExpressions(threadData_t *threadData, modelica_metatype _dlow, modelica_metatype *out_maxDelayedExpIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractDelayedExpressions,2,0) {(void*) boxptr_SimCodeUtil_extractDelayedExpressions,0}};
+#define boxvar_SimCodeUtil_extractDelayedExpressions MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractDelayedExpressions)
+
+
+#define boxptr_SimCodeUtil_updateDelayExpressions omc_SimCodeUtil_updateDelayExpressions
+
+
+#define boxptr_SimCodeUtil_collectDelayExpressions omc_SimCodeUtil_collectDelayExpressions
+
+
+#define boxptr_SimCodeUtil_dumpSparsePattern omc_SimCodeUtil_dumpSparsePattern
+
+
+#define boxptr_SimCodeUtil_dumpSparsePatternInt omc_SimCodeUtil_dumpSparsePatternInt
+
+
+#define boxptr_SimCodeUtil_sortColoring omc_SimCodeUtil_sortColoring
+
+
+#define boxptr_SimCodeUtil_dumpSortedInitialUnknownCrefs omc_SimCodeUtil_dumpSortedInitialUnknownCrefs
+
+
+#define boxptr_SimCodeUtil_sortInitialUnknowsSimVars omc_SimCodeUtil_sortInitialUnknowsSimVars
+
+
+#define boxptr_SimCodeUtil_makeTmpRealSimCodeVar omc_SimCodeUtil_makeTmpRealSimCodeVar
+
+
+#define boxptr_SimCodeUtil_setSimVarMatrixName omc_SimCodeUtil_setSimVarMatrixName
+
+
+#define boxptr_SimCodeUtil_setSimVarKind omc_SimCodeUtil_setSimVarKind
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_collectAllSeedVars(threadData_t *threadData, modelica_metatype _inJacobianMatrices);
+#define boxptr_SimCodeUtil_collectAllSeedVars omc_SimCodeUtil_collectAllSeedVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_collectAllSeedVars,2,0) {(void*) boxptr_SimCodeUtil_collectAllSeedVars,0}};
+#define boxvar_SimCodeUtil_collectAllSeedVars MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_collectAllSeedVars)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_collectAllJacobianVars(threadData_t *threadData, modelica_metatype _inJacobianMatrix);
+#define boxptr_SimCodeUtil_collectAllJacobianVars omc_SimCodeUtil_collectAllJacobianVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_collectAllJacobianVars,2,0) {(void*) boxptr_SimCodeUtil_collectAllJacobianVars,0}};
+#define boxvar_SimCodeUtil_collectAllJacobianVars MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_collectAllJacobianVars)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_collectAllJacobianEquations(threadData_t *threadData, modelica_metatype _inJacobianMatrix);
+#define boxptr_SimCodeUtil_collectAllJacobianEquations omc_SimCodeUtil_collectAllJacobianEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_collectAllJacobianEquations,2,0) {(void*) boxptr_SimCodeUtil_collectAllJacobianEquations,0}};
+#define boxvar_SimCodeUtil_collectAllJacobianEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_collectAllJacobianEquations)
+
+
+#define boxptr_SimCodeUtil_sortBackVarWithSimVarsOrder omc_SimCodeUtil_sortBackVarWithSimVarsOrder
+
+
+#define boxptr_SimCodeUtil_replaceSeedVarsName omc_SimCodeUtil_replaceSeedVarsName
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getSimVars2Crefs(threadData_t *threadData, modelica_metatype _inCrefs, modelica_metatype _inSimVarHT);
+#define boxptr_SimCodeUtil_getSimVars2Crefs omc_SimCodeUtil_getSimVars2Crefs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimVars2Crefs,2,0) {(void*) boxptr_SimCodeUtil_getSimVars2Crefs,0}};
+#define boxvar_SimCodeUtil_getSimVars2Crefs MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimVars2Crefs)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createSymbolicJacobianssSimCode(threadData_t *threadData, modelica_metatype _inSymJacobians, modelica_metatype _inSimVarHT, modelica_integer _iuniqueEqIndex, modelica_metatype _inNames, modelica_metatype _inJacobianMatrices, modelica_integer *out_ouniqueEqIndex);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createSymbolicJacobianssSimCode(threadData_t *threadData, modelica_metatype _inSymJacobians, modelica_metatype _inSimVarHT, modelica_metatype _iuniqueEqIndex, modelica_metatype _inNames, modelica_metatype _inJacobianMatrices, modelica_metatype *out_ouniqueEqIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createSymbolicJacobianssSimCode,2,0) {(void*) boxptr_SimCodeUtil_createSymbolicJacobianssSimCode,0}};
+#define boxvar_SimCodeUtil_createSymbolicJacobianssSimCode MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createSymbolicJacobianssSimCode)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createJacobianLinearCode(threadData_t *threadData, modelica_metatype _inSymjacs, modelica_metatype _inModelInfo, modelica_integer _iuniqueEqIndex, modelica_metatype _shared, modelica_integer *out_ouniqueEqIndex);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createJacobianLinearCode(threadData_t *threadData, modelica_metatype _inSymjacs, modelica_metatype _inModelInfo, modelica_metatype _iuniqueEqIndex, modelica_metatype _shared, modelica_metatype *out_ouniqueEqIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createJacobianLinearCode,2,0) {(void*) boxptr_SimCodeUtil_createJacobianLinearCode,0}};
+#define boxvar_SimCodeUtil_createJacobianLinearCode MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createJacobianLinearCode)
+
+
+#define boxptr_SimCodeUtil_getFurtherVars omc_SimCodeUtil_getFurtherVars
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_updateSimVarIndex(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcolumn, modelica_metatype _crefsHT);
+#define boxptr_SimCodeUtil_updateSimVarIndex omc_SimCodeUtil_updateSimVarIndex
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_updateSimVarIndex,2,0) {(void*) boxptr_SimCodeUtil_updateSimVarIndex,0}};
+#define boxvar_SimCodeUtil_updateSimVarIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_updateSimVarIndex)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_syncDAEandSimJac(threadData_t *threadData, modelica_metatype _symJac, modelica_metatype __omcQ_24in_5FdaeJac);
+#define boxptr_SimCodeUtil_syncDAEandSimJac omc_SimCodeUtil_syncDAEandSimJac
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_syncDAEandSimJac,2,0) {(void*) boxptr_SimCodeUtil_syncDAEandSimJac,0}};
+#define boxvar_SimCodeUtil_syncDAEandSimJac MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_syncDAEandSimJac)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createSymbolicSimulationJacobian(threadData_t *threadData, modelica_metatype _inJacobian, modelica_integer _iuniqueEqIndex, modelica_metatype _itempvars, modelica_boolean _detectNonlinearPattern, modelica_integer *out_ouniqueEqIndex, modelica_metatype *out_otempvars);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createSymbolicSimulationJacobian(threadData_t *threadData, modelica_metatype _inJacobian, modelica_metatype _iuniqueEqIndex, modelica_metatype _itempvars, modelica_metatype _detectNonlinearPattern, modelica_metatype *out_ouniqueEqIndex, modelica_metatype *out_otempvars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createSymbolicSimulationJacobian,2,0) {(void*) boxptr_SimCodeUtil_createSymbolicSimulationJacobian,0}};
+#define boxvar_SimCodeUtil_createSymbolicSimulationJacobian MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createSymbolicSimulationJacobian)
+
+
+#define boxptr_SimCodeUtil_createStateSetsSystem omc_SimCodeUtil_createStateSetsSystem
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createStateSets(threadData_t *threadData, modelica_metatype _inDAE, modelica_metatype _iEquations, modelica_integer _iuniqueEqIndex, modelica_metatype _itempvars, modelica_metatype *out_oEquations, modelica_integer *out_ouniqueEqIndex, modelica_metatype *out_otempvars, modelica_integer *out_numStateSets);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createStateSets(threadData_t *threadData, modelica_metatype _inDAE, modelica_metatype _iEquations, modelica_metatype _iuniqueEqIndex, modelica_metatype _itempvars, modelica_metatype *out_oEquations, modelica_metatype *out_ouniqueEqIndex, modelica_metatype *out_otempvars, modelica_metatype *out_numStateSets);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createStateSets,2,0) {(void*) boxptr_SimCodeUtil_createStateSets,0}};
+#define boxvar_SimCodeUtil_createStateSets MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createStateSets)
+
+
+#define boxptr_SimCodeUtil_appendOMSIFunction omc_SimCodeUtil_appendOMSIFunction
+
+
+#define boxptr_SimCodeUtil_solveInnerEquations1 omc_SimCodeUtil_solveInnerEquations1
+
+
+#define boxptr_SimCodeUtil_solveInnerEquations omc_SimCodeUtil_solveInnerEquations
+
+
+#define boxptr_SimCodeUtil_makeSES__RESIDUAL1 omc_SimCodeUtil_makeSES__RESIDUAL1
+
+
+#define boxptr_SimCodeUtil_makeSES__RESIDUAL omc_SimCodeUtil_makeSES__RESIDUAL
+
+
+#define boxptr_SimCodeUtil_dimsToAllIndexes1 omc_SimCodeUtil_dimsToAllIndexes1
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_dimsToAllIndexes(threadData_t *threadData, modelica_metatype _inDims);
+#define boxptr_SimCodeUtil_dimsToAllIndexes omc_SimCodeUtil_dimsToAllIndexes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_dimsToAllIndexes,2,0) {(void*) boxptr_SimCodeUtil_dimsToAllIndexes,0}};
+#define boxvar_SimCodeUtil_dimsToAllIndexes MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_dimsToAllIndexes)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_fixNonlinearResidualIndices(threadData_t *threadData, modelica_metatype _inSysts);
+#define boxptr_SimCodeUtil_fixNonlinearResidualIndices omc_SimCodeUtil_fixNonlinearResidualIndices
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_fixNonlinearResidualIndices,2,0) {(void*) boxptr_SimCodeUtil_fixNonlinearResidualIndices,0}};
+#define boxvar_SimCodeUtil_fixNonlinearResidualIndices MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_fixNonlinearResidualIndices)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createNonlinearResidualEquations(threadData_t *threadData, modelica_metatype _eqs, modelica_metatype __omcQ_24in_5Fidx_5Ftpl, modelica_metatype __omcQ_24in_5Ftempvars, modelica_metatype _funcTree, modelica_metatype *out_idx_tpl, modelica_metatype *out_tempvars);
+#define boxptr_SimCodeUtil_createNonlinearResidualEquations omc_SimCodeUtil_createNonlinearResidualEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createNonlinearResidualEquations,2,0) {(void*) boxptr_SimCodeUtil_createNonlinearResidualEquations,0}};
+#define boxvar_SimCodeUtil_createNonlinearResidualEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createNonlinearResidualEquations)
+
+
+#define boxptr_SimCodeUtil_createTempVars omc_SimCodeUtil_createTempVars
+
+
+#define boxptr_SimCodeUtil_createTempVarsforCrefs omc_SimCodeUtil_createTempVarsforCrefs
+
+
+#define boxptr_SimCodeUtil_createArrayTempVar omc_SimCodeUtil_createArrayTempVar
+
+
+#define boxptr_SimCodeUtil_createTmpCrefExpsForComplexEqnSys__work omc_SimCodeUtil_createTmpCrefExpsForComplexEqnSys__work
+
+
+#define boxptr_SimCodeUtil_createTmpCrefExpsForComplexEqnSys omc_SimCodeUtil_createTmpCrefExpsForComplexEqnSys
+
+
+#define boxptr_SimCodeUtil_createNonlinearResidualEquationsComplex omc_SimCodeUtil_createNonlinearResidualEquationsComplex
+
+
+#define boxptr_SimCodeUtil_solveAlgorithmInverse omc_SimCodeUtil_solveAlgorithmInverse
+
+
+#define boxptr_SimCodeUtil_replaceIFBrancheswithoutVar omc_SimCodeUtil_replaceIFBrancheswithoutVar
+
+
+#define boxptr_SimCodeUtil_partitionKindToClockIndex omc_SimCodeUtil_partitionKindToClockIndex
+
+
+#define boxptr_SimCodeUtil_convertListIndx omc_SimCodeUtil_convertListIndx
+
+
+#define boxptr_SimCodeUtil_convertListMappingToArray1 omc_SimCodeUtil_convertListMappingToArray1
+
+
+#define boxptr_SimCodeUtil_updateZeroCrossEqnIndexHelp omc_SimCodeUtil_updateZeroCrossEqnIndexHelp
+
+
+#define boxptr_SimCodeUtil_whenEquationsIndices omc_SimCodeUtil_whenEquationsIndices
+
+
+#define boxptr_SimCodeUtil_zeroCrossingEquations omc_SimCodeUtil_zeroCrossingEquations
+
+
+#define boxptr_SimCodeUtil_zeroCrossingsEquations omc_SimCodeUtil_zeroCrossingsEquations
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_sortSimVarsAndWriteIndex(threadData_t *threadData, modelica_metatype _inSimVar, modelica_metatype _crefToSimVarHT);
+#define boxptr_SimCodeUtil_sortSimVarsAndWriteIndex omc_SimCodeUtil_sortSimVarsAndWriteIndex
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_sortSimVarsAndWriteIndex,2,0) {(void*) boxptr_SimCodeUtil_sortSimVarsAndWriteIndex,0}};
+#define boxvar_SimCodeUtil_sortSimVarsAndWriteIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_sortSimVarsAndWriteIndex)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getSimCodeDAEModeDataEqns(threadData_t *threadData, modelica_metatype _inOptDaeMode);
+#define boxptr_SimCodeUtil_getSimCodeDAEModeDataEqns omc_SimCodeUtil_getSimCodeDAEModeDataEqns
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimCodeDAEModeDataEqns,2,0) {(void*) boxptr_SimCodeUtil_getSimCodeDAEModeDataEqns,0}};
+#define boxvar_SimCodeUtil_getSimCodeDAEModeDataEqns MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSimCodeDAEModeDataEqns)
+
+
+#define boxptr_SimCodeUtil_createEquationsForSystem1 omc_SimCodeUtil_createEquationsForSystem1
+
+
+#define boxptr_SimCodeUtil_addEquationsToLists omc_SimCodeUtil_addEquationsToLists
+
+
+#define boxptr_SimCodeUtil_createEquationsForSystems1 omc_SimCodeUtil_createEquationsForSystems1
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_jacobianColumnsAreEmpty(threadData_t *threadData, modelica_metatype _columns);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_jacobianColumnsAreEmpty(threadData_t *threadData, modelica_metatype _columns);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_jacobianColumnsAreEmpty,2,0) {(void*) boxptr_SimCodeUtil_jacobianColumnsAreEmpty,0}};
+#define boxvar_SimCodeUtil_jacobianColumnsAreEmpty MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_jacobianColumnsAreEmpty)
+
+
+#define boxptr_SimCodeUtil_addAlgebraicLoopsClockPartitions omc_SimCodeUtil_addAlgebraicLoopsClockPartitions
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_addAlgebraicLoopsModelInfoStateSets(threadData_t *threadData, modelica_metatype _inSets, modelica_metatype _inModelInfo, modelica_metatype *out_modelInfo, modelica_metatype *out_outSymJacs, modelica_metatype *out_outSymJacsInternal);
+#define boxptr_SimCodeUtil_addAlgebraicLoopsModelInfoStateSets omc_SimCodeUtil_addAlgebraicLoopsModelInfoStateSets
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_addAlgebraicLoopsModelInfoStateSets,2,0) {(void*) boxptr_SimCodeUtil_addAlgebraicLoopsModelInfoStateSets,0}};
+#define boxvar_SimCodeUtil_addAlgebraicLoopsModelInfoStateSets MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_addAlgebraicLoopsModelInfoStateSets)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_addAlgebraicLoopsModelInfoSymJacs(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsymjacs, modelica_metatype __omcQ_24in_5FmodelInfo, modelica_metatype *out_modelInfo, modelica_metatype *out_outSymJacsInSymJacs);
+#define boxptr_SimCodeUtil_addAlgebraicLoopsModelInfoSymJacs omc_SimCodeUtil_addAlgebraicLoopsModelInfoSymJacs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_addAlgebraicLoopsModelInfoSymJacs,2,0) {(void*) boxptr_SimCodeUtil_addAlgebraicLoopsModelInfoSymJacs,0}};
+#define boxvar_SimCodeUtil_addAlgebraicLoopsModelInfoSymJacs MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_addAlgebraicLoopsModelInfoSymJacs)
+
+
+#define boxptr_SimCodeUtil_updateLinearSyst omc_SimCodeUtil_updateLinearSyst
+
+
+#define boxptr_SimCodeUtil_updateNonLinearSyst omc_SimCodeUtil_updateNonLinearSyst
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_addAlgebraicLoopsModelInfo(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqns, modelica_metatype __omcQ_24in_5FmodelInfo, modelica_metatype *out_modelInfo, modelica_metatype *out_symJacs);
+#define boxptr_SimCodeUtil_addAlgebraicLoopsModelInfo omc_SimCodeUtil_addAlgebraicLoopsModelInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_addAlgebraicLoopsModelInfo,2,0) {(void*) boxptr_SimCodeUtil_addAlgebraicLoopsModelInfo,0}};
+#define boxvar_SimCodeUtil_addAlgebraicLoopsModelInfo MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_addAlgebraicLoopsModelInfo)
+
+
+#define boxptr_SimCodeUtil_setSystemIndexMap omc_SimCodeUtil_setSystemIndexMap
+
+
+#define boxptr_SimCodeUtil_getSystemIndexMap omc_SimCodeUtil_getSystemIndexMap
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_addNumEqns(threadData_t *threadData, modelica_metatype _modelInfo, modelica_integer _numEqns);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_addNumEqns(threadData_t *threadData, modelica_metatype _modelInfo, modelica_metatype _numEqns);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_addNumEqns,2,0) {(void*) boxptr_SimCodeUtil_addNumEqns,0}};
+#define boxvar_SimCodeUtil_addNumEqns MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_addNumEqns)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_setSeedVars(threadData_t *threadData, modelica_metatype _seedVars, modelica_metatype __omcQ_24in_5FmodelInfo);
+#define boxptr_SimCodeUtil_setSeedVars omc_SimCodeUtil_setSeedVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_setSeedVars,2,0) {(void*) boxptr_SimCodeUtil_setSeedVars,0}};
+#define boxvar_SimCodeUtil_setSeedVars MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_setSeedVars)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_setJacobianVars(threadData_t *threadData, modelica_metatype _iJacobianVars, modelica_metatype _iModelInfo);
+#define boxptr_SimCodeUtil_setJacobianVars omc_SimCodeUtil_setJacobianVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_setJacobianVars,2,0) {(void*) boxptr_SimCodeUtil_setJacobianVars,0}};
+#define boxvar_SimCodeUtil_setJacobianVars MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_setJacobianVars)
+
+
+#define boxptr_SimCodeUtil_addTempVars omc_SimCodeUtil_addTempVars
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getClockedEquations(threadData_t *threadData, modelica_metatype _inSubPartitions);
+#define boxptr_SimCodeUtil_getClockedEquations omc_SimCodeUtil_getClockedEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getClockedEquations,2,0) {(void*) boxptr_SimCodeUtil_getClockedEquations,0}};
+#define boxvar_SimCodeUtil_getClockedEquations MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getClockedEquations)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getSubPartition(threadData_t *threadData, modelica_metatype _inPartition);
+#define boxptr_SimCodeUtil_getSubPartition omc_SimCodeUtil_getSubPartition
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSubPartition,2,0) {(void*) boxptr_SimCodeUtil_getSubPartition,0}};
+#define boxvar_SimCodeUtil_getSubPartition MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSubPartition)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getSubPartitions(threadData_t *threadData, modelica_metatype _inPartitions);
+#define boxptr_SimCodeUtil_getSubPartitions omc_SimCodeUtil_getSubPartitions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSubPartitions,2,0) {(void*) boxptr_SimCodeUtil_getSubPartitions,0}};
+#define boxvar_SimCodeUtil_getSubPartitions MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getSubPartitions)
+
+
+#define boxptr_SimCodeUtil_getSimVarCompRef omc_SimCodeUtil_getSimVarCompRef
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getClockIndex(threadData_t *threadData, modelica_metatype _simVar, modelica_metatype _simCode);
+#define boxptr_SimCodeUtil_getClockIndex omc_SimCodeUtil_getClockIndex
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getClockIndex,2,0) {(void*) boxptr_SimCodeUtil_getClockIndex,0}};
+#define boxvar_SimCodeUtil_getClockIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getClockIndex)
+
+
+#define boxptr_SimCodeUtil_collectClockedVars1 omc_SimCodeUtil_collectClockedVars1
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_collectClockedVars(threadData_t *threadData, modelica_metatype _inEqSystem, modelica_metatype _inTpl);
+#define boxptr_SimCodeUtil_collectClockedVars omc_SimCodeUtil_collectClockedVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_collectClockedVars,2,0) {(void*) boxptr_SimCodeUtil_collectClockedVars,0}};
+#define boxvar_SimCodeUtil_collectClockedVars MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_collectClockedVars)
+
+
+#define boxptr_SimCodeUtil_createClockedSimPartitions omc_SimCodeUtil_createClockedSimPartitions
+
+
+#define boxptr_SimCodeUtil_getParamAsserts omc_SimCodeUtil_getParamAsserts
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createFunctions(threadData_t *threadData, modelica_metatype _inProgram, modelica_metatype _functionTree, modelica_metatype *out_outLibPaths, modelica_metatype *out_outIncludes, modelica_metatype *out_outIncludeDirs, modelica_metatype *out_outRecordDecls, modelica_metatype *out_outFunctions, modelica_metatype *out_outLiterals);
+#define boxptr_SimCodeUtil_createFunctions omc_SimCodeUtil_createFunctions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createFunctions,2,0) {(void*) boxptr_SimCodeUtil_createFunctions,0}};
+#define boxvar_SimCodeUtil_createFunctions MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createFunctions)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createSimCode(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_metatype _inInitDAE, modelica_metatype _inInitDAE_lambda0, modelica_metatype _inInlineData, modelica_metatype _inRemovedInitialEquationLst, modelica_metatype _inClassName, modelica_string _filenamePrefix, modelica_string _inFileDir, modelica_metatype _functions, modelica_metatype _externalFunctionIncludes, modelica_metatype _includeDirs, modelica_metatype _libs, modelica_metatype _libPaths, modelica_metatype _program, modelica_metatype _simSettingsOpt, modelica_metatype _recordDecls, modelica_metatype _literals, modelica_metatype _args, modelica_boolean _isFMU, modelica_string _FMUVersion, modelica_string _fmuTargetName, modelica_metatype _inFMIDer, modelica_metatype *out_outMapping);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_createSimCode(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_metatype _inInitDAE, modelica_metatype _inInitDAE_lambda0, modelica_metatype _inInlineData, modelica_metatype _inRemovedInitialEquationLst, modelica_metatype _inClassName, modelica_metatype _filenamePrefix, modelica_metatype _inFileDir, modelica_metatype _functions, modelica_metatype _externalFunctionIncludes, modelica_metatype _includeDirs, modelica_metatype _libs, modelica_metatype _libPaths, modelica_metatype _program, modelica_metatype _simSettingsOpt, modelica_metatype _recordDecls, modelica_metatype _literals, modelica_metatype _args, modelica_metatype _isFMU, modelica_metatype _FMUVersion, modelica_metatype _fmuTargetName, modelica_metatype _inFMIDer, modelica_metatype *out_outMapping);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createSimCode,2,0) {(void*) boxptr_SimCodeUtil_createSimCode,0}};
+#define boxvar_SimCodeUtil_createSimCode MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createSimCode)
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_compareEqSystemsEquality(threadData_t *threadData, modelica_metatype _eq1, modelica_metatype _eq2);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_compareEqSystemsEquality(threadData_t *threadData, modelica_metatype _eq1, modelica_metatype _eq2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_compareEqSystemsEquality,2,0) {(void*) boxptr_SimCodeUtil_compareEqSystemsEquality,0}};
+#define boxvar_SimCodeUtil_compareEqSystemsEquality MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_compareEqSystemsEquality)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_hashEqSystem(threadData_t *threadData, modelica_metatype _eq);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_hashEqSystem(threadData_t *threadData, modelica_metatype _eq);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_hashEqSystem,2,0) {(void*) boxptr_SimCodeUtil_hashEqSystem,0}};
+#define boxvar_SimCodeUtil_hashEqSystem MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_hashEqSystem)
+
+
+#define boxptr_SimCodeUtil_simulationFindLiterals omc_SimCodeUtil_simulationFindLiterals
+
+
+#define boxptr_SimCodeUtil_expandEntwined omc_SimCodeUtil_expandEntwined
+
+
+DLLDirection
 modelica_metatype omc_SimCodeUtil_sortEqSystems(threadData_t *threadData, modelica_metatype _eqs);
 #define boxptr_SimCodeUtil_sortEqSystems omc_SimCodeUtil_sortEqSystems
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_sortEqSystems,2,0) {(void*) boxptr_SimCodeUtil_sortEqSystems,0}};
 #define boxvar_SimCodeUtil_sortEqSystems MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_sortEqSystems)
+
 #ifdef __cplusplus
 }
 #endif

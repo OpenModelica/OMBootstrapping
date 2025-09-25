@@ -1,0 +1,285 @@
+#ifndef EvaluateFunctions__H
+#define EvaluateFunctions__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_DYNAMIC__EQUATION__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_VarKind_VARIABLE__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__QUAL__desc;
+
+extern struct record_description DAE_Element_ALGORITHM__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Else_ELSE__desc;
+
+extern struct record_description DAE_Else_ELSEIF__desc;
+
+extern struct record_description DAE_Else_NOELSE__desc;
+
+extern struct record_description DAE_Exp_ASUB__desc;
+
+extern struct record_description DAE_Exp_BCONST__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_Exp_TUPLE__desc;
+
+extern struct record_description DAE_FunctionDefinition_FUNCTION__DEF__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__IF__desc;
+
+extern struct record_description DAE_Type_T__INTEGER__desc;
+
+extern struct record_description DAE_Type_T__TUPLE__desc;
+
+extern struct record_description DAE_VarDirection_BIDIR__desc;
+
+extern struct record_description DAE_VarVisibility_PROTECTED__desc;
+
+extern struct record_description EvaluateFunctions_CallSignature_SIGNATURE__desc;
+
+extern struct record_description EvaluateFunctions_FuncInfo_FUNCINFO__desc;
+
+extern struct record_description EvaluateFunctions_Variability_CONST__desc;
+
+extern struct record_description EvaluateFunctions_Variability_VARIABLE__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_EvaluateFunctions_makeBackendEquation omc_EvaluateFunctions_makeBackendEquation
+
+
+#define boxptr_EvaluateFunctions_convertTupleEquations omc_EvaluateFunctions_convertTupleEquations
+
+
+#define boxptr_EvaluateFunctions_findDerVarCrefs omc_EvaluateFunctions_findDerVarCrefs
+
+
+#define boxptr_EvaluateFunctions_setVarKindForStates omc_EvaluateFunctions_setVarKindForStates
+
+
+#define boxptr_EvaluateFunctions_updateVarKinds__eqSys omc_EvaluateFunctions_updateVarKinds__eqSys
+
+
+#define boxptr_EvaluateFunctions_updateVarKinds omc_EvaluateFunctions_updateVarKinds
+
+
+#define boxptr_EvaluateFunctions_makeAssignment omc_EvaluateFunctions_makeAssignment
+
+
+#define boxptr_EvaluateFunctions_makeAssignmentMap omc_EvaluateFunctions_makeAssignmentMap
+
+
+#define boxptr_EvaluateFunctions_compareConstantExps omc_EvaluateFunctions_compareConstantExps
+
+
+#define boxptr_EvaluateFunctions_updateStatementsInElse omc_EvaluateFunctions_updateStatementsInElse
+
+
+#define boxptr_EvaluateFunctions_updateStatementsInIfStmt omc_EvaluateFunctions_updateStatementsInIfStmt
+
+
+#define boxptr_EvaluateFunctions_getOnlyConstantReplacements omc_EvaluateFunctions_getOnlyConstantReplacements
+
+
+#define boxptr_EvaluateFunctions_collectReplacements1 omc_EvaluateFunctions_collectReplacements1
+
+
+#define boxptr_EvaluateFunctions_collectReplacements omc_EvaluateFunctions_collectReplacements
+
+
+#define boxptr_EvaluateFunctions_getVarLstFromType omc_EvaluateFunctions_getVarLstFromType
+
+
+DLLDirection
+modelica_metatype omc_EvaluateFunctions_getRecordScalars(threadData_t *threadData, modelica_metatype _crefIn);
+#define boxptr_EvaluateFunctions_getRecordScalars omc_EvaluateFunctions_getRecordScalars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_getRecordScalars,2,0) {(void*) boxptr_EvaluateFunctions_getRecordScalars,0}};
+#define boxvar_EvaluateFunctions_getRecordScalars MMC_REFSTRUCTLIT(boxvar_lit_EvaluateFunctions_getRecordScalars)
+
+
+#define boxptr_EvaluateFunctions_setTypesForScalarCrefs omc_EvaluateFunctions_setTypesForScalarCrefs
+
+
+#define boxptr_EvaluateFunctions_subsLstString omc_EvaluateFunctions_subsLstString
+
+
+#define boxptr_EvaluateFunctions_expandDimension omc_EvaluateFunctions_expandDimension
+
+
+#define boxptr_EvaluateFunctions_getScalarsForComplexVar omc_EvaluateFunctions_getScalarsForComplexVar
+
+
+#define boxptr_EvaluateFunctions_expType omc_EvaluateFunctions_expType
+
+
+#define boxptr_EvaluateFunctions_equationToStmt omc_EvaluateFunctions_equationToStmt
+
+
+#define boxptr_EvaluateFunctions_getDAEelseStatemntLsts omc_EvaluateFunctions_getDAEelseStatemntLsts
+
+
+#define boxptr_EvaluateFunctions_getStatementsOutputs omc_EvaluateFunctions_getStatementsOutputs
+
+
+#define boxptr_EvaluateFunctions_getStatementLHSScalar omc_EvaluateFunctions_getStatementLHSScalar
+
+
+#define boxptr_EvaluateFunctions_getStatementLHS omc_EvaluateFunctions_getStatementLHS
+
+
+#define boxptr_EvaluateFunctions_replaceExps omc_EvaluateFunctions_replaceExps
+
+
+#define boxptr_EvaluateFunctions_equationToStatement omc_EvaluateFunctions_equationToStatement
+
+
+#define boxptr_EvaluateFunctions_addTplReplacements omc_EvaluateFunctions_addTplReplacements
+
+
+#define boxptr_EvaluateFunctions_addReplacementRuleForAssignment omc_EvaluateFunctions_addReplacementRuleForAssignment
+
+
+#define boxptr_EvaluateFunctions_generateConstEqs omc_EvaluateFunctions_generateConstEqs
+
+
+#define boxptr_EvaluateFunctions_replaceCrefIdent omc_EvaluateFunctions_replaceCrefIdent
+
+
+#define boxptr_EvaluateFunctions_makeIdentCref2 omc_EvaluateFunctions_makeIdentCref2
+
+
+#define boxptr_EvaluateFunctions_makeIdentCref omc_EvaluateFunctions_makeIdentCref
+
+
+#define boxptr_EvaluateFunctions_traverseStmtsAndUpdate omc_EvaluateFunctions_traverseStmtsAndUpdate
+
+
+#define boxptr_EvaluateFunctions_stmtCanBeRemoved omc_EvaluateFunctions_stmtCanBeRemoved
+
+
+#define boxptr_EvaluateFunctions_buildPartialFunction omc_EvaluateFunctions_buildPartialFunction
+
+
+#define boxptr_EvaluateFunctions_updateFunctionType omc_EvaluateFunctions_updateFunctionType
+
+
+#define boxptr_EvaluateFunctions_generateProtectedElements omc_EvaluateFunctions_generateProtectedElements
+
+
+#define boxptr_EvaluateFunctions_generateOutputElements omc_EvaluateFunctions_generateOutputElements
+
+
+#define boxptr_EvaluateFunctions_checkIfOutputIsEvaluatedConstant omc_EvaluateFunctions_checkIfOutputIsEvaluatedConstant
+
+
+#define boxptr_EvaluateFunctions_buildConstFunctionCrefs omc_EvaluateFunctions_buildConstFunctionCrefs
+
+
+#define boxptr_EvaluateFunctions_buildVariableFunctionParts omc_EvaluateFunctions_buildVariableFunctionParts
+
+
+#define boxptr_EvaluateFunctions_scalarRecCrefsForOneDimRec omc_EvaluateFunctions_scalarRecCrefsForOneDimRec
+
+
+#define boxptr_EvaluateFunctions_scalarRecExpForOneDimRec omc_EvaluateFunctions_scalarRecExpForOneDimRec
+
+
+DLLDirection
+modelica_metatype omc_EvaluateFunctions_getCrefsForRecord(threadData_t *threadData, modelica_metatype _e);
+#define boxptr_EvaluateFunctions_getCrefsForRecord omc_EvaluateFunctions_getCrefsForRecord
+static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_getCrefsForRecord,2,0) {(void*) boxptr_EvaluateFunctions_getCrefsForRecord,0}};
+#define boxvar_EvaluateFunctions_getCrefsForRecord MMC_REFSTRUCTLIT(boxvar_lit_EvaluateFunctions_getCrefsForRecord)
+
+
+#define boxptr_EvaluateFunctions_setRecordTypes omc_EvaluateFunctions_setRecordTypes
+
+
+#define boxptr_EvaluateFunctions_expandComplexElementsToCrefs omc_EvaluateFunctions_expandComplexElementsToCrefs
+
+
+#define boxptr_EvaluateFunctions_expandComplexExpressions omc_EvaluateFunctions_expandComplexExpressions
+
+
+DLLDirection
+modelica_metatype omc_EvaluateFunctions_evaluateConstantFunction(threadData_t *threadData, modelica_metatype _rhsExpIn, modelica_metatype _lhsExpIn, modelica_metatype _funcsIn, modelica_integer _eqIdx, modelica_metatype _callSignLstIn, modelica_integer _recursionLimit, modelica_metatype *out_lhsExpOut, modelica_metatype *out_addedEquations, modelica_metatype *out_funcsOut, modelica_integer *out_eqIdxOut, modelica_boolean *out_changed, modelica_metatype *out_callSignLstOut);
+DLLDirection
+modelica_metatype boxptr_EvaluateFunctions_evaluateConstantFunction(threadData_t *threadData, modelica_metatype _rhsExpIn, modelica_metatype _lhsExpIn, modelica_metatype _funcsIn, modelica_metatype _eqIdx, modelica_metatype _callSignLstIn, modelica_metatype _recursionLimit, modelica_metatype *out_lhsExpOut, modelica_metatype *out_addedEquations, modelica_metatype *out_funcsOut, modelica_metatype *out_eqIdxOut, modelica_metatype *out_changed, modelica_metatype *out_callSignLstOut);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evaluateConstantFunction,2,0) {(void*) boxptr_EvaluateFunctions_evaluateConstantFunction,0}};
+#define boxvar_EvaluateFunctions_evaluateConstantFunction MMC_REFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evaluateConstantFunction)
+
+
+DLLDirection
+modelica_metatype omc_EvaluateFunctions_evaluateConstantFunctionCallExp(threadData_t *threadData, modelica_metatype _expIn, modelica_metatype _funcsIn, modelica_boolean _evalConstArgsOnly, modelica_integer _recursionLimit);
+DLLDirection
+modelica_metatype boxptr_EvaluateFunctions_evaluateConstantFunctionCallExp(threadData_t *threadData, modelica_metatype _expIn, modelica_metatype _funcsIn, modelica_metatype _evalConstArgsOnly, modelica_metatype _recursionLimit);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evaluateConstantFunctionCallExp,2,0) {(void*) boxptr_EvaluateFunctions_evaluateConstantFunctionCallExp,0}};
+#define boxvar_EvaluateFunctions_evaluateConstantFunctionCallExp MMC_REFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evaluateConstantFunctionCallExp)
+
+
+#define boxptr_EvaluateFunctions_evalFunctions__main omc_EvaluateFunctions_evalFunctions__main
+
+
+DLLDirection
+modelica_metatype omc_EvaluateFunctions_evalFunctions(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_EvaluateFunctions_evalFunctions omc_EvaluateFunctions_evalFunctions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evalFunctions,2,0) {(void*) boxptr_EvaluateFunctions_evalFunctions,0}};
+#define boxvar_EvaluateFunctions_evalFunctions MMC_REFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evalFunctions)
+
+
+#define boxptr_EvaluateFunctions_getVariabilityForExp omc_EvaluateFunctions_getVariabilityForExp
+
+
+#define boxptr_EvaluateFunctions_getCallSignatureForCall omc_EvaluateFunctions_getCallSignatureForCall
+
+
+#define boxptr_EvaluateFunctions_VariabilityString omc_EvaluateFunctions_VariabilityString
+
+
+#define boxptr_EvaluateFunctions_callSignatureStr omc_EvaluateFunctions_callSignatureStr
+
+#ifdef __cplusplus
+}
+#endif
+#endif

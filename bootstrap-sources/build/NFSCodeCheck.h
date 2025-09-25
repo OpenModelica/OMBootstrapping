@@ -1,0 +1,121 @@
+#ifndef NFSCodeCheck__H
+#define NFSCodeCheck__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_NOTIFICATION__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkPartialInstance(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inInfo);
+#define boxptr_NFSCodeCheck_checkPartialInstance omc_NFSCodeCheck_checkPartialInstance
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkPartialInstance,2,0) {(void*) boxptr_NFSCodeCheck_checkPartialInstance,0}};
+#define boxvar_NFSCodeCheck_checkPartialInstance MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkPartialInstance)
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkInstanceRestriction(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inPrefix, modelica_metatype _inInfo);
+#define boxptr_NFSCodeCheck_checkInstanceRestriction omc_NFSCodeCheck_checkInstanceRestriction
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkInstanceRestriction,2,0) {(void*) boxptr_NFSCodeCheck_checkInstanceRestriction,0}};
+#define boxvar_NFSCodeCheck_checkInstanceRestriction MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkInstanceRestriction)
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkComponentsEqual(threadData_t *threadData, modelica_metatype _inComponent1, modelica_metatype _inComponent2);
+#define boxptr_NFSCodeCheck_checkComponentsEqual omc_NFSCodeCheck_checkComponentsEqual
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkComponentsEqual,2,0) {(void*) boxptr_NFSCodeCheck_checkComponentsEqual,0}};
+#define boxvar_NFSCodeCheck_checkComponentsEqual MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkComponentsEqual)
+
+
+DLLDirection
+modelica_boolean omc_NFSCodeCheck_checkIdentNotEqTypeName(threadData_t *threadData, modelica_string _inIdent, modelica_metatype _inTypeName, modelica_metatype _inInfo);
+DLLDirection
+modelica_metatype boxptr_NFSCodeCheck_checkIdentNotEqTypeName(threadData_t *threadData, modelica_metatype _inIdent, modelica_metatype _inTypeName, modelica_metatype _inInfo);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkIdentNotEqTypeName,2,0) {(void*) boxptr_NFSCodeCheck_checkIdentNotEqTypeName,0}};
+#define boxvar_NFSCodeCheck_checkIdentNotEqTypeName MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkIdentNotEqTypeName)
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkRecursiveComponentDeclaration(threadData_t *threadData, modelica_string _inComponentName, modelica_metatype _inComponentInfo, modelica_metatype _inTypeEnv, modelica_metatype _inTypeItem, modelica_metatype _inComponentEnv);
+#define boxptr_NFSCodeCheck_checkRecursiveComponentDeclaration omc_NFSCodeCheck_checkRecursiveComponentDeclaration
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkRecursiveComponentDeclaration,2,0) {(void*) boxptr_NFSCodeCheck_checkRecursiveComponentDeclaration,0}};
+#define boxvar_NFSCodeCheck_checkRecursiveComponentDeclaration MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkRecursiveComponentDeclaration)
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkDuplicateRedeclarations(threadData_t *threadData, modelica_metatype _inRedeclare, modelica_metatype _inRedeclarations);
+#define boxptr_NFSCodeCheck_checkDuplicateRedeclarations omc_NFSCodeCheck_checkDuplicateRedeclarations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkDuplicateRedeclarations,2,0) {(void*) boxptr_NFSCodeCheck_checkDuplicateRedeclarations,0}};
+#define boxvar_NFSCodeCheck_checkDuplicateRedeclarations MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkDuplicateRedeclarations)
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkRedeclaredElementPrefix(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inReplacement, modelica_metatype _inInfo);
+#define boxptr_NFSCodeCheck_checkRedeclaredElementPrefix omc_NFSCodeCheck_checkRedeclaredElementPrefix
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkRedeclaredElementPrefix,2,0) {(void*) boxptr_NFSCodeCheck_checkRedeclaredElementPrefix,0}};
+#define boxvar_NFSCodeCheck_checkRedeclaredElementPrefix MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkRedeclaredElementPrefix)
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkModifierIfRedeclare(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inModifier, modelica_metatype _inInfo);
+#define boxptr_NFSCodeCheck_checkModifierIfRedeclare omc_NFSCodeCheck_checkModifierIfRedeclare
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkModifierIfRedeclare,2,0) {(void*) boxptr_NFSCodeCheck_checkModifierIfRedeclare,0}};
+#define boxvar_NFSCodeCheck_checkModifierIfRedeclare MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkModifierIfRedeclare)
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkRedeclareModifier2(threadData_t *threadData, modelica_metatype _inModifier, modelica_metatype _inBaseClass, modelica_metatype _inEnv);
+#define boxptr_NFSCodeCheck_checkRedeclareModifier2 omc_NFSCodeCheck_checkRedeclareModifier2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkRedeclareModifier2,2,0) {(void*) boxptr_NFSCodeCheck_checkRedeclareModifier2,0}};
+#define boxvar_NFSCodeCheck_checkRedeclareModifier2 MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkRedeclareModifier2)
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkRedeclareModifier(threadData_t *threadData, modelica_metatype _inModifier, modelica_metatype _inBaseClass, modelica_metatype _inEnv);
+#define boxptr_NFSCodeCheck_checkRedeclareModifier omc_NFSCodeCheck_checkRedeclareModifier
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkRedeclareModifier,2,0) {(void*) boxptr_NFSCodeCheck_checkRedeclareModifier,0}};
+#define boxvar_NFSCodeCheck_checkRedeclareModifier MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkRedeclareModifier)
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkClassExtendsReplaceability(threadData_t *threadData, modelica_metatype _inBaseClass, modelica_metatype _inOriginInfo);
+#define boxptr_NFSCodeCheck_checkClassExtendsReplaceability omc_NFSCodeCheck_checkClassExtendsReplaceability
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkClassExtendsReplaceability,2,0) {(void*) boxptr_NFSCodeCheck_checkClassExtendsReplaceability,0}};
+#define boxvar_NFSCodeCheck_checkClassExtendsReplaceability MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkClassExtendsReplaceability)
+
+
+DLLDirection
+void omc_NFSCodeCheck_checkRecursiveShortDefinition(threadData_t *threadData, modelica_metatype _inTypeSpec, modelica_string _inTypeName, modelica_metatype _inTypeEnv, modelica_metatype _inInfo);
+#define boxptr_NFSCodeCheck_checkRecursiveShortDefinition omc_NFSCodeCheck_checkRecursiveShortDefinition
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkRecursiveShortDefinition,2,0) {(void*) boxptr_NFSCodeCheck_checkRecursiveShortDefinition,0}};
+#define boxvar_NFSCodeCheck_checkRecursiveShortDefinition MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeCheck_checkRecursiveShortDefinition)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

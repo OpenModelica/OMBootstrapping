@@ -1,0 +1,612 @@
+#ifndef Conversion__H
+#define Conversion__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_ComponentRef_CREF__FULLYQUALIFIED__desc;
+
+extern struct record_description Absyn_EqMod_NOMOD__desc;
+
+extern struct record_description Absyn_Exp_ARRAY__desc;
+
+extern struct record_description Absyn_Import_QUAL__IMPORT__desc;
+
+extern struct record_description Absyn_Modification_CLASSMOD__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description Conversion_ConversionRule_CLASS__desc;
+
+extern struct record_description Conversion_ConversionRule_ELEMENT__desc;
+
+extern struct record_description Conversion_ConversionRule_MESSAGE__desc;
+
+extern struct record_description Conversion_ConversionRule_MODIFIERS__desc;
+
+extern struct record_description Conversion_ConversionRules_CONVERSION__RULES__desc;
+
+extern struct record_description Conversion_Env_ENV__desc;
+
+extern struct record_description Conversion_ImportData_IMPORT__DATA__desc;
+
+extern struct record_description Conversion_ImportTreeImpl_Tree_EMPTY__desc;
+
+extern struct record_description Conversion_ImportTreeImpl_Tree_LEAF__desc;
+
+extern struct record_description Conversion_ImportTreeImpl_Tree_NODE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_SCRIPTING__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_Conversion_addComponentTypesToEnv2 omc_Conversion_addComponentTypesToEnv2
+
+
+#define boxptr_Conversion_addComponentTypesToEnv omc_Conversion_addComponentTypesToEnv
+
+
+#define boxptr_Conversion_stripImportPath omc_Conversion_stripImportPath
+
+
+#define boxptr_Conversion_applyImportsToPath omc_Conversion_applyImportsToPath
+
+
+#define boxptr_Conversion_shadowImport omc_Conversion_shadowImport
+
+
+#define boxptr_Conversion_shadowImportsInElementSpec omc_Conversion_shadowImportsInElementSpec
+
+
+#define boxptr_Conversion_shadowImportsInElementItem omc_Conversion_shadowImportsInElementItem
+
+
+#define boxptr_Conversion_shadowImportsInParts omc_Conversion_shadowImportsInParts
+
+
+#define boxptr_Conversion_addGroupImportName omc_Conversion_addGroupImportName
+
+
+#define boxptr_Conversion_addImportName omc_Conversion_addImportName
+
+
+#define boxptr_Conversion_addImportNamesToEnv omc_Conversion_addImportNamesToEnv
+
+
+#define boxptr_Conversion_getImportsInElementItem omc_Conversion_getImportsInElementItem
+
+
+#define boxptr_Conversion_getImportsInParts omc_Conversion_getImportsInParts
+
+
+#define boxptr_Conversion_getExtendsPathsInElementItem omc_Conversion_getExtendsPathsInElementItem
+
+
+#define boxptr_Conversion_getExtendsPathsInParts omc_Conversion_getExtendsPathsInParts
+
+
+#define boxptr_Conversion_getExtendsRules omc_Conversion_getExtendsRules
+
+
+#define boxptr_Conversion_convertOption omc_Conversion_convertOption
+
+
+#define boxptr_Conversion_convertNamedArg omc_Conversion_convertNamedArg
+
+
+#define boxptr_Conversion_convertFunctionArgs omc_Conversion_convertFunctionArgs
+
+
+#define boxptr_Conversion_applyRulesPath omc_Conversion_applyRulesPath
+
+
+#define boxptr_Conversion_convertPath omc_Conversion_convertPath
+
+
+#define boxptr_Conversion_convertSubscript omc_Conversion_convertSubscript
+
+
+#define boxptr_Conversion_convertSubscripts omc_Conversion_convertSubscripts
+
+
+#define boxptr_Conversion_convertCrefSubscripts omc_Conversion_convertCrefSubscripts
+
+
+#define boxptr_Conversion_convertCref2 omc_Conversion_convertCref2
+
+
+#define boxptr_Conversion_convertCref omc_Conversion_convertCref
+
+
+#define boxptr_Conversion_convertExp omc_Conversion_convertExp
+
+
+#define boxptr_Conversion_convertOptExp omc_Conversion_convertOptExp
+
+
+#define boxptr_Conversion_convertExps omc_Conversion_convertExps
+
+
+#define boxptr_Conversion_convertExternalDecl omc_Conversion_convertExternalDecl
+
+
+#define boxptr_Conversion_convertForIterator omc_Conversion_convertForIterator
+
+
+#define boxptr_Conversion_convertForIterators omc_Conversion_convertForIterators
+
+
+#define boxptr_Conversion_convertBranches omc_Conversion_convertBranches
+
+
+#define boxptr_Conversion_convertAlgorithm omc_Conversion_convertAlgorithm
+
+
+#define boxptr_Conversion_convertAlgorithmItem omc_Conversion_convertAlgorithmItem
+
+
+#define boxptr_Conversion_convertAlgorithmItems omc_Conversion_convertAlgorithmItems
+
+
+#define boxptr_Conversion_convertEquation omc_Conversion_convertEquation
+
+
+#define boxptr_Conversion_convertEquationItem omc_Conversion_convertEquationItem
+
+
+#define boxptr_Conversion_convertEquationItems omc_Conversion_convertEquationItems
+
+
+#define boxptr_Conversion_convertComponent omc_Conversion_convertComponent
+
+
+#define boxptr_Conversion_convertComponentItem omc_Conversion_convertComponentItem
+
+
+#define boxptr_Conversion_filterDuplicateImports omc_Conversion_filterDuplicateImports
+
+
+#define boxptr_Conversion_simplifyImport omc_Conversion_simplifyImport
+
+
+#define boxptr_Conversion_convertImport omc_Conversion_convertImport
+
+
+#define boxptr_Conversion_convertElementSpec omc_Conversion_convertElementSpec
+
+
+#define boxptr_Conversion_convertConstrainClass omc_Conversion_convertConstrainClass
+
+
+#define boxptr_Conversion_convertElement omc_Conversion_convertElement
+
+
+#define boxptr_Conversion_convertElementItem omc_Conversion_convertElementItem
+
+
+#define boxptr_Conversion_convertElementItems omc_Conversion_convertElementItems
+
+
+#define boxptr_Conversion_convertTypePath omc_Conversion_convertTypePath
+
+
+#define boxptr_Conversion_convertTypeSpec omc_Conversion_convertTypeSpec
+
+
+#define boxptr_Conversion_mergeModifiers omc_Conversion_mergeModifiers
+
+
+#define boxptr_Conversion_replacePlaceholdersExp omc_Conversion_replacePlaceholdersExp
+
+
+#define boxptr_Conversion_replacePlaceholdersEqMod omc_Conversion_replacePlaceholdersEqMod
+
+
+#define boxptr_Conversion_replacePlaceholders omc_Conversion_replacePlaceholders
+
+
+#define boxptr_Conversion_getElementArgBinding omc_Conversion_getElementArgBinding
+
+
+#define boxptr_Conversion_makePlaceholderTable omc_Conversion_makePlaceholderTable
+
+
+#define boxptr_Conversion_convertModifier omc_Conversion_convertModifier
+
+
+#define boxptr_Conversion_convertModification2 omc_Conversion_convertModification2
+
+
+#define boxptr_Conversion_convertModification omc_Conversion_convertModification
+
+
+#define boxptr_Conversion_convertEqMod omc_Conversion_convertEqMod
+
+
+#define boxptr_Conversion_convertModificationExps2 omc_Conversion_convertModificationExps2
+
+
+#define boxptr_Conversion_convertModificationExps omc_Conversion_convertModificationExps
+
+
+#define boxptr_Conversion_convertElementArg omc_Conversion_convertElementArg
+
+
+#define boxptr_Conversion_convertElementArgs omc_Conversion_convertElementArgs
+
+
+#define boxptr_Conversion_convertClassPart omc_Conversion_convertClassPart
+
+
+#define boxptr_Conversion_convertClassParts omc_Conversion_convertClassParts
+
+
+#define boxptr_Conversion_convertClassDef omc_Conversion_convertClassDef
+
+
+#define boxptr_Conversion_convertClass omc_Conversion_convertClass
+
+
+#define boxptr_Conversion_convertProgram omc_Conversion_convertProgram
+
+
+#define boxptr_Conversion_dumpRule omc_Conversion_dumpRule
+
+
+#define boxptr_Conversion_dumpRules omc_Conversion_dumpRules
+
+
+#define boxptr_Conversion_lookupClassExtendsRules omc_Conversion_lookupClassExtendsRules
+
+
+#define boxptr_Conversion_mergeRuleList omc_Conversion_mergeRuleList
+
+
+#define boxptr_Conversion_sortLocalRules omc_Conversion_sortLocalRules
+
+
+#define boxptr_Conversion_newEnv omc_Conversion_newEnv
+
+
+#define boxptr_Conversion_newTypeTable omc_Conversion_newTypeTable
+
+
+#define boxptr_Conversion_newRuleTable omc_Conversion_newRuleTable
+
+
+#define boxptr_Conversion_lookupTypeRules omc_Conversion_lookupTypeRules
+
+
+#define boxptr_Conversion_lookupRules omc_Conversion_lookupRules
+
+
+#define boxptr_Conversion_lookupRuleNode omc_Conversion_lookupRuleNode
+
+
+#define boxptr_Conversion_updateNode omc_Conversion_updateNode
+
+
+#define boxptr_Conversion_addRule omc_Conversion_addRule
+
+
+#define boxptr_Conversion_parsePathList omc_Conversion_parsePathList
+
+
+#define boxptr_Conversion_parsePath omc_Conversion_parsePath
+
+
+#define boxptr_Conversion_parseConvertMessage omc_Conversion_parseConvertMessage
+
+
+#define boxptr_Conversion_quotePlaceholders omc_Conversion_quotePlaceholders
+
+
+#define boxptr_Conversion_parseModifier omc_Conversion_parseModifier
+
+
+#define boxptr_Conversion_parseConvertModifiers omc_Conversion_parseConvertModifiers
+
+
+#define boxptr_Conversion_parseConvertElement omc_Conversion_parseConvertElement
+
+
+#define boxptr_Conversion_parseConvertClassIf omc_Conversion_parseConvertClassIf
+
+
+#define boxptr_Conversion_parseConvertClassStr omc_Conversion_parseConvertClassStr
+
+
+#define boxptr_Conversion_parseConvertClass omc_Conversion_parseConvertClass
+
+
+#define boxptr_Conversion_printConversionRuleError omc_Conversion_printConversionRuleError
+
+
+#define boxptr_Conversion_statementInfo omc_Conversion_statementInfo
+
+
+#define boxptr_Conversion_vectorizeArgs omc_Conversion_vectorizeArgs
+
+
+#define boxptr_Conversion_expandArg omc_Conversion_expandArg
+
+
+#define boxptr_Conversion_parseRule omc_Conversion_parseRule
+
+
+#define boxptr_Conversion_parseRules omc_Conversion_parseRules
+
+
+#define boxptr_Conversion_loadScript omc_Conversion_loadScript
+
+
+DLLDirection
+modelica_metatype omc_Conversion_convertPackage(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcls, modelica_string _scriptFile);
+#define boxptr_Conversion_convertPackage omc_Conversion_convertPackage
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_convertPackage,2,0) {(void*) boxptr_Conversion_convertPackage,0}};
+#define boxvar_Conversion_convertPackage MMC_REFSTRUCTLIT(boxvar_lit_Conversion_convertPackage)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_add(threadData_t *threadData, modelica_metatype _inTree, modelica_string _inKey, modelica_metatype _inValue, modelica_fnptr _conflictFunc);
+#define boxptr_Conversion_ImportTreeImpl_add omc_Conversion_ImportTreeImpl_add
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_add,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_add,0}};
+#define boxvar_Conversion_ImportTreeImpl_add MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_add)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_addConflictDefault(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_Conversion_ImportTreeImpl_addConflictDefault omc_Conversion_ImportTreeImpl_addConflictDefault
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_addConflictDefault,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_addConflictDefault,0}};
+#define boxvar_Conversion_ImportTreeImpl_addConflictDefault MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_addConflictDefault)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_addConflictFail(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_Conversion_ImportTreeImpl_addConflictFail omc_Conversion_ImportTreeImpl_addConflictFail
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_addConflictFail,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_addConflictFail,0}};
+#define boxvar_Conversion_ImportTreeImpl_addConflictFail MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_addConflictFail)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_addConflictKeep(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_Conversion_ImportTreeImpl_addConflictKeep omc_Conversion_ImportTreeImpl_addConflictKeep
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_addConflictKeep,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_addConflictKeep,0}};
+#define boxvar_Conversion_ImportTreeImpl_addConflictKeep MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_addConflictKeep)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_addConflictReplace(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_Conversion_ImportTreeImpl_addConflictReplace omc_Conversion_ImportTreeImpl_addConflictReplace
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_addConflictReplace,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_addConflictReplace,0}};
+#define boxvar_Conversion_ImportTreeImpl_addConflictReplace MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_addConflictReplace)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_addList(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _inValues, modelica_fnptr _conflictFunc);
+#define boxptr_Conversion_ImportTreeImpl_addList omc_Conversion_ImportTreeImpl_addList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_addList,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_addList,0}};
+#define boxvar_Conversion_ImportTreeImpl_addList MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_addList)
+
+
+#define boxptr_Conversion_ImportTreeImpl_balance omc_Conversion_ImportTreeImpl_balance
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_fold(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc, modelica_metatype _inStartValue);
+#define boxptr_Conversion_ImportTreeImpl_fold omc_Conversion_ImportTreeImpl_fold
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_fold,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_fold,0}};
+#define boxvar_Conversion_ImportTreeImpl_fold MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_fold)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_foldCond(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _foldFunc, modelica_metatype __omcQ_24in_5Fvalue);
+#define boxptr_Conversion_ImportTreeImpl_foldCond omc_Conversion_ImportTreeImpl_foldCond
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_foldCond,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_foldCond,0}};
+#define boxvar_Conversion_ImportTreeImpl_foldCond MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_foldCond)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_fold__2(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _foldFunc, modelica_metatype __omcQ_24in_5FfoldArg1, modelica_metatype __omcQ_24in_5FfoldArg2, modelica_metatype *out_foldArg2);
+#define boxptr_Conversion_ImportTreeImpl_fold__2 omc_Conversion_ImportTreeImpl_fold__2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_fold__2,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_fold__2,0}};
+#define boxvar_Conversion_ImportTreeImpl_fold__2 MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_fold__2)
+
+
+DLLDirection
+void omc_Conversion_ImportTreeImpl_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
+#define boxptr_Conversion_ImportTreeImpl_forEach omc_Conversion_ImportTreeImpl_forEach
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_forEach,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_forEach,0}};
+#define boxvar_Conversion_ImportTreeImpl_forEach MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_forEach)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_fromList(threadData_t *threadData, modelica_metatype _inValues, modelica_fnptr _conflictFunc);
+#define boxptr_Conversion_ImportTreeImpl_fromList omc_Conversion_ImportTreeImpl_fromList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_fromList,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_fromList,0}};
+#define boxvar_Conversion_ImportTreeImpl_fromList MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_fromList)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_get(threadData_t *threadData, modelica_metatype _tree, modelica_string _key);
+#define boxptr_Conversion_ImportTreeImpl_get omc_Conversion_ImportTreeImpl_get
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_get,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_get,0}};
+#define boxvar_Conversion_ImportTreeImpl_get MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_get)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_getOpt(threadData_t *threadData, modelica_metatype _tree, modelica_string _key);
+#define boxptr_Conversion_ImportTreeImpl_getOpt omc_Conversion_ImportTreeImpl_getOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_getOpt,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_getOpt,0}};
+#define boxvar_Conversion_ImportTreeImpl_getOpt MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_getOpt)
+
+
+DLLDirection
+modelica_boolean omc_Conversion_ImportTreeImpl_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_string _inKey);
+DLLDirection
+modelica_metatype boxptr_Conversion_ImportTreeImpl_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_hasKey,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_hasKey,0}};
+#define boxvar_Conversion_ImportTreeImpl_hasKey MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_hasKey)
+
+
+DLLDirection
+void omc_Conversion_ImportTreeImpl_intersection(threadData_t *threadData);
+#define boxptr_Conversion_ImportTreeImpl_intersection omc_Conversion_ImportTreeImpl_intersection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_intersection,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_intersection,0}};
+#define boxvar_Conversion_ImportTreeImpl_intersection MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_intersection)
+
+
+DLLDirection
+modelica_boolean omc_Conversion_ImportTreeImpl_isEmpty(threadData_t *threadData, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_Conversion_ImportTreeImpl_isEmpty(threadData_t *threadData, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_isEmpty,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_isEmpty,0}};
+#define boxvar_Conversion_ImportTreeImpl_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_isEmpty)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_join(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _treeToJoin, modelica_fnptr _conflictFunc);
+#define boxptr_Conversion_ImportTreeImpl_join omc_Conversion_ImportTreeImpl_join
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_join,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_join,0}};
+#define boxvar_Conversion_ImportTreeImpl_join MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_join)
+
+
+DLLDirection
+modelica_integer omc_Conversion_ImportTreeImpl_keyCompare(threadData_t *threadData, modelica_string _inKey1, modelica_string _inKey2);
+DLLDirection
+modelica_metatype boxptr_Conversion_ImportTreeImpl_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_keyCompare,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_keyCompare,0}};
+#define boxvar_Conversion_ImportTreeImpl_keyCompare MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_keyCompare)
+
+
+DLLDirection
+modelica_string omc_Conversion_ImportTreeImpl_keyStr(threadData_t *threadData, modelica_string _inKey);
+#define boxptr_Conversion_ImportTreeImpl_keyStr omc_Conversion_ImportTreeImpl_keyStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_keyStr,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_keyStr,0}};
+#define boxvar_Conversion_ImportTreeImpl_keyStr MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_keyStr)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_listKeys(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_Conversion_ImportTreeImpl_listKeys omc_Conversion_ImportTreeImpl_listKeys
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_listKeys,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_listKeys,0}};
+#define boxvar_Conversion_ImportTreeImpl_listKeys MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_listKeys)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_listKeysReverse(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_Conversion_ImportTreeImpl_listKeysReverse omc_Conversion_ImportTreeImpl_listKeysReverse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_listKeysReverse,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_listKeysReverse,0}};
+#define boxvar_Conversion_ImportTreeImpl_listKeysReverse MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_listKeysReverse)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_listValues(threadData_t *threadData, modelica_metatype _tree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_Conversion_ImportTreeImpl_listValues omc_Conversion_ImportTreeImpl_listValues
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_listValues,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_listValues,0}};
+#define boxvar_Conversion_ImportTreeImpl_listValues MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_listValues)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_map(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc);
+#define boxptr_Conversion_ImportTreeImpl_map omc_Conversion_ImportTreeImpl_map
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_map,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_map,0}};
+#define boxvar_Conversion_ImportTreeImpl_map MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_map)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_mapFold(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc, modelica_metatype _inStartValue, modelica_metatype *out_outResult);
+#define boxptr_Conversion_ImportTreeImpl_mapFold omc_Conversion_ImportTreeImpl_mapFold
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_mapFold,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_mapFold,0}};
+#define boxvar_Conversion_ImportTreeImpl_mapFold MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_mapFold)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_new(threadData_t *threadData);
+#define boxptr_Conversion_ImportTreeImpl_new omc_Conversion_ImportTreeImpl_new
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_new,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_new,0}};
+#define boxvar_Conversion_ImportTreeImpl_new MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_new)
+
+
+DLLDirection
+modelica_string omc_Conversion_ImportTreeImpl_printNodeStr(threadData_t *threadData, modelica_metatype _inNode);
+#define boxptr_Conversion_ImportTreeImpl_printNodeStr omc_Conversion_ImportTreeImpl_printNodeStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_printNodeStr,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_printNodeStr,0}};
+#define boxvar_Conversion_ImportTreeImpl_printNodeStr MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_printNodeStr)
+
+
+DLLDirection
+modelica_string omc_Conversion_ImportTreeImpl_printTreeStr(threadData_t *threadData, modelica_metatype _inTree);
+#define boxptr_Conversion_ImportTreeImpl_printTreeStr omc_Conversion_ImportTreeImpl_printTreeStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_printTreeStr,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_printTreeStr,0}};
+#define boxvar_Conversion_ImportTreeImpl_printTreeStr MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_printTreeStr)
+
+
+#define boxptr_Conversion_ImportTreeImpl_rotateLeft omc_Conversion_ImportTreeImpl_rotateLeft
+
+
+#define boxptr_Conversion_ImportTreeImpl_rotateRight omc_Conversion_ImportTreeImpl_rotateRight
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_setTreeLeftRight(threadData_t *threadData, modelica_metatype _orig, modelica_metatype _left, modelica_metatype _right);
+#define boxptr_Conversion_ImportTreeImpl_setTreeLeftRight omc_Conversion_ImportTreeImpl_setTreeLeftRight
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_setTreeLeftRight,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_setTreeLeftRight,0}};
+#define boxvar_Conversion_ImportTreeImpl_setTreeLeftRight MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_setTreeLeftRight)
+
+
+DLLDirection
+modelica_string omc_Conversion_ImportTreeImpl_smallestKey(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_Conversion_ImportTreeImpl_smallestKey omc_Conversion_ImportTreeImpl_smallestKey
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_smallestKey,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_smallestKey,0}};
+#define boxvar_Conversion_ImportTreeImpl_smallestKey MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_smallestKey)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_toList(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_Conversion_ImportTreeImpl_toList omc_Conversion_ImportTreeImpl_toList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_toList,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_toList,0}};
+#define boxvar_Conversion_ImportTreeImpl_toList MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_toList)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ImportTreeImpl_update(threadData_t *threadData, modelica_metatype _tree, modelica_string _key, modelica_metatype _value);
+#define boxptr_Conversion_ImportTreeImpl_update omc_Conversion_ImportTreeImpl_update
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_update,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_update,0}};
+#define boxvar_Conversion_ImportTreeImpl_update MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_update)
+
+
+DLLDirection
+modelica_string omc_Conversion_ImportTreeImpl_valueStr(threadData_t *threadData, modelica_metatype _inValue);
+#define boxptr_Conversion_ImportTreeImpl_valueStr omc_Conversion_ImportTreeImpl_valueStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_valueStr,2,0) {(void*) boxptr_Conversion_ImportTreeImpl_valueStr,0}};
+#define boxvar_Conversion_ImportTreeImpl_valueStr MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ImportTreeImpl_valueStr)
+
+
+DLLDirection
+modelica_metatype omc_Conversion_ConversionRules_newNode(threadData_t *threadData);
+#define boxptr_Conversion_ConversionRules_newNode omc_Conversion_ConversionRules_newNode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Conversion_ConversionRules_newNode,2,0) {(void*) boxptr_Conversion_ConversionRules_newNode,0}};
+#define boxvar_Conversion_ConversionRules_newNode MMC_REFSTRUCTLIT(boxvar_lit_Conversion_ConversionRules_newNode)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

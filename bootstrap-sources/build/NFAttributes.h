@@ -1,0 +1,234 @@
+#ifndef NFAttributes__H
+#define NFAttributes__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_InnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_Attributes_ATTR__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFClass_Prefixes_PREFIXES__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description SCode_Encapsulated_NOT__ENCAPSULATED__desc;
+
+extern struct record_description SCode_Final_NOT__FINAL__desc;
+
+extern struct record_description SCode_Partial_NOT__PARTIAL__desc;
+
+extern struct record_description SCode_Replaceable_NOT__REPLACEABLE__desc;
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_toFlatStream(threadData_t *threadData, modelica_metatype _attr, modelica_metatype _ty, modelica_metatype __omcQ_24in_5Fs, modelica_boolean _isTopLevel);
+DLLDirection
+modelica_metatype boxptr_NFAttributes_toFlatStream(threadData_t *threadData, modelica_metatype _attr, modelica_metatype _ty, modelica_metatype __omcQ_24in_5Fs, modelica_metatype _isTopLevel);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_toFlatStream,2,0) {(void*) boxptr_NFAttributes_toFlatStream,0}};
+#define boxvar_NFAttributes_toFlatStream MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_toFlatStream)
+
+
+DLLDirection
+modelica_string omc_NFAttributes_toString(threadData_t *threadData, modelica_metatype _attr, modelica_metatype _ty);
+#define boxptr_NFAttributes_toString omc_NFAttributes_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_toString,2,0) {(void*) boxptr_NFAttributes_toString,0}};
+#define boxvar_NFAttributes_toString MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_toString)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_toDAE(threadData_t *threadData, modelica_metatype _ina, modelica_integer _vis);
+DLLDirection
+modelica_metatype boxptr_NFAttributes_toDAE(threadData_t *threadData, modelica_metatype _ina, modelica_metatype _vis);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_toDAE,2,0) {(void*) boxptr_NFAttributes_toDAE,0}};
+#define boxvar_NFAttributes_toDAE MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_toDAE)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_setReplaceable(threadData_t *threadData, modelica_metatype _repl, modelica_metatype __omcQ_24in_5Fattr);
+#define boxptr_NFAttributes_setReplaceable omc_NFAttributes_setReplaceable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_setReplaceable,2,0) {(void*) boxptr_NFAttributes_setReplaceable,0}};
+#define boxvar_NFAttributes_setReplaceable MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_setReplaceable)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_setRedeclare(threadData_t *threadData, modelica_boolean _redecl, modelica_metatype __omcQ_24in_5Fattr);
+DLLDirection
+modelica_metatype boxptr_NFAttributes_setRedeclare(threadData_t *threadData, modelica_metatype _redecl, modelica_metatype __omcQ_24in_5Fattr);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_setRedeclare,2,0) {(void*) boxptr_NFAttributes_setRedeclare,0}};
+#define boxvar_NFAttributes_setRedeclare MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_setRedeclare)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_setFinal(threadData_t *threadData, modelica_boolean _fin, modelica_metatype __omcQ_24in_5Fattr);
+DLLDirection
+modelica_metatype boxptr_NFAttributes_setFinal(threadData_t *threadData, modelica_metatype _fin, modelica_metatype __omcQ_24in_5Fattr);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_setFinal,2,0) {(void*) boxptr_NFAttributes_setFinal,0}};
+#define boxvar_NFAttributes_setFinal MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_setFinal)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_setInnerOuter(threadData_t *threadData, modelica_integer _io, modelica_metatype __omcQ_24in_5Fattr);
+DLLDirection
+modelica_metatype boxptr_NFAttributes_setInnerOuter(threadData_t *threadData, modelica_metatype _io, modelica_metatype __omcQ_24in_5Fattr);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_setInnerOuter,2,0) {(void*) boxptr_NFAttributes_setInnerOuter,0}};
+#define boxvar_NFAttributes_setInnerOuter MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_setInnerOuter)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_setDirection(threadData_t *threadData, modelica_integer _dir, modelica_metatype __omcQ_24in_5Fattr);
+DLLDirection
+modelica_metatype boxptr_NFAttributes_setDirection(threadData_t *threadData, modelica_metatype _dir, modelica_metatype __omcQ_24in_5Fattr);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_setDirection,2,0) {(void*) boxptr_NFAttributes_setDirection,0}};
+#define boxvar_NFAttributes_setDirection MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_setDirection)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_setVariability(threadData_t *threadData, modelica_integer _var, modelica_metatype __omcQ_24in_5Fattr);
+DLLDirection
+modelica_metatype boxptr_NFAttributes_setVariability(threadData_t *threadData, modelica_metatype _var, modelica_metatype __omcQ_24in_5Fattr);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_setVariability,2,0) {(void*) boxptr_NFAttributes_setVariability,0}};
+#define boxvar_NFAttributes_setVariability MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_setVariability)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_setConnectorType(threadData_t *threadData, modelica_integer _cty, modelica_metatype __omcQ_24in_5Fattr);
+DLLDirection
+modelica_metatype boxptr_NFAttributes_setConnectorType(threadData_t *threadData, modelica_metatype _cty, modelica_metatype __omcQ_24in_5Fattr);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_setConnectorType,2,0) {(void*) boxptr_NFAttributes_setConnectorType,0}};
+#define boxvar_NFAttributes_setConnectorType MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_setConnectorType)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_updateVariability(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fattr, modelica_metatype _cls, modelica_metatype _clsNode, modelica_metatype _compNode, modelica_integer _context);
+DLLDirection
+modelica_metatype boxptr_NFAttributes_updateVariability(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fattr, modelica_metatype _cls, modelica_metatype _clsNode, modelica_metatype _compNode, modelica_metatype _context);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_updateVariability,2,0) {(void*) boxptr_NFAttributes_updateVariability,0}};
+#define boxvar_NFAttributes_updateVariability MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_updateVariability)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_updateClassConnectorType(threadData_t *threadData, modelica_metatype _res, modelica_metatype __omcQ_24in_5Fattrs);
+#define boxptr_NFAttributes_updateClassConnectorType omc_NFAttributes_updateClassConnectorType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_updateClassConnectorType,2,0) {(void*) boxptr_NFAttributes_updateClassConnectorType,0}};
+#define boxvar_NFAttributes_updateClassConnectorType MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_updateClassConnectorType)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_updateComponentConnectorType(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fattributes, modelica_metatype _restriction, modelica_integer _context, modelica_metatype _component);
+DLLDirection
+modelica_metatype boxptr_NFAttributes_updateComponentConnectorType(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fattributes, modelica_metatype _restriction, modelica_metatype _context, modelica_metatype _component);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_updateComponentConnectorType,2,0) {(void*) boxptr_NFAttributes_updateComponentConnectorType,0}};
+#define boxvar_NFAttributes_updateComponentConnectorType MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_updateComponentConnectorType)
+
+
+DLLDirection
+void omc_NFAttributes_assertNotFlowStream(threadData_t *threadData, modelica_integer _cty, modelica_metatype _node, modelica_metatype _restriction);
+DLLDirection
+void boxptr_NFAttributes_assertNotFlowStream(threadData_t *threadData, modelica_metatype _cty, modelica_metatype _node, modelica_metatype _restriction);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_assertNotFlowStream,2,0) {(void*) boxptr_NFAttributes_assertNotFlowStream,0}};
+#define boxvar_NFAttributes_assertNotFlowStream MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_assertNotFlowStream)
+
+
+DLLDirection
+void omc_NFAttributes_assertNotInnerOuter(threadData_t *threadData, modelica_integer _io, modelica_metatype _node, modelica_metatype _restriction);
+DLLDirection
+void boxptr_NFAttributes_assertNotInnerOuter(threadData_t *threadData, modelica_metatype _io, modelica_metatype _node, modelica_metatype _restriction);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_assertNotInnerOuter,2,0) {(void*) boxptr_NFAttributes_assertNotInnerOuter,0}};
+#define boxvar_NFAttributes_assertNotInnerOuter MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_assertNotInnerOuter)
+
+
+DLLDirection
+void omc_NFAttributes_assertNotInputOutput(threadData_t *threadData, modelica_integer _dir, modelica_metatype _node, modelica_metatype _restriction);
+DLLDirection
+void boxptr_NFAttributes_assertNotInputOutput(threadData_t *threadData, modelica_metatype _dir, modelica_metatype _node, modelica_metatype _restriction);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_assertNotInputOutput,2,0) {(void*) boxptr_NFAttributes_assertNotInputOutput,0}};
+#define boxvar_NFAttributes_assertNotInputOutput MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_assertNotInputOutput)
+
+
+DLLDirection
+void omc_NFAttributes_invalidComponentPrefixError(threadData_t *threadData, modelica_string _prefix, modelica_metatype _node, modelica_metatype _restriction);
+#define boxptr_NFAttributes_invalidComponentPrefixError omc_NFAttributes_invalidComponentPrefixError
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_invalidComponentPrefixError,2,0) {(void*) boxptr_NFAttributes_invalidComponentPrefixError,0}};
+#define boxvar_NFAttributes_invalidComponentPrefixError MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_invalidComponentPrefixError)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_checkDeclaredComponentAttributes(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fattr, modelica_metatype _parentRestriction, modelica_metatype _component);
+#define boxptr_NFAttributes_checkDeclaredComponentAttributes omc_NFAttributes_checkDeclaredComponentAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_checkDeclaredComponentAttributes,2,0) {(void*) boxptr_NFAttributes_checkDeclaredComponentAttributes,0}};
+#define boxvar_NFAttributes_checkDeclaredComponentAttributes MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_checkDeclaredComponentAttributes)
+
+
+DLLDirection
+void omc_NFAttributes_printRedeclarePrefixError(threadData_t *threadData, modelica_metatype _node, modelica_string _prefix1, modelica_string _prefix2);
+#define boxptr_NFAttributes_printRedeclarePrefixError omc_NFAttributes_printRedeclarePrefixError
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_printRedeclarePrefixError,2,0) {(void*) boxptr_NFAttributes_printRedeclarePrefixError,0}};
+#define boxvar_NFAttributes_printRedeclarePrefixError MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_printRedeclarePrefixError)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_mergeRedeclaredClassPrefixes(threadData_t *threadData, modelica_metatype _origPrefs, modelica_metatype _redeclPrefs, modelica_metatype _node);
+#define boxptr_NFAttributes_mergeRedeclaredClassPrefixes omc_NFAttributes_mergeRedeclaredClassPrefixes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_mergeRedeclaredClassPrefixes,2,0) {(void*) boxptr_NFAttributes_mergeRedeclaredClassPrefixes,0}};
+#define boxvar_NFAttributes_mergeRedeclaredClassPrefixes MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_mergeRedeclaredClassPrefixes)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_mergeRedeclaredComponentAttributes(threadData_t *threadData, modelica_metatype _origAttr, modelica_metatype _redeclAttr, modelica_metatype _node);
+#define boxptr_NFAttributes_mergeRedeclaredComponentAttributes omc_NFAttributes_mergeRedeclaredComponentAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_mergeRedeclaredComponentAttributes,2,0) {(void*) boxptr_NFAttributes_mergeRedeclaredComponentAttributes,0}};
+#define boxvar_NFAttributes_mergeRedeclaredComponentAttributes MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_mergeRedeclaredComponentAttributes)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_mergeDerivedAttributes(threadData_t *threadData, modelica_metatype _outerAttr, modelica_metatype _innerAttr, modelica_metatype _node);
+#define boxptr_NFAttributes_mergeDerivedAttributes omc_NFAttributes_mergeDerivedAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_mergeDerivedAttributes,2,0) {(void*) boxptr_NFAttributes_mergeDerivedAttributes,0}};
+#define boxvar_NFAttributes_mergeDerivedAttributes MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_mergeDerivedAttributes)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_mergeComponentAttributes(threadData_t *threadData, modelica_metatype _outerAttr, modelica_metatype _innerAttr, modelica_metatype _node, modelica_metatype _parentRestriction);
+#define boxptr_NFAttributes_mergeComponentAttributes omc_NFAttributes_mergeComponentAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_mergeComponentAttributes,2,0) {(void*) boxptr_NFAttributes_mergeComponentAttributes,0}};
+#define boxvar_NFAttributes_mergeComponentAttributes MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_mergeComponentAttributes)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_fromDerivedSCode(threadData_t *threadData, modelica_metatype _scodeAttr);
+#define boxptr_NFAttributes_fromDerivedSCode omc_NFAttributes_fromDerivedSCode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_fromDerivedSCode,2,0) {(void*) boxptr_NFAttributes_fromDerivedSCode,0}};
+#define boxvar_NFAttributes_fromDerivedSCode MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_fromDerivedSCode)
+
+
+DLLDirection
+modelica_metatype omc_NFAttributes_fromSCode(threadData_t *threadData, modelica_metatype _compAttr, modelica_metatype _compPrefs);
+#define boxptr_NFAttributes_fromSCode omc_NFAttributes_fromSCode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFAttributes_fromSCode,2,0) {(void*) boxptr_NFAttributes_fromSCode,0}};
+#define boxvar_NFAttributes_fromSCode MMC_REFSTRUCTLIT(boxvar_lit_NFAttributes_fromSCode)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

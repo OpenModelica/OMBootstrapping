@@ -5,14 +5,135 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-DLLExport
-modelica_metatype omc_NFUnitCheck_checkUnits(threadData_t *threadData, modelica_metatype _inDAE, modelica_metatype _func);
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_Prefix_NOPRE__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Gettext_TranslatableContent_notrans__desc;
+
+extern struct record_description NFComponentRef_CREF__desc;
+
+extern struct record_description NFComponentRef_EMPTY__desc;
+
+extern struct record_description NFExpression_BINARY__desc;
+
+extern struct record_description NFExpression_CREF__desc;
+
+extern struct record_description NFExpression_STRING__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_NAME__NODE__desc;
+
+extern struct record_description NFType_REAL__desc;
+
+extern struct record_description NFType_UNKNOWN__desc;
+
+extern struct record_description NFUnit_Unit_MASTER__desc;
+
+extern struct record_description NFUnit_Unit_UNIT__desc;
+
+extern struct record_description NFUnit_Unit_UNKNOWN__desc;
+
+extern struct record_description NFUnitCheck_Functionargs_FUNCTIONUNITS__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFUnitCheck_parse omc_NFUnitCheck_parse
+
+
+#define boxptr_NFUnitCheck_getUnitStringFromExp omc_NFUnitCheck_getUnitStringFromExp
+
+
+#define boxptr_NFUnitCheck_convertUnitStringToUnit omc_NFUnitCheck_convertUnitStringToUnit
+
+
+#define boxptr_NFUnitCheck_addUnit2HtU2S omc_NFUnitCheck_addUnit2HtU2S
+
+
+#define boxptr_NFUnitCheck_addUnit2HtS2U omc_NFUnitCheck_addUnit2HtS2U
+
+
+#define boxptr_NFUnitCheck_foldCallArg1 omc_NFUnitCheck_foldCallArg1
+
+
+#define boxptr_NFUnitCheck_foldCallArg omc_NFUnitCheck_foldCallArg
+
+
+#define boxptr_NFUnitCheck_Errorfunction2 omc_NFUnitCheck_Errorfunction2
+
+
+#define boxptr_NFUnitCheck_Errorfunction omc_NFUnitCheck_Errorfunction
+
+
+#define boxptr_NFUnitCheck_updateHtCr2U omc_NFUnitCheck_updateHtCr2U
+
+
+#define boxptr_NFUnitCheck_parseFunctionUnits omc_NFUnitCheck_parseFunctionUnits
+
+
+#define boxptr_NFUnitCheck_getCallUnits omc_NFUnitCheck_getCallUnits
+
+
+#define boxptr_NFUnitCheck_insertUnitString omc_NFUnitCheck_insertUnitString
+
+
+#define boxptr_NFUnitCheck_insertUnitInEquationCall omc_NFUnitCheck_insertUnitInEquationCall
+
+
+#define boxptr_NFUnitCheck_insertUnitInEquation omc_NFUnitCheck_insertUnitInEquation
+
+
+#define boxptr_NFUnitCheck_makeNewCref omc_NFUnitCheck_makeNewCref
+
+
+#define boxptr_NFUnitCheck_checkModelConsistency omc_NFUnitCheck_checkModelConsistency
+
+
+#define boxptr_NFUnitCheck_notification2 omc_NFUnitCheck_notification2
+
+
+#define boxptr_NFUnitCheck_notification omc_NFUnitCheck_notification
+
+
+#define boxptr_NFUnitCheck_updateVariable omc_NFUnitCheck_updateVariable
+
+
+#define boxptr_NFUnitCheck_updateModel omc_NFUnitCheck_updateModel
+
+
+DLLDirection
+modelica_metatype omc_NFUnitCheck_checkUnits(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel);
 #define boxptr_NFUnitCheck_checkUnits omc_NFUnitCheck_checkUnits
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFUnitCheck_checkUnits,2,0) {(void*) boxptr_NFUnitCheck_checkUnits,0}};
 #define boxvar_NFUnitCheck_checkUnits MMC_REFSTRUCTLIT(boxvar_lit_NFUnitCheck_checkUnits)
+
 #ifdef __cplusplus
 }
 #endif

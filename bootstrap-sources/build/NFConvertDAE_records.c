@@ -1,0 +1,35 @@
+#include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
+#ifdef __cplusplus
+extern "C" {
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc_added
+#define NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc__fields[2] = {"isFunctionParameter","addTypeToSource"};
+ADD_METARECORD_DEFINITIONS struct record_description NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc = {
+  "NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS",
+  "NFConvertDAE.VariableConversionSettings.VARIABLE_CONVERSION_SETTINGS",
+  NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc_added
+#define NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc__fields[2] = {"isFunctionParameter","addTypeToSource"};
+ADD_METARECORD_DEFINITIONS struct record_description NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc = {
+  "NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS",
+  "NFConvertDAE.VariableConversionSettings.VARIABLE_CONVERSION_SETTINGS",
+  NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc;
+#endif
+#ifdef __cplusplus
+}
+#endif
+

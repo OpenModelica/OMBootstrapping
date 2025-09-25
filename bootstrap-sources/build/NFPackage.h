@@ -1,0 +1,243 @@
+#ifndef NFPackage__H
+#define NFPackage__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFCeval_EvalTarget_EVAL__TARGET__desc;
+
+extern struct record_description NFPackage_ConstantsSetImpl_Tree_EMPTY__desc;
+
+extern struct record_description NFPackage_ConstantsSetImpl_Tree_LEAF__desc;
+
+extern struct record_description NFPackage_ConstantsSetImpl_Tree_NODE__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_replaceFuncConstants(threadData_t *threadData, modelica_metatype _name, modelica_metatype __omcQ_24in_5Ffunc);
+#define boxptr_NFPackage_replaceFuncConstants omc_NFPackage_replaceFuncConstants
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_replaceFuncConstants,2,0) {(void*) boxptr_NFPackage_replaceFuncConstants,0}};
+#define boxvar_NFPackage_replaceFuncConstants MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_replaceFuncConstants)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_replaceExpConstants__traverser(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFPackage_replaceExpConstants__traverser omc_NFPackage_replaceExpConstants__traverser
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_replaceExpConstants__traverser,2,0) {(void*) boxptr_NFPackage_replaceExpConstants__traverser,0}};
+#define boxvar_NFPackage_replaceExpConstants__traverser MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_replaceExpConstants__traverser)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_replaceExpConstants(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NFPackage_replaceExpConstants omc_NFPackage_replaceExpConstants
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_replaceExpConstants,2,0) {(void*) boxptr_NFPackage_replaceExpConstants,0}};
+#define boxvar_NFPackage_replaceExpConstants MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_replaceExpConstants)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_replaceBindingConstants(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbinding);
+#define boxptr_NFPackage_replaceBindingConstants omc_NFPackage_replaceBindingConstants
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_replaceBindingConstants,2,0) {(void*) boxptr_NFPackage_replaceBindingConstants,0}};
+#define boxvar_NFPackage_replaceBindingConstants MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_replaceBindingConstants)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_replaceVariableConstants(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fvar);
+#define boxptr_NFPackage_replaceVariableConstants omc_NFPackage_replaceVariableConstants
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_replaceVariableConstants,2,0) {(void*) boxptr_NFPackage_replaceVariableConstants,0}};
+#define boxvar_NFPackage_replaceVariableConstants MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_replaceVariableConstants)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_collectFuncConstants(threadData_t *threadData, modelica_metatype _name, modelica_metatype _func, modelica_metatype __omcQ_24in_5Fconstants);
+#define boxptr_NFPackage_collectFuncConstants omc_NFPackage_collectFuncConstants
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_collectFuncConstants,2,0) {(void*) boxptr_NFPackage_collectFuncConstants,0}};
+#define boxvar_NFPackage_collectFuncConstants MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_collectFuncConstants)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_getPackageConstantBinding2(threadData_t *threadData, modelica_metatype _fieldNode, modelica_metatype _cref);
+#define boxptr_NFPackage_getPackageConstantBinding2 omc_NFPackage_getPackageConstantBinding2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_getPackageConstantBinding2,2,0) {(void*) boxptr_NFPackage_getPackageConstantBinding2,0}};
+#define boxvar_NFPackage_getPackageConstantBinding2 MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_getPackageConstantBinding2)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_getPackageConstantBinding(threadData_t *threadData, modelica_metatype _cref);
+#define boxptr_NFPackage_getPackageConstantBinding omc_NFPackage_getPackageConstantBinding
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_getPackageConstantBinding,2,0) {(void*) boxptr_NFPackage_getPackageConstantBinding,0}};
+#define boxvar_NFPackage_getPackageConstantBinding MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_getPackageConstantBinding)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_collectExpConstants__traverser(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Fconstants);
+#define boxptr_NFPackage_collectExpConstants__traverser omc_NFPackage_collectExpConstants__traverser
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_collectExpConstants__traverser,2,0) {(void*) boxptr_NFPackage_collectExpConstants__traverser,0}};
+#define boxvar_NFPackage_collectExpConstants__traverser MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_collectExpConstants__traverser)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_collectExpConstants(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Fconstants);
+#define boxptr_NFPackage_collectExpConstants omc_NFPackage_collectExpConstants
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_collectExpConstants,2,0) {(void*) boxptr_NFPackage_collectExpConstants,0}};
+#define boxvar_NFPackage_collectExpConstants MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_collectExpConstants)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_collectBindingConstants(threadData_t *threadData, modelica_metatype _binding, modelica_metatype __omcQ_24in_5Fconstants);
+#define boxptr_NFPackage_collectBindingConstants omc_NFPackage_collectBindingConstants
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_collectBindingConstants,2,0) {(void*) boxptr_NFPackage_collectBindingConstants,0}};
+#define boxvar_NFPackage_collectBindingConstants MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_collectBindingConstants)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_collectVariableConstants(threadData_t *threadData, modelica_metatype _var, modelica_metatype __omcQ_24in_5Fconstants);
+#define boxptr_NFPackage_collectVariableConstants omc_NFPackage_collectVariableConstants
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_collectVariableConstants,2,0) {(void*) boxptr_NFPackage_collectVariableConstants,0}};
+#define boxvar_NFPackage_collectVariableConstants MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_collectVariableConstants)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_replaceConstants(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel, modelica_metatype __omcQ_24in_5Ffunctions, modelica_metatype *out_functions);
+#define boxptr_NFPackage_replaceConstants omc_NFPackage_replaceConstants
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_replaceConstants,2,0) {(void*) boxptr_NFPackage_replaceConstants,0}};
+#define boxvar_NFPackage_replaceConstants MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_replaceConstants)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_collectConstants(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel);
+#define boxptr_NFPackage_collectConstants omc_NFPackage_collectConstants
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_collectConstants,2,0) {(void*) boxptr_NFPackage_collectConstants,0}};
+#define boxvar_NFPackage_collectConstants MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_collectConstants)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_ConstantsSetImpl_add(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey);
+#define boxptr_NFPackage_ConstantsSetImpl_add omc_NFPackage_ConstantsSetImpl_add
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_add,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_add,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_add MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_add)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_ConstantsSetImpl_addList(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _inValues);
+#define boxptr_NFPackage_ConstantsSetImpl_addList omc_NFPackage_ConstantsSetImpl_addList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_addList,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_addList,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_addList MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_addList)
+
+
+#define boxptr_NFPackage_ConstantsSetImpl_balance omc_NFPackage_ConstantsSetImpl_balance
+
+
+DLLDirection
+modelica_boolean omc_NFPackage_ConstantsSetImpl_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey);
+DLLDirection
+modelica_metatype boxptr_NFPackage_ConstantsSetImpl_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_hasKey,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_hasKey,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_hasKey MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_hasKey)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_ConstantsSetImpl_intersection(threadData_t *threadData, modelica_metatype _tree1, modelica_metatype _tree2, modelica_metatype *out_rest1, modelica_metatype *out_rest2);
+#define boxptr_NFPackage_ConstantsSetImpl_intersection omc_NFPackage_ConstantsSetImpl_intersection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_intersection,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_intersection,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_intersection MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_intersection)
+
+
+DLLDirection
+modelica_boolean omc_NFPackage_ConstantsSetImpl_isEmpty(threadData_t *threadData, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_NFPackage_ConstantsSetImpl_isEmpty(threadData_t *threadData, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_isEmpty,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_isEmpty,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_isEmpty)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_ConstantsSetImpl_join(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _treeToJoin);
+#define boxptr_NFPackage_ConstantsSetImpl_join omc_NFPackage_ConstantsSetImpl_join
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_join,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_join,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_join MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_join)
+
+
+DLLDirection
+modelica_integer omc_NFPackage_ConstantsSetImpl_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2);
+DLLDirection
+modelica_metatype boxptr_NFPackage_ConstantsSetImpl_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_keyCompare,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_keyCompare,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_keyCompare MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_keyCompare)
+
+
+DLLDirection
+modelica_string omc_NFPackage_ConstantsSetImpl_keyStr(threadData_t *threadData, modelica_metatype _inKey);
+#define boxptr_NFPackage_ConstantsSetImpl_keyStr omc_NFPackage_ConstantsSetImpl_keyStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_keyStr,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_keyStr,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_keyStr MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_keyStr)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_ConstantsSetImpl_listKeys(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_NFPackage_ConstantsSetImpl_listKeys omc_NFPackage_ConstantsSetImpl_listKeys
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_listKeys,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_listKeys,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_listKeys MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_listKeys)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_ConstantsSetImpl_listKeysReverse(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_NFPackage_ConstantsSetImpl_listKeysReverse omc_NFPackage_ConstantsSetImpl_listKeysReverse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_listKeysReverse,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_listKeysReverse,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_listKeysReverse MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_listKeysReverse)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_ConstantsSetImpl_new(threadData_t *threadData);
+#define boxptr_NFPackage_ConstantsSetImpl_new omc_NFPackage_ConstantsSetImpl_new
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_new,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_new,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_new MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_new)
+
+
+DLLDirection
+modelica_string omc_NFPackage_ConstantsSetImpl_printNodeStr(threadData_t *threadData, modelica_metatype _inNode);
+#define boxptr_NFPackage_ConstantsSetImpl_printNodeStr omc_NFPackage_ConstantsSetImpl_printNodeStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_printNodeStr,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_printNodeStr,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_printNodeStr MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_printNodeStr)
+
+
+DLLDirection
+modelica_string omc_NFPackage_ConstantsSetImpl_printTreeStr(threadData_t *threadData, modelica_metatype _inTree);
+#define boxptr_NFPackage_ConstantsSetImpl_printTreeStr omc_NFPackage_ConstantsSetImpl_printTreeStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_printTreeStr,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_printTreeStr,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_printTreeStr MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_printTreeStr)
+
+
+#define boxptr_NFPackage_ConstantsSetImpl_rotateLeft omc_NFPackage_ConstantsSetImpl_rotateLeft
+
+
+#define boxptr_NFPackage_ConstantsSetImpl_rotateRight omc_NFPackage_ConstantsSetImpl_rotateRight
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_ConstantsSetImpl_setTreeLeftRight(threadData_t *threadData, modelica_metatype _orig, modelica_metatype _left, modelica_metatype _right);
+#define boxptr_NFPackage_ConstantsSetImpl_setTreeLeftRight omc_NFPackage_ConstantsSetImpl_setTreeLeftRight
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_setTreeLeftRight,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_setTreeLeftRight,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_setTreeLeftRight MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_setTreeLeftRight)
+
+
+DLLDirection
+modelica_metatype omc_NFPackage_ConstantsSetImpl_smallestKey(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_NFPackage_ConstantsSetImpl_smallestKey omc_NFPackage_ConstantsSetImpl_smallestKey
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_smallestKey,2,0) {(void*) boxptr_NFPackage_ConstantsSetImpl_smallestKey,0}};
+#define boxvar_NFPackage_ConstantsSetImpl_smallestKey MMC_REFSTRUCTLIT(boxvar_lit_NFPackage_ConstantsSetImpl_smallestKey)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

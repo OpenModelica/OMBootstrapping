@@ -1,0 +1,108 @@
+#ifndef NFFlatModelicaUtil__H
+#define NFFlatModelicaUtil__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_ComponentRef_CREF__IDENT__desc;
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_quoteCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_integer __omcQ_24in_5Fdummy, modelica_integer *out_dummy);
+DLLDirection
+modelica_metatype boxptr_NFFlatModelicaUtil_quoteCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fdummy, modelica_metatype *out_dummy);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_quoteCref,2,0) {(void*) boxptr_NFFlatModelicaUtil_quoteCref,0}};
+#define boxvar_NFFlatModelicaUtil_quoteCref MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_quoteCref)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_appendExp(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Fs);
+#define boxptr_NFFlatModelicaUtil_appendExp omc_NFFlatModelicaUtil_appendExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendExp,2,0) {(void*) boxptr_NFFlatModelicaUtil_appendExp,0}};
+#define boxvar_NFFlatModelicaUtil_appendExp MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendExp)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_appendAnnotationSubMod(threadData_t *threadData, modelica_metatype _mod, modelica_metatype __omcQ_24in_5Fs);
+#define boxptr_NFFlatModelicaUtil_appendAnnotationSubMod omc_NFFlatModelicaUtil_appendAnnotationSubMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendAnnotationSubMod,2,0) {(void*) boxptr_NFFlatModelicaUtil_appendAnnotationSubMod,0}};
+#define boxvar_NFFlatModelicaUtil_appendAnnotationSubMod MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendAnnotationSubMod)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_appendAnnotationMod(threadData_t *threadData, modelica_metatype _mod, modelica_metatype __omcQ_24in_5Fs);
+#define boxptr_NFFlatModelicaUtil_appendAnnotationMod omc_NFFlatModelicaUtil_appendAnnotationMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendAnnotationMod,2,0) {(void*) boxptr_NFFlatModelicaUtil_appendAnnotationMod,0}};
+#define boxvar_NFFlatModelicaUtil_appendAnnotationMod MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendAnnotationMod)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_filterRootClassAnnotations(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod);
+#define boxptr_NFFlatModelicaUtil_filterRootClassAnnotations omc_NFFlatModelicaUtil_filterRootClassAnnotations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_filterRootClassAnnotations,2,0) {(void*) boxptr_NFFlatModelicaUtil_filterRootClassAnnotations,0}};
+#define boxvar_NFFlatModelicaUtil_filterRootClassAnnotations MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_filterRootClassAnnotations)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_appendCommentAnnotation(threadData_t *threadData, modelica_metatype _comment, modelica_integer _elementType, modelica_string _indent, modelica_string _ending, modelica_metatype __omcQ_24in_5Fs);
+DLLDirection
+modelica_metatype boxptr_NFFlatModelicaUtil_appendCommentAnnotation(threadData_t *threadData, modelica_metatype _comment, modelica_metatype _elementType, modelica_metatype _indent, modelica_metatype _ending, modelica_metatype __omcQ_24in_5Fs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendCommentAnnotation,2,0) {(void*) boxptr_NFFlatModelicaUtil_appendCommentAnnotation,0}};
+#define boxvar_NFFlatModelicaUtil_appendCommentAnnotation MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendCommentAnnotation)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_appendCommentString(threadData_t *threadData, modelica_metatype _comment, modelica_metatype __omcQ_24in_5Fs);
+#define boxptr_NFFlatModelicaUtil_appendCommentString omc_NFFlatModelicaUtil_appendCommentString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendCommentString,2,0) {(void*) boxptr_NFFlatModelicaUtil_appendCommentString,0}};
+#define boxvar_NFFlatModelicaUtil_appendCommentString MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendCommentString)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_appendComment(threadData_t *threadData, modelica_metatype _comment, modelica_integer _elementType, modelica_metatype __omcQ_24in_5Fs);
+DLLDirection
+modelica_metatype boxptr_NFFlatModelicaUtil_appendComment(threadData_t *threadData, modelica_metatype _comment, modelica_metatype _elementType, modelica_metatype __omcQ_24in_5Fs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendComment,2,0) {(void*) boxptr_NFFlatModelicaUtil_appendComment,0}};
+#define boxvar_NFFlatModelicaUtil_appendComment MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendComment)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_appendCommentOpt(threadData_t *threadData, modelica_metatype _comment, modelica_integer _elementType, modelica_metatype __omcQ_24in_5Fs);
+DLLDirection
+modelica_metatype boxptr_NFFlatModelicaUtil_appendCommentOpt(threadData_t *threadData, modelica_metatype _comment, modelica_metatype _elementType, modelica_metatype __omcQ_24in_5Fs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendCommentOpt,2,0) {(void*) boxptr_NFFlatModelicaUtil_appendCommentOpt,0}};
+#define boxvar_NFFlatModelicaUtil_appendCommentOpt MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendCommentOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_appendElementSourceComment(threadData_t *threadData, modelica_metatype _source, modelica_integer _elementType, modelica_metatype __omcQ_24in_5Fs);
+DLLDirection
+modelica_metatype boxptr_NFFlatModelicaUtil_appendElementSourceComment(threadData_t *threadData, modelica_metatype _source, modelica_metatype _elementType, modelica_metatype __omcQ_24in_5Fs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendElementSourceComment,2,0) {(void*) boxptr_NFFlatModelicaUtil_appendElementSourceComment,0}};
+#define boxvar_NFFlatModelicaUtil_appendElementSourceComment MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendElementSourceComment)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_appendElementSourceCommentAnnotation(threadData_t *threadData, modelica_metatype _source, modelica_integer _elementType, modelica_string _indent, modelica_string _ending, modelica_metatype __omcQ_24in_5Fs);
+DLLDirection
+modelica_metatype boxptr_NFFlatModelicaUtil_appendElementSourceCommentAnnotation(threadData_t *threadData, modelica_metatype _source, modelica_metatype _elementType, modelica_metatype _indent, modelica_metatype _ending, modelica_metatype __omcQ_24in_5Fs);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendElementSourceCommentAnnotation,2,0) {(void*) boxptr_NFFlatModelicaUtil_appendElementSourceCommentAnnotation,0}};
+#define boxvar_NFFlatModelicaUtil_appendElementSourceCommentAnnotation MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendElementSourceCommentAnnotation)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatModelicaUtil_appendElementSourceCommentString(threadData_t *threadData, modelica_metatype _source, modelica_metatype __omcQ_24in_5Fs);
+#define boxptr_NFFlatModelicaUtil_appendElementSourceCommentString omc_NFFlatModelicaUtil_appendElementSourceCommentString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendElementSourceCommentString,2,0) {(void*) boxptr_NFFlatModelicaUtil_appendElementSourceCommentString,0}};
+#define boxvar_NFFlatModelicaUtil_appendElementSourceCommentString MMC_REFSTRUCTLIT(boxvar_lit_NFFlatModelicaUtil_appendElementSourceCommentString)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

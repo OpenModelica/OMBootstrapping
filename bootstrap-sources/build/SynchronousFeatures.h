@@ -1,0 +1,349 @@
+#ifndef SynchronousFeatures__H
+#define SynchronousFeatures__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_CLOCKED__PARTITION__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_CONTINUOUS__TIME__PARTITION__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNSPECIFIED__PARTITION__desc;
+
+extern struct record_description BackendDAE_BasePartition_BASE__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_ARRAY__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_FOR__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_WHEN__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_DYNAMIC__EQUATION__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_IndexType_BASECLOCK__IDX__desc;
+
+extern struct record_description BackendDAE_IndexType_SUBCLOCK__IDX__desc;
+
+extern struct record_description BackendDAE_SubClock_INFERED__SUBCLOCK__desc;
+
+extern struct record_description BackendDAE_SubClock_SUBCLOCK__desc;
+
+extern struct record_description BackendDAE_SubPartition_SUB__PARTITION__desc;
+
+extern struct record_description BackendDAE_TearingSelect_DEFAULT__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_CLOCKED__STATE__desc;
+
+extern struct record_description BackendDAE_VarKind_VARIABLE__desc;
+
+extern struct record_description BackendDAE_WhenEquation_WHEN__STMTS__desc;
+
+extern struct record_description BackendDAE_WhenOperator_NORETCALL__desc;
+
+extern struct record_description DAE_CallAttributes_CALL__ATTR__desc;
+
+extern struct record_description DAE_ClockKind_EVENT__CLOCK__desc;
+
+extern struct record_description DAE_ClockKind_INFERRED__CLOCK__desc;
+
+extern struct record_description DAE_ClockKind_RATIONAL__CLOCK__desc;
+
+extern struct record_description DAE_ClockKind_REAL__CLOCK__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_CLKCONST__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_Exp_IFEXP__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description DAE_Operator_ADD__desc;
+
+extern struct record_description DAE_Operator_DIV__desc;
+
+extern struct record_description DAE_Operator_MUL__desc;
+
+extern struct record_description DAE_Operator_SUB__desc;
+
+extern struct record_description DAE_Subscript_INDEX__desc;
+
+extern struct record_description DAE_TailCall_NO__TAIL__desc;
+
+extern struct record_description DAE_Type_T__BOOL__desc;
+
+extern struct record_description DAE_Type_T__CLOCK__desc;
+
+extern struct record_description DAE_Type_T__INTEGER__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description DAE_VarDirection_BIDIR__desc;
+
+extern struct record_description DAE_VarInnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_SYMBOLIC__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description MMath_Rational_RATIONAL__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_SynchronousFeatures_subClockTreeString omc_SynchronousFeatures_subClockTreeString
+
+
+#define boxptr_SynchronousFeatures_partitionEquations omc_SynchronousFeatures_partitionEquations
+
+
+#define boxptr_SynchronousFeatures_createEqSystem omc_SynchronousFeatures_createEqSystem
+
+
+DLLDirection
+modelica_metatype omc_SynchronousFeatures_partitionIndependentBlocksSplitBlocks(threadData_t *threadData, modelica_integer _n, modelica_metatype _inSyst, modelica_metatype _ixs, modelica_metatype _rixs, modelica_metatype _mT, modelica_metatype _rmT, modelica_boolean _throwNoError, modelica_metatype _funcs, modelica_boolean _isInitial, modelica_metatype *out_unpartRemovedEqs, modelica_metatype *out_varPartMap);
+DLLDirection
+modelica_metatype boxptr_SynchronousFeatures_partitionIndependentBlocksSplitBlocks(threadData_t *threadData, modelica_metatype _n, modelica_metatype _inSyst, modelica_metatype _ixs, modelica_metatype _rixs, modelica_metatype _mT, modelica_metatype _rmT, modelica_metatype _throwNoError, modelica_metatype _funcs, modelica_metatype _isInitial, modelica_metatype *out_unpartRemovedEqs, modelica_metatype *out_varPartMap);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_partitionIndependentBlocksSplitBlocks,2,0) {(void*) boxptr_SynchronousFeatures_partitionIndependentBlocksSplitBlocks,0}};
+#define boxvar_SynchronousFeatures_partitionIndependentBlocksSplitBlocks MMC_REFSTRUCTLIT(boxvar_lit_SynchronousFeatures_partitionIndependentBlocksSplitBlocks)
+
+
+DLLDirection
+modelica_integer omc_SynchronousFeatures_partitionIndependentBlocks0(threadData_t *threadData, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _rm, modelica_metatype _rmT, modelica_metatype _eqPartMap, modelica_metatype _varPartMap, modelica_metatype _rixs, modelica_metatype _vars, modelica_metatype _rvars);
+DLLDirection
+modelica_metatype boxptr_SynchronousFeatures_partitionIndependentBlocks0(threadData_t *threadData, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _rm, modelica_metatype _rmT, modelica_metatype _eqPartMap, modelica_metatype _varPartMap, modelica_metatype _rixs, modelica_metatype _vars, modelica_metatype _rvars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_partitionIndependentBlocks0,2,0) {(void*) boxptr_SynchronousFeatures_partitionIndependentBlocks0,0}};
+#define boxvar_SynchronousFeatures_partitionIndependentBlocks0 MMC_REFSTRUCTLIT(boxvar_lit_SynchronousFeatures_partitionIndependentBlocks0)
+
+
+#define boxptr_SynchronousFeatures_setClockedPartition omc_SynchronousFeatures_setClockedPartition
+
+
+#define boxptr_SynchronousFeatures_getPartitionConflictError omc_SynchronousFeatures_getPartitionConflictError
+
+
+#define boxptr_SynchronousFeatures_setSystPartition omc_SynchronousFeatures_setSystPartition
+
+
+#define boxptr_SynchronousFeatures_detectEqPartitionExp omc_SynchronousFeatures_detectEqPartitionExp
+
+
+#define boxptr_SynchronousFeatures_printPartitionType omc_SynchronousFeatures_printPartitionType
+
+
+#define boxptr_SynchronousFeatures_detectEqPartition omc_SynchronousFeatures_detectEqPartition
+
+
+#define boxptr_SynchronousFeatures_baseClockPartitioning omc_SynchronousFeatures_baseClockPartitioning
+
+
+#define boxptr_SynchronousFeatures_getVarIxs omc_SynchronousFeatures_getVarIxs
+
+
+#define boxptr_SynchronousFeatures_createEqVarPair omc_SynchronousFeatures_createEqVarPair
+
+
+#define boxptr_SynchronousFeatures_createVar omc_SynchronousFeatures_createVar
+
+
+#define boxptr_SynchronousFeatures_substitutePartitionOpExp1 omc_SynchronousFeatures_substitutePartitionOpExp1
+
+
+#define boxptr_SynchronousFeatures_substitutePartitionOpExp omc_SynchronousFeatures_substitutePartitionOpExp
+
+
+#define boxptr_SynchronousFeatures_substitutePartitionOpExps omc_SynchronousFeatures_substitutePartitionOpExps
+
+
+#define boxptr_SynchronousFeatures_splitClockVars omc_SynchronousFeatures_splitClockVars
+
+
+#define boxptr_SynchronousFeatures_splitClockEqs omc_SynchronousFeatures_splitClockEqs
+
+
+#define boxptr_SynchronousFeatures_collectSubclkInfoExp1 omc_SynchronousFeatures_collectSubclkInfoExp1
+
+
+#define boxptr_SynchronousFeatures_substGetPartition omc_SynchronousFeatures_substGetPartition
+
+
+#define boxptr_SynchronousFeatures_collectSubclkInfoExp omc_SynchronousFeatures_collectSubclkInfoExp
+
+
+#define boxptr_SynchronousFeatures_setShift omc_SynchronousFeatures_setShift
+
+
+#define boxptr_SynchronousFeatures_setFactor omc_SynchronousFeatures_setFactor
+
+
+#define boxptr_SynchronousFeatures_replaceSampledClocks1 omc_SynchronousFeatures_replaceSampledClocks1
+
+
+#define boxptr_SynchronousFeatures_replaceSampledClocks omc_SynchronousFeatures_replaceSampledClocks
+
+
+#define boxptr_SynchronousFeatures_findBaseClockInterfaces omc_SynchronousFeatures_findBaseClockInterfaces
+
+
+#define boxptr_SynchronousFeatures_getBaseClock omc_SynchronousFeatures_getBaseClock
+
+
+#define boxptr_SynchronousFeatures_setSubClockSolver omc_SynchronousFeatures_setSubClockSolver
+
+
+#define boxptr_SynchronousFeatures_setSubClockShift omc_SynchronousFeatures_setSubClockShift
+
+
+#define boxptr_SynchronousFeatures_getSubClockSolverOpt omc_SynchronousFeatures_getSubClockSolverOpt
+
+
+#define boxptr_SynchronousFeatures_getSubClockShift omc_SynchronousFeatures_getSubClockShift
+
+
+#define boxptr_SynchronousFeatures_getSubClockFactor omc_SynchronousFeatures_getSubClockFactor
+
+
+#define boxptr_SynchronousFeatures_setSubClockFactor omc_SynchronousFeatures_setSubClockFactor
+
+
+#define boxptr_SynchronousFeatures_mergeSolver omc_SynchronousFeatures_mergeSolver
+
+
+#define boxptr_SynchronousFeatures_computeAbsoluteSubClock omc_SynchronousFeatures_computeAbsoluteSubClock
+
+
+#define boxptr_SynchronousFeatures_setSolverSubClock omc_SynchronousFeatures_setSolverSubClock
+
+
+#define boxptr_SynchronousFeatures_getSubClockForClkConstructor omc_SynchronousFeatures_getSubClockForClkConstructor
+
+
+#define boxptr_SynchronousFeatures_removeHoldExp omc_SynchronousFeatures_removeHoldExp
+
+
+#define boxptr_SynchronousFeatures_removeHoldExp1 omc_SynchronousFeatures_removeHoldExp1
+
+
+#define boxptr_SynchronousFeatures_removeHoldExpsSyst omc_SynchronousFeatures_removeHoldExpsSyst
+
+
+#define boxptr_SynchronousFeatures_subClockPartitioning1 omc_SynchronousFeatures_subClockPartitioning1
+
+
+#define boxptr_SynchronousFeatures_collectPrevVars1 omc_SynchronousFeatures_collectPrevVars1
+
+
+#define boxptr_SynchronousFeatures_collectPrevVars omc_SynchronousFeatures_collectPrevVars
+
+
+#define boxptr_SynchronousFeatures_markClockedStates omc_SynchronousFeatures_markClockedStates
+
+
+#define boxptr_SynchronousFeatures_substituteFiniteDifference omc_SynchronousFeatures_substituteFiniteDifference
+
+
+#define boxptr_SynchronousFeatures_substituteFiniteDifference1 omc_SynchronousFeatures_substituteFiniteDifference1
+
+
+#define boxptr_SynchronousFeatures_shiftDerVars omc_SynchronousFeatures_shiftDerVars
+
+
+#define boxptr_SynchronousFeatures_shiftDerVars1 omc_SynchronousFeatures_shiftDerVars1
+
+
+#define boxptr_SynchronousFeatures_getDerVars omc_SynchronousFeatures_getDerVars
+
+
+#define boxptr_SynchronousFeatures_getDerVars1 omc_SynchronousFeatures_getDerVars1
+
+
+#define boxptr_SynchronousFeatures_treatClockedStates omc_SynchronousFeatures_treatClockedStates
+
+
+DLLDirection
+modelica_metatype omc_SynchronousFeatures_getBoolClockWhenClauses(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feq, modelica_metatype __omcQ_24in_5FeqLst, modelica_metatype *out_eqLst);
+#define boxptr_SynchronousFeatures_getBoolClockWhenClauses omc_SynchronousFeatures_getBoolClockWhenClauses
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_getBoolClockWhenClauses,2,0) {(void*) boxptr_SynchronousFeatures_getBoolClockWhenClauses,0}};
+#define boxvar_SynchronousFeatures_getBoolClockWhenClauses MMC_REFSTRUCTLIT(boxvar_lit_SynchronousFeatures_getBoolClockWhenClauses)
+
+
+#define boxptr_SynchronousFeatures_createBoolClockWhenClauses omc_SynchronousFeatures_createBoolClockWhenClauses
+
+
+#define boxptr_SynchronousFeatures_clockPartitioning1 omc_SynchronousFeatures_clockPartitioning1
+
+
+DLLDirection
+modelica_metatype omc_SynchronousFeatures_contPartitioning(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_SynchronousFeatures_contPartitioning omc_SynchronousFeatures_contPartitioning
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_contPartitioning,2,0) {(void*) boxptr_SynchronousFeatures_contPartitioning,0}};
+#define boxvar_SynchronousFeatures_contPartitioning MMC_REFSTRUCTLIT(boxvar_lit_SynchronousFeatures_contPartitioning)
+
+
+DLLDirection
+modelica_metatype omc_SynchronousFeatures_synchronousFeatures(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_SynchronousFeatures_synchronousFeatures omc_SynchronousFeatures_synchronousFeatures
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_synchronousFeatures,2,0) {(void*) boxptr_SynchronousFeatures_synchronousFeatures,0}};
+#define boxvar_SynchronousFeatures_synchronousFeatures MMC_REFSTRUCTLIT(boxvar_lit_SynchronousFeatures_synchronousFeatures)
+
+
+DLLDirection
+modelica_metatype omc_SynchronousFeatures_clockPartitioning(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_SynchronousFeatures_clockPartitioning omc_SynchronousFeatures_clockPartitioning
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_clockPartitioning,2,0) {(void*) boxptr_SynchronousFeatures_clockPartitioning,0}};
+#define boxvar_SynchronousFeatures_clockPartitioning MMC_REFSTRUCTLIT(boxvar_lit_SynchronousFeatures_clockPartitioning)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

@@ -1,0 +1,1060 @@
+#ifndef BackendEquation__H
+#define BackendEquation__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_Equation_ALGORITHM__desc;
+
+extern struct record_description BackendDAE_Equation_ARRAY__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_COMPLEX__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_DUMMY__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_FOR__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_IF__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_RESIDUAL__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_SOLVED__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_WHEN__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_CLOCKED__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_DYNAMIC__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_UNKNOWN__EQUATION__KIND__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_Matching_NO__MATCHING__desc;
+
+extern struct record_description BackendDAE_TearingSelect_AVOID__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_DAE__RESIDUAL__VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_PARAM__desc;
+
+extern struct record_description BackendDAE_WhenEquation_WHEN__STMTS__desc;
+
+extern struct record_description BackendDAE_WhenOperator_ASSERT__desc;
+
+extern struct record_description BackendDAE_WhenOperator_ASSIGN__desc;
+
+extern struct record_description BackendDAE_WhenOperator_NORETCALL__desc;
+
+extern struct record_description BackendDAE_WhenOperator_REINIT__desc;
+
+extern struct record_description BackendDAE_WhenOperator_TERMINATE__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_IFEXP__desc;
+
+extern struct record_description DAE_Exp_LUNARY__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Exp_TSUB__desc;
+
+extern struct record_description DAE_Exp_UNARY__desc;
+
+extern struct record_description DAE_Operator_UMINUS__desc;
+
+extern struct record_description DAE_Operator_UMINUS__ARR__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_VarDirection_OUTPUT__desc;
+
+extern struct record_description DAE_VarInnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_hasAnyUnknown(threadData_t *threadData, modelica_metatype _eqn, modelica_metatype _vars);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_hasAnyUnknown(threadData_t *threadData, modelica_metatype _eqn, modelica_metatype _vars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_hasAnyUnknown,2,0) {(void*) boxptr_BackendEquation_hasAnyUnknown,0}};
+#define boxvar_BackendEquation_hasAnyUnknown MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_hasAnyUnknown)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_createResidualExp(threadData_t *threadData, modelica_metatype _eqn);
+#define boxptr_BackendEquation_createResidualExp omc_BackendEquation_createResidualExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_createResidualExp,2,0) {(void*) boxptr_BackendEquation_createResidualExp,0}};
+#define boxvar_BackendEquation_createResidualExp MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_createResidualExp)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_allAlgorithmsLst(threadData_t *threadData, modelica_metatype _eqn_lst);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_allAlgorithmsLst(threadData_t *threadData, modelica_metatype _eqn_lst);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_allAlgorithmsLst,2,0) {(void*) boxptr_BackendEquation_allAlgorithmsLst,0}};
+#define boxvar_BackendEquation_allAlgorithmsLst MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_allAlgorithmsLst)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_scalarComplexEquations(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _funcTree);
+#define boxptr_BackendEquation_scalarComplexEquations omc_BackendEquation_scalarComplexEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_scalarComplexEquations,2,0) {(void*) boxptr_BackendEquation_scalarComplexEquations,0}};
+#define boxvar_BackendEquation_scalarComplexEquations MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_scalarComplexEquations)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getEquationLHS(threadData_t *threadData, modelica_metatype _eq);
+#define boxptr_BackendEquation_getEquationLHS omc_BackendEquation_getEquationLHS
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getEquationLHS,2,0) {(void*) boxptr_BackendEquation_getEquationLHS,0}};
+#define boxvar_BackendEquation_getEquationLHS MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getEquationLHS)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getEquationRHS(threadData_t *threadData, modelica_metatype _eq);
+#define boxptr_BackendEquation_getEquationRHS omc_BackendEquation_getEquationRHS
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getEquationRHS,2,0) {(void*) boxptr_BackendEquation_getEquationRHS,0}};
+#define boxvar_BackendEquation_getEquationRHS MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getEquationRHS)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_replaceDerOpInEquationList(threadData_t *threadData, modelica_metatype _inEqns);
+#define boxptr_BackendEquation_replaceDerOpInEquationList omc_BackendEquation_replaceDerOpInEquationList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_replaceDerOpInEquationList,2,0) {(void*) boxptr_BackendEquation_replaceDerOpInEquationList,0}};
+#define boxvar_BackendEquation_replaceDerOpInEquationList MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_replaceDerOpInEquationList)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isDifferentiated(threadData_t *threadData, modelica_metatype _inEqn);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isDifferentiated(threadData_t *threadData, modelica_metatype _inEqn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isDifferentiated,2,0) {(void*) boxptr_BackendEquation_isDifferentiated,0}};
+#define boxvar_BackendEquation_isDifferentiated MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isDifferentiated)
+
+
+#define boxptr_BackendEquation_markDifferentiated2 omc_BackendEquation_markDifferentiated2
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_markDifferentiated(threadData_t *threadData, modelica_metatype _inEqn);
+#define boxptr_BackendEquation_markDifferentiated omc_BackendEquation_markDifferentiated
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_markDifferentiated,2,0) {(void*) boxptr_BackendEquation_markDifferentiated,0}};
+#define boxvar_BackendEquation_markDifferentiated MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_markDifferentiated)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isNotAlgorithm(threadData_t *threadData, modelica_metatype _inEqn);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isNotAlgorithm(threadData_t *threadData, modelica_metatype _inEqn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isNotAlgorithm,2,0) {(void*) boxptr_BackendEquation_isNotAlgorithm,0}};
+#define boxvar_BackendEquation_isNotAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isNotAlgorithm)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isEquation(threadData_t *threadData, modelica_metatype _inEqn);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isEquation(threadData_t *threadData, modelica_metatype _inEqn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isEquation,2,0) {(void*) boxptr_BackendEquation_isEquation,0}};
+#define boxvar_BackendEquation_isEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isEquation)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isComplexEquation(threadData_t *threadData, modelica_metatype _inEqn);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isComplexEquation(threadData_t *threadData, modelica_metatype _inEqn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isComplexEquation,2,0) {(void*) boxptr_BackendEquation_isComplexEquation,0}};
+#define boxvar_BackendEquation_isComplexEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isComplexEquation)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isAlgorithm(threadData_t *threadData, modelica_metatype _inEqn);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isAlgorithm(threadData_t *threadData, modelica_metatype _inEqn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isAlgorithm,2,0) {(void*) boxptr_BackendEquation_isAlgorithm,0}};
+#define boxvar_BackendEquation_isAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isAlgorithm)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isArrayEquation(threadData_t *threadData, modelica_metatype _inEqn);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isArrayEquation(threadData_t *threadData, modelica_metatype _inEqn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isArrayEquation,2,0) {(void*) boxptr_BackendEquation_isArrayEquation,0}};
+#define boxvar_BackendEquation_isArrayEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isArrayEquation)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isWhenEquationOrDiscreteAlgorithm(threadData_t *threadData, modelica_metatype _inEqn, modelica_metatype _vars);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isWhenEquationOrDiscreteAlgorithm(threadData_t *threadData, modelica_metatype _inEqn, modelica_metatype _vars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isWhenEquationOrDiscreteAlgorithm,2,0) {(void*) boxptr_BackendEquation_isWhenEquationOrDiscreteAlgorithm,0}};
+#define boxvar_BackendEquation_isWhenEquationOrDiscreteAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isWhenEquationOrDiscreteAlgorithm)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isWhenEquation(threadData_t *threadData, modelica_metatype _inEqn);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isWhenEquation(threadData_t *threadData, modelica_metatype _inEqn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isWhenEquation,2,0) {(void*) boxptr_BackendEquation_isWhenEquation,0}};
+#define boxvar_BackendEquation_isWhenEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isWhenEquation)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isTornSystem(threadData_t *threadData, modelica_metatype _comp);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isTornSystem(threadData_t *threadData, modelica_metatype _comp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isTornSystem,2,0) {(void*) boxptr_BackendEquation_isTornSystem,0}};
+#define boxvar_BackendEquation_isTornSystem MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isTornSystem)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isEquationsSystem(threadData_t *threadData, modelica_metatype _comp);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isEquationsSystem(threadData_t *threadData, modelica_metatype _comp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isEquationsSystem,2,0) {(void*) boxptr_BackendEquation_isEquationsSystem,0}};
+#define boxvar_BackendEquation_isEquationsSystem MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isEquationsSystem)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_addOperation(threadData_t *threadData, modelica_metatype _inEqn, modelica_metatype _inSymOp);
+#define boxptr_BackendEquation_addOperation omc_BackendEquation_addOperation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_addOperation,2,0) {(void*) boxptr_BackendEquation_addOperation,0}};
+#define boxvar_BackendEquation_addOperation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_addOperation)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_derivativeEquation(threadData_t *threadData, modelica_metatype _eqn, modelica_metatype *out_dcr, modelica_metatype *out_e, modelica_metatype *out_de, modelica_boolean *out_negate);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_derivativeEquation(threadData_t *threadData, modelica_metatype _eqn, modelica_metatype *out_dcr, modelica_metatype *out_e, modelica_metatype *out_de, modelica_metatype *out_negate);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_derivativeEquation,2,0) {(void*) boxptr_BackendEquation_derivativeEquation,0}};
+#define boxvar_BackendEquation_derivativeEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_derivativeEquation)
+
+
+#define boxptr_BackendEquation_aliasExpression omc_BackendEquation_aliasExpression
+
+
+#define boxptr_BackendEquation_aliasRecord omc_BackendEquation_aliasRecord
+
+
+#define boxptr_BackendEquation_aliasEquation2 omc_BackendEquation_aliasEquation2
+
+
+#define boxptr_BackendEquation_aliasEquationLst omc_BackendEquation_aliasEquationLst
+
+
+#define boxptr_BackendEquation_aliasEquation1 omc_BackendEquation_aliasEquation1
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_aliasEquation(threadData_t *threadData, modelica_metatype _inEqn);
+#define boxptr_BackendEquation_aliasEquation omc_BackendEquation_aliasEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_aliasEquation,2,0) {(void*) boxptr_BackendEquation_aliasEquation,0}};
+#define boxvar_BackendEquation_aliasEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_aliasEquation)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getInitialEqnsFromShared(threadData_t *threadData, modelica_metatype _inShared);
+#define boxptr_BackendEquation_getInitialEqnsFromShared omc_BackendEquation_getInitialEqnsFromShared
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getInitialEqnsFromShared,2,0) {(void*) boxptr_BackendEquation_getInitialEqnsFromShared,0}};
+#define boxvar_BackendEquation_getInitialEqnsFromShared MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getInitialEqnsFromShared)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getEqnsFromEqSystem(threadData_t *threadData, modelica_metatype _inEqSystem);
+#define boxptr_BackendEquation_getEqnsFromEqSystem omc_BackendEquation_getEqnsFromEqSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getEqnsFromEqSystem,2,0) {(void*) boxptr_BackendEquation_getEqnsFromEqSystem,0}};
+#define boxvar_BackendEquation_getEqnsFromEqSystem MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getEqnsFromEqSystem)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getEqnsFromEqSystems(threadData_t *threadData, modelica_metatype _inEqSystems);
+#define boxptr_BackendEquation_getEqnsFromEqSystems omc_BackendEquation_getEqnsFromEqSystems
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getEqnsFromEqSystems,2,0) {(void*) boxptr_BackendEquation_getEqnsFromEqSystems,0}};
+#define boxvar_BackendEquation_getEqnsFromEqSystems MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getEqnsFromEqSystems)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationSystemsEqnsLst(threadData_t *threadData, modelica_metatype _systs);
+#define boxptr_BackendEquation_equationSystemsEqnsLst omc_BackendEquation_equationSystemsEqnsLst
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationSystemsEqnsLst,2,0) {(void*) boxptr_BackendEquation_equationSystemsEqnsLst,0}};
+#define boxvar_BackendEquation_equationSystemsEqnsLst MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationSystemsEqnsLst)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_generateRESIDUAL__EQUATION1(threadData_t *threadData, modelica_metatype _inTpl, modelica_metatype _source, modelica_metatype _inEqAttr);
+#define boxptr_BackendEquation_generateRESIDUAL__EQUATION1 omc_BackendEquation_generateRESIDUAL__EQUATION1
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_generateRESIDUAL__EQUATION1,2,0) {(void*) boxptr_BackendEquation_generateRESIDUAL__EQUATION1,0}};
+#define boxvar_BackendEquation_generateRESIDUAL__EQUATION1 MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_generateRESIDUAL__EQUATION1)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_generateRESIDUAL__EQUATION(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inSource, modelica_metatype _inEqAttr);
+#define boxptr_BackendEquation_generateRESIDUAL__EQUATION omc_BackendEquation_generateRESIDUAL__EQUATION
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_generateRESIDUAL__EQUATION,2,0) {(void*) boxptr_BackendEquation_generateRESIDUAL__EQUATION,0}};
+#define boxvar_BackendEquation_generateRESIDUAL__EQUATION MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_generateRESIDUAL__EQUATION)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_solveEquation(threadData_t *threadData, modelica_metatype _eqn, modelica_metatype _crefExp, modelica_metatype _functions);
+#define boxptr_BackendEquation_solveEquation omc_BackendEquation_solveEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_solveEquation,2,0) {(void*) boxptr_BackendEquation_solveEquation,0}};
+#define boxvar_BackendEquation_solveEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_solveEquation)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_normalizationVec(threadData_t *threadData, modelica_metatype _vec, modelica_string _name, modelica_integer _offset, modelica_metatype _ieqns, modelica_metatype _ivars, modelica_metatype _ishared, modelica_metatype *out_oeqns, modelica_metatype *out_ovars, modelica_metatype *out_oshared);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_normalizationVec(threadData_t *threadData, modelica_metatype _vec, modelica_metatype _name, modelica_metatype _offset, modelica_metatype _ieqns, modelica_metatype _ivars, modelica_metatype _ishared, modelica_metatype *out_oeqns, modelica_metatype *out_ovars, modelica_metatype *out_oshared);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_normalizationVec,2,0) {(void*) boxptr_BackendEquation_normalizationVec,0}};
+#define boxvar_BackendEquation_normalizationVec MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_normalizationVec)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_makeTmpEqnForExp(threadData_t *threadData, modelica_metatype _iExp, modelica_string _name, modelica_integer _offset, modelica_metatype _ieqns, modelica_metatype _ivars, modelica_metatype _ishared, modelica_boolean _noPara, modelica_metatype *out_oeqns, modelica_metatype *out_ovars, modelica_metatype *out_oshared, modelica_boolean *out_update, modelica_boolean *out_para);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_makeTmpEqnForExp(threadData_t *threadData, modelica_metatype _iExp, modelica_metatype _name, modelica_metatype _offset, modelica_metatype _ieqns, modelica_metatype _ivars, modelica_metatype _ishared, modelica_metatype _noPara, modelica_metatype *out_oeqns, modelica_metatype *out_ovars, modelica_metatype *out_oshared, modelica_metatype *out_update, modelica_metatype *out_para);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_makeTmpEqnForExp,2,0) {(void*) boxptr_BackendEquation_makeTmpEqnForExp,0}};
+#define boxvar_BackendEquation_makeTmpEqnForExp MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_makeTmpEqnForExp)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_generateResidualFromRelation(threadData_t *threadData, modelica_string _conCrefName, modelica_metatype _iRhs, modelica_metatype _Source, modelica_metatype _inVars, modelica_metatype _knvars, modelica_metatype _conKind, modelica_metatype *out_vout);
+#define boxptr_BackendEquation_generateResidualFromRelation omc_BackendEquation_generateResidualFromRelation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_generateResidualFromRelation,2,0) {(void*) boxptr_BackendEquation_generateResidualFromRelation,0}};
+#define boxvar_BackendEquation_generateResidualFromRelation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_generateResidualFromRelation)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_generateSolvedEqnsfromOption(threadData_t *threadData, modelica_metatype _inLhs, modelica_metatype _inRhs, modelica_metatype _inSource, modelica_metatype _inEqAttr);
+#define boxptr_BackendEquation_generateSolvedEqnsfromOption omc_BackendEquation_generateSolvedEqnsfromOption
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_generateSolvedEqnsfromOption,2,0) {(void*) boxptr_BackendEquation_generateSolvedEqnsfromOption,0}};
+#define boxvar_BackendEquation_generateSolvedEqnsfromOption MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_generateSolvedEqnsfromOption)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEquationRHS(threadData_t *threadData, modelica_metatype _inEqn, modelica_metatype _rhs);
+#define boxptr_BackendEquation_setEquationRHS omc_BackendEquation_setEquationRHS
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEquationRHS,2,0) {(void*) boxptr_BackendEquation_setEquationRHS,0}};
+#define boxvar_BackendEquation_setEquationRHS MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEquationRHS)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEquationLHS(threadData_t *threadData, modelica_metatype _inEqn, modelica_metatype _lhs);
+#define boxptr_BackendEquation_setEquationLHS omc_BackendEquation_setEquationLHS
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEquationLHS,2,0) {(void*) boxptr_BackendEquation_setEquationLHS,0}};
+#define boxvar_BackendEquation_setEquationLHS MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEquationLHS)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEquationAttributes(threadData_t *threadData, modelica_metatype _inEqn, modelica_metatype _inAttr);
+#define boxptr_BackendEquation_setEquationAttributes omc_BackendEquation_setEquationAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEquationAttributes,2,0) {(void*) boxptr_BackendEquation_setEquationAttributes,0}};
+#define boxvar_BackendEquation_setEquationAttributes MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEquationAttributes)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getEquationAttributes(threadData_t *threadData, modelica_metatype _inEqn);
+#define boxptr_BackendEquation_getEquationAttributes omc_BackendEquation_getEquationAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getEquationAttributes,2,0) {(void*) boxptr_BackendEquation_getEquationAttributes,0}};
+#define boxvar_BackendEquation_getEquationAttributes MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getEquationAttributes)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getEquationArraySubsetLst(threadData_t *threadData, modelica_metatype _eqnArr, modelica_metatype _iLst);
+#define boxptr_BackendEquation_getEquationArraySubsetLst omc_BackendEquation_getEquationArraySubsetLst
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getEquationArraySubsetLst,2,0) {(void*) boxptr_BackendEquation_getEquationArraySubsetLst,0}};
+#define boxvar_BackendEquation_getEquationArraySubsetLst MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getEquationArraySubsetLst)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_generateEquation(threadData_t *threadData, modelica_metatype _lhs, modelica_metatype _rhs, modelica_metatype _source, modelica_metatype _inEqAttr);
+#define boxptr_BackendEquation_generateEquation omc_BackendEquation_generateEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_generateEquation,2,0) {(void*) boxptr_BackendEquation_generateEquation,0}};
+#define boxvar_BackendEquation_generateEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_generateEquation)
+
+
+DLLDirection
+modelica_integer omc_BackendEquation_equationLstSizeKeepAlgorithmAsOne(threadData_t *threadData, modelica_metatype _inEqns);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_equationLstSizeKeepAlgorithmAsOne(threadData_t *threadData, modelica_metatype _inEqns);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationLstSizeKeepAlgorithmAsOne,2,0) {(void*) boxptr_BackendEquation_equationLstSizeKeepAlgorithmAsOne,0}};
+#define boxvar_BackendEquation_equationLstSizeKeepAlgorithmAsOne MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationLstSizeKeepAlgorithmAsOne)
+
+
+DLLDirection
+modelica_integer omc_BackendEquation_equationLstSize(threadData_t *threadData, modelica_metatype _inEqns);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_equationLstSize(threadData_t *threadData, modelica_metatype _inEqns);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationLstSize,2,0) {(void*) boxptr_BackendEquation_equationLstSize,0}};
+#define boxvar_BackendEquation_equationLstSize MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationLstSize)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEquationEvalStage(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn, modelica_fnptr _func);
+#define boxptr_BackendEquation_setEquationEvalStage omc_BackendEquation_setEquationEvalStage
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEquationEvalStage,2,0) {(void*) boxptr_BackendEquation_setEquationEvalStage,0}};
+#define boxvar_BackendEquation_setEquationEvalStage MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEquationEvalStage)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEvalStage(threadData_t *threadData, modelica_metatype __omcQ_24in_5FevalStage, modelica_boolean _dynamicEval, modelica_boolean _algebraicEval, modelica_boolean _zerocrossEval, modelica_boolean _discreteEval);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_setEvalStage(threadData_t *threadData, modelica_metatype __omcQ_24in_5FevalStage, modelica_metatype _dynamicEval, modelica_metatype _algebraicEval, modelica_metatype _zerocrossEval, modelica_metatype _discreteEval);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStage,2,0) {(void*) boxptr_BackendEquation_setEvalStage,0}};
+#define boxvar_BackendEquation_setEvalStage MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStage)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEvalStageAll(threadData_t *threadData, modelica_metatype __omcQ_24in_5FevalStage);
+#define boxptr_BackendEquation_setEvalStageAll omc_BackendEquation_setEvalStageAll
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageAll,2,0) {(void*) boxptr_BackendEquation_setEvalStageAll,0}};
+#define boxvar_BackendEquation_setEvalStageAll MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageAll)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEvalStageOnlyDiscrete(threadData_t *threadData, modelica_metatype __omcQ_24in_5FevalStage);
+#define boxptr_BackendEquation_setEvalStageOnlyDiscrete omc_BackendEquation_setEvalStageOnlyDiscrete
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageOnlyDiscrete,2,0) {(void*) boxptr_BackendEquation_setEvalStageOnlyDiscrete,0}};
+#define boxvar_BackendEquation_setEvalStageOnlyDiscrete MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageOnlyDiscrete)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEvalStageDiscrete(threadData_t *threadData, modelica_metatype __omcQ_24in_5FevalStage);
+#define boxptr_BackendEquation_setEvalStageDiscrete omc_BackendEquation_setEvalStageDiscrete
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageDiscrete,2,0) {(void*) boxptr_BackendEquation_setEvalStageDiscrete,0}};
+#define boxvar_BackendEquation_setEvalStageDiscrete MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageDiscrete)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEvalStageZeroCross(threadData_t *threadData, modelica_metatype __omcQ_24in_5FevalStage);
+#define boxptr_BackendEquation_setEvalStageZeroCross omc_BackendEquation_setEvalStageZeroCross
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageZeroCross,2,0) {(void*) boxptr_BackendEquation_setEvalStageZeroCross,0}};
+#define boxvar_BackendEquation_setEvalStageZeroCross MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageZeroCross)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEvalStageAlgebraic(threadData_t *threadData, modelica_metatype __omcQ_24in_5FevalStage);
+#define boxptr_BackendEquation_setEvalStageAlgebraic omc_BackendEquation_setEvalStageAlgebraic
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageAlgebraic,2,0) {(void*) boxptr_BackendEquation_setEvalStageAlgebraic,0}};
+#define boxvar_BackendEquation_setEvalStageAlgebraic MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageAlgebraic)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEvalStageDynamic(threadData_t *threadData, modelica_metatype __omcQ_24in_5FevalStage);
+#define boxptr_BackendEquation_setEvalStageDynamic omc_BackendEquation_setEvalStageDynamic
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageDynamic,2,0) {(void*) boxptr_BackendEquation_setEvalStageDynamic,0}};
+#define boxvar_BackendEquation_setEvalStageDynamic MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEvalStageDynamic)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setEquationKind(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feq, modelica_metatype __omcQ_24in_5Fk, modelica_metatype *out_k);
+#define boxptr_BackendEquation_setEquationKind omc_BackendEquation_setEquationKind
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setEquationKind,2,0) {(void*) boxptr_BackendEquation_setEquationKind,0}};
+#define boxvar_BackendEquation_setEquationKind MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setEquationKind)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationKind(threadData_t *threadData, modelica_metatype _inEquation);
+#define boxptr_BackendEquation_equationKind omc_BackendEquation_equationKind
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationKind,2,0) {(void*) boxptr_BackendEquation_equationKind,0}};
+#define boxvar_BackendEquation_equationKind MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationKind)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_defaultClockedEqAttr(threadData_t *threadData, modelica_integer _clockIndex);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_defaultClockedEqAttr(threadData_t *threadData, modelica_metatype _clockIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_defaultClockedEqAttr,2,0) {(void*) boxptr_BackendEquation_defaultClockedEqAttr,0}};
+#define boxvar_BackendEquation_defaultClockedEqAttr MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_defaultClockedEqAttr)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isAuxEqKind(threadData_t *threadData, modelica_metatype _inEqKind);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isAuxEqKind(threadData_t *threadData, modelica_metatype _inEqKind);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isAuxEqKind,2,0) {(void*) boxptr_BackendEquation_isAuxEqKind,0}};
+#define boxvar_BackendEquation_isAuxEqKind MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isAuxEqKind)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isAuxEquation(threadData_t *threadData, modelica_metatype _inEquation);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isAuxEquation(threadData_t *threadData, modelica_metatype _inEquation);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isAuxEquation,2,0) {(void*) boxptr_BackendEquation_isAuxEquation,0}};
+#define boxvar_BackendEquation_isAuxEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isAuxEquation)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isDiscreteEqKind(threadData_t *threadData, modelica_metatype _inEqKind);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isDiscreteEqKind(threadData_t *threadData, modelica_metatype _inEqKind);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isDiscreteEqKind,2,0) {(void*) boxptr_BackendEquation_isDiscreteEqKind,0}};
+#define boxvar_BackendEquation_isDiscreteEqKind MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isDiscreteEqKind)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isDiscreteEquation(threadData_t *threadData, modelica_metatype _inEquation);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isDiscreteEquation(threadData_t *threadData, modelica_metatype _inEquation);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isDiscreteEquation,2,0) {(void*) boxptr_BackendEquation_isDiscreteEquation,0}};
+#define boxvar_BackendEquation_isDiscreteEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isDiscreteEquation)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isBindingEqKind(threadData_t *threadData, modelica_metatype _inEqKind);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isBindingEqKind(threadData_t *threadData, modelica_metatype _inEqKind);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isBindingEqKind,2,0) {(void*) boxptr_BackendEquation_isBindingEqKind,0}};
+#define boxvar_BackendEquation_isBindingEqKind MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isBindingEqKind)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isBindingEquation(threadData_t *threadData, modelica_metatype _inEquation);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isBindingEquation(threadData_t *threadData, modelica_metatype _inEquation);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isBindingEquation,2,0) {(void*) boxptr_BackendEquation_isBindingEquation,0}};
+#define boxvar_BackendEquation_isBindingEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isBindingEquation)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isDynamicEqKind(threadData_t *threadData, modelica_metatype _inEqKind);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isDynamicEqKind(threadData_t *threadData, modelica_metatype _inEqKind);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isDynamicEqKind,2,0) {(void*) boxptr_BackendEquation_isDynamicEqKind,0}};
+#define boxvar_BackendEquation_isDynamicEqKind MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isDynamicEqKind)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isDynamicEquation(threadData_t *threadData, modelica_metatype _inEquation);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isDynamicEquation(threadData_t *threadData, modelica_metatype _inEquation);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isDynamicEquation,2,0) {(void*) boxptr_BackendEquation_isDynamicEquation,0}};
+#define boxvar_BackendEquation_isDynamicEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isDynamicEquation)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isInitialEqKind(threadData_t *threadData, modelica_metatype _inEqKind);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isInitialEqKind(threadData_t *threadData, modelica_metatype _inEqKind);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isInitialEqKind,2,0) {(void*) boxptr_BackendEquation_isInitialEqKind,0}};
+#define boxvar_BackendEquation_isInitialEqKind MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isInitialEqKind)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_isInitialEquation(threadData_t *threadData, modelica_metatype _inEquation);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_isInitialEquation(threadData_t *threadData, modelica_metatype _inEquation);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_isInitialEquation,2,0) {(void*) boxptr_BackendEquation_isInitialEquation,0}};
+#define boxvar_BackendEquation_isInitialEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_isInitialEquation)
+
+
+DLLDirection
+modelica_integer omc_BackendEquation_equationSize(threadData_t *threadData, modelica_metatype _eq);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_equationSize(threadData_t *threadData, modelica_metatype _eq);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationSize,2,0) {(void*) boxptr_BackendEquation_equationSize,0}};
+#define boxvar_BackendEquation_equationSize MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationSize)
+
+
+DLLDirection
+modelica_integer omc_BackendEquation_equationSizeKeepAlgorithmAsOne(threadData_t *threadData, modelica_metatype _eq);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_equationSizeKeepAlgorithmAsOne(threadData_t *threadData, modelica_metatype _eq);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationSizeKeepAlgorithmAsOne,2,0) {(void*) boxptr_BackendEquation_equationSizeKeepAlgorithmAsOne,0}};
+#define boxvar_BackendEquation_equationSizeKeepAlgorithmAsOne MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationSizeKeepAlgorithmAsOne)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationSource(threadData_t *threadData, modelica_metatype _eq);
+#define boxptr_BackendEquation_equationSource omc_BackendEquation_equationSource
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationSource,2,0) {(void*) boxptr_BackendEquation_equationSource,0}};
+#define boxvar_BackendEquation_equationSource MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationSource)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_markedEquationSource(threadData_t *threadData, modelica_metatype _inEqSystem, modelica_integer _inPos);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_markedEquationSource(threadData_t *threadData, modelica_metatype _inEqSystem, modelica_metatype _inPos);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_markedEquationSource,2,0) {(void*) boxptr_BackendEquation_markedEquationSource,0}};
+#define boxvar_BackendEquation_markedEquationSource MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_markedEquationSource)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationInfo(threadData_t *threadData, modelica_metatype _eq);
+#define boxptr_BackendEquation_equationInfo omc_BackendEquation_equationInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationInfo,2,0) {(void*) boxptr_BackendEquation_equationInfo,0}};
+#define boxvar_BackendEquation_equationInfo MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationInfo)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_convertResidualsIntoSolvedEquations(threadData_t *threadData, modelica_metatype _inResidualList, modelica_string _inName, modelica_integer _inIndex, modelica_boolean _isResidual, modelica_metatype *out_outVariableList, modelica_integer *out_outVarIndex);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_convertResidualsIntoSolvedEquations(threadData_t *threadData, modelica_metatype _inResidualList, modelica_metatype _inName, modelica_metatype _inIndex, modelica_metatype _isResidual, modelica_metatype *out_outVariableList, modelica_metatype *out_outVarIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_convertResidualsIntoSolvedEquations,2,0) {(void*) boxptr_BackendEquation_convertResidualsIntoSolvedEquations,0}};
+#define boxvar_BackendEquation_convertResidualsIntoSolvedEquations MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_convertResidualsIntoSolvedEquations)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_traverseEquationToScalarResidualForm(threadData_t *threadData, modelica_metatype _inEq, modelica_metatype _inEqs, modelica_metatype *out_outEqs);
+#define boxptr_BackendEquation_traverseEquationToScalarResidualForm omc_BackendEquation_traverseEquationToScalarResidualForm
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_traverseEquationToScalarResidualForm,2,0) {(void*) boxptr_BackendEquation_traverseEquationToScalarResidualForm,0}};
+#define boxvar_BackendEquation_traverseEquationToScalarResidualForm MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_traverseEquationToScalarResidualForm)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationToResidualForm(threadData_t *threadData, modelica_metatype _inEquation);
+#define boxptr_BackendEquation_equationToResidualForm omc_BackendEquation_equationToResidualForm
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationToResidualForm,2,0) {(void*) boxptr_BackendEquation_equationToResidualForm,0}};
+#define boxvar_BackendEquation_equationToResidualForm MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationToResidualForm)
+
+
+#define boxptr_BackendEquation_equationTupleToScalarResidualForm omc_BackendEquation_equationTupleToScalarResidualForm
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationToScalarResidualForm(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _funcTree);
+#define boxptr_BackendEquation_equationToScalarResidualForm omc_BackendEquation_equationToScalarResidualForm
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationToScalarResidualForm,2,0) {(void*) boxptr_BackendEquation_equationToScalarResidualForm,0}};
+#define boxvar_BackendEquation_equationToScalarResidualForm MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationToScalarResidualForm)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_removeRemovedEqs(threadData_t *threadData, modelica_metatype __omcQ_24in_5FeqSystem);
+#define boxptr_BackendEquation_removeRemovedEqs omc_BackendEquation_removeRemovedEqs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_removeRemovedEqs,2,0) {(void*) boxptr_BackendEquation_removeRemovedEqs,0}};
+#define boxvar_BackendEquation_removeRemovedEqs MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_removeRemovedEqs)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_requationsAddDAE(threadData_t *threadData, modelica_metatype _inEquations, modelica_metatype _inSyst);
+#define boxptr_BackendEquation_requationsAddDAE omc_BackendEquation_requationsAddDAE
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_requationsAddDAE,2,0) {(void*) boxptr_BackendEquation_requationsAddDAE,0}};
+#define boxvar_BackendEquation_requationsAddDAE MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_requationsAddDAE)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationsAddDAE(threadData_t *threadData, modelica_metatype _inEquations, modelica_metatype _inEqSystem);
+#define boxptr_BackendEquation_equationsAddDAE omc_BackendEquation_equationsAddDAE
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationsAddDAE,2,0) {(void*) boxptr_BackendEquation_equationsAddDAE,0}};
+#define boxvar_BackendEquation_equationsAddDAE MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationsAddDAE)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationAddDAE(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _inEqSystem);
+#define boxptr_BackendEquation_equationAddDAE omc_BackendEquation_equationAddDAE
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationAddDAE,2,0) {(void*) boxptr_BackendEquation_equationAddDAE,0}};
+#define boxvar_BackendEquation_equationAddDAE MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationAddDAE)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_equationEqual(threadData_t *threadData, modelica_metatype _e1, modelica_metatype _e2);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_equationEqual(threadData_t *threadData, modelica_metatype _e1, modelica_metatype _e2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationEqual,2,0) {(void*) boxptr_BackendEquation_equationEqual,0}};
+#define boxvar_BackendEquation_equationEqual MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationEqual)
+
+
+#define boxptr_BackendEquation_traverseExpsOfExpList omc_BackendEquation_traverseExpsOfExpList
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_statementEq(threadData_t *threadData, modelica_metatype _iStmts);
+#define boxptr_BackendEquation_statementEq omc_BackendEquation_statementEq
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_statementEq,2,0) {(void*) boxptr_BackendEquation_statementEq,0}};
+#define boxvar_BackendEquation_statementEq MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_statementEq)
+
+
+#define boxptr_BackendEquation_traverseExpsOfWhenOps omc_BackendEquation_traverseExpsOfWhenOps
+
+
+#define boxptr_BackendEquation_traverseExpsOfWhenEquation omc_BackendEquation_traverseExpsOfWhenEquation
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_traverseExpsOfEquation__WithStop(threadData_t *threadData, modelica_metatype _inEquation, modelica_fnptr _func, modelica_metatype _inTypeA, modelica_metatype *out_outTypeA);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_traverseExpsOfEquation__WithStop(threadData_t *threadData, modelica_metatype _inEquation, modelica_fnptr _func, modelica_metatype _inTypeA, modelica_metatype *out_outTypeA);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_traverseExpsOfEquation__WithStop,2,0) {(void*) boxptr_BackendEquation_traverseExpsOfEquation__WithStop,0}};
+#define boxvar_BackendEquation_traverseExpsOfEquation__WithStop MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_traverseExpsOfEquation__WithStop)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_traverseExpsOfEquation(threadData_t *threadData, modelica_metatype _inEquation, modelica_fnptr _inFunc, modelica_metatype _inTypeA, modelica_metatype *out_outTypeA);
+#define boxptr_BackendEquation_traverseExpsOfEquation omc_BackendEquation_traverseExpsOfEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_traverseExpsOfEquation,2,0) {(void*) boxptr_BackendEquation_traverseExpsOfEquation,0}};
+#define boxvar_BackendEquation_traverseExpsOfEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_traverseExpsOfEquation)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_traverseExpsOfEquationList__WithoutChange(threadData_t *threadData, modelica_metatype _inEquation, modelica_fnptr _func, modelica_metatype _inArg);
+#define boxptr_BackendEquation_traverseExpsOfEquationList__WithoutChange omc_BackendEquation_traverseExpsOfEquationList__WithoutChange
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_traverseExpsOfEquationList__WithoutChange,2,0) {(void*) boxptr_BackendEquation_traverseExpsOfEquationList__WithoutChange,0}};
+#define boxvar_BackendEquation_traverseExpsOfEquationList__WithoutChange MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_traverseExpsOfEquationList__WithoutChange)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_traverseExpsOfEquationList__WithStop(threadData_t *threadData, modelica_metatype _inEquations, modelica_fnptr _inFunc, modelica_metatype _inTypeA, modelica_metatype *out_outTypeA);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_traverseExpsOfEquationList__WithStop(threadData_t *threadData, modelica_metatype _inEquations, modelica_fnptr _inFunc, modelica_metatype _inTypeA, modelica_metatype *out_outTypeA);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_traverseExpsOfEquationList__WithStop,2,0) {(void*) boxptr_BackendEquation_traverseExpsOfEquationList__WithStop,0}};
+#define boxvar_BackendEquation_traverseExpsOfEquationList__WithStop MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_traverseExpsOfEquationList__WithStop)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_traverseExpsOfEquationList(threadData_t *threadData, modelica_metatype _inEquations, modelica_fnptr _func, modelica_metatype _inArg, modelica_metatype *out_outArg);
+#define boxptr_BackendEquation_traverseExpsOfEquationList omc_BackendEquation_traverseExpsOfEquationList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_traverseExpsOfEquationList,2,0) {(void*) boxptr_BackendEquation_traverseExpsOfEquationList,0}};
+#define boxvar_BackendEquation_traverseExpsOfEquationList MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_traverseExpsOfEquationList)
+
+
+#define boxptr_BackendEquation_checkEquationsUnknownCrefsExp omc_BackendEquation_checkEquationsUnknownCrefsExp
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationUnknownCrefs(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inVars, modelica_metatype _inKnVars);
+#define boxptr_BackendEquation_equationUnknownCrefs omc_BackendEquation_equationUnknownCrefs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationUnknownCrefs,2,0) {(void*) boxptr_BackendEquation_equationUnknownCrefs,0}};
+#define boxvar_BackendEquation_equationUnknownCrefs MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationUnknownCrefs)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_findUnknownCrefs(threadData_t *threadData, modelica_metatype __omcQ_24in_5FinEq, modelica_metatype __omcQ_24in_5FextraArgs, modelica_metatype *out_extraArgs);
+#define boxptr_BackendEquation_findUnknownCrefs omc_BackendEquation_findUnknownCrefs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_findUnknownCrefs,2,0) {(void*) boxptr_BackendEquation_findUnknownCrefs,0}};
+#define boxvar_BackendEquation_findUnknownCrefs MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_findUnknownCrefs)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getCrefsFromEquations(threadData_t *threadData, modelica_metatype _inEqns, modelica_metatype _inVars, modelica_metatype _inKnVars);
+#define boxptr_BackendEquation_getCrefsFromEquations omc_BackendEquation_getCrefsFromEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getCrefsFromEquations,2,0) {(void*) boxptr_BackendEquation_getCrefsFromEquations,0}};
+#define boxvar_BackendEquation_getCrefsFromEquations MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getCrefsFromEquations)
+
+
+#define boxptr_BackendEquation_traversingEquationCrefFinder omc_BackendEquation_traversingEquationCrefFinder
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getAllCrefFromEquations(threadData_t *threadData, modelica_metatype _inEqns);
+#define boxptr_BackendEquation_getAllCrefFromEquations omc_BackendEquation_getAllCrefFromEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getAllCrefFromEquations,2,0) {(void*) boxptr_BackendEquation_getAllCrefFromEquations,0}};
+#define boxvar_BackendEquation_getAllCrefFromEquations MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getAllCrefFromEquations)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationCrefsSolved(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype *out_rhs_lst);
+#define boxptr_BackendEquation_equationCrefsSolved omc_BackendEquation_equationCrefsSolved
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationCrefsSolved,2,0) {(void*) boxptr_BackendEquation_equationCrefsSolved,0}};
+#define boxvar_BackendEquation_equationCrefsSolved MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationCrefsSolved)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationCrefs(threadData_t *threadData, modelica_metatype _inEquation);
+#define boxptr_BackendEquation_equationCrefs omc_BackendEquation_equationCrefs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationCrefs,2,0) {(void*) boxptr_BackendEquation_equationCrefs,0}};
+#define boxvar_BackendEquation_equationCrefs MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationCrefs)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationsCrefs(threadData_t *threadData, modelica_metatype _inEquationLst);
+#define boxptr_BackendEquation_equationsCrefs omc_BackendEquation_equationsCrefs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationsCrefs,2,0) {(void*) boxptr_BackendEquation_equationsCrefs,0}};
+#define boxvar_BackendEquation_equationsCrefs MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationsCrefs)
+
+
+#define boxptr_BackendEquation_traversingRelationsforIterationVars omc_BackendEquation_traversingRelationsforIterationVars
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_iterationVarsinRelations(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inVars, modelica_metatype *out_indexes);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_iterationVarsinRelations(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inVars, modelica_metatype *out_indexes);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_iterationVarsinRelations,2,0) {(void*) boxptr_BackendEquation_iterationVarsinRelations,0}};
+#define boxvar_BackendEquation_iterationVarsinRelations MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_iterationVarsinRelations)
+
+
+#define boxptr_BackendEquation_traversingParamRefFinder0 omc_BackendEquation_traversingParamRefFinder0
+
+
+#define boxptr_BackendEquation_traversingParamRefFinder omc_BackendEquation_traversingParamRefFinder
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationsParams(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inVars, modelica_metatype *out_outParamVarsIdc);
+#define boxptr_BackendEquation_equationsParams omc_BackendEquation_equationsParams
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationsParams,2,0) {(void*) boxptr_BackendEquation_equationsParams,0}};
+#define boxvar_BackendEquation_equationsParams MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationsParams)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_assertWithCondTrue(threadData_t *threadData, modelica_metatype _inEqn);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_assertWithCondTrue(threadData_t *threadData, modelica_metatype _inEqn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_assertWithCondTrue,2,0) {(void*) boxptr_BackendEquation_assertWithCondTrue,0}};
+#define boxvar_BackendEquation_assertWithCondTrue MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_assertWithCondTrue)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_checkEquationsVarsExpTopDown(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _vars, modelica_boolean *out_cont, modelica_metatype *out_tree);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_checkEquationsVarsExpTopDown(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _vars, modelica_metatype *out_cont, modelica_metatype *out_tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_checkEquationsVarsExpTopDown,2,0) {(void*) boxptr_BackendEquation_checkEquationsVarsExpTopDown,0}};
+#define boxvar_BackendEquation_checkEquationsVarsExpTopDown MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_checkEquationsVarsExpTopDown)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_checkEquationsVarsExpTopDownTraverseHelper(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _vars, modelica_metatype *out_tree);
+#define boxptr_BackendEquation_checkEquationsVarsExpTopDownTraverseHelper omc_BackendEquation_checkEquationsVarsExpTopDownTraverseHelper
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_checkEquationsVarsExpTopDownTraverseHelper,2,0) {(void*) boxptr_BackendEquation_checkEquationsVarsExpTopDownTraverseHelper,0}};
+#define boxvar_BackendEquation_checkEquationsVarsExpTopDownTraverseHelper MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_checkEquationsVarsExpTopDownTraverseHelper)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_expressionVarsIndexes(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Findexes, modelica_fnptr _func);
+#define boxptr_BackendEquation_expressionVarsIndexes omc_BackendEquation_expressionVarsIndexes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_expressionVarsIndexes,2,0) {(void*) boxptr_BackendEquation_expressionVarsIndexes,0}};
+#define boxvar_BackendEquation_expressionVarsIndexes MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_expressionVarsIndexes)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_expressionVars(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _vars);
+#define boxptr_BackendEquation_expressionVars omc_BackendEquation_expressionVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_expressionVars,2,0) {(void*) boxptr_BackendEquation_expressionVars,0}};
+#define boxvar_BackendEquation_expressionVars MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_expressionVars)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationVars(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _inVars);
+#define boxptr_BackendEquation_equationVars omc_BackendEquation_equationVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationVars,2,0) {(void*) boxptr_BackendEquation_equationVars,0}};
+#define boxvar_BackendEquation_equationVars MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationVars)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationsVars(threadData_t *threadData, modelica_metatype _inEquations, modelica_metatype _inVars);
+#define boxptr_BackendEquation_equationsVars omc_BackendEquation_equationsVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationsVars,2,0) {(void*) boxptr_BackendEquation_equationsVars,0}};
+#define boxvar_BackendEquation_equationsVars MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationsVars)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationsLstVars(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inVars);
+#define boxptr_BackendEquation_equationsLstVars omc_BackendEquation_equationsLstVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationsLstVars,2,0) {(void*) boxptr_BackendEquation_equationsLstVars,0}};
+#define boxvar_BackendEquation_equationsLstVars MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationsLstVars)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setWhenElsePart(threadData_t *threadData, modelica_metatype _inWhenEquation, modelica_metatype _inElseWhenEquation);
+#define boxptr_BackendEquation_setWhenElsePart omc_BackendEquation_setWhenElsePart
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setWhenElsePart,2,0) {(void*) boxptr_BackendEquation_setWhenElsePart,0}};
+#define boxvar_BackendEquation_setWhenElsePart MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setWhenElsePart)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getWhenEquationExpr(threadData_t *threadData, modelica_metatype _inWhenEquation, modelica_metatype *out_outExp);
+#define boxptr_BackendEquation_getWhenEquationExpr omc_BackendEquation_getWhenEquationExpr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getWhenEquationExpr,2,0) {(void*) boxptr_BackendEquation_getWhenEquationExpr,0}};
+#define boxvar_BackendEquation_getWhenEquationExpr MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getWhenEquationExpr)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getForEquationIterIdent(threadData_t *threadData, modelica_metatype _inEquation);
+#define boxptr_BackendEquation_getForEquationIterIdent omc_BackendEquation_getForEquationIterIdent
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getForEquationIterIdent,2,0) {(void*) boxptr_BackendEquation_getForEquationIterIdent,0}};
+#define boxvar_BackendEquation_getForEquationIterIdent MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getForEquationIterIdent)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_sortInitialEqns(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqns);
+#define boxptr_BackendEquation_sortInitialEqns omc_BackendEquation_sortInitialEqns
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_sortInitialEqns,2,0) {(void*) boxptr_BackendEquation_sortInitialEqns,0}};
+#define boxvar_BackendEquation_sortInitialEqns MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_sortInitialEqns)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_traverseEquationArray__WithUpdate(threadData_t *threadData, modelica_metatype __omcQ_24in_5FequationArray, modelica_fnptr _inFuncWithUpdate, modelica_metatype __omcQ_24in_5FextraArg, modelica_metatype *out_extraArg);
+#define boxptr_BackendEquation_traverseEquationArray__WithUpdate omc_BackendEquation_traverseEquationArray__WithUpdate
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_traverseEquationArray__WithUpdate,2,0) {(void*) boxptr_BackendEquation_traverseEquationArray__WithUpdate,0}};
+#define boxvar_BackendEquation_traverseEquationArray__WithUpdate MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_traverseEquationArray__WithUpdate)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_traverseEquationArray__WithStop(threadData_t *threadData, modelica_metatype _equationArray, modelica_fnptr _inFuncWithStop, modelica_metatype __omcQ_24in_5FextraArg);
+#define boxptr_BackendEquation_traverseEquationArray__WithStop omc_BackendEquation_traverseEquationArray__WithStop
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_traverseEquationArray__WithStop,2,0) {(void*) boxptr_BackendEquation_traverseEquationArray__WithStop,0}};
+#define boxvar_BackendEquation_traverseEquationArray__WithStop MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_traverseEquationArray__WithStop)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_traverseEquationArray(threadData_t *threadData, modelica_metatype _equationArray, modelica_fnptr _inFunc, modelica_metatype __omcQ_24in_5FextraArg);
+#define boxptr_BackendEquation_traverseEquationArray omc_BackendEquation_traverseEquationArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_traverseEquationArray,2,0) {(void*) boxptr_BackendEquation_traverseEquationArray,0}};
+#define boxvar_BackendEquation_traverseEquationArray MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_traverseEquationArray)
+
+
+DLLDirection
+modelica_integer omc_BackendEquation_getNumberOfEquations(threadData_t *threadData, modelica_metatype _inEquationArray);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_getNumberOfEquations(threadData_t *threadData, modelica_metatype _inEquationArray);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getNumberOfEquations,2,0) {(void*) boxptr_BackendEquation_getNumberOfEquations,0}};
+#define boxvar_BackendEquation_getNumberOfEquations MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getNumberOfEquations)
+
+
+DLLDirection
+modelica_integer omc_BackendEquation_equationArraySize(threadData_t *threadData, modelica_metatype _equationArray);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_equationArraySize(threadData_t *threadData, modelica_metatype _equationArray);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationArraySize,2,0) {(void*) boxptr_BackendEquation_equationArraySize,0}};
+#define boxvar_BackendEquation_equationArraySize MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationArraySize)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_getList(threadData_t *threadData, modelica_metatype _inIndices, modelica_metatype _inEquationArray);
+#define boxptr_BackendEquation_getList omc_BackendEquation_getList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_getList,2,0) {(void*) boxptr_BackendEquation_getList,0}};
+#define boxvar_BackendEquation_getList MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_getList)
+
+
+DLLDirection
+modelica_boolean omc_BackendEquation_has(threadData_t *threadData, modelica_metatype _inEquationArray, modelica_integer _inPos);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_has(threadData_t *threadData, modelica_metatype _inEquationArray, modelica_metatype _inPos);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_has,2,0) {(void*) boxptr_BackendEquation_has,0}};
+#define boxvar_BackendEquation_has MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_has)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_get(threadData_t *threadData, modelica_metatype _inEquationArray, modelica_integer _inPos);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_get(threadData_t *threadData, modelica_metatype _inEquationArray, modelica_metatype _inPos);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_get,2,0) {(void*) boxptr_BackendEquation_get,0}};
+#define boxvar_BackendEquation_get MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_get)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setAtIndexFirst(threadData_t *threadData, modelica_integer _inPos, modelica_metatype _inEquation, modelica_metatype _inEquationArray);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_setAtIndexFirst(threadData_t *threadData, modelica_metatype _inPos, modelica_metatype _inEquation, modelica_metatype _inEquationArray);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setAtIndexFirst,2,0) {(void*) boxptr_BackendEquation_setAtIndexFirst,0}};
+#define boxvar_BackendEquation_setAtIndexFirst MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setAtIndexFirst)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_setAtIndex(threadData_t *threadData, modelica_metatype __omcQ_24in_5FequationArray, modelica_integer _inPos, modelica_metatype _inEquation);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_setAtIndex(threadData_t *threadData, modelica_metatype __omcQ_24in_5FequationArray, modelica_metatype _inPos, modelica_metatype _inEquation);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_setAtIndex,2,0) {(void*) boxptr_BackendEquation_setAtIndex,0}};
+#define boxvar_BackendEquation_setAtIndex MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_setAtIndex)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_copyEquationArray(threadData_t *threadData, modelica_metatype _inEquationArray);
+#define boxptr_BackendEquation_copyEquationArray omc_BackendEquation_copyEquationArray
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_copyEquationArray,2,0) {(void*) boxptr_BackendEquation_copyEquationArray,0}};
+#define boxvar_BackendEquation_copyEquationArray MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_copyEquationArray)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_equationList(threadData_t *threadData, modelica_metatype _equationArray);
+#define boxptr_BackendEquation_equationList omc_BackendEquation_equationList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_equationList,2,0) {(void*) boxptr_BackendEquation_equationList,0}};
+#define boxvar_BackendEquation_equationList MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_equationList)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_listEquation(threadData_t *threadData, modelica_metatype _inEquationList);
+#define boxptr_BackendEquation_listEquation omc_BackendEquation_listEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_listEquation,2,0) {(void*) boxptr_BackendEquation_listEquation,0}};
+#define boxvar_BackendEquation_listEquation MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_listEquation)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_merge(threadData_t *threadData, modelica_metatype _inEqns1, modelica_metatype _inEqns2);
+#define boxptr_BackendEquation_merge omc_BackendEquation_merge
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_merge,2,0) {(void*) boxptr_BackendEquation_merge,0}};
+#define boxvar_BackendEquation_merge MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_merge)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_deleteList(threadData_t *threadData, modelica_metatype __omcQ_24in_5FequationArray, modelica_metatype _inIndices);
+#define boxptr_BackendEquation_deleteList omc_BackendEquation_deleteList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_deleteList,2,0) {(void*) boxptr_BackendEquation_deleteList,0}};
+#define boxvar_BackendEquation_deleteList MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_deleteList)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_delete(threadData_t *threadData, modelica_integer _inPos, modelica_metatype __omcQ_24in_5FequationArray);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_delete(threadData_t *threadData, modelica_metatype _inPos, modelica_metatype __omcQ_24in_5FequationArray);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_delete,2,0) {(void*) boxptr_BackendEquation_delete,0}};
+#define boxvar_BackendEquation_delete MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_delete)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_addList(threadData_t *threadData, modelica_metatype _eqnlst, modelica_metatype __omcQ_24in_5FequationArray);
+#define boxptr_BackendEquation_addList omc_BackendEquation_addList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_addList,2,0) {(void*) boxptr_BackendEquation_addList,0}};
+#define boxvar_BackendEquation_addList MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_addList)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_add(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype __omcQ_24in_5FequationArray);
+#define boxptr_BackendEquation_add omc_BackendEquation_add
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_add,2,0) {(void*) boxptr_BackendEquation_add,0}};
+#define boxvar_BackendEquation_add MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_add)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_emptyEqnsSized(threadData_t *threadData, modelica_integer _size);
+DLLDirection
+modelica_metatype boxptr_BackendEquation_emptyEqnsSized(threadData_t *threadData, modelica_metatype _size);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_emptyEqnsSized,2,0) {(void*) boxptr_BackendEquation_emptyEqnsSized,0}};
+#define boxvar_BackendEquation_emptyEqnsSized MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_emptyEqnsSized)
+
+
+DLLDirection
+modelica_metatype omc_BackendEquation_emptyEqns(threadData_t *threadData);
+#define boxptr_BackendEquation_emptyEqns omc_BackendEquation_emptyEqns
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendEquation_emptyEqns,2,0) {(void*) boxptr_BackendEquation_emptyEqns,0}};
+#define boxvar_BackendEquation_emptyEqns MMC_REFSTRUCTLIT(boxvar_lit_BackendEquation_emptyEqns)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

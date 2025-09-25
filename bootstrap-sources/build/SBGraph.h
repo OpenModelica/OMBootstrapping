@@ -1,0 +1,260 @@
+#ifndef SBGraph__H
+#define SBGraph__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description SBGraph_BipartiteIncidenceList_BIPARTITE__INCIDENCE__LIST__desc;
+
+extern struct record_description SBGraph_IncidenceList_INCIDENCE__LIST__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_string omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData_t *threadData, modelica_integer _ST);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_setTypeString(threadData_t *threadData, modelica_metatype _ST);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_setTypeString,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_setTypeString,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_setTypeString MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_setTypeString)
+
+
+DLLDirection
+modelica_string omc_SBGraph_BipartiteIncidenceList_toString(threadData_t *threadData, modelica_metatype _il);
+#define boxptr_SBGraph_BipartiteIncidenceList_toString omc_SBGraph_BipartiteIncidenceList_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_toString,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_toString,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_toString MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_toString)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_BipartiteIncidenceList_edges(threadData_t *threadData, modelica_metatype _il);
+#define boxptr_SBGraph_BipartiteIncidenceList_edges omc_SBGraph_BipartiteIncidenceList_edges
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_edges,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_edges,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_edges MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_edges)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_BipartiteIncidenceList_vertices(threadData_t *threadData, modelica_metatype _il, modelica_integer _ST);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_vertices(threadData_t *threadData, modelica_metatype _il, modelica_metatype _ST);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_vertices,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_vertices,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_vertices MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_vertices)
+
+
+DLLDirection
+modelica_integer omc_SBGraph_BipartiteIncidenceList_edgeCount(threadData_t *threadData, modelica_metatype _il);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_edgeCount(threadData_t *threadData, modelica_metatype _il);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_edgeCount,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_edgeCount,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_edgeCount MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_edgeCount)
+
+
+DLLDirection
+modelica_integer omc_SBGraph_BipartiteIncidenceList_vertexCount(threadData_t *threadData, modelica_metatype _il, modelica_integer _ST);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_vertexCount(threadData_t *threadData, modelica_metatype _il, modelica_metatype _ST);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_vertexCount,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_vertexCount,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_vertexCount MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_vertexCount)
+
+
+DLLDirection
+modelica_boolean omc_SBGraph_BipartiteIncidenceList_isEmpty(threadData_t *threadData, modelica_metatype _il);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_isEmpty(threadData_t *threadData, modelica_metatype _il);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_isEmpty,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_isEmpty,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_isEmpty)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_BipartiteIncidenceList_getEdge(threadData_t *threadData, modelica_metatype _il, modelica_integer _d);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_getEdge(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_getEdge,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_getEdge,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_getEdge MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_getEdge)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_BipartiteIncidenceList_getEdgesFromSet(threadData_t *threadData, modelica_metatype _il, modelica_metatype _set, modelica_fnptr _getSet);
+#define boxptr_SBGraph_BipartiteIncidenceList_getEdgesFromSet omc_SBGraph_BipartiteIncidenceList_getEdgesFromSet
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_getEdgesFromSet,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_getEdgesFromSet,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_getEdgesFromSet MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_getEdgesFromSet)
+
+
+DLLDirection
+modelica_integer omc_SBGraph_BipartiteIncidenceList_addEdge(threadData_t *threadData, modelica_metatype _il, modelica_integer _d1, modelica_integer _d2, modelica_metatype _e);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_addEdge(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d1, modelica_metatype _d2, modelica_metatype _e);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_addEdge,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_addEdge,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_addEdge MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_addEdge)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_BipartiteIncidenceList_getVerticesFromSet(threadData_t *threadData, modelica_metatype _il, modelica_metatype _set, modelica_integer _ST, modelica_fnptr _getSet);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_getVerticesFromSet(threadData_t *threadData, modelica_metatype _il, modelica_metatype _set, modelica_metatype _ST, modelica_fnptr _getSet);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_getVerticesFromSet,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_getVerticesFromSet,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_getVerticesFromSet MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_getVerticesFromSet)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_BipartiteIncidenceList_getVertex(threadData_t *threadData, modelica_metatype _il, modelica_integer _d, modelica_integer _ST);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_getVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d, modelica_metatype _ST);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_getVertex,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_getVertex,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_getVertex MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_getVertex)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_BipartiteIncidenceList_findVertex(threadData_t *threadData, modelica_metatype _il, modelica_integer _ST, modelica_fnptr _predFn);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_findVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _ST, modelica_fnptr _predFn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_findVertex,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_findVertex,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_findVertex MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_findVertex)
+
+
+DLLDirection
+modelica_integer omc_SBGraph_BipartiteIncidenceList_addVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _v, modelica_integer _ST);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_addVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _v, modelica_metatype _ST);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_addVertex,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_addVertex,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_addVertex MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_addVertex)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_BipartiteIncidenceList_getRow(threadData_t *threadData, modelica_metatype _il, modelica_integer _d);
+DLLDirection
+modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_getRow(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_getRow,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_getRow,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_getRow MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_getRow)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_BipartiteIncidenceList_new(threadData_t *threadData, modelica_fnptr _vertexEq, modelica_fnptr _edgeEq, modelica_fnptr _vertexStr, modelica_fnptr _edgeStr);
+#define boxptr_SBGraph_BipartiteIncidenceList_new omc_SBGraph_BipartiteIncidenceList_new
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_new,2,0) {(void*) boxptr_SBGraph_BipartiteIncidenceList_new,0}};
+#define boxvar_SBGraph_BipartiteIncidenceList_new MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_BipartiteIncidenceList_new)
+
+
+DLLDirection
+modelica_string omc_SBGraph_IncidenceList_toString(threadData_t *threadData, modelica_metatype _il);
+#define boxptr_SBGraph_IncidenceList_toString omc_SBGraph_IncidenceList_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_toString,2,0) {(void*) boxptr_SBGraph_IncidenceList_toString,0}};
+#define boxvar_SBGraph_IncidenceList_toString MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_toString)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_IncidenceList_edges(threadData_t *threadData, modelica_metatype _il);
+#define boxptr_SBGraph_IncidenceList_edges omc_SBGraph_IncidenceList_edges
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_edges,2,0) {(void*) boxptr_SBGraph_IncidenceList_edges,0}};
+#define boxvar_SBGraph_IncidenceList_edges MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_edges)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_IncidenceList_vertices(threadData_t *threadData, modelica_metatype _il);
+#define boxptr_SBGraph_IncidenceList_vertices omc_SBGraph_IncidenceList_vertices
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_vertices,2,0) {(void*) boxptr_SBGraph_IncidenceList_vertices,0}};
+#define boxvar_SBGraph_IncidenceList_vertices MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_vertices)
+
+
+DLLDirection
+modelica_integer omc_SBGraph_IncidenceList_edgeCount(threadData_t *threadData, modelica_metatype _il);
+DLLDirection
+modelica_metatype boxptr_SBGraph_IncidenceList_edgeCount(threadData_t *threadData, modelica_metatype _il);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_edgeCount,2,0) {(void*) boxptr_SBGraph_IncidenceList_edgeCount,0}};
+#define boxvar_SBGraph_IncidenceList_edgeCount MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_edgeCount)
+
+
+DLLDirection
+modelica_integer omc_SBGraph_IncidenceList_vertexCount(threadData_t *threadData, modelica_metatype _il);
+DLLDirection
+modelica_metatype boxptr_SBGraph_IncidenceList_vertexCount(threadData_t *threadData, modelica_metatype _il);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_vertexCount,2,0) {(void*) boxptr_SBGraph_IncidenceList_vertexCount,0}};
+#define boxvar_SBGraph_IncidenceList_vertexCount MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_vertexCount)
+
+
+DLLDirection
+modelica_boolean omc_SBGraph_IncidenceList_isEmpty(threadData_t *threadData, modelica_metatype _il);
+DLLDirection
+modelica_metatype boxptr_SBGraph_IncidenceList_isEmpty(threadData_t *threadData, modelica_metatype _il);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_isEmpty,2,0) {(void*) boxptr_SBGraph_IncidenceList_isEmpty,0}};
+#define boxvar_SBGraph_IncidenceList_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_isEmpty)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_IncidenceList_getEdge(threadData_t *threadData, modelica_metatype _il, modelica_integer _d);
+DLLDirection
+modelica_metatype boxptr_SBGraph_IncidenceList_getEdge(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_getEdge,2,0) {(void*) boxptr_SBGraph_IncidenceList_getEdge,0}};
+#define boxvar_SBGraph_IncidenceList_getEdge MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_getEdge)
+
+
+DLLDirection
+modelica_integer omc_SBGraph_IncidenceList_addEdge(threadData_t *threadData, modelica_metatype _il, modelica_integer _d1, modelica_integer _d2, modelica_metatype _e);
+DLLDirection
+modelica_metatype boxptr_SBGraph_IncidenceList_addEdge(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d1, modelica_metatype _d2, modelica_metatype _e);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_addEdge,2,0) {(void*) boxptr_SBGraph_IncidenceList_addEdge,0}};
+#define boxvar_SBGraph_IncidenceList_addEdge MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_addEdge)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_IncidenceList_getVerticesFromSet(threadData_t *threadData, modelica_metatype _il, modelica_metatype _set, modelica_fnptr _getSet);
+#define boxptr_SBGraph_IncidenceList_getVerticesFromSet omc_SBGraph_IncidenceList_getVerticesFromSet
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_getVerticesFromSet,2,0) {(void*) boxptr_SBGraph_IncidenceList_getVerticesFromSet,0}};
+#define boxvar_SBGraph_IncidenceList_getVerticesFromSet MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_getVerticesFromSet)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_IncidenceList_getVertex(threadData_t *threadData, modelica_metatype _il, modelica_integer _d);
+DLLDirection
+modelica_metatype boxptr_SBGraph_IncidenceList_getVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_getVertex,2,0) {(void*) boxptr_SBGraph_IncidenceList_getVertex,0}};
+#define boxvar_SBGraph_IncidenceList_getVertex MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_getVertex)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_IncidenceList_findVertex(threadData_t *threadData, modelica_metatype _il, modelica_fnptr _predFn);
+#define boxptr_SBGraph_IncidenceList_findVertex omc_SBGraph_IncidenceList_findVertex
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_findVertex,2,0) {(void*) boxptr_SBGraph_IncidenceList_findVertex,0}};
+#define boxvar_SBGraph_IncidenceList_findVertex MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_findVertex)
+
+
+DLLDirection
+modelica_integer omc_SBGraph_IncidenceList_addVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _v);
+DLLDirection
+modelica_metatype boxptr_SBGraph_IncidenceList_addVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _v);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_addVertex,2,0) {(void*) boxptr_SBGraph_IncidenceList_addVertex,0}};
+#define boxvar_SBGraph_IncidenceList_addVertex MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_addVertex)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_IncidenceList_getRow(threadData_t *threadData, modelica_metatype _il, modelica_integer _d);
+DLLDirection
+modelica_metatype boxptr_SBGraph_IncidenceList_getRow(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_getRow,2,0) {(void*) boxptr_SBGraph_IncidenceList_getRow,0}};
+#define boxvar_SBGraph_IncidenceList_getRow MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_getRow)
+
+
+DLLDirection
+modelica_metatype omc_SBGraph_IncidenceList_new(threadData_t *threadData, modelica_fnptr _vertexEq, modelica_fnptr _edgeEq, modelica_fnptr _vertexStr, modelica_fnptr _edgeStr);
+#define boxptr_SBGraph_IncidenceList_new omc_SBGraph_IncidenceList_new
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_new,2,0) {(void*) boxptr_SBGraph_IncidenceList_new,0}};
+#define boxvar_SBGraph_IncidenceList_new MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_IncidenceList_new)
+
+
+DLLDirection
+modelica_boolean omc_SBGraph_edge__finder(threadData_t *threadData, modelica_integer _index, modelica_metatype _e, modelica_metatype _edges, modelica_fnptr _eqFn);
+DLLDirection
+modelica_metatype boxptr_SBGraph_edge__finder(threadData_t *threadData, modelica_metatype _index, modelica_metatype _e, modelica_metatype _edges, modelica_fnptr _eqFn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SBGraph_edge__finder,2,0) {(void*) boxptr_SBGraph_edge__finder,0}};
+#define boxvar_SBGraph_edge__finder MMC_REFSTRUCTLIT(boxvar_lit_SBGraph_edge__finder)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

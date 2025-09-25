@@ -1,0 +1,120 @@
+#ifndef NFFunctionDerivative__H
+#define NFFunctionDerivative__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description Absyn_Exp_CREF__desc;
+
+extern struct record_description Absyn_Exp_INTEGER__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_FunctionDefinition_FUNCTION__DER__MAPPER__desc;
+
+extern struct record_description DAE_derivativeCond_NO__DERIVATIVE__desc;
+
+extern struct record_description DAE_derivativeCond_ZERO__DERIVATIVE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFExpression_EMPTY__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFFunctionDerivative_FUNCTION__DER__desc;
+
+extern struct record_description NFType_INTEGER__desc;
+
+extern struct record_description NFType_UNKNOWN__desc;
+
+extern struct record_description SCode_Each_NOT__EACH__desc;
+
+extern struct record_description SCode_Final_NOT__FINAL__desc;
+
+extern struct record_description SCode_Mod_MOD__desc;
+
+extern struct record_description SCode_SubMod_NAMEMOD__desc;
+
+extern struct record_description SCodeDump_SCodeDumpOptions_OPTIONS__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFFunctionDerivative_addLowerOrderDerivative2 omc_NFFunctionDerivative_addLowerOrderDerivative2
+
+
+#define boxptr_NFFunctionDerivative_addLowerOrderDerivative omc_NFFunctionDerivative_addLowerOrderDerivative
+
+
+#define boxptr_NFFunctionDerivative_getDerivativeAttributes omc_NFFunctionDerivative_getDerivativeAttributes
+
+
+#define boxptr_NFFunctionDerivative_instDerivativeMod omc_NFFunctionDerivative_instDerivativeMod
+
+
+#define boxptr_NFFunctionDerivative_getDerivativeAnnotations omc_NFFunctionDerivative_getDerivativeAnnotations
+
+
+DLLDirection
+modelica_boolean omc_NFFunctionDerivative_perfectFit(threadData_t *threadData, modelica_metatype _fnDer, modelica_metatype _interface_map);
+DLLDirection
+modelica_metatype boxptr_NFFunctionDerivative_perfectFit(threadData_t *threadData, modelica_metatype _fnDer, modelica_metatype _interface_map);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_perfectFit,2,0) {(void*) boxptr_NFFunctionDerivative_perfectFit,0}};
+#define boxvar_NFFunctionDerivative_perfectFit MMC_REFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_perfectFit)
+
+
+DLLDirection
+modelica_metatype omc_NFFunctionDerivative_toSubMod(threadData_t *threadData, modelica_metatype _fnDer);
+#define boxptr_NFFunctionDerivative_toSubMod omc_NFFunctionDerivative_toSubMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_toSubMod,2,0) {(void*) boxptr_NFFunctionDerivative_toSubMod,0}};
+#define boxvar_NFFunctionDerivative_toSubMod MMC_REFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_toSubMod)
+
+
+DLLDirection
+modelica_metatype omc_NFFunctionDerivative_conditionToDAE(threadData_t *threadData, modelica_metatype _cond);
+#define boxptr_NFFunctionDerivative_conditionToDAE omc_NFFunctionDerivative_conditionToDAE
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_conditionToDAE,2,0) {(void*) boxptr_NFFunctionDerivative_conditionToDAE,0}};
+#define boxvar_NFFunctionDerivative_conditionToDAE MMC_REFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_conditionToDAE)
+
+
+DLLDirection
+modelica_metatype omc_NFFunctionDerivative_toDAE(threadData_t *threadData, modelica_metatype _fnDer);
+#define boxptr_NFFunctionDerivative_toDAE omc_NFFunctionDerivative_toDAE
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_toDAE,2,0) {(void*) boxptr_NFFunctionDerivative_toDAE,0}};
+#define boxvar_NFFunctionDerivative_toDAE MMC_REFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_toDAE)
+
+
+DLLDirection
+void omc_NFFunctionDerivative_typeDerivative(threadData_t *threadData, modelica_metatype _fnDer);
+#define boxptr_NFFunctionDerivative_typeDerivative omc_NFFunctionDerivative_typeDerivative
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_typeDerivative,2,0) {(void*) boxptr_NFFunctionDerivative_typeDerivative,0}};
+#define boxvar_NFFunctionDerivative_typeDerivative MMC_REFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_typeDerivative)
+
+
+DLLDirection
+modelica_metatype omc_NFFunctionDerivative_instDerivatives(threadData_t *threadData, modelica_metatype _fnNode, modelica_metatype _fn);
+#define boxptr_NFFunctionDerivative_instDerivatives omc_NFFunctionDerivative_instDerivatives
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_instDerivatives,2,0) {(void*) boxptr_NFFunctionDerivative_instDerivatives,0}};
+#define boxvar_NFFunctionDerivative_instDerivatives MMC_REFSTRUCTLIT(boxvar_lit_NFFunctionDerivative_instDerivatives)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

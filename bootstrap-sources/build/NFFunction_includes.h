@@ -1,0 +1,53 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
+#include "openmodelica.h"       // Defines OPENMODELICA_H_ for libraris to test if called from OpenModelica.
+#include "ModelicaUtilities.h"  // Make Modelica C util functions available for external includes.
+
+#include "AbsynUtil.h"
+#include "Array.h"
+#include "Config.h"
+#include "Dump.h"
+#include "ElementSource.h"
+#include "Error.h"
+#include "ErrorExt.h"
+#include "Flags.h"
+#include "Graph.h"
+#include "IOStream.h"
+#include "InstUtil.h"
+#include "List.h"
+#include "NFBinding.h"
+#include "NFClass.h"
+#include "NFClassTree.h"
+#include "NFComponent.h"
+#include "NFComponentRef.h"
+#include "NFDimension.h"
+#include "NFExpression.h"
+#include "NFFlatModelicaUtil.h"
+#include "NFFunction.h"
+#include "NFFunctionDerivative.h"
+#include "NFFunctionInverse.h"
+#include "NFInst.h"
+#include "NFInstContext.h"
+#include "NFInstNode.h"
+#include "NFLookup.h"
+#include "NFOperatorOverloading.h"
+#include "NFPrefixes.h"
+#include "NFRecord.h"
+#include "NFRestriction.h"
+#include "NFSections.h"
+#include "NFStatement.h"
+#include "NFType.h"
+#include "NFTypeCheck.h"
+#include "NFTyping.h"
+#include "Pointer.h"
+#include "SCodeDump.h"
+#include "SCodeUtil.h"
+#include "StringUtil.h"
+#include "UnorderedMap.h"
+#include "UnorderedSet.h"
+#include "Util.h"
+#include "Vector.h"
+#ifdef __cplusplus
+}
+#endif

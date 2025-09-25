@@ -1,0 +1,565 @@
+#ifndef BackendVarTransform__H
+#define BackendVarTransform__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_Equation_ALGORITHM__desc;
+
+extern struct record_description BackendDAE_Equation_ARRAY__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_COMPLEX__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_IF__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_RESIDUAL__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_SOLVED__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_WHEN__EQUATION__desc;
+
+extern struct record_description BackendDAE_EventInfo_EVENT__INFO__desc;
+
+extern struct record_description BackendDAE_TimeEvent_SAMPLE__TIME__EVENT__desc;
+
+extern struct record_description BackendDAE_WhenEquation_WHEN__STMTS__desc;
+
+extern struct record_description BackendDAE_WhenOperator_ASSERT__desc;
+
+extern struct record_description BackendDAE_WhenOperator_ASSIGN__desc;
+
+extern struct record_description BackendDAE_WhenOperator_NORETCALL__desc;
+
+extern struct record_description BackendDAE_WhenOperator_REINIT__desc;
+
+extern struct record_description BackendDAE_WhenOperator_TERMINATE__desc;
+
+extern struct record_description BackendDAE_ZeroCrossing_ZERO__CROSSING__desc;
+
+extern struct record_description BackendVarTransform_VariableReplacements_REPLACEMENTS__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_ClockKind_EVENT__CLOCK__desc;
+
+extern struct record_description DAE_ClockKind_RATIONAL__CLOCK__desc;
+
+extern struct record_description DAE_ClockKind_REAL__CLOCK__desc;
+
+extern struct record_description DAE_ClockKind_SOLVER__CLOCK__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__QUAL__desc;
+
+extern struct record_description DAE_ComponentRef_WILD__desc;
+
+extern struct record_description DAE_Else_ELSE__desc;
+
+extern struct record_description DAE_Else_ELSEIF__desc;
+
+extern struct record_description DAE_EquationExp_EQUALITY__EXPS__desc;
+
+extern struct record_description DAE_EquationExp_PARTIAL__EQUATION__desc;
+
+extern struct record_description DAE_Exp_ARRAY__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_BOX__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_CAST__desc;
+
+extern struct record_description DAE_Exp_CLKCONST__desc;
+
+extern struct record_description DAE_Exp_CODE__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_IFEXP__desc;
+
+extern struct record_description DAE_Exp_LBINARY__desc;
+
+extern struct record_description DAE_Exp_LUNARY__desc;
+
+extern struct record_description DAE_Exp_MATRIX__desc;
+
+extern struct record_description DAE_Exp_PARTEVALFUNCTION__desc;
+
+extern struct record_description DAE_Exp_RANGE__desc;
+
+extern struct record_description DAE_Exp_RECORD__desc;
+
+extern struct record_description DAE_Exp_REDUCTION__desc;
+
+extern struct record_description DAE_Exp_RELATION__desc;
+
+extern struct record_description DAE_Exp_SIZE__desc;
+
+extern struct record_description DAE_Exp_TSUB__desc;
+
+extern struct record_description DAE_Exp_TUPLE__desc;
+
+extern struct record_description DAE_Exp_UNARY__desc;
+
+extern struct record_description DAE_Exp_UNBOX__desc;
+
+extern struct record_description DAE_Expand_NOT__EXPAND__desc;
+
+extern struct record_description DAE_Operator_ADD__desc;
+
+extern struct record_description DAE_Operator_NOT__desc;
+
+extern struct record_description DAE_Operator_SUB__desc;
+
+extern struct record_description DAE_Operator_UMINUS__desc;
+
+extern struct record_description DAE_Operator_UMINUS__ARR__desc;
+
+extern struct record_description DAE_ReductionIterator_REDUCTIONITER__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSERT__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__ARR__desc;
+
+extern struct record_description DAE_Statement_STMT__FAILURE__desc;
+
+extern struct record_description DAE_Statement_STMT__FOR__desc;
+
+extern struct record_description DAE_Statement_STMT__IF__desc;
+
+extern struct record_description DAE_Statement_STMT__NORETCALL__desc;
+
+extern struct record_description DAE_Statement_STMT__PARFOR__desc;
+
+extern struct record_description DAE_Statement_STMT__REINIT__desc;
+
+extern struct record_description DAE_Statement_STMT__TERMINATE__desc;
+
+extern struct record_description DAE_Statement_STMT__TUPLE__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__WHEN__desc;
+
+extern struct record_description DAE_Statement_STMT__WHILE__desc;
+
+extern struct record_description DAE_Subscript_INDEX__desc;
+
+extern struct record_description DAE_Subscript_SLICE__desc;
+
+extern struct record_description DAE_Subscript_WHOLE__NONEXP__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__BOOL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__ENUMERATION__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__INT__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__REAL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__STRING__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_getConstantReplacements(threadData_t *threadData, modelica_metatype _replIn);
+#define boxptr_BackendVarTransform_getConstantReplacements omc_BackendVarTransform_getConstantReplacements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_getConstantReplacements,2,0) {(void*) boxptr_BackendVarTransform_getConstantReplacements,0}};
+#define boxvar_BackendVarTransform_getConstantReplacements MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_getConstantReplacements)
+
+
+#define boxptr_BackendVarTransform_printReplacementTupleStr omc_BackendVarTransform_printReplacementTupleStr
+
+
+DLLDirection
+void omc_BackendVarTransform_dumpDerConstReplacements(threadData_t *threadData, modelica_metatype _repl);
+#define boxptr_BackendVarTransform_dumpDerConstReplacements omc_BackendVarTransform_dumpDerConstReplacements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_dumpDerConstReplacements,2,0) {(void*) boxptr_BackendVarTransform_dumpDerConstReplacements,0}};
+#define boxvar_BackendVarTransform_dumpDerConstReplacements MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_dumpDerConstReplacements)
+
+
+DLLDirection
+void omc_BackendVarTransform_dumpExtendReplacements(threadData_t *threadData, modelica_metatype _repl);
+#define boxptr_BackendVarTransform_dumpExtendReplacements omc_BackendVarTransform_dumpExtendReplacements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_dumpExtendReplacements,2,0) {(void*) boxptr_BackendVarTransform_dumpExtendReplacements,0}};
+#define boxvar_BackendVarTransform_dumpExtendReplacements MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_dumpExtendReplacements)
+
+
+DLLDirection
+void omc_BackendVarTransform_dumpReplacements(threadData_t *threadData, modelica_metatype _repl);
+#define boxptr_BackendVarTransform_dumpReplacements omc_BackendVarTransform_dumpReplacements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_dumpReplacements,2,0) {(void*) boxptr_BackendVarTransform_dumpReplacements,0}};
+#define boxvar_BackendVarTransform_dumpReplacements MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_dumpReplacements)
+
+
+#define boxptr_BackendVarTransform_replaceZeroCrossing omc_BackendVarTransform_replaceZeroCrossing
+
+
+#define boxptr_BackendVarTransform_replaceTimeEvents omc_BackendVarTransform_replaceTimeEvents
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceEventInfo(threadData_t *threadData, modelica_metatype _eInfoIn, modelica_metatype _inVariableReplacements, modelica_metatype _inFuncTypeExpExpToBooleanOption);
+#define boxptr_BackendVarTransform_replaceEventInfo omc_BackendVarTransform_replaceEventInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceEventInfo,2,0) {(void*) boxptr_BackendVarTransform_replaceEventInfo,0}};
+#define boxvar_BackendVarTransform_replaceEventInfo MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceEventInfo)
+
+
+#define boxptr_BackendVarTransform_negateOperator omc_BackendVarTransform_negateOperator
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceVariableAttributesInVar(threadData_t *threadData, modelica_metatype _varIn, modelica_metatype _repl);
+#define boxptr_BackendVarTransform_replaceVariableAttributesInVar omc_BackendVarTransform_replaceVariableAttributesInVar
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceVariableAttributesInVar,2,0) {(void*) boxptr_BackendVarTransform_replaceVariableAttributesInVar,0}};
+#define boxvar_BackendVarTransform_replaceVariableAttributesInVar MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceVariableAttributesInVar)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceOptionExp(threadData_t *threadData, modelica_metatype _optIn, modelica_metatype _repl);
+#define boxptr_BackendVarTransform_replaceOptionExp omc_BackendVarTransform_replaceOptionExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceOptionExp,2,0) {(void*) boxptr_BackendVarTransform_replaceOptionExp,0}};
+#define boxvar_BackendVarTransform_replaceOptionExp MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceOptionExp)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceVariableAttributes(threadData_t *threadData, modelica_metatype _attrIn, modelica_metatype _repl);
+#define boxptr_BackendVarTransform_replaceVariableAttributes omc_BackendVarTransform_replaceVariableAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceVariableAttributes,2,0) {(void*) boxptr_BackendVarTransform_replaceVariableAttributes,0}};
+#define boxvar_BackendVarTransform_replaceVariableAttributes MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceVariableAttributes)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceBindingExp(threadData_t *threadData, modelica_metatype _varIn, modelica_metatype _repl);
+#define boxptr_BackendVarTransform_replaceBindingExp omc_BackendVarTransform_replaceBindingExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceBindingExp,2,0) {(void*) boxptr_BackendVarTransform_replaceBindingExp,0}};
+#define boxvar_BackendVarTransform_replaceBindingExp MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceBindingExp)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceVarTraverser(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _inRepl, modelica_metatype *out_repl);
+#define boxptr_BackendVarTransform_replaceVarTraverser omc_BackendVarTransform_replaceVarTraverser
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceVarTraverser,2,0) {(void*) boxptr_BackendVarTransform_replaceVarTraverser,0}};
+#define boxvar_BackendVarTransform_replaceVarTraverser MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceVarTraverser)
+
+
+#define boxptr_BackendVarTransform_validLhsAssignSTMT omc_BackendVarTransform_validLhsAssignSTMT
+
+
+#define boxptr_BackendVarTransform_validLhsArrayAssignSTMT omc_BackendVarTransform_validLhsArrayAssignSTMT
+
+
+#define boxptr_BackendVarTransform_moveNegateRhs omc_BackendVarTransform_moveNegateRhs
+
+
+#define boxptr_BackendVarTransform_replaceExpWrapper omc_BackendVarTransform_replaceExpWrapper
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceStatementLstRHS(threadData_t *threadData, modelica_metatype _inStatementLst, modelica_metatype _inVariableReplacements, modelica_metatype _inFuncTypeExpExpToBooleanOption, modelica_metatype _inAcc, modelica_boolean _inBAcc, modelica_boolean *out_replacementPerformed);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_replaceStatementLstRHS(threadData_t *threadData, modelica_metatype _inStatementLst, modelica_metatype _inVariableReplacements, modelica_metatype _inFuncTypeExpExpToBooleanOption, modelica_metatype _inAcc, modelica_metatype _inBAcc, modelica_metatype *out_replacementPerformed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceStatementLstRHS,2,0) {(void*) boxptr_BackendVarTransform_replaceStatementLstRHS,0}};
+#define boxvar_BackendVarTransform_replaceStatementLstRHS MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceStatementLstRHS)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceStatementLst(threadData_t *threadData, modelica_metatype _inStatementLst, modelica_metatype _inVariableReplacements, modelica_metatype _inFuncTypeExpExpToBooleanOption, modelica_metatype _inAcc, modelica_boolean _inBAcc, modelica_boolean *out_replacementPerformed);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_replaceStatementLst(threadData_t *threadData, modelica_metatype _inStatementLst, modelica_metatype _inVariableReplacements, modelica_metatype _inFuncTypeExpExpToBooleanOption, modelica_metatype _inAcc, modelica_metatype _inBAcc, modelica_metatype *out_replacementPerformed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceStatementLst,2,0) {(void*) boxptr_BackendVarTransform_replaceStatementLst,0}};
+#define boxvar_BackendVarTransform_replaceStatementLst MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceStatementLst)
+
+
+#define boxptr_BackendVarTransform_validWhenLeftHandSide omc_BackendVarTransform_validWhenLeftHandSide
+
+
+#define boxptr_BackendVarTransform_optimizeIfEquation omc_BackendVarTransform_optimizeIfEquation
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceEquations(threadData_t *threadData, modelica_metatype _inEqns, modelica_metatype _repl, modelica_metatype _inFuncTypeExpExpToBooleanOption, modelica_boolean *out_replacementPerformed);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_replaceEquations(threadData_t *threadData, modelica_metatype _inEqns, modelica_metatype _repl, modelica_metatype _inFuncTypeExpExpToBooleanOption, modelica_metatype *out_replacementPerformed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceEquations,2,0) {(void*) boxptr_BackendVarTransform_replaceEquations,0}};
+#define boxvar_BackendVarTransform_replaceEquations MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceEquations)
+
+
+#define boxptr_BackendVarTransform_replaceEquationTraverser omc_BackendVarTransform_replaceEquationTraverser
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceEquationsArr(threadData_t *threadData, modelica_metatype _inEqns, modelica_metatype _repl, modelica_metatype _inFuncTypeExpExpToBooleanOption, modelica_boolean *out_replacementPerformed);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_replaceEquationsArr(threadData_t *threadData, modelica_metatype _inEqns, modelica_metatype _repl, modelica_metatype _inFuncTypeExpExpToBooleanOption, modelica_metatype *out_replacementPerformed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceEquationsArr,2,0) {(void*) boxptr_BackendVarTransform_replaceEquationsArr,0}};
+#define boxvar_BackendVarTransform_replaceEquationsArr MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceEquationsArr)
+
+
+DLLDirection
+modelica_boolean omc_BackendVarTransform_skipPreChangeEdgeOperator(threadData_t *threadData, modelica_metatype _inExp);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_skipPreChangeEdgeOperator(threadData_t *threadData, modelica_metatype _inExp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_skipPreChangeEdgeOperator,2,0) {(void*) boxptr_BackendVarTransform_skipPreChangeEdgeOperator,0}};
+#define boxvar_BackendVarTransform_skipPreChangeEdgeOperator MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_skipPreChangeEdgeOperator)
+
+
+DLLDirection
+modelica_boolean omc_BackendVarTransform_skipPreOperator(threadData_t *threadData, modelica_metatype _inExp);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_skipPreOperator(threadData_t *threadData, modelica_metatype _inExp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_skipPreOperator,2,0) {(void*) boxptr_BackendVarTransform_skipPreOperator,0}};
+#define boxvar_BackendVarTransform_skipPreOperator MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_skipPreOperator)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceExpList1(threadData_t *threadData, modelica_metatype _iexpl, modelica_metatype _repl, modelica_metatype _cond, modelica_metatype *out_replacementPerformed);
+#define boxptr_BackendVarTransform_replaceExpList1 omc_BackendVarTransform_replaceExpList1
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceExpList1,2,0) {(void*) boxptr_BackendVarTransform_replaceExpList1,0}};
+#define boxvar_BackendVarTransform_replaceExpList1 MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceExpList1)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceExpList(threadData_t *threadData, modelica_metatype _iexpl, modelica_metatype _repl, modelica_metatype _cond, modelica_boolean *out_replacementPerformed);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_replaceExpList(threadData_t *threadData, modelica_metatype _iexpl, modelica_metatype _repl, modelica_metatype _cond, modelica_metatype *out_replacementPerformed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceExpList,2,0) {(void*) boxptr_BackendVarTransform_replaceExpList,0}};
+#define boxvar_BackendVarTransform_replaceExpList MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceExpList)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceCref(threadData_t *threadData, modelica_metatype _crefIn, modelica_metatype _replIn, modelica_boolean *out_changedOut);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_replaceCref(threadData_t *threadData, modelica_metatype _crefIn, modelica_metatype _replIn, modelica_metatype *out_changedOut);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceCref,2,0) {(void*) boxptr_BackendVarTransform_replaceCref,0}};
+#define boxvar_BackendVarTransform_replaceCref MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceCref)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_getRecordElement(threadData_t *threadData, modelica_string _name, modelica_metatype _expl);
+#define boxptr_BackendVarTransform_getRecordElement omc_BackendVarTransform_getRecordElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_getRecordElement,2,0) {(void*) boxptr_BackendVarTransform_getRecordElement,0}};
+#define boxvar_BackendVarTransform_getRecordElement MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_getRecordElement)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_addConstantRecordReplacements(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _expl, modelica_metatype __omcQ_24in_5Frepl, modelica_metatype _inFuncTypeExpExpToBooleanOption);
+#define boxptr_BackendVarTransform_addConstantRecordReplacements omc_BackendVarTransform_addConstantRecordReplacements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_addConstantRecordReplacements,2,0) {(void*) boxptr_BackendVarTransform_addConstantRecordReplacements,0}};
+#define boxvar_BackendVarTransform_addConstantRecordReplacements MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_addConstantRecordReplacements)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_replaceExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inVariableReplacements, modelica_metatype _inFuncTypeExpExpToBooleanOption, modelica_boolean *out_replacementPerformed);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_replaceExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inVariableReplacements, modelica_metatype _inFuncTypeExpExpToBooleanOption, modelica_metatype *out_replacementPerformed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceExp,2,0) {(void*) boxptr_BackendVarTransform_replaceExp,0}};
+#define boxvar_BackendVarTransform_replaceExp MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_replaceExp)
+
+
+DLLDirection
+modelica_boolean omc_BackendVarTransform_isReplacementEmpty(threadData_t *threadData, modelica_metatype _repl);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_isReplacementEmpty(threadData_t *threadData, modelica_metatype _repl);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_isReplacementEmpty,2,0) {(void*) boxptr_BackendVarTransform_isReplacementEmpty,0}};
+#define boxvar_BackendVarTransform_isReplacementEmpty MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_isReplacementEmpty)
+
+
+#define boxptr_BackendVarTransform_avoidDoubleHashLookup omc_BackendVarTransform_avoidDoubleHashLookup
+
+
+DLLDirection
+modelica_boolean omc_BackendVarTransform_hasExtendReplacement(threadData_t *threadData, modelica_metatype _repl, modelica_metatype _src);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_hasExtendReplacement(threadData_t *threadData, modelica_metatype _repl, modelica_metatype _src);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_hasExtendReplacement,2,0) {(void*) boxptr_BackendVarTransform_hasExtendReplacement,0}};
+#define boxvar_BackendVarTransform_hasExtendReplacement MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_hasExtendReplacement)
+
+
+#define boxptr_BackendVarTransform_getCrefExpTableEntries omc_BackendVarTransform_getCrefExpTableEntries
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_getAllReplacements(threadData_t *threadData, modelica_metatype _repl, modelica_metatype *out_dsts);
+#define boxptr_BackendVarTransform_getAllReplacements omc_BackendVarTransform_getAllReplacements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_getAllReplacements,2,0) {(void*) boxptr_BackendVarTransform_getAllReplacements,0}};
+#define boxvar_BackendVarTransform_getAllReplacements MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_getAllReplacements)
+
+
+DLLDirection
+modelica_boolean omc_BackendVarTransform_hasNoReplacement(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _repl);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_hasNoReplacement(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _repl);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_hasNoReplacement,2,0) {(void*) boxptr_BackendVarTransform_hasNoReplacement,0}};
+#define boxvar_BackendVarTransform_hasNoReplacement MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_hasNoReplacement)
+
+
+DLLDirection
+modelica_boolean omc_BackendVarTransform_hasReplacement(threadData_t *threadData, modelica_metatype _repl, modelica_metatype _inComponentRef);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_hasReplacement(threadData_t *threadData, modelica_metatype _repl, modelica_metatype _inComponentRef);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_hasReplacement,2,0) {(void*) boxptr_BackendVarTransform_hasReplacement,0}};
+#define boxvar_BackendVarTransform_hasReplacement MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_hasReplacement)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_getReplacement(threadData_t *threadData, modelica_metatype _inVariableReplacements, modelica_metatype _inComponentRef);
+#define boxptr_BackendVarTransform_getReplacement omc_BackendVarTransform_getReplacement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_getReplacement,2,0) {(void*) boxptr_BackendVarTransform_getReplacement,0}};
+#define boxvar_BackendVarTransform_getReplacement MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_getReplacement)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_addDerConstRepl(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _inExp, modelica_metatype __omcQ_24in_5Frepl);
+#define boxptr_BackendVarTransform_addDerConstRepl omc_BackendVarTransform_addDerConstRepl
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_addDerConstRepl,2,0) {(void*) boxptr_BackendVarTransform_addDerConstRepl,0}};
+#define boxvar_BackendVarTransform_addDerConstRepl MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_addDerConstRepl)
+
+
+#define boxptr_BackendVarTransform_removeIterationVar omc_BackendVarTransform_removeIterationVar
+
+
+#define boxptr_BackendVarTransform_addIterationVar omc_BackendVarTransform_addIterationVar
+
+
+#define boxptr_BackendVarTransform_addExtendReplacement omc_BackendVarTransform_addExtendReplacement
+
+
+#define boxptr_BackendVarTransform_makeTransitive2 omc_BackendVarTransform_makeTransitive2
+
+
+#define boxptr_BackendVarTransform_makeTransitive12 omc_BackendVarTransform_makeTransitive12
+
+
+#define boxptr_BackendVarTransform_makeTransitive1 omc_BackendVarTransform_makeTransitive1
+
+
+#define boxptr_BackendVarTransform_makeTransitive omc_BackendVarTransform_makeTransitive
+
+
+#define boxptr_BackendVarTransform_addReplacementInv2 omc_BackendVarTransform_addReplacementInv2
+
+
+#define boxptr_BackendVarTransform_addReplacementInv omc_BackendVarTransform_addReplacementInv
+
+
+#define boxptr_BackendVarTransform_removeReplacementInv omc_BackendVarTransform_removeReplacementInv
+
+
+#define boxptr_BackendVarTransform_addReplacementNoTransitive omc_BackendVarTransform_addReplacementNoTransitive
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_performReplacementsEqSystem(threadData_t *threadData, modelica_metatype _inEqs, modelica_metatype _inRepl);
+#define boxptr_BackendVarTransform_performReplacementsEqSystem omc_BackendVarTransform_performReplacementsEqSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_performReplacementsEqSystem,2,0) {(void*) boxptr_BackendVarTransform_performReplacementsEqSystem,0}};
+#define boxvar_BackendVarTransform_performReplacementsEqSystem MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_performReplacementsEqSystem)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_addReplacement(threadData_t *threadData, modelica_metatype _repl, modelica_metatype _inSrc, modelica_metatype _inDst, modelica_metatype _inFuncTypeExpExpToBooleanOption);
+#define boxptr_BackendVarTransform_addReplacement omc_BackendVarTransform_addReplacement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_addReplacement,2,0) {(void*) boxptr_BackendVarTransform_addReplacement,0}};
+#define boxvar_BackendVarTransform_addReplacement MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_addReplacement)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_addReplacements(threadData_t *threadData, modelica_metatype _iRepl, modelica_metatype _inSrcs, modelica_metatype _inDsts, modelica_metatype _inFuncTypeExpExpToBooleanOption);
+#define boxptr_BackendVarTransform_addReplacements omc_BackendVarTransform_addReplacements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_addReplacements,2,0) {(void*) boxptr_BackendVarTransform_addReplacements,0}};
+#define boxvar_BackendVarTransform_addReplacements MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_addReplacements)
+
+
+DLLDirection
+void omc_BackendVarTransform_removeReplacements(threadData_t *threadData, modelica_metatype _iRepl, modelica_metatype _inSrcs);
+#define boxptr_BackendVarTransform_removeReplacements omc_BackendVarTransform_removeReplacements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_removeReplacements,2,0) {(void*) boxptr_BackendVarTransform_removeReplacements,0}};
+#define boxvar_BackendVarTransform_removeReplacements MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_removeReplacements)
+
+
+DLLDirection
+void omc_BackendVarTransform_removeReplacement(threadData_t *threadData, modelica_metatype _repl, modelica_metatype _inSrc);
+#define boxptr_BackendVarTransform_removeReplacement omc_BackendVarTransform_removeReplacement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_removeReplacement,2,0) {(void*) boxptr_BackendVarTransform_removeReplacement,0}};
+#define boxvar_BackendVarTransform_removeReplacement MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_removeReplacement)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_emptyReplacementsSized(threadData_t *threadData, modelica_integer _size);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_emptyReplacementsSized(threadData_t *threadData, modelica_metatype _size);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_emptyReplacementsSized,2,0) {(void*) boxptr_BackendVarTransform_emptyReplacementsSized,0}};
+#define boxvar_BackendVarTransform_emptyReplacementsSized MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_emptyReplacementsSized)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_emptyReplacements(threadData_t *threadData);
+#define boxptr_BackendVarTransform_emptyReplacements omc_BackendVarTransform_emptyReplacements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_emptyReplacements,2,0) {(void*) boxptr_BackendVarTransform_emptyReplacements,0}};
+#define boxvar_BackendVarTransform_emptyReplacements MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_emptyReplacements)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_newCrefSetSized(threadData_t *threadData, modelica_integer _size);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_newCrefSetSized(threadData_t *threadData, modelica_metatype _size);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefSetSized,2,0) {(void*) boxptr_BackendVarTransform_newCrefSetSized,0}};
+#define boxvar_BackendVarTransform_newCrefSetSized MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefSetSized)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_newCrefSet(threadData_t *threadData);
+#define boxptr_BackendVarTransform_newCrefSet omc_BackendVarTransform_newCrefSet
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefSet,2,0) {(void*) boxptr_BackendVarTransform_newCrefSet,0}};
+#define boxvar_BackendVarTransform_newCrefSet MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefSet)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_newCrefCrefListTableSized(threadData_t *threadData, modelica_integer _size);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_newCrefCrefListTableSized(threadData_t *threadData, modelica_metatype _size);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefCrefListTableSized,2,0) {(void*) boxptr_BackendVarTransform_newCrefCrefListTableSized,0}};
+#define boxvar_BackendVarTransform_newCrefCrefListTableSized MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefCrefListTableSized)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_newCrefCrefListTable(threadData_t *threadData);
+#define boxptr_BackendVarTransform_newCrefCrefListTable omc_BackendVarTransform_newCrefCrefListTable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefCrefListTable,2,0) {(void*) boxptr_BackendVarTransform_newCrefCrefListTable,0}};
+#define boxvar_BackendVarTransform_newCrefCrefListTable MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefCrefListTable)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_newCrefExpTableSized(threadData_t *threadData, modelica_integer _size);
+DLLDirection
+modelica_metatype boxptr_BackendVarTransform_newCrefExpTableSized(threadData_t *threadData, modelica_metatype _size);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefExpTableSized,2,0) {(void*) boxptr_BackendVarTransform_newCrefExpTableSized,0}};
+#define boxvar_BackendVarTransform_newCrefExpTableSized MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefExpTableSized)
+
+
+DLLDirection
+modelica_metatype omc_BackendVarTransform_newCrefExpTable(threadData_t *threadData);
+#define boxptr_BackendVarTransform_newCrefExpTable omc_BackendVarTransform_newCrefExpTable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefExpTable,2,0) {(void*) boxptr_BackendVarTransform_newCrefExpTable,0}};
+#define boxvar_BackendVarTransform_newCrefExpTable MMC_REFSTRUCTLIT(boxvar_lit_BackendVarTransform_newCrefExpTable)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

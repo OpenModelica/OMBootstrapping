@@ -1,6 +1,9 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+#include "openmodelica.h"       // Defines OPENMODELICA_H_ for libraris to test if called from OpenModelica.
+#include "ModelicaUtilities.h"  // Make Modelica C util functions available for external includes.
+
 #include "AbsynUtil.h"
 #include "BaseHashSet.h"
 #include "Builtin.h"
@@ -41,6 +44,7 @@ extern "C" {
 #include "List.h"
 #include "Lookup.h"
 #include "Mod.h"
+#include "PackageManagement.h"
 #include "Parser.h"
 #include "Print.h"
 #include "SCodeDump.h"
@@ -50,11 +54,13 @@ extern "C" {
 #include "SimCodeFunction.h"
 #include "StackOverflow.h"
 #include "Static.h"
+#include "StringUtil.h"
 #include "SymbolTable.h"
 #include "System.h"
 #include "Testsuite.h"
 #include "Tpl.h"
 #include "Types.h"
+#include "UnorderedMap.h"
 #include "Unparsing.h"
 #include "Util.h"
 #include "ValuesUtil.h"

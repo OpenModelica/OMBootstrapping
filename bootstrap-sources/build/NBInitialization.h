@@ -1,0 +1,254 @@
+#ifndef NBInitialization__H
+#define NBInitialization__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_InlineType_BUILTIN__EARLY__INLINE__desc;
+
+extern struct record_description DAE_InlineType_DEFAULT__INLINE__desc;
+
+extern struct record_description DAE_InlineType_EARLY__INLINE__desc;
+
+extern struct record_description DAE_InlineType_NORM__INLINE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__LIST__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NBEquation_Equation_DUMMY__EQUATION__desc;
+
+extern struct record_description NBEquation_Iterator_EMPTY__desc;
+
+extern struct record_description NBSlice_SLICE__desc;
+
+extern struct record_description NFExpression_BOOLEAN__desc;
+
+extern struct record_description NFStatement_ASSIGNMENT__desc;
+
+extern struct record_description NFType_INTEGER__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_collectAlgorithmOutputs(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn, modelica_metatype _outputs);
+#define boxptr_NBInitialization_collectAlgorithmOutputs omc_NBInitialization_collectAlgorithmOutputs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_collectAlgorithmOutputs,2,0) {(void*) boxptr_NBInitialization_collectAlgorithmOutputs,0}};
+#define boxvar_NBInitialization_collectAlgorithmOutputs MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_collectAlgorithmOutputs)
+
+
+DLLDirection
+void omc_NBInitialization_collectNonInitial(threadData_t *threadData, modelica_metatype _condition, modelica_metatype _condition_set);
+#define boxptr_NBInitialization_collectNonInitial omc_NBInitialization_collectNonInitial
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_collectNonInitial,2,0) {(void*) boxptr_NBInitialization_collectNonInitial,0}};
+#define boxvar_NBInitialization_collectNonInitial MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_collectNonInitial)
+
+
+DLLDirection
+modelica_boolean omc_NBInitialization_isInitialCall(threadData_t *threadData, modelica_metatype _condition);
+DLLDirection
+modelica_metatype boxptr_NBInitialization_isInitialCall(threadData_t *threadData, modelica_metatype _condition);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_isInitialCall,2,0) {(void*) boxptr_NBInitialization_isInitialCall,0}};
+#define boxvar_NBInitialization_isInitialCall MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_isInitialCall)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_replaceClockedFunctions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
+#define boxptr_NBInitialization_replaceClockedFunctions omc_NBInitialization_replaceClockedFunctions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_replaceClockedFunctions,2,0) {(void*) boxptr_NBInitialization_replaceClockedFunctions,0}};
+#define boxvar_NBInitialization_replaceClockedFunctions MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_replaceClockedFunctions)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_replaceClockedFunctionsEqn(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn);
+#define boxptr_NBInitialization_replaceClockedFunctionsEqn omc_NBInitialization_replaceClockedFunctionsEqn
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_replaceClockedFunctionsEqn,2,0) {(void*) boxptr_NBInitialization_replaceClockedFunctionsEqn,0}};
+#define boxvar_NBInitialization_replaceClockedFunctionsEqn MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_replaceClockedFunctionsEqn)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_findPreVars(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _pre_set);
+#define boxptr_NBInitialization_findPreVars omc_NBInitialization_findPreVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_findPreVars,2,0) {(void*) boxptr_NBInitialization_findPreVars,0}};
+#define boxvar_NBInitialization_findPreVars MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_findPreVars)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_removeConditionEquation(threadData_t *threadData, modelica_metatype _stmt, modelica_metatype _condition_set, modelica_metatype _tail_stmts_ptr);
+#define boxptr_NBInitialization_removeConditionEquation omc_NBInitialization_removeConditionEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_removeConditionEquation,2,0) {(void*) boxptr_NBInitialization_removeConditionEquation,0}};
+#define boxvar_NBInitialization_removeConditionEquation MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_removeConditionEquation)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_removeWhenEquationStatement(threadData_t *threadData, modelica_metatype _stmt, modelica_metatype _condition_set);
+#define boxptr_NBInitialization_removeWhenEquationStatement omc_NBInitialization_removeWhenEquationStatement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_removeWhenEquationStatement,2,0) {(void*) boxptr_NBInitialization_removeWhenEquationStatement,0}};
+#define boxvar_NBInitialization_removeWhenEquationStatement MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_removeWhenEquationStatement)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_removeWhenEquationAlgorithmBody(threadData_t *threadData, modelica_metatype _in_stmts);
+#define boxptr_NBInitialization_removeWhenEquationAlgorithmBody omc_NBInitialization_removeWhenEquationAlgorithmBody
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_removeWhenEquationAlgorithmBody,2,0) {(void*) boxptr_NBInitialization_removeWhenEquationAlgorithmBody,0}};
+#define boxvar_NBInitialization_removeWhenEquationAlgorithmBody MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_removeWhenEquationAlgorithmBody)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_removeWhenEquationIfBody(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbody, modelica_metatype _iter, modelica_metatype _cref_map);
+#define boxptr_NBInitialization_removeWhenEquationIfBody omc_NBInitialization_removeWhenEquationIfBody
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_removeWhenEquationIfBody,2,0) {(void*) boxptr_NBInitialization_removeWhenEquationIfBody,0}};
+#define boxvar_NBInitialization_removeWhenEquationIfBody MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_removeWhenEquationIfBody)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_removeWhenEquationBody(threadData_t *threadData, modelica_metatype _body_opt);
+#define boxptr_NBInitialization_removeWhenEquationBody omc_NBInitialization_removeWhenEquationBody
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_removeWhenEquationBody,2,0) {(void*) boxptr_NBInitialization_removeWhenEquationBody,0}};
+#define boxvar_NBInitialization_removeWhenEquationBody MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_removeWhenEquationBody)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_removeWhenEquation(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn, modelica_metatype _iter, modelica_metatype _cref_map);
+#define boxptr_NBInitialization_removeWhenEquation omc_NBInitialization_removeWhenEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_removeWhenEquation,2,0) {(void*) boxptr_NBInitialization_removeWhenEquation,0}};
+#define boxvar_NBInitialization_removeWhenEquation MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_removeWhenEquation)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_containsHomotopyCall(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _b);
+#define boxptr_NBInitialization_containsHomotopyCall omc_NBInitialization_containsHomotopyCall
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_containsHomotopyCall,2,0) {(void*) boxptr_NBInitialization_containsHomotopyCall,0}};
+#define boxvar_NBInitialization_containsHomotopyCall MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_containsHomotopyCall)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_cleanupHomotopy(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_boolean _init, modelica_metatype _hasHom);
+DLLDirection
+modelica_metatype boxptr_NBInitialization_cleanupHomotopy(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _init, modelica_metatype _hasHom);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_cleanupHomotopy,2,0) {(void*) boxptr_NBInitialization_cleanupHomotopy,0}};
+#define boxvar_NBInitialization_cleanupHomotopy MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_cleanupHomotopy)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_cleanupInitialCallExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_boolean _init, modelica_metatype _simplify);
+DLLDirection
+modelica_metatype boxptr_NBInitialization_cleanupInitialCallExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _init, modelica_metatype _simplify);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_cleanupInitialCallExp,2,0) {(void*) boxptr_NBInitialization_cleanupInitialCallExp,0}};
+#define boxvar_NBInitialization_cleanupInitialCallExp MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_cleanupInitialCallExp)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_cleanupInitialCall(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feq, modelica_boolean _init);
+DLLDirection
+modelica_metatype boxptr_NBInitialization_cleanupInitialCall(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feq, modelica_metatype _init);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_cleanupInitialCall,2,0) {(void*) boxptr_NBInitialization_cleanupInitialCall,0}};
+#define boxvar_NBInitialization_cleanupInitialCall MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_cleanupInitialCall)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_cleanup(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
+#define boxptr_NBInitialization_cleanup omc_NBInitialization_cleanup
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_cleanup,2,0) {(void*) boxptr_NBInitialization_cleanup,0}};
+#define boxvar_NBInitialization_cleanup MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_cleanup)
+
+
+DLLDirection
+void omc_NBInitialization_createPreEquationSlice(threadData_t *threadData, modelica_metatype _var_slice, modelica_metatype _ptr_pre_eqs, modelica_metatype _idx);
+#define boxptr_NBInitialization_createPreEquationSlice omc_NBInitialization_createPreEquationSlice
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_createPreEquationSlice,2,0) {(void*) boxptr_NBInitialization_createPreEquationSlice,0}};
+#define boxvar_NBInitialization_createPreEquationSlice MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_createPreEquationSlice)
+
+
+DLLDirection
+void omc_NBInitialization_createPreEquation(threadData_t *threadData, modelica_metatype _var_ptr, modelica_metatype _ptr_pre_eqs, modelica_metatype _idx);
+#define boxptr_NBInitialization_createPreEquation omc_NBInitialization_createPreEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_createPreEquation,2,0) {(void*) boxptr_NBInitialization_createPreEquation,0}};
+#define boxvar_NBInitialization_createPreEquation MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_createPreEquation)
+
+
+#define boxptr_NBInitialization_createIteratedStartCref omc_NBInitialization_createIteratedStartCref
+
+
+DLLDirection
+void omc_NBInitialization_createStartEquationSlice(threadData_t *threadData, modelica_metatype _var_slice, modelica_metatype _ptr_start_vars, modelica_metatype _ptr_start_eqs, modelica_metatype _idx);
+#define boxptr_NBInitialization_createStartEquationSlice omc_NBInitialization_createStartEquationSlice
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_createStartEquationSlice,2,0) {(void*) boxptr_NBInitialization_createStartEquationSlice,0}};
+#define boxvar_NBInitialization_createStartEquationSlice MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_createStartEquationSlice)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_createParameterEquations(threadData_t *threadData, modelica_metatype _parameters, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FinitialEqs, modelica_metatype __omcQ_24in_5FinitialVars, modelica_metatype _new_iters, modelica_metatype _idx, modelica_string _str, modelica_metatype *out_initialEqs, modelica_metatype *out_initialVars);
+#define boxptr_NBInitialization_createParameterEquations omc_NBInitialization_createParameterEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_createParameterEquations,2,0) {(void*) boxptr_NBInitialization_createParameterEquations,0}};
+#define boxvar_NBInitialization_createParameterEquations MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_createParameterEquations)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_createStartVar(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fvar_5Fptr, modelica_metatype __omcQ_24in_5Fname, modelica_metatype _subscripts, modelica_metatype *out_name, modelica_metatype *out_start_var, modelica_metatype *out_start_name);
+#define boxptr_NBInitialization_createStartVar omc_NBInitialization_createStartVar
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_createStartVar,2,0) {(void*) boxptr_NBInitialization_createStartVar,0}};
+#define boxvar_NBInitialization_createStartVar MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_createStartVar)
+
+
+DLLDirection
+void omc_NBInitialization_createWhenReplacementEquation(threadData_t *threadData, modelica_metatype _tpl, modelica_metatype _ptr_start_eqs, modelica_metatype _idx);
+#define boxptr_NBInitialization_createWhenReplacementEquation omc_NBInitialization_createWhenReplacementEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_createWhenReplacementEquation,2,0) {(void*) boxptr_NBInitialization_createWhenReplacementEquation,0}};
+#define boxvar_NBInitialization_createWhenReplacementEquation MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_createWhenReplacementEquation)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_createWhenReplacementEquations(threadData_t *threadData, modelica_metatype _cref_map, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FinitialEqs, modelica_metatype _idx, modelica_metatype *out_initialEqs);
+#define boxptr_NBInitialization_createWhenReplacementEquations omc_NBInitialization_createWhenReplacementEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_createWhenReplacementEquations,2,0) {(void*) boxptr_NBInitialization_createWhenReplacementEquations,0}};
+#define boxvar_NBInitialization_createWhenReplacementEquations MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_createWhenReplacementEquations)
+
+
+DLLDirection
+void omc_NBInitialization_createStartEquation(threadData_t *threadData, modelica_metatype _var, modelica_metatype _ptr_start_vars, modelica_metatype _ptr_start_eqs, modelica_metatype _idx, modelica_metatype _algorithm_outputs);
+#define boxptr_NBInitialization_createStartEquation omc_NBInitialization_createStartEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_createStartEquation,2,0) {(void*) boxptr_NBInitialization_createStartEquation,0}};
+#define boxvar_NBInitialization_createStartEquation MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_createStartEquation)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_createStartEquations(threadData_t *threadData, modelica_metatype _states, modelica_metatype __omcQ_24in_5Fvariables, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FinitialEqs, modelica_metatype _idx, modelica_metatype _algorithm_outputs, modelica_string _str, modelica_metatype *out_equations, modelica_metatype *out_initialEqs);
+#define boxptr_NBInitialization_createStartEquations omc_NBInitialization_createStartEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_createStartEquations,2,0) {(void*) boxptr_NBInitialization_createStartEquations,0}};
+#define boxvar_NBInitialization_createStartEquations MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_createStartEquations)
+
+
+DLLDirection
+modelica_metatype omc_NBInitialization_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
+#define boxptr_NBInitialization_main omc_NBInitialization_main
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInitialization_main,2,0) {(void*) boxptr_NBInitialization_main,0}};
+#define boxvar_NBInitialization_main MMC_REFSTRUCTLIT(boxvar_lit_NBInitialization_main)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

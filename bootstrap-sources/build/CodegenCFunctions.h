@@ -5,2126 +5,3940 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
+
 extern struct record_description Absyn_Path_IDENT__desc;
+
 extern struct record_description ClassInf_State_RECORD__desc;
+
 extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
 extern struct record_description DAE_Exp_ICONST__desc;
+
 extern struct record_description DAE_Type_T__COMPLEX__desc;
+
 extern struct record_description DAE_VarKind_VARIABLE__desc;
+
 extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
 extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
 extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
 extern struct record_description SimCodeFunction_Context_FUNCTION__CONTEXT__desc;
+
 extern struct record_description SimCodeFunction_Context_OTHER__CONTEXT__desc;
+
 extern struct record_description SimCodeFunction_Context_SIMULATION__CONTEXT__desc;
+
 extern struct record_description SimCodeFunction_Variable_VARIABLE__desc;
+
 extern struct record_description SourceInfo_SOURCEINFO__desc;
+
 extern struct record_description Tpl_BlockType_BT__INDENT__desc;
+
 extern struct record_description Tpl_IterOptions_ITER__OPTIONS__desc;
+
 extern struct record_description Tpl_StringToken_ST__LINE__desc;
+
 extern struct record_description Tpl_StringToken_ST__NEW__LINE__desc;
+
 extern struct record_description Tpl_StringToken_ST__STRING__desc;
+
 extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
+
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_typeCastContextInt(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_context, modelica_metatype _in_a_ty);
 #define boxptr_CodegenCFunctions_typeCastContextInt omc_CodegenCFunctions_typeCastContextInt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_typeCastContextInt,2,0) {(void*) boxptr_CodegenCFunctions_typeCastContextInt,0}};
 #define boxvar_CodegenCFunctions_typeCastContextInt MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_typeCastContextInt)
-#define boxptr_CodegenCFunctions_fun__1265 omc_CodegenCFunctions_fun__1265
-#define boxptr_CodegenCFunctions_fun__1264 omc_CodegenCFunctions_fun__1264
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1245 omc_CodegenCFunctions_fun__1245
+
+
+#define boxptr_CodegenCFunctions_fun__1244 omc_CodegenCFunctions_fun__1244
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_typeCastContext(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_context, modelica_metatype _in_a_ty);
 #define boxptr_CodegenCFunctions_typeCastContext omc_CodegenCFunctions_typeCastContext
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_typeCastContext,2,0) {(void*) boxptr_CodegenCFunctions_typeCastContext,0}};
 #define boxvar_CodegenCFunctions_typeCastContext MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_typeCastContext)
-#define boxptr_CodegenCFunctions_fun__1262 omc_CodegenCFunctions_fun__1262
-#define boxptr_CodegenCFunctions_fun__1261 omc_CodegenCFunctions_fun__1261
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1242 omc_CodegenCFunctions_fun__1242
+
+
+#define boxptr_CodegenCFunctions_fun__1241 omc_CodegenCFunctions_fun__1241
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefAttributes(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr);
 #define boxptr_CodegenCFunctions_crefAttributes omc_CodegenCFunctions_crefAttributes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefAttributes,2,0) {(void*) boxptr_CodegenCFunctions_crefAttributes,0}};
 #define boxvar_CodegenCFunctions_crefAttributes MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefAttributes)
-#define boxptr_CodegenCFunctions_fun__1259 omc_CodegenCFunctions_fun__1259
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1239 omc_CodegenCFunctions_fun__1239
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varAttributes(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_metatype _a_sub, modelica_metatype *out_out_a_sub);
 #define boxptr_CodegenCFunctions_varAttributes omc_CodegenCFunctions_varAttributes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varAttributes,2,0) {(void*) boxptr_CodegenCFunctions_varAttributes,0}};
 #define boxvar_CodegenCFunctions_varAttributes MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varAttributes)
-#define boxptr_CodegenCFunctions_fun__1256 omc_CodegenCFunctions_fun__1256
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1236 omc_CodegenCFunctions_fun__1236
+
+
+DLLDirection
+modelica_metatype omc_CodegenCFunctions_crefIndexWithComment(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr);
+#define boxptr_CodegenCFunctions_crefIndexWithComment omc_CodegenCFunctions_crefIndexWithComment
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefIndexWithComment,2,0) {(void*) boxptr_CodegenCFunctions_crefIndexWithComment,0}};
+#define boxvar_CodegenCFunctions_crefIndexWithComment MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefIndexWithComment)
+
+
+#define boxptr_CodegenCFunctions_fun__1233 omc_CodegenCFunctions_fun__1233
+
+
+DLLDirection
+modelica_metatype omc_CodegenCFunctions_varIndexWithComment(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
+#define boxptr_CodegenCFunctions_varIndexWithComment omc_CodegenCFunctions_varIndexWithComment
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varIndexWithComment,2,0) {(void*) boxptr_CodegenCFunctions_varIndexWithComment,0}};
+#define boxvar_CodegenCFunctions_varIndexWithComment MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varIndexWithComment)
+
+
+DLLDirection
+modelica_metatype omc_CodegenCFunctions_initializeStaticLSVars(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_vars, modelica_integer _a_index);
+DLLDirection
+modelica_metatype boxptr_CodegenCFunctions_initializeStaticLSVars(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_vars, modelica_metatype _a_index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_initializeStaticLSVars,2,0) {(void*) boxptr_CodegenCFunctions_initializeStaticLSVars,0}};
+#define boxvar_CodegenCFunctions_initializeStaticLSVars MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_initializeStaticLSVars)
+
+
+#define boxptr_CodegenCFunctions_lm__1230 omc_CodegenCFunctions_lm__1230
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefVarInfo(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr);
 #define boxptr_CodegenCFunctions_crefVarInfo omc_CodegenCFunctions_crefVarInfo
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefVarInfo,2,0) {(void*) boxptr_CodegenCFunctions_crefVarInfo,0}};
 #define boxvar_CodegenCFunctions_crefVarInfo MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefVarInfo)
-#define boxptr_CodegenCFunctions_fun__1253 omc_CodegenCFunctions_fun__1253
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1228 omc_CodegenCFunctions_fun__1228
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varArrayName(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenCFunctions_varArrayName omc_CodegenCFunctions_varArrayName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varArrayName,2,0) {(void*) boxptr_CodegenCFunctions_varArrayName,0}};
 #define boxvar_CodegenCFunctions_varArrayName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varArrayName)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varArrayNameValues(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_integer _a_ix, modelica_boolean _a_isPre, modelica_boolean _a_isStart, modelica_metatype _a_sub, modelica_metatype *out_out_a_sub);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_varArrayNameValues(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_metatype _a_ix, modelica_metatype _a_isPre, modelica_metatype _a_isStart, modelica_metatype _a_sub, modelica_metatype *out_out_a_sub);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varArrayNameValues,2,0) {(void*) boxptr_CodegenCFunctions_varArrayNameValues,0}};
 #define boxvar_CodegenCFunctions_varArrayNameValues MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varArrayNameValues)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefShortType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCFunctions_crefShortType omc_CodegenCFunctions_crefShortType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefShortType,2,0) {(void*) boxptr_CodegenCFunctions_crefShortType,0}};
 #define boxvar_CodegenCFunctions_crefShortType MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefShortType)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeSubscriptExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeSubscriptExp omc_CodegenCFunctions_daeSubscriptExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeSubscriptExp,2,0) {(void*) boxptr_CodegenCFunctions_daeSubscriptExp,0}};
 #define boxvar_CodegenCFunctions_daeSubscriptExp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeSubscriptExp)
-#define boxptr_CodegenCFunctions_fun__1240 omc_CodegenCFunctions_fun__1240
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1215 omc_CodegenCFunctions_fun__1215
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeSubscript(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_sub, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeSubscript omc_CodegenCFunctions_daeSubscript
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeSubscript,2,0) {(void*) boxptr_CodegenCFunctions_daeSubscript,0}};
 #define boxvar_CodegenCFunctions_daeSubscript MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeSubscript)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpSharedLiteral(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp);
 #define boxptr_CodegenCFunctions_daeExpSharedLiteral omc_CodegenCFunctions_daeExpSharedLiteral
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpSharedLiteral,2,0) {(void*) boxptr_CodegenCFunctions_daeExpSharedLiteral,0}};
 #define boxvar_CodegenCFunctions_daeExpSharedLiteral MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpSharedLiteral)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpUnbox(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpUnbox omc_CodegenCFunctions_daeExpUnbox
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpUnbox,2,0) {(void*) boxptr_CodegenCFunctions_daeExpUnbox,0}};
 #define boxvar_CodegenCFunctions_daeExpUnbox MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpUnbox)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpBox(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpBox omc_CodegenCFunctions_daeExpBox
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpBox,2,0) {(void*) boxptr_CodegenCFunctions_daeExpBox,0}};
 #define boxvar_CodegenCFunctions_daeExpBox MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpBox)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_switchIndex(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_pattern, modelica_integer _in_a_extraArg);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_switchIndex(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_pattern, modelica_metatype _in_a_extraArg);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_switchIndex,2,0) {(void*) boxptr_CodegenCFunctions_switchIndex,0}};
 #define boxvar_CodegenCFunctions_switchIndex MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_switchIndex)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpMatchCases(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cases, modelica_metatype _a_tupleAssignExps, modelica_metatype _a_ty, modelica_metatype _a_ix, modelica_metatype _a_res, modelica_metatype _a_startIndexOutputs, modelica_metatype _a_prefix, modelica_metatype _a_startIndexInputs, modelica_metatype _a_inputs, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_integer _a_startTmpTickIndex, modelica_metatype *out_out_a_ix, modelica_metatype *out_out_a_res, modelica_metatype *out_out_a_startIndexOutputs, modelica_metatype *out_out_a_prefix, modelica_metatype *out_out_a_startIndexInputs, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_daeExpMatchCases(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cases, modelica_metatype _a_tupleAssignExps, modelica_metatype _a_ty, modelica_metatype _a_ix, modelica_metatype _a_res, modelica_metatype _a_startIndexOutputs, modelica_metatype _a_prefix, modelica_metatype _a_startIndexInputs, modelica_metatype _a_inputs, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype _a_startTmpTickIndex, modelica_metatype *out_out_a_ix, modelica_metatype *out_out_a_res, modelica_metatype *out_out_a_startIndexOutputs, modelica_metatype *out_out_a_prefix, modelica_metatype *out_out_a_startIndexInputs, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMatchCases,2,0) {(void*) boxptr_CodegenCFunctions_daeExpMatchCases,0}};
 #define boxvar_CodegenCFunctions_daeExpMatchCases MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMatchCases)
-#define boxptr_CodegenCFunctions_fun__1231 omc_CodegenCFunctions_fun__1231
-#define boxptr_CodegenCFunctions_fun__1228 omc_CodegenCFunctions_fun__1228
-#define boxptr_CodegenCFunctions_lm__1227 omc_CodegenCFunctions_lm__1227
-#define boxptr_CodegenCFunctions_fun__1226 omc_CodegenCFunctions_fun__1226
-#define boxptr_CodegenCFunctions_fun__1225 omc_CodegenCFunctions_fun__1225
-#define boxptr_CodegenCFunctions_fun__1224 omc_CodegenCFunctions_fun__1224
-#define boxptr_CodegenCFunctions_lm__1223 omc_CodegenCFunctions_lm__1223
-#define boxptr_CodegenCFunctions_lm__1222 omc_CodegenCFunctions_lm__1222
-#define boxptr_CodegenCFunctions_fun__1221 omc_CodegenCFunctions_fun__1221
-#define boxptr_CodegenCFunctions_lm__1220 omc_CodegenCFunctions_lm__1220
-#define boxptr_CodegenCFunctions_lm__1219 omc_CodegenCFunctions_lm__1219
-#define boxptr_CodegenCFunctions_fun__1218 omc_CodegenCFunctions_fun__1218
-#define boxptr_CodegenCFunctions_fun__1217 omc_CodegenCFunctions_fun__1217
-#define boxptr_CodegenCFunctions_fun__1215 omc_CodegenCFunctions_fun__1215
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1206 omc_CodegenCFunctions_fun__1206
+
+
+#define boxptr_CodegenCFunctions_fun__1203 omc_CodegenCFunctions_fun__1203
+
+
+#define boxptr_CodegenCFunctions_lm__1202 omc_CodegenCFunctions_lm__1202
+
+
+#define boxptr_CodegenCFunctions_fun__1201 omc_CodegenCFunctions_fun__1201
+
+
+#define boxptr_CodegenCFunctions_fun__1200 omc_CodegenCFunctions_fun__1200
+
+
+#define boxptr_CodegenCFunctions_fun__1199 omc_CodegenCFunctions_fun__1199
+
+
+#define boxptr_CodegenCFunctions_lm__1198 omc_CodegenCFunctions_lm__1198
+
+
+#define boxptr_CodegenCFunctions_lm__1197 omc_CodegenCFunctions_lm__1197
+
+
+#define boxptr_CodegenCFunctions_fun__1196 omc_CodegenCFunctions_fun__1196
+
+
+#define boxptr_CodegenCFunctions_lm__1195 omc_CodegenCFunctions_lm__1195
+
+
+#define boxptr_CodegenCFunctions_lm__1194 omc_CodegenCFunctions_lm__1194
+
+
+#define boxptr_CodegenCFunctions_fun__1193 omc_CodegenCFunctions_fun__1193
+
+
+#define boxptr_CodegenCFunctions_fun__1192 omc_CodegenCFunctions_fun__1192
+
+
+#define boxptr_CodegenCFunctions_fun__1190 omc_CodegenCFunctions_fun__1190
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpMatch2(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_tupleAssignExps, modelica_metatype _in_a_res, modelica_metatype _in_a_startIndexOutputs, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_res, modelica_metatype *out_out_a_startIndexOutputs, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpMatch2 omc_CodegenCFunctions_daeExpMatch2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMatch2,2,0) {(void*) boxptr_CodegenCFunctions_daeExpMatch2,0}};
 #define boxvar_CodegenCFunctions_daeExpMatch2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMatch2)
-#define boxptr_CodegenCFunctions_fun__1213 omc_CodegenCFunctions_fun__1213
-#define boxptr_CodegenCFunctions_fun__1212 omc_CodegenCFunctions_fun__1212
-#define boxptr_CodegenCFunctions_fun__1211 omc_CodegenCFunctions_fun__1211
-#define boxptr_CodegenCFunctions_fun__1210 omc_CodegenCFunctions_fun__1210
-#define boxptr_CodegenCFunctions_fun__1209 omc_CodegenCFunctions_fun__1209
-#define boxptr_CodegenCFunctions_fun__1208 omc_CodegenCFunctions_fun__1208
-#define boxptr_CodegenCFunctions_lm__1207 omc_CodegenCFunctions_lm__1207
-#define boxptr_CodegenCFunctions_lm__1206 omc_CodegenCFunctions_lm__1206
-#define boxptr_CodegenCFunctions_fun__1205 omc_CodegenCFunctions_fun__1205
-#define boxptr_CodegenCFunctions_lm__1204 omc_CodegenCFunctions_lm__1204
-#define boxptr_CodegenCFunctions_lm__1203 omc_CodegenCFunctions_lm__1203
-#define boxptr_CodegenCFunctions_lm__1202 omc_CodegenCFunctions_lm__1202
-#define boxptr_CodegenCFunctions_fun__1201 omc_CodegenCFunctions_fun__1201
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1188 omc_CodegenCFunctions_fun__1188
+
+
+#define boxptr_CodegenCFunctions_fun__1187 omc_CodegenCFunctions_fun__1187
+
+
+#define boxptr_CodegenCFunctions_fun__1186 omc_CodegenCFunctions_fun__1186
+
+
+#define boxptr_CodegenCFunctions_fun__1185 omc_CodegenCFunctions_fun__1185
+
+
+#define boxptr_CodegenCFunctions_fun__1184 omc_CodegenCFunctions_fun__1184
+
+
+#define boxptr_CodegenCFunctions_fun__1183 omc_CodegenCFunctions_fun__1183
+
+
+#define boxptr_CodegenCFunctions_lm__1182 omc_CodegenCFunctions_lm__1182
+
+
+#define boxptr_CodegenCFunctions_lm__1181 omc_CodegenCFunctions_lm__1181
+
+
+#define boxptr_CodegenCFunctions_fun__1180 omc_CodegenCFunctions_fun__1180
+
+
+#define boxptr_CodegenCFunctions_lm__1179 omc_CodegenCFunctions_lm__1179
+
+
+#define boxptr_CodegenCFunctions_lm__1178 omc_CodegenCFunctions_lm__1178
+
+
+#define boxptr_CodegenCFunctions_lm__1177 omc_CodegenCFunctions_lm__1177
+
+
+#define boxptr_CodegenCFunctions_fun__1176 omc_CodegenCFunctions_fun__1176
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpMatch(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpMatch omc_CodegenCFunctions_daeExpMatch
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMatch,2,0) {(void*) boxptr_CodegenCFunctions_daeExpMatch,0}};
 #define boxvar_CodegenCFunctions_daeExpMatch MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMatch)
-#define boxptr_CodegenCFunctions_fun__1199 omc_CodegenCFunctions_fun__1199
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1174 omc_CodegenCFunctions_fun__1174
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpReduction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpReduction omc_CodegenCFunctions_daeExpReduction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpReduction,2,0) {(void*) boxptr_CodegenCFunctions_daeExpReduction,0}};
 #define boxvar_CodegenCFunctions_daeExpReduction MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpReduction)
-#define boxptr_CodegenCFunctions_fun__1197 omc_CodegenCFunctions_fun__1197
-#define boxptr_CodegenCFunctions_fun__1196 omc_CodegenCFunctions_fun__1196
-#define boxptr_CodegenCFunctions_fun__1195 omc_CodegenCFunctions_fun__1195
-#define boxptr_CodegenCFunctions_fun__1194 omc_CodegenCFunctions_fun__1194
-#define boxptr_CodegenCFunctions_fun__1193 omc_CodegenCFunctions_fun__1193
-#define boxptr_CodegenCFunctions_fun__1192 omc_CodegenCFunctions_fun__1192
-#define boxptr_CodegenCFunctions_fun__1191 omc_CodegenCFunctions_fun__1191
-#define boxptr_CodegenCFunctions_lm__1190 omc_CodegenCFunctions_lm__1190
-#define boxptr_CodegenCFunctions_fun__1189 omc_CodegenCFunctions_fun__1189
-#define boxptr_CodegenCFunctions_lm__1188 omc_CodegenCFunctions_lm__1188
-#define boxptr_CodegenCFunctions_fun__1187 omc_CodegenCFunctions_fun__1187
-#define boxptr_CodegenCFunctions_fun__1186 omc_CodegenCFunctions_fun__1186
-#define boxptr_CodegenCFunctions_lm__1184 omc_CodegenCFunctions_lm__1184
-#define boxptr_CodegenCFunctions_fun__1183 omc_CodegenCFunctions_fun__1183
-#define boxptr_CodegenCFunctions_fun__1182 omc_CodegenCFunctions_fun__1182
-#define boxptr_CodegenCFunctions_fun__1180 omc_CodegenCFunctions_fun__1180
-#define boxptr_CodegenCFunctions_fun__1174 omc_CodegenCFunctions_fun__1174
-#define boxptr_CodegenCFunctions_fun__1173 omc_CodegenCFunctions_fun__1173
+
+
 #define boxptr_CodegenCFunctions_fun__1172 omc_CodegenCFunctions_fun__1172
+
+
 #define boxptr_CodegenCFunctions_fun__1171 omc_CodegenCFunctions_fun__1171
+
+
 #define boxptr_CodegenCFunctions_fun__1170 omc_CodegenCFunctions_fun__1170
+
+
 #define boxptr_CodegenCFunctions_fun__1169 omc_CodegenCFunctions_fun__1169
+
+
 #define boxptr_CodegenCFunctions_fun__1168 omc_CodegenCFunctions_fun__1168
+
+
 #define boxptr_CodegenCFunctions_fun__1167 omc_CodegenCFunctions_fun__1167
+
+
 #define boxptr_CodegenCFunctions_fun__1166 omc_CodegenCFunctions_fun__1166
-#define boxptr_CodegenCFunctions_fun__1165 omc_CodegenCFunctions_fun__1165
+
+
+#define boxptr_CodegenCFunctions_lm__1165 omc_CodegenCFunctions_lm__1165
+
+
 #define boxptr_CodegenCFunctions_fun__1164 omc_CodegenCFunctions_fun__1164
-#define boxptr_CodegenCFunctions_fun__1163 omc_CodegenCFunctions_fun__1163
+
+
+#define boxptr_CodegenCFunctions_lm__1163 omc_CodegenCFunctions_lm__1163
+
+
 #define boxptr_CodegenCFunctions_fun__1162 omc_CodegenCFunctions_fun__1162
+
+
 #define boxptr_CodegenCFunctions_fun__1161 omc_CodegenCFunctions_fun__1161
-#define boxptr_CodegenCFunctions_fun__1160 omc_CodegenCFunctions_fun__1160
-#define boxptr_CodegenCFunctions_fun__1159 omc_CodegenCFunctions_fun__1159
+
+
+#define boxptr_CodegenCFunctions_lm__1159 omc_CodegenCFunctions_lm__1159
+
+
 #define boxptr_CodegenCFunctions_fun__1158 omc_CodegenCFunctions_fun__1158
+
+
 #define boxptr_CodegenCFunctions_fun__1157 omc_CodegenCFunctions_fun__1157
+
+
 #define boxptr_CodegenCFunctions_fun__1155 omc_CodegenCFunctions_fun__1155
-#define boxptr_CodegenCFunctions_fun__1154 omc_CodegenCFunctions_fun__1154
-#define boxptr_CodegenCFunctions_fun__1153 omc_CodegenCFunctions_fun__1153
-#define boxptr_CodegenCFunctions_fun__1152 omc_CodegenCFunctions_fun__1152
-#define boxptr_CodegenCFunctions_fun__1151 omc_CodegenCFunctions_fun__1151
-#define boxptr_CodegenCFunctions_fun__1150 omc_CodegenCFunctions_fun__1150
+
+
 #define boxptr_CodegenCFunctions_fun__1149 omc_CodegenCFunctions_fun__1149
+
+
 #define boxptr_CodegenCFunctions_fun__1148 omc_CodegenCFunctions_fun__1148
+
+
 #define boxptr_CodegenCFunctions_fun__1147 omc_CodegenCFunctions_fun__1147
-#define boxptr_CodegenCFunctions_lm__1146 omc_CodegenCFunctions_lm__1146
+
+
+#define boxptr_CodegenCFunctions_fun__1146 omc_CodegenCFunctions_fun__1146
+
+
 #define boxptr_CodegenCFunctions_fun__1145 omc_CodegenCFunctions_fun__1145
+
+
 #define boxptr_CodegenCFunctions_fun__1144 omc_CodegenCFunctions_fun__1144
+
+
 #define boxptr_CodegenCFunctions_fun__1143 omc_CodegenCFunctions_fun__1143
+
+
 #define boxptr_CodegenCFunctions_fun__1142 omc_CodegenCFunctions_fun__1142
+
+
 #define boxptr_CodegenCFunctions_fun__1141 omc_CodegenCFunctions_fun__1141
+
+
 #define boxptr_CodegenCFunctions_fun__1140 omc_CodegenCFunctions_fun__1140
+
+
 #define boxptr_CodegenCFunctions_fun__1139 omc_CodegenCFunctions_fun__1139
+
+
 #define boxptr_CodegenCFunctions_fun__1138 omc_CodegenCFunctions_fun__1138
+
+
 #define boxptr_CodegenCFunctions_fun__1137 omc_CodegenCFunctions_fun__1137
+
+
 #define boxptr_CodegenCFunctions_fun__1136 omc_CodegenCFunctions_fun__1136
+
+
 #define boxptr_CodegenCFunctions_fun__1135 omc_CodegenCFunctions_fun__1135
+
+
 #define boxptr_CodegenCFunctions_fun__1134 omc_CodegenCFunctions_fun__1134
+
+
 #define boxptr_CodegenCFunctions_fun__1133 omc_CodegenCFunctions_fun__1133
-#define boxptr_CodegenCFunctions_lm__1132 omc_CodegenCFunctions_lm__1132
-#define boxptr_CodegenCFunctions_fun__1131 omc_CodegenCFunctions_fun__1131
-#define boxptr_CodegenCFunctions_lm__1130 omc_CodegenCFunctions_lm__1130
+
+
+#define boxptr_CodegenCFunctions_fun__1132 omc_CodegenCFunctions_fun__1132
+
+
+#define boxptr_CodegenCFunctions_fun__1130 omc_CodegenCFunctions_fun__1130
+
+
 #define boxptr_CodegenCFunctions_fun__1129 omc_CodegenCFunctions_fun__1129
+
+
 #define boxptr_CodegenCFunctions_fun__1128 omc_CodegenCFunctions_fun__1128
-#define boxptr_CodegenCFunctions_lm__1126 omc_CodegenCFunctions_lm__1126
+
+
+#define boxptr_CodegenCFunctions_fun__1127 omc_CodegenCFunctions_fun__1127
+
+
+#define boxptr_CodegenCFunctions_fun__1126 omc_CodegenCFunctions_fun__1126
+
+
 #define boxptr_CodegenCFunctions_fun__1125 omc_CodegenCFunctions_fun__1125
+
+
 #define boxptr_CodegenCFunctions_fun__1124 omc_CodegenCFunctions_fun__1124
+
+
+#define boxptr_CodegenCFunctions_fun__1123 omc_CodegenCFunctions_fun__1123
+
+
 #define boxptr_CodegenCFunctions_fun__1122 omc_CodegenCFunctions_fun__1122
+
+
+#define boxptr_CodegenCFunctions_lm__1121 omc_CodegenCFunctions_lm__1121
+
+
+#define boxptr_CodegenCFunctions_fun__1120 omc_CodegenCFunctions_fun__1120
+
+
+#define boxptr_CodegenCFunctions_fun__1119 omc_CodegenCFunctions_fun__1119
+
+
+#define boxptr_CodegenCFunctions_fun__1118 omc_CodegenCFunctions_fun__1118
+
+
+#define boxptr_CodegenCFunctions_fun__1117 omc_CodegenCFunctions_fun__1117
+
+
 #define boxptr_CodegenCFunctions_fun__1116 omc_CodegenCFunctions_fun__1116
+
+
 #define boxptr_CodegenCFunctions_fun__1115 omc_CodegenCFunctions_fun__1115
+
+
 #define boxptr_CodegenCFunctions_fun__1114 omc_CodegenCFunctions_fun__1114
+
+
 #define boxptr_CodegenCFunctions_fun__1113 omc_CodegenCFunctions_fun__1113
+
+
 #define boxptr_CodegenCFunctions_fun__1112 omc_CodegenCFunctions_fun__1112
+
+
 #define boxptr_CodegenCFunctions_fun__1111 omc_CodegenCFunctions_fun__1111
+
+
 #define boxptr_CodegenCFunctions_fun__1110 omc_CodegenCFunctions_fun__1110
+
+
 #define boxptr_CodegenCFunctions_fun__1109 omc_CodegenCFunctions_fun__1109
+
+
 #define boxptr_CodegenCFunctions_fun__1108 omc_CodegenCFunctions_fun__1108
-#define boxptr_CodegenCFunctions_fun__1107 omc_CodegenCFunctions_fun__1107
+
+
+#define boxptr_CodegenCFunctions_lm__1107 omc_CodegenCFunctions_lm__1107
+
+
 #define boxptr_CodegenCFunctions_fun__1106 omc_CodegenCFunctions_fun__1106
-#define boxptr_CodegenCFunctions_fun__1105 omc_CodegenCFunctions_fun__1105
+
+
+#define boxptr_CodegenCFunctions_lm__1105 omc_CodegenCFunctions_lm__1105
+
+
 #define boxptr_CodegenCFunctions_fun__1104 omc_CodegenCFunctions_fun__1104
+
+
 #define boxptr_CodegenCFunctions_fun__1103 omc_CodegenCFunctions_fun__1103
-#define boxptr_CodegenCFunctions_fun__1102 omc_CodegenCFunctions_fun__1102
-#define boxptr_CodegenCFunctions_fun__1101 omc_CodegenCFunctions_fun__1101
+
+
+#define boxptr_CodegenCFunctions_lm__1101 omc_CodegenCFunctions_lm__1101
+
+
 #define boxptr_CodegenCFunctions_fun__1100 omc_CodegenCFunctions_fun__1100
+
+
 #define boxptr_CodegenCFunctions_fun__1099 omc_CodegenCFunctions_fun__1099
+
+
 #define boxptr_CodegenCFunctions_fun__1097 omc_CodegenCFunctions_fun__1097
-#define boxptr_CodegenCFunctions_fun__1096 omc_CodegenCFunctions_fun__1096
-#define boxptr_CodegenCFunctions_fun__1095 omc_CodegenCFunctions_fun__1095
-#define boxptr_CodegenCFunctions_fun__1094 omc_CodegenCFunctions_fun__1094
-#define boxptr_CodegenCFunctions_fun__1093 omc_CodegenCFunctions_fun__1093
-#define boxptr_CodegenCFunctions_fun__1092 omc_CodegenCFunctions_fun__1092
+
+
 #define boxptr_CodegenCFunctions_fun__1091 omc_CodegenCFunctions_fun__1091
+
+
 #define boxptr_CodegenCFunctions_fun__1090 omc_CodegenCFunctions_fun__1090
+
+
 #define boxptr_CodegenCFunctions_fun__1089 omc_CodegenCFunctions_fun__1089
-#define boxptr_CodegenCFunctions_lm__1088 omc_CodegenCFunctions_lm__1088
+
+
+#define boxptr_CodegenCFunctions_fun__1088 omc_CodegenCFunctions_fun__1088
+
+
 #define boxptr_CodegenCFunctions_fun__1087 omc_CodegenCFunctions_fun__1087
+
+
 #define boxptr_CodegenCFunctions_fun__1086 omc_CodegenCFunctions_fun__1086
+
+
 #define boxptr_CodegenCFunctions_fun__1085 omc_CodegenCFunctions_fun__1085
+
+
 #define boxptr_CodegenCFunctions_fun__1084 omc_CodegenCFunctions_fun__1084
+
+
 #define boxptr_CodegenCFunctions_fun__1083 omc_CodegenCFunctions_fun__1083
+
+
 #define boxptr_CodegenCFunctions_fun__1082 omc_CodegenCFunctions_fun__1082
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1081 omc_CodegenCFunctions_fun__1081
+
+
+#define boxptr_CodegenCFunctions_fun__1080 omc_CodegenCFunctions_fun__1080
+
+
+#define boxptr_CodegenCFunctions_fun__1079 omc_CodegenCFunctions_fun__1079
+
+
+#define boxptr_CodegenCFunctions_fun__1078 omc_CodegenCFunctions_fun__1078
+
+
+#define boxptr_CodegenCFunctions_fun__1077 omc_CodegenCFunctions_fun__1077
+
+
+#define boxptr_CodegenCFunctions_fun__1076 omc_CodegenCFunctions_fun__1076
+
+
+#define boxptr_CodegenCFunctions_fun__1075 omc_CodegenCFunctions_fun__1075
+
+
+#define boxptr_CodegenCFunctions_fun__1074 omc_CodegenCFunctions_fun__1074
+
+
+#define boxptr_CodegenCFunctions_fun__1072 omc_CodegenCFunctions_fun__1072
+
+
+#define boxptr_CodegenCFunctions_fun__1071 omc_CodegenCFunctions_fun__1071
+
+
+#define boxptr_CodegenCFunctions_fun__1070 omc_CodegenCFunctions_fun__1070
+
+
+#define boxptr_CodegenCFunctions_fun__1069 omc_CodegenCFunctions_fun__1069
+
+
+#define boxptr_CodegenCFunctions_fun__1068 omc_CodegenCFunctions_fun__1068
+
+
+#define boxptr_CodegenCFunctions_fun__1067 omc_CodegenCFunctions_fun__1067
+
+
+#define boxptr_CodegenCFunctions_fun__1066 omc_CodegenCFunctions_fun__1066
+
+
+#define boxptr_CodegenCFunctions_fun__1065 omc_CodegenCFunctions_fun__1065
+
+
+#define boxptr_CodegenCFunctions_fun__1064 omc_CodegenCFunctions_fun__1064
+
+
+#define boxptr_CodegenCFunctions_lm__1063 omc_CodegenCFunctions_lm__1063
+
+
+#define boxptr_CodegenCFunctions_fun__1062 omc_CodegenCFunctions_fun__1062
+
+
+#define boxptr_CodegenCFunctions_fun__1061 omc_CodegenCFunctions_fun__1061
+
+
+#define boxptr_CodegenCFunctions_fun__1060 omc_CodegenCFunctions_fun__1060
+
+
+#define boxptr_CodegenCFunctions_fun__1059 omc_CodegenCFunctions_fun__1059
+
+
+#define boxptr_CodegenCFunctions_fun__1058 omc_CodegenCFunctions_fun__1058
+
+
+#define boxptr_CodegenCFunctions_fun__1057 omc_CodegenCFunctions_fun__1057
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpSize(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpSize omc_CodegenCFunctions_daeExpSize
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpSize,2,0) {(void*) boxptr_CodegenCFunctions_daeExpSize,0}};
 #define boxvar_CodegenCFunctions_daeExpSize MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpSize)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCallPre(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCallPre omc_CodegenCFunctions_daeExpCallPre
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCallPre,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCallPre,0}};
 #define boxvar_CodegenCFunctions_daeExpCallPre MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCallPre)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpASubIndex(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpASubIndex omc_CodegenCFunctions_daeExpASubIndex
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpASubIndex,2,0) {(void*) boxptr_CodegenCFunctions_daeExpASubIndex,0}};
 #define boxvar_CodegenCFunctions_daeExpASubIndex MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpASubIndex)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpAsub(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_inExp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpAsub omc_CodegenCFunctions_daeExpAsub
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpAsub,2,0) {(void*) boxptr_CodegenCFunctions_daeExpAsub,0}};
 #define boxvar_CodegenCFunctions_daeExpAsub MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpAsub)
-#define boxptr_CodegenCFunctions_fun__1077 omc_CodegenCFunctions_fun__1077
-#define boxptr_CodegenCFunctions_fun__1076 omc_CodegenCFunctions_fun__1076
-#define boxptr_CodegenCFunctions_fun__1075 omc_CodegenCFunctions_fun__1075
-#define boxptr_CodegenCFunctions_lm__1073 omc_CodegenCFunctions_lm__1073
-#define boxptr_CodegenCFunctions_lm__1072 omc_CodegenCFunctions_lm__1072
-#define boxptr_CodegenCFunctions_fun__1071 omc_CodegenCFunctions_fun__1071
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1052 omc_CodegenCFunctions_fun__1052
+
+
+#define boxptr_CodegenCFunctions_fun__1051 omc_CodegenCFunctions_fun__1051
+
+
+#define boxptr_CodegenCFunctions_fun__1050 omc_CodegenCFunctions_fun__1050
+
+
+#define boxptr_CodegenCFunctions_lm__1048 omc_CodegenCFunctions_lm__1048
+
+
+#define boxptr_CodegenCFunctions_lm__1047 omc_CodegenCFunctions_lm__1047
+
+
+#define boxptr_CodegenCFunctions_lm__1046 omc_CodegenCFunctions_lm__1046
+
+
+#define boxptr_CodegenCFunctions_fun__1045 omc_CodegenCFunctions_fun__1045
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpRsub(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_inExp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpRsub omc_CodegenCFunctions_daeExpRsub
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpRsub,2,0) {(void*) boxptr_CodegenCFunctions_daeExpRsub,0}};
 #define boxvar_CodegenCFunctions_daeExpRsub MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpRsub)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpTsub(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_inExp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpTsub omc_CodegenCFunctions_daeExpTsub
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpTsub,2,0) {(void*) boxptr_CodegenCFunctions_daeExpTsub,0}};
 #define boxvar_CodegenCFunctions_daeExpTsub MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpTsub)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCast(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCast omc_CodegenCFunctions_daeExpCast
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCast,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCast,0}};
 #define boxvar_CodegenCFunctions_daeExpCast MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCast)
-#define boxptr_CodegenCFunctions_fun__1064 omc_CodegenCFunctions_fun__1064
-#define boxptr_CodegenCFunctions_fun__1063 omc_CodegenCFunctions_fun__1063
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1038 omc_CodegenCFunctions_fun__1038
+
+
+#define boxptr_CodegenCFunctions_fun__1037 omc_CodegenCFunctions_fun__1037
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpRange(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpRange omc_CodegenCFunctions_daeExpRange
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpRange,2,0) {(void*) boxptr_CodegenCFunctions_daeExpRange,0}};
 #define boxvar_CodegenCFunctions_daeExpRange MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpRange)
-#define boxptr_CodegenCFunctions_fun__1060 omc_CodegenCFunctions_fun__1060
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1034 omc_CodegenCFunctions_fun__1034
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpMatrixRow(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_row, modelica_string _a_arrayTypeStr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpMatrixRow omc_CodegenCFunctions_daeExpMatrixRow
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMatrixRow,2,0) {(void*) boxptr_CodegenCFunctions_daeExpMatrixRow,0}};
 #define boxvar_CodegenCFunctions_daeExpMatrixRow MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMatrixRow)
-#define boxptr_CodegenCFunctions_lm__1058 omc_CodegenCFunctions_lm__1058
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__1032 omc_CodegenCFunctions_lm__1032
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpMatrix(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpMatrix omc_CodegenCFunctions_daeExpMatrix
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMatrix,2,0) {(void*) boxptr_CodegenCFunctions_daeExpMatrix,0}};
 #define boxvar_CodegenCFunctions_daeExpMatrix MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMatrix)
-#define boxptr_CodegenCFunctions_fun__1056 omc_CodegenCFunctions_fun__1056
-#define boxptr_CodegenCFunctions_lm__1055 omc_CodegenCFunctions_lm__1055
-#define boxptr_CodegenCFunctions_lm__1054 omc_CodegenCFunctions_lm__1054
-#define boxptr_CodegenCFunctions_lm__1052 omc_CodegenCFunctions_lm__1052
-#define boxptr_CodegenCFunctions_lm__1050 omc_CodegenCFunctions_lm__1050
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1030 omc_CodegenCFunctions_fun__1030
+
+
+#define boxptr_CodegenCFunctions_lm__1029 omc_CodegenCFunctions_lm__1029
+
+
+#define boxptr_CodegenCFunctions_lm__1028 omc_CodegenCFunctions_lm__1028
+
+
+#define boxptr_CodegenCFunctions_lm__1026 omc_CodegenCFunctions_lm__1026
+
+
+#define boxptr_CodegenCFunctions_lm__1024 omc_CodegenCFunctions_lm__1024
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpArray(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpArray omc_CodegenCFunctions_daeExpArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpArray,2,0) {(void*) boxptr_CodegenCFunctions_daeExpArray,0}};
 #define boxvar_CodegenCFunctions_daeExpArray MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpArray)
-#define boxptr_CodegenCFunctions_fun__1047 omc_CodegenCFunctions_fun__1047
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1021 omc_CodegenCFunctions_fun__1021
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpTailCall(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_es, modelica_metatype _in_a_vs, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_postExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_postExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpTailCall omc_CodegenCFunctions_daeExpTailCall
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpTailCall,2,0) {(void*) boxptr_CodegenCFunctions_daeExpTailCall,0}};
 #define boxvar_CodegenCFunctions_daeExpTailCall MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpTailCall)
-#define boxptr_CodegenCFunctions_fun__1039 omc_CodegenCFunctions_fun__1039
-#define boxptr_CodegenCFunctions_fun__1038 omc_CodegenCFunctions_fun__1038
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1013 omc_CodegenCFunctions_fun__1013
+
+
+#define boxptr_CodegenCFunctions_fun__1012 omc_CodegenCFunctions_fun__1012
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_generateTypeCastFromType(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_boolean _a_isClosure);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_generateTypeCastFromType(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_isClosure);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_generateTypeCastFromType,2,0) {(void*) boxptr_CodegenCFunctions_generateTypeCastFromType,0}};
 #define boxvar_CodegenCFunctions_generateTypeCastFromType MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_generateTypeCastFromType)
-#define boxptr_CodegenCFunctions_fun__1031 omc_CodegenCFunctions_fun__1031
-#define boxptr_CodegenCFunctions_lm__1030 omc_CodegenCFunctions_lm__1030
-#define boxptr_CodegenCFunctions_fun__1029 omc_CodegenCFunctions_fun__1029
-#define boxptr_CodegenCFunctions_lm__1028 omc_CodegenCFunctions_lm__1028
-#define boxptr_CodegenCFunctions_fun__1027 omc_CodegenCFunctions_fun__1027
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__1005 omc_CodegenCFunctions_fun__1005
+
+
+#define boxptr_CodegenCFunctions_lm__1004 omc_CodegenCFunctions_lm__1004
+
+
+#define boxptr_CodegenCFunctions_fun__1003 omc_CodegenCFunctions_fun__1003
+
+
+#define boxptr_CodegenCFunctions_lm__1002 omc_CodegenCFunctions_lm__1002
+
+
+#define boxptr_CodegenCFunctions_fun__1001 omc_CodegenCFunctions_fun__1001
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_generateTypeCast(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_es, modelica_boolean _a_isClosure);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_generateTypeCast(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_es, modelica_metatype _a_isClosure);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_generateTypeCast,2,0) {(void*) boxptr_CodegenCFunctions_generateTypeCast,0}};
 #define boxvar_CodegenCFunctions_generateTypeCast MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_generateTypeCast)
-#define boxptr_CodegenCFunctions_fun__1023 omc_CodegenCFunctions_fun__1023
-#define boxptr_CodegenCFunctions_lm__1022 omc_CodegenCFunctions_lm__1022
-#define boxptr_CodegenCFunctions_lm__1021 omc_CodegenCFunctions_lm__1021
-#define boxptr_CodegenCFunctions_fun__1020 omc_CodegenCFunctions_fun__1020
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__997 omc_CodegenCFunctions_fun__997
+
+
+#define boxptr_CodegenCFunctions_lm__996 omc_CodegenCFunctions_lm__996
+
+
+#define boxptr_CodegenCFunctions_lm__995 omc_CodegenCFunctions_lm__995
+
+
+#define boxptr_CodegenCFunctions_fun__994 omc_CodegenCFunctions_fun__994
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCallTuple(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_call, modelica_metatype _a_additionalOutputs, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_additionalOutputs, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCallTuple omc_CodegenCFunctions_daeExpCallTuple
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCallTuple,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCallTuple,0}};
 #define boxvar_CodegenCFunctions_daeExpCallTuple MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCallTuple)
-#define boxptr_CodegenCFunctions_fun__1018 omc_CodegenCFunctions_fun__1018
-#define boxptr_CodegenCFunctions_lm__1016 omc_CodegenCFunctions_lm__1016
-#define boxptr_CodegenCFunctions_fun__1015 omc_CodegenCFunctions_fun__1015
-#define boxptr_CodegenCFunctions_lm__1012 omc_CodegenCFunctions_lm__1012
-#define boxptr_CodegenCFunctions_lm__1011 omc_CodegenCFunctions_lm__1011
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__992 omc_CodegenCFunctions_fun__992
+
+
+#define boxptr_CodegenCFunctions_lm__990 omc_CodegenCFunctions_lm__990
+
+
+#define boxptr_CodegenCFunctions_fun__989 omc_CodegenCFunctions_fun__989
+
+
+#define boxptr_CodegenCFunctions_lm__986 omc_CodegenCFunctions_lm__986
+
+
+#define boxptr_CodegenCFunctions_lm__985 omc_CodegenCFunctions_lm__985
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCall(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_call, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCall omc_CodegenCFunctions_daeExpCall
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCall,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCall,0}};
 #define boxvar_CodegenCFunctions_daeExpCall MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCall)
-#define boxptr_CodegenCFunctions_fun__1009 omc_CodegenCFunctions_fun__1009
-#define boxptr_CodegenCFunctions_fun__1006 omc_CodegenCFunctions_fun__1006
-#define boxptr_CodegenCFunctions_fun__1005 omc_CodegenCFunctions_fun__1005
-#define boxptr_CodegenCFunctions_fun__1002 omc_CodegenCFunctions_fun__1002
-#define boxptr_CodegenCFunctions_lm__1001 omc_CodegenCFunctions_lm__1001
-#define boxptr_CodegenCFunctions_fun__1000 omc_CodegenCFunctions_fun__1000
-#define boxptr_CodegenCFunctions_fun__999 omc_CodegenCFunctions_fun__999
-#define boxptr_CodegenCFunctions_fun__998 omc_CodegenCFunctions_fun__998
-#define boxptr_CodegenCFunctions_fun__997 omc_CodegenCFunctions_fun__997
-#define boxptr_CodegenCFunctions_fun__996 omc_CodegenCFunctions_fun__996
-#define boxptr_CodegenCFunctions_fun__995 omc_CodegenCFunctions_fun__995
-#define boxptr_CodegenCFunctions_fun__993 omc_CodegenCFunctions_fun__993
-#define boxptr_CodegenCFunctions_fun__992 omc_CodegenCFunctions_fun__992
-#define boxptr_CodegenCFunctions_fun__991 omc_CodegenCFunctions_fun__991
-#define boxptr_CodegenCFunctions_lm__990 omc_CodegenCFunctions_lm__990
-#define boxptr_CodegenCFunctions_lm__989 omc_CodegenCFunctions_lm__989
-#define boxptr_CodegenCFunctions_lm__988 omc_CodegenCFunctions_lm__988
-#define boxptr_CodegenCFunctions_lm__986 omc_CodegenCFunctions_lm__986
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__983 omc_CodegenCFunctions_fun__983
+
+
+#define boxptr_CodegenCFunctions_fun__980 omc_CodegenCFunctions_fun__980
+
+
+#define boxptr_CodegenCFunctions_fun__979 omc_CodegenCFunctions_fun__979
+
+
+#define boxptr_CodegenCFunctions_fun__976 omc_CodegenCFunctions_fun__976
+
+
+#define boxptr_CodegenCFunctions_lm__975 omc_CodegenCFunctions_lm__975
+
+
+#define boxptr_CodegenCFunctions_fun__974 omc_CodegenCFunctions_fun__974
+
+
+#define boxptr_CodegenCFunctions_fun__973 omc_CodegenCFunctions_fun__973
+
+
+#define boxptr_CodegenCFunctions_fun__972 omc_CodegenCFunctions_fun__972
+
+
+#define boxptr_CodegenCFunctions_fun__971 omc_CodegenCFunctions_fun__971
+
+
+#define boxptr_CodegenCFunctions_fun__970 omc_CodegenCFunctions_fun__970
+
+
+#define boxptr_CodegenCFunctions_fun__969 omc_CodegenCFunctions_fun__969
+
+
+#define boxptr_CodegenCFunctions_fun__967 omc_CodegenCFunctions_fun__967
+
+
+#define boxptr_CodegenCFunctions_fun__966 omc_CodegenCFunctions_fun__966
+
+
+#define boxptr_CodegenCFunctions_fun__965 omc_CodegenCFunctions_fun__965
+
+
+#define boxptr_CodegenCFunctions_lm__964 omc_CodegenCFunctions_lm__964
+
+
+#define boxptr_CodegenCFunctions_lm__963 omc_CodegenCFunctions_lm__963
+
+
+#define boxptr_CodegenCFunctions_lm__962 omc_CodegenCFunctions_lm__962
+
+
+#define boxptr_CodegenCFunctions_lm__960 omc_CodegenCFunctions_lm__960
+
+
+#define boxptr_CodegenCFunctions_fun__952 omc_CodegenCFunctions_fun__952
+
+
+#define boxptr_CodegenCFunctions_fun__951 omc_CodegenCFunctions_fun__951
+
+
+#define boxptr_CodegenCFunctions_fun__950 omc_CodegenCFunctions_fun__950
+
+
+#define boxptr_CodegenCFunctions_fun__949 omc_CodegenCFunctions_fun__949
+
+
+#define boxptr_CodegenCFunctions_fun__948 omc_CodegenCFunctions_fun__948
+
+
+#define boxptr_CodegenCFunctions_fun__947 omc_CodegenCFunctions_fun__947
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpPartEvalFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpPartEvalFunction omc_CodegenCFunctions_daeExpPartEvalFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpPartEvalFunction,2,0) {(void*) boxptr_CodegenCFunctions_daeExpPartEvalFunction,0}};
 #define boxvar_CodegenCFunctions_daeExpPartEvalFunction MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpPartEvalFunction)
-#define boxptr_CodegenCFunctions_lm__974 omc_CodegenCFunctions_lm__974
-#define boxptr_CodegenCFunctions_lm__973 omc_CodegenCFunctions_lm__973
-#define boxptr_CodegenCFunctions_lm__972 omc_CodegenCFunctions_lm__972
-#define boxptr_CodegenCFunctions_lm__971 omc_CodegenCFunctions_lm__971
-#define boxptr_CodegenCFunctions_lm__970 omc_CodegenCFunctions_lm__970
-#define boxptr_CodegenCFunctions_fun__969 omc_CodegenCFunctions_fun__969
-#define boxptr_CodegenCFunctions_lm__966 omc_CodegenCFunctions_lm__966
-#define boxptr_CodegenCFunctions_fun__965 omc_CodegenCFunctions_fun__965
-#define boxptr_CodegenCFunctions_fun__964 omc_CodegenCFunctions_fun__964
-#define boxptr_CodegenCFunctions_lm__963 omc_CodegenCFunctions_lm__963
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__942 omc_CodegenCFunctions_lm__942
+
+
+#define boxptr_CodegenCFunctions_lm__941 omc_CodegenCFunctions_lm__941
+
+
+#define boxptr_CodegenCFunctions_lm__940 omc_CodegenCFunctions_lm__940
+
+
+#define boxptr_CodegenCFunctions_lm__939 omc_CodegenCFunctions_lm__939
+
+
+#define boxptr_CodegenCFunctions_lm__938 omc_CodegenCFunctions_lm__938
+
+
+#define boxptr_CodegenCFunctions_fun__937 omc_CodegenCFunctions_fun__937
+
+
+#define boxptr_CodegenCFunctions_lm__934 omc_CodegenCFunctions_lm__934
+
+
+#define boxptr_CodegenCFunctions_fun__933 omc_CodegenCFunctions_fun__933
+
+
+#define boxptr_CodegenCFunctions_fun__932 omc_CodegenCFunctions_fun__932
+
+
+#define boxptr_CodegenCFunctions_lm__931 omc_CodegenCFunctions_lm__931
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpRecord(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_rec, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpRecord omc_CodegenCFunctions_daeExpRecord
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpRecord,2,0) {(void*) boxptr_CodegenCFunctions_daeExpRecord,0}};
 #define boxvar_CodegenCFunctions_daeExpRecord MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpRecord)
-#define boxptr_CodegenCFunctions_lm__961 omc_CodegenCFunctions_lm__961
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__929 omc_CodegenCFunctions_lm__929
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_resultVarAssignment(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_lhs, modelica_metatype _a_rhs, modelica_metatype *out_out_a_lhs, modelica_metatype *out_out_a_rhs);
 #define boxptr_CodegenCFunctions_resultVarAssignment omc_CodegenCFunctions_resultVarAssignment
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_resultVarAssignment,2,0) {(void*) boxptr_CodegenCFunctions_resultVarAssignment,0}};
 #define boxvar_CodegenCFunctions_resultVarAssignment MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_resultVarAssignment)
-#define boxptr_CodegenCFunctions_fun__959 omc_CodegenCFunctions_fun__959
-#define boxptr_CodegenCFunctions_lm__958 omc_CodegenCFunctions_lm__958
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__927 omc_CodegenCFunctions_fun__927
+
+
+#define boxptr_CodegenCFunctions_lm__926 omc_CodegenCFunctions_lm__926
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_iteratedCrefStr(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cref);
 #define boxptr_CodegenCFunctions_iteratedCrefStr omc_CodegenCFunctions_iteratedCrefStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_iteratedCrefStr,2,0) {(void*) boxptr_CodegenCFunctions_iteratedCrefStr,0}};
 #define boxvar_CodegenCFunctions_iteratedCrefStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_iteratedCrefStr)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpIf(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpIf omc_CodegenCFunctions_daeExpIf
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpIf,2,0) {(void*) boxptr_CodegenCFunctions_daeExpIf,0}};
 #define boxvar_CodegenCFunctions_daeExpIf MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpIf)
-#define boxptr_CodegenCFunctions_fun__955 omc_CodegenCFunctions_fun__955
-#define boxptr_CodegenCFunctions_fun__954 omc_CodegenCFunctions_fun__954
-#define boxptr_CodegenCFunctions_fun__953 omc_CodegenCFunctions_fun__953
-#define boxptr_CodegenCFunctions_fun__952 omc_CodegenCFunctions_fun__952
-#define boxptr_CodegenCFunctions_fun__951 omc_CodegenCFunctions_fun__951
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__923 omc_CodegenCFunctions_fun__923
+
+
+#define boxptr_CodegenCFunctions_fun__922 omc_CodegenCFunctions_fun__922
+
+
+#define boxptr_CodegenCFunctions_fun__921 omc_CodegenCFunctions_fun__921
+
+
+#define boxptr_CodegenCFunctions_fun__920 omc_CodegenCFunctions_fun__920
+
+
+#define boxptr_CodegenCFunctions_fun__919 omc_CodegenCFunctions_fun__919
+
+
+DLLDirection
+modelica_metatype omc_CodegenCFunctions_daeExpNominalTmp(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_tmp1, modelica_string _a_tmp2, modelica_metatype _a_exp1, modelica_metatype _a_exp2, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
+#define boxptr_CodegenCFunctions_daeExpNominalTmp omc_CodegenCFunctions_daeExpNominalTmp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpNominalTmp,2,0) {(void*) boxptr_CodegenCFunctions_daeExpNominalTmp,0}};
+#define boxvar_CodegenCFunctions_daeExpNominalTmp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpNominalTmp)
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpRelationSim(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpRelationSim omc_CodegenCFunctions_daeExpRelationSim
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpRelationSim,2,0) {(void*) boxptr_CodegenCFunctions_daeExpRelationSim,0}};
 #define boxvar_CodegenCFunctions_daeExpRelationSim MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpRelationSim)
-#define boxptr_CodegenCFunctions_fun__944 omc_CodegenCFunctions_fun__944
-#define boxptr_CodegenCFunctions_fun__935 omc_CodegenCFunctions_fun__935
-#define boxptr_CodegenCFunctions_fun__925 omc_CodegenCFunctions_fun__925
-#define boxptr_CodegenCFunctions_fun__923 omc_CodegenCFunctions_fun__923
-#define boxptr_CodegenCFunctions_fun__922 omc_CodegenCFunctions_fun__922
-#define boxptr_CodegenCFunctions_fun__921 omc_CodegenCFunctions_fun__921
-#define boxptr_CodegenCFunctions_fun__920 omc_CodegenCFunctions_fun__920
-#define boxptr_CodegenCFunctions_fun__919 omc_CodegenCFunctions_fun__919
-#define boxptr_CodegenCFunctions_fun__915 omc_CodegenCFunctions_fun__915
-#define boxptr_CodegenCFunctions_fun__913 omc_CodegenCFunctions_fun__913
-#define boxptr_CodegenCFunctions_fun__912 omc_CodegenCFunctions_fun__912
-#define boxptr_CodegenCFunctions_fun__911 omc_CodegenCFunctions_fun__911
-#define boxptr_CodegenCFunctions_fun__910 omc_CodegenCFunctions_fun__910
-#define boxptr_CodegenCFunctions_fun__909 omc_CodegenCFunctions_fun__909
-#define boxptr_CodegenCFunctions_fun__904 omc_CodegenCFunctions_fun__904
-#define boxptr_CodegenCFunctions_fun__902 omc_CodegenCFunctions_fun__902
-#define boxptr_CodegenCFunctions_fun__901 omc_CodegenCFunctions_fun__901
-#define boxptr_CodegenCFunctions_fun__900 omc_CodegenCFunctions_fun__900
-#define boxptr_CodegenCFunctions_fun__899 omc_CodegenCFunctions_fun__899
+
+
+#define boxptr_CodegenCFunctions_fun__906 omc_CodegenCFunctions_fun__906
+
+
 #define boxptr_CodegenCFunctions_fun__898 omc_CodegenCFunctions_fun__898
-#define boxptr_CodegenCFunctions_fun__894 omc_CodegenCFunctions_fun__894
-#define boxptr_CodegenCFunctions_fun__892 omc_CodegenCFunctions_fun__892
-#define boxptr_CodegenCFunctions_fun__891 omc_CodegenCFunctions_fun__891
+
+
 #define boxptr_CodegenCFunctions_fun__890 omc_CodegenCFunctions_fun__890
-#define boxptr_CodegenCFunctions_fun__889 omc_CodegenCFunctions_fun__889
-#define boxptr_CodegenCFunctions_fun__888 omc_CodegenCFunctions_fun__888
-#define boxptr_CodegenCFunctions_fun__883 omc_CodegenCFunctions_fun__883
-#define boxptr_CodegenCFunctions_fun__881 omc_CodegenCFunctions_fun__881
-#define boxptr_CodegenCFunctions_fun__880 omc_CodegenCFunctions_fun__880
+
+
+#define boxptr_CodegenCFunctions_fun__882 omc_CodegenCFunctions_fun__882
+
+
 #define boxptr_CodegenCFunctions_fun__879 omc_CodegenCFunctions_fun__879
-#define boxptr_CodegenCFunctions_fun__878 omc_CodegenCFunctions_fun__878
-#define boxptr_CodegenCFunctions_fun__877 omc_CodegenCFunctions_fun__877
-#define boxptr_CodegenCFunctions_fun__873 omc_CodegenCFunctions_fun__873
-#define boxptr_CodegenCFunctions_fun__871 omc_CodegenCFunctions_fun__871
-#define boxptr_CodegenCFunctions_fun__870 omc_CodegenCFunctions_fun__870
-#define boxptr_CodegenCFunctions_fun__869 omc_CodegenCFunctions_fun__869
-#define boxptr_CodegenCFunctions_fun__868 omc_CodegenCFunctions_fun__868
-#define boxptr_CodegenCFunctions_fun__867 omc_CodegenCFunctions_fun__867
-#define boxptr_CodegenCFunctions_fun__862 omc_CodegenCFunctions_fun__862
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpRelation(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpRelation omc_CodegenCFunctions_daeExpRelation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpRelation,2,0) {(void*) boxptr_CodegenCFunctions_daeExpRelation,0}};
 #define boxvar_CodegenCFunctions_daeExpRelation MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpRelation)
-#define boxptr_CodegenCFunctions_fun__860 omc_CodegenCFunctions_fun__860
-#define boxptr_CodegenCFunctions_fun__859 omc_CodegenCFunctions_fun__859
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__877 omc_CodegenCFunctions_fun__877
+
+
+#define boxptr_CodegenCFunctions_fun__876 omc_CodegenCFunctions_fun__876
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpLunary(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpLunary omc_CodegenCFunctions_daeExpLunary
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpLunary,2,0) {(void*) boxptr_CodegenCFunctions_daeExpLunary,0}};
 #define boxvar_CodegenCFunctions_daeExpLunary MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpLunary)
-#define boxptr_CodegenCFunctions_fun__857 omc_CodegenCFunctions_fun__857
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__874 omc_CodegenCFunctions_fun__874
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpLbinary(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpLbinary omc_CodegenCFunctions_daeExpLbinary
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpLbinary,2,0) {(void*) boxptr_CodegenCFunctions_daeExpLbinary,0}};
 #define boxvar_CodegenCFunctions_daeExpLbinary MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpLbinary)
-#define boxptr_CodegenCFunctions_fun__855 omc_CodegenCFunctions_fun__855
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__872 omc_CodegenCFunctions_fun__872
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpUnary(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpUnary omc_CodegenCFunctions_daeExpUnary
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpUnary,2,0) {(void*) boxptr_CodegenCFunctions_daeExpUnary,0}};
 #define boxvar_CodegenCFunctions_daeExpUnary MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpUnary)
-#define boxptr_CodegenCFunctions_fun__853 omc_CodegenCFunctions_fun__853
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__870 omc_CodegenCFunctions_fun__870
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpBinary(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpBinary omc_CodegenCFunctions_daeExpBinary
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpBinary,2,0) {(void*) boxptr_CodegenCFunctions_daeExpBinary,0}};
 #define boxvar_CodegenCFunctions_daeExpBinary MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpBinary)
-#define boxptr_CodegenCFunctions_fun__850 omc_CodegenCFunctions_fun__850
+
+
+#define boxptr_CodegenCFunctions_fun__867 omc_CodegenCFunctions_fun__867
+
+
+#define boxptr_CodegenCFunctions_fun__866 omc_CodegenCFunctions_fun__866
+
+
+#define boxptr_CodegenCFunctions_fun__865 omc_CodegenCFunctions_fun__865
+
+
+#define boxptr_CodegenCFunctions_fun__864 omc_CodegenCFunctions_fun__864
+
+
+#define boxptr_CodegenCFunctions_fun__863 omc_CodegenCFunctions_fun__863
+
+
+#define boxptr_CodegenCFunctions_fun__862 omc_CodegenCFunctions_fun__862
+
+
+#define boxptr_CodegenCFunctions_fun__861 omc_CodegenCFunctions_fun__861
+
+
+#define boxptr_CodegenCFunctions_fun__860 omc_CodegenCFunctions_fun__860
+
+
+#define boxptr_CodegenCFunctions_fun__858 omc_CodegenCFunctions_fun__858
+
+
+#define boxptr_CodegenCFunctions_fun__856 omc_CodegenCFunctions_fun__856
+
+
+#define boxptr_CodegenCFunctions_fun__855 omc_CodegenCFunctions_fun__855
+
+
+#define boxptr_CodegenCFunctions_fun__854 omc_CodegenCFunctions_fun__854
+
+
+#define boxptr_CodegenCFunctions_fun__853 omc_CodegenCFunctions_fun__853
+
+
+#define boxptr_CodegenCFunctions_fun__852 omc_CodegenCFunctions_fun__852
+
+
 #define boxptr_CodegenCFunctions_fun__849 omc_CodegenCFunctions_fun__849
-#define boxptr_CodegenCFunctions_fun__848 omc_CodegenCFunctions_fun__848
-#define boxptr_CodegenCFunctions_fun__847 omc_CodegenCFunctions_fun__847
+
+
 #define boxptr_CodegenCFunctions_fun__846 omc_CodegenCFunctions_fun__846
-#define boxptr_CodegenCFunctions_fun__845 omc_CodegenCFunctions_fun__845
-#define boxptr_CodegenCFunctions_fun__844 omc_CodegenCFunctions_fun__844
-#define boxptr_CodegenCFunctions_fun__843 omc_CodegenCFunctions_fun__843
-#define boxptr_CodegenCFunctions_fun__841 omc_CodegenCFunctions_fun__841
-#define boxptr_CodegenCFunctions_fun__839 omc_CodegenCFunctions_fun__839
-#define boxptr_CodegenCFunctions_fun__838 omc_CodegenCFunctions_fun__838
-#define boxptr_CodegenCFunctions_fun__837 omc_CodegenCFunctions_fun__837
-#define boxptr_CodegenCFunctions_fun__836 omc_CodegenCFunctions_fun__836
-#define boxptr_CodegenCFunctions_fun__835 omc_CodegenCFunctions_fun__835
-#define boxptr_CodegenCFunctions_fun__833 omc_CodegenCFunctions_fun__833
-#define boxptr_CodegenCFunctions_fun__830 omc_CodegenCFunctions_fun__830
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCrefIndexSpec(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_subs, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCrefIndexSpec omc_CodegenCFunctions_daeExpCrefIndexSpec
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefIndexSpec,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCrefIndexSpec,0}};
 #define boxvar_CodegenCFunctions_daeExpCrefIndexSpec MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefIndexSpec)
-#define boxptr_CodegenCFunctions_lm__826 omc_CodegenCFunctions_lm__826
-#define boxptr_CodegenCFunctions_fun__825 omc_CodegenCFunctions_fun__825
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__842 omc_CodegenCFunctions_lm__842
+
+
+#define boxptr_CodegenCFunctions_fun__841 omc_CodegenCFunctions_fun__841
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCrefLhsFunContextParModExpl(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCrefLhsFunContextParModExpl omc_CodegenCFunctions_daeExpCrefLhsFunContextParModExpl
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefLhsFunContextParModExpl,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCrefLhsFunContextParModExpl,0}};
 #define boxvar_CodegenCFunctions_daeExpCrefLhsFunContextParModExpl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefLhsFunContextParModExpl)
-#define boxptr_CodegenCFunctions_lm__821 omc_CodegenCFunctions_lm__821
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__837 omc_CodegenCFunctions_lm__837
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCrefLhsFunContextNormal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCrefLhsFunContextNormal omc_CodegenCFunctions_daeExpCrefLhsFunContextNormal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefLhsFunContextNormal,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCrefLhsFunContextNormal,0}};
 #define boxvar_CodegenCFunctions_daeExpCrefLhsFunContextNormal MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefLhsFunContextNormal)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCrefLhsFunContext(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ecr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCrefLhsFunContext omc_CodegenCFunctions_daeExpCrefLhsFunContext
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefLhsFunContext,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCrefLhsFunContext,0}};
 #define boxvar_CodegenCFunctions_daeExpCrefLhsFunContext MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefLhsFunContext)
-#define boxptr_CodegenCFunctions_fun__816 omc_CodegenCFunctions_fun__816
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__832 omc_CodegenCFunctions_fun__832
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_indexSubRecursive(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_dims, modelica_metatype _a_subs, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_indexSubRecursive omc_CodegenCFunctions_indexSubRecursive
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_indexSubRecursive,2,0) {(void*) boxptr_CodegenCFunctions_indexSubRecursive,0}};
 #define boxvar_CodegenCFunctions_indexSubRecursive MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_indexSubRecursive)
-#define boxptr_CodegenCFunctions_fun__814 omc_CodegenCFunctions_fun__814
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__830 omc_CodegenCFunctions_fun__830
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_indexSubs(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_dims, modelica_metatype _a_subs, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_indexSubs omc_CodegenCFunctions_indexSubs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_indexSubs,2,0) {(void*) boxptr_CodegenCFunctions_indexSubs,0}};
 #define boxvar_CodegenCFunctions_indexSubs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_indexSubs)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCrefLhsSimContext(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_boolean _in_a_isPre, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_daeExpCrefLhsSimContext(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype _in_a_isPre, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefLhsSimContext,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCrefLhsSimContext,0}};
 #define boxvar_CodegenCFunctions_daeExpCrefLhsSimContext MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefLhsSimContext)
-#define boxptr_CodegenCFunctions_lm__807 omc_CodegenCFunctions_lm__807
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__823 omc_CodegenCFunctions_lm__823
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCrefLhs(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_boolean _in_a_isPre, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_daeExpCrefLhs(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype _in_a_isPre, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefLhs,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCrefLhs,0}};
 #define boxvar_CodegenCFunctions_daeExpCrefLhs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefLhs)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_arrayScalarRhs(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_subs, modelica_string _a_arrName, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_arrayScalarRhs omc_CodegenCFunctions_arrayScalarRhs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_arrayScalarRhs,2,0) {(void*) boxptr_CodegenCFunctions_arrayScalarRhs,0}};
 #define boxvar_CodegenCFunctions_arrayScalarRhs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_arrayScalarRhs)
-#define boxptr_CodegenCFunctions_fun__803 omc_CodegenCFunctions_fun__803
-#define boxptr_CodegenCFunctions_fun__802 omc_CodegenCFunctions_fun__802
-#define boxptr_CodegenCFunctions_lm__800 omc_CodegenCFunctions_lm__800
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__819 omc_CodegenCFunctions_fun__819
+
+
+#define boxptr_CodegenCFunctions_fun__818 omc_CodegenCFunctions_fun__818
+
+
+#define boxptr_CodegenCFunctions_lm__816 omc_CodegenCFunctions_lm__816
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCrefRhsFunContextParallel(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ecr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCrefRhsFunContextParallel omc_CodegenCFunctions_daeExpCrefRhsFunContextParallel
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefRhsFunContextParallel,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCrefRhsFunContextParallel,0}};
 #define boxvar_CodegenCFunctions_daeExpCrefRhsFunContextParallel MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefRhsFunContextParallel)
-#define boxptr_CodegenCFunctions_fun__798 omc_CodegenCFunctions_fun__798
-#define boxptr_CodegenCFunctions_lm__795 omc_CodegenCFunctions_lm__795
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__814 omc_CodegenCFunctions_fun__814
+
+
+#define boxptr_CodegenCFunctions_lm__811 omc_CodegenCFunctions_lm__811
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCrefRhsFunContext(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ecr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCrefRhsFunContext omc_CodegenCFunctions_daeExpCrefRhsFunContext
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefRhsFunContext,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCrefRhsFunContext,0}};
 #define boxvar_CodegenCFunctions_daeExpCrefRhsFunContext MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefRhsFunContext)
-#define boxptr_CodegenCFunctions_fun__793 omc_CodegenCFunctions_fun__793
-#define boxptr_CodegenCFunctions_fun__790 omc_CodegenCFunctions_fun__790
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__809 omc_CodegenCFunctions_fun__809
+
+
+#define boxptr_CodegenCFunctions_fun__806 omc_CodegenCFunctions_fun__806
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCrefRhsSimContext(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCrefRhsSimContext omc_CodegenCFunctions_daeExpCrefRhsSimContext
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefRhsSimContext,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCrefRhsSimContext,0}};
 #define boxvar_CodegenCFunctions_daeExpCrefRhsSimContext MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefRhsSimContext)
-#define boxptr_CodegenCFunctions_lm__784 omc_CodegenCFunctions_lm__784
-#define boxptr_CodegenCFunctions_lm__783 omc_CodegenCFunctions_lm__783
-#define boxptr_CodegenCFunctions_lm__782 omc_CodegenCFunctions_lm__782
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__800 omc_CodegenCFunctions_lm__800
+
+
+#define boxptr_CodegenCFunctions_lm__799 omc_CodegenCFunctions_lm__799
+
+
+#define boxptr_CodegenCFunctions_lm__798 omc_CodegenCFunctions_lm__798
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_constVarOrDaeExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_metatype _in_a_cr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_constVarOrDaeExp omc_CodegenCFunctions_constVarOrDaeExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_constVarOrDaeExp,2,0) {(void*) boxptr_CodegenCFunctions_constVarOrDaeExp,0}};
 #define boxvar_CodegenCFunctions_constVarOrDaeExp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_constVarOrDaeExp)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCrefRhs(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCrefRhs omc_CodegenCFunctions_daeExpCrefRhs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefRhs,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCrefRhs,0}};
 #define boxvar_CodegenCFunctions_daeExpCrefRhs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCrefRhs)
-#define boxptr_CodegenCFunctions_fun__779 omc_CodegenCFunctions_fun__779
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__795 omc_CodegenCFunctions_fun__795
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_generateThrow(threadData_t *threadData, modelica_metatype _txt);
 #define boxptr_CodegenCFunctions_generateThrow omc_CodegenCFunctions_generateThrow
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_generateThrow,2,0) {(void*) boxptr_CodegenCFunctions_generateThrow,0}};
 #define boxvar_CodegenCFunctions_generateThrow MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_generateThrow)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_subscriptToMStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscript);
 #define boxptr_CodegenCFunctions_subscriptToMStr omc_CodegenCFunctions_subscriptToMStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_subscriptToMStr,2,0) {(void*) boxptr_CodegenCFunctions_subscriptToMStr,0}};
 #define boxvar_CodegenCFunctions_subscriptToMStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_subscriptToMStr)
-#define boxptr_CodegenCFunctions_fun__775 omc_CodegenCFunctions_fun__775
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__791 omc_CodegenCFunctions_fun__791
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_subscriptsToMStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts);
 #define boxptr_CodegenCFunctions_subscriptsToMStr omc_CodegenCFunctions_subscriptsToMStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_subscriptsToMStr,2,0) {(void*) boxptr_CodegenCFunctions_subscriptsToMStr,0}};
 #define boxvar_CodegenCFunctions_subscriptsToMStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_subscriptsToMStr)
-#define boxptr_CodegenCFunctions_lm__773 omc_CodegenCFunctions_lm__773
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__789 omc_CodegenCFunctions_lm__789
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefToMStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCFunctions_crefToMStr omc_CodegenCFunctions_crefToMStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefToMStr,2,0) {(void*) boxptr_CodegenCFunctions_crefToMStr,0}};
 #define boxvar_CodegenCFunctions_crefToMStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefToMStr)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpMetaHelperBoxStart(threadData_t *threadData, modelica_metatype _txt, modelica_integer _a_numVariables);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_daeExpMetaHelperBoxStart(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_numVariables);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMetaHelperBoxStart,2,0) {(void*) boxptr_CodegenCFunctions_daeExpMetaHelperBoxStart,0}};
 #define boxvar_CodegenCFunctions_daeExpMetaHelperBoxStart MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMetaHelperBoxStart)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpMetarecordcall(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpMetarecordcall omc_CodegenCFunctions_daeExpMetarecordcall
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMetarecordcall,2,0) {(void*) boxptr_CodegenCFunctions_daeExpMetarecordcall,0}};
 #define boxvar_CodegenCFunctions_daeExpMetarecordcall MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMetarecordcall)
-#define boxptr_CodegenCFunctions_fun__768 omc_CodegenCFunctions_fun__768
-#define boxptr_CodegenCFunctions_lm__767 omc_CodegenCFunctions_lm__767
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__784 omc_CodegenCFunctions_fun__784
+
+
+#define boxptr_CodegenCFunctions_lm__783 omc_CodegenCFunctions_lm__783
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpMetaOption(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpMetaOption omc_CodegenCFunctions_daeExpMetaOption
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMetaOption,2,0) {(void*) boxptr_CodegenCFunctions_daeExpMetaOption,0}};
 #define boxvar_CodegenCFunctions_daeExpMetaOption MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMetaOption)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpMetaTuple(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpMetaTuple omc_CodegenCFunctions_daeExpMetaTuple
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMetaTuple,2,0) {(void*) boxptr_CodegenCFunctions_daeExpMetaTuple,0}};
 #define boxvar_CodegenCFunctions_daeExpMetaTuple MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpMetaTuple)
-#define boxptr_CodegenCFunctions_fun__764 omc_CodegenCFunctions_fun__764
-#define boxptr_CodegenCFunctions_lm__763 omc_CodegenCFunctions_lm__763
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__780 omc_CodegenCFunctions_fun__780
+
+
+#define boxptr_CodegenCFunctions_lm__779 omc_CodegenCFunctions_lm__779
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpTuple(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpTuple omc_CodegenCFunctions_daeExpTuple
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpTuple,2,0) {(void*) boxptr_CodegenCFunctions_daeExpTuple,0}};
 #define boxvar_CodegenCFunctions_daeExpTuple MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpTuple)
-#define boxptr_CodegenCFunctions_lm__761 omc_CodegenCFunctions_lm__761
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__777 omc_CodegenCFunctions_lm__777
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_tempDeclTuple(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_inType, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_tempDeclTuple omc_CodegenCFunctions_tempDeclTuple
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDeclTuple,2,0) {(void*) boxptr_CodegenCFunctions_tempDeclTuple,0}};
 #define boxvar_CodegenCFunctions_tempDeclTuple MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDeclTuple)
-#define boxptr_CodegenCFunctions_lm__759 omc_CodegenCFunctions_lm__759
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__775 omc_CodegenCFunctions_lm__775
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpCons(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpCons omc_CodegenCFunctions_daeExpCons
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCons,2,0) {(void*) boxptr_CodegenCFunctions_daeExpCons,0}};
 #define boxvar_CodegenCFunctions_daeExpCons MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpCons)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpListToCons(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_listItems, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpListToCons omc_CodegenCFunctions_daeExpListToCons
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpListToCons,2,0) {(void*) boxptr_CodegenCFunctions_daeExpListToCons,0}};
 #define boxvar_CodegenCFunctions_daeExpListToCons MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpListToCons)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpList(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpList omc_CodegenCFunctions_daeExpList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpList,2,0) {(void*) boxptr_CodegenCFunctions_daeExpList,0}};
 #define boxvar_CodegenCFunctions_daeExpList MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpList)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpSconst(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_string, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_daeExpSconst omc_CodegenCFunctions_daeExpSconst
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpSconst,2,0) {(void*) boxptr_CodegenCFunctions_daeExpSconst,0}};
 #define boxvar_CodegenCFunctions_daeExpSconst MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpSconst)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExternalF77Exp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExternalF77Exp omc_CodegenCFunctions_daeExternalF77Exp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExternalF77Exp,2,0) {(void*) boxptr_CodegenCFunctions_daeExternalF77Exp,0}};
 #define boxvar_CodegenCFunctions_daeExternalF77Exp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExternalF77Exp)
-#define boxptr_CodegenCFunctions_fun__752 omc_CodegenCFunctions_fun__752
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__768 omc_CodegenCFunctions_fun__768
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExternalCExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExternalCExp omc_CodegenCFunctions_daeExternalCExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExternalCExp,2,0) {(void*) boxptr_CodegenCFunctions_daeExternalCExp,0}};
 #define boxvar_CodegenCFunctions_daeExternalCExp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExternalCExp)
-#define boxptr_CodegenCFunctions_fun__750 omc_CodegenCFunctions_fun__750
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__766 omc_CodegenCFunctions_fun__766
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpAsLValue(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExpAsLValue omc_CodegenCFunctions_daeExpAsLValue
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpAsLValue,2,0) {(void*) boxptr_CodegenCFunctions_daeExpAsLValue,0}};
 #define boxvar_CodegenCFunctions_daeExpAsLValue MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpAsLValue)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExpSimpleLiteral(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp);
 #define boxptr_CodegenCFunctions_daeExpSimpleLiteral omc_CodegenCFunctions_daeExpSimpleLiteral
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpSimpleLiteral,2,0) {(void*) boxptr_CodegenCFunctions_daeExpSimpleLiteral,0}};
 #define boxvar_CodegenCFunctions_daeExpSimpleLiteral MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExpSimpleLiteral)
-#define boxptr_CodegenCFunctions_fun__746 omc_CodegenCFunctions_fun__746
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__762 omc_CodegenCFunctions_fun__762
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_daeExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_daeExp omc_CodegenCFunctions_daeExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExp,2,0) {(void*) boxptr_CodegenCFunctions_daeExp,0}};
 #define boxvar_CodegenCFunctions_daeExp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_daeExp)
-#define boxptr_CodegenCFunctions_fun__744 omc_CodegenCFunctions_fun__744
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__760 omc_CodegenCFunctions_fun__760
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_getTempDeclMatchOutputName(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_outputs, modelica_string _a_prefix, modelica_string _a_startIndex, modelica_integer _a_index);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_getTempDeclMatchOutputName(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_outputs, modelica_metatype _a_prefix, modelica_metatype _a_startIndex, modelica_metatype _a_index);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_getTempDeclMatchOutputName,2,0) {(void*) boxptr_CodegenCFunctions_getTempDeclMatchOutputName,0}};
 #define boxvar_CodegenCFunctions_getTempDeclMatchOutputName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_getTempDeclMatchOutputName)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_tempDeclMatchOutput(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ty, modelica_string _a_prefix, modelica_string _a_startIndex, modelica_string _a_index, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_tempDeclMatchOutput omc_CodegenCFunctions_tempDeclMatchOutput
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDeclMatchOutput,2,0) {(void*) boxptr_CodegenCFunctions_tempDeclMatchOutput,0}};
 #define boxvar_CodegenCFunctions_tempDeclMatchOutput MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDeclMatchOutput)
-#define boxptr_CodegenCFunctions_fun__740 omc_CodegenCFunctions_fun__740
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__756 omc_CodegenCFunctions_fun__756
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_getTempDeclMatchInputName(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_startIndex, modelica_integer _a_index);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_getTempDeclMatchInputName(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_startIndex, modelica_metatype _a_index);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_getTempDeclMatchInputName,2,0) {(void*) boxptr_CodegenCFunctions_getTempDeclMatchInputName,0}};
 #define boxvar_CodegenCFunctions_getTempDeclMatchInputName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_getTempDeclMatchInputName)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_tempDeclMatchInput(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_matchTy, modelica_string _a_ty, modelica_string _a_startIndex, modelica_string _a_index, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_tempDeclMatchInput omc_CodegenCFunctions_tempDeclMatchInput
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDeclMatchInput,2,0) {(void*) boxptr_CodegenCFunctions_tempDeclMatchInput,0}};
 #define boxvar_CodegenCFunctions_tempDeclMatchInput MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDeclMatchInput)
-#define boxptr_CodegenCFunctions_fun__737 omc_CodegenCFunctions_fun__737
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__753 omc_CodegenCFunctions_fun__753
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_tempDeclZero(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ty, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_tempDeclZero omc_CodegenCFunctions_tempDeclZero
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDeclZero,2,0) {(void*) boxptr_CodegenCFunctions_tempDeclZero,0}};
 #define boxvar_CodegenCFunctions_tempDeclZero MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDeclZero)
-#define boxptr_CodegenCFunctions_fun__735 omc_CodegenCFunctions_fun__735
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__751 omc_CodegenCFunctions_fun__751
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_tempDeclArray(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ty, modelica_metatype _a_len, modelica_metatype _a_elts, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_len, modelica_metatype *out_out_a_elts, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_tempDeclArray omc_CodegenCFunctions_tempDeclArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDeclArray,2,0) {(void*) boxptr_CodegenCFunctions_tempDeclArray,0}};
 #define boxvar_CodegenCFunctions_tempDeclArray MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDeclArray)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_tempDecl(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ty, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_tempDecl omc_CodegenCFunctions_tempDecl
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDecl,2,0) {(void*) boxptr_CodegenCFunctions_tempDecl,0}};
 #define boxvar_CodegenCFunctions_tempDecl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempDecl)
-#define boxptr_CodegenCFunctions_fun__732 omc_CodegenCFunctions_fun__732
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__748 omc_CodegenCFunctions_fun__748
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_endModelicaLine(threadData_t *threadData, modelica_metatype _txt);
 #define boxptr_CodegenCFunctions_endModelicaLine omc_CodegenCFunctions_endModelicaLine
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_endModelicaLine,2,0) {(void*) boxptr_CodegenCFunctions_endModelicaLine,0}};
 #define boxvar_CodegenCFunctions_endModelicaLine MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_endModelicaLine)
-DLLExport
-modelica_metatype omc_CodegenCFunctions_modelicaLine(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_info);
+
+
+DLLDirection
+modelica_metatype omc_CodegenCFunctions_modelicaLine(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_info);
 #define boxptr_CodegenCFunctions_modelicaLine omc_CodegenCFunctions_modelicaLine
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_modelicaLine,2,0) {(void*) boxptr_CodegenCFunctions_modelicaLine,0}};
 #define boxvar_CodegenCFunctions_modelicaLine MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_modelicaLine)
-#define boxptr_CodegenCFunctions_fun__726 omc_CodegenCFunctions_fun__726
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__742 omc_CodegenCFunctions_fun__742
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_addRootsTempArray(threadData_t *threadData, modelica_metatype _txt);
 #define boxptr_CodegenCFunctions_addRootsTempArray omc_CodegenCFunctions_addRootsTempArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_addRootsTempArray,2,0) {(void*) boxptr_CodegenCFunctions_addRootsTempArray,0}};
 #define boxvar_CodegenCFunctions_addRootsTempArray MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_addRootsTempArray)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefFunctionName(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCFunctions_crefFunctionName omc_CodegenCFunctions_crefFunctionName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefFunctionName,2,0) {(void*) boxptr_CodegenCFunctions_crefFunctionName,0}};
 #define boxvar_CodegenCFunctions_crefFunctionName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefFunctionName)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_arrayCrefStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCFunctions_arrayCrefStr omc_CodegenCFunctions_arrayCrefStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_arrayCrefStr,2,0) {(void*) boxptr_CodegenCFunctions_arrayCrefStr,0}};
 #define boxvar_CodegenCFunctions_arrayCrefStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_arrayCrefStr)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_contextArrayCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context);
 #define boxptr_CodegenCFunctions_contextArrayCref omc_CodegenCFunctions_contextArrayCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextArrayCref,2,0) {(void*) boxptr_CodegenCFunctions_contextArrayCref,0}};
 #define boxvar_CodegenCFunctions_contextArrayCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextArrayCref)
-#define boxptr_CodegenCFunctions_fun__719 omc_CodegenCFunctions_fun__719
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__735 omc_CodegenCFunctions_fun__735
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefTypeNameOMSIC(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
 #define boxptr_CodegenCFunctions_crefTypeNameOMSIC omc_CodegenCFunctions_crefTypeNameOMSIC
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefTypeNameOMSIC,2,0) {(void*) boxptr_CodegenCFunctions_crefTypeNameOMSIC,0}};
 #define boxvar_CodegenCFunctions_crefTypeNameOMSIC MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefTypeNameOMSIC)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefTypeOMSIC(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCFunctions_crefTypeOMSIC omc_CodegenCFunctions_crefTypeOMSIC
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefTypeOMSIC,2,0) {(void*) boxptr_CodegenCFunctions_crefTypeOMSIC,0}};
 #define boxvar_CodegenCFunctions_crefTypeOMSIC MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefTypeOMSIC)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefToIndex(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr);
 #define boxptr_CodegenCFunctions_crefToIndex omc_CodegenCFunctions_crefToIndex
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefToIndex,2,0) {(void*) boxptr_CodegenCFunctions_crefToIndex,0}};
 #define boxvar_CodegenCFunctions_crefToIndex MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefToIndex)
-#define boxptr_CodegenCFunctions_fun__715 omc_CodegenCFunctions_fun__715
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__731 omc_CodegenCFunctions_fun__731
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefToCStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_integer _in_a_ix, modelica_boolean _in_a_isPre, modelica_boolean _in_a_isStart, modelica_metatype _in_a_sub, modelica_metatype *out_out_a_sub);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_crefToCStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_ix, modelica_metatype _in_a_isPre, modelica_metatype _in_a_isStart, modelica_metatype _in_a_sub, modelica_metatype *out_out_a_sub);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefToCStr,2,0) {(void*) boxptr_CodegenCFunctions_crefToCStr,0}};
 #define boxvar_CodegenCFunctions_crefToCStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefToCStr)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefNonSimVar(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr);
 #define boxptr_CodegenCFunctions_crefNonSimVar omc_CodegenCFunctions_crefNonSimVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefNonSimVar,2,0) {(void*) boxptr_CodegenCFunctions_crefNonSimVar,0}};
 #define boxvar_CodegenCFunctions_crefNonSimVar MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefNonSimVar)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefDefine(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCFunctions_crefDefine omc_CodegenCFunctions_crefDefine
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefDefine,2,0) {(void*) boxptr_CodegenCFunctions_crefDefine,0}};
 #define boxvar_CodegenCFunctions_crefDefine MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefDefine)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefPre(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr);
 #define boxptr_CodegenCFunctions_crefPre omc_CodegenCFunctions_crefPre
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefPre,2,0) {(void*) boxptr_CodegenCFunctions_crefPre,0}};
 #define boxvar_CodegenCFunctions_crefPre MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefPre)
-#define boxptr_CodegenCFunctions_fun__706 omc_CodegenCFunctions_fun__706
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__722 omc_CodegenCFunctions_fun__722
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefOld(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_integer _a_ix);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_crefOld(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_ix);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefOld,2,0) {(void*) boxptr_CodegenCFunctions_crefOld,0}};
 #define boxvar_CodegenCFunctions_crefOld MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefOld)
-DLLExport
-modelica_metatype omc_CodegenCFunctions_crefOrStartCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
-#define boxptr_CodegenCFunctions_crefOrStartCref omc_CodegenCFunctions_crefOrStartCref
-static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefOrStartCref,2,0) {(void*) boxptr_CodegenCFunctions_crefOrStartCref,0}};
-#define boxvar_CodegenCFunctions_crefOrStartCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefOrStartCref)
-#define boxptr_CodegenCFunctions_fun__702 omc_CodegenCFunctions_fun__702
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_cref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_sub, modelica_metatype *out_out_a_sub);
 #define boxptr_CodegenCFunctions_cref omc_CodegenCFunctions_cref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_cref,2,0) {(void*) boxptr_CodegenCFunctions_cref,0}};
 #define boxvar_CodegenCFunctions_cref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_cref)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_contextIteratorName(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_name, modelica_metatype _a_context);
 #define boxptr_CodegenCFunctions_contextIteratorName omc_CodegenCFunctions_contextIteratorName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextIteratorName,2,0) {(void*) boxptr_CodegenCFunctions_contextIteratorName,0}};
 #define boxvar_CodegenCFunctions_contextIteratorName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextIteratorName)
-#define boxptr_CodegenCFunctions_fun__698 omc_CodegenCFunctions_fun__698
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__717 omc_CodegenCFunctions_fun__717
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_contextCrefIsPre(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_auxFunction, modelica_boolean _a_isPre, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_contextCrefIsPre(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_auxFunction, modelica_metatype _a_isPre, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextCrefIsPre,2,0) {(void*) boxptr_CodegenCFunctions_contextCrefIsPre,0}};
 #define boxvar_CodegenCFunctions_contextCrefIsPre MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextCrefIsPre)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_jacCrefs(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_integer _a_ix);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_jacCrefs(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_ix);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_jacCrefs,2,0) {(void*) boxptr_CodegenCFunctions_jacCrefs,0}};
 #define boxvar_CodegenCFunctions_jacCrefs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_jacCrefs)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_contextCrefOld(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_auxFunction, modelica_integer _a_ix, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_contextCrefOld(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_auxFunction, modelica_metatype _a_ix, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextCrefOld,2,0) {(void*) boxptr_CodegenCFunctions_contextCrefOld,0}};
 #define boxvar_CodegenCFunctions_contextCrefOld MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextCrefOld)
-#define boxptr_CodegenCFunctions_fun__690 omc_CodegenCFunctions_fun__690
-#define boxptr_CodegenCFunctions_lm__689 omc_CodegenCFunctions_lm__689
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__709 omc_CodegenCFunctions_fun__709
+
+
+#define boxptr_CodegenCFunctions_lm__708 omc_CodegenCFunctions_lm__708
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionContextCrefFirstIdentNoUnderscore(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_pref, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_pref, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_functionContextCrefFirstIdentNoUnderscore omc_CodegenCFunctions_functionContextCrefFirstIdentNoUnderscore
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionContextCrefFirstIdentNoUnderscore,2,0) {(void*) boxptr_CodegenCFunctions_functionContextCrefFirstIdentNoUnderscore,0}};
 #define boxvar_CodegenCFunctions_functionContextCrefFirstIdentNoUnderscore MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionContextCrefFirstIdentNoUnderscore)
-#define boxptr_CodegenCFunctions_fun__687 omc_CodegenCFunctions_fun__687
-#define boxptr_CodegenCFunctions_lm__686 omc_CodegenCFunctions_lm__686
-#define boxptr_CodegenCFunctions_lm__685 omc_CodegenCFunctions_lm__685
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__706 omc_CodegenCFunctions_fun__706
+
+
+#define boxptr_CodegenCFunctions_lm__705 omc_CodegenCFunctions_lm__705
+
+
+#define boxptr_CodegenCFunctions_lm__704 omc_CodegenCFunctions_lm__704
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionContextCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_pref, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_pref, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_functionContextCref omc_CodegenCFunctions_functionContextCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionContextCref,2,0) {(void*) boxptr_CodegenCFunctions_functionContextCref,0}};
 #define boxvar_CodegenCFunctions_functionContextCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionContextCref)
-#define boxptr_CodegenCFunctions_fun__683 omc_CodegenCFunctions_fun__683
-#define boxptr_CodegenCFunctions_lm__682 omc_CodegenCFunctions_lm__682
-#define boxptr_CodegenCFunctions_lm__681 omc_CodegenCFunctions_lm__681
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__702 omc_CodegenCFunctions_fun__702
+
+
+#define boxptr_CodegenCFunctions_lm__701 omc_CodegenCFunctions_lm__701
+
+
+#define boxptr_CodegenCFunctions_lm__700 omc_CodegenCFunctions_lm__700
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_contextCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype _a_sub, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction, modelica_metatype *out_out_a_sub);
 #define boxptr_CodegenCFunctions_contextCref omc_CodegenCFunctions_contextCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextCref,2,0) {(void*) boxptr_CodegenCFunctions_contextCref,0}};
 #define boxvar_CodegenCFunctions_contextCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextCref)
-#define boxptr_CodegenCFunctions_fun__679 omc_CodegenCFunctions_fun__679
-#define boxptr_CodegenCFunctions_fun__678 omc_CodegenCFunctions_fun__678
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__698 omc_CodegenCFunctions_fun__698
+
+
+#define boxptr_CodegenCFunctions_fun__697 omc_CodegenCFunctions_fun__697
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_contextCrefNoPrevExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_contextCrefNoPrevExp omc_CodegenCFunctions_contextCrefNoPrevExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextCrefNoPrevExp,2,0) {(void*) boxptr_CodegenCFunctions_contextCrefNoPrevExp,0}};
 #define boxvar_CodegenCFunctions_contextCrefNoPrevExp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_contextCrefNoPrevExp)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_assertCommonVar(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_condVar, modelica_metatype _a_msgVar, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_info, modelica_metatype *out_out_a_condVar, modelica_metatype *out_out_a_msgVar, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_assertCommonVar omc_CodegenCFunctions_assertCommonVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_assertCommonVar,2,0) {(void*) boxptr_CodegenCFunctions_assertCommonVar,0}};
 #define boxvar_CodegenCFunctions_assertCommonVar MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_assertCommonVar)
-#define boxptr_CodegenCFunctions_fun__675 omc_CodegenCFunctions_fun__675
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__694 omc_CodegenCFunctions_fun__694
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expToFormatString(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_expToFormatString omc_CodegenCFunctions_expToFormatString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expToFormatString,2,0) {(void*) boxptr_CodegenCFunctions_expToFormatString,0}};
 #define boxvar_CodegenCFunctions_expToFormatString MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expToFormatString)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_assertCommon(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_condition, modelica_metatype _a_messages, modelica_metatype _a_level, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype _a_info, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_assertCommon omc_CodegenCFunctions_assertCommon
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_assertCommon,2,0) {(void*) boxptr_CodegenCFunctions_assertCommon,0}};
 #define boxvar_CodegenCFunctions_assertCommon MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_assertCommon)
-#define boxptr_CodegenCFunctions_fun__672 omc_CodegenCFunctions_fun__672
-#define boxptr_CodegenCFunctions_fun__671 omc_CodegenCFunctions_fun__671
-#define boxptr_CodegenCFunctions_fun__670 omc_CodegenCFunctions_fun__670
-#define boxptr_CodegenCFunctions_fun__669 omc_CodegenCFunctions_fun__669
-#define boxptr_CodegenCFunctions_fun__668 omc_CodegenCFunctions_fun__668
-#define boxptr_CodegenCFunctions_fun__667 omc_CodegenCFunctions_fun__667
-#define boxptr_CodegenCFunctions_lm__666 omc_CodegenCFunctions_lm__666
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__691 omc_CodegenCFunctions_fun__691
+
+
+#define boxptr_CodegenCFunctions_fun__690 omc_CodegenCFunctions_fun__690
+
+
+#define boxptr_CodegenCFunctions_fun__689 omc_CodegenCFunctions_fun__689
+
+
+#define boxptr_CodegenCFunctions_fun__688 omc_CodegenCFunctions_fun__688
+
+
+#define boxptr_CodegenCFunctions_fun__687 omc_CodegenCFunctions_fun__687
+
+
+#define boxptr_CodegenCFunctions_fun__686 omc_CodegenCFunctions_fun__686
+
+
+#define boxptr_CodegenCFunctions_lm__685 omc_CodegenCFunctions_lm__685
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_infoArgs(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_info);
 #define boxptr_CodegenCFunctions_infoArgs omc_CodegenCFunctions_infoArgs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_infoArgs,2,0) {(void*) boxptr_CodegenCFunctions_infoArgs,0}};
 #define boxvar_CodegenCFunctions_infoArgs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_infoArgs)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_patternMatch(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_pat, modelica_metatype _in_a_rhs, modelica_metatype _in_a_onPatternFail, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_assignments, modelica_metatype *out_out_a_rhs, modelica_metatype *out_out_a_onPatternFail, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_assignments);
 #define boxptr_CodegenCFunctions_patternMatch omc_CodegenCFunctions_patternMatch
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_patternMatch,2,0) {(void*) boxptr_CodegenCFunctions_patternMatch,0}};
 #define boxvar_CodegenCFunctions_patternMatch MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_patternMatch)
-#define boxptr_CodegenCFunctions_lm__662 omc_CodegenCFunctions_lm__662
-#define boxptr_CodegenCFunctions_lm__659 omc_CodegenCFunctions_lm__659
-#define boxptr_CodegenCFunctions_fun__658 omc_CodegenCFunctions_fun__658
-#define boxptr_CodegenCFunctions_lm__657 omc_CodegenCFunctions_lm__657
-#define boxptr_CodegenCFunctions_lm__655 omc_CodegenCFunctions_lm__655
-#define boxptr_CodegenCFunctions_fun__653 omc_CodegenCFunctions_fun__653
-#define boxptr_CodegenCFunctions_fun__652 omc_CodegenCFunctions_fun__652
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__681 omc_CodegenCFunctions_lm__681
+
+
+#define boxptr_CodegenCFunctions_lm__678 omc_CodegenCFunctions_lm__678
+
+
+#define boxptr_CodegenCFunctions_fun__677 omc_CodegenCFunctions_fun__677
+
+
+#define boxptr_CodegenCFunctions_lm__676 omc_CodegenCFunctions_lm__676
+
+
+#define boxptr_CodegenCFunctions_lm__674 omc_CodegenCFunctions_lm__674
+
+
+#define boxptr_CodegenCFunctions_fun__672 omc_CodegenCFunctions_fun__672
+
+
+#define boxptr_CodegenCFunctions_fun__671 omc_CodegenCFunctions_fun__671
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtAssignPattern(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtAssignPattern omc_CodegenCFunctions_algStmtAssignPattern
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignPattern,2,0) {(void*) boxptr_CodegenCFunctions_algStmtAssignPattern,0}};
 #define boxvar_CodegenCFunctions_algStmtAssignPattern MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignPattern)
-#define boxptr_CodegenCFunctions_fun__650 omc_CodegenCFunctions_fun__650
-#define boxptr_CodegenCFunctions_lm__649 omc_CodegenCFunctions_lm__649
-#define boxptr_CodegenCFunctions_fun__648 omc_CodegenCFunctions_fun__648
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__669 omc_CodegenCFunctions_fun__669
+
+
+#define boxptr_CodegenCFunctions_lm__668 omc_CodegenCFunctions_lm__668
+
+
+#define boxptr_CodegenCFunctions_fun__667 omc_CodegenCFunctions_fun__667
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_dimension(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_d, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_dimension omc_CodegenCFunctions_dimension
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_dimension,2,0) {(void*) boxptr_CodegenCFunctions_dimension,0}};
 #define boxvar_CodegenCFunctions_dimension MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_dimension)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeFromOpFlag(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_op, modelica_integer _in_a_flag);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_expTypeFromOpFlag(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_op, modelica_metatype _in_a_flag);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromOpFlag,2,0) {(void*) boxptr_CodegenCFunctions_expTypeFromOpFlag,0}};
 #define boxvar_CodegenCFunctions_expTypeFromOpFlag MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromOpFlag)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeFromExpFlag(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_integer _in_a_flag);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_expTypeFromExpFlag(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_flag);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromExpFlag,2,0) {(void*) boxptr_CodegenCFunctions_expTypeFromExpFlag,0}};
 #define boxvar_CodegenCFunctions_expTypeFromExpFlag MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromExpFlag)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeFlag(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_integer _a_flag);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_expTypeFlag(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_flag);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFlag,2,0) {(void*) boxptr_CodegenCFunctions_expTypeFlag,0}};
 #define boxvar_CodegenCFunctions_expTypeFlag MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFlag)
-#define boxptr_CodegenCFunctions_fun__626 omc_CodegenCFunctions_fun__626
-#define boxptr_CodegenCFunctions_fun__625 omc_CodegenCFunctions_fun__625
-#define boxptr_CodegenCFunctions_fun__624 omc_CodegenCFunctions_fun__624
-#define boxptr_CodegenCFunctions_fun__623 omc_CodegenCFunctions_fun__623
-#define boxptr_CodegenCFunctions_fun__622 omc_CodegenCFunctions_fun__622
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__645 omc_CodegenCFunctions_fun__645
+
+
+#define boxptr_CodegenCFunctions_fun__644 omc_CodegenCFunctions_fun__644
+
+
+#define boxptr_CodegenCFunctions_fun__643 omc_CodegenCFunctions_fun__643
+
+
+#define boxptr_CodegenCFunctions_fun__642 omc_CodegenCFunctions_fun__642
+
+
+#define boxptr_CodegenCFunctions_fun__641 omc_CodegenCFunctions_fun__641
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeFromExpArrayIf(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenCFunctions_expTypeFromExpArrayIf omc_CodegenCFunctions_expTypeFromExpArrayIf
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromExpArrayIf,2,0) {(void*) boxptr_CodegenCFunctions_expTypeFromExpArrayIf,0}};
 #define boxvar_CodegenCFunctions_expTypeFromExpArrayIf MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromExpArrayIf)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeFromExpArray(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenCFunctions_expTypeFromExpArray omc_CodegenCFunctions_expTypeFromExpArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromExpArray,2,0) {(void*) boxptr_CodegenCFunctions_expTypeFromExpArray,0}};
 #define boxvar_CodegenCFunctions_expTypeFromExpArray MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromExpArray)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeFromExpModelica(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenCFunctions_expTypeFromExpModelica omc_CodegenCFunctions_expTypeFromExpModelica
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromExpModelica,2,0) {(void*) boxptr_CodegenCFunctions_expTypeFromExpModelica,0}};
 #define boxvar_CodegenCFunctions_expTypeFromExpModelica MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromExpModelica)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeFromExpShort(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenCFunctions_expTypeFromExpShort omc_CodegenCFunctions_expTypeFromExpShort
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromExpShort,2,0) {(void*) boxptr_CodegenCFunctions_expTypeFromExpShort,0}};
 #define boxvar_CodegenCFunctions_expTypeFromExpShort MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeFromExpShort)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeArrayIf(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty);
 #define boxptr_CodegenCFunctions_expTypeArrayIf omc_CodegenCFunctions_expTypeArrayIf
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeArrayIf,2,0) {(void*) boxptr_CodegenCFunctions_expTypeArrayIf,0}};
 #define boxvar_CodegenCFunctions_expTypeArrayIf MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeArrayIf)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeArray(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty);
 #define boxptr_CodegenCFunctions_expTypeArray omc_CodegenCFunctions_expTypeArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeArray,2,0) {(void*) boxptr_CodegenCFunctions_expTypeArray,0}};
 #define boxvar_CodegenCFunctions_expTypeArray MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeArray)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeModelica(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty);
 #define boxptr_CodegenCFunctions_expTypeModelica omc_CodegenCFunctions_expTypeModelica
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeModelica,2,0) {(void*) boxptr_CodegenCFunctions_expTypeModelica,0}};
 #define boxvar_CodegenCFunctions_expTypeModelica MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeModelica)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expType(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_boolean _a_array);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_expType(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_array);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expType,2,0) {(void*) boxptr_CodegenCFunctions_expType,0}};
 #define boxvar_CodegenCFunctions_expType MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expType)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_mmcTypeShort(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
 #define boxptr_CodegenCFunctions_mmcTypeShort omc_CodegenCFunctions_mmcTypeShort
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_mmcTypeShort,2,0) {(void*) boxptr_CodegenCFunctions_mmcTypeShort,0}};
 #define boxvar_CodegenCFunctions_mmcTypeShort MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_mmcTypeShort)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeShort(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
 #define boxptr_CodegenCFunctions_expTypeShort omc_CodegenCFunctions_expTypeShort
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeShort,2,0) {(void*) boxptr_CodegenCFunctions_expTypeShort,0}};
 #define boxvar_CodegenCFunctions_expTypeShort MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeShort)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_expTypeRW(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
 #define boxptr_CodegenCFunctions_expTypeRW omc_CodegenCFunctions_expTypeRW
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeRW,2,0) {(void*) boxptr_CodegenCFunctions_expTypeRW,0}};
 #define boxvar_CodegenCFunctions_expTypeRW MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_expTypeRW)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefToOMSICStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cref, modelica_metatype _in_a_hashTable);
 #define boxptr_CodegenCFunctions_crefToOMSICStr omc_CodegenCFunctions_crefToOMSICStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefToOMSICStr,2,0) {(void*) boxptr_CodegenCFunctions_crefToOMSICStr,0}};
 #define boxvar_CodegenCFunctions_crefToOMSICStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefToOMSICStr)
-#define boxptr_CodegenCFunctions_fun__607 omc_CodegenCFunctions_fun__607
-#define boxptr_CodegenCFunctions_fun__606 omc_CodegenCFunctions_fun__606
-#define boxptr_CodegenCFunctions_fun__605 omc_CodegenCFunctions_fun__605
-#define boxptr_CodegenCFunctions_fun__604 omc_CodegenCFunctions_fun__604
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__626 omc_CodegenCFunctions_fun__626
+
+
+#define boxptr_CodegenCFunctions_fun__625 omc_CodegenCFunctions_fun__625
+
+
+#define boxptr_CodegenCFunctions_fun__624 omc_CodegenCFunctions_fun__624
+
+
+#define boxptr_CodegenCFunctions_fun__623 omc_CodegenCFunctions_fun__623
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_crefOMSI(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cref, modelica_metatype _in_a_context);
 #define boxptr_CodegenCFunctions_crefOMSI omc_CodegenCFunctions_crefOMSI
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefOMSI,2,0) {(void*) boxptr_CodegenCFunctions_crefOMSI,0}};
 #define boxvar_CodegenCFunctions_crefOMSI MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_crefOMSI)
-#define boxptr_CodegenCFunctions_fun__602 omc_CodegenCFunctions_fun__602
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__621 omc_CodegenCFunctions_fun__621
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varTypeBoxed(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenCFunctions_varTypeBoxed omc_CodegenCFunctions_varTypeBoxed
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varTypeBoxed,2,0) {(void*) boxptr_CodegenCFunctions_varTypeBoxed,0}};
 #define boxvar_CodegenCFunctions_varTypeBoxed MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varTypeBoxed)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenCFunctions_varType omc_CodegenCFunctions_varType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varType,2,0) {(void*) boxptr_CodegenCFunctions_varType,0}};
 #define boxvar_CodegenCFunctions_varType MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varType)
-#define boxptr_CodegenCFunctions_fun__599 omc_CodegenCFunctions_fun__599
-#define boxptr_CodegenCFunctions_fun__598 omc_CodegenCFunctions_fun__598
-#define boxptr_CodegenCFunctions_fun__597 omc_CodegenCFunctions_fun__597
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__618 omc_CodegenCFunctions_fun__618
+
+
+#define boxptr_CodegenCFunctions_fun__617 omc_CodegenCFunctions_fun__617
+
+
+#define boxptr_CodegenCFunctions_fun__616 omc_CodegenCFunctions_fun__616
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_literalExpConstArrayVal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_lit);
 #define boxptr_CodegenCFunctions_literalExpConstArrayVal omc_CodegenCFunctions_literalExpConstArrayVal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_literalExpConstArrayVal,2,0) {(void*) boxptr_CodegenCFunctions_literalExpConstArrayVal,0}};
 #define boxvar_CodegenCFunctions_literalExpConstArrayVal MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_literalExpConstArrayVal)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_literalExpConstBoxedValPreLit(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_lit, modelica_metatype _in_a_index, modelica_metatype *out_out_a_index);
 #define boxptr_CodegenCFunctions_literalExpConstBoxedValPreLit omc_CodegenCFunctions_literalExpConstBoxedValPreLit
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_literalExpConstBoxedValPreLit,2,0) {(void*) boxptr_CodegenCFunctions_literalExpConstBoxedValPreLit,0}};
 #define boxvar_CodegenCFunctions_literalExpConstBoxedValPreLit MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_literalExpConstBoxedValPreLit)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_literalExpConstBoxedVal(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_lit, modelica_metatype _a_index, modelica_metatype *out_out_a_index);
 #define boxptr_CodegenCFunctions_literalExpConstBoxedVal omc_CodegenCFunctions_literalExpConstBoxedVal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_literalExpConstBoxedVal,2,0) {(void*) boxptr_CodegenCFunctions_literalExpConstBoxedVal,0}};
 #define boxvar_CodegenCFunctions_literalExpConstBoxedVal MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_literalExpConstBoxedVal)
-#define boxptr_CodegenCFunctions_fun__593 omc_CodegenCFunctions_fun__593
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__612 omc_CodegenCFunctions_fun__612
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_literalExpConst(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_lit, modelica_integer _a_litindex);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_literalExpConst(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_lit, modelica_metatype _a_litindex);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_literalExpConst,2,0) {(void*) boxptr_CodegenCFunctions_literalExpConst,0}};
 #define boxvar_CodegenCFunctions_literalExpConst MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_literalExpConst)
-#define boxptr_CodegenCFunctions_lm__582 omc_CodegenCFunctions_lm__582
-#define boxptr_CodegenCFunctions_fun__580 omc_CodegenCFunctions_fun__580
-#define boxptr_CodegenCFunctions_lm__579 omc_CodegenCFunctions_lm__579
-#define boxptr_CodegenCFunctions_lm__578 omc_CodegenCFunctions_lm__578
-#define boxptr_CodegenCFunctions_fun__577 omc_CodegenCFunctions_fun__577
-#define boxptr_CodegenCFunctions_lm__576 omc_CodegenCFunctions_lm__576
-#define boxptr_CodegenCFunctions_lm__575 omc_CodegenCFunctions_lm__575
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__601 omc_CodegenCFunctions_lm__601
+
+
+#define boxptr_CodegenCFunctions_fun__599 omc_CodegenCFunctions_fun__599
+
+
+#define boxptr_CodegenCFunctions_lm__598 omc_CodegenCFunctions_lm__598
+
+
+#define boxptr_CodegenCFunctions_lm__597 omc_CodegenCFunctions_lm__597
+
+
+#define boxptr_CodegenCFunctions_fun__596 omc_CodegenCFunctions_fun__596
+
+
+#define boxptr_CodegenCFunctions_lm__595 omc_CodegenCFunctions_lm__595
+
+
+#define boxptr_CodegenCFunctions_lm__594 omc_CodegenCFunctions_lm__594
+
+
+#define boxptr_CodegenCFunctions_lm__593 omc_CodegenCFunctions_lm__593
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordsFile(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_filePrefix, modelica_metatype _a_recordDecls, modelica_boolean _a_isSimulation);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_recordsFile(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_filePrefix, modelica_metatype _a_recordDecls, modelica_metatype _a_isSimulation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordsFile,2,0) {(void*) boxptr_CodegenCFunctions_recordsFile,0}};
 #define boxvar_CodegenCFunctions_recordsFile MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordsFile)
-#define boxptr_CodegenCFunctions_lm__573 omc_CodegenCFunctions_lm__573
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__591 omc_CodegenCFunctions_lm__591
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionsParModelicaKernelsFile(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_filePrefix, modelica_metatype _a_mainFunction, modelica_metatype _a_functions);
 #define boxptr_CodegenCFunctions_functionsParModelicaKernelsFile omc_CodegenCFunctions_functionsParModelicaKernelsFile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionsParModelicaKernelsFile,2,0) {(void*) boxptr_CodegenCFunctions_functionsParModelicaKernelsFile,0}};
 #define boxvar_CodegenCFunctions_functionsParModelicaKernelsFile MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionsParModelicaKernelsFile)
-#define boxptr_CodegenCFunctions_fun__570 omc_CodegenCFunctions_fun__570
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__588 omc_CodegenCFunctions_fun__588
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_elseExpr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_else__, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_elseExpr omc_CodegenCFunctions_elseExpr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_elseExpr,2,0) {(void*) boxptr_CodegenCFunctions_elseExpr,0}};
 #define boxvar_CodegenCFunctions_elseExpr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_elseExpr)
-#define boxptr_CodegenCFunctions_lm__568 omc_CodegenCFunctions_lm__568
-#define boxptr_CodegenCFunctions_lm__567 omc_CodegenCFunctions_lm__567
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__586 omc_CodegenCFunctions_lm__586
+
+
+#define boxptr_CodegenCFunctions_lm__585 omc_CodegenCFunctions_lm__585
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtReinit(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtReinit omc_CodegenCFunctions_algStmtReinit
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtReinit,2,0) {(void*) boxptr_CodegenCFunctions_algStmtReinit,0}};
 #define boxvar_CodegenCFunctions_algStmtReinit MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtReinit)
-DLLExport
-modelica_metatype omc_CodegenCFunctions_algStatementWhenElse(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_stmt, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
+
+
+DLLDirection
+modelica_metatype omc_CodegenCFunctions_algStatementWhenElse(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_stmt, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStatementWhenElse omc_CodegenCFunctions_algStatementWhenElse
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStatementWhenElse,2,0) {(void*) boxptr_CodegenCFunctions_algStatementWhenElse,0}};
 #define boxvar_CodegenCFunctions_algStatementWhenElse MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStatementWhenElse)
-#define boxptr_CodegenCFunctions_fun__564 omc_CodegenCFunctions_fun__564
-#define boxptr_CodegenCFunctions_lm__563 omc_CodegenCFunctions_lm__563
-#define boxptr_CodegenCFunctions_lm__561 omc_CodegenCFunctions_lm__561
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__582 omc_CodegenCFunctions_fun__582
+
+
+#define boxptr_CodegenCFunctions_lm__581 omc_CodegenCFunctions_lm__581
+
+
+#define boxptr_CodegenCFunctions_lm__579 omc_CodegenCFunctions_lm__579
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtWhen(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_when, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtWhen omc_CodegenCFunctions_algStmtWhen
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtWhen,2,0) {(void*) boxptr_CodegenCFunctions_algStmtWhen,0}};
 #define boxvar_CodegenCFunctions_algStmtWhen MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtWhen)
-#define boxptr_CodegenCFunctions_fun__559 omc_CodegenCFunctions_fun__559
-#define boxptr_CodegenCFunctions_fun__558 omc_CodegenCFunctions_fun__558
-#define boxptr_CodegenCFunctions_lm__557 omc_CodegenCFunctions_lm__557
-#define boxptr_CodegenCFunctions_lm__555 omc_CodegenCFunctions_lm__555
-#define boxptr_CodegenCFunctions_fun__554 omc_CodegenCFunctions_fun__554
-#define boxptr_CodegenCFunctions_lm__553 omc_CodegenCFunctions_lm__553
-#define boxptr_CodegenCFunctions_lm__551 omc_CodegenCFunctions_lm__551
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__577 omc_CodegenCFunctions_fun__577
+
+
+#define boxptr_CodegenCFunctions_fun__576 omc_CodegenCFunctions_fun__576
+
+
+#define boxptr_CodegenCFunctions_lm__575 omc_CodegenCFunctions_lm__575
+
+
+#define boxptr_CodegenCFunctions_lm__573 omc_CodegenCFunctions_lm__573
+
+
+#define boxptr_CodegenCFunctions_fun__572 omc_CodegenCFunctions_fun__572
+
+
+#define boxptr_CodegenCFunctions_lm__571 omc_CodegenCFunctions_lm__571
+
+
+#define boxptr_CodegenCFunctions_lm__569 omc_CodegenCFunctions_lm__569
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtNoretcall(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtNoretcall omc_CodegenCFunctions_algStmtNoretcall
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtNoretcall,2,0) {(void*) boxptr_CodegenCFunctions_algStmtNoretcall,0}};
 #define boxvar_CodegenCFunctions_algStmtNoretcall MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtNoretcall)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtFailure(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtFailure omc_CodegenCFunctions_algStmtFailure
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtFailure,2,0) {(void*) boxptr_CodegenCFunctions_algStmtFailure,0}};
 #define boxvar_CodegenCFunctions_algStmtFailure MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtFailure)
-#define boxptr_CodegenCFunctions_lm__547 omc_CodegenCFunctions_lm__547
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__565 omc_CodegenCFunctions_lm__565
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtTerminate(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtTerminate omc_CodegenCFunctions_algStmtTerminate
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtTerminate,2,0) {(void*) boxptr_CodegenCFunctions_algStmtTerminate,0}};
 #define boxvar_CodegenCFunctions_algStmtTerminate MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtTerminate)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtAssert(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtAssert omc_CodegenCFunctions_algStmtAssert
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssert,2,0) {(void*) boxptr_CodegenCFunctions_algStmtAssert,0}};
 #define boxvar_CodegenCFunctions_algStmtAssert MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssert)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtWhile(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtWhile omc_CodegenCFunctions_algStmtWhile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtWhile,2,0) {(void*) boxptr_CodegenCFunctions_algStmtWhile,0}};
 #define boxvar_CodegenCFunctions_algStmtWhile MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtWhile)
-#define boxptr_CodegenCFunctions_lm__543 omc_CodegenCFunctions_lm__543
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__561 omc_CodegenCFunctions_lm__561
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtForGeneric__impl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_string _a_iterator, modelica_string _a_type, modelica_string _a_arrayType, modelica_boolean _a_iterIsArray, modelica_metatype _a_body, modelica_metatype _a_tvar, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_body, modelica_metatype *out_out_a_tvar, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_algStmtForGeneric__impl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_iterator, modelica_metatype _a_type, modelica_metatype _a_arrayType, modelica_metatype _a_iterIsArray, modelica_metatype _a_body, modelica_metatype _a_tvar, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_body, modelica_metatype *out_out_a_tvar, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtForGeneric__impl,2,0) {(void*) boxptr_CodegenCFunctions_algStmtForGeneric__impl,0}};
 #define boxvar_CodegenCFunctions_algStmtForGeneric__impl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtForGeneric__impl)
-#define boxptr_CodegenCFunctions_fun__539 omc_CodegenCFunctions_fun__539
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__557 omc_CodegenCFunctions_fun__557
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtForGeneric(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtForGeneric omc_CodegenCFunctions_algStmtForGeneric
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtForGeneric,2,0) {(void*) boxptr_CodegenCFunctions_algStmtForGeneric,0}};
 #define boxvar_CodegenCFunctions_algStmtForGeneric MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtForGeneric)
-#define boxptr_CodegenCFunctions_lm__537 omc_CodegenCFunctions_lm__537
-#define boxptr_CodegenCFunctions_fun__536 omc_CodegenCFunctions_fun__536
-#define boxptr_CodegenCFunctions_fun__535 omc_CodegenCFunctions_fun__535
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__555 omc_CodegenCFunctions_lm__555
+
+
+#define boxptr_CodegenCFunctions_fun__554 omc_CodegenCFunctions_fun__554
+
+
+#define boxptr_CodegenCFunctions_fun__553 omc_CodegenCFunctions_fun__553
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtForRange__impl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_range, modelica_string _a_iterator, modelica_string _a_type, modelica_string _a_shortType, modelica_metatype _a_body, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_body, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtForRange__impl omc_CodegenCFunctions_algStmtForRange__impl
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtForRange__impl,2,0) {(void*) boxptr_CodegenCFunctions_algStmtForRange__impl,0}};
 #define boxvar_CodegenCFunctions_algStmtForRange__impl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtForRange__impl)
-#define boxptr_CodegenCFunctions_fun__533 omc_CodegenCFunctions_fun__533
-#define boxptr_CodegenCFunctions_fun__532 omc_CodegenCFunctions_fun__532
-#define boxptr_CodegenCFunctions_fun__531 omc_CodegenCFunctions_fun__531
-#define boxptr_CodegenCFunctions_fun__530 omc_CodegenCFunctions_fun__530
-#define boxptr_CodegenCFunctions_fun__529 omc_CodegenCFunctions_fun__529
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__551 omc_CodegenCFunctions_fun__551
+
+
+#define boxptr_CodegenCFunctions_fun__550 omc_CodegenCFunctions_fun__550
+
+
+#define boxptr_CodegenCFunctions_fun__549 omc_CodegenCFunctions_fun__549
+
+
+#define boxptr_CodegenCFunctions_fun__548 omc_CodegenCFunctions_fun__548
+
+
+#define boxptr_CodegenCFunctions_fun__547 omc_CodegenCFunctions_fun__547
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtForRange(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtForRange omc_CodegenCFunctions_algStmtForRange
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtForRange,2,0) {(void*) boxptr_CodegenCFunctions_algStmtForRange,0}};
 #define boxvar_CodegenCFunctions_algStmtForRange MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtForRange)
-#define boxptr_CodegenCFunctions_lm__527 omc_CodegenCFunctions_lm__527
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__545 omc_CodegenCFunctions_lm__545
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtFor(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtFor omc_CodegenCFunctions_algStmtFor
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtFor,2,0) {(void*) boxptr_CodegenCFunctions_algStmtFor,0}};
 #define boxvar_CodegenCFunctions_algStmtFor MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtFor)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtParForRangeInterface__impl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_range, modelica_string _a_iterator, modelica_string _a_type, modelica_string _a_shortType, modelica_metatype _a_loopPrlVars, modelica_metatype _a_body, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_body, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtParForRangeInterface__impl omc_CodegenCFunctions_algStmtParForRangeInterface__impl
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtParForRangeInterface__impl,2,0) {(void*) boxptr_CodegenCFunctions_algStmtParForRangeInterface__impl,0}};
 #define boxvar_CodegenCFunctions_algStmtParForRangeInterface__impl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtParForRangeInterface__impl)
-#define boxptr_CodegenCFunctions_fun__524 omc_CodegenCFunctions_fun__524
-#define boxptr_CodegenCFunctions_lm__523 omc_CodegenCFunctions_lm__523
-#define boxptr_CodegenCFunctions_fun__522 omc_CodegenCFunctions_fun__522
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__542 omc_CodegenCFunctions_fun__542
+
+
+#define boxptr_CodegenCFunctions_lm__541 omc_CodegenCFunctions_lm__541
+
+
+#define boxptr_CodegenCFunctions_fun__540 omc_CodegenCFunctions_fun__540
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtParForRangeInterface(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtParForRangeInterface omc_CodegenCFunctions_algStmtParForRangeInterface
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtParForRangeInterface,2,0) {(void*) boxptr_CodegenCFunctions_algStmtParForRangeInterface,0}};
 #define boxvar_CodegenCFunctions_algStmtParForRangeInterface MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtParForRangeInterface)
-#define boxptr_CodegenCFunctions_lm__520 omc_CodegenCFunctions_lm__520
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__538 omc_CodegenCFunctions_lm__538
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtParForInterface(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtParForInterface omc_CodegenCFunctions_algStmtParForInterface
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtParForInterface,2,0) {(void*) boxptr_CodegenCFunctions_algStmtParForInterface,0}};
 #define boxvar_CodegenCFunctions_algStmtParForInterface MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtParForInterface)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtParForRangeBody(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_stmt, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtParForRangeBody omc_CodegenCFunctions_algStmtParForRangeBody
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtParForRangeBody,2,0) {(void*) boxptr_CodegenCFunctions_algStmtParForRangeBody,0}};
 #define boxvar_CodegenCFunctions_algStmtParForRangeBody MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtParForRangeBody)
-#define boxptr_CodegenCFunctions_fun__517 omc_CodegenCFunctions_fun__517
-#define boxptr_CodegenCFunctions_lm__516 omc_CodegenCFunctions_lm__516
-#define boxptr_CodegenCFunctions_lm__515 omc_CodegenCFunctions_lm__515
-#define boxptr_CodegenCFunctions_lm__514 omc_CodegenCFunctions_lm__514
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__535 omc_CodegenCFunctions_fun__535
+
+
+#define boxptr_CodegenCFunctions_lm__534 omc_CodegenCFunctions_lm__534
+
+
+#define boxptr_CodegenCFunctions_lm__533 omc_CodegenCFunctions_lm__533
+
+
+#define boxptr_CodegenCFunctions_lm__532 omc_CodegenCFunctions_lm__532
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtParForBody(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtParForBody omc_CodegenCFunctions_algStmtParForBody
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtParForBody,2,0) {(void*) boxptr_CodegenCFunctions_algStmtParForBody,0}};
 #define boxvar_CodegenCFunctions_algStmtParForBody MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtParForBody)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtIf(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtIf omc_CodegenCFunctions_algStmtIf
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtIf,2,0) {(void*) boxptr_CodegenCFunctions_algStmtIf,0}};
 #define boxvar_CodegenCFunctions_algStmtIf MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtIf)
-#define boxptr_CodegenCFunctions_lm__511 omc_CodegenCFunctions_lm__511
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__529 omc_CodegenCFunctions_lm__529
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_tupleReturnVariableUpdates(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_inExp, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varCopy, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varCopy, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_tupleReturnVariableUpdates omc_CodegenCFunctions_tupleReturnVariableUpdates
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tupleReturnVariableUpdates,2,0) {(void*) boxptr_CodegenCFunctions_tupleReturnVariableUpdates,0}};
 #define boxvar_CodegenCFunctions_tupleReturnVariableUpdates MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tupleReturnVariableUpdates)
-#define boxptr_CodegenCFunctions_lm__508 omc_CodegenCFunctions_lm__508
-#define boxptr_CodegenCFunctions_lm__507 omc_CodegenCFunctions_lm__507
-#define boxptr_CodegenCFunctions_lm__506 omc_CodegenCFunctions_lm__506
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__526 omc_CodegenCFunctions_lm__526
+
+
+#define boxptr_CodegenCFunctions_lm__525 omc_CodegenCFunctions_lm__525
+
+
+#define boxptr_CodegenCFunctions_lm__524 omc_CodegenCFunctions_lm__524
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtTupleAssign(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtTupleAssign omc_CodegenCFunctions_algStmtTupleAssign
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtTupleAssign,2,0) {(void*) boxptr_CodegenCFunctions_algStmtTupleAssign,0}};
 #define boxvar_CodegenCFunctions_algStmtTupleAssign MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtTupleAssign)
-#define boxptr_CodegenCFunctions_lm__504 omc_CodegenCFunctions_lm__504
-#define boxptr_CodegenCFunctions_lm__503 omc_CodegenCFunctions_lm__503
-#define boxptr_CodegenCFunctions_lm__502 omc_CodegenCFunctions_lm__502
-#define boxptr_CodegenCFunctions_lm__501 omc_CodegenCFunctions_lm__501
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__522 omc_CodegenCFunctions_lm__522
+
+
+#define boxptr_CodegenCFunctions_lm__521 omc_CodegenCFunctions_lm__521
+
+
+#define boxptr_CodegenCFunctions_lm__520 omc_CodegenCFunctions_lm__520
+
+
+#define boxptr_CodegenCFunctions_lm__519 omc_CodegenCFunctions_lm__519
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_indexedAssign(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_lhs, modelica_string _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_indexedAssign omc_CodegenCFunctions_indexedAssign
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_indexedAssign,2,0) {(void*) boxptr_CodegenCFunctions_indexedAssign,0}};
 #define boxvar_CodegenCFunctions_indexedAssign MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_indexedAssign)
-#define boxptr_CodegenCFunctions_fun__499 omc_CodegenCFunctions_fun__499
-#define boxptr_CodegenCFunctions_fun__498 omc_CodegenCFunctions_fun__498
-#define boxptr_CodegenCFunctions_lm__497 omc_CodegenCFunctions_lm__497
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__517 omc_CodegenCFunctions_fun__517
+
+
+#define boxptr_CodegenCFunctions_fun__516 omc_CodegenCFunctions_fun__516
+
+
+#define boxptr_CodegenCFunctions_lm__515 omc_CodegenCFunctions_lm__515
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_fillArrayFromRange(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_exp, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_fillArrayFromRange omc_CodegenCFunctions_fillArrayFromRange
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_fillArrayFromRange,2,0) {(void*) boxptr_CodegenCFunctions_fillArrayFromRange,0}};
 #define boxvar_CodegenCFunctions_fillArrayFromRange MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_fillArrayFromRange)
-#define boxptr_CodegenCFunctions_fun__495 omc_CodegenCFunctions_fun__495
-#define boxptr_CodegenCFunctions_fun__494 omc_CodegenCFunctions_fun__494
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__513 omc_CodegenCFunctions_fun__513
+
+
+#define boxptr_CodegenCFunctions_fun__512 omc_CodegenCFunctions_fun__512
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtAssignArrWithRhsExpStr(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_lhsexp, modelica_metatype _a_rhsExpStr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_rhsExpStr, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtAssignArrWithRhsExpStr omc_CodegenCFunctions_algStmtAssignArrWithRhsExpStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignArrWithRhsExpStr,2,0) {(void*) boxptr_CodegenCFunctions_algStmtAssignArrWithRhsExpStr,0}};
 #define boxvar_CodegenCFunctions_algStmtAssignArrWithRhsExpStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignArrWithRhsExpStr)
-#define boxptr_CodegenCFunctions_fun__492 omc_CodegenCFunctions_fun__492
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__510 omc_CodegenCFunctions_fun__510
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtAssignRecordWithRhsExpStr(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_lhsexp, modelica_metatype _a_rhsExpStr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_rhsExpStr, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtAssignRecordWithRhsExpStr omc_CodegenCFunctions_algStmtAssignRecordWithRhsExpStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignRecordWithRhsExpStr,2,0) {(void*) boxptr_CodegenCFunctions_algStmtAssignRecordWithRhsExpStr,0}};
 #define boxvar_CodegenCFunctions_algStmtAssignRecordWithRhsExpStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignRecordWithRhsExpStr)
-#define boxptr_CodegenCFunctions_fun__489 omc_CodegenCFunctions_fun__489
-#define boxptr_CodegenCFunctions_lm__488 omc_CodegenCFunctions_lm__488
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__507 omc_CodegenCFunctions_fun__507
+
+
+#define boxptr_CodegenCFunctions_lm__506 omc_CodegenCFunctions_lm__506
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtAssignWithRhsExpStr(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_lhsexp, modelica_metatype _a_rhsExpStr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_postExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_rhsExpStr, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_postExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtAssignWithRhsExpStr omc_CodegenCFunctions_algStmtAssignWithRhsExpStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignWithRhsExpStr,2,0) {(void*) boxptr_CodegenCFunctions_algStmtAssignWithRhsExpStr,0}};
 #define boxvar_CodegenCFunctions_algStmtAssignWithRhsExpStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignWithRhsExpStr)
-#define boxptr_CodegenCFunctions_fun__486 omc_CodegenCFunctions_fun__486
-#define boxptr_CodegenCFunctions_lm__485 omc_CodegenCFunctions_lm__485
-#define boxptr_CodegenCFunctions_lm__484 omc_CodegenCFunctions_lm__484
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__504 omc_CodegenCFunctions_fun__504
+
+
+#define boxptr_CodegenCFunctions_lm__503 omc_CodegenCFunctions_lm__503
+
+
+#define boxptr_CodegenCFunctions_lm__502 omc_CodegenCFunctions_lm__502
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtAssignArr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtAssignArr omc_CodegenCFunctions_algStmtAssignArr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignArr,2,0) {(void*) boxptr_CodegenCFunctions_algStmtAssignArr,0}};
 #define boxvar_CodegenCFunctions_algStmtAssignArr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignArr)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_assignRhsExpToRecordCrefFunctionContext(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_lhs__cref, modelica_metatype _a_rhs__exp, modelica_metatype _a_rec__type, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_assignRhsExpToRecordCrefFunctionContext omc_CodegenCFunctions_assignRhsExpToRecordCrefFunctionContext
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_assignRhsExpToRecordCrefFunctionContext,2,0) {(void*) boxptr_CodegenCFunctions_assignRhsExpToRecordCrefFunctionContext,0}};
 #define boxvar_CodegenCFunctions_assignRhsExpToRecordCrefFunctionContext MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_assignRhsExpToRecordCrefFunctionContext)
-#define boxptr_CodegenCFunctions_fun__481 omc_CodegenCFunctions_fun__481
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__499 omc_CodegenCFunctions_fun__499
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_assignRhsExpToRecordCrefSimContext(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_lhs__cref, modelica_metatype _a_rhs__exp, modelica_metatype _a_rec__type, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_assignRhsExpToRecordCrefSimContext omc_CodegenCFunctions_assignRhsExpToRecordCrefSimContext
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_assignRhsExpToRecordCrefSimContext,2,0) {(void*) boxptr_CodegenCFunctions_assignRhsExpToRecordCrefSimContext,0}};
 #define boxvar_CodegenCFunctions_assignRhsExpToRecordCrefSimContext MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_assignRhsExpToRecordCrefSimContext)
-#define boxptr_CodegenCFunctions_fun__479 omc_CodegenCFunctions_fun__479
-#define boxptr_CodegenCFunctions_lm__478 omc_CodegenCFunctions_lm__478
-#define boxptr_CodegenCFunctions_lm__477 omc_CodegenCFunctions_lm__477
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__497 omc_CodegenCFunctions_fun__497
+
+
+#define boxptr_CodegenCFunctions_lm__496 omc_CodegenCFunctions_lm__496
+
+
+#define boxptr_CodegenCFunctions_lm__495 omc_CodegenCFunctions_lm__495
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_assignRhsExpToRecordCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_lhs__cref, modelica_metatype _a_rhs__exp, modelica_metatype _a_rec__type, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_assignRhsExpToRecordCref omc_CodegenCFunctions_assignRhsExpToRecordCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_assignRhsExpToRecordCref,2,0) {(void*) boxptr_CodegenCFunctions_assignRhsExpToRecordCref,0}};
 #define boxvar_CodegenCFunctions_assignRhsExpToRecordCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_assignRhsExpToRecordCref)
-#define boxptr_CodegenCFunctions_fun__475 omc_CodegenCFunctions_fun__475
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__493 omc_CodegenCFunctions_fun__493
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtAssignRecord(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtAssignRecord omc_CodegenCFunctions_algStmtAssignRecord
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignRecord,2,0) {(void*) boxptr_CodegenCFunctions_algStmtAssignRecord,0}};
 #define boxvar_CodegenCFunctions_algStmtAssignRecord MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssignRecord)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStmtAssign(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStmtAssign omc_CodegenCFunctions_algStmtAssign
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssign,2,0) {(void*) boxptr_CodegenCFunctions_algStmtAssign,0}};
 #define boxvar_CodegenCFunctions_algStmtAssign MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStmtAssign)
-#define boxptr_CodegenCFunctions_fun__472 omc_CodegenCFunctions_fun__472
-#define boxptr_CodegenCFunctions_fun__471 omc_CodegenCFunctions_fun__471
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__490 omc_CodegenCFunctions_fun__490
+
+
+#define boxptr_CodegenCFunctions_fun__489 omc_CodegenCFunctions_fun__489
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_algStatement(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_stmt, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_algStatement omc_CodegenCFunctions_algStatement
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStatement,2,0) {(void*) boxptr_CodegenCFunctions_algStatement,0}};
 #define boxvar_CodegenCFunctions_algStatement MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_algStatement)
-#define boxptr_CodegenCFunctions_fun__468 omc_CodegenCFunctions_fun__468
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__486 omc_CodegenCFunctions_fun__486
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extractParFors__impl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_stmt, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extractParFors__impl omc_CodegenCFunctions_extractParFors__impl
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extractParFors__impl,2,0) {(void*) boxptr_CodegenCFunctions_extractParFors__impl,0}};
 #define boxvar_CodegenCFunctions_extractParFors__impl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extractParFors__impl)
-#define boxptr_CodegenCFunctions_fun__466 omc_CodegenCFunctions_fun__466
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__484 omc_CodegenCFunctions_fun__484
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extractParFors(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_statementLst, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extractParFors omc_CodegenCFunctions_extractParFors
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extractParFors,2,0) {(void*) boxptr_CodegenCFunctions_extractParFors,0}};
 #define boxvar_CodegenCFunctions_extractParFors MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extractParFors)
-#define boxptr_CodegenCFunctions_lm__464 omc_CodegenCFunctions_lm__464
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__482 omc_CodegenCFunctions_lm__482
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_parModelicafunStatement(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_statementLst, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_parModelicafunStatement omc_CodegenCFunctions_parModelicafunStatement
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_parModelicafunStatement,2,0) {(void*) boxptr_CodegenCFunctions_parModelicafunStatement,0}};
 #define boxvar_CodegenCFunctions_parModelicafunStatement MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_parModelicafunStatement)
-#define boxptr_CodegenCFunctions_lm__462 omc_CodegenCFunctions_lm__462
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__480 omc_CodegenCFunctions_lm__480
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_funStatement(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_statementLst, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_funStatement omc_CodegenCFunctions_funStatement
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funStatement,2,0) {(void*) boxptr_CodegenCFunctions_funStatement,0}};
 #define boxvar_CodegenCFunctions_funStatement MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funStatement)
-#define boxptr_CodegenCFunctions_lm__460 omc_CodegenCFunctions_lm__460
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__478 omc_CodegenCFunctions_lm__478
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_tempSizeVarName(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_c, modelica_metatype _a_indices, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_tempSizeVarName omc_CodegenCFunctions_tempSizeVarName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempSizeVarName,2,0) {(void*) boxptr_CodegenCFunctions_tempSizeVarName,0}};
 #define boxvar_CodegenCFunctions_tempSizeVarName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tempSizeVarName)
-#define boxptr_CodegenCFunctions_fun__458 omc_CodegenCFunctions_fun__458
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__476 omc_CodegenCFunctions_fun__476
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extArgF77(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_extArg, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extArgF77 omc_CodegenCFunctions_extArgF77
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extArgF77,2,0) {(void*) boxptr_CodegenCFunctions_extArgF77,0}};
 #define boxvar_CodegenCFunctions_extArgF77 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extArgF77)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extArg(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_extArg, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extArg omc_CodegenCFunctions_extArg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extArg,2,0) {(void*) boxptr_CodegenCFunctions_extArg,0}};
 #define boxvar_CodegenCFunctions_extArg MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extArg)
-#define boxptr_CodegenCFunctions_fun__453 omc_CodegenCFunctions_fun__453
-#define boxptr_CodegenCFunctions_fun__452 omc_CodegenCFunctions_fun__452
-#define boxptr_CodegenCFunctions_fun__450 omc_CodegenCFunctions_fun__450
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__471 omc_CodegenCFunctions_fun__471
+
+
+#define boxptr_CodegenCFunctions_fun__469 omc_CodegenCFunctions_fun__469
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunCallVarcopyF77(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_arg, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extFunCallVarcopyF77 omc_CodegenCFunctions_extFunCallVarcopyF77
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallVarcopyF77,2,0) {(void*) boxptr_CodegenCFunctions_extFunCallVarcopyF77,0}};
 #define boxvar_CodegenCFunctions_extFunCallVarcopyF77 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallVarcopyF77)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunCallVarcopy(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_arg, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extFunCallVarcopy omc_CodegenCFunctions_extFunCallVarcopy
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallVarcopy,2,0) {(void*) boxptr_CodegenCFunctions_extFunCallVarcopy,0}};
 #define boxvar_CodegenCFunctions_extFunCallVarcopy MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallVarcopy)
-#define boxptr_CodegenCFunctions_fun__445 omc_CodegenCFunctions_fun__445
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__464 omc_CodegenCFunctions_fun__464
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunCallBiVarF77(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extFunCallBiVarF77 omc_CodegenCFunctions_extFunCallBiVarF77
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallBiVarF77,2,0) {(void*) boxptr_CodegenCFunctions_extFunCallBiVarF77,0}};
 #define boxvar_CodegenCFunctions_extFunCallBiVarF77 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallBiVarF77)
-#define boxptr_CodegenCFunctions_fun__441 omc_CodegenCFunctions_fun__441
-#define boxptr_CodegenCFunctions_fun__440 omc_CodegenCFunctions_fun__440
-#define boxptr_CodegenCFunctions_fun__439 omc_CodegenCFunctions_fun__439
-#define boxptr_CodegenCFunctions_lm__438 omc_CodegenCFunctions_lm__438
-#define boxptr_CodegenCFunctions_fun__437 omc_CodegenCFunctions_fun__437
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__460 omc_CodegenCFunctions_fun__460
+
+
+#define boxptr_CodegenCFunctions_fun__459 omc_CodegenCFunctions_fun__459
+
+
+#define boxptr_CodegenCFunctions_fun__458 omc_CodegenCFunctions_fun__458
+
+
+#define boxptr_CodegenCFunctions_lm__457 omc_CodegenCFunctions_lm__457
+
+
+#define boxptr_CodegenCFunctions_fun__456 omc_CodegenCFunctions_fun__456
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunCallBiVar(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extFunCallBiVar omc_CodegenCFunctions_extFunCallBiVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallBiVar,2,0) {(void*) boxptr_CodegenCFunctions_extFunCallBiVar,0}};
 #define boxvar_CodegenCFunctions_extFunCallBiVar MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallBiVar)
-#define boxptr_CodegenCFunctions_fun__435 omc_CodegenCFunctions_fun__435
-#define boxptr_CodegenCFunctions_fun__434 omc_CodegenCFunctions_fun__434
-#define boxptr_CodegenCFunctions_fun__433 omc_CodegenCFunctions_fun__433
-#define boxptr_CodegenCFunctions_lm__432 omc_CodegenCFunctions_lm__432
-#define boxptr_CodegenCFunctions_fun__431 omc_CodegenCFunctions_fun__431
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__454 omc_CodegenCFunctions_fun__454
+
+
+#define boxptr_CodegenCFunctions_fun__453 omc_CodegenCFunctions_fun__453
+
+
+#define boxptr_CodegenCFunctions_fun__452 omc_CodegenCFunctions_fun__452
+
+
+#define boxptr_CodegenCFunctions_lm__451 omc_CodegenCFunctions_lm__451
+
+
+#define boxptr_CodegenCFunctions_fun__450 omc_CodegenCFunctions_fun__450
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_typeDefaultValue(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty);
 #define boxptr_CodegenCFunctions_typeDefaultValue omc_CodegenCFunctions_typeDefaultValue
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_typeDefaultValue,2,0) {(void*) boxptr_CodegenCFunctions_typeDefaultValue,0}};
 #define boxvar_CodegenCFunctions_typeDefaultValue MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_typeDefaultValue)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_boolStrC(threadData_t *threadData, modelica_metatype _in_txt, modelica_boolean _in_a_v);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_boolStrC(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_v);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_boolStrC,2,0) {(void*) boxptr_CodegenCFunctions_boolStrC,0}};
 #define boxvar_CodegenCFunctions_boolStrC MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_boolStrC)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunCallVardeclF77(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_arg, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extFunCallVardeclF77 omc_CodegenCFunctions_extFunCallVardeclF77
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallVardeclF77,2,0) {(void*) boxptr_CodegenCFunctions_extFunCallVardeclF77,0}};
 #define boxvar_CodegenCFunctions_extFunCallVardeclF77 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallVardeclF77)
-#define boxptr_CodegenCFunctions_fun__424 omc_CodegenCFunctions_fun__424
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__443 omc_CodegenCFunctions_fun__443
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunCallVardecl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_arg, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_boolean _a_isReturn, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_extFunCallVardecl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_arg, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype _a_isReturn, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallVardecl,2,0) {(void*) boxptr_CodegenCFunctions_extFunCallVardecl,0}};
 #define boxvar_CodegenCFunctions_extFunCallVardecl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallVardecl)
-#define boxptr_CodegenCFunctions_fun__422 omc_CodegenCFunctions_fun__422
-#define boxptr_CodegenCFunctions_fun__420 omc_CodegenCFunctions_fun__420
-#define boxptr_CodegenCFunctions_fun__419 omc_CodegenCFunctions_fun__419
-#define boxptr_CodegenCFunctions_fun__418 omc_CodegenCFunctions_fun__418
-#define boxptr_CodegenCFunctions_fun__416 omc_CodegenCFunctions_fun__416
-#define boxptr_CodegenCFunctions_fun__415 omc_CodegenCFunctions_fun__415
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__441 omc_CodegenCFunctions_fun__441
+
+
+#define boxptr_CodegenCFunctions_fun__439 omc_CodegenCFunctions_fun__439
+
+
+#define boxptr_CodegenCFunctions_fun__438 omc_CodegenCFunctions_fun__438
+
+
+#define boxptr_CodegenCFunctions_fun__437 omc_CodegenCFunctions_fun__437
+
+
+#define boxptr_CodegenCFunctions_fun__436 omc_CodegenCFunctions_fun__436
+
+
+#define boxptr_CodegenCFunctions_fun__434 omc_CodegenCFunctions_fun__434
+
+
+#define boxptr_CodegenCFunctions_fun__433 omc_CodegenCFunctions_fun__433
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunCallF77(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fun, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_varInit, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInit, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extFunCallF77 omc_CodegenCFunctions_extFunCallF77
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallF77,2,0) {(void*) boxptr_CodegenCFunctions_extFunCallF77,0}};
 #define boxvar_CodegenCFunctions_extFunCallF77 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallF77)
-#define boxptr_CodegenCFunctions_fun__413 omc_CodegenCFunctions_fun__413
-#define boxptr_CodegenCFunctions_lm__412 omc_CodegenCFunctions_lm__412
-#define boxptr_CodegenCFunctions_fun__411 omc_CodegenCFunctions_fun__411
-#define boxptr_CodegenCFunctions_fun__410 omc_CodegenCFunctions_fun__410
-#define boxptr_CodegenCFunctions_lm__409 omc_CodegenCFunctions_lm__409
-#define boxptr_CodegenCFunctions_lm__408 omc_CodegenCFunctions_lm__408
-#define boxptr_CodegenCFunctions_lm__407 omc_CodegenCFunctions_lm__407
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__431 omc_CodegenCFunctions_fun__431
+
+
+#define boxptr_CodegenCFunctions_lm__430 omc_CodegenCFunctions_lm__430
+
+
+#define boxptr_CodegenCFunctions_fun__429 omc_CodegenCFunctions_fun__429
+
+
+#define boxptr_CodegenCFunctions_fun__428 omc_CodegenCFunctions_fun__428
+
+
+#define boxptr_CodegenCFunctions_lm__427 omc_CodegenCFunctions_lm__427
+
+
+#define boxptr_CodegenCFunctions_lm__426 omc_CodegenCFunctions_lm__426
+
+
+#define boxptr_CodegenCFunctions_lm__425 omc_CodegenCFunctions_lm__425
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunCallC(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fun, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extFunCallC omc_CodegenCFunctions_extFunCallC
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallC,2,0) {(void*) boxptr_CodegenCFunctions_extFunCallC,0}};
 #define boxvar_CodegenCFunctions_extFunCallC MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCallC)
-#define boxptr_CodegenCFunctions_fun__405 omc_CodegenCFunctions_fun__405
-#define boxptr_CodegenCFunctions_lm__404 omc_CodegenCFunctions_lm__404
-#define boxptr_CodegenCFunctions_fun__403 omc_CodegenCFunctions_fun__403
-#define boxptr_CodegenCFunctions_fun__402 omc_CodegenCFunctions_fun__402
-#define boxptr_CodegenCFunctions_lm__401 omc_CodegenCFunctions_lm__401
-#define boxptr_CodegenCFunctions_lm__398 omc_CodegenCFunctions_lm__398
-#define boxptr_CodegenCFunctions_lm__397 omc_CodegenCFunctions_lm__397
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__423 omc_CodegenCFunctions_fun__423
+
+
+#define boxptr_CodegenCFunctions_lm__422 omc_CodegenCFunctions_lm__422
+
+
+#define boxptr_CodegenCFunctions_fun__421 omc_CodegenCFunctions_fun__421
+
+
+#define boxptr_CodegenCFunctions_fun__420 omc_CodegenCFunctions_fun__420
+
+
+#define boxptr_CodegenCFunctions_fun__419 omc_CodegenCFunctions_fun__419
+
+
+#define boxptr_CodegenCFunctions_fun__418 omc_CodegenCFunctions_fun__418
+
+
+#define boxptr_CodegenCFunctions_lm__417 omc_CodegenCFunctions_lm__417
+
+
+#define boxptr_CodegenCFunctions_lm__414 omc_CodegenCFunctions_lm__414
+
+
+#define boxptr_CodegenCFunctions_lm__413 omc_CodegenCFunctions_lm__413
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunCall(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fun, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_varInit, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInit, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_extFunCall omc_CodegenCFunctions_extFunCall
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCall,2,0) {(void*) boxptr_CodegenCFunctions_extFunCall,0}};
 #define boxvar_CodegenCFunctions_extFunCall MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunCall)
-#define boxptr_CodegenCFunctions_fun__395 omc_CodegenCFunctions_fun__395
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__411 omc_CodegenCFunctions_fun__411
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extVarName(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr);
 #define boxptr_CodegenCFunctions_extVarName omc_CodegenCFunctions_extVarName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extVarName,2,0) {(void*) boxptr_CodegenCFunctions_extVarName,0}};
 #define boxvar_CodegenCFunctions_extVarName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extVarName)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_initRecordMembers(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_metatype _a_varDecls, modelica_metatype _a_varInits, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInits, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_initRecordMembers omc_CodegenCFunctions_initRecordMembers
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_initRecordMembers,2,0) {(void*) boxptr_CodegenCFunctions_initRecordMembers,0}};
 #define boxvar_CodegenCFunctions_initRecordMembers MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_initRecordMembers)
-#define boxptr_CodegenCFunctions_fun__392 omc_CodegenCFunctions_fun__392
-#define boxptr_CodegenCFunctions_lm__391 omc_CodegenCFunctions_lm__391
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__408 omc_CodegenCFunctions_fun__408
+
+
+#define boxptr_CodegenCFunctions_lm__407 omc_CodegenCFunctions_lm__407
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varOutputKernelInterface(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_string _a_dest, modelica_integer _a_ix, modelica_metatype _a_varDecls, modelica_metatype _a_varInits, modelica_metatype _a_varCopy, modelica_metatype _a_varAssign, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInits, modelica_metatype *out_out_a_varCopy, modelica_metatype *out_out_a_varAssign, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_varOutputKernelInterface(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_metatype _a_dest, modelica_metatype _a_ix, modelica_metatype _a_varDecls, modelica_metatype _a_varInits, modelica_metatype _a_varCopy, modelica_metatype _a_varAssign, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInits, modelica_metatype *out_out_a_varCopy, modelica_metatype *out_out_a_varAssign, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varOutputKernelInterface,2,0) {(void*) boxptr_CodegenCFunctions_varOutputKernelInterface,0}};
 #define boxvar_CodegenCFunctions_varOutputKernelInterface MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varOutputKernelInterface)
-#define boxptr_CodegenCFunctions_lm__387 omc_CodegenCFunctions_lm__387
-#define boxptr_CodegenCFunctions_lm__385 omc_CodegenCFunctions_lm__385
-#define boxptr_CodegenCFunctions_lm__383 omc_CodegenCFunctions_lm__383
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__403 omc_CodegenCFunctions_lm__403
+
+
+#define boxptr_CodegenCFunctions_lm__401 omc_CodegenCFunctions_lm__401
+
+
+#define boxptr_CodegenCFunctions_lm__399 omc_CodegenCFunctions_lm__399
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varOutput(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenCFunctions_varOutput omc_CodegenCFunctions_varOutput
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varOutput,2,0) {(void*) boxptr_CodegenCFunctions_varOutput,0}};
 #define boxvar_CodegenCFunctions_varOutput MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varOutput)
-#define boxptr_CodegenCFunctions_fun__381 omc_CodegenCFunctions_fun__381
-#define boxptr_CodegenCFunctions_fun__380 omc_CodegenCFunctions_fun__380
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__397 omc_CodegenCFunctions_fun__397
+
+
+#define boxptr_CodegenCFunctions_fun__396 omc_CodegenCFunctions_fun__396
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varAllocDefaultValue(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_metatype _a_context, modelica_string _a_lhsVarName, modelica_metatype _a_allocNoDefault, modelica_metatype _a_varDecls, modelica_metatype _a_varInits, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_allocNoDefault, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInits, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_varAllocDefaultValue omc_CodegenCFunctions_varAllocDefaultValue
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varAllocDefaultValue,2,0) {(void*) boxptr_CodegenCFunctions_varAllocDefaultValue,0}};
 #define boxvar_CodegenCFunctions_varAllocDefaultValue MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varAllocDefaultValue)
-#define boxptr_CodegenCFunctions_fun__378 omc_CodegenCFunctions_fun__378
-#define boxptr_CodegenCFunctions_fun__377 omc_CodegenCFunctions_fun__377
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__394 omc_CodegenCFunctions_fun__394
+
+
+#define boxptr_CodegenCFunctions_fun__393 omc_CodegenCFunctions_fun__393
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varInitParallel(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_string _a_outStruct, modelica_integer _a_i, modelica_metatype _a_varDecls, modelica_metatype _a_varInits, modelica_metatype _a_varFrees, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInits, modelica_metatype *out_out_a_varFrees, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_varInitParallel(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_metatype _a_outStruct, modelica_metatype _a_i, modelica_metatype _a_varDecls, modelica_metatype _a_varInits, modelica_metatype _a_varFrees, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInits, modelica_metatype *out_out_a_varFrees, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varInitParallel,2,0) {(void*) boxptr_CodegenCFunctions_varInitParallel,0}};
 #define boxvar_CodegenCFunctions_varInitParallel MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varInitParallel)
-#define boxptr_CodegenCFunctions_fun__372 omc_CodegenCFunctions_fun__372
-#define boxptr_CodegenCFunctions_fun__371 omc_CodegenCFunctions_fun__371
-#define boxptr_CodegenCFunctions_lm__370 omc_CodegenCFunctions_lm__370
-#define boxptr_CodegenCFunctions_fun__368 omc_CodegenCFunctions_fun__368
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__388 omc_CodegenCFunctions_fun__388
+
+
+#define boxptr_CodegenCFunctions_fun__387 omc_CodegenCFunctions_fun__387
+
+
+#define boxptr_CodegenCFunctions_lm__386 omc_CodegenCFunctions_lm__386
+
+
+#define boxptr_CodegenCFunctions_fun__384 omc_CodegenCFunctions_fun__384
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_parVarInit(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_string _a_outStruct, modelica_metatype _a_varDecls, modelica_metatype _a_varInits, modelica_metatype _a_varFrees, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInits, modelica_metatype *out_out_a_varFrees, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_parVarInit omc_CodegenCFunctions_parVarInit
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_parVarInit,2,0) {(void*) boxptr_CodegenCFunctions_parVarInit,0}};
 #define boxvar_CodegenCFunctions_parVarInit MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_parVarInit)
-#define boxptr_CodegenCFunctions_fun__366 omc_CodegenCFunctions_fun__366
-#define boxptr_CodegenCFunctions_fun__365 omc_CodegenCFunctions_fun__365
-#define boxptr_CodegenCFunctions_fun__364 omc_CodegenCFunctions_fun__364
-#define boxptr_CodegenCFunctions_lm__363 omc_CodegenCFunctions_lm__363
-#define boxptr_CodegenCFunctions_fun__362 omc_CodegenCFunctions_fun__362
-#define boxptr_CodegenCFunctions_fun__361 omc_CodegenCFunctions_fun__361
-#define boxptr_CodegenCFunctions_lm__360 omc_CodegenCFunctions_lm__360
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__382 omc_CodegenCFunctions_fun__382
+
+
+#define boxptr_CodegenCFunctions_fun__381 omc_CodegenCFunctions_fun__381
+
+
+#define boxptr_CodegenCFunctions_fun__380 omc_CodegenCFunctions_fun__380
+
+
+#define boxptr_CodegenCFunctions_lm__379 omc_CodegenCFunctions_lm__379
+
+
+#define boxptr_CodegenCFunctions_fun__378 omc_CodegenCFunctions_fun__378
+
+
+#define boxptr_CodegenCFunctions_fun__377 omc_CodegenCFunctions_fun__377
+
+
+#define boxptr_CodegenCFunctions_lm__376 omc_CodegenCFunctions_lm__376
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varInit(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_string _in_a_outStruct, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_varInits, modelica_metatype _in_a_varFrees, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInits, modelica_metatype *out_out_a_varFrees, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_varInit omc_CodegenCFunctions_varInit
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varInit,2,0) {(void*) boxptr_CodegenCFunctions_varInit,0}};
 #define boxvar_CodegenCFunctions_varInit MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varInit)
-#define boxptr_CodegenCFunctions_fun__358 omc_CodegenCFunctions_fun__358
-#define boxptr_CodegenCFunctions_fun__355 omc_CodegenCFunctions_fun__355
-#define boxptr_CodegenCFunctions_fun__354 omc_CodegenCFunctions_fun__354
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__374 omc_CodegenCFunctions_fun__374
+
+
+#define boxptr_CodegenCFunctions_fun__371 omc_CodegenCFunctions_fun__371
+
+
+#define boxptr_CodegenCFunctions_fun__370 omc_CodegenCFunctions_fun__370
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_writeOutVarRecordMembers(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type, modelica_string _in_a_prefix);
 #define boxptr_CodegenCFunctions_writeOutVarRecordMembers omc_CodegenCFunctions_writeOutVarRecordMembers
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_writeOutVarRecordMembers,2,0) {(void*) boxptr_CodegenCFunctions_writeOutVarRecordMembers,0}};
 #define boxvar_CodegenCFunctions_writeOutVarRecordMembers MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_writeOutVarRecordMembers)
-#define boxptr_CodegenCFunctions_fun__352 omc_CodegenCFunctions_fun__352
-#define boxptr_CodegenCFunctions_lm__351 omc_CodegenCFunctions_lm__351
-#define boxptr_CodegenCFunctions_fun__350 omc_CodegenCFunctions_fun__350
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__368 omc_CodegenCFunctions_fun__368
+
+
+#define boxptr_CodegenCFunctions_lm__367 omc_CodegenCFunctions_lm__367
+
+
+#define boxptr_CodegenCFunctions_fun__366 omc_CodegenCFunctions_fun__366
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_writeOutVar(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenCFunctions_writeOutVar omc_CodegenCFunctions_writeOutVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_writeOutVar,2,0) {(void*) boxptr_CodegenCFunctions_writeOutVar,0}};
 #define boxvar_CodegenCFunctions_writeOutVar MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_writeOutVar)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_readInVarRecordMembers(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type, modelica_string _in_a_prefix);
 #define boxptr_CodegenCFunctions_readInVarRecordMembers omc_CodegenCFunctions_readInVarRecordMembers
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_readInVarRecordMembers,2,0) {(void*) boxptr_CodegenCFunctions_readInVarRecordMembers,0}};
 #define boxvar_CodegenCFunctions_readInVarRecordMembers MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_readInVarRecordMembers)
-#define boxptr_CodegenCFunctions_lm__347 omc_CodegenCFunctions_lm__347
-#define boxptr_CodegenCFunctions_fun__346 omc_CodegenCFunctions_fun__346
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__363 omc_CodegenCFunctions_lm__363
+
+
+#define boxptr_CodegenCFunctions_fun__362 omc_CodegenCFunctions_fun__362
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_readInVar(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var);
 #define boxptr_CodegenCFunctions_readInVar omc_CodegenCFunctions_readInVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_readInVar,2,0) {(void*) boxptr_CodegenCFunctions_readInVar,0}};
 #define boxvar_CodegenCFunctions_readInVar MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_readInVar)
-#define boxptr_CodegenCFunctions_fun__344 omc_CodegenCFunctions_fun__344
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__360 omc_CodegenCFunctions_fun__360
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_mmcConstructor(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type, modelica_string _in_a_varName, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_mmcConstructor omc_CodegenCFunctions_mmcConstructor
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_mmcConstructor,2,0) {(void*) boxptr_CodegenCFunctions_mmcConstructor,0}};
 #define boxvar_CodegenCFunctions_mmcConstructor MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_mmcConstructor)
-#define boxptr_CodegenCFunctions_lm__341 omc_CodegenCFunctions_lm__341
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__357 omc_CodegenCFunctions_lm__357
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_mmcConstructorType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
 #define boxptr_CodegenCFunctions_mmcConstructorType omc_CodegenCFunctions_mmcConstructorType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_mmcConstructorType,2,0) {(void*) boxptr_CodegenCFunctions_mmcConstructorType,0}};
 #define boxvar_CodegenCFunctions_mmcConstructorType MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_mmcConstructorType)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_funArgBox(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_outName, modelica_string _a_varName, modelica_string _a_condition, modelica_metatype _a_ty, modelica_metatype _a_varUnbox, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varUnbox, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_funArgBox omc_CodegenCFunctions_funArgBox
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgBox,2,0) {(void*) boxptr_CodegenCFunctions_funArgBox,0}};
 #define boxvar_CodegenCFunctions_funArgBox MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgBox)
-#define boxptr_CodegenCFunctions_fun__338 omc_CodegenCFunctions_fun__338
-#define boxptr_CodegenCFunctions_fun__337 omc_CodegenCFunctions_fun__337
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__354 omc_CodegenCFunctions_fun__354
+
+
+#define boxptr_CodegenCFunctions_fun__353 omc_CodegenCFunctions_fun__353
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_unboxRecord(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_recordVar, modelica_metatype _a_ty, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_unboxRecord omc_CodegenCFunctions_unboxRecord
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_unboxRecord,2,0) {(void*) boxptr_CodegenCFunctions_unboxRecord,0}};
 #define boxvar_CodegenCFunctions_unboxRecord MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_unboxRecord)
-#define boxptr_CodegenCFunctions_fun__335 omc_CodegenCFunctions_fun__335
-#define boxptr_CodegenCFunctions_lm__334 omc_CodegenCFunctions_lm__334
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__351 omc_CodegenCFunctions_fun__351
+
+
+#define boxptr_CodegenCFunctions_lm__350 omc_CodegenCFunctions_lm__350
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_unboxVariable(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_varName, modelica_metatype _a_varType, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCFunctions_unboxVariable omc_CodegenCFunctions_unboxVariable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_unboxVariable,2,0) {(void*) boxptr_CodegenCFunctions_unboxVariable,0}};
 #define boxvar_CodegenCFunctions_unboxVariable MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_unboxVariable)
-#define boxptr_CodegenCFunctions_fun__332 omc_CodegenCFunctions_fun__332
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__348 omc_CodegenCFunctions_fun__348
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_funArgUnbox(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_varBox, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varBox, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_funArgUnbox omc_CodegenCFunctions_funArgUnbox
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgUnbox,2,0) {(void*) boxptr_CodegenCFunctions_funArgUnbox,0}};
 #define boxvar_CodegenCFunctions_funArgUnbox MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgUnbox)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_boxRecordConstructor(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_boolean _a_isSimulation);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_boxRecordConstructor(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_metatype _a_isSimulation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_boxRecordConstructor,2,0) {(void*) boxptr_CodegenCFunctions_boxRecordConstructor,0}};
 #define boxvar_CodegenCFunctions_boxRecordConstructor MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_boxRecordConstructor)
-#define boxptr_CodegenCFunctions_lm__327 omc_CodegenCFunctions_lm__327
-#define boxptr_CodegenCFunctions_fun__324 omc_CodegenCFunctions_fun__324
-#define boxptr_CodegenCFunctions_lm__323 omc_CodegenCFunctions_lm__323
-#define boxptr_CodegenCFunctions_fun__322 omc_CodegenCFunctions_fun__322
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__343 omc_CodegenCFunctions_lm__343
+
+
+#define boxptr_CodegenCFunctions_fun__340 omc_CodegenCFunctions_fun__340
+
+
+#define boxptr_CodegenCFunctions_lm__339 omc_CodegenCFunctions_lm__339
+
+
+#define boxptr_CodegenCFunctions_fun__338 omc_CodegenCFunctions_fun__338
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodyBoxedImpl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_funargs, modelica_metatype _a_outvars, modelica_metatype _a_visibility, modelica_boolean _a_isSimulation);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBodyBoxedImpl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_funargs, modelica_metatype _a_outvars, modelica_metatype _a_visibility, modelica_metatype _a_isSimulation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyBoxedImpl,2,0) {(void*) boxptr_CodegenCFunctions_functionBodyBoxedImpl,0}};
 #define boxvar_CodegenCFunctions_functionBodyBoxedImpl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyBoxedImpl)
-#define boxptr_CodegenCFunctions_fun__320 omc_CodegenCFunctions_fun__320
-#define boxptr_CodegenCFunctions_fun__319 omc_CodegenCFunctions_fun__319
-#define boxptr_CodegenCFunctions_lm__318 omc_CodegenCFunctions_lm__318
-#define boxptr_CodegenCFunctions_fun__317 omc_CodegenCFunctions_fun__317
-#define boxptr_CodegenCFunctions_fun__316 omc_CodegenCFunctions_fun__316
-#define boxptr_CodegenCFunctions_lm__315 omc_CodegenCFunctions_lm__315
-#define boxptr_CodegenCFunctions_fun__314 omc_CodegenCFunctions_fun__314
-#define boxptr_CodegenCFunctions_fun__313 omc_CodegenCFunctions_fun__313
-#define boxptr_CodegenCFunctions_lm__312 omc_CodegenCFunctions_lm__312
-#define boxptr_CodegenCFunctions_fun__311 omc_CodegenCFunctions_fun__311
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__336 omc_CodegenCFunctions_fun__336
+
+
+#define boxptr_CodegenCFunctions_fun__335 omc_CodegenCFunctions_fun__335
+
+
+#define boxptr_CodegenCFunctions_lm__334 omc_CodegenCFunctions_lm__334
+
+
+#define boxptr_CodegenCFunctions_fun__333 omc_CodegenCFunctions_fun__333
+
+
+#define boxptr_CodegenCFunctions_fun__332 omc_CodegenCFunctions_fun__332
+
+
+#define boxptr_CodegenCFunctions_lm__331 omc_CodegenCFunctions_lm__331
+
+
+#define boxptr_CodegenCFunctions_fun__330 omc_CodegenCFunctions_fun__330
+
+
+#define boxptr_CodegenCFunctions_fun__329 omc_CodegenCFunctions_fun__329
+
+
+#define boxptr_CodegenCFunctions_lm__328 omc_CodegenCFunctions_lm__328
+
+
+#define boxptr_CodegenCFunctions_fun__327 omc_CodegenCFunctions_fun__327
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodyBoxed(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_boolean _a_isSimulation);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBodyBoxed(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_metatype _a_isSimulation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyBoxed,2,0) {(void*) boxptr_CodegenCFunctions_functionBodyBoxed,0}};
 #define boxvar_CodegenCFunctions_functionBodyBoxed MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyBoxed)
-#define boxptr_CodegenCFunctions_fun__306 omc_CodegenCFunctions_fun__306
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__322 omc_CodegenCFunctions_fun__322
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_varInitRecord(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_string _in_a_prefix, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_varInits, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_varInits, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_varInitRecord omc_CodegenCFunctions_varInitRecord
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varInitRecord,2,0) {(void*) boxptr_CodegenCFunctions_varInitRecord,0}};
 #define boxvar_CodegenCFunctions_varInitRecord MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_varInitRecord)
-#define boxptr_CodegenCFunctions_fun__304 omc_CodegenCFunctions_fun__304
-#define boxptr_CodegenCFunctions_fun__303 omc_CodegenCFunctions_fun__303
-#define boxptr_CodegenCFunctions_lm__302 omc_CodegenCFunctions_lm__302
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__320 omc_CodegenCFunctions_fun__320
+
+
+#define boxptr_CodegenCFunctions_fun__319 omc_CodegenCFunctions_fun__319
+
+
+#define boxptr_CodegenCFunctions_lm__318 omc_CodegenCFunctions_lm__318
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodyRecordConstructor(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_boolean _in_a_isSimulation);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBodyRecordConstructor(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_metatype _in_a_isSimulation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyRecordConstructor,2,0) {(void*) boxptr_CodegenCFunctions_functionBodyRecordConstructor,0}};
 #define boxvar_CodegenCFunctions_functionBodyRecordConstructor MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyRecordConstructor)
-#define boxptr_CodegenCFunctions_lm__299 omc_CodegenCFunctions_lm__299
-#define boxptr_CodegenCFunctions_lm__298 omc_CodegenCFunctions_lm__298
-#define boxptr_CodegenCFunctions_lm__296 omc_CodegenCFunctions_lm__296
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__315 omc_CodegenCFunctions_lm__315
+
+
+#define boxptr_CodegenCFunctions_lm__314 omc_CodegenCFunctions_lm__314
+
+
+#define boxptr_CodegenCFunctions_lm__312 omc_CodegenCFunctions_lm__312
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodyExternalFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_boolean _in_a_inFunc, modelica_boolean _in_a_isSimulation);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBodyExternalFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_metatype _in_a_inFunc, modelica_metatype _in_a_isSimulation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyExternalFunction,2,0) {(void*) boxptr_CodegenCFunctions_functionBodyExternalFunction,0}};
 #define boxvar_CodegenCFunctions_functionBodyExternalFunction MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyExternalFunction)
-#define boxptr_CodegenCFunctions_fun__292 omc_CodegenCFunctions_fun__292
-#define boxptr_CodegenCFunctions_lm__291 omc_CodegenCFunctions_lm__291
-#define boxptr_CodegenCFunctions_lm__290 omc_CodegenCFunctions_lm__290
-#define boxptr_CodegenCFunctions_fun__289 omc_CodegenCFunctions_fun__289
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__308 omc_CodegenCFunctions_fun__308
+
+
+#define boxptr_CodegenCFunctions_lm__307 omc_CodegenCFunctions_lm__307
+
+
+#define boxptr_CodegenCFunctions_lm__306 omc_CodegenCFunctions_lm__306
+
+
+#define boxptr_CodegenCFunctions_fun__305 omc_CodegenCFunctions_fun__305
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_setKernelArgFormTupleLoopVars__ith(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_tupleVar, modelica_metatype _a_KernelName, modelica_metatype _a_argNr, modelica_metatype _a_parVarList, modelica_metatype _a_context, modelica_metatype *out_out_a_KernelName, modelica_metatype *out_out_a_argNr, modelica_metatype *out_out_a_parVarList);
 #define boxptr_CodegenCFunctions_setKernelArgFormTupleLoopVars__ith omc_CodegenCFunctions_setKernelArgFormTupleLoopVars__ith
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_setKernelArgFormTupleLoopVars__ith,2,0) {(void*) boxptr_CodegenCFunctions_setKernelArgFormTupleLoopVars__ith,0}};
 #define boxvar_CodegenCFunctions_setKernelArgFormTupleLoopVars__ith MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_setKernelArgFormTupleLoopVars__ith)
-#define boxptr_CodegenCFunctions_fun__287 omc_CodegenCFunctions_fun__287
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__303 omc_CodegenCFunctions_fun__303
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_setKernelArg__ith(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_metatype _a_KernelName, modelica_metatype _a_argNr, modelica_metatype _a_parVarList, modelica_metatype *out_out_a_KernelName, modelica_metatype *out_out_a_argNr, modelica_metatype *out_out_a_parVarList);
 #define boxptr_CodegenCFunctions_setKernelArg__ith omc_CodegenCFunctions_setKernelArg__ith
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_setKernelArg__ith,2,0) {(void*) boxptr_CodegenCFunctions_setKernelArg__ith,0}};
 #define boxvar_CodegenCFunctions_setKernelArg__ith MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_setKernelArg__ith)
-#define boxptr_CodegenCFunctions_fun__285 omc_CodegenCFunctions_fun__285
-#define boxptr_CodegenCFunctions_fun__284 omc_CodegenCFunctions_fun__284
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__301 omc_CodegenCFunctions_fun__301
+
+
+#define boxptr_CodegenCFunctions_fun__300 omc_CodegenCFunctions_fun__300
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodyKernelFunctionInterface(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_boolean _a_inFunc);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBodyKernelFunctionInterface(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_metatype _a_inFunc);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyKernelFunctionInterface,2,0) {(void*) boxptr_CodegenCFunctions_functionBodyKernelFunctionInterface,0}};
 #define boxvar_CodegenCFunctions_functionBodyKernelFunctionInterface MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyKernelFunctionInterface)
-#define boxptr_CodegenCFunctions_fun__282 omc_CodegenCFunctions_fun__282
-#define boxptr_CodegenCFunctions_fun__281 omc_CodegenCFunctions_fun__281
-#define boxptr_CodegenCFunctions_lm__280 omc_CodegenCFunctions_lm__280
-#define boxptr_CodegenCFunctions_lm__279 omc_CodegenCFunctions_lm__279
-#define boxptr_CodegenCFunctions_lm__278 omc_CodegenCFunctions_lm__278
-#define boxptr_CodegenCFunctions_lm__277 omc_CodegenCFunctions_lm__277
-#define boxptr_CodegenCFunctions_lm__276 omc_CodegenCFunctions_lm__276
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__298 omc_CodegenCFunctions_fun__298
+
+
+#define boxptr_CodegenCFunctions_fun__297 omc_CodegenCFunctions_fun__297
+
+
+#define boxptr_CodegenCFunctions_lm__296 omc_CodegenCFunctions_lm__296
+
+
+#define boxptr_CodegenCFunctions_lm__295 omc_CodegenCFunctions_lm__295
+
+
+#define boxptr_CodegenCFunctions_lm__294 omc_CodegenCFunctions_lm__294
+
+
+#define boxptr_CodegenCFunctions_lm__293 omc_CodegenCFunctions_lm__293
+
+
+#define boxptr_CodegenCFunctions_lm__292 omc_CodegenCFunctions_lm__292
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodyParallelFunction(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_boolean _a_inFunc);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBodyParallelFunction(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_metatype _a_inFunc);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyParallelFunction,2,0) {(void*) boxptr_CodegenCFunctions_functionBodyParallelFunction,0}};
 #define boxvar_CodegenCFunctions_functionBodyParallelFunction MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyParallelFunction)
-#define boxptr_CodegenCFunctions_fun__274 omc_CodegenCFunctions_fun__274
-#define boxptr_CodegenCFunctions_fun__273 omc_CodegenCFunctions_fun__273
-#define boxptr_CodegenCFunctions_lm__272 omc_CodegenCFunctions_lm__272
-#define boxptr_CodegenCFunctions_lm__271 omc_CodegenCFunctions_lm__271
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__290 omc_CodegenCFunctions_fun__290
+
+
+#define boxptr_CodegenCFunctions_fun__289 omc_CodegenCFunctions_fun__289
+
+
+#define boxptr_CodegenCFunctions_lm__288 omc_CodegenCFunctions_lm__288
+
+
+#define boxptr_CodegenCFunctions_lm__287 omc_CodegenCFunctions_lm__287
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodyKernelFunction(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_boolean _a_inFunc);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBodyKernelFunction(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_metatype _a_inFunc);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyKernelFunction,2,0) {(void*) boxptr_CodegenCFunctions_functionBodyKernelFunction,0}};
 #define boxvar_CodegenCFunctions_functionBodyKernelFunction MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyKernelFunction)
-#define boxptr_CodegenCFunctions_fun__269 omc_CodegenCFunctions_fun__269
-#define boxptr_CodegenCFunctions_lm__268 omc_CodegenCFunctions_lm__268
-#define boxptr_CodegenCFunctions_lm__267 omc_CodegenCFunctions_lm__267
-#define boxptr_CodegenCFunctions_lm__266 omc_CodegenCFunctions_lm__266
-#define boxptr_CodegenCFunctions_lm__265 omc_CodegenCFunctions_lm__265
-#define boxptr_CodegenCFunctions_lm__264 omc_CodegenCFunctions_lm__264
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__285 omc_CodegenCFunctions_fun__285
+
+
+#define boxptr_CodegenCFunctions_lm__284 omc_CodegenCFunctions_lm__284
+
+
+#define boxptr_CodegenCFunctions_lm__283 omc_CodegenCFunctions_lm__283
+
+
+#define boxptr_CodegenCFunctions_lm__282 omc_CodegenCFunctions_lm__282
+
+
+#define boxptr_CodegenCFunctions_lm__281 omc_CodegenCFunctions_lm__281
+
+
+#define boxptr_CodegenCFunctions_lm__280 omc_CodegenCFunctions_lm__280
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_generateInFunc(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fname, modelica_metatype _a_functionArguments, modelica_metatype _a_outVars, modelica_metatype *out_out_a_fname);
 #define boxptr_CodegenCFunctions_generateInFunc omc_CodegenCFunctions_generateInFunc
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_generateInFunc,2,0) {(void*) boxptr_CodegenCFunctions_generateInFunc,0}};
 #define boxvar_CodegenCFunctions_generateInFunc MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_generateInFunc)
-#define boxptr_CodegenCFunctions_lm__261 omc_CodegenCFunctions_lm__261
-#define boxptr_CodegenCFunctions_fun__260 omc_CodegenCFunctions_fun__260
-#define boxptr_CodegenCFunctions_lm__259 omc_CodegenCFunctions_lm__259
-#define boxptr_CodegenCFunctions_lm__258 omc_CodegenCFunctions_lm__258
-#define boxptr_CodegenCFunctions_fun__257 omc_CodegenCFunctions_fun__257
-#define boxptr_CodegenCFunctions_lm__256 omc_CodegenCFunctions_lm__256
-#define boxptr_CodegenCFunctions_lm__255 omc_CodegenCFunctions_lm__255
-#define boxptr_CodegenCFunctions_lm__254 omc_CodegenCFunctions_lm__254
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__277 omc_CodegenCFunctions_lm__277
+
+
+#define boxptr_CodegenCFunctions_fun__276 omc_CodegenCFunctions_fun__276
+
+
+#define boxptr_CodegenCFunctions_lm__275 omc_CodegenCFunctions_lm__275
+
+
+#define boxptr_CodegenCFunctions_lm__274 omc_CodegenCFunctions_lm__274
+
+
+#define boxptr_CodegenCFunctions_fun__273 omc_CodegenCFunctions_fun__273
+
+
+#define boxptr_CodegenCFunctions_lm__272 omc_CodegenCFunctions_lm__272
+
+
+#define boxptr_CodegenCFunctions_lm__271 omc_CodegenCFunctions_lm__271
+
+
+#define boxptr_CodegenCFunctions_lm__270 omc_CodegenCFunctions_lm__270
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodyRegularFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_boolean _in_a_inFunc, modelica_boolean _in_a_isSimulation);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBodyRegularFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_metatype _in_a_inFunc, modelica_metatype _in_a_isSimulation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyRegularFunction,2,0) {(void*) boxptr_CodegenCFunctions_functionBodyRegularFunction,0}};
 #define boxvar_CodegenCFunctions_functionBodyRegularFunction MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyRegularFunction)
-#define boxptr_CodegenCFunctions_fun__251 omc_CodegenCFunctions_fun__251
-#define boxptr_CodegenCFunctions_fun__248 omc_CodegenCFunctions_fun__248
-#define boxptr_CodegenCFunctions_lm__246 omc_CodegenCFunctions_lm__246
-#define boxptr_CodegenCFunctions_lm__245 omc_CodegenCFunctions_lm__245
-#define boxptr_CodegenCFunctions_lm__244 omc_CodegenCFunctions_lm__244
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__267 omc_CodegenCFunctions_fun__267
+
+
+#define boxptr_CodegenCFunctions_fun__264 omc_CodegenCFunctions_fun__264
+
+
+#define boxptr_CodegenCFunctions_lm__262 omc_CodegenCFunctions_lm__262
+
+
+#define boxptr_CodegenCFunctions_lm__261 omc_CodegenCFunctions_lm__261
+
+
+#define boxptr_CodegenCFunctions_lm__260 omc_CodegenCFunctions_lm__260
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extractParforBodies(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_boolean _a_inFunc);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_extractParforBodies(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fn, modelica_metatype _a_inFunc);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extractParforBodies,2,0) {(void*) boxptr_CodegenCFunctions_extractParforBodies,0}};
 #define boxvar_CodegenCFunctions_extractParforBodies MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extractParforBodies)
-#define boxptr_CodegenCFunctions_fun__240 omc_CodegenCFunctions_fun__240
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__256 omc_CodegenCFunctions_fun__256
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodyParModelica(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_boolean _in_a_inFunc);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBodyParModelica(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_metatype _in_a_inFunc);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyParModelica,2,0) {(void*) boxptr_CodegenCFunctions_functionBodyParModelica,0}};
 #define boxvar_CodegenCFunctions_functionBodyParModelica MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodyParModelica)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBody(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_boolean _in_a_inFunc, modelica_boolean _in_a_isSimulation);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBody(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_metatype _in_a_inFunc, modelica_metatype _in_a_isSimulation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBody,2,0) {(void*) boxptr_CodegenCFunctions_functionBody,0}};
 #define boxvar_CodegenCFunctions_functionBody MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBody)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodiesParModelica(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_functions);
 #define boxptr_CodegenCFunctions_functionBodiesParModelica omc_CodegenCFunctions_functionBodiesParModelica
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodiesParModelica,2,0) {(void*) boxptr_CodegenCFunctions_functionBodiesParModelica,0}};
 #define boxvar_CodegenCFunctions_functionBodiesParModelica MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodiesParModelica)
-#define boxptr_CodegenCFunctions_lm__236 omc_CodegenCFunctions_lm__236
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__252 omc_CodegenCFunctions_lm__252
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionBodies(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_functions, modelica_boolean _a_isSimulation);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionBodies(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_functions, modelica_metatype _a_isSimulation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodies,2,0) {(void*) boxptr_CodegenCFunctions_functionBodies,0}};
 #define boxvar_CodegenCFunctions_functionBodies MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionBodies)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionName(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_boolean _in_a_dotPath);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionName(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_metatype _in_a_dotPath);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionName,2,0) {(void*) boxptr_CodegenCFunctions_functionName,0}};
 #define boxvar_CodegenCFunctions_functionName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionName)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunDefArgF77(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_extArg);
 #define boxptr_CodegenCFunctions_extFunDefArgF77 omc_CodegenCFunctions_extFunDefArgF77
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunDefArgF77,2,0) {(void*) boxptr_CodegenCFunctions_extFunDefArgF77,0}};
 #define boxvar_CodegenCFunctions_extFunDefArgF77 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunDefArgF77)
-#define boxptr_CodegenCFunctions_fun__228 omc_CodegenCFunctions_fun__228
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__244 omc_CodegenCFunctions_fun__244
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunDefArg(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_extArg);
 #define boxptr_CodegenCFunctions_extFunDefArg omc_CodegenCFunctions_extFunDefArg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunDefArg,2,0) {(void*) boxptr_CodegenCFunctions_extFunDefArg,0}};
 #define boxvar_CodegenCFunctions_extFunDefArg MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunDefArg)
-#define boxptr_CodegenCFunctions_fun__226 omc_CodegenCFunctions_fun__226
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__242 omc_CodegenCFunctions_fun__242
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extTypeF77(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_type, modelica_boolean _a_isReference);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_extTypeF77(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_type, modelica_metatype _a_isReference);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extTypeF77,2,0) {(void*) boxptr_CodegenCFunctions_extTypeF77,0}};
 #define boxvar_CodegenCFunctions_extTypeF77 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extTypeF77)
-#define boxptr_CodegenCFunctions_fun__222 omc_CodegenCFunctions_fun__222
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__238 omc_CodegenCFunctions_fun__238
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extType(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_type, modelica_boolean _a_isInput, modelica_boolean _a_isArray, modelica_boolean _a_returnType);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_extType(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_type, modelica_metatype _a_isInput, modelica_metatype _a_isArray, modelica_metatype _a_returnType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extType,2,0) {(void*) boxptr_CodegenCFunctions_extType,0}};
 #define boxvar_CodegenCFunctions_extType MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extType)
-#define boxptr_CodegenCFunctions_fun__217 omc_CodegenCFunctions_fun__217
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__233 omc_CodegenCFunctions_fun__233
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extReturnType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_extArg);
 #define boxptr_CodegenCFunctions_extReturnType omc_CodegenCFunctions_extReturnType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extReturnType,2,0) {(void*) boxptr_CodegenCFunctions_extReturnType,0}};
 #define boxvar_CodegenCFunctions_extReturnType MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extReturnType)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunDefArgs(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_args, modelica_string _a_language);
 #define boxptr_CodegenCFunctions_extFunDefArgs omc_CodegenCFunctions_extFunDefArgs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunDefArgs,2,0) {(void*) boxptr_CodegenCFunctions_extFunDefArgs,0}};
 #define boxvar_CodegenCFunctions_extFunDefArgs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunDefArgs)
-#define boxptr_CodegenCFunctions_fun__212 omc_CodegenCFunctions_fun__212
-#define boxptr_CodegenCFunctions_lm__211 omc_CodegenCFunctions_lm__211
-#define boxptr_CodegenCFunctions_lm__210 omc_CodegenCFunctions_lm__210
-#define boxptr_CodegenCFunctions_lm__209 omc_CodegenCFunctions_lm__209
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__229 omc_CodegenCFunctions_fun__229
+
+
+#define boxptr_CodegenCFunctions_lm__228 omc_CodegenCFunctions_lm__228
+
+
+#define boxptr_CodegenCFunctions_lm__227 omc_CodegenCFunctions_lm__227
+
+
+#define boxptr_CodegenCFunctions_lm__226 omc_CodegenCFunctions_lm__226
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunctionName(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_name, modelica_string _a_language);
 #define boxptr_CodegenCFunctions_extFunctionName omc_CodegenCFunctions_extFunctionName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunctionName,2,0) {(void*) boxptr_CodegenCFunctions_extFunctionName,0}};
 #define boxvar_CodegenCFunctions_extFunctionName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunctionName)
-#define boxptr_CodegenCFunctions_fun__207 omc_CodegenCFunctions_fun__207
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__224 omc_CodegenCFunctions_fun__224
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunDefDynamic(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn);
 #define boxptr_CodegenCFunctions_extFunDefDynamic omc_CodegenCFunctions_extFunDefDynamic
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunDefDynamic,2,0) {(void*) boxptr_CodegenCFunctions_extFunDefDynamic,0}};
 #define boxvar_CodegenCFunctions_extFunDefDynamic MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunDefDynamic)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_extFunDef(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn);
 #define boxptr_CodegenCFunctions_extFunDef omc_CodegenCFunctions_extFunDef
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunDef,2,0) {(void*) boxptr_CodegenCFunctions_extFunDef,0}};
 #define boxvar_CodegenCFunctions_extFunDef MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_extFunDef)
-#define boxptr_CodegenCFunctions_fun__203 omc_CodegenCFunctions_fun__203
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__220 omc_CodegenCFunctions_fun__220
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_funArgBoxedDefinition(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var);
 #define boxptr_CodegenCFunctions_funArgBoxedDefinition omc_CodegenCFunctions_funArgBoxedDefinition
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgBoxedDefinition,2,0) {(void*) boxptr_CodegenCFunctions_funArgBoxedDefinition,0}};
 #define boxvar_CodegenCFunctions_funArgBoxedDefinition MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgBoxedDefinition)
-#define boxptr_CodegenCFunctions_fun__201 omc_CodegenCFunctions_fun__201
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__218 omc_CodegenCFunctions_fun__218
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_reconstructKernelArrays(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_metatype _a_reconstructedArrs, modelica_metatype *out_out_a_reconstructedArrs);
 #define boxptr_CodegenCFunctions_reconstructKernelArrays omc_CodegenCFunctions_reconstructKernelArrays
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_reconstructKernelArrays,2,0) {(void*) boxptr_CodegenCFunctions_reconstructKernelArrays,0}};
 #define boxvar_CodegenCFunctions_reconstructKernelArrays MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_reconstructKernelArrays)
-#define boxptr_CodegenCFunctions_fun__199 omc_CodegenCFunctions_fun__199
-#define boxptr_CodegenCFunctions_fun__198 omc_CodegenCFunctions_fun__198
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__216 omc_CodegenCFunctions_fun__216
+
+
+#define boxptr_CodegenCFunctions_fun__215 omc_CodegenCFunctions_fun__215
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_reconstructKernelArraysFromLooptupleVars(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_tupleVar, modelica_metatype _in_a_reconstructedArrs, modelica_metatype *out_out_a_reconstructedArrs);
 #define boxptr_CodegenCFunctions_reconstructKernelArraysFromLooptupleVars omc_CodegenCFunctions_reconstructKernelArraysFromLooptupleVars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_reconstructKernelArraysFromLooptupleVars,2,0) {(void*) boxptr_CodegenCFunctions_reconstructKernelArraysFromLooptupleVars,0}};
 #define boxvar_CodegenCFunctions_reconstructKernelArraysFromLooptupleVars MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_reconstructKernelArraysFromLooptupleVars)
-#define boxptr_CodegenCFunctions_fun__196 omc_CodegenCFunctions_fun__196
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__213 omc_CodegenCFunctions_fun__213
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_parFunArgDefinitionFromLooptupleVar(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_tupleVar);
 #define boxptr_CodegenCFunctions_parFunArgDefinitionFromLooptupleVar omc_CodegenCFunctions_parFunArgDefinitionFromLooptupleVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_parFunArgDefinitionFromLooptupleVar,2,0) {(void*) boxptr_CodegenCFunctions_parFunArgDefinitionFromLooptupleVar,0}};
 #define boxvar_CodegenCFunctions_parFunArgDefinitionFromLooptupleVar MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_parFunArgDefinitionFromLooptupleVar)
-#define boxptr_CodegenCFunctions_fun__194 omc_CodegenCFunctions_fun__194
-#define boxptr_CodegenCFunctions_fun__193 omc_CodegenCFunctions_fun__193
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__211 omc_CodegenCFunctions_fun__211
+
+
+#define boxptr_CodegenCFunctions_fun__210 omc_CodegenCFunctions_fun__210
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_funArgDefinitionKernelFunctionBody2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_metatype _a_parArgList, modelica_metatype *out_out_a_parArgList);
 #define boxptr_CodegenCFunctions_funArgDefinitionKernelFunctionBody2 omc_CodegenCFunctions_funArgDefinitionKernelFunctionBody2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgDefinitionKernelFunctionBody2,2,0) {(void*) boxptr_CodegenCFunctions_funArgDefinitionKernelFunctionBody2,0}};
 #define boxvar_CodegenCFunctions_funArgDefinitionKernelFunctionBody2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgDefinitionKernelFunctionBody2)
-#define boxptr_CodegenCFunctions_fun__191 omc_CodegenCFunctions_fun__191
-#define boxptr_CodegenCFunctions_fun__190 omc_CodegenCFunctions_fun__190
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__208 omc_CodegenCFunctions_fun__208
+
+
+#define boxptr_CodegenCFunctions_fun__207 omc_CodegenCFunctions_fun__207
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_funArgDefinitionKernelFunctionBody(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var);
 #define boxptr_CodegenCFunctions_funArgDefinitionKernelFunctionBody omc_CodegenCFunctions_funArgDefinitionKernelFunctionBody
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgDefinitionKernelFunctionBody,2,0) {(void*) boxptr_CodegenCFunctions_funArgDefinitionKernelFunctionBody,0}};
 #define boxvar_CodegenCFunctions_funArgDefinitionKernelFunctionBody MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgDefinitionKernelFunctionBody)
-#define boxptr_CodegenCFunctions_fun__188 omc_CodegenCFunctions_fun__188
-#define boxptr_CodegenCFunctions_fun__187 omc_CodegenCFunctions_fun__187
-#define boxptr_CodegenCFunctions_fun__186 omc_CodegenCFunctions_fun__186
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__205 omc_CodegenCFunctions_fun__205
+
+
+#define boxptr_CodegenCFunctions_fun__204 omc_CodegenCFunctions_fun__204
+
+
+#define boxptr_CodegenCFunctions_fun__203 omc_CodegenCFunctions_fun__203
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_tupleOutfunArgDefinitionKernelFunctionInterface(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var);
 #define boxptr_CodegenCFunctions_tupleOutfunArgDefinitionKernelFunctionInterface omc_CodegenCFunctions_tupleOutfunArgDefinitionKernelFunctionInterface
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tupleOutfunArgDefinitionKernelFunctionInterface,2,0) {(void*) boxptr_CodegenCFunctions_tupleOutfunArgDefinitionKernelFunctionInterface,0}};
 #define boxvar_CodegenCFunctions_tupleOutfunArgDefinitionKernelFunctionInterface MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_tupleOutfunArgDefinitionKernelFunctionInterface)
-#define boxptr_CodegenCFunctions_fun__184 omc_CodegenCFunctions_fun__184
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__201 omc_CodegenCFunctions_fun__201
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_funArgDefinitionKernelFunctionInterface(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var);
 #define boxptr_CodegenCFunctions_funArgDefinitionKernelFunctionInterface omc_CodegenCFunctions_funArgDefinitionKernelFunctionInterface
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgDefinitionKernelFunctionInterface,2,0) {(void*) boxptr_CodegenCFunctions_funArgDefinitionKernelFunctionInterface,0}};
 #define boxvar_CodegenCFunctions_funArgDefinitionKernelFunctionInterface MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgDefinitionKernelFunctionInterface)
-#define boxptr_CodegenCFunctions_fun__182 omc_CodegenCFunctions_fun__182
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__199 omc_CodegenCFunctions_fun__199
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_funArgDefinition(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var);
 #define boxptr_CodegenCFunctions_funArgDefinition omc_CodegenCFunctions_funArgDefinition
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgDefinition,2,0) {(void*) boxptr_CodegenCFunctions_funArgDefinition,0}};
 #define boxvar_CodegenCFunctions_funArgDefinition MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgDefinition)
-#define boxptr_CodegenCFunctions_fun__180 omc_CodegenCFunctions_fun__180
-#define boxptr_CodegenCFunctions_fun__179 omc_CodegenCFunctions_fun__179
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__197 omc_CodegenCFunctions_fun__197
+
+
+#define boxptr_CodegenCFunctions_fun__196 omc_CodegenCFunctions_fun__196
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_funArgName(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var);
 #define boxptr_CodegenCFunctions_funArgName omc_CodegenCFunctions_funArgName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgName,2,0) {(void*) boxptr_CodegenCFunctions_funArgName,0}};
 #define boxvar_CodegenCFunctions_funArgName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_funArgName)
-#define boxptr_CodegenCFunctions_fun__177 omc_CodegenCFunctions_fun__177
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__194 omc_CodegenCFunctions_fun__194
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionHeaderKernelFunctionInterfacePrototype(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars);
 #define boxptr_CodegenCFunctions_functionHeaderKernelFunctionInterfacePrototype omc_CodegenCFunctions_functionHeaderKernelFunctionInterfacePrototype
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderKernelFunctionInterfacePrototype,2,0) {(void*) boxptr_CodegenCFunctions_functionHeaderKernelFunctionInterfacePrototype,0}};
 #define boxvar_CodegenCFunctions_functionHeaderKernelFunctionInterfacePrototype MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderKernelFunctionInterfacePrototype)
-#define boxptr_CodegenCFunctions_fun__175 omc_CodegenCFunctions_fun__175
-#define boxptr_CodegenCFunctions_fun__174 omc_CodegenCFunctions_fun__174
-#define boxptr_CodegenCFunctions_lm__173 omc_CodegenCFunctions_lm__173
-#define boxptr_CodegenCFunctions_fun__172 omc_CodegenCFunctions_fun__172
-#define boxptr_CodegenCFunctions_lm__171 omc_CodegenCFunctions_lm__171
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__192 omc_CodegenCFunctions_fun__192
+
+
+#define boxptr_CodegenCFunctions_fun__191 omc_CodegenCFunctions_fun__191
+
+
+#define boxptr_CodegenCFunctions_lm__190 omc_CodegenCFunctions_lm__190
+
+
+#define boxptr_CodegenCFunctions_fun__189 omc_CodegenCFunctions_fun__189
+
+
+#define boxptr_CodegenCFunctions_lm__188 omc_CodegenCFunctions_lm__188
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionHeaderKernelFunctionInterface(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars);
 #define boxptr_CodegenCFunctions_functionHeaderKernelFunctionInterface omc_CodegenCFunctions_functionHeaderKernelFunctionInterface
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderKernelFunctionInterface,2,0) {(void*) boxptr_CodegenCFunctions_functionHeaderKernelFunctionInterface,0}};
 #define boxvar_CodegenCFunctions_functionHeaderKernelFunctionInterface MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderKernelFunctionInterface)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionPrototype(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_boolean _a_boxed, modelica_metatype _a_visibility, modelica_boolean _a_isSimulation, modelica_boolean _a_isPrototype, modelica_metatype _a_afterBody, modelica_metatype *out_out_a_afterBody);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionPrototype(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_metatype _a_boxed, modelica_metatype _a_visibility, modelica_metatype _a_isSimulation, modelica_metatype _a_isPrototype, modelica_metatype _a_afterBody, modelica_metatype *out_out_a_afterBody);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionPrototype,2,0) {(void*) boxptr_CodegenCFunctions_functionPrototype,0}};
 #define boxvar_CodegenCFunctions_functionPrototype MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionPrototype)
-#define boxptr_CodegenCFunctions_lm__153 omc_CodegenCFunctions_lm__153
-#define boxptr_CodegenCFunctions_lm__152 omc_CodegenCFunctions_lm__152
-#define boxptr_CodegenCFunctions_fun__150 omc_CodegenCFunctions_fun__150
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__170 omc_CodegenCFunctions_lm__170
+
+
+#define boxptr_CodegenCFunctions_lm__169 omc_CodegenCFunctions_lm__169
+
+
+#define boxptr_CodegenCFunctions_fun__167 omc_CodegenCFunctions_fun__167
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionHeaderImpl(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_boolean _a_inFunc, modelica_boolean _a_boxed, modelica_metatype _a_visibility, modelica_boolean _a_dynamicLoad, modelica_boolean _a_isSimulation, modelica_metatype _a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionHeaderImpl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_metatype _a_inFunc, modelica_metatype _a_boxed, modelica_metatype _a_visibility, modelica_metatype _a_dynamicLoad, modelica_metatype _a_isSimulation, modelica_metatype _a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderImpl,2,0) {(void*) boxptr_CodegenCFunctions_functionHeaderImpl,0}};
 #define boxvar_CodegenCFunctions_functionHeaderImpl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderImpl)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionHeaderBoxed(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_boolean _a_inFunc, modelica_boolean _a_isBoxed, modelica_metatype _a_visibility, modelica_boolean _a_dynLoad, modelica_boolean _a_isSimulation, modelica_metatype _a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionHeaderBoxed(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_metatype _a_inFunc, modelica_metatype _a_isBoxed, modelica_metatype _a_visibility, modelica_metatype _a_dynLoad, modelica_metatype _a_isSimulation, modelica_metatype _a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderBoxed,2,0) {(void*) boxptr_CodegenCFunctions_functionHeaderBoxed,0}};
 #define boxvar_CodegenCFunctions_functionHeaderBoxed MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderBoxed)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionHeaderNormal(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_boolean _a_inFunc, modelica_metatype _a_visibility, modelica_boolean _a_dynLoad, modelica_boolean _a_isSimulation, modelica_metatype _a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionHeaderNormal(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_metatype _a_inFunc, modelica_metatype _a_visibility, modelica_metatype _a_dynLoad, modelica_metatype _a_isSimulation, modelica_metatype _a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderNormal,2,0) {(void*) boxptr_CodegenCFunctions_functionHeaderNormal,0}};
 #define boxvar_CodegenCFunctions_functionHeaderNormal MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderNormal)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordDefinitionHeader(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_origName, modelica_string _a_encName, modelica_integer _a_numFields);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_recordDefinitionHeader(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_origName, modelica_metatype _a_encName, modelica_metatype _a_numFields);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDefinitionHeader,2,0) {(void*) boxptr_CodegenCFunctions_recordDefinitionHeader,0}};
 #define boxvar_CodegenCFunctions_recordDefinitionHeader MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDefinitionHeader)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordDefinition(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_origName, modelica_string _a_encName, modelica_string _a_fieldNames, modelica_integer _a_numFields);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_recordDefinition(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_origName, modelica_metatype _a_encName, modelica_metatype _a_fieldNames, modelica_metatype _a_numFields);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDefinition,2,0) {(void*) boxptr_CodegenCFunctions_recordDefinition,0}};
 #define boxvar_CodegenCFunctions_recordDefinition MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDefinition)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_arrayVarAllocInit(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var__cref, modelica_metatype _a_var__type, modelica_metatype _a_var__dims, modelica_metatype _a_value, modelica_boolean _a_bind__outside, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_arrayVarAllocInit(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var__cref, modelica_metatype _a_var__type, modelica_metatype _a_var__dims, modelica_metatype _a_value, modelica_metatype _a_bind__outside, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_arrayVarAllocInit,2,0) {(void*) boxptr_CodegenCFunctions_arrayVarAllocInit,0}};
 #define boxvar_CodegenCFunctions_arrayVarAllocInit MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_arrayVarAllocInit)
-#define boxptr_CodegenCFunctions_lm__128 omc_CodegenCFunctions_lm__128
-#define boxptr_CodegenCFunctions_lm__126 omc_CodegenCFunctions_lm__126
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__145 omc_CodegenCFunctions_lm__145
+
+
+#define boxptr_CodegenCFunctions_lm__143 omc_CodegenCFunctions_lm__143
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordInitOutsideBindings(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subvar, modelica_integer _in_a_ix, modelica_metatype _in_a_ctor__suffix, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_ctor__suffix, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_recordInitOutsideBindings(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subvar, modelica_metatype _in_a_ix, modelica_metatype _in_a_ctor__suffix, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_ctor__suffix, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordInitOutsideBindings,2,0) {(void*) boxptr_CodegenCFunctions_recordInitOutsideBindings,0}};
 #define boxvar_CodegenCFunctions_recordInitOutsideBindings MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordInitOutsideBindings)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordVarAllocInit(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_value, modelica_metatype _a_var__cref, modelica_boolean _a_bind__outside, modelica_metatype _a_var__type, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_recordVarAllocInit(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_value, modelica_metatype _a_var__cref, modelica_metatype _a_bind__outside, modelica_metatype _a_var__type, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordVarAllocInit,2,0) {(void*) boxptr_CodegenCFunctions_recordVarAllocInit,0}};
 #define boxvar_CodegenCFunctions_recordVarAllocInit MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordVarAllocInit)
-#define boxptr_CodegenCFunctions_fun__120 omc_CodegenCFunctions_fun__120
-#define boxptr_CodegenCFunctions_lm__119 omc_CodegenCFunctions_lm__119
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__137 omc_CodegenCFunctions_fun__137
+
+
+#define boxptr_CodegenCFunctions_lm__136 omc_CodegenCFunctions_lm__136
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_simpleVarInit(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_value, modelica_metatype _a_var__cref, modelica_boolean _a_bind__outside, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_simpleVarInit(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_value, modelica_metatype _a_var__cref, modelica_metatype _a_bind__outside, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_simpleVarInit,2,0) {(void*) boxptr_CodegenCFunctions_simpleVarInit,0}};
 #define boxvar_CodegenCFunctions_simpleVarInit MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_simpleVarInit)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordMemberAllocInit(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_recordMemberAllocInit omc_CodegenCFunctions_recordMemberAllocInit
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordMemberAllocInit,2,0) {(void*) boxptr_CodegenCFunctions_recordMemberAllocInit,0}};
 #define boxvar_CodegenCFunctions_recordMemberAllocInit MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordMemberAllocInit)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordConstructorDef(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ctor__name, modelica_string _a_rec__name, modelica_metatype _a_variables);
 #define boxptr_CodegenCFunctions_recordConstructorDef omc_CodegenCFunctions_recordConstructorDef
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordConstructorDef,2,0) {(void*) boxptr_CodegenCFunctions_recordConstructorDef,0}};
 #define boxvar_CodegenCFunctions_recordConstructorDef MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordConstructorDef)
-#define boxptr_CodegenCFunctions_lm__112 omc_CodegenCFunctions_lm__112
-#define boxptr_CodegenCFunctions_lm__111 omc_CodegenCFunctions_lm__111
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__129 omc_CodegenCFunctions_lm__129
+
+
+#define boxptr_CodegenCFunctions_lm__128 omc_CodegenCFunctions_lm__128
+
+
+DLLDirection
+modelica_metatype omc_CodegenCFunctions_recordMemberCopyToFromExternal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_string _in_a_src__pref, modelica_string _in_a_dst__pref, modelica_boolean _in_a_copy__to, modelica_metatype _in_a_varCopies, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varCopies, modelica_metatype *out_out_a_auxFunction);
+DLLDirection
+modelica_metatype boxptr_CodegenCFunctions_recordMemberCopyToFromExternal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_metatype _in_a_src__pref, modelica_metatype _in_a_dst__pref, modelica_metatype _in_a_copy__to, modelica_metatype _in_a_varCopies, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varCopies, modelica_metatype *out_out_a_auxFunction);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordMemberCopyToFromExternal,2,0) {(void*) boxptr_CodegenCFunctions_recordMemberCopyToFromExternal,0}};
+#define boxvar_CodegenCFunctions_recordMemberCopyToFromExternal MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordMemberCopyToFromExternal)
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordMemberCopy(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_string _in_a_src__pref, modelica_string _in_a_dst__pref, modelica_metatype _in_a_varCopies, modelica_metatype _in_a_auxFunction, modelica_metatype *out_out_a_varCopies, modelica_metatype *out_out_a_auxFunction);
 #define boxptr_CodegenCFunctions_recordMemberCopy omc_CodegenCFunctions_recordMemberCopy
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordMemberCopy,2,0) {(void*) boxptr_CodegenCFunctions_recordMemberCopy,0}};
 #define boxvar_CodegenCFunctions_recordMemberCopy MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordMemberCopy)
-#define boxptr_CodegenCFunctions_fun__108 omc_CodegenCFunctions_fun__108
-DLLExport
-modelica_metatype omc_CodegenCFunctions_recordModelicaCallConstrctor(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_rec__name, modelica_metatype _a_variables);
-#define boxptr_CodegenCFunctions_recordModelicaCallConstrctor omc_CodegenCFunctions_recordModelicaCallConstrctor
-static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordModelicaCallConstrctor,2,0) {(void*) boxptr_CodegenCFunctions_recordModelicaCallConstrctor,0}};
-#define boxvar_CodegenCFunctions_recordModelicaCallConstrctor MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordModelicaCallConstrctor)
-#define boxptr_CodegenCFunctions_lm__106 omc_CodegenCFunctions_lm__106
-#define boxptr_CodegenCFunctions_lm__105 omc_CodegenCFunctions_lm__105
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__121 omc_CodegenCFunctions_fun__121
+
+
+DLLDirection
+modelica_metatype omc_CodegenCFunctions_recordCreateFromVarsDef(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_rec__name, modelica_metatype _a_variables);
+#define boxptr_CodegenCFunctions_recordCreateFromVarsDef omc_CodegenCFunctions_recordCreateFromVarsDef
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordCreateFromVarsDef,2,0) {(void*) boxptr_CodegenCFunctions_recordCreateFromVarsDef,0}};
+#define boxvar_CodegenCFunctions_recordCreateFromVarsDef MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordCreateFromVarsDef)
+
+
+#define boxptr_CodegenCFunctions_lm__119 omc_CodegenCFunctions_lm__119
+
+
+#define boxptr_CodegenCFunctions_lm__117 omc_CodegenCFunctions_lm__117
+
+
+#define boxptr_CodegenCFunctions_lm__116 omc_CodegenCFunctions_lm__116
+
+
+#define boxptr_CodegenCFunctions_fun__115 omc_CodegenCFunctions_fun__115
+
+
+DLLDirection
+modelica_metatype omc_CodegenCFunctions_recordCopyExternalDefs(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_rec__name, modelica_metatype _a_variables);
+#define boxptr_CodegenCFunctions_recordCopyExternalDefs omc_CodegenCFunctions_recordCopyExternalDefs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordCopyExternalDefs,2,0) {(void*) boxptr_CodegenCFunctions_recordCopyExternalDefs,0}};
+#define boxvar_CodegenCFunctions_recordCopyExternalDefs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordCopyExternalDefs)
+
+
+#define boxptr_CodegenCFunctions_lm__113 omc_CodegenCFunctions_lm__113
+
+
+#define boxptr_CodegenCFunctions_lm__112 omc_CodegenCFunctions_lm__112
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordCopyDef(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_rec__name, modelica_metatype _a_variables);
 #define boxptr_CodegenCFunctions_recordCopyDef omc_CodegenCFunctions_recordCopyDef
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordCopyDef,2,0) {(void*) boxptr_CodegenCFunctions_recordCopyDef,0}};
 #define boxvar_CodegenCFunctions_recordCopyDef MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordCopyDef)
-#define boxptr_CodegenCFunctions_lm__103 omc_CodegenCFunctions_lm__103
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__110 omc_CodegenCFunctions_lm__110
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordDeclarationFullHeader(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_recDecl);
 #define boxptr_CodegenCFunctions_recordDeclarationFullHeader omc_CodegenCFunctions_recordDeclarationFullHeader
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDeclarationFullHeader,2,0) {(void*) boxptr_CodegenCFunctions_recordDeclarationFullHeader,0}};
 #define boxvar_CodegenCFunctions_recordDeclarationFullHeader MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDeclarationFullHeader)
-#define boxptr_CodegenCFunctions_fun__101 omc_CodegenCFunctions_fun__101
+
+
+#define boxptr_CodegenCFunctions_lm__105 omc_CodegenCFunctions_lm__105
+
+
+#define boxptr_CodegenCFunctions_lm__104 omc_CodegenCFunctions_lm__104
+
+
+#define boxptr_CodegenCFunctions_lm__102 omc_CodegenCFunctions_lm__102
+
+
+#define boxptr_CodegenCFunctions_lm__101 omc_CodegenCFunctions_lm__101
+
+
 #define boxptr_CodegenCFunctions_lm__100 omc_CodegenCFunctions_lm__100
+
+
 #define boxptr_CodegenCFunctions_lm__99 omc_CodegenCFunctions_lm__99
-#define boxptr_CodegenCFunctions_lm__98 omc_CodegenCFunctions_lm__98
+
+
 #define boxptr_CodegenCFunctions_lm__97 omc_CodegenCFunctions_lm__97
-#define boxptr_CodegenCFunctions_lm__95 omc_CodegenCFunctions_lm__95
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordDeclarationExtraCtor(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_recDecl);
 #define boxptr_CodegenCFunctions_recordDeclarationExtraCtor omc_CodegenCFunctions_recordDeclarationExtraCtor
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDeclarationExtraCtor,2,0) {(void*) boxptr_CodegenCFunctions_recordDeclarationExtraCtor,0}};
 #define boxvar_CodegenCFunctions_recordDeclarationExtraCtor MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDeclarationExtraCtor)
+
+
+#define boxptr_CodegenCFunctions_lm__94 omc_CodegenCFunctions_lm__94
+
+
 #define boxptr_CodegenCFunctions_lm__92 omc_CodegenCFunctions_lm__92
-#define boxptr_CodegenCFunctions_lm__90 omc_CodegenCFunctions_lm__90
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordDeclarationHeader(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_recDecl);
 #define boxptr_CodegenCFunctions_recordDeclarationHeader omc_CodegenCFunctions_recordDeclarationHeader
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDeclarationHeader,2,0) {(void*) boxptr_CodegenCFunctions_recordDeclarationHeader,0}};
 #define boxvar_CodegenCFunctions_recordDeclarationHeader MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDeclarationHeader)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_recordDeclaration(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_recDecl);
 #define boxptr_CodegenCFunctions_recordDeclaration omc_CodegenCFunctions_recordDeclaration
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDeclaration,2,0) {(void*) boxptr_CodegenCFunctions_recordDeclaration,0}};
 #define boxvar_CodegenCFunctions_recordDeclaration MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_recordDeclaration)
+
+
+#define boxptr_CodegenCFunctions_lm__88 omc_CodegenCFunctions_lm__88
+
+
 #define boxptr_CodegenCFunctions_lm__86 omc_CodegenCFunctions_lm__86
-#define boxptr_CodegenCFunctions_lm__85 omc_CodegenCFunctions_lm__85
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionHeaderParallelImpl(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_boolean _a_inFunc, modelica_boolean _a_boxed);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionHeaderParallelImpl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_metatype _a_inFunc, modelica_metatype _a_boxed);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderParallelImpl,2,0) {(void*) boxptr_CodegenCFunctions_functionHeaderParallelImpl,0}};
 #define boxvar_CodegenCFunctions_functionHeaderParallelImpl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaderParallelImpl)
+
+
+#define boxptr_CodegenCFunctions_fun__84 omc_CodegenCFunctions_fun__84
+
+
 #define boxptr_CodegenCFunctions_fun__83 omc_CodegenCFunctions_fun__83
-#define boxptr_CodegenCFunctions_fun__82 omc_CodegenCFunctions_fun__82
+
+
+#define boxptr_CodegenCFunctions_lm__82 omc_CodegenCFunctions_lm__82
+
+
 #define boxptr_CodegenCFunctions_lm__81 omc_CodegenCFunctions_lm__81
-#define boxptr_CodegenCFunctions_lm__80 omc_CodegenCFunctions_lm__80
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_parallelFunctionHeader(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_boolean _in_a_inFunc);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_parallelFunctionHeader(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_metatype _in_a_inFunc);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_parallelFunctionHeader,2,0) {(void*) boxptr_CodegenCFunctions_parallelFunctionHeader,0}};
 #define boxvar_CodegenCFunctions_parallelFunctionHeader MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_parallelFunctionHeader)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionHeader(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_boolean _in_a_inFunc, modelica_boolean _in_a_isSimulation, modelica_metatype _in_a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionHeader(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_metatype _in_a_inFunc, modelica_metatype _in_a_isSimulation, modelica_metatype _in_a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeader,2,0) {(void*) boxptr_CodegenCFunctions_functionHeader,0}};
 #define boxvar_CodegenCFunctions_functionHeader MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeader)
-#define boxptr_CodegenCFunctions_fun__76 omc_CodegenCFunctions_fun__76
-#define boxptr_CodegenCFunctions_lm__75 omc_CodegenCFunctions_lm__75
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__77 omc_CodegenCFunctions_fun__77
+
+
+#define boxptr_CodegenCFunctions_lm__76 omc_CodegenCFunctions_lm__76
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_parallelFunctionHeadersImpl(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_functions);
 #define boxptr_CodegenCFunctions_parallelFunctionHeadersImpl omc_CodegenCFunctions_parallelFunctionHeadersImpl
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_parallelFunctionHeadersImpl,2,0) {(void*) boxptr_CodegenCFunctions_parallelFunctionHeadersImpl,0}};
 #define boxvar_CodegenCFunctions_parallelFunctionHeadersImpl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_parallelFunctionHeadersImpl)
-#define boxptr_CodegenCFunctions_lm__72 omc_CodegenCFunctions_lm__72
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__73 omc_CodegenCFunctions_lm__73
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionHeadersParModelica(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_filePrefix, modelica_metatype _a_functions);
 #define boxptr_CodegenCFunctions_functionHeadersParModelica omc_CodegenCFunctions_functionHeadersParModelica
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeadersParModelica,2,0) {(void*) boxptr_CodegenCFunctions_functionHeadersParModelica,0}};
 #define boxvar_CodegenCFunctions_functionHeadersParModelica MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeadersParModelica)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionHeaders(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_functions, modelica_boolean _a_isSimulation, modelica_metatype _a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_CodegenCFunctions_functionHeaders(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_functions, modelica_metatype _a_isSimulation, modelica_metatype _a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaders,2,0) {(void*) boxptr_CodegenCFunctions_functionHeaders,0}};
 #define boxvar_CodegenCFunctions_functionHeaders MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionHeaders)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_externalFunctionIncludes(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_includes);
 #define boxptr_CodegenCFunctions_externalFunctionIncludes omc_CodegenCFunctions_externalFunctionIncludes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_externalFunctionIncludes,2,0) {(void*) boxptr_CodegenCFunctions_externalFunctionIncludes,0}};
 #define boxvar_CodegenCFunctions_externalFunctionIncludes MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_externalFunctionIncludes)
-#define boxptr_CodegenCFunctions_lm__67 omc_CodegenCFunctions_lm__67
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__68 omc_CodegenCFunctions_lm__68
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_commonHeader(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_filePrefix);
 #define boxptr_CodegenCFunctions_commonHeader omc_CodegenCFunctions_commonHeader
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_commonHeader,2,0) {(void*) boxptr_CodegenCFunctions_commonHeader,0}};
 #define boxvar_CodegenCFunctions_commonHeader MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_commonHeader)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionsMakefile(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fnCode);
 #define boxptr_CodegenCFunctions_functionsMakefile omc_CodegenCFunctions_functionsMakefile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionsMakefile,2,0) {(void*) boxptr_CodegenCFunctions_functionsMakefile,0}};
 #define boxvar_CodegenCFunctions_functionsMakefile MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionsMakefile)
-#define boxptr_CodegenCFunctions_lm__62 omc_CodegenCFunctions_lm__62
-#define boxptr_CodegenCFunctions_lm__56 omc_CodegenCFunctions_lm__56
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__63 omc_CodegenCFunctions_lm__63
+
+
+#define boxptr_CodegenCFunctions_lm__57 omc_CodegenCFunctions_lm__57
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionsHeaderFile(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_filePrefix, modelica_metatype _a_mainFunction, modelica_metatype _a_functions, modelica_metatype _a_extraRecordDecls, modelica_metatype _a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
 #define boxptr_CodegenCFunctions_functionsHeaderFile omc_CodegenCFunctions_functionsHeaderFile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionsHeaderFile,2,0) {(void*) boxptr_CodegenCFunctions_functionsHeaderFile,0}};
 #define boxvar_CodegenCFunctions_functionsHeaderFile MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionsHeaderFile)
-#define boxptr_CodegenCFunctions_fun__54 omc_CodegenCFunctions_fun__54
-#define boxptr_CodegenCFunctions_lm__53 omc_CodegenCFunctions_lm__53
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__55 omc_CodegenCFunctions_fun__55
+
+
+#define boxptr_CodegenCFunctions_lm__54 omc_CodegenCFunctions_lm__54
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_functionsFile(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_filePrefix, modelica_metatype _a_mainFunction, modelica_metatype _a_functions, modelica_metatype _a_literals, modelica_metatype _a_staticPrototypes, modelica_metatype *out_out_a_staticPrototypes);
 #define boxptr_CodegenCFunctions_functionsFile omc_CodegenCFunctions_functionsFile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionsFile,2,0) {(void*) boxptr_CodegenCFunctions_functionsFile,0}};
 #define boxvar_CodegenCFunctions_functionsFile MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_functionsFile)
+
+
+#define boxptr_CodegenCFunctions_fun__52 omc_CodegenCFunctions_fun__52
+
+
 #define boxptr_CodegenCFunctions_fun__51 omc_CodegenCFunctions_fun__51
-#define boxptr_CodegenCFunctions_fun__50 omc_CodegenCFunctions_fun__50
-#define boxptr_CodegenCFunctions_lm__48 omc_CodegenCFunctions_lm__48
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_lm__49 omc_CodegenCFunctions_lm__49
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_translateFunctionHeaderFiles(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_functionCode);
 #define boxptr_CodegenCFunctions_translateFunctionHeaderFiles omc_CodegenCFunctions_translateFunctionHeaderFiles
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_translateFunctionHeaderFiles,2,0) {(void*) boxptr_CodegenCFunctions_translateFunctionHeaderFiles,0}};
 #define boxvar_CodegenCFunctions_translateFunctionHeaderFiles MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_translateFunctionHeaderFiles)
-#define boxptr_CodegenCFunctions_fun__46 omc_CodegenCFunctions_fun__46
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__47 omc_CodegenCFunctions_fun__47
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_translateFunctions(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_functionCode);
 #define boxptr_CodegenCFunctions_translateFunctions omc_CodegenCFunctions_translateFunctions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_translateFunctions,2,0) {(void*) boxptr_CodegenCFunctions_translateFunctions,0}};
 #define boxvar_CodegenCFunctions_translateFunctions MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_translateFunctions)
-#define boxptr_CodegenCFunctions_fun__43 omc_CodegenCFunctions_fun__43
-DLLExport
+
+
+#define boxptr_CodegenCFunctions_fun__44 omc_CodegenCFunctions_fun__44
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_mainTop(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_mainBody, modelica_string _a_url, modelica_metatype *out_out_a_mainBody);
 #define boxptr_CodegenCFunctions_mainTop omc_CodegenCFunctions_mainTop
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_mainTop,2,0) {(void*) boxptr_CodegenCFunctions_mainTop,0}};
 #define boxvar_CodegenCFunctions_mainTop MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_mainTop)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_CodegenCFunctions_generateEntryPoint(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_entryPoint, modelica_string _a_url);
 #define boxptr_CodegenCFunctions_generateEntryPoint omc_CodegenCFunctions_generateEntryPoint
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCFunctions_generateEntryPoint,2,0) {(void*) boxptr_CodegenCFunctions_generateEntryPoint,0}};
 #define boxvar_CodegenCFunctions_generateEntryPoint MMC_REFSTRUCTLIT(boxvar_lit_CodegenCFunctions_generateEntryPoint)
+
 #ifdef __cplusplus
 }
 #endif

@@ -1,0 +1,159 @@
+#ifndef MMToJuliaUtil__H
+#define MMToJuliaUtil__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Direction_BIDIR__desc;
+
+extern struct record_description Absyn_Direction_INPUT__desc;
+
+extern struct record_description Absyn_Direction_INPUT__OUTPUT__desc;
+
+extern struct record_description Absyn_Direction_OUTPUT__desc;
+
+extern struct record_description MMToJuliaUtil_Context_FUNCTION__desc;
+
+extern struct record_description MMToJuliaUtil_Context_FUNCTION__RETURN__CONTEXT__desc;
+
+extern struct record_description MMToJuliaUtil_Context_INPUT__CONTEXT__desc;
+
+extern struct record_description MMToJuliaUtil_Context_MATCH__CONTEXT__desc;
+
+extern struct record_description MMToJuliaUtil_Context_UNIONTYPE__desc;
+
+
+DLLDirection
+void omc_MMToJuliaUtil_mMKeywordToJLKeyword(threadData_t *threadData);
+#define boxptr_MMToJuliaUtil_mMKeywordToJLKeyword omc_MMToJuliaUtil_mMKeywordToJLKeyword
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_mMKeywordToJLKeyword,2,0) {(void*) boxptr_MMToJuliaUtil_mMKeywordToJLKeyword,0}};
+#define boxvar_MMToJuliaUtil_mMKeywordToJLKeyword MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_mMKeywordToJLKeyword)
+
+
+DLLDirection
+modelica_boolean omc_MMToJuliaUtil_algorithmItemsContainsReturn(threadData_t *threadData, modelica_metatype _contents);
+DLLDirection
+modelica_metatype boxptr_MMToJuliaUtil_algorithmItemsContainsReturn(threadData_t *threadData, modelica_metatype _contents);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_algorithmItemsContainsReturn,2,0) {(void*) boxptr_MMToJuliaUtil_algorithmItemsContainsReturn,0}};
+#define boxvar_MMToJuliaUtil_algorithmItemsContainsReturn MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_algorithmItemsContainsReturn)
+
+
+DLLDirection
+modelica_boolean omc_MMToJuliaUtil_explicitReturnInClassPart(threadData_t *threadData, modelica_metatype _classParts);
+DLLDirection
+modelica_metatype boxptr_MMToJuliaUtil_explicitReturnInClassPart(threadData_t *threadData, modelica_metatype _classParts);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_explicitReturnInClassPart,2,0) {(void*) boxptr_MMToJuliaUtil_explicitReturnInClassPart,0}};
+#define boxvar_MMToJuliaUtil_explicitReturnInClassPart MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_explicitReturnInClassPart)
+
+
+DLLDirection
+modelica_boolean omc_MMToJuliaUtil_elementSpecIsOUTPUT__OR__BIDIR(threadData_t *threadData, modelica_metatype _spec);
+DLLDirection
+modelica_metatype boxptr_MMToJuliaUtil_elementSpecIsOUTPUT__OR__BIDIR(threadData_t *threadData, modelica_metatype _spec);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_elementSpecIsOUTPUT__OR__BIDIR,2,0) {(void*) boxptr_MMToJuliaUtil_elementSpecIsOUTPUT__OR__BIDIR,0}};
+#define boxvar_MMToJuliaUtil_elementSpecIsOUTPUT__OR__BIDIR MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_elementSpecIsOUTPUT__OR__BIDIR)
+
+
+DLLDirection
+modelica_boolean omc_MMToJuliaUtil_elementSpecIsOUTPUT(threadData_t *threadData, modelica_metatype _spec);
+DLLDirection
+modelica_metatype boxptr_MMToJuliaUtil_elementSpecIsOUTPUT(threadData_t *threadData, modelica_metatype _spec);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_elementSpecIsOUTPUT,2,0) {(void*) boxptr_MMToJuliaUtil_elementSpecIsOUTPUT,0}};
+#define boxvar_MMToJuliaUtil_elementSpecIsOUTPUT MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_elementSpecIsOUTPUT)
+
+
+DLLDirection
+modelica_boolean omc_MMToJuliaUtil_elementSpecIsBIDIR(threadData_t *threadData, modelica_metatype _spec);
+DLLDirection
+modelica_metatype boxptr_MMToJuliaUtil_elementSpecIsBIDIR(threadData_t *threadData, modelica_metatype _spec);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_elementSpecIsBIDIR,2,0) {(void*) boxptr_MMToJuliaUtil_elementSpecIsBIDIR,0}};
+#define boxvar_MMToJuliaUtil_elementSpecIsBIDIR MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_elementSpecIsBIDIR)
+
+
+DLLDirection
+modelica_metatype omc_MMToJuliaUtil_filterOnDirection(threadData_t *threadData, modelica_metatype _inputs, modelica_metatype _direction);
+#define boxptr_MMToJuliaUtil_filterOnDirection omc_MMToJuliaUtil_filterOnDirection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_filterOnDirection,2,0) {(void*) boxptr_MMToJuliaUtil_filterOnDirection,0}};
+#define boxvar_MMToJuliaUtil_filterOnDirection MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_filterOnDirection)
+
+
+DLLDirection
+modelica_boolean omc_MMToJuliaUtil_isFunctionContext(threadData_t *threadData, modelica_metatype _givenCTX);
+DLLDirection
+modelica_metatype boxptr_MMToJuliaUtil_isFunctionContext(threadData_t *threadData, modelica_metatype _givenCTX);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_isFunctionContext,2,0) {(void*) boxptr_MMToJuliaUtil_isFunctionContext,0}};
+#define boxvar_MMToJuliaUtil_isFunctionContext MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_isFunctionContext)
+
+
+DLLDirection
+modelica_metatype omc_MMToJuliaUtil_makeBDirection(threadData_t *threadData);
+#define boxptr_MMToJuliaUtil_makeBDirection omc_MMToJuliaUtil_makeBDirection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeBDirection,2,0) {(void*) boxptr_MMToJuliaUtil_makeBDirection,0}};
+#define boxvar_MMToJuliaUtil_makeBDirection MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeBDirection)
+
+
+DLLDirection
+modelica_metatype omc_MMToJuliaUtil_makeInputOutputDirection(threadData_t *threadData);
+#define boxptr_MMToJuliaUtil_makeInputOutputDirection omc_MMToJuliaUtil_makeInputOutputDirection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeInputOutputDirection,2,0) {(void*) boxptr_MMToJuliaUtil_makeInputOutputDirection,0}};
+#define boxvar_MMToJuliaUtil_makeInputOutputDirection MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeInputOutputDirection)
+
+
+DLLDirection
+modelica_metatype omc_MMToJuliaUtil_makeOutputDirection(threadData_t *threadData);
+#define boxptr_MMToJuliaUtil_makeOutputDirection omc_MMToJuliaUtil_makeOutputDirection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeOutputDirection,2,0) {(void*) boxptr_MMToJuliaUtil_makeOutputDirection,0}};
+#define boxvar_MMToJuliaUtil_makeOutputDirection MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeOutputDirection)
+
+
+DLLDirection
+modelica_metatype omc_MMToJuliaUtil_makeInputDirection(threadData_t *threadData);
+#define boxptr_MMToJuliaUtil_makeInputDirection omc_MMToJuliaUtil_makeInputDirection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeInputDirection,2,0) {(void*) boxptr_MMToJuliaUtil_makeInputDirection,0}};
+#define boxvar_MMToJuliaUtil_makeInputDirection MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeInputDirection)
+
+
+DLLDirection
+modelica_metatype omc_MMToJuliaUtil_makeMatchContext(threadData_t *threadData, modelica_metatype _iExp);
+#define boxptr_MMToJuliaUtil_makeMatchContext omc_MMToJuliaUtil_makeMatchContext
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeMatchContext,2,0) {(void*) boxptr_MMToJuliaUtil_makeMatchContext,0}};
+#define boxvar_MMToJuliaUtil_makeMatchContext MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeMatchContext)
+
+
+DLLDirection
+modelica_metatype omc_MMToJuliaUtil_makeFunctionReturnContext(threadData_t *threadData, modelica_string _returnValuesStr, modelica_string _ty_str);
+#define boxptr_MMToJuliaUtil_makeFunctionReturnContext omc_MMToJuliaUtil_makeFunctionReturnContext
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeFunctionReturnContext,2,0) {(void*) boxptr_MMToJuliaUtil_makeFunctionReturnContext,0}};
+#define boxvar_MMToJuliaUtil_makeFunctionReturnContext MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeFunctionReturnContext)
+
+
+DLLDirection
+modelica_metatype omc_MMToJuliaUtil_makeFunctionContext(threadData_t *threadData, modelica_string _returnValuesStr);
+#define boxptr_MMToJuliaUtil_makeFunctionContext omc_MMToJuliaUtil_makeFunctionContext
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeFunctionContext,2,0) {(void*) boxptr_MMToJuliaUtil_makeFunctionContext,0}};
+#define boxvar_MMToJuliaUtil_makeFunctionContext MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeFunctionContext)
+
+
+DLLDirection
+modelica_metatype omc_MMToJuliaUtil_makeInputContext(threadData_t *threadData, modelica_string _ty_str);
+#define boxptr_MMToJuliaUtil_makeInputContext omc_MMToJuliaUtil_makeInputContext
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeInputContext,2,0) {(void*) boxptr_MMToJuliaUtil_makeInputContext,0}};
+#define boxvar_MMToJuliaUtil_makeInputContext MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeInputContext)
+
+
+DLLDirection
+modelica_metatype omc_MMToJuliaUtil_makeUniontypeContext(threadData_t *threadData, modelica_string _name);
+#define boxptr_MMToJuliaUtil_makeUniontypeContext omc_MMToJuliaUtil_makeUniontypeContext
+static const MMC_DEFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeUniontypeContext,2,0) {(void*) boxptr_MMToJuliaUtil_makeUniontypeContext,0}};
+#define boxvar_MMToJuliaUtil_makeUniontypeContext MMC_REFSTRUCTLIT(boxvar_lit_MMToJuliaUtil_makeUniontypeContext)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

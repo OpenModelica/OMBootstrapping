@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,14 +8,15 @@ extern "C" {
 #define SymbolTable_SYMBOLTABLE__desc_added
 ADD_METARECORD_DEFINITIONS const char* SymbolTable_SYMBOLTABLE__desc__fields[5] = {"ast","explodedAst","vars","cachedAsts","cacheIndex"};
 ADD_METARECORD_DEFINITIONS struct record_description SymbolTable_SYMBOLTABLE__desc = {
-"SymbolTable_SYMBOLTABLE",
-"SymbolTable.SYMBOLTABLE",
-SymbolTable_SYMBOLTABLE__desc__fields
+  "SymbolTable_SYMBOLTABLE",
+  "SymbolTable.SYMBOLTABLE",
+  SymbolTable_SYMBOLTABLE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description SymbolTable_SYMBOLTABLE__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

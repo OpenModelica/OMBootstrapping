@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,12 +8,12 @@ extern "C" {
 #define Interactive_AnnotationType_ICON__ANNOTATION__desc_added
 ADD_METARECORD_DEFINITIONS const char* Interactive_AnnotationType_ICON__ANNOTATION__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description Interactive_AnnotationType_ICON__ANNOTATION__desc = {
-"Interactive_AnnotationType_ICON__ANNOTATION",
-"Interactive.AnnotationType.ICON_ANNOTATION",
-Interactive_AnnotationType_ICON__ANNOTATION__desc__fields
+  "Interactive_AnnotationType_ICON__ANNOTATION",
+  "Interactive.AnnotationType.ICON_ANNOTATION",
+  Interactive_AnnotationType_ICON__ANNOTATION__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Interactive_AnnotationType_ICON__ANNOTATION__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -20,12 +21,12 @@ extern struct record_description Interactive_AnnotationType_ICON__ANNOTATION__de
 #define Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc_added
 ADD_METARECORD_DEFINITIONS const char* Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc = {
-"Interactive_AnnotationType_DIAGRAM__ANNOTATION",
-"Interactive.AnnotationType.DIAGRAM_ANNOTATION",
-Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc__fields
+  "Interactive_AnnotationType_DIAGRAM__ANNOTATION",
+  "Interactive.AnnotationType.DIAGRAM_ANNOTATION",
+  Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -33,12 +34,12 @@ extern struct record_description Interactive_AnnotationType_DIAGRAM__ANNOTATION_
 #define Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc_added
 ADD_METARECORD_DEFINITIONS const char* Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc = {
-"Interactive_AnnotationType_DIAGRAM__ANNOTATION",
-"Interactive.AnnotationType.DIAGRAM_ANNOTATION",
-Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc__fields
+  "Interactive_AnnotationType_DIAGRAM__ANNOTATION",
+  "Interactive.AnnotationType.DIAGRAM_ANNOTATION",
+  Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Interactive_AnnotationType_DIAGRAM__ANNOTATION__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -46,12 +47,12 @@ extern struct record_description Interactive_AnnotationType_DIAGRAM__ANNOTATION_
 #define Interactive_AnnotationType_ICON__ANNOTATION__desc_added
 ADD_METARECORD_DEFINITIONS const char* Interactive_AnnotationType_ICON__ANNOTATION__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description Interactive_AnnotationType_ICON__ANNOTATION__desc = {
-"Interactive_AnnotationType_ICON__ANNOTATION",
-"Interactive.AnnotationType.ICON_ANNOTATION",
-Interactive_AnnotationType_ICON__ANNOTATION__desc__fields
+  "Interactive_AnnotationType_ICON__ANNOTATION",
+  "Interactive.AnnotationType.ICON_ANNOTATION",
+  Interactive_AnnotationType_ICON__ANNOTATION__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Interactive_AnnotationType_ICON__ANNOTATION__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -59,12 +60,12 @@ extern struct record_description Interactive_AnnotationType_ICON__ANNOTATION__de
 #define Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc_added
 ADD_METARECORD_DEFINITIONS const char* Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc__fields[2] = {"program","modelPath"};
 ADD_METARECORD_DEFINITIONS struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc = {
-"Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE",
-"Interactive.GraphicEnvCache.GRAPHIC_ENV_NO_CACHE",
-Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc__fields
+  "Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE",
+  "Interactive.GraphicEnvCache.GRAPHIC_ENV_NO_CACHE",
+  Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -72,12 +73,12 @@ extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__C
 #define Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc_added
 ADD_METARECORD_DEFINITIONS const char* Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc__fields[4] = {"program","modelPath","cache","env"};
 ADD_METARECORD_DEFINITIONS struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc = {
-"Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE",
-"Interactive.GraphicEnvCache.GRAPHIC_ENV_PARTIAL_CACHE",
-Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc__fields
+  "Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE",
+  "Interactive.GraphicEnvCache.GRAPHIC_ENV_PARTIAL_CACHE",
+  Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -85,12 +86,12 @@ extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTI
 #define Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc_added
 ADD_METARECORD_DEFINITIONS const char* Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc__fields[4] = {"program","modelPath","cache","env"};
 ADD_METARECORD_DEFINITIONS struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc = {
-"Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE",
-"Interactive.GraphicEnvCache.GRAPHIC_ENV_FULL_CACHE",
-Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc__fields
+  "Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE",
+  "Interactive.GraphicEnvCache.GRAPHIC_ENV_FULL_CACHE",
+  Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -98,12 +99,12 @@ extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL_
 #define Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc_added
 ADD_METARECORD_DEFINITIONS const char* Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc__fields[4] = {"program","modelPath","cache","env"};
 ADD_METARECORD_DEFINITIONS struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc = {
-"Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE",
-"Interactive.GraphicEnvCache.GRAPHIC_ENV_FULL_CACHE",
-Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc__fields
+  "Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE",
+  "Interactive.GraphicEnvCache.GRAPHIC_ENV_FULL_CACHE",
+  Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -111,12 +112,12 @@ extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL_
 #define Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc_added
 ADD_METARECORD_DEFINITIONS const char* Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc__fields[4] = {"program","modelPath","cache","env"};
 ADD_METARECORD_DEFINITIONS struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc = {
-"Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE",
-"Interactive.GraphicEnvCache.GRAPHIC_ENV_PARTIAL_CACHE",
-Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc__fields
+  "Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE",
+  "Interactive.GraphicEnvCache.GRAPHIC_ENV_PARTIAL_CACHE",
+  Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTIAL__CACHE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -124,14 +125,41 @@ extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__PARTI
 #define Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc_added
 ADD_METARECORD_DEFINITIONS const char* Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc__fields[2] = {"program","modelPath"};
 ADD_METARECORD_DEFINITIONS struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc = {
-"Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE",
-"Interactive.GraphicEnvCache.GRAPHIC_ENV_NO_CACHE",
-Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc__fields
+  "Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE",
+  "Interactive.GraphicEnvCache.GRAPHIC_ENV_NO_CACHE",
+  Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__NO__CACHE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef Interactive_ComponentProperties_PROPERTIES__desc_added
+#define Interactive_ComponentProperties_PROPERTIES__desc_added
+ADD_METARECORD_DEFINITIONS const char* Interactive_ComponentProperties_PROPERTIES__desc__fields[8] = {"isFinal","isFlow","isStream","isProtected","isReplaceable","variability","innerOuter","direction"};
+ADD_METARECORD_DEFINITIONS struct record_description Interactive_ComponentProperties_PROPERTIES__desc = {
+  "Interactive_ComponentProperties_PROPERTIES",
+  "Interactive.ComponentProperties.PROPERTIES",
+  Interactive_ComponentProperties_PROPERTIES__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description Interactive_ComponentProperties_PROPERTIES__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef Interactive_ComponentProperties_PROPERTIES__desc_added
+#define Interactive_ComponentProperties_PROPERTIES__desc_added
+ADD_METARECORD_DEFINITIONS const char* Interactive_ComponentProperties_PROPERTIES__desc__fields[8] = {"isFinal","isFlow","isStream","isProtected","isReplaceable","variability","innerOuter","direction"};
+ADD_METARECORD_DEFINITIONS struct record_description Interactive_ComponentProperties_PROPERTIES__desc = {
+  "Interactive_ComponentProperties_PROPERTIES",
+  "Interactive.ComponentProperties.PROPERTIES",
+  Interactive_ComponentProperties_PROPERTIES__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description Interactive_ComponentProperties_PROPERTIES__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

@@ -1,0 +1,216 @@
+#ifndef CommonSubExpression__H
+#define CommonSubExpression__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description AvlSetInt_Tree_EMPTY__desc;
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_BINDING__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_DYNAMIC__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_UNKNOWN__EQUATION__KIND__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_IndexType_ABSOLUTE__desc;
+
+extern struct record_description BackendDAE_IndexType_SOLVABLE__desc;
+
+extern struct record_description BackendDAE_Matching_NO__MATCHING__desc;
+
+extern struct record_description CommonSubExpression_CSE__Equation_CSE__EQUATION__desc;
+
+extern struct record_description CommonSubExpression_CommonSubExp_ASSIGNMENT__CSE__desc;
+
+extern struct record_description CommonSubExpression_CommonSubExp_SHORTCUT__CSE__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ComponentRef_WILD__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Exp_TUPLE__desc;
+
+extern struct record_description DAE_Type_T__BOOL__desc;
+
+extern struct record_description DAE_Type_T__CLOCK__desc;
+
+extern struct record_description DAE_Type_T__INTEGER__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_Type_T__STRING__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_CommonSubExpression_printCSE omc_CommonSubExpression_printCSE
+
+
+#define boxptr_CommonSubExpression_getTopLevelFactors omc_CommonSubExpression_getTopLevelFactors
+
+
+#define boxptr_CommonSubExpression_commonSubExpressionUpdate omc_CommonSubExpression_commonSubExpressionUpdate
+
+
+#define boxptr_CommonSubExpression_getCSE3 omc_CommonSubExpression_getCSE3
+
+
+#define boxptr_CommonSubExpression_getCSE2 omc_CommonSubExpression_getCSE2
+
+
+#define boxptr_CommonSubExpression_commonSubExpression omc_CommonSubExpression_commonSubExpression
+
+
+DLLDirection
+modelica_metatype omc_CommonSubExpression_commonSubExpressionReplacement(threadData_t *threadData, modelica_metatype _daeIn);
+#define boxptr_CommonSubExpression_commonSubExpressionReplacement omc_CommonSubExpression_commonSubExpressionReplacement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_commonSubExpressionReplacement,2,0) {(void*) boxptr_CommonSubExpression_commonSubExpressionReplacement,0}};
+#define boxvar_CommonSubExpression_commonSubExpressionReplacement MMC_REFSTRUCTLIT(boxvar_lit_CommonSubExpression_commonSubExpressionReplacement)
+
+
+#define boxptr_CommonSubExpression_createStatistics1 omc_CommonSubExpression_createStatistics1
+
+
+#define boxptr_CommonSubExpression_createStatistics omc_CommonSubExpression_createStatistics
+
+
+#define boxptr_CommonSubExpression_substituteCSE1 omc_CommonSubExpression_substituteCSE1
+
+
+#define boxptr_CommonSubExpression_substituteCSE omc_CommonSubExpression_substituteCSE
+
+
+DLLDirection
+modelica_metatype omc_CommonSubExpression_cseBinary(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_CommonSubExpression_cseBinary omc_CommonSubExpression_cseBinary
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_cseBinary,2,0) {(void*) boxptr_CommonSubExpression_cseBinary,0}};
+#define boxvar_CommonSubExpression_cseBinary MMC_REFSTRUCTLIT(boxvar_lit_CommonSubExpression_cseBinary)
+
+
+DLLDirection
+modelica_boolean omc_CommonSubExpression_isCSEExp(threadData_t *threadData, modelica_metatype _inExp);
+DLLDirection
+modelica_metatype boxptr_CommonSubExpression_isCSEExp(threadData_t *threadData, modelica_metatype _inExp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_isCSEExp,2,0) {(void*) boxptr_CommonSubExpression_isCSEExp,0}};
+#define boxvar_CommonSubExpression_isCSEExp MMC_REFSTRUCTLIT(boxvar_lit_CommonSubExpression_isCSEExp)
+
+
+DLLDirection
+modelica_boolean omc_CommonSubExpression_isCSECref(threadData_t *threadData, modelica_metatype _cr);
+DLLDirection
+modelica_metatype boxptr_CommonSubExpression_isCSECref(threadData_t *threadData, modelica_metatype _cr);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_isCSECref,2,0) {(void*) boxptr_CommonSubExpression_isCSECref,0}};
+#define boxvar_CommonSubExpression_isCSECref MMC_REFSTRUCTLIT(boxvar_lit_CommonSubExpression_isCSECref)
+
+
+#define boxptr_CommonSubExpression_createVarsForExp omc_CommonSubExpression_createVarsForExp
+
+
+#define boxptr_CommonSubExpression_createVarsForExp__onlyCSECrefs omc_CommonSubExpression_createVarsForExp__onlyCSECrefs
+
+
+#define boxptr_CommonSubExpression_mergeCSETuples2 omc_CommonSubExpression_mergeCSETuples2
+
+
+#define boxptr_CommonSubExpression_mergeCSETuples omc_CommonSubExpression_mergeCSETuples
+
+
+#define boxptr_CommonSubExpression_getTheRightPattern omc_CommonSubExpression_getTheRightPattern
+
+
+#define boxptr_CommonSubExpression_wrapFunctionCalls__analysis2 omc_CommonSubExpression_wrapFunctionCalls__analysis2
+
+
+#define boxptr_CommonSubExpression_wrapFunctionCalls__analysis omc_CommonSubExpression_wrapFunctionCalls__analysis
+
+
+#define boxptr_CommonSubExpression_addConstantCseVarsToGlobalKnownVarHT omc_CommonSubExpression_addConstantCseVarsToGlobalKnownVarHT
+
+
+#define boxptr_CommonSubExpression_determineDependencies2 omc_CommonSubExpression_determineDependencies2
+
+
+#define boxptr_CommonSubExpression_determineDependencies omc_CommonSubExpression_determineDependencies
+
+
+#define boxptr_CommonSubExpression_createCseEquations omc_CommonSubExpression_createCseEquations
+
+
+#define boxptr_CommonSubExpression_substituteExp omc_CommonSubExpression_substituteExp
+
+
+#define boxptr_CommonSubExpression_substituteDependencies omc_CommonSubExpression_substituteDependencies
+
+
+#define boxptr_CommonSubExpression_wrapFunctionCalls__substitution3 omc_CommonSubExpression_wrapFunctionCalls__substitution3
+
+
+#define boxptr_CommonSubExpression_wrapFunctionCalls__substitution2 omc_CommonSubExpression_wrapFunctionCalls__substitution2
+
+
+#define boxptr_CommonSubExpression_wrapFunctionCalls__substitution omc_CommonSubExpression_wrapFunctionCalls__substitution
+
+
+#define boxptr_CommonSubExpression_findCallsInGlobalKnownVars omc_CommonSubExpression_findCallsInGlobalKnownVars
+
+
+#define boxptr_CommonSubExpression_VarToGlobalKnownVarHT omc_CommonSubExpression_VarToGlobalKnownVarHT
+
+
+DLLDirection
+modelica_metatype omc_CommonSubExpression_wrapFunctionCalls(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_CommonSubExpression_wrapFunctionCalls omc_CommonSubExpression_wrapFunctionCalls
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_wrapFunctionCalls,2,0) {(void*) boxptr_CommonSubExpression_wrapFunctionCalls,0}};
+#define boxvar_CommonSubExpression_wrapFunctionCalls MMC_REFSTRUCTLIT(boxvar_lit_CommonSubExpression_wrapFunctionCalls)
+
+
+#define boxptr_CommonSubExpression_printCSEEquation omc_CommonSubExpression_printCSEEquation
+
+#ifdef __cplusplus
+}
+#endif
+#endif

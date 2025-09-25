@@ -1,0 +1,186 @@
+#ifndef DynamicOptimization__H
+#define DynamicOptimization__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_UNKNOWN__EQUATION__KIND__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_TearingSelect_AVOID__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_OPT__CONSTR__desc;
+
+extern struct record_description BackendDAE_VarKind_OPT__FCONSTR__desc;
+
+extern struct record_description BackendDAE_VarKind_OPT__INPUT__DER__desc;
+
+extern struct record_description BackendDAE_VarKind_OPT__INPUT__WITH__DER__desc;
+
+extern struct record_description BackendDAE_VarKind_OPT__LOOP__INPUT__desc;
+
+extern struct record_description BackendDAE_VarKind_OPT__TGRID__desc;
+
+extern struct record_description BackendDAE_VarKind_VARIABLE__desc;
+
+extern struct record_description DAE_ClassAttributes_OPTIMIZATION__ATTRS__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_Constraint_CONSTRAINT__EXPS__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_BCONST__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_IFEXP__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Exp_RELATION__desc;
+
+extern struct record_description DAE_Operator_LESS__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_VarDirection_INPUT__desc;
+
+extern struct record_description DAE_VarDirection_OUTPUT__desc;
+
+extern struct record_description DAE_VarInnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_DynamicOptimization_checkObjectIsSet(threadData_t *threadData, modelica_metatype _inVars, modelica_string _CrefName);
+#define boxptr_DynamicOptimization_checkObjectIsSet omc_DynamicOptimization_checkObjectIsSet
+static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_checkObjectIsSet,2,0) {(void*) boxptr_DynamicOptimization_checkObjectIsSet,0}};
+#define boxvar_DynamicOptimization_checkObjectIsSet MMC_REFSTRUCTLIT(boxvar_lit_DynamicOptimization_checkObjectIsSet)
+
+
+DLLDirection
+modelica_metatype omc_DynamicOptimization_reduceDynamicOptimization(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_DynamicOptimization_reduceDynamicOptimization omc_DynamicOptimization_reduceDynamicOptimization
+static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_reduceDynamicOptimization,2,0) {(void*) boxptr_DynamicOptimization_reduceDynamicOptimization,0}};
+#define boxvar_DynamicOptimization_reduceDynamicOptimization MMC_REFSTRUCTLIT(boxvar_lit_DynamicOptimization_reduceDynamicOptimization)
+
+
+DLLDirection
+modelica_metatype omc_DynamicOptimization_simplifyConstraints(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_DynamicOptimization_simplifyConstraints omc_DynamicOptimization_simplifyConstraints
+static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_simplifyConstraints,2,0) {(void*) boxptr_DynamicOptimization_simplifyConstraints,0}};
+#define boxvar_DynamicOptimization_simplifyConstraints MMC_REFSTRUCTLIT(boxvar_lit_DynamicOptimization_simplifyConstraints)
+
+
+#define boxptr_DynamicOptimization_res2Con omc_DynamicOptimization_res2Con
+
+
+DLLDirection
+modelica_metatype omc_DynamicOptimization_removeLoops(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_DynamicOptimization_removeLoops omc_DynamicOptimization_removeLoops
+static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_removeLoops,2,0) {(void*) boxptr_DynamicOptimization_removeLoops,0}};
+#define boxvar_DynamicOptimization_removeLoops MMC_REFSTRUCTLIT(boxvar_lit_DynamicOptimization_removeLoops)
+
+
+#define boxptr_DynamicOptimization_traverserinputDerivativesForDynOpt omc_DynamicOptimization_traverserinputDerivativesForDynOpt
+
+
+DLLDirection
+modelica_metatype omc_DynamicOptimization_inputDerivativesForDynOpt(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_DynamicOptimization_inputDerivativesForDynOpt omc_DynamicOptimization_inputDerivativesForDynOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_inputDerivativesForDynOpt,2,0) {(void*) boxptr_DynamicOptimization_inputDerivativesForDynOpt,0}};
+#define boxvar_DynamicOptimization_inputDerivativesForDynOpt MMC_REFSTRUCTLIT(boxvar_lit_DynamicOptimization_inputDerivativesForDynOpt)
+
+
+#define boxptr_DynamicOptimization_addConstraints2 omc_DynamicOptimization_addConstraints2
+
+
+#define boxptr_DynamicOptimization_addConstraints omc_DynamicOptimization_addConstraints
+
+
+#define boxptr_DynamicOptimization_mergeObjectVars omc_DynamicOptimization_mergeObjectVars
+
+
+#define boxptr_DynamicOptimization_findObjTerm omc_DynamicOptimization_findObjTerm
+
+
+#define boxptr_DynamicOptimization_findTimeGrid omc_DynamicOptimization_findTimeGrid
+
+
+#define boxptr_DynamicOptimization_findLagrangeTerm omc_DynamicOptimization_findLagrangeTerm
+
+
+#define boxptr_DynamicOptimization_findMayerTerm omc_DynamicOptimization_findMayerTerm
+
+
+#define boxptr_DynamicOptimization_makeVar omc_DynamicOptimization_makeVar
+
+
+#define boxptr_DynamicOptimization_makeObject omc_DynamicOptimization_makeObject
+
+
+#define boxptr_DynamicOptimization_joinObjectFun omc_DynamicOptimization_joinObjectFun
+
+
+#define boxptr_DynamicOptimization_joinConstraints omc_DynamicOptimization_joinConstraints
+
+
+#define boxptr_DynamicOptimization_addTimeGrid omc_DynamicOptimization_addTimeGrid
+
+
+#define boxptr_DynamicOptimization_getOptimicaArgs omc_DynamicOptimization_getOptimicaArgs
+
+
+#define boxptr_DynamicOptimization_addOptimizationVarsEqns omc_DynamicOptimization_addOptimizationVarsEqns
+
+
+DLLDirection
+modelica_metatype omc_DynamicOptimization_createDynamicOptimization(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fdae);
+#define boxptr_DynamicOptimization_createDynamicOptimization omc_DynamicOptimization_createDynamicOptimization
+static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_createDynamicOptimization,2,0) {(void*) boxptr_DynamicOptimization_createDynamicOptimization,0}};
+#define boxvar_DynamicOptimization_createDynamicOptimization MMC_REFSTRUCTLIT(boxvar_lit_DynamicOptimization_createDynamicOptimization)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

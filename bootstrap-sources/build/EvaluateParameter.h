@@ -1,0 +1,71 @@
+#ifndef EvaluateParameter__H
+#define EvaluateParameter__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Msg_NO__MSG__desc;
+
+extern struct record_description AvlSetInt_Tree_EMPTY__desc;
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Gettext_TranslatableContent_notrans__desc;
+
+
+#define boxptr_EvaluateParameter_replaceEvaluatedParametersSystemEqns omc_EvaluateParameter_replaceEvaluatedParametersSystemEqns
+
+
+#define boxptr_EvaluateParameter_replaceEvaluatedParametersEqns omc_EvaluateParameter_replaceEvaluatedParametersEqns
+
+
+#define boxptr_EvaluateParameter_replaceEvaluatedParameterTraverser omc_EvaluateParameter_replaceEvaluatedParameterTraverser
+
+
+#define boxptr_EvaluateParameter_replaceEvaluatedParametersSystem omc_EvaluateParameter_replaceEvaluatedParametersSystem
+
+
+#define boxptr_EvaluateParameter_traverseExpVisitorWrapper omc_EvaluateParameter_traverseExpVisitorWrapper
+
+
+#define boxptr_EvaluateParameter_addConstExpReplacement omc_EvaluateParameter_addConstExpReplacement
+
+
+#define boxptr_EvaluateParameter_replaceCrefWithBindStartExp omc_EvaluateParameter_replaceCrefWithBindStartExp
+
+
+#define boxptr_EvaluateParameter_getParameterAdjacencyMatrix omc_EvaluateParameter_getParameterAdjacencyMatrix
+
+
+DLLDirection
+modelica_metatype omc_EvaluateParameter_evaluateParameters(threadData_t *threadData, modelica_metatype __omcQ_24in_5FDAE);
+#define boxptr_EvaluateParameter_evaluateParameters omc_EvaluateParameter_evaluateParameters
+static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateParameter_evaluateParameters,2,0) {(void*) boxptr_EvaluateParameter_evaluateParameters,0}};
+#define boxvar_EvaluateParameter_evaluateParameters MMC_REFSTRUCTLIT(boxvar_lit_EvaluateParameter_evaluateParameters)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

@@ -1,0 +1,241 @@
+#ifndef HpcOmEqSystems__H
+#define HpcOmEqSystems__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_RESIDUAL__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_DYNAMIC__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_UNKNOWN__EQUATION__KIND__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_IndexType_ABSOLUTE__desc;
+
+extern struct record_description BackendDAE_IndexType_NORMAL__desc;
+
+extern struct record_description BackendDAE_Jacobian_FULL__JACOBIAN__desc;
+
+extern struct record_description BackendDAE_JacobianType_JAC__LINEAR__desc;
+
+extern struct record_description BackendDAE_Matching_MATCHING__desc;
+
+extern struct record_description BackendDAE_StrongComponent_EQUATIONSYSTEM__desc;
+
+extern struct record_description BackendDAE_StrongComponent_SINGLEEQUATION__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_VARIABLE__desc;
+
+extern struct record_description ClassInf_State_UNKNOWN__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Exp_UNARY__desc;
+
+extern struct record_description DAE_Operator_ADD__desc;
+
+extern struct record_description DAE_Operator_DIV__desc;
+
+extern struct record_description DAE_Operator_MUL__desc;
+
+extern struct record_description DAE_Operator_SUB__desc;
+
+extern struct record_description DAE_Operator_UMINUS__desc;
+
+extern struct record_description DAE_Type_T__ANYTYPE__desc;
+
+extern struct record_description DAE_Type_T__COMPLEX__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_VarDirection_BIDIR__desc;
+
+extern struct record_description DAE_VarInnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description HpcOmEqSystems_EqSys_LINSYS__desc;
+
+extern struct record_description HpcOmSimCode_Schedule_THREADSCHEDULE__desc;
+
+extern struct record_description HpcOmSimCode_Task_SCHEDULED__TASK__desc;
+
+extern struct record_description HpcOmSimCode_Task_TASKEMPTY__desc;
+
+extern struct record_description HpcOmTaskGraph_Communication_COMMUNICATION__desc;
+
+extern struct record_description HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_HpcOmEqSystems_createSingleBlockSchedule(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _metaIn, modelica_metatype _scheduledTasks, modelica_metatype _sccSimEqMapping);
+#define boxptr_HpcOmEqSystems_createSingleBlockSchedule omc_HpcOmEqSystems_createSingleBlockSchedule
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_createSingleBlockSchedule,2,0) {(void*) boxptr_HpcOmEqSystems_createSingleBlockSchedule,0}};
+#define boxvar_HpcOmEqSystems_createSingleBlockSchedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_createSingleBlockSchedule)
+
+
+#define boxptr_HpcOmEqSystems_buildDummyCommCosts omc_HpcOmEqSystems_buildDummyCommCosts
+
+
+#define boxptr_HpcOmEqSystems_buildTaskgraphMetaForTornSystem omc_HpcOmEqSystems_buildTaskgraphMetaForTornSystem
+
+
+DLLDirection
+modelica_metatype omc_HpcOmEqSystems_parallelizeTornSystems(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _metaIn, modelica_metatype _sccSimEqMapping, modelica_metatype _simVarMapping, modelica_metatype _inDAE, modelica_metatype *out_daeNodeIdcs);
+#define boxptr_HpcOmEqSystems_parallelizeTornSystems omc_HpcOmEqSystems_parallelizeTornSystems
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_parallelizeTornSystems,2,0) {(void*) boxptr_HpcOmEqSystems_parallelizeTornSystems,0}};
+#define boxvar_HpcOmEqSystems_parallelizeTornSystems MMC_REFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_parallelizeTornSystems)
+
+
+#define boxptr_HpcOmEqSystems_dumpEqArrLst omc_HpcOmEqSystems_dumpEqArrLst
+
+
+#define boxptr_HpcOmEqSystems_dumpVarArrLst omc_HpcOmEqSystems_dumpVarArrLst
+
+
+#define boxptr_HpcOmEqSystems_dumpMatrix omc_HpcOmEqSystems_dumpMatrix
+
+
+#define boxptr_HpcOmEqSystems_EqSysRowString omc_HpcOmEqSystems_EqSysRowString
+
+
+#define boxptr_HpcOmEqSystems_dumpEqSys omc_HpcOmEqSystems_dumpEqSys
+
+
+#define boxptr_HpcOmEqSystems_transposeMatrix omc_HpcOmEqSystems_transposeMatrix
+
+
+#define boxptr_HpcOmEqSystems_getMatrixFromJac omc_HpcOmEqSystems_getMatrixFromJac
+
+
+#define boxptr_HpcOmEqSystems_determinant omc_HpcOmEqSystems_determinant
+
+
+#define boxptr_HpcOmEqSystems_CramerRule omc_HpcOmEqSystems_CramerRule
+
+
+#define boxptr_HpcOmEqSystems_applyCramerRule omc_HpcOmEqSystems_applyCramerRule
+
+
+#define boxptr_HpcOmEqSystems_makeVarOfIdent omc_HpcOmEqSystems_makeVarOfIdent
+
+
+#define boxptr_HpcOmEqSystems_chiosCondensation omc_HpcOmEqSystems_chiosCondensation
+
+
+#define boxptr_HpcOmEqSystems_getSummands omc_HpcOmEqSystems_getSummands
+
+
+#define boxptr_HpcOmEqSystems_getCallExpLst omc_HpcOmEqSystems_getCallExpLst
+
+
+#define boxptr_HpcOmEqSystems_getEqSystem3 omc_HpcOmEqSystems_getEqSystem3
+
+
+#define boxptr_HpcOmEqSystems_getEqSystem2 omc_HpcOmEqSystems_getEqSystem2
+
+
+#define boxptr_HpcOmEqSystems_createEqSystem omc_HpcOmEqSystems_createEqSystem
+
+
+#define boxptr_HpcOmEqSystems_getEqSystem omc_HpcOmEqSystems_getEqSystem
+
+
+#define boxptr_HpcOmEqSystems_eqInFrontList omc_HpcOmEqSystems_eqInFrontList
+
+
+#define boxptr_HpcOmEqSystems_varInFrontList omc_HpcOmEqSystems_varInFrontList
+
+
+#define boxptr_HpcOmEqSystems_getResidualExpressionForEquation omc_HpcOmEqSystems_getResidualExpressionForEquation
+
+
+#define boxptr_HpcOmEqSystems_getResidualExpressions omc_HpcOmEqSystems_getResidualExpressions
+
+
+#define boxptr_HpcOmEqSystems_varExp omc_HpcOmEqSystems_varExp
+
+
+#define boxptr_HpcOmEqSystems_addProductToExp omc_HpcOmEqSystems_addProductToExp
+
+
+#define boxptr_HpcOmEqSystems_getOtherComps1 omc_HpcOmEqSystems_getOtherComps1
+
+
+#define boxptr_HpcOmEqSystems_getOtherComps omc_HpcOmEqSystems_getOtherComps
+
+
+#define boxptr_HpcOmEqSystems_buildLinearJacobian omc_HpcOmEqSystems_buildLinearJacobian
+
+
+#define boxptr_HpcOmEqSystems_buildEqSystemComponent omc_HpcOmEqSystems_buildEqSystemComponent
+
+
+#define boxptr_HpcOmEqSystems_addDerReplacement omc_HpcOmEqSystems_addDerReplacement
+
+
+#define boxptr_HpcOmEqSystems_replaceIndecesInComp omc_HpcOmEqSystems_replaceIndecesInComp
+
+
+#define boxptr_HpcOmEqSystems_matchComponent omc_HpcOmEqSystems_matchComponent
+
+
+#define boxptr_HpcOmEqSystems_updateAssignmentsByComp omc_HpcOmEqSystems_updateAssignmentsByComp
+
+
+DLLDirection
+modelica_metatype omc_HpcOmEqSystems_partitionLinearTornSystem(threadData_t *threadData, modelica_metatype _daeIn);
+#define boxptr_HpcOmEqSystems_partitionLinearTornSystem omc_HpcOmEqSystems_partitionLinearTornSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_partitionLinearTornSystem,2,0) {(void*) boxptr_HpcOmEqSystems_partitionLinearTornSystem,0}};
+#define boxvar_HpcOmEqSystems_partitionLinearTornSystem MMC_REFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_partitionLinearTornSystem)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

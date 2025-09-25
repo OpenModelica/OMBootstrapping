@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,12 +8,12 @@ extern "C" {
 #define ClassLoader_PackageOrder_CLASSPART__desc_added
 ADD_METARECORD_DEFINITIONS const char* ClassLoader_PackageOrder_CLASSPART__desc__fields[1] = {"cp"};
 ADD_METARECORD_DEFINITIONS struct record_description ClassLoader_PackageOrder_CLASSPART__desc = {
-"ClassLoader_PackageOrder_CLASSPART",
-"ClassLoader.PackageOrder.CLASSPART",
-ClassLoader_PackageOrder_CLASSPART__desc__fields
+  "ClassLoader_PackageOrder_CLASSPART",
+  "ClassLoader.PackageOrder.CLASSPART",
+  ClassLoader_PackageOrder_CLASSPART__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ClassLoader_PackageOrder_CLASSPART__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -20,12 +21,12 @@ extern struct record_description ClassLoader_PackageOrder_CLASSPART__desc;
 #define ClassLoader_PackageOrder_ELEMENT__desc_added
 ADD_METARECORD_DEFINITIONS const char* ClassLoader_PackageOrder_ELEMENT__desc__fields[2] = {"element","pub"};
 ADD_METARECORD_DEFINITIONS struct record_description ClassLoader_PackageOrder_ELEMENT__desc = {
-"ClassLoader_PackageOrder_ELEMENT",
-"ClassLoader.PackageOrder.ELEMENT",
-ClassLoader_PackageOrder_ELEMENT__desc__fields
+  "ClassLoader_PackageOrder_ELEMENT",
+  "ClassLoader.PackageOrder.ELEMENT",
+  ClassLoader_PackageOrder_ELEMENT__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ClassLoader_PackageOrder_ELEMENT__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -33,12 +34,12 @@ extern struct record_description ClassLoader_PackageOrder_ELEMENT__desc;
 #define ClassLoader_PackageOrder_CLASSLOAD__desc_added
 ADD_METARECORD_DEFINITIONS const char* ClassLoader_PackageOrder_CLASSLOAD__desc__fields[1] = {"cl"};
 ADD_METARECORD_DEFINITIONS struct record_description ClassLoader_PackageOrder_CLASSLOAD__desc = {
-"ClassLoader_PackageOrder_CLASSLOAD",
-"ClassLoader.PackageOrder.CLASSLOAD",
-ClassLoader_PackageOrder_CLASSLOAD__desc__fields
+  "ClassLoader_PackageOrder_CLASSLOAD",
+  "ClassLoader.PackageOrder.CLASSLOAD",
+  ClassLoader_PackageOrder_CLASSLOAD__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ClassLoader_PackageOrder_CLASSLOAD__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -46,12 +47,12 @@ extern struct record_description ClassLoader_PackageOrder_CLASSLOAD__desc;
 #define ClassLoader_PackageOrder_CLASSLOAD__desc_added
 ADD_METARECORD_DEFINITIONS const char* ClassLoader_PackageOrder_CLASSLOAD__desc__fields[1] = {"cl"};
 ADD_METARECORD_DEFINITIONS struct record_description ClassLoader_PackageOrder_CLASSLOAD__desc = {
-"ClassLoader_PackageOrder_CLASSLOAD",
-"ClassLoader.PackageOrder.CLASSLOAD",
-ClassLoader_PackageOrder_CLASSLOAD__desc__fields
+  "ClassLoader_PackageOrder_CLASSLOAD",
+  "ClassLoader.PackageOrder.CLASSLOAD",
+  ClassLoader_PackageOrder_CLASSLOAD__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ClassLoader_PackageOrder_CLASSLOAD__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -59,12 +60,12 @@ extern struct record_description ClassLoader_PackageOrder_CLASSLOAD__desc;
 #define ClassLoader_PackageOrder_ELEMENT__desc_added
 ADD_METARECORD_DEFINITIONS const char* ClassLoader_PackageOrder_ELEMENT__desc__fields[2] = {"element","pub"};
 ADD_METARECORD_DEFINITIONS struct record_description ClassLoader_PackageOrder_ELEMENT__desc = {
-"ClassLoader_PackageOrder_ELEMENT",
-"ClassLoader.PackageOrder.ELEMENT",
-ClassLoader_PackageOrder_ELEMENT__desc__fields
+  "ClassLoader_PackageOrder_ELEMENT",
+  "ClassLoader.PackageOrder.ELEMENT",
+  ClassLoader_PackageOrder_ELEMENT__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ClassLoader_PackageOrder_ELEMENT__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -72,12 +73,12 @@ extern struct record_description ClassLoader_PackageOrder_ELEMENT__desc;
 #define ClassLoader_PackageOrder_CLASSPART__desc_added
 ADD_METARECORD_DEFINITIONS const char* ClassLoader_PackageOrder_CLASSPART__desc__fields[1] = {"cp"};
 ADD_METARECORD_DEFINITIONS struct record_description ClassLoader_PackageOrder_CLASSPART__desc = {
-"ClassLoader_PackageOrder_CLASSPART",
-"ClassLoader.PackageOrder.CLASSPART",
-ClassLoader_PackageOrder_CLASSPART__desc__fields
+  "ClassLoader_PackageOrder_CLASSPART",
+  "ClassLoader.PackageOrder.CLASSPART",
+  ClassLoader_PackageOrder_CLASSPART__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ClassLoader_PackageOrder_CLASSPART__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -85,12 +86,12 @@ extern struct record_description ClassLoader_PackageOrder_CLASSPART__desc;
 #define ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc_added
 ADD_METARECORD_DEFINITIONS const char* ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc__fields[1] = {"ht"};
 ADD_METARECORD_DEFINITIONS struct record_description ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc = {
-"ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE",
-"ClassLoader.LoadFileStrategy.STRATEGY_HASHTABLE",
-ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc__fields
+  "ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE",
+  "ClassLoader.LoadFileStrategy.STRATEGY_HASHTABLE",
+  ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -98,12 +99,12 @@ extern struct record_description ClassLoader_LoadFileStrategy_STRATEGY__HASHTABL
 #define ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc_added
 ADD_METARECORD_DEFINITIONS const char* ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc__fields[1] = {"encoding"};
 ADD_METARECORD_DEFINITIONS struct record_description ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc = {
-"ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND",
-"ClassLoader.LoadFileStrategy.STRATEGY_ON_DEMAND",
-ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc__fields
+  "ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND",
+  "ClassLoader.LoadFileStrategy.STRATEGY_ON_DEMAND",
+  ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -111,12 +112,12 @@ extern struct record_description ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMA
 #define ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc_added
 ADD_METARECORD_DEFINITIONS const char* ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc__fields[1] = {"encoding"};
 ADD_METARECORD_DEFINITIONS struct record_description ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc = {
-"ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND",
-"ClassLoader.LoadFileStrategy.STRATEGY_ON_DEMAND",
-ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc__fields
+  "ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND",
+  "ClassLoader.LoadFileStrategy.STRATEGY_ON_DEMAND",
+  ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMAND__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -124,14 +125,15 @@ extern struct record_description ClassLoader_LoadFileStrategy_STRATEGY__ON__DEMA
 #define ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc_added
 ADD_METARECORD_DEFINITIONS const char* ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc__fields[1] = {"ht"};
 ADD_METARECORD_DEFINITIONS struct record_description ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc = {
-"ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE",
-"ClassLoader.LoadFileStrategy.STRATEGY_HASHTABLE",
-ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc__fields
+  "ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE",
+  "ClassLoader.LoadFileStrategy.STRATEGY_HASHTABLE",
+  ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ClassLoader_LoadFileStrategy_STRATEGY__HASHTABLE__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

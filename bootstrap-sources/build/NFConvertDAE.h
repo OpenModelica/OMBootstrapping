@@ -1,0 +1,361 @@
+#ifndef NFConvertDAE__H
+#define NFConvertDAE__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_InnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_AvlTreePathFunction_Tree_EMPTY__desc;
+
+extern struct record_description DAE_AvlTreePathFunction_Tree_LEAF__desc;
+
+extern struct record_description DAE_AvlTreePathFunction_Tree_NODE__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_DAElist_DAE__desc;
+
+extern struct record_description DAE_Element_ALGORITHM__desc;
+
+extern struct record_description DAE_Element_ARRAY__EQUATION__desc;
+
+extern struct record_description DAE_Element_ASSERT__desc;
+
+extern struct record_description DAE_Element_COMP__desc;
+
+extern struct record_description DAE_Element_COMPLEX__EQUATION__desc;
+
+extern struct record_description DAE_Element_EQUATION__desc;
+
+extern struct record_description DAE_Element_EQUEQUATION__desc;
+
+extern struct record_description DAE_Element_FOR__EQUATION__desc;
+
+extern struct record_description DAE_Element_IF__EQUATION__desc;
+
+extern struct record_description DAE_Element_INITIALALGORITHM__desc;
+
+extern struct record_description DAE_Element_INITIALEQUATION__desc;
+
+extern struct record_description DAE_Element_INITIAL__ARRAY__EQUATION__desc;
+
+extern struct record_description DAE_Element_INITIAL__ASSERT__desc;
+
+extern struct record_description DAE_Element_INITIAL__COMPLEX__EQUATION__desc;
+
+extern struct record_description DAE_Element_INITIAL__FOR__EQUATION__desc;
+
+extern struct record_description DAE_Element_INITIAL__IF__EQUATION__desc;
+
+extern struct record_description DAE_Element_INITIAL__NORETCALL__desc;
+
+extern struct record_description DAE_Element_INITIAL__TERMINATE__desc;
+
+extern struct record_description DAE_Element_NORETCALL__desc;
+
+extern struct record_description DAE_Element_REINIT__desc;
+
+extern struct record_description DAE_Element_TERMINATE__desc;
+
+extern struct record_description DAE_Element_VAR__desc;
+
+extern struct record_description DAE_Element_WHEN__EQUATION__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Else_ELSE__desc;
+
+extern struct record_description DAE_Else_ELSEIF__desc;
+
+extern struct record_description DAE_Else_NOELSE__desc;
+
+extern struct record_description DAE_Exp_SCONST__desc;
+
+extern struct record_description DAE_Exp_TSUB__desc;
+
+extern struct record_description DAE_ExtArg_EXTARG__desc;
+
+extern struct record_description DAE_ExtArg_EXTARGEXP__desc;
+
+extern struct record_description DAE_ExtArg_EXTARGSIZE__desc;
+
+extern struct record_description DAE_ExtArg_NOEXTARG__desc;
+
+extern struct record_description DAE_ExternalDecl_EXTERNALDECL__desc;
+
+extern struct record_description DAE_Function_RECORD__CONSTRUCTOR__desc;
+
+extern struct record_description DAE_FunctionDefinition_FUNCTION__DEF__desc;
+
+extern struct record_description DAE_FunctionDefinition_FUNCTION__EXT__desc;
+
+extern struct record_description DAE_FunctionDefinition_FUNCTION__PARTIAL__DERIVATIVE__desc;
+
+extern struct record_description DAE_Prefix_NOPRE__desc;
+
+extern struct record_description DAE_StateSelect_ALWAYS__desc;
+
+extern struct record_description DAE_StateSelect_AVOID__desc;
+
+extern struct record_description DAE_StateSelect_DEFAULT__desc;
+
+extern struct record_description DAE_StateSelect_NEVER__desc;
+
+extern struct record_description DAE_StateSelect_PREFER__desc;
+
+extern struct record_description DAE_Statement_STMT__ARRAY__INIT__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSERT__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__ARR__desc;
+
+extern struct record_description DAE_Statement_STMT__BREAK__desc;
+
+extern struct record_description DAE_Statement_STMT__FAILURE__desc;
+
+extern struct record_description DAE_Statement_STMT__FOR__desc;
+
+extern struct record_description DAE_Statement_STMT__IF__desc;
+
+extern struct record_description DAE_Statement_STMT__NORETCALL__desc;
+
+extern struct record_description DAE_Statement_STMT__PARFOR__desc;
+
+extern struct record_description DAE_Statement_STMT__REINIT__desc;
+
+extern struct record_description DAE_Statement_STMT__RETURN__desc;
+
+extern struct record_description DAE_Statement_STMT__TERMINATE__desc;
+
+extern struct record_description DAE_Statement_STMT__TUPLE__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__WHEN__desc;
+
+extern struct record_description DAE_Statement_STMT__WHILE__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description DAE_Uncertainty_GIVEN__desc;
+
+extern struct record_description DAE_Uncertainty_PROPAGATE__desc;
+
+extern struct record_description DAE_Uncertainty_REFINE__desc;
+
+extern struct record_description DAE_Uncertainty_SOUGHT__desc;
+
+extern struct record_description DAE_Var_TYPES__VAR__desc;
+
+extern struct record_description DAE_VarDirection_BIDIR__desc;
+
+extern struct record_description DAE_VarKind_VARIABLE__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__BOOL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__ENUMERATION__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__INT__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__REAL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__STRING__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFComponentRef_EMPTY__desc;
+
+extern struct record_description NFConvertDAE_VariableConversionSettings_VARIABLE__CONVERSION__SETTINGS__desc;
+
+extern struct record_description NFFlatten_Prefix_PREFIX__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFConvertDAE_stripScopePrefixCref omc_NFConvertDAE_stripScopePrefixCref
+
+
+#define boxptr_NFConvertDAE_stripScopePrefixCrefExp omc_NFConvertDAE_stripScopePrefixCrefExp
+
+
+#define boxptr_NFConvertDAE_stripScopePrefixExp omc_NFConvertDAE_stripScopePrefixExp
+
+
+#define boxptr_NFConvertDAE_stripScopePrefixFromDim omc_NFConvertDAE_stripScopePrefixFromDim
+
+
+DLLDirection
+modelica_metatype omc_NFConvertDAE_makeTypeRecordVar(threadData_t *threadData, modelica_metatype _component);
+#define boxptr_NFConvertDAE_makeTypeRecordVar omc_NFConvertDAE_makeTypeRecordVar
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeRecordVar,2,0) {(void*) boxptr_NFConvertDAE_makeTypeRecordVar,0}};
+#define boxvar_NFConvertDAE_makeTypeRecordVar MMC_REFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeRecordVar)
+
+
+DLLDirection
+modelica_metatype omc_NFConvertDAE_makeTypeVar(threadData_t *threadData, modelica_metatype _component);
+#define boxptr_NFConvertDAE_makeTypeVar omc_NFConvertDAE_makeTypeVar
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeVar,2,0) {(void*) boxptr_NFConvertDAE_makeTypeVar,0}};
+#define boxvar_NFConvertDAE_makeTypeVar MMC_REFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeVar)
+
+
+DLLDirection
+modelica_metatype omc_NFConvertDAE_makeTypeVars(threadData_t *threadData, modelica_metatype _complexCls);
+#define boxptr_NFConvertDAE_makeTypeVars omc_NFConvertDAE_makeTypeVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeVars,2,0) {(void*) boxptr_NFConvertDAE_makeTypeVars,0}};
+#define boxvar_NFConvertDAE_makeTypeVars MMC_REFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeVars)
+
+
+#define boxptr_NFConvertDAE_convertExternalDeclOutput omc_NFConvertDAE_convertExternalDeclOutput
+
+
+#define boxptr_NFConvertDAE_convertExternalDeclArg omc_NFConvertDAE_convertExternalDeclArg
+
+
+#define boxptr_NFConvertDAE_convertExternalDecl omc_NFConvertDAE_convertExternalDecl
+
+
+#define boxptr_NFConvertDAE_convertFunctionParam omc_NFConvertDAE_convertFunctionParam
+
+
+#define boxptr_NFConvertDAE_convertFunctionParams omc_NFConvertDAE_convertFunctionParams
+
+
+#define boxptr_NFConvertDAE_convertFunction omc_NFConvertDAE_convertFunction
+
+
+DLLDirection
+modelica_metatype omc_NFConvertDAE_convertFunctionTree(threadData_t *threadData, modelica_metatype _funcs);
+#define boxptr_NFConvertDAE_convertFunctionTree omc_NFConvertDAE_convertFunctionTree
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertFunctionTree,2,0) {(void*) boxptr_NFConvertDAE_convertFunctionTree,0}};
+#define boxvar_NFConvertDAE_convertFunctionTree MMC_REFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertFunctionTree)
+
+
+#define boxptr_NFConvertDAE_convertInitialAlgorithm omc_NFConvertDAE_convertInitialAlgorithm
+
+
+#define boxptr_NFConvertDAE_convertInitialAlgorithms omc_NFConvertDAE_convertInitialAlgorithms
+
+
+#define boxptr_NFConvertDAE_convertWhenStatement omc_NFConvertDAE_convertWhenStatement
+
+
+#define boxptr_NFConvertDAE_convertIfStatement omc_NFConvertDAE_convertIfStatement
+
+
+#define boxptr_NFConvertDAE_convertForStatementParallelVar omc_NFConvertDAE_convertForStatementParallelVar
+
+
+#define boxptr_NFConvertDAE_convertForStatement omc_NFConvertDAE_convertForStatement
+
+
+#define boxptr_NFConvertDAE_convertAssignment omc_NFConvertDAE_convertAssignment
+
+
+#define boxptr_NFConvertDAE_convertStatement omc_NFConvertDAE_convertStatement
+
+
+#define boxptr_NFConvertDAE_convertAlgorithm omc_NFConvertDAE_convertAlgorithm
+
+
+#define boxptr_NFConvertDAE_convertAlgorithms omc_NFConvertDAE_convertAlgorithms
+
+
+#define boxptr_NFConvertDAE_convertInitialEquation omc_NFConvertDAE_convertInitialEquation
+
+
+#define boxptr_NFConvertDAE_convertInitialEquations omc_NFConvertDAE_convertInitialEquations
+
+
+#define boxptr_NFConvertDAE_convertWhenEquation omc_NFConvertDAE_convertWhenEquation
+
+
+#define boxptr_NFConvertDAE_convertEquation omc_NFConvertDAE_convertEquation
+
+
+#define boxptr_NFConvertDAE_convertEquations omc_NFConvertDAE_convertEquations
+
+
+#define boxptr_NFConvertDAE_convertStartOrigin omc_NFConvertDAE_convertStartOrigin
+
+
+#define boxptr_NFConvertDAE_lookupUncertaintyMember omc_NFConvertDAE_lookupUncertaintyMember
+
+
+#define boxptr_NFConvertDAE_convertUncertaintyAttribute omc_NFConvertDAE_convertUncertaintyAttribute
+
+
+#define boxptr_NFConvertDAE_lookupStateSelectMember omc_NFConvertDAE_lookupStateSelectMember
+
+
+#define boxptr_NFConvertDAE_getStateSelectName omc_NFConvertDAE_getStateSelectName
+
+
+#define boxptr_NFConvertDAE_convertStateSelectAttribute omc_NFConvertDAE_convertStateSelectAttribute
+
+
+#define boxptr_NFConvertDAE_convertVarAttribute omc_NFConvertDAE_convertVarAttribute
+
+
+#define boxptr_NFConvertDAE_convertEnumVarAttributes omc_NFConvertDAE_convertEnumVarAttributes
+
+
+#define boxptr_NFConvertDAE_convertStringVarAttributes omc_NFConvertDAE_convertStringVarAttributes
+
+
+#define boxptr_NFConvertDAE_convertBoolVarAttributes omc_NFConvertDAE_convertBoolVarAttributes
+
+
+#define boxptr_NFConvertDAE_convertIntVarAttributes omc_NFConvertDAE_convertIntVarAttributes
+
+
+#define boxptr_NFConvertDAE_convertRealVarAttributes omc_NFConvertDAE_convertRealVarAttributes
+
+
+#define boxptr_NFConvertDAE_convertVarAttributes omc_NFConvertDAE_convertVarAttributes
+
+
+#define boxptr_NFConvertDAE_addComponentTypeToSource omc_NFConvertDAE_addComponentTypeToSource
+
+
+#define boxptr_NFConvertDAE_convertVariable omc_NFConvertDAE_convertVariable
+
+
+#define boxptr_NFConvertDAE_convertVariables omc_NFConvertDAE_convertVariables
+
+
+DLLDirection
+modelica_metatype omc_NFConvertDAE_convertStatements(threadData_t *threadData, modelica_metatype _statements);
+#define boxptr_NFConvertDAE_convertStatements omc_NFConvertDAE_convertStatements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertStatements,2,0) {(void*) boxptr_NFConvertDAE_convertStatements,0}};
+#define boxvar_NFConvertDAE_convertStatements MMC_REFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertStatements)
+
+
+DLLDirection
+modelica_metatype omc_NFConvertDAE_convert(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_metatype *out_daeFunctions);
+#define boxptr_NFConvertDAE_convert omc_NFConvertDAE_convert
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_convert,2,0) {(void*) boxptr_NFConvertDAE_convert,0}};
+#define boxvar_NFConvertDAE_convert MMC_REFSTRUCTLIT(boxvar_lit_NFConvertDAE_convert)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

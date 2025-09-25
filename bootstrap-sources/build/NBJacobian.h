@@ -1,0 +1,172 @@
+#ifndef NBJacobian__H
+#define NBJacobian__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NBDifferentiate_DifferentiationArguments_DIFFERENTIATION__ARGUMENTS__desc;
+
+extern struct record_description NBJacobian_SparsityColoring_SPARSITY__COLORING__desc;
+
+extern struct record_description NBJacobian_SparsityPattern_SPARSITY__PATTERN__desc;
+
+extern struct record_description NBPartition_Association_CONTINUOUS__desc;
+
+extern struct record_description NBVariable_VarData_VAR__DATA__JAC__desc;
+
+extern struct record_description NBackendDAE_JACOBIAN__desc;
+
+extern struct record_description NFComponentRef_EMPTY__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NBJacobian_partJacobian omc_NBJacobian_partJacobian
+
+
+DLLDirection
+modelica_metatype omc_NBJacobian_SparsityColoring_combine(threadData_t *threadData, modelica_metatype _coloring1, modelica_metatype _coloring2);
+#define boxptr_NBJacobian_SparsityColoring_combine omc_NBJacobian_SparsityColoring_combine
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityColoring_combine,2,0) {(void*) boxptr_NBJacobian_SparsityColoring_combine,0}};
+#define boxvar_NBJacobian_SparsityColoring_combine MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityColoring_combine)
+
+
+DLLDirection
+modelica_metatype omc_NBJacobian_SparsityColoring_PartialD2ColoringAlg(threadData_t *threadData, modelica_metatype _sparsityPattern, modelica_metatype _map);
+#define boxptr_NBJacobian_SparsityColoring_PartialD2ColoringAlg omc_NBJacobian_SparsityColoring_PartialD2ColoringAlg
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityColoring_PartialD2ColoringAlg,2,0) {(void*) boxptr_NBJacobian_SparsityColoring_PartialD2ColoringAlg,0}};
+#define boxvar_NBJacobian_SparsityColoring_PartialD2ColoringAlg MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityColoring_PartialD2ColoringAlg)
+
+
+DLLDirection
+modelica_metatype omc_NBJacobian_SparsityColoring_PartialD2ColoringAlgC(threadData_t *threadData, modelica_metatype _sparsityPattern, modelica_integer _jacType);
+DLLDirection
+modelica_metatype boxptr_NBJacobian_SparsityColoring_PartialD2ColoringAlgC(threadData_t *threadData, modelica_metatype _sparsityPattern, modelica_metatype _jacType);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityColoring_PartialD2ColoringAlgC,2,0) {(void*) boxptr_NBJacobian_SparsityColoring_PartialD2ColoringAlgC,0}};
+#define boxvar_NBJacobian_SparsityColoring_PartialD2ColoringAlgC MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityColoring_PartialD2ColoringAlgC)
+
+
+DLLDirection
+modelica_metatype omc_NBJacobian_SparsityColoring_lazy(threadData_t *threadData, modelica_metatype _sparsityPattern);
+#define boxptr_NBJacobian_SparsityColoring_lazy omc_NBJacobian_SparsityColoring_lazy
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityColoring_lazy,2,0) {(void*) boxptr_NBJacobian_SparsityColoring_lazy,0}};
+#define boxvar_NBJacobian_SparsityColoring_lazy MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityColoring_lazy)
+
+
+DLLDirection
+modelica_string omc_NBJacobian_SparsityColoring_toString(threadData_t *threadData, modelica_metatype _sparsityColoring);
+#define boxptr_NBJacobian_SparsityColoring_toString omc_NBJacobian_SparsityColoring_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityColoring_toString,2,0) {(void*) boxptr_NBJacobian_SparsityColoring_toString,0}};
+#define boxvar_NBJacobian_SparsityColoring_toString MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityColoring_toString)
+
+
+DLLDirection
+modelica_metatype omc_NBJacobian_SparsityPattern_createEmpty(threadData_t *threadData, modelica_metatype *out_sparsityColoring);
+#define boxptr_NBJacobian_SparsityPattern_createEmpty omc_NBJacobian_SparsityPattern_createEmpty
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityPattern_createEmpty,2,0) {(void*) boxptr_NBJacobian_SparsityPattern_createEmpty,0}};
+#define boxvar_NBJacobian_SparsityPattern_createEmpty MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityPattern_createEmpty)
+
+
+DLLDirection
+modelica_metatype omc_NBJacobian_SparsityPattern_create(threadData_t *threadData, modelica_metatype _seedCandidates, modelica_metatype _partialCandidates, modelica_metatype _strongComponents, modelica_integer _jacType, modelica_metatype *out_sparsityColoring);
+DLLDirection
+modelica_metatype boxptr_NBJacobian_SparsityPattern_create(threadData_t *threadData, modelica_metatype _seedCandidates, modelica_metatype _partialCandidates, modelica_metatype _strongComponents, modelica_metatype _jacType, modelica_metatype *out_sparsityColoring);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityPattern_create,2,0) {(void*) boxptr_NBJacobian_SparsityPattern_create,0}};
+#define boxvar_NBJacobian_SparsityPattern_create MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityPattern_create)
+
+
+DLLDirection
+modelica_metatype omc_NBJacobian_SparsityPattern_lazy(threadData_t *threadData, modelica_metatype _seedCandidates, modelica_metatype _partialCandidates, modelica_metatype _strongComponents, modelica_integer _jacType, modelica_metatype *out_sparsityColoring);
+DLLDirection
+modelica_metatype boxptr_NBJacobian_SparsityPattern_lazy(threadData_t *threadData, modelica_metatype _seedCandidates, modelica_metatype _partialCandidates, modelica_metatype _strongComponents, modelica_metatype _jacType, modelica_metatype *out_sparsityColoring);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityPattern_lazy,2,0) {(void*) boxptr_NBJacobian_SparsityPattern_lazy,0}};
+#define boxvar_NBJacobian_SparsityPattern_lazy MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityPattern_lazy)
+
+
+DLLDirection
+modelica_string omc_NBJacobian_SparsityPattern_toString(threadData_t *threadData, modelica_metatype _pattern);
+#define boxptr_NBJacobian_SparsityPattern_toString omc_NBJacobian_SparsityPattern_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityPattern_toString,2,0) {(void*) boxptr_NBJacobian_SparsityPattern_toString,0}};
+#define boxvar_NBJacobian_SparsityPattern_toString MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_SparsityPattern_toString)
+
+
+DLLDirection
+modelica_string omc_NBJacobian_jacobianTypeString(threadData_t *threadData, modelica_integer _jacType);
+DLLDirection
+modelica_metatype boxptr_NBJacobian_jacobianTypeString(threadData_t *threadData, modelica_metatype _jacType);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_jacobianTypeString,2,0) {(void*) boxptr_NBJacobian_jacobianTypeString,0}};
+#define boxvar_NBJacobian_jacobianTypeString MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_jacobianTypeString)
+
+
+DLLDirection
+modelica_string omc_NBJacobian_toString(threadData_t *threadData, modelica_metatype _jacobian, modelica_string __omcQ_24in_5Fstr);
+#define boxptr_NBJacobian_toString omc_NBJacobian_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_toString,2,0) {(void*) boxptr_NBJacobian_toString,0}};
+#define boxvar_NBJacobian_toString MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_toString)
+
+
+DLLDirection
+modelica_fnptr omc_NBJacobian_getModule(threadData_t *threadData);
+#define boxptr_NBJacobian_getModule omc_NBJacobian_getModule
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_getModule,2,0) {(void*) boxptr_NBJacobian_getModule,0}};
+#define boxvar_NBJacobian_getModule MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_getModule)
+
+
+DLLDirection
+modelica_metatype omc_NBJacobian_combine(threadData_t *threadData, modelica_metatype _jacobians, modelica_string _name);
+#define boxptr_NBJacobian_combine omc_NBJacobian_combine
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_combine,2,0) {(void*) boxptr_NBJacobian_combine,0}};
+#define boxvar_NBJacobian_combine MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_combine)
+
+
+DLLDirection
+modelica_metatype omc_NBJacobian_nonlinear(threadData_t *threadData, modelica_metatype _variables, modelica_metatype _equations, modelica_metatype _comps, modelica_metatype __omcQ_24in_5FfuncTree, modelica_string _name, modelica_boolean _init, modelica_metatype *out_funcTree);
+DLLDirection
+modelica_metatype boxptr_NBJacobian_nonlinear(threadData_t *threadData, modelica_metatype _variables, modelica_metatype _equations, modelica_metatype _comps, modelica_metatype __omcQ_24in_5FfuncTree, modelica_metatype _name, modelica_metatype _init, modelica_metatype *out_funcTree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_nonlinear,2,0) {(void*) boxptr_NBJacobian_nonlinear,0}};
+#define boxvar_NBJacobian_nonlinear MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_nonlinear)
+
+
+DLLDirection
+modelica_metatype omc_NBJacobian_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_integer _kind);
+DLLDirection
+modelica_metatype boxptr_NBJacobian_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _kind);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_main,2,0) {(void*) boxptr_NBJacobian_main,0}};
+#define boxvar_NBJacobian_main MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_main)
+
+
+DLLDirection
+modelica_boolean omc_NBJacobian_isDynamic(threadData_t *threadData, modelica_integer _jacType);
+DLLDirection
+modelica_metatype boxptr_NBJacobian_isDynamic(threadData_t *threadData, modelica_metatype _jacType);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_isDynamic,2,0) {(void*) boxptr_NBJacobian_isDynamic,0}};
+#define boxvar_NBJacobian_isDynamic MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_isDynamic)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

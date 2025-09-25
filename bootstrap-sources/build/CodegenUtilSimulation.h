@@ -1,0 +1,218 @@
+#ifndef CodegenUtilSimulation__H
+#define CodegenUtilSimulation__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Tpl_BlockType_BT__INDENT__desc;
+
+extern struct record_description Tpl_IterOptions_ITER__OPTIONS__desc;
+
+extern struct record_description Tpl_StringToken_ST__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__NEW__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
+
+extern struct record_description Tpl_Text_MEM__TEXT__desc;
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_dumpEqsAlternativeTearingWork(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_eqs);
+#define boxptr_CodegenUtilSimulation_dumpEqsAlternativeTearingWork omc_CodegenUtilSimulation_dumpEqsAlternativeTearingWork
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpEqsAlternativeTearingWork,2,0) {(void*) boxptr_CodegenUtilSimulation_dumpEqsAlternativeTearingWork,0}};
+#define boxvar_CodegenUtilSimulation_dumpEqsAlternativeTearingWork MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpEqsAlternativeTearingWork)
+
+
+#define boxptr_CodegenUtilSimulation_lm__81 omc_CodegenUtilSimulation_lm__81
+
+
+#define boxptr_CodegenUtilSimulation_fun__80 omc_CodegenUtilSimulation_fun__80
+
+
+#define boxptr_CodegenUtilSimulation_lm__79 omc_CodegenUtilSimulation_lm__79
+
+
+#define boxptr_CodegenUtilSimulation_lm__78 omc_CodegenUtilSimulation_lm__78
+
+
+#define boxptr_CodegenUtilSimulation_lm__77 omc_CodegenUtilSimulation_lm__77
+
+
+#define boxptr_CodegenUtilSimulation_fun__76 omc_CodegenUtilSimulation_fun__76
+
+
+#define boxptr_CodegenUtilSimulation_lm__75 omc_CodegenUtilSimulation_lm__75
+
+
+#define boxptr_CodegenUtilSimulation_lm__74 omc_CodegenUtilSimulation_lm__74
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_dumpEqsAlternativeTearing(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_eqs);
+#define boxptr_CodegenUtilSimulation_dumpEqsAlternativeTearing omc_CodegenUtilSimulation_dumpEqsAlternativeTearing
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpEqsAlternativeTearing,2,0) {(void*) boxptr_CodegenUtilSimulation_dumpEqsAlternativeTearing,0}};
+#define boxvar_CodegenUtilSimulation_dumpEqsAlternativeTearing MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpEqsAlternativeTearing)
+
+
+#define boxptr_CodegenUtilSimulation_fun__72 omc_CodegenUtilSimulation_fun__72
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_dumpWhenOps(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_whenOps);
+#define boxptr_CodegenUtilSimulation_dumpWhenOps omc_CodegenUtilSimulation_dumpWhenOps
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpWhenOps,2,0) {(void*) boxptr_CodegenUtilSimulation_dumpWhenOps,0}};
+#define boxvar_CodegenUtilSimulation_dumpWhenOps MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpWhenOps)
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_dumpAlgSystemColumn(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_column, modelica_metatype _in_a_columnBuffer, modelica_metatype _in_a_varsBuffer, modelica_metatype *out_out_a_columnBuffer, modelica_metatype *out_out_a_varsBuffer);
+#define boxptr_CodegenUtilSimulation_dumpAlgSystemColumn omc_CodegenUtilSimulation_dumpAlgSystemColumn
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpAlgSystemColumn,2,0) {(void*) boxptr_CodegenUtilSimulation_dumpAlgSystemColumn,0}};
+#define boxvar_CodegenUtilSimulation_dumpAlgSystemColumn MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpAlgSystemColumn)
+
+
+#define boxptr_CodegenUtilSimulation_lm__69 omc_CodegenUtilSimulation_lm__69
+
+
+#define boxptr_CodegenUtilSimulation_lm__68 omc_CodegenUtilSimulation_lm__68
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_dumpAlgSystemOps(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_derivativeMatrix);
+#define boxptr_CodegenUtilSimulation_dumpAlgSystemOps omc_CodegenUtilSimulation_dumpAlgSystemOps
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpAlgSystemOps,2,0) {(void*) boxptr_CodegenUtilSimulation_dumpAlgSystemOps,0}};
+#define boxvar_CodegenUtilSimulation_dumpAlgSystemOps MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpAlgSystemOps)
+
+
+#define boxptr_CodegenUtilSimulation_fun__66 omc_CodegenUtilSimulation_fun__66
+
+
+#define boxptr_CodegenUtilSimulation_lm__65 omc_CodegenUtilSimulation_lm__65
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_dumpEqsWork(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_eqs);
+#define boxptr_CodegenUtilSimulation_dumpEqsWork omc_CodegenUtilSimulation_dumpEqsWork
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpEqsWork,2,0) {(void*) boxptr_CodegenUtilSimulation_dumpEqsWork,0}};
+#define boxvar_CodegenUtilSimulation_dumpEqsWork MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpEqsWork)
+
+
+#define boxptr_CodegenUtilSimulation_lm__63 omc_CodegenUtilSimulation_lm__63
+
+
+#define boxptr_CodegenUtilSimulation_fun__62 omc_CodegenUtilSimulation_fun__62
+
+
+#define boxptr_CodegenUtilSimulation_lm__61 omc_CodegenUtilSimulation_lm__61
+
+
+#define boxptr_CodegenUtilSimulation_lm__60 omc_CodegenUtilSimulation_lm__60
+
+
+#define boxptr_CodegenUtilSimulation_lm__59 omc_CodegenUtilSimulation_lm__59
+
+
+#define boxptr_CodegenUtilSimulation_lm__58 omc_CodegenUtilSimulation_lm__58
+
+
+#define boxptr_CodegenUtilSimulation_lm__57 omc_CodegenUtilSimulation_lm__57
+
+
+#define boxptr_CodegenUtilSimulation_lm__56 omc_CodegenUtilSimulation_lm__56
+
+
+#define boxptr_CodegenUtilSimulation_lm__55 omc_CodegenUtilSimulation_lm__55
+
+
+#define boxptr_CodegenUtilSimulation_lm__54 omc_CodegenUtilSimulation_lm__54
+
+
+#define boxptr_CodegenUtilSimulation_fun__53 omc_CodegenUtilSimulation_fun__53
+
+
+#define boxptr_CodegenUtilSimulation_lm__52 omc_CodegenUtilSimulation_lm__52
+
+
+#define boxptr_CodegenUtilSimulation_lm__51 omc_CodegenUtilSimulation_lm__51
+
+
+#define boxptr_CodegenUtilSimulation_lm__50 omc_CodegenUtilSimulation_lm__50
+
+
+#define boxptr_CodegenUtilSimulation_lm__49 omc_CodegenUtilSimulation_lm__49
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_dumpEqs(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_eqs);
+#define boxptr_CodegenUtilSimulation_dumpEqs omc_CodegenUtilSimulation_dumpEqs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpEqs,2,0) {(void*) boxptr_CodegenUtilSimulation_dumpEqs,0}};
+#define boxvar_CodegenUtilSimulation_dumpEqs MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_dumpEqs)
+
+
+#define boxptr_CodegenUtilSimulation_fun__47 omc_CodegenUtilSimulation_fun__47
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_equationIndexGeneral(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq);
+#define boxptr_CodegenUtilSimulation_equationIndexGeneral omc_CodegenUtilSimulation_equationIndexGeneral
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_equationIndexGeneral,2,0) {(void*) boxptr_CodegenUtilSimulation_equationIndexGeneral,0}};
+#define boxvar_CodegenUtilSimulation_equationIndexGeneral MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_equationIndexGeneral)
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_equationIndexAlternativeTearing(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq);
+#define boxptr_CodegenUtilSimulation_equationIndexAlternativeTearing omc_CodegenUtilSimulation_equationIndexAlternativeTearing
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_equationIndexAlternativeTearing,2,0) {(void*) boxptr_CodegenUtilSimulation_equationIndexAlternativeTearing,0}};
+#define boxvar_CodegenUtilSimulation_equationIndexAlternativeTearing MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_equationIndexAlternativeTearing)
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_equationIndex(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq);
+#define boxptr_CodegenUtilSimulation_equationIndex omc_CodegenUtilSimulation_equationIndex
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_equationIndex,2,0) {(void*) boxptr_CodegenUtilSimulation_equationIndex,0}};
+#define boxvar_CodegenUtilSimulation_equationIndex MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_equationIndex)
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_fullPathPrefix(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
+#define boxptr_CodegenUtilSimulation_fullPathPrefix omc_CodegenUtilSimulation_fullPathPrefix
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_fullPathPrefix,2,0) {(void*) boxptr_CodegenUtilSimulation_fullPathPrefix,0}};
+#define boxvar_CodegenUtilSimulation_fullPathPrefix MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_fullPathPrefix)
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_fileNamePrefix(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
+#define boxptr_CodegenUtilSimulation_fileNamePrefix omc_CodegenUtilSimulation_fileNamePrefix
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_fileNamePrefix,2,0) {(void*) boxptr_CodegenUtilSimulation_fileNamePrefix,0}};
+#define boxvar_CodegenUtilSimulation_fileNamePrefix MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_fileNamePrefix)
+
+
+DLLDirection
+modelica_metatype omc_CodegenUtilSimulation_modelNamePrefix(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
+#define boxptr_CodegenUtilSimulation_modelNamePrefix omc_CodegenUtilSimulation_modelNamePrefix
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_modelNamePrefix,2,0) {(void*) boxptr_CodegenUtilSimulation_modelNamePrefix,0}};
+#define boxvar_CodegenUtilSimulation_modelNamePrefix MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtilSimulation_modelNamePrefix)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

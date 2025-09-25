@@ -5,14 +5,856 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-DLLExport
+
+extern struct record_description Dump_DumpOptions_DUMPOPTIONS__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Tpl_IterOptions_ITER__OPTIONS__desc;
+
+extern struct record_description Tpl_StringToken_ST__NEW__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
+
+extern struct record_description Tpl_Text_MEM__TEXT__desc;
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_errorMsg(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_errMessage);
+#define boxptr_AbsynJLDumpTpl_errorMsg omc_AbsynJLDumpTpl_errorMsg
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_errorMsg,2,0) {(void*) boxptr_AbsynJLDumpTpl_errorMsg,0}};
+#define boxvar_AbsynJLDumpTpl_errorMsg MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_errorMsg)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpForIterator(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_iterator, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpForIterator omc_AbsynJLDumpTpl_dumpForIterator
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpForIterator,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpForIterator,0}};
+#define boxvar_AbsynJLDumpTpl_dumpForIterator MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpForIterator)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__197 omc_AbsynJLDumpTpl_fun__197
+
+
+#define boxptr_AbsynJLDumpTpl_fun__196 omc_AbsynJLDumpTpl_fun__196
+
+
+#define boxptr_AbsynJLDumpTpl_fun__195 omc_AbsynJLDumpTpl_fun__195
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpForIterators(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_iters, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpForIterators omc_AbsynJLDumpTpl_dumpForIterators
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpForIterators,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpForIterators,0}};
+#define boxvar_AbsynJLDumpTpl_dumpForIterators MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpForIterators)
+
+
+#define boxptr_AbsynJLDumpTpl_lm__193 omc_AbsynJLDumpTpl_lm__193
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpNamedArg(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_narg, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpNamedArg omc_AbsynJLDumpTpl_dumpNamedArg
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpNamedArg,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpNamedArg,0}};
+#define boxvar_AbsynJLDumpTpl_dumpNamedArg MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpNamedArg)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__191 omc_AbsynJLDumpTpl_fun__191
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpFunctionArgs(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_args, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpFunctionArgs omc_AbsynJLDumpTpl_dumpFunctionArgs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpFunctionArgs,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpFunctionArgs,0}};
+#define boxvar_AbsynJLDumpTpl_dumpFunctionArgs MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpFunctionArgs)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__189 omc_AbsynJLDumpTpl_fun__189
+
+
+#define boxptr_AbsynJLDumpTpl_fun__188 omc_AbsynJLDumpTpl_fun__188
+
+
+#define boxptr_AbsynJLDumpTpl_lm__187 omc_AbsynJLDumpTpl_lm__187
+
+
+#define boxptr_AbsynJLDumpTpl_lm__186 omc_AbsynJLDumpTpl_lm__186
+
+
+#define boxptr_AbsynJLDumpTpl_lm__185 omc_AbsynJLDumpTpl_lm__185
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_cref, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpCref omc_AbsynJLDumpTpl_dumpCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpCref,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpCref,0}};
+#define boxvar_AbsynJLDumpTpl_dumpCref MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpCref)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__183 omc_AbsynJLDumpTpl_fun__183
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpOperator(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_op);
+#define boxptr_AbsynJLDumpTpl_dumpOperator omc_AbsynJLDumpTpl_dumpOperator
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpOperator,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpOperator,0}};
+#define boxvar_AbsynJLDumpTpl_dumpOperator MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpOperator)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpMatchCase(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_c, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpMatchCase omc_AbsynJLDumpTpl_dumpMatchCase
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpMatchCase,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpMatchCase,0}};
+#define boxvar_AbsynJLDumpTpl_dumpMatchCase MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpMatchCase)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__179 omc_AbsynJLDumpTpl_fun__179
+
+
+#define boxptr_AbsynJLDumpTpl_lm__178 omc_AbsynJLDumpTpl_lm__178
+
+
+#define boxptr_AbsynJLDumpTpl_lm__177 omc_AbsynJLDumpTpl_lm__177
+
+
+#define boxptr_AbsynJLDumpTpl_fun__176 omc_AbsynJLDumpTpl_fun__176
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpMatchEquations(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_cp, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpMatchEquations omc_AbsynJLDumpTpl_dumpMatchEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpMatchEquations,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpMatchEquations,0}};
+#define boxvar_AbsynJLDumpTpl_dumpMatchEquations MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpMatchEquations)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__174 omc_AbsynJLDumpTpl_fun__174
+
+
+#define boxptr_AbsynJLDumpTpl_lm__173 omc_AbsynJLDumpTpl_lm__173
+
+
+#define boxptr_AbsynJLDumpTpl_lm__172 omc_AbsynJLDumpTpl_lm__172
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpMatchLocals(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_locals, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpMatchLocals omc_AbsynJLDumpTpl_dumpMatchLocals
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpMatchLocals,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpMatchLocals,0}};
+#define boxvar_AbsynJLDumpTpl_dumpMatchLocals MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpMatchLocals)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__170 omc_AbsynJLDumpTpl_fun__170
+
+
+#define boxptr_AbsynJLDumpTpl_lm__169 omc_AbsynJLDumpTpl_lm__169
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpMatchType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_match__type);
+#define boxptr_AbsynJLDumpTpl_dumpMatchType omc_AbsynJLDumpTpl_dumpMatchType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpMatchType,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpMatchType,0}};
+#define boxvar_AbsynJLDumpTpl_dumpMatchType MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpMatchType)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpMatchExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_match__exp, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpMatchExp omc_AbsynJLDumpTpl_dumpMatchExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpMatchExp,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpMatchExp,0}};
+#define boxvar_AbsynJLDumpTpl_dumpMatchExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpMatchExp)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__166 omc_AbsynJLDumpTpl_fun__166
+
+
+#define boxptr_AbsynJLDumpTpl_lm__165 omc_AbsynJLDumpTpl_lm__165
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpCodeNode(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_code, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpCodeNode omc_AbsynJLDumpTpl_dumpCodeNode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpCodeNode,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpCodeNode,0}};
+#define boxvar_AbsynJLDumpTpl_dumpCodeNode MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpCodeNode)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__163 omc_AbsynJLDumpTpl_fun__163
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpElseIfExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_else__if, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpElseIfExp omc_AbsynJLDumpTpl_dumpElseIfExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElseIfExp,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpElseIfExp,0}};
+#define boxvar_AbsynJLDumpTpl_dumpElseIfExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElseIfExp)
+
+
+#define boxptr_AbsynJLDumpTpl_lm__158 omc_AbsynJLDumpTpl_lm__158
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpIfExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_if__exp, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpIfExp omc_AbsynJLDumpTpl_dumpIfExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpIfExp,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpIfExp,0}};
+#define boxvar_AbsynJLDumpTpl_dumpIfExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpIfExp)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__156 omc_AbsynJLDumpTpl_fun__156
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpOperand(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_operand, modelica_metatype _a_operation, modelica_boolean _a_lhs, modelica_metatype *out_out_a_preText);
+DLLDirection
+modelica_metatype boxptr_AbsynJLDumpTpl_dumpOperand(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_operand, modelica_metatype _a_operation, modelica_metatype _a_lhs, modelica_metatype *out_out_a_preText);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpOperand,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpOperand,0}};
+#define boxvar_AbsynJLDumpTpl_dumpOperand MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpOperand)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpLhsExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_lhs, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpLhsExp omc_AbsynJLDumpTpl_dumpLhsExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpLhsExp,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpLhsExp,0}};
+#define boxvar_AbsynJLDumpTpl_dumpLhsExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpLhsExp)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__153 omc_AbsynJLDumpTpl_fun__153
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_exp, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpExp omc_AbsynJLDumpTpl_dumpExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpExp,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpExp,0}};
+#define boxvar_AbsynJLDumpTpl_dumpExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpExp)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__151 omc_AbsynJLDumpTpl_fun__151
+
+
+#define boxptr_AbsynJLDumpTpl_lm__150 omc_AbsynJLDumpTpl_lm__150
+
+
+#define boxptr_AbsynJLDumpTpl_lm__149 omc_AbsynJLDumpTpl_lm__149
+
+
+#define boxptr_AbsynJLDumpTpl_lm__148 omc_AbsynJLDumpTpl_lm__148
+
+
+#define boxptr_AbsynJLDumpTpl_lm__147 omc_AbsynJLDumpTpl_lm__147
+
+
+#define boxptr_AbsynJLDumpTpl_lm__146 omc_AbsynJLDumpTpl_lm__146
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpSubscript(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_subscript, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpSubscript omc_AbsynJLDumpTpl_dumpSubscript
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpSubscript,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpSubscript,0}};
+#define boxvar_AbsynJLDumpTpl_dumpSubscript MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpSubscript)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__144 omc_AbsynJLDumpTpl_fun__144
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpSubscripts(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_subscripts, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpSubscripts omc_AbsynJLDumpTpl_dumpSubscripts
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpSubscripts,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpSubscripts,0}};
+#define boxvar_AbsynJLDumpTpl_dumpSubscripts MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpSubscripts)
+
+
+#define boxptr_AbsynJLDumpTpl_lm__142 omc_AbsynJLDumpTpl_lm__142
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpArrayDim(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_arraydim, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpArrayDim omc_AbsynJLDumpTpl_dumpArrayDim
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpArrayDim,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpArrayDim,0}};
+#define boxvar_AbsynJLDumpTpl_dumpArrayDim MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpArrayDim)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpArrayDimOpt(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_arraydim, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpArrayDimOpt omc_AbsynJLDumpTpl_dumpArrayDimOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpArrayDimOpt,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpArrayDimOpt,0}};
+#define boxvar_AbsynJLDumpTpl_dumpArrayDimOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpArrayDimOpt)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__139 omc_AbsynJLDumpTpl_fun__139
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpTypeSpec(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_typeSpec, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpTypeSpec omc_AbsynJLDumpTpl_dumpTypeSpec
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpTypeSpec,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpTypeSpec,0}};
+#define boxvar_AbsynJLDumpTpl_dumpTypeSpec MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpTypeSpec)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__137 omc_AbsynJLDumpTpl_fun__137
+
+
+#define boxptr_AbsynJLDumpTpl_lm__136 omc_AbsynJLDumpTpl_lm__136
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpStringCommentOption(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cmt);
+#define boxptr_AbsynJLDumpTpl_dumpStringCommentOption omc_AbsynJLDumpTpl_dumpStringCommentOption
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpStringCommentOption,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpStringCommentOption,0}};
+#define boxvar_AbsynJLDumpTpl_dumpStringCommentOption MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpStringCommentOption)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpPathNoQual(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
+#define boxptr_AbsynJLDumpTpl_dumpPathNoQual omc_AbsynJLDumpTpl_dumpPathNoQual
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpPathNoQual,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpPathNoQual,0}};
+#define boxvar_AbsynJLDumpTpl_dumpPathNoQual MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpPathNoQual)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpPath(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
+#define boxptr_AbsynJLDumpTpl_dumpPath omc_AbsynJLDumpTpl_dumpPath
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpPath,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpPath,0}};
+#define boxvar_AbsynJLDumpTpl_dumpPath MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpPath)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpAlgorithm(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_alg, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpAlgorithm omc_AbsynJLDumpTpl_dumpAlgorithm
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAlgorithm,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpAlgorithm,0}};
+#define boxvar_AbsynJLDumpTpl_dumpAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAlgorithm)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__130 omc_AbsynJLDumpTpl_fun__130
+
+
+#define boxptr_AbsynJLDumpTpl_fun__129 omc_AbsynJLDumpTpl_fun__129
+
+
+#define boxptr_AbsynJLDumpTpl_lm__128 omc_AbsynJLDumpTpl_lm__128
+
+
+#define boxptr_AbsynJLDumpTpl_lm__127 omc_AbsynJLDumpTpl_lm__127
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpAlgorithmItem(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_alg, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpAlgorithmItem omc_AbsynJLDumpTpl_dumpAlgorithmItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAlgorithmItem,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpAlgorithmItem,0}};
+#define boxvar_AbsynJLDumpTpl_dumpAlgorithmItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAlgorithmItem)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__125 omc_AbsynJLDumpTpl_fun__125
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpAlgorithmItems(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_algs, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpAlgorithmItems omc_AbsynJLDumpTpl_dumpAlgorithmItems
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAlgorithmItems,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpAlgorithmItems,0}};
+#define boxvar_AbsynJLDumpTpl_dumpAlgorithmItems MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAlgorithmItems)
+
+
+#define boxptr_AbsynJLDumpTpl_lm__123 omc_AbsynJLDumpTpl_lm__123
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpEquation(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_eq, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpEquation omc_AbsynJLDumpTpl_dumpEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEquation,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpEquation,0}};
+#define boxvar_AbsynJLDumpTpl_dumpEquation MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEquation)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__121 omc_AbsynJLDumpTpl_fun__121
+
+
+#define boxptr_AbsynJLDumpTpl_lm__120 omc_AbsynJLDumpTpl_lm__120
+
+
+#define boxptr_AbsynJLDumpTpl_lm__119 omc_AbsynJLDumpTpl_lm__119
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpEquationItems(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_eql, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpEquationItems omc_AbsynJLDumpTpl_dumpEquationItems
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEquationItems,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpEquationItems,0}};
+#define boxvar_AbsynJLDumpTpl_dumpEquationItems MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEquationItems)
+
+
+#define boxptr_AbsynJLDumpTpl_lm__117 omc_AbsynJLDumpTpl_lm__117
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpEquationItem(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_eq, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpEquationItem omc_AbsynJLDumpTpl_dumpEquationItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEquationItem,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpEquationItem,0}};
+#define boxvar_AbsynJLDumpTpl_dumpEquationItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEquationItem)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__115 omc_AbsynJLDumpTpl_fun__115
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpElement(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_elem, modelica_metatype _a_options, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpElement omc_AbsynJLDumpTpl_dumpElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElement,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpElement,0}};
+#define boxvar_AbsynJLDumpTpl_dumpElement MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElement)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__113 omc_AbsynJLDumpTpl_fun__113
+
+
+#define boxptr_AbsynJLDumpTpl_fun__111 omc_AbsynJLDumpTpl_fun__111
+
+
+#define boxptr_AbsynJLDumpTpl_fun__110 omc_AbsynJLDumpTpl_fun__110
+
+
+#define boxptr_AbsynJLDumpTpl_lm__109 omc_AbsynJLDumpTpl_lm__109
+
+
+#define boxptr_AbsynJLDumpTpl_fun__107 omc_AbsynJLDumpTpl_fun__107
+
+
+#define boxptr_AbsynJLDumpTpl_fun__106 omc_AbsynJLDumpTpl_fun__106
+
+
+#define boxptr_AbsynJLDumpTpl_fun__105 omc_AbsynJLDumpTpl_fun__105
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpElementItem(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_eitem, modelica_metatype _a_options, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpElementItem omc_AbsynJLDumpTpl_dumpElementItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElementItem,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpElementItem,0}};
+#define boxvar_AbsynJLDumpTpl_dumpElementItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElementItem)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__103 omc_AbsynJLDumpTpl_fun__103
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpGroupImport(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_gimp);
+#define boxptr_AbsynJLDumpTpl_dumpGroupImport omc_AbsynJLDumpTpl_dumpGroupImport
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpGroupImport,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpGroupImport,0}};
+#define boxvar_AbsynJLDumpTpl_dumpGroupImport MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpGroupImport)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpImport(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_imp);
+#define boxptr_AbsynJLDumpTpl_dumpImport omc_AbsynJLDumpTpl_dumpImport
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpImport,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpImport,0}};
+#define boxvar_AbsynJLDumpTpl_dumpImport MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpImport)
+
+
+#define boxptr_AbsynJLDumpTpl_lm__100 omc_AbsynJLDumpTpl_lm__100
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpComponentCondition(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_cond, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpComponentCondition omc_AbsynJLDumpTpl_dumpComponentCondition
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpComponentCondition,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpComponentCondition,0}};
+#define boxvar_AbsynJLDumpTpl_dumpComponentCondition MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpComponentCondition)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__98 omc_AbsynJLDumpTpl_fun__98
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpComponent(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_comp, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpComponent omc_AbsynJLDumpTpl_dumpComponent
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpComponent,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpComponent,0}};
+#define boxvar_AbsynJLDumpTpl_dumpComponent MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpComponent)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__96 omc_AbsynJLDumpTpl_fun__96
+
+
+#define boxptr_AbsynJLDumpTpl_fun__95 omc_AbsynJLDumpTpl_fun__95
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpComponentItem(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_comp, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpComponentItem omc_AbsynJLDumpTpl_dumpComponentItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpComponentItem,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpComponentItem,0}};
+#define boxvar_AbsynJLDumpTpl_dumpComponentItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpComponentItem)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__93 omc_AbsynJLDumpTpl_fun__93
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpConstrainClass(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_cc, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpConstrainClass omc_AbsynJLDumpTpl_dumpConstrainClass
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpConstrainClass,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpConstrainClass,0}};
+#define boxvar_AbsynJLDumpTpl_dumpConstrainClass MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpConstrainClass)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__91 omc_AbsynJLDumpTpl_fun__91
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpElementAttrDim(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_attr, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpElementAttrDim omc_AbsynJLDumpTpl_dumpElementAttrDim
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElementAttrDim,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpElementAttrDim,0}};
+#define boxvar_AbsynJLDumpTpl_dumpElementAttrDim MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElementAttrDim)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__89 omc_AbsynJLDumpTpl_fun__89
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpDirection(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_dir);
+#define boxptr_AbsynJLDumpTpl_dumpDirection omc_AbsynJLDumpTpl_dumpDirection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpDirection,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpDirection,0}};
+#define boxvar_AbsynJLDumpTpl_dumpDirection MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpDirection)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpVariability(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
+#define boxptr_AbsynJLDumpTpl_dumpVariability omc_AbsynJLDumpTpl_dumpVariability
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpVariability,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpVariability,0}};
+#define boxvar_AbsynJLDumpTpl_dumpVariability MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpVariability)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpIsField(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_isField);
+#define boxptr_AbsynJLDumpTpl_dumpIsField omc_AbsynJLDumpTpl_dumpIsField
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpIsField,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpIsField,0}};
+#define boxvar_AbsynJLDumpTpl_dumpIsField MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpIsField)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpParallelism(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_par);
+#define boxptr_AbsynJLDumpTpl_dumpParallelism omc_AbsynJLDumpTpl_dumpParallelism
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpParallelism,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpParallelism,0}};
+#define boxvar_AbsynJLDumpTpl_dumpParallelism MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpParallelism)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpElementAttr(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_attr, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpElementAttr omc_AbsynJLDumpTpl_dumpElementAttr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElementAttr,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpElementAttr,0}};
+#define boxvar_AbsynJLDumpTpl_dumpElementAttr MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElementAttr)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__83 omc_AbsynJLDumpTpl_fun__83
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpElementSpec(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_elem, modelica_metatype _a_options, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpElementSpec omc_AbsynJLDumpTpl_dumpElementSpec
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElementSpec,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpElementSpec,0}};
+#define boxvar_AbsynJLDumpTpl_dumpElementSpec MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElementSpec)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__79 omc_AbsynJLDumpTpl_fun__79
+
+
+#define boxptr_AbsynJLDumpTpl_lm__78 omc_AbsynJLDumpTpl_lm__78
+
+
+#define boxptr_AbsynJLDumpTpl_lm__77 omc_AbsynJLDumpTpl_lm__77
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpEqMod(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_eqmod, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpEqMod omc_AbsynJLDumpTpl_dumpEqMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEqMod,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpEqMod,0}};
+#define boxvar_AbsynJLDumpTpl_dumpEqMod MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEqMod)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__75 omc_AbsynJLDumpTpl_fun__75
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpModification(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_mod, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpModification omc_AbsynJLDumpTpl_dumpModification
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpModification,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpModification,0}};
+#define boxvar_AbsynJLDumpTpl_dumpModification MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpModification)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__73 omc_AbsynJLDumpTpl_fun__73
+
+
+#define boxptr_AbsynJLDumpTpl_lm__72 omc_AbsynJLDumpTpl_lm__72
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpInnerOuter(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_io);
+#define boxptr_AbsynJLDumpTpl_dumpInnerOuter omc_AbsynJLDumpTpl_dumpInnerOuter
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpInnerOuter,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpInnerOuter,0}};
+#define boxvar_AbsynJLDumpTpl_dumpInnerOuter MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpInnerOuter)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpReplaceable(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_repl);
+#define boxptr_AbsynJLDumpTpl_dumpReplaceable omc_AbsynJLDumpTpl_dumpReplaceable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpReplaceable,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpReplaceable,0}};
+#define boxvar_AbsynJLDumpTpl_dumpReplaceable MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpReplaceable)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpRedeclare(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_redecl);
+#define boxptr_AbsynJLDumpTpl_dumpRedeclare omc_AbsynJLDumpTpl_dumpRedeclare
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpRedeclare,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpRedeclare,0}};
+#define boxvar_AbsynJLDumpTpl_dumpRedeclare MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpRedeclare)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpFinal(threadData_t *threadData, modelica_metatype _in_txt, modelica_boolean _in_a_final);
+DLLDirection
+modelica_metatype boxptr_AbsynJLDumpTpl_dumpFinal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_final);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpFinal,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpFinal,0}};
+#define boxvar_AbsynJLDumpTpl_dumpFinal MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpFinal)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpEach(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_each);
+#define boxptr_AbsynJLDumpTpl_dumpEach omc_AbsynJLDumpTpl_dumpEach
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEach,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpEach,0}};
+#define boxvar_AbsynJLDumpTpl_dumpEach MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEach)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpElementArg(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_earg, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpElementArg omc_AbsynJLDumpTpl_dumpElementArg
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElementArg,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpElementArg,0}};
+#define boxvar_AbsynJLDumpTpl_dumpElementArg MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpElementArg)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__65 omc_AbsynJLDumpTpl_fun__65
+
+
+#define boxptr_AbsynJLDumpTpl_fun__64 omc_AbsynJLDumpTpl_fun__64
+
+
+#define boxptr_AbsynJLDumpTpl_fun__63 omc_AbsynJLDumpTpl_fun__63
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpCommentOpt(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_ocmt, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpCommentOpt omc_AbsynJLDumpTpl_dumpCommentOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpCommentOpt,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpCommentOpt,0}};
+#define boxvar_AbsynJLDumpTpl_dumpCommentOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpCommentOpt)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__61 omc_AbsynJLDumpTpl_fun__61
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpComment(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_cmt, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpComment omc_AbsynJLDumpTpl_dumpComment
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpComment,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpComment,0}};
+#define boxvar_AbsynJLDumpTpl_dumpComment MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpComment)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__59 omc_AbsynJLDumpTpl_fun__59
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpAnnotationOptSpace(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_oann, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpAnnotationOptSpace omc_AbsynJLDumpTpl_dumpAnnotationOptSpace
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAnnotationOptSpace,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpAnnotationOptSpace,0}};
+#define boxvar_AbsynJLDumpTpl_dumpAnnotationOptSpace MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAnnotationOptSpace)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__57 omc_AbsynJLDumpTpl_fun__57
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpAnnotationOpt(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_oann, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpAnnotationOpt omc_AbsynJLDumpTpl_dumpAnnotationOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAnnotationOpt,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpAnnotationOpt,0}};
+#define boxvar_AbsynJLDumpTpl_dumpAnnotationOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAnnotationOpt)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__55 omc_AbsynJLDumpTpl_fun__55
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpAnnotation(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_ann, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpAnnotation omc_AbsynJLDumpTpl_dumpAnnotation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAnnotation,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpAnnotation,0}};
+#define boxvar_AbsynJLDumpTpl_dumpAnnotation MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpAnnotation)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__53 omc_AbsynJLDumpTpl_fun__53
+
+
+#define boxptr_AbsynJLDumpTpl_lm__52 omc_AbsynJLDumpTpl_lm__52
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpInfo(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_info);
+#define boxptr_AbsynJLDumpTpl_dumpInfo omc_AbsynJLDumpTpl_dumpInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpInfo,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpInfo,0}};
+#define boxvar_AbsynJLDumpTpl_dumpInfo MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpInfo)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpWithin(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_within);
+#define boxptr_AbsynJLDumpTpl_dumpWithin omc_AbsynJLDumpTpl_dumpWithin
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpWithin,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpWithin,0}};
+#define boxvar_AbsynJLDumpTpl_dumpWithin MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpWithin)
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpClassPart(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_class__part, modelica_metatype _a_options, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpClassPart omc_AbsynJLDumpTpl_dumpClassPart
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpClassPart,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpClassPart,0}};
+#define boxvar_AbsynJLDumpTpl_dumpClassPart MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpClassPart)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__47 omc_AbsynJLDumpTpl_fun__47
+
+
+#define boxptr_AbsynJLDumpTpl_fun__46 omc_AbsynJLDumpTpl_fun__46
+
+
+#define boxptr_AbsynJLDumpTpl_lm__45 omc_AbsynJLDumpTpl_lm__45
+
+
+#define boxptr_AbsynJLDumpTpl_fun__44 omc_AbsynJLDumpTpl_fun__44
+
+
+#define boxptr_AbsynJLDumpTpl_fun__43 omc_AbsynJLDumpTpl_fun__43
+
+
+#define boxptr_AbsynJLDumpTpl_fun__42 omc_AbsynJLDumpTpl_fun__42
+
+
+#define boxptr_AbsynJLDumpTpl_fun__41 omc_AbsynJLDumpTpl_fun__41
+
+
+#define boxptr_AbsynJLDumpTpl_lm__40 omc_AbsynJLDumpTpl_lm__40
+
+
+#define boxptr_AbsynJLDumpTpl_lm__39 omc_AbsynJLDumpTpl_lm__39
+
+
+#define boxptr_AbsynJLDumpTpl_lm__38 omc_AbsynJLDumpTpl_lm__38
+
+
+#define boxptr_AbsynJLDumpTpl_lm__37 omc_AbsynJLDumpTpl_lm__37
+
+
+#define boxptr_AbsynJLDumpTpl_lm__36 omc_AbsynJLDumpTpl_lm__36
+
+
+#define boxptr_AbsynJLDumpTpl_lm__35 omc_AbsynJLDumpTpl_lm__35
+
+
+#define boxptr_AbsynJLDumpTpl_lm__34 omc_AbsynJLDumpTpl_lm__34
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpRestriction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_restriction);
+#define boxptr_AbsynJLDumpTpl_dumpRestriction omc_AbsynJLDumpTpl_dumpRestriction
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpRestriction,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpRestriction,0}};
+#define boxvar_AbsynJLDumpTpl_dumpRestriction MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpRestriction)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__32 omc_AbsynJLDumpTpl_fun__32
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpEnumLiteral(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_lit, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpEnumLiteral omc_AbsynJLDumpTpl_dumpEnumLiteral
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEnumLiteral,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpEnumLiteral,0}};
+#define boxvar_AbsynJLDumpTpl_dumpEnumLiteral MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEnumLiteral)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__30 omc_AbsynJLDumpTpl_fun__30
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpEnumDef(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_enum__def, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpEnumDef omc_AbsynJLDumpTpl_dumpEnumDef
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEnumDef,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpEnumDef,0}};
+#define boxvar_AbsynJLDumpTpl_dumpEnumDef MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpEnumDef)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__28 omc_AbsynJLDumpTpl_fun__28
+
+
+#define boxptr_AbsynJLDumpTpl_lm__27 omc_AbsynJLDumpTpl_lm__27
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpClassDef(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_cdef, modelica_metatype _a_options, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpClassDef omc_AbsynJLDumpTpl_dumpClassDef
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpClassDef,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpClassDef,0}};
+#define boxvar_AbsynJLDumpTpl_dumpClassDef MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpClassDef)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__25 omc_AbsynJLDumpTpl_fun__25
+
+
+#define boxptr_AbsynJLDumpTpl_lm__24 omc_AbsynJLDumpTpl_lm__24
+
+
+#define boxptr_AbsynJLDumpTpl_lm__23 omc_AbsynJLDumpTpl_lm__23
+
+
+#define boxptr_AbsynJLDumpTpl_fun__22 omc_AbsynJLDumpTpl_fun__22
+
+
+#define boxptr_AbsynJLDumpTpl_lm__21 omc_AbsynJLDumpTpl_lm__21
+
+
+#define boxptr_AbsynJLDumpTpl_lm__20 omc_AbsynJLDumpTpl_lm__20
+
+
+#define boxptr_AbsynJLDumpTpl_lm__19 omc_AbsynJLDumpTpl_lm__19
+
+
+#define boxptr_AbsynJLDumpTpl_lm__18 omc_AbsynJLDumpTpl_lm__18
+
+
+#define boxptr_AbsynJLDumpTpl_lm__17 omc_AbsynJLDumpTpl_lm__17
+
+
+#define boxptr_AbsynJLDumpTpl_lm__16 omc_AbsynJLDumpTpl_lm__16
+
+
+#define boxptr_AbsynJLDumpTpl_lm__15 omc_AbsynJLDumpTpl_lm__15
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dumpClass(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_cls, modelica_metatype _a_options, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dumpClass omc_AbsynJLDumpTpl_dumpClass
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpClass,2,0) {(void*) boxptr_AbsynJLDumpTpl_dumpClass,0}};
+#define boxvar_AbsynJLDumpTpl_dumpClass MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dumpClass)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__13 omc_AbsynJLDumpTpl_fun__13
+
+
+DLLDirection
+modelica_metatype omc_AbsynJLDumpTpl_dump2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_preText, modelica_metatype _a_program, modelica_metatype _a_options, modelica_metatype *out_out_a_preText);
+#define boxptr_AbsynJLDumpTpl_dump2 omc_AbsynJLDumpTpl_dump2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dump2,2,0) {(void*) boxptr_AbsynJLDumpTpl_dump2,0}};
+#define boxvar_AbsynJLDumpTpl_dump2 MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dump2)
+
+
+#define boxptr_AbsynJLDumpTpl_fun__11 omc_AbsynJLDumpTpl_fun__11
+
+
+#define boxptr_AbsynJLDumpTpl_lm__10 omc_AbsynJLDumpTpl_lm__10
+
+
+DLLDirection
 modelica_metatype omc_AbsynJLDumpTpl_dump(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_program);
 #define boxptr_AbsynJLDumpTpl_dump omc_AbsynJLDumpTpl_dump
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dump,2,0) {(void*) boxptr_AbsynJLDumpTpl_dump,0}};
 #define boxvar_AbsynJLDumpTpl_dump MMC_REFSTRUCTLIT(boxvar_lit_AbsynJLDumpTpl_dump)
+
 #ifdef __cplusplus
 }
 #endif

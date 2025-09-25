@@ -1,0 +1,248 @@
+#ifndef Binding__H
+#define Binding__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Class_CLASS__desc;
+
+extern struct record_description Absyn_ClassDef_PARTS__desc;
+
+extern struct record_description Absyn_ClassPart_PUBLIC__desc;
+
+extern struct record_description Absyn_Component_COMPONENT__desc;
+
+extern struct record_description Absyn_ComponentItem_COMPONENTITEM__desc;
+
+extern struct record_description Absyn_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description Absyn_ComponentRef_CREF__QUAL__desc;
+
+extern struct record_description Absyn_Direction_BIDIR__desc;
+
+extern struct record_description Absyn_Each_NON__EACH__desc;
+
+extern struct record_description Absyn_Element_ELEMENT__desc;
+
+extern struct record_description Absyn_ElementArg_MODIFICATION__desc;
+
+extern struct record_description Absyn_ElementAttributes_ATTR__desc;
+
+extern struct record_description Absyn_ElementItem_ELEMENTITEM__desc;
+
+extern struct record_description Absyn_ElementSpec_CLASSDEF__desc;
+
+extern struct record_description Absyn_ElementSpec_COMPONENTS__desc;
+
+extern struct record_description Absyn_ElementSpec_EXTENDS__desc;
+
+extern struct record_description Absyn_EqMod_EQMOD__desc;
+
+extern struct record_description Absyn_EqMod_NOMOD__desc;
+
+extern struct record_description Absyn_Exp_ARRAY__desc;
+
+extern struct record_description Absyn_Exp_BINARY__desc;
+
+extern struct record_description Absyn_Exp_BOOL__desc;
+
+extern struct record_description Absyn_Exp_CALL__desc;
+
+extern struct record_description Absyn_Exp_CREF__desc;
+
+extern struct record_description Absyn_Exp_IFEXP__desc;
+
+extern struct record_description Absyn_Exp_LBINARY__desc;
+
+extern struct record_description Absyn_Exp_LIST__desc;
+
+extern struct record_description Absyn_Exp_LUNARY__desc;
+
+extern struct record_description Absyn_Exp_RELATION__desc;
+
+extern struct record_description Absyn_Exp_STRING__desc;
+
+extern struct record_description Absyn_Exp_UNARY__desc;
+
+extern struct record_description Absyn_FunctionArgs_FUNCTIONARGS__desc;
+
+extern struct record_description Absyn_InnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description Absyn_IsField_NONFIELD__desc;
+
+extern struct record_description Absyn_Modification_CLASSMOD__desc;
+
+extern struct record_description Absyn_Parallelism_NON__PARALLEL__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description Absyn_Path_QUALIFIED__desc;
+
+extern struct record_description Absyn_Program_PROGRAM__desc;
+
+extern struct record_description Absyn_Restriction_R__MODEL__desc;
+
+extern struct record_description Absyn_TypeSpec_TPATH__desc;
+
+extern struct record_description Absyn_Variability_VAR__desc;
+
+extern struct record_description Binding_Client_CLIENT__desc;
+
+extern struct record_description Binding_Client__e_CLIENT__E__desc;
+
+extern struct record_description Binding_Client__e_NO__PRED__desc;
+
+extern struct record_description Binding_Mediator_MEDIATOR__desc;
+
+extern struct record_description Binding_Preferred_PREFERRED__desc;
+
+extern struct record_description Binding_Provider_PROVIDER__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_Binding_getValueR omc_Binding_getValueR
+
+
+#define boxptr_Binding_getValue omc_Binding_getValue
+
+
+#define boxptr_Binding_getArg omc_Binding_getArg
+
+
+#define boxptr_Binding_getProviderList omc_Binding_getProviderList
+
+
+#define boxptr_Binding_getClientList omc_Binding_getClientList
+
+
+#define boxptr_Binding_getPreferredList omc_Binding_getPreferredList
+
+
+#define boxptr_Binding_getMediatorDefsElement omc_Binding_getMediatorDefsElement
+
+
+#define boxptr_Binding_getMediatorDefsElements omc_Binding_getMediatorDefsElements
+
+
+#define boxptr_Binding_parseElementInstList2 omc_Binding_parseElementInstList2
+
+
+#define boxptr_Binding_getComponentNames omc_Binding_getComponentNames
+
+
+#define boxptr_Binding_parseElementInstList omc_Binding_parseElementInstList
+
+
+#define boxptr_Binding_buildInstList2 omc_Binding_buildInstList2
+
+
+#define boxptr_Binding_buildInstList omc_Binding_buildInstList
+
+
+#define boxptr_Binding_parseComponents omc_Binding_parseComponents
+
+
+#define boxptr_Binding_getAllProviderInstances omc_Binding_getAllProviderInstances
+
+
+#define boxptr_Binding_updateCRF omc_Binding_updateCRF
+
+
+#define boxptr_Binding_parseExpression omc_Binding_parseExpression
+
+
+#define boxptr_Binding_applyTemplate2 omc_Binding_applyTemplate2
+
+
+#define boxptr_Binding_applyTemplate omc_Binding_applyTemplate
+
+
+DLLDirection
+modelica_metatype omc_Binding_getProviders(threadData_t *threadData, modelica_metatype _providers, modelica_metatype _vmodel, modelica_metatype _env, modelica_metatype _in_es);
+#define boxptr_Binding_getProviders omc_Binding_getProviders
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_getProviders,2,0) {(void*) boxptr_Binding_getProviders,0}};
+#define boxvar_Binding_getProviders MMC_REFSTRUCTLIT(boxvar_lit_Binding_getProviders)
+
+
+#define boxptr_Binding_parseAggregator omc_Binding_parseAggregator
+
+
+#define boxptr_Binding_buildAllComponentModifiers3 omc_Binding_buildAllComponentModifiers3
+
+
+#define boxptr_Binding_buildAllComponentModifiers2 omc_Binding_buildAllComponentModifiers2
+
+
+#define boxptr_Binding_buildAllComponentModifiers omc_Binding_buildAllComponentModifiers
+
+
+#define boxptr_Binding_buildComponentModifiers2 omc_Binding_buildComponentModifiers2
+
+
+#define boxptr_Binding_buildComponentModifiers omc_Binding_buildComponentModifiers
+
+
+#define boxptr_Binding_applyModifierPreferred omc_Binding_applyModifierPreferred
+
+
+#define boxptr_Binding_getPreferredBinding omc_Binding_getPreferredBinding
+
+
+DLLDirection
+modelica_metatype omc_Binding_updateClass(threadData_t *threadData, modelica_metatype _in_class, modelica_metatype _typeSpec, modelica_metatype _rootType, modelica_metatype _exp, modelica_metatype _instance_name, modelica_metatype _defs, modelica_boolean _hasPreferred, modelica_metatype _preferred, modelica_string _path);
+DLLDirection
+modelica_metatype boxptr_Binding_updateClass(threadData_t *threadData, modelica_metatype _in_class, modelica_metatype _typeSpec, modelica_metatype _rootType, modelica_metatype _exp, modelica_metatype _instance_name, modelica_metatype _defs, modelica_metatype _hasPreferred, modelica_metatype _preferred, modelica_metatype _path);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_updateClass,2,0) {(void*) boxptr_Binding_updateClass,0}};
+#define boxvar_Binding_updateClass MMC_REFSTRUCTLIT(boxvar_lit_Binding_updateClass)
+
+
+DLLDirection
+modelica_metatype omc_Binding_toExpList(threadData_t *threadData, modelica_metatype _e_list, modelica_metatype _in_es);
+#define boxptr_Binding_toExpList omc_Binding_toExpList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_toExpList,2,0) {(void*) boxptr_Binding_toExpList,0}};
+#define boxvar_Binding_toExpList MMC_REFSTRUCTLIT(boxvar_lit_Binding_toExpList)
+
+
+#define boxptr_Binding_inferBindingClient omc_Binding_inferBindingClient
+
+
+#define boxptr_Binding_inferBindingClientList omc_Binding_inferBindingClientList
+
+
+#define boxptr_Binding_getAllElementsOfType2 omc_Binding_getAllElementsOfType2
+
+
+#define boxptr_Binding_getAllElementsOfType omc_Binding_getAllElementsOfType
+
+
+DLLDirection
+modelica_metatype omc_Binding_updatePackage(threadData_t *threadData, modelica_metatype _in_class, modelica_metatype _ag_elems);
+#define boxptr_Binding_updatePackage omc_Binding_updatePackage
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_updatePackage,2,0) {(void*) boxptr_Binding_updatePackage,0}};
+#define boxvar_Binding_updatePackage MMC_REFSTRUCTLIT(boxvar_lit_Binding_updatePackage)
+
+
+DLLDirection
+modelica_metatype omc_Binding_generateVerificationScenarios(threadData_t *threadData, modelica_metatype _package_path, modelica_metatype _in_env);
+#define boxptr_Binding_generateVerificationScenarios omc_Binding_generateVerificationScenarios
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_generateVerificationScenarios,2,0) {(void*) boxptr_Binding_generateVerificationScenarios,0}};
+#define boxvar_Binding_generateVerificationScenarios MMC_REFSTRUCTLIT(boxvar_lit_Binding_generateVerificationScenarios)
+
+
+DLLDirection
+modelica_metatype omc_Binding_inferBindings(threadData_t *threadData, modelica_metatype _model_path, modelica_metatype _env);
+#define boxptr_Binding_inferBindings omc_Binding_inferBindings
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_inferBindings,2,0) {(void*) boxptr_Binding_inferBindings,0}};
+#define boxvar_Binding_inferBindings MMC_REFSTRUCTLIT(boxvar_lit_Binding_inferBindings)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

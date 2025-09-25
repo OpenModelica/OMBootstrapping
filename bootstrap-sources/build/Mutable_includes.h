@@ -1,17 +1,25 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+#include "openmodelica.h"       // Defines OPENMODELICA_H_ for libraris to test if called from OpenModelica.
+#include "ModelicaUtilities.h"  // Make Modelica C util functions available for external includes.
+
+
 static inline void* mutableCreate(void *data)
 {
-return mmc_mk_box1(0, data);
+  return mmc_mk_box1(0, data);
 }
+
+
 static inline void mutableUpdate(void *mutable, void *data)
 {
-MMC_STRUCTDATA(mutable)[0] = data;
+  MMC_STRUCTDATA(mutable)[0] = data;
 }
+
+
 static inline void* mutableAccess(void *mutable)
 {
-return MMC_STRUCTDATA(mutable)[0];
+  return MMC_STRUCTDATA(mutable)[0];
 }
 #ifdef __cplusplus
 }

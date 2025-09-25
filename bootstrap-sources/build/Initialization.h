@@ -1,0 +1,300 @@
+#ifndef Initialization__H
+#define Initialization__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description AvlSetCR_Tree_EMPTY__desc;
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BackendDAEType_INITIALSYSTEM__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_ALGORITHM__desc;
+
+extern struct record_description BackendDAE_Equation_ARRAY__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_SOLVED__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationConstraints_EXACT__desc;
+
+extern struct record_description BackendDAE_EquationKind_BINDING__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_DYNAMIC__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_INITIAL__EQUATION__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_IndexReduction_NO__INDEX__REDUCTION__desc;
+
+extern struct record_description BackendDAE_IndexType_NORMAL__desc;
+
+extern struct record_description BackendDAE_IndexType_SOLVABLE__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_DISCRETE__desc;
+
+extern struct record_description BackendDAE_VarKind_VARIABLE__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_CallAttributes_CALL__ATTR__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_BCONST__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_Expand_EXPAND__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description DAE_Operator_SUB__desc;
+
+extern struct record_description DAE_Statement_STMT__NORETCALL__desc;
+
+extern struct record_description DAE_TailCall_NO__TAIL__desc;
+
+extern struct record_description DAE_Type_T__BOOL__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description DAE_VarDirection_BIDIR__desc;
+
+extern struct record_description DAE_VarInnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_SYMBOLIC__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_Initialization_replaceHomotopyWithSimplifiedEqs(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqs);
+#define boxptr_Initialization_replaceHomotopyWithSimplifiedEqs omc_Initialization_replaceHomotopyWithSimplifiedEqs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_replaceHomotopyWithSimplifiedEqs,2,0) {(void*) boxptr_Initialization_replaceHomotopyWithSimplifiedEqs,0}};
+#define boxvar_Initialization_replaceHomotopyWithSimplifiedEqs MMC_REFSTRUCTLIT(boxvar_lit_Initialization_replaceHomotopyWithSimplifiedEqs)
+
+
+DLLDirection
+modelica_metatype omc_Initialization_replaceHomotopyWithSimplified(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_Initialization_replaceHomotopyWithSimplified omc_Initialization_replaceHomotopyWithSimplified
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_replaceHomotopyWithSimplified,2,0) {(void*) boxptr_Initialization_replaceHomotopyWithSimplified,0}};
+#define boxvar_Initialization_replaceHomotopyWithSimplified MMC_REFSTRUCTLIT(boxvar_lit_Initialization_replaceHomotopyWithSimplified)
+
+
+#define boxptr_Initialization_filterWhenEquation omc_Initialization_filterWhenEquation
+
+
+DLLDirection
+modelica_metatype omc_Initialization_removeInitializationStuff(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_Initialization_removeInitializationStuff omc_Initialization_removeInitializationStuff
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_removeInitializationStuff,2,0) {(void*) boxptr_Initialization_removeInitializationStuff,0}};
+#define boxvar_Initialization_removeInitializationStuff MMC_REFSTRUCTLIT(boxvar_lit_Initialization_removeInitializationStuff)
+
+
+#define boxptr_Initialization_collectInitialBindings omc_Initialization_collectInitialBindings
+
+
+#define boxptr_Initialization_replaceDerPreCref omc_Initialization_replaceDerPreCref
+
+
+#define boxptr_Initialization_collectInitialEqns omc_Initialization_collectInitialEqns
+
+
+#define boxptr_Initialization_collectInitialClockedVarsEqns omc_Initialization_collectInitialClockedVarsEqns
+
+
+#define boxptr_Initialization_collectInitialVars omc_Initialization_collectInitialVars
+
+
+#define boxptr_Initialization_collectInitialStateSets omc_Initialization_collectInitialStateSets
+
+
+#define boxptr_Initialization_introducePreVarsForAliasVariables omc_Initialization_introducePreVarsForAliasVariables
+
+
+#define boxptr_Initialization_setupVarReplacements omc_Initialization_setupVarReplacements
+
+
+#define boxptr_Initialization_downCompsMarker omc_Initialization_downCompsMarker
+
+
+#define boxptr_Initialization_compsMarker2 omc_Initialization_compsMarker2
+
+
+#define boxptr_Initialization_mapListIndices omc_Initialization_mapListIndices
+
+
+#define boxptr_Initialization_mapIndices omc_Initialization_mapIndices
+
+
+#define boxptr_Initialization_splitStrongComponents omc_Initialization_splitStrongComponents
+
+
+#define boxptr_Initialization_addStartValueEquations omc_Initialization_addStartValueEquations
+
+
+#define boxptr_Initialization_updateFixedAttribute omc_Initialization_updateFixedAttribute
+
+
+#define boxptr_Initialization_resolveOverAndUnderconstraints omc_Initialization_resolveOverAndUnderconstraints
+
+
+#define boxptr_Initialization_getInitEqIndices omc_Initialization_getInitEqIndices
+
+
+#define boxptr_Initialization_analyzeInitialSystem omc_Initialization_analyzeInitialSystem
+
+
+#define boxptr_Initialization_selectInitializationVariables2 omc_Initialization_selectInitializationVariables2
+
+
+#define boxptr_Initialization_selectInitializationVariables1 omc_Initialization_selectInitializationVariables1
+
+
+#define boxptr_Initialization_selectInitializationVariables omc_Initialization_selectInitializationVariables
+
+
+DLLDirection
+modelica_integer omc_Initialization_flattenParamComp(threadData_t *threadData, modelica_metatype _paramIndices, modelica_metatype _inAllParameters);
+DLLDirection
+modelica_metatype boxptr_Initialization_flattenParamComp(threadData_t *threadData, modelica_metatype _paramIndices, modelica_metatype _inAllParameters);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_flattenParamComp,2,0) {(void*) boxptr_Initialization_flattenParamComp,0}};
+#define boxvar_Initialization_flattenParamComp MMC_REFSTRUCTLIT(boxvar_lit_Initialization_flattenParamComp)
+
+
+#define boxptr_Initialization_selectSecondaryParameters omc_Initialization_selectSecondaryParameters
+
+
+#define boxptr_Initialization_createGlobalKnownVarsEquations omc_Initialization_createGlobalKnownVarsEquations
+
+
+#define boxptr_Initialization_addExtObjToGlobalKnownVars omc_Initialization_addExtObjToGlobalKnownVars
+
+
+#define boxptr_Initialization_selectInitializationVariablesDAE omc_Initialization_selectInitializationVariablesDAE
+
+
+#define boxptr_Initialization_warnAboutEqns2 omc_Initialization_warnAboutEqns2
+
+
+#define boxptr_Initialization_warnAboutVars2 omc_Initialization_warnAboutVars2
+
+
+#define boxptr_Initialization_collectPreVariablesTraverseExp2 omc_Initialization_collectPreVariablesTraverseExp2
+
+
+DLLDirection
+modelica_metatype omc_Initialization_collectPreVariablesTraverseExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inHS, modelica_metatype *out_outHS);
+#define boxptr_Initialization_collectPreVariablesTraverseExp omc_Initialization_collectPreVariablesTraverseExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_collectPreVariablesTraverseExp,2,0) {(void*) boxptr_Initialization_collectPreVariablesTraverseExp,0}};
+#define boxvar_Initialization_collectPreVariablesTraverseExp MMC_REFSTRUCTLIT(boxvar_lit_Initialization_collectPreVariablesTraverseExp)
+
+
+DLLDirection
+modelica_metatype omc_Initialization_collectPreVariablesEqSystem(threadData_t *threadData, modelica_metatype _inSyst, modelica_metatype _inHS);
+#define boxptr_Initialization_collectPreVariablesEqSystem omc_Initialization_collectPreVariablesEqSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_collectPreVariablesEqSystem,2,0) {(void*) boxptr_Initialization_collectPreVariablesEqSystem,0}};
+#define boxvar_Initialization_collectPreVariablesEqSystem MMC_REFSTRUCTLIT(boxvar_lit_Initialization_collectPreVariablesEqSystem)
+
+
+#define boxptr_Initialization_collectPreVariables omc_Initialization_collectPreVariables
+
+
+#define boxptr_Initialization_generateInactiveWhenEquationForInitialization omc_Initialization_generateInactiveWhenEquationForInitialization
+
+
+#define boxptr_Initialization_inlineWhenForInitializationWhenStmt omc_Initialization_inlineWhenForInitializationWhenStmt
+
+
+#define boxptr_Initialization_inlineWhenForInitializationWhenAlgorithm omc_Initialization_inlineWhenForInitializationWhenAlgorithm
+
+
+#define boxptr_Initialization_inlineWhenForInitializationWhenEquation omc_Initialization_inlineWhenForInitializationWhenEquation
+
+
+#define boxptr_Initialization_inlineWhenForInitializationEquation omc_Initialization_inlineWhenForInitializationEquation
+
+
+#define boxptr_Initialization_inlineWhenForInitializationSystem omc_Initialization_inlineWhenForInitializationSystem
+
+
+#define boxptr_Initialization_inlineWhenForInitialization omc_Initialization_inlineWhenForInitialization
+
+
+#define boxptr_Initialization_solveInitialSystemEqSystem omc_Initialization_solveInitialSystemEqSystem
+
+
+DLLDirection
+modelica_metatype omc_Initialization_createInitialDAEFromSystem(threadData_t *threadData, modelica_metatype _inInitsyst, modelica_metatype _inShared, modelica_metatype _initVars, modelica_metatype _enabledModules, modelica_metatype _disabledModules, modelica_metatype _globalKnownVars, modelica_boolean _isLambda0, modelica_metatype *out_dumpVars, modelica_metatype *out_removedEqns);
+DLLDirection
+modelica_metatype boxptr_Initialization_createInitialDAEFromSystem(threadData_t *threadData, modelica_metatype _inInitsyst, modelica_metatype _inShared, modelica_metatype _initVars, modelica_metatype _enabledModules, modelica_metatype _disabledModules, modelica_metatype _globalKnownVars, modelica_metatype _isLambda0, modelica_metatype *out_dumpVars, modelica_metatype *out_removedEqns);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_createInitialDAEFromSystem,2,0) {(void*) boxptr_Initialization_createInitialDAEFromSystem,0}};
+#define boxvar_Initialization_createInitialDAEFromSystem MMC_REFSTRUCTLIT(boxvar_lit_Initialization_createInitialDAEFromSystem)
+
+
+DLLDirection
+modelica_metatype omc_Initialization_solveInitialSystem(threadData_t *threadData, modelica_metatype _inDAE, modelica_metatype *out_outInitDAE_lambda0, modelica_metatype *out_outRemovedInitialEquations, modelica_metatype *out_outGlobalKnownVars, modelica_metatype *out_outSimDAE);
+#define boxptr_Initialization_solveInitialSystem omc_Initialization_solveInitialSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_solveInitialSystem,2,0) {(void*) boxptr_Initialization_solveInitialSystem,0}};
+#define boxvar_Initialization_solveInitialSystem MMC_REFSTRUCTLIT(boxvar_lit_Initialization_solveInitialSystem)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

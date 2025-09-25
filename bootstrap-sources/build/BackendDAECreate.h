@@ -5,14 +5,443 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-DLLExport
-modelica_metatype omc_BackendDAECreate_lower(threadData_t *threadData, modelica_metatype _a, modelica_metatype _b, modelica_metatype _c, modelica_metatype _d);
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BackendDAEModeData_BDAE__MODE__DATA__desc;
+
+extern struct record_description BackendDAE_BackendDAEType_SIMULATION__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_ALGORITHM__desc;
+
+extern struct record_description BackendDAE_Equation_ARRAY__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_COMPLEX__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_FOR__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_IF__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_WHEN__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_BINDING__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_DYNAMIC__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_INITIAL__EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationKind_UNKNOWN__EQUATION__KIND__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_EventInfo_EVENT__INFO__desc;
+
+extern struct record_description BackendDAE_ExternalObjectClass_EXTOBJCLASS__desc;
+
+extern struct record_description BackendDAE_Shared_SHARED__desc;
+
+extern struct record_description BackendDAE_TearingSelect_DEFAULT__desc;
+
+extern struct record_description BackendDAE_TimeEvent_SAMPLE__TIME__EVENT__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_CONST__desc;
+
+extern struct record_description BackendDAE_VarKind_DISCRETE__desc;
+
+extern struct record_description BackendDAE_VarKind_DUMMY__STATE__desc;
+
+extern struct record_description BackendDAE_VarKind_EXTOBJ__desc;
+
+extern struct record_description BackendDAE_VarKind_PARAM__desc;
+
+extern struct record_description BackendDAE_VarKind_STATE__desc;
+
+extern struct record_description BackendDAE_VarKind_VARIABLE__desc;
+
+extern struct record_description BackendDAE_WhenEquation_WHEN__STMTS__desc;
+
+extern struct record_description BackendDAE_WhenOperator_ASSERT__desc;
+
+extern struct record_description BackendDAE_WhenOperator_ASSIGN__desc;
+
+extern struct record_description BackendDAE_WhenOperator_NORETCALL__desc;
+
+extern struct record_description BackendDAE_WhenOperator_REINIT__desc;
+
+extern struct record_description BackendDAE_WhenOperator_TERMINATE__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_Binding_EQBOUND__desc;
+
+extern struct record_description DAE_BindingSource_BINDING__FROM__DEFAULT__VALUE__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_Const_C__CONST__desc;
+
+extern struct record_description DAE_Const_C__VAR__desc;
+
+extern struct record_description DAE_Element_ALGORITHM__desc;
+
+extern struct record_description DAE_Element_ASSERT__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Else_NOELSE__desc;
+
+extern struct record_description DAE_EquationExp_EQUALITY__EXPS__desc;
+
+extern struct record_description DAE_EquationExp_PARTIAL__EQUATION__desc;
+
+extern struct record_description DAE_Exp_ARRAY__desc;
+
+extern struct record_description DAE_Exp_ASUB__desc;
+
+extern struct record_description DAE_Exp_BCONST__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_ENUM__LITERAL__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_Exp_IFEXP__desc;
+
+extern struct record_description DAE_Exp_MATRIX__desc;
+
+extern struct record_description DAE_Exp_TSUB__desc;
+
+extern struct record_description DAE_Expand_EXPAND__desc;
+
+extern struct record_description DAE_Expand_NOT__EXPAND__desc;
+
+extern struct record_description DAE_FunctionDefinition_FUNCTION__DEF__desc;
+
+extern struct record_description DAE_InlineType_DEFAULT__INLINE__desc;
+
+extern struct record_description DAE_InlineType_NORM__INLINE__desc;
+
+extern struct record_description DAE_StateSelect_ALWAYS__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSERT__desc;
+
+extern struct record_description DAE_Statement_STMT__IF__desc;
+
+extern struct record_description DAE_Statement_STMT__NORETCALL__desc;
+
+extern struct record_description DAE_Statement_STMT__TERMINATE__desc;
+
+extern struct record_description DAE_SymbolicOperation_OP__INLINE__desc;
+
+extern struct record_description DAE_SymbolicOperation_SOLVED__desc;
+
+extern struct record_description DAE_Type_T__BOOL__desc;
+
+extern struct record_description DAE_Type_T__CLOCK__desc;
+
+extern struct record_description DAE_Type_T__INTEGER__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_Type_T__STRING__desc;
+
+extern struct record_description DAE_VarDirection_BIDIR__desc;
+
+extern struct record_description DAE_VarInnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__BOOL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__ENUMERATION__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__INT__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__REAL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__STRING__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_SYMBOLIC__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_NOTIFICATION__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_BackendDAECreate_replaceParameters omc_BackendDAECreate_replaceParameters
+
+
+#define boxptr_BackendDAECreate_renameFunctionParameter2 omc_BackendDAECreate_renameFunctionParameter2
+
+
+#define boxptr_BackendDAECreate_renameFunctionParameter1 omc_BackendDAECreate_renameFunctionParameter1
+
+
+#define boxptr_BackendDAECreate_renameFunctionParameter omc_BackendDAECreate_renameFunctionParameter
+
+
+#define boxptr_BackendDAECreate_deriveFunction omc_BackendDAECreate_deriveFunction
+
+
+#define boxptr_BackendDAECreate_lowerFunctions omc_BackendDAECreate_lowerFunctions
+
+
+#define boxptr_BackendDAECreate_getVarsFromExp omc_BackendDAECreate_getVarsFromExp
+
+
+#define boxptr_BackendDAECreate_detectImplicitDiscreteFold omc_BackendDAECreate_detectImplicitDiscreteFold
+
+
+#define boxptr_BackendDAECreate_detectImplicitDiscrete omc_BackendDAECreate_detectImplicitDiscrete
+
+
+#define boxptr_BackendDAECreate_replaceableAlias omc_BackendDAECreate_replaceableAlias
+
+
+#define boxptr_BackendDAECreate_selectAliasLst omc_BackendDAECreate_selectAliasLst
+
+
+#define boxptr_BackendDAECreate_selectAlias omc_BackendDAECreate_selectAlias
+
+
+#define boxptr_BackendDAECreate_handleAliasEquations2 omc_BackendDAECreate_handleAliasEquations2
+
+
+#define boxptr_BackendDAECreate_replaceAliasVarTraverser omc_BackendDAECreate_replaceAliasVarTraverser
+
+
+#define boxptr_BackendDAECreate_handleAliasEquations1 omc_BackendDAECreate_handleAliasEquations1
+
+
+#define boxptr_BackendDAECreate_handleAliasEquations omc_BackendDAECreate_handleAliasEquations
+
+
+#define boxptr_BackendDAECreate_lowerTupleAssignment omc_BackendDAECreate_lowerTupleAssignment
+
+
+#define boxptr_BackendDAECreate_mergeWhenEqns omc_BackendDAECreate_mergeWhenEqns
+
+
+#define boxptr_BackendDAECreate_lowerWhenIfEqnsElse omc_BackendDAECreate_lowerWhenIfEqnsElse
+
+
+#define boxptr_BackendDAECreate_lowerWhenIfEqnsMergeNestedIf omc_BackendDAECreate_lowerWhenIfEqnsMergeNestedIf
+
+
+#define boxptr_BackendDAECreate_lowerWhenIfEqns1 omc_BackendDAECreate_lowerWhenIfEqns1
+
+
+#define boxptr_BackendDAECreate_lowerWhenIfEqns omc_BackendDAECreate_lowerWhenIfEqns
+
+
+#define boxptr_BackendDAECreate_lowerWhenIfEqns2 omc_BackendDAECreate_lowerWhenIfEqns2
+
+
+#define boxptr_BackendDAECreate_lowerWhenEqn2 omc_BackendDAECreate_lowerWhenEqn2
+
+
+#define boxptr_BackendDAECreate_lowerWhenEqn omc_BackendDAECreate_lowerWhenEqn
+
+
+#define boxptr_BackendDAECreate_generateEquations omc_BackendDAECreate_generateEquations
+
+
+#define boxptr_BackendDAECreate_lowerArrayEqn omc_BackendDAECreate_lowerArrayEqn
+
+
+#define boxptr_BackendDAECreate_lowerExtendedRecordEqn omc_BackendDAECreate_lowerExtendedRecordEqn
+
+
+#define boxptr_BackendDAECreate_lowerExtendedRecordEqns omc_BackendDAECreate_lowerExtendedRecordEqns
+
+
+#define boxptr_BackendDAECreate_makeIfExp omc_BackendDAECreate_makeIfExp
+
+
+#define boxptr_BackendDAECreate_lowerIfEquationAsserts1 omc_BackendDAECreate_lowerIfEquationAsserts1
+
+
+#define boxptr_BackendDAECreate_lowerIfEquationAsserts omc_BackendDAECreate_lowerIfEquationAsserts
+
+
+#define boxptr_BackendDAECreate_lowerIfEquation1 omc_BackendDAECreate_lowerIfEquation1
+
+
+#define boxptr_BackendDAECreate_lowerIfEquation omc_BackendDAECreate_lowerIfEquation
+
+
+#define boxptr_BackendDAECreate_lowerForEquation omc_BackendDAECreate_lowerForEquation
+
+
+#define boxptr_BackendDAECreate_lowerExtObjVarkind omc_BackendDAECreate_lowerExtObjVarkind
+
+
+#define boxptr_BackendDAECreate_lowerExtObjVar omc_BackendDAECreate_lowerExtObjVar
+
+
+#define boxptr_BackendDAECreate_lowerType omc_BackendDAECreate_lowerType
+
+
+#define boxptr_BackendDAECreate_lowerKnownVarkind omc_BackendDAECreate_lowerKnownVarkind
+
+
+#define boxptr_BackendDAECreate_lowerVarkind omc_BackendDAECreate_lowerVarkind
+
+
+#define boxptr_BackendDAECreate_setMinMaxFromEnumeration1 omc_BackendDAECreate_setMinMaxFromEnumeration1
+
+
+#define boxptr_BackendDAECreate_setMinMaxFromEnumeration omc_BackendDAECreate_setMinMaxFromEnumeration
+
+
+#define boxptr_BackendDAECreate_inlineExpOpt1 omc_BackendDAECreate_inlineExpOpt1
+
+
+#define boxptr_BackendDAECreate_inlineExpOpt omc_BackendDAECreate_inlineExpOpt
+
+
+#define boxptr_BackendDAECreate_buildAssertAlgorithms omc_BackendDAECreate_buildAssertAlgorithms
+
+
+#define boxptr_BackendDAECreate_replaceFillWithExp omc_BackendDAECreate_replaceFillWithExp
+
+
+#define boxptr_BackendDAECreate_replaceFillWithExpInAttributes omc_BackendDAECreate_replaceFillWithExpInAttributes
+
+
+DLLDirection
+modelica_metatype omc_BackendDAECreate_lowerKnownVarSingle(threadData_t *threadData, modelica_metatype _element);
+#define boxptr_BackendDAECreate_lowerKnownVarSingle omc_BackendDAECreate_lowerKnownVarSingle
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_lowerKnownVarSingle,2,0) {(void*) boxptr_BackendDAECreate_lowerKnownVarSingle,0}};
+#define boxvar_BackendDAECreate_lowerKnownVarSingle MMC_REFSTRUCTLIT(boxvar_lit_BackendDAECreate_lowerKnownVarSingle)
+
+
+#define boxptr_BackendDAECreate_lowerKnownVar omc_BackendDAECreate_lowerKnownVar
+
+
+#define boxptr_BackendDAECreate_lowerDynamicVar omc_BackendDAECreate_lowerDynamicVar
+
+
+#define boxptr_BackendDAECreate_lowerVar omc_BackendDAECreate_lowerVar
+
+
+DLLDirection
+modelica_metatype omc_BackendDAECreate_lowerVars(threadData_t *threadData, modelica_metatype _inElements, modelica_metatype _functionTree, modelica_metatype _inVars, modelica_metatype _inGlobalKnownVars, modelica_metatype _inExVars, modelica_metatype _inEqns, modelica_metatype _inREqns, modelica_metatype *out_outGlobalKnownVars, modelica_metatype *out_outExVars, modelica_metatype *out_outEqns, modelica_metatype *out_outREqns);
+#define boxptr_BackendDAECreate_lowerVars omc_BackendDAECreate_lowerVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_lowerVars,2,0) {(void*) boxptr_BackendDAECreate_lowerVars,0}};
+#define boxvar_BackendDAECreate_lowerVars MMC_REFSTRUCTLIT(boxvar_lit_BackendDAECreate_lowerVars)
+
+
+#define boxptr_BackendDAECreate_transformBuiltinExpression omc_BackendDAECreate_transformBuiltinExpression
+
+
+#define boxptr_BackendDAECreate_processBuiltinExpressions omc_BackendDAECreate_processBuiltinExpressions
+
+
+#define boxptr_BackendDAECreate_lower2 omc_BackendDAECreate_lower2
+
+
+#define boxptr_BackendDAECreate_getExternalObjectAlias2 omc_BackendDAECreate_getExternalObjectAlias2
+
+
+#define boxptr_BackendDAECreate_chooseExternalAlias omc_BackendDAECreate_chooseExternalAlias
+
+
+#define boxptr_BackendDAECreate_addExternalObjectReplacementRules omc_BackendDAECreate_addExternalObjectReplacementRules
+
+
+#define boxptr_BackendDAECreate_getExternalObjectAlias3 omc_BackendDAECreate_getExternalObjectAlias3
+
+
+#define boxptr_BackendDAECreate_removeExtAliasBinding omc_BackendDAECreate_removeExtAliasBinding
+
+
+#define boxptr_BackendDAECreate_getExternalObjectAlias omc_BackendDAECreate_getExternalObjectAlias
+
+
+#define boxptr_BackendDAECreate_updateRecordTypesVarLst omc_BackendDAECreate_updateRecordTypesVarLst
+
+
+#define boxptr_BackendDAECreate_collapseArrayBindings omc_BackendDAECreate_collapseArrayBindings
+
+
+#define boxptr_BackendDAECreate_updateRecordTypesEqn omc_BackendDAECreate_updateRecordTypesEqn
+
+
+#define boxptr_BackendDAECreate_collectRecordTypesEqn omc_BackendDAECreate_collectRecordTypesEqn
+
+
+#define boxptr_BackendDAECreate_collectRecordTypesVar omc_BackendDAECreate_collectRecordTypesVar
+
+
+#define boxptr_BackendDAECreate_collectRecordTypesVarLst omc_BackendDAECreate_collectRecordTypesVarLst
+
+
+#define boxptr_BackendDAECreate_updateConstantRecordElementBinding omc_BackendDAECreate_updateConstantRecordElementBinding
+
+
+#define boxptr_BackendDAECreate_collectRecordElementBindings omc_BackendDAECreate_collectRecordElementBindings
+
+
+DLLDirection
+modelica_metatype omc_BackendDAECreate_patchRecordBindings(threadData_t *threadData, modelica_metatype _varlst, modelica_metatype _extvarlst, modelica_metatype __omcQ_24in_5FglobalKnownVarLst, modelica_metatype __omcQ_24in_5Feqns, modelica_metatype __omcQ_24in_5Freqns, modelica_metatype __omcQ_24in_5Fieqns, modelica_metatype *out_eqns, modelica_metatype *out_reqns, modelica_metatype *out_ieqns);
+#define boxptr_BackendDAECreate_patchRecordBindings omc_BackendDAECreate_patchRecordBindings
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_patchRecordBindings,2,0) {(void*) boxptr_BackendDAECreate_patchRecordBindings,0}};
+#define boxvar_BackendDAECreate_patchRecordBindings MMC_REFSTRUCTLIT(boxvar_lit_BackendDAECreate_patchRecordBindings)
+
+
+#define boxptr_BackendDAECreate_printArrayBindingList omc_BackendDAECreate_printArrayBindingList
+
+
+DLLDirection
+modelica_metatype omc_BackendDAECreate_lower(threadData_t *threadData, modelica_metatype _lst, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExtraInfo);
 #define boxptr_BackendDAECreate_lower omc_BackendDAECreate_lower
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_lower,2,0) {(void*) boxptr_BackendDAECreate_lower,0}};
 #define boxvar_BackendDAECreate_lower MMC_REFSTRUCTLIT(boxvar_lit_BackendDAECreate_lower)
+
 #ifdef __cplusplus
 }
 #endif

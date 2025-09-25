@@ -1,0 +1,224 @@
+#ifndef NFLookupState__H
+#define NFLookupState__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__LIST__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFLookupState_LookupState_CLASS__desc;
+
+extern struct record_description NFLookupState_LookupState_CLASS__COMP__desc;
+
+extern struct record_description NFLookupState_LookupState_COMP__desc;
+
+extern struct record_description NFLookupState_LookupState_COMP__CLASS__desc;
+
+extern struct record_description NFLookupState_LookupState_COMP__FUNC__desc;
+
+extern struct record_description NFLookupState_LookupState_ERROR__desc;
+
+extern struct record_description NFLookupState_LookupState_FUNC__desc;
+
+extern struct record_description NFLookupState_LookupState_IMPORT__desc;
+
+extern struct record_description NFLookupState_LookupState_NON__CONSTANT__desc;
+
+extern struct record_description NFLookupState_LookupState_PACKAGE__desc;
+
+extern struct record_description NFLookupState_LookupStateName_CREF__desc;
+
+extern struct record_description NFLookupState_LookupStateName_PATH__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_boolean omc_NFLookupState_LookupState_isNonConstantComponent(threadData_t *threadData, modelica_metatype _node);
+DLLDirection
+modelica_metatype boxptr_NFLookupState_LookupState_isNonConstantComponent(threadData_t *threadData, modelica_metatype _node);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isNonConstantComponent,2,0) {(void*) boxptr_NFLookupState_LookupState_isNonConstantComponent,0}};
+#define boxvar_NFLookupState_LookupState_isNonConstantComponent MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isNonConstantComponent)
+
+
+DLLDirection
+modelica_metatype omc_NFLookupState_LookupState_checkCrefVariability(threadData_t *threadData, modelica_metatype _cref, modelica_boolean _inEnclosingScope, modelica_integer _context, modelica_metatype __omcQ_24in_5Fstate);
+DLLDirection
+modelica_metatype boxptr_NFLookupState_LookupState_checkCrefVariability(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _inEnclosingScope, modelica_metatype _context, modelica_metatype __omcQ_24in_5Fstate);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_checkCrefVariability,2,0) {(void*) boxptr_NFLookupState_LookupState_checkCrefVariability,0}};
+#define boxvar_NFLookupState_LookupState_checkCrefVariability MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_checkCrefVariability)
+
+
+DLLDirection
+modelica_metatype omc_NFLookupState_LookupState_next2(threadData_t *threadData, modelica_metatype _elementState, modelica_metatype _currentState, modelica_metatype _node);
+#define boxptr_NFLookupState_LookupState_next2 omc_NFLookupState_LookupState_next2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_next2,2,0) {(void*) boxptr_NFLookupState_LookupState_next2,0}};
+#define boxvar_NFLookupState_LookupState_next2 MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_next2)
+
+
+DLLDirection
+modelica_metatype omc_NFLookupState_LookupState_elementState(threadData_t *threadData, modelica_metatype _element);
+#define boxptr_NFLookupState_LookupState_elementState omc_NFLookupState_LookupState_elementState
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_elementState,2,0) {(void*) boxptr_NFLookupState_LookupState_elementState,0}};
+#define boxvar_NFLookupState_LookupState_elementState MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_elementState)
+
+
+DLLDirection
+modelica_metatype omc_NFLookupState_LookupState_nodeState(threadData_t *threadData, modelica_metatype _node);
+#define boxptr_NFLookupState_LookupState_nodeState omc_NFLookupState_LookupState_nodeState
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_nodeState,2,0) {(void*) boxptr_NFLookupState_LookupState_nodeState,0}};
+#define boxvar_NFLookupState_LookupState_nodeState MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_nodeState)
+
+
+DLLDirection
+void omc_NFLookupState_LookupState_checkProtection(threadData_t *threadData, modelica_metatype _node, modelica_metatype _currentState);
+#define boxptr_NFLookupState_LookupState_checkProtection omc_NFLookupState_LookupState_checkProtection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_checkProtection,2,0) {(void*) boxptr_NFLookupState_LookupState_checkProtection,0}};
+#define boxvar_NFLookupState_LookupState_checkProtection MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_checkProtection)
+
+
+DLLDirection
+modelica_metatype omc_NFLookupState_LookupState_next(threadData_t *threadData, modelica_metatype _node, modelica_metatype _currentState, modelica_integer _context, modelica_boolean _checkAccessViolations);
+DLLDirection
+modelica_metatype boxptr_NFLookupState_LookupState_next(threadData_t *threadData, modelica_metatype _node, modelica_metatype _currentState, modelica_metatype _context, modelica_metatype _checkAccessViolations);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_next,2,0) {(void*) boxptr_NFLookupState_LookupState_next,0}};
+#define boxvar_NFLookupState_LookupState_next MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_next)
+
+
+DLLDirection
+void omc_NFLookupState_LookupState_printFoundWrongTypeError(threadData_t *threadData, modelica_metatype _foundState, modelica_metatype _expectedState, modelica_metatype _name, modelica_metatype _info);
+#define boxptr_NFLookupState_LookupState_printFoundWrongTypeError omc_NFLookupState_LookupState_printFoundWrongTypeError
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_printFoundWrongTypeError,2,0) {(void*) boxptr_NFLookupState_LookupState_printFoundWrongTypeError,0}};
+#define boxvar_NFLookupState_LookupState_printFoundWrongTypeError MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_printFoundWrongTypeError)
+
+
+DLLDirection
+modelica_string omc_NFLookupState_LookupState_lookupStateString(threadData_t *threadData, modelica_metatype _state);
+#define boxptr_NFLookupState_LookupState_lookupStateString omc_NFLookupState_LookupState_lookupStateString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_lookupStateString,2,0) {(void*) boxptr_NFLookupState_LookupState_lookupStateString,0}};
+#define boxvar_NFLookupState_LookupState_lookupStateString MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_lookupStateString)
+
+
+DLLDirection
+modelica_boolean omc_NFLookupState_LookupState_isError(threadData_t *threadData, modelica_metatype _state);
+DLLDirection
+modelica_metatype boxptr_NFLookupState_LookupState_isError(threadData_t *threadData, modelica_metatype _state);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isError,2,0) {(void*) boxptr_NFLookupState_LookupState_isError,0}};
+#define boxvar_NFLookupState_LookupState_isError MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isError)
+
+
+DLLDirection
+void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _expectedState, modelica_metatype _node, modelica_metatype _name, modelica_integer _context, modelica_metatype _info);
+DLLDirection
+void boxptr_NFLookupState_LookupState_assertState(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _expectedState, modelica_metatype _node, modelica_metatype _name, modelica_metatype _context, modelica_metatype _info);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_assertState,2,0) {(void*) boxptr_NFLookupState_LookupState_assertState,0}};
+#define boxvar_NFLookupState_LookupState_assertState MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_assertState)
+
+
+DLLDirection
+modelica_boolean omc_NFLookupState_LookupState_isClass(threadData_t *threadData, modelica_metatype _state);
+DLLDirection
+modelica_metatype boxptr_NFLookupState_LookupState_isClass(threadData_t *threadData, modelica_metatype _state);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isClass,2,0) {(void*) boxptr_NFLookupState_LookupState_isClass,0}};
+#define boxvar_NFLookupState_LookupState_isClass MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isClass)
+
+
+DLLDirection
+modelica_boolean omc_NFLookupState_LookupState_isFunction(threadData_t *threadData, modelica_metatype _state, modelica_metatype _node);
+DLLDirection
+modelica_metatype boxptr_NFLookupState_LookupState_isFunction(threadData_t *threadData, modelica_metatype _state, modelica_metatype _node);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isFunction,2,0) {(void*) boxptr_NFLookupState_LookupState_isFunction,0}};
+#define boxvar_NFLookupState_LookupState_isFunction MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isFunction)
+
+
+DLLDirection
+modelica_boolean omc_NFLookupState_LookupState_isCallableComponent(threadData_t *threadData, modelica_metatype _node);
+DLLDirection
+modelica_metatype boxptr_NFLookupState_LookupState_isCallableComponent(threadData_t *threadData, modelica_metatype _node);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isCallableComponent,2,0) {(void*) boxptr_NFLookupState_LookupState_isCallableComponent,0}};
+#define boxvar_NFLookupState_LookupState_isCallableComponent MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isCallableComponent)
+
+
+DLLDirection
+modelica_boolean omc_NFLookupState_LookupState_isCallableType(threadData_t *threadData, modelica_metatype _node);
+DLLDirection
+modelica_metatype boxptr_NFLookupState_LookupState_isCallableType(threadData_t *threadData, modelica_metatype _node);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isCallableType,2,0) {(void*) boxptr_NFLookupState_LookupState_isCallableType,0}};
+#define boxvar_NFLookupState_LookupState_isCallableType MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_isCallableType)
+
+
+DLLDirection
+void omc_NFLookupState_LookupState_assertImport(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_metatype _info);
+#define boxptr_NFLookupState_LookupState_assertImport omc_NFLookupState_LookupState_assertImport
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_assertImport,2,0) {(void*) boxptr_NFLookupState_LookupState_assertImport,0}};
+#define boxvar_NFLookupState_LookupState_assertImport MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_assertImport)
+
+
+DLLDirection
+void omc_NFLookupState_LookupState_assertComponent(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_integer _context, modelica_metatype _info);
+DLLDirection
+void boxptr_NFLookupState_LookupState_assertComponent(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_metatype _context, modelica_metatype _info);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_assertComponent,2,0) {(void*) boxptr_NFLookupState_LookupState_assertComponent,0}};
+#define boxvar_NFLookupState_LookupState_assertComponent MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_assertComponent)
+
+
+DLLDirection
+void omc_NFLookupState_LookupState_assertFunction(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_integer _context, modelica_metatype _info);
+DLLDirection
+void boxptr_NFLookupState_LookupState_assertFunction(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_metatype _context, modelica_metatype _info);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_assertFunction,2,0) {(void*) boxptr_NFLookupState_LookupState_assertFunction,0}};
+#define boxvar_NFLookupState_LookupState_assertFunction MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_assertFunction)
+
+
+DLLDirection
+void omc_NFLookupState_LookupState_assertClass(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_integer _context, modelica_metatype _info);
+DLLDirection
+void boxptr_NFLookupState_LookupState_assertClass(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_metatype _context, modelica_metatype _info);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_assertClass,2,0) {(void*) boxptr_NFLookupState_LookupState_assertClass,0}};
+#define boxvar_NFLookupState_LookupState_assertClass MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupState_assertClass)
+
+
+DLLDirection
+modelica_string omc_NFLookupState_LookupStateName_secondIdent(threadData_t *threadData, modelica_metatype _name);
+#define boxptr_NFLookupState_LookupStateName_secondIdent omc_NFLookupState_LookupStateName_secondIdent
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupStateName_secondIdent,2,0) {(void*) boxptr_NFLookupState_LookupStateName_secondIdent,0}};
+#define boxvar_NFLookupState_LookupStateName_secondIdent MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupStateName_secondIdent)
+
+
+DLLDirection
+modelica_string omc_NFLookupState_LookupStateName_firstIdent(threadData_t *threadData, modelica_metatype _name);
+#define boxptr_NFLookupState_LookupStateName_firstIdent omc_NFLookupState_LookupStateName_firstIdent
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupStateName_firstIdent,2,0) {(void*) boxptr_NFLookupState_LookupStateName_firstIdent,0}};
+#define boxvar_NFLookupState_LookupStateName_firstIdent MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupStateName_firstIdent)
+
+
+DLLDirection
+modelica_string omc_NFLookupState_LookupStateName_toString(threadData_t *threadData, modelica_metatype _name);
+#define boxptr_NFLookupState_LookupStateName_toString omc_NFLookupState_LookupStateName_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFLookupState_LookupStateName_toString,2,0) {(void*) boxptr_NFLookupState_LookupStateName_toString,0}};
+#define boxvar_NFLookupState_LookupStateName_toString MMC_REFSTRUCTLIT(boxvar_lit_NFLookupState_LookupStateName_toString)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

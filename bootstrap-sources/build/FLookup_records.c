@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,12 +8,12 @@ extern "C" {
 #define FLookup_Options_OPTIONS__desc_added
 ADD_METARECORD_DEFINITIONS const char* FLookup_Options_OPTIONS__desc__fields[3] = {"ignoreImports","ignoreExtends","ignoreParents"};
 ADD_METARECORD_DEFINITIONS struct record_description FLookup_Options_OPTIONS__desc = {
-"FLookup_Options_OPTIONS",
-"FLookup.Options.OPTIONS",
-FLookup_Options_OPTIONS__desc__fields
+  "FLookup_Options_OPTIONS",
+  "FLookup.Options.OPTIONS",
+  FLookup_Options_OPTIONS__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description FLookup_Options_OPTIONS__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -20,14 +21,15 @@ extern struct record_description FLookup_Options_OPTIONS__desc;
 #define FLookup_Options_OPTIONS__desc_added
 ADD_METARECORD_DEFINITIONS const char* FLookup_Options_OPTIONS__desc__fields[3] = {"ignoreImports","ignoreExtends","ignoreParents"};
 ADD_METARECORD_DEFINITIONS struct record_description FLookup_Options_OPTIONS__desc = {
-"FLookup_Options_OPTIONS",
-"FLookup.Options.OPTIONS",
-FLookup_Options_OPTIONS__desc__fields
+  "FLookup_Options_OPTIONS",
+  "FLookup.Options.OPTIONS",
+  FLookup_Options_OPTIONS__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description FLookup_Options_OPTIONS__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

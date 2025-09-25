@@ -5,45 +5,60 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-DLLExport
+
+
+
+DLLDirection
 modelica_metatype omc_BackendInterface_appendLibrary(threadData_t *threadData, modelica_metatype _modelName, modelica_string _modelicaPath, modelica_boolean *out_success);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_BackendInterface_appendLibrary(threadData_t *threadData, modelica_metatype _modelName, modelica_metatype _modelicaPath, modelica_metatype *out_success);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_appendLibrary,2,0) {(void*) boxptr_BackendInterface_appendLibrary,0}};
 #define boxvar_BackendInterface_appendLibrary MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_appendLibrary)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_BackendInterface_rewriteFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_boolean *out_isChanged);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_BackendInterface_rewriteFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype *out_isChanged);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_rewriteFrontEnd,2,0) {(void*) boxptr_BackendInterface_rewriteFrontEnd,0}};
 #define boxvar_BackendInterface_rewriteFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_rewriteFrontEnd)
-DLLExport
+
+
+DLLDirection
 modelica_boolean omc_BackendInterface_noRewriteRulesFrontEnd(threadData_t *threadData);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_BackendInterface_noRewriteRulesFrontEnd(threadData_t *threadData);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_noRewriteRulesFrontEnd,2,0) {(void*) boxptr_BackendInterface_noRewriteRulesFrontEnd,0}};
 #define boxvar_BackendInterface_noRewriteRulesFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_noRewriteRulesFrontEnd)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_BackendInterface_elabCallInteractive(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inCref, modelica_metatype _inExps, modelica_metatype _inNamedArgs, modelica_boolean _inImplInst, modelica_metatype _inPrefix, modelica_metatype _inInfo, modelica_metatype *out_outExp, modelica_metatype *out_outProperties);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_BackendInterface_elabCallInteractive(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inCref, modelica_metatype _inExps, modelica_metatype _inNamedArgs, modelica_metatype _inImplInst, modelica_metatype _inPrefix, modelica_metatype _inInfo, modelica_metatype *out_outExp, modelica_metatype *out_outProperties);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_elabCallInteractive,2,0) {(void*) boxptr_BackendInterface_elabCallInteractive,0}};
 #define boxvar_BackendInterface_elabCallInteractive MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_elabCallInteractive)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_BackendInterface_cevalCallFunction(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_metatype _inValues, modelica_boolean _inImplInst, modelica_metatype _inMsg, modelica_integer _inNumIter, modelica_metatype *out_outValue);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_BackendInterface_cevalCallFunction(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_metatype _inValues, modelica_metatype _inImplInst, modelica_metatype _inMsg, modelica_metatype _inNumIter, modelica_metatype *out_outValue);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_cevalCallFunction,2,0) {(void*) boxptr_BackendInterface_cevalCallFunction,0}};
 #define boxvar_BackendInterface_cevalCallFunction MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_cevalCallFunction)
-DLLExport
+
+
+DLLDirection
 modelica_metatype omc_BackendInterface_cevalInteractiveFunctions(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_metatype _inMsg, modelica_integer _inNumIter, modelica_metatype *out_outValue);
-DLLExport
+DLLDirection
 modelica_metatype boxptr_BackendInterface_cevalInteractiveFunctions(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_metatype _inMsg, modelica_metatype _inNumIter, modelica_metatype *out_outValue);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_cevalInteractiveFunctions,2,0) {(void*) boxptr_BackendInterface_cevalInteractiveFunctions,0}};
 #define boxvar_BackendInterface_cevalInteractiveFunctions MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_cevalInteractiveFunctions)
+
 #ifdef __cplusplus
 }
 #endif

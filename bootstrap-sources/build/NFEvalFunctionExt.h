@@ -1,0 +1,150 @@
+#ifndef NFEvalFunctionExt__H
+#define NFEvalFunctionExt__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description NFCeval_EvalTarget_EVAL__TARGET__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFEvalFunctionExt_assignVariableExt omc_NFEvalFunctionExt_assignVariableExt
+
+
+#define boxptr_NFEvalFunctionExt_evaluateExtRealMatrixArg omc_NFEvalFunctionExt_evaluateExtRealMatrixArg
+
+
+#define boxptr_NFEvalFunctionExt_evaluateExtRealArrayArg omc_NFEvalFunctionExt_evaluateExtRealArrayArg
+
+
+#define boxptr_NFEvalFunctionExt_evaluateExtIntArrayArg omc_NFEvalFunctionExt_evaluateExtIntArrayArg
+
+
+#define boxptr_NFEvalFunctionExt_getExtStringValue omc_NFEvalFunctionExt_getExtStringValue
+
+
+#define boxptr_NFEvalFunctionExt_evaluateExtStringArg omc_NFEvalFunctionExt_evaluateExtStringArg
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dhseqr(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dhseqr omc_NFEvalFunctionExt_Lapack__dhseqr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dhseqr,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dhseqr,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dhseqr MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dhseqr)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dorgqr(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dorgqr omc_NFEvalFunctionExt_Lapack__dorgqr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dorgqr,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dorgqr,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dorgqr MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dorgqr)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgeqpf(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgeqpf omc_NFEvalFunctionExt_Lapack__dgeqpf
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgeqpf,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgeqpf,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgeqpf MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgeqpf)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgetri(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgetri omc_NFEvalFunctionExt_Lapack__dgetri
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgetri,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgetri,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgetri MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgetri)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgetrs(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgetrs omc_NFEvalFunctionExt_Lapack__dgetrs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgetrs,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgetrs,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgetrs MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgetrs)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgetrf(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgetrf omc_NFEvalFunctionExt_Lapack__dgetrf
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgetrf,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgetrf,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgetrf MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgetrf)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgesvd(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgesvd omc_NFEvalFunctionExt_Lapack__dgesvd
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgesvd,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgesvd,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgesvd MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgesvd)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgbsv(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgbsv omc_NFEvalFunctionExt_Lapack__dgbsv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgbsv,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgbsv,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgbsv MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgbsv)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgtsv(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgtsv omc_NFEvalFunctionExt_Lapack__dgtsv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgtsv,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgtsv,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgtsv MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgtsv)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgglse(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgglse omc_NFEvalFunctionExt_Lapack__dgglse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgglse,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgglse,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgglse MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgglse)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgesv(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgesv omc_NFEvalFunctionExt_Lapack__dgesv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgesv,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgesv,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgesv MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgesv)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgelsy(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgelsy omc_NFEvalFunctionExt_Lapack__dgelsy
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgelsy,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgelsy,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgelsy MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgelsy)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgelsx(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgelsx omc_NFEvalFunctionExt_Lapack__dgelsx
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgelsx,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgelsx,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgelsx MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgelsx)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgels(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgels omc_NFEvalFunctionExt_Lapack__dgels
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgels,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgels,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgels MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgels)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgegv(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgegv omc_NFEvalFunctionExt_Lapack__dgegv
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgegv,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgegv,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgegv MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgegv)
+
+
+DLLDirection
+void omc_NFEvalFunctionExt_Lapack__dgeev(threadData_t *threadData, modelica_metatype _args);
+#define boxptr_NFEvalFunctionExt_Lapack__dgeev omc_NFEvalFunctionExt_Lapack__dgeev
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgeev,2,0) {(void*) boxptr_NFEvalFunctionExt_Lapack__dgeev,0}};
+#define boxvar_NFEvalFunctionExt_Lapack__dgeev MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunctionExt_Lapack__dgeev)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

@@ -1,0 +1,258 @@
+#ifndef NFCallParameterTree__H
+#define NFCallParameterTree__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description NFCallParameterTree_Tree_EMPTY__desc;
+
+extern struct record_description NFCallParameterTree_Tree_LEAF__desc;
+
+extern struct record_description NFCallParameterTree_Tree_NODE__desc;
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_add(threadData_t *threadData, modelica_metatype _inTree, modelica_string _inKey, modelica_metatype _inValue, modelica_fnptr _conflictFunc);
+#define boxptr_NFCallParameterTree_add omc_NFCallParameterTree_add
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_add,2,0) {(void*) boxptr_NFCallParameterTree_add,0}};
+#define boxvar_NFCallParameterTree_add MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_add)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_addConflictDefault(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_NFCallParameterTree_addConflictDefault omc_NFCallParameterTree_addConflictDefault
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_addConflictDefault,2,0) {(void*) boxptr_NFCallParameterTree_addConflictDefault,0}};
+#define boxvar_NFCallParameterTree_addConflictDefault MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_addConflictDefault)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_addConflictFail(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_NFCallParameterTree_addConflictFail omc_NFCallParameterTree_addConflictFail
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_addConflictFail,2,0) {(void*) boxptr_NFCallParameterTree_addConflictFail,0}};
+#define boxvar_NFCallParameterTree_addConflictFail MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_addConflictFail)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_addConflictKeep(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_NFCallParameterTree_addConflictKeep omc_NFCallParameterTree_addConflictKeep
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_addConflictKeep,2,0) {(void*) boxptr_NFCallParameterTree_addConflictKeep,0}};
+#define boxvar_NFCallParameterTree_addConflictKeep MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_addConflictKeep)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_addConflictReplace(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
+#define boxptr_NFCallParameterTree_addConflictReplace omc_NFCallParameterTree_addConflictReplace
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_addConflictReplace,2,0) {(void*) boxptr_NFCallParameterTree_addConflictReplace,0}};
+#define boxvar_NFCallParameterTree_addConflictReplace MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_addConflictReplace)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_addList(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _inValues, modelica_fnptr _conflictFunc);
+#define boxptr_NFCallParameterTree_addList omc_NFCallParameterTree_addList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_addList,2,0) {(void*) boxptr_NFCallParameterTree_addList,0}};
+#define boxvar_NFCallParameterTree_addList MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_addList)
+
+
+#define boxptr_NFCallParameterTree_balance omc_NFCallParameterTree_balance
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_fold(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc, modelica_metatype _inStartValue);
+#define boxptr_NFCallParameterTree_fold omc_NFCallParameterTree_fold
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_fold,2,0) {(void*) boxptr_NFCallParameterTree_fold,0}};
+#define boxvar_NFCallParameterTree_fold MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_fold)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_foldCond(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _foldFunc, modelica_metatype __omcQ_24in_5Fvalue);
+#define boxptr_NFCallParameterTree_foldCond omc_NFCallParameterTree_foldCond
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_foldCond,2,0) {(void*) boxptr_NFCallParameterTree_foldCond,0}};
+#define boxvar_NFCallParameterTree_foldCond MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_foldCond)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_fold__2(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _foldFunc, modelica_metatype __omcQ_24in_5FfoldArg1, modelica_metatype __omcQ_24in_5FfoldArg2, modelica_metatype *out_foldArg2);
+#define boxptr_NFCallParameterTree_fold__2 omc_NFCallParameterTree_fold__2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_fold__2,2,0) {(void*) boxptr_NFCallParameterTree_fold__2,0}};
+#define boxvar_NFCallParameterTree_fold__2 MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_fold__2)
+
+
+DLLDirection
+void omc_NFCallParameterTree_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
+#define boxptr_NFCallParameterTree_forEach omc_NFCallParameterTree_forEach
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_forEach,2,0) {(void*) boxptr_NFCallParameterTree_forEach,0}};
+#define boxvar_NFCallParameterTree_forEach MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_forEach)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_fromList(threadData_t *threadData, modelica_metatype _inValues, modelica_fnptr _conflictFunc);
+#define boxptr_NFCallParameterTree_fromList omc_NFCallParameterTree_fromList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_fromList,2,0) {(void*) boxptr_NFCallParameterTree_fromList,0}};
+#define boxvar_NFCallParameterTree_fromList MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_fromList)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_get(threadData_t *threadData, modelica_metatype _tree, modelica_string _key);
+#define boxptr_NFCallParameterTree_get omc_NFCallParameterTree_get
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_get,2,0) {(void*) boxptr_NFCallParameterTree_get,0}};
+#define boxvar_NFCallParameterTree_get MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_get)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_getOpt(threadData_t *threadData, modelica_metatype _tree, modelica_string _key);
+#define boxptr_NFCallParameterTree_getOpt omc_NFCallParameterTree_getOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_getOpt,2,0) {(void*) boxptr_NFCallParameterTree_getOpt,0}};
+#define boxvar_NFCallParameterTree_getOpt MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_getOpt)
+
+
+DLLDirection
+modelica_boolean omc_NFCallParameterTree_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_string _inKey);
+DLLDirection
+modelica_metatype boxptr_NFCallParameterTree_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_hasKey,2,0) {(void*) boxptr_NFCallParameterTree_hasKey,0}};
+#define boxvar_NFCallParameterTree_hasKey MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_hasKey)
+
+
+DLLDirection
+void omc_NFCallParameterTree_intersection(threadData_t *threadData);
+#define boxptr_NFCallParameterTree_intersection omc_NFCallParameterTree_intersection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_intersection,2,0) {(void*) boxptr_NFCallParameterTree_intersection,0}};
+#define boxvar_NFCallParameterTree_intersection MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_intersection)
+
+
+DLLDirection
+modelica_boolean omc_NFCallParameterTree_isEmpty(threadData_t *threadData, modelica_metatype _tree);
+DLLDirection
+modelica_metatype boxptr_NFCallParameterTree_isEmpty(threadData_t *threadData, modelica_metatype _tree);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_isEmpty,2,0) {(void*) boxptr_NFCallParameterTree_isEmpty,0}};
+#define boxvar_NFCallParameterTree_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_isEmpty)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_join(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _treeToJoin, modelica_fnptr _conflictFunc);
+#define boxptr_NFCallParameterTree_join omc_NFCallParameterTree_join
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_join,2,0) {(void*) boxptr_NFCallParameterTree_join,0}};
+#define boxvar_NFCallParameterTree_join MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_join)
+
+
+DLLDirection
+modelica_integer omc_NFCallParameterTree_keyCompare(threadData_t *threadData, modelica_string _inKey1, modelica_string _inKey2);
+DLLDirection
+modelica_metatype boxptr_NFCallParameterTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_keyCompare,2,0) {(void*) boxptr_NFCallParameterTree_keyCompare,0}};
+#define boxvar_NFCallParameterTree_keyCompare MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_keyCompare)
+
+
+DLLDirection
+modelica_string omc_NFCallParameterTree_keyStr(threadData_t *threadData, modelica_string _inKey);
+#define boxptr_NFCallParameterTree_keyStr omc_NFCallParameterTree_keyStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_keyStr,2,0) {(void*) boxptr_NFCallParameterTree_keyStr,0}};
+#define boxvar_NFCallParameterTree_keyStr MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_keyStr)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_listKeys(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_NFCallParameterTree_listKeys omc_NFCallParameterTree_listKeys
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_listKeys,2,0) {(void*) boxptr_NFCallParameterTree_listKeys,0}};
+#define boxvar_NFCallParameterTree_listKeys MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_listKeys)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_listKeysReverse(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_NFCallParameterTree_listKeysReverse omc_NFCallParameterTree_listKeysReverse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_listKeysReverse,2,0) {(void*) boxptr_NFCallParameterTree_listKeysReverse,0}};
+#define boxvar_NFCallParameterTree_listKeysReverse MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_listKeysReverse)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_listValues(threadData_t *threadData, modelica_metatype _tree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_NFCallParameterTree_listValues omc_NFCallParameterTree_listValues
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_listValues,2,0) {(void*) boxptr_NFCallParameterTree_listValues,0}};
+#define boxvar_NFCallParameterTree_listValues MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_listValues)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_map(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc);
+#define boxptr_NFCallParameterTree_map omc_NFCallParameterTree_map
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_map,2,0) {(void*) boxptr_NFCallParameterTree_map,0}};
+#define boxvar_NFCallParameterTree_map MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_map)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_mapFold(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc, modelica_metatype _inStartValue, modelica_metatype *out_outResult);
+#define boxptr_NFCallParameterTree_mapFold omc_NFCallParameterTree_mapFold
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_mapFold,2,0) {(void*) boxptr_NFCallParameterTree_mapFold,0}};
+#define boxvar_NFCallParameterTree_mapFold MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_mapFold)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_new(threadData_t *threadData);
+#define boxptr_NFCallParameterTree_new omc_NFCallParameterTree_new
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_new,2,0) {(void*) boxptr_NFCallParameterTree_new,0}};
+#define boxvar_NFCallParameterTree_new MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_new)
+
+
+DLLDirection
+modelica_string omc_NFCallParameterTree_printNodeStr(threadData_t *threadData, modelica_metatype _inNode);
+#define boxptr_NFCallParameterTree_printNodeStr omc_NFCallParameterTree_printNodeStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_printNodeStr,2,0) {(void*) boxptr_NFCallParameterTree_printNodeStr,0}};
+#define boxvar_NFCallParameterTree_printNodeStr MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_printNodeStr)
+
+
+DLLDirection
+modelica_string omc_NFCallParameterTree_printTreeStr(threadData_t *threadData, modelica_metatype _inTree);
+#define boxptr_NFCallParameterTree_printTreeStr omc_NFCallParameterTree_printTreeStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_printTreeStr,2,0) {(void*) boxptr_NFCallParameterTree_printTreeStr,0}};
+#define boxvar_NFCallParameterTree_printTreeStr MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_printTreeStr)
+
+
+#define boxptr_NFCallParameterTree_rotateLeft omc_NFCallParameterTree_rotateLeft
+
+
+#define boxptr_NFCallParameterTree_rotateRight omc_NFCallParameterTree_rotateRight
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_setTreeLeftRight(threadData_t *threadData, modelica_metatype _orig, modelica_metatype _left, modelica_metatype _right);
+#define boxptr_NFCallParameterTree_setTreeLeftRight omc_NFCallParameterTree_setTreeLeftRight
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_setTreeLeftRight,2,0) {(void*) boxptr_NFCallParameterTree_setTreeLeftRight,0}};
+#define boxvar_NFCallParameterTree_setTreeLeftRight MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_setTreeLeftRight)
+
+
+DLLDirection
+modelica_string omc_NFCallParameterTree_smallestKey(threadData_t *threadData, modelica_metatype _tree);
+#define boxptr_NFCallParameterTree_smallestKey omc_NFCallParameterTree_smallestKey
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_smallestKey,2,0) {(void*) boxptr_NFCallParameterTree_smallestKey,0}};
+#define boxvar_NFCallParameterTree_smallestKey MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_smallestKey)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_toList(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
+#define boxptr_NFCallParameterTree_toList omc_NFCallParameterTree_toList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_toList,2,0) {(void*) boxptr_NFCallParameterTree_toList,0}};
+#define boxvar_NFCallParameterTree_toList MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_toList)
+
+
+DLLDirection
+modelica_metatype omc_NFCallParameterTree_update(threadData_t *threadData, modelica_metatype _tree, modelica_string _key, modelica_metatype _value);
+#define boxptr_NFCallParameterTree_update omc_NFCallParameterTree_update
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_update,2,0) {(void*) boxptr_NFCallParameterTree_update,0}};
+#define boxvar_NFCallParameterTree_update MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_update)
+
+
+DLLDirection
+modelica_string omc_NFCallParameterTree_valueStr(threadData_t *threadData, modelica_metatype _inValue);
+#define boxptr_NFCallParameterTree_valueStr omc_NFCallParameterTree_valueStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallParameterTree_valueStr,2,0) {(void*) boxptr_NFCallParameterTree_valueStr,0}};
+#define boxvar_NFCallParameterTree_valueStr MMC_REFSTRUCTLIT(boxvar_lit_NFCallParameterTree_valueStr)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

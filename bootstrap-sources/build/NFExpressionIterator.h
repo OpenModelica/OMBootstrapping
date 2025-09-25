@@ -1,0 +1,103 @@
+#ifndef NFExpressionIterator__H
+#define NFExpressionIterator__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description NFExpressionIterator_ARRAY__ITERATOR__desc;
+
+extern struct record_description NFExpressionIterator_EACH__ITERATOR__desc;
+
+extern struct record_description NFExpressionIterator_NONE__ITERATOR__desc;
+
+extern struct record_description NFExpressionIterator_REPEAT__ITERATOR__desc;
+
+extern struct record_description NFExpressionIterator_SCALAR__ITERATOR__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFExpressionIterator_flattenArray__impl omc_NFExpressionIterator_flattenArray__impl
+
+
+#define boxptr_NFExpressionIterator_flattenArray omc_NFExpressionIterator_flattenArray
+
+
+#define boxptr_NFExpressionIterator_makeArrayIterator omc_NFExpressionIterator_makeArrayIterator
+
+
+DLLDirection
+modelica_boolean omc_NFExpressionIterator_isSubscriptedArrayCall(threadData_t *threadData, modelica_metatype _iterator, modelica_boolean _trySimplify);
+DLLDirection
+modelica_metatype boxptr_NFExpressionIterator_isSubscriptedArrayCall(threadData_t *threadData, modelica_metatype _iterator, modelica_metatype _trySimplify);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpressionIterator_isSubscriptedArrayCall,2,0) {(void*) boxptr_NFExpressionIterator_isSubscriptedArrayCall,0}};
+#define boxvar_NFExpressionIterator_isSubscriptedArrayCall MMC_REFSTRUCTLIT(boxvar_lit_NFExpressionIterator_isSubscriptedArrayCall)
+
+
+DLLDirection
+modelica_metatype omc_NFExpressionIterator_toList(threadData_t *threadData, modelica_metatype _iterator);
+#define boxptr_NFExpressionIterator_toList omc_NFExpressionIterator_toList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpressionIterator_toList,2,0) {(void*) boxptr_NFExpressionIterator_toList,0}};
+#define boxvar_NFExpressionIterator_toList MMC_REFSTRUCTLIT(boxvar_lit_NFExpressionIterator_toList)
+
+
+DLLDirection
+modelica_metatype omc_NFExpressionIterator_nextOpt(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fiterator, modelica_metatype *out_nextExp);
+#define boxptr_NFExpressionIterator_nextOpt omc_NFExpressionIterator_nextOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpressionIterator_nextOpt,2,0) {(void*) boxptr_NFExpressionIterator_nextOpt,0}};
+#define boxvar_NFExpressionIterator_nextOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpressionIterator_nextOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFExpressionIterator_next(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fiterator, modelica_metatype *out_nextExp);
+#define boxptr_NFExpressionIterator_next omc_NFExpressionIterator_next
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpressionIterator_next,2,0) {(void*) boxptr_NFExpressionIterator_next,0}};
+#define boxvar_NFExpressionIterator_next MMC_REFSTRUCTLIT(boxvar_lit_NFExpressionIterator_next)
+
+
+DLLDirection
+modelica_boolean omc_NFExpressionIterator_hasNext(threadData_t *threadData, modelica_metatype _iterator);
+DLLDirection
+modelica_metatype boxptr_NFExpressionIterator_hasNext(threadData_t *threadData, modelica_metatype _iterator);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpressionIterator_hasNext,2,0) {(void*) boxptr_NFExpressionIterator_hasNext,0}};
+#define boxvar_NFExpressionIterator_hasNext MMC_REFSTRUCTLIT(boxvar_lit_NFExpressionIterator_hasNext)
+
+
+DLLDirection
+modelica_metatype omc_NFExpressionIterator_fromBinding(threadData_t *threadData, modelica_metatype _binding);
+#define boxptr_NFExpressionIterator_fromBinding omc_NFExpressionIterator_fromBinding
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpressionIterator_fromBinding,2,0) {(void*) boxptr_NFExpressionIterator_fromBinding,0}};
+#define boxvar_NFExpressionIterator_fromBinding MMC_REFSTRUCTLIT(boxvar_lit_NFExpressionIterator_fromBinding)
+
+
+DLLDirection
+modelica_metatype omc_NFExpressionIterator_fromExpOpt(threadData_t *threadData, modelica_metatype _optExp);
+#define boxptr_NFExpressionIterator_fromExpOpt omc_NFExpressionIterator_fromExpOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpressionIterator_fromExpOpt,2,0) {(void*) boxptr_NFExpressionIterator_fromExpOpt,0}};
+#define boxvar_NFExpressionIterator_fromExpOpt MMC_REFSTRUCTLIT(boxvar_lit_NFExpressionIterator_fromExpOpt)
+
+
+DLLDirection
+modelica_metatype omc_NFExpressionIterator_fromExp(threadData_t *threadData, modelica_metatype _exp, modelica_boolean _backend);
+DLLDirection
+modelica_metatype boxptr_NFExpressionIterator_fromExp(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _backend);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpressionIterator_fromExp,2,0) {(void*) boxptr_NFExpressionIterator_fromExp,0}};
+#define boxvar_NFExpressionIterator_fromExp MMC_REFSTRUCTLIT(boxvar_lit_NFExpressionIterator_fromExp)
+
+
+DLLDirection
+modelica_string omc_NFExpressionIterator_toString(threadData_t *threadData, modelica_metatype _iter);
+#define boxptr_NFExpressionIterator_toString omc_NFExpressionIterator_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpressionIterator_toString,2,0) {(void*) boxptr_NFExpressionIterator_toString,0}};
+#define boxvar_NFExpressionIterator_toString MMC_REFSTRUCTLIT(boxvar_lit_NFExpressionIterator_toString)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

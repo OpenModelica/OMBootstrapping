@@ -1,0 +1,112 @@
+#ifndef NFExpandableConnectors__H
+#define NFExpandableConnectors__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_Prefix_NOPRE__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFBackendExtension_Annotations_ANNOTATIONS__desc;
+
+extern struct record_description NFBackendExtension_BackendInfo_BACKEND__INFO__desc;
+
+extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_FRONTEND__DUMMY__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFConnection_CONNECTION__desc;
+
+extern struct record_description NFConnector_CONNECTOR__desc;
+
+extern struct record_description NFExpression_CREF__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description NFType_COMPLEX__desc;
+
+extern struct record_description NFVariable_VARIABLE__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFExpandableConnectors_updatePotentiallyPresentVariable omc_NFExpandableConnectors_updatePotentiallyPresentVariable
+
+
+#define boxptr_NFExpandableConnectors_updateExpandableConnector omc_NFExpandableConnectors_updateExpandableConnector
+
+
+#define boxptr_NFExpandableConnectors_updateExpandableConnection omc_NFExpandableConnectors_updateExpandableConnection
+
+
+#define boxptr_NFExpandableConnectors_updateUndeclaredConnection omc_NFExpandableConnectors_updateUndeclaredConnection
+
+
+#define boxptr_NFExpandableConnectors_createVirtualVariables omc_NFExpandableConnectors_createVirtualVariables
+
+
+#define boxptr_NFExpandableConnectors_augmentExpandableConnector omc_NFExpandableConnectors_augmentExpandableConnector
+
+
+#define boxptr_NFExpandableConnectors_markComponentPresent omc_NFExpandableConnectors_markComponentPresent
+
+
+#define boxptr_NFExpandableConnectors_elaborateExpandableSet omc_NFExpandableConnectors_elaborateExpandableSet
+
+
+#define boxptr_NFExpandableConnectors_makeVirtualConnector omc_NFExpandableConnectors_makeVirtualConnector
+
+
+#define boxptr_NFExpandableConnectors_addConnectionToSets omc_NFExpandableConnectors_addConnectionToSets
+
+
+#define boxptr_NFExpandableConnectors_addUndeclaredConnectorToSets omc_NFExpandableConnectors_addUndeclaredConnectorToSets
+
+
+#define boxptr_NFExpandableConnectors_getExpandableConnectorsInConnector omc_NFExpandableConnectors_getExpandableConnectorsInConnector
+
+
+#define boxptr_NFExpandableConnectors_addNestedExpandableConnectorsToSets omc_NFExpandableConnectors_addNestedExpandableConnectorsToSets
+
+
+#define boxptr_NFExpandableConnectors_addExpandableConnectorsToSets omc_NFExpandableConnectors_addExpandableConnectorsToSets
+
+
+#define boxptr_NFExpandableConnectors_sortConnections omc_NFExpandableConnectors_sortConnections
+
+
+DLLDirection
+modelica_metatype omc_NFExpandableConnectors_elaborate(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel, modelica_metatype __omcQ_24in_5Fconnections, modelica_metatype *out_connections);
+#define boxptr_NFExpandableConnectors_elaborate omc_NFExpandableConnectors_elaborate
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_elaborate,2,0) {(void*) boxptr_NFExpandableConnectors_elaborate,0}};
+#define boxvar_NFExpandableConnectors_elaborate MMC_REFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_elaborate)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

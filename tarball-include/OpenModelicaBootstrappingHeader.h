@@ -94,6 +94,21 @@ extern struct record_description NFDimension_NFDimension_EXP__desc;
 #define NFDimension__EXP_3dBOX2 8
 #define NFDimension__EXP(exp,var) (mmc_mk_box3(8,&NFDimension_NFDimension_EXP__desc,exp,var))
 #ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFDimension_NFDimension_RESIZABLE__desc_added
+#define NFDimension_NFDimension_RESIZABLE__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFDimension_NFDimension_RESIZABLE__desc__fields[4] = {"size","opt_size","exp","var"};
+ADD_METARECORD_DEFINITIONS struct record_description NFDimension_NFDimension_RESIZABLE__desc = {
+  "NFDimension_NFDimension_RESIZABLE",
+  "NFDimension.NFDimension.RESIZABLE",
+  NFDimension_NFDimension_RESIZABLE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFDimension_NFDimension_RESIZABLE__desc;
+#endif
+#define NFDimension__RESIZABLE_3dBOX4 9
+#define NFDimension__RESIZABLE(size,opt_size,exp,var) (mmc_mk_box5(9,&NFDimension_NFDimension_RESIZABLE__desc,size,opt_size,exp,var))
+#ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFDimension_NFDimension_UNKNOWN__desc_added
 #define NFDimension_NFDimension_UNKNOWN__desc_added
 ADD_METARECORD_DEFINITIONS const char* NFDimension_NFDimension_UNKNOWN__desc__fields[1] = {"no fields"};
@@ -106,8 +121,8 @@ ADD_METARECORD_DEFINITIONS struct record_description NFDimension_NFDimension_UNK
 #else /* Only use the file as a header */
 extern struct record_description NFDimension_NFDimension_UNKNOWN__desc;
 #endif
-#define NFDimension__UNKNOWN_3dBOX0 9
-static const MMC_DEFSTRUCTLIT(NFDimension__UNKNOWN__struct,1,9) {&NFDimension_NFDimension_UNKNOWN__desc}};
+#define NFDimension__UNKNOWN_3dBOX0 10
+static const MMC_DEFSTRUCTLIT(NFDimension__UNKNOWN__struct,1,10) {&NFDimension_NFDimension_UNKNOWN__desc}};
 static void *NFDimension__UNKNOWN = MMC_REFSTRUCTLIT(NFDimension__UNKNOWN__struct);
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFExpression_NFExpression_INTEGER__desc_added
@@ -413,7 +428,7 @@ extern struct record_description NFExpression_NFExpression_LUNARY__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFExpression_NFExpression_RELATION__desc_added
 #define NFExpression_NFExpression_RELATION__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFExpression_NFExpression_RELATION__desc__fields[3] = {"exp1","operator","exp2"};
+ADD_METARECORD_DEFINITIONS const char* NFExpression_NFExpression_RELATION__desc__fields[4] = {"exp1","operator","exp2","index"};
 ADD_METARECORD_DEFINITIONS struct record_description NFExpression_NFExpression_RELATION__desc = {
   "NFExpression_NFExpression_RELATION",
   "NFExpression.NFExpression.RELATION",
@@ -423,8 +438,8 @@ ADD_METARECORD_DEFINITIONS struct record_description NFExpression_NFExpression_R
 #else /* Only use the file as a header */
 extern struct record_description NFExpression_NFExpression_RELATION__desc;
 #endif
-#define NFExpression__RELATION_3dBOX3 23
-#define NFExpression__RELATION(exp1,operator,exp2) (mmc_mk_box4(23,&NFExpression_NFExpression_RELATION__desc,exp1,operator,exp2))
+#define NFExpression__RELATION_3dBOX4 23
+#define NFExpression__RELATION(exp1,operator,exp2,index) (mmc_mk_box5(23,&NFExpression_NFExpression_RELATION__desc,exp1,operator,exp2,index))
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFExpression_NFExpression_MULTARY__desc_added
 #define NFExpression_NFExpression_MULTARY__desc_added
@@ -590,6 +605,51 @@ extern struct record_description NFExpression_NFExpression_PARTIAL__FUNCTION__AP
 #endif
 #define NFExpression__PARTIAL_5fFUNCTION_5fAPPLICATION_3dBOX4 34
 #define NFExpression__PARTIAL_5fFUNCTION_5fAPPLICATION(fn,args,argNames,ty) (mmc_mk_box5(34,&NFExpression_NFExpression_PARTIAL__FUNCTION__APPLICATION__desc,fn,args,argNames,ty))
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFExpression_NFExpression_FILENAME__desc_added
+#define NFExpression_NFExpression_FILENAME__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFExpression_NFExpression_FILENAME__desc__fields[1] = {"filename"};
+ADD_METARECORD_DEFINITIONS struct record_description NFExpression_NFExpression_FILENAME__desc = {
+  "NFExpression_NFExpression_FILENAME",
+  "NFExpression.NFExpression.FILENAME",
+  NFExpression_NFExpression_FILENAME__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFExpression_NFExpression_FILENAME__desc;
+#endif
+#define NFExpression__FILENAME_3dBOX1 35
+#define NFExpression__FILENAME(filename) (mmc_mk_box2(35,&NFExpression_NFExpression_FILENAME__desc,filename))
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFExpression_NFExpression_SHARED__LITERAL__desc_added
+#define NFExpression_NFExpression_SHARED__LITERAL__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFExpression_NFExpression_SHARED__LITERAL__desc__fields[2] = {"index","exp"};
+ADD_METARECORD_DEFINITIONS struct record_description NFExpression_NFExpression_SHARED__LITERAL__desc = {
+  "NFExpression_NFExpression_SHARED__LITERAL",
+  "NFExpression.NFExpression.SHARED_LITERAL",
+  NFExpression_NFExpression_SHARED__LITERAL__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFExpression_NFExpression_SHARED__LITERAL__desc;
+#endif
+#define NFExpression__SHARED_5fLITERAL_3dBOX2 36
+#define NFExpression__SHARED_5fLITERAL(index,exp) (mmc_mk_box3(36,&NFExpression_NFExpression_SHARED__LITERAL__desc,index,exp))
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFExpression_NFExpression_INSTANCE__NAME__desc_added
+#define NFExpression_NFExpression_INSTANCE__NAME__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFExpression_NFExpression_INSTANCE__NAME__desc__fields[1] = {"scope"};
+ADD_METARECORD_DEFINITIONS struct record_description NFExpression_NFExpression_INSTANCE__NAME__desc = {
+  "NFExpression_NFExpression_INSTANCE__NAME",
+  "NFExpression.NFExpression.INSTANCE_NAME",
+  NFExpression_NFExpression_INSTANCE__NAME__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFExpression_NFExpression_INSTANCE__NAME__desc;
+#endif
+#define NFExpression__INSTANCE_5fNAME_3dBOX1 37
+#define NFExpression__INSTANCE_5fNAME(scope) (mmc_mk_box2(37,&NFExpression_NFExpression_INSTANCE__NAME__desc,scope))
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFType_NFType_INTEGER__desc_added
 #define NFType_NFType_INTEGER__desc_added
@@ -840,21 +900,6 @@ extern struct record_description NFType_NFType_ANY__desc;
 static const MMC_DEFSTRUCTLIT(NFType__ANY__struct,1,18) {&NFType_NFType_ANY__desc}};
 static void *NFType__ANY = MMC_REFSTRUCTLIT(NFType__ANY__struct);
 #ifdef ADD_METARECORD_DEFINITIONS
-#ifndef NFType_NFType_SUBSCRIPTED__desc_added
-#define NFType_NFType_SUBSCRIPTED__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFType_NFType_SUBSCRIPTED__desc__fields[4] = {"name","ty","subs","subscriptedTy"};
-ADD_METARECORD_DEFINITIONS struct record_description NFType_NFType_SUBSCRIPTED__desc = {
-  "NFType_NFType_SUBSCRIPTED",
-  "NFType.NFType.SUBSCRIPTED",
-  NFType_NFType_SUBSCRIPTED__desc__fields
-};
-#endif
-#else /* Only use the file as a header */
-extern struct record_description NFType_NFType_SUBSCRIPTED__desc;
-#endif
-#define NFType__SUBSCRIPTED_3dBOX4 19
-#define NFType__SUBSCRIPTED(name,ty,subs,subscriptedTy) (mmc_mk_box5(19,&NFType_NFType_SUBSCRIPTED__desc,name,ty,subs,subscriptedTy))
-#ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFType_NFType_CONDITIONAL__ARRAY__desc_added
 #define NFType_NFType_CONDITIONAL__ARRAY__desc_added
 ADD_METARECORD_DEFINITIONS const char* NFType_NFType_CONDITIONAL__ARRAY__desc__fields[3] = {"trueType","falseType","matchedBranch"};
@@ -867,8 +912,8 @@ ADD_METARECORD_DEFINITIONS struct record_description NFType_NFType_CONDITIONAL__
 #else /* Only use the file as a header */
 extern struct record_description NFType_NFType_CONDITIONAL__ARRAY__desc;
 #endif
-#define NFType__CONDITIONAL_5fARRAY_3dBOX3 20
-#define NFType__CONDITIONAL_5fARRAY(trueType,falseType,matchedBranch) (mmc_mk_box4(20,&NFType_NFType_CONDITIONAL__ARRAY__desc,trueType,falseType,matchedBranch))
+#define NFType__CONDITIONAL_5fARRAY_3dBOX3 19
+#define NFType__CONDITIONAL_5fARRAY(trueType,falseType,matchedBranch) (mmc_mk_box4(19,&NFType_NFType_CONDITIONAL__ARRAY__desc,trueType,falseType,matchedBranch))
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFType_NFType_UNTYPED__desc_added
 #define NFType_NFType_UNTYPED__desc_added
@@ -882,8 +927,8 @@ ADD_METARECORD_DEFINITIONS struct record_description NFType_NFType_UNTYPED__desc
 #else /* Only use the file as a header */
 extern struct record_description NFType_NFType_UNTYPED__desc;
 #endif
-#define NFType__UNTYPED_3dBOX2 21
-#define NFType__UNTYPED(typeNode,dimensions) (mmc_mk_box3(21,&NFType_NFType_UNTYPED__desc,typeNode,dimensions))
+#define NFType__UNTYPED_3dBOX2 20
+#define NFType__UNTYPED(typeNode,dimensions) (mmc_mk_box3(20,&NFType_NFType_UNTYPED__desc,typeNode,dimensions))
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef FMI_Info_INFO__desc_added
 #define FMI_Info_INFO__desc_added
@@ -1821,7 +1866,7 @@ extern struct record_description Absyn_Within_WITHIN__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef Absyn_Class_CLASS__desc_added
 #define Absyn_Class_CLASS__desc_added
-ADD_METARECORD_DEFINITIONS const char* Absyn_Class_CLASS__desc__fields[9] = {"name","partialPrefix","finalPrefix","encapsulatedPrefix","restriction","body","commentsBeforeEnd","commentsAfterEnd","info"};
+ADD_METARECORD_DEFINITIONS const char* Absyn_Class_CLASS__desc__fields[10] = {"name","partialPrefix","finalPrefix","encapsulatedPrefix","restriction","body","commentsBeforeClass","commentsBeforeEnd","commentsAfterEnd","info"};
 ADD_METARECORD_DEFINITIONS struct record_description Absyn_Class_CLASS__desc = {
   "Absyn_Class_CLASS",
   "Absyn.Class.CLASS",
@@ -1831,8 +1876,8 @@ ADD_METARECORD_DEFINITIONS struct record_description Absyn_Class_CLASS__desc = {
 #else /* Only use the file as a header */
 extern struct record_description Absyn_Class_CLASS__desc;
 #endif
-#define Absyn__CLASS_3dBOX9 3
-#define Absyn__CLASS(name,partialPrefix,finalPrefix,encapsulatedPrefix,restriction,body,commentsBeforeEnd,commentsAfterEnd,info) (mmc_mk_box(10, 3,&Absyn_Class_CLASS__desc,name,partialPrefix,finalPrefix,encapsulatedPrefix,restriction,body,commentsBeforeEnd,commentsAfterEnd,info))
+#define Absyn__CLASS_3dBOX10 3
+#define Absyn__CLASS(name,partialPrefix,finalPrefix,encapsulatedPrefix,restriction,body,commentsBeforeClass,commentsBeforeEnd,commentsAfterEnd,info) (mmc_mk_box(11, 3,&Absyn_Class_CLASS__desc,name,partialPrefix,finalPrefix,encapsulatedPrefix,restriction,body,commentsBeforeClass,commentsBeforeEnd,commentsAfterEnd,info))
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef Absyn_ClassDef_PDER__desc_added
 #define Absyn_ClassDef_PDER__desc_added

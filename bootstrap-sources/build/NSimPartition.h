@@ -1,0 +1,128 @@
+#ifndef NSimPartition__H
+#define NSimPartition__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_FunctionAttributes_FUNCTION__ATTRIBUTES__desc;
+
+extern struct record_description DAE_FunctionBuiltin_FUNCTION__BUILTIN__desc;
+
+extern struct record_description DAE_FunctionParallelism_FP__NON__PARALLEL__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NBEquation_WhenStatement_NORETCALL__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFComponent_COMPONENT__desc;
+
+extern struct record_description NFExpression_CALL__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFFunction_Function_FUNCTION__desc;
+
+extern struct record_description NFInstNode_InstNode_COMPONENT__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description NFType_INTEGER__desc;
+
+extern struct record_description NFType_UNKNOWN__desc;
+
+extern struct record_description NSimPartition_BASE__PARTITION__desc;
+
+extern struct record_description NSimPartition_SUB__PARTITION__desc;
+
+extern struct record_description NSimStrongComponent_Block_WHEN__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SimCode_ClockedPartition_CLOCKED__PARTITION__desc;
+
+extern struct record_description SimCode_SubPartition_SUBPARTITION__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_NSimPartition_convertSub(threadData_t *threadData, modelica_metatype _part);
+#define boxptr_NSimPartition_convertSub omc_NSimPartition_convertSub
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_convertSub,2,0) {(void*) boxptr_NSimPartition_convertSub,0}};
+#define boxvar_NSimPartition_convertSub MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_convertSub)
+
+
+DLLDirection
+modelica_metatype omc_NSimPartition_convertBase(threadData_t *threadData, modelica_metatype _part);
+#define boxptr_NSimPartition_convertBase omc_NSimPartition_convertBase
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_convertBase,2,0) {(void*) boxptr_NSimPartition_convertBase,0}};
+#define boxvar_NSimPartition_convertBase MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_convertBase)
+
+
+DLLDirection
+modelica_string omc_NSimPartition_toStringShort(threadData_t *threadData, modelica_metatype _part);
+#define boxptr_NSimPartition_toStringShort omc_NSimPartition_toStringShort
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_toStringShort,2,0) {(void*) boxptr_NSimPartition_toStringShort,0}};
+#define boxvar_NSimPartition_toStringShort MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_toStringShort)
+
+
+DLLDirection
+modelica_string omc_NSimPartition_toString(threadData_t *threadData, modelica_metatype _part, modelica_string __omcQ_24in_5Fstr);
+#define boxptr_NSimPartition_toString omc_NSimPartition_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_toString,2,0) {(void*) boxptr_NSimPartition_toString,0}};
+#define boxvar_NSimPartition_toString MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_toString)
+
+
+DLLDirection
+modelica_string omc_NSimPartition_listToString(threadData_t *threadData, modelica_metatype _parts, modelica_string __omcQ_24in_5Fstr, modelica_string _header);
+#define boxptr_NSimPartition_listToString omc_NSimPartition_listToString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_listToString,2,0) {(void*) boxptr_NSimPartition_listToString,0}};
+#define boxvar_NSimPartition_listToString MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_listToString)
+
+
+DLLDirection
+modelica_metatype omc_NSimPartition_createBasePartitions(threadData_t *threadData, modelica_metatype _clock_collector, modelica_metatype __omcQ_24in_5FsimCodeIndices, modelica_metatype *out_eventClocks, modelica_metatype *out_simCodeIndices);
+#define boxptr_NSimPartition_createBasePartitions omc_NSimPartition_createBasePartitions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_createBasePartitions,2,0) {(void*) boxptr_NSimPartition_createBasePartitions,0}};
+#define boxvar_NSimPartition_createBasePartitions MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_createBasePartitions)
+
+
+DLLDirection
+modelica_metatype omc_NSimPartition_createSubPartition(threadData_t *threadData, modelica_metatype _subClock, modelica_metatype _equations, modelica_metatype _variables, modelica_boolean _holdEvents);
+DLLDirection
+modelica_metatype boxptr_NSimPartition_createSubPartition(threadData_t *threadData, modelica_metatype _subClock, modelica_metatype _equations, modelica_metatype _variables, modelica_metatype _holdEvents);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_createSubPartition,2,0) {(void*) boxptr_NSimPartition_createSubPartition,0}};
+#define boxvar_NSimPartition_createSubPartition MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_createSubPartition)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

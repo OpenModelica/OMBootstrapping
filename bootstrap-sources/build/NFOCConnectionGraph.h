@@ -1,0 +1,395 @@
+#ifndef NFOCConnectionGraph__H
+#define NFOCConnectionGraph__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_InnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description IOStream_IOStreamType_LIST__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFCall_UNTYPED__CALL__desc;
+
+extern struct record_description NFCeval_EvalTarget_EVAL__TARGET__desc;
+
+extern struct record_description NFClass_PARTIAL__BUILTIN__desc;
+
+extern struct record_description NFClass_Prefixes_PREFIXES__desc;
+
+extern struct record_description NFClassTree_ClassTree_FLAT__TREE__desc;
+
+extern struct record_description NFComponent_COMPONENT__desc;
+
+extern struct record_description NFComponent_TYPE__ATTRIBUTE__desc;
+
+extern struct record_description NFComponentRef_CREF__desc;
+
+extern struct record_description NFComponentRef_EMPTY__desc;
+
+extern struct record_description NFConnections_BrokenEdge_BROKEN__EDGE__desc;
+
+extern struct record_description NFDuplicateTree_Tree_EMPTY__desc;
+
+extern struct record_description NFEquation_EQUALITY__desc;
+
+extern struct record_description NFExpression_BOOLEAN__desc;
+
+extern struct record_description NFExpression_CALL__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFExpression_REAL__desc;
+
+extern struct record_description NFExpression_STRING__desc;
+
+extern struct record_description NFInstNode_CachedData_FUNCTION__desc;
+
+extern struct record_description NFInstNode_InstNode_CLASS__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_COMPONENT__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNodeType_BUILTIN__CLASS__desc;
+
+extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
+
+extern struct record_description NFLookupTree_Entry_COMPONENT__desc;
+
+extern struct record_description NFLookupTree_Tree_EMPTY__desc;
+
+extern struct record_description NFLookupTree_Tree_LEAF__desc;
+
+extern struct record_description NFLookupTree_Tree_NODE__desc;
+
+extern struct record_description NFModifier_Modifier_NOMOD__desc;
+
+extern struct record_description NFOCConnectionGraph_CrefSets_Sets_DISJOINT__SETS__desc;
+
+extern struct record_description NFOCConnectionGraph_NFOCConnectionGraph_GRAPH__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description NFRestriction_TYPE__desc;
+
+extern struct record_description NFType_BOOLEAN__desc;
+
+extern struct record_description NFType_ENUMERATION__desc;
+
+extern struct record_description NFType_REAL__desc;
+
+extern struct record_description NFType_STRING__desc;
+
+extern struct record_description SCode_ClassDef_PARTS__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SCode_Element_CLASS__desc;
+
+extern struct record_description SCode_Encapsulated_NOT__ENCAPSULATED__desc;
+
+extern struct record_description SCode_Final_NOT__FINAL__desc;
+
+extern struct record_description SCode_Partial_NOT__PARTIAL__desc;
+
+extern struct record_description SCode_Prefixes_PREFIXES__desc;
+
+extern struct record_description SCode_Redeclare_NOT__REDECLARE__desc;
+
+extern struct record_description SCode_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description SCode_Restriction_R__TYPE__desc;
+
+extern struct record_description SCode_Visibility_PUBLIC__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFOCConnectionGraph_newCrefCrefTable omc_NFOCConnectionGraph_newCrefCrefTable
+
+
+#define boxptr_NFOCConnectionGraph_removeBrokenConnects omc_NFOCConnectionGraph_removeBrokenConnects
+
+
+#define boxptr_NFOCConnectionGraph_showGraphViz omc_NFOCConnectionGraph_showGraphViz
+
+
+#define boxptr_NFOCConnectionGraph_generateGraphViz omc_NFOCConnectionGraph_generateGraphViz
+
+
+#define boxptr_NFOCConnectionGraph_graphVizPotentialRoot omc_NFOCConnectionGraph_graphVizPotentialRoot
+
+
+#define boxptr_NFOCConnectionGraph_graphVizDefiniteRoot omc_NFOCConnectionGraph_graphVizDefiniteRoot
+
+
+#define boxptr_NFOCConnectionGraph_graphVizFlatEdge omc_NFOCConnectionGraph_graphVizFlatEdge
+
+
+#define boxptr_NFOCConnectionGraph_graphVizEdge omc_NFOCConnectionGraph_graphVizEdge
+
+
+#define boxptr_NFOCConnectionGraph_merge omc_NFOCConnectionGraph_merge
+
+
+#define boxptr_NFOCConnectionGraph_getConnections omc_NFOCConnectionGraph_getConnections
+
+
+#define boxptr_NFOCConnectionGraph_getBranches omc_NFOCConnectionGraph_getBranches
+
+
+#define boxptr_NFOCConnectionGraph_getPotentialRoots omc_NFOCConnectionGraph_getPotentialRoots
+
+
+#define boxptr_NFOCConnectionGraph_getUniqueRoots omc_NFOCConnectionGraph_getUniqueRoots
+
+
+#define boxptr_NFOCConnectionGraph_getDefiniteRoots omc_NFOCConnectionGraph_getDefiniteRoots
+
+
+#define boxptr_NFOCConnectionGraph_printNFOCConnectionGraph omc_NFOCConnectionGraph_printNFOCConnectionGraph
+
+
+#define boxptr_NFOCConnectionGraph_printFlatEdges omc_NFOCConnectionGraph_printFlatEdges
+
+
+#define boxptr_NFOCConnectionGraph_printEdges omc_NFOCConnectionGraph_printEdges
+
+
+#define boxptr_NFOCConnectionGraph_printConnectionStr omc_NFOCConnectionGraph_printConnectionStr
+
+
+#define boxptr_NFOCConnectionGraph_getEdge omc_NFOCConnectionGraph_getEdge
+
+
+#define boxptr_NFOCConnectionGraph_evalConnectionsOperatorsHelper omc_NFOCConnectionGraph_evalConnectionsOperatorsHelper
+
+
+#define boxptr_NFOCConnectionGraph_evaluateOperators omc_NFOCConnectionGraph_evaluateOperators
+
+
+#define boxptr_NFOCConnectionGraph_evalConnectionsOperatorsVar omc_NFOCConnectionGraph_evalConnectionsOperatorsVar
+
+
+#define boxptr_NFOCConnectionGraph_evalConnectionsOperatorsEqs omc_NFOCConnectionGraph_evalConnectionsOperatorsEqs
+
+
+DLLDirection
+modelica_metatype omc_NFOCConnectionGraph_addConnectionRooted_updateRooted(threadData_t *threadData, modelica_metatype _roots, modelica_metatype _newRoot);
+#define boxptr_NFOCConnectionGraph_addConnectionRooted_updateRooted omc_NFOCConnectionGraph_addConnectionRooted_updateRooted
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_addConnectionRooted_updateRooted,2,0) {(void*) boxptr_NFOCConnectionGraph_addConnectionRooted_updateRooted,0}};
+#define boxvar_NFOCConnectionGraph_addConnectionRooted_updateRooted MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_addConnectionRooted_updateRooted)
+
+
+#define boxptr_NFOCConnectionGraph_addConnectionRooted omc_NFOCConnectionGraph_addConnectionRooted
+
+
+#define boxptr_NFOCConnectionGraph_addConnectionsRooted omc_NFOCConnectionGraph_addConnectionsRooted
+
+
+#define boxptr_NFOCConnectionGraph_addBranches omc_NFOCConnectionGraph_addBranches
+
+
+#define boxptr_NFOCConnectionGraph_buildRootedTable omc_NFOCConnectionGraph_buildRootedTable
+
+
+#define boxptr_NFOCConnectionGraph_printPotentialRootTuple omc_NFOCConnectionGraph_printPotentialRootTuple
+
+
+#define boxptr_NFOCConnectionGraph_makeTuple omc_NFOCConnectionGraph_makeTuple
+
+
+#define boxptr_NFOCConnectionGraph_printTupleStr omc_NFOCConnectionGraph_printTupleStr
+
+
+#define boxptr_NFOCConnectionGraph_orderConnectsGuidedByUser omc_NFOCConnectionGraph_orderConnectsGuidedByUser
+
+
+#define boxptr_NFOCConnectionGraph_findResultGraph omc_NFOCConnectionGraph_findResultGraph
+
+
+#define boxptr_NFOCConnectionGraph_addConnections omc_NFOCConnectionGraph_addConnections
+
+
+#define boxptr_NFOCConnectionGraph_addPotentialRootsToTable omc_NFOCConnectionGraph_addPotentialRootsToTable
+
+
+#define boxptr_NFOCConnectionGraph_addBranchesToTable omc_NFOCConnectionGraph_addBranchesToTable
+
+
+#define boxptr_NFOCConnectionGraph_resultGraphWithRoots omc_NFOCConnectionGraph_resultGraphWithRoots
+
+
+#define boxptr_NFOCConnectionGraph_addRootsToTable omc_NFOCConnectionGraph_addRootsToTable
+
+
+#define boxptr_NFOCConnectionGraph_connectComponents omc_NFOCConnectionGraph_connectComponents
+
+
+#define boxptr_NFOCConnectionGraph_connectBranchComponents omc_NFOCConnectionGraph_connectBranchComponents
+
+
+#define boxptr_NFOCConnectionGraph_canonical omc_NFOCConnectionGraph_canonical
+
+
+#define boxptr_NFOCConnectionGraph_handleOverconstrainedConnections__dispatch omc_NFOCConnectionGraph_handleOverconstrainedConnections__dispatch
+
+
+#define boxptr_NFOCConnectionGraph_getOverconstrainedCref omc_NFOCConnectionGraph_getOverconstrainedCref
+
+
+#define boxptr_NFOCConnectionGraph_getOverconstrainedCrefs omc_NFOCConnectionGraph_getOverconstrainedCrefs
+
+
+#define boxptr_NFOCConnectionGraph_generateEqualityConstraintEquation omc_NFOCConnectionGraph_generateEqualityConstraintEquation
+
+
+DLLDirection
+modelica_metatype omc_NFOCConnectionGraph_handleOverconstrainedConnections(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel, modelica_metatype _conns, modelica_fnptr _isDeleted, modelica_metatype *out_broken);
+#define boxptr_NFOCConnectionGraph_handleOverconstrainedConnections omc_NFOCConnectionGraph_handleOverconstrainedConnections
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_handleOverconstrainedConnections,2,0) {(void*) boxptr_NFOCConnectionGraph_handleOverconstrainedConnections,0}};
+#define boxvar_NFOCConnectionGraph_handleOverconstrainedConnections MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_handleOverconstrainedConnections)
+
+
+DLLDirection
+modelica_boolean omc_NFOCConnectionGraph_CrefSets_EntryEqual(threadData_t *threadData, modelica_metatype _entry1, modelica_metatype _entry2);
+DLLDirection
+modelica_metatype boxptr_NFOCConnectionGraph_CrefSets_EntryEqual(threadData_t *threadData, modelica_metatype _entry1, modelica_metatype _entry2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_EntryEqual,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_EntryEqual,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_EntryEqual MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_EntryEqual)
+
+
+DLLDirection
+modelica_integer omc_NFOCConnectionGraph_CrefSets_EntryHash(threadData_t *threadData, modelica_metatype _entry);
+DLLDirection
+modelica_metatype boxptr_NFOCConnectionGraph_CrefSets_EntryHash(threadData_t *threadData, modelica_metatype _entry);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_EntryHash,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_EntryHash,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_EntryHash MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_EntryHash)
+
+
+DLLDirection
+modelica_string omc_NFOCConnectionGraph_CrefSets_EntryString(threadData_t *threadData, modelica_metatype _entry);
+#define boxptr_NFOCConnectionGraph_CrefSets_EntryString omc_NFOCConnectionGraph_CrefSets_EntryString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_EntryString,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_EntryString,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_EntryString MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_EntryString)
+
+
+DLLDirection
+modelica_metatype omc_NFOCConnectionGraph_CrefSets_add(threadData_t *threadData, modelica_metatype _entry, modelica_metatype __omcQ_24in_5Fsets, modelica_integer *out_index);
+DLLDirection
+modelica_metatype boxptr_NFOCConnectionGraph_CrefSets_add(threadData_t *threadData, modelica_metatype _entry, modelica_metatype __omcQ_24in_5Fsets, modelica_metatype *out_index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_add,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_add,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_add MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_add)
+
+
+DLLDirection
+modelica_metatype omc_NFOCConnectionGraph_CrefSets_addList(threadData_t *threadData, modelica_metatype _entries, modelica_metatype __omcQ_24in_5Fsets);
+#define boxptr_NFOCConnectionGraph_CrefSets_addList omc_NFOCConnectionGraph_CrefSets_addList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_addList,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_addList,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_addList MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_addList)
+
+
+DLLDirection
+modelica_metatype omc_NFOCConnectionGraph_CrefSets_emptySets(threadData_t *threadData, modelica_integer _setCount);
+DLLDirection
+modelica_metatype boxptr_NFOCConnectionGraph_CrefSets_emptySets(threadData_t *threadData, modelica_metatype _setCount);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_emptySets,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_emptySets,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_emptySets MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_emptySets)
+
+
+DLLDirection
+modelica_metatype omc_NFOCConnectionGraph_CrefSets_extractSets(threadData_t *threadData, modelica_metatype _sets, modelica_metatype *out_assignedSets);
+#define boxptr_NFOCConnectionGraph_CrefSets_extractSets omc_NFOCConnectionGraph_CrefSets_extractSets
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_extractSets,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_extractSets,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_extractSets MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_extractSets)
+
+
+DLLDirection
+modelica_metatype omc_NFOCConnectionGraph_CrefSets_find(threadData_t *threadData, modelica_metatype _entry, modelica_metatype __omcQ_24in_5Fsets, modelica_integer *out_index);
+DLLDirection
+modelica_metatype boxptr_NFOCConnectionGraph_CrefSets_find(threadData_t *threadData, modelica_metatype _entry, modelica_metatype __omcQ_24in_5Fsets, modelica_metatype *out_index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_find,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_find,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_find MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_find)
+
+
+DLLDirection
+modelica_integer omc_NFOCConnectionGraph_CrefSets_findRoot(threadData_t *threadData, modelica_integer _nodeIndex, modelica_metatype _nodes);
+DLLDirection
+modelica_metatype boxptr_NFOCConnectionGraph_CrefSets_findRoot(threadData_t *threadData, modelica_metatype _nodeIndex, modelica_metatype _nodes);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_findRoot,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_findRoot,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_findRoot MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_findRoot)
+
+
+DLLDirection
+modelica_integer omc_NFOCConnectionGraph_CrefSets_findSet(threadData_t *threadData, modelica_metatype _entry, modelica_metatype _sets, modelica_metatype *out_updatedSets);
+DLLDirection
+modelica_metatype boxptr_NFOCConnectionGraph_CrefSets_findSet(threadData_t *threadData, modelica_metatype _entry, modelica_metatype _sets, modelica_metatype *out_updatedSets);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_findSet,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_findSet,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_findSet MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_findSet)
+
+
+DLLDirection
+modelica_integer omc_NFOCConnectionGraph_CrefSets_findSetArrayIndex(threadData_t *threadData, modelica_metatype _entry, modelica_metatype _sets);
+DLLDirection
+modelica_metatype boxptr_NFOCConnectionGraph_CrefSets_findSetArrayIndex(threadData_t *threadData, modelica_metatype _entry, modelica_metatype _sets);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_findSetArrayIndex,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_findSetArrayIndex,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_findSetArrayIndex MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_findSetArrayIndex)
+
+
+DLLDirection
+modelica_integer omc_NFOCConnectionGraph_CrefSets_getNodeCount(threadData_t *threadData, modelica_metatype _sets);
+DLLDirection
+modelica_metatype boxptr_NFOCConnectionGraph_CrefSets_getNodeCount(threadData_t *threadData, modelica_metatype _sets);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_getNodeCount,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_getNodeCount,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_getNodeCount MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_getNodeCount)
+
+
+DLLDirection
+modelica_metatype omc_NFOCConnectionGraph_CrefSets_merge(threadData_t *threadData, modelica_metatype _entry1, modelica_metatype _entry2, modelica_metatype __omcQ_24in_5Fsets);
+#define boxptr_NFOCConnectionGraph_CrefSets_merge omc_NFOCConnectionGraph_CrefSets_merge
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_merge,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_merge,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_merge MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_merge)
+
+
+DLLDirection
+void omc_NFOCConnectionGraph_CrefSets_printSets(threadData_t *threadData, modelica_metatype _sets);
+#define boxptr_NFOCConnectionGraph_CrefSets_printSets omc_NFOCConnectionGraph_CrefSets_printSets
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_printSets,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_printSets,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_printSets MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_printSets)
+
+
+DLLDirection
+modelica_metatype omc_NFOCConnectionGraph_CrefSets_union(threadData_t *threadData, modelica_integer _set1, modelica_integer _set2, modelica_metatype __omcQ_24in_5Fsets);
+DLLDirection
+modelica_metatype boxptr_NFOCConnectionGraph_CrefSets_union(threadData_t *threadData, modelica_metatype _set1, modelica_metatype _set2, modelica_metatype __omcQ_24in_5Fsets);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_union,2,0) {(void*) boxptr_NFOCConnectionGraph_CrefSets_union,0}};
+#define boxvar_NFOCConnectionGraph_CrefSets_union MMC_REFSTRUCTLIT(boxvar_lit_NFOCConnectionGraph_CrefSets_union)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

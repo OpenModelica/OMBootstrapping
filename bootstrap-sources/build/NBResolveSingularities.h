@@ -1,0 +1,86 @@
+#ifndef NBResolveSingularities__H
+#define NBResolveSingularities__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Gettext_TranslatableContent_notrans__desc;
+
+extern struct record_description NBAdjacency_Matrix_EMPTY__desc;
+
+extern struct record_description NBMatching_MATCHING__desc;
+
+extern struct record_description NBSlice_SLICE__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NBResolveSingularities_toStringUnmatched omc_NBResolveSingularities_toStringUnmatched
+
+
+#define boxptr_NBResolveSingularities_toStringDynamicSelect omc_NBResolveSingularities_toStringDynamicSelect
+
+
+#define boxptr_NBResolveSingularities_toStringCandidatesConstraints omc_NBResolveSingularities_toStringCandidatesConstraints
+
+
+#define boxptr_NBResolveSingularities_sortCandidates omc_NBResolveSingularities_sortCandidates
+
+
+#define boxptr_NBResolveSingularities_getStateCandidate_getStateCandidateVar omc_NBResolveSingularities_getStateCandidate_getStateCandidateVar
+
+
+#define boxptr_NBResolveSingularities_getStateCandidate omc_NBResolveSingularities_getStateCandidate
+
+
+#define boxptr_NBResolveSingularities_getConstraintsAndCandidates omc_NBResolveSingularities_getConstraintsAndCandidates
+
+
+#define boxptr_NBResolveSingularities_getMSSS omc_NBResolveSingularities_getMSSS
+
+
+DLLDirection
+modelica_metatype omc_NBResolveSingularities_balanceInitialization(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fadj, modelica_metatype __omcQ_24in_5Ffull, modelica_metatype __omcQ_24in_5Fvariables, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype __omcQ_24in_5FeqData, modelica_metatype __omcQ_24in_5FfuncTree, modelica_metatype _matching, modelica_metatype _mapping_opt, modelica_metatype *out_full, modelica_metatype *out_variables, modelica_metatype *out_equations, modelica_metatype *out_varData, modelica_metatype *out_eqData, modelica_metatype *out_funcTree, modelica_boolean *out_changed);
+DLLDirection
+modelica_metatype boxptr_NBResolveSingularities_balanceInitialization(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fadj, modelica_metatype __omcQ_24in_5Ffull, modelica_metatype __omcQ_24in_5Fvariables, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype __omcQ_24in_5FeqData, modelica_metatype __omcQ_24in_5FfuncTree, modelica_metatype _matching, modelica_metatype _mapping_opt, modelica_metatype *out_full, modelica_metatype *out_variables, modelica_metatype *out_equations, modelica_metatype *out_varData, modelica_metatype *out_eqData, modelica_metatype *out_funcTree, modelica_metatype *out_changed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResolveSingularities_balanceInitialization,2,0) {(void*) boxptr_NBResolveSingularities_balanceInitialization,0}};
+#define boxvar_NBResolveSingularities_balanceInitialization MMC_REFSTRUCTLIT(boxvar_lit_NBResolveSingularities_balanceInitialization)
+
+
+DLLDirection
+modelica_metatype omc_NBResolveSingularities_noIndexReduction(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fadj, modelica_metatype __omcQ_24in_5Ffull, modelica_metatype __omcQ_24in_5Fvariables, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype __omcQ_24in_5FeqData, modelica_metatype __omcQ_24in_5FfuncTree, modelica_metatype _matching, modelica_metatype _mapping_opt, modelica_metatype *out_full, modelica_metatype *out_variables, modelica_metatype *out_equations, modelica_metatype *out_varData, modelica_metatype *out_eqData, modelica_metatype *out_funcTree, modelica_boolean *out_changed);
+DLLDirection
+modelica_metatype boxptr_NBResolveSingularities_noIndexReduction(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fadj, modelica_metatype __omcQ_24in_5Ffull, modelica_metatype __omcQ_24in_5Fvariables, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype __omcQ_24in_5FeqData, modelica_metatype __omcQ_24in_5FfuncTree, modelica_metatype _matching, modelica_metatype _mapping_opt, modelica_metatype *out_full, modelica_metatype *out_variables, modelica_metatype *out_equations, modelica_metatype *out_varData, modelica_metatype *out_eqData, modelica_metatype *out_funcTree, modelica_metatype *out_changed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResolveSingularities_noIndexReduction,2,0) {(void*) boxptr_NBResolveSingularities_noIndexReduction,0}};
+#define boxvar_NBResolveSingularities_noIndexReduction MMC_REFSTRUCTLIT(boxvar_lit_NBResolveSingularities_noIndexReduction)
+
+
+DLLDirection
+modelica_metatype omc_NBResolveSingularities_indexReduction(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fadj, modelica_metatype __omcQ_24in_5Ffull, modelica_metatype __omcQ_24in_5Fvariables, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype __omcQ_24in_5FeqData, modelica_metatype __omcQ_24in_5FfuncTree, modelica_metatype _matching, modelica_metatype _mapping_opt, modelica_metatype *out_full, modelica_metatype *out_variables, modelica_metatype *out_equations, modelica_metatype *out_varData, modelica_metatype *out_eqData, modelica_metatype *out_funcTree, modelica_boolean *out_changed);
+DLLDirection
+modelica_metatype boxptr_NBResolveSingularities_indexReduction(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fadj, modelica_metatype __omcQ_24in_5Ffull, modelica_metatype __omcQ_24in_5Fvariables, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype __omcQ_24in_5FeqData, modelica_metatype __omcQ_24in_5FfuncTree, modelica_metatype _matching, modelica_metatype _mapping_opt, modelica_metatype *out_full, modelica_metatype *out_variables, modelica_metatype *out_equations, modelica_metatype *out_varData, modelica_metatype *out_eqData, modelica_metatype *out_funcTree, modelica_metatype *out_changed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResolveSingularities_indexReduction,2,0) {(void*) boxptr_NBResolveSingularities_indexReduction,0}};
+#define boxvar_NBResolveSingularities_indexReduction MMC_REFSTRUCTLIT(boxvar_lit_NBResolveSingularities_indexReduction)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

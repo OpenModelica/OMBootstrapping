@@ -1,0 +1,188 @@
+#ifndef NFConnectEquations__H
+#define NFConnectEquations__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_FunctionAttributes_FUNCTION__ATTRIBUTES__desc;
+
+extern struct record_description DAE_FunctionBuiltin_FUNCTION__BUILTIN__desc;
+
+extern struct record_description DAE_FunctionParallelism_FP__NON__PARALLEL__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagData_REAL__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFCeval_EvalTarget_EVAL__TARGET__desc;
+
+extern struct record_description NFComponent_COMPONENT__desc;
+
+extern struct record_description NFConnector_CONNECTOR__desc;
+
+extern struct record_description NFEquation_ASSERT__desc;
+
+extern struct record_description NFEquation_EQUALITY__desc;
+
+extern struct record_description NFEquation_FOR__desc;
+
+extern struct record_description NFExpression_BINARY__desc;
+
+extern struct record_description NFExpression_CALL__desc;
+
+extern struct record_description NFExpression_ENUM__LITERAL__desc;
+
+extern struct record_description NFExpression_IF__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFExpression_REAL__desc;
+
+extern struct record_description NFExpression_RELATION__desc;
+
+extern struct record_description NFExpression_STRING__desc;
+
+extern struct record_description NFExpression_UNARY__desc;
+
+extern struct record_description NFFunction_Function_FUNCTION__desc;
+
+extern struct record_description NFInstNode_InstNode_COMPONENT__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description NFType_ENUMERATION__desc;
+
+extern struct record_description NFType_REAL__desc;
+
+extern struct record_description NFType_UNKNOWN__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFConnectEquations_lookupVarAttr omc_NFConnectEquations_lookupVarAttr
+
+
+#define boxptr_NFConnectEquations_associatedFlowCref omc_NFConnectEquations_associatedFlowCref
+
+
+#define boxptr_NFConnectEquations_removeStreamSetElement omc_NFConnectEquations_removeStreamSetElement
+
+
+#define boxptr_NFConnectEquations_evaluateActualStreamMul omc_NFConnectEquations_evaluateActualStreamMul
+
+
+#define boxptr_NFConnectEquations_evaluateActualStream omc_NFConnectEquations_evaluateActualStream
+
+
+#define boxptr_NFConnectEquations_evaluateInStream omc_NFConnectEquations_evaluateInStream
+
+
+#define boxptr_NFConnectEquations_evaluateOperatorArrayConstructorExp omc_NFConnectEquations_evaluateOperatorArrayConstructorExp
+
+
+#define boxptr_NFConnectEquations_evaluateOperatorReductionExp omc_NFConnectEquations_evaluateOperatorReductionExp
+
+
+#define boxptr_NFConnectEquations_makeInStreamDivCall omc_NFConnectEquations_makeInStreamDivCall
+
+
+#define boxptr_NFConnectEquations_makePositiveMaxCall omc_NFConnectEquations_makePositiveMaxCall
+
+
+#define boxptr_NFConnectEquations_makeInStreamCall omc_NFConnectEquations_makeInStreamCall
+
+
+#define boxptr_NFConnectEquations_sumInside2 omc_NFConnectEquations_sumInside2
+
+
+#define boxptr_NFConnectEquations_sumOutside2 omc_NFConnectEquations_sumOutside2
+
+
+#define boxptr_NFConnectEquations_sumInside1 omc_NFConnectEquations_sumInside1
+
+
+#define boxptr_NFConnectEquations_sumOutside1 omc_NFConnectEquations_sumOutside1
+
+
+#define boxptr_NFConnectEquations_flowExp omc_NFConnectEquations_flowExp
+
+
+#define boxptr_NFConnectEquations_streamFlowExp omc_NFConnectEquations_streamFlowExp
+
+
+#define boxptr_NFConnectEquations_sumMap omc_NFConnectEquations_sumMap
+
+
+#define boxptr_NFConnectEquations_streamSumEquationExp omc_NFConnectEquations_streamSumEquationExp
+
+
+#define boxptr_NFConnectEquations_streamEquationGeneral omc_NFConnectEquations_streamEquationGeneral
+
+
+#define boxptr_NFConnectEquations_generateStreamEquations omc_NFConnectEquations_generateStreamEquations
+
+
+#define boxptr_NFConnectEquations_makeFlowExp omc_NFConnectEquations_makeFlowExp
+
+
+#define boxptr_NFConnectEquations_generateFlowEquations omc_NFConnectEquations_generateFlowEquations
+
+
+#define boxptr_NFConnectEquations_makeEqualityAssert omc_NFConnectEquations_makeEqualityAssert
+
+
+#define boxptr_NFConnectEquations_makeEqualityEquation omc_NFConnectEquations_makeEqualityEquation
+
+
+#define boxptr_NFConnectEquations_generatePotentialEquations omc_NFConnectEquations_generatePotentialEquations
+
+
+DLLDirection
+modelica_metatype omc_NFConnectEquations_evaluateOperators(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _sets, modelica_metatype _setsArray, modelica_metatype _variables, modelica_metatype _ctable);
+#define boxptr_NFConnectEquations_evaluateOperators omc_NFConnectEquations_evaluateOperators
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConnectEquations_evaluateOperators,2,0) {(void*) boxptr_NFConnectEquations_evaluateOperators,0}};
+#define boxvar_NFConnectEquations_evaluateOperators MMC_REFSTRUCTLIT(boxvar_lit_NFConnectEquations_evaluateOperators)
+
+
+DLLDirection
+modelica_metatype omc_NFConnectEquations_generateEquations(threadData_t *threadData, modelica_metatype _sets, modelica_metatype _variables, modelica_metatype *out_connectedLocalIOs);
+#define boxptr_NFConnectEquations_generateEquations omc_NFConnectEquations_generateEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConnectEquations_generateEquations,2,0) {(void*) boxptr_NFConnectEquations_generateEquations,0}};
+#define boxvar_NFConnectEquations_generateEquations MMC_REFSTRUCTLIT(boxvar_lit_NFConnectEquations_generateEquations)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

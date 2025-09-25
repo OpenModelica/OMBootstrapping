@@ -1,0 +1,1070 @@
+#ifndef AbsynToJulia__H
+#define AbsynToJulia__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Dump_DumpOptions_DUMPOPTIONS__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description MMToJuliaUtil_Context_FUNCTION__desc;
+
+extern struct record_description MMToJuliaUtil_Context_INPUT__CONTEXT__desc;
+
+extern struct record_description MMToJuliaUtil_Context_NO__CONTEXT__desc;
+
+extern struct record_description MMToJuliaUtil_Context_PACKAGE__desc;
+
+extern struct record_description SCodeDump_SCodeDumpOptions_OPTIONS__desc;
+
+extern struct record_description Tpl_BlockType_BT__ABS__INDENT__desc;
+
+extern struct record_description Tpl_BlockType_BT__INDENT__desc;
+
+extern struct record_description Tpl_IterOptions_ITER__OPTIONS__desc;
+
+extern struct record_description Tpl_StringToken_ST__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__NEW__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
+
+extern struct record_description Tpl_Text_MEM__TEXT__desc;
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpOutputsJL(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_elements);
+#define boxptr_AbsynToJulia_dumpOutputsJL omc_AbsynToJulia_dumpOutputsJL
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpOutputsJL,2,0) {(void*) boxptr_AbsynToJulia_dumpOutputsJL,0}};
+#define boxvar_AbsynToJulia_dumpOutputsJL MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpOutputsJL)
+
+
+#define boxptr_AbsynToJulia_lm__246 omc_AbsynToJulia_lm__246
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpForIteratorName(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_iterator, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpForIteratorName omc_AbsynToJulia_dumpForIteratorName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpForIteratorName,2,0) {(void*) boxptr_AbsynToJulia_dumpForIteratorName,0}};
+#define boxvar_AbsynToJulia_dumpForIteratorName MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpForIteratorName)
+
+
+#define boxptr_AbsynToJulia_fun__244 omc_AbsynToJulia_fun__244
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpForIteratorRanges(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_iterator, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpForIteratorRanges omc_AbsynToJulia_dumpForIteratorRanges
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpForIteratorRanges,2,0) {(void*) boxptr_AbsynToJulia_dumpForIteratorRanges,0}};
+#define boxvar_AbsynToJulia_dumpForIteratorRanges MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpForIteratorRanges)
+
+
+#define boxptr_AbsynToJulia_fun__242 omc_AbsynToJulia_fun__242
+
+
+#define boxptr_AbsynToJulia_fun__241 omc_AbsynToJulia_fun__241
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpForIterator(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_iterator, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpForIterator omc_AbsynToJulia_dumpForIterator
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpForIterator,2,0) {(void*) boxptr_AbsynToJulia_dumpForIterator,0}};
+#define boxvar_AbsynToJulia_dumpForIterator MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpForIterator)
+
+
+#define boxptr_AbsynToJulia_fun__239 omc_AbsynToJulia_fun__239
+
+
+#define boxptr_AbsynToJulia_fun__238 omc_AbsynToJulia_fun__238
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpForIterators(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_iters, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpForIterators omc_AbsynToJulia_dumpForIterators
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpForIterators,2,0) {(void*) boxptr_AbsynToJulia_dumpForIterators,0}};
+#define boxvar_AbsynToJulia_dumpForIterators MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpForIterators)
+
+
+#define boxptr_AbsynToJulia_lm__236 omc_AbsynToJulia_lm__236
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpNamedArg(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_narg, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpNamedArg omc_AbsynToJulia_dumpNamedArg
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpNamedArg,2,0) {(void*) boxptr_AbsynToJulia_dumpNamedArg,0}};
+#define boxvar_AbsynToJulia_dumpNamedArg MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpNamedArg)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpFunctionArgs(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_args, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpFunctionArgs omc_AbsynToJulia_dumpFunctionArgs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpFunctionArgs,2,0) {(void*) boxptr_AbsynToJulia_dumpFunctionArgs,0}};
+#define boxvar_AbsynToJulia_dumpFunctionArgs MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpFunctionArgs)
+
+
+#define boxptr_AbsynToJulia_fun__233 omc_AbsynToJulia_fun__233
+
+
+#define boxptr_AbsynToJulia_lm__232 omc_AbsynToJulia_lm__232
+
+
+#define boxptr_AbsynToJulia_lm__231 omc_AbsynToJulia_lm__231
+
+
+#define boxptr_AbsynToJulia_lm__230 omc_AbsynToJulia_lm__230
+
+
+#define boxptr_AbsynToJulia_fun__229 omc_AbsynToJulia_fun__229
+
+
+#define boxptr_AbsynToJulia_fun__228 omc_AbsynToJulia_fun__228
+
+
+#define boxptr_AbsynToJulia_lm__227 omc_AbsynToJulia_lm__227
+
+
+#define boxptr_AbsynToJulia_lm__226 omc_AbsynToJulia_lm__226
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpCref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cref, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpCref omc_AbsynToJulia_dumpCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCref,2,0) {(void*) boxptr_AbsynToJulia_dumpCref,0}};
+#define boxvar_AbsynToJulia_dumpCref MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCref)
+
+
+#define boxptr_AbsynToJulia_fun__223 omc_AbsynToJulia_fun__223
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpOperator(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_op);
+#define boxptr_AbsynToJulia_dumpOperator omc_AbsynToJulia_dumpOperator
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpOperator,2,0) {(void*) boxptr_AbsynToJulia_dumpOperator,0}};
+#define boxvar_AbsynToJulia_dumpOperator MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpOperator)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpMatchCase(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_c, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpMatchCase omc_AbsynToJulia_dumpMatchCase
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpMatchCase,2,0) {(void*) boxptr_AbsynToJulia_dumpMatchCase,0}};
+#define boxvar_AbsynToJulia_dumpMatchCase MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpMatchCase)
+
+
+#define boxptr_AbsynToJulia_fun__220 omc_AbsynToJulia_fun__220
+
+
+#define boxptr_AbsynToJulia_fun__219 omc_AbsynToJulia_fun__219
+
+
+#define boxptr_AbsynToJulia_fun__218 omc_AbsynToJulia_fun__218
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpMatchLocals(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_locals);
+#define boxptr_AbsynToJulia_dumpMatchLocals omc_AbsynToJulia_dumpMatchLocals
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpMatchLocals,2,0) {(void*) boxptr_AbsynToJulia_dumpMatchLocals,0}};
+#define boxvar_AbsynToJulia_dumpMatchLocals MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpMatchLocals)
+
+
+#define boxptr_AbsynToJulia_lm__216 omc_AbsynToJulia_lm__216
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpMatchContents(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cp);
+#define boxptr_AbsynToJulia_dumpMatchContents omc_AbsynToJulia_dumpMatchContents
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpMatchContents,2,0) {(void*) boxptr_AbsynToJulia_dumpMatchContents,0}};
+#define boxvar_AbsynToJulia_dumpMatchContents MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpMatchContents)
+
+
+#define boxptr_AbsynToJulia_lm__214 omc_AbsynToJulia_lm__214
+
+
+#define boxptr_AbsynToJulia_lm__213 omc_AbsynToJulia_lm__213
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpMatchType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_match__type);
+#define boxptr_AbsynToJulia_dumpMatchType omc_AbsynToJulia_dumpMatchType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpMatchType,2,0) {(void*) boxptr_AbsynToJulia_dumpMatchType,0}};
+#define boxvar_AbsynToJulia_dumpMatchType MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpMatchType)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpMatchExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_match__exp);
+#define boxptr_AbsynToJulia_dumpMatchExp omc_AbsynToJulia_dumpMatchExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpMatchExp,2,0) {(void*) boxptr_AbsynToJulia_dumpMatchExp,0}};
+#define boxvar_AbsynToJulia_dumpMatchExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpMatchExp)
+
+
+#define boxptr_AbsynToJulia_lm__210 omc_AbsynToJulia_lm__210
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpCodeNode(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_code, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpCodeNode omc_AbsynToJulia_dumpCodeNode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCodeNode,2,0) {(void*) boxptr_AbsynToJulia_dumpCodeNode,0}};
+#define boxvar_AbsynToJulia_dumpCodeNode MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCodeNode)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElseIfExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_else__if, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpElseIfExp omc_AbsynToJulia_dumpElseIfExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElseIfExp,2,0) {(void*) boxptr_AbsynToJulia_dumpElseIfExp,0}};
+#define boxvar_AbsynToJulia_dumpElseIfExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElseIfExp)
+
+
+#define boxptr_AbsynToJulia_lm__207 omc_AbsynToJulia_lm__207
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpIfExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_if__exp, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpIfExp omc_AbsynToJulia_dumpIfExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpIfExp,2,0) {(void*) boxptr_AbsynToJulia_dumpIfExp,0}};
+#define boxvar_AbsynToJulia_dumpIfExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpIfExp)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpOperand(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_operand, modelica_metatype _a_operation, modelica_boolean _a_lhs, modelica_metatype _a_context);
+DLLDirection
+modelica_metatype boxptr_AbsynToJulia_dumpOperand(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_operand, modelica_metatype _a_operation, modelica_metatype _a_lhs, modelica_metatype _a_context);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpOperand,2,0) {(void*) boxptr_AbsynToJulia_dumpOperand,0}};
+#define boxvar_AbsynToJulia_dumpOperand MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpOperand)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpLhsExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_lhs, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpLhsExp omc_AbsynToJulia_dumpLhsExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpLhsExp,2,0) {(void*) boxptr_AbsynToJulia_dumpLhsExp,0}};
+#define boxvar_AbsynToJulia_dumpLhsExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpLhsExp)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpNamedArgPattern3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_narg);
+#define boxptr_AbsynToJulia_dumpNamedArgPattern3 omc_AbsynToJulia_dumpNamedArgPattern3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpNamedArgPattern3,2,0) {(void*) boxptr_AbsynToJulia_dumpNamedArgPattern3,0}};
+#define boxvar_AbsynToJulia_dumpNamedArgPattern3 MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpNamedArgPattern3)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpNamedArgPattern2(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_narg);
+#define boxptr_AbsynToJulia_dumpNamedArgPattern2 omc_AbsynToJulia_dumpNamedArgPattern2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpNamedArgPattern2,2,0) {(void*) boxptr_AbsynToJulia_dumpNamedArgPattern2,0}};
+#define boxvar_AbsynToJulia_dumpNamedArgPattern2 MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpNamedArgPattern2)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpNamedArgPattern(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_narg);
+#define boxptr_AbsynToJulia_dumpNamedArgPattern omc_AbsynToJulia_dumpNamedArgPattern
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpNamedArgPattern,2,0) {(void*) boxptr_AbsynToJulia_dumpNamedArgPattern,0}};
+#define boxvar_AbsynToJulia_dumpNamedArgPattern MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpNamedArgPattern)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpFunctionArgsPattern(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_args);
+#define boxptr_AbsynToJulia_dumpFunctionArgsPattern omc_AbsynToJulia_dumpFunctionArgsPattern
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpFunctionArgsPattern,2,0) {(void*) boxptr_AbsynToJulia_dumpFunctionArgsPattern,0}};
+#define boxvar_AbsynToJulia_dumpFunctionArgsPattern MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpFunctionArgsPattern)
+
+
+#define boxptr_AbsynToJulia_fun__198 omc_AbsynToJulia_fun__198
+
+
+#define boxptr_AbsynToJulia_fun__197 omc_AbsynToJulia_fun__197
+
+
+#define boxptr_AbsynToJulia_lm__196 omc_AbsynToJulia_lm__196
+
+
+#define boxptr_AbsynToJulia_lm__195 omc_AbsynToJulia_lm__195
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpCons(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_headString, modelica_string _a_tailString);
+#define boxptr_AbsynToJulia_dumpCons omc_AbsynToJulia_dumpCons
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCons,2,0) {(void*) boxptr_AbsynToJulia_dumpCons,0}};
+#define boxvar_AbsynToJulia_dumpCons MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCons)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpPattern(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_as__str, modelica_metatype *out_out_a_as__str);
+#define boxptr_AbsynToJulia_dumpPattern omc_AbsynToJulia_dumpPattern
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpPattern,2,0) {(void*) boxptr_AbsynToJulia_dumpPattern,0}};
+#define boxvar_AbsynToJulia_dumpPattern MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpPattern)
+
+
+#define boxptr_AbsynToJulia_lm__192 omc_AbsynToJulia_lm__192
+
+
+#define boxptr_AbsynToJulia_fun__191 omc_AbsynToJulia_fun__191
+
+
+#define boxptr_AbsynToJulia_fun__190 omc_AbsynToJulia_fun__190
+
+
+#define boxptr_AbsynToJulia_fun__189 omc_AbsynToJulia_fun__189
+
+
+#define boxptr_AbsynToJulia_fun__188 omc_AbsynToJulia_fun__188
+
+
+#define boxptr_AbsynToJulia_fun__187 omc_AbsynToJulia_fun__187
+
+
+#define boxptr_AbsynToJulia_lm__186 omc_AbsynToJulia_lm__186
+
+
+#define boxptr_AbsynToJulia_lm__185 omc_AbsynToJulia_lm__185
+
+
+#define boxptr_AbsynToJulia_lm__184 omc_AbsynToJulia_lm__184
+
+
+#define boxptr_AbsynToJulia_lm__183 omc_AbsynToJulia_lm__183
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpExp omc_AbsynToJulia_dumpExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpExp,2,0) {(void*) boxptr_AbsynToJulia_dumpExp,0}};
+#define boxvar_AbsynToJulia_dumpExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpExp)
+
+
+#define boxptr_AbsynToJulia_lm__181 omc_AbsynToJulia_lm__181
+
+
+#define boxptr_AbsynToJulia_fun__180 omc_AbsynToJulia_fun__180
+
+
+#define boxptr_AbsynToJulia_lm__179 omc_AbsynToJulia_lm__179
+
+
+#define boxptr_AbsynToJulia_lm__178 omc_AbsynToJulia_lm__178
+
+
+#define boxptr_AbsynToJulia_lm__177 omc_AbsynToJulia_lm__177
+
+
+#define boxptr_AbsynToJulia_fun__176 omc_AbsynToJulia_fun__176
+
+
+#define boxptr_AbsynToJulia_lm__175 omc_AbsynToJulia_lm__175
+
+
+#define boxptr_AbsynToJulia_fun__174 omc_AbsynToJulia_fun__174
+
+
+#define boxptr_AbsynToJulia_lm__173 omc_AbsynToJulia_lm__173
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpSubscript(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscript, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpSubscript omc_AbsynToJulia_dumpSubscript
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpSubscript,2,0) {(void*) boxptr_AbsynToJulia_dumpSubscript,0}};
+#define boxvar_AbsynToJulia_dumpSubscript MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpSubscript)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpSubscripts(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpSubscripts omc_AbsynToJulia_dumpSubscripts
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpSubscripts,2,0) {(void*) boxptr_AbsynToJulia_dumpSubscripts,0}};
+#define boxvar_AbsynToJulia_dumpSubscripts MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpSubscripts)
+
+
+#define boxptr_AbsynToJulia_lm__170 omc_AbsynToJulia_lm__170
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpArrayDimOpt(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_arraydim, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpArrayDimOpt omc_AbsynToJulia_dumpArrayDimOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpArrayDimOpt,2,0) {(void*) boxptr_AbsynToJulia_dumpArrayDimOpt,0}};
+#define boxvar_AbsynToJulia_dumpArrayDimOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpArrayDimOpt)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpSubscriptsTypeSpec(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_subscripts, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpSubscriptsTypeSpec omc_AbsynToJulia_dumpSubscriptsTypeSpec
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpSubscriptsTypeSpec,2,0) {(void*) boxptr_AbsynToJulia_dumpSubscriptsTypeSpec,0}};
+#define boxvar_AbsynToJulia_dumpSubscriptsTypeSpec MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpSubscriptsTypeSpec)
+
+
+#define boxptr_AbsynToJulia_fun__167 omc_AbsynToJulia_fun__167
+
+
+#define boxptr_AbsynToJulia_lm__166 omc_AbsynToJulia_lm__166
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpArrayDimOptTypeSpec(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_arraydim, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpArrayDimOptTypeSpec omc_AbsynToJulia_dumpArrayDimOptTypeSpec
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpArrayDimOptTypeSpec,2,0) {(void*) boxptr_AbsynToJulia_dumpArrayDimOptTypeSpec,0}};
+#define boxvar_AbsynToJulia_dumpArrayDimOptTypeSpec MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpArrayDimOptTypeSpec)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpTypeSpec(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_typeSpec, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpTypeSpec omc_AbsynToJulia_dumpTypeSpec
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpTypeSpec,2,0) {(void*) boxptr_AbsynToJulia_dumpTypeSpec,0}};
+#define boxvar_AbsynToJulia_dumpTypeSpec MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpTypeSpec)
+
+
+#define boxptr_AbsynToJulia_fun__163 omc_AbsynToJulia_fun__163
+
+
+#define boxptr_AbsynToJulia_fun__162 omc_AbsynToJulia_fun__162
+
+
+#define boxptr_AbsynToJulia_fun__161 omc_AbsynToJulia_fun__161
+
+
+#define boxptr_AbsynToJulia_fun__160 omc_AbsynToJulia_fun__160
+
+
+#define boxptr_AbsynToJulia_lm__159 omc_AbsynToJulia_lm__159
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpTypeSpecOpt(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_typespecOpt, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpTypeSpecOpt omc_AbsynToJulia_dumpTypeSpecOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpTypeSpecOpt,2,0) {(void*) boxptr_AbsynToJulia_dumpTypeSpecOpt,0}};
+#define boxvar_AbsynToJulia_dumpTypeSpecOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpTypeSpecOpt)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpPathNoQual(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
+#define boxptr_AbsynToJulia_dumpPathNoQual omc_AbsynToJulia_dumpPathNoQual
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpPathNoQual,2,0) {(void*) boxptr_AbsynToJulia_dumpPathNoQual,0}};
+#define boxvar_AbsynToJulia_dumpPathNoQual MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpPathNoQual)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpPathJL(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
+#define boxptr_AbsynToJulia_dumpPathJL omc_AbsynToJulia_dumpPathJL
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpPathJL,2,0) {(void*) boxptr_AbsynToJulia_dumpPathJL,0}};
+#define boxvar_AbsynToJulia_dumpPathJL MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpPathJL)
+
+
+#define boxptr_AbsynToJulia_fun__155 omc_AbsynToJulia_fun__155
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpAlgorithmBranch(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cond, modelica_metatype _a_body, modelica_string _a_header, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpAlgorithmBranch omc_AbsynToJulia_dumpAlgorithmBranch
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAlgorithmBranch,2,0) {(void*) boxptr_AbsynToJulia_dumpAlgorithmBranch,0}};
+#define boxvar_AbsynToJulia_dumpAlgorithmBranch MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAlgorithmBranch)
+
+
+#define boxptr_AbsynToJulia_lm__152 omc_AbsynToJulia_lm__152
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpAlgReturnString(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpAlgReturnString omc_AbsynToJulia_dumpAlgReturnString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAlgReturnString,2,0) {(void*) boxptr_AbsynToJulia_dumpAlgReturnString,0}};
+#define boxvar_AbsynToJulia_dumpAlgReturnString MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAlgReturnString)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpAlgorithm(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_alg, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpAlgorithm omc_AbsynToJulia_dumpAlgorithm
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAlgorithm,2,0) {(void*) boxptr_AbsynToJulia_dumpAlgorithm,0}};
+#define boxvar_AbsynToJulia_dumpAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAlgorithm)
+
+
+#define boxptr_AbsynToJulia_fun__149 omc_AbsynToJulia_fun__149
+
+
+#define boxptr_AbsynToJulia_fun__148 omc_AbsynToJulia_fun__148
+
+
+#define boxptr_AbsynToJulia_lm__147 omc_AbsynToJulia_lm__147
+
+
+#define boxptr_AbsynToJulia_fun__145 omc_AbsynToJulia_fun__145
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpAlgorithmItem(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_alg, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpAlgorithmItem omc_AbsynToJulia_dumpAlgorithmItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAlgorithmItem,2,0) {(void*) boxptr_AbsynToJulia_dumpAlgorithmItem,0}};
+#define boxvar_AbsynToJulia_dumpAlgorithmItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAlgorithmItem)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpAlgorithmItems(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_algs, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpAlgorithmItems omc_AbsynToJulia_dumpAlgorithmItems
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAlgorithmItems,2,0) {(void*) boxptr_AbsynToJulia_dumpAlgorithmItems,0}};
+#define boxvar_AbsynToJulia_dumpAlgorithmItems MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAlgorithmItems)
+
+
+#define boxptr_AbsynToJulia_lm__142 omc_AbsynToJulia_lm__142
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpEquation(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_eq);
+#define boxptr_AbsynToJulia_dumpEquation omc_AbsynToJulia_dumpEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpEquation,2,0) {(void*) boxptr_AbsynToJulia_dumpEquation,0}};
+#define boxvar_AbsynToJulia_dumpEquation MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpEquation)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpGroupImport(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_gimp);
+#define boxptr_AbsynToJulia_dumpGroupImport omc_AbsynToJulia_dumpGroupImport
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpGroupImport,2,0) {(void*) boxptr_AbsynToJulia_dumpGroupImport,0}};
+#define boxvar_AbsynToJulia_dumpGroupImport MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpGroupImport)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpImport(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_imp);
+#define boxptr_AbsynToJulia_dumpImport omc_AbsynToJulia_dumpImport
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpImport,2,0) {(void*) boxptr_AbsynToJulia_dumpImport,0}};
+#define boxvar_AbsynToJulia_dumpImport MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpImport)
+
+
+#define boxptr_AbsynToJulia_lm__138 omc_AbsynToJulia_lm__138
+
+
+#define boxptr_AbsynToJulia_fun__137 omc_AbsynToJulia_fun__137
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpComponentCondition(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cond, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpComponentCondition omc_AbsynToJulia_dumpComponentCondition
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComponentCondition,2,0) {(void*) boxptr_AbsynToJulia_dumpComponentCondition,0}};
+#define boxvar_AbsynToJulia_dumpComponentCondition MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComponentCondition)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpComponent(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_comp, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpComponent omc_AbsynToJulia_dumpComponent
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComponent,2,0) {(void*) boxptr_AbsynToJulia_dumpComponent,0}};
+#define boxvar_AbsynToJulia_dumpComponent MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComponent)
+
+
+#define boxptr_AbsynToJulia_fun__134 omc_AbsynToJulia_fun__134
+
+
+#define boxptr_AbsynToJulia_fun__133 omc_AbsynToJulia_fun__133
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpComponentItemWithoutCondString(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_comp, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpComponentItemWithoutCondString omc_AbsynToJulia_dumpComponentItemWithoutCondString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComponentItemWithoutCondString,2,0) {(void*) boxptr_AbsynToJulia_dumpComponentItemWithoutCondString,0}};
+#define boxvar_AbsynToJulia_dumpComponentItemWithoutCondString MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComponentItemWithoutCondString)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpComponentItem(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_comp, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpComponentItem omc_AbsynToJulia_dumpComponentItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComponentItem,2,0) {(void*) boxptr_AbsynToJulia_dumpComponentItem,0}};
+#define boxvar_AbsynToJulia_dumpComponentItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComponentItem)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpComponentItems(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_componentItems, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpComponentItems omc_AbsynToJulia_dumpComponentItems
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComponentItems,2,0) {(void*) boxptr_AbsynToJulia_dumpComponentItems,0}};
+#define boxvar_AbsynToJulia_dumpComponentItems MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComponentItems)
+
+
+#define boxptr_AbsynToJulia_lm__129 omc_AbsynToJulia_lm__129
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpConstrainClass(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cc, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpConstrainClass omc_AbsynToJulia_dumpConstrainClass
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpConstrainClass,2,0) {(void*) boxptr_AbsynToJulia_dumpConstrainClass,0}};
+#define boxvar_AbsynToJulia_dumpConstrainClass MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpConstrainClass)
+
+
+#define boxptr_AbsynToJulia_fun__127 omc_AbsynToJulia_fun__127
+
+
+#define boxptr_AbsynToJulia_lm__126 omc_AbsynToJulia_lm__126
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpVariability(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
+#define boxptr_AbsynToJulia_dumpVariability omc_AbsynToJulia_dumpVariability
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpVariability,2,0) {(void*) boxptr_AbsynToJulia_dumpVariability,0}};
+#define boxvar_AbsynToJulia_dumpVariability MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpVariability)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElementAttr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_attr);
+#define boxptr_AbsynToJulia_dumpElementAttr omc_AbsynToJulia_dumpElementAttr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementAttr,2,0) {(void*) boxptr_AbsynToJulia_dumpElementAttr,0}};
+#define boxvar_AbsynToJulia_dumpElementAttr MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementAttr)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElementSpecForComponents(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_specification, modelica_metatype _a_options, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpElementSpecForComponents omc_AbsynToJulia_dumpElementSpecForComponents
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementSpecForComponents,2,0) {(void*) boxptr_AbsynToJulia_dumpElementSpecForComponents,0}};
+#define boxvar_AbsynToJulia_dumpElementSpecForComponents MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementSpecForComponents)
+
+
+#define boxptr_AbsynToJulia_fun__122 omc_AbsynToJulia_fun__122
+
+
+#define boxptr_AbsynToJulia_lm__121 omc_AbsynToJulia_lm__121
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElementSpec(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_specification, modelica_metatype _in_a_options, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpElementSpec omc_AbsynToJulia_dumpElementSpec
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementSpec,2,0) {(void*) boxptr_AbsynToJulia_dumpElementSpec,0}};
+#define boxvar_AbsynToJulia_dumpElementSpec MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementSpec)
+
+
+#define boxptr_AbsynToJulia_fun__119 omc_AbsynToJulia_fun__119
+
+
+#define boxptr_AbsynToJulia_fun__118 omc_AbsynToJulia_fun__118
+
+
+#define boxptr_AbsynToJulia_fun__117 omc_AbsynToJulia_fun__117
+
+
+#define boxptr_AbsynToJulia_lm__115 omc_AbsynToJulia_lm__115
+
+
+#define boxptr_AbsynToJulia_fun__114 omc_AbsynToJulia_fun__114
+
+
+#define boxptr_AbsynToJulia_lm__112 omc_AbsynToJulia_lm__112
+
+
+#define boxptr_AbsynToJulia_fun__111 omc_AbsynToJulia_fun__111
+
+
+#define boxptr_AbsynToJulia_lm__110 omc_AbsynToJulia_lm__110
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpEqMod(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eqmod, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpEqMod omc_AbsynToJulia_dumpEqMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpEqMod,2,0) {(void*) boxptr_AbsynToJulia_dumpEqMod,0}};
+#define boxvar_AbsynToJulia_dumpEqMod MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpEqMod)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpModification(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_mod, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpModification omc_AbsynToJulia_dumpModification
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpModification,2,0) {(void*) boxptr_AbsynToJulia_dumpModification,0}};
+#define boxvar_AbsynToJulia_dumpModification MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpModification)
+
+
+#define boxptr_AbsynToJulia_fun__107 omc_AbsynToJulia_fun__107
+
+
+#define boxptr_AbsynToJulia_lm__106 omc_AbsynToJulia_lm__106
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpReplaceable(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_repl);
+#define boxptr_AbsynToJulia_dumpReplaceable omc_AbsynToJulia_dumpReplaceable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpReplaceable,2,0) {(void*) boxptr_AbsynToJulia_dumpReplaceable,0}};
+#define boxvar_AbsynToJulia_dumpReplaceable MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpReplaceable)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpRedeclare(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_redecl);
+#define boxptr_AbsynToJulia_dumpRedeclare omc_AbsynToJulia_dumpRedeclare
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpRedeclare,2,0) {(void*) boxptr_AbsynToJulia_dumpRedeclare,0}};
+#define boxvar_AbsynToJulia_dumpRedeclare MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpRedeclare)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpFinal(threadData_t *threadData, modelica_metatype _in_txt, modelica_boolean _in_a_final);
+DLLDirection
+modelica_metatype boxptr_AbsynToJulia_dumpFinal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_final);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpFinal,2,0) {(void*) boxptr_AbsynToJulia_dumpFinal,0}};
+#define boxvar_AbsynToJulia_dumpFinal MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpFinal)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpEach(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_each);
+#define boxptr_AbsynToJulia_dumpEach omc_AbsynToJulia_dumpEach
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpEach,2,0) {(void*) boxptr_AbsynToJulia_dumpEach,0}};
+#define boxvar_AbsynToJulia_dumpEach MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpEach)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElementArg(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_earg, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpElementArg omc_AbsynToJulia_dumpElementArg
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementArg,2,0) {(void*) boxptr_AbsynToJulia_dumpElementArg,0}};
+#define boxvar_AbsynToJulia_dumpElementArg MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementArg)
+
+
+#define boxptr_AbsynToJulia_fun__100 omc_AbsynToJulia_fun__100
+
+
+#define boxptr_AbsynToJulia_fun__99 omc_AbsynToJulia_fun__99
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpCommentStr(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_comment);
+#define boxptr_AbsynToJulia_dumpCommentStr omc_AbsynToJulia_dumpCommentStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCommentStr,2,0) {(void*) boxptr_AbsynToJulia_dumpCommentStr,0}};
+#define boxvar_AbsynToJulia_dumpCommentStr MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCommentStr)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpCommentStrOpt(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_comment);
+#define boxptr_AbsynToJulia_dumpCommentStrOpt omc_AbsynToJulia_dumpCommentStrOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCommentStrOpt,2,0) {(void*) boxptr_AbsynToJulia_dumpCommentStrOpt,0}};
+#define boxvar_AbsynToJulia_dumpCommentStrOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCommentStrOpt)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpCommentOpt(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ocmt, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpCommentOpt omc_AbsynToJulia_dumpCommentOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCommentOpt,2,0) {(void*) boxptr_AbsynToJulia_dumpCommentOpt,0}};
+#define boxvar_AbsynToJulia_dumpCommentOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpCommentOpt)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpComment(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cmt, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpComment omc_AbsynToJulia_dumpComment
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComment,2,0) {(void*) boxptr_AbsynToJulia_dumpComment,0}};
+#define boxvar_AbsynToJulia_dumpComment MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpComment)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpAnnotationOptSpace(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_oann, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpAnnotationOptSpace omc_AbsynToJulia_dumpAnnotationOptSpace
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAnnotationOptSpace,2,0) {(void*) boxptr_AbsynToJulia_dumpAnnotationOptSpace,0}};
+#define boxvar_AbsynToJulia_dumpAnnotationOptSpace MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAnnotationOptSpace)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpAnnotationOpt(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_oann, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpAnnotationOpt omc_AbsynToJulia_dumpAnnotationOpt
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAnnotationOpt,2,0) {(void*) boxptr_AbsynToJulia_dumpAnnotationOpt,0}};
+#define boxvar_AbsynToJulia_dumpAnnotationOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAnnotationOpt)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpAnnotation(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ann, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpAnnotation omc_AbsynToJulia_dumpAnnotation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAnnotation,2,0) {(void*) boxptr_AbsynToJulia_dumpAnnotation,0}};
+#define boxvar_AbsynToJulia_dumpAnnotation MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpAnnotation)
+
+
+#define boxptr_AbsynToJulia_lm__91 omc_AbsynToJulia_lm__91
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpInfo(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_info);
+#define boxptr_AbsynToJulia_dumpInfo omc_AbsynToJulia_dumpInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpInfo,2,0) {(void*) boxptr_AbsynToJulia_dumpInfo,0}};
+#define boxvar_AbsynToJulia_dumpInfo MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpInfo)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElement(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_elem, modelica_metatype _in_a_options, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpElement omc_AbsynToJulia_dumpElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElement,2,0) {(void*) boxptr_AbsynToJulia_dumpElement,0}};
+#define boxvar_AbsynToJulia_dumpElement MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElement)
+
+
+#define boxptr_AbsynToJulia_fun__86 omc_AbsynToJulia_fun__86
+
+
+#define boxptr_AbsynToJulia_fun__84 omc_AbsynToJulia_fun__84
+
+
+#define boxptr_AbsynToJulia_fun__83 omc_AbsynToJulia_fun__83
+
+
+#define boxptr_AbsynToJulia_fun__82 omc_AbsynToJulia_fun__82
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElementItemRaw(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_eitem, modelica_metatype _a_options, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpElementItemRaw omc_AbsynToJulia_dumpElementItemRaw
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementItemRaw,2,0) {(void*) boxptr_AbsynToJulia_dumpElementItemRaw,0}};
+#define boxvar_AbsynToJulia_dumpElementItemRaw MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementItemRaw)
+
+
+#define boxptr_AbsynToJulia_fun__80 omc_AbsynToJulia_fun__80
+
+
+#define boxptr_AbsynToJulia_fun__79 omc_AbsynToJulia_fun__79
+
+
+#define boxptr_AbsynToJulia_fun__78 omc_AbsynToJulia_fun__78
+
+
+#define boxptr_AbsynToJulia_lm__77 omc_AbsynToJulia_lm__77
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElementItem(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eitem, modelica_metatype _in_a_options, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpElementItem omc_AbsynToJulia_dumpElementItem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementItem,2,0) {(void*) boxptr_AbsynToJulia_dumpElementItem,0}};
+#define boxvar_AbsynToJulia_dumpElementItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementItem)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpClassDefSpacing(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cdef);
+#define boxptr_AbsynToJulia_dumpClassDefSpacing omc_AbsynToJulia_dumpClassDefSpacing
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassDefSpacing,2,0) {(void*) boxptr_AbsynToJulia_dumpClassDefSpacing,0}};
+#define boxvar_AbsynToJulia_dumpClassDefSpacing MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassDefSpacing)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElementItemSpacing(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_item);
+#define boxptr_AbsynToJulia_dumpElementItemSpacing omc_AbsynToJulia_dumpElementItemSpacing
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementItemSpacing,2,0) {(void*) boxptr_AbsynToJulia_dumpElementItemSpacing,0}};
+#define boxvar_AbsynToJulia_dumpElementItemSpacing MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementItemSpacing)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElementItemPreSpacing(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_curSpacing, modelica_string _a_prevSpacing);
+#define boxptr_AbsynToJulia_dumpElementItemPreSpacing omc_AbsynToJulia_dumpElementItemPreSpacing
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementItemPreSpacing,2,0) {(void*) boxptr_AbsynToJulia_dumpElementItemPreSpacing,0}};
+#define boxvar_AbsynToJulia_dumpElementItemPreSpacing MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementItemPreSpacing)
+
+
+#define boxptr_AbsynToJulia_fun__72 omc_AbsynToJulia_fun__72
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpElementItems(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_items, modelica_metatype _in_a_context, modelica_string _in_a_prevSpacing, modelica_boolean _in_a_first, modelica_metatype _in_a_options);
+DLLDirection
+modelica_metatype boxptr_AbsynToJulia_dumpElementItems(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_items, modelica_metatype _in_a_context, modelica_metatype _in_a_prevSpacing, modelica_metatype _in_a_first, modelica_metatype _in_a_options);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementItems,2,0) {(void*) boxptr_AbsynToJulia_dumpElementItems,0}};
+#define boxvar_AbsynToJulia_dumpElementItems MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpElementItems)
+
+
+#define boxptr_AbsynToJulia_fun__70 omc_AbsynToJulia_fun__70
+
+
+#define boxptr_AbsynToJulia_fun__69 omc_AbsynToJulia_fun__69
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpClassPart(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_class__part, modelica_integer _a_idx, modelica_metatype _a_context, modelica_metatype _a_options);
+DLLDirection
+modelica_metatype boxptr_AbsynToJulia_dumpClassPart(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_class__part, modelica_metatype _a_idx, modelica_metatype _a_context, modelica_metatype _a_options);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassPart,2,0) {(void*) boxptr_AbsynToJulia_dumpClassPart,0}};
+#define boxvar_AbsynToJulia_dumpClassPart MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassPart)
+
+
+#define boxptr_AbsynToJulia_fun__66 omc_AbsynToJulia_fun__66
+
+
+#define boxptr_AbsynToJulia_fun__65 omc_AbsynToJulia_fun__65
+
+
+#define boxptr_AbsynToJulia_fun__64 omc_AbsynToJulia_fun__64
+
+
+#define boxptr_AbsynToJulia_lm__63 omc_AbsynToJulia_lm__63
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpClassType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_restriction);
+#define boxptr_AbsynToJulia_dumpClassType omc_AbsynToJulia_dumpClassType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassType,2,0) {(void*) boxptr_AbsynToJulia_dumpClassType,0}};
+#define boxvar_AbsynToJulia_dumpClassType MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassType)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpClassDef(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cdef, modelica_metatype _in_a_context, modelica_metatype _in_a_options);
+#define boxptr_AbsynToJulia_dumpClassDef omc_AbsynToJulia_dumpClassDef
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassDef,2,0) {(void*) boxptr_AbsynToJulia_dumpClassDef,0}};
+#define boxvar_AbsynToJulia_dumpClassDef MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassDef)
+
+
+#define boxptr_AbsynToJulia_lm__59 omc_AbsynToJulia_lm__59
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpReturnStrJL(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_outputs, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpReturnStrJL omc_AbsynToJulia_dumpReturnStrJL
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpReturnStrJL,2,0) {(void*) boxptr_AbsynToJulia_dumpReturnStrJL,0}};
+#define boxvar_AbsynToJulia_dumpReturnStrJL MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpReturnStrJL)
+
+
+#define boxptr_AbsynToJulia_fun__57 omc_AbsynToJulia_fun__57
+
+
+#define boxptr_AbsynToJulia_lm__56 omc_AbsynToJulia_lm__56
+
+
+#define boxptr_AbsynToJulia_lm__55 omc_AbsynToJulia_lm__55
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpReturnTypeJL(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_outputs);
+#define boxptr_AbsynToJulia_dumpReturnTypeJL omc_AbsynToJulia_dumpReturnTypeJL
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpReturnTypeJL,2,0) {(void*) boxptr_AbsynToJulia_dumpReturnTypeJL,0}};
+#define boxvar_AbsynToJulia_dumpReturnTypeJL MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpReturnTypeJL)
+
+
+#define boxptr_AbsynToJulia_fun__53 omc_AbsynToJulia_fun__53
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpInputsJL(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_inputs, modelica_metatype _a_context);
+#define boxptr_AbsynToJulia_dumpInputsJL omc_AbsynToJulia_dumpInputsJL
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpInputsJL,2,0) {(void*) boxptr_AbsynToJulia_dumpInputsJL,0}};
+#define boxvar_AbsynToJulia_dumpInputsJL MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpInputsJL)
+
+
+#define boxptr_AbsynToJulia_lm__51 omc_AbsynToJulia_lm__51
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpClassFooter(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_classDef, modelica_string _a_cdefStr, modelica_string _a_name, modelica_string _a_cmt, modelica_string _a_ann);
+#define boxptr_AbsynToJulia_dumpClassFooter omc_AbsynToJulia_dumpClassFooter
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassFooter,2,0) {(void*) boxptr_AbsynToJulia_dumpClassFooter,0}};
+#define boxvar_AbsynToJulia_dumpClassFooter MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassFooter)
+
+
+#define boxptr_AbsynToJulia_fun__49 omc_AbsynToJulia_fun__49
+
+
+#define boxptr_AbsynToJulia_fun__48 omc_AbsynToJulia_fun__48
+
+
+#define boxptr_AbsynToJulia_fun__47 omc_AbsynToJulia_fun__47
+
+
+#define boxptr_AbsynToJulia_fun__46 omc_AbsynToJulia_fun__46
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpClassTypeTypeVars(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_restriction, modelica_metatype _in_a_typeVars);
+#define boxptr_AbsynToJulia_dumpClassTypeTypeVars omc_AbsynToJulia_dumpClassTypeTypeVars
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassTypeTypeVars,2,0) {(void*) boxptr_AbsynToJulia_dumpClassTypeTypeVars,0}};
+#define boxvar_AbsynToJulia_dumpClassTypeTypeVars MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassTypeTypeVars)
+
+
+#define boxptr_AbsynToJulia_fun__44 omc_AbsynToJulia_fun__44
+
+
+#define boxptr_AbsynToJulia_lm__43 omc_AbsynToJulia_lm__43
+
+
+#define boxptr_AbsynToJulia_fun__42 omc_AbsynToJulia_fun__42
+
+
+#define boxptr_AbsynToJulia_lm__41 omc_AbsynToJulia_lm__41
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpClassTypeSuperType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_r);
+#define boxptr_AbsynToJulia_dumpClassTypeSuperType omc_AbsynToJulia_dumpClassTypeSuperType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassTypeSuperType,2,0) {(void*) boxptr_AbsynToJulia_dumpClassTypeSuperType,0}};
+#define boxvar_AbsynToJulia_dumpClassTypeSuperType MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassTypeSuperType)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpClassHeader(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_classDef, modelica_metatype _in_a_restriction);
+#define boxptr_AbsynToJulia_dumpClassHeader omc_AbsynToJulia_dumpClassHeader
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassHeader,2,0) {(void*) boxptr_AbsynToJulia_dumpClassHeader,0}};
+#define boxvar_AbsynToJulia_dumpClassHeader MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassHeader)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpClassElement(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_class, modelica_metatype _in_a_options, modelica_metatype _in_a_context);
+#define boxptr_AbsynToJulia_dumpClassElement omc_AbsynToJulia_dumpClassElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassElement,2,0) {(void*) boxptr_AbsynToJulia_dumpClassElement,0}};
+#define boxvar_AbsynToJulia_dumpClassElement MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClassElement)
+
+
+#define boxptr_AbsynToJulia_lm__37 omc_AbsynToJulia_lm__37
+
+
+#define boxptr_AbsynToJulia_lm__36 omc_AbsynToJulia_lm__36
+
+
+#define boxptr_AbsynToJulia_fun__35 omc_AbsynToJulia_fun__35
+
+
+#define boxptr_AbsynToJulia_fun__34 omc_AbsynToJulia_fun__34
+
+
+#define boxptr_AbsynToJulia_fun__33 omc_AbsynToJulia_fun__33
+
+
+#define boxptr_AbsynToJulia_fun__32 omc_AbsynToJulia_fun__32
+
+
+#define boxptr_AbsynToJulia_fun__29 omc_AbsynToJulia_fun__29
+
+
+#define boxptr_AbsynToJulia_fun__28 omc_AbsynToJulia_fun__28
+
+
+#define boxptr_AbsynToJulia_lm__27 omc_AbsynToJulia_lm__27
+
+
+#define boxptr_AbsynToJulia_lm__26 omc_AbsynToJulia_lm__26
+
+
+#define boxptr_AbsynToJulia_lm__25 omc_AbsynToJulia_lm__25
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpClass(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cls, modelica_metatype _a_options);
+#define boxptr_AbsynToJulia_dumpClass omc_AbsynToJulia_dumpClass
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClass,2,0) {(void*) boxptr_AbsynToJulia_dumpClass,0}};
+#define boxvar_AbsynToJulia_dumpClass MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpClass)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpSCodeElements2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_elements);
+#define boxptr_AbsynToJulia_dumpSCodeElements2 omc_AbsynToJulia_dumpSCodeElements2
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpSCodeElements2,2,0) {(void*) boxptr_AbsynToJulia_dumpSCodeElements2,0}};
+#define boxvar_AbsynToJulia_dumpSCodeElements2 MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpSCodeElements2)
+
+
+#define boxptr_AbsynToJulia_fun__22 omc_AbsynToJulia_fun__22
+
+
+#define boxptr_AbsynToJulia_lm__21 omc_AbsynToJulia_lm__21
+
+
+#define boxptr_AbsynToJulia_fun__20 omc_AbsynToJulia_fun__20
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpSCodeElements(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_elements);
+#define boxptr_AbsynToJulia_dumpSCodeElements omc_AbsynToJulia_dumpSCodeElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpSCodeElements,2,0) {(void*) boxptr_AbsynToJulia_dumpSCodeElements,0}};
+#define boxvar_AbsynToJulia_dumpSCodeElements MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpSCodeElements)
+
+
+DLLDirection
+modelica_metatype omc_AbsynToJulia_dumpProgram(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_program);
+#define boxptr_AbsynToJulia_dumpProgram omc_AbsynToJulia_dumpProgram
+static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpProgram,2,0) {(void*) boxptr_AbsynToJulia_dumpProgram,0}};
+#define boxvar_AbsynToJulia_dumpProgram MMC_REFSTRUCTLIT(boxvar_lit_AbsynToJulia_dumpProgram)
+
+
+#define boxptr_AbsynToJulia_lm__17 omc_AbsynToJulia_lm__17
+
+#ifdef __cplusplus
+}
+#endif
+#endif

@@ -1,0 +1,162 @@
+#ifndef NFSCodeFlattenImports__H
+#define NFSCodeFlattenImports__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description Absyn_ComponentRef_CREF__QUAL__desc;
+
+extern struct record_description Absyn_Exp_CALL__desc;
+
+extern struct record_description Absyn_Exp_CREF__desc;
+
+extern struct record_description Absyn_Exp_PARTEVALFUNCTION__desc;
+
+extern struct record_description Absyn_ForIterator_ITERATOR__desc;
+
+extern struct record_description Absyn_FunctionArgs_FOR__ITER__FARG__desc;
+
+extern struct record_description Absyn_Subscript_SUBSCRIPT__desc;
+
+extern struct record_description Absyn_TypeSpec_TCOMPLEX__desc;
+
+extern struct record_description Absyn_TypeSpec_TPATH__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SCode_AlgorithmSection_ALGORITHM__desc;
+
+extern struct record_description SCode_Attributes_ATTR__desc;
+
+extern struct record_description SCode_ClassDef_CLASS__EXTENDS__desc;
+
+extern struct record_description SCode_ClassDef_DERIVED__desc;
+
+extern struct record_description SCode_ClassDef_PARTS__desc;
+
+extern struct record_description SCode_ConstraintSection_CONSTRAINTS__desc;
+
+extern struct record_description SCode_Element_CLASS__desc;
+
+extern struct record_description SCode_Element_COMPONENT__desc;
+
+extern struct record_description SCode_Element_EXTENDS__desc;
+
+extern struct record_description SCode_Equation_EQ__REINIT__desc;
+
+extern struct record_description SCode_Mod_MOD__desc;
+
+extern struct record_description SCode_Mod_REDECL__desc;
+
+extern struct record_description SCode_SubMod_NAMEMOD__desc;
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeFlattenImports_flattenComponentRefSubs(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inEnv, modelica_metatype _inInfo);
+#define boxptr_NFSCodeFlattenImports_flattenComponentRefSubs omc_NFSCodeFlattenImports_flattenComponentRefSubs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenComponentRefSubs,2,0) {(void*) boxptr_NFSCodeFlattenImports_flattenComponentRefSubs,0}};
+#define boxvar_NFSCodeFlattenImports_flattenComponentRefSubs MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenComponentRefSubs)
+
+
+#define boxptr_NFSCodeFlattenImports_flattenExpTraverserExit omc_NFSCodeFlattenImports_flattenExpTraverserExit
+
+
+#define boxptr_NFSCodeFlattenImports_flattenExpTraverserEnter omc_NFSCodeFlattenImports_flattenExpTraverserEnter
+
+
+#define boxptr_NFSCodeFlattenImports_flattenOptExp omc_NFSCodeFlattenImports_flattenOptExp
+
+
+#define boxptr_NFSCodeFlattenImports_flattenExp omc_NFSCodeFlattenImports_flattenExp
+
+
+#define boxptr_NFSCodeFlattenImports_flattenSubscript omc_NFSCodeFlattenImports_flattenSubscript
+
+
+#define boxptr_NFSCodeFlattenImports_flattenRedeclare omc_NFSCodeFlattenImports_flattenRedeclare
+
+
+#define boxptr_NFSCodeFlattenImports_flattenSubMod omc_NFSCodeFlattenImports_flattenSubMod
+
+
+#define boxptr_NFSCodeFlattenImports_flattenModOptExp omc_NFSCodeFlattenImports_flattenModOptExp
+
+
+#define boxptr_NFSCodeFlattenImports_flattenModifier omc_NFSCodeFlattenImports_flattenModifier
+
+
+#define boxptr_NFSCodeFlattenImports_flattenStatementTraverser omc_NFSCodeFlattenImports_flattenStatementTraverser
+
+
+#define boxptr_NFSCodeFlattenImports_flattenStatement omc_NFSCodeFlattenImports_flattenStatement
+
+
+#define boxptr_NFSCodeFlattenImports_flattenAlgorithm omc_NFSCodeFlattenImports_flattenAlgorithm
+
+
+#define boxptr_NFSCodeFlattenImports_flattenConstraints omc_NFSCodeFlattenImports_flattenConstraints
+
+
+#define boxptr_NFSCodeFlattenImports_traverseExp omc_NFSCodeFlattenImports_traverseExp
+
+
+#define boxptr_NFSCodeFlattenImports_flattenEquationTraverser omc_NFSCodeFlattenImports_flattenEquationTraverser
+
+
+#define boxptr_NFSCodeFlattenImports_flattenEquation omc_NFSCodeFlattenImports_flattenEquation
+
+
+#define boxptr_NFSCodeFlattenImports_flattenExtends omc_NFSCodeFlattenImports_flattenExtends
+
+
+#define boxptr_NFSCodeFlattenImports_flattenTypeSpec omc_NFSCodeFlattenImports_flattenTypeSpec
+
+
+#define boxptr_NFSCodeFlattenImports_flattenAttributes omc_NFSCodeFlattenImports_flattenAttributes
+
+
+#define boxptr_NFSCodeFlattenImports_flattenComponent omc_NFSCodeFlattenImports_flattenComponent
+
+
+#define boxptr_NFSCodeFlattenImports_flattenElement omc_NFSCodeFlattenImports_flattenElement
+
+
+#define boxptr_NFSCodeFlattenImports_flattenDerivedClassDef omc_NFSCodeFlattenImports_flattenDerivedClassDef
+
+
+#define boxptr_NFSCodeFlattenImports_flattenClassDef omc_NFSCodeFlattenImports_flattenClassDef
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeFlattenImports_flattenClass(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inEnv, modelica_metatype *out_outEnv);
+#define boxptr_NFSCodeFlattenImports_flattenClass omc_NFSCodeFlattenImports_flattenClass
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenClass,2,0) {(void*) boxptr_NFSCodeFlattenImports_flattenClass,0}};
+#define boxvar_NFSCodeFlattenImports_flattenClass MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenClass)
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeFlattenImports_flattenProgram(threadData_t *threadData, modelica_metatype _inProgram, modelica_metatype _inEnv, modelica_metatype *out_outEnv);
+#define boxptr_NFSCodeFlattenImports_flattenProgram omc_NFSCodeFlattenImports_flattenProgram
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenProgram,2,0) {(void*) boxptr_NFSCodeFlattenImports_flattenProgram,0}};
+#define boxvar_NFSCodeFlattenImports_flattenProgram MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenProgram)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

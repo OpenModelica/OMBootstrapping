@@ -5,14 +5,189 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-DLLExport
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_Type_T__BOOL__desc;
+
+extern struct record_description DAE_Type_T__INTEGER__desc;
+
+extern struct record_description DAE_Type_T__METALIST__desc;
+
+extern struct record_description DAE_Type_T__METAOPTION__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_Type_T__STRING__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description DAEToMid_State_STATE__desc;
+
+extern struct record_description MidCode_BinaryOp_ADD__desc;
+
+extern struct record_description MidCode_BinaryOp_DIV__desc;
+
+extern struct record_description MidCode_BinaryOp_EQUAL__desc;
+
+extern struct record_description MidCode_BinaryOp_GREATER__desc;
+
+extern struct record_description MidCode_BinaryOp_GREATEREQ__desc;
+
+extern struct record_description MidCode_BinaryOp_LESS__desc;
+
+extern struct record_description MidCode_BinaryOp_LESSEQ__desc;
+
+extern struct record_description MidCode_BinaryOp_MUL__desc;
+
+extern struct record_description MidCode_BinaryOp_NEQUAL__desc;
+
+extern struct record_description MidCode_BinaryOp_POW__desc;
+
+extern struct record_description MidCode_BinaryOp_SUB__desc;
+
+extern struct record_description MidCode_Block_BLOCK__desc;
+
+extern struct record_description MidCode_Function_FUNCTION__desc;
+
+extern struct record_description MidCode_OutVar_OUT__VAR__desc;
+
+extern struct record_description MidCode_OutVar_OUT__WILD__desc;
+
+extern struct record_description MidCode_RValue_BINARYOP__desc;
+
+extern struct record_description MidCode_RValue_ISCONS__desc;
+
+extern struct record_description MidCode_RValue_ISSOME__desc;
+
+extern struct record_description MidCode_RValue_LITERALBOOLEAN__desc;
+
+extern struct record_description MidCode_RValue_LITERALINTEGER__desc;
+
+extern struct record_description MidCode_RValue_LITERALMETATYPE__desc;
+
+extern struct record_description MidCode_RValue_LITERALREAL__desc;
+
+extern struct record_description MidCode_RValue_LITERALSTRING__desc;
+
+extern struct record_description MidCode_RValue_METAFIELD__desc;
+
+extern struct record_description MidCode_RValue_UNARYOP__desc;
+
+extern struct record_description MidCode_RValue_UNIONTYPEVARIANT__desc;
+
+extern struct record_description MidCode_RValue_VARIABLE__desc;
+
+extern struct record_description MidCode_Stmt_ASSIGN__desc;
+
+extern struct record_description MidCode_Terminator_ASSERT__desc;
+
+extern struct record_description MidCode_Terminator_BRANCH__desc;
+
+extern struct record_description MidCode_Terminator_CALL__desc;
+
+extern struct record_description MidCode_Terminator_GOTO__desc;
+
+extern struct record_description MidCode_Terminator_LONGJMP__desc;
+
+extern struct record_description MidCode_Terminator_POPJMP__desc;
+
+extern struct record_description MidCode_Terminator_PUSHJMP__desc;
+
+extern struct record_description MidCode_Terminator_RETURN__desc;
+
+extern struct record_description MidCode_Terminator_SWITCH__desc;
+
+extern struct record_description MidCode_Terminator_TERMINATE__desc;
+
+extern struct record_description MidCode_UnaryOp_BOX__desc;
+
+extern struct record_description MidCode_UnaryOp_MOVE__desc;
+
+extern struct record_description MidCode_UnaryOp_NOT__desc;
+
+extern struct record_description MidCode_UnaryOp_UMINUS__desc;
+
+extern struct record_description MidCode_UnaryOp_UNBOX__desc;
+
+extern struct record_description MidCode_Var_VAR__desc;
+
+extern struct record_description MidCode_VarBuf_VARBUF__desc;
+
+extern struct record_description MidCode_VarBufPtr_VARBUFPTR__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_DAEToMid_MatchExpressionToMid omc_DAEToMid_MatchExpressionToMid
+
+
+#define boxptr_DAEToMid_unpackCrefFromExp omc_DAEToMid_unpackCrefFromExp
+
+
+#define boxptr_DAEToMid_stateAddStmt omc_DAEToMid_stateAddStmt
+
+
+#define boxptr_DAEToMid_IfToMid omc_DAEToMid_IfToMid
+
+
+#define boxptr_DAEToMid_ForToMid omc_DAEToMid_ForToMid
+
+
+#define boxptr_DAEToMid_CallToMid omc_DAEToMid_CallToMid
+
+
+#define boxptr_DAEToMid_ExpToMid omc_DAEToMid_ExpToMid
+
+
+#define boxptr_DAEToMid_StmtsToMid omc_DAEToMid_StmtsToMid
+
+
+#define boxptr_DAEToMid_DAEFunctionToMid omc_DAEToMid_DAEFunctionToMid
+
+
+#define boxptr_DAEToMid_RValueToVar omc_DAEToMid_RValueToVar
+
+
+#define boxptr_DAEToMid_RValueType omc_DAEToMid_RValueType
+
+
+#define boxptr_DAEToMid_CrefToMidVar omc_DAEToMid_CrefToMidVar
+
+
+#define boxptr_DAEToMid_GetCrefIndexVar omc_DAEToMid_GetCrefIndexVar
+
+
+#define boxptr_DAEToMid_ConvertSimCodeVars omc_DAEToMid_ConvertSimCodeVars
+
+
+#define boxptr_DAEToMid_GenTmpVarBufPtr omc_DAEToMid_GenTmpVarBufPtr
+
+
+#define boxptr_DAEToMid_GenTmpVarBuf omc_DAEToMid_GenTmpVarBuf
+
+
+#define boxptr_DAEToMid_GenTmpVarVolatile omc_DAEToMid_GenTmpVarVolatile
+
+
+#define boxptr_DAEToMid_GenTmpVar omc_DAEToMid_GenTmpVar
+
+
+#define boxptr_DAEToMid_listZip omc_DAEToMid_listZip
+
+
+DLLDirection
 modelica_metatype omc_DAEToMid_DAEFunctionsToMid(threadData_t *threadData, modelica_metatype _simfuncs);
 #define boxptr_DAEToMid_DAEFunctionsToMid omc_DAEToMid_DAEFunctionsToMid
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEToMid_DAEFunctionsToMid,2,0) {(void*) boxptr_DAEToMid_DAEFunctionsToMid,0}};
 #define boxvar_DAEToMid_DAEFunctionsToMid MMC_REFSTRUCTLIT(boxvar_lit_DAEToMid_DAEFunctionsToMid)
+
 #ifdef __cplusplus
 }
 #endif

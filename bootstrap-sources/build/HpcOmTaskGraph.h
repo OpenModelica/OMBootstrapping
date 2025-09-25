@@ -1,0 +1,742 @@
+#ifndef HpcOmTaskGraph__H
+#define HpcOmTaskGraph__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description BackendDAE_CompInfo_NO__COMP__desc;
+
+extern struct record_description BackendDAE_IndexType_NORMAL__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description GraphML_ArrowType_ARROWNONE__desc;
+
+extern struct record_description GraphML_ArrowType_ARROWSTANDART__desc;
+
+extern struct record_description GraphML_AttributeTarget_TARGET__EDGE__desc;
+
+extern struct record_description GraphML_AttributeTarget_TARGET__GRAPH__desc;
+
+extern struct record_description GraphML_AttributeTarget_TARGET__NODE__desc;
+
+extern struct record_description GraphML_AttributeType_TYPE__BOOLEAN__desc;
+
+extern struct record_description GraphML_AttributeType_TYPE__DOUBLE__desc;
+
+extern struct record_description GraphML_AttributeType_TYPE__INTEGER__desc;
+
+extern struct record_description GraphML_AttributeType_TYPE__STRING__desc;
+
+extern struct record_description GraphML_EdgeLabel_EDGELABEL__desc;
+
+extern struct record_description GraphML_FontStyle_FONTBOLD__desc;
+
+extern struct record_description GraphML_FontStyle_FONTPLAIN__desc;
+
+extern struct record_description GraphML_LineType_LINE__desc;
+
+extern struct record_description GraphML_NodeLabel_NODELABEL__CORNER__desc;
+
+extern struct record_description GraphML_NodeLabel_NODELABEL__INTERNAL__desc;
+
+extern struct record_description GraphML_ShapeType_RECTANGLE__desc;
+
+extern struct record_description HpcOmTaskGraph_Communication_COMMUNICATION__desc;
+
+extern struct record_description HpcOmTaskGraph_ComponentInfo_COMPONENTINFO__desc;
+
+extern struct record_description HpcOmTaskGraph_GraphDumpOptions_GRAPHDUMPOPTIONS__desc;
+
+extern struct record_description HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc;
+
+extern struct record_description SimCode_PartitionData_PARTITIONDATA__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_HpcOmTaskGraph_dumpSccSimEqMapping1 omc_HpcOmTaskGraph_dumpSccSimEqMapping1
+
+
+#define boxptr_HpcOmTaskGraph_dumpSccSimEqMapping omc_HpcOmTaskGraph_dumpSccSimEqMapping
+
+
+#define boxptr_HpcOmTaskGraph_dumpSimEqSCCMapping omc_HpcOmTaskGraph_dumpSimEqSCCMapping
+
+
+#define boxptr_HpcOmTaskGraph_getSimCodeEqsByTaskList0 omc_HpcOmTaskGraph_getSimCodeEqsByTaskList0
+
+
+#define boxptr_HpcOmTaskGraph_getSimCodeEqsByTaskList omc_HpcOmTaskGraph_getSimCodeEqsByTaskList
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByIndex(threadData_t *threadData, modelica_metatype _iEqs, modelica_integer _iIdx);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_getSimCodeEqByIndex(threadData_t *threadData, modelica_metatype _iEqs, modelica_metatype _iIdx);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getSimCodeEqByIndex,2,0) {(void*) boxptr_HpcOmTaskGraph_getSimCodeEqByIndex,0}};
+#define boxvar_HpcOmTaskGraph_getSimCodeEqByIndex MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getSimCodeEqByIndex)
+
+
+#define boxptr_HpcOmTaskGraph_getSimEqIdxSimEqMapping1 omc_HpcOmTaskGraph_getSimEqIdxSimEqMapping1
+
+
+#define boxptr_HpcOmTaskGraph_convertToSimeqCompMapping1 omc_HpcOmTaskGraph_convertToSimeqCompMapping1
+
+
+#define boxptr_HpcOmTaskGraph_convertToSccSimEqMapping1 omc_HpcOmTaskGraph_convertToSccSimEqMapping1
+
+
+#define boxptr_HpcOmTaskGraph_removeDummyStateFromMapping1 omc_HpcOmTaskGraph_removeDummyStateFromMapping1
+
+
+#define boxptr_HpcOmTaskGraph_removeDummyStateFromMapping omc_HpcOmTaskGraph_removeDummyStateFromMapping
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_setUpHpcOmMapping(threadData_t *threadData, modelica_metatype _daeIn, modelica_metatype _simCodeIn, modelica_integer _lastEqMappingIdx, modelica_metatype _equationSccMappingIn, modelica_metatype *out_sccSimEqMapping, modelica_metatype *out_daeSccSimEqMapping);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_setUpHpcOmMapping(threadData_t *threadData, modelica_metatype _daeIn, modelica_metatype _simCodeIn, modelica_metatype _lastEqMappingIdx, modelica_metatype _equationSccMappingIn, modelica_metatype *out_sccSimEqMapping, modelica_metatype *out_daeSccSimEqMapping);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_setUpHpcOmMapping,2,0) {(void*) boxptr_HpcOmTaskGraph_setUpHpcOmMapping,0}};
+#define boxvar_HpcOmTaskGraph_setUpHpcOmMapping MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_setUpHpcOmMapping)
+
+
+#define boxptr_HpcOmTaskGraph_dumpPartitionData omc_HpcOmTaskGraph_dumpPartitionData
+
+
+#define boxptr_HpcOmTaskGraph_dumpStateAssign omc_HpcOmTaskGraph_dumpStateAssign
+
+
+#define boxptr_HpcOmTaskGraph_multirate__assignTasksToStates omc_HpcOmTaskGraph_multirate__assignTasksToStates
+
+
+#define boxptr_HpcOmTaskGraph_multirate__getPartitionPredecessors omc_HpcOmTaskGraph_multirate__getPartitionPredecessors
+
+
+#define boxptr_HpcOmTaskGraph_multirate__dispatchLeaveNodes omc_HpcOmTaskGraph_multirate__dispatchLeaveNodes
+
+
+#define boxptr_HpcOmTaskGraph_multirate__getPartitions omc_HpcOmTaskGraph_multirate__getPartitions
+
+
+#define boxptr_HpcOmTaskGraph_getSimEqsIdxLstForSCCIdxLst omc_HpcOmTaskGraph_getSimEqsIdxLstForSCCIdxLst
+
+
+#define boxptr_HpcOmTaskGraph_multirate__orderStateTasksInSimVarStateOrder omc_HpcOmTaskGraph_multirate__orderStateTasksInSimVarStateOrder
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_multirate__partitioning(threadData_t *threadData, modelica_metatype _odeGraph, modelica_metatype _odeGraphData, modelica_metatype _backendDAE, modelica_metatype _simCode, modelica_metatype _sccSimEqMapping);
+#define boxptr_HpcOmTaskGraph_multirate__partitioning omc_HpcOmTaskGraph_multirate__partitioning
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_multirate__partitioning,2,0) {(void*) boxptr_HpcOmTaskGraph_multirate__partitioning,0}};
+#define boxvar_HpcOmTaskGraph_multirate__partitioning MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_multirate__partitioning)
+
+
+#define boxptr_HpcOmTaskGraph_getNodeForCref omc_HpcOmTaskGraph_getNodeForCref
+
+
+#define boxptr_HpcOmTaskGraph_getNodeForCrefLst omc_HpcOmTaskGraph_getNodeForCrefLst
+
+
+#define boxptr_HpcOmTaskGraph_printNodeVars1 omc_HpcOmTaskGraph_printNodeVars1
+
+
+#define boxptr_HpcOmTaskGraph_printNodeVars omc_HpcOmTaskGraph_printNodeVars
+
+
+#define boxptr_HpcOmTaskGraph_estimateEquationCosts omc_HpcOmTaskGraph_estimateEquationCosts
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_appendRemovedEquations(threadData_t *threadData, modelica_metatype _dae, modelica_metatype _graphIn, modelica_metatype _graphDataIn, modelica_metatype *out_graphDataOut);
+#define boxptr_HpcOmTaskGraph_appendRemovedEquations omc_HpcOmTaskGraph_appendRemovedEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_appendRemovedEquations,2,0) {(void*) boxptr_HpcOmTaskGraph_appendRemovedEquations,0}};
+#define boxvar_HpcOmTaskGraph_appendRemovedEquations MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_appendRemovedEquations)
+
+
+#define boxptr_HpcOmTaskGraph_setAnnotationsForTasks1 omc_HpcOmTaskGraph_setAnnotationsForTasks1
+
+
+#define boxptr_HpcOmTaskGraph_setAnnotationsForTasks omc_HpcOmTaskGraph_setAnnotationsForTasks
+
+
+DLLDirection
+modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_real _inReal, modelica_integer _nIn);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_metatype _inReal, modelica_metatype _nIn);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_roundReal,2,0) {(void*) boxptr_HpcOmTaskGraph_roundReal,0}};
+#define boxvar_HpcOmTaskGraph_roundReal MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_roundReal)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getAllSCCsOfGraph(threadData_t *threadData, modelica_metatype _iTaskGraphMeta);
+#define boxptr_HpcOmTaskGraph_getAllSCCsOfGraph omc_HpcOmTaskGraph_getAllSCCsOfGraph
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getAllSCCsOfGraph,2,0) {(void*) boxptr_HpcOmTaskGraph_getAllSCCsOfGraph,0}};
+#define boxvar_HpcOmTaskGraph_getAllSCCsOfGraph MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getAllSCCsOfGraph)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_sumUpExeCosts(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iMeta);
+#define boxptr_HpcOmTaskGraph_sumUpExeCosts omc_HpcOmTaskGraph_sumUpExeCosts
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_sumUpExeCosts,2,0) {(void*) boxptr_HpcOmTaskGraph_sumUpExeCosts,0}};
+#define boxvar_HpcOmTaskGraph_sumUpExeCosts MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_sumUpExeCosts)
+
+
+#define boxptr_HpcOmTaskGraph_getHighestCommCost omc_HpcOmTaskGraph_getHighestCommCost
+
+
+DLLDirection
+modelica_real omc_HpcOmTaskGraph_getCommCostTimeBetweenNodes(threadData_t *threadData, modelica_integer _iParentNodeIdx, modelica_integer _iChildNodeIdx, modelica_metatype _iTaskGraphMeta);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_getCommCostTimeBetweenNodes(threadData_t *threadData, modelica_metatype _iParentNodeIdx, modelica_metatype _iChildNodeIdx, modelica_metatype _iTaskGraphMeta);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getCommCostTimeBetweenNodes,2,0) {(void*) boxptr_HpcOmTaskGraph_getCommCostTimeBetweenNodes,0}};
+#define boxvar_HpcOmTaskGraph_getCommCostTimeBetweenNodes MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getCommCostTimeBetweenNodes)
+
+
+#define boxptr_HpcOmTaskGraph_transposeCommCosts0 omc_HpcOmTaskGraph_transposeCommCosts0
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_transposeCommCosts(threadData_t *threadData, modelica_metatype _iCommCosts);
+#define boxptr_HpcOmTaskGraph_transposeCommCosts omc_HpcOmTaskGraph_transposeCommCosts
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_transposeCommCosts,2,0) {(void*) boxptr_HpcOmTaskGraph_transposeCommCosts,0}};
+#define boxvar_HpcOmTaskGraph_transposeCommCosts MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_transposeCommCosts)
+
+
+#define boxptr_HpcOmTaskGraph_tupleToStringIntRealInt omc_HpcOmTaskGraph_tupleToStringIntRealInt
+
+
+#define boxptr_HpcOmTaskGraph_getNodeCoords omc_HpcOmTaskGraph_getNodeCoords
+
+
+DLLDirection
+modelica_real omc_HpcOmTaskGraph_getCostsForContractedNodes(threadData_t *threadData, modelica_metatype _nodeList, modelica_metatype _exeCosts);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_getCostsForContractedNodes(threadData_t *threadData, modelica_metatype _nodeList, modelica_metatype _exeCosts);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getCostsForContractedNodes,2,0) {(void*) boxptr_HpcOmTaskGraph_getCostsForContractedNodes,0}};
+#define boxvar_HpcOmTaskGraph_getCostsForContractedNodes MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getCostsForContractedNodes)
+
+
+#define boxptr_HpcOmTaskGraph_gatherParallelSets omc_HpcOmTaskGraph_gatherParallelSets
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphDataIn, modelica_metatype *out_criticalPathOutWoC);
+#define boxptr_HpcOmTaskGraph_getCriticalPaths omc_HpcOmTaskGraph_getCriticalPaths
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getCriticalPaths,2,0) {(void*) boxptr_HpcOmTaskGraph_getCriticalPaths,0}};
+#define boxvar_HpcOmTaskGraph_getCriticalPaths MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getCriticalPaths)
+
+
+#define boxptr_HpcOmTaskGraph_getGraphComponents0 omc_HpcOmTaskGraph_getGraphComponents0
+
+
+#define boxptr_HpcOmTaskGraph_getGraphComponents omc_HpcOmTaskGraph_getGraphComponents
+
+
+#define boxptr_HpcOmTaskGraph_checkForDuplicates0 omc_HpcOmTaskGraph_checkForDuplicates0
+
+
+#define boxptr_HpcOmTaskGraph_validateTaskGraphMeta0 omc_HpcOmTaskGraph_validateTaskGraphMeta0
+
+
+DLLDirection
+modelica_boolean omc_HpcOmTaskGraph_validateTaskGraphMeta(threadData_t *threadData, modelica_metatype _iMeta, modelica_metatype _iDae);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_validateTaskGraphMeta(threadData_t *threadData, modelica_metatype _iMeta, modelica_metatype _iDae);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_validateTaskGraphMeta,2,0) {(void*) boxptr_HpcOmTaskGraph_validateTaskGraphMeta,0}};
+#define boxvar_HpcOmTaskGraph_validateTaskGraphMeta MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_validateTaskGraphMeta)
+
+
+#define boxptr_HpcOmTaskGraph_createCommCosts0 omc_HpcOmTaskGraph_createCommCosts0
+
+
+#define boxptr_HpcOmTaskGraph_createCosts1 omc_HpcOmTaskGraph_createCosts1
+
+
+#define boxptr_HpcOmTaskGraph_createCosts0 omc_HpcOmTaskGraph_createCosts0
+
+
+#define boxptr_HpcOmTaskGraph_convertSimEqToSccCosts1 omc_HpcOmTaskGraph_convertSimEqToSccCosts1
+
+
+#define boxptr_HpcOmTaskGraph_convertSimEqToSccCosts omc_HpcOmTaskGraph_convertSimEqToSccCosts
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_convertNodeListToEdgeTuples(threadData_t *threadData, modelica_metatype _iNodeList);
+#define boxptr_HpcOmTaskGraph_convertNodeListToEdgeTuples omc_HpcOmTaskGraph_convertNodeListToEdgeTuples
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_convertNodeListToEdgeTuples,2,0) {(void*) boxptr_HpcOmTaskGraph_convertNodeListToEdgeTuples,0}};
+#define boxvar_HpcOmTaskGraph_convertNodeListToEdgeTuples MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_convertNodeListToEdgeTuples)
+
+
+#define boxptr_HpcOmTaskGraph_getCommCostsOnly omc_HpcOmTaskGraph_getCommCostsOnly
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_copyCosts(threadData_t *threadData, modelica_metatype _iSourceTaskGraphData, modelica_metatype _iTargetTaskGraphData);
+#define boxptr_HpcOmTaskGraph_copyCosts omc_HpcOmTaskGraph_copyCosts
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_copyCosts,2,0) {(void*) boxptr_HpcOmTaskGraph_copyCosts,0}};
+#define boxvar_HpcOmTaskGraph_copyCosts MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_copyCosts)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, modelica_metatype _compInfo);
+#define boxptr_HpcOmTaskGraph_calculateCosts omc_HpcOmTaskGraph_calculateCosts
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_calculateCosts,2,0) {(void*) boxptr_HpcOmTaskGraph_calculateCosts,0}};
+#define boxvar_HpcOmTaskGraph_calculateCosts MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_calculateCosts)
+
+
+#define boxptr_HpcOmTaskGraph_estimateCosts omc_HpcOmTaskGraph_estimateCosts
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_createCosts(threadData_t *threadData, modelica_metatype _iDae, modelica_string _iBenchFilePrefix, modelica_metatype _iSimEqCompMapping, modelica_metatype _iTaskGraphMeta);
+#define boxptr_HpcOmTaskGraph_createCosts omc_HpcOmTaskGraph_createCosts
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_createCosts,2,0) {(void*) boxptr_HpcOmTaskGraph_createCosts,0}};
+#define boxvar_HpcOmTaskGraph_createCosts MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_createCosts)
+
+
+DLLDirection
+modelica_boolean omc_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelica_metatype _inList1, modelica_metatype _inList2);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelica_metatype _inList1, modelica_metatype _inList2);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_equalLists,2,0) {(void*) boxptr_HpcOmTaskGraph_equalLists,0}};
+#define boxvar_HpcOmTaskGraph_equalLists MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_equalLists)
+
+
+#define boxptr_HpcOmTaskGraph_updateInCompsForMerging omc_HpcOmTaskGraph_updateInCompsForMerging
+
+
+#define boxptr_HpcOmTaskGraph_getMergedSystemData omc_HpcOmTaskGraph_getMergedSystemData
+
+
+#define boxptr_HpcOmTaskGraph_contractNodesInGraph1 omc_HpcOmTaskGraph_contractNodesInGraph1
+
+
+DLLDirection
+modelica_boolean omc_HpcOmTaskGraph_isNodeContracted(threadData_t *threadData, modelica_integer _iNode, modelica_metatype _iContrNodes);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_isNodeContracted(threadData_t *threadData, modelica_metatype _iNode, modelica_metatype _iContrNodes);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_isNodeContracted,2,0) {(void*) boxptr_HpcOmTaskGraph_isNodeContracted,0}};
+#define boxvar_HpcOmTaskGraph_isNodeContracted MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_isNodeContracted)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_filterNonContractedNodes(threadData_t *threadData, modelica_metatype _nodesIn, modelica_metatype _contrNodes);
+#define boxptr_HpcOmTaskGraph_filterNonContractedNodes omc_HpcOmTaskGraph_filterNonContractedNodes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_filterNonContractedNodes,2,0) {(void*) boxptr_HpcOmTaskGraph_filterNonContractedNodes,0}};
+#define boxvar_HpcOmTaskGraph_filterNonContractedNodes MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_filterNonContractedNodes)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_filterContractedNodes(threadData_t *threadData, modelica_metatype _nodesIn, modelica_metatype _contrNodes);
+#define boxptr_HpcOmTaskGraph_filterContractedNodes omc_HpcOmTaskGraph_filterContractedNodes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_filterContractedNodes,2,0) {(void*) boxptr_HpcOmTaskGraph_filterContractedNodes,0}};
+#define boxvar_HpcOmTaskGraph_filterContractedNodes MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_filterContractedNodes)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_setInCompsInMeta(threadData_t *threadData, modelica_metatype _inComps, modelica_metatype _metaIn);
+#define boxptr_HpcOmTaskGraph_setInCompsInMeta omc_HpcOmTaskGraph_setInCompsInMeta
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_setInCompsInMeta,2,0) {(void*) boxptr_HpcOmTaskGraph_setInCompsInMeta,0}};
+#define boxvar_HpcOmTaskGraph_setInCompsInMeta MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_setInCompsInMeta)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadData, modelica_metatype _iContractNodes, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphT, modelica_metatype _iTaskGraphMeta, modelica_metatype _iContractedTasks, modelica_metatype *out_oTaskGraphT, modelica_metatype *out_oTaskGraphMeta, modelica_metatype *out_oContractedTasks);
+#define boxptr_HpcOmTaskGraph_contractNodesInGraph omc_HpcOmTaskGraph_contractNodesInGraph
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_contractNodesInGraph,2,0) {(void*) boxptr_HpcOmTaskGraph_contractNodesInGraph,0}};
+#define boxvar_HpcOmTaskGraph_contractNodesInGraph MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_contractNodesInGraph)
+
+
+#define boxptr_HpcOmTaskGraph_getHighestExecCost omc_HpcOmTaskGraph_getHighestExecCost
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getExeCost(threadData_t *threadData, modelica_integer _iNodeIdx, modelica_metatype _iGraphData);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_getExeCost(threadData_t *threadData, modelica_metatype _iNodeIdx, modelica_metatype _iGraphData);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getExeCost,2,0) {(void*) boxptr_HpcOmTaskGraph_getExeCost,0}};
+#define boxvar_HpcOmTaskGraph_getExeCost MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getExeCost)
+
+
+DLLDirection
+modelica_real omc_HpcOmTaskGraph_getExeCostReqCycles(threadData_t *threadData, modelica_integer _iNodeIdx, modelica_metatype _iGraphData);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_getExeCostReqCycles(threadData_t *threadData, modelica_metatype _iNodeIdx, modelica_metatype _iGraphData);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getExeCostReqCycles,2,0) {(void*) boxptr_HpcOmTaskGraph_getExeCostReqCycles,0}};
+#define boxvar_HpcOmTaskGraph_getExeCostReqCycles MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getExeCostReqCycles)
+
+
+#define boxptr_HpcOmTaskGraph_addUpExeCosts omc_HpcOmTaskGraph_addUpExeCosts
+
+
+#define boxptr_HpcOmTaskGraph_combineComponentInformations omc_HpcOmTaskGraph_combineComponentInformations
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_markSystemComponents(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iComponentMarks, modelica_metatype _iTargetTaskGraphMeta);
+#define boxptr_HpcOmTaskGraph_markSystemComponents omc_HpcOmTaskGraph_markSystemComponents
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_markSystemComponents,2,0) {(void*) boxptr_HpcOmTaskGraph_markSystemComponents,0}};
+#define boxvar_HpcOmTaskGraph_markSystemComponents MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_markSystemComponents)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphTIn, modelica_metatype _graphDataIn, modelica_metatype _contractedTasksIn, modelica_metatype *out_graphTOut, modelica_metatype *out_graphDataOut, modelica_metatype *out_contractedTasksOut, modelica_boolean *out_changed);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_mergeParentNodes(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphTIn, modelica_metatype _graphDataIn, modelica_metatype _contractedTasksIn, modelica_metatype *out_graphTOut, modelica_metatype *out_graphDataOut, modelica_metatype *out_contractedTasksOut, modelica_metatype *out_changed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_mergeParentNodes,2,0) {(void*) boxptr_HpcOmTaskGraph_mergeParentNodes,0}};
+#define boxvar_HpcOmTaskGraph_mergeParentNodes MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_mergeParentNodes)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_mergeSimpleNodes(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphTIn, modelica_metatype _graphDataIn, modelica_metatype _contractedTasksIn, modelica_metatype *out_graphTOut, modelica_metatype *out_graphDataOut, modelica_metatype *out_contractedTasksOut, modelica_boolean *out_changed);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_mergeSimpleNodes(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphTIn, modelica_metatype _graphDataIn, modelica_metatype _contractedTasksIn, modelica_metatype *out_graphTOut, modelica_metatype *out_graphDataOut, modelica_metatype *out_contractedTasksOut, modelica_metatype *out_changed);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_mergeSimpleNodes,2,0) {(void*) boxptr_HpcOmTaskGraph_mergeSimpleNodes,0}};
+#define boxvar_HpcOmTaskGraph_mergeSimpleNodes MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_mergeSimpleNodes)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_distributeToClusters(threadData_t *threadData, modelica_metatype _items, modelica_metatype _values, modelica_integer _numClusters, modelica_metatype *out_clusterValuesOut);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_distributeToClusters(threadData_t *threadData, modelica_metatype _items, modelica_metatype _values, modelica_metatype _numClusters, modelica_metatype *out_clusterValuesOut);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_distributeToClusters,2,0) {(void*) boxptr_HpcOmTaskGraph_distributeToClusters,0}};
+#define boxvar_HpcOmTaskGraph_distributeToClusters MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_distributeToClusters)
+
+
+DLLDirection
+modelica_string omc_HpcOmTaskGraph_dumpCriticalPathInfo(threadData_t *threadData, modelica_metatype _iCriticalPaths, modelica_metatype _iCriticalPathsWoC);
+#define boxptr_HpcOmTaskGraph_dumpCriticalPathInfo omc_HpcOmTaskGraph_dumpCriticalPathInfo
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_dumpCriticalPathInfo,2,0) {(void*) boxptr_HpcOmTaskGraph_dumpCriticalPathInfo,0}};
+#define boxvar_HpcOmTaskGraph_dumpCriticalPathInfo MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_dumpCriticalPathInfo)
+
+
+DLLDirection
+modelica_string omc_HpcOmTaskGraph_intLstString(threadData_t *threadData, modelica_metatype _lstIn);
+#define boxptr_HpcOmTaskGraph_intLstString omc_HpcOmTaskGraph_intLstString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_intLstString,2,0) {(void*) boxptr_HpcOmTaskGraph_intLstString,0}};
+#define boxvar_HpcOmTaskGraph_intLstString MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_intLstString)
+
+
+#define boxptr_HpcOmTaskGraph_printComponentInformations omc_HpcOmTaskGraph_printComponentInformations
+
+
+#define boxptr_HpcOmTaskGraph_printNodeMarks omc_HpcOmTaskGraph_printNodeMarks
+
+
+#define boxptr_HpcOmTaskGraph_printCommCost omc_HpcOmTaskGraph_printCommCost
+
+
+#define boxptr_HpcOmTaskGraph_printCommCosts omc_HpcOmTaskGraph_printCommCosts
+
+
+#define boxptr_HpcOmTaskGraph_printExeCosts omc_HpcOmTaskGraph_printExeCosts
+
+
+#define boxptr_HpcOmTaskGraph_printCompDescs omc_HpcOmTaskGraph_printCompDescs
+
+
+#define boxptr_HpcOmTaskGraph_printComponentNames omc_HpcOmTaskGraph_printComponentNames
+
+
+#define boxptr_HpcOmTaskGraph_printCompParamMapping omc_HpcOmTaskGraph_printCompParamMapping
+
+
+#define boxptr_HpcOmTaskGraph_printEqCompMapping omc_HpcOmTaskGraph_printEqCompMapping
+
+
+#define boxptr_HpcOmTaskGraph_printVarCompMapping omc_HpcOmTaskGraph_printVarCompMapping
+
+
+#define boxptr_HpcOmTaskGraph_printInComps omc_HpcOmTaskGraph_printInComps
+
+
+DLLDirection
+void omc_HpcOmTaskGraph_printTaskGraphMeta(threadData_t *threadData, modelica_metatype _metaDataIn);
+#define boxptr_HpcOmTaskGraph_printTaskGraphMeta omc_HpcOmTaskGraph_printTaskGraphMeta
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_printTaskGraphMeta,2,0) {(void*) boxptr_HpcOmTaskGraph_printTaskGraphMeta,0}};
+#define boxvar_HpcOmTaskGraph_printTaskGraphMeta MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_printTaskGraphMeta)
+
+
+#define boxptr_HpcOmTaskGraph_dumpAdjacencyRow omc_HpcOmTaskGraph_dumpAdjacencyRow
+
+
+DLLDirection
+void omc_HpcOmTaskGraph_printTaskGraph(threadData_t *threadData, modelica_metatype _graphIn);
+#define boxptr_HpcOmTaskGraph_printTaskGraph omc_HpcOmTaskGraph_printTaskGraph
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_printTaskGraph,2,0) {(void*) boxptr_HpcOmTaskGraph_printTaskGraph,0}};
+#define boxvar_HpcOmTaskGraph_printTaskGraph MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_printTaskGraph)
+
+
+#define boxptr_HpcOmTaskGraph_getNodeMembershipByComponents omc_HpcOmTaskGraph_getNodeMembershipByComponents
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_string _iCriticalPathInfo, modelica_metatype _iCriticalPath, modelica_metatype _iCriticalPathWoC, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSchedulerInfo, modelica_metatype _iAnnotationInfo, modelica_integer _iGraphIdx, modelica_metatype _iGraphDumpOptions, modelica_metatype _iGraphInfo);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_metatype _iCriticalPathInfo, modelica_metatype _iCriticalPath, modelica_metatype _iCriticalPathWoC, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSchedulerInfo, modelica_metatype _iAnnotationInfo, modelica_metatype _iGraphIdx, modelica_metatype _iGraphDumpOptions, modelica_metatype _iGraphInfo);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph,2,0) {(void*) boxptr_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph,0}};
+#define boxvar_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_convertToGraphMLSccLevel(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_string _iCriticalPathInfo, modelica_metatype _iCriticalPath, modelica_metatype _iCriticalPathWoC, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSchedulerInfo, modelica_metatype _iGraphDumpOptions);
+#define boxptr_HpcOmTaskGraph_convertToGraphMLSccLevel omc_HpcOmTaskGraph_convertToGraphMLSccLevel
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_convertToGraphMLSccLevel,2,0) {(void*) boxptr_HpcOmTaskGraph_convertToGraphMLSccLevel,0}};
+#define boxvar_HpcOmTaskGraph_convertToGraphMLSccLevel MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_convertToGraphMLSccLevel)
+
+
+DLLDirection
+void omc_HpcOmTaskGraph_dumpAsGraphMLSccLevel(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_string _iFileName, modelica_string _iCriticalPathInfo, modelica_metatype _iCriticalPath, modelica_metatype _iCriticalPathWoC, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSchedulerInfo, modelica_metatype _iGraphDumpOptions);
+#define boxptr_HpcOmTaskGraph_dumpAsGraphMLSccLevel omc_HpcOmTaskGraph_dumpAsGraphMLSccLevel
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_dumpAsGraphMLSccLevel,2,0) {(void*) boxptr_HpcOmTaskGraph_dumpAsGraphMLSccLevel,0}};
+#define boxvar_HpcOmTaskGraph_dumpAsGraphMLSccLevel MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_dumpAsGraphMLSccLevel)
+
+
+DLLDirection
+void omc_HpcOmTaskGraph_dumpTaskGraph(threadData_t *threadData, modelica_metatype _dae, modelica_string _fileName);
+#define boxptr_HpcOmTaskGraph_dumpTaskGraph omc_HpcOmTaskGraph_dumpTaskGraph
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_dumpTaskGraph,2,0) {(void*) boxptr_HpcOmTaskGraph_dumpTaskGraph,0}};
+#define boxvar_HpcOmTaskGraph_dumpTaskGraph MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_dumpTaskGraph)
+
+
+#define boxptr_HpcOmTaskGraph_getDiscreteNodesEqs omc_HpcOmTaskGraph_getDiscreteNodesEqs
+
+
+#define boxptr_HpcOmTaskGraph_getDiscreteNodes omc_HpcOmTaskGraph_getDiscreteNodes
+
+
+#define boxptr_HpcOmTaskGraph_getComponentsIncludingTime0 omc_HpcOmTaskGraph_getComponentsIncludingTime0
+
+
+#define boxptr_HpcOmTaskGraph_getComponentsIncludingTime omc_HpcOmTaskGraph_getComponentsIncludingTime
+
+
+#define boxptr_HpcOmTaskGraph_getComponentsOfZeroCrossing omc_HpcOmTaskGraph_getComponentsOfZeroCrossing
+
+
+#define boxptr_HpcOmTaskGraph_getEventSystem omc_HpcOmTaskGraph_getEventSystem
+
+
+#define boxptr_HpcOmTaskGraph_mapIntegers omc_HpcOmTaskGraph_mapIntegers
+
+
+#define boxptr_HpcOmTaskGraph_reverseTaskGraphIndices omc_HpcOmTaskGraph_reverseTaskGraphIndices
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iBackendDAE, modelica_integer _iNumberOfSccs, modelica_metatype _iZeroCrossingEquationIdc, modelica_metatype _iSimCodeEqCompMapping, modelica_metatype *out_oTaskGraphMeta);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iBackendDAE, modelica_metatype _iNumberOfSccs, modelica_metatype _iZeroCrossingEquationIdc, modelica_metatype _iSimCodeEqCompMapping, modelica_metatype *out_oTaskGraphMeta);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getZeroFuncsSystem,2,0) {(void*) boxptr_HpcOmTaskGraph_getZeroFuncsSystem,0}};
+#define boxvar_HpcOmTaskGraph_getZeroFuncsSystem MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getZeroFuncsSystem)
+
+
+#define boxptr_HpcOmTaskGraph_getNodesWithRefCountZero omc_HpcOmTaskGraph_getNodesWithRefCountZero
+
+
+#define boxptr_HpcOmTaskGraph_createRefCounter0 omc_HpcOmTaskGraph_createRefCounter0
+
+
+#define boxptr_HpcOmTaskGraph_createRefCounter omc_HpcOmTaskGraph_createRefCounter
+
+
+#define boxptr_HpcOmTaskGraph_getLevelNodes0 omc_HpcOmTaskGraph_getLevelNodes0
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getLevelNodes(threadData_t *threadData, modelica_metatype _iTaskGraph);
+#define boxptr_HpcOmTaskGraph_getLevelNodes omc_HpcOmTaskGraph_getLevelNodes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getLevelNodes,2,0) {(void*) boxptr_HpcOmTaskGraph_getLevelNodes,0}};
+#define boxvar_HpcOmTaskGraph_getLevelNodes MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getLevelNodes)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getLeafNodes(threadData_t *threadData, modelica_metatype _iTaskGraph);
+#define boxptr_HpcOmTaskGraph_getLeafNodes omc_HpcOmTaskGraph_getLeafNodes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getLeafNodes,2,0) {(void*) boxptr_HpcOmTaskGraph_getLeafNodes,0}};
+#define boxvar_HpcOmTaskGraph_getLeafNodes MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getLeafNodes)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getRootNodes(threadData_t *threadData, modelica_metatype _iTaskGraph);
+#define boxptr_HpcOmTaskGraph_getRootNodes omc_HpcOmTaskGraph_getRootNodes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getRootNodes,2,0) {(void*) boxptr_HpcOmTaskGraph_getRootNodes,0}};
+#define boxvar_HpcOmTaskGraph_getRootNodes MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getRootNodes)
+
+
+#define boxptr_HpcOmTaskGraph_deleteRowInAdjLst omc_HpcOmTaskGraph_deleteRowInAdjLst
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_updateContinuousEntriesInList(threadData_t *threadData, modelica_metatype _lstIn, modelica_metatype _deleteEntriesIn);
+#define boxptr_HpcOmTaskGraph_updateContinuousEntriesInList omc_HpcOmTaskGraph_updateContinuousEntriesInList
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_updateContinuousEntriesInList,2,0) {(void*) boxptr_HpcOmTaskGraph_updateContinuousEntriesInList,0}};
+#define boxvar_HpcOmTaskGraph_updateContinuousEntriesInList MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_updateContinuousEntriesInList)
+
+
+#define boxptr_HpcOmTaskGraph_getAllSuccessors2 omc_HpcOmTaskGraph_getAllSuccessors2
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getAllSuccessors(threadData_t *threadData, modelica_metatype _nodes, modelica_metatype _graph);
+#define boxptr_HpcOmTaskGraph_getAllSuccessors omc_HpcOmTaskGraph_getAllSuccessors
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getAllSuccessors,2,0) {(void*) boxptr_HpcOmTaskGraph_getAllSuccessors,0}};
+#define boxvar_HpcOmTaskGraph_getAllSuccessors MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getAllSuccessors)
+
+
+DLLDirection
+modelica_integer omc_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, modelica_integer _compIn, modelica_integer _compIdx, modelica_metatype _inComps, modelica_metatype _nodeMark);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, modelica_metatype _compIn, modelica_metatype _compIdx, modelica_metatype _inComps, modelica_metatype _nodeMark);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getCompInComps,2,0) {(void*) boxptr_HpcOmTaskGraph_getCompInComps,0}};
+#define boxvar_HpcOmTaskGraph_getCompInComps MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getCompInComps)
+
+
+#define boxptr_HpcOmTaskGraph_cutSystemData omc_HpcOmTaskGraph_cutSystemData
+
+
+#define boxptr_HpcOmTaskGraph_cutTaskGraph2 omc_HpcOmTaskGraph_cutTaskGraph2
+
+
+#define boxptr_HpcOmTaskGraph_cutTaskGraph omc_HpcOmTaskGraph_cutTaskGraph
+
+
+#define boxptr_HpcOmTaskGraph_getAllStateNodes omc_HpcOmTaskGraph_getAllStateNodes
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getOdeSystem(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphDataIn, modelica_metatype _systIn, modelica_metatype *out_graphDataOdeOut);
+#define boxptr_HpcOmTaskGraph_getOdeSystem omc_HpcOmTaskGraph_getOdeSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getOdeSystem,2,0) {(void*) boxptr_HpcOmTaskGraph_getOdeSystem,0}};
+#define boxvar_HpcOmTaskGraph_getOdeSystem MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getOdeSystem)
+
+
+#define boxptr_HpcOmTaskGraph_othersInTearComp omc_HpcOmTaskGraph_othersInTearComp
+
+
+#define boxptr_HpcOmTaskGraph_getSccNodeMapping0 omc_HpcOmTaskGraph_getSccNodeMapping0
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getSccNodeMapping(threadData_t *threadData, modelica_integer _iNumberOfSccs, modelica_metatype _iTaskGraphMeta);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_getSccNodeMapping(threadData_t *threadData, modelica_metatype _iNumberOfSccs, modelica_metatype _iTaskGraphMeta);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getSccNodeMapping,2,0) {(void*) boxptr_HpcOmTaskGraph_getSccNodeMapping,0}};
+#define boxvar_HpcOmTaskGraph_getSccNodeMapping MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getSccNodeMapping)
+
+
+#define boxptr_HpcOmTaskGraph_tuple3ToString omc_HpcOmTaskGraph_tuple3ToString
+
+
+#define boxptr_HpcOmTaskGraph_tupleToString omc_HpcOmTaskGraph_tupleToString
+
+
+DLLDirection
+modelica_boolean omc_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *threadData, modelica_integer _iTask1, modelica_integer _iTask2, modelica_metatype _iTaskComps, modelica_metatype _iExeCosts, modelica_boolean _iDescending);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *threadData, modelica_metatype _iTask1, modelica_metatype _iTask2, modelica_metatype _iTaskComps, modelica_metatype _iExeCosts, modelica_metatype _iDescending);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_compareTasksByExecTime,2,0) {(void*) boxptr_HpcOmTaskGraph_compareTasksByExecTime,0}};
+#define boxvar_HpcOmTaskGraph_compareTasksByExecTime MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_compareTasksByExecTime)
+
+
+#define boxptr_HpcOmTaskGraph_getUnsolvedVarsBySCC2 omc_HpcOmTaskGraph_getUnsolvedVarsBySCC2
+
+
+#define boxptr_HpcOmTaskGraph_getUnsolvedVarsBySCC1 omc_HpcOmTaskGraph_getUnsolvedVarsBySCC1
+
+
+#define boxptr_HpcOmTaskGraph_getArrayTuple31 omc_HpcOmTaskGraph_getArrayTuple31
+
+
+#define boxptr_HpcOmTaskGraph_getEventNodeEqs omc_HpcOmTaskGraph_getEventNodeEqs
+
+
+#define boxptr_HpcOmTaskGraph_getEventNodes omc_HpcOmTaskGraph_getEventNodes
+
+
+#define boxptr_HpcOmTaskGraph_shortenVarString omc_HpcOmTaskGraph_shortenVarString
+
+
+DLLDirection
+modelica_string omc_HpcOmTaskGraph_getVarString(threadData_t *threadData, modelica_metatype _inVar);
+#define boxptr_HpcOmTaskGraph_getVarString omc_HpcOmTaskGraph_getVarString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getVarString,2,0) {(void*) boxptr_HpcOmTaskGraph_getVarString,0}};
+#define boxvar_HpcOmTaskGraph_getVarString MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getVarString)
+
+
+#define boxptr_HpcOmTaskGraph_getEquationStrings2 omc_HpcOmTaskGraph_getEquationStrings2
+
+
+#define boxptr_HpcOmTaskGraph_getEquationStrings omc_HpcOmTaskGraph_getEquationStrings
+
+
+#define boxptr_HpcOmTaskGraph_createRequiredSccsRefCount omc_HpcOmTaskGraph_createRequiredSccsRefCount
+
+
+#define boxptr_HpcOmTaskGraph_taskGraphAppend omc_HpcOmTaskGraph_taskGraphAppend
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_copyTaskGraphMeta(threadData_t *threadData, modelica_metatype _graphDataIn);
+#define boxptr_HpcOmTaskGraph_copyTaskGraphMeta omc_HpcOmTaskGraph_copyTaskGraphMeta
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_copyTaskGraphMeta,2,0) {(void*) boxptr_HpcOmTaskGraph_copyTaskGraphMeta,0}};
+#define boxvar_HpcOmTaskGraph_copyTaskGraphMeta MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_copyTaskGraphMeta)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getEmptyTaskGraph(threadData_t *threadData, modelica_integer _numComps, modelica_integer _numVars, modelica_integer _numEqs, modelica_metatype *out_graphData);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_getEmptyTaskGraph(threadData_t *threadData, modelica_metatype _numComps, modelica_metatype _numVars, modelica_metatype _numEqs, modelica_metatype *out_graphData);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getEmptyTaskGraph,2,0) {(void*) boxptr_HpcOmTaskGraph_getEmptyTaskGraph,0}};
+#define boxvar_HpcOmTaskGraph_getEmptyTaskGraph MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getEmptyTaskGraph)
+
+
+#define boxptr_HpcOmTaskGraph_getSystemComponents0 omc_HpcOmTaskGraph_getSystemComponents0
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_getSystemComponents(threadData_t *threadData, modelica_metatype _iDae, modelica_metatype *out_oMapping);
+#define boxptr_HpcOmTaskGraph_getSystemComponents omc_HpcOmTaskGraph_getSystemComponents
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getSystemComponents,2,0) {(void*) boxptr_HpcOmTaskGraph_getSystemComponents,0}};
+#define boxvar_HpcOmTaskGraph_getSystemComponents MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getSystemComponents)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, modelica_metatype _iSyst, modelica_metatype _iShared, modelica_boolean _iAnalyzeParameters, modelica_metatype _iGraphInfo);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, modelica_metatype _iSyst, modelica_metatype _iShared, modelica_metatype _iAnalyzeParameters, modelica_metatype _iGraphInfo);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_createTaskGraph0,2,0) {(void*) boxptr_HpcOmTaskGraph_createTaskGraph0,0}};
+#define boxvar_HpcOmTaskGraph_createTaskGraph0 MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_createTaskGraph0)
+
+
+DLLDirection
+modelica_metatype omc_HpcOmTaskGraph_createTaskGraph(threadData_t *threadData, modelica_metatype _iDAE, modelica_boolean _iAnalyzeParameters, modelica_metatype *out_oGraphData);
+DLLDirection
+modelica_metatype boxptr_HpcOmTaskGraph_createTaskGraph(threadData_t *threadData, modelica_metatype _iDAE, modelica_metatype _iAnalyzeParameters, modelica_metatype *out_oGraphData);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_createTaskGraph,2,0) {(void*) boxptr_HpcOmTaskGraph_createTaskGraph,0}};
+#define boxvar_HpcOmTaskGraph_createTaskGraph MMC_REFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_createTaskGraph)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

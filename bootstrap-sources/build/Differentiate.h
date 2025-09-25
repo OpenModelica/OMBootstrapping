@@ -1,0 +1,342 @@
+#ifndef Differentiate__H
+#define Differentiate__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description AvlSetPath_Tree_EMPTY__desc;
+
+extern struct record_description BackendDAE_DifferentiateInputData_DIFFINPUTDATA__desc;
+
+extern struct record_description BackendDAE_DifferentiationType_DIFFERENTIATION__FUNCTION__desc;
+
+extern struct record_description BackendDAE_DifferentiationType_DIFFERENTIATION__TIME__desc;
+
+extern struct record_description BackendDAE_DifferentiationType_DIFF__FULL__JACOBIAN__desc;
+
+extern struct record_description BackendDAE_DifferentiationType_GENERIC__GRADIENT__desc;
+
+extern struct record_description BackendDAE_DifferentiationType_SIMPLE__DIFFERENTIATION__desc;
+
+extern struct record_description BackendDAE_Equation_ALGORITHM__desc;
+
+extern struct record_description BackendDAE_Equation_ARRAY__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_COMPLEX__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_IF__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_RESIDUAL__EQUATION__desc;
+
+extern struct record_description BackendDAE_Equation_WHEN__EQUATION__desc;
+
+extern struct record_description BackendDAE_Var_VAR__desc;
+
+extern struct record_description BackendDAE_VarKind_DISCRETE__desc;
+
+extern struct record_description BackendDAE_WhenEquation_WHEN__STMTS__desc;
+
+extern struct record_description BackendDAE_WhenOperator_ASSIGN__desc;
+
+extern struct record_description DAE_Algorithm_ALGORITHM__STMTS__desc;
+
+extern struct record_description DAE_AvlTreePathFunction_Tree_EMPTY__desc;
+
+extern struct record_description DAE_CallAttributes_CALL__ATTR__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
+extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
+
+extern struct record_description DAE_Element_ALGORITHM__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Else_ELSE__desc;
+
+extern struct record_description DAE_Else_NOELSE__desc;
+
+extern struct record_description DAE_Exp_ARRAY__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_CALL__desc;
+
+extern struct record_description DAE_Exp_CAST__desc;
+
+extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_ICONST__desc;
+
+extern struct record_description DAE_Exp_IFEXP__desc;
+
+extern struct record_description DAE_Exp_MATRIX__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Exp_RECORD__desc;
+
+extern struct record_description DAE_Exp_REDUCTION__desc;
+
+extern struct record_description DAE_Exp_RELATION__desc;
+
+extern struct record_description DAE_Exp_RSUB__desc;
+
+extern struct record_description DAE_Exp_TSUB__desc;
+
+extern struct record_description DAE_Exp_TUPLE__desc;
+
+extern struct record_description DAE_Exp_UNARY__desc;
+
+extern struct record_description DAE_Function_FUNCTION__desc;
+
+extern struct record_description DAE_FunctionDefinition_FUNCTION__DEF__desc;
+
+extern struct record_description DAE_FunctionDefinition_FUNCTION__DER__MAPPER__desc;
+
+extern struct record_description DAE_InlineType_DEFAULT__INLINE__desc;
+
+extern struct record_description DAE_InlineType_NORM__INLINE__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description DAE_Operator_ADD__desc;
+
+extern struct record_description DAE_Operator_ADD__ARR__desc;
+
+extern struct record_description DAE_Operator_ADD__ARRAY__SCALAR__desc;
+
+extern struct record_description DAE_Operator_DIV__desc;
+
+extern struct record_description DAE_Operator_DIV__ARR__desc;
+
+extern struct record_description DAE_Operator_DIV__ARRAY__SCALAR__desc;
+
+extern struct record_description DAE_Operator_EQUAL__desc;
+
+extern struct record_description DAE_Operator_GREATER__desc;
+
+extern struct record_description DAE_Operator_GREATEREQ__desc;
+
+extern struct record_description DAE_Operator_LESS__desc;
+
+extern struct record_description DAE_Operator_MUL__desc;
+
+extern struct record_description DAE_Operator_MUL__ARR__desc;
+
+extern struct record_description DAE_Operator_MUL__ARRAY__SCALAR__desc;
+
+extern struct record_description DAE_Operator_MUL__MATRIX__PRODUCT__desc;
+
+extern struct record_description DAE_Operator_MUL__SCALAR__PRODUCT__desc;
+
+extern struct record_description DAE_Operator_POW__desc;
+
+extern struct record_description DAE_Operator_SUB__desc;
+
+extern struct record_description DAE_Operator_SUB__ARR__desc;
+
+extern struct record_description DAE_Operator_SUB__SCALAR__ARRAY__desc;
+
+extern struct record_description DAE_Operator_UMINUS__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__ASSIGN__ARR__desc;
+
+extern struct record_description DAE_Statement_STMT__FOR__desc;
+
+extern struct record_description DAE_Statement_STMT__IF__desc;
+
+extern struct record_description DAE_Statement_STMT__TUPLE__ASSIGN__desc;
+
+extern struct record_description DAE_Statement_STMT__WHEN__desc;
+
+extern struct record_description DAE_Statement_STMT__WHILE__desc;
+
+extern struct record_description DAE_SymbolicOperation_OP__DIFFERENTIATE__desc;
+
+extern struct record_description DAE_TailCall_NO__TAIL__desc;
+
+extern struct record_description DAE_Type_T__BOOL__desc;
+
+extern struct record_description DAE_Type_T__INTEGER__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_Type_T__UNKNOWN__desc;
+
+extern struct record_description DAE_VarDirection_BIDIR__desc;
+
+extern struct record_description DAE_VarInnerOuter_NOT__INNER__OUTER__desc;
+
+extern struct record_description DAE_VarParallelism_NON__PARALLEL__desc;
+
+extern struct record_description DAE_VarVisibility_PROTECTED__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_SYMBOLIC__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_WARNING__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_Differentiate_dumpInputData omc_Differentiate_dumpInputData
+
+
+#define boxptr_Differentiate_addElementVars2Dep omc_Differentiate_addElementVars2Dep
+
+
+#define boxptr_Differentiate_lowerVarsElementVars omc_Differentiate_lowerVarsElementVars
+
+
+#define boxptr_Differentiate_addGlobalVars omc_Differentiate_addGlobalVars
+
+
+#define boxptr_Differentiate_addAllVars omc_Differentiate_addAllVars
+
+
+#define boxptr_Differentiate_addDependentVars omc_Differentiate_addDependentVars
+
+
+#define boxptr_Differentiate_getFunctionMapper1 omc_Differentiate_getFunctionMapper1
+
+
+DLLDirection
+modelica_metatype omc_Differentiate_getFunctionMapper(threadData_t *threadData, modelica_metatype _fname, modelica_metatype _functions, modelica_metatype *out_tp);
+#define boxptr_Differentiate_getFunctionMapper omc_Differentiate_getFunctionMapper
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_getFunctionMapper,2,0) {(void*) boxptr_Differentiate_getFunctionMapper,0}};
+#define boxvar_Differentiate_getFunctionMapper MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_getFunctionMapper)
+
+
+#define boxptr_Differentiate_getlowerOrderDerivative omc_Differentiate_getlowerOrderDerivative
+
+
+#define boxptr_Differentiate_checkDerFunctionConds omc_Differentiate_checkDerFunctionConds
+
+
+#define boxptr_Differentiate_differentiateFunction1 omc_Differentiate_differentiateFunction1
+
+
+#define boxptr_Differentiate_getDiffedTypeandName omc_Differentiate_getDiffedTypeandName
+
+
+#define boxptr_Differentiate_createPartialSum omc_Differentiate_createPartialSum
+
+
+#define boxptr_Differentiate_createPartialArgumentsRecord omc_Differentiate_createPartialArgumentsRecord
+
+
+#define boxptr_Differentiate_createPartialArgumentsTuple omc_Differentiate_createPartialArgumentsTuple
+
+
+#define boxptr_Differentiate_createPartialArguments omc_Differentiate_createPartialArguments
+
+
+#define boxptr_Differentiate_addFunctionConstantsAndParameters omc_Differentiate_addFunctionConstantsAndParameters
+
+
+#define boxptr_Differentiate_createFromNCall2ArgsCall omc_Differentiate_createFromNCall2ArgsCall
+
+
+DLLDirection
+modelica_boolean omc_Differentiate_isSeedCref(threadData_t *threadData, modelica_metatype _cr);
+DLLDirection
+modelica_metatype boxptr_Differentiate_isSeedCref(threadData_t *threadData, modelica_metatype _cr);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_isSeedCref,2,0) {(void*) boxptr_Differentiate_isSeedCref,0}};
+#define boxvar_Differentiate_isSeedCref MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_isSeedCref)
+
+
+DLLDirection
+modelica_metatype omc_Differentiate_createSeedCrefName(threadData_t *threadData, modelica_metatype _inCref, modelica_string _inMatrixName);
+#define boxptr_Differentiate_createSeedCrefName omc_Differentiate_createSeedCrefName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_createSeedCrefName,2,0) {(void*) boxptr_Differentiate_createSeedCrefName,0}};
+#define boxvar_Differentiate_createSeedCrefName MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_createSeedCrefName)
+
+
+DLLDirection
+modelica_metatype omc_Differentiate_createDiffedCrefName(threadData_t *threadData, modelica_metatype _inCref, modelica_string _inMatrixName);
+#define boxptr_Differentiate_createDiffedCrefName omc_Differentiate_createDiffedCrefName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_createDiffedCrefName,2,0) {(void*) boxptr_Differentiate_createDiffedCrefName,0}};
+#define boxvar_Differentiate_createDiffedCrefName MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_createDiffedCrefName)
+
+
+#define boxptr_Differentiate_makeAssignmentfromTuple omc_Differentiate_makeAssignmentfromTuple
+
+
+#define boxptr_Differentiate_differentiateWhenEquations omc_Differentiate_differentiateWhenEquations
+
+
+#define boxptr_Differentiate_differentiateEquationsLst omc_Differentiate_differentiateEquationsLst
+
+
+#define boxptr_Differentiate_differentiateEquations omc_Differentiate_differentiateEquations
+
+
+DLLDirection
+modelica_metatype omc_Differentiate_differentiateEquationFragile(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _inDiffwrtCref, modelica_metatype _inInputData, modelica_metatype _inDiffType, modelica_metatype _inFunctionTree, modelica_metatype *out_outFunctionTree);
+#define boxptr_Differentiate_differentiateEquationFragile omc_Differentiate_differentiateEquationFragile
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquationFragile,2,0) {(void*) boxptr_Differentiate_differentiateEquationFragile,0}};
+#define boxvar_Differentiate_differentiateEquationFragile MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquationFragile)
+
+
+DLLDirection
+modelica_metatype omc_Differentiate_differentiateEquation(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _inDiffwrtCref, modelica_metatype _inInputData, modelica_metatype _inDiffType, modelica_metatype _inFunctionTree, modelica_metatype *out_outFunctionTree);
+#define boxptr_Differentiate_differentiateEquation omc_Differentiate_differentiateEquation
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquation,2,0) {(void*) boxptr_Differentiate_differentiateEquation,0}};
+#define boxvar_Differentiate_differentiateEquation MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquation)
+
+
+DLLDirection
+modelica_metatype omc_Differentiate_differentiateExpCrefFullJacobian(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inCref, modelica_metatype _inVariables, modelica_metatype _inShared, modelica_metatype *out_outShared);
+#define boxptr_Differentiate_differentiateExpCrefFullJacobian omc_Differentiate_differentiateExpCrefFullJacobian
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpCrefFullJacobian,2,0) {(void*) boxptr_Differentiate_differentiateExpCrefFullJacobian,0}};
+#define boxvar_Differentiate_differentiateExpCrefFullJacobian MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpCrefFullJacobian)
+
+
+DLLDirection
+modelica_metatype omc_Differentiate_differentiateExpSolve(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inCref, modelica_metatype _functions);
+#define boxptr_Differentiate_differentiateExpSolve omc_Differentiate_differentiateExpSolve
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpSolve,2,0) {(void*) boxptr_Differentiate_differentiateExpSolve,0}};
+#define boxvar_Differentiate_differentiateExpSolve MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpSolve)
+
+
+DLLDirection
+modelica_metatype omc_Differentiate_differentiateExpTime(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inVariables, modelica_metatype _inShared, modelica_metatype *out_outShared);
+#define boxptr_Differentiate_differentiateExpTime omc_Differentiate_differentiateExpTime
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpTime,2,0) {(void*) boxptr_Differentiate_differentiateExpTime,0}};
+#define boxvar_Differentiate_differentiateExpTime MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpTime)
+
+
+DLLDirection
+modelica_metatype omc_Differentiate_differentiateEquationTime(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _inVariables, modelica_metatype _inShared, modelica_metatype *out_outShared);
+#define boxptr_Differentiate_differentiateEquationTime omc_Differentiate_differentiateEquationTime
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquationTime,2,0) {(void*) boxptr_Differentiate_differentiateEquationTime,0}};
+#define boxvar_Differentiate_differentiateEquationTime MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquationTime)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

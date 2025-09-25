@@ -1,0 +1,185 @@
+#ifndef NBAlias__H
+#define NBAlias__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description DAE_FunctionAttributes_FUNCTION__ATTRIBUTES__desc;
+
+extern struct record_description DAE_FunctionBuiltin_FUNCTION__BUILTIN__desc;
+
+extern struct record_description DAE_FunctionParallelism_FP__NON__PARALLEL__desc;
+
+extern struct record_description DAE_InlineType_NO__INLINE__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NBAlias_AliasSet_ALIAS__SET__desc;
+
+extern struct record_description NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc;
+
+extern struct record_description NBAlias_CrefTpl_CREF__TPL__desc;
+
+extern struct record_description NBEquation_Iterator_EMPTY__desc;
+
+extern struct record_description NFAttributes_ATTRIBUTES__desc;
+
+extern struct record_description NFBackendExtension_Annotations_ANNOTATIONS__desc;
+
+extern struct record_description NFBackendExtension_BackendInfo_BACKEND__INFO__desc;
+
+extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_FRONTEND__DUMMY__desc;
+
+extern struct record_description NFBackendExtension_VariableKind_PARAMETER__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFComponent_COMPONENT__desc;
+
+extern struct record_description NFComponentRef_EMPTY__desc;
+
+extern struct record_description NFExpression_BOOLEAN__desc;
+
+extern struct record_description NFExpression_CALL__desc;
+
+extern struct record_description NFExpression_REAL__desc;
+
+extern struct record_description NFFlatten_FunctionTreeImpl_Tree_EMPTY__desc;
+
+extern struct record_description NFFunction_Function_FUNCTION__desc;
+
+extern struct record_description NFInstNode_InstNode_COMPONENT__NODE__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
+
+extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
+
+extern struct record_description NFType_ANY__desc;
+
+extern struct record_description NFType_REAL__desc;
+
+extern struct record_description NFVariable_VARIABLE__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_metatype omc_NBAlias_AttributeCollector_fixValues(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fattrcollector, modelica_metatype _var_cref, modelica_metatype _solved_eq);
+#define boxptr_NBAlias_AttributeCollector_fixValues omc_NBAlias_AttributeCollector_fixValues
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_AttributeCollector_fixValues,2,0) {(void*) boxptr_NBAlias_AttributeCollector_fixValues,0}};
+#define boxvar_NBAlias_AttributeCollector_fixValues MMC_REFSTRUCTLIT(boxvar_lit_NBAlias_AttributeCollector_fixValues)
+
+
+DLLDirection
+modelica_string omc_NBAlias_AttributeCollector_toString(threadData_t *threadData, modelica_metatype _attrcollector, modelica_string __omcQ_24in_5Fstr);
+#define boxptr_NBAlias_AttributeCollector_toString omc_NBAlias_AttributeCollector_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_AttributeCollector_toString,2,0) {(void*) boxptr_NBAlias_AttributeCollector_toString,0}};
+#define boxvar_NBAlias_AttributeCollector_toString MMC_REFSTRUCTLIT(boxvar_lit_NBAlias_AttributeCollector_toString)
+
+
+#define boxptr_NBAlias_optionStartFixed omc_NBAlias_optionStartFixed
+
+
+#define boxptr_NBAlias_optionMinMax omc_NBAlias_optionMinMax
+
+
+#define boxptr_NBAlias_chooseTearingSelect omc_NBAlias_chooseTearingSelect
+
+
+#define boxptr_NBAlias_chooseStateSelect omc_NBAlias_chooseStateSelect
+
+
+#define boxptr_NBAlias_diffTearingSelect omc_NBAlias_diffTearingSelect
+
+
+#define boxptr_NBAlias_stateSelectAlways omc_NBAlias_stateSelectAlways
+
+
+#define boxptr_NBAlias_checkNominalThreshold omc_NBAlias_checkNominalThreshold
+
+
+#define boxptr_NBAlias_setStartFixed omc_NBAlias_setStartFixed
+
+
+#define boxptr_NBAlias_getMinimum omc_NBAlias_getMinimum
+
+
+#define boxptr_NBAlias_getMaximum omc_NBAlias_getMaximum
+
+
+#define boxptr_NBAlias_chooseVariableToKeep omc_NBAlias_chooseVariableToKeep
+
+
+#define boxptr_NBAlias_setNewAttributes omc_NBAlias_setNewAttributes
+
+
+#define boxptr_NBAlias_createReplacementRules omc_NBAlias_createReplacementRules
+
+
+#define boxptr_NBAlias_findCrefs omc_NBAlias_findCrefs
+
+
+#define boxptr_NBAlias_aliasCausalize omc_NBAlias_aliasCausalize
+
+
+#define boxptr_NBAlias_aliasClocks omc_NBAlias_aliasClocks
+
+
+#define boxptr_NBAlias_dumpReplacements omc_NBAlias_dumpReplacements
+
+
+#define boxptr_NBAlias_filterPre omc_NBAlias_filterPre
+
+
+#define boxptr_NBAlias_checkReplacements omc_NBAlias_checkReplacements
+
+
+#define boxptr_NBAlias_aliasDefault omc_NBAlias_aliasDefault
+
+
+DLLDirection
+modelica_string omc_NBAlias_AliasSet_toString(threadData_t *threadData, modelica_metatype _set);
+#define boxptr_NBAlias_AliasSet_toString omc_NBAlias_AliasSet_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_AliasSet_toString,2,0) {(void*) boxptr_NBAlias_AliasSet_toString,0}};
+#define boxvar_NBAlias_AliasSet_toString MMC_REFSTRUCTLIT(boxvar_lit_NBAlias_AliasSet_toString)
+
+
+DLLDirection
+modelica_fnptr omc_NBAlias_getModule(threadData_t *threadData);
+#define boxptr_NBAlias_getModule omc_NBAlias_getModule
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_getModule,2,0) {(void*) boxptr_NBAlias_getModule,0}};
+#define boxvar_NBAlias_getModule MMC_REFSTRUCTLIT(boxvar_lit_NBAlias_getModule)
+
+
+DLLDirection
+modelica_metatype omc_NBAlias_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
+#define boxptr_NBAlias_main omc_NBAlias_main
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_main,2,0) {(void*) boxptr_NBAlias_main,0}};
+#define boxvar_NBAlias_main MMC_REFSTRUCTLIT(boxvar_lit_NBAlias_main)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

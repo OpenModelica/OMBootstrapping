@@ -1,0 +1,69 @@
+#ifndef NFOperatorOverloading__H
+#define NFOperatorOverloading__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFOperatorOverloading_patchOperatorRecordConstructorBinding__traverser omc_NFOperatorOverloading_patchOperatorRecordConstructorBinding__traverser
+
+
+#define boxptr_NFOperatorOverloading_checkOperatorConstructorOutput omc_NFOperatorOverloading_checkOperatorConstructorOutput
+
+
+DLLDirection
+modelica_metatype omc_NFOperatorOverloading_patchOperatorRecordConstructorBinding(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ffn);
+#define boxptr_NFOperatorOverloading_patchOperatorRecordConstructorBinding omc_NFOperatorOverloading_patchOperatorRecordConstructorBinding
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOperatorOverloading_patchOperatorRecordConstructorBinding,2,0) {(void*) boxptr_NFOperatorOverloading_patchOperatorRecordConstructorBinding,0}};
+#define boxvar_NFOperatorOverloading_patchOperatorRecordConstructorBinding MMC_REFSTRUCTLIT(boxvar_lit_NFOperatorOverloading_patchOperatorRecordConstructorBinding)
+
+
+DLLDirection
+modelica_metatype omc_NFOperatorOverloading_lookupOperatorFunctionsInType(threadData_t *threadData, modelica_string _operatorName, modelica_metatype _ty);
+#define boxptr_NFOperatorOverloading_lookupOperatorFunctionsInType omc_NFOperatorOverloading_lookupOperatorFunctionsInType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOperatorOverloading_lookupOperatorFunctionsInType,2,0) {(void*) boxptr_NFOperatorOverloading_lookupOperatorFunctionsInType,0}};
+#define boxvar_NFOperatorOverloading_lookupOperatorFunctionsInType MMC_REFSTRUCTLIT(boxvar_lit_NFOperatorOverloading_lookupOperatorFunctionsInType)
+
+
+DLLDirection
+void omc_NFOperatorOverloading_checkOperatorRestrictions(threadData_t *threadData, modelica_metatype _operatorNode);
+#define boxptr_NFOperatorOverloading_checkOperatorRestrictions omc_NFOperatorOverloading_checkOperatorRestrictions
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOperatorOverloading_checkOperatorRestrictions,2,0) {(void*) boxptr_NFOperatorOverloading_checkOperatorRestrictions,0}};
+#define boxvar_NFOperatorOverloading_checkOperatorRestrictions MMC_REFSTRUCTLIT(boxvar_lit_NFOperatorOverloading_checkOperatorRestrictions)
+
+
+DLLDirection
+modelica_metatype omc_NFOperatorOverloading_instOperatorFunctions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fnode, modelica_integer _context, modelica_metatype _info);
+DLLDirection
+modelica_metatype boxptr_NFOperatorOverloading_instOperatorFunctions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fnode, modelica_metatype _context, modelica_metatype _info);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOperatorOverloading_instOperatorFunctions,2,0) {(void*) boxptr_NFOperatorOverloading_instOperatorFunctions,0}};
+#define boxvar_NFOperatorOverloading_instOperatorFunctions MMC_REFSTRUCTLIT(boxvar_lit_NFOperatorOverloading_instOperatorFunctions)
+
+
+DLLDirection
+modelica_metatype omc_NFOperatorOverloading_instConstructor(threadData_t *threadData, modelica_metatype _path, modelica_metatype __omcQ_24in_5FrecordNode, modelica_integer _context, modelica_metatype _info);
+DLLDirection
+modelica_metatype boxptr_NFOperatorOverloading_instConstructor(threadData_t *threadData, modelica_metatype _path, modelica_metatype __omcQ_24in_5FrecordNode, modelica_metatype _context, modelica_metatype _info);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFOperatorOverloading_instConstructor,2,0) {(void*) boxptr_NFOperatorOverloading_instConstructor,0}};
+#define boxvar_NFOperatorOverloading_instConstructor MMC_REFSTRUCTLIT(boxvar_lit_NFOperatorOverloading_instConstructor)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

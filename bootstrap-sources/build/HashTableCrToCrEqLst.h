@@ -1,0 +1,46 @@
+#ifndef HashTableCrToCrEqLst__H
+#define HashTableCrToCrEqLst__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+
+DLLDirection
+modelica_string omc_HashTableCrToCrEqLst_printTupleComponentRefEqStr(threadData_t *threadData, modelica_metatype _cr_eq);
+#define boxptr_HashTableCrToCrEqLst_printTupleComponentRefEqStr omc_HashTableCrToCrEqLst_printTupleComponentRefEqStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrToCrEqLst_printTupleComponentRefEqStr,2,0) {(void*) boxptr_HashTableCrToCrEqLst_printTupleComponentRefEqStr,0}};
+#define boxvar_HashTableCrToCrEqLst_printTupleComponentRefEqStr MMC_REFSTRUCTLIT(boxvar_lit_HashTableCrToCrEqLst_printTupleComponentRefEqStr)
+
+
+DLLDirection
+modelica_string omc_HashTableCrToCrEqLst_printTupleComponentRefEqListStr(threadData_t *threadData, modelica_metatype _cr_eq_lst);
+#define boxptr_HashTableCrToCrEqLst_printTupleComponentRefEqListStr omc_HashTableCrToCrEqLst_printTupleComponentRefEqListStr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrToCrEqLst_printTupleComponentRefEqListStr,2,0) {(void*) boxptr_HashTableCrToCrEqLst_printTupleComponentRefEqListStr,0}};
+#define boxvar_HashTableCrToCrEqLst_printTupleComponentRefEqListStr MMC_REFSTRUCTLIT(boxvar_lit_HashTableCrToCrEqLst_printTupleComponentRefEqListStr)
+
+
+DLLDirection
+modelica_metatype omc_HashTableCrToCrEqLst_emptyHashTableSized(threadData_t *threadData, modelica_integer _size);
+DLLDirection
+modelica_metatype boxptr_HashTableCrToCrEqLst_emptyHashTableSized(threadData_t *threadData, modelica_metatype _size);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrToCrEqLst_emptyHashTableSized,2,0) {(void*) boxptr_HashTableCrToCrEqLst_emptyHashTableSized,0}};
+#define boxvar_HashTableCrToCrEqLst_emptyHashTableSized MMC_REFSTRUCTLIT(boxvar_lit_HashTableCrToCrEqLst_emptyHashTableSized)
+
+
+DLLDirection
+modelica_metatype omc_HashTableCrToCrEqLst_emptyHashTable(threadData_t *threadData);
+#define boxptr_HashTableCrToCrEqLst_emptyHashTable omc_HashTableCrToCrEqLst_emptyHashTable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrToCrEqLst_emptyHashTable,2,0) {(void*) boxptr_HashTableCrToCrEqLst_emptyHashTable,0}};
+#define boxvar_HashTableCrToCrEqLst_emptyHashTable MMC_REFSTRUCTLIT(boxvar_lit_HashTableCrToCrEqLst_emptyHashTable)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

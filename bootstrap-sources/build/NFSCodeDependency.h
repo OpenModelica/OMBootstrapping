@@ -1,0 +1,244 @@
+#ifndef NFSCodeDependency__H
+#define NFSCodeDependency__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Absyn_ForIterator_ITERATOR__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NFInstPrefix_Prefix_EMPTY__PREFIX__desc;
+
+extern struct record_description NFSCodeEnv_ClassType_USERDEFINED__desc;
+
+extern struct record_description NFSCodeEnv_Extends_EXTENDS__desc;
+
+extern struct record_description NFSCodeEnv_ExtendsTable_EXTENDS__TABLE__desc;
+
+extern struct record_description NFSCodeEnv_Frame_FRAME__desc;
+
+extern struct record_description NFSCodeEnv_Item_CLASS__desc;
+
+extern struct record_description SCode_Element_CLASS__desc;
+
+extern struct record_description SCode_Restriction_R__CLASS__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NFSCodeDependency_removeUnusedRedeclares3 omc_NFSCodeDependency_removeUnusedRedeclares3
+
+
+#define boxptr_NFSCodeDependency_removeUnusedRedeclares2 omc_NFSCodeDependency_removeUnusedRedeclares2
+
+
+#define boxptr_NFSCodeDependency_removeUnusedRedeclares omc_NFSCodeDependency_removeUnusedRedeclares
+
+
+#define boxptr_NFSCodeDependency_collectUsedElements omc_NFSCodeDependency_collectUsedElements
+
+
+#define boxptr_NFSCodeDependency_collectUsedClassDef omc_NFSCodeDependency_collectUsedClassDef
+
+
+#define boxptr_NFSCodeDependency_updateItemEnv omc_NFSCodeDependency_updateItemEnv
+
+
+#define boxptr_NFSCodeDependency_collectUsedClass omc_NFSCodeDependency_collectUsedClass
+
+
+#define boxptr_NFSCodeDependency_collectUsedProgram2 omc_NFSCodeDependency_collectUsedProgram2
+
+
+#define boxptr_NFSCodeDependency_collectUsedProgram omc_NFSCodeDependency_collectUsedProgram
+
+
+#define boxptr_NFSCodeDependency_analyseClassExtendsDef omc_NFSCodeDependency_analyseClassExtendsDef
+
+
+#define boxptr_NFSCodeDependency_analyseClassExtends omc_NFSCodeDependency_analyseClassExtends
+
+
+#define boxptr_NFSCodeDependency_analyseStatementTraverser omc_NFSCodeDependency_analyseStatementTraverser
+
+
+#define boxptr_NFSCodeDependency_analyseStatement omc_NFSCodeDependency_analyseStatement
+
+
+#define boxptr_NFSCodeDependency_analyseAlgorithm omc_NFSCodeDependency_analyseAlgorithm
+
+
+#define boxptr_NFSCodeDependency_traverseExp omc_NFSCodeDependency_traverseExp
+
+
+#define boxptr_NFSCodeDependency_analyseEquationTraverser omc_NFSCodeDependency_analyseEquationTraverser
+
+
+#define boxptr_NFSCodeDependency_analyseEquation omc_NFSCodeDependency_analyseEquation
+
+
+#define boxptr_NFSCodeDependency_analyseExpTraverserExit omc_NFSCodeDependency_analyseExpTraverserExit
+
+
+#define boxptr_NFSCodeDependency_analyseCref omc_NFSCodeDependency_analyseCref
+
+
+#define boxptr_NFSCodeDependency_analyseExp2 omc_NFSCodeDependency_analyseExp2
+
+
+#define boxptr_NFSCodeDependency_analyseExpTraverserEnter omc_NFSCodeDependency_analyseExpTraverserEnter
+
+
+#define boxptr_NFSCodeDependency_analyseOptExp omc_NFSCodeDependency_analyseOptExp
+
+
+#define boxptr_NFSCodeDependency_analyseExp omc_NFSCodeDependency_analyseExp
+
+
+#define boxptr_NFSCodeDependency_analyseAnnotationName omc_NFSCodeDependency_analyseAnnotationName
+
+
+#define boxptr_NFSCodeDependency_analyseAnnotationMod omc_NFSCodeDependency_analyseAnnotationMod
+
+
+#define boxptr_NFSCodeDependency_analyseAnnotation omc_NFSCodeDependency_analyseAnnotation
+
+
+#define boxptr_NFSCodeDependency_analyseComment omc_NFSCodeDependency_analyseComment
+
+
+#define boxptr_NFSCodeDependency_analyseExternalDecl omc_NFSCodeDependency_analyseExternalDecl
+
+
+#define boxptr_NFSCodeDependency_analyseTypeSpecDim omc_NFSCodeDependency_analyseTypeSpecDim
+
+
+#define boxptr_NFSCodeDependency_analyseTypeSpecDims omc_NFSCodeDependency_analyseTypeSpecDims
+
+
+#define boxptr_NFSCodeDependency_analyseTypeSpec omc_NFSCodeDependency_analyseTypeSpec
+
+
+#define boxptr_NFSCodeDependency_analyseModBinding omc_NFSCodeDependency_analyseModBinding
+
+
+#define boxptr_NFSCodeDependency_analyseSubscript omc_NFSCodeDependency_analyseSubscript
+
+
+#define boxptr_NFSCodeDependency_lookupNameMod omc_NFSCodeDependency_lookupNameMod
+
+
+#define boxptr_NFSCodeDependency_analyseNameMod2 omc_NFSCodeDependency_analyseNameMod2
+
+
+#define boxptr_NFSCodeDependency_analyseNameMod omc_NFSCodeDependency_analyseNameMod
+
+
+#define boxptr_NFSCodeDependency_analyseSubMod omc_NFSCodeDependency_analyseSubMod
+
+
+#define boxptr_NFSCodeDependency_analyseConstrainClass omc_NFSCodeDependency_analyseConstrainClass
+
+
+#define boxptr_NFSCodeDependency_analyseRedeclareModifier omc_NFSCodeDependency_analyseRedeclareModifier
+
+
+#define boxptr_NFSCodeDependency_analyseModifier omc_NFSCodeDependency_analyseModifier
+
+
+#define boxptr_NFSCodeDependency_analyseAttributes omc_NFSCodeDependency_analyseAttributes
+
+
+#define boxptr_NFSCodeDependency_analyseExtends omc_NFSCodeDependency_analyseExtends
+
+
+#define boxptr_NFSCodeDependency_markAsUsedOnRestriction omc_NFSCodeDependency_markAsUsedOnRestriction
+
+
+#define boxptr_NFSCodeDependency_markAsUsedOnConstant omc_NFSCodeDependency_markAsUsedOnConstant
+
+
+#define boxptr_NFSCodeDependency_analyseElement omc_NFSCodeDependency_analyseElement
+
+
+#define boxptr_NFSCodeDependency_analyseElements2 omc_NFSCodeDependency_analyseElements2
+
+
+#define boxptr_NFSCodeDependency_analyseElements omc_NFSCodeDependency_analyseElements
+
+
+#define boxptr_NFSCodeDependency_analyseRedeclaredClass2 omc_NFSCodeDependency_analyseRedeclaredClass2
+
+
+#define boxptr_NFSCodeDependency_analyseRedeclaredClass omc_NFSCodeDependency_analyseRedeclaredClass
+
+
+#define boxptr_NFSCodeDependency_analyseMetaType omc_NFSCodeDependency_analyseMetaType
+
+
+#define boxptr_NFSCodeDependency_checkExternalObject omc_NFSCodeDependency_checkExternalObject
+
+
+#define boxptr_NFSCodeDependency_elementName omc_NFSCodeDependency_elementName
+
+
+#define boxptr_NFSCodeDependency_isExternalObject omc_NFSCodeDependency_isExternalObject
+
+
+#define boxptr_NFSCodeDependency_markEnvAsUsed2 omc_NFSCodeDependency_markEnvAsUsed2
+
+
+#define boxptr_NFSCodeDependency_markEnvAsUsed omc_NFSCodeDependency_markEnvAsUsed
+
+
+#define boxptr_NFSCodeDependency_markFrameAsUsed omc_NFSCodeDependency_markFrameAsUsed
+
+
+#define boxptr_NFSCodeDependency_markItemAsUsed omc_NFSCodeDependency_markItemAsUsed
+
+
+#define boxptr_NFSCodeDependency_analyseItemNoStopOnUsed omc_NFSCodeDependency_analyseItemNoStopOnUsed
+
+
+#define boxptr_NFSCodeDependency_analyseItemIfRedeclares omc_NFSCodeDependency_analyseItemIfRedeclares
+
+
+#define boxptr_NFSCodeDependency_analyseItem omc_NFSCodeDependency_analyseItem
+
+
+#define boxptr_NFSCodeDependency_checkItemIsClass omc_NFSCodeDependency_checkItemIsClass
+
+
+#define boxptr_NFSCodeDependency_lookupNameInItem omc_NFSCodeDependency_lookupNameInItem
+
+
+#define boxptr_NFSCodeDependency_analyseClass omc_NFSCodeDependency_analyseClass
+
+
+DLLDirection
+modelica_metatype omc_NFSCodeDependency_analyse(threadData_t *threadData, modelica_metatype _inClassName, modelica_metatype _inEnv, modelica_metatype _inProgram, modelica_metatype *out_outEnv);
+#define boxptr_NFSCodeDependency_analyse omc_NFSCodeDependency_analyse
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeDependency_analyse,2,0) {(void*) boxptr_NFSCodeDependency_analyse,0}};
+#define boxvar_NFSCodeDependency_analyse MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeDependency_analyse)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

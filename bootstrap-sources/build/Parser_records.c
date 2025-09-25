@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,12 +8,12 @@ extern "C" {
 #define Parser_ParserResult_PARSERRESULT__desc_added
 ADD_METARECORD_DEFINITIONS const char* Parser_ParserResult_PARSERRESULT__desc__fields[2] = {"filename","program"};
 ADD_METARECORD_DEFINITIONS struct record_description Parser_ParserResult_PARSERRESULT__desc = {
-"Parser_ParserResult_PARSERRESULT",
-"Parser.ParserResult.PARSERRESULT",
-Parser_ParserResult_PARSERRESULT__desc__fields
+  "Parser_ParserResult_PARSERRESULT",
+  "Parser.ParserResult.PARSERRESULT",
+  Parser_ParserResult_PARSERRESULT__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Parser_ParserResult_PARSERRESULT__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -20,14 +21,15 @@ extern struct record_description Parser_ParserResult_PARSERRESULT__desc;
 #define Parser_ParserResult_PARSERRESULT__desc_added
 ADD_METARECORD_DEFINITIONS const char* Parser_ParserResult_PARSERRESULT__desc__fields[2] = {"filename","program"};
 ADD_METARECORD_DEFINITIONS struct record_description Parser_ParserResult_PARSERRESULT__desc = {
-"Parser_ParserResult_PARSERRESULT",
-"Parser.ParserResult.PARSERRESULT",
-Parser_ParserResult_PARSERRESULT__desc__fields
+  "Parser_ParserResult_PARSERRESULT",
+  "Parser.ParserResult.PARSERRESULT",
+  Parser_ParserResult_PARSERRESULT__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description Parser_ParserResult_PARSERRESULT__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

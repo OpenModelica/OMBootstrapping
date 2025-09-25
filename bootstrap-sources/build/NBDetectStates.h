@@ -1,0 +1,91 @@
+#ifndef NBDetectStates__H
+#define NBDetectStates__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description NBEquation_Iterator_EMPTY__desc;
+
+extern struct record_description NFExpression_BOOLEAN__desc;
+
+extern struct record_description NFExpression_LBINARY__desc;
+
+extern struct record_description NFExpression_RELATION__desc;
+
+extern struct record_description NFFlatten_FunctionTreeImpl_Tree_EMPTY__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+void omc_NBDetectStates_updateStateOrder(threadData_t *threadData, modelica_metatype _lhs, modelica_metatype _rhs, modelica_metatype _state_order);
+#define boxptr_NBDetectStates_updateStateOrder omc_NBDetectStates_updateStateOrder
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBDetectStates_updateStateOrder,2,0) {(void*) boxptr_NBDetectStates_updateStateOrder,0}};
+#define boxvar_NBDetectStates_updateStateOrder MMC_REFSTRUCTLIT(boxvar_lit_NBDetectStates_updateStateOrder)
+
+
+DLLDirection
+modelica_metatype omc_NBDetectStates_stateOrder(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn, modelica_metatype _state_order);
+#define boxptr_NBDetectStates_stateOrder omc_NBDetectStates_stateOrder
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBDetectStates_stateOrder,2,0) {(void*) boxptr_NBDetectStates_stateOrder,0}};
+#define boxvar_NBDetectStates_stateOrder MMC_REFSTRUCTLIT(boxvar_lit_NBDetectStates_stateOrder)
+
+
+DLLDirection
+void omc_NBDetectStates_findDiscreteStatesFromWhenBody(threadData_t *threadData, modelica_metatype _body, modelica_metatype _acc_discrete_states, modelica_metatype _acc_previous);
+#define boxptr_NBDetectStates_findDiscreteStatesFromWhenBody omc_NBDetectStates_findDiscreteStatesFromWhenBody
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBDetectStates_findDiscreteStatesFromWhenBody,2,0) {(void*) boxptr_NBDetectStates_findDiscreteStatesFromWhenBody,0}};
+#define boxvar_NBDetectStates_findDiscreteStatesFromWhenBody MMC_REFSTRUCTLIT(boxvar_lit_NBDetectStates_findDiscreteStatesFromWhenBody)
+
+
+#define boxptr_NBDetectStates_updateDiscreteStatesAndPrevious omc_NBDetectStates_updateDiscreteStatesAndPrevious
+
+
+#define boxptr_NBDetectStates_updateStatesAndDerivatives omc_NBDetectStates_updateStatesAndDerivatives
+
+
+#define boxptr_NBDetectStates_resolveGeneralDer omc_NBDetectStates_resolveGeneralDer
+
+
+#define boxptr_NBDetectStates_detectDiscreteStatesDefault omc_NBDetectStates_detectDiscreteStatesDefault
+
+
+#define boxptr_NBDetectStates_detectContinuousStatesDefault omc_NBDetectStates_detectContinuousStatesDefault
+
+
+#define boxptr_NBDetectStates_detectStatesDefault omc_NBDetectStates_detectStatesDefault
+
+
+DLLDirection
+modelica_fnptr omc_NBDetectStates_getModule(threadData_t *threadData, modelica_fnptr *out_contFunc, modelica_fnptr *out_discFunc);
+#define boxptr_NBDetectStates_getModule omc_NBDetectStates_getModule
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBDetectStates_getModule,2,0) {(void*) boxptr_NBDetectStates_getModule,0}};
+#define boxvar_NBDetectStates_getModule MMC_REFSTRUCTLIT(boxvar_lit_NBDetectStates_getModule)
+
+
+DLLDirection
+modelica_metatype omc_NBDetectStates_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
+#define boxptr_NBDetectStates_main omc_NBDetectStates_main
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBDetectStates_main,2,0) {(void*) boxptr_NBDetectStates_main,0}};
+#define boxvar_NBDetectStates_main MMC_REFSTRUCTLIT(boxvar_lit_NBDetectStates_main)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

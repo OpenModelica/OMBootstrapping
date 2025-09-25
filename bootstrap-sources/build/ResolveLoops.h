@@ -1,0 +1,212 @@
+#ifndef ResolveLoops__H
+#define ResolveLoops__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description AvlSetInt_Tree_EMPTY__desc;
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_Equation_EQUATION__desc;
+
+extern struct record_description BackendDAE_EquationAttributes_EQUATION__ATTRIBUTES__desc;
+
+extern struct record_description BackendDAE_EquationKind_UNKNOWN__EQUATION__KIND__desc;
+
+extern struct record_description BackendDAE_EvaluationStages_EVALUATION__STAGES__desc;
+
+extern struct record_description BackendDAE_IndexType_ABSOLUTE__desc;
+
+extern struct record_description BackendDAE_IndexType_NORMAL__desc;
+
+extern struct record_description BackendDAE_IndexType_SOLVABLE__desc;
+
+extern struct record_description BackendDAE_JacobianType_JAC__LINEAR__desc;
+
+extern struct record_description BackendDAE_Matching_MATCHING__desc;
+
+extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
+
+extern struct record_description DAE_ElementSource_SOURCE__desc;
+
+extern struct record_description DAE_Exp_BINARY__desc;
+
+extern struct record_description DAE_Exp_RCONST__desc;
+
+extern struct record_description DAE_Operator_ADD__desc;
+
+extern struct record_description DAE_Operator_SUB__desc;
+
+extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_ResolveLoops_solveLinearSystem1 omc_ResolveLoops_solveLinearSystem1
+
+
+#define boxptr_ResolveLoops_solveLinearSystem0 omc_ResolveLoops_solveLinearSystem0
+
+
+DLLDirection
+modelica_metatype omc_ResolveLoops_solveLinearSystem(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_ResolveLoops_solveLinearSystem omc_ResolveLoops_solveLinearSystem
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_solveLinearSystem,2,0) {(void*) boxptr_ResolveLoops_solveLinearSystem,0}};
+#define boxvar_ResolveLoops_solveLinearSystem MMC_REFSTRUCTLIT(boxvar_lit_ResolveLoops_solveLinearSystem)
+
+
+DLLDirection
+modelica_metatype omc_ResolveLoops_resolveEquations(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _loopIn, modelica_metatype _me, modelica_metatype _meT, modelica_metatype _eqsIn, modelica_metatype _varsIn);
+#define boxptr_ResolveLoops_resolveEquations omc_ResolveLoops_resolveEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveEquations,2,0) {(void*) boxptr_ResolveLoops_resolveEquations,0}};
+#define boxvar_ResolveLoops_resolveEquations MMC_REFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveEquations)
+
+
+#define boxptr_ResolveLoops_getDoublicates omc_ResolveLoops_getDoublicates
+
+
+#define boxptr_ResolveLoops_reshuffling__post4__resolveAndReplace omc_ResolveLoops_reshuffling__post4__resolveAndReplace
+
+
+#define boxptr_ResolveLoops_reshuffling__post3__selectShuffleEqs omc_ResolveLoops_reshuffling__post3__selectShuffleEqs
+
+
+#define boxptr_ResolveLoops_reshuffling__post1 omc_ResolveLoops_reshuffling__post1
+
+
+#define boxptr_ResolveLoops_reshuffling__post0 omc_ResolveLoops_reshuffling__post0
+
+
+DLLDirection
+modelica_metatype omc_ResolveLoops_reshuffling__post(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_ResolveLoops_reshuffling__post omc_ResolveLoops_reshuffling__post
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_reshuffling__post,2,0) {(void*) boxptr_ResolveLoops_reshuffling__post,0}};
+#define boxvar_ResolveLoops_reshuffling__post MMC_REFSTRUCTLIT(boxvar_lit_ResolveLoops_reshuffling__post)
+
+
+#define boxptr_ResolveLoops_connectPaths omc_ResolveLoops_connectPaths
+
+
+#define boxptr_ResolveLoops_connect2PathsToLoops omc_ResolveLoops_connect2PathsToLoops
+
+
+#define boxptr_ResolveLoops_sortPathsAsChain omc_ResolveLoops_sortPathsAsChain
+
+
+#define boxptr_ResolveLoops_isAddOrSubExp omc_ResolveLoops_isAddOrSubExp
+
+
+DLLDirection
+modelica_metatype omc_ResolveLoops_partitionBipartiteGraph(threadData_t *threadData, modelica_metatype _m, modelica_metatype _mT);
+#define boxptr_ResolveLoops_partitionBipartiteGraph omc_ResolveLoops_partitionBipartiteGraph
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_partitionBipartiteGraph,2,0) {(void*) boxptr_ResolveLoops_partitionBipartiteGraph,0}};
+#define boxvar_ResolveLoops_partitionBipartiteGraph MMC_REFSTRUCTLIT(boxvar_lit_ResolveLoops_partitionBipartiteGraph)
+
+
+#define boxptr_ResolveLoops_simplifyZeroAssignment omc_ResolveLoops_simplifyZeroAssignment
+
+
+#define boxptr_ResolveLoops_updateTripleLoop omc_ResolveLoops_updateTripleLoop
+
+
+#define boxptr_ResolveLoops_priorizeEqsWithVarCrosses omc_ResolveLoops_priorizeEqsWithVarCrosses
+
+
+#define boxptr_ResolveLoops_getPathTillNextCrossEq omc_ResolveLoops_getPathTillNextCrossEq
+
+
+#define boxptr_ResolveLoops_doubleEntriesInLst omc_ResolveLoops_doubleEntriesInLst
+
+
+#define boxptr_ResolveLoops_closePathDirectly omc_ResolveLoops_closePathDirectly
+
+
+DLLDirection
+modelica_metatype omc_ResolveLoops_sortLoop(threadData_t *threadData, modelica_metatype _loopIn, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _sortLoopIn);
+#define boxptr_ResolveLoops_sortLoop omc_ResolveLoops_sortLoop
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_sortLoop,2,0) {(void*) boxptr_ResolveLoops_sortLoop,0}};
+#define boxvar_ResolveLoops_sortLoop MMC_REFSTRUCTLIT(boxvar_lit_ResolveLoops_sortLoop)
+
+
+#define boxptr_ResolveLoops_resolveClosedLoop2 omc_ResolveLoops_resolveClosedLoop2
+
+
+#define boxptr_ResolveLoops_resolveClosedLoop omc_ResolveLoops_resolveClosedLoop
+
+
+#define boxptr_ResolveLoops_getEqNodesForVarLoop omc_ResolveLoops_getEqNodesForVarLoop
+
+
+#define boxptr_ResolveLoops_getTriples omc_ResolveLoops_getTriples
+
+
+#define boxptr_ResolveLoops_getDoubles omc_ResolveLoops_getDoubles
+
+
+#define boxptr_ResolveLoops_getReverseDoubles omc_ResolveLoops_getReverseDoubles
+
+
+#define boxptr_ResolveLoops_resolveLoops__resolveAndReplace omc_ResolveLoops_resolveLoops__resolveAndReplace
+
+
+#define boxptr_ResolveLoops_connectPathsToOneLoop omc_ResolveLoops_connectPathsToOneLoop
+
+
+#define boxptr_ResolveLoops_removeEqualPaths omc_ResolveLoops_removeEqualPaths
+
+
+#define boxptr_ResolveLoops_getMinimalAdjacencyMatrix omc_ResolveLoops_getMinimalAdjacencyMatrix
+
+
+#define boxptr_ResolveLoops_findEqualPathStructure omc_ResolveLoops_findEqualPathStructure
+
+
+DLLDirection
+modelica_metatype omc_ResolveLoops_resolveLoops__findLoops(threadData_t *threadData, modelica_metatype _partitionsIn, modelica_metatype _mIn, modelica_metatype _mTIn, modelica_boolean _findExactlyOneLoop, modelica_metatype *out_crossEqsOut, modelica_metatype *out_crossVarsOut, modelica_metatype *out_optStructureMapping);
+DLLDirection
+modelica_metatype boxptr_ResolveLoops_resolveLoops__findLoops(threadData_t *threadData, modelica_metatype _partitionsIn, modelica_metatype _mIn, modelica_metatype _mTIn, modelica_metatype _findExactlyOneLoop, modelica_metatype *out_crossEqsOut, modelica_metatype *out_crossVarsOut, modelica_metatype *out_optStructureMapping);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveLoops__findLoops,2,0) {(void*) boxptr_ResolveLoops_resolveLoops__findLoops,0}};
+#define boxvar_ResolveLoops_resolveLoops__findLoops MMC_REFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveLoops__findLoops)
+
+
+#define boxptr_ResolveLoops_getSimpleEquationVariables omc_ResolveLoops_getSimpleEquationVariables
+
+
+#define boxptr_ResolveLoops_getSimpleEquations omc_ResolveLoops_getSimpleEquations
+
+
+#define boxptr_ResolveLoops_resolveLoops__cutNodes omc_ResolveLoops_resolveLoops__cutNodes
+
+
+#define boxptr_ResolveLoops_resolveLoops__resolvePartitions omc_ResolveLoops_resolveLoops__resolvePartitions
+
+
+DLLDirection
+modelica_metatype omc_ResolveLoops_resolveLoops(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_ResolveLoops_resolveLoops omc_ResolveLoops_resolveLoops
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveLoops,2,0) {(void*) boxptr_ResolveLoops_resolveLoops,0}};
+#define boxvar_ResolveLoops_resolveLoops MMC_REFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveLoops)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

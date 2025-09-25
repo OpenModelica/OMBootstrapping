@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,12 +8,12 @@ extern "C" {
 #define AvlSetPath_Tree_NODE__desc_added
 ADD_METARECORD_DEFINITIONS const char* AvlSetPath_Tree_NODE__desc__fields[4] = {"key","height","left","right"};
 ADD_METARECORD_DEFINITIONS struct record_description AvlSetPath_Tree_NODE__desc = {
-"AvlSetPath_Tree_NODE",
-"AvlSetPath.Tree.NODE",
-AvlSetPath_Tree_NODE__desc__fields
+  "AvlSetPath_Tree_NODE",
+  "AvlSetPath.Tree.NODE",
+  AvlSetPath_Tree_NODE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description AvlSetPath_Tree_NODE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -20,12 +21,12 @@ extern struct record_description AvlSetPath_Tree_NODE__desc;
 #define AvlSetPath_Tree_LEAF__desc_added
 ADD_METARECORD_DEFINITIONS const char* AvlSetPath_Tree_LEAF__desc__fields[1] = {"key"};
 ADD_METARECORD_DEFINITIONS struct record_description AvlSetPath_Tree_LEAF__desc = {
-"AvlSetPath_Tree_LEAF",
-"AvlSetPath.Tree.LEAF",
-AvlSetPath_Tree_LEAF__desc__fields
+  "AvlSetPath_Tree_LEAF",
+  "AvlSetPath.Tree.LEAF",
+  AvlSetPath_Tree_LEAF__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description AvlSetPath_Tree_LEAF__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -33,12 +34,12 @@ extern struct record_description AvlSetPath_Tree_LEAF__desc;
 #define AvlSetPath_Tree_EMPTY__desc_added
 ADD_METARECORD_DEFINITIONS const char* AvlSetPath_Tree_EMPTY__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description AvlSetPath_Tree_EMPTY__desc = {
-"AvlSetPath_Tree_EMPTY",
-"AvlSetPath.Tree.EMPTY",
-AvlSetPath_Tree_EMPTY__desc__fields
+  "AvlSetPath_Tree_EMPTY",
+  "AvlSetPath.Tree.EMPTY",
+  AvlSetPath_Tree_EMPTY__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description AvlSetPath_Tree_EMPTY__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -46,12 +47,12 @@ extern struct record_description AvlSetPath_Tree_EMPTY__desc;
 #define AvlSetPath_Tree_NODE__desc_added
 ADD_METARECORD_DEFINITIONS const char* AvlSetPath_Tree_NODE__desc__fields[4] = {"key","height","left","right"};
 ADD_METARECORD_DEFINITIONS struct record_description AvlSetPath_Tree_NODE__desc = {
-"AvlSetPath_Tree_NODE",
-"AvlSetPath.Tree.NODE",
-AvlSetPath_Tree_NODE__desc__fields
+  "AvlSetPath_Tree_NODE",
+  "AvlSetPath.Tree.NODE",
+  AvlSetPath_Tree_NODE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description AvlSetPath_Tree_NODE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -59,12 +60,12 @@ extern struct record_description AvlSetPath_Tree_NODE__desc;
 #define AvlSetPath_Tree_LEAF__desc_added
 ADD_METARECORD_DEFINITIONS const char* AvlSetPath_Tree_LEAF__desc__fields[1] = {"key"};
 ADD_METARECORD_DEFINITIONS struct record_description AvlSetPath_Tree_LEAF__desc = {
-"AvlSetPath_Tree_LEAF",
-"AvlSetPath.Tree.LEAF",
-AvlSetPath_Tree_LEAF__desc__fields
+  "AvlSetPath_Tree_LEAF",
+  "AvlSetPath.Tree.LEAF",
+  AvlSetPath_Tree_LEAF__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description AvlSetPath_Tree_LEAF__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -72,14 +73,15 @@ extern struct record_description AvlSetPath_Tree_LEAF__desc;
 #define AvlSetPath_Tree_EMPTY__desc_added
 ADD_METARECORD_DEFINITIONS const char* AvlSetPath_Tree_EMPTY__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description AvlSetPath_Tree_EMPTY__desc = {
-"AvlSetPath_Tree_EMPTY",
-"AvlSetPath.Tree.EMPTY",
-AvlSetPath_Tree_EMPTY__desc__fields
+  "AvlSetPath_Tree_EMPTY",
+  "AvlSetPath.Tree.EMPTY",
+  AvlSetPath_Tree_EMPTY__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description AvlSetPath_Tree_EMPTY__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

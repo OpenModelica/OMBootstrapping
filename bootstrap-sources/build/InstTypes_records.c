@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,12 +8,12 @@ extern "C" {
 #define InstTypes_CallingScope_TOP__CALL__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_CallingScope_TOP__CALL__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_CallingScope_TOP__CALL__desc = {
-"InstTypes_CallingScope_TOP__CALL",
-"InstTypes.CallingScope.TOP_CALL",
-InstTypes_CallingScope_TOP__CALL__desc__fields
+  "InstTypes_CallingScope_TOP__CALL",
+  "InstTypes.CallingScope.TOP_CALL",
+  InstTypes_CallingScope_TOP__CALL__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_CallingScope_TOP__CALL__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -20,12 +21,12 @@ extern struct record_description InstTypes_CallingScope_TOP__CALL__desc;
 #define InstTypes_CallingScope_INNER__CALL__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_CallingScope_INNER__CALL__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_CallingScope_INNER__CALL__desc = {
-"InstTypes_CallingScope_INNER__CALL",
-"InstTypes.CallingScope.INNER_CALL",
-InstTypes_CallingScope_INNER__CALL__desc__fields
+  "InstTypes_CallingScope_INNER__CALL",
+  "InstTypes.CallingScope.INNER_CALL",
+  InstTypes_CallingScope_INNER__CALL__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_CallingScope_INNER__CALL__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -33,12 +34,12 @@ extern struct record_description InstTypes_CallingScope_INNER__CALL__desc;
 #define InstTypes_CallingScope_TYPE__CALL__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_CallingScope_TYPE__CALL__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_CallingScope_TYPE__CALL__desc = {
-"InstTypes_CallingScope_TYPE__CALL",
-"InstTypes.CallingScope.TYPE_CALL",
-InstTypes_CallingScope_TYPE__CALL__desc__fields
+  "InstTypes_CallingScope_TYPE__CALL",
+  "InstTypes.CallingScope.TYPE_CALL",
+  InstTypes_CallingScope_TYPE__CALL__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_CallingScope_TYPE__CALL__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -46,12 +47,12 @@ extern struct record_description InstTypes_CallingScope_TYPE__CALL__desc;
 #define InstTypes_CallingScope_TYPE__CALL__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_CallingScope_TYPE__CALL__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_CallingScope_TYPE__CALL__desc = {
-"InstTypes_CallingScope_TYPE__CALL",
-"InstTypes.CallingScope.TYPE_CALL",
-InstTypes_CallingScope_TYPE__CALL__desc__fields
+  "InstTypes_CallingScope_TYPE__CALL",
+  "InstTypes.CallingScope.TYPE_CALL",
+  InstTypes_CallingScope_TYPE__CALL__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_CallingScope_TYPE__CALL__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -59,12 +60,12 @@ extern struct record_description InstTypes_CallingScope_TYPE__CALL__desc;
 #define InstTypes_CallingScope_INNER__CALL__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_CallingScope_INNER__CALL__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_CallingScope_INNER__CALL__desc = {
-"InstTypes_CallingScope_INNER__CALL",
-"InstTypes.CallingScope.INNER_CALL",
-InstTypes_CallingScope_INNER__CALL__desc__fields
+  "InstTypes_CallingScope_INNER__CALL",
+  "InstTypes.CallingScope.INNER_CALL",
+  InstTypes_CallingScope_INNER__CALL__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_CallingScope_INNER__CALL__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -72,12 +73,12 @@ extern struct record_description InstTypes_CallingScope_INNER__CALL__desc;
 #define InstTypes_CallingScope_TOP__CALL__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_CallingScope_TOP__CALL__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_CallingScope_TOP__CALL__desc = {
-"InstTypes_CallingScope_TOP__CALL",
-"InstTypes.CallingScope.TOP_CALL",
-InstTypes_CallingScope_TOP__CALL__desc__fields
+  "InstTypes_CallingScope_TOP__CALL",
+  "InstTypes.CallingScope.TOP_CALL",
+  InstTypes_CallingScope_TOP__CALL__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_CallingScope_TOP__CALL__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -85,12 +86,12 @@ extern struct record_description InstTypes_CallingScope_TOP__CALL__desc;
 #define InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc = {
-"InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY",
-"InstTypes.SearchStrategy.SEARCH_LOCAL_ONLY",
-InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc__fields
+  "InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY",
+  "InstTypes.SearchStrategy.SEARCH_LOCAL_ONLY",
+  InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -98,12 +99,12 @@ extern struct record_description InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__d
 #define InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc = {
-"InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN",
-"InstTypes.SearchStrategy.SEARCH_ALSO_BUILTIN",
-InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc__fields
+  "InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN",
+  "InstTypes.SearchStrategy.SEARCH_ALSO_BUILTIN",
+  InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -111,12 +112,12 @@ extern struct record_description InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN_
 #define InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc = {
-"InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN",
-"InstTypes.SearchStrategy.SEARCH_ALSO_BUILTIN",
-InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc__fields
+  "InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN",
+  "InstTypes.SearchStrategy.SEARCH_ALSO_BUILTIN",
+  InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -124,12 +125,12 @@ extern struct record_description InstTypes_SearchStrategy_SEARCH__ALSO__BUILTIN_
 #define InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc = {
-"InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY",
-"InstTypes.SearchStrategy.SEARCH_LOCAL_ONLY",
-InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc__fields
+  "InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY",
+  "InstTypes.SearchStrategy.SEARCH_LOCAL_ONLY",
+  InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -137,12 +138,12 @@ extern struct record_description InstTypes_SearchStrategy_SEARCH__LOCAL__ONLY__d
 #define InstTypes_SplicedExpData_SPLICEDEXPDATA__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_SplicedExpData_SPLICEDEXPDATA__desc__fields[2] = {"splicedExp","identType"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_SplicedExpData_SPLICEDEXPDATA__desc = {
-"InstTypes_SplicedExpData_SPLICEDEXPDATA",
-"InstTypes.SplicedExpData.SPLICEDEXPDATA",
-InstTypes_SplicedExpData_SPLICEDEXPDATA__desc__fields
+  "InstTypes_SplicedExpData_SPLICEDEXPDATA",
+  "InstTypes.SplicedExpData.SPLICEDEXPDATA",
+  InstTypes_SplicedExpData_SPLICEDEXPDATA__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_SplicedExpData_SPLICEDEXPDATA__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -150,14 +151,15 @@ extern struct record_description InstTypes_SplicedExpData_SPLICEDEXPDATA__desc;
 #define InstTypes_SplicedExpData_SPLICEDEXPDATA__desc_added
 ADD_METARECORD_DEFINITIONS const char* InstTypes_SplicedExpData_SPLICEDEXPDATA__desc__fields[2] = {"splicedExp","identType"};
 ADD_METARECORD_DEFINITIONS struct record_description InstTypes_SplicedExpData_SPLICEDEXPDATA__desc = {
-"InstTypes_SplicedExpData_SPLICEDEXPDATA",
-"InstTypes.SplicedExpData.SPLICEDEXPDATA",
-InstTypes_SplicedExpData_SPLICEDEXPDATA__desc__fields
+  "InstTypes_SplicedExpData_SPLICEDEXPDATA",
+  "InstTypes.SplicedExpData.SPLICEDEXPDATA",
+  InstTypes_SplicedExpData_SPLICEDEXPDATA__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description InstTypes_SplicedExpData_SPLICEDEXPDATA__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

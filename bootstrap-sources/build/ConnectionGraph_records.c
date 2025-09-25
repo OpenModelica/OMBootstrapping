@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,12 +8,12 @@ extern "C" {
 #define ConnectionGraph_ConnectionGraph_GRAPH__desc_added
 ADD_METARECORD_DEFINITIONS const char* ConnectionGraph_ConnectionGraph_GRAPH__desc__fields[6] = {"updateGraph","definiteRoots","potentialRoots","uniqueRoots","branches","connections"};
 ADD_METARECORD_DEFINITIONS struct record_description ConnectionGraph_ConnectionGraph_GRAPH__desc = {
-"ConnectionGraph_ConnectionGraph_GRAPH",
-"ConnectionGraph.ConnectionGraph.GRAPH",
-ConnectionGraph_ConnectionGraph_GRAPH__desc__fields
+  "ConnectionGraph_ConnectionGraph_GRAPH",
+  "ConnectionGraph.ConnectionGraph.GRAPH",
+  ConnectionGraph_ConnectionGraph_GRAPH__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ConnectionGraph_ConnectionGraph_GRAPH__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -20,14 +21,15 @@ extern struct record_description ConnectionGraph_ConnectionGraph_GRAPH__desc;
 #define ConnectionGraph_ConnectionGraph_GRAPH__desc_added
 ADD_METARECORD_DEFINITIONS const char* ConnectionGraph_ConnectionGraph_GRAPH__desc__fields[6] = {"updateGraph","definiteRoots","potentialRoots","uniqueRoots","branches","connections"};
 ADD_METARECORD_DEFINITIONS struct record_description ConnectionGraph_ConnectionGraph_GRAPH__desc = {
-"ConnectionGraph_ConnectionGraph_GRAPH",
-"ConnectionGraph.ConnectionGraph.GRAPH",
-ConnectionGraph_ConnectionGraph_GRAPH__desc__fields
+  "ConnectionGraph_ConnectionGraph_GRAPH",
+  "ConnectionGraph.ConnectionGraph.GRAPH",
+  ConnectionGraph_ConnectionGraph_GRAPH__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ConnectionGraph_ConnectionGraph_GRAPH__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

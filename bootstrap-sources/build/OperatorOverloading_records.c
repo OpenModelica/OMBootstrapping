@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,12 +8,12 @@ extern "C" {
 #define OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc__fields[5] = {"key","value","height","left","right"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc = {
-"OperatorOverloading_AvlTreePathPathEnv_Tree_NODE",
-"OperatorOverloading.AvlTreePathPathEnv.Tree.NODE",
-OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc__fields
+  "OperatorOverloading_AvlTreePathPathEnv_Tree_NODE",
+  "OperatorOverloading.AvlTreePathPathEnv.Tree.NODE",
+  OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -20,12 +21,12 @@ extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_NOD
 #define OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc__fields[2] = {"key","value"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc = {
-"OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF",
-"OperatorOverloading.AvlTreePathPathEnv.Tree.LEAF",
-OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc__fields
+  "OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF",
+  "OperatorOverloading.AvlTreePathPathEnv.Tree.LEAF",
+  OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -33,12 +34,12 @@ extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_LEA
 #define OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc = {
-"OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY",
-"OperatorOverloading.AvlTreePathPathEnv.Tree.EMPTY",
-OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc__fields
+  "OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY",
+  "OperatorOverloading.AvlTreePathPathEnv.Tree.EMPTY",
+  OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -46,12 +47,12 @@ extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_EMP
 #define OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc__fields[5] = {"key","value","height","left","right"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc = {
-"OperatorOverloading_AvlTreePathPathEnv_Tree_NODE",
-"OperatorOverloading.AvlTreePathPathEnv.Tree.NODE",
-OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc__fields
+  "OperatorOverloading_AvlTreePathPathEnv_Tree_NODE",
+  "OperatorOverloading.AvlTreePathPathEnv.Tree.NODE",
+  OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_NODE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -59,12 +60,12 @@ extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_NOD
 #define OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc__fields[2] = {"key","value"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc = {
-"OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF",
-"OperatorOverloading.AvlTreePathPathEnv.Tree.LEAF",
-OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc__fields
+  "OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF",
+  "OperatorOverloading.AvlTreePathPathEnv.Tree.LEAF",
+  OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_LEAF__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -72,12 +73,12 @@ extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_LEA
 #define OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc = {
-"OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY",
-"OperatorOverloading.AvlTreePathPathEnv.Tree.EMPTY",
-OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc__fields
+  "OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY",
+  "OperatorOverloading.AvlTreePathPathEnv.Tree.EMPTY",
+  OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_EMPTY__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -85,12 +86,12 @@ extern struct record_description OperatorOverloading_AvlTreePathPathEnv_Tree_EMP
 #define OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc__fields[5] = {"key","value","height","left","right"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc = {
-"OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE",
-"OperatorOverloading.AvlTreePathOperatorTypes.Tree.NODE",
-OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc__fields
+  "OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE",
+  "OperatorOverloading.AvlTreePathOperatorTypes.Tree.NODE",
+  OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -98,12 +99,12 @@ extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tr
 #define OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc__fields[2] = {"key","value"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc = {
-"OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF",
-"OperatorOverloading.AvlTreePathOperatorTypes.Tree.LEAF",
-OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc__fields
+  "OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF",
+  "OperatorOverloading.AvlTreePathOperatorTypes.Tree.LEAF",
+  OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -111,12 +112,12 @@ extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tr
 #define OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc = {
-"OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY",
-"OperatorOverloading.AvlTreePathOperatorTypes.Tree.EMPTY",
-OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc__fields
+  "OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY",
+  "OperatorOverloading.AvlTreePathOperatorTypes.Tree.EMPTY",
+  OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -124,12 +125,12 @@ extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tr
 #define OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc__fields[5] = {"key","value","height","left","right"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc = {
-"OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE",
-"OperatorOverloading.AvlTreePathOperatorTypes.Tree.NODE",
-OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc__fields
+  "OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE",
+  "OperatorOverloading.AvlTreePathOperatorTypes.Tree.NODE",
+  OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_NODE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -137,12 +138,12 @@ extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tr
 #define OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc__fields[2] = {"key","value"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc = {
-"OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF",
-"OperatorOverloading.AvlTreePathOperatorTypes.Tree.LEAF",
-OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc__fields
+  "OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF",
+  "OperatorOverloading.AvlTreePathOperatorTypes.Tree.LEAF",
+  OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_LEAF__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -150,14 +151,15 @@ extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tr
 #define OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc_added
 ADD_METARECORD_DEFINITIONS const char* OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc = {
-"OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY",
-"OperatorOverloading.AvlTreePathOperatorTypes.Tree.EMPTY",
-OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc__fields
+  "OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY",
+  "OperatorOverloading.AvlTreePathOperatorTypes.Tree.EMPTY",
+  OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description OperatorOverloading_AvlTreePathOperatorTypes_Tree_EMPTY__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

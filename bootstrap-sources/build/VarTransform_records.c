@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,12 +8,12 @@ extern "C" {
 #define VarTransform_VariableReplacements_REPLACEMENTS__desc_added
 ADD_METARECORD_DEFINITIONS const char* VarTransform_VariableReplacements_REPLACEMENTS__desc__fields[2] = {"hashTable","invHashTable"};
 ADD_METARECORD_DEFINITIONS struct record_description VarTransform_VariableReplacements_REPLACEMENTS__desc = {
-"VarTransform_VariableReplacements_REPLACEMENTS",
-"VarTransform.VariableReplacements.REPLACEMENTS",
-VarTransform_VariableReplacements_REPLACEMENTS__desc__fields
+  "VarTransform_VariableReplacements_REPLACEMENTS",
+  "VarTransform.VariableReplacements.REPLACEMENTS",
+  VarTransform_VariableReplacements_REPLACEMENTS__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description VarTransform_VariableReplacements_REPLACEMENTS__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -20,14 +21,15 @@ extern struct record_description VarTransform_VariableReplacements_REPLACEMENTS_
 #define VarTransform_VariableReplacements_REPLACEMENTS__desc_added
 ADD_METARECORD_DEFINITIONS const char* VarTransform_VariableReplacements_REPLACEMENTS__desc__fields[2] = {"hashTable","invHashTable"};
 ADD_METARECORD_DEFINITIONS struct record_description VarTransform_VariableReplacements_REPLACEMENTS__desc = {
-"VarTransform_VariableReplacements_REPLACEMENTS",
-"VarTransform.VariableReplacements.REPLACEMENTS",
-VarTransform_VariableReplacements_REPLACEMENTS__desc__fields
+  "VarTransform_VariableReplacements_REPLACEMENTS",
+  "VarTransform.VariableReplacements.REPLACEMENTS",
+  VarTransform_VariableReplacements_REPLACEMENTS__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description VarTransform_VariableReplacements_REPLACEMENTS__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

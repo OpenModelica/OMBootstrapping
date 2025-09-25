@@ -1,4 +1,5 @@
 #include <meta/meta_modelica.h>
+/* Automatically generated header for bootstrapping MetaModelica */
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -7,12 +8,12 @@ extern "C" {
 #define ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc = {
-"ExpressionSimplifyTypes_Evaluate_NO__EVAL",
-"ExpressionSimplifyTypes.Evaluate.NO_EVAL",
-ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc__fields
+  "ExpressionSimplifyTypes_Evaluate_NO__EVAL",
+  "ExpressionSimplifyTypes.Evaluate.NO_EVAL",
+  ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -20,12 +21,12 @@ extern struct record_description ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc
 #define ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc = {
-"ExpressionSimplifyTypes_Evaluate_DO__EVAL",
-"ExpressionSimplifyTypes.Evaluate.DO_EVAL",
-ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc__fields
+  "ExpressionSimplifyTypes_Evaluate_DO__EVAL",
+  "ExpressionSimplifyTypes.Evaluate.DO_EVAL",
+  ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -33,12 +34,12 @@ extern struct record_description ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc
 #define ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc = {
-"ExpressionSimplifyTypes_Evaluate_DO__EVAL",
-"ExpressionSimplifyTypes.Evaluate.DO_EVAL",
-ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc__fields
+  "ExpressionSimplifyTypes_Evaluate_DO__EVAL",
+  "ExpressionSimplifyTypes.Evaluate.DO_EVAL",
+  ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -46,12 +47,12 @@ extern struct record_description ExpressionSimplifyTypes_Evaluate_DO__EVAL__desc
 #define ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc = {
-"ExpressionSimplifyTypes_Evaluate_NO__EVAL",
-"ExpressionSimplifyTypes.Evaluate.NO_EVAL",
-ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc__fields
+  "ExpressionSimplifyTypes_Evaluate_NO__EVAL",
+  "ExpressionSimplifyTypes.Evaluate.NO_EVAL",
+  ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -59,12 +60,12 @@ extern struct record_description ExpressionSimplifyTypes_Evaluate_NO__EVAL__desc
 #define ExpressionSimplifyTypes_IntOp_MULOP__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_IntOp_MULOP__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_IntOp_MULOP__desc = {
-"ExpressionSimplifyTypes_IntOp_MULOP",
-"ExpressionSimplifyTypes.IntOp.MULOP",
-ExpressionSimplifyTypes_IntOp_MULOP__desc__fields
+  "ExpressionSimplifyTypes_IntOp_MULOP",
+  "ExpressionSimplifyTypes.IntOp.MULOP",
+  ExpressionSimplifyTypes_IntOp_MULOP__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_IntOp_MULOP__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -72,12 +73,12 @@ extern struct record_description ExpressionSimplifyTypes_IntOp_MULOP__desc;
 #define ExpressionSimplifyTypes_IntOp_DIVOP__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_IntOp_DIVOP__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_IntOp_DIVOP__desc = {
-"ExpressionSimplifyTypes_IntOp_DIVOP",
-"ExpressionSimplifyTypes.IntOp.DIVOP",
-ExpressionSimplifyTypes_IntOp_DIVOP__desc__fields
+  "ExpressionSimplifyTypes_IntOp_DIVOP",
+  "ExpressionSimplifyTypes.IntOp.DIVOP",
+  ExpressionSimplifyTypes_IntOp_DIVOP__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_IntOp_DIVOP__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -85,12 +86,12 @@ extern struct record_description ExpressionSimplifyTypes_IntOp_DIVOP__desc;
 #define ExpressionSimplifyTypes_IntOp_ADDOP__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_IntOp_ADDOP__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_IntOp_ADDOP__desc = {
-"ExpressionSimplifyTypes_IntOp_ADDOP",
-"ExpressionSimplifyTypes.IntOp.ADDOP",
-ExpressionSimplifyTypes_IntOp_ADDOP__desc__fields
+  "ExpressionSimplifyTypes_IntOp_ADDOP",
+  "ExpressionSimplifyTypes.IntOp.ADDOP",
+  ExpressionSimplifyTypes_IntOp_ADDOP__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_IntOp_ADDOP__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -98,12 +99,12 @@ extern struct record_description ExpressionSimplifyTypes_IntOp_ADDOP__desc;
 #define ExpressionSimplifyTypes_IntOp_SUBOP__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_IntOp_SUBOP__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_IntOp_SUBOP__desc = {
-"ExpressionSimplifyTypes_IntOp_SUBOP",
-"ExpressionSimplifyTypes.IntOp.SUBOP",
-ExpressionSimplifyTypes_IntOp_SUBOP__desc__fields
+  "ExpressionSimplifyTypes_IntOp_SUBOP",
+  "ExpressionSimplifyTypes.IntOp.SUBOP",
+  ExpressionSimplifyTypes_IntOp_SUBOP__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_IntOp_SUBOP__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -111,12 +112,12 @@ extern struct record_description ExpressionSimplifyTypes_IntOp_SUBOP__desc;
 #define ExpressionSimplifyTypes_IntOp_POWOP__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_IntOp_POWOP__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_IntOp_POWOP__desc = {
-"ExpressionSimplifyTypes_IntOp_POWOP",
-"ExpressionSimplifyTypes.IntOp.POWOP",
-ExpressionSimplifyTypes_IntOp_POWOP__desc__fields
+  "ExpressionSimplifyTypes_IntOp_POWOP",
+  "ExpressionSimplifyTypes.IntOp.POWOP",
+  ExpressionSimplifyTypes_IntOp_POWOP__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_IntOp_POWOP__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -124,12 +125,12 @@ extern struct record_description ExpressionSimplifyTypes_IntOp_POWOP__desc;
 #define ExpressionSimplifyTypes_IntOp_POWOP__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_IntOp_POWOP__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_IntOp_POWOP__desc = {
-"ExpressionSimplifyTypes_IntOp_POWOP",
-"ExpressionSimplifyTypes.IntOp.POWOP",
-ExpressionSimplifyTypes_IntOp_POWOP__desc__fields
+  "ExpressionSimplifyTypes_IntOp_POWOP",
+  "ExpressionSimplifyTypes.IntOp.POWOP",
+  ExpressionSimplifyTypes_IntOp_POWOP__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_IntOp_POWOP__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -137,12 +138,12 @@ extern struct record_description ExpressionSimplifyTypes_IntOp_POWOP__desc;
 #define ExpressionSimplifyTypes_IntOp_SUBOP__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_IntOp_SUBOP__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_IntOp_SUBOP__desc = {
-"ExpressionSimplifyTypes_IntOp_SUBOP",
-"ExpressionSimplifyTypes.IntOp.SUBOP",
-ExpressionSimplifyTypes_IntOp_SUBOP__desc__fields
+  "ExpressionSimplifyTypes_IntOp_SUBOP",
+  "ExpressionSimplifyTypes.IntOp.SUBOP",
+  ExpressionSimplifyTypes_IntOp_SUBOP__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_IntOp_SUBOP__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -150,12 +151,12 @@ extern struct record_description ExpressionSimplifyTypes_IntOp_SUBOP__desc;
 #define ExpressionSimplifyTypes_IntOp_ADDOP__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_IntOp_ADDOP__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_IntOp_ADDOP__desc = {
-"ExpressionSimplifyTypes_IntOp_ADDOP",
-"ExpressionSimplifyTypes.IntOp.ADDOP",
-ExpressionSimplifyTypes_IntOp_ADDOP__desc__fields
+  "ExpressionSimplifyTypes_IntOp_ADDOP",
+  "ExpressionSimplifyTypes.IntOp.ADDOP",
+  ExpressionSimplifyTypes_IntOp_ADDOP__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_IntOp_ADDOP__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -163,12 +164,12 @@ extern struct record_description ExpressionSimplifyTypes_IntOp_ADDOP__desc;
 #define ExpressionSimplifyTypes_IntOp_DIVOP__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_IntOp_DIVOP__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_IntOp_DIVOP__desc = {
-"ExpressionSimplifyTypes_IntOp_DIVOP",
-"ExpressionSimplifyTypes.IntOp.DIVOP",
-ExpressionSimplifyTypes_IntOp_DIVOP__desc__fields
+  "ExpressionSimplifyTypes_IntOp_DIVOP",
+  "ExpressionSimplifyTypes.IntOp.DIVOP",
+  ExpressionSimplifyTypes_IntOp_DIVOP__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_IntOp_DIVOP__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
@@ -176,14 +177,15 @@ extern struct record_description ExpressionSimplifyTypes_IntOp_DIVOP__desc;
 #define ExpressionSimplifyTypes_IntOp_MULOP__desc_added
 ADD_METARECORD_DEFINITIONS const char* ExpressionSimplifyTypes_IntOp_MULOP__desc__fields[1] = {"no fields"};
 ADD_METARECORD_DEFINITIONS struct record_description ExpressionSimplifyTypes_IntOp_MULOP__desc = {
-"ExpressionSimplifyTypes_IntOp_MULOP",
-"ExpressionSimplifyTypes.IntOp.MULOP",
-ExpressionSimplifyTypes_IntOp_MULOP__desc__fields
+  "ExpressionSimplifyTypes_IntOp_MULOP",
+  "ExpressionSimplifyTypes.IntOp.MULOP",
+  ExpressionSimplifyTypes_IntOp_MULOP__desc__fields
 };
 #endif
-#else
+#else /* Only use the file as a header */
 extern struct record_description ExpressionSimplifyTypes_IntOp_MULOP__desc;
 #endif
 #ifdef __cplusplus
 }
 #endif
+

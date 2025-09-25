@@ -5,27 +5,154 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-DLLExport
-modelica_metatype omc_SimCodeMain_translateModel(threadData_t *threadData, modelica_metatype _x, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _className, modelica_metatype _inInteractiveSymbolTable, modelica_string _inFileNamePrefix, modelica_boolean _addDummy, modelica_metatype _inSimSettingsOpt, modelica_metatype _args, modelica_metatype *out_outInteractiveSymbolTable, modelica_metatype *out_outBackendDAE, modelica_metatype *out_outStringLst, modelica_string *out_outFileDir, modelica_metatype *out_resultValues);
-DLLExport
-modelica_metatype boxptr_SimCodeMain_translateModel(threadData_t *threadData, modelica_metatype _x, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _className, modelica_metatype _inInteractiveSymbolTable, modelica_metatype _inFileNamePrefix, modelica_metatype _addDummy, modelica_metatype _inSimSettingsOpt, modelica_metatype _args, modelica_metatype *out_outInteractiveSymbolTable, modelica_metatype *out_outBackendDAE, modelica_metatype *out_outStringLst, modelica_metatype *out_outFileDir, modelica_metatype *out_resultValues);
+
+extern struct record_description Absyn_FunctionArgs_FUNCTIONARGS__desc;
+
+extern struct record_description Absyn_Path_IDENT__desc;
+
+extern struct record_description AvlSetString_Tree_EMPTY__desc;
+
+extern struct record_description AvlTreeCRToInt_Tree_EMPTY__desc;
+
+extern struct record_description BackendDAE_BackendDAE_DAE__desc;
+
+extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
+
+extern struct record_description BackendDAE_ExtraInfo_EXTRA__INFO__desc;
+
+extern struct record_description BackendDAE_Jacobian_GENERIC__JACOBIAN__desc;
+
+extern struct record_description ErrorTypes_Message_MESSAGE__desc;
+
+extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
+
+extern struct record_description ErrorTypes_Severity_ERROR__desc;
+
+extern struct record_description ErrorTypes_Severity_NOTIFICATION__desc;
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
+
+extern struct record_description Flags_FlagData_INT__FLAG__desc;
+
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
+extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
+
+extern struct record_description Gettext_TranslatableContent_gettext__desc;
+
+extern struct record_description Gettext_TranslatableContent_notrans__desc;
+
+extern struct record_description HpcOmSimCode_HpcOmData_HPCOMDATA__desc;
+
+extern struct record_description SemanticVersion_Version_SEMVER__desc;
+
+extern struct record_description SimCode_DaeModeConfig_ALL__EQUATIONS__desc;
+
+extern struct record_description SimCode_DaeModeData_DAEMODEDATA__desc;
+
+extern struct record_description SimCode_DelayedExpression_DELAYED__EXPRESSIONS__desc;
+
+extern struct record_description SimCode_PartitionData_PARTITIONDATA__desc;
+
+extern struct record_description SimCode_SimCode_SIMCODE__desc;
+
+extern struct record_description SimCode_SimulationSettings_SIMULATION__SETTINGS__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+extern struct record_description Tpl_Text_MEM__TEXT__desc;
+
+extern struct record_description Values_Value_REAL__desc;
+
+
+#define boxptr_SimCodeMain_copyFiles omc_SimCodeMain_copyFiles
+
+
+#define boxptr_SimCodeMain_serializeNotify omc_SimCodeMain_serializeNotify
+
+
+#define boxptr_SimCodeMain_translateModelCallBackendNB omc_SimCodeMain_translateModelCallBackendNB
+
+
+DLLDirection
+modelica_metatype omc_SimCodeMain_translateModelCallBackendOBDAEMode(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcache, modelica_metatype _inEnv, modelica_metatype _inDae, modelica_metatype _className, modelica_string _inFileNamePrefix, modelica_metatype _inSimSettingsOpt, modelica_metatype _args, modelica_metatype *out_outLibs, modelica_string *out_outFileDir, modelica_metatype *out_resultValues);
+#define boxptr_SimCodeMain_translateModelCallBackendOBDAEMode omc_SimCodeMain_translateModelCallBackendOBDAEMode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeMain_translateModelCallBackendOBDAEMode,2,0) {(void*) boxptr_SimCodeMain_translateModelCallBackendOBDAEMode,0}};
+#define boxvar_SimCodeMain_translateModelCallBackendOBDAEMode MMC_REFSTRUCTLIT(boxvar_lit_SimCodeMain_translateModelCallBackendOBDAEMode)
+
+
+#define boxptr_SimCodeMain_translateModelCallBackendOB omc_SimCodeMain_translateModelCallBackendOB
+
+
+DLLDirection
+modelica_boolean omc_SimCodeMain_translateModel(threadData_t *threadData, modelica_metatype _kind, modelica_metatype __omcQ_24in_5Fcache, modelica_metatype _inEnv, modelica_metatype _className, modelica_string _inFileNamePrefix, modelica_boolean _runBackend, modelica_boolean _useDAEMode, modelica_boolean _runSilent, modelica_metatype _inSimSettingsOpt, modelica_metatype _args, modelica_metatype *out_cache, modelica_metatype *out_outLibs, modelica_string *out_outFileDir, modelica_metatype *out_resultValues);
+DLLDirection
+modelica_metatype boxptr_SimCodeMain_translateModel(threadData_t *threadData, modelica_metatype _kind, modelica_metatype __omcQ_24in_5Fcache, modelica_metatype _inEnv, modelica_metatype _className, modelica_metatype _inFileNamePrefix, modelica_metatype _runBackend, modelica_metatype _useDAEMode, modelica_metatype _runSilent, modelica_metatype _inSimSettingsOpt, modelica_metatype _args, modelica_metatype *out_cache, modelica_metatype *out_outLibs, modelica_metatype *out_outFileDir, modelica_metatype *out_resultValues);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeMain_translateModel,2,0) {(void*) boxptr_SimCodeMain_translateModel,0}};
 #define boxvar_SimCodeMain_translateModel MMC_REFSTRUCTLIT(boxvar_lit_SimCodeMain_translateModel)
-DLLExport
-modelica_metatype omc_SimCodeMain_generateModelCode(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_metatype _inInitDAE, modelica_metatype _inInitDAE_lambda0, modelica_metatype _inInlineDAE, modelica_metatype _inRemovedInitialEquationLst, modelica_metatype _p, modelica_metatype _className, modelica_string _filenamePrefix, modelica_metatype _simSettingsOpt, modelica_metatype _args, modelica_string *out_fileDir, modelica_real *out_timeSimCode, modelica_real *out_timeTemplates);
-DLLExport
-modelica_metatype boxptr_SimCodeMain_generateModelCode(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_metatype _inInitDAE, modelica_metatype _inInitDAE_lambda0, modelica_metatype _inInlineDAE, modelica_metatype _inRemovedInitialEquationLst, modelica_metatype _p, modelica_metatype _className, modelica_metatype _filenamePrefix, modelica_metatype _simSettingsOpt, modelica_metatype _args, modelica_metatype *out_fileDir, modelica_metatype *out_timeSimCode, modelica_metatype *out_timeTemplates);
+
+
+#define boxptr_SimCodeMain_callTargetTemplatesXML omc_SimCodeMain_callTargetTemplatesXML
+
+
+#define boxptr_SimCodeMain_callTargetTemplatesFMU omc_SimCodeMain_callTargetTemplatesFMU
+
+
+#define boxptr_SimCodeMain_callTargetTemplatesOMSICpp omc_SimCodeMain_callTargetTemplatesOMSICpp
+
+
+#define boxptr_SimCodeMain_callTargetTemplatesCPP omc_SimCodeMain_callTargetTemplatesCPP
+
+
+#define boxptr_SimCodeMain_callTargetTemplates_runToBoolean omc_SimCodeMain_callTargetTemplates_runToBoolean
+
+
+#define boxptr_SimCodeMain_callTargetTemplates_runCodegenFunc omc_SimCodeMain_callTargetTemplates_runCodegenFunc
+
+
+#define boxptr_SimCodeMain_callTargetTemplates_runToStr omc_SimCodeMain_callTargetTemplates_runToStr
+
+
+#define boxptr_SimCodeMain_callTargetTemplates omc_SimCodeMain_callTargetTemplates
+
+
+#define boxptr_SimCodeMain_runTpl omc_SimCodeMain_runTpl
+
+
+#define boxptr_SimCodeMain_runTplWriteFile omc_SimCodeMain_runTplWriteFile
+
+
+DLLDirection
+modelica_metatype omc_SimCodeMain_generateModelCode(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_metatype _inInitDAE, modelica_metatype _inInitDAE_lambda0, modelica_metatype _inInlineData, modelica_metatype _inRemovedInitialEquationLst, modelica_metatype _p, modelica_metatype _className, modelica_string _filenamePrefix, modelica_metatype _simSettingsOpt, modelica_metatype _args, modelica_metatype _inFMIDer, modelica_string *out_fileDir, modelica_real *out_timeSimCode, modelica_real *out_timeTemplates);
+DLLDirection
+modelica_metatype boxptr_SimCodeMain_generateModelCode(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_metatype _inInitDAE, modelica_metatype _inInitDAE_lambda0, modelica_metatype _inInlineData, modelica_metatype _inRemovedInitialEquationLst, modelica_metatype _p, modelica_metatype _className, modelica_metatype _filenamePrefix, modelica_metatype _simSettingsOpt, modelica_metatype _args, modelica_metatype _inFMIDer, modelica_metatype *out_fileDir, modelica_metatype *out_timeSimCode, modelica_metatype *out_timeTemplates);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeMain_generateModelCode,2,0) {(void*) boxptr_SimCodeMain_generateModelCode,0}};
 #define boxvar_SimCodeMain_generateModelCode MMC_REFSTRUCTLIT(boxvar_lit_SimCodeMain_generateModelCode)
-DLLExport
-modelica_integer omc_SimCodeMain_createSimulationSettings(threadData_t *threadData, modelica_real _startTime, modelica_real _stopTime, modelica_integer _inumberOfIntervals, modelica_real _tolerance, modelica_string _method, modelica_string _options, modelica_string _outputFormat, modelica_string _variableFilter, modelica_string _cflags);
-DLLExport
+
+
+DLLDirection
+modelica_metatype omc_SimCodeMain_createSimulationSettings(threadData_t *threadData, modelica_real _startTime, modelica_real _stopTime, modelica_integer _inumberOfIntervals, modelica_real _tolerance, modelica_string _method, modelica_string _options, modelica_string _outputFormat, modelica_string _variableFilter, modelica_string _cflags);
+DLLDirection
 modelica_metatype boxptr_SimCodeMain_createSimulationSettings(threadData_t *threadData, modelica_metatype _startTime, modelica_metatype _stopTime, modelica_metatype _inumberOfIntervals, modelica_metatype _tolerance, modelica_metatype _method, modelica_metatype _options, modelica_metatype _outputFormat, modelica_metatype _variableFilter, modelica_metatype _cflags);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeMain_createSimulationSettings,2,0) {(void*) boxptr_SimCodeMain_createSimulationSettings,0}};
 #define boxvar_SimCodeMain_createSimulationSettings MMC_REFSTRUCTLIT(boxvar_lit_SimCodeMain_createSimulationSettings)
+
 #ifdef __cplusplus
 }
 #endif

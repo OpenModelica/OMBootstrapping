@@ -1941,6 +1941,32 @@ ADD_METARECORD_DEFINITIONS struct record_description Absyn_ElementArg_ELEMENTARG
 extern struct record_description Absyn_ElementArg_ELEMENTARGCOMMENT__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
+#ifndef Absyn_ElementArg_INHERITANCEBREAK__desc_added
+#define Absyn_ElementArg_INHERITANCEBREAK__desc_added
+ADD_METARECORD_DEFINITIONS const char* Absyn_ElementArg_INHERITANCEBREAK__desc__fields[2] = {"cnct","info"};
+ADD_METARECORD_DEFINITIONS struct record_description Absyn_ElementArg_INHERITANCEBREAK__desc = {
+  "Absyn_ElementArg_INHERITANCEBREAK",
+  "Absyn.ElementArg.INHERITANCEBREAK",
+  Absyn_ElementArg_INHERITANCEBREAK__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description Absyn_ElementArg_INHERITANCEBREAK__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef Absyn_ElementArg_INHERITANCEBREAK__desc_added
+#define Absyn_ElementArg_INHERITANCEBREAK__desc_added
+ADD_METARECORD_DEFINITIONS const char* Absyn_ElementArg_INHERITANCEBREAK__desc__fields[2] = {"cnct","info"};
+ADD_METARECORD_DEFINITIONS struct record_description Absyn_ElementArg_INHERITANCEBREAK__desc = {
+  "Absyn_ElementArg_INHERITANCEBREAK",
+  "Absyn.ElementArg.INHERITANCEBREAK",
+  Absyn_ElementArg_INHERITANCEBREAK__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description Absyn_ElementArg_INHERITANCEBREAK__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
 #ifndef Absyn_ElementArg_ELEMENTARGCOMMENT__desc_added
 #define Absyn_ElementArg_ELEMENTARGCOMMENT__desc_added
 ADD_METARECORD_DEFINITIONS const char* Absyn_ElementArg_ELEMENTARGCOMMENT__desc__fields[1] = {"comment"};

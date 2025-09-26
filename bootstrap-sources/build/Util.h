@@ -755,22 +755,6 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Util_optionToString,2,0) {(void*) boxpt
 
 
 DLLDirection
-modelica_boolean omc_Util_boolAndList(threadData_t *threadData, modelica_metatype _inBooleanLst);
-DLLDirection
-modelica_metatype boxptr_Util_boolAndList(threadData_t *threadData, modelica_metatype _inBooleanLst);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_Util_boolAndList,2,0) {(void*) boxptr_Util_boolAndList,0}};
-#define boxvar_Util_boolAndList MMC_REFSTRUCTLIT(boxvar_lit_Util_boolAndList)
-
-
-DLLDirection
-modelica_boolean omc_Util_boolOrList(threadData_t *threadData, modelica_metatype _inBooleanLst);
-DLLDirection
-modelica_metatype boxptr_Util_boolOrList(threadData_t *threadData, modelica_metatype _inBooleanLst);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_Util_boolOrList,2,0) {(void*) boxptr_Util_boolOrList,0}};
-#define boxvar_Util_boolOrList MMC_REFSTRUCTLIT(boxvar_lit_Util_boolOrList)
-
-
-DLLDirection
 modelica_metatype omc_Util_stringSplitAtChar(threadData_t *threadData, modelica_string _string, modelica_string _token);
 #define boxptr_Util_stringSplitAtChar omc_Util_stringSplitAtChar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Util_stringSplitAtChar,2,0) {(void*) boxptr_Util_stringSplitAtChar,0}};

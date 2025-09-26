@@ -7,6 +7,7 @@ extern "C" {
 #include "AbsynToSCode.h"
 #include "AbsynUtil.h"
 #include "Debug.h"
+#include "Dump.h"
 #include "Error.h"
 #include "Flags.h"
 #include "InstHashTable.h"

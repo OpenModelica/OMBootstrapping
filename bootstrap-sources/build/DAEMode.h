@@ -36,6 +36,8 @@ extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
 
 extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
 
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
 extern struct record_description Flags_FlagData_STRING__FLAG__desc;
 
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;

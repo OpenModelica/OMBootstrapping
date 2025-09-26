@@ -2908,6 +2908,21 @@ extern struct record_description Absyn_EqMod_NOMOD__desc;
 static const MMC_DEFSTRUCTLIT(Absyn__NOMOD__struct,1,3) {&Absyn_EqMod_NOMOD__desc}};
 static void *Absyn__NOMOD = MMC_REFSTRUCTLIT(Absyn__NOMOD__struct);
 #ifdef ADD_METARECORD_DEFINITIONS
+#ifndef Absyn_ElementArg_INHERITANCEBREAK__desc_added
+#define Absyn_ElementArg_INHERITANCEBREAK__desc_added
+ADD_METARECORD_DEFINITIONS const char* Absyn_ElementArg_INHERITANCEBREAK__desc__fields[2] = {"cnct","info"};
+ADD_METARECORD_DEFINITIONS struct record_description Absyn_ElementArg_INHERITANCEBREAK__desc = {
+  "Absyn_ElementArg_INHERITANCEBREAK",
+  "Absyn.ElementArg.INHERITANCEBREAK",
+  Absyn_ElementArg_INHERITANCEBREAK__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description Absyn_ElementArg_INHERITANCEBREAK__desc;
+#endif
+#define Absyn__INHERITANCEBREAK_3dBOX2 6
+#define Absyn__INHERITANCEBREAK(cnct,info) (mmc_mk_box3(6,&Absyn_ElementArg_INHERITANCEBREAK__desc,cnct,info))
+#ifdef ADD_METARECORD_DEFINITIONS
 #ifndef Absyn_ElementArg_ELEMENTARGCOMMENT__desc_added
 #define Absyn_ElementArg_ELEMENTARGCOMMENT__desc_added
 ADD_METARECORD_DEFINITIONS const char* Absyn_ElementArg_ELEMENTARGCOMMENT__desc__fields[1] = {"comment"};

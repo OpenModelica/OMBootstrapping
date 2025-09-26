@@ -8653,7 +8653,6 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_prepairOrphansOrder1
   modelica_metatype _r = NULL;
   modelica_metatype _elst = NULL;
   modelica_boolean _b1;
-  modelica_metatype _blst = NULL;
   modelica_metatype _vlst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
@@ -8664,7 +8663,6 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_prepairOrphansOrder1
   // _r has no default value.
   // _elst has no default value.
   // _b1 has no default value.
-  // _blst has no default value.
   // _vlst has no default value.
   {
     modelica_metatype _e;
@@ -8697,9 +8695,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_prepairOrphansOrder1
 
           _vlst = omc_List_map1r(threadData, _r, boxvar_BackendVariable_getVarAt, _vars);
 
-          _blst = omc_List_map(threadData, _vlst, boxvar_BackendVariable_isFlowVar);
-
-          _b1 = omc_Util_boolOrList(threadData, _blst);
+          _b1 = omc_List_any(threadData, _vlst, boxvar_BackendVariable_isFlowVar);
 
           _ofoundFlow = omc_OnRelaxation_prepairOrphansOrder1(threadData, _next, _ass1, _ass2, _m, _mt, _mark, _rowmarks, _colummarks, _preorphan, _orphans, _r, (_b1 || _ofoundFlow), _vars);
         }
@@ -9066,7 +9062,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_generateCliquesResid
 
           _blst = omc_List_map(threadData, _vlst, boxvar_BackendVariable_isFlowVar);
 
-          _b1 = omc_Util_boolOrList(threadData, _blst);
+          _b1 = omc_List_any(threadData, _blst, boxvar_Util_id);
 
           _next = omc_OnRelaxation_selectNonFlows(threadData, _next, _blst);
 
@@ -9176,7 +9172,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_generateCliquesResid
 
           _blst = omc_List_map(threadData, _vlst, boxvar_BackendVariable_isFlowVar);
 
-          _foundflow = omc_Util_boolOrList(threadData, _blst);
+          _foundflow = omc_List_any(threadData, _blst, boxvar_Util_id);
 
           _rlst = omc_OnRelaxation_selectNonFlows(threadData, _rlst, _blst);
 

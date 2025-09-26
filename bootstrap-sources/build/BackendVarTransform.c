@@ -89,7 +89,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT29,50,_OMC_LIT29_data);
 #define _OMC_LIT30_data "/home/adrpo33/OpenModelica/OMCompiler/Compiler/BackEnd/BackendVarTransform.mo"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT30,77,_OMC_LIT30_data);
 #define _OMC_LIT30 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT30)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT31_6,1.758197185e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT31_6,1.758917908e9);
 #define _OMC_LIT31_6 MMC_REFREALLIT(_OMC_LIT_STRUCT31_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT31,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT30,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(155)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(155)),MMC_IMMEDIATE(MMC_TAGFIXNUM(150)),_OMC_LIT31_6}};
 #define _OMC_LIT31 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT31)
@@ -4132,7 +4132,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVarTransform_replaceEquat
           /* Pattern matching succeeded */
           _expl1 = omc_BackendVarTransform_replaceExpList1(threadData, _expl, _repl, _inFuncTypeExpExpToBooleanOption ,&_blst);
 
-          _b1 = omc_Util_boolOrList(threadData, _blst);
+          _b1 = omc_List_any(threadData, _blst, boxvar_Util_id);
 
           _source = omc_ElementSource_addSymbolicTransformationSubstitutionLst(threadData, _blst, _source, _expl, _expl1);
 

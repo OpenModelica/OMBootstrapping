@@ -12494,12 +12494,7 @@ modelica_metatype omc_TplAbsyn_statementsFromMapExp(threadData_t *threadData, mo
           modelica_metatype tmpMeta136;
           modelica_metatype tmpMeta137;
           modelica_metatype tmpMeta138;
-          modelica_metatype tmpMeta139;
-          modelica_metatype tmpMeta140;
-          modelica_metatype tmpMeta141;
-          modelica_metatype tmpMeta142;
-          modelica_metatype tmpMeta143;
-          modelica_metatype tmpMeta144;
+          modelica_string tmp139 = 0;
           modelica_metatype tmpMeta145;
           modelica_metatype tmpMeta146;
           modelica_metatype tmpMeta147;
@@ -12508,6 +12503,8 @@ modelica_metatype omc_TplAbsyn_statementsFromMapExp(threadData_t *threadData, mo
           modelica_metatype tmpMeta150;
           modelica_metatype tmpMeta151;
           modelica_metatype tmpMeta152;
+          modelica_metatype tmpMeta153;
+          modelica_metatype tmpMeta154;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta89 = MMC_CAR(tmp4_2);
           tmpMeta90 = MMC_CDR(tmp4_2);
@@ -12641,39 +12638,66 @@ modelica_metatype omc_TplAbsyn_statementsFromMapExp(threadData_t *threadData, mo
 
           _arrName = _OMC_LIT208;
 
-          /* Pattern-matching assignment */
-          tmpMeta139 = _caseLocals;
-          if (listEmpty(tmpMeta139)) goto goto_2;
-          tmpMeta140 = MMC_CAR(tmpMeta139);
-          tmpMeta141 = MMC_CDR(tmpMeta139);
-          tmpMeta142 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta140), 1));
-          _eltName = tmpMeta142;
+          { /* match expression */
+            modelica_metatype tmp142_1;
+            tmp142_1 = _mexp;
+            {
+              volatile mmc_switch_type tmp142;
+              int tmp143;
+              tmp142 = 0;
+              for (; tmp142 < 2; tmp142++) {
+                switch (MMC_SWITCH_CAST(tmp142)) {
+                case 0: {
+                  modelica_metatype tmpMeta144;
+                  if (mmc__uniontype__metarecord__typedef__equal(tmp142_1,1,1) == 0) goto tmp141_end;
+                  tmpMeta144 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp142_1), 2));
+                  _eltName = tmpMeta144;
+                  /* Pattern matching succeeded */
+                  tmp139 = _eltName;
+                  goto tmp141_done;
+                }
+                case 1: {
+                  if (mmc__uniontype__metarecord__typedef__equal(tmp142_1,10,0) == 0) goto tmp141_end;
+                  /* Pattern matching succeeded */
+                  tmp139 = _OMC_LIT2;
+                  goto tmp141_done;
+                }
+                }
+                goto tmp141_end;
+                tmp141_end: ;
+              }
+              goto goto_140;
+              goto_140:;
+              goto goto_2;
+              goto tmp141_done;
+              tmp141_done:;
+            }
+          }
+          _eltName = tmp139;
 
-          tmpMeta143 = mmc_mk_box6(3, &TplAbsyn_MapContext_MAP__CONTEXT__desc, _ofbind, _mapexp, _iopts, _hasIndexIdentOpt, mmc_mk_boolean(_useiter));
-          _mapctx = tmpMeta143;
+          tmpMeta145 = mmc_mk_box6(3, &TplAbsyn_MapContext_MAP__CONTEXT__desc, _ofbind, _mapexp, _iopts, _hasIndexIdentOpt, mmc_mk_boolean(_useiter));
+          _mapctx = tmpMeta145;
 
-          tmpMeta145 = mmc_mk_box5(10, &TplAbsyn_MMExp_MM__FOR__LOOP__desc, _idxName, _arrName, _eltName, _mapstmts);
-          tmpMeta144 = mmc_mk_cons(tmpMeta145, MMC_REFSTRUCTLIT(mmc_nil));
-          tmpMeta146 = mmc_mk_box3(5, &TplAbsyn_GenInfo_GI__MAP__FUN__desc, _argtype, _mapctx);
-          tmpMeta147 = mmc_mk_box8(6, &TplAbsyn_MMDeclaration_MM__FUN__desc, mmc_mk_boolean(0 /* false */), _fname, _iargs, _oargs, _maplocals, tmpMeta144, tmpMeta146);
-          _mmFun = tmpMeta147;
+          tmpMeta147 = mmc_mk_box5(10, &TplAbsyn_MMExp_MM__FOR__LOOP__desc, _idxName, _arrName, _eltName, _mapstmts);
+          tmpMeta146 = mmc_mk_cons(tmpMeta147, MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta148 = mmc_mk_box3(5, &TplAbsyn_GenInfo_GI__MAP__FUN__desc, _argtype, _mapctx);
+          tmpMeta149 = mmc_mk_box8(6, &TplAbsyn_MMDeclaration_MM__FUN__desc, mmc_mk_boolean(0 /* false */), _fname, _iargs, _oargs, _maplocals, tmpMeta146, tmpMeta148);
+          _mmFun = tmpMeta149;
 
           _stmts = omc_TplAbsyn_addPushIter(threadData, (_isfirst && _useiter), _iopts, _stmts, _intxt, _outtxt ,&_intxt);
 
           _extargvals = omc_List_map(threadData, _localArgs, boxvar_TplAbsyn_makeMMArgValue);
 
-          tmpMeta148 = mmc_mk_cons(_argtomap, _extargvals);
-          tmpMeta149 = mmc_mk_box2(3, &TplAbsyn_PathIdent_IDENT__desc, _fname);
-          tmpMeta150 = MMC_REFSTRUCTLIT(mmc_nil);
-          omc_TplAbsyn_statementFromFun(threadData, tmpMeta148, tmpMeta149, _iargs, _oargs, tmpMeta150, _intxt, _outtxt, _locals, _tplPackage, _sinfo ,&_stmt ,NULL ,NULL ,&_locals ,&_intxt);
-          tmpMeta151 = mmc_mk_cons(_stmt, _stmts);
-          tmpMeta152 = mmc_mk_cons(_mmFun, _accMMDecls);
-          tmpMeta[0+0] = omc_TplAbsyn_statementsFromMapExp(threadData, 0 /* false */, _restargs, _mapctx, tmpMeta151, _intxt, _outtxt, _locals, _scEnv, _tplPackage, tmpMeta152, &tmpMeta[0+1], &tmpMeta[0+2], &tmpMeta[0+3], &tmp1_c4);
+          tmpMeta150 = mmc_mk_cons(_argtomap, _extargvals);
+          tmpMeta151 = mmc_mk_box2(3, &TplAbsyn_PathIdent_IDENT__desc, _fname);
+          tmpMeta152 = MMC_REFSTRUCTLIT(mmc_nil);
+          omc_TplAbsyn_statementFromFun(threadData, tmpMeta150, tmpMeta151, _iargs, _oargs, tmpMeta152, _intxt, _outtxt, _locals, _tplPackage, _sinfo ,&_stmt ,NULL ,NULL ,&_locals ,&_intxt);
+          tmpMeta153 = mmc_mk_cons(_stmt, _stmts);
+          tmpMeta154 = mmc_mk_cons(_mmFun, _accMMDecls);
+          tmpMeta[0+0] = omc_TplAbsyn_statementsFromMapExp(threadData, 0 /* false */, _restargs, _mapctx, tmpMeta153, _intxt, _outtxt, _locals, _scEnv, _tplPackage, tmpMeta154, &tmpMeta[0+1], &tmpMeta[0+2], &tmpMeta[0+3], &tmp1_c4);
           goto tmp3_done;
         }
         case 4: {
-          modelica_metatype tmpMeta153;
-          modelica_metatype tmpMeta154;
           modelica_metatype tmpMeta155;
           modelica_metatype tmpMeta156;
           modelica_metatype tmpMeta157;
@@ -12681,13 +12705,13 @@ modelica_metatype omc_TplAbsyn_statementsFromMapExp(threadData_t *threadData, mo
           modelica_metatype tmpMeta159;
           modelica_metatype tmpMeta160;
           modelica_metatype tmpMeta161;
-          modelica_integer tmp162;
+          modelica_metatype tmpMeta162;
           modelica_metatype tmpMeta163;
-          modelica_boolean tmp164;
-          modelica_metatype tmpMeta166;
-          modelica_boolean tmp167;
-          modelica_metatype tmpMeta169;
-          modelica_metatype tmpMeta170;
+          modelica_integer tmp164;
+          modelica_metatype tmpMeta165;
+          modelica_boolean tmp166;
+          modelica_metatype tmpMeta168;
+          modelica_boolean tmp169;
           modelica_metatype tmpMeta171;
           modelica_metatype tmpMeta172;
           modelica_metatype tmpMeta173;
@@ -12703,9 +12727,9 @@ modelica_metatype omc_TplAbsyn_statementsFromMapExp(threadData_t *threadData, mo
           modelica_metatype tmpMeta183;
           modelica_metatype tmpMeta184;
           modelica_metatype tmpMeta185;
-          modelica_integer tmp186;
+          modelica_metatype tmpMeta186;
           modelica_metatype tmpMeta187;
-          modelica_metatype tmpMeta188;
+          modelica_integer tmp188;
           modelica_metatype tmpMeta189;
           modelica_metatype tmpMeta190;
           modelica_metatype tmpMeta191;
@@ -12716,9 +12740,9 @@ modelica_metatype omc_TplAbsyn_statementsFromMapExp(threadData_t *threadData, mo
           modelica_metatype tmpMeta196;
           modelica_metatype tmpMeta197;
           modelica_metatype tmpMeta198;
-          modelica_boolean tmp199;
+          modelica_metatype tmpMeta199;
           modelica_metatype tmpMeta200;
-          modelica_metatype tmpMeta201;
+          modelica_boolean tmp201;
           modelica_metatype tmpMeta202;
           modelica_metatype tmpMeta203;
           modelica_metatype tmpMeta204;
@@ -12737,193 +12761,195 @@ modelica_metatype omc_TplAbsyn_statementsFromMapExp(threadData_t *threadData, mo
           modelica_metatype tmpMeta217;
           modelica_metatype tmpMeta218;
           modelica_metatype tmpMeta219;
+          modelica_metatype tmpMeta220;
+          modelica_metatype tmpMeta221;
           if (listEmpty(tmp4_2)) goto tmp3_end;
-          tmpMeta153 = MMC_CAR(tmp4_2);
-          tmpMeta154 = MMC_CDR(tmp4_2);
-          tmpMeta155 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta153), 2));
-          tmpMeta156 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 2));
-          tmpMeta157 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 3));
-          tmpMeta158 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta157), 2));
-          tmpMeta159 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 4));
-          tmpMeta160 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 5));
-          tmpMeta161 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 6));
-          tmp162 = mmc_unbox_integer(tmpMeta161);
-          tmpMeta163 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_9), 3));
+          tmpMeta155 = MMC_CAR(tmp4_2);
+          tmpMeta156 = MMC_CDR(tmp4_2);
+          tmpMeta157 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta155), 2));
+          tmpMeta158 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 2));
+          tmpMeta159 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 3));
+          tmpMeta160 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta159), 2));
+          tmpMeta161 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 4));
+          tmpMeta162 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 5));
+          tmpMeta163 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 6));
+          tmp164 = mmc_unbox_integer(tmpMeta163);
+          tmpMeta165 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_9), 3));
           
-          _argtomap = tmpMeta153;
-          _argtype = tmpMeta155;
-          _restargs = tmpMeta154;
+          _argtomap = tmpMeta155;
+          _argtype = tmpMeta157;
+          _restargs = tmpMeta156;
           _isfirst = tmp4_1;
-          _ofbind = tmpMeta156;
-          _mapexp = tmpMeta157;
-          _sinfo = tmpMeta158;
-          _iopts = tmpMeta159;
-          _hasIndexIdentOpt = tmpMeta160;
-          _useiter = tmp162  /* pattern as ty=Boolean */;
+          _ofbind = tmpMeta158;
+          _mapexp = tmpMeta159;
+          _sinfo = tmpMeta160;
+          _iopts = tmpMeta161;
+          _hasIndexIdentOpt = tmpMeta162;
+          _useiter = tmp164  /* pattern as ty=Boolean */;
           _stmts = tmp4_4;
           _intxt = tmp4_5;
           _outtxt = tmp4_6;
           _locals = tmp4_7;
           _scEnv = tmp4_8;
           _tplPackage = tmp4_9;
-          _astDefs = tmpMeta163;
+          _astDefs = tmpMeta165;
           _accMMDecls = tmp4_10;
           /* Pattern matching succeeded */
-          tmp164 = 0; /* begin failure */
+          tmp166 = 0; /* begin failure */
           MMC_TRY_INTERNAL(mmc_jumper)
             /* Pattern-matching assignment */
-            tmpMeta166 = omc_TplAbsyn_deAliasedType(threadData, _argtype, _astDefs);
-            if (mmc__uniontype__metarecord__typedef__equal(tmpMeta166,0,1) == 0) goto goto_165;
+            tmpMeta168 = omc_TplAbsyn_deAliasedType(threadData, _argtype, _astDefs);
+            if (mmc__uniontype__metarecord__typedef__equal(tmpMeta168,0,1) == 0) goto goto_167;
             
-            tmp164 = 1;
-          goto goto_165;
-          goto_165:;
+            tmp166 = 1;
+          goto goto_167;
+          goto_167:;
           MMC_CATCH_INTERNAL(mmc_jumper)
-          if (tmp164) {goto goto_2;} /* end failure */
+          if (tmp166) {goto goto_2;} /* end failure */
 
-          tmp167 = 0; /* begin failure */
+          tmp169 = 0; /* begin failure */
           MMC_TRY_INTERNAL(mmc_jumper)
             /* Pattern-matching assignment */
-            tmpMeta169 = omc_TplAbsyn_deAliasedType(threadData, _argtype, _astDefs);
-            if (mmc__uniontype__metarecord__typedef__equal(tmpMeta169,1,1) == 0) goto goto_168;
+            tmpMeta171 = omc_TplAbsyn_deAliasedType(threadData, _argtype, _astDefs);
+            if (mmc__uniontype__metarecord__typedef__equal(tmpMeta171,1,1) == 0) goto goto_170;
             
-            tmp167 = 1;
-          goto goto_168;
-          goto_168:;
+            tmp169 = 1;
+          goto goto_170;
+          goto_170:;
           MMC_CATCH_INTERNAL(mmc_jumper)
-          if (tmp167) {goto goto_2;} /* end failure */
+          if (tmp169) {goto goto_2;} /* end failure */
 
           _ofbindEnc = omc_TplAbsyn_typeCheckMatchingExp(threadData, _ofbind, _argtype, _astDefs);
 
           _idxName = omc_Util_getOptionOrDefault(threadData, _hasIndexIdentOpt, _OMC_LIT157);
 
-          tmpMeta170 = stringAppend(_OMC_LIT205,_idxName);
-          _freshIdxName = tmpMeta170;
+          tmpMeta172 = stringAppend(_OMC_LIT205,_idxName);
+          _freshIdxName = tmpMeta172;
 
-          tmpMeta171 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta172 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta173 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta175 = mmc_mk_box5(5, &TplAbsyn_Scope_LET__SCOPE__desc, _idxName, _OMC_LIT119, _freshIdxName, mmc_mk_boolean(0 /* false */));
-          tmpMeta177 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta178 = MMC_REFSTRUCTLIT(mmc_nil);
+          tmpMeta174 = MMC_REFSTRUCTLIT(mmc_nil);
+          tmpMeta175 = MMC_REFSTRUCTLIT(mmc_nil);
+          tmpMeta177 = mmc_mk_box5(5, &TplAbsyn_Scope_LET__SCOPE__desc, _idxName, _OMC_LIT119, _freshIdxName, mmc_mk_boolean(0 /* false */));
           tmpMeta179 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta180 = mmc_mk_box8(4, &TplAbsyn_Scope_CASE__SCOPE__desc, _ofbindEnc, _argtype, tmpMeta177, tmpMeta178, tmpMeta179, _OMC_LIT157, mmc_mk_boolean(1 /* true */));
-          tmpMeta181 = mmc_mk_cons(_OMC_LIT159, _scEnv);
-          tmpMeta176 = mmc_mk_cons(tmpMeta180, tmpMeta181);
-          tmpMeta174 = mmc_mk_cons(tmpMeta175, tmpMeta176);
-          _mapstmts = omc_TplAbsyn_statementsFromExp(threadData, _mapexp, tmpMeta171, tmpMeta172, _OMC_LIT42, _OMC_LIT42, tmpMeta173, tmpMeta174, _tplPackage, _accMMDecls ,&_maplocals ,&_scEnv ,&_accMMDecls ,NULL);
+          tmpMeta180 = MMC_REFSTRUCTLIT(mmc_nil);
+          tmpMeta181 = MMC_REFSTRUCTLIT(mmc_nil);
+          tmpMeta182 = mmc_mk_box8(4, &TplAbsyn_Scope_CASE__SCOPE__desc, _ofbindEnc, _argtype, tmpMeta179, tmpMeta180, tmpMeta181, _OMC_LIT157, mmc_mk_boolean(1 /* true */));
+          tmpMeta183 = mmc_mk_cons(_OMC_LIT159, _scEnv);
+          tmpMeta178 = mmc_mk_cons(tmpMeta182, tmpMeta183);
+          tmpMeta176 = mmc_mk_cons(tmpMeta177, tmpMeta178);
+          _mapstmts = omc_TplAbsyn_statementsFromExp(threadData, _mapexp, tmpMeta173, tmpMeta174, _OMC_LIT42, _OMC_LIT42, tmpMeta175, tmpMeta176, _tplPackage, _accMMDecls ,&_maplocals ,&_scEnv ,&_accMMDecls ,NULL);
 
           /* Pattern-matching assignment */
-          tmpMeta182 = _scEnv;
-          if (listEmpty(tmpMeta182)) goto goto_2;
-          tmpMeta183 = MMC_CAR(tmpMeta182);
-          tmpMeta184 = MMC_CDR(tmpMeta182);
-          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta183,2,4) == 0) goto goto_2;
-          tmpMeta185 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta183), 5));
-          tmp186 = mmc_unbox_integer(tmpMeta185);
+          tmpMeta184 = _scEnv;
           if (listEmpty(tmpMeta184)) goto goto_2;
-          tmpMeta187 = MMC_CAR(tmpMeta184);
-          tmpMeta188 = MMC_CDR(tmpMeta184);
-          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta187,1,7) == 0) goto goto_2;
-          tmpMeta189 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta187), 2));
-          tmpMeta190 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta187), 4));
-          tmpMeta191 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta187), 5));
-          tmpMeta192 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta187), 6));
-          if (listEmpty(tmpMeta188)) goto goto_2;
-          tmpMeta193 = MMC_CAR(tmpMeta188);
-          tmpMeta194 = MMC_CDR(tmpMeta188);
-          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta193,0,2) == 0) goto goto_2;
-          tmpMeta195 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta193), 3));
-          _isUsed = tmp186  /* pattern as ty=Boolean */;
-          _mexp = tmpMeta189;
-          _localNames = tmpMeta190;
-          _caseLocals = tmpMeta191;
-          _encodedExtargs = tmpMeta192;
-          _localArgs = tmpMeta195;
-          _scEnv = tmpMeta194;
+          tmpMeta185 = MMC_CAR(tmpMeta184);
+          tmpMeta186 = MMC_CDR(tmpMeta184);
+          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta185,2,4) == 0) goto goto_2;
+          tmpMeta187 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta185), 5));
+          tmp188 = mmc_unbox_integer(tmpMeta187);
+          if (listEmpty(tmpMeta186)) goto goto_2;
+          tmpMeta189 = MMC_CAR(tmpMeta186);
+          tmpMeta190 = MMC_CDR(tmpMeta186);
+          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta189,1,7) == 0) goto goto_2;
+          tmpMeta191 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta189), 2));
+          tmpMeta192 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta189), 4));
+          tmpMeta193 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta189), 5));
+          tmpMeta194 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta189), 6));
+          if (listEmpty(tmpMeta190)) goto goto_2;
+          tmpMeta195 = MMC_CAR(tmpMeta190);
+          tmpMeta196 = MMC_CDR(tmpMeta190);
+          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta195,0,2) == 0) goto goto_2;
+          tmpMeta197 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta195), 3));
+          _isUsed = tmp188  /* pattern as ty=Boolean */;
+          _mexp = tmpMeta191;
+          _localNames = tmpMeta192;
+          _caseLocals = tmpMeta193;
+          _encodedExtargs = tmpMeta194;
+          _localArgs = tmpMeta197;
+          _scEnv = tmpMeta196;
 
-          tmpMeta196 = MMC_REFSTRUCTLIT(mmc_nil);
-          _mexp = omc_TplAbsyn_rewriteMatchExpByLocalNames(threadData, _mexp, _argtype, _localNames, tmpMeta196, _astDefs, NULL);
+          tmpMeta198 = MMC_REFSTRUCTLIT(mmc_nil);
+          _mexp = omc_TplAbsyn_rewriteMatchExpByLocalNames(threadData, _mexp, _argtype, _localNames, tmpMeta198, _astDefs, NULL);
 
           _maplocals = listAppend(_caseLocals, _maplocals);
 
           _useiter = omc_TplAbsyn_shouldUseIterFunctions(threadData, _isfirst, _useiter, 0 /* false */, _isUsed, _iopts, _restargs);
 
-          tmpMeta197 = MMC_REFSTRUCTLIT(mmc_nil);
-          _stmt = omc_TplAbsyn_tplStatement(threadData, _OMC_LIT206, tmpMeta197, _OMC_LIT42, _OMC_LIT42);
+          tmpMeta199 = MMC_REFSTRUCTLIT(mmc_nil);
+          _stmt = omc_TplAbsyn_tplStatement(threadData, _OMC_LIT206, tmpMeta199, _OMC_LIT42, _OMC_LIT42);
 
-          tmp199 = (modelica_boolean)_useiter;
-          if(tmp199)
+          tmp201 = (modelica_boolean)_useiter;
+          if(tmp201)
           {
-            tmpMeta198 = mmc_mk_cons(_stmt, _mapstmts);
-            tmpMeta200 = tmpMeta198;
+            tmpMeta200 = mmc_mk_cons(_stmt, _mapstmts);
+            tmpMeta202 = tmpMeta200;
           }
           else
           {
-            tmpMeta200 = _mapstmts;
+            tmpMeta202 = _mapstmts;
           }
-          _mapstmts = tmpMeta200;
+          _mapstmts = tmpMeta202;
 
-          tmpMeta201 = stringAppend(_OMC_LIT219,intString(listLength(_accMMDecls)));
-          _fname = tmpMeta201;
+          tmpMeta203 = stringAppend(_OMC_LIT219,intString(listLength(_accMMDecls)));
+          _fname = tmpMeta203;
 
-          tmpMeta204 = mmc_mk_box2(0, _OMC_LIT220, _argtype);
-          tmpMeta203 = mmc_mk_cons(tmpMeta204, _encodedExtargs);
-          tmpMeta202 = mmc_mk_cons(_OMC_LIT43, tmpMeta203);
-          _iargs = tmpMeta202;
+          tmpMeta206 = mmc_mk_box2(0, _OMC_LIT220, _argtype);
+          tmpMeta205 = mmc_mk_cons(tmpMeta206, _encodedExtargs);
+          tmpMeta204 = mmc_mk_cons(_OMC_LIT43, tmpMeta205);
+          _iargs = tmpMeta204;
 
-          tmpMeta205 = MMC_REFSTRUCTLIT(mmc_nil);
-          _assignedIdents = omc_TplAbsyn_getAssignedIdents(threadData, _mapstmts, tmpMeta205);
+          tmpMeta207 = MMC_REFSTRUCTLIT(mmc_nil);
+          _assignedIdents = omc_TplAbsyn_getAssignedIdents(threadData, _mapstmts, tmpMeta207);
 
           _oargs = omc_List_filter1OnTrue(threadData, _encodedExtargs, boxvar_TplAbsyn_isAssignedText, _assignedIdents);
 
-          tmpMeta206 = mmc_mk_cons(_OMC_LIT43, _oargs);
-          _oargs = tmpMeta206;
+          tmpMeta208 = mmc_mk_cons(_OMC_LIT43, _oargs);
+          _oargs = tmpMeta208;
 
           _mapstmts = listReverse(_mapstmts);
 
           _mapstmts = omc_TplAbsyn_addGetIndex(threadData, _isUsed, _freshIdxName, _mapstmts, _OMC_LIT42, _maplocals ,&_maplocals);
 
-          tmpMeta208 = mmc_mk_box3(0, _mexp, _encodedExtargs, _mapstmts);
-          tmpMeta207 = mmc_mk_cons(tmpMeta208, MMC_REFSTRUCTLIT(mmc_nil));
-          _elabcases = omc_TplAbsyn_addRestElabCase(threadData, tmpMeta207);
+          tmpMeta210 = mmc_mk_box3(0, _mexp, _encodedExtargs, _mapstmts);
+          tmpMeta209 = mmc_mk_cons(tmpMeta210, MMC_REFSTRUCTLIT(mmc_nil));
+          _elabcases = omc_TplAbsyn_addRestElabCase(threadData, tmpMeta209);
 
           _mmmcases = omc_List_map2(threadData, _elabcases, boxvar_TplAbsyn_makeMMMatchCase, _encodedExtargs, _oargs);
 
-          tmpMeta209 = mmc_mk_box6(3, &TplAbsyn_MapContext_MAP__CONTEXT__desc, _ofbind, _mapexp, _iopts, _hasIndexIdentOpt, mmc_mk_boolean(_useiter));
-          _mapctx = tmpMeta209;
+          tmpMeta211 = mmc_mk_box6(3, &TplAbsyn_MapContext_MAP__CONTEXT__desc, _ofbind, _mapexp, _iopts, _hasIndexIdentOpt, mmc_mk_boolean(_useiter));
+          _mapctx = tmpMeta211;
 
           _maplocals = listAppend(_encodedExtargs, _maplocals);
 
-          tmpMeta210 = mmc_mk_cons(_OMC_LIT43, _maplocals);
-          _maplocals = tmpMeta210;
+          tmpMeta212 = mmc_mk_cons(_OMC_LIT43, _maplocals);
+          _maplocals = tmpMeta212;
 
-          tmpMeta212 = mmc_mk_box2(9, &TplAbsyn_MMExp_MM__MATCH__desc, _mmmcases);
-          tmpMeta211 = mmc_mk_cons(tmpMeta212, MMC_REFSTRUCTLIT(mmc_nil));
-          tmpMeta213 = mmc_mk_box3(5, &TplAbsyn_GenInfo_GI__MAP__FUN__desc, _argtype, _mapctx);
-          tmpMeta214 = mmc_mk_box8(6, &TplAbsyn_MMDeclaration_MM__FUN__desc, mmc_mk_boolean(0 /* false */), _fname, _iargs, _oargs, _maplocals, tmpMeta211, tmpMeta213);
-          _mmFun = tmpMeta214;
+          tmpMeta214 = mmc_mk_box2(9, &TplAbsyn_MMExp_MM__MATCH__desc, _mmmcases);
+          tmpMeta213 = mmc_mk_cons(tmpMeta214, MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta215 = mmc_mk_box3(5, &TplAbsyn_GenInfo_GI__MAP__FUN__desc, _argtype, _mapctx);
+          tmpMeta216 = mmc_mk_box8(6, &TplAbsyn_MMDeclaration_MM__FUN__desc, mmc_mk_boolean(0 /* false */), _fname, _iargs, _oargs, _maplocals, tmpMeta213, tmpMeta215);
+          _mmFun = tmpMeta216;
 
           _stmts = omc_TplAbsyn_addPushIter(threadData, (_isfirst && _useiter), _iopts, _stmts, _intxt, _outtxt ,&_intxt);
 
           _extargvals = omc_List_map(threadData, _localArgs, boxvar_TplAbsyn_makeMMArgValue);
 
-          tmpMeta215 = mmc_mk_cons(_argtomap, _extargvals);
-          tmpMeta216 = mmc_mk_box2(3, &TplAbsyn_PathIdent_IDENT__desc, _fname);
-          tmpMeta217 = MMC_REFSTRUCTLIT(mmc_nil);
-          omc_TplAbsyn_statementFromFun(threadData, tmpMeta215, tmpMeta216, _iargs, _oargs, tmpMeta217, _intxt, _outtxt, _locals, _tplPackage, _sinfo ,&_stmt ,NULL ,NULL ,&_locals ,&_intxt);
-          tmpMeta218 = mmc_mk_cons(_stmt, _stmts);
-          tmpMeta219 = mmc_mk_cons(_mmFun, _accMMDecls);
-          tmpMeta[0+0] = omc_TplAbsyn_statementsFromMapExp(threadData, 0 /* false */, _restargs, _mapctx, tmpMeta218, _intxt, _outtxt, _locals, _scEnv, _tplPackage, tmpMeta219, &tmpMeta[0+1], &tmpMeta[0+2], &tmpMeta[0+3], &tmp1_c4);
+          tmpMeta217 = mmc_mk_cons(_argtomap, _extargvals);
+          tmpMeta218 = mmc_mk_box2(3, &TplAbsyn_PathIdent_IDENT__desc, _fname);
+          tmpMeta219 = MMC_REFSTRUCTLIT(mmc_nil);
+          omc_TplAbsyn_statementFromFun(threadData, tmpMeta217, tmpMeta218, _iargs, _oargs, tmpMeta219, _intxt, _outtxt, _locals, _tplPackage, _sinfo ,&_stmt ,NULL ,NULL ,&_locals ,&_intxt);
+          tmpMeta220 = mmc_mk_cons(_stmt, _stmts);
+          tmpMeta221 = mmc_mk_cons(_mmFun, _accMMDecls);
+          tmpMeta[0+0] = omc_TplAbsyn_statementsFromMapExp(threadData, 0 /* false */, _restargs, _mapctx, tmpMeta220, _intxt, _outtxt, _locals, _scEnv, _tplPackage, tmpMeta221, &tmpMeta[0+1], &tmpMeta[0+2], &tmpMeta[0+3], &tmp1_c4);
           goto tmp3_done;
         }
         case 5: {
-          modelica_boolean tmp220;
+          modelica_boolean tmp222;
           
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
-          tmp220 = omc_Flags_isSet(threadData, _OMC_LIT7);
-          if (1 /* true */ != tmp220) goto goto_2;
+          tmp222 = omc_Flags_isSet(threadData, _OMC_LIT7);
+          if (1 /* true */ != tmp222) goto goto_2;
 
           omc_Debug_trace(threadData, _OMC_LIT221);
           goto goto_2;

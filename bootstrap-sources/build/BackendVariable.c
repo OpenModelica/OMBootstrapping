@@ -73,10 +73,10 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT26,34,_OMC_LIT26_data);
 #define _OMC_LIT27_data "function traverseBackendDAEVarsWithUpdate failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT27,48,_OMC_LIT27_data);
 #define _OMC_LIT27 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT27)
-#define _OMC_LIT28_data "/projects/OpenModelica-session2/OMCompiler/Compiler/BackEnd/BackendVariable.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT28,78,_OMC_LIT28_data);
+#define _OMC_LIT28_data "//OpenModelica/OMCompiler/Compiler/BackEnd/BackendVariable.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT28,84,_OMC_LIT28_data);
 #define _OMC_LIT28 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT28)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT29_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT29_6,1.784195231e9);
 #define _OMC_LIT29_6 MMC_REFREALLIT(_OMC_LIT_STRUCT29_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT29,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT28,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3768)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3768)),MMC_IMMEDIATE(MMC_TAGFIXNUM(93)),_OMC_LIT29_6}};
 #define _OMC_LIT29 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT29)
@@ -522,14 +522,14 @@ modelica_metatype omc_BackendVariable_varExp2(threadData_t *threadData, modelica
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
           tmp8 = mmc_unbox_integer(tmpMeta7);
           if (1 != tmp8) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           _exp = omc_Expression_crefExp(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inVar), 2))));
           tmpMeta1 = omc_Expression_expDer(threadData, _exp);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_Expression_crefExp(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inVar), 2))));
           goto tmp3_done;
@@ -566,10 +566,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isRecordVar(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _isRec;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _isRec = mmc_unbox_boolean(omc_ComponentReference_traverseCref(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inVar), 2))), boxvar_ComponentReference_crefIsRec, mmc_mk_boolean(0 /* false */)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isRec;
 }
 modelica_metatype boxptr_BackendVariable_isRecordVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -647,7 +653,7 @@ modelica_metatype omc_BackendVariable_transformXToXd(threadData_t *threadData, m
           modelica_metatype tmpMeta8;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,3) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           _outVar = _inVar;
 
@@ -664,7 +670,7 @@ modelica_metatype omc_BackendVariable_transformXToXd(threadData_t *threadData, m
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inVar;
           goto tmp3_done;
@@ -690,6 +696,9 @@ modelica_integer omc_BackendVariable_stateSelectToInteger(threadData_t *threadDa
 {
   modelica_integer _prio;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _prio has no default value.
@@ -701,31 +710,31 @@ modelica_integer omc_BackendVariable_stateSelectToInteger(threadData_t *threadDa
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) -1);
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 0);
           goto tmp3_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 1);
           goto tmp3_done;
         }
         case 6: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 2);
           goto tmp3_done;
         }
         case 7: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 3);
           goto tmp3_done;
@@ -743,6 +752,9 @@ modelica_integer omc_BackendVariable_stateSelectToInteger(threadData_t *threadDa
   }
   _prio = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _prio;
 }
 modelica_metatype boxptr_BackendVariable_stateSelectToInteger(threadData_t *threadData, modelica_metatype _inStateSelect)
@@ -760,6 +772,9 @@ modelica_integer omc_BackendVariable_varStateSelectPrioAlias(threadData_t *threa
   modelica_integer _prio;
   modelica_metatype _ss = NULL;
   modelica_boolean _knownDer;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _prio has no default value.
@@ -775,6 +790,9 @@ modelica_integer omc_BackendVariable_varStateSelectPrioAlias(threadData_t *threa
 
   _prio = (_knownDer?((modelica_integer) 1) + _prio:_prio);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _prio;
 }
 modelica_metatype boxptr_BackendVariable_varStateSelectPrioAlias(threadData_t *threadData, modelica_metatype _v)
@@ -790,10 +808,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_selfGeneratedVar(threadData_t *threadData, modelica_metatype _inCref)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _b = omc_StringUtil_startsWith(threadData, omc_ComponentReference_crefStr(threadData, _inCref), _OMC_LIT1);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_selfGeneratedVar(threadData_t *threadData, modelica_metatype _inCref)
@@ -811,6 +835,9 @@ modelica_integer omc_BackendVariable_calcAliasKey(threadData_t *threadData, mode
   modelica_integer _i;
   modelica_boolean _b;
   modelica_integer _d;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _i has no default value.
@@ -844,6 +871,9 @@ modelica_integer omc_BackendVariable_calcAliasKey(threadData_t *threadData, mode
 
   _i = _i + _d;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _i;
 }
 modelica_metatype boxptr_BackendVariable_calcAliasKey(threadData_t *threadData, modelica_metatype _inVar)
@@ -896,20 +926,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeMax(threadD
         }
         case 1: {
           if (!optionNone(tmp4_1)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inMax2;
           goto tmp3_done;
         }
         case 2: {
           if (!optionNone(tmp4_2)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inMax1;
           goto tmp3_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inMax1;
           goto tmp3_done;
@@ -971,20 +1001,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeMin(threadD
         }
         case 1: {
           if (!optionNone(tmp4_1)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inMin2;
           goto tmp3_done;
         }
         case 2: {
           if (!optionNone(tmp4_2)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inMin1;
           goto tmp3_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inMin1;
           goto tmp3_done;
@@ -1007,6 +1037,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeMin(threadD
 
 PROTECTED_FUNCTION_STATIC void omc_BackendVariable_checkMinMax(threadData_t *threadData, modelica_metatype _inMin, modelica_metatype _inMax, modelica_metatype _cr1, modelica_metatype _cr2, modelica_boolean _negate)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -1081,7 +1114,7 @@ PROTECTED_FUNCTION_STATIC void omc_BackendVariable_checkMinMax(threadData_t *thr
           goto tmp2_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
@@ -1105,6 +1138,9 @@ PROTECTED_FUNCTION_STATIC void omc_BackendVariable_checkMinMax(threadData_t *thr
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_BackendVariable_checkMinMax(threadData_t *threadData, modelica_metatype _inMin, modelica_metatype _inMax, modelica_metatype _cr1, modelica_metatype _cr2, modelica_metatype _negate)
@@ -1208,7 +1244,7 @@ modelica_metatype omc_BackendVariable_mergeMinMaxAttribute(threadData_t *threadD
           modelica_metatype tmpMeta7;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 11));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 11));
-          
+
           _v = tmp4_1;
           _attr = tmpMeta6;
           _var = tmp4_2;
@@ -1227,7 +1263,7 @@ modelica_metatype omc_BackendVariable_mergeMinMaxAttribute(threadData_t *threadD
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inVar;
           goto tmp3_done;
@@ -1301,7 +1337,7 @@ modelica_metatype omc_BackendVariable_mergeNominalAttribute(threadData_t *thread
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          
+
           _v = tmp4_1;
           _var = tmp4_2;
           /* Pattern matching succeeded */
@@ -1321,7 +1357,7 @@ modelica_metatype omc_BackendVariable_mergeNominalAttribute(threadData_t *thread
           goto tmp3_done;
         }
         case 1: {
-          
+
           _v = tmp4_1;
           _var = tmp4_2;
           /* Pattern matching succeeded */
@@ -1332,7 +1368,7 @@ modelica_metatype omc_BackendVariable_mergeNominalAttribute(threadData_t *thread
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inVar;
           goto tmp3_done;
@@ -1374,6 +1410,9 @@ modelica_integer omc_BackendVariable_startOriginToValue(threadData_t *threadData
 {
   modelica_integer _i;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _i has no default value.
@@ -1441,6 +1480,9 @@ modelica_integer omc_BackendVariable_startOriginToValue(threadData_t *threadData
   }
   _i = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _i;
 }
 modelica_metatype boxptr_BackendVariable_startOriginToValue(threadData_t *threadData, modelica_metatype _startOrigin)
@@ -1461,8 +1503,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getNonZeroStart(
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExp has no default value.
   // _outStartOrigin has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_boolean tmp4_1;
     tmp4_1 = _mustBeEqual;
@@ -1491,7 +1533,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getNonZeroStart(
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_boolean tmp6;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp6 = omc_ExpressionBasics_expEqual(threadData, _exp1, _exp2);
@@ -1558,7 +1600,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getNonZeroStart(
           modelica_metatype tmpMeta23;
           modelica_metatype tmpMeta24;
           modelica_boolean tmp25;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching tuple assignment */
           tmpMeta18 = mmc_mk_box3(0, _globalKnownVars, mmc_mk_boolean(0 /* false */), omc_HashSet_emptyHashSet(threadData));
@@ -1639,8 +1681,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_replaceCrefWithB
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExp has no default value.
   // _outTuple has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;
     tmp4_1 = _inExp;
@@ -1724,7 +1766,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_replaceCrefWithB
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _inExp;
           tmpMeta[0+1] = _inTuple;
@@ -1928,7 +1970,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_startValueType(t
           goto tmp3_done;
         }
         case 6: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT20;
           goto tmp3_done;
@@ -2000,7 +2042,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
         case 0: {
           if (1 /* true */ != tmp4_2) goto tmp3_end;
           if (0 /* false */ != tmp4_5) goto tmp3_end;
-          
+
           _v = tmp4_1;
           tmp4 += 11; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta1 = _v;
@@ -2012,7 +2054,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           if (1 /* true */ != tmp4_5) goto tmp3_end;
           if (optionNone(tmp4_6)) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_6), 1));
-          
+
           _sb = tmpMeta6;
           _v = tmp4_1;
           tmp4 += 10; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -2027,7 +2069,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           if (1 /* true */ != tmp4_5) goto tmp3_end;
           if (!optionNone(tmp4_3)) goto tmp3_end;
           if (!optionNone(tmp4_6)) goto tmp3_end;
-          
+
           _v = tmp4_1;
           tmp4 += 9; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta1 = omc_BackendVariable_setVarFixed(threadData, _v, 1 /* true */);
@@ -2040,7 +2082,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           if (optionNone(tmp4_3)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 1));
           if (!optionNone(tmp4_6)) goto tmp3_end;
-          
+
           _v = tmp4_1;
           tmp4 += 8; /* Pattern matching succeeded; we may skip some cases if we fail */
           omc_BackendVariable_setVarStartValueOption(threadData, _v, mmc_mk_none());
@@ -2052,7 +2094,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           if (0 /* false */ != tmp4_5) goto tmp3_end;
           if (!optionNone(tmp4_3)) goto tmp3_end;
           if (!optionNone(tmp4_6)) goto tmp3_end;
-          
+
           _v = tmp4_1;
           tmp4 += 2; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta1 = _v;
@@ -2065,7 +2107,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           if (optionNone(tmp4_3)) goto tmp3_end;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 1));
           if (!optionNone(tmp4_6)) goto tmp3_end;
-          
+
           _v = tmp4_1;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta1 = _v;
@@ -2078,7 +2120,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           if (!optionNone(tmp4_3)) goto tmp3_end;
           if (optionNone(tmp4_6)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_6), 1));
-          
+
           _sb = tmpMeta9;
           _v = tmp4_1;
           /* Pattern matching succeeded */
@@ -2093,7 +2135,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           if (0 /* false */ != tmp4_5) goto tmp3_end;
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_4), 6));
-          
+
           _v = tmp4_1;
           _ty = tmpMeta10;
           _tya = tmpMeta11;
@@ -2121,7 +2163,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_4), 2));
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_4), 6));
-          
+
           _v = tmp4_1;
           _cr = tmpMeta12;
           _ty = tmpMeta13;
@@ -2145,7 +2187,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           if (1 /* true */ != tmp4_5) goto tmp3_end;
           if (!optionNone(tmp4_3)) goto tmp3_end;
           if (!optionNone(tmp4_6)) goto tmp3_end;
-          
+
           _v = tmp4_1;
           /* Pattern matching succeeded */
           tmpMeta1 = _v;
@@ -2158,7 +2200,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           if (1 /* true */ != tmp4_5) goto tmp3_end;
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_4), 6));
-          
+
           _v = tmp4_1;
           _ty = tmpMeta16;
           _tya = tmpMeta17;
@@ -2186,7 +2228,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_mergeStartFixed(
           tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_4), 2));
           tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_4), 6));
-          
+
           _v = tmp4_1;
           _cr = tmpMeta18;
           _ty = tmpMeta19;
@@ -2443,11 +2485,17 @@ DLLDirection
 modelica_integer omc_BackendVariable_getNumStateVarFromVariables(threadData_t *threadData, modelica_metatype _inVariables)
 {
   modelica_integer _count;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _count has no default value.
   _count = mmc_unbox_integer(omc_BackendVariable_traverseBackendDAEVars(threadData, _inVariables, boxvar_BackendVariable_traversingisStateCount, mmc_mk_integer(((modelica_integer) 0))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _count;
 }
 modelica_metatype boxptr_BackendVariable_getNumStateVarFromVariables(threadData_t *threadData, modelica_metatype _inVariables)
@@ -2588,8 +2636,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_traversingVarCre
   _tailrecursive: OMC_LABEL_UNUSED
   // _outVar has no default value.
   // _outCrefs has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;
     tmp4_1 = _inVar;
@@ -2611,7 +2659,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_traversingVarCre
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          
+
           _v = tmp4_1;
           _cr_lst = tmp4_2;
           /* Pattern matching succeeded */
@@ -2622,7 +2670,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_traversingVarCre
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _inVar;
           tmpMeta[0+1] = _inCrefs;
@@ -2676,8 +2724,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_traverseBackendD
   _tailrecursive: OMC_LABEL_UNUSED
   // _outVar has no default value.
   // _outArg has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _inVar;
@@ -2840,8 +2888,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_BackendVariable_traverseBackendDA
   _tailrecursive: OMC_LABEL_UNUSED
   // _outContinue has no default value.
   // _outArg has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _inVar;
@@ -2970,7 +3018,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_traverseBackendD
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inArg;
           goto tmp3_done;
@@ -3342,6 +3390,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_BackendVariable_crefIndexEqualCre
   modelica_metatype _cr = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outMatch has no default value.
@@ -3353,6 +3404,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_BackendVariable_crefIndexEqualCre
 
   _outMatch = omc_ComponentReferenceBasics_crefEqualNoStringCompare(threadData, _cr, _inCref);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outMatch;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendVariable_crefIndexEqualCref(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inIndex)
@@ -3585,8 +3639,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_computeRangeExps
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExp has no default value.
   // _isCalculated has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _inExp;
@@ -3663,7 +3717,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_computeRangeExps
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _inExp;
           tmp1_c1 = 0 /* false */;
@@ -3706,8 +3760,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_replaceVarWithWh
   _tailrecursive: OMC_LABEL_UNUSED
   // _outSubscript has no default value.
   // _oPerformed has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _inSubscript;
@@ -3919,8 +3973,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_replaceVarWithWh
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCref has no default value.
   // _oPerformed has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _inCref;
@@ -4008,14 +4062,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_replaceVarWithWh
           goto tmp3_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _inCref;
           tmp1_c1 = _iPerformed;
           goto tmp3_done;
         }
         case 6: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _inCref;
           tmp1_c1 = _iPerformed;
@@ -4023,7 +4077,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_replaceVarWithWh
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           omc_Error_addMessage(threadData, _OMC_LIT34, _OMC_LIT36);
           goto goto_2;
@@ -4213,8 +4267,8 @@ modelica_metatype omc_BackendVariable_getVarSingle(threadData_t *threadData, mod
   _tailrecursive: OMC_LABEL_UNUSED
   // _outVar has no default value.
   // _outInteger has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     {
       modelica_metatype _v = NULL;
@@ -4381,8 +4435,8 @@ modelica_metatype omc_BackendVariable_getVar(threadData_t *threadData, modelica_
   _tailrecursive: OMC_LABEL_UNUSED
   // _outVarLst has no default value.
   // _outIntegerLst has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     {
       modelica_metatype _v = NULL;
@@ -4541,6 +4595,9 @@ DLLDirection
 modelica_boolean omc_BackendVariable_containsCref(threadData_t *threadData, modelica_metatype _cr, modelica_metatype _inVariables)
 {
   modelica_boolean _outB;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outB has no default value.
@@ -4586,6 +4643,9 @@ modelica_boolean omc_BackendVariable_containsCref(threadData_t *threadData, mode
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outB;
 }
 modelica_metatype boxptr_BackendVariable_containsCref(threadData_t *threadData, modelica_metatype _cr, modelica_metatype _inVariables)
@@ -4601,10 +4661,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_containsVar(threadData_t *threadData, modelica_metatype _var, modelica_metatype _inVariables)
 {
   modelica_boolean _outB;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outB = omc_BackendVariable_containsCref(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 2))), _inVariables);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outB;
 }
 modelica_metatype boxptr_BackendVariable_containsVar(threadData_t *threadData, modelica_metatype _var, modelica_metatype _inVariables)
@@ -4770,6 +4836,7 @@ modelica_metatype omc_BackendVariable_addVariables(threadData_t *threadData, mod
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp8, tmp10); _i += tmp9)
     {
+
       _ovar = arrayGet(_vars,_i) /* DAE.ASUB */;
 
       if(isSome(_ovar))
@@ -5055,6 +5122,9 @@ modelica_boolean omc_BackendVariable_existsAnyVar(threadData_t *threadData, mode
   modelica_boolean _outExists;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outExists = 0 /* false */;
@@ -5072,6 +5142,9 @@ modelica_boolean omc_BackendVariable_existsAnyVar(threadData_t *threadData, mode
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outExists;
 }
 modelica_metatype boxptr_BackendVariable_existsAnyVar(threadData_t *threadData, modelica_metatype _inComponentRefs, modelica_metatype _inVariables, modelica_metatype _skipDiscrete)
@@ -5090,6 +5163,9 @@ modelica_boolean omc_BackendVariable_existsVar(threadData_t *threadData, modelic
 {
   modelica_boolean _outExists;
   modelica_metatype _varlst = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExists has no default value.
@@ -5138,6 +5214,9 @@ modelica_boolean omc_BackendVariable_existsVar(threadData_t *threadData, modelic
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outExists;
 }
 modelica_metatype boxptr_BackendVariable_existsVar(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _inVariables, modelica_metatype _skipDiscrete)
@@ -5157,6 +5236,9 @@ modelica_boolean omc_BackendVariable_crefIsParam(threadData_t *threadData, model
   jmp_buf *old_mmc_jumper = threadData->mmc_jumper;
   modelica_boolean _outBool;
   modelica_metatype _varlst = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outBool = 1 /* true */;
@@ -5218,6 +5300,9 @@ modelica_boolean omc_BackendVariable_crefIsParam(threadData_t *threadData, model
   ;
   _return: OMC_LABEL_UNUSED
   threadData->mmc_jumper = old_mmc_jumper;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBool;
 }
 modelica_metatype boxptr_BackendVariable_crefIsParam(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _inVariables)
@@ -5269,7 +5354,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_isKnownAndParamW
         case 0: {
           modelica_metatype tmpMeta10;
           if (0 /* false */ != tmp8_2) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta10 = mmc_mk_box2(0, mmc_mk_boolean(0 /* false */), _knownVars);
           tmpMeta5 = tmpMeta10;
@@ -5280,7 +5365,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_isKnownAndParamW
           modelica_metatype tmpMeta12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_1,6,2) == 0) goto tmp7_end;
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp8_1), 2));
-          
+
           _cr = tmpMeta11;
           /* Pattern matching succeeded */
           tmpMeta12 = mmc_mk_box2(0, mmc_mk_boolean(omc_BackendVariable_crefIsParam(threadData, _cr, _knownVars)), _knownVars);
@@ -5289,7 +5374,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_isKnownAndParamW
         }
         case 2: {
           modelica_metatype tmpMeta13;
-          
+
           /* Pattern matching succeeded */
           tmpMeta13 = mmc_mk_box2(0, mmc_mk_boolean(1 /* true */), _knownVars);
           tmpMeta5 = tmpMeta13;
@@ -5321,6 +5406,9 @@ modelica_boolean omc_BackendVariable_isKnownAndParam(threadData_t *threadData, m
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_integer tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -5332,6 +5420,9 @@ modelica_boolean omc_BackendVariable_isKnownAndParam(threadData_t *threadData, m
   tmp4 = mmc_unbox_integer(tmpMeta3);
   _outBoolean = tmp4  /* pattern as ty=Boolean */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isKnownAndParam(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _knownVars)
@@ -5346,11 +5437,17 @@ modelica_metatype boxptr_BackendVariable_isKnownAndParam(threadData_t *threadDat
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_BackendVariable_removeVar2(threadData_t *threadData, modelica_metatype _inCrefIndex1, modelica_metatype _inCrefIndex2)
 {
   modelica_boolean _outMatch;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outMatch has no default value.
   _outMatch = (mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inCrefIndex1), 3)))) == mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inCrefIndex2), 3)))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outMatch;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendVariable_removeVar2(threadData_t *threadData, modelica_metatype _inCrefIndex1, modelica_metatype _inCrefIndex2)
@@ -5494,8 +5591,8 @@ modelica_metatype omc_BackendVariable_removeVars(threadData_t *threadData, model
   _tailrecursive: OMC_LABEL_UNUSED
   // _outVariables has no default value.
   // _outVars has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _inVarPos;
@@ -5602,7 +5699,7 @@ modelica_metatype omc_BackendVariable_removeCref(threadData_t *threadData, model
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          
+
           _cr = tmp4_1;
           /* Pattern matching succeeded */
           omc_BackendVariable_getVar(threadData, _cr, _inVariables ,&_ilst);
@@ -5611,7 +5708,7 @@ modelica_metatype omc_BackendVariable_removeCref(threadData_t *threadData, model
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inVariables;
           goto tmp3_done;
@@ -5738,7 +5835,7 @@ modelica_metatype omc_BackendVariable_deleteVar(threadData_t *threadData, modeli
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          
+
           _cr = tmp4_1;
           /* Pattern matching succeeded */
           omc_BackendVariable_getVar(threadData, _cr, _inVariables ,&_ilst);
@@ -5856,6 +5953,9 @@ modelica_boolean omc_BackendVariable_isTopLevelInputOrOutput(threadData_t *threa
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -5924,6 +6024,9 @@ modelica_boolean omc_BackendVariable_isTopLevelInputOrOutput(threadData_t *threa
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isTopLevelInputOrOutput(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _inVars, modelica_metatype _inGlobalKnownVars)
@@ -5940,6 +6043,9 @@ modelica_boolean omc_BackendVariable_isVarKindState(threadData_t *threadData, mo
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -5954,13 +6060,13 @@ modelica_boolean omc_BackendVariable_isVarKindState(threadData_t *threadData, mo
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,3) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -5978,6 +6084,9 @@ modelica_boolean omc_BackendVariable_isVarKindState(threadData_t *threadData, mo
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarKindState(threadData_t *threadData, modelica_metatype _inVarKind)
@@ -5992,6 +6101,9 @@ modelica_metatype boxptr_BackendVariable_isVarKindState(threadData_t *threadData
 DLLDirection
 void omc_BackendVariable_isVarKindVariable(threadData_t *threadData, modelica_metatype _inVarKind)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -6002,27 +6114,27 @@ void omc_BackendVariable_isVarKindVariable(threadData_t *threadData, modelica_me
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp3_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
         case 7: {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
         case 6: {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
         case 9: {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
@@ -6039,12 +6151,18 @@ void omc_BackendVariable_isVarKindVariable(threadData_t *threadData, modelica_me
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_BackendVariable_isVariable(threadData_t *threadData, modelica_metatype _inComponentRef1, modelica_metatype _inVariables2, modelica_metatype _inVariables3)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -6074,7 +6192,7 @@ void omc_BackendVariable_isVariable(threadData_t *threadData, modelica_metatype 
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          
+
           _cr = tmp3_1;
           _vars = tmp3_2;
           /* Pattern matching succeeded */
@@ -6094,7 +6212,7 @@ void omc_BackendVariable_isVariable(threadData_t *threadData, modelica_metatype 
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
-          
+
           _cr = tmp3_1;
           _globalKnownVars = tmp3_3;
           /* Pattern matching succeeded */
@@ -6129,6 +6247,9 @@ void omc_BackendVariable_isVariable(threadData_t *threadData, modelica_metatype 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -6136,6 +6257,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_BackendVariable_varsLoadFactor(threa
 {
   modelica_real _outLoadFactor;
   modelica_real tmp1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outLoadFactor has no default value.
@@ -6143,6 +6267,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_BackendVariable_varsLoadFactor(threa
   if (tmp1 == 0) {MMC_THROW_INTERNAL();}
   _outLoadFactor = (((modelica_real)mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inVariables), 5)))) + _inIncrease)) / tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outLoadFactor;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendVariable_varsLoadFactor(threadData_t *threadData, modelica_metatype _inVariables, modelica_metatype _inIncrease)
@@ -6160,10 +6287,16 @@ DLLDirection
 modelica_integer omc_BackendVariable_varsSize(threadData_t *threadData, modelica_metatype _inVariables)
 {
   modelica_integer _outNumVariables;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outNumVariables = mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inVariables), 3)))), 2))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outNumVariables;
 }
 modelica_metatype boxptr_BackendVariable_varsSize(threadData_t *threadData, modelica_metatype _inVariables)
@@ -6337,6 +6470,9 @@ modelica_boolean omc_BackendVariable_areAllCrefsPrimaryParameters(threadData_t *
   modelica_metatype _v = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _isPrimary = 1 /* true */;
@@ -6396,6 +6532,9 @@ modelica_boolean omc_BackendVariable_areAllCrefsPrimaryParameters(threadData_t *
   }
   _return: OMC_LABEL_UNUSED
   threadData->mmc_jumper = old_mmc_jumper;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isPrimary;
 }
 modelica_metatype boxptr_BackendVariable_areAllCrefsPrimaryParameters(threadData_t *threadData, modelica_metatype _inCrefs, modelica_metatype _inVars)
@@ -6413,6 +6552,9 @@ modelica_boolean omc_BackendVariable_areAllCrefsInVarList(threadData_t *threadDa
   modelica_boolean _isInList;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _isInList = 1 /* true */;
@@ -6430,6 +6572,9 @@ modelica_boolean omc_BackendVariable_areAllCrefsInVarList(threadData_t *threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isInList;
 }
 modelica_metatype boxptr_BackendVariable_areAllCrefsInVarList(threadData_t *threadData, modelica_metatype _inCrefs, modelica_metatype _inVars)
@@ -6447,6 +6592,9 @@ modelica_boolean omc_BackendVariable_isCrefInVarList(threadData_t *threadData, m
   modelica_boolean _isInList;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _isInList = 0 /* false */;
@@ -6464,6 +6612,9 @@ modelica_boolean omc_BackendVariable_isCrefInVarList(threadData_t *threadData, m
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isInList;
 }
 modelica_metatype boxptr_BackendVariable_isCrefInVarList(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inVars)
@@ -6589,6 +6740,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_vararrayList(thr
     modelica_integer _i;
     for(_i = arrayLength(_varOptArr); in_range_integer(_i, tmp5, tmp7); _i += tmp6)
     {
+
       if(isSome(arrayGet(_varOptArr,_i) /* DAE.ASUB */))
       {
         tmpMeta4 = mmc_mk_cons(omc_Util_getOption(threadData, arrayGet(_varOptArr,_i) /* DAE.ASUB */), _outVars);
@@ -6769,6 +6921,9 @@ modelica_integer omc_BackendVariable_daenumVariables(threadData_t *threadData, m
 {
   modelica_integer _n;
   modelica_metatype _vars = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _n has no default value.
@@ -6777,6 +6932,9 @@ modelica_integer omc_BackendVariable_daenumVariables(threadData_t *threadData, m
 
   _n = omc_BackendVariable_varsSize(threadData, _vars);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _n;
 }
 modelica_metatype boxptr_BackendVariable_daenumVariables(threadData_t *threadData, modelica_metatype _syst)
@@ -6798,8 +6956,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getAlias1(thread
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCr has no default value.
   // _negated has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _inExp;
@@ -6815,7 +6973,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getAlias1(thread
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _name = tmpMeta6;
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _name;
@@ -6832,7 +6990,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getAlias1(thread
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,6,2) == 0) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
-          
+
           _name = tmpMeta9;
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _name;
@@ -6849,7 +7007,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getAlias1(thread
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,6,2) == 0) goto tmp3_end;
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 2));
-          
+
           _name = tmpMeta12;
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _name;
@@ -6866,7 +7024,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getAlias1(thread
           tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta14,6,2) == 0) goto tmp3_end;
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta14), 2));
-          
+
           _name = tmpMeta15;
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _name;
@@ -6892,7 +7050,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getAlias1(thread
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta19,6,2) == 0) goto tmp3_end;
           tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta19), 2));
           if (!listEmpty(tmpMeta20)) goto tmp3_end;
-          
+
           _name = tmpMeta21;
           /* Pattern matching succeeded */
           _name = omc_ComponentReference_crefPrefixDer(threadData, _name);
@@ -6925,7 +7083,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getAlias1(thread
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta27,6,2) == 0) goto tmp3_end;
           tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 2));
           if (!listEmpty(tmpMeta28)) goto tmp3_end;
-          
+
           _name = tmpMeta29;
           /* Pattern matching succeeded */
           _name = omc_ComponentReference_crefPrefixDer(threadData, _name);
@@ -6958,7 +7116,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendVariable_getAlias1(thread
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta35,6,2) == 0) goto tmp3_end;
           tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta35), 2));
           if (!listEmpty(tmpMeta36)) goto tmp3_end;
-          
+
           _name = tmpMeta37;
           /* Pattern matching succeeded */
           _name = omc_ComponentReference_crefPrefixDer(threadData, _name);
@@ -7060,11 +7218,17 @@ DLLDirection
 modelica_boolean omc_BackendVariable_varSortFunc(threadData_t *threadData, modelica_metatype _v1, modelica_metatype _v2)
 {
   modelica_boolean _greaterThan;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _greaterThan has no default value.
   _greaterThan = omc_ComponentReferenceBasics_crefSortFunc(threadData, omc_BackendVariable_varCref(threadData, _v1), omc_BackendVariable_varCref(threadData, _v2));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _greaterThan;
 }
 modelica_metatype boxptr_BackendVariable_varSortFunc(threadData_t *threadData, modelica_metatype _v1, modelica_metatype _v2)
@@ -7314,7 +7478,7 @@ modelica_metatype omc_BackendVariable_getMinMaxAsserts(threadData_t *threadData,
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,8,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inAsserts;
           goto tmp3_done;
@@ -7338,7 +7502,7 @@ modelica_metatype omc_BackendVariable_getMinMaxAsserts(threadData_t *threadData,
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 10));
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 11));
-          
+
           _name = tmpMeta7;
           _varType = tmpMeta8;
           _source = tmpMeta9;
@@ -7392,7 +7556,7 @@ modelica_metatype omc_BackendVariable_getMinMaxAsserts(threadData_t *threadData,
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inAsserts;
           goto tmp3_done;
@@ -7458,10 +7622,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isChangeable(threadData_t *threadData, modelica_metatype _v)
 {
   modelica_boolean _isValueChangeable;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _isValueChangeable = (omc_BackendVariable_isVarOnTopLevelAndInput(threadData, _v) || ((omc_BackendVariable_varFixed(threadData, _v) && (!omc_BackendVariable_hasVarEvaluateAnnotationTrueOrFinalOrProtected(threadData, _v))) && (omc_BackendVariable_isParam(threadData, _v)?(omc_BackendVariable_varHasConstantBindExp(threadData, _v) || ((!omc_BackendVariable_varHasBindExp(threadData, _v)) && omc_BackendVariable_varHasConstantStartExp(threadData, _v))):omc_BackendVariable_varHasConstantStartExp(threadData, _v))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isValueChangeable;
 }
 modelica_metatype boxptr_BackendVariable_isChangeable(threadData_t *threadData, modelica_metatype _v)
@@ -7477,10 +7647,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isFinalOrProtectedVar(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _b = (omc_BackendVariable_isFinalVar(threadData, _inVar) || omc_BackendVariable_isProtectedVar(threadData, _inVar));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_isFinalOrProtectedVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -7496,10 +7672,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isFinalVar(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _b = omc_DAEUtil_getFinalAttr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inVar), 11))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_isFinalVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -7515,10 +7697,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isVarOnTopLevelAndInputNoDerInput(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _outBoolean;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outBoolean = (omc_BackendVariable_isVarOnTopLevelAndInput(threadData, _inVar) && (!omc_BackendVariable_isRealOptimizeDerInput(threadData, _inVar)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isVarOnTopLevelAndInputNoDerInput(threadData_t *threadData, modelica_metatype _inVar)
@@ -7534,10 +7722,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isVarOnTopLevelAndInput(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _outBoolean;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outBoolean = omc_BackendVariable_isInput(threadData, _inVar);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isVarOnTopLevelAndInput(threadData_t *threadData, modelica_metatype _inVar)
@@ -7553,10 +7747,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isVarOnTopLevelAndOutput(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _outBoolean;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outBoolean = omc_BackendVariable_isOutputVar(threadData, _inVar);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isVarOnTopLevelAndOutput(threadData_t *threadData, modelica_metatype _inVar)
@@ -7909,7 +8109,7 @@ modelica_metatype omc_BackendVariable_generateArrayVar(threadData_t *threadData,
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
-          
+
           /* Pattern matching succeeded */
           tmpMeta8 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta9 = mmc_mk_box19(3, &BackendDAE_Var_VAR__desc, _name, _varKind, _OMC_LIT38, _OMC_LIT39, _varType, mmc_mk_none(), mmc_mk_none(), tmpMeta8, _OMC_LIT42, _attr, mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), _OMC_LIT43, _OMC_LIT44, mmc_mk_boolean(0 /* false */), mmc_mk_boolean(0 /* false */), mmc_mk_boolean(0 /* false */));
@@ -8146,7 +8346,7 @@ modelica_metatype omc_BackendVariable_getAnnotationComment(threadData_t *threadD
         case 0: {
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 14));
-          
+
           _com = tmpMeta6;
           /* Pattern matching succeeded */
           tmpMeta1 = _com;
@@ -8208,6 +8408,9 @@ modelica_boolean omc_BackendVariable_hasAnnotation(threadData_t *threadData, mod
 {
   modelica_boolean _hasAnnot;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hasAnnot has no default value.
@@ -8231,13 +8434,13 @@ modelica_boolean omc_BackendVariable_hasAnnotation(threadData_t *threadData, mod
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -8255,6 +8458,9 @@ modelica_boolean omc_BackendVariable_hasAnnotation(threadData_t *threadData, mod
   }
   _hasAnnot = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _hasAnnot;
 }
 modelica_metatype boxptr_BackendVariable_hasAnnotation(threadData_t *threadData, modelica_metatype _inVar)
@@ -8272,6 +8478,9 @@ modelica_boolean omc_BackendVariable_hasVarEvaluateAnnotationFalse(threadData_t 
   modelica_boolean _isFalse;
   modelica_metatype _ann = NULL;
   modelica_metatype _val = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isFalse has no default value.
@@ -8340,6 +8549,9 @@ modelica_boolean omc_BackendVariable_hasVarEvaluateAnnotationFalse(threadData_t 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isFalse;
 }
 modelica_metatype boxptr_BackendVariable_hasVarEvaluateAnnotationFalse(threadData_t *threadData, modelica_metatype _inVar)
@@ -8357,6 +8569,9 @@ modelica_boolean omc_BackendVariable_hasVarEvaluateAnnotationTrue(threadData_t *
   modelica_boolean _isTrue;
   modelica_metatype _ann = NULL;
   modelica_metatype _val = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isTrue has no default value.
@@ -8425,6 +8640,9 @@ modelica_boolean omc_BackendVariable_hasVarEvaluateAnnotationTrue(threadData_t *
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isTrue;
 }
 modelica_metatype boxptr_BackendVariable_hasVarEvaluateAnnotationTrue(threadData_t *threadData, modelica_metatype _inVar)
@@ -8441,6 +8659,9 @@ modelica_boolean omc_BackendVariable_hasVarEvaluateAnnotation(threadData_t *thre
 {
   modelica_boolean _select;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _select has no default value.
@@ -8466,14 +8687,14 @@ modelica_boolean omc_BackendVariable_hasVarEvaluateAnnotation(threadData_t *thre
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          
+
           _anno = tmpMeta9;
           /* Pattern matching succeeded */
           tmp1 = omc_SCodeUtil_hasBooleanNamedAnnotation(threadData, _anno, _OMC_LIT87);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -8491,6 +8712,9 @@ modelica_boolean omc_BackendVariable_hasVarEvaluateAnnotation(threadData_t *thre
   }
   _select = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _select;
 }
 modelica_metatype boxptr_BackendVariable_hasVarEvaluateAnnotation(threadData_t *threadData, modelica_metatype _inVar)
@@ -8506,11 +8730,17 @@ DLLDirection
 modelica_boolean omc_BackendVariable_hasVarEvaluateAnnotationTrueOrFinalOrProtected(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _select;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _select has no default value.
   _select = (omc_BackendVariable_isFinalOrProtectedVar(threadData, _inVar) || omc_BackendVariable_hasVarEvaluateAnnotationTrue(threadData, _inVar));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _select;
 }
 modelica_metatype boxptr_BackendVariable_hasVarEvaluateAnnotationTrueOrFinalOrProtected(threadData_t *threadData, modelica_metatype _inVar)
@@ -8526,11 +8756,17 @@ DLLDirection
 modelica_boolean omc_BackendVariable_hasVarEvaluateAnnotationTrueOrProtected(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _select;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _select has no default value.
   _select = (omc_BackendVariable_isProtectedVar(threadData, _inVar) || omc_BackendVariable_hasVarEvaluateAnnotationTrue(threadData, _inVar));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _select;
 }
 modelica_metatype boxptr_BackendVariable_hasVarEvaluateAnnotationTrueOrProtected(threadData_t *threadData, modelica_metatype _inVar)
@@ -8546,11 +8782,17 @@ DLLDirection
 modelica_boolean omc_BackendVariable_hasVarEvaluateAnnotationTrueOrFinal(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _select;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _select has no default value.
   _select = (omc_BackendVariable_isFinalVar(threadData, _inVar) || omc_BackendVariable_hasVarEvaluateAnnotationTrue(threadData, _inVar));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _select;
 }
 modelica_metatype boxptr_BackendVariable_hasVarEvaluateAnnotationTrueOrFinal(threadData_t *threadData, modelica_metatype _inVar)
@@ -8567,6 +8809,9 @@ modelica_boolean omc_BackendVariable_isProtected(threadData_t *threadData, model
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -8591,7 +8836,7 @@ modelica_boolean omc_BackendVariable_isProtected(threadData_t *threadData, model
           if (optionNone(tmpMeta7)) goto tmp3_end;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
           tmp9 = mmc_unbox_integer(tmpMeta8);
-          
+
           _b = tmp9  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _b;
@@ -8609,7 +8854,7 @@ modelica_boolean omc_BackendVariable_isProtected(threadData_t *threadData, model
           if (optionNone(tmpMeta11)) goto tmp3_end;
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 1));
           tmp13 = mmc_unbox_integer(tmpMeta12);
-          
+
           _b = tmp13  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _b;
@@ -8627,7 +8872,7 @@ modelica_boolean omc_BackendVariable_isProtected(threadData_t *threadData, model
           if (optionNone(tmpMeta15)) goto tmp3_end;
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 1));
           tmp17 = mmc_unbox_integer(tmpMeta16);
-          
+
           _b = tmp17  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _b;
@@ -8645,7 +8890,7 @@ modelica_boolean omc_BackendVariable_isProtected(threadData_t *threadData, model
           if (optionNone(tmpMeta19)) goto tmp3_end;
           tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta19), 1));
           tmp21 = mmc_unbox_integer(tmpMeta20);
-          
+
           _b = tmp21  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _b;
@@ -8663,14 +8908,14 @@ modelica_boolean omc_BackendVariable_isProtected(threadData_t *threadData, model
           if (optionNone(tmpMeta23)) goto tmp3_end;
           tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta23), 1));
           tmp25 = mmc_unbox_integer(tmpMeta24);
-          
+
           _b = tmp25  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _b;
           goto tmp3_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -8688,6 +8933,9 @@ modelica_boolean omc_BackendVariable_isProtected(threadData_t *threadData, model
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_isProtected(threadData_t *threadData, modelica_metatype _v)
@@ -8703,10 +8951,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isProtectedVar(threadData_t *threadData, modelica_metatype _v)
 {
   modelica_boolean _hidden;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _hidden = omc_DAEUtil_getProtectedAttr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 11))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _hidden;
 }
 modelica_metatype boxptr_BackendVariable_isProtectedVar(threadData_t *threadData, modelica_metatype _v)
@@ -8723,6 +8977,9 @@ modelica_boolean omc_BackendVariable_isOutput(threadData_t *threadData, modelica
 {
   modelica_boolean _outBool;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBool has no default value.
@@ -8749,7 +9006,7 @@ modelica_boolean omc_BackendVariable_isOutput(threadData_t *threadData, modelica
           tmpMeta8 = MMC_CDR(tmpMeta6);
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 4));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,1,0) == 0) goto goto_2;
-          
+
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
@@ -8778,6 +9035,9 @@ modelica_boolean omc_BackendVariable_isOutput(threadData_t *threadData, modelica
   }
   _outBool = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBool;
 }
 modelica_metatype boxptr_BackendVariable_isOutput(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inVars)
@@ -8794,6 +9054,9 @@ modelica_boolean omc_BackendVariable_isRealOutputVar(threadData_t *threadData, m
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -8813,13 +9076,13 @@ modelica_boolean omc_BackendVariable_isRealOutputVar(threadData_t *threadData, m
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,0) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -8837,6 +9100,9 @@ modelica_boolean omc_BackendVariable_isRealOutputVar(threadData_t *threadData, m
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isRealOutputVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -8853,6 +9119,9 @@ modelica_boolean omc_BackendVariable_isRealVar(threadData_t *threadData, modelic
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -8869,13 +9138,13 @@ modelica_boolean omc_BackendVariable_isRealVar(threadData_t *threadData, modelic
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -8893,6 +9162,9 @@ modelica_boolean omc_BackendVariable_isRealVar(threadData_t *threadData, modelic
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isRealVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -8910,6 +9182,9 @@ modelica_boolean omc_BackendVariable_isOutputAliasVar(threadData_t *threadData, 
   modelica_boolean _outBoolean;
   modelica_string _s = NULL;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -8929,14 +9204,14 @@ modelica_boolean omc_BackendVariable_isOutputAliasVar(threadData_t *threadData, 
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,3) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          
+
           _s = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = omc_StringUtil_startsWith(threadData, _s, _OMC_LIT90);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -8954,6 +9229,9 @@ modelica_boolean omc_BackendVariable_isOutputAliasVar(threadData_t *threadData, 
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isOutputAliasVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -8970,6 +9248,9 @@ modelica_boolean omc_BackendVariable_isOutputVar(threadData_t *threadData, model
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -8986,13 +9267,13 @@ modelica_boolean omc_BackendVariable_isOutputVar(threadData_t *threadData, model
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9010,6 +9291,9 @@ modelica_boolean omc_BackendVariable_isOutputVar(threadData_t *threadData, model
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isOutputVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -9026,6 +9310,9 @@ modelica_boolean omc_BackendVariable_isInput(threadData_t *threadData, modelica_
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9042,13 +9329,13 @@ modelica_boolean omc_BackendVariable_isInput(threadData_t *threadData, modelica_
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,0,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9066,6 +9353,9 @@ modelica_boolean omc_BackendVariable_isInput(threadData_t *threadData, modelica_
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isInput(threadData_t *threadData, modelica_metatype _inVar)
@@ -9081,11 +9371,17 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isNonRealParam(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _outBoolean;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
   _outBoolean = (!omc_BackendVariable_isRealParam(threadData, _inVar));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isNonRealParam(threadData_t *threadData, modelica_metatype _inVar)
@@ -9102,6 +9398,9 @@ modelica_boolean omc_BackendVariable_hasTimeGridAnno(threadData_t *threadData, m
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9122,14 +9421,14 @@ modelica_boolean omc_BackendVariable_hasTimeGridAnno(threadData_t *threadData, m
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 14));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _comm = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = omc_SCodeUtil_commentHasBooleanNamedAnnotation(threadData, _comm, _OMC_LIT91);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9147,6 +9446,9 @@ modelica_boolean omc_BackendVariable_hasTimeGridAnno(threadData_t *threadData, m
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_hasTimeGridAnno(threadData_t *threadData, modelica_metatype _inVar)
@@ -9163,6 +9465,9 @@ modelica_boolean omc_BackendVariable_hasFinalConTermAnno(threadData_t *threadDat
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9183,14 +9488,14 @@ modelica_boolean omc_BackendVariable_hasFinalConTermAnno(threadData_t *threadDat
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 14));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _comm = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = omc_SCodeUtil_commentHasBooleanNamedAnnotation(threadData, _comm, _OMC_LIT92);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9208,6 +9513,9 @@ modelica_boolean omc_BackendVariable_hasFinalConTermAnno(threadData_t *threadDat
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_hasFinalConTermAnno(threadData_t *threadData, modelica_metatype _inVar)
@@ -9224,6 +9532,9 @@ modelica_boolean omc_BackendVariable_hasConTermAnno(threadData_t *threadData, mo
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9244,14 +9555,14 @@ modelica_boolean omc_BackendVariable_hasConTermAnno(threadData_t *threadData, mo
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 14));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _comm = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = omc_SCodeUtil_commentHasBooleanNamedAnnotation(threadData, _comm, _OMC_LIT93);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9269,6 +9580,9 @@ modelica_boolean omc_BackendVariable_hasConTermAnno(threadData_t *threadData, mo
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_hasConTermAnno(threadData_t *threadData, modelica_metatype _inVar)
@@ -9285,6 +9599,9 @@ modelica_boolean omc_BackendVariable_hasLagrangeTermAnno(threadData_t *threadDat
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9305,14 +9622,14 @@ modelica_boolean omc_BackendVariable_hasLagrangeTermAnno(threadData_t *threadDat
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 14));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _comm = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = omc_SCodeUtil_commentHasBooleanNamedAnnotation(threadData, _comm, _OMC_LIT94);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9330,6 +9647,9 @@ modelica_boolean omc_BackendVariable_hasLagrangeTermAnno(threadData_t *threadDat
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_hasLagrangeTermAnno(threadData_t *threadData, modelica_metatype _inVar)
@@ -9346,6 +9666,9 @@ modelica_boolean omc_BackendVariable_hasOpenModelicaBoundaryConditionAnnotation(
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9366,14 +9689,14 @@ modelica_boolean omc_BackendVariable_hasOpenModelicaBoundaryConditionAnnotation(
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 14));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _comm = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = omc_SCodeUtil_commentHasBooleanNamedAnnotation(threadData, _comm, _OMC_LIT95);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9391,6 +9714,9 @@ modelica_boolean omc_BackendVariable_hasOpenModelicaBoundaryConditionAnnotation(
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_hasOpenModelicaBoundaryConditionAnnotation(threadData_t *threadData, modelica_metatype _inVar)
@@ -9407,6 +9733,9 @@ modelica_boolean omc_BackendVariable_hasMayerTermAnno(threadData_t *threadData, 
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9427,14 +9756,14 @@ modelica_boolean omc_BackendVariable_hasMayerTermAnno(threadData_t *threadData, 
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 14));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _comm = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = omc_SCodeUtil_commentHasBooleanNamedAnnotation(threadData, _comm, _OMC_LIT96);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9452,6 +9781,9 @@ modelica_boolean omc_BackendVariable_hasMayerTermAnno(threadData_t *threadData, 
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_hasMayerTermAnno(threadData_t *threadData, modelica_metatype _inVar)
@@ -9468,6 +9800,9 @@ modelica_boolean omc_BackendVariable_isRESVar(threadData_t *threadData, modelica
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9484,7 +9819,7 @@ modelica_boolean omc_BackendVariable_isRESVar(threadData_t *threadData, modelica
           modelica_metatype tmpMeta5;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,3) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _s = tmpMeta5;
           /* Pattern matching succeeded */
           tmp1 = omc_StringUtil_startsWith(threadData, _s, _OMC_LIT97);
@@ -9494,7 +9829,7 @@ modelica_boolean omc_BackendVariable_isRESVar(threadData_t *threadData, modelica
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,4) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _s = tmpMeta6;
           /* Pattern matching succeeded */
           tmp1 = omc_StringUtil_startsWith(threadData, _s, _OMC_LIT97);
@@ -9502,7 +9837,7 @@ modelica_boolean omc_BackendVariable_isRESVar(threadData_t *threadData, modelica
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9520,6 +9855,9 @@ modelica_boolean omc_BackendVariable_isRESVar(threadData_t *threadData, modelica
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isRESVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -9536,6 +9874,9 @@ modelica_boolean omc_BackendVariable_isCSEVar(threadData_t *threadData, modelica
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9549,7 +9890,7 @@ modelica_boolean omc_BackendVariable_isCSEVar(threadData_t *threadData, modelica
       for (; tmp4 < 2; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_CommonSubExpression_isCSECref(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inVar), 2))))) goto tmp3_end;
@@ -9557,7 +9898,7 @@ modelica_boolean omc_BackendVariable_isCSEVar(threadData_t *threadData, modelica
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9575,6 +9916,9 @@ modelica_boolean omc_BackendVariable_isCSEVar(threadData_t *threadData, modelica
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isCSEVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -9591,6 +9935,9 @@ modelica_boolean omc_BackendVariable_isAlgebraicOldState(threadData_t *threadDat
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9607,13 +9954,13 @@ modelica_boolean omc_BackendVariable_isAlgebraicOldState(threadData_t *threadDat
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,20,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9631,6 +9978,9 @@ modelica_boolean omc_BackendVariable_isAlgebraicOldState(threadData_t *threadDat
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isAlgebraicOldState(threadData_t *threadData, modelica_metatype _inVar)
@@ -9647,6 +9997,9 @@ modelica_boolean omc_BackendVariable_isRealOptimizeDerInput(threadData_t *thread
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9663,13 +10016,13 @@ modelica_boolean omc_BackendVariable_isRealOptimizeDerInput(threadData_t *thread
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,16,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9687,6 +10040,9 @@ modelica_boolean omc_BackendVariable_isRealOptimizeDerInput(threadData_t *thread
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isRealOptimizeDerInput(threadData_t *threadData, modelica_metatype _inVar)
@@ -9703,6 +10059,9 @@ modelica_boolean omc_BackendVariable_isRealOptimizeFinalConstraintsVars(threadDa
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9719,13 +10078,13 @@ modelica_boolean omc_BackendVariable_isRealOptimizeFinalConstraintsVars(threadDa
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,14,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9743,6 +10102,9 @@ modelica_boolean omc_BackendVariable_isRealOptimizeFinalConstraintsVars(threadDa
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isRealOptimizeFinalConstraintsVars(threadData_t *threadData, modelica_metatype _inVar)
@@ -9759,6 +10121,9 @@ modelica_boolean omc_BackendVariable_isDAEmodeAuxVar(threadData_t *threadData, m
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9775,13 +10140,13 @@ modelica_boolean omc_BackendVariable_isDAEmodeAuxVar(threadData_t *threadData, m
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,22,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9799,6 +10164,9 @@ modelica_boolean omc_BackendVariable_isDAEmodeAuxVar(threadData_t *threadData, m
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isDAEmodeAuxVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -9815,6 +10183,9 @@ modelica_boolean omc_BackendVariable_isDAEmodeResVar(threadData_t *threadData, m
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9831,13 +10202,13 @@ modelica_boolean omc_BackendVariable_isDAEmodeResVar(threadData_t *threadData, m
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,21,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9855,6 +10226,9 @@ modelica_boolean omc_BackendVariable_isDAEmodeResVar(threadData_t *threadData, m
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isDAEmodeResVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -9871,6 +10245,9 @@ modelica_boolean omc_BackendVariable_isDAEmodeVar(threadData_t *threadData, mode
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9887,7 +10264,7 @@ modelica_boolean omc_BackendVariable_isDAEmodeVar(threadData_t *threadData, mode
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,21,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -9896,13 +10273,13 @@ modelica_boolean omc_BackendVariable_isDAEmodeVar(threadData_t *threadData, mode
           modelica_metatype tmpMeta7;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,22,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9920,6 +10297,9 @@ modelica_boolean omc_BackendVariable_isDAEmodeVar(threadData_t *threadData, mode
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isDAEmodeVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -9936,6 +10316,9 @@ modelica_boolean omc_BackendVariable_isRealOptimizeConstraintsVars(threadData_t 
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -9952,13 +10335,13 @@ modelica_boolean omc_BackendVariable_isRealOptimizeConstraintsVars(threadData_t 
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,13,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9976,6 +10359,9 @@ modelica_boolean omc_BackendVariable_isRealOptimizeConstraintsVars(threadData_t 
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isRealOptimizeConstraintsVars(threadData_t *threadData, modelica_metatype _inVar)
@@ -9992,6 +10378,9 @@ modelica_boolean omc_BackendVariable_isRealParam(threadData_t *threadData, model
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -10011,13 +10400,13 @@ modelica_boolean omc_BackendVariable_isRealParam(threadData_t *threadData, model
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,7,0) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10035,6 +10424,9 @@ modelica_boolean omc_BackendVariable_isRealParam(threadData_t *threadData, model
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isRealParam(threadData_t *threadData, modelica_metatype _inVar)
@@ -10051,6 +10443,9 @@ modelica_boolean omc_BackendVariable_isAlgState(threadData_t *threadData, modeli
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -10067,13 +10462,13 @@ modelica_boolean omc_BackendVariable_isAlgState(threadData_t *threadData, modeli
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,19,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10091,6 +10486,9 @@ modelica_boolean omc_BackendVariable_isAlgState(threadData_t *threadData, modeli
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isAlgState(threadData_t *threadData, modelica_metatype _inVar)
@@ -10107,6 +10505,9 @@ modelica_boolean omc_BackendVariable_isExtObj(threadData_t *threadData, modelica
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -10123,13 +10524,13 @@ modelica_boolean omc_BackendVariable_isExtObj(threadData_t *threadData, modelica
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,9,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10147,6 +10548,9 @@ modelica_boolean omc_BackendVariable_isExtObj(threadData_t *threadData, modelica
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isExtObj(threadData_t *threadData, modelica_metatype _inVar)
@@ -10163,6 +10567,9 @@ modelica_boolean omc_BackendVariable_isStringParam(threadData_t *threadData, mod
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -10182,13 +10589,13 @@ modelica_boolean omc_BackendVariable_isStringParam(threadData_t *threadData, mod
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,7,0) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10206,6 +10613,9 @@ modelica_boolean omc_BackendVariable_isStringParam(threadData_t *threadData, mod
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isStringParam(threadData_t *threadData, modelica_metatype _inVar)
@@ -10222,6 +10632,9 @@ modelica_boolean omc_BackendVariable_isBoolParam(threadData_t *threadData, model
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -10241,13 +10654,13 @@ modelica_boolean omc_BackendVariable_isBoolParam(threadData_t *threadData, model
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,7,0) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10265,6 +10678,9 @@ modelica_boolean omc_BackendVariable_isBoolParam(threadData_t *threadData, model
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isBoolParam(threadData_t *threadData, modelica_metatype _inVar)
@@ -10281,6 +10697,9 @@ modelica_boolean omc_BackendVariable_isIntParam(threadData_t *threadData, modeli
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -10300,7 +10719,7 @@ modelica_boolean omc_BackendVariable_isIntParam(threadData_t *threadData, modeli
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,7,0) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -10312,13 +10731,13 @@ modelica_boolean omc_BackendVariable_isIntParam(threadData_t *threadData, modeli
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,7,0) == 0) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,5,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10336,6 +10755,9 @@ modelica_boolean omc_BackendVariable_isIntParam(threadData_t *threadData, modeli
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isIntParam(threadData_t *threadData, modelica_metatype _inVar)
@@ -10351,11 +10773,17 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isParamOrConstant(threadData_t *threadData, modelica_metatype _invar)
 {
   modelica_boolean _outbool;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outbool = 0 /* false */;
   _outbool = (omc_BackendVariable_isParam(threadData, _invar) || omc_BackendVariable_isConst(threadData, _invar));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outbool;
 }
 modelica_metatype boxptr_BackendVariable_isParamOrConstant(threadData_t *threadData, modelica_metatype _invar)
@@ -10437,6 +10865,9 @@ modelica_boolean omc_BackendVariable_isParam(threadData_t *threadData, modelica_
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -10453,7 +10884,7 @@ modelica_boolean omc_BackendVariable_isParam(threadData_t *threadData, modelica_
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,7,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -10462,13 +10893,13 @@ modelica_boolean omc_BackendVariable_isParam(threadData_t *threadData, modelica_
           modelica_metatype tmpMeta7;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,17,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10486,6 +10917,9 @@ modelica_boolean omc_BackendVariable_isParam(threadData_t *threadData, modelica_
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isParam(threadData_t *threadData, modelica_metatype _inVar)
@@ -10502,6 +10936,9 @@ modelica_boolean omc_BackendVariable_isConst(threadData_t *threadData, modelica_
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -10518,13 +10955,13 @@ modelica_boolean omc_BackendVariable_isConst(threadData_t *threadData, modelica_
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,8,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10542,6 +10979,9 @@ modelica_boolean omc_BackendVariable_isConst(threadData_t *threadData, modelica_
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isConst(threadData_t *threadData, modelica_metatype _inVar)
@@ -10558,6 +10998,9 @@ modelica_boolean omc_BackendVariable_isFlowVar(threadData_t *threadData, modelic
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -10574,13 +11017,13 @@ modelica_boolean omc_BackendVariable_isFlowVar(threadData_t *threadData, modelic
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 15));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10598,6 +11041,9 @@ modelica_boolean omc_BackendVariable_isFlowVar(threadData_t *threadData, modelic
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isFlowVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -10614,6 +11060,9 @@ modelica_boolean omc_BackendVariable_isVarConnector(threadData_t *threadData, mo
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -10630,13 +11079,13 @@ modelica_boolean omc_BackendVariable_isVarConnector(threadData_t *threadData, mo
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 15));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,3,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -10654,6 +11103,9 @@ modelica_boolean omc_BackendVariable_isVarConnector(threadData_t *threadData, mo
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarConnector(threadData_t *threadData, modelica_metatype _var)
@@ -10670,6 +11122,9 @@ modelica_boolean omc_BackendVariable_isVarBoolParam(threadData_t *threadData, mo
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -10686,7 +11141,7 @@ modelica_boolean omc_BackendVariable_isVarBoolParam(threadData_t *threadData, mo
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_BackendVariable_isParam(threadData, _var)) goto tmp3_end;
@@ -10694,7 +11149,7 @@ modelica_boolean omc_BackendVariable_isVarBoolParam(threadData_t *threadData, mo
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10712,6 +11167,9 @@ modelica_boolean omc_BackendVariable_isVarBoolParam(threadData_t *threadData, mo
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarBoolParam(threadData_t *threadData, modelica_metatype _var)
@@ -10728,6 +11186,9 @@ modelica_boolean omc_BackendVariable_isVarIntParam(threadData_t *threadData, mod
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -10744,7 +11205,7 @@ modelica_boolean omc_BackendVariable_isVarIntParam(threadData_t *threadData, mod
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_BackendVariable_isParam(threadData, _var)) goto tmp3_end;
@@ -10755,7 +11216,7 @@ modelica_boolean omc_BackendVariable_isVarIntParam(threadData_t *threadData, mod
           modelica_metatype tmpMeta7;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,5,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_BackendVariable_isParam(threadData, _var)) goto tmp3_end;
@@ -10763,7 +11224,7 @@ modelica_boolean omc_BackendVariable_isVarIntParam(threadData_t *threadData, mod
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10781,6 +11242,9 @@ modelica_boolean omc_BackendVariable_isVarIntParam(threadData_t *threadData, mod
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarIntParam(threadData_t *threadData, modelica_metatype _var)
@@ -10797,6 +11261,9 @@ modelica_boolean omc_BackendVariable_isVarStringParam(threadData_t *threadData, 
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -10813,7 +11280,7 @@ modelica_boolean omc_BackendVariable_isVarStringParam(threadData_t *threadData, 
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_BackendVariable_isParam(threadData, _var)) goto tmp3_end;
@@ -10821,7 +11288,7 @@ modelica_boolean omc_BackendVariable_isVarStringParam(threadData_t *threadData, 
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10839,6 +11306,9 @@ modelica_boolean omc_BackendVariable_isVarStringParam(threadData_t *threadData, 
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarStringParam(threadData_t *threadData, modelica_metatype _var)
@@ -10855,6 +11325,9 @@ modelica_boolean omc_BackendVariable_isVarParam(threadData_t *threadData, modeli
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -10871,7 +11344,7 @@ modelica_boolean omc_BackendVariable_isVarParam(threadData_t *threadData, modeli
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10880,7 +11353,7 @@ modelica_boolean omc_BackendVariable_isVarParam(threadData_t *threadData, modeli
           modelica_metatype tmpMeta7;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10889,7 +11362,7 @@ modelica_boolean omc_BackendVariable_isVarParam(threadData_t *threadData, modeli
           modelica_metatype tmpMeta8;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10898,13 +11371,13 @@ modelica_boolean omc_BackendVariable_isVarParam(threadData_t *threadData, modeli
           modelica_metatype tmpMeta9;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,5,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_BackendVariable_isParam(threadData, _var)) goto tmp3_end;
@@ -10912,7 +11385,7 @@ modelica_boolean omc_BackendVariable_isVarParam(threadData_t *threadData, modeli
           goto tmp3_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10930,6 +11403,9 @@ modelica_boolean omc_BackendVariable_isVarParam(threadData_t *threadData, modeli
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarParam(threadData_t *threadData, modelica_metatype _var)
@@ -10946,6 +11422,9 @@ modelica_boolean omc_BackendVariable_isVarBoolConst(threadData_t *threadData, mo
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -10962,7 +11441,7 @@ modelica_boolean omc_BackendVariable_isVarBoolConst(threadData_t *threadData, mo
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_BackendVariable_isConst(threadData, _var)) goto tmp3_end;
@@ -10970,7 +11449,7 @@ modelica_boolean omc_BackendVariable_isVarBoolConst(threadData_t *threadData, mo
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -10988,6 +11467,9 @@ modelica_boolean omc_BackendVariable_isVarBoolConst(threadData_t *threadData, mo
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarBoolConst(threadData_t *threadData, modelica_metatype _var)
@@ -11004,6 +11486,9 @@ modelica_boolean omc_BackendVariable_isVarIntConst(threadData_t *threadData, mod
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -11020,7 +11505,7 @@ modelica_boolean omc_BackendVariable_isVarIntConst(threadData_t *threadData, mod
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_BackendVariable_isConst(threadData, _var)) goto tmp3_end;
@@ -11031,7 +11516,7 @@ modelica_boolean omc_BackendVariable_isVarIntConst(threadData_t *threadData, mod
           modelica_metatype tmpMeta7;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,5,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_BackendVariable_isConst(threadData, _var)) goto tmp3_end;
@@ -11039,7 +11524,7 @@ modelica_boolean omc_BackendVariable_isVarIntConst(threadData_t *threadData, mod
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11057,6 +11542,9 @@ modelica_boolean omc_BackendVariable_isVarIntConst(threadData_t *threadData, mod
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarIntConst(threadData_t *threadData, modelica_metatype _var)
@@ -11073,6 +11561,9 @@ modelica_boolean omc_BackendVariable_isVarStringConst(threadData_t *threadData, 
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -11089,7 +11580,7 @@ modelica_boolean omc_BackendVariable_isVarStringConst(threadData_t *threadData, 
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_BackendVariable_isConst(threadData, _var)) goto tmp3_end;
@@ -11097,7 +11588,7 @@ modelica_boolean omc_BackendVariable_isVarStringConst(threadData_t *threadData, 
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11115,6 +11606,9 @@ modelica_boolean omc_BackendVariable_isVarStringConst(threadData_t *threadData, 
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarStringConst(threadData_t *threadData, modelica_metatype _var)
@@ -11131,6 +11625,9 @@ modelica_boolean omc_BackendVariable_isVarConst(threadData_t *threadData, modeli
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -11147,7 +11644,7 @@ modelica_boolean omc_BackendVariable_isVarConst(threadData_t *threadData, modeli
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11156,7 +11653,7 @@ modelica_boolean omc_BackendVariable_isVarConst(threadData_t *threadData, modeli
           modelica_metatype tmpMeta7;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11165,7 +11662,7 @@ modelica_boolean omc_BackendVariable_isVarConst(threadData_t *threadData, modeli
           modelica_metatype tmpMeta8;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,5,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11174,13 +11671,13 @@ modelica_boolean omc_BackendVariable_isVarConst(threadData_t *threadData, modeli
           modelica_metatype tmpMeta9;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_BackendVariable_isConst(threadData, _var)) goto tmp3_end;
@@ -11188,7 +11685,7 @@ modelica_boolean omc_BackendVariable_isVarConst(threadData_t *threadData, modeli
           goto tmp3_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11206,6 +11703,9 @@ modelica_boolean omc_BackendVariable_isVarConst(threadData_t *threadData, modeli
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarConst(threadData_t *threadData, modelica_metatype _var)
@@ -11222,6 +11722,9 @@ modelica_boolean omc_BackendVariable_isVarAlg(threadData_t *threadData, modelica
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -11233,38 +11736,38 @@ modelica_boolean omc_BackendVariable_isVarAlg(threadData_t *threadData, modelica
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 9: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 6: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 7: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 8: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11282,6 +11785,9 @@ modelica_boolean omc_BackendVariable_isVarAlg(threadData_t *threadData, modelica
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarAlg(threadData_t *threadData, modelica_metatype _var)
@@ -11298,6 +11804,9 @@ modelica_boolean omc_BackendVariable_isVarDiscreteRealAlg(threadData_t *threadDa
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -11317,13 +11826,13 @@ modelica_boolean omc_BackendVariable_isVarDiscreteRealAlg(threadData_t *threadDa
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,6,0) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11341,6 +11850,9 @@ modelica_boolean omc_BackendVariable_isVarDiscreteRealAlg(threadData_t *threadDa
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarDiscreteRealAlg(threadData_t *threadData, modelica_metatype _var)
@@ -11357,6 +11869,9 @@ modelica_boolean omc_BackendVariable_isOptInputVar(threadData_t *threadData, mod
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -11368,26 +11883,26 @@ modelica_boolean omc_BackendVariable_isOptInputVar(threadData_t *threadData, mod
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 21: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 18: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 19: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11405,6 +11920,9 @@ modelica_boolean omc_BackendVariable_isOptInputVar(threadData_t *threadData, mod
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_isOptInputVar(threadData_t *threadData, modelica_metatype _var)
@@ -11421,6 +11939,9 @@ modelica_boolean omc_BackendVariable_isVarNonDiscreteAlg(threadData_t *threadDat
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -11437,13 +11958,13 @@ modelica_boolean omc_BackendVariable_isVarNonDiscreteAlg(threadData_t *threadDat
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((omc_BackendVariable_isVarAlg(threadData, _var) && (!omc_BackendVariable_isVarDiscreteRealAlg(threadData, _var))) || omc_BackendVariable_isOptInputVar(threadData, _var));
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11461,6 +11982,9 @@ modelica_boolean omc_BackendVariable_isVarNonDiscreteAlg(threadData_t *threadDat
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_BackendVariable_isVarNonDiscreteAlg(threadData_t *threadData, modelica_metatype _var)
@@ -11477,6 +12001,9 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -11503,7 +12030,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,0,0) == 0) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11523,7 +12050,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta13,6,2) == 0) goto tmp3_end;
           tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta14,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11537,7 +12064,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta16 = MMC_CDR(tmp4_1);
           tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta17,1,3) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11551,7 +12078,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta19 = MMC_CDR(tmp4_1);
           tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta18), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta20,2,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11565,7 +12092,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta22 = MMC_CDR(tmp4_1);
           tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta21), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta23,3,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11579,7 +12106,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta25 = MMC_CDR(tmp4_1);
           tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta26,4,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11593,7 +12120,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta28 = MMC_CDR(tmp4_1);
           tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta29,13,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11607,7 +12134,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta31 = MMC_CDR(tmp4_1);
           tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta32,14,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11621,7 +12148,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta34 = MMC_CDR(tmp4_1);
           tmpMeta35 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta33), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta35,15,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11635,7 +12162,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta37 = MMC_CDR(tmp4_1);
           tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta36), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta38,16,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11649,7 +12176,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta40 = MMC_CDR(tmp4_1);
           tmpMeta41 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta39), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta41,17,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11663,7 +12190,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta43 = MMC_CDR(tmp4_1);
           tmpMeta44 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta42), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta44,18,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11677,7 +12204,7 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
           tmpMeta46 = MMC_CDR(tmp4_1);
           tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta45), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta47,19,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11715,6 +12242,9 @@ modelica_boolean omc_BackendVariable_hasContinuousVar(threadData_t *threadData, 
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_hasContinuousVar(threadData_t *threadData, modelica_metatype _inBackendDAEVarLst)
@@ -11732,6 +12262,9 @@ modelica_boolean omc_BackendVariable_hasDiscreteVar(threadData_t *threadData, mo
   modelica_boolean _outBoolean;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outBoolean = 0 /* false */;
@@ -11749,6 +12282,9 @@ modelica_boolean omc_BackendVariable_hasDiscreteVar(threadData_t *threadData, mo
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_hasDiscreteVar(threadData_t *threadData, modelica_metatype _inBackendDAEVarLst)
@@ -11764,11 +12300,17 @@ DLLDirection
 modelica_boolean omc_BackendVariable_isVarNonDiscrete(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _outBoolean;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
   _outBoolean = (!omc_BackendVariable_isVarDiscrete(threadData, _inVar));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isVarNonDiscrete(threadData_t *threadData, modelica_metatype _inVar)
@@ -11785,6 +12327,9 @@ modelica_boolean omc_BackendVariable_isDiscrete(threadData_t *threadData, modeli
 {
   modelica_boolean _outBoolean;
   modelica_metatype _v = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -11793,6 +12338,9 @@ modelica_boolean omc_BackendVariable_isDiscrete(threadData_t *threadData, modeli
 
   _outBoolean = omc_BackendVariable_isVarDiscrete(threadData, _v);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isDiscrete(threadData_t *threadData, modelica_metatype _cr, modelica_metatype _vars)
@@ -11810,6 +12358,9 @@ modelica_boolean omc_BackendVariable_isVarClockedState(threadData_t *threadData,
   modelica_boolean _outBoolean;
   modelica_string _test = NULL;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -11827,13 +12378,13 @@ modelica_boolean omc_BackendVariable_isVarClockedState(threadData_t *threadData,
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,5,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11853,6 +12404,9 @@ modelica_boolean omc_BackendVariable_isVarClockedState(threadData_t *threadData,
 
   _test = _OMC_LIT23;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isVarClockedState(threadData_t *threadData, modelica_metatype _inVar)
@@ -11869,6 +12423,9 @@ modelica_boolean omc_BackendVariable_isVarNonDifferentiable(threadData_t *thread
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -11885,7 +12442,7 @@ modelica_boolean omc_BackendVariable_isVarNonDifferentiable(threadData_t *thread
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,6,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11894,7 +12451,7 @@ modelica_boolean omc_BackendVariable_isVarNonDifferentiable(threadData_t *thread
           modelica_metatype tmpMeta7;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11903,7 +12460,7 @@ modelica_boolean omc_BackendVariable_isVarNonDifferentiable(threadData_t *thread
           modelica_metatype tmpMeta8;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11912,13 +12469,13 @@ modelica_boolean omc_BackendVariable_isVarNonDifferentiable(threadData_t *thread
           modelica_metatype tmpMeta9;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,5,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -11936,6 +12493,9 @@ modelica_boolean omc_BackendVariable_isVarNonDifferentiable(threadData_t *thread
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isVarNonDifferentiable(threadData_t *threadData, modelica_metatype _inVar)
@@ -11952,6 +12512,9 @@ modelica_boolean omc_BackendVariable_isVarDiscrete(threadData_t *threadData, mod
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -11968,7 +12531,7 @@ modelica_boolean omc_BackendVariable_isVarDiscrete(threadData_t *threadData, mod
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,6,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11977,7 +12540,7 @@ modelica_boolean omc_BackendVariable_isVarDiscrete(threadData_t *threadData, mod
           modelica_metatype tmpMeta7;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,7,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11986,7 +12549,7 @@ modelica_boolean omc_BackendVariable_isVarDiscrete(threadData_t *threadData, mod
           modelica_metatype tmpMeta8;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,8,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -11995,7 +12558,7 @@ modelica_boolean omc_BackendVariable_isVarDiscrete(threadData_t *threadData, mod
           modelica_metatype tmpMeta9;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12004,7 +12567,7 @@ modelica_boolean omc_BackendVariable_isVarDiscrete(threadData_t *threadData, mod
           modelica_metatype tmpMeta10;
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta10,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12013,13 +12576,13 @@ modelica_boolean omc_BackendVariable_isVarDiscrete(threadData_t *threadData, mod
           modelica_metatype tmpMeta11;
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,5,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 6: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -12037,6 +12600,9 @@ modelica_boolean omc_BackendVariable_isVarDiscrete(threadData_t *threadData, mod
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isVarDiscrete(threadData_t *threadData, modelica_metatype _inVar)
@@ -12053,6 +12619,9 @@ modelica_boolean omc_BackendVariable_isStateorStateDerVar(threadData_t *threadDa
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -12069,7 +12638,7 @@ modelica_boolean omc_BackendVariable_isStateorStateDerVar(threadData_t *threadDa
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,3) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12078,13 +12647,13 @@ modelica_boolean omc_BackendVariable_isStateorStateDerVar(threadData_t *threadDa
           modelica_metatype tmpMeta7;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,2,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -12102,6 +12671,9 @@ modelica_boolean omc_BackendVariable_isStateorStateDerVar(threadData_t *threadDa
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isStateorStateDerVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -12118,6 +12690,9 @@ modelica_boolean omc_BackendVariable_isStateDerVar(threadData_t *threadData, mod
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -12134,13 +12709,13 @@ modelica_boolean omc_BackendVariable_isStateDerVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,2,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -12158,6 +12733,9 @@ modelica_boolean omc_BackendVariable_isStateDerVar(threadData_t *threadData, mod
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isStateDerVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -12174,6 +12752,9 @@ modelica_boolean omc_BackendVariable_isDummyDerVar(threadData_t *threadData, mod
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -12190,13 +12771,13 @@ modelica_boolean omc_BackendVariable_isDummyDerVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,3,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -12214,6 +12795,9 @@ modelica_boolean omc_BackendVariable_isDummyDerVar(threadData_t *threadData, mod
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isDummyDerVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -12230,6 +12814,9 @@ modelica_boolean omc_BackendVariable_isDummyStateVar(threadData_t *threadData, m
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -12246,13 +12833,13 @@ modelica_boolean omc_BackendVariable_isDummyStateVar(threadData_t *threadData, m
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,4,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -12270,6 +12857,9 @@ modelica_boolean omc_BackendVariable_isDummyStateVar(threadData_t *threadData, m
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isDummyStateVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -12286,6 +12876,9 @@ modelica_boolean omc_BackendVariable_varHasUncertaintyAttribute(threadData_t *th
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -12310,7 +12903,7 @@ modelica_boolean omc_BackendVariable_varHasUncertaintyAttribute(threadData_t *th
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 11));
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12327,13 +12920,13 @@ modelica_boolean omc_BackendVariable_varHasUncertaintyAttribute(threadData_t *th
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 7));
           if (optionNone(tmpMeta12)) goto tmp3_end;
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -12351,6 +12944,9 @@ modelica_boolean omc_BackendVariable_varHasUncertaintyAttribute(threadData_t *th
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_varHasUncertaintyAttribute(threadData_t *threadData, modelica_metatype _var)
@@ -12367,6 +12963,9 @@ modelica_boolean omc_BackendVariable_varHasDistributionAttribute(threadData_t *t
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -12391,7 +12990,7 @@ modelica_boolean omc_BackendVariable_varHasDistributionAttribute(threadData_t *t
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 12));
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12408,13 +13007,13 @@ modelica_boolean omc_BackendVariable_varHasDistributionAttribute(threadData_t *t
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 8));
           if (optionNone(tmpMeta12)) goto tmp3_end;
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -12432,6 +13031,9 @@ modelica_boolean omc_BackendVariable_varHasDistributionAttribute(threadData_t *t
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_varHasDistributionAttribute(threadData_t *threadData, modelica_metatype _var)
@@ -12472,7 +13074,7 @@ modelica_metatype omc_BackendVariable_varUncertainty(threadData_t *threadData, m
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 11));
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          
+
           _u = tmpMeta9;
           /* Pattern matching succeeded */
           tmpMeta1 = _u;
@@ -12490,7 +13092,7 @@ modelica_metatype omc_BackendVariable_varUncertainty(threadData_t *threadData, m
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 7));
           if (optionNone(tmpMeta12)) goto tmp3_end;
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-          
+
           _u = tmpMeta13;
           /* Pattern matching succeeded */
           tmpMeta1 = _u;
@@ -12543,7 +13145,7 @@ modelica_metatype omc_BackendVariable_varTryGetDistribution(threadData_t *thread
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 12));
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          
+
           _d = tmpMeta8;
           /* Pattern matching succeeded */
           tmpMeta1 = _d;
@@ -12561,14 +13163,14 @@ modelica_metatype omc_BackendVariable_varTryGetDistribution(threadData_t *thread
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 8));
           if (optionNone(tmpMeta12)) goto tmp3_end;
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-          
+
           _d = tmpMeta12;
           /* Pattern matching succeeded */
           tmpMeta1 = _d;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = mmc_mk_none();
           goto tmp3_done;
@@ -12618,7 +13220,7 @@ modelica_metatype omc_BackendVariable_varDistribution(threadData_t *threadData, 
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 12));
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          
+
           _d = tmpMeta9;
           /* Pattern matching succeeded */
           tmpMeta1 = _d;
@@ -12636,7 +13238,7 @@ modelica_metatype omc_BackendVariable_varDistribution(threadData_t *threadData, 
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 8));
           if (optionNone(tmpMeta12)) goto tmp3_end;
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-          
+
           _d = tmpMeta13;
           /* Pattern matching succeeded */
           tmpMeta1 = _d;
@@ -12663,6 +13265,9 @@ modelica_boolean omc_BackendVariable_varHasUncertainValuePropagate(threadData_t 
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -12688,13 +13293,13 @@ modelica_boolean omc_BackendVariable_varHasUncertainValuePropagate(threadData_t 
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,3,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -12712,6 +13317,9 @@ modelica_boolean omc_BackendVariable_varHasUncertainValuePropagate(threadData_t 
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_varHasUncertainValuePropagate(threadData_t *threadData, modelica_metatype _var)
@@ -12728,6 +13336,9 @@ modelica_boolean omc_BackendVariable_varHasUncertainValueRefine(threadData_t *th
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -12753,7 +13364,7 @@ modelica_boolean omc_BackendVariable_varHasUncertainValueRefine(threadData_t *th
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,2,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12771,13 +13382,13 @@ modelica_boolean omc_BackendVariable_varHasUncertainValueRefine(threadData_t *th
           if (optionNone(tmpMeta12)) goto tmp3_end;
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta13,2,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -12795,6 +13406,9 @@ modelica_boolean omc_BackendVariable_varHasUncertainValueRefine(threadData_t *th
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_varHasUncertainValueRefine(threadData_t *threadData, modelica_metatype _var)
@@ -12811,6 +13425,9 @@ modelica_boolean omc_BackendVariable_isClockedState(threadData_t *threadData, mo
 {
   modelica_boolean _outBool;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBool has no default value.
@@ -12837,7 +13454,7 @@ modelica_boolean omc_BackendVariable_isClockedState(threadData_t *threadData, mo
           tmpMeta8 = MMC_CDR(tmpMeta6);
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,5,2) == 0) goto goto_2;
-          
+
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
@@ -12866,6 +13483,9 @@ modelica_boolean omc_BackendVariable_isClockedState(threadData_t *threadData, mo
   }
   _outBool = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBool;
 }
 modelica_metatype boxptr_BackendVariable_isClockedState(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inVars)
@@ -12882,6 +13502,9 @@ modelica_boolean omc_BackendVariable_isClockedStateVar(threadData_t *threadData,
 {
   modelica_boolean _outBool;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBool has no default value.
@@ -12898,13 +13521,13 @@ modelica_boolean omc_BackendVariable_isClockedStateVar(threadData_t *threadData,
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,5,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -12922,6 +13545,9 @@ modelica_boolean omc_BackendVariable_isClockedStateVar(threadData_t *threadData,
   }
   _outBool = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBool;
 }
 modelica_metatype boxptr_BackendVariable_isClockedStateVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -12938,6 +13564,9 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -12954,7 +13583,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,0,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12963,7 +13592,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta7;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,3,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12972,7 +13601,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta8;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,4,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12981,7 +13610,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta9;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,6,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12990,7 +13619,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta10;
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta10,2,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -12999,7 +13628,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta11;
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,13,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -13008,7 +13637,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta12;
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta12,14,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -13017,7 +13646,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta13;
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta13,15,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -13026,7 +13655,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta14;
           tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta14,16,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -13035,7 +13664,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta15;
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta15,17,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -13044,7 +13673,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta16;
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta16,18,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -13053,7 +13682,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta17;
           tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta17,19,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -13062,7 +13691,7 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta18;
           tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta18,23,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -13071,13 +13700,13 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
           modelica_metatype tmpMeta19;
           tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta19,24,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 14: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -13095,6 +13724,9 @@ modelica_boolean omc_BackendVariable_isNonStateVar(threadData_t *threadData, mod
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isNonStateVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -13111,6 +13743,9 @@ modelica_boolean omc_BackendVariable_isState(threadData_t *threadData, modelica_
 {
   modelica_boolean _outBool;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBool has no default value.
@@ -13137,7 +13772,7 @@ modelica_boolean omc_BackendVariable_isState(threadData_t *threadData, modelica_
           tmpMeta8 = MMC_CDR(tmpMeta6);
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,1,3) == 0) goto goto_2;
-          
+
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
@@ -13166,6 +13801,9 @@ modelica_boolean omc_BackendVariable_isState(threadData_t *threadData, modelica_
   }
   _outBool = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBool;
 }
 modelica_metatype boxptr_BackendVariable_isState(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inVars)
@@ -13182,6 +13820,9 @@ modelica_boolean omc_BackendVariable_isStateVar(threadData_t *threadData, modeli
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -13198,13 +13839,13 @@ modelica_boolean omc_BackendVariable_isStateVar(threadData_t *threadData, modeli
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,3) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -13222,6 +13863,9 @@ modelica_boolean omc_BackendVariable_isStateVar(threadData_t *threadData, modeli
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_isStateVar(threadData_t *threadData, modelica_metatype _inVar)
@@ -13254,6 +13898,9 @@ DLLDirection
 modelica_boolean omc_BackendVariable_varHasNominalValue(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _outBool;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBool has no default value.
@@ -13284,7 +13931,7 @@ modelica_boolean omc_BackendVariable_varHasNominalValue(threadData_t *threadData
           if (optionNone(tmpMeta8)) goto goto_1;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,1,1) == 0) goto goto_1;
-          
+
 
           _outBool = 1 /* true */;
           goto tmp2_done;
@@ -13314,6 +13961,9 @@ modelica_boolean omc_BackendVariable_varHasNominalValue(threadData_t *threadData
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBool;
 }
 modelica_metatype boxptr_BackendVariable_varHasNominalValue(threadData_t *threadData, modelica_metatype _inVar)
@@ -13336,6 +13986,9 @@ modelica_real omc_BackendVariable_varNominal(threadData_t *threadData, modelica_
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_real tmp7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outReal has no default value.
@@ -13353,6 +14006,9 @@ modelica_real omc_BackendVariable_varNominal(threadData_t *threadData, modelica_
   tmp7 = mmc_unbox_real(tmpMeta6);
   _outReal = tmp7  /* pattern as ty=Real */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outReal;
 }
 modelica_metatype boxptr_BackendVariable_varNominal(threadData_t *threadData, modelica_metatype _inVar)
@@ -13512,38 +14168,38 @@ modelica_metatype omc_BackendVariable_getVariableAttributefromType(threadData_t 
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT99;
           goto tmp3_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT100;
           goto tmp3_done;
         }
         case 6: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT101;
           goto tmp3_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT102;
           goto tmp3_done;
         }
         case 8: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT103;
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           if(omc_Flags_isSet(threadData, _OMC_LIT107))
           {
@@ -13610,6 +14266,9 @@ modelica_boolean omc_BackendVariable_varHasStateDerivative(threadData_t *threadD
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -13631,13 +14290,13 @@ modelica_boolean omc_BackendVariable_varHasStateDerivative(threadData_t *threadD
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 3));
           if (optionNone(tmpMeta7)) goto tmp3_end;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -13655,6 +14314,9 @@ modelica_boolean omc_BackendVariable_varHasStateDerivative(threadData_t *threadD
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_varHasStateDerivative(threadData_t *threadData, modelica_metatype _inVar)
@@ -13694,6 +14356,9 @@ modelica_boolean omc_BackendVariable_isArtificialState(threadData_t *threadData,
 {
   modelica_boolean _artificial;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _artificial has no default value.
@@ -13716,14 +14381,14 @@ modelica_boolean omc_BackendVariable_isArtificialState(threadData_t *threadData,
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,3) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 4));
           tmp8 = mmc_unbox_integer(tmpMeta7);
-          
+
           _n = tmp8  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = (!_n);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -13741,6 +14406,9 @@ modelica_boolean omc_BackendVariable_isArtificialState(threadData_t *threadData,
   }
   _artificial = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _artificial;
 }
 modelica_metatype boxptr_BackendVariable_isArtificialState(threadData_t *threadData, modelica_metatype _var)
@@ -13757,6 +14425,9 @@ modelica_boolean omc_BackendVariable_isNaturalState(threadData_t *threadData, mo
 {
   modelica_boolean _natural;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _natural has no default value.
@@ -13779,14 +14450,14 @@ modelica_boolean omc_BackendVariable_isNaturalState(threadData_t *threadData, mo
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,3) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 4));
           tmp8 = mmc_unbox_integer(tmpMeta7);
-          
+
           _n = tmp8  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _n;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -13804,6 +14475,9 @@ modelica_boolean omc_BackendVariable_isNaturalState(threadData_t *threadData, mo
   }
   _natural = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _natural;
 }
 modelica_metatype boxptr_BackendVariable_isNaturalState(threadData_t *threadData, modelica_metatype _var)
@@ -13820,6 +14494,9 @@ modelica_boolean omc_BackendVariable_varStateSelectForced(threadData_t *threadDa
 {
   modelica_boolean _isForced;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isForced has no default value.
@@ -13845,7 +14522,7 @@ modelica_boolean omc_BackendVariable_varStateSelectForced(threadData_t *threadDa
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,4,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -13863,13 +14540,13 @@ modelica_boolean omc_BackendVariable_varStateSelectForced(threadData_t *threadDa
           if (optionNone(tmpMeta12)) goto tmp3_end;
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta13,3,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -13887,6 +14564,9 @@ modelica_boolean omc_BackendVariable_varStateSelectForced(threadData_t *threadDa
   }
   _isForced = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isForced;
 }
 modelica_metatype boxptr_BackendVariable_varStateSelectForced(threadData_t *threadData, modelica_metatype _inVar)
@@ -13923,6 +14603,9 @@ modelica_boolean omc_BackendVariable_varStateSelectPrefer(threadData_t *threadDa
 {
   modelica_boolean _isPrefer;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isPrefer has no default value.
@@ -13942,7 +14625,7 @@ modelica_boolean omc_BackendVariable_varStateSelectPrefer(threadData_t *threadDa
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -13960,6 +14643,9 @@ modelica_boolean omc_BackendVariable_varStateSelectPrefer(threadData_t *threadDa
   }
   _isPrefer = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isPrefer;
 }
 modelica_metatype boxptr_BackendVariable_varStateSelectPrefer(threadData_t *threadData, modelica_metatype _inVar)
@@ -13976,6 +14662,9 @@ modelica_boolean omc_BackendVariable_varStateSelectAvoid(threadData_t *threadDat
 {
   modelica_boolean _isAvoid;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isAvoid has no default value.
@@ -13995,7 +14684,7 @@ modelica_boolean omc_BackendVariable_varStateSelectAvoid(threadData_t *threadDat
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -14013,6 +14702,9 @@ modelica_boolean omc_BackendVariable_varStateSelectAvoid(threadData_t *threadDat
   }
   _isAvoid = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isAvoid;
 }
 modelica_metatype boxptr_BackendVariable_varStateSelectAvoid(threadData_t *threadData, modelica_metatype _inVar)
@@ -14029,6 +14721,9 @@ modelica_boolean omc_BackendVariable_varStateSelectNever(threadData_t *threadDat
 {
   modelica_boolean _isNever;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isNever has no default value.
@@ -14048,7 +14743,7 @@ modelica_boolean omc_BackendVariable_varStateSelectNever(threadData_t *threadDat
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -14066,6 +14761,9 @@ modelica_boolean omc_BackendVariable_varStateSelectNever(threadData_t *threadDat
   }
   _isNever = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isNever;
 }
 modelica_metatype boxptr_BackendVariable_varStateSelectNever(threadData_t *threadData, modelica_metatype _inVar)
@@ -14082,6 +14780,9 @@ modelica_boolean omc_BackendVariable_notVarStateSelectAlways(threadData_t *threa
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -14104,14 +14805,14 @@ modelica_boolean omc_BackendVariable_notVarStateSelectAlways(threadData_t *threa
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,3) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
           tmp8 = mmc_unbox_integer(tmpMeta7);
-          
+
           _diffcount = tmp8  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1 = (!(omc_BackendVariable_varStateSelectAlways(threadData, _v) && ((_diffcount == _level) || (_diffcount == ((modelica_integer) 1)))));
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -14129,6 +14830,9 @@ modelica_boolean omc_BackendVariable_notVarStateSelectAlways(threadData_t *threa
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_notVarStateSelectAlways(threadData_t *threadData, modelica_metatype _v, modelica_metatype _level)
@@ -14147,6 +14851,9 @@ modelica_boolean omc_BackendVariable_varStateSelectAlways(threadData_t *threadDa
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -14175,13 +14882,13 @@ modelica_boolean omc_BackendVariable_varStateSelectAlways(threadData_t *threadDa
           if (optionNone(tmpMeta9)) goto tmp3_end;
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 1));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta10,4,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -14199,6 +14906,9 @@ modelica_boolean omc_BackendVariable_varStateSelectAlways(threadData_t *threadDa
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_varStateSelectAlways(threadData_t *threadData, modelica_metatype _v)
@@ -14215,6 +14925,9 @@ modelica_boolean omc_BackendVariable_varHasStateSelect(threadData_t *threadData,
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -14239,13 +14952,13 @@ modelica_boolean omc_BackendVariable_varHasStateSelect(threadData_t *threadData,
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 10));
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -14263,6 +14976,9 @@ modelica_boolean omc_BackendVariable_varHasStateSelect(threadData_t *threadData,
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_BackendVariable_varHasStateSelect(threadData_t *threadData, modelica_metatype _inVar)
@@ -14305,14 +15021,14 @@ modelica_metatype omc_BackendVariable_varStateSelect(threadData_t *threadData, m
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 10));
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          
+
           _stateselect = tmpMeta9;
           /* Pattern matching succeeded */
           tmpMeta1 = _stateselect;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT108;
           goto tmp3_done;
@@ -14358,14 +15074,14 @@ modelica_metatype omc_BackendVariable_varBindExpStartValueNoFail(threadData_t *t
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _e = tmpMeta7;
           /* Pattern matching succeeded */
           tmpMeta1 = _e;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_BackendVariable_varStartValue(threadData, _v);
           goto tmp3_done;
@@ -14411,14 +15127,14 @@ modelica_metatype omc_BackendVariable_varBindExpStartValue(threadData_t *threadD
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _e = tmpMeta7;
           /* Pattern matching succeeded */
           tmpMeta1 = _e;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_BackendVariable_varStartValueFail(threadData, _v);
           goto tmp3_done;
@@ -14444,6 +15160,9 @@ modelica_boolean omc_BackendVariable_varHasBindExp(threadData_t *threadData, mod
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -14462,13 +15181,13 @@ modelica_boolean omc_BackendVariable_varHasBindExp(threadData_t *threadData, mod
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -14486,6 +15205,9 @@ modelica_boolean omc_BackendVariable_varHasBindExp(threadData_t *threadData, mod
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 modelica_metatype boxptr_BackendVariable_varHasBindExp(threadData_t *threadData, modelica_metatype _v)
@@ -14502,6 +15224,9 @@ modelica_boolean omc_BackendVariable_varHasConstantStartExp(threadData_t *thread
 {
   modelica_boolean _out;
   modelica_metatype _e = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -14548,6 +15273,9 @@ modelica_boolean omc_BackendVariable_varHasConstantStartExp(threadData_t *thread
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 modelica_metatype boxptr_BackendVariable_varHasConstantStartExp(threadData_t *threadData, modelica_metatype _v)
@@ -14564,6 +15292,9 @@ modelica_boolean omc_BackendVariable_varHasNonConstantBindExpOrStartValue(thread
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -14584,14 +15315,14 @@ modelica_boolean omc_BackendVariable_varHasNonConstantBindExpOrStartValue(thread
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _e = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = (!omc_Expression_isConstValue(threadData, _e));
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = (!omc_BackendVariable_varHasConstantStartExp(threadData, _v));
           goto tmp3_done;
@@ -14609,6 +15340,9 @@ modelica_boolean omc_BackendVariable_varHasNonConstantBindExpOrStartValue(thread
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 modelica_metatype boxptr_BackendVariable_varHasNonConstantBindExpOrStartValue(threadData_t *threadData, modelica_metatype _v)
@@ -14625,6 +15359,9 @@ modelica_boolean omc_BackendVariable_varHasConstantBindExp(threadData_t *threadD
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -14645,14 +15382,14 @@ modelica_boolean omc_BackendVariable_varHasConstantBindExp(threadData_t *threadD
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _e = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = omc_Expression_isConst(threadData, _e);
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -14670,6 +15407,9 @@ modelica_boolean omc_BackendVariable_varHasConstantBindExp(threadData_t *threadD
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 modelica_metatype boxptr_BackendVariable_varHasConstantBindExp(threadData_t *threadData, modelica_metatype _v)
@@ -14726,11 +15466,17 @@ DLLDirection
 modelica_boolean omc_BackendVariable_varHasNoStartValue(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _outHasNoStartValue;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHasNoStartValue has no default value.
   _outHasNoStartValue = (!omc_BackendVariable_varHasStartValue(threadData, _inVar));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHasNoStartValue;
 }
 modelica_metatype boxptr_BackendVariable_varHasNoStartValue(threadData_t *threadData, modelica_metatype _inVar)
@@ -14749,6 +15495,9 @@ modelica_boolean omc_BackendVariable_varHasStartValue(threadData_t *threadData, 
   modelica_metatype _attr = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHasStartValue has no default value.
@@ -14760,6 +15509,9 @@ modelica_boolean omc_BackendVariable_varHasStartValue(threadData_t *threadData, 
 
   _outHasStartValue = omc_DAEUtil_hasStartAttr(threadData, _attr);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHasStartValue;
 }
 modelica_metatype boxptr_BackendVariable_varHasStartValue(threadData_t *threadData, modelica_metatype _inVar)
@@ -14798,7 +15550,7 @@ modelica_metatype omc_BackendVariable_varStartValueOption(threadData_t *threadDa
         case 0: {
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 11));
-          
+
           _attr = tmpMeta6;
           /* Pattern matching succeeded */
           _exp = omc_DAEUtil_getStartAttrFail(threadData, _attr);
@@ -14806,7 +15558,7 @@ modelica_metatype omc_BackendVariable_varStartValueOption(threadData_t *threadDa
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = mmc_mk_none();
           goto tmp3_done;
@@ -14998,10 +15750,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_varUnreplaceable(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_boolean _outUnreplaceable;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outUnreplaceable = mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inVar), 17))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outUnreplaceable;
 }
 modelica_metatype boxptr_BackendVariable_varUnreplaceable(threadData_t *threadData, modelica_metatype _inVar)
@@ -15106,6 +15864,9 @@ modelica_boolean omc_BackendVariable_varFixed(threadData_t *threadData, modelica
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -15137,7 +15898,7 @@ modelica_boolean omc_BackendVariable_varFixed(threadData_t *threadData, modelica
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,3,1) == 0) goto tmp3_end;
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
           tmp11 = mmc_unbox_integer(tmpMeta10);
-          
+
           _fixed = tmp11  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _fixed;
@@ -15160,7 +15921,7 @@ modelica_boolean omc_BackendVariable_varFixed(threadData_t *threadData, modelica
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta15,3,1) == 0) goto tmp3_end;
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 2));
           tmp17 = mmc_unbox_integer(tmpMeta16);
-          
+
           _fixed = tmp17  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _fixed;
@@ -15183,7 +15944,7 @@ modelica_boolean omc_BackendVariable_varFixed(threadData_t *threadData, modelica
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta21,3,1) == 0) goto tmp3_end;
           tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta21), 2));
           tmp23 = mmc_unbox_integer(tmpMeta22);
-          
+
           _fixed = tmp23  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _fixed;
@@ -15206,7 +15967,7 @@ modelica_boolean omc_BackendVariable_varFixed(threadData_t *threadData, modelica
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta27,3,1) == 0) goto tmp3_end;
           tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 2));
           tmp29 = mmc_unbox_integer(tmpMeta28);
-          
+
           _fixed = tmp29  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _fixed;
@@ -15229,7 +15990,7 @@ modelica_boolean omc_BackendVariable_varFixed(threadData_t *threadData, modelica
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta33,3,1) == 0) goto tmp3_end;
           tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta33), 2));
           tmp35 = mmc_unbox_integer(tmpMeta34);
-          
+
           _fixed = tmp35  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           tmp1 = _fixed;
@@ -15239,7 +16000,7 @@ modelica_boolean omc_BackendVariable_varFixed(threadData_t *threadData, modelica
           modelica_metatype tmpMeta36;
           tmpMeta36 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta36,7,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -15253,13 +16014,13 @@ modelica_boolean omc_BackendVariable_varFixed(threadData_t *threadData, modelica
           tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
           if (optionNone(tmpMeta38)) goto tmp3_end;
           tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta38), 1));
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 7: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -15277,6 +16038,9 @@ modelica_boolean omc_BackendVariable_varFixed(threadData_t *threadData, modelica
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_varFixed(threadData_t *threadData, modelica_metatype _inVar)
@@ -15361,10 +16125,16 @@ DLLDirection
 modelica_boolean omc_BackendVariable_varEqual(threadData_t *threadData, modelica_metatype _inVar1, modelica_metatype _inVar2)
 {
   modelica_boolean _outBoolean;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outBoolean = omc_ComponentReferenceBasics_crefEqualNoStringCompare(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inVar1), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inVar2), 2))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_BackendVariable_varEqual(threadData_t *threadData, modelica_metatype _inVar1, modelica_metatype _inVar2)
@@ -15375,4 +16145,3 @@ modelica_metatype boxptr_BackendVariable_varEqual(threadData_t *threadData, mode
   out_outBoolean = mmc_mk_icon(_outBoolean);
   return out_outBoolean;
 }
-

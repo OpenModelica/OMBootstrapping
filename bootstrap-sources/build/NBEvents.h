@@ -40,7 +40,11 @@ extern struct record_description ErrorTypes_Severity_ERROR__desc;
 
 extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
 
+extern struct record_description NBEquation_IfEquationBody_IF__EQUATION__BODY__desc;
+
 extern struct record_description NBEquation_Iterator_EMPTY__desc;
+
+extern struct record_description NBEquation_WhenEquationBody_WHEN__EQUATION__BODY__desc;
 
 extern struct record_description NBEvents_Bucket_BUCKET__desc;
 
@@ -49,6 +53,8 @@ extern struct record_description NBEvents_CompositeEvent_COMPOSITE__EVENT__desc;
 extern struct record_description NBEvents_Condition_CONDITION__desc;
 
 extern struct record_description NBEvents_EventInfo_EVENT__INFO__desc;
+
+extern struct record_description NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc;
 
 extern struct record_description NBEvents_StateEvent_STATE__EVENT__desc;
 
@@ -81,6 +87,8 @@ extern struct record_description NFExpression_BOOLEAN__desc;
 extern struct record_description NFExpression_CALL__desc;
 
 extern struct record_description NFExpression_INTEGER__desc;
+
+extern struct record_description NFExpression_LBINARY__desc;
 
 extern struct record_description NFFunction_Function_FUNCTION__desc;
 
@@ -142,6 +150,10 @@ extern struct record_description SCode_Restriction_R__TYPE__desc;
 
 extern struct record_description SCode_Visibility_PUBLIC__desc;
 
+extern struct record_description SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc;
+
+extern struct record_description SimCode_SpatialDistributionInfo_SPATIAL__DISTRIBUTION__INFO__desc;
+
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
@@ -151,10 +163,57 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NBEvents_containsTimeTraverseExp omc_NBEvents_containsTimeTraverseExp
 
 
+#define boxptr_NBEvents_simplifyWhenConditionExp omc_NBEvents_simplifyWhenConditionExp
+
+
+#define boxptr_NBEvents_simplifyWhenConditionBody omc_NBEvents_simplifyWhenConditionBody
+
+
+#define boxptr_NBEvents_simplifyWhenConditionEqn omc_NBEvents_simplifyWhenConditionEqn
+
+
+#define boxptr_NBEvents_simplifyWhenConditions omc_NBEvents_simplifyWhenConditions
+
+
 #define boxptr_NBEvents_collectEvents omc_NBEvents_collectEvents
 
 
 #define boxptr_NBEvents_eventsDefault omc_NBEvents_eventsDefault
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_SpatialDistribution_convert(threadData_t *threadData, modelica_metatype _sd);
+#define boxptr_NBEvents_SpatialDistribution_convert omc_NBEvents_SpatialDistribution_convert
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_SpatialDistribution_convert,2,0) {(void*) boxptr_NBEvents_SpatialDistribution_convert,0}};
+#define boxvar_NBEvents_SpatialDistribution_convert MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_SpatialDistribution_convert)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_SpatialDistribution_updateCondition(threadData_t *threadData, modelica_metatype _condition, modelica_metatype _new_cond, modelica_metatype *out_cond_false);
+#define boxptr_NBEvents_SpatialDistribution_updateCondition omc_NBEvents_SpatialDistribution_updateCondition
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_SpatialDistribution_updateCondition,2,0) {(void*) boxptr_NBEvents_SpatialDistribution_updateCondition,0}};
+#define boxvar_NBEvents_SpatialDistribution_updateCondition MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_SpatialDistribution_updateCondition)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_SpatialDistribution_collectExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _condition, modelica_metatype _spatial_lst);
+#define boxptr_NBEvents_SpatialDistribution_collectExp omc_NBEvents_SpatialDistribution_collectExp
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_SpatialDistribution_collectExp,2,0) {(void*) boxptr_NBEvents_SpatialDistribution_collectExp,0}};
+#define boxvar_NBEvents_SpatialDistribution_collectExp MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_SpatialDistribution_collectExp)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_SpatialDistribution_collectIfBody(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbody, modelica_metatype _condition, modelica_metatype _spatial_lst);
+#define boxptr_NBEvents_SpatialDistribution_collectIfBody omc_NBEvents_SpatialDistribution_collectIfBody
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_SpatialDistribution_collectIfBody,2,0) {(void*) boxptr_NBEvents_SpatialDistribution_collectIfBody,0}};
+#define boxvar_NBEvents_SpatialDistribution_collectIfBody MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_SpatialDistribution_collectIfBody)
+
+
+DLLDirection
+modelica_metatype omc_NBEvents_SpatialDistribution_collect(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn_5Fptr, modelica_metatype _condition, modelica_metatype _spatial_lst);
+#define boxptr_NBEvents_SpatialDistribution_collect omc_NBEvents_SpatialDistribution_collect
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_SpatialDistribution_collect,2,0) {(void*) boxptr_NBEvents_SpatialDistribution_collect,0}};
+#define boxvar_NBEvents_SpatialDistribution_collect MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_SpatialDistribution_collect)
 
 
 DLLDirection
@@ -380,7 +439,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_TimeEvent_toString,2,0) {(void
 
 
 DLLDirection
-modelica_metatype omc_NBEvents_EventInfo_convert(threadData_t *threadData, modelica_metatype _eventInfo, modelica_metatype _equation_map, modelica_metatype *out_relations, modelica_metatype *out_timeEvents);
+modelica_metatype omc_NBEvents_EventInfo_convert(threadData_t *threadData, modelica_metatype _eventInfo, modelica_metatype _equation_map, modelica_metatype *out_relations, modelica_metatype *out_timeEvents, modelica_metatype *out_spatialInfo);
 #define boxptr_NBEvents_EventInfo_convert omc_NBEvents_EventInfo_convert
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_convert,2,0) {(void*) boxptr_NBEvents_EventInfo_convert,0}};
 #define boxvar_NBEvents_EventInfo_convert MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_convert)
@@ -416,7 +475,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_createAux,2,0) {(voi
 
 
 DLLDirection
-modelica_metatype omc_NBEvents_EventInfo_create(threadData_t *threadData, modelica_metatype _bucket, modelica_metatype _variables, modelica_metatype _idx, modelica_metatype *out_auxiliary_vars, modelica_metatype *out_auxiliary_eqns);
+modelica_metatype omc_NBEvents_EventInfo_create(threadData_t *threadData, modelica_metatype _bucket, modelica_metatype _variables, modelica_metatype _idx, modelica_metatype _spatial_lst, modelica_metatype *out_auxiliary_vars, modelica_metatype *out_auxiliary_eqns);
 #define boxptr_NBEvents_EventInfo_create omc_NBEvents_EventInfo_create
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_create,2,0) {(void*) boxptr_NBEvents_EventInfo_create,0}};
 #define boxvar_NBEvents_EventInfo_create MMC_REFSTRUCTLIT(boxvar_lit_NBEvents_EventInfo_create)

@@ -50,7 +50,16 @@ extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
 
 extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
 
+extern struct record_description IOStream_IOStreamType_LIST__desc;
+
 extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLDirection
+modelica_string omc_FlagsUtil_wrapToTerminal(threadData_t *threadData, modelica_string _str);
+#define boxptr_FlagsUtil_wrapToTerminal omc_FlagsUtil_wrapToTerminal
+static const MMC_DEFSTRUCTLIT(boxvar_lit_FlagsUtil_wrapToTerminal,2,0) {(void*) boxptr_FlagsUtil_wrapToTerminal,0}};
+#define boxvar_FlagsUtil_wrapToTerminal MMC_REFSTRUCTLIT(boxvar_lit_FlagsUtil_wrapToTerminal)
 
 
 DLLDirection

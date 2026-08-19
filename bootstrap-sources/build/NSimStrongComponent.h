@@ -152,6 +152,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimStrongComponent_LinearSystem_toStri
 #define boxvar_NSimStrongComponent_LinearSystem_toString MMC_REFSTRUCTLIT(boxvar_lit_NSimStrongComponent_LinearSystem_toString)
 
 
+#define boxptr_NSimStrongComponent_Block_getEntwinedEquationName omc_NSimStrongComponent_Block_getEntwinedEquationName
+
+
 #define boxptr_NSimStrongComponent_Block_getGenericEquationName omc_NSimStrongComponent_Block_getGenericEquationName
 
 
@@ -370,7 +373,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimStrongComponent_Block_ifTplStr,2,0)
 
 
 DLLDirection
-modelica_string omc_NSimStrongComponent_Block_forTplStr(threadData_t *threadData, modelica_metatype _tpl);
+modelica_string omc_NSimStrongComponent_Block_forTplStr(threadData_t *threadData, modelica_metatype _iter);
 #define boxptr_NSimStrongComponent_Block_forTplStr omc_NSimStrongComponent_Block_forTplStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimStrongComponent_Block_forTplStr,2,0) {(void*) boxptr_NSimStrongComponent_Block_forTplStr,0}};
 #define boxvar_NSimStrongComponent_Block_forTplStr MMC_REFSTRUCTLIT(boxvar_lit_NSimStrongComponent_Block_forTplStr)

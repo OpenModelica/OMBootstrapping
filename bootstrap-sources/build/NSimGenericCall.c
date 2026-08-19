@@ -464,7 +464,7 @@ modelica_string omc_NSimGenericCall_SimBranch_toString(threadData_t *threadData,
           }
           _str = tmp22;
           tmpMeta23 = mmc_mk_box1(0, _OMC_LIT6);
-          tmpMeta24 = stringAppend(_str,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_branch), 3))), (modelica_fnptr) mmc_mk_box2(0,closure0_NFStatement_toString,tmpMeta23), _OMC_LIT3, _OMC_LIT3, _OMC_LIT0, _OMC_LIT6, 1 /* true */, ((modelica_integer) 0)));
+          tmpMeta24 = stringAppend(_str,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_branch), 3))), (modelica_fnptr) mmc_mk_box2(0,closure0_NFStatement_toString,tmpMeta23), 8));
           tmp1 = tmpMeta24;
           goto tmp3_done;
         }
@@ -1122,7 +1122,7 @@ modelica_string omc_NSimGenericCall_SimIterator_toString_subIterString(threadDat
     *tmp2 = mmc_mk_nil();
     tmpMeta1 = __omcQ_24tmpVar17;
   }
-  _str = omc_List_toString(threadData, tmpMeta1, boxvar_NFComponentRef_toString, _OMC_LIT6, _OMC_LIT15, _OMC_LIT16, _OMC_LIT17, 0 /* false */, ((modelica_integer) 0));
+  _str = omc_List_toStringCustom(threadData, tmpMeta1, boxvar_NFComponentRef_toString, _OMC_LIT6, _OMC_LIT15, _OMC_LIT16, _OMC_LIT17, 0 /* false */, ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
   return _str;
 }
@@ -1184,7 +1184,7 @@ modelica_string omc_NSimGenericCall_SimIterator_toString(threadData_t *threadDat
           /* Pattern matching succeeded */
           tmpMeta17 = stringAppend(_OMC_LIT18,omc_NFComponentRef_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_iter), 2)))));
           tmpMeta18 = stringAppend(tmpMeta17,_OMC_LIT24);
-          tmpMeta19 = stringAppend(tmpMeta18,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_iter), 3))), boxvar_intString, _OMC_LIT6, _OMC_LIT18, _OMC_LIT16, _OMC_LIT23, 1 /* true */, ((modelica_integer) 10)));
+          tmpMeta19 = stringAppend(tmpMeta18,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_iter), 3))), boxvar_intString, 5));
           tmpMeta20 = stringAppend(tmpMeta19,_OMC_LIT23);
           tmpMeta21 = stringAppend(tmpMeta20,omc_NSimGenericCall_SimIterator_toString_subIterString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_iter), 5)))));
           tmp1 = tmpMeta21;
@@ -1602,7 +1602,7 @@ modelica_string omc_NSimGenericCall_toString(threadData_t *threadData, modelica_
           /* Pattern matching succeeded */
           tmpMeta5 = stringAppend(_OMC_LIT15,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 2))))));
           tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT27);
-          tmpMeta7 = stringAppend(tmpMeta6,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 3))), boxvar_NSimGenericCall_SimIterator_toString, _OMC_LIT6, _OMC_LIT18, _OMC_LIT16, _OMC_LIT23, 1 /* true */, ((modelica_integer) 0)));
+          tmpMeta7 = stringAppend(tmpMeta6,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 3))), boxvar_NSimGenericCall_SimIterator_toString, 4));
           tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT28);
           tmpMeta9 = stringAppend(tmpMeta8,omc_NFExpression_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 4)))));
           tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT4);
@@ -1620,9 +1620,9 @@ modelica_string omc_NSimGenericCall_toString(threadData_t *threadData, modelica_
           /* Pattern matching succeeded */
           tmpMeta12 = stringAppend(_OMC_LIT15,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 2))))));
           tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT29);
-          tmpMeta14 = stringAppend(tmpMeta13,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 3))), boxvar_NSimGenericCall_SimIterator_toString, _OMC_LIT6, _OMC_LIT18, _OMC_LIT16, _OMC_LIT23, 1 /* true */, ((modelica_integer) 0)));
+          tmpMeta14 = stringAppend(tmpMeta13,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 3))), boxvar_NSimGenericCall_SimIterator_toString, 4));
           tmpMeta15 = stringAppend(tmpMeta14,_OMC_LIT28);
-          tmpMeta16 = stringAppend(tmpMeta15,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 4))), boxvar_NSimGenericCall_SimBranch_toString, _OMC_LIT6, _OMC_LIT6, _OMC_LIT30, _OMC_LIT6, 1 /* true */, ((modelica_integer) 0)));
+          tmpMeta16 = stringAppend(tmpMeta15,omc_List_toStringCustom(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 4))), boxvar_NSimGenericCall_SimBranch_toString, _OMC_LIT6, _OMC_LIT6, _OMC_LIT30, _OMC_LIT6, 1 /* true */, ((modelica_integer) 0)));
           tmp1 = tmpMeta16;
           goto tmp3_done;
         }
@@ -1636,9 +1636,9 @@ modelica_string omc_NSimGenericCall_toString(threadData_t *threadData, modelica_
           /* Pattern matching succeeded */
           tmpMeta17 = stringAppend(_OMC_LIT15,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 2))))));
           tmpMeta18 = stringAppend(tmpMeta17,_OMC_LIT31);
-          tmpMeta19 = stringAppend(tmpMeta18,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 3))), boxvar_NSimGenericCall_SimIterator_toString, _OMC_LIT6, _OMC_LIT18, _OMC_LIT16, _OMC_LIT23, 1 /* true */, ((modelica_integer) 0)));
+          tmpMeta19 = stringAppend(tmpMeta18,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 3))), boxvar_NSimGenericCall_SimIterator_toString, 4));
           tmpMeta20 = stringAppend(tmpMeta19,_OMC_LIT28);
-          tmpMeta21 = stringAppend(tmpMeta20,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 4))), boxvar_NSimGenericCall_SimBranch_toString, _OMC_LIT6, _OMC_LIT6, _OMC_LIT30, _OMC_LIT6, 1 /* true */, ((modelica_integer) 0)));
+          tmpMeta21 = stringAppend(tmpMeta20,omc_List_toStringCustom(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_call), 4))), boxvar_NSimGenericCall_SimBranch_toString, _OMC_LIT6, _OMC_LIT6, _OMC_LIT30, _OMC_LIT6, 1 /* true */, ((modelica_integer) 0)));
           tmp1 = tmpMeta21;
           goto tmp3_done;
         }

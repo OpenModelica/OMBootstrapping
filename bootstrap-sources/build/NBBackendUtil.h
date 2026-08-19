@@ -32,6 +32,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBBackendUtil_getLocalSystem,2,0) {(voi
 
 
 DLLDirection
+modelica_boolean omc_NBBackendUtil_containsContinuousVarFold(threadData_t *threadData, modelica_metatype _exp, modelica_boolean __omcQ_24in_5Fb);
+DLLDirection
+modelica_metatype boxptr_NBBackendUtil_containsContinuousVarFold(threadData_t *threadData, modelica_metatype _exp, modelica_metatype __omcQ_24in_5Fb);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBBackendUtil_containsContinuousVarFold,2,0) {(void*) boxptr_NBBackendUtil_containsContinuousVarFold,0}};
+#define boxvar_NBBackendUtil_containsContinuousVarFold MMC_REFSTRUCTLIT(boxvar_lit_NBBackendUtil_containsContinuousVarFold)
+
+
+DLLDirection
+modelica_boolean omc_NBBackendUtil_containsContinuousVar(threadData_t *threadData, modelica_metatype _exp);
+DLLDirection
+modelica_metatype boxptr_NBBackendUtil_containsContinuousVar(threadData_t *threadData, modelica_metatype _exp);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBBackendUtil_containsContinuousVar,2,0) {(void*) boxptr_NBBackendUtil_containsContinuousVar,0}};
+#define boxvar_NBBackendUtil_containsContinuousVar MMC_REFSTRUCTLIT(boxvar_lit_NBBackendUtil_containsContinuousVar)
+
+
+DLLDirection
 modelica_boolean omc_NBBackendUtil_isContinuousFold(threadData_t *threadData, modelica_metatype _exp, modelica_boolean _staticAsContinuous, modelica_boolean __omcQ_24in_5Fb);
 DLLDirection
 modelica_metatype boxptr_NBBackendUtil_isContinuousFold(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _staticAsContinuous, modelica_metatype __omcQ_24in_5Fb);

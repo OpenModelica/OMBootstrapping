@@ -40,8 +40,6 @@ extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
 
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
-extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
-
 
 #define boxptr_SymbolicImplicitSolver_symSolverAppendStringToStates omc_SymbolicImplicitSolver_symSolverAppendStringToStates
 

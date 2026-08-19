@@ -64,7 +64,11 @@ extern struct record_description DAE_Type_T__TUPLE__desc;
 
 extern struct record_description DAE_VarDirection_BIDIR__desc;
 
+extern struct record_description DAE_VarDirection_OUTPUT__desc;
+
 extern struct record_description DAE_VarVisibility_PROTECTED__desc;
+
+extern struct record_description DAE_VarVisibility_PUBLIC__desc;
 
 extern struct record_description EvaluateFunctions_CallSignature_SIGNATURE__desc;
 
@@ -207,6 +211,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_getRecordScalars,2,0)
 
 
 #define boxptr_EvaluateFunctions_generateOutputElements omc_EvaluateFunctions_generateOutputElements
+
+
+#define boxptr_EvaluateFunctions_flattenSubscripts omc_EvaluateFunctions_flattenSubscripts
+
+
+#define boxptr_EvaluateFunctions_flattenCrefIdent omc_EvaluateFunctions_flattenCrefIdent
+
+
+#define boxptr_EvaluateFunctions_generateScalarOutputElement omc_EvaluateFunctions_generateScalarOutputElement
 
 
 #define boxptr_EvaluateFunctions_checkIfOutputIsEvaluatedConstant omc_EvaluateFunctions_checkIfOutputIsEvaluatedConstant

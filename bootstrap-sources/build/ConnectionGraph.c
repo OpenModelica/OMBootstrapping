@@ -1999,6 +1999,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ConnectionGraph_getDefiniteRoots
 
 PROTECTED_FUNCTION_STATIC void omc_ConnectionGraph_printConnectionGraph(threadData_t *threadData, modelica_metatype _inGraph)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2044,11 +2047,17 @@ PROTECTED_FUNCTION_STATIC void omc_ConnectionGraph_printConnectionGraph(threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_ConnectionGraph_printDaeEdges(threadData_t *threadData, modelica_metatype _inEdges)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2116,11 +2125,17 @@ PROTECTED_FUNCTION_STATIC void omc_ConnectionGraph_printDaeEdges(threadData_t *t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_ConnectionGraph_printEdges(threadData_t *threadData, modelica_metatype _inEdges)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2187,6 +2202,9 @@ PROTECTED_FUNCTION_STATIC void omc_ConnectionGraph_printEdges(threadData_t *thre
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2385,6 +2403,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ConnectionGraph_getRooted(threadD
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -2435,6 +2456,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ConnectionGraph_getRooted(threadD
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ConnectionGraph_getRooted(threadData_t *threadData, modelica_metatype _cref1, modelica_metatype _cref2, modelica_metatype _rooted)
@@ -4003,6 +4027,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ConnectionGraph_ord(threadData_t 
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -4100,6 +4127,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ConnectionGraph_ord(threadData_t 
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ConnectionGraph_ord(threadData_t *threadData, modelica_metatype _inEl1, modelica_metatype _inEl2)
@@ -4631,6 +4661,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ConnectionGraph_areInSameComponen
 {
   modelica_boolean _outResult;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
@@ -4701,6 +4734,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ConnectionGraph_areInSameComponen
   }
   _outResult = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ConnectionGraph_areInSameComponent(threadData_t *threadData, modelica_metatype _inPartition, modelica_metatype _inRef1, modelica_metatype _inRef2)

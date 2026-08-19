@@ -490,6 +490,9 @@ modelica_metatype boxptr_NFAttributes_updateComponentConnectorType(threadData_t 
 DLLDirection
 void omc_NFAttributes_assertNotFlowStream(threadData_t *threadData, modelica_integer _cty, modelica_metatype _node, modelica_metatype _restriction)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if(omc_NFPrefixes_ConnectorType_isFlowOrStream(threadData, _cty))
@@ -499,6 +502,9 @@ void omc_NFAttributes_assertNotFlowStream(threadData_t *threadData, modelica_int
     MMC_THROW_INTERNAL();
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFAttributes_assertNotFlowStream(threadData_t *threadData, modelica_metatype _cty, modelica_metatype _node, modelica_metatype _restriction)
@@ -512,6 +518,9 @@ void boxptr_NFAttributes_assertNotFlowStream(threadData_t *threadData, modelica_
 DLLDirection
 void omc_NFAttributes_assertNotInnerOuter(threadData_t *threadData, modelica_integer _io, modelica_metatype _node, modelica_metatype _restriction)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if(((modelica_integer)_io != 1))
@@ -521,6 +530,9 @@ void omc_NFAttributes_assertNotInnerOuter(threadData_t *threadData, modelica_int
     MMC_THROW_INTERNAL();
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFAttributes_assertNotInnerOuter(threadData_t *threadData, modelica_metatype _io, modelica_metatype _node, modelica_metatype _restriction)
@@ -534,6 +546,9 @@ void boxptr_NFAttributes_assertNotInnerOuter(threadData_t *threadData, modelica_
 DLLDirection
 void omc_NFAttributes_assertNotInputOutput(threadData_t *threadData, modelica_integer _dir, modelica_metatype _node, modelica_metatype _restriction)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if(((modelica_integer)_dir != 1))
@@ -543,6 +558,9 @@ void omc_NFAttributes_assertNotInputOutput(threadData_t *threadData, modelica_in
     MMC_THROW_INTERNAL();
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFAttributes_assertNotInputOutput(threadData_t *threadData, modelica_metatype _dir, modelica_metatype _node, modelica_metatype _restriction)
@@ -557,11 +575,17 @@ DLLDirection
 void omc_NFAttributes_invalidComponentPrefixError(threadData_t *threadData, modelica_string _prefix, modelica_metatype _node, modelica_metatype _restriction)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_cons(_prefix, mmc_mk_cons(omc_NFInstNode_InstNode_name(threadData, _node), mmc_mk_cons(omc_NFRestriction_toString(threadData, _restriction), MMC_REFSTRUCTLIT(mmc_nil))));
   omc_Error_addSourceMessage(threadData, _OMC_LIT19, tmpMeta1, omc_NFInstNode_InstNode_info(threadData, _node));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -632,11 +656,17 @@ DLLDirection
 void omc_NFAttributes_printRedeclarePrefixError(threadData_t *threadData, modelica_metatype _node, modelica_string _prefix1, modelica_string _prefix2)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_cons(_prefix1, mmc_mk_cons(omc_NFInstNode_InstNode_name(threadData, _node), mmc_mk_cons(_prefix2, MMC_REFSTRUCTLIT(mmc_nil))));
   omc_Error_addSourceMessageAndFail(threadData, _OMC_LIT21, tmpMeta1, omc_NFInstNode_InstNode_info(threadData, _node));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

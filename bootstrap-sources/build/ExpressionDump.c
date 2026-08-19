@@ -1187,16 +1187,25 @@ modelica_metatype boxptr_ExpressionDump_parenthesize(threadData_t *threadData, m
 DLLDirection
 void omc_ExpressionDump_printExp(threadData_t *threadData, modelica_metatype _e)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_Tpl_tplPrint2(threadData, boxvar_ExpressionDumpTpl_dumpExp, _e, _OMC_LIT22);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_ExpressionDump_printSubscript(threadData_t *threadData, modelica_metatype _inSubscript)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1256,6 +1265,9 @@ void omc_ExpressionDump_printSubscript(threadData_t *threadData, modelica_metaty
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1263,6 +1275,9 @@ DLLDirection
 void omc_ExpressionDump_dumpExpWithTitle(threadData_t *threadData, modelica_string _title, modelica_metatype _exp)
 {
   modelica_string _str = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
@@ -1274,6 +1289,9 @@ void omc_ExpressionDump_dumpExpWithTitle(threadData_t *threadData, modelica_stri
 
   fputs(MMC_STRINGDATA(_OMC_LIT25),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1564,6 +1582,9 @@ DLLDirection
 void omc_ExpressionDump_dumpExp(threadData_t *threadData, modelica_metatype _exp)
 {
   modelica_string _str = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
@@ -1573,6 +1594,9 @@ void omc_ExpressionDump_dumpExp(threadData_t *threadData, modelica_metatype _exp
 
   fputs(MMC_STRINGDATA(_OMC_LIT30),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3281,6 +3305,9 @@ modelica_integer omc_ExpressionDump_expPriority(threadData_t *threadData, modeli
 {
   modelica_integer _outInteger;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outInteger has no default value.
@@ -3727,6 +3754,9 @@ modelica_integer omc_ExpressionDump_expPriority(threadData_t *threadData, modeli
   }
   _outInteger = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outInteger;
 }
 modelica_metatype boxptr_ExpressionDump_expPriority(threadData_t *threadData, modelica_metatype _inExp)
@@ -5414,16 +5444,25 @@ modelica_string omc_ExpressionDump_debugPrintSubscriptStr(threadData_t *threadDa
 
 PROTECTED_FUNCTION_STATIC void omc_ExpressionDump_printRow(threadData_t *threadData, modelica_metatype _es_1)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_ExpressionDump_printList(threadData, _es_1, boxvar_ExpressionDump_printExp, _OMC_LIT3);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_ExpressionDump_printList(threadData_t *threadData, modelica_metatype _inTypeALst, modelica_fnptr _inFuncTypeTypeATo, modelica_string _inString)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -5506,6 +5545,9 @@ void omc_ExpressionDump_printList(threadData_t *threadData, modelica_metatype _i
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

@@ -184,6 +184,24 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_System_getMemorySize,2,0) {(void*) boxp
 extern double System_getMemorySize();
 
 DLLDirection
+void omc_System_reportProgress(threadData_t *threadData, modelica_integer _permille, modelica_integer _phase);
+DLLDirection
+void boxptr_System_reportProgress(threadData_t *threadData, modelica_metatype _permille, modelica_metatype _phase);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_System_reportProgress,2,0) {(void*) boxptr_System_reportProgress,0}};
+#define boxvar_System_reportProgress MMC_REFSTRUCTLIT(boxvar_lit_System_reportProgress)
+
+extern void System_reportProgress(int /*_permille*/, int /*_phase*/);
+
+DLLDirection
+modelica_boolean omc_System_isCancelled(threadData_t *threadData);
+DLLDirection
+modelica_metatype boxptr_System_isCancelled(threadData_t *threadData);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_System_isCancelled,2,0) {(void*) boxptr_System_isCancelled,0}};
+#define boxvar_System_isCancelled MMC_REFSTRUCTLIT(boxvar_lit_System_isCancelled)
+
+extern int System_isCancelled();
+
+DLLDirection
 void omc_System_threadWorkFailed(threadData_t *threadData);
 #define boxptr_System_threadWorkFailed omc_System_threadWorkFailed
 static const MMC_DEFSTRUCTLIT(boxvar_lit_System_threadWorkFailed,2,0) {(void*) boxptr_System_threadWorkFailed,0}};
@@ -204,6 +222,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_System_exit,2,0) {(void*) boxptr_System
  * in one of these files and have this prototype:
  * extern void exit(int (*_status*));
  */
+
+DLLDirection
+modelica_metatype omc_System_launchParallelTasksThreaded(threadData_t *threadData, modelica_integer _numThreads, modelica_metatype _inData, modelica_fnptr _func);
+DLLDirection
+modelica_metatype boxptr_System_launchParallelTasksThreaded(threadData_t *threadData, modelica_metatype _numThreads, modelica_metatype _inData, modelica_fnptr _func);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_System_launchParallelTasksThreaded,2,0) {(void*) boxptr_System_launchParallelTasksThreaded,0}};
+#define boxvar_System_launchParallelTasksThreaded MMC_REFSTRUCTLIT(boxvar_lit_System_launchParallelTasksThreaded)
+
+extern modelica_metatype System_launchParallelTasks(OpenModelica_threadData_ThreadData*, int /*_numThreads*/, modelica_metatype /*_inData*/, modelica_fnptr /*_func*/);
 
 DLLDirection
 modelica_metatype omc_System_launchParallelTasks(threadData_t *threadData, modelica_integer _numThreads, modelica_metatype _inData, modelica_fnptr _func);

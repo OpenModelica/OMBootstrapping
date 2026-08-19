@@ -216,6 +216,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFVariable_isTopLevelInput,2,0) {(void*
 
 
 DLLDirection
+modelica_boolean omc_NFVariable_isOutput(threadData_t *threadData, modelica_metatype _variable);
+DLLDirection
+modelica_metatype boxptr_NFVariable_isOutput(threadData_t *threadData, modelica_metatype _variable);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFVariable_isOutput,2,0) {(void*) boxptr_NFVariable_isOutput,0}};
+#define boxvar_NFVariable_isOutput MMC_REFSTRUCTLIT(boxvar_lit_NFVariable_isOutput)
+
+
+DLLDirection
 modelica_boolean omc_NFVariable_isInput(threadData_t *threadData, modelica_metatype _variable);
 DLLDirection
 modelica_metatype boxptr_NFVariable_isInput(threadData_t *threadData, modelica_metatype _variable);

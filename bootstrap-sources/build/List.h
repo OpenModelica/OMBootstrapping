@@ -229,9 +229,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_List_hasOneElement,2,0) {(void*) boxptr
 
 
 DLLDirection
-modelica_string omc_List_toString(threadData_t *threadData, modelica_metatype _inList, modelica_fnptr _inPrintFunc, modelica_string _inNameStr, modelica_string _inBeginStr, modelica_string _inDelimitStr, modelica_string _inEndStr, modelica_boolean _inPrintEmpty, modelica_integer _maxLength);
+modelica_string omc_List_toStringCustom(threadData_t *threadData, modelica_metatype _inList, modelica_fnptr _inPrintFunc, modelica_string _inNameStr, modelica_string _inBeginStr, modelica_string _inDelimitStr, modelica_string _inEndStr, modelica_boolean _inPrintEmpty, modelica_integer _maxLength);
 DLLDirection
-modelica_metatype boxptr_List_toString(threadData_t *threadData, modelica_metatype _inList, modelica_fnptr _inPrintFunc, modelica_metatype _inNameStr, modelica_metatype _inBeginStr, modelica_metatype _inDelimitStr, modelica_metatype _inEndStr, modelica_metatype _inPrintEmpty, modelica_metatype _maxLength);
+modelica_metatype boxptr_List_toStringCustom(threadData_t *threadData, modelica_metatype _inList, modelica_fnptr _inPrintFunc, modelica_metatype _inNameStr, modelica_metatype _inBeginStr, modelica_metatype _inDelimitStr, modelica_metatype _inEndStr, modelica_metatype _inPrintEmpty, modelica_metatype _maxLength);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_List_toStringCustom,2,0) {(void*) boxptr_List_toStringCustom,0}};
+#define boxvar_List_toStringCustom MMC_REFSTRUCTLIT(boxvar_lit_List_toStringCustom)
+
+
+DLLDirection
+modelica_string omc_List_toString(threadData_t *threadData, modelica_metatype _inList, modelica_fnptr _inPrintFunc, modelica_integer _style);
+DLLDirection
+modelica_metatype boxptr_List_toString(threadData_t *threadData, modelica_metatype _inList, modelica_fnptr _inPrintFunc, modelica_metatype _style);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_List_toString,2,0) {(void*) boxptr_List_toString,0}};
 #define boxvar_List_toString MMC_REFSTRUCTLIT(boxvar_lit_List_toString)
 

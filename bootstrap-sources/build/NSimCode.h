@@ -88,8 +88,6 @@ extern struct record_description SimCode_PartitionData_PARTITIONDATA__desc;
 
 extern struct record_description SimCode_SimCode_SIMCODE__desc;
 
-extern struct record_description SimCode_SpatialDistributionInfo_SPATIAL__DISTRIBUTION__INFO__desc;
-
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 

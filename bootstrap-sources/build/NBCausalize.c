@@ -2,14 +2,14 @@
 #include "NBCausalize.h"
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT0,1,5) {&NBEquation_Iterator_EMPTY__desc,}};
 #define _OMC_LIT0 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT0)
-#define _OMC_LIT1_data "/projects/OpenModelica-session2/OMCompiler/Compiler/NBackEnd/Modules/1_Main/NBCausalize.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT1,90,_OMC_LIT1_data);
+#define _OMC_LIT1_data "//OpenModelica/OMCompiler/Compiler/NBackEnd/Modules/1_Main/NBCausalize.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT1,96,_OMC_LIT1_data);
 #define _OMC_LIT1 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT1)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT2_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT2_6,1.786954567e9);
 #define _OMC_LIT2_6 MMC_REFREALLIT(_OMC_LIT_STRUCT2_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT2,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(295)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(295)),MMC_IMMEDIATE(MMC_TAGFIXNUM(55)),_OMC_LIT2_6}};
 #define _OMC_LIT2 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT2)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT3_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT3_6,1.786954567e9);
 #define _OMC_LIT3_6 MMC_REFREALLIT(_OMC_LIT_STRUCT3_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT3,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(296)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(296)),MMC_IMMEDIATE(MMC_TAGFIXNUM(55)),_OMC_LIT3_6}};
 #define _OMC_LIT3 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT3)
@@ -342,11 +342,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NBCausalize_causalizePseudoArray
   // _adj_sorting has no default value.
   // _matching has no default value.
   // _comps has no default value.
-  
-  
-  
-  
-  
+
+
+
+
+
   { /* match expression */
     modelica_integer tmp4_1;
     tmp4_1 = (modelica_integer)_kind;
@@ -382,7 +382,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NBCausalize_causalizePseudoArray
           modelica_metatype tmpMeta18;
           modelica_metatype tmpMeta19;
           modelica_metatype tmpMeta23;
-          
+
           _kind = tmp4_1;
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
@@ -580,13 +580,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NBCausalize_causalizePseudoArray
           modelica_metatype tmpMeta27;
           modelica_metatype tmpMeta28;
           modelica_metatype tmpMeta29;
-          
+
           /* Pattern matching succeeded */
           _variables = omc_NBVariable_VariablePointers_compress(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_partition), 4))));
 
           _equations = omc_NBEquation_EquationPointers_compress(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_partition), 6))));
-
-          omc_NBASSC_main(threadData, _equations, _variables);
 
           _full = omc_NBAdjacency_Matrix_createFull(threadData, _variables, _equations, (modelica_integer)_kind);
 
@@ -675,7 +673,7 @@ modelica_fnptr omc_NBCausalize_getModule(threadData_t *threadData)
         case 2: {
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
-          
+
           /* Pattern matching succeeded */
           tmpMeta7 = stringAppend(_OMC_LIT93,_flag);
           tmpMeta6 = mmc_mk_cons(tmpMeta7, MMC_REFSTRUCTLIT(mmc_nil));
@@ -753,6 +751,9 @@ modelica_boolean omc_NBCausalize_checkSystemVariabilities(threadData_t *threadDa
   modelica_metatype tmpMeta14;
   modelica_integer tmp15;
   modelica_integer tmp16;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _violated = 0 /* false */;
@@ -789,7 +790,7 @@ modelica_boolean omc_NBCausalize_checkSystemVariabilities(threadData_t *threadDa
                 modelica_metatype tmpMeta12;
                 modelica_metatype tmpMeta13;
                 if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,3) == 0) goto tmp3_end;
-                
+
                 /* Pattern matching succeeded */
                 _ty1 = omc_NFType_removeSizeOneArraysAndRecords(threadData, omc_NFVariable_typeOf(threadData, omc_Pointer_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_scc), 2))))));
 
@@ -821,7 +822,7 @@ modelica_boolean omc_NBCausalize_checkSystemVariabilities(threadData_t *threadDa
                 goto tmp3_done;
               }
               case 1: {
-                
+
                 /* Pattern matching succeeded */
                 goto tmp3_done;
               }
@@ -841,6 +842,9 @@ modelica_boolean omc_NBCausalize_checkSystemVariabilities(threadData_t *threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _violated;
 }
 modelica_metatype boxptr_NBCausalize_checkSystemVariabilities(threadData_t *threadData, modelica_metatype _partition)
@@ -976,7 +980,7 @@ modelica_metatype omc_NBCausalize_main(threadData_t *threadData, modelica_metaty
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 6));
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 10));
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 11));
-          
+
           _partitions = tmpMeta6;
           _clocked = tmpMeta7;
           _varData = tmpMeta8;
@@ -1021,7 +1025,7 @@ modelica_metatype omc_NBCausalize_main(threadData_t *threadData, modelica_metaty
           tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 10));
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 11));
-          
+
           _partitions = tmpMeta14;
           _varData = tmpMeta15;
           _eqData = tmpMeta16;
@@ -1078,7 +1082,7 @@ modelica_metatype omc_NBCausalize_main(threadData_t *threadData, modelica_metaty
           tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta22), 1));
           tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 10));
           tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 11));
-          
+
           _partitions = tmpMeta23;
           _varData = tmpMeta24;
           _eqData = tmpMeta25;
@@ -1106,7 +1110,7 @@ modelica_metatype omc_NBCausalize_main(threadData_t *threadData, modelica_metaty
           modelica_metatype tmpMeta29;
           modelica_metatype tmpMeta30;
           modelica_metatype tmpMeta31;
-          
+
           /* Pattern matching succeeded */
           tmpMeta30 = stringAppend(_OMC_LIT106,omc_NBPartition_Partition_kindToString(threadData, (modelica_integer)_kind));
           tmpMeta31 = stringAppend(tmpMeta30,_OMC_LIT107);
@@ -1139,4 +1143,3 @@ modelica_metatype boxptr_NBCausalize_main(threadData_t *threadData, modelica_met
   /* skip box _bdae; NBackendDAE */
   return _bdae;
 }
-

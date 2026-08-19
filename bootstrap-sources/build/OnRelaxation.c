@@ -973,6 +973,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_aliasMatching1(threa
 {
   modelica_integer _i;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _i has no default value.
@@ -1013,6 +1016,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_aliasMatching1(threa
   }
   _i = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _i;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_aliasMatching1(threadData_t *threadData, modelica_metatype _i1, modelica_metatype _i2, modelica_metatype _b1, modelica_metatype _b2)
@@ -1772,11 +1778,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_onefreeMatchingB
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_isAssignedSaveEnhanced(threadData_t *threadData, modelica_metatype _ass, modelica_integer _inTpl)
 {
   modelica_boolean _outB;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outB has no default value.
   _outB = ((_inTpl > ((modelica_integer) 0))?(mmc_unbox_integer(arrayGet(_ass,_inTpl) /* DAE.ASUB */) > ((modelica_integer) 0)):1 /* true */);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outB;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isAssignedSaveEnhanced(threadData_t *threadData, modelica_metatype _ass, modelica_metatype _inTpl)
@@ -1792,6 +1804,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isAssignedSaveEn
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_onefreeMatchingBFS(threadData_t *threadData, modelica_metatype _queue, modelica_metatype _m, modelica_metatype _mt, modelica_integer _size, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _columark, modelica_integer _mark, modelica_metatype _nextQeue)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1869,6 +1884,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_onefreeMatchingBFS(threadData_t 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_onefreeMatchingBFS(threadData_t *threadData, modelica_metatype _queue, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _size, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _columark, modelica_metatype _mark, modelica_metatype _nextQeue)
@@ -1883,6 +1901,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_onefreeMatchingBFS(threadData
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_unassignedLst(threadData_t *threadData, modelica_metatype _vlst, modelica_metatype _ass1)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1939,11 +1960,17 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_unassignedLst(threadData_t *thre
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_assignLst(threadData_t *threadData, modelica_metatype _vlst, modelica_integer _e, modelica_metatype _ass1, modelica_metatype _ass2)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2000,6 +2027,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_assignLst(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_assignLst(threadData_t *threadData, modelica_metatype _vlst, modelica_metatype _e, modelica_metatype _ass1, modelica_metatype _ass2)
@@ -2280,6 +2310,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_expHasCref(threadDat
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isthere has no default value.
@@ -2295,6 +2328,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_expHasCref(threadDat
   tmp3 = mmc_unbox_integer(tmpMeta2);
   _isthere = tmp3  /* pattern as ty=Boolean */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isthere;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_expHasCref(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _cr)
@@ -2376,6 +2412,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getOrphans(threa
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_markIndexdColums(threadData_t *threadData, modelica_integer _i, modelica_integer _size, modelica_integer _mark, modelica_metatype _colummarks, modelica_metatype _vec2)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -2439,6 +2478,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_markIndexdColums(threadData_t *t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_markIndexdColums(threadData_t *threadData, modelica_metatype _i, modelica_metatype _size, modelica_metatype _mark, modelica_metatype _colummarks, modelica_metatype _vec2)
@@ -2455,6 +2497,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_markIndexdColums(threadData_t
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getIndexesForEqnsRest(threadData_t *threadData, modelica_integer _i, modelica_integer _size, modelica_integer _id, modelica_integer _mark, modelica_metatype _colummarks, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _vec1, modelica_metatype _vec2)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -2520,6 +2565,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getIndexesForEqnsRest(threadData
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_getIndexesForEqnsRest(threadData_t *threadData, modelica_metatype _i, modelica_metatype _size, modelica_metatype _id, modelica_metatype _mark, modelica_metatype _colummarks, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _vec1, modelica_metatype _vec2)
@@ -2538,6 +2586,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_getIndexesForEqnsRest(threadD
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_markIndexSubgraph(threadData_t *threadData, modelica_boolean _b, modelica_metatype _r, modelica_integer _mark, modelica_metatype _rowmarks)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2573,6 +2624,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_markIndexSubgraph(threadData_t *
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_markIndexSubgraph(threadData_t *threadData, modelica_metatype _b, modelica_metatype _r, modelica_metatype _mark, modelica_metatype _rowmarks)
@@ -2589,6 +2643,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_getIndexSubGraph(thr
 {
   modelica_boolean _found;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _found has no default value.
@@ -2748,6 +2805,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_getIndexSubGraph(thr
   }
   _found = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _found;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getIndexSubGraph(threadData_t *threadData, modelica_metatype _rows, modelica_metatype _vorphan, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _orowmarks, modelica_metatype _ocolummarks, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _ifound)
@@ -2765,10 +2825,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getIndexSubGraph
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_doMark(threadData_t *threadData, modelica_integer _index, modelica_metatype _arr, modelica_integer _mark)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   arrayUpdate(_arr, _index, mmc_mk_integer(_mark));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_doMark(threadData_t *threadData, modelica_metatype _index, modelica_metatype _arr, modelica_metatype _mark)
@@ -2783,10 +2849,16 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_doMark(threadData_t *threadDa
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_doAssign(threadData_t *threadData, modelica_integer _index, modelica_metatype _arr, modelica_metatype _assign)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   arrayUpdate(_arr, _index, _assign);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_doAssign(threadData_t *threadData, modelica_metatype _index, modelica_metatype _arr, modelica_metatype _assign)
@@ -2800,11 +2872,17 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_doAssign(threadData_t *thread
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_isNoResOrphan(threadData_t *threadData, modelica_integer _indx, modelica_metatype _ass)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (!listEmpty(arrayGet(_ass,_indx) /* DAE.ASUB */));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isNoResOrphan(threadData_t *threadData, modelica_metatype _indx, modelica_metatype _ass)
@@ -2821,11 +2899,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isNoResOrphan(th
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_isResOrphan(threadData_t *threadData, modelica_integer _indx, modelica_metatype _ass)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = listEmpty(arrayGet(_ass,_indx) /* DAE.ASUB */);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isResOrphan(threadData_t *threadData, modelica_metatype _indx, modelica_metatype _ass)
@@ -2842,11 +2926,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isResOrphan(thre
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_isNoOrphan(threadData_t *threadData, modelica_integer _indx, modelica_metatype _ass)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (mmc_unbox_integer(arrayGet(_ass,_indx) /* DAE.ASUB */) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isNoOrphan(threadData_t *threadData, modelica_metatype _indx, modelica_metatype _ass)
@@ -2863,11 +2953,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isNoOrphan(threa
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_isOrphan(threadData_t *threadData, modelica_integer _indx, modelica_metatype _ass)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (mmc_unbox_integer(arrayGet(_ass,_indx) /* DAE.ASUB */) < ((modelica_integer) 1));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isOrphan(threadData_t *threadData, modelica_metatype _indx, modelica_metatype _ass)
@@ -2884,11 +2980,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isOrphan(threadD
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_marked(threadData_t *threadData, modelica_integer _indx, modelica_metatype _markarray, modelica_integer _mark)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (mmc_unbox_integer(arrayGet(_markarray,_indx) /* DAE.ASUB */) == _mark);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_marked(threadData_t *threadData, modelica_metatype _indx, modelica_metatype _markarray, modelica_metatype _mark)
@@ -2907,11 +3009,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_marked(threadDat
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_unmarked(threadData_t *threadData, modelica_integer _indx, modelica_metatype _markarray, modelica_integer _mark)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (mmc_unbox_integer(arrayGet(_markarray,_indx) /* DAE.ASUB */) != _mark);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_unmarked(threadData_t *threadData, modelica_metatype _indx, modelica_metatype _markarray, modelica_metatype _mark)
@@ -3268,6 +3376,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_setIndexQueue(th
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_setBoarderElemts(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _m, modelica_integer _mark, modelica_metatype _arr, modelica_integer _orphan)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3327,6 +3438,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_setBoarderElemts(threadData_t *t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_setBoarderElemts(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _m, modelica_metatype _mark, modelica_metatype _arr, modelica_metatype _orphan)
@@ -3423,6 +3537,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getIndexesForEqnsAdv
 {
   modelica_integer _outMark;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outMark has no default value.
@@ -3622,6 +3739,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getIndexesForEqnsAdv
   }
   _outMark = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outMark;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getIndexesForEqnsAdvanced(threadData_t *threadData, modelica_metatype _orphans, modelica_metatype _index, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _imark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _orowmarks, modelica_metatype _ocolummarks, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _vec1, modelica_metatype _vec2, modelica_metatype _queuemark, modelica_metatype _vars, modelica_metatype _eqns, modelica_metatype _shared, modelica_metatype _size)
@@ -3641,6 +3761,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getIndexesForEqn
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getOrphansPairsConstraints1(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_integer _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _eqnsarr, modelica_integer _orphan, modelica_metatype _nextQueue)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -3784,6 +3907,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getOrphansPairsConstraints1(thre
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_getOrphansPairsConstraints1(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _eqnsarr, modelica_metatype _orphan, modelica_metatype _nextQueue)
@@ -3800,6 +3926,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getOrphansPairsConst
 {
   modelica_integer _omark;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _omark has no default value.
@@ -3886,6 +4015,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getOrphansPairsConst
   }
   _omark = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _omark;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getOrphansPairsConstraints(threadData_t *threadData, modelica_metatype _inOrphans, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _eqns)
@@ -3901,6 +4033,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getOrphansPairsC
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getOrphansPairs1(threadData_t *threadData, modelica_metatype _rows, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_integer _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_integer _orphan, modelica_metatype _nextQueue)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -4028,6 +4163,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getOrphansPairs1(threadData_t *t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_getOrphansPairs1(threadData_t *threadData, modelica_metatype _rows, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _orphan, modelica_metatype _nextQueue)
@@ -4044,6 +4182,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getOrphansPairs(thre
 {
   modelica_integer _omark;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _omark has no default value.
@@ -4124,6 +4265,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getOrphansPairs(thre
   }
   _omark = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _omark;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getOrphansPairs(threadData_t *threadData, modelica_metatype _inOrphans, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks)
@@ -4488,6 +4632,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getEqnsinOrder(t
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_dumpJacMatrix(threadData_t *threadData, modelica_metatype _jac, modelica_integer _row, modelica_integer _col, modelica_integer _size, modelica_metatype _vars)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -4678,6 +4825,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_dumpJacMatrix(threadData_t *thre
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_dumpJacMatrix(threadData_t *threadData, modelica_metatype _jac, modelica_metatype _row, modelica_metatype _col, modelica_metatype _size, modelica_metatype _vars)
@@ -4694,6 +4844,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_dumpJacMatrix(threadData_t *t
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_transformJacToMatrix(threadData_t *threadData, modelica_metatype _jac, modelica_integer _row, modelica_integer _col, modelica_integer _size, modelica_metatype _b, modelica_metatype _matrix)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -4889,6 +5042,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_transformJacToMatrix(threadData_
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_transformJacToMatrix(threadData_t *threadData, modelica_metatype _jac, modelica_metatype _row, modelica_metatype _col, modelica_metatype _size, modelica_metatype _b, modelica_metatype _matrix)
@@ -4905,6 +5061,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_transformJacToMatrix(threadDa
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_transformJacToAdjacencyMatrix(threadData_t *threadData, modelica_metatype _jac, modelica_metatype _m, modelica_metatype _mT, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -4994,11 +5153,17 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_transformJacToAdjacencyMatrix(th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_transformJacToAdjacencyMatrix1(threadData_t *threadData, modelica_metatype _jac, modelica_metatype _m, modelica_metatype _ass1, modelica_metatype _ass2, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5082,11 +5247,17 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_transformJacToAdjacencyMatrix1(t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_transformJacToAdjacencyMatrix2(threadData_t *threadData, modelica_metatype _jac, modelica_metatype _m, modelica_metatype _mapIncRowEqn, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5178,17 +5349,26 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_transformJacToAdjacencyMatrix2(t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_isConstOneMinusOne(threadData_t *threadData, modelica_metatype _inExp)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (omc_Expression_isConstOne(threadData, _inExp) || omc_Expression_isConstMinusOne(threadData, _inExp));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_isConstOneMinusOne(threadData_t *threadData, modelica_metatype _inExp)
@@ -6208,6 +6388,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_OnRelaxation_dumpMatrix1(threadDat
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_dumpMatrix(threadData_t *threadData, modelica_integer _row, modelica_integer _size, modelica_metatype _matrix)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -6259,6 +6442,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_dumpMatrix(threadData_t *threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_dumpMatrix(threadData_t *threadData, modelica_metatype _row, modelica_metatype _size, modelica_metatype _matrix)
@@ -6482,6 +6668,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_hasResidualOrphan(th
 {
   modelica_integer _Orphan;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _Orphan has no default value.
@@ -6549,6 +6738,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_hasResidualOrphan(th
   }
   _Orphan = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _Orphan;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_hasResidualOrphan(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass)
@@ -6564,6 +6756,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_hasResidualOrphan1(t
 {
   modelica_integer _Orphan;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _Orphan has no default value.
@@ -6639,6 +6834,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_hasResidualOrphan1(t
   }
   _Orphan = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _Orphan;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_hasResidualOrphan1(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass, modelica_metatype _eqnsarr)
@@ -6652,6 +6850,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_hasResidualOrpha
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_reduceOrphancMatrix1(threadData_t *threadData, modelica_metatype _comps, modelica_metatype _comps1, modelica_metatype _m)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -6711,11 +6912,17 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_reduceOrphancMatrix1(threadData_
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_reduceOrphancMatrix(threadData_t *threadData, modelica_metatype _comps, modelica_metatype _m)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -6788,6 +6995,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_reduceOrphancMatrix(threadData_t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -7016,6 +7226,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getOrphansAdjace
 PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getInvMap(threadData_t *threadData, modelica_integer _orphan, modelica_metatype _invmap, modelica_integer _index)
 {
   modelica_integer _oindex;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oindex has no default value.
@@ -7023,6 +7236,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getInvMap(threadData
 
   _oindex = ((modelica_integer) 1) + _index;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oindex;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getInvMap(threadData_t *threadData, modelica_metatype _orphan, modelica_metatype _invmap, modelica_metatype _index)
@@ -7043,6 +7259,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getOrphansOrderEdvan
   modelica_integer _omark;
   modelica_metatype _childs = NULL;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _omark has no default value.
@@ -7052,6 +7271,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getOrphansOrderEdvan
 
   omc_OnRelaxation_getOrphansOrderEdvanced6(threadData, _linklst, _childs, _m);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _omark;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getOrphansOrderEdvanced4(threadData_t *threadData, modelica_metatype _linklst, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _imark, modelica_metatype _rowmarks, modelica_metatype _iorder, modelica_metatype _iAcc)
@@ -7067,6 +7289,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getOrphansOrderE
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getOrphansOrderEdvanced6(threadData_t *threadData, modelica_metatype _linklst, modelica_metatype _childslst, modelica_metatype _m)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -7138,6 +7363,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getOrphansOrderEdvanced6(threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -7529,6 +7757,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_OnRelaxation_mergeOrphanParents(
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getConstraintesOrphansOrderEdvanced1(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_integer _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_integer _preorphan, modelica_metatype _orphans, modelica_metatype _nextQueue)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -7675,6 +7906,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getConstraintesOrphansOrderEdvan
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_getConstraintesOrphansOrderEdvanced1(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _preorphan, modelica_metatype _orphans, modelica_metatype _nextQueue)
@@ -7691,6 +7925,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getConstraintesOrpha
 {
   modelica_integer _omark;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _omark has no default value.
@@ -7771,6 +8008,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getConstraintesOrpha
   }
   _omark = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _omark;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getConstraintesOrphansOrderEdvanced(threadData_t *threadData, modelica_metatype _inOrphans, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mc, modelica_metatype _mct, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _orphans)
@@ -7786,6 +8026,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getConstraintesO
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getOrphansOrderEdvanced1(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_integer _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_integer _preorphan, modelica_metatype _orphans, modelica_metatype _nextQueue)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -7921,6 +8164,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_getOrphansOrderEdvanced1(threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_getOrphansOrderEdvanced1(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _preorphan, modelica_metatype _orphans, modelica_metatype _nextQueue)
@@ -7935,6 +8181,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_getOrphansOrderEdvanced1(thre
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_addPreOrphans(threadData_t *threadData, modelica_integer _orphan, modelica_metatype _preorphans, modelica_metatype _arr)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -7988,6 +8237,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_addPreOrphans(threadData_t *thre
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_addPreOrphans(threadData_t *threadData, modelica_metatype _orphan, modelica_metatype _preorphans, modelica_metatype _arr)
@@ -8001,6 +8253,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_addPreOrphans(threadData_t *t
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_addPreOrphan(threadData_t *threadData, modelica_integer _orphan, modelica_integer _preorphan, modelica_metatype _arr)
 {
   modelica_metatype _olst = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _olst has no default value.
@@ -8010,6 +8265,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_addPreOrphan(threadData_t *threa
 
   arrayUpdate(_arr, _orphan, _olst);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_addPreOrphan(threadData_t *threadData, modelica_metatype _orphan, modelica_metatype _preorphan, modelica_metatype _arr)
@@ -8109,6 +8367,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getOrphansOrderEdvan
 {
   modelica_integer _omark;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _omark has no default value.
@@ -8189,6 +8450,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_getOrphansOrderEdvan
   }
   _omark = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _omark;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getOrphansOrderEdvanced(threadData_t *threadData, modelica_metatype _inOrphans, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mc, modelica_metatype _mct, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _orphans)
@@ -8204,6 +8468,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_getOrphansOrderE
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_generateResidualClique(threadData_t *threadData, modelica_integer _r, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _orphans, modelica_integer _e)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -8281,6 +8548,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_generateResidualClique(threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_generateResidualClique(threadData_t *threadData, modelica_metatype _r, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _orphans, modelica_metatype _e)
@@ -8295,6 +8565,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_generateResidualClique(thread
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_generateClique(threadData_t *threadData, modelica_integer _r, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _orphans, modelica_integer _e)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -8372,6 +8645,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_generateClique(threadData_t *thr
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_generateClique(threadData_t *threadData, modelica_metatype _r, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _orphans, modelica_metatype _e)
@@ -8386,6 +8662,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_generateClique(threadData_t *
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_prepairOrphansOrder3(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_integer _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_integer _preorphan, modelica_metatype _partner, modelica_metatype _orphans, modelica_metatype _prer)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -8509,6 +8788,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_prepairOrphansOrder3(threadData_
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_prepairOrphansOrder3(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _preorphan, modelica_metatype _partner, modelica_metatype _orphans, modelica_metatype _prer)
@@ -8525,6 +8807,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_prepairOrphansOrder2
 {
   modelica_integer _omark;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _omark has no default value.
@@ -8621,6 +8906,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_prepairOrphansOrder2
   }
   _omark = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _omark;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_prepairOrphansOrder2(threadData_t *threadData, modelica_metatype _inOrphans, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _imark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _orphans)
@@ -8644,6 +8932,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_prepairOrphansOrder1
   modelica_metatype _vlst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _ofoundFlow = _ifoundFlow;
@@ -8691,6 +8982,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_prepairOrphansOrder1
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _ofoundFlow;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_prepairOrphansOrder1(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _preorphan, modelica_metatype _orphans, modelica_metatype _prer, modelica_metatype _ifoundFlow, modelica_metatype _vars)
@@ -8845,6 +9139,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_prepairOrphansOr
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_generateCliquesResidual2(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_integer _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _orphan)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -8947,6 +9244,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_generateCliquesResidual2(threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_generateCliquesResidual2(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _orphan)
@@ -9012,6 +9312,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_generateCliquesResid
   modelica_metatype _vlst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _ofoundFlow = _ifoundFlow;
@@ -9060,6 +9363,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OnRelaxation_generateCliquesResid
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _ofoundFlow;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_generateCliquesResidual1(threadData_t *threadData, modelica_metatype _rows, modelica_metatype _ass1, modelica_metatype _ass2, modelica_metatype _m, modelica_metatype _mt, modelica_metatype _mark, modelica_metatype _rowmarks, modelica_metatype _colummarks, modelica_metatype _ifoundFlow, modelica_metatype _vars)
@@ -9256,6 +9562,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_transposeOrphanVec(t
 {
   modelica_integer _outId;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outId has no default value.
@@ -9311,6 +9620,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OnRelaxation_transposeOrphanVec(t
   }
   _outId = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outId;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_transposeOrphanVec(threadData_t *threadData, modelica_metatype _c, modelica_metatype _vec3, modelica_metatype _inId)
@@ -9329,6 +9641,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OnRelaxation_transposeOrphanV
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_dumpVar(threadData_t *threadData, modelica_integer _id, modelica_metatype _vars)
 {
   modelica_metatype _v = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
@@ -9338,6 +9653,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_dumpVar(threadData_t *threadData
 
   fputs(MMC_STRINGDATA(_OMC_LIT1),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_dumpVar(threadData_t *threadData, modelica_metatype _id, modelica_metatype _vars)
@@ -9577,6 +9895,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_OnRelaxation_replaceFinalParamet
 
 PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_removeRootConnections(threadData_t *threadData, modelica_integer _orphan, modelica_metatype _orphansarray, modelica_metatype _roots)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -9629,6 +9950,9 @@ PROTECTED_FUNCTION_STATIC void omc_OnRelaxation_removeRootConnections(threadData
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OnRelaxation_removeRootConnections(threadData_t *threadData, modelica_metatype _orphan, modelica_metatype _orphansarray, modelica_metatype _roots)

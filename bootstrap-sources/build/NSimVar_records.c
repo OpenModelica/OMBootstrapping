@@ -6,7 +6,7 @@ extern "C" {
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NSimVar_SimVar_SIMVAR__desc_added
 #define NSimVar_SimVar_SIMVAR__desc_added
-ADD_METARECORD_DEFINITIONS const char* NSimVar_SimVar_SIMVAR__desc__fields[29] = {"name","varKind","comment","unit","displayUnit","index","min","max","start","nominal","isFixed","type_","isDiscrete","arrayCref","aliasvar","info","causality","variable_index","fmi_index","numArrayElement","isValueChangeable","isProtected","hideResult","isEncrypted","inputIndex","matrixName","variability","initial_","exportVar"};
+ADD_METARECORD_DEFINITIONS const char* NSimVar_SimVar_SIMVAR__desc__fields[30] = {"name","varKind","comment","unit","displayUnit","index","min","max","start","nominal","isFixed","type_","isDiscrete","arrayCref","aliasvar","info","causality","variable_index","fmi_index","numArrayElement","isValueChangeable","isProtected","hideResult","isEncrypted","inputIndex","matrixName","variability","initial_","exportVar","isConnectorFlow"};
 ADD_METARECORD_DEFINITIONS struct record_description NSimVar_SimVar_SIMVAR__desc = {
   "NSimVar_SimVar_SIMVAR",
   "NSimVar.SimVar.SIMVAR",
@@ -19,7 +19,7 @@ extern struct record_description NSimVar_SimVar_SIMVAR__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NSimVar_SimVar_SIMVAR__desc_added
 #define NSimVar_SimVar_SIMVAR__desc_added
-ADD_METARECORD_DEFINITIONS const char* NSimVar_SimVar_SIMVAR__desc__fields[29] = {"name","varKind","comment","unit","displayUnit","index","min","max","start","nominal","isFixed","type_","isDiscrete","arrayCref","aliasvar","info","causality","variable_index","fmi_index","numArrayElement","isValueChangeable","isProtected","hideResult","isEncrypted","inputIndex","matrixName","variability","initial_","exportVar"};
+ADD_METARECORD_DEFINITIONS const char* NSimVar_SimVar_SIMVAR__desc__fields[30] = {"name","varKind","comment","unit","displayUnit","index","min","max","start","nominal","isFixed","type_","isDiscrete","arrayCref","aliasvar","info","causality","variable_index","fmi_index","numArrayElement","isValueChangeable","isProtected","hideResult","isEncrypted","inputIndex","matrixName","variability","initial_","exportVar","isConnectorFlow"};
 ADD_METARECORD_DEFINITIONS struct record_description NSimVar_SimVar_SIMVAR__desc = {
   "NSimVar_SimVar_SIMVAR",
   "NSimVar.SimVar.SIMVAR",

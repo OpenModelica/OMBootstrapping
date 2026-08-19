@@ -5,6 +5,7 @@ extern "C" {
 #include "ModelicaUtilities.h"  // Make Modelica C util functions available for external includes.
 
 #include "AbsynUtil.h"
+#include "Array.h"
 #include "Error.h"
 #include "Flags.h"
 #include "List.h"
@@ -18,6 +19,7 @@ extern "C" {
 #include "NFCall.h"
 #include "NFComponentRef.h"
 #include "NFExpression.h"
+#include "NFFunction.h"
 #include "NFOperator.h"
 #include "NFStatement.h"
 #include "NFSubscript.h"

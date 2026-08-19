@@ -1766,11 +1766,17 @@ DLLDirection
 modelica_boolean omc_TplAbsyn_canBeOnOneLine(threadData_t *threadData, modelica_metatype _inStringList)
 {
   modelica_boolean _outCanBeOnOneLine;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCanBeOnOneLine has no default value.
   _outCanBeOnOneLine = ((listLength(_inStringList) <= ((modelica_integer) 4)) && (stringLength(stringAppendList(_inStringList)) <= ((modelica_integer) 10)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outCanBeOnOneLine;
 }
 modelica_metatype boxptr_TplAbsyn_canBeOnOneLine(threadData_t *threadData, modelica_metatype _inStringList)
@@ -1786,6 +1792,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_TplAbsyn_canBeEscapedUnquotedChar
 {
   modelica_boolean _outCanBeUnquoted;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCanBeUnquoted has no default value.
@@ -1844,6 +1853,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_TplAbsyn_canBeEscapedUnquotedChar
   }
   _outCanBeUnquoted = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outCanBeUnquoted;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_TplAbsyn_canBeEscapedUnquotedChars(threadData_t *threadData, modelica_metatype _inChars)
@@ -1860,6 +1872,9 @@ modelica_boolean omc_TplAbsyn_canBeEscapedUnquoted(threadData_t *threadData, mod
 {
   modelica_boolean _outCanBeUnquoted;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCanBeUnquoted has no default value.
@@ -1952,6 +1967,9 @@ modelica_boolean omc_TplAbsyn_canBeEscapedUnquoted(threadData_t *threadData, mod
   }
   _outCanBeUnquoted = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outCanBeUnquoted;
 }
 modelica_metatype boxptr_TplAbsyn_canBeEscapedUnquoted(threadData_t *threadData, modelica_metatype _inStringList)
@@ -1966,11 +1984,17 @@ modelica_metatype boxptr_TplAbsyn_canBeEscapedUnquoted(threadData_t *threadData,
 PROTECTED_FUNCTION_STATIC void omc_TplAbsyn_addSusanNotification(threadData_t *threadData, modelica_string _inErrMsg, modelica_metatype _inInfo)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_cons(_inErrMsg, MMC_REFSTRUCTLIT(mmc_nil));
   omc_Error_addSourceMessage(threadData, _OMC_LIT20, tmpMeta1, _inInfo);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1979,6 +2003,9 @@ void omc_TplAbsyn_addSusanError(threadData_t *threadData, modelica_string _inErr
 {
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if(omc_Flags_isSet(threadData, _OMC_LIT6))
@@ -1990,6 +2017,9 @@ void omc_TplAbsyn_addSusanError(threadData_t *threadData, modelica_string _inErr
   tmpMeta2 = mmc_mk_cons(_inErrMsg, MMC_REFSTRUCTLIT(mmc_nil));
   omc_Error_addSourceMessage(threadData, _OMC_LIT23, tmpMeta2, _inInfo);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3320,6 +3350,9 @@ modelica_metatype omc_TplAbsyn_fullyQualifyASTDefs(threadData_t *threadData, mod
 DLLDirection
 void omc_TplAbsyn_isRecordTag(threadData_t *threadData, modelica_string _inTagIdent, modelica_metatype _inTypeInfo, modelica_string _inTypeIdent)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3375,6 +3408,9 @@ void omc_TplAbsyn_isRecordTag(threadData_t *threadData, modelica_string _inTagId
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3573,6 +3609,9 @@ modelica_metatype omc_TplAbsyn_getFields(threadData_t *threadData, modelica_stri
 DLLDirection
 void omc_TplAbsyn_checkPackageOpt(threadData_t *threadData, modelica_metatype _inPackage, modelica_metatype _inPackageOpt)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -3644,6 +3683,9 @@ void omc_TplAbsyn_checkPackageOpt(threadData_t *threadData, modelica_metatype _i
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -4170,6 +4212,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplAbsyn_typesEqualList(threadDa
 
 PROTECTED_FUNCTION_STATIC void omc_TplAbsyn_typesEqualConcrete(threadData_t *threadData, modelica_metatype _inTypeA, modelica_metatype _inTypeB, modelica_metatype _inASTDefs)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -4260,6 +4305,9 @@ PROTECTED_FUNCTION_STATIC void omc_TplAbsyn_typesEqualConcrete(threadData_t *thr
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -6756,6 +6804,9 @@ modelica_boolean omc_TplAbsyn_usedInImmediateLetScope(threadData_t *threadData, 
 {
   modelica_boolean _outIsUsed;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsUsed has no default value.
@@ -6882,6 +6933,9 @@ modelica_boolean omc_TplAbsyn_usedInImmediateLetScope(threadData_t *threadData, 
   }
   _outIsUsed = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsUsed;
 }
 modelica_metatype boxptr_TplAbsyn_usedInImmediateLetScope(threadData_t *threadData, modelica_metatype _inIdent, modelica_metatype _inFreshIdent, modelica_metatype _inScopeEnv)
@@ -7943,6 +7997,9 @@ modelica_metatype omc_TplAbsyn_checkTextType(threadData_t *threadData, modelica_
 DLLDirection
 void omc_TplAbsyn_checkResolvedType(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inType, modelica_string _inUnresolvedMsg, modelica_metatype _inInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -8006,6 +8063,9 @@ void omc_TplAbsyn_checkResolvedType(threadData_t *threadData, modelica_metatype 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -8699,6 +8759,9 @@ modelica_boolean omc_TplAbsyn_isAlwaysMatchedBool(threadData_t *threadData, mode
 {
   modelica_boolean _isAlwaysMatched;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isAlwaysMatched has no default value.
@@ -8750,6 +8813,9 @@ modelica_boolean omc_TplAbsyn_isAlwaysMatchedBool(threadData_t *threadData, mode
   }
   _isAlwaysMatched = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isAlwaysMatched;
 }
 modelica_metatype boxptr_TplAbsyn_isAlwaysMatchedBool(threadData_t *threadData, modelica_metatype _inMatchingExp)
@@ -8764,6 +8830,9 @@ modelica_metatype boxptr_TplAbsyn_isAlwaysMatchedBool(threadData_t *threadData, 
 DLLDirection
 void omc_TplAbsyn_isAlwaysMatched(threadData_t *threadData, modelica_metatype _inMatchingExp)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -8822,6 +8891,9 @@ void omc_TplAbsyn_isAlwaysMatched(threadData_t *threadData, modelica_metatype _i
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -10774,6 +10846,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_TplAbsyn_isAssignedText(threadDat
 {
   modelica_boolean _outB;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outB has no default value.
@@ -10825,6 +10900,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_TplAbsyn_isAssignedText(threadDat
   }
   _outB = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outB;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_TplAbsyn_isAssignedText(threadData_t *threadData, modelica_metatype _inArg, modelica_metatype _inAssignedTexts)
@@ -10841,6 +10919,9 @@ modelica_boolean omc_TplAbsyn_isText(threadData_t *threadData, modelica_metatype
 {
   modelica_boolean _outB;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outB has no default value.
@@ -10880,6 +10961,9 @@ modelica_boolean omc_TplAbsyn_isText(threadData_t *threadData, modelica_metatype
   }
   _outB = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outB;
 }
 modelica_metatype boxptr_TplAbsyn_isText(threadData_t *threadData, modelica_metatype _inArg)
@@ -11743,6 +11827,9 @@ modelica_boolean omc_TplAbsyn_shouldUseIterFunctions(threadData_t *threadData, m
 {
   modelica_boolean _outUseIterFuns;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outUseIterFuns has no default value.
@@ -11879,6 +11966,9 @@ modelica_boolean omc_TplAbsyn_shouldUseIterFunctions(threadData_t *threadData, m
   }
   _outUseIterFuns = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outUseIterFuns;
 }
 modelica_metatype boxptr_TplAbsyn_shouldUseIterFunctions(threadData_t *threadData, modelica_metatype _inIsFirstArgToMap, modelica_metatype _inUseIterLast, modelica_metatype _inIsListArgToMap, modelica_metatype _wasIndexVarUsed, modelica_metatype _inIterOptions, modelica_metatype _inRestArgValsToMap)
@@ -11903,6 +11993,9 @@ modelica_boolean omc_TplAbsyn_isTupleListMember(threadData_t *threadData, modeli
 {
   modelica_boolean _outIsMember;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsMember has no default value.
@@ -11947,6 +12040,9 @@ modelica_boolean omc_TplAbsyn_isTupleListMember(threadData_t *threadData, modeli
   }
   _outIsMember = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsMember;
 }
 modelica_metatype boxptr_TplAbsyn_isTupleListMember(threadData_t *threadData, modelica_metatype _inId, modelica_metatype _inList)
@@ -11968,6 +12064,9 @@ modelica_boolean omc_TplAbsyn_intersectInOutArgs_areTypedIdentsEqual(threadData_
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _equal has no default value.
@@ -11985,6 +12084,9 @@ modelica_boolean omc_TplAbsyn_intersectInOutArgs_areTypedIdentsEqual(threadData_
 
   _equal = (stringEqual(_ident1, _ident2));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _equal;
 }
 modelica_metatype boxptr_TplAbsyn_intersectInOutArgs_areTypedIdentsEqual(threadData_t *threadData, modelica_metatype _inTypedIdent1, modelica_metatype _inTypedIdent2)
@@ -13924,6 +14026,9 @@ modelica_metatype omc_TplAbsyn_typeAdaptMMArgsForFun(threadData_t *threadData, m
 DLLDirection
 void omc_TplAbsyn_areTextInOutArgs(threadData_t *threadData, modelica_metatype _inInArg, modelica_metatype _inOutArg, modelica_metatype _inTplPackage)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -14082,6 +14187,9 @@ void omc_TplAbsyn_areTextInOutArgs(threadData_t *threadData, modelica_metatype _
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -16086,6 +16194,9 @@ modelica_metatype omc_TplAbsyn_statementsFromEscOptions(threadData_t *threadData
 DLLDirection
 void omc_TplAbsyn_warnIfSomeOptions(threadData_t *threadData, modelica_metatype _inMMEscOptions)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -16163,6 +16274,9 @@ void omc_TplAbsyn_warnIfSomeOptions(threadData_t *threadData, modelica_metatype 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -17372,6 +17486,9 @@ modelica_boolean omc_TplAbsyn_isAssignedIdent(threadData_t *threadData, modelica
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsAssigned has no default value.
@@ -17398,6 +17515,9 @@ modelica_boolean omc_TplAbsyn_isAssignedIdent(threadData_t *threadData, modelica
 
   _outIsAssigned = 0 /* false */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsAssigned;
 }
 modelica_metatype boxptr_TplAbsyn_isAssignedIdent(threadData_t *threadData, modelica_metatype _inStatementList, modelica_metatype _inIdent)

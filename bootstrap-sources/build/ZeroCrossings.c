@@ -93,6 +93,9 @@ modelica_integer omc_ZeroCrossings_compare(threadData_t *threadData, modelica_me
 {
   modelica_integer _comp;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _comp has no default value.
@@ -487,6 +490,9 @@ modelica_integer omc_ZeroCrossings_compare(threadData_t *threadData, modelica_me
   }
   _comp = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_ZeroCrossings_compare(threadData_t *threadData, modelica_metatype _zc1, modelica_metatype _zc2)
@@ -502,11 +508,17 @@ DLLDirection
 modelica_boolean omc_ZeroCrossings_equals(threadData_t *threadData, modelica_metatype _zc1, modelica_metatype _zc2)
 {
   modelica_boolean _outBoolean;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
   _outBoolean = (((modelica_integer) 0) == omc_ZeroCrossings_compare(threadData, _zc1, _zc2));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 modelica_metatype boxptr_ZeroCrossings_equals(threadData_t *threadData, modelica_metatype _zc1, modelica_metatype _zc2)
@@ -542,11 +554,17 @@ DLLDirection
 modelica_boolean omc_ZeroCrossings_contains(threadData_t *threadData, modelica_metatype _zc_set, modelica_metatype _zc)
 {
   modelica_boolean _matches;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _matches has no default value.
   _matches = omc_ZeroCrossings_ZeroCrossingTree_hasKey(threadData, arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_zc_set), 3))), ((modelica_integer) 1)), _zc);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _matches;
 }
 modelica_metatype boxptr_ZeroCrossings_contains(threadData_t *threadData, modelica_metatype _zc_set, modelica_metatype _zc)
@@ -614,6 +632,9 @@ void omc_ZeroCrossings_add__list(threadData_t *threadData, modelica_metatype _zc
 {
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   {
@@ -625,6 +646,9 @@ void omc_ZeroCrossings_add__list(threadData_t *threadData, modelica_metatype _zc
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -632,6 +656,9 @@ DLLDirection
 void omc_ZeroCrossings_add(threadData_t *threadData, modelica_metatype _zc_set, modelica_metatype _zc)
 {
   modelica_metatype _addedCell = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _addedCell has no default value.
@@ -644,6 +671,9 @@ void omc_ZeroCrossings_add(threadData_t *threadData, modelica_metatype _zc_set, 
     arrayUpdate((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_zc_set), 3))), ((modelica_integer) 1), omc_ZeroCrossings_ZeroCrossingTree_add(threadData, arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_zc_set), 3))), ((modelica_integer) 1)), _zc, _addedCell, boxvar_ZeroCrossings_ZeroCrossingTree_addConflictDefault));
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -652,6 +682,9 @@ modelica_integer omc_ZeroCrossings_zeroCrossingSize(threadData_t *threadData, mo
 {
   modelica_integer _s;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _s has no default value.
@@ -694,6 +727,9 @@ modelica_integer omc_ZeroCrossings_zeroCrossingSize(threadData_t *threadData, mo
   }
   _s = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _s;
 }
 modelica_metatype boxptr_ZeroCrossings_zeroCrossingSize(threadData_t *threadData, modelica_metatype _zc)
@@ -711,6 +747,9 @@ modelica_integer omc_ZeroCrossings_length(threadData_t *threadData, modelica_met
   modelica_integer _i;
   modelica_metatype _zcs = NULL;
   modelica_integer tmp1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _i has no default value.
@@ -743,6 +782,9 @@ modelica_integer omc_ZeroCrossings_length(threadData_t *threadData, modelica_met
   }
   _i = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _i;
 }
 modelica_metatype boxptr_ZeroCrossings_length(threadData_t *threadData, modelica_metatype _zc_set)
@@ -1191,6 +1233,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_ZeroCrossings_ZeroCrossingTree_ca
 {
   modelica_integer _outBalance;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBalance has no default value.
@@ -1233,6 +1278,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_ZeroCrossings_ZeroCrossingTree_ca
   }
   _outBalance = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBalance;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ZeroCrossings_ZeroCrossingTree_calculateBalance(threadData_t *threadData, modelica_metatype _inNode)
@@ -1447,6 +1495,9 @@ modelica_metatype omc_ZeroCrossings_ZeroCrossingTree_fold__2(threadData_t *threa
 DLLDirection
 void omc_ZeroCrossings_ZeroCrossingTree_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1494,6 +1545,9 @@ void omc_ZeroCrossings_ZeroCrossingTree_forEach(threadData_t *threadData, modeli
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1772,6 +1826,9 @@ modelica_boolean omc_ZeroCrossings_ZeroCrossingTree_hasKey(threadData_t *threadD
   modelica_metatype _tree = NULL;
   modelica_metatype tmpMeta1;
   modelica_boolean tmp5 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _comp = 0 /* false */;
@@ -1882,6 +1939,9 @@ modelica_boolean omc_ZeroCrossings_ZeroCrossingTree_hasKey(threadData_t *threadD
   }
   _comp = tmp5;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_ZeroCrossings_ZeroCrossingTree_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey)
@@ -1897,6 +1957,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_ZeroCrossings_ZeroCrossingTree_he
 {
   modelica_integer _outHeight;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHeight has no default value.
@@ -1939,6 +2002,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_ZeroCrossings_ZeroCrossingTree_he
   }
   _outHeight = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHeight;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ZeroCrossings_ZeroCrossingTree_height(threadData_t *threadData, modelica_metatype _inNode)
@@ -1953,10 +2019,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ZeroCrossings_ZeroCrossingTre
 DLLDirection
 void omc_ZeroCrossings_ZeroCrossingTree_intersection(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1965,6 +2037,9 @@ modelica_boolean omc_ZeroCrossings_ZeroCrossingTree_isEmpty(threadData_t *thread
 {
   modelica_boolean _isEmpty;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -2002,6 +2077,9 @@ modelica_boolean omc_ZeroCrossings_ZeroCrossingTree_isEmpty(threadData_t *thread
   }
   _isEmpty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_ZeroCrossings_ZeroCrossingTree_isEmpty(threadData_t *threadData, modelica_metatype _tree)
@@ -2073,11 +2151,17 @@ DLLDirection
 modelica_integer omc_ZeroCrossings_ZeroCrossingTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
 {
   modelica_integer _outResult;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
   _outResult = omc_ZeroCrossings_compare(threadData, _inKey1, _inKey2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_ZeroCrossings_ZeroCrossingTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
@@ -2725,6 +2809,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ZeroCrossings_ZeroCrossingTree_re
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -2764,6 +2851,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ZeroCrossings_ZeroCrossingTree_re
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ZeroCrossings_ZeroCrossingTree_referenceEqOrEmpty(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)

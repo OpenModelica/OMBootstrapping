@@ -92,6 +92,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_InstHashTable_opaqVal(threadData_t
 DLLDirection
 void omc_InstHashTable_addToInstCache(threadData_t *threadData, modelica_metatype _fullEnvPathPlusClass, modelica_metatype _fullInstOpt, modelica_metatype _partialInstOpt)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -269,6 +272,9 @@ void omc_InstHashTable_addToInstCache(threadData_t *threadData, modelica_metatyp
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -291,12 +297,18 @@ modelica_metatype omc_InstHashTable_get(threadData_t *threadData, modelica_metat
 DLLDirection
 void omc_InstHashTable_release(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   setGlobalRoot(((modelica_integer) 9), omc_InstHashTable_emptyInstHashTable(threadData));
 
   omc_OperatorOverloading_initCache(threadData);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -304,6 +316,9 @@ DLLDirection
 void omc_InstHashTable_init(threadData_t *threadData)
 {
   modelica_metatype _ht = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ht has no default value.
@@ -351,6 +366,9 @@ void omc_InstHashTable_init(threadData_t *threadData)
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

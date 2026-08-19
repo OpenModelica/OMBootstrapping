@@ -491,6 +491,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFDuplicateTree_calculateBalance(
 {
   modelica_integer _outBalance;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBalance has no default value.
@@ -533,6 +536,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFDuplicateTree_calculateBalance(
   }
   _outBalance = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBalance;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFDuplicateTree_calculateBalance(threadData_t *threadData, modelica_metatype _inNode)
@@ -790,6 +796,9 @@ modelica_metatype omc_NFDuplicateTree_fold__2(threadData_t *threadData, modelica
 DLLDirection
 void omc_NFDuplicateTree_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -837,6 +846,9 @@ void omc_NFDuplicateTree_forEach(threadData_t *threadData, modelica_metatype _tr
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1158,6 +1170,9 @@ modelica_boolean omc_NFDuplicateTree_hasKey(threadData_t *threadData, modelica_m
   modelica_metatype _tree = NULL;
   modelica_string tmp1 = 0;
   modelica_boolean tmp5 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _comp = 0 /* false */;
@@ -1268,6 +1283,9 @@ modelica_boolean omc_NFDuplicateTree_hasKey(threadData_t *threadData, modelica_m
   }
   _comp = tmp5;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_NFDuplicateTree_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey)
@@ -1283,6 +1301,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFDuplicateTree_height(threadData
 {
   modelica_integer _outHeight;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHeight has no default value.
@@ -1325,6 +1346,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFDuplicateTree_height(threadData
   }
   _outHeight = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHeight;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFDuplicateTree_height(threadData_t *threadData, modelica_metatype _inNode)
@@ -1346,12 +1370,18 @@ modelica_boolean omc_NFDuplicateTree_idExistsInEntry(threadData_t *threadData, m
 {
   modelica_boolean _exists;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _exists has no default value.
   tmpMeta1 = mmc_mk_box1(0, _id);
   _exists = (omc_NFLookupTree_Entry_isEqual(threadData, _id, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_entry), 2)))) || omc_List_any(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_entry), 4))), (modelica_fnptr) mmc_mk_box2(0,closure0_NFDuplicateTree_idExistsInEntry,tmpMeta1)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _exists;
 }
 modelica_metatype boxptr_NFDuplicateTree_idExistsInEntry(threadData_t *threadData, modelica_metatype _id, modelica_metatype _entry)
@@ -1366,10 +1396,16 @@ modelica_metatype boxptr_NFDuplicateTree_idExistsInEntry(threadData_t *threadDat
 DLLDirection
 void omc_NFDuplicateTree_intersection(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1378,6 +1414,9 @@ modelica_boolean omc_NFDuplicateTree_isEmpty(threadData_t *threadData, modelica_
 {
   modelica_boolean _isEmpty;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -1415,6 +1454,9 @@ modelica_boolean omc_NFDuplicateTree_isEmpty(threadData_t *threadData, modelica_
   }
   _isEmpty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_NFDuplicateTree_isEmpty(threadData_t *threadData, modelica_metatype _tree)
@@ -1486,11 +1528,17 @@ DLLDirection
 modelica_integer omc_NFDuplicateTree_keyCompare(threadData_t *threadData, modelica_string _inKey1, modelica_string _inKey2)
 {
   modelica_integer _outResult;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
   _outResult = stringCompare(_inKey1, _inKey2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_NFDuplicateTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
@@ -2183,6 +2231,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFDuplicateTree_referenceEqOrEmpt
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -2222,6 +2273,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFDuplicateTree_referenceEqOrEmpt
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFDuplicateTree_referenceEqOrEmpty(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)

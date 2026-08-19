@@ -1106,6 +1106,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_XMLDump_unaryopSymbol(threadData_t
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpResidual(threadData_t *threadData, modelica_metatype _inEquation, modelica_string _inIndexNumber, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1682,6 +1685,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpResidual(threadData_t *threadData
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpResidual(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _inIndexNumber, modelica_metatype _addMathMLCode)
@@ -1894,6 +1900,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_XMLDump_lbinopSymbol(threadData_t 
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpZcLst(threadData_t *threadData, modelica_metatype _inZeroCrossingLst, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1965,6 +1974,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpZcLst(threadData_t *threadData, m
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpZcLst(threadData_t *threadData, modelica_metatype _inZeroCrossingLst, modelica_metatype _addMathMLCode)
@@ -1977,6 +1989,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpZcLst(threadData_t *threadData
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpZeroCrossing(threadData_t *threadData, modelica_metatype _zeroCross, modelica_string _inContent, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2020,6 +2035,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpZeroCrossing(threadData_t *thread
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpZeroCrossing(threadData_t *threadData, modelica_metatype _zeroCross, modelica_metatype _inContent, modelica_metatype _addMathMLCode)
@@ -2032,6 +2050,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpZeroCrossing(threadData_t *thr
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpSampleLst(threadData_t *threadData, modelica_metatype _inSamples, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2144,6 +2165,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpSampleLst(threadData_t *threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpSampleLst(threadData_t *threadData, modelica_metatype _inSamples, modelica_metatype _addMathMLCode)
@@ -2156,6 +2180,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpSampleLst(threadData_t *thread
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpTimeEvents(threadData_t *threadData, modelica_metatype _inTimeEvents, modelica_string _inContent, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2199,6 +2226,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpTimeEvents(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpTimeEvents(threadData_t *threadData, modelica_metatype _inTimeEvents, modelica_metatype _inContent, modelica_metatype _addMathMLCode)
@@ -2211,6 +2241,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpTimeEvents(threadData_t *threa
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpWhenOperatorLst(threadData_t *threadData, modelica_metatype _inWhenOperators, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2521,6 +2554,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpWhenOperatorLst(threadData_t *thr
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpWhenOperatorLst(threadData_t *threadData, modelica_metatype _inWhenOperators, modelica_metatype _addMathMLCode)
@@ -2533,6 +2569,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpWhenOperatorLst(threadData_t *
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpWhenOperators(threadData_t *threadData, modelica_metatype _inWhenOperators, modelica_string _inContent, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2579,6 +2618,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpWhenOperators(threadData_t *threa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpWhenOperators(threadData_t *threadData, modelica_metatype _inWhenOperators, modelica_metatype _inContent, modelica_metatype _addMathMLCode)
@@ -2591,6 +2633,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpWhenOperators(threadData_t *th
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpVarsAdds2(threadData_t *threadData, modelica_metatype _inVarLst, modelica_metatype _crefIdxLstArr, modelica_integer _inInteger, modelica_boolean _addMMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2744,6 +2789,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpVarsAdds2(threadData_t *threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpVarsAdds2(threadData_t *threadData, modelica_metatype _inVarLst, modelica_metatype _crefIdxLstArr, modelica_metatype _inInteger, modelica_metatype _addMMLCode)
@@ -2758,6 +2806,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpVarsAdds2(threadData_t *thread
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpVars2(threadData_t *threadData, modelica_metatype _inVarLst, modelica_integer _inInteger, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2934,6 +2985,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpVars2(threadData_t *threadData, m
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpVars2(threadData_t *threadData, modelica_metatype _inVarLst, modelica_metatype _inInteger, modelica_metatype _addMathMLCode)
@@ -3053,6 +3107,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_XMLDump_getIndex(threadData_t *thr
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpVars(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _crefIdxLstArr, modelica_string _Content, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -3134,6 +3191,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpVars(threadData_t *threadData, mo
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpVars(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _crefIdxLstArr, modelica_metatype _Content, modelica_metatype _addMathMLCode)
@@ -3146,6 +3206,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpVars(threadData_t *threadData,
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpVarsAdditionalInfo(threadData_t *threadData, modelica_metatype _crefIdxLstArr, modelica_integer _i)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -3204,6 +3267,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpVarsAdditionalInfo(threadData_t *
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpVarsAdditionalInfo(threadData_t *threadData, modelica_metatype _crefIdxLstArr, modelica_metatype _i)
@@ -3216,6 +3282,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpVarsAdditionalInfo(threadData_
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_printIndexAndDerName(threadData_t *threadData, modelica_string _indx, modelica_string _derName)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3293,11 +3362,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_printIndexAndDerName(threadData_t *th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpVariable(threadData_t *threadData, modelica_string _varno, modelica_string _cr, modelica_string _kind, modelica_string _dir, modelica_string _var_type, modelica_string _indx, modelica_string _derName, modelica_string _varFixed, modelica_string _flowPrefix, modelica_string _streamPrefix, modelica_string _comment)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -3492,6 +3567,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpVariable(threadData_t *threadData
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3586,6 +3664,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_XMLDump_dumpTypeStr(threadData_t *
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpDimension(threadData_t *threadData, modelica_metatype _inDimension)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3644,11 +3725,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpDimension(threadData_t *threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrVoidTag(threadData_t *threadData, modelica_string _inElementName)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3691,11 +3778,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrVoidTag(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrTagContent(threadData_t *threadData, modelica_string _inElementName, modelica_string _inContent)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3751,11 +3844,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrTagContent(threadData_t *threa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrTagAttrNoChild(threadData_t *threadData, modelica_string _inContent, modelica_string _Attribute, modelica_string _AttributeContent)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -3853,11 +3952,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrTagAttrNoChild(threadData_t *t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrOpenTagAttr(threadData_t *threadData, modelica_string _inContent, modelica_string _Attribute, modelica_string _AttributeContent)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -3955,11 +4060,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrOpenTagAttr(threadData_t *thre
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrOpenTag(threadData_t *threadData, modelica_string _inContent)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -4013,11 +4124,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrOpenTag(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrMathMLVariable(threadData_t *threadData, modelica_string _inVariable)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_XMLDump_dumpStrOpenTag(threadData, _OMC_LIT107);
@@ -4026,11 +4143,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrMathMLVariable(threadData_t *t
 
   omc_XMLDump_dumpStrCloseTag(threadData, _OMC_LIT107);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrMathMLNumberAttr(threadData_t *threadData, modelica_string _inNumber, modelica_string _inAttribute, modelica_string _inAttributeContent)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_XMLDump_dumpStrOpenTagAttr(threadData, _OMC_LIT108, _inAttribute, _inAttributeContent);
@@ -4039,11 +4162,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrMathMLNumberAttr(threadData_t 
 
   omc_XMLDump_dumpStrCloseTag(threadData, _OMC_LIT108);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrMathMLNumber(threadData_t *threadData, modelica_string _inNumber)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_XMLDump_dumpStrOpenTag(threadData, _OMC_LIT108);
@@ -4052,6 +4181,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrMathMLNumber(threadData_t *thr
 
   omc_XMLDump_dumpStrCloseTag(threadData, _OMC_LIT108);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -4111,6 +4243,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_XMLDump_dumpStreamStr(threadData_t
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrCloseTag(threadData_t *threadData, modelica_string _inContent)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -4153,6 +4288,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpStrCloseTag(threadData_t *threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -4169,6 +4307,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_XMLDump_transformModelicaIdentifie
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpSolvingInfo(threadData_t *threadData, modelica_boolean _addOriginalAdjacencyMatrix, modelica_boolean _addSolvingInfo, modelica_metatype _inBackendDAE)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -4261,6 +4402,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpSolvingInfo(threadData_t *threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpSolvingInfo(threadData_t *threadData, modelica_metatype _addOriginalAdjacencyMatrix, modelica_metatype _addSolvingInfo, modelica_metatype _inBackendDAE)
@@ -4275,15 +4419,24 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpSolvingInfo(threadData_t *thre
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpRow(threadData_t *threadData, modelica_metatype _es_1)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_XMLDump_dumpList(threadData, _es_1, boxvar_XMLDump_dumpExp2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpOptionDAEStateSelect(threadData_t *threadData, modelica_metatype _ss, modelica_string _Content)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -4359,11 +4512,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpOptionDAEStateSelect(threadData_t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpOptInteger(threadData_t *threadData, modelica_metatype _inOption, modelica_string _Content, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -4408,6 +4567,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpOptInteger(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpOptInteger(threadData_t *threadData, modelica_metatype _inOption, modelica_metatype _Content, modelica_metatype _addMathMLCode)
@@ -4420,6 +4582,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpOptInteger(threadData_t *threa
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpOptExp(threadData_t *threadData, modelica_metatype _inExpExpOption, modelica_string _Content, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -4464,6 +4629,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpOptExp(threadData_t *threadData, 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpOptExp(threadData_t *threadData, modelica_metatype _inExpExpOption, modelica_metatype _Content, modelica_metatype _addMathMLCode)
@@ -4535,6 +4703,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_XMLDump_dumpMatching2(threadD
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpMatching1(threadData_t *threadData, modelica_metatype _v, modelica_integer _voffset, modelica_integer _eoffset)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -4587,6 +4758,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpMatching1(threadData_t *threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpMatching1(threadData_t *threadData, modelica_metatype _v, modelica_metatype _voffset, modelica_metatype _eoffset)
@@ -4651,6 +4825,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_XMLDump_dumpMatchingWork(threadD
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpMatching(threadData_t *threadData, modelica_metatype _dae)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_XMLDump_dumpStrOpenTag(threadData, _OMC_LIT124);
@@ -4659,11 +4836,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpMatching(threadData_t *threadData
 
   omc_XMLDump_dumpStrCloseTag(threadData, _OMC_LIT124);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpLstIntAttr(threadData_t *threadData, modelica_metatype _lst, modelica_string _inContent, modelica_string _inElementContent)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -4715,11 +4898,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpLstIntAttr(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpLstInt(threadData_t *threadData, modelica_metatype _inLstStr, modelica_string _inElementName)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -4808,6 +4997,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpLstInt(threadData_t *threadData, 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -4824,6 +5016,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_XMLDump_printExpStr(threadData_t *
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpListSeparator(threadData_t *threadData, modelica_metatype _inTypeALst, modelica_fnptr _inFuncTypeTypeATo, modelica_string _inString)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -4906,11 +5101,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpListSeparator(threadData_t *threa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpList(threadData_t *threadData, modelica_metatype _inTypeALst, modelica_fnptr _inFuncTypeTypeATo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -4987,6 +5188,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpList(threadData_t *threadData, mo
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -5095,6 +5299,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpMatrixIntegerRow(threadData_t *th
 {
   modelica_integer _e;
   modelica_string _s = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _e has no default value.
@@ -5109,6 +5316,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpMatrixIntegerRow(threadData_t *th
 
   omc_XMLDump_dumpStrCloseTag(threadData, _OMC_LIT107);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpMatrixIntegerRow(threadData_t *threadData, modelica_metatype _x, modelica_metatype _offset)
@@ -5164,6 +5374,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_XMLDump_dumpAdjacencyMatrixWork(t
   modelica_metatype _m = NULL;
   modelica_metatype _funcs = NULL;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outOffset has no default value.
@@ -5178,6 +5391,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_XMLDump_dumpAdjacencyMatrixWork(t
 
   _outOffset = _inOffset + arrayLength(_m);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outOffset;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_XMLDump_dumpAdjacencyMatrixWork(threadData_t *threadData, modelica_metatype _syst, modelica_metatype _shared, modelica_metatype _inOffset)
@@ -5193,6 +5409,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_XMLDump_dumpAdjacencyMatrixWo
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpAdjacencyMatrix(threadData_t *threadData, modelica_metatype _dae)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_XMLDump_dumpStrOpenTag(threadData, _OMC_LIT6);
@@ -5209,11 +5428,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpAdjacencyMatrix(threadData_t *thr
 
   omc_XMLDump_dumpStrCloseTag(threadData, _OMC_LIT6);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpFunctions3(threadData_t *threadData, modelica_metatype _fun)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -5281,11 +5506,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpFunctions3(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpFunctions2(threadData_t *threadData, modelica_metatype _funcelems)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5337,11 +5568,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpFunctions2(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpFunctions(threadData_t *threadData, modelica_metatype _funcelems)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5381,6 +5618,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpFunctions(threadData_t *threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -5440,6 +5680,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_XMLDump_dumpFlowStr(threadData_t *
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpExtObjCls2(threadData_t *threadData, modelica_metatype _cls, modelica_string _Content)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5512,11 +5755,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpExtObjCls2(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpExtObjCls(threadData_t *threadData, modelica_metatype _cls, modelica_string _Content)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5563,11 +5812,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpExtObjCls(threadData_t *threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpExp2(threadData_t *threadData, modelica_metatype _inExp)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -6454,11 +6709,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpExp2(threadData_t *threadData, mo
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpExp(threadData_t *threadData, modelica_metatype _e, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -6523,6 +6784,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpExp(threadData_t *threadData, mod
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpExp(threadData_t *threadData, modelica_metatype _e, modelica_metatype _addMathMLCode)
@@ -6535,6 +6799,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpExp(threadData_t *threadData, 
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpEquation(threadData_t *threadData, modelica_metatype _inEquation, modelica_string _inIndexNumber, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -7025,6 +7292,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpEquation(threadData_t *threadData
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpEquation(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _inIndexNumber, modelica_metatype _addMathMLCode)
@@ -7037,6 +7307,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpEquation(threadData_t *threadD
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpEqns2(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inVarLst, modelica_integer _inInteger, modelica_boolean _addMathMLCode, modelica_boolean _dumpResiduals, modelica_boolean _dumpSolved)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -7195,6 +7468,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpEqns2(threadData_t *threadData, m
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpEqns2(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inVarLst, modelica_metatype _inInteger, modelica_metatype _addMathMLCode, modelica_metatype _dumpResiduals, modelica_metatype _dumpSolved)
@@ -7213,6 +7489,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpEqns2(threadData_t *threadData
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpEqns(threadData_t *threadData, modelica_metatype _eqns, modelica_string _inContent, modelica_boolean _addMathMLCode, modelica_boolean _dumpResiduals, modelica_boolean _dumpSolved)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -7263,6 +7542,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpEqns(threadData_t *threadData, mo
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpEqns(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _inContent, modelica_metatype _addMathMLCode, modelica_metatype _dumpResiduals, modelica_metatype _dumpSolved)
@@ -7279,6 +7561,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpEqns(threadData_t *threadData,
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpSolvedEqns(threadData_t *threadData, modelica_metatype _eqns, modelica_integer _inCount, modelica_string _inContent, modelica_boolean _addMathMLCode, modelica_boolean _dumpResiduals, modelica_boolean _dumpSolved)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -7363,6 +7648,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpSolvedEqns(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpSolvedEqns(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _inCount, modelica_metatype _inContent, modelica_metatype _addMathMLCode, modelica_metatype _dumpResiduals, modelica_metatype _dumpSolved)
@@ -7443,6 +7731,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_XMLDump_dumpDirectionStr(threadDat
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpDAEVariableAttributes(threadData_t *threadData, modelica_metatype _dae_var_attr, modelica_string _Content, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -7815,6 +8106,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpDAEVariableAttributes(threadData_
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpDAEVariableAttributes(threadData_t *threadData, modelica_metatype _dae_var_attr, modelica_metatype _Content, modelica_metatype _addMathMLCode)
@@ -8271,6 +8565,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_XMLDump_getOrderedVars(threadDat
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpEventInfo(threadData_t *threadData, modelica_metatype _inEventInfo, modelica_boolean _addMML)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -8313,6 +8610,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpEventInfo(threadData_t *threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpEventInfo(threadData_t *threadData, modelica_metatype _inEventInfo, modelica_metatype _addMML)
@@ -8326,6 +8626,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpEventInfo(threadData_t *thread
 DLLDirection
 void omc_XMLDump_dumpBackendDAE(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_boolean _addOriginalAdjacencyMatrix, modelica_boolean _addSolvingInfo, modelica_boolean _addMathMLCode, modelica_boolean _dumpResiduals, modelica_boolean _dumpSolvedEquations)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -8638,6 +8941,9 @@ void omc_XMLDump_dumpBackendDAE(threadData_t *threadData, modelica_metatype _inB
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_XMLDump_dumpBackendDAE(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_metatype _addOriginalAdjacencyMatrix, modelica_metatype _addSolvingInfo, modelica_metatype _addMathMLCode, modelica_metatype _dumpResiduals, modelica_metatype _dumpSolvedEquations)
@@ -8691,6 +8997,9 @@ modelica_metatype omc_XMLDump_dumpDAEXML(threadData_t *threadData, modelica_meta
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpDAEInstDims2(threadData_t *threadData, modelica_metatype _arry_Dim)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -8746,11 +9055,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpDAEInstDims2(threadData_t *thread
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpDAEInstDims(threadData_t *threadData, modelica_metatype _arry_Dim, modelica_string _Content)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -8790,11 +9105,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpDAEInstDims(threadData_t *threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpCrefIdxLst2(threadData_t *threadData, modelica_metatype _crefIdxLst)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -8863,11 +9184,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpCrefIdxLst2(threadData_t *threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpCrefIdxLst(threadData_t *threadData, modelica_metatype _crefIdxLst, modelica_string _Content)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -8907,11 +9234,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpCrefIdxLst(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpCrefIdxLstArr(threadData_t *threadData, modelica_metatype _crefIdxLstArr, modelica_string _Content, modelica_integer _inInteger)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -8971,6 +9304,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpCrefIdxLstArr(threadData_t *threa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpCrefIdxLstArr(threadData_t *threadData, modelica_metatype _crefIdxLstArr, modelica_metatype _Content, modelica_metatype _inInteger)
@@ -8983,6 +9319,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpCrefIdxLstArr(threadData_t *th
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpComponents2(threadData_t *threadData, modelica_metatype _inIntegerLstLst, modelica_integer _i, modelica_integer _offset)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -9039,6 +9378,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpComponents2(threadData_t *threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpComponents2(threadData_t *threadData, modelica_metatype _inIntegerLstLst, modelica_metatype _i, modelica_metatype _offset)
@@ -9053,6 +9395,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpComponents2(threadData_t *thre
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpComponents1(threadData_t *threadData, modelica_metatype _l, modelica_integer _voffset, modelica_integer _eoffset)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -9088,6 +9433,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpComponents1(threadData_t *threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpComponents1(threadData_t *threadData, modelica_metatype _l, modelica_metatype _voffset, modelica_metatype _eoffset)
@@ -9161,6 +9509,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_XMLDump_dumpComponentsWork(threa
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpComponents(threadData_t *threadData, modelica_metatype _dae)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_XMLDump_dumpStrOpenTag(threadData, _OMC_LIT218);
@@ -9169,11 +9520,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpComponents(threadData_t *threadDa
 
   omc_XMLDump_dumpStrCloseTag(threadData, _OMC_LIT218);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpComment(threadData_t *threadData, modelica_string _inComment)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_Print_printBuf(threadData, _OMC_LIT219);
@@ -9182,11 +9539,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpComment(threadData_t *threadData,
 
   omc_Print_printBuf(threadData, _OMC_LIT220);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpBindExpression(threadData_t *threadData, modelica_metatype _inOptExpExp, modelica_boolean _addMathMLCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -9229,6 +9592,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpBindExpression(threadData_t *thre
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpBindExpression(threadData_t *threadData, modelica_metatype _inOptExpExp, modelica_metatype _addMathMLCode)
@@ -9241,6 +9607,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpBindExpression(threadData_t *t
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpBltInvolvedEquations1(threadData_t *threadData, modelica_metatype _inList, modelica_integer _offset)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -9294,6 +9663,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpBltInvolvedEquations1(threadData_
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpBltInvolvedEquations1(threadData_t *threadData, modelica_metatype _inList, modelica_metatype _offset)
@@ -9306,6 +9678,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpBltInvolvedEquations1(threadDa
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpBltInvolvedEquations(threadData_t *threadData, modelica_metatype _inComp, modelica_integer _offset)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -9354,6 +9729,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpBltInvolvedEquations(threadData_t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpBltInvolvedEquations(threadData_t *threadData, modelica_metatype _inComp, modelica_metatype _offset)
@@ -9366,6 +9744,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpBltInvolvedEquations(threadDat
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpConstraints2(threadData_t *threadData, modelica_metatype _iConstrs, modelica_integer _inConsNo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -9443,6 +9824,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpConstraints2(threadData_t *thread
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpConstraints2(threadData_t *threadData, modelica_metatype _iConstrs, modelica_metatype _inConsNo)
@@ -9455,6 +9839,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_XMLDump_dumpConstraints2(threadData_t *thr
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpConstraints(threadData_t *threadData, modelica_metatype _constrs)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -9498,11 +9885,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpConstraints(threadData_t *threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpAbsynPathLst2(threadData_t *threadData, modelica_metatype _absynPathLst)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -9558,11 +9951,17 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpAbsynPathLst2(threadData_t *threa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpAbsynPathLst(threadData_t *threadData, modelica_metatype _absynPathLst, modelica_string _Content)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -9602,6 +10001,9 @@ PROTECTED_FUNCTION_STATIC void omc_XMLDump_dumpAbsynPathLst(threadData_t *thread
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

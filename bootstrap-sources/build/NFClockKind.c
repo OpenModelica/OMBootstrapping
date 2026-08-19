@@ -98,6 +98,9 @@ modelica_integer omc_NFClockKind_hashContinue(threadData_t *threadData, modelica
 {
   modelica_integer _hash;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _hash = __omcQ_24in_5Fhash;
@@ -164,6 +167,9 @@ modelica_integer omc_NFClockKind_hashContinue(threadData_t *threadData, modelica
 
   _hash = stringHashDjb2Continue(_OMC_LIT2, _hash);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _hash;
 }
 modelica_metatype boxptr_NFClockKind_hashContinue(threadData_t *threadData, modelica_metatype _clk, modelica_metatype __omcQ_24in_5Fhash)
@@ -1448,6 +1454,9 @@ modelica_metatype omc_NFClockKind_foldExp(threadData_t *threadData, modelica_met
 DLLDirection
 void omc_NFClockKind_applyExpShallow(threadData_t *threadData, modelica_metatype _ck, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1506,12 +1515,18 @@ void omc_NFClockKind_applyExpShallow(threadData_t *threadData, modelica_metatype
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFClockKind_applyExp(threadData_t *threadData, modelica_metatype _ck, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1570,6 +1585,9 @@ void omc_NFClockKind_applyExp(threadData_t *threadData, modelica_metatype _ck, m
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1578,6 +1596,9 @@ modelica_boolean omc_NFClockKind_containsExpShallow(threadData_t *threadData, mo
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -1632,6 +1653,9 @@ modelica_boolean omc_NFClockKind_containsExpShallow(threadData_t *threadData, mo
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_NFClockKind_containsExpShallow(threadData_t *threadData, modelica_metatype _ck, modelica_fnptr _func)
@@ -1648,6 +1672,9 @@ modelica_boolean omc_NFClockKind_containsExp(threadData_t *threadData, modelica_
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -1702,6 +1729,9 @@ modelica_boolean omc_NFClockKind_containsExp(threadData_t *threadData, modelica_
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_NFClockKind_containsExp(threadData_t *threadData, modelica_metatype _ck, modelica_fnptr _func)
@@ -1717,6 +1747,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFClockKind_compare_compareInt(th
 {
   modelica_integer _i;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _i has no default value.
@@ -1777,6 +1810,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFClockKind_compare_compareInt(th
   }
   _i = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _i;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFClockKind_compare_compareInt(threadData_t *threadData, modelica_metatype _kind)
@@ -1793,6 +1829,9 @@ modelica_integer omc_NFClockKind_compare(threadData_t *threadData, modelica_meta
 {
   modelica_integer _comp;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _comp has no default value.
@@ -1941,6 +1980,9 @@ modelica_integer omc_NFClockKind_compare(threadData_t *threadData, modelica_meta
   }
   _comp = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_NFClockKind_compare(threadData_t *threadData, modelica_metatype _ck1, modelica_metatype _ck2)
@@ -1957,6 +1999,9 @@ modelica_boolean omc_NFClockKind_isInferred(threadData_t *threadData, modelica_m
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -1995,6 +2040,9 @@ modelica_boolean omc_NFClockKind_isInferred(threadData_t *threadData, modelica_m
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_NFClockKind_isInferred(threadData_t *threadData, modelica_metatype _ck)

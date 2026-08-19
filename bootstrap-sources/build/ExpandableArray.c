@@ -42,10 +42,16 @@ DLLDirection
 modelica_integer omc_ExpandableArray_getCapacity(threadData_t *threadData, modelica_metatype _exarray)
 {
   modelica_integer _capacity;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _capacity = mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exarray), 4)))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _capacity;
 }
 modelica_metatype boxptr_ExpandableArray_getCapacity(threadData_t *threadData, modelica_metatype _exarray)
@@ -61,10 +67,16 @@ DLLDirection
 modelica_integer omc_ExpandableArray_getLastUsedIndex(threadData_t *threadData, modelica_metatype _exarray)
 {
   modelica_integer _lastUsedIndex;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _lastUsedIndex = mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exarray), 3)))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _lastUsedIndex;
 }
 modelica_metatype boxptr_ExpandableArray_getLastUsedIndex(threadData_t *threadData, modelica_metatype _exarray)
@@ -80,10 +92,16 @@ DLLDirection
 modelica_integer omc_ExpandableArray_getNumberOfElements(threadData_t *threadData, modelica_metatype _exarray)
 {
   modelica_integer _numberOfElements;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _numberOfElements = mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exarray), 2)))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _numberOfElements;
 }
 modelica_metatype boxptr_ExpandableArray_getNumberOfElements(threadData_t *threadData, modelica_metatype _exarray)
@@ -162,6 +180,7 @@ modelica_string omc_ExpandableArray_toString(threadData_t *threadData, modelica_
       modelica_integer _i;
       for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp17, tmp19); _i += tmp18)
       {
+
         if(isSome(arrayGetNoBoundsChecking(_data, _i)))
         {
           /* Pattern-matching assignment */
@@ -227,6 +246,7 @@ modelica_metatype omc_ExpandableArray_shrink(threadData_t *threadData, modelica_
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       arrayUpdateNoBoundsChecking(_newData, _i, arrayGetNoBoundsChecking(_data, _i));
     }
   }
@@ -593,6 +613,9 @@ modelica_boolean omc_ExpandableArray_occupied(threadData_t *threadData, modelica
   modelica_boolean _b;
   modelica_integer _lastUsedIndex;
   modelica_metatype _data = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -600,6 +623,9 @@ modelica_boolean omc_ExpandableArray_occupied(threadData_t *threadData, modelica
   _data = omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exarray), 5))));
   _b = (((_index >= ((modelica_integer) 1)) && (_index <= _lastUsedIndex)) && isSome(arrayGetNoBoundsChecking(_data, _index)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_ExpandableArray_occupied(threadData_t *threadData, modelica_metatype _index, modelica_metatype _exarray)
@@ -671,6 +697,7 @@ modelica_metatype omc_ExpandableArray_clear(threadData_t *threadData, modelica_m
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if(isSome(arrayGetNoBoundsChecking(_data, _i)))
       {
         _n = ((modelica_integer) -1) + _n;

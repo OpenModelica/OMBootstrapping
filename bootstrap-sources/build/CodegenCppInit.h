@@ -35,10 +35,10 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppInit_jacobianMatrixXML,2,0) {
 #define boxvar_CodegenCppInit_jacobianMatrixXML MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppInit_jacobianMatrixXML)
 
 
-#define boxptr_CodegenCppInit_lm__111 omc_CodegenCppInit_lm__111
+#define boxptr_CodegenCppInit_lm__113 omc_CodegenCppInit_lm__113
 
 
-#define boxptr_CodegenCppInit_lm__108 omc_CodegenCppInit_lm__108
+#define boxptr_CodegenCppInit_lm__110 omc_CodegenCppInit_lm__110
 
 
 DLLDirection
@@ -48,7 +48,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppInit_jacobianMatricesXML,2,0)
 #define boxvar_CodegenCppInit_jacobianMatricesXML MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppInit_jacobianMatricesXML)
 
 
-#define boxptr_CodegenCppInit_lm__106 omc_CodegenCppInit_lm__106
+#define boxptr_CodegenCppInit_lm__108 omc_CodegenCppInit_lm__108
 
 
 DLLDirection
@@ -58,19 +58,19 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppInit_algLoopXML,2,0) {(void*)
 #define boxvar_CodegenCppInit_algLoopXML MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppInit_algLoopXML)
 
 
-#define boxptr_CodegenCppInit_fun__104 omc_CodegenCppInit_fun__104
+#define boxptr_CodegenCppInit_fun__106 omc_CodegenCppInit_fun__106
+
+
+#define boxptr_CodegenCppInit_lm__105 omc_CodegenCppInit_lm__105
+
+
+#define boxptr_CodegenCppInit_lm__104 omc_CodegenCppInit_lm__104
 
 
 #define boxptr_CodegenCppInit_lm__103 omc_CodegenCppInit_lm__103
 
 
 #define boxptr_CodegenCppInit_lm__102 omc_CodegenCppInit_lm__102
-
-
-#define boxptr_CodegenCppInit_lm__101 omc_CodegenCppInit_lm__101
-
-
-#define boxptr_CodegenCppInit_lm__100 omc_CodegenCppInit_lm__100
 
 
 DLLDirection
@@ -80,13 +80,13 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppInit_ScalarVariableTypeStartA
 #define boxvar_CodegenCppInit_ScalarVariableTypeStartAttribute MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppInit_ScalarVariableTypeStartAttribute)
 
 
+#define boxptr_CodegenCppInit_fun__100 omc_CodegenCppInit_fun__100
+
+
+#define boxptr_CodegenCppInit_fun__99 omc_CodegenCppInit_fun__99
+
+
 #define boxptr_CodegenCppInit_fun__98 omc_CodegenCppInit_fun__98
-
-
-#define boxptr_CodegenCppInit_fun__97 omc_CodegenCppInit_fun__97
-
-
-#define boxptr_CodegenCppInit_fun__96 omc_CodegenCppInit_fun__96
 
 
 DLLDirection
@@ -110,7 +110,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppInit_attributeString,2,0) {(v
 #define boxvar_CodegenCppInit_attributeString MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppInit_attributeString)
 
 
-#define boxptr_CodegenCppInit_lm__90 omc_CodegenCppInit_lm__90
+#define boxptr_CodegenCppInit_lm__92 omc_CodegenCppInit_lm__92
 
 
 DLLDirection
@@ -136,10 +136,10 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppInit_scalarVariableAttributeX
 #define boxvar_CodegenCppInit_scalarVariableAttributeXML MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppInit_scalarVariableAttributeXML)
 
 
-#define boxptr_CodegenCppInit_fun__83 omc_CodegenCppInit_fun__83
+#define boxptr_CodegenCppInit_fun__85 omc_CodegenCppInit_fun__85
 
 
-#define boxptr_CodegenCppInit_fun__82 omc_CodegenCppInit_fun__82
+#define boxptr_CodegenCppInit_fun__84 omc_CodegenCppInit_fun__84
 
 
 DLLDirection
@@ -148,6 +148,9 @@ DLLDirection
 modelica_metatype boxptr_CodegenCppInit_scalarVariableXML(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_simVar, modelica_metatype _a_varToArrayIndexMapping, modelica_metatype _a_indexForUndefinedReferences, modelica_metatype _a_generateFMUModelDescription, modelica_metatype _a_complexStartExpressions, modelica_metatype _a_stateDerVectorName, modelica_metatype *out_out_a_complexStartExpressions, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppInit_scalarVariableXML,2,0) {(void*) boxptr_CodegenCppInit_scalarVariableXML,0}};
 #define boxvar_CodegenCppInit_scalarVariableXML MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppInit_scalarVariableXML)
+
+
+#define boxptr_CodegenCppInit_lm__78 omc_CodegenCppInit_lm__78
 
 
 DLLDirection

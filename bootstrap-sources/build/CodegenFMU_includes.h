@@ -9,6 +9,7 @@ extern "C" {
 #include "CodegenFMU.h"
 #include "CodegenFMU1.h"
 #include "CodegenFMU2.h"
+#include "CodegenFMU3.h"
 #include "CodegenFMUCommon.h"
 #include "CodegenUtil.h"
 #include "CodegenUtilSimulation.h"

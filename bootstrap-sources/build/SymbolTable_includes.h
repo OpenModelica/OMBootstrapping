@@ -15,6 +15,7 @@ extern "C" {
 #include "Inst.h"
 #include "List.h"
 #include "Lookup.h"
+#include "MetaUtil.h"
 #include "SCodeUtil.h"
 #include "SymbolTable.h"
 #include "System.h"

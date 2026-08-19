@@ -770,6 +770,9 @@ modelica_boolean omc_Lookup_isFunctionCallViaComponent(threadData_t *threadData,
 {
   modelica_boolean _yes;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _yes has no default value.
@@ -838,6 +841,9 @@ modelica_boolean omc_Lookup_isFunctionCallViaComponent(threadData_t *threadData,
   }
   _yes = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _yes;
 }
 modelica_metatype boxptr_Lookup_isFunctionCallViaComponent(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inPath)
@@ -2960,6 +2966,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_Lookup_lookupVar2(threadData_t *
 
 PROTECTED_FUNCTION_STATIC void omc_Lookup_reportSeveralNamesError(threadData_t *threadData, modelica_boolean _unique, modelica_string _name)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2997,6 +3006,9 @@ PROTECTED_FUNCTION_STATIC void omc_Lookup_reportSeveralNamesError(threadData_t *
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_Lookup_reportSeveralNamesError(threadData_t *threadData, modelica_metatype _unique, modelica_metatype _name)
@@ -6886,6 +6898,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Lookup_frameIsImplAddedScope(thre
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -6928,6 +6943,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Lookup_frameIsImplAddedScope(thre
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Lookup_frameIsImplAddedScope(threadData_t *threadData, modelica_metatype _f)
@@ -7333,6 +7351,9 @@ modelica_metatype omc_Lookup_lookupVarInternal(threadData_t *threadData, modelic
 
 PROTECTED_FUNCTION_STATIC void omc_Lookup_checkPackageVariableConstant(threadData_t *threadData, modelica_metatype _parentEnv, modelica_metatype _classEnv, modelica_metatype _componentEnv, modelica_metatype _attr, modelica_metatype _tp, modelica_metatype _cref)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -7395,6 +7416,9 @@ PROTECTED_FUNCTION_STATIC void omc_Lookup_checkPackageVariableConstant(threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -9282,6 +9306,9 @@ PROTECTED_FUNCTION_STATIC void omc_Lookup_checkPartialScope(threadData_t *thread
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _el has no default value.
@@ -9337,6 +9364,9 @@ PROTECTED_FUNCTION_STATIC void omc_Lookup_checkPartialScope(threadData_t *thread
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

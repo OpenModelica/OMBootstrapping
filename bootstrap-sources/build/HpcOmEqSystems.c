@@ -1264,6 +1264,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmEqSystems_getScheduledTaskCo
 {
   modelica_integer _compIdx;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
@@ -1301,6 +1304,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmEqSystems_getScheduledTaskCo
   }
   _compIdx = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _compIdx;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmEqSystems_getScheduledTaskCompIdx(threadData_t *threadData, modelica_metatype _taskIn)
@@ -1438,6 +1444,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmEqSystems_dumpEqArrLst(threadData_t *thr
   modelica_metatype _inLstLst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
@@ -1450,6 +1459,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmEqSystems_dumpEqArrLst(threadData_t *thr
 
   _str = omc_List_fold1(threadData, omc_List_intRange(threadData, arrayLength(_inArrLst)), boxvar_HpcOmEqSystems_dumpEqArrLst1, _inLstLst, _heading);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1493,6 +1505,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmEqSystems_dumpVarArrLst(threadData_t *th
   modelica_metatype _inLstLst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
@@ -1505,6 +1520,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmEqSystems_dumpVarArrLst(threadData_t *th
 
   _str = omc_List_fold1(threadData, omc_List_intRange(threadData, arrayLength(_inArrLst)), boxvar_HpcOmEqSystems_dumpVarArrLst1, _inLstLst, _heading);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1514,6 +1532,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmEqSystems_dumpMatrix(threadData_t *threa
   modelica_string _s = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _sLst has no default value.
@@ -1526,6 +1547,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmEqSystems_dumpMatrix(threadData_t *threa
 
   fputs(MMC_STRINGDATA(_s),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1587,6 +1611,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmEqSystems_dumpEqSys(threadData_t *thread
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta16;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _dim has no default value.
@@ -1664,6 +1691,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmEqSystems_dumpEqSys(threadData_t *thread
   tmpMeta16 = stringAppend(stringDelimitList(_sLst, _OMC_LIT35),_OMC_LIT35);
   fputs(MMC_STRINGDATA(tmpMeta16),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3351,6 +3381,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmEqSystems_containsFunctionca
   modelica_boolean _hasCrefInCall;
   modelica_metatype _expLst = NULL;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hasCrefInCall has no default value.
@@ -3367,6 +3400,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmEqSystems_containsFunctionca
     _hasCrefInCall = 0 /* false */;
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _hasCrefInCall;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmEqSystems_containsFunctioncallOfCref(threadData_t *threadData, modelica_metatype _expIn, modelica_metatype _cref)
@@ -6334,6 +6370,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmEqSystems_updateAssignmentsByComp(thread
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
   modelica_integer tmp5;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eqn has no default value.
@@ -6352,6 +6391,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmEqSystems_updateAssignmentsByComp(thread
 
   arrayUpdate(_ass1, _var, mmc_mk_integer(_eqn));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -6359,6 +6401,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmEqSystems_compHasDummyState(
 {
   modelica_boolean _hasDummy;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hasDummy has no default value.
@@ -6431,6 +6476,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmEqSystems_compHasDummyState(
   }
   _hasDummy = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _hasDummy;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmEqSystems_compHasDummyState(threadData_t *threadData, modelica_metatype _comp, modelica_metatype _syst)
@@ -6663,7 +6711,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmEqSystems_reduceLinearTornS
 
           _numNewSingleEqs = listLength(_compsNew) - listLength(_tvarIdcs);
 
-          _compsTmp = omc_List_replaceAtWithList(threadData, listAppend(_compsNew, _otherComps), ((modelica_integer) -1) + _compIdx, _compsIn);
+          _compsTmp = omc_List_replaceAtWithList(threadData, listAppend(_compsNew, _otherComps), _compIdx, _compsIn);
 
           /* Pattern-matching assignment */
           tmpMeta29 = mmc_mk_box2(0, mmc_mk_integer(listLength(_eqsOld)), mmc_mk_integer(listLength(_varsOld)));
@@ -6752,7 +6800,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmEqSystems_reduceLinearTornS
 
           _compsNew = listAppend(_otherComps, _compsNew);
 
-          _compsTmp = omc_List_replaceAtWithList(threadData, _compsNew, ((modelica_integer) -1) + _compIdx, _compsIn);
+          _compsTmp = omc_List_replaceAtWithList(threadData, _compsNew, _compIdx, _compsIn);
 
           _eqLst = listAppend(_eqsOld, _addEqs);
 

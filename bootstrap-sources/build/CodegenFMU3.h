@@ -1,0 +1,533 @@
+#ifndef CodegenFMU3__H
+#define CodegenFMU3__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Tpl_BlockType_BT__INDENT__desc;
+
+extern struct record_description Tpl_IterOptions_ITER__OPTIONS__desc;
+
+extern struct record_description Tpl_StringToken_ST__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__NEW__LINE__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__desc;
+
+extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
+
+extern struct record_description Tpl_Text_MEM__TEXT__desc;
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_EventIndicators3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode);
+#define boxptr_CodegenFMU3_EventIndicators3 omc_CodegenFMU3_EventIndicators3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_EventIndicators3,2,0) {(void*) boxptr_CodegenFMU3_EventIndicators3,0}};
+#define boxvar_CodegenFMU3_EventIndicators3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_EventIndicators3)
+
+
+#define boxptr_CodegenFMU3_lm__194 omc_CodegenFMU3_lm__194
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_FmiUnknown3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_fmiUnknown, modelica_string _a_element);
+#define boxptr_CodegenFMU3_FmiUnknown3 omc_CodegenFMU3_FmiUnknown3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_FmiUnknown3,2,0) {(void*) boxptr_CodegenFMU3_FmiUnknown3,0}};
+#define boxvar_CodegenFMU3_FmiUnknown3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_FmiUnknown3)
+
+
+#define boxptr_CodegenFMU3_fun__192 omc_CodegenFMU3_fun__192
+
+
+#define boxptr_CodegenFMU3_fun__191 omc_CodegenFMU3_fun__191
+
+
+#define boxptr_CodegenFMU3_lm__190 omc_CodegenFMU3_lm__190
+
+
+#define boxptr_CodegenFMU3_fun__189 omc_CodegenFMU3_fun__189
+
+
+#define boxptr_CodegenFMU3_lm__188 omc_CodegenFMU3_lm__188
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_ModelStructureInitialUnknowns3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_fmiInitialUnknowns);
+#define boxptr_CodegenFMU3_ModelStructureInitialUnknowns3 omc_CodegenFMU3_ModelStructureInitialUnknowns3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_ModelStructureInitialUnknowns3,2,0) {(void*) boxptr_CodegenFMU3_ModelStructureInitialUnknowns3,0}};
+#define boxvar_CodegenFMU3_ModelStructureInitialUnknowns3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_ModelStructureInitialUnknowns3)
+
+
+#define boxptr_CodegenFMU3_fun__186 omc_CodegenFMU3_fun__186
+
+
+#define boxptr_CodegenFMU3_lm__185 omc_CodegenFMU3_lm__185
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_ModelStructureDerivatives3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_fmiDerivatives);
+#define boxptr_CodegenFMU3_ModelStructureDerivatives3 omc_CodegenFMU3_ModelStructureDerivatives3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_ModelStructureDerivatives3,2,0) {(void*) boxptr_CodegenFMU3_ModelStructureDerivatives3,0}};
+#define boxvar_CodegenFMU3_ModelStructureDerivatives3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_ModelStructureDerivatives3)
+
+
+#define boxptr_CodegenFMU3_fun__183 omc_CodegenFMU3_fun__183
+
+
+#define boxptr_CodegenFMU3_lm__182 omc_CodegenFMU3_lm__182
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_ModelStructureOutputs3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_fmiOutputs);
+#define boxptr_CodegenFMU3_ModelStructureOutputs3 omc_CodegenFMU3_ModelStructureOutputs3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_ModelStructureOutputs3,2,0) {(void*) boxptr_CodegenFMU3_ModelStructureOutputs3,0}};
+#define boxvar_CodegenFMU3_ModelStructureOutputs3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_ModelStructureOutputs3)
+
+
+#define boxptr_CodegenFMU3_fun__180 omc_CodegenFMU3_fun__180
+
+
+#define boxptr_CodegenFMU3_lm__179 omc_CodegenFMU3_lm__179
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_modelStructure3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_fmiModelStructure);
+#define boxptr_CodegenFMU3_modelStructure3 omc_CodegenFMU3_modelStructure3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_modelStructure3,2,0) {(void*) boxptr_CodegenFMU3_modelStructure3,0}};
+#define boxvar_CodegenFMU3_modelStructure3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_modelStructure3)
+
+
+#define boxptr_CodegenFMU3_fun__177 omc_CodegenFMU3_fun__177
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_StringStartChild3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar);
+#define boxptr_CodegenFMU3_StringStartChild3 omc_CodegenFMU3_StringStartChild3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_StringStartChild3,2,0) {(void*) boxptr_CodegenFMU3_StringStartChild3,0}};
+#define boxvar_CodegenFMU3_StringStartChild3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_StringStartChild3)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_DerivativeAttribute3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simVar, modelica_metatype _a_simCode, modelica_metatype _a_stateVars);
+#define boxptr_CodegenFMU3_DerivativeAttribute3 omc_CodegenFMU3_DerivativeAttribute3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_DerivativeAttribute3,2,0) {(void*) boxptr_CodegenFMU3_DerivativeAttribute3,0}};
+#define boxvar_CodegenFMU3_DerivativeAttribute3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_DerivativeAttribute3)
+
+
+#define boxptr_CodegenFMU3_fun__174 omc_CodegenFMU3_fun__174
+
+
+#define boxptr_CodegenFMU3_fun__173 omc_CodegenFMU3_fun__173
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_BinaryVariableAttributes3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar, modelica_metatype _in_a_simCode);
+#define boxptr_CodegenFMU3_BinaryVariableAttributes3 omc_CodegenFMU3_BinaryVariableAttributes3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_BinaryVariableAttributes3,2,0) {(void*) boxptr_CodegenFMU3_BinaryVariableAttributes3,0}};
+#define boxvar_CodegenFMU3_BinaryVariableAttributes3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_BinaryVariableAttributes3)
+
+
+#define boxptr_CodegenFMU3_fun__171 omc_CodegenFMU3_fun__171
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_VariableCommonAttributes3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar, modelica_metatype _in_a_simCode);
+#define boxptr_CodegenFMU3_VariableCommonAttributes3 omc_CodegenFMU3_VariableCommonAttributes3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_VariableCommonAttributes3,2,0) {(void*) boxptr_CodegenFMU3_VariableCommonAttributes3,0}};
+#define boxvar_CodegenFMU3_VariableCommonAttributes3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_VariableCommonAttributes3)
+
+
+#define boxptr_CodegenFMU3_fun__166 omc_CodegenFMU3_fun__166
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_FmiInitialAttribute3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar);
+#define boxptr_CodegenFMU3_FmiInitialAttribute3 omc_CodegenFMU3_FmiInitialAttribute3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_FmiInitialAttribute3,2,0) {(void*) boxptr_CodegenFMU3_FmiInitialAttribute3,0}};
+#define boxvar_CodegenFMU3_FmiInitialAttribute3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_FmiInitialAttribute3)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_Dimensions3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar);
+#define boxptr_CodegenFMU3_Dimensions3 omc_CodegenFMU3_Dimensions3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_Dimensions3,2,0) {(void*) boxptr_CodegenFMU3_Dimensions3,0}};
+#define boxvar_CodegenFMU3_Dimensions3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_Dimensions3)
+
+
+#define boxptr_CodegenFMU3_lm__163 omc_CodegenFMU3_lm__163
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_arrayStartAttr(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simVar);
+#define boxptr_CodegenFMU3_arrayStartAttr omc_CodegenFMU3_arrayStartAttr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_arrayStartAttr,2,0) {(void*) boxptr_CodegenFMU3_arrayStartAttr,0}};
+#define boxvar_CodegenFMU3_arrayStartAttr MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_arrayStartAttr)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_ArrayStartString3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar);
+#define boxptr_CodegenFMU3_ArrayStartString3 omc_CodegenFMU3_ArrayStartString3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_ArrayStartString3,2,0) {(void*) boxptr_CodegenFMU3_ArrayStartString3,0}};
+#define boxvar_CodegenFMU3_ArrayStartString3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_ArrayStartString3)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_Clock3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_clock, modelica_string _in_a_FMUType);
+#define boxptr_CodegenFMU3_Clock3 omc_CodegenFMU3_Clock3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_Clock3,2,0) {(void*) boxptr_CodegenFMU3_Clock3,0}};
+#define boxvar_CodegenFMU3_Clock3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_Clock3)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_AliasElement3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_aliasVar);
+#define boxptr_CodegenFMU3_AliasElement3 omc_CodegenFMU3_AliasElement3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_AliasElement3,2,0) {(void*) boxptr_CodegenFMU3_AliasElement3,0}};
+#define boxvar_CodegenFMU3_AliasElement3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_AliasElement3)
+
+
+#define boxptr_CodegenFMU3_fun__152 omc_CodegenFMU3_fun__152
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_AliasElements3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar, modelica_metatype _in_a_simCode);
+#define boxptr_CodegenFMU3_AliasElements3 omc_CodegenFMU3_AliasElements3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_AliasElements3,2,0) {(void*) boxptr_CodegenFMU3_AliasElements3,0}};
+#define boxvar_CodegenFMU3_AliasElements3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_AliasElements3)
+
+
+#define boxptr_CodegenFMU3_fun__150 omc_CodegenFMU3_fun__150
+
+
+#define boxptr_CodegenFMU3_lm__149 omc_CodegenFMU3_lm__149
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_CloseWithAliases3(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_tag, modelica_metatype _a_simVar, modelica_metatype _a_simCode);
+#define boxptr_CodegenFMU3_CloseWithAliases3 omc_CodegenFMU3_CloseWithAliases3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_CloseWithAliases3,2,0) {(void*) boxptr_CodegenFMU3_CloseWithAliases3,0}};
+#define boxvar_CodegenFMU3_CloseWithAliases3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_CloseWithAliases3)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_Variable3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar, modelica_metatype _in_a_simCode, modelica_metatype _in_a_stateVars);
+#define boxptr_CodegenFMU3_Variable3 omc_CodegenFMU3_Variable3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_Variable3,2,0) {(void*) boxptr_CodegenFMU3_Variable3,0}};
+#define boxvar_CodegenFMU3_Variable3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_Variable3)
+
+
+#define boxptr_CodegenFMU3_fun__141 omc_CodegenFMU3_fun__141
+
+
+#define boxptr_CodegenFMU3_fun__139 omc_CodegenFMU3_fun__139
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_TimeVariable3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode);
+#define boxptr_CodegenFMU3_TimeVariable3 omc_CodegenFMU3_TimeVariable3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_TimeVariable3,2,0) {(void*) boxptr_CodegenFMU3_TimeVariable3,0}};
+#define boxvar_CodegenFMU3_TimeVariable3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_TimeVariable3)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_EventIndicatorVariables3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode);
+#define boxptr_CodegenFMU3_EventIndicatorVariables3 omc_CodegenFMU3_EventIndicatorVariables3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_EventIndicatorVariables3,2,0) {(void*) boxptr_CodegenFMU3_EventIndicatorVariables3,0}};
+#define boxvar_CodegenFMU3_EventIndicatorVariables3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_EventIndicatorVariables3)
+
+
+#define boxptr_CodegenFMU3_lm__135 omc_CodegenFMU3_lm__135
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_fmiModelVariables3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode, modelica_string _in_a_FMUType);
+#define boxptr_CodegenFMU3_fmiModelVariables3 omc_CodegenFMU3_fmiModelVariables3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiModelVariables3,2,0) {(void*) boxptr_CodegenFMU3_fmiModelVariables3,0}};
+#define boxvar_CodegenFMU3_fmiModelVariables3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiModelVariables3)
+
+
+#define boxptr_CodegenFMU3_fun__133 omc_CodegenFMU3_fun__133
+
+
+#define boxptr_CodegenFMU3_lm__132 omc_CodegenFMU3_lm__132
+
+
+#define boxptr_CodegenFMU3_lm__131 omc_CodegenFMU3_lm__131
+
+
+#define boxptr_CodegenFMU3_lm__130 omc_CodegenFMU3_lm__130
+
+
+#define boxptr_CodegenFMU3_lm__129 omc_CodegenFMU3_lm__129
+
+
+#define boxptr_CodegenFMU3_lm__128 omc_CodegenFMU3_lm__128
+
+
+#define boxptr_CodegenFMU3_lm__127 omc_CodegenFMU3_lm__127
+
+
+#define boxptr_CodegenFMU3_lm__126 omc_CodegenFMU3_lm__126
+
+
+#define boxptr_CodegenFMU3_lm__125 omc_CodegenFMU3_lm__125
+
+
+#define boxptr_CodegenFMU3_lm__124 omc_CodegenFMU3_lm__124
+
+
+#define boxptr_CodegenFMU3_lm__123 omc_CodegenFMU3_lm__123
+
+
+#define boxptr_CodegenFMU3_lm__122 omc_CodegenFMU3_lm__122
+
+
+#define boxptr_CodegenFMU3_lm__121 omc_CodegenFMU3_lm__121
+
+
+#define boxptr_CodegenFMU3_lm__120 omc_CodegenFMU3_lm__120
+
+
+#define boxptr_CodegenFMU3_lm__119 omc_CodegenFMU3_lm__119
+
+
+#define boxptr_CodegenFMU3_lm__118 omc_CodegenFMU3_lm__118
+
+
+#define boxptr_CodegenFMU3_lm__117 omc_CodegenFMU3_lm__117
+
+
+#define boxptr_CodegenFMU3_lm__116 omc_CodegenFMU3_lm__116
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_TypeDefinition3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar);
+#define boxptr_CodegenFMU3_TypeDefinition3 omc_CodegenFMU3_TypeDefinition3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_TypeDefinition3,2,0) {(void*) boxptr_CodegenFMU3_TypeDefinition3,0}};
+#define boxvar_CodegenFMU3_TypeDefinition3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_TypeDefinition3)
+
+
+#define boxptr_CodegenFMU3_lm__114 omc_CodegenFMU3_lm__114
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_TypeDefinitions3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
+#define boxptr_CodegenFMU3_TypeDefinitions3 omc_CodegenFMU3_TypeDefinitions3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_TypeDefinitions3,2,0) {(void*) boxptr_CodegenFMU3_TypeDefinitions3,0}};
+#define boxvar_CodegenFMU3_TypeDefinitions3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_TypeDefinitions3)
+
+
+#define boxptr_CodegenFMU3_fun__112 omc_CodegenFMU3_fun__112
+
+
+#define boxptr_CodegenFMU3_lm__110 omc_CodegenFMU3_lm__110
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_DefaultExperiment3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simulationSettingsOpt);
+#define boxptr_CodegenFMU3_DefaultExperiment3 omc_CodegenFMU3_DefaultExperiment3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_DefaultExperiment3,2,0) {(void*) boxptr_CodegenFMU3_DefaultExperiment3,0}};
+#define boxvar_CodegenFMU3_DefaultExperiment3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_DefaultExperiment3)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_ScheduledExecution3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_sourceFiles);
+#define boxptr_CodegenFMU3_ScheduledExecution3 omc_CodegenFMU3_ScheduledExecution3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_ScheduledExecution3,2,0) {(void*) boxptr_CodegenFMU3_ScheduledExecution3,0}};
+#define boxvar_CodegenFMU3_ScheduledExecution3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_ScheduledExecution3)
+
+
+#define boxptr_CodegenFMU3_fun__107 omc_CodegenFMU3_fun__107
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_CoSimulation3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_sourceFiles);
+#define boxptr_CodegenFMU3_CoSimulation3 omc_CodegenFMU3_CoSimulation3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_CoSimulation3,2,0) {(void*) boxptr_CodegenFMU3_CoSimulation3,0}};
+#define boxvar_CodegenFMU3_CoSimulation3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_CoSimulation3)
+
+
+#define boxptr_CodegenFMU3_fun__104 omc_CodegenFMU3_fun__104
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_ModelExchange3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_sourceFiles);
+#define boxptr_CodegenFMU3_ModelExchange3 omc_CodegenFMU3_ModelExchange3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_ModelExchange3,2,0) {(void*) boxptr_CodegenFMU3_ModelExchange3,0}};
+#define boxvar_CodegenFMU3_ModelExchange3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_ModelExchange3)
+
+
+#define boxptr_CodegenFMU3_fun__99 omc_CodegenFMU3_fun__99
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_fmiModelDescriptionAttributes(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode, modelica_string _in_a_guid);
+#define boxptr_CodegenFMU3_fmiModelDescriptionAttributes omc_CodegenFMU3_fmiModelDescriptionAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiModelDescriptionAttributes,2,0) {(void*) boxptr_CodegenFMU3_fmiModelDescriptionAttributes,0}};
+#define boxvar_CodegenFMU3_fmiModelDescriptionAttributes MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiModelDescriptionAttributes)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_TerminalMember3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_member);
+#define boxptr_CodegenFMU3_TerminalMember3 omc_CodegenFMU3_TerminalMember3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_TerminalMember3,2,0) {(void*) boxptr_CodegenFMU3_TerminalMember3,0}};
+#define boxvar_CodegenFMU3_TerminalMember3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_TerminalMember3)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_Terminal3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_terminal);
+#define boxptr_CodegenFMU3_Terminal3 omc_CodegenFMU3_Terminal3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_Terminal3,2,0) {(void*) boxptr_CodegenFMU3_Terminal3,0}};
+#define boxvar_CodegenFMU3_Terminal3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_Terminal3)
+
+
+#define boxptr_CodegenFMU3_lm__91 omc_CodegenFMU3_lm__91
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_fmiTerminalsAndIcons(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_terminals);
+#define boxptr_CodegenFMU3_fmiTerminalsAndIcons omc_CodegenFMU3_fmiTerminalsAndIcons
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiTerminalsAndIcons,2,0) {(void*) boxptr_CodegenFMU3_fmiTerminalsAndIcons,0}};
+#define boxvar_CodegenFMU3_fmiTerminalsAndIcons MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiTerminalsAndIcons)
+
+
+#define boxptr_CodegenFMU3_lm__87 omc_CodegenFMU3_lm__87
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_fmiTerminalsAndIconsFile(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_string _a_fileNamePrefixHash);
+#define boxptr_CodegenFMU3_fmiTerminalsAndIconsFile omc_CodegenFMU3_fmiTerminalsAndIconsFile
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiTerminalsAndIconsFile,2,0) {(void*) boxptr_CodegenFMU3_fmiTerminalsAndIconsFile,0}};
+#define boxvar_CodegenFMU3_fmiTerminalsAndIconsFile MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiTerminalsAndIconsFile)
+
+
+#define boxptr_CodegenFMU3_fun__85 omc_CodegenFMU3_fun__85
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_fmiBuildDescription(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode, modelica_metatype _in_a_sourceFiles);
+#define boxptr_CodegenFMU3_fmiBuildDescription omc_CodegenFMU3_fmiBuildDescription
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiBuildDescription,2,0) {(void*) boxptr_CodegenFMU3_fmiBuildDescription,0}};
+#define boxvar_CodegenFMU3_fmiBuildDescription MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiBuildDescription)
+
+
+#define boxptr_CodegenFMU3_lm__83 omc_CodegenFMU3_lm__83
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_fmiBuildDescriptionFile(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_sourceFiles, modelica_string _a_fileNamePrefixHash);
+#define boxptr_CodegenFMU3_fmiBuildDescriptionFile omc_CodegenFMU3_fmiBuildDescriptionFile
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiBuildDescriptionFile,2,0) {(void*) boxptr_CodegenFMU3_fmiBuildDescriptionFile,0}};
+#define boxvar_CodegenFMU3_fmiBuildDescriptionFile MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiBuildDescriptionFile)
+
+
+#define boxptr_CodegenFMU3_fun__81 omc_CodegenFMU3_fun__81
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_figureStrAttr(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_name, modelica_string _a_value);
+#define boxptr_CodegenFMU3_figureStrAttr omc_CodegenFMU3_figureStrAttr
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_figureStrAttr,2,0) {(void*) boxptr_CodegenFMU3_figureStrAttr,0}};
+#define boxvar_CodegenFMU3_figureStrAttr MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_figureStrAttr)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_figureCrefName(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cref);
+#define boxptr_CodegenFMU3_figureCrefName omc_CodegenFMU3_figureCrefName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_figureCrefName,2,0) {(void*) boxptr_CodegenFMU3_figureCrefName,0}};
+#define boxvar_CodegenFMU3_figureCrefName MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_figureCrefName)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_FigureCurve3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_curve);
+#define boxptr_CodegenFMU3_FigureCurve3 omc_CodegenFMU3_FigureCurve3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_FigureCurve3,2,0) {(void*) boxptr_CodegenFMU3_FigureCurve3,0}};
+#define boxvar_CodegenFMU3_FigureCurve3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_FigureCurve3)
+
+
+#define boxptr_CodegenFMU3_fun__76 omc_CodegenFMU3_fun__76
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_FigureAxis3(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_role, modelica_metatype _a_axis);
+#define boxptr_CodegenFMU3_FigureAxis3 omc_CodegenFMU3_FigureAxis3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_FigureAxis3,2,0) {(void*) boxptr_CodegenFMU3_FigureAxis3,0}};
+#define boxvar_CodegenFMU3_FigureAxis3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_FigureAxis3)
+
+
+#define boxptr_CodegenFMU3_fun__74 omc_CodegenFMU3_fun__74
+
+
+#define boxptr_CodegenFMU3_fun__71 omc_CodegenFMU3_fun__71
+
+
+#define boxptr_CodegenFMU3_fun__70 omc_CodegenFMU3_fun__70
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_FigurePlot3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_plot);
+#define boxptr_CodegenFMU3_FigurePlot3 omc_CodegenFMU3_FigurePlot3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_FigurePlot3,2,0) {(void*) boxptr_CodegenFMU3_FigurePlot3,0}};
+#define boxvar_CodegenFMU3_FigurePlot3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_FigurePlot3)
+
+
+#define boxptr_CodegenFMU3_fun__68 omc_CodegenFMU3_fun__68
+
+
+#define boxptr_CodegenFMU3_lm__67 omc_CodegenFMU3_lm__67
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_Figure3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_figure);
+#define boxptr_CodegenFMU3_Figure3 omc_CodegenFMU3_Figure3
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_Figure3,2,0) {(void*) boxptr_CodegenFMU3_Figure3,0}};
+#define boxvar_CodegenFMU3_Figure3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_Figure3)
+
+
+#define boxptr_CodegenFMU3_lm__65 omc_CodegenFMU3_lm__65
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_fmiVisualizationElement(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode);
+#define boxptr_CodegenFMU3_fmiVisualizationElement omc_CodegenFMU3_fmiVisualizationElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiVisualizationElement,2,0) {(void*) boxptr_CodegenFMU3_fmiVisualizationElement,0}};
+#define boxvar_CodegenFMU3_fmiVisualizationElement MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiVisualizationElement)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_fmiFiguresBody(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode);
+#define boxptr_CodegenFMU3_fmiFiguresBody omc_CodegenFMU3_fmiFiguresBody
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiFiguresBody,2,0) {(void*) boxptr_CodegenFMU3_fmiFiguresBody,0}};
+#define boxvar_CodegenFMU3_fmiFiguresBody MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiFiguresBody)
+
+
+#define boxptr_CodegenFMU3_fun__59 omc_CodegenFMU3_fun__59
+
+
+#define boxptr_CodegenFMU3_lm__58 omc_CodegenFMU3_lm__58
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_fmiOpenModelicaAnnotations(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode);
+#define boxptr_CodegenFMU3_fmiOpenModelicaAnnotations omc_CodegenFMU3_fmiOpenModelicaAnnotations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiOpenModelicaAnnotations,2,0) {(void*) boxptr_CodegenFMU3_fmiOpenModelicaAnnotations,0}};
+#define boxvar_CodegenFMU3_fmiOpenModelicaAnnotations MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiOpenModelicaAnnotations)
+
+
+DLLDirection
+modelica_metatype omc_CodegenFMU3_fmiModelDescription(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode, modelica_string _in_a_guid, modelica_string _in_a_FMUType, modelica_metatype _in_a_sourceFiles);
+#define boxptr_CodegenFMU3_fmiModelDescription omc_CodegenFMU3_fmiModelDescription
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiModelDescription,2,0) {(void*) boxptr_CodegenFMU3_fmiModelDescription,0}};
+#define boxvar_CodegenFMU3_fmiModelDescription MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMU3_fmiModelDescription)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

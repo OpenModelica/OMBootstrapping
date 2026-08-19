@@ -201,6 +201,9 @@ modelica_boolean omc_FGraph_isPartialScope(threadData_t *threadData, modelica_me
 {
   modelica_boolean _outIsPartial;
   modelica_metatype _el = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsPartial has no default value.
@@ -255,6 +258,9 @@ modelica_boolean omc_FGraph_isPartialScope(threadData_t *threadData, modelica_me
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsPartial;
 }
 modelica_metatype boxptr_FGraph_isPartialScope(threadData_t *threadData, modelica_metatype _inEnv)
@@ -607,6 +613,9 @@ modelica_boolean omc_FGraph_graphPrefixOf2(threadData_t *threadData, modelica_me
 {
   modelica_boolean _outIsPrefix;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsPrefix has no default value.
@@ -683,6 +692,9 @@ modelica_boolean omc_FGraph_graphPrefixOf2(threadData_t *threadData, modelica_me
   }
   _outIsPrefix = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsPrefix;
 }
 modelica_metatype boxptr_FGraph_graphPrefixOf2(threadData_t *threadData, modelica_metatype _inPrefixEnv, modelica_metatype _inEnv)
@@ -698,11 +710,17 @@ DLLDirection
 modelica_boolean omc_FGraph_graphPrefixOf(threadData_t *threadData, modelica_metatype _inPrefixEnv, modelica_metatype _inEnv)
 {
   modelica_boolean _outIsPrefix;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsPrefix has no default value.
   _outIsPrefix = omc_FGraph_graphPrefixOf2(threadData, listReverse(omc_FGraph_currentScope(threadData, _inPrefixEnv)), listReverse(omc_FGraph_currentScope(threadData, _inEnv)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsPrefix;
 }
 modelica_metatype boxptr_FGraph_graphPrefixOf(threadData_t *threadData, modelica_metatype _inPrefixEnv, modelica_metatype _inEnv)
@@ -780,6 +798,9 @@ modelica_boolean omc_FGraph_isInstance(threadData_t *threadData, modelica_metaty
 {
   modelica_boolean _yes;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _yes has no default value.
@@ -831,6 +852,9 @@ modelica_boolean omc_FGraph_isInstance(threadData_t *threadData, modelica_metaty
   }
   _yes = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _yes;
 }
 modelica_metatype boxptr_FGraph_isInstance(threadData_t *threadData, modelica_metatype _inEnv, modelica_metatype _inName)
@@ -970,6 +994,9 @@ modelica_boolean omc_FGraph_isTargetClassBuiltin(threadData_t *threadData, model
 {
   modelica_boolean _yes;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _yes has no default value.
@@ -1016,6 +1043,9 @@ modelica_boolean omc_FGraph_isTargetClassBuiltin(threadData_t *threadData, model
   }
   _yes = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _yes;
 }
 modelica_metatype boxptr_FGraph_isTargetClassBuiltin(threadData_t *threadData, modelica_metatype _inGraph, modelica_metatype _inClass)
@@ -1544,11 +1574,17 @@ DLLDirection
 modelica_boolean omc_FGraph_isImplicitScope(threadData_t *threadData, modelica_string _inName)
 {
   modelica_boolean _isImplicit;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isImplicit has no default value.
   _isImplicit = omc_FCore_isImplicitScope(threadData, _inName);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isImplicit;
 }
 modelica_metatype boxptr_FGraph_isImplicitScope(threadData_t *threadData, modelica_metatype _inName)
@@ -1795,6 +1831,9 @@ modelica_boolean omc_FGraph_checkScopeType(threadData_t *threadData, modelica_me
 {
   modelica_boolean _yes;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _yes has no default value.
@@ -1902,6 +1941,9 @@ modelica_boolean omc_FGraph_checkScopeType(threadData_t *threadData, modelica_me
   }
   _yes = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _yes;
 }
 modelica_metatype boxptr_FGraph_checkScopeType(threadData_t *threadData, modelica_metatype _inScope, modelica_metatype _inScopeType)
@@ -1962,6 +2004,9 @@ modelica_boolean omc_FGraph_inFunctionScope(threadData_t *threadData, modelica_m
 {
   modelica_boolean _inFunction;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _inFunction has no default value.
@@ -2006,6 +2051,9 @@ modelica_boolean omc_FGraph_inFunctionScope(threadData_t *threadData, modelica_m
   }
   _inFunction = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _inFunction;
 }
 modelica_metatype boxptr_FGraph_inFunctionScope(threadData_t *threadData, modelica_metatype _inGraph)
@@ -2033,6 +2081,9 @@ DLLDirection
 modelica_boolean omc_FGraph_isEmptyScope(threadData_t *threadData, modelica_metatype _graph)
 {
   modelica_boolean _isEmpty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -2076,6 +2127,9 @@ modelica_boolean omc_FGraph_isEmptyScope(threadData_t *threadData, modelica_meta
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_FGraph_isEmptyScope(threadData_t *threadData, modelica_metatype _graph)
@@ -2091,11 +2145,17 @@ DLLDirection
 modelica_boolean omc_FGraph_isNotEmpty(threadData_t *threadData, modelica_metatype _inGraph)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (!omc_FGraph_isEmpty(threadData, _inGraph));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_FGraph_isNotEmpty(threadData_t *threadData, modelica_metatype _inGraph)
@@ -2112,6 +2172,9 @@ modelica_boolean omc_FGraph_isEmpty(threadData_t *threadData, modelica_metatype 
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -2150,6 +2213,9 @@ modelica_boolean omc_FGraph_isEmpty(threadData_t *threadData, modelica_metatype 
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_FGraph_isEmpty(threadData_t *threadData, modelica_metatype _inGraph)
@@ -2978,6 +3044,9 @@ modelica_boolean omc_FGraph_isTopScope(threadData_t *threadData, modelica_metaty
 {
   modelica_boolean _isTop;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isTop has no default value.
@@ -3025,6 +3094,9 @@ modelica_boolean omc_FGraph_isTopScope(threadData_t *threadData, modelica_metaty
   }
   _isTop = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isTop;
 }
 modelica_metatype boxptr_FGraph_isTopScope(threadData_t *threadData, modelica_metatype _graph)
@@ -3551,6 +3623,9 @@ modelica_boolean omc_FGraph_inForOrParforIterLoopScope(threadData_t *threadData,
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -3602,6 +3677,9 @@ modelica_boolean omc_FGraph_inForOrParforIterLoopScope(threadData_t *threadData,
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_FGraph_inForOrParforIterLoopScope(threadData_t *threadData, modelica_metatype _inGraph)
@@ -3618,6 +3696,9 @@ modelica_boolean omc_FGraph_inForLoopScope(threadData_t *threadData, modelica_me
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -3669,6 +3750,9 @@ modelica_boolean omc_FGraph_inForLoopScope(threadData_t *threadData, modelica_me
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_FGraph_inForLoopScope(threadData_t *threadData, modelica_metatype _inGraph)

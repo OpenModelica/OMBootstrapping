@@ -236,6 +236,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_Vectorization_getIndexSubScript(t
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_integer tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _int has no default value.
@@ -248,6 +251,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_Vectorization_getIndexSubScript(t
   tmp4 = mmc_unbox_integer(tmpMeta3);
   _int = tmp4  /* pattern as ty=Integer */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _int;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Vectorization_getIndexSubScript(threadData_t *threadData, modelica_metatype _sub)
@@ -533,6 +539,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_crefPartlyEqual(thr
 {
   modelica_boolean _partlyEq;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _partlyEq has no default value.
@@ -616,6 +625,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_crefPartlyEqual(thr
   }
   _partlyEq = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _partlyEq;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Vectorization_crefPartlyEqual(threadData_t *threadData, modelica_metatype _cref0, modelica_metatype _cref1)
@@ -630,11 +642,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Vectorization_crefPartlyEqual
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_crefPartlyEqualToCrefs(threadData_t *threadData, modelica_metatype _cref0, modelica_metatype _crefLst)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = omc_List_exist1(threadData, _crefLst, boxvar_Vectorization_crefPartlyEqual, _cref0);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Vectorization_crefPartlyEqualToCrefs(threadData_t *threadData, modelica_metatype _cref0, modelica_metatype _crefLst)
@@ -1782,6 +1800,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_expEqualNoCrefSubsL
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outEqual has no default value.
@@ -1818,6 +1839,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_expEqualNoCrefSubsL
 
   _outEqual = 1 /* true */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outEqual;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Vectorization_expEqualNoCrefSubsListList(threadData_t *threadData, modelica_metatype _inExpl1, modelica_metatype _inExpl2)
@@ -1839,6 +1863,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_expEqualNoCrefSubsL
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outEqual has no default value.
@@ -1875,6 +1902,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_expEqualNoCrefSubsL
 
   _outEqual = 1 /* true */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outEqual;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Vectorization_expEqualNoCrefSubsList(threadData_t *threadData, modelica_metatype _inExpl1, modelica_metatype _inExpl2)
@@ -1892,6 +1922,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_expEqualNoCrefSubsO
   modelica_metatype _e1 = NULL;
   modelica_metatype _e2 = NULL;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outEqual has no default value.
@@ -1946,6 +1979,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_expEqualNoCrefSubsO
   }
   _outEqual = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outEqual;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Vectorization_expEqualNoCrefSubsOpt(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2)
@@ -1962,6 +1998,9 @@ modelica_boolean omc_Vectorization_expEqualNoCrefSubs(threadData_t *threadData, 
 {
   modelica_boolean _outEqual;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outEqual has no default value.
@@ -2592,6 +2631,9 @@ modelica_boolean omc_Vectorization_expEqualNoCrefSubs(threadData_t *threadData, 
   }
   _outEqual = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outEqual;
 }
 modelica_metatype boxptr_Vectorization_expEqualNoCrefSubs(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2)
@@ -2608,6 +2650,9 @@ modelica_boolean omc_Vectorization_equationEqualNoCrefSubs(threadData_t *threadD
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -2832,6 +2877,9 @@ modelica_boolean omc_Vectorization_equationEqualNoCrefSubs(threadData_t *threadD
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_Vectorization_equationEqualNoCrefSubs(threadData_t *threadData, modelica_metatype _e1, modelica_metatype _e2)
@@ -2849,6 +2897,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_minmaxTermEqual(thr
   modelica_metatype _term0 = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -2860,6 +2911,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_minmaxTermEqual(thr
 
   _b = omc_Vectorization_expEqualNoCrefSubs(threadData, _term0, _term);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Vectorization_minmaxTermEqual(threadData_t *threadData, modelica_metatype _minmaxTerm, modelica_metatype _term)
@@ -3475,6 +3529,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_varIsEqualCrefWitho
 {
   modelica_boolean _b;
   modelica_metatype _cref = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -3483,6 +3540,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Vectorization_varIsEqualCrefWitho
 
   _b = omc_ComponentReferenceBasics_crefEqualWithoutSubs(threadData, _cref, _crefIn);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Vectorization_varIsEqualCrefWithoutSubs(threadData_t *threadData, modelica_metatype _varIn, modelica_metatype _crefIn)

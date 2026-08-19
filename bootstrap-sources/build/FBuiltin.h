@@ -96,8 +96,6 @@ extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
 
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
-extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
-
 extern struct record_description SCode_Attributes_ATTR__desc;
 
 extern struct record_description SCode_ClassDef_PARTS__desc;

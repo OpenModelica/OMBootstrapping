@@ -174,10 +174,10 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT63,5,3) {&ErrorTypes_Message_MESSAG
 #define _OMC_LIT64_data "Unknown support level "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT64,22,_OMC_LIT64_data);
 #define _OMC_LIT64 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT64)
-#define _OMC_LIT65_data "/projects/OpenModelica-session2/OMCompiler/Compiler/Script/PackageManagement.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT65,79,_OMC_LIT65_data);
+#define _OMC_LIT65_data "//OpenModelica/OMCompiler/Compiler/Script/PackageManagement.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT65,85,_OMC_LIT65_data);
 #define _OMC_LIT65 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT65)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT66_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT66_6,1.784622031e9);
 #define _OMC_LIT66_6 MMC_REFREALLIT(_OMC_LIT_STRUCT66_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT66,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT65,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(215)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(215)),MMC_IMMEDIATE(MMC_TAGFIXNUM(92)),_OMC_LIT66_6}};
 #define _OMC_LIT66 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT66)
@@ -925,6 +925,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_PackageManagement_compareUrlBool(
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -948,6 +951,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_PackageManagement_compareUrlBool(
 
   _b = (stringCompare(_s1, _s2) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PackageManagement_compareUrlBool(threadData_t *threadData, modelica_metatype _tpl1, modelica_metatype _tpl2)
@@ -975,6 +981,9 @@ void omc_PackageManagement_installCachedPackages(threadData_t *threadData)
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
   modelica_metatype tmpMeta14;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _packageIndex has no default value.
@@ -1120,6 +1129,9 @@ void omc_PackageManagement_installCachedPackages(threadData_t *threadData)
   omc_PackageManagement_updateIndex(threadData);
   _return: OMC_LABEL_UNUSED
   threadData->mmc_jumper = old_mmc_jumper;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1173,6 +1185,9 @@ modelica_boolean omc_PackageManagement_installPackage(threadData_t *threadData, 
   modelica_metatype tmpMeta48;
   modelica_metatype tmpMeta49;
   modelica_metatype tmpMeta50;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _success has no default value.
@@ -1494,6 +1509,9 @@ modelica_boolean omc_PackageManagement_installPackage(threadData_t *threadData, 
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _success;
 }
 modelica_metatype boxptr_PackageManagement_installPackage(threadData_t *threadData, modelica_metatype _pkg, modelica_metatype _version, modelica_metatype _exactMatch, modelica_metatype _skipDownload)
@@ -1675,6 +1693,7 @@ modelica_metatype omc_PackageManagement_versionsThatConvertFromTheWanted(threadD
                 modelica_integer _i;
                 for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp10, tmp12); _i += tmp11)
                 {
+
                   /* Pattern-matching assignment */
                   tmpMeta7 = omc_JSON_at(threadData, _convertFrom, _i);
                   if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,4,1) == 0) goto goto_2;
@@ -1916,6 +1935,7 @@ modelica_metatype omc_PackageManagement_getAllProvidedVersionsForLibrary(threadD
                 modelica_integer _i;
                 for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp7, tmp9); _i += tmp8)
                 {
+
                   _tree = omc_AvlSetString_add(threadData, _tree, omc_JSON_getString(threadData, omc_JSON_at(threadData, _provides, _i)));
                 }
               }
@@ -2126,6 +2146,9 @@ modelica_boolean omc_PackageManagement_upgradeInstalledPackages(threadData_t *th
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _success has no default value.
@@ -2160,6 +2183,9 @@ modelica_boolean omc_PackageManagement_upgradeInstalledPackages(threadData_t *th
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _success;
 }
 modelica_metatype boxptr_PackageManagement_upgradeInstalledPackages(threadData_t *threadData, modelica_metatype _installNewestVersions)
@@ -2184,6 +2210,9 @@ modelica_boolean omc_PackageManagement_updateIndex(threadData_t *threadData)
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _success has no default value.
@@ -2215,6 +2244,9 @@ modelica_boolean omc_PackageManagement_updateIndex(threadData_t *threadData)
 
   setGlobalRoot(((modelica_integer) 29), mmc_mk_integer(((modelica_integer) 0)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _success;
 }
 modelica_metatype boxptr_PackageManagement_updateIndex(threadData_t *threadData)
@@ -2242,6 +2274,9 @@ modelica_boolean omc_PackageManagement_compareVersionsAndSupportLevel(threadData
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_integer tmp8;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _c has no default value.
@@ -2290,6 +2325,9 @@ modelica_boolean omc_PackageManagement_compareVersionsAndSupportLevel(threadData
 
   _c = (omc_SemanticVersion_compare(threadData, _v1, _v2, 1 /* true */, 1 /* true */) < ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _c;
 }
 modelica_metatype boxptr_PackageManagement_compareVersionsAndSupportLevel(threadData_t *threadData, modelica_metatype _x1, modelica_metatype _x2)
@@ -2306,6 +2344,9 @@ modelica_integer omc_PackageManagement_getSupportLevel(threadData_t *threadData,
 {
   modelica_integer _support;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _support has no default value.
@@ -2374,7 +2415,7 @@ modelica_integer omc_PackageManagement_getSupportLevel(threadData_t *threadData,
         }
         case 6: {
           modelica_metatype tmpMeta12;
-          
+
           /* Pattern matching succeeded */
           tmpMeta12 = stringAppend(_OMC_LIT64,omc_JSON_toString(threadData, _obj, 0 /* false */));
           omc_Error_addInternalError(threadData, tmpMeta12, _OMC_LIT66);
@@ -2394,6 +2435,9 @@ modelica_integer omc_PackageManagement_getSupportLevel(threadData_t *threadData,
   }
   _support = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _support;
 }
 modelica_metatype boxptr_PackageManagement_getSupportLevel(threadData_t *threadData, modelica_metatype _obj)
@@ -2415,6 +2459,9 @@ modelica_boolean omc_PackageManagement_providesExpectedVersion(threadData_t *thr
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _matches has no default value.
@@ -2470,7 +2517,7 @@ modelica_boolean omc_PackageManagement_providesExpectedVersion(threadData_t *thr
           tmpMeta14 = MMC_CDR(tmpMeta12);
           if (7 != MMC_STRLEN(tmpMeta13) || strcmp(MMC_STRINGDATA(_OMC_LIT72), MMC_STRINGDATA(tmpMeta13)) != 0) goto tmp2_end;
           if (!listEmpty(tmpMeta14)) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           _matches = 1 /* true */;
 
@@ -2479,7 +2526,7 @@ modelica_boolean omc_PackageManagement_providesExpectedVersion(threadData_t *thr
           goto tmp2_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
@@ -2517,6 +2564,9 @@ modelica_boolean omc_PackageManagement_providesExpectedVersion(threadData_t *thr
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _matches;
 }
 modelica_metatype boxptr_PackageManagement_providesExpectedVersion(threadData_t *threadData, modelica_metatype _version, modelica_metatype _provides, modelica_metatype _wantedVersion)
@@ -2809,7 +2859,7 @@ modelica_metatype omc_PackageManagement_VersionMap_add(threadData_t *threadData,
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 5: {
           modelica_metatype tmpMeta5;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_box3(4, &PackageManagement_VersionMap_Tree_LEAF__desc, _inKey, _inValue);
           tmpMeta1 = tmpMeta5;
@@ -2822,7 +2872,7 @@ modelica_metatype omc_PackageManagement_VersionMap_add(threadData_t *threadData,
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _key = tmpMeta6;
           /* Pattern matching succeeded */
           _key_comp = omc_PackageManagement_VersionMap_keyCompare(threadData, _inKey, _key);
@@ -2865,7 +2915,7 @@ modelica_metatype omc_PackageManagement_VersionMap_add(threadData_t *threadData,
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
           modelica_metatype tmpMeta14;
-          
+
           /* Pattern matching succeeded */
           _key_comp = omc_PackageManagement_VersionMap_keyCompare(threadData, _inKey, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))));
 
@@ -3019,7 +3069,7 @@ modelica_metatype omc_PackageManagement_VersionMap_addUpdate(threadData_t *threa
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 5: {
           modelica_metatype tmpMeta5;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_box3(4, &PackageManagement_VersionMap_Tree_LEAF__desc, _key, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_fn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_fn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_fn), 2))), mmc_mk_none()) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_fn), 1)))) (threadData, mmc_mk_none()));
           tmpMeta1 = tmpMeta5;
@@ -3029,7 +3079,7 @@ modelica_metatype omc_PackageManagement_VersionMap_addUpdate(threadData_t *threa
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          
+
           /* Pattern matching succeeded */
           _key_comp = omc_PackageManagement_VersionMap_keyCompare(threadData, _key, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))));
 
@@ -3066,7 +3116,7 @@ modelica_metatype omc_PackageManagement_VersionMap_addUpdate(threadData_t *threa
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
-          
+
           /* Pattern matching succeeded */
           _key_comp = omc_PackageManagement_VersionMap_keyCompare(threadData, _key, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))));
 
@@ -3139,7 +3189,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_VersionMap_bal
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inTree;
           goto tmp3_done;
@@ -3147,7 +3197,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_VersionMap_bal
         case 1: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           _lh = omc_PackageManagement_VersionMap_height(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_outTree), 5))));
 
@@ -3205,6 +3255,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_VersionMap_calc
 {
   modelica_integer _outBalance;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBalance has no default value.
@@ -3216,20 +3269,20 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_VersionMap_calc
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_PackageManagement_VersionMap_height(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inNode), 5)))) - omc_PackageManagement_VersionMap_height(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inNode), 6))));
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 0);
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 0);
           goto tmp3_done;
@@ -3247,6 +3300,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_VersionMap_calc
   }
   _outBalance = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBalance;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PackageManagement_VersionMap_calculateBalance(threadData_t *threadData, modelica_metatype _inNode)
@@ -3283,7 +3339,7 @@ modelica_metatype omc_PackageManagement_VersionMap_fold(threadData_t *threadData
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _key = tmpMeta5;
           _value = tmpMeta6;
           /* Pattern matching succeeded */
@@ -3311,7 +3367,7 @@ modelica_metatype omc_PackageManagement_VersionMap_fold(threadData_t *threadData
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _outResult;
           goto tmp3_done;
@@ -3353,7 +3409,7 @@ modelica_metatype omc_PackageManagement_VersionMap_foldCond(threadData_t *thread
           modelica_metatype tmpMeta5;
           modelica_integer tmp6;
           modelica_metatype tmpMeta7;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching tuple assignment */
           tmpMeta7 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _value, &tmpMeta5) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _value, &tmpMeta5);
@@ -3372,7 +3428,7 @@ modelica_metatype omc_PackageManagement_VersionMap_foldCond(threadData_t *thread
         }
         case 4: {
           modelica_metatype tmpMeta8;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching tuple assignment */
           tmpMeta8 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _value, NULL) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _value, NULL);
@@ -3382,7 +3438,7 @@ modelica_metatype omc_PackageManagement_VersionMap_foldCond(threadData_t *thread
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _value;
           goto tmp3_done;
@@ -3420,7 +3476,7 @@ modelica_metatype omc_PackageManagement_VersionMap_fold__2(threadData_t *threadD
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp3_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           _foldArg1 = omc_PackageManagement_VersionMap_fold__2(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 5))), ((modelica_fnptr) _foldFunc), _foldArg1, _foldArg2 ,&_foldArg2);
 
@@ -3430,14 +3486,14 @@ modelica_metatype omc_PackageManagement_VersionMap_fold__2(threadData_t *threadD
           goto tmp2_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           _foldArg1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _foldArg1, _foldArg2 ,&_foldArg2) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _foldArg1, _foldArg2 ,&_foldArg2);
           goto tmp2_done;
         }
         default:
         tmp2_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
@@ -3461,6 +3517,9 @@ modelica_metatype omc_PackageManagement_VersionMap_fold__2(threadData_t *threadD
 DLLDirection
 void omc_PackageManagement_VersionMap_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3471,7 +3530,7 @@ void omc_PackageManagement_VersionMap_forEach(threadData_t *threadData, modelica
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp3_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           omc_PackageManagement_VersionMap_forEach(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 5))), ((modelica_fnptr) _func));
 
@@ -3485,13 +3544,13 @@ void omc_PackageManagement_VersionMap_forEach(threadData_t *threadData, modelica
           goto tmp2_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((void(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3)))) : ((void(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))));
           goto tmp2_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
@@ -3508,6 +3567,9 @@ void omc_PackageManagement_VersionMap_forEach(threadData_t *threadData, modelica
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3568,14 +3630,14 @@ modelica_string omc_PackageManagement_VersionMap_get(threadData_t *threadData, m
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2)));
           goto tmp3_done;
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2)));
           goto tmp3_done;
@@ -3606,7 +3668,7 @@ modelica_string omc_PackageManagement_VersionMap_get(threadData_t *threadData, m
         case 0: {
           if (0 != tmp9_1) goto tmp8_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp9_2,1,2) == 0) goto tmp8_end;
-          
+
           /* Pattern matching succeeded */
           tmp6 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3)));
           goto tmp8_done;
@@ -3614,7 +3676,7 @@ modelica_string omc_PackageManagement_VersionMap_get(threadData_t *threadData, m
         case 1: {
           if (0 != tmp9_1) goto tmp8_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp9_2,0,5) == 0) goto tmp8_end;
-          
+
           /* Pattern matching succeeded */
           tmp6 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3)));
           goto tmp8_done;
@@ -3622,7 +3684,7 @@ modelica_string omc_PackageManagement_VersionMap_get(threadData_t *threadData, m
         case 2: {
           if (1 != tmp9_1) goto tmp8_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp9_2,0,5) == 0) goto tmp8_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _tree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 6)));
@@ -3633,7 +3695,7 @@ modelica_string omc_PackageManagement_VersionMap_get(threadData_t *threadData, m
         case 3: {
           if (-1 != tmp9_1) goto tmp8_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp9_2,0,5) == 0) goto tmp8_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _tree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 5)));
@@ -3676,20 +3738,20 @@ modelica_metatype omc_PackageManagement_VersionMap_getOpt(threadData_t *threadDa
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2)));
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2)));
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _key;
           goto tmp3_done;
@@ -3720,7 +3782,7 @@ modelica_metatype omc_PackageManagement_VersionMap_getOpt(threadData_t *threadDa
         case 0: {
           if (0 != tmp8_1) goto tmp7_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_2,1,2) == 0) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_some((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))));
           goto tmp7_done;
@@ -3728,7 +3790,7 @@ modelica_metatype omc_PackageManagement_VersionMap_getOpt(threadData_t *threadDa
         case 1: {
           if (0 != tmp8_1) goto tmp7_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_2,0,5) == 0) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_some((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))));
           goto tmp7_done;
@@ -3736,7 +3798,7 @@ modelica_metatype omc_PackageManagement_VersionMap_getOpt(threadData_t *threadDa
         case 2: {
           if (1 != tmp8_1) goto tmp7_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_2,0,5) == 0) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _tree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 6)));
@@ -3747,7 +3809,7 @@ modelica_metatype omc_PackageManagement_VersionMap_getOpt(threadData_t *threadDa
         case 3: {
           if (-1 != tmp8_1) goto tmp7_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_2,0,5) == 0) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _tree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 5)));
@@ -3756,7 +3818,7 @@ modelica_metatype omc_PackageManagement_VersionMap_getOpt(threadData_t *threadDa
           goto tmp7_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_none();
           goto tmp7_done;
@@ -3786,6 +3848,9 @@ modelica_boolean omc_PackageManagement_VersionMap_hasKey(threadData_t *threadDat
   modelica_metatype _tree = NULL;
   modelica_metatype tmpMeta1;
   modelica_boolean tmp5 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _comp = 0 /* false */;
@@ -3800,19 +3865,19 @@ modelica_boolean omc_PackageManagement_VersionMap_hasKey(threadData_t *threadDat
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inTree), 2)));
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inTree), 2)));
           goto tmp3_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           goto _return;
           goto goto_2;
@@ -3845,7 +3910,7 @@ modelica_boolean omc_PackageManagement_VersionMap_hasKey(threadData_t *threadDat
         switch (MMC_SWITCH_CAST(tmp8)) {
         case 0: {
           if (0 != tmp8_1) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           tmp5 = 1 /* true */;
           goto tmp7_done;
@@ -3868,7 +3933,7 @@ modelica_boolean omc_PackageManagement_VersionMap_hasKey(threadData_t *threadDat
           if (-1 != tmp8_1) goto tmp7_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_2,0,5) == 0) goto tmp7_end;
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp8_2), 5));
-          
+
           _tree = tmpMeta11;
           /* Pattern matching succeeded */
           /* Tail recursive call */
@@ -3878,7 +3943,7 @@ modelica_boolean omc_PackageManagement_VersionMap_hasKey(threadData_t *threadDat
           goto tmp7_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp5 = 0 /* false */;
           goto tmp7_done;
@@ -3896,6 +3961,9 @@ modelica_boolean omc_PackageManagement_VersionMap_hasKey(threadData_t *threadDat
   }
   _comp = tmp5;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_PackageManagement_VersionMap_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey)
@@ -3911,6 +3979,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_VersionMap_heig
 {
   modelica_integer _outHeight;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHeight has no default value.
@@ -3922,20 +3993,20 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_VersionMap_heig
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inNode), 4))));
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 1);
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 0);
           goto tmp3_done;
@@ -3953,6 +4024,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_VersionMap_heig
   }
   _outHeight = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHeight;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PackageManagement_VersionMap_height(threadData_t *threadData, modelica_metatype _inNode)
@@ -3967,10 +4041,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PackageManagement_VersionMap_
 DLLDirection
 void omc_PackageManagement_VersionMap_intersection(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3979,6 +4059,9 @@ modelica_boolean omc_PackageManagement_VersionMap_isEmpty(threadData_t *threadDa
 {
   modelica_boolean _isEmpty;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -3998,7 +4081,7 @@ modelica_boolean omc_PackageManagement_VersionMap_isEmpty(threadData_t *threadDa
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -4016,6 +4099,9 @@ modelica_boolean omc_PackageManagement_VersionMap_isEmpty(threadData_t *threadDa
   }
   _isEmpty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_PackageManagement_VersionMap_isEmpty(threadData_t *threadData, modelica_metatype _tree)
@@ -4043,13 +4129,13 @@ modelica_metatype omc_PackageManagement_VersionMap_join(threadData_t *threadData
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _tree;
           goto tmp3_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           _tree = omc_PackageManagement_VersionMap_add(threadData, _tree, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_treeToJoin), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_treeToJoin), 3))), ((modelica_fnptr) _conflictFunc));
 
@@ -4062,7 +4148,7 @@ modelica_metatype omc_PackageManagement_VersionMap_join(threadData_t *threadData
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_PackageManagement_VersionMap_add(threadData, _tree, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_treeToJoin), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_treeToJoin), 3))), ((modelica_fnptr) _conflictFunc));
           goto tmp3_done;
@@ -4087,11 +4173,17 @@ DLLDirection
 modelica_integer omc_PackageManagement_VersionMap_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
 {
   modelica_integer _outResult;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
   _outResult = omc_SemanticVersion_compare(threadData, _inKey1, _inKey2, 1 /* true */, 1 /* true */);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_PackageManagement_VersionMap_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
@@ -4137,7 +4229,7 @@ modelica_metatype omc_PackageManagement_VersionMap_listKeys(threadData_t *thread
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _key = tmpMeta5;
           /* Pattern matching succeeded */
           _lst = omc_PackageManagement_VersionMap_listKeys(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 6))), _lst);
@@ -4156,7 +4248,7 @@ modelica_metatype omc_PackageManagement_VersionMap_listKeys(threadData_t *thread
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _key = tmpMeta7;
           /* Pattern matching succeeded */
           tmpMeta8 = mmc_mk_cons(_key, _lst);
@@ -4165,7 +4257,7 @@ modelica_metatype omc_PackageManagement_VersionMap_listKeys(threadData_t *thread
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _lst;
           goto tmp3_done;
@@ -4203,7 +4295,7 @@ modelica_metatype omc_PackageManagement_VersionMap_listKeysReverse(threadData_t 
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 4: {
           modelica_metatype tmpMeta5;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_cons((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inTree), 2))), _lst);
           tmpMeta1 = tmpMeta5;
@@ -4211,7 +4303,7 @@ modelica_metatype omc_PackageManagement_VersionMap_listKeysReverse(threadData_t 
         }
         case 3: {
           modelica_metatype tmpMeta6;
-          
+
           /* Pattern matching succeeded */
           _lst = omc_PackageManagement_VersionMap_listKeysReverse(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inTree), 5))), _lst);
 
@@ -4226,7 +4318,7 @@ modelica_metatype omc_PackageManagement_VersionMap_listKeysReverse(threadData_t 
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _lst;
           goto tmp3_done;
@@ -4269,7 +4361,7 @@ modelica_metatype omc_PackageManagement_VersionMap_listValues(threadData_t *thre
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _value = tmpMeta5;
           /* Pattern matching succeeded */
           _lst = omc_PackageManagement_VersionMap_listValues(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 6))), _lst);
@@ -4296,7 +4388,7 @@ modelica_metatype omc_PackageManagement_VersionMap_listValues(threadData_t *thre
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _lst;
           goto tmp3_done;
@@ -4349,7 +4441,7 @@ modelica_metatype omc_PackageManagement_VersionMap_map(threadData_t *threadData,
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _key = tmpMeta5;
           _value = tmpMeta6;
           /* Pattern matching succeeded */
@@ -4391,7 +4483,7 @@ modelica_metatype omc_PackageManagement_VersionMap_map(threadData_t *threadData,
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inTree;
           goto tmp3_done;
@@ -4446,7 +4538,7 @@ modelica_metatype omc_PackageManagement_VersionMap_mapFold(threadData_t *threadD
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _key = tmpMeta5;
           _value = tmpMeta6;
           /* Pattern matching succeeded */
@@ -4488,7 +4580,7 @@ modelica_metatype omc_PackageManagement_VersionMap_mapFold(threadData_t *threadD
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inTree;
           goto tmp3_done;
@@ -4544,7 +4636,7 @@ modelica_string omc_PackageManagement_VersionMap_printNodeStr(threadData_t *thre
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta6 = stringAppend(_OMC_LIT75,omc_PackageManagement_VersionMap_keyStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inNode), 2)))));
           tmpMeta7 = stringAppend(tmpMeta6,_OMC_LIT25);
@@ -4559,7 +4651,7 @@ modelica_string omc_PackageManagement_VersionMap_printNodeStr(threadData_t *thre
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta10 = stringAppend(_OMC_LIT75,omc_PackageManagement_VersionMap_keyStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inNode), 2)))));
           tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT25);
@@ -4604,13 +4696,13 @@ modelica_string omc_PackageManagement_VersionMap_printTreeStr(threadData_t *thre
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT77;
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_PackageManagement_VersionMap_printNodeStr(threadData, _inTree);
           goto tmp3_done;
@@ -4676,7 +4768,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_PackageManagement_VersionMap_print
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = stringAppend(_inIndent,(_isLeft?_OMC_LIT78:_OMC_LIT79));
           tmpMeta6 = stringAppend(omc_PackageManagement_VersionMap_printTreeStr2(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inTree), 5))), 1 /* true */, tmpMeta5),_inIndent);
@@ -4694,7 +4786,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_PackageManagement_VersionMap_print
           modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
-          
+
           /* Pattern matching succeeded */
           tmpMeta13 = stringAppend(_inIndent,(_isLeft?_OMC_LIT80:_OMC_LIT81));
           tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT82);
@@ -4705,7 +4797,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_PackageManagement_VersionMap_print
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT15;
           goto tmp3_done;
@@ -4739,6 +4831,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_PackageManagement_VersionMap_refe
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -4760,7 +4855,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_PackageManagement_VersionMap_refe
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = referenceEq(_t1, _t2);
           goto tmp3_done;
@@ -4778,6 +4873,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_PackageManagement_VersionMap_refe
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PackageManagement_VersionMap_referenceEqOrEmpty(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)
@@ -4814,7 +4912,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_VersionMap_rot
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,0,5) == 0) goto tmp3_end;
-          
+
           _child = tmpMeta6;
           /* Pattern matching succeeded */
           _node = omc_PackageManagement_VersionMap_setTreeLeftRight(threadData, _outNode, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_outNode), 5))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_child), 5))));
@@ -4826,7 +4924,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_VersionMap_rot
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,1,2) == 0) goto tmp3_end;
-          
+
           _child = tmpMeta7;
           /* Pattern matching succeeded */
           _node = omc_PackageManagement_VersionMap_setTreeLeftRight(threadData, _outNode, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_outNode), 5))), _OMC_LIT74);
@@ -4834,7 +4932,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_VersionMap_rot
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inNode;
           goto tmp3_done;
@@ -4880,7 +4978,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_VersionMap_rot
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,0,5) == 0) goto tmp3_end;
-          
+
           _child = tmpMeta6;
           /* Pattern matching succeeded */
           _node = omc_PackageManagement_VersionMap_setTreeLeftRight(threadData, _outNode, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_child), 6))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_outNode), 6))));
@@ -4892,7 +4990,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_VersionMap_rot
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,1,2) == 0) goto tmp3_end;
-          
+
           _child = tmpMeta7;
           /* Pattern matching succeeded */
           _node = omc_PackageManagement_VersionMap_setTreeLeftRight(threadData, _outNode, _OMC_LIT74, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_outNode), 6))));
@@ -4900,7 +4998,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_VersionMap_rot
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inNode;
           goto tmp3_done;
@@ -4963,7 +5061,7 @@ modelica_metatype omc_PackageManagement_VersionMap_setTreeLeftRight(threadData_t
           modelica_boolean tmp8;
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp8 = (modelica_boolean)(omc_PackageManagement_VersionMap_referenceEqOrEmpty(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_orig), 5))), _left) && omc_PackageManagement_VersionMap_referenceEqOrEmpty(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_orig), 6))), _right));
           if(tmp8)
@@ -4981,7 +5079,7 @@ modelica_metatype omc_PackageManagement_VersionMap_setTreeLeftRight(threadData_t
         case 3: {
           modelica_metatype tmpMeta10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta10 = mmc_mk_box6(3, &PackageManagement_VersionMap_Tree_NODE__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_orig), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_orig), 3))), mmc_mk_integer(((modelica_integer) 1) + modelica_integer_max((modelica_integer)(omc_PackageManagement_VersionMap_height(threadData, _left)),(modelica_integer)(omc_PackageManagement_VersionMap_height(threadData, _right)))), _left, _right);
           tmpMeta1 = tmpMeta10;
@@ -5031,7 +5129,7 @@ modelica_metatype omc_PackageManagement_VersionMap_smallestKey(threadData_t *thr
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _tree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 6)));
@@ -5041,7 +5139,7 @@ modelica_metatype omc_PackageManagement_VersionMap_smallestKey(threadData_t *thr
         }
         case 2: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2)));
           goto tmp3_done;
@@ -5089,7 +5187,7 @@ modelica_metatype omc_PackageManagement_VersionMap_toList(threadData_t *threadDa
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _key = tmpMeta5;
           _value = tmpMeta6;
           /* Pattern matching succeeded */
@@ -5123,7 +5221,7 @@ modelica_metatype omc_PackageManagement_VersionMap_toList(threadData_t *threadDa
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _lst;
           goto tmp3_done;
@@ -5192,7 +5290,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_add(threadData_t *thr
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 5: {
           modelica_metatype tmpMeta5;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_box3(4, &PackageManagement_AvailableLibraries_Tree_LEAF__desc, _inKey, _inValue);
           tmpMeta1 = tmpMeta5;
@@ -5205,7 +5303,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_add(threadData_t *thr
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _key = tmpMeta6;
           /* Pattern matching succeeded */
           _key_comp = omc_PackageManagement_AvailableLibraries_keyCompare(threadData, _inKey, _key);
@@ -5248,7 +5346,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_add(threadData_t *thr
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
           modelica_metatype tmpMeta14;
-          
+
           /* Pattern matching succeeded */
           _key_comp = omc_PackageManagement_AvailableLibraries_keyCompare(threadData, _inKey, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))));
 
@@ -5402,7 +5500,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_addUpdate(threadData_
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 5: {
           modelica_metatype tmpMeta5;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_box3(4, &PackageManagement_AvailableLibraries_Tree_LEAF__desc, _key, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_fn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_fn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_fn), 2))), mmc_mk_none()) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_fn), 1)))) (threadData, mmc_mk_none()));
           tmpMeta1 = tmpMeta5;
@@ -5412,7 +5510,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_addUpdate(threadData_
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          
+
           /* Pattern matching succeeded */
           _key_comp = omc_PackageManagement_AvailableLibraries_keyCompare(threadData, _key, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))));
 
@@ -5449,7 +5547,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_addUpdate(threadData_
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
-          
+
           /* Pattern matching succeeded */
           _key_comp = omc_PackageManagement_AvailableLibraries_keyCompare(threadData, _key, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))));
 
@@ -5522,7 +5620,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_AvailableLibra
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inTree;
           goto tmp3_done;
@@ -5530,7 +5628,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_AvailableLibra
         case 1: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           _lh = omc_PackageManagement_AvailableLibraries_height(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_outTree), 5))));
 
@@ -5588,6 +5686,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_AvailableLibrar
 {
   modelica_integer _outBalance;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBalance has no default value.
@@ -5599,20 +5700,20 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_AvailableLibrar
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_PackageManagement_AvailableLibraries_height(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inNode), 5)))) - omc_PackageManagement_AvailableLibraries_height(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inNode), 6))));
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 0);
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 0);
           goto tmp3_done;
@@ -5630,6 +5731,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_AvailableLibrar
   }
   _outBalance = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBalance;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PackageManagement_AvailableLibraries_calculateBalance(threadData_t *threadData, modelica_metatype _inNode)
@@ -5666,7 +5770,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_fold(threadData_t *th
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _key = tmpMeta5;
           _value = tmpMeta6;
           /* Pattern matching succeeded */
@@ -5694,7 +5798,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_fold(threadData_t *th
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _outResult;
           goto tmp3_done;
@@ -5736,7 +5840,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_foldCond(threadData_t
           modelica_metatype tmpMeta5;
           modelica_integer tmp6;
           modelica_metatype tmpMeta7;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching tuple assignment */
           tmpMeta7 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _value, &tmpMeta5) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _value, &tmpMeta5);
@@ -5755,7 +5859,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_foldCond(threadData_t
         }
         case 4: {
           modelica_metatype tmpMeta8;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching tuple assignment */
           tmpMeta8 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _value, NULL) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _value, NULL);
@@ -5765,7 +5869,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_foldCond(threadData_t
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _value;
           goto tmp3_done;
@@ -5803,7 +5907,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_fold__2(threadData_t 
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp3_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           _foldArg1 = omc_PackageManagement_AvailableLibraries_fold__2(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 5))), ((modelica_fnptr) _foldFunc), _foldArg1, _foldArg2 ,&_foldArg2);
 
@@ -5813,14 +5917,14 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_fold__2(threadData_t 
           goto tmp2_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           _foldArg1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _foldArg1, _foldArg2 ,&_foldArg2) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_foldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))), _foldArg1, _foldArg2 ,&_foldArg2);
           goto tmp2_done;
         }
         default:
         tmp2_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
@@ -5844,6 +5948,9 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_fold__2(threadData_t 
 DLLDirection
 void omc_PackageManagement_AvailableLibraries_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5854,7 +5961,7 @@ void omc_PackageManagement_AvailableLibraries_forEach(threadData_t *threadData, 
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp3_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           omc_PackageManagement_AvailableLibraries_forEach(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 5))), ((modelica_fnptr) _func));
 
@@ -5868,13 +5975,13 @@ void omc_PackageManagement_AvailableLibraries_forEach(threadData_t *threadData, 
           goto tmp2_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((void(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3)))) : ((void(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))));
           goto tmp2_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
@@ -5891,6 +5998,9 @@ void omc_PackageManagement_AvailableLibraries_forEach(threadData_t *threadData, 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -5951,14 +6061,14 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_get(threadData_t *thr
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2)));
           goto tmp3_done;
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2)));
           goto tmp3_done;
@@ -5989,7 +6099,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_get(threadData_t *thr
         case 0: {
           if (0 != tmp9_1) goto tmp8_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp9_2,1,2) == 0) goto tmp8_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta6 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3)));
           goto tmp8_done;
@@ -5997,7 +6107,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_get(threadData_t *thr
         case 1: {
           if (0 != tmp9_1) goto tmp8_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp9_2,0,5) == 0) goto tmp8_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta6 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3)));
           goto tmp8_done;
@@ -6005,7 +6115,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_get(threadData_t *thr
         case 2: {
           if (1 != tmp9_1) goto tmp8_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp9_2,0,5) == 0) goto tmp8_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _tree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 6)));
@@ -6016,7 +6126,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_get(threadData_t *thr
         case 3: {
           if (-1 != tmp9_1) goto tmp8_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp9_2,0,5) == 0) goto tmp8_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _tree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 5)));
@@ -6059,20 +6169,20 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_getOpt(threadData_t *
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2)));
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2)));
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _key;
           goto tmp3_done;
@@ -6103,7 +6213,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_getOpt(threadData_t *
         case 0: {
           if (0 != tmp8_1) goto tmp7_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_2,1,2) == 0) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_some((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))));
           goto tmp7_done;
@@ -6111,7 +6221,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_getOpt(threadData_t *
         case 1: {
           if (0 != tmp8_1) goto tmp7_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_2,0,5) == 0) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_some((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 3))));
           goto tmp7_done;
@@ -6119,7 +6229,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_getOpt(threadData_t *
         case 2: {
           if (1 != tmp8_1) goto tmp7_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_2,0,5) == 0) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _tree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 6)));
@@ -6130,7 +6240,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_getOpt(threadData_t *
         case 3: {
           if (-1 != tmp8_1) goto tmp7_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_2,0,5) == 0) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _tree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 5)));
@@ -6139,7 +6249,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_getOpt(threadData_t *
           goto tmp7_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_none();
           goto tmp7_done;
@@ -6169,6 +6279,9 @@ modelica_boolean omc_PackageManagement_AvailableLibraries_hasKey(threadData_t *t
   modelica_metatype _tree = NULL;
   modelica_string tmp1 = 0;
   modelica_boolean tmp5 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _comp = 0 /* false */;
@@ -6183,19 +6296,19 @@ modelica_boolean omc_PackageManagement_AvailableLibraries_hasKey(threadData_t *t
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inTree), 2)));
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inTree), 2)));
           goto tmp3_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           goto _return;
           goto goto_2;
@@ -6228,7 +6341,7 @@ modelica_boolean omc_PackageManagement_AvailableLibraries_hasKey(threadData_t *t
         switch (MMC_SWITCH_CAST(tmp8)) {
         case 0: {
           if (0 != tmp8_1) goto tmp7_end;
-          
+
           /* Pattern matching succeeded */
           tmp5 = 1 /* true */;
           goto tmp7_done;
@@ -6251,7 +6364,7 @@ modelica_boolean omc_PackageManagement_AvailableLibraries_hasKey(threadData_t *t
           if (-1 != tmp8_1) goto tmp7_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp8_2,0,5) == 0) goto tmp7_end;
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp8_2), 5));
-          
+
           _tree = tmpMeta11;
           /* Pattern matching succeeded */
           /* Tail recursive call */
@@ -6261,7 +6374,7 @@ modelica_boolean omc_PackageManagement_AvailableLibraries_hasKey(threadData_t *t
           goto tmp7_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp5 = 0 /* false */;
           goto tmp7_done;
@@ -6279,6 +6392,9 @@ modelica_boolean omc_PackageManagement_AvailableLibraries_hasKey(threadData_t *t
   }
   _comp = tmp5;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_PackageManagement_AvailableLibraries_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey)
@@ -6294,6 +6410,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_AvailableLibrar
 {
   modelica_integer _outHeight;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHeight has no default value.
@@ -6305,20 +6424,20 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_AvailableLibrar
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inNode), 4))));
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 1);
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 0);
           goto tmp3_done;
@@ -6336,6 +6455,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PackageManagement_AvailableLibrar
   }
   _outHeight = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHeight;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PackageManagement_AvailableLibraries_height(threadData_t *threadData, modelica_metatype _inNode)
@@ -6350,10 +6472,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PackageManagement_AvailableLi
 DLLDirection
 void omc_PackageManagement_AvailableLibraries_intersection(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -6362,6 +6490,9 @@ modelica_boolean omc_PackageManagement_AvailableLibraries_isEmpty(threadData_t *
 {
   modelica_boolean _isEmpty;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -6381,7 +6512,7 @@ modelica_boolean omc_PackageManagement_AvailableLibraries_isEmpty(threadData_t *
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -6399,6 +6530,9 @@ modelica_boolean omc_PackageManagement_AvailableLibraries_isEmpty(threadData_t *
   }
   _isEmpty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_PackageManagement_AvailableLibraries_isEmpty(threadData_t *threadData, modelica_metatype _tree)
@@ -6426,13 +6560,13 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_join(threadData_t *th
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _tree;
           goto tmp3_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           _tree = omc_PackageManagement_AvailableLibraries_add(threadData, _tree, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_treeToJoin), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_treeToJoin), 3))), ((modelica_fnptr) _conflictFunc));
 
@@ -6445,7 +6579,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_join(threadData_t *th
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_PackageManagement_AvailableLibraries_add(threadData, _tree, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_treeToJoin), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_treeToJoin), 3))), ((modelica_fnptr) _conflictFunc));
           goto tmp3_done;
@@ -6470,11 +6604,17 @@ DLLDirection
 modelica_integer omc_PackageManagement_AvailableLibraries_keyCompare(threadData_t *threadData, modelica_string _inKey1, modelica_string _inKey2)
 {
   modelica_integer _outResult;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
   _outResult = stringCompare(_inKey1, _inKey2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_PackageManagement_AvailableLibraries_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
@@ -6520,7 +6660,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_listKeys(threadData_t
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _key = tmpMeta5;
           /* Pattern matching succeeded */
           _lst = omc_PackageManagement_AvailableLibraries_listKeys(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 6))), _lst);
@@ -6539,7 +6679,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_listKeys(threadData_t
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _key = tmpMeta7;
           /* Pattern matching succeeded */
           tmpMeta8 = mmc_mk_cons(_key, _lst);
@@ -6548,7 +6688,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_listKeys(threadData_t
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _lst;
           goto tmp3_done;
@@ -6586,7 +6726,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_listKeysReverse(threa
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 4: {
           modelica_metatype tmpMeta5;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = mmc_mk_cons((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inTree), 2))), _lst);
           tmpMeta1 = tmpMeta5;
@@ -6594,7 +6734,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_listKeysReverse(threa
         }
         case 3: {
           modelica_metatype tmpMeta6;
-          
+
           /* Pattern matching succeeded */
           _lst = omc_PackageManagement_AvailableLibraries_listKeysReverse(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inTree), 5))), _lst);
 
@@ -6609,7 +6749,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_listKeysReverse(threa
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _lst;
           goto tmp3_done;
@@ -6652,7 +6792,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_listValues(threadData
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _value = tmpMeta5;
           /* Pattern matching succeeded */
           _lst = omc_PackageManagement_AvailableLibraries_listValues(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 6))), _lst);
@@ -6679,7 +6819,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_listValues(threadData
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _lst;
           goto tmp3_done;
@@ -6732,7 +6872,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_map(threadData_t *thr
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _key = tmpMeta5;
           _value = tmpMeta6;
           /* Pattern matching succeeded */
@@ -6774,7 +6914,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_map(threadData_t *thr
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inTree;
           goto tmp3_done;
@@ -6829,7 +6969,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_mapFold(threadData_t 
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _key = tmpMeta5;
           _value = tmpMeta6;
           /* Pattern matching succeeded */
@@ -6871,7 +7011,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_mapFold(threadData_t 
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inTree;
           goto tmp3_done;
@@ -6927,7 +7067,7 @@ modelica_string omc_PackageManagement_AvailableLibraries_printNodeStr(threadData
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta6 = stringAppend(_OMC_LIT75,omc_PackageManagement_AvailableLibraries_keyStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inNode), 2)))));
           tmpMeta7 = stringAppend(tmpMeta6,_OMC_LIT25);
@@ -6942,7 +7082,7 @@ modelica_string omc_PackageManagement_AvailableLibraries_printNodeStr(threadData
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta10 = stringAppend(_OMC_LIT75,omc_PackageManagement_AvailableLibraries_keyStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inNode), 2)))));
           tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT25);
@@ -6987,13 +7127,13 @@ modelica_string omc_PackageManagement_AvailableLibraries_printTreeStr(threadData
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT77;
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_PackageManagement_AvailableLibraries_printNodeStr(threadData, _inTree);
           goto tmp3_done;
@@ -7059,7 +7199,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_PackageManagement_AvailableLibrari
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = stringAppend(_inIndent,(_isLeft?_OMC_LIT78:_OMC_LIT79));
           tmpMeta6 = stringAppend(omc_PackageManagement_AvailableLibraries_printTreeStr2(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inTree), 5))), 1 /* true */, tmpMeta5),_inIndent);
@@ -7077,7 +7217,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_PackageManagement_AvailableLibrari
           modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
-          
+
           /* Pattern matching succeeded */
           tmpMeta13 = stringAppend(_inIndent,(_isLeft?_OMC_LIT80:_OMC_LIT81));
           tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT82);
@@ -7088,7 +7228,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_PackageManagement_AvailableLibrari
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT15;
           goto tmp3_done;
@@ -7122,6 +7262,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_PackageManagement_AvailableLibrar
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -7143,7 +7286,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_PackageManagement_AvailableLibrar
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = referenceEq(_t1, _t2);
           goto tmp3_done;
@@ -7161,6 +7304,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_PackageManagement_AvailableLibrar
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PackageManagement_AvailableLibraries_referenceEqOrEmpty(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)
@@ -7197,7 +7343,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_AvailableLibra
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,0,5) == 0) goto tmp3_end;
-          
+
           _child = tmpMeta6;
           /* Pattern matching succeeded */
           _node = omc_PackageManagement_AvailableLibraries_setTreeLeftRight(threadData, _outNode, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_outNode), 5))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_child), 5))));
@@ -7209,7 +7355,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_AvailableLibra
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,1,2) == 0) goto tmp3_end;
-          
+
           _child = tmpMeta7;
           /* Pattern matching succeeded */
           _node = omc_PackageManagement_AvailableLibraries_setTreeLeftRight(threadData, _outNode, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_outNode), 5))), _OMC_LIT83);
@@ -7217,7 +7363,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_AvailableLibra
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inNode;
           goto tmp3_done;
@@ -7263,7 +7409,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_AvailableLibra
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,0,5) == 0) goto tmp3_end;
-          
+
           _child = tmpMeta6;
           /* Pattern matching succeeded */
           _node = omc_PackageManagement_AvailableLibraries_setTreeLeftRight(threadData, _outNode, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_child), 6))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_outNode), 6))));
@@ -7275,7 +7421,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_AvailableLibra
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,1,2) == 0) goto tmp3_end;
-          
+
           _child = tmpMeta7;
           /* Pattern matching succeeded */
           _node = omc_PackageManagement_AvailableLibraries_setTreeLeftRight(threadData, _outNode, _OMC_LIT83, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_outNode), 6))));
@@ -7283,7 +7429,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PackageManagement_AvailableLibra
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _inNode;
           goto tmp3_done;
@@ -7346,7 +7492,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_setTreeLeftRight(thre
           modelica_boolean tmp8;
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp8 = (modelica_boolean)(omc_PackageManagement_AvailableLibraries_referenceEqOrEmpty(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_orig), 5))), _left) && omc_PackageManagement_AvailableLibraries_referenceEqOrEmpty(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_orig), 6))), _right));
           if(tmp8)
@@ -7364,7 +7510,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_setTreeLeftRight(thre
         case 3: {
           modelica_metatype tmpMeta10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta10 = mmc_mk_box6(3, &PackageManagement_AvailableLibraries_Tree_NODE__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_orig), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_orig), 3))), mmc_mk_integer(((modelica_integer) 1) + modelica_integer_max((modelica_integer)(omc_PackageManagement_AvailableLibraries_height(threadData, _left)),(modelica_integer)(omc_PackageManagement_AvailableLibraries_height(threadData, _right)))), _left, _right);
           tmpMeta1 = tmpMeta10;
@@ -7414,7 +7560,7 @@ modelica_string omc_PackageManagement_AvailableLibraries_smallestKey(threadData_
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _tree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 6)));
@@ -7424,7 +7570,7 @@ modelica_string omc_PackageManagement_AvailableLibraries_smallestKey(threadData_
         }
         case 2: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tree), 2)));
           goto tmp3_done;
@@ -7472,7 +7618,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_toList(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _key = tmpMeta5;
           _value = tmpMeta6;
           /* Pattern matching succeeded */
@@ -7506,7 +7652,7 @@ modelica_metatype omc_PackageManagement_AvailableLibraries_toList(threadData_t *
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _lst;
           goto tmp3_done;
@@ -7549,4 +7695,3 @@ modelica_string omc_PackageManagement_AvailableLibraries_valueStr(threadData_t *
   _return: OMC_LABEL_UNUSED
   return _outString;
 }
-

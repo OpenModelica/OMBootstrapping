@@ -78,6 +78,10 @@ extern struct record_description NFExpression_BINARY__desc;
 
 extern struct record_description NFExpression_CALL__desc;
 
+extern struct record_description NFExpression_CREF__desc;
+
+extern struct record_description NFExpression_INTEGER__desc;
+
 extern struct record_description NFExpression_MULTARY__desc;
 
 extern struct record_description NFExpression_REAL__desc;
@@ -114,6 +118,8 @@ extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
 
 extern struct record_description NFRestriction_TYPE__desc;
 
+extern struct record_description NFSubscript_INDEX__desc;
+
 extern struct record_description NFType_ANY__desc;
 
 extern struct record_description NFType_BOOLEAN__desc;
@@ -149,6 +155,12 @@ extern struct record_description SCode_Restriction_R__TYPE__desc;
 extern struct record_description SCode_Visibility_PUBLIC__desc;
 
 extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+#define boxptr_NBSolve_expandArraySumExpDim omc_NBSolve_expandArraySumExpDim
+
+
+#define boxptr_NBSolve_expandArraySumExp omc_NBSolve_expandArraySumExp
 
 
 #define boxptr_NBSolve_applyInstruction omc_NBSolve_applyInstruction

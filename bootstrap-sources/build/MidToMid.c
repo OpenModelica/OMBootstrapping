@@ -33,6 +33,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_MidToMid_isPopJmp(threadData_t *t
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -71,6 +74,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_MidToMid_isPopJmp(threadData_t *t
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_MidToMid_isPopJmp(threadData_t *threadData, modelica_metatype _t)
@@ -86,6 +92,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_MidToMid_isPushJmp(threadData_t *
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -124,6 +133,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_MidToMid_isPushJmp(threadData_t *
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_MidToMid_isPushJmp(threadData_t *threadData, modelica_metatype _t)
@@ -139,6 +151,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_MidToMid_isLongJmp(threadData_t *
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -176,6 +191,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_MidToMid_isLongJmp(threadData_t *
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_MidToMid_isLongJmp(threadData_t *threadData, modelica_metatype _t)
@@ -193,6 +211,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_MidToMid_tupleSnd(threadData_t *t
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _i has no default value.
@@ -202,6 +223,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_MidToMid_tupleSnd(threadData_t *t
   tmp3 = mmc_unbox_integer(tmpMeta2);
   _i = tmp3  /* pattern as ty=Integer */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _i;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_MidToMid_tupleSnd(threadData_t *threadData, modelica_metatype _t)

@@ -78,6 +78,8 @@ extern struct record_description Flags_FlagData_STRING__FLAG__desc;
 
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
+
 extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
 
 extern struct record_description SCode_Visibility_PUBLIC__desc;
@@ -246,6 +248,12 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeFunctionUtil_getImplicitRecordCo
 
 
 #define boxptr_SimCodeFunctionUtil_generateExtFunctionIncludesLibstr omc_SimCodeFunctionUtil_generateExtFunctionIncludesLibstr
+
+
+#define boxptr_SimCodeFunctionUtil_getLibraryStringInWasmFormat omc_SimCodeFunctionUtil_getLibraryStringInWasmFormat
+
+
+#define boxptr_SimCodeFunctionUtil_stripLibraryExtension omc_SimCodeFunctionUtil_stripLibraryExtension
 
 
 #define boxptr_SimCodeFunctionUtil_getLibraryStringInGccFormat omc_SimCodeFunctionUtil_getLibraryStringInGccFormat

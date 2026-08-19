@@ -18,10 +18,10 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT4,2,_OMC_LIT4_data);
 #define _OMC_LIT5_data "function mapIndexColors failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT5,30,_OMC_LIT5_data);
 #define _OMC_LIT5 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT5)
-#define _OMC_LIT6_data "/projects/OpenModelica-session2/OMCompiler/Compiler/BackEnd/Coloring.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT6,71,_OMC_LIT6_data);
+#define _OMC_LIT6_data "/home/andreas/workdir/OM/OpenModelica/OMCompiler/Compiler/BackEnd/Coloring.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT6,77,_OMC_LIT6_data);
 #define _OMC_LIT6 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT6)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT7_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT7_6,1.784195231e9);
 #define _OMC_LIT7_6 MMC_REFREALLIT(_OMC_LIT_STRUCT7_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT7,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT6,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(142)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(142)),MMC_IMMEDIATE(MMC_TAGFIXNUM(75)),_OMC_LIT7_6}};
 #define _OMC_LIT7 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT7)
@@ -51,7 +51,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT15,22,_OMC_LIT15_data);
 #define _OMC_LIT16_data "function createColoring failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT16,30,_OMC_LIT16_data);
 #define _OMC_LIT16 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT16)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT17_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT17_6,1.784195231e9);
 #define _OMC_LIT17_6 MMC_REFREALLIT(_OMC_LIT_STRUCT17_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT17,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT6,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(112)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(112)),MMC_IMMEDIATE(MMC_TAGFIXNUM(75)),_OMC_LIT17_6}};
 #define _OMC_LIT17 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT17)
@@ -84,6 +84,9 @@ PROTECTED_FUNCTION_STATIC void omc_Coloring_dumpColoring(threadData_t *threadDat
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = stringAppend(_OMC_LIT0,intString(listLength(_pattern)));
@@ -103,12 +106,18 @@ PROTECTED_FUNCTION_STATIC void omc_Coloring_dumpColoring(threadData_t *threadDat
 
   fputs(MMC_STRINGDATA(_OMC_LIT1),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Coloring_mapIndexColors(threadData_t *threadData, modelica_metatype _inColors, modelica_integer _inMaxIndex, modelica_metatype _inArray)
 {
   modelica_integer _index;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _index has no default value.
@@ -134,6 +143,7 @@ PROTECTED_FUNCTION_STATIC void omc_Coloring_mapIndexColors(threadData_t *threadD
             modelica_integer _i;
             for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp6, tmp8); _i += tmp7)
             {
+
               _index = mmc_unbox_integer(arrayGet(_inColors, _i));
 
               tmpMeta5 = mmc_mk_cons(mmc_mk_integer(_i), arrayGet(_inArray, _index));
@@ -169,6 +179,9 @@ PROTECTED_FUNCTION_STATIC void omc_Coloring_mapIndexColors(threadData_t *threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_Coloring_mapIndexColors(threadData_t *threadData, modelica_metatype _inColors, modelica_metatype _inMaxIndex, modelica_metatype _inArray)

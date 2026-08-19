@@ -484,6 +484,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmSimCodeMain_createAndExportInitial
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmSimCodeMain_outputTimeBenchmark2(threadData_t *threadData, modelica_metatype _compsIn, modelica_metatype _numCycles, modelica_metatype _eqSystemsIn, modelica_metatype _shared, modelica_integer _compIdx)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -635,6 +638,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmSimCodeMain_outputTimeBenchmark2(threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmSimCodeMain_outputTimeBenchmark2(threadData_t *threadData, modelica_metatype _compsIn, modelica_metatype _numCycles, modelica_metatype _eqSystemsIn, modelica_metatype _shared, modelica_metatype _compIdx)
@@ -657,6 +663,9 @@ void omc_HpcOmSimCodeMain_outputTimeBenchmark(threadData_t *threadData, modelica
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eqSystems has no default value.
@@ -683,6 +692,9 @@ void omc_HpcOmSimCodeMain_outputTimeBenchmark(threadData_t *threadData, modelica
 
   fputs(MMC_STRINGDATA(_OMC_LIT5),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -704,6 +716,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmSimCodeMain_checkEquationCou
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIsCorrect has no default value.
@@ -753,6 +768,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmSimCodeMain_checkEquationCou
     fputs(MMC_STRINGDATA(tmpMeta10),stdout);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oIsCorrect;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmSimCodeMain_checkEquationCount(threadData_t *threadData, modelica_metatype _iTaskGraphMeta, modelica_metatype _iSystemName, modelica_metatype _iExpectedNumberOfEqs, modelica_metatype _iSccSimEqMapping)
@@ -779,6 +797,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmSimCodeMain_checkTaskGraphMe
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIsCorrect has no default value.
@@ -808,6 +829,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmSimCodeMain_checkTaskGraphMe
     _oIsCorrect = 1 /* true */;
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oIsCorrect;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmSimCodeMain_checkTaskGraphMetaConsistency(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iSystemName)
@@ -835,6 +859,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmSimCodeMain_checkOdeSystemSi
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIsCorrect has no default value.
@@ -887,6 +914,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmSimCodeMain_checkOdeSystemSi
     fputs(MMC_STRINGDATA(_OMC_LIT19),stdout);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oIsCorrect;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmSimCodeMain_checkOdeSystemSize(threadData_t *threadData, modelica_metatype _iTaskGraphMeta, modelica_metatype _iOdeEqs, modelica_metatype _iSccSimEqMapping)
@@ -2032,6 +2062,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmSimCodeMain_setNumProc(threa
   modelica_integer tmp1_c0 __attribute__((unused)) = 0;
   modelica_boolean tmp1_c1 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _numProcOut has no default value.
@@ -2139,6 +2172,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmSimCodeMain_setNumProc(threa
   _numFixed = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_numFixed) { *out_numFixed = _numFixed; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _numProcOut;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmSimCodeMain_setNumProc(threadData_t *threadData, modelica_metatype _numProcFlag, modelica_metatype _cpCosts, modelica_metatype _taskGraphMetaIn, modelica_metatype *out_numFixed)
@@ -2164,6 +2200,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmSimCodeMain_createAndExportInitialSystem
   modelica_string _fileName = NULL;
   modelica_metatype _sccSimEqMapping = NULL;
   modelica_metatype _schedulerInfo = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _initDAE has no default value.
@@ -2226,6 +2265,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmSimCodeMain_createAndExportInitialSystem
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

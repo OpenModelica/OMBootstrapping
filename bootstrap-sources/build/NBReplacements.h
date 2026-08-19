@@ -94,6 +94,13 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBReplacements_applySimpleVar,2,0) {(vo
 
 
 DLLDirection
+modelica_metatype omc_NBReplacements_applySimpleCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _replacements);
+#define boxptr_NBReplacements_applySimpleCref omc_NBReplacements_applySimpleCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBReplacements_applySimpleCref,2,0) {(void*) boxptr_NBReplacements_applySimpleCref,0}};
+#define boxvar_NBReplacements_applySimpleCref MMC_REFSTRUCTLIT(boxvar_lit_NBReplacements_applySimpleCref)
+
+
+DLLDirection
 modelica_metatype omc_NBReplacements_applySimpleExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _replacements);
 #define boxptr_NBReplacements_applySimpleExp omc_NBReplacements_applySimpleExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBReplacements_applySimpleExp,2,0) {(void*) boxptr_NBReplacements_applySimpleExp,0}};

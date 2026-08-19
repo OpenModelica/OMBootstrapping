@@ -97,7 +97,7 @@ extern struct record_description NBAdjacency_Matrix_FINAL__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBAdjacency_Matrix_SPARSITY__desc_added
 #define NBAdjacency_Matrix_SPARSITY__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBAdjacency_Matrix_SPARSITY__desc__fields[4] = {"equation_names","dependencies","repetitions","solved_variables"};
+ADD_METARECORD_DEFINITIONS const char* NBAdjacency_Matrix_SPARSITY__desc__fields[5] = {"equation_names","equation_iterators","dependencies","repetitions","solved_crefs"};
 ADD_METARECORD_DEFINITIONS struct record_description NBAdjacency_Matrix_SPARSITY__desc = {
   "NBAdjacency_Matrix_SPARSITY",
   "NBAdjacency.Matrix.SPARSITY",
@@ -110,7 +110,7 @@ extern struct record_description NBAdjacency_Matrix_SPARSITY__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBAdjacency_Matrix_SPARSITY__desc_added
 #define NBAdjacency_Matrix_SPARSITY__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBAdjacency_Matrix_SPARSITY__desc__fields[4] = {"equation_names","dependencies","repetitions","solved_variables"};
+ADD_METARECORD_DEFINITIONS const char* NBAdjacency_Matrix_SPARSITY__desc__fields[5] = {"equation_names","equation_iterators","dependencies","repetitions","solved_crefs"};
 ADD_METARECORD_DEFINITIONS struct record_description NBAdjacency_Matrix_SPARSITY__desc = {
   "NBAdjacency_Matrix_SPARSITY",
   "NBAdjacency.Matrix.SPARSITY",

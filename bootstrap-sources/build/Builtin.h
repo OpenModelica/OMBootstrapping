@@ -22,8 +22,6 @@ extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
 
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
-extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
-
 
 DLLDirection
 void omc_Builtin_clearInitialGraph(threadData_t *threadData);

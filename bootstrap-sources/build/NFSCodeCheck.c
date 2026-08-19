@@ -150,6 +150,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeCheck_isSelfReference,2,0) {(voi
 DLLDirection
 void omc_NFSCodeCheck_checkPartialInstance(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -200,12 +203,18 @@ void omc_NFSCodeCheck_checkPartialInstance(threadData_t *threadData, modelica_me
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFSCodeCheck_checkInstanceRestriction(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inPrefix, modelica_metatype _inInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -294,12 +303,18 @@ void omc_NFSCodeCheck_checkInstanceRestriction(threadData_t *threadData, modelic
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFSCodeCheck_checkComponentsEqual(threadData_t *threadData, modelica_metatype _inComponent1, modelica_metatype _inComponent2)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -327,6 +342,9 @@ void omc_NFSCodeCheck_checkComponentsEqual(threadData_t *threadData, modelica_me
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -335,6 +353,9 @@ modelica_boolean omc_NFSCodeCheck_checkIdentNotEqTypeName(threadData_t *threadDa
 {
   modelica_boolean _outIsNotEq;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsNotEq has no default value.
@@ -403,6 +424,9 @@ modelica_boolean omc_NFSCodeCheck_checkIdentNotEqTypeName(threadData_t *threadDa
   }
   _outIsNotEq = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsNotEq;
 }
 modelica_metatype boxptr_NFSCodeCheck_checkIdentNotEqTypeName(threadData_t *threadData, modelica_metatype _inIdent, modelica_metatype _inTypeName, modelica_metatype _inInfo)
@@ -417,6 +441,9 @@ modelica_metatype boxptr_NFSCodeCheck_checkIdentNotEqTypeName(threadData_t *thre
 DLLDirection
 void omc_NFSCodeCheck_checkRecursiveComponentDeclaration(threadData_t *threadData, modelica_string _inComponentName, modelica_metatype _inComponentInfo, modelica_metatype _inTypeEnv, modelica_metatype _inTypeItem, modelica_metatype _inComponentEnv)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -558,6 +585,9 @@ void omc_NFSCodeCheck_checkRecursiveComponentDeclaration(threadData_t *threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -565,6 +595,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkDuplicateRedecl
 {
   modelica_boolean _outIsDuplicate;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsDuplicate has no default value.
@@ -650,6 +683,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkDuplicateRedecl
   }
   _outIsDuplicate = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsDuplicate;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeCheck_checkDuplicateRedeclarations2(threadData_t *threadData, modelica_metatype _inRedeclareName, modelica_metatype _inRedeclareInfo, modelica_metatype _inRedeclarations)
@@ -667,6 +703,9 @@ void omc_NFSCodeCheck_checkDuplicateRedeclarations(threadData_t *threadData, mod
   modelica_string _el_name = NULL;
   modelica_metatype _el_info = NULL;
   modelica_boolean tmp1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _el_name has no default value.
@@ -677,6 +716,9 @@ void omc_NFSCodeCheck_checkDuplicateRedeclarations(threadData_t *threadData, mod
   tmp1 = omc_NFSCodeCheck_checkDuplicateRedeclarations2(threadData, _el_name, _el_info, _inRedeclarations);
   if (0 /* false */ != tmp1) MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -684,6 +726,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkRedeclarationVi
 {
   modelica_boolean _isValid;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isValid has no default value.
@@ -740,6 +785,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkRedeclarationVi
   }
   _isValid = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isValid;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeCheck_checkRedeclarationVisibility(threadData_t *threadData, modelica_metatype _inName, modelica_metatype _inType, modelica_metatype _inOriginalVisibility, modelica_metatype _inNewVisibility, modelica_metatype _inOriginInfo, modelica_metatype _inNewInfo)
@@ -755,6 +803,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkRedeclarationVa
 {
   modelica_boolean _isValid;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isValid has no default value.
@@ -797,6 +848,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkRedeclarationVa
   }
   _isValid = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isValid;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeCheck_checkRedeclarationVariability(threadData_t *threadData, modelica_metatype _inName, modelica_metatype _inType, modelica_metatype _inVariability, modelica_metatype _inOriginInfo, modelica_metatype _inInfo)
@@ -812,6 +866,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkRedeclarationFi
 {
   modelica_boolean _isValid;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isValid has no default value.
@@ -854,6 +911,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkRedeclarationFi
   }
   _isValid = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isValid;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeCheck_checkRedeclarationFinal(threadData_t *threadData, modelica_metatype _inName, modelica_metatype _inType, modelica_metatype _inFinal, modelica_metatype _inOriginInfo, modelica_metatype _inInfo)
@@ -869,6 +929,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkCompRedeclarati
 {
   modelica_boolean _isValid;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isValid has no default value.
@@ -921,6 +984,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkCompRedeclarati
   }
   _isValid = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isValid;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeCheck_checkCompRedeclarationReplaceable(threadData_t *threadData, modelica_metatype _inName, modelica_metatype _inReplaceable, modelica_metatype _inType1, modelica_metatype _inType2, modelica_metatype _inOriginInfo, modelica_metatype _inInfo)
@@ -936,6 +1002,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkClassRedeclarat
 {
   modelica_boolean _isValid;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isValid has no default value.
@@ -980,6 +1049,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_checkClassRedeclarat
   }
   _isValid = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isValid;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeCheck_checkClassRedeclarationReplaceable(threadData_t *threadData, modelica_metatype _inName, modelica_metatype _inReplaceable, modelica_metatype _inOriginInfo, modelica_metatype _inInfo)
@@ -994,6 +1066,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeCheck_checkClassRedecl
 DLLDirection
 void omc_NFSCodeCheck_checkRedeclaredElementPrefix(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inReplacement, modelica_metatype _inInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1190,12 +1265,18 @@ void omc_NFSCodeCheck_checkRedeclaredElementPrefix(threadData_t *threadData, mod
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFSCodeCheck_checkModifierIfRedeclare(threadData_t *threadData, modelica_metatype _inItem, modelica_metatype _inModifier, modelica_metatype _inInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1236,12 +1317,18 @@ void omc_NFSCodeCheck_checkModifierIfRedeclare(threadData_t *threadData, modelic
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFSCodeCheck_checkRedeclareModifier2(threadData_t *threadData, modelica_metatype _inModifier, modelica_metatype _inBaseClass, modelica_metatype _inEnv)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -1330,12 +1417,18 @@ void omc_NFSCodeCheck_checkRedeclareModifier2(threadData_t *threadData, modelica
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFSCodeCheck_checkRedeclareModifier(threadData_t *threadData, modelica_metatype _inModifier, modelica_metatype _inBaseClass, modelica_metatype _inEnv)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1381,12 +1474,18 @@ void omc_NFSCodeCheck_checkRedeclareModifier(threadData_t *threadData, modelica_
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFSCodeCheck_checkClassExtendsReplaceability(threadData_t *threadData, modelica_metatype _inBaseClass, modelica_metatype _inOriginInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1425,6 +1524,9 @@ void omc_NFSCodeCheck_checkClassExtendsReplaceability(threadData_t *threadData, 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1432,6 +1534,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_isSelfReference(thre
 {
   modelica_boolean _selfRef;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _selfRef has no default value.
@@ -1482,6 +1587,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeCheck_isSelfReference(thre
   }
   _selfRef = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _selfRef;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeCheck_isSelfReference(threadData_t *threadData, modelica_metatype _inTypeName, modelica_metatype _inTypePath, modelica_metatype _inReferencedName)
@@ -1496,6 +1604,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeCheck_isSelfReference(
 DLLDirection
 void omc_NFSCodeCheck_checkRecursiveShortDefinition(threadData_t *threadData, modelica_metatype _inTypeSpec, modelica_string _inTypeName, modelica_metatype _inTypeEnv, modelica_metatype _inInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -1569,6 +1680,9 @@ void omc_NFSCodeCheck_checkRecursiveShortDefinition(threadData_t *threadData, mo
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

@@ -24499,7 +24499,7 @@ modelica_metatype omc_CodegenXML_algStmtForGenericXml(threadData_t *threadData, 
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,7) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
           tmp8 = mmc_unbox_integer(tmpMeta7);
@@ -24927,7 +24927,7 @@ modelica_metatype omc_CodegenXML_algStmtForRangeXml(threadData_t *threadData, mo
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,7) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
           tmp8 = mmc_unbox_integer(tmpMeta7);
@@ -25081,7 +25081,7 @@ modelica_metatype omc_CodegenXML_algStmtForXml(threadData_t *threadData, modelic
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,7) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 5));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,18,4) == 0) goto tmp3_end;
           
@@ -25094,7 +25094,7 @@ modelica_metatype omc_CodegenXML_algStmtForXml(threadData_t *threadData, modelic
           goto tmp3_done;
         }
         case 1: {
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,7) == 0) goto tmp3_end;
           
           _i_s = tmp4_2;
           _txt = tmp4_1;
@@ -27300,7 +27300,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenXML_fun__229(threadData_t
           goto tmp3_done;
         }
         case 4: {
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,7) == 0) goto tmp3_end;
           
           _i_s = tmp4_2;
           _txt = tmp4_1;

@@ -47,55 +47,41 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT18,2,1) {_OMC_LIT5,_OMC_LIT17}};
 #define _OMC_LIT18 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT18)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT19,3,10) {&Flags_FlagData_ENUM__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(1)),_OMC_LIT18}};
 #define _OMC_LIT19 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT19)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT20,2,1) {_OMC_LIT12,MMC_REFSTRUCTLIT(mmc_nil)}};
-#define _OMC_LIT20 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT20)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT21,2,1) {_OMC_LIT10,_OMC_LIT20}};
+#define _OMC_LIT20_data "Sets the grammar and semantics to accept."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT20,41,_OMC_LIT20_data);
+#define _OMC_LIT20 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT20)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT21,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(6)),_OMC_LIT0,_OMC_LIT2,_OMC_LIT3,_OMC_LIT19,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT20}};
 #define _OMC_LIT21 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT21)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT22,2,1) {_OMC_LIT8,_OMC_LIT21}};
-#define _OMC_LIT22 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT22)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT23,2,1) {_OMC_LIT6,_OMC_LIT22}};
-#define _OMC_LIT23 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT23)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT24,2,1) {_OMC_LIT4,_OMC_LIT23}};
+#define _OMC_LIT22_data "graph"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT22,5,_OMC_LIT22_data);
+#define _OMC_LIT22 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT22)
+#define _OMC_LIT23_data "$EMPTY"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT23,6,_OMC_LIT23_data);
+#define _OMC_LIT23 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT23)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT24,2,4) {&Absyn_Path_IDENT__desc,_OMC_LIT23}};
 #define _OMC_LIT24 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT24)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT25,2,3) {&Flags_ValidOptions_STRING__OPTION__desc,_OMC_LIT24}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT25,1,5) {&FCore_Kind_BASIC__TYPE__desc,}};
 #define _OMC_LIT25 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT25)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT26,1,1) {_OMC_LIT25}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT26,1,4) {&FCore_Kind_BUILTIN__desc,}};
 #define _OMC_LIT26 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT26)
-#define _OMC_LIT27_data "Sets the grammar and semantics to accept."
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT27,41,_OMC_LIT27_data);
+#define _OMC_LIT27_data "der"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT27,3,_OMC_LIT27_data);
 #define _OMC_LIT27 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT27)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT28,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(6)),_OMC_LIT0,_OMC_LIT2,_OMC_LIT3,_OMC_LIT19,_OMC_LIT26,_OMC_LIT27}};
-#define _OMC_LIT28 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT28)
-#define _OMC_LIT29_data "graph"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT29,5,_OMC_LIT29_data);
+#define _OMC_LIT28_data "time"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT28,4,_OMC_LIT28_data);
+#define _OMC_LIT28 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT28)
+#define _OMC_LIT29_data "startTime"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT29,9,_OMC_LIT29_data);
 #define _OMC_LIT29 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT29)
-#define _OMC_LIT30_data "$EMPTY"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT30,6,_OMC_LIT30_data);
+#define _OMC_LIT30_data "finalTime"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT30,9,_OMC_LIT30_data);
 #define _OMC_LIT30 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT30)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT31,2,4) {&Absyn_Path_IDENT__desc,_OMC_LIT30}};
-#define _OMC_LIT31 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT31)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT32,1,5) {&FCore_Kind_BASIC__TYPE__desc,}};
-#define _OMC_LIT32 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT32)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT33,1,4) {&FCore_Kind_BUILTIN__desc,}};
-#define _OMC_LIT33 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT33)
-#define _OMC_LIT34_data "der"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT34,3,_OMC_LIT34_data);
-#define _OMC_LIT34 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT34)
-#define _OMC_LIT35_data "time"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT35,4,_OMC_LIT35_data);
-#define _OMC_LIT35 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT35)
-#define _OMC_LIT36_data "startTime"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT36,9,_OMC_LIT36_data);
-#define _OMC_LIT36 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT36)
-#define _OMC_LIT37_data "finalTime"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT37,9,_OMC_LIT37_data);
-#define _OMC_LIT37 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT37)
-#define _OMC_LIT38_data "objective"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT38,9,_OMC_LIT38_data);
-#define _OMC_LIT38 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT38)
-#define _OMC_LIT39_data "objectiveIntegrand"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT39,18,_OMC_LIT39_data);
-#define _OMC_LIT39 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT39)
+#define _OMC_LIT31_data "objective"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT31,9,_OMC_LIT31_data);
+#define _OMC_LIT31 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT31)
+#define _OMC_LIT32_data "objectiveIntegrand"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT32,18,_OMC_LIT32_data);
+#define _OMC_LIT32 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT32)
 #include "util/modelica.h"
 
 #include "Builtin_includes.h"
@@ -113,11 +99,17 @@ DLLDirection
 void omc_Builtin_clearInitialGraph(threadData_t *threadData)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   setGlobalRoot(((modelica_integer) 18), tmpMeta1);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -169,7 +161,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_Builtin_getSetInitialGraph(threa
           if (!optionNone(tmp4_1)) goto tmp3_end;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
           _assocLst = getGlobalRoot(((modelica_integer) 18));
-          tmpMeta1 = omc_FGraph_clone(threadData, omc_Util_assoc(threadData, mmc_mk_integer(omc_Flags_getConfigEnum(threadData, _OMC_LIT28)), _assocLst));
+          tmpMeta1 = omc_FGraph_clone(threadData, omc_Util_assoc(threadData, mmc_mk_integer(omc_Flags_getConfigEnum(threadData, _OMC_LIT21)), _assocLst));
           goto tmp3_done;
         }
         case 2: {
@@ -192,7 +184,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_Builtin_getSetInitialGraph(threa
           /* Pattern matching succeeded */
           _assocLst = getGlobalRoot(((modelica_integer) 18));
 
-          _f = omc_Flags_getConfigEnum(threadData, _OMC_LIT28);
+          _f = omc_Flags_getConfigEnum(threadData, _OMC_LIT21);
 
           tmp20 = (modelica_boolean)(_f == ((modelica_integer) 2));
           if(tmp20)
@@ -308,15 +300,15 @@ modelica_metatype omc_Builtin_initialGraph(threadData_t *threadData, modelica_me
           
           _cache = tmp4_1;
           /* Pattern matching succeeded */
-          _graph = omc_FGraph_new(threadData, _OMC_LIT29, _OMC_LIT31);
+          _graph = omc_FGraph_new(threadData, _OMC_LIT22, _OMC_LIT24);
 
-          _graph = omc_FGraphBuildEnv_mkProgramGraph(threadData, omc_FBuiltin_getBasicTypes(threadData), _OMC_LIT32, _graph);
+          _graph = omc_FGraphBuildEnv_mkProgramGraph(threadData, omc_FBuiltin_getBasicTypes(threadData), _OMC_LIT25, _graph);
 
           _graph = omc_FBuiltin_initialGraphModelica(threadData, _graph, boxvar_FGraphBuildEnv_mkTypeNode, boxvar_FGraphBuildEnv_mkCompNode);
 
           omc_FBuiltin_getInitialFunctions(threadData ,&_initialProgram);
 
-          _graph = omc_FGraphBuildEnv_mkProgramGraph(threadData, _initialProgram, _OMC_LIT33, _graph);
+          _graph = omc_FGraphBuildEnv_mkProgramGraph(threadData, _initialProgram, _OMC_LIT26, _graph);
 
           _graph = omc_FBuiltin_initialGraphOptimica(threadData, _graph, boxvar_FGraphBuildEnv_mkCompNode);
 
@@ -359,6 +351,9 @@ modelica_metatype omc_Builtin_initialGraph(threadData_t *threadData, modelica_me
 DLLDirection
 void omc_Builtin_isDer(threadData_t *threadData, modelica_metatype _inPath)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -376,7 +371,7 @@ void omc_Builtin_isDer(threadData_t *threadData, modelica_metatype _inPath)
           modelica_metatype tmpMeta5;
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,1,1) == 0) goto tmp2_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
-          if (3 != MMC_STRLEN(tmpMeta5) || strcmp(MMC_STRINGDATA(_OMC_LIT34), MMC_STRINGDATA(tmpMeta5)) != 0) goto tmp2_end;
+          if (3 != MMC_STRLEN(tmpMeta5) || strcmp(MMC_STRINGDATA(_OMC_LIT27), MMC_STRINGDATA(tmpMeta5)) != 0) goto tmp2_end;
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
@@ -406,6 +401,9 @@ void omc_Builtin_isDer(threadData_t *threadData, modelica_metatype _inPath)
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -414,6 +412,9 @@ modelica_boolean omc_Builtin_variableNameIsBuiltin(threadData_t *threadData, mod
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -427,31 +428,31 @@ modelica_boolean omc_Builtin_variableNameIsBuiltin(threadData_t *threadData, mod
       for (; tmp4 < 6; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
-          if (4 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT35), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (4 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT28), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          if (9 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT36), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (9 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT29), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
           /* Pattern matching succeeded */
           tmp1 = omc_Config_acceptOptimicaGrammar(threadData);
           goto tmp3_done;
         }
         case 2: {
-          if (9 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT37), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (9 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT30), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
           /* Pattern matching succeeded */
           tmp1 = omc_Config_acceptOptimicaGrammar(threadData);
           goto tmp3_done;
         }
         case 3: {
-          if (9 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT38), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (9 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT31), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
           /* Pattern matching succeeded */
           tmp1 = omc_Config_acceptOptimicaGrammar(threadData);
           goto tmp3_done;
         }
         case 4: {
-          if (18 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT39), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (18 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT32), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
           /* Pattern matching succeeded */
           tmp1 = omc_Config_acceptOptimicaGrammar(threadData);
           goto tmp3_done;
@@ -475,6 +476,9 @@ modelica_boolean omc_Builtin_variableNameIsBuiltin(threadData_t *threadData, mod
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_Builtin_variableNameIsBuiltin(threadData_t *threadData, modelica_metatype _name)
@@ -491,6 +495,9 @@ modelica_boolean omc_Builtin_variableIsBuiltin(threadData_t *threadData, modelic
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -534,6 +541,9 @@ modelica_boolean omc_Builtin_variableIsBuiltin(threadData_t *threadData, modelic
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_Builtin_variableIsBuiltin(threadData_t *threadData, modelica_metatype _cref)

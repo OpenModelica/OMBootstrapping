@@ -143,6 +143,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_DumpGraphML_isUnMarked(threadData
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_integer tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -158,6 +161,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_DumpGraphML_isUnMarked(threadData
 
   _b = (!(mmc_unbox_integer(arrayGet(_arr,labs(_indx)) /* DAE.ASUB */) == _mark));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_isUnMarked(threadData_t *threadData, modelica_metatype _ass, modelica_metatype _indx)
@@ -1931,6 +1937,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
 DLLDirection
 void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inSystem, modelica_metatype _inShared, modelica_metatype _inids, modelica_string _filename, modelica_boolean _numberMode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2373,6 +2382,9 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inSystem, modelica_metatype _inShared, modelica_metatype _inids, modelica_metatype _filename, modelica_metatype _numberMode)

@@ -20,15 +20,29 @@ extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
 
 extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
 
+extern struct record_description Flags_FlagData_STRING__FLAG__desc;
+
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
+extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
+
 extern struct record_description NSimJacobian_SimJacobian_SIM__JAC__desc;
+
+extern struct record_description NSimJacobian_Sparsity_EMPTY__desc;
+
+extern struct record_description NSimJacobian_Sparsity_SPARSITY__desc;
+
+extern struct record_description NSimJacobian_SparsityRow_SPARSITY__ROW__desc;
 
 extern struct record_description SimCode_JacobianColumn_JAC__COLUMN__desc;
 
 extern struct record_description SimCode_JacobianMatrix_JAC__MATRIX__desc;
 
-extern struct record_description SourceInfo_SOURCEINFO__desc;
+extern struct record_description SimCode_Sparsity_EMPTY__desc;
+
+extern struct record_description SimCode_Sparsity_SPARSITY__desc;
+
+extern struct record_description SimCode_SparsityRow_SPARSITY__ROW__desc;
 
 
 DLLDirection
@@ -67,27 +81,6 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_SimJacobian_empty,2,0) {(v
 
 
 DLLDirection
-modelica_metatype omc_NSimJacobian_SimJacobian_createSparsityColoring(threadData_t *threadData, modelica_metatype _coloring, modelica_metatype _idx_map, modelica_metatype *out_simColoringRows);
-#define boxptr_NSimJacobian_SimJacobian_createSparsityColoring omc_NSimJacobian_SimJacobian_createSparsityColoring
-static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_SimJacobian_createSparsityColoring,2,0) {(void*) boxptr_NSimJacobian_SimJacobian_createSparsityColoring,0}};
-#define boxvar_NSimJacobian_SimJacobian_createSparsityColoring MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_SimJacobian_createSparsityColoring)
-
-
-DLLDirection
-modelica_metatype omc_NSimJacobian_SimJacobian_createSparsityPattern(threadData_t *threadData, modelica_metatype _cols, modelica_metatype _local_idx_map);
-#define boxptr_NSimJacobian_SimJacobian_createSparsityPattern omc_NSimJacobian_SimJacobian_createSparsityPattern
-static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_SimJacobian_createSparsityPattern,2,0) {(void*) boxptr_NSimJacobian_SimJacobian_createSparsityPattern,0}};
-#define boxvar_NSimJacobian_SimJacobian_createSparsityPattern MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_SimJacobian_createSparsityPattern)
-
-
-DLLDirection
-modelica_metatype omc_NSimJacobian_SimJacobian_createSparsity(threadData_t *threadData, modelica_metatype _jacobian, modelica_metatype _local_idx_map, modelica_metatype *out_sparsityT, modelica_metatype *out_coloring, modelica_metatype *out_rowColoring);
-#define boxptr_NSimJacobian_SimJacobian_createSparsity omc_NSimJacobian_SimJacobian_createSparsity
-static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_SimJacobian_createSparsity,2,0) {(void*) boxptr_NSimJacobian_SimJacobian_createSparsity,0}};
-#define boxvar_NSimJacobian_SimJacobian_createSparsity MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_SimJacobian_createSparsity)
-
-
-DLLDirection
 modelica_metatype omc_NSimJacobian_SimJacobian_createOptimizationJacobian(threadData_t *threadData, modelica_metatype _partitions, modelica_metatype __omcQ_24in_5FsimCodeIndices, modelica_metatype _simcode_map, modelica_metatype *out_simJacMrf, modelica_metatype *out_simJacR0, modelica_metatype *out_simCodeIndices);
 #define boxptr_NSimJacobian_SimJacobian_createOptimizationJacobian omc_NSimJacobian_SimJacobian_createOptimizationJacobian
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_SimJacobian_createOptimizationJacobian,2,0) {(void*) boxptr_NSimJacobian_SimJacobian_createOptimizationJacobian,0}};
@@ -121,6 +114,55 @@ modelica_string omc_NSimJacobian_SimJacobian_toString(threadData_t *threadData, 
 #define boxptr_NSimJacobian_SimJacobian_toString omc_NSimJacobian_SimJacobian_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_SimJacobian_toString,2,0) {(void*) boxptr_NSimJacobian_SimJacobian_toString,0}};
 #define boxvar_NSimJacobian_SimJacobian_toString MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_SimJacobian_toString)
+
+
+DLLDirection
+modelica_string omc_NSimJacobian_Sparsity_toString(threadData_t *threadData, modelica_metatype _sparsity);
+#define boxptr_NSimJacobian_Sparsity_toString omc_NSimJacobian_Sparsity_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_Sparsity_toString,2,0) {(void*) boxptr_NSimJacobian_Sparsity_toString,0}};
+#define boxvar_NSimJacobian_Sparsity_toString MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_Sparsity_toString)
+
+
+DLLDirection
+modelica_metatype omc_NSimJacobian_Sparsity_convert(threadData_t *threadData, modelica_metatype _sparsity);
+#define boxptr_NSimJacobian_Sparsity_convert omc_NSimJacobian_Sparsity_convert
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_Sparsity_convert,2,0) {(void*) boxptr_NSimJacobian_Sparsity_convert,0}};
+#define boxvar_NSimJacobian_Sparsity_convert MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_Sparsity_convert)
+
+
+DLLDirection
+modelica_metatype omc_NSimJacobian_Sparsity_create(threadData_t *threadData, modelica_metatype _mat);
+#define boxptr_NSimJacobian_Sparsity_create omc_NSimJacobian_Sparsity_create
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_Sparsity_create,2,0) {(void*) boxptr_NSimJacobian_Sparsity_create,0}};
+#define boxvar_NSimJacobian_Sparsity_create MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_Sparsity_create)
+
+
+DLLDirection
+modelica_string omc_NSimJacobian_SparsityRow_toString_dependencyString(threadData_t *threadData, modelica_metatype _tpl);
+#define boxptr_NSimJacobian_SparsityRow_toString_dependencyString omc_NSimJacobian_SparsityRow_toString_dependencyString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_SparsityRow_toString_dependencyString,2,0) {(void*) boxptr_NSimJacobian_SparsityRow_toString_dependencyString,0}};
+#define boxvar_NSimJacobian_SparsityRow_toString_dependencyString MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_SparsityRow_toString_dependencyString)
+
+
+DLLDirection
+modelica_string omc_NSimJacobian_SparsityRow_toString(threadData_t *threadData, modelica_metatype _row);
+#define boxptr_NSimJacobian_SparsityRow_toString omc_NSimJacobian_SparsityRow_toString
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_SparsityRow_toString,2,0) {(void*) boxptr_NSimJacobian_SparsityRow_toString,0}};
+#define boxvar_NSimJacobian_SparsityRow_toString MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_SparsityRow_toString)
+
+
+DLLDirection
+modelica_metatype omc_NSimJacobian_SparsityRow_convert(threadData_t *threadData, modelica_metatype _row);
+#define boxptr_NSimJacobian_SparsityRow_convert omc_NSimJacobian_SparsityRow_convert
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_SparsityRow_convert,2,0) {(void*) boxptr_NSimJacobian_SparsityRow_convert,0}};
+#define boxvar_NSimJacobian_SparsityRow_convert MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_SparsityRow_convert)
+
+
+DLLDirection
+modelica_metatype omc_NSimJacobian_SparsityRow_create(threadData_t *threadData, modelica_metatype _equation_name, modelica_metatype _equation_iterator, modelica_metatype _dependencies, modelica_metatype _repetitions, modelica_metatype _solved_crefs);
+#define boxptr_NSimJacobian_SparsityRow_create omc_NSimJacobian_SparsityRow_create
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimJacobian_SparsityRow_create,2,0) {(void*) boxptr_NSimJacobian_SparsityRow_create,0}};
+#define boxvar_NSimJacobian_SparsityRow_create MMC_REFSTRUCTLIT(boxvar_lit_NSimJacobian_SparsityRow_create)
 
 #ifdef __cplusplus
 }

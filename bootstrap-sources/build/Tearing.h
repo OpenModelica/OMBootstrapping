@@ -60,6 +60,8 @@ extern struct record_description Flags_FlagData_INT__FLAG__desc;
 
 extern struct record_description Flags_FlagData_INT__LIST__FLAG__desc;
 
+extern struct record_description Flags_FlagData_REAL__FLAG__desc;
+
 extern struct record_description Flags_FlagData_STRING__FLAG__desc;
 
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
@@ -228,6 +230,9 @@ DLLDirection
 modelica_metatype boxptr_Tearing_unsolvable(threadData_t *threadData, modelica_metatype _elem);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_unsolvable,2,0) {(void*) boxptr_Tearing_unsolvable,0}};
 #define boxvar_Tearing_unsolvable MMC_REFSTRUCTLIT(boxvar_lit_Tearing_unsolvable)
+
+
+#define boxptr_Tearing_substituteKnownVar omc_Tearing_substituteKnownVar
 
 
 #define boxptr_Tearing_getTearingMethod omc_Tearing_getTearingMethod

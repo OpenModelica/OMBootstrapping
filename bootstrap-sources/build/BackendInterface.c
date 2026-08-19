@@ -11,6 +11,9 @@ void omc_BackendInterface_initInstHashTable(threadData_t *threadData)
 {
   modelica_metatype _functions = NULL;
   modelica_fnptr _func;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _functions has no default value.
@@ -20,6 +23,9 @@ void omc_BackendInterface_initInstHashTable(threadData_t *threadData)
 
   (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((void(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2)))) : ((void(*)(threadData_t*)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -105,6 +111,9 @@ modelica_boolean omc_BackendInterface_noRewriteRulesFrontEnd(threadData_t *threa
   modelica_boolean _noRules;
   modelica_metatype _functions = NULL;
   modelica_fnptr _func;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _noRules has no default value.
@@ -115,6 +124,9 @@ modelica_boolean omc_BackendInterface_noRewriteRulesFrontEnd(threadData_t *threa
 
   _noRules = mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2)))) : ((modelica_metatype(*)(threadData_t*)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _noRules;
 }
 modelica_metatype boxptr_BackendInterface_noRewriteRulesFrontEnd(threadData_t *threadData)
@@ -129,10 +141,16 @@ modelica_metatype boxptr_BackendInterface_noRewriteRulesFrontEnd(threadData_t *t
 DLLDirection
 void omc_BackendInterface_initializeBackendInterface(threadData_t *threadData, modelica_metatype _inFunctions)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   setGlobalRoot(((modelica_integer) 31), _inFunctions);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

@@ -360,6 +360,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Figaro_fcElement,2,0) {(void*) boxptr_F
 
 PROTECTED_FUNCTION_STATIC void omc_Figaro_printToken(threadData_t *threadData, modelica_metatype _inToken)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -419,11 +422,17 @@ PROTECTED_FUNCTION_STATIC void omc_Figaro_printToken(threadData_t *threadData, m
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Figaro_printTokenList(threadData_t *threadData, modelica_metatype _inTokenList)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -494,11 +503,17 @@ PROTECTED_FUNCTION_STATIC void omc_Figaro_printTokenList(threadData_t *threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Figaro_printFigaroObjectList(threadData_t *threadData, modelica_metatype _inFigaroObjectList)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -567,11 +582,17 @@ PROTECTED_FUNCTION_STATIC void omc_Figaro_printFigaroObjectList(threadData_t *th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Figaro_printFigaroClass(threadData_t *threadData, modelica_metatype _inFigaroClass)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -617,11 +638,17 @@ PROTECTED_FUNCTION_STATIC void omc_Figaro_printFigaroClass(threadData_t *threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Figaro_printFigaroClassList(threadData_t *threadData, modelica_metatype _inFigaroClassList)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -690,6 +717,9 @@ PROTECTED_FUNCTION_STATIC void omc_Figaro_printFigaroClassList(threadData_t *thr
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -697,6 +727,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Figaro_reportErrors(threadData_t 
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -749,6 +782,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Figaro_reportErrors(threadData_t 
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Figaro_reportErrors(threadData_t *threadData, modelica_metatype _inStringList)
@@ -844,6 +880,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Figaro_isToBeReported(threadData_
   modelica_boolean _outBoolean;
   modelica_metatype _errorsToReport = NULL;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -923,6 +962,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Figaro_isToBeReported(threadData_
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Figaro_isToBeReported(threadData_t *threadData, modelica_metatype _inStringTupleList)
@@ -1430,12 +1472,18 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Figaro_isInfoTag(threadData_t *th
 {
   modelica_boolean _outBoolean;
   modelica_metatype _itl = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
   _itl = _OMC_LIT17;
   _outBoolean = listMember(_inTagName, _itl);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Figaro_isInfoTag(threadData_t *threadData, modelica_metatype _inTagName)
@@ -1451,12 +1499,18 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Figaro_isKnownTag(threadData_t *t
 {
   modelica_boolean _outBoolean;
   modelica_metatype _ktl = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
   _ktl = _OMC_LIT20;
   _outBoolean = listMember(_inTagName, _ktl);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Figaro_isKnownTag(threadData_t *threadData, modelica_metatype _inTagName)
@@ -2167,6 +2221,9 @@ PROTECTED_FUNCTION_STATIC void omc_Figaro_callFigaroProcessor(threadData_t *thre
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _command has no default value.
@@ -2177,6 +2234,9 @@ PROTECTED_FUNCTION_STATIC void omc_Figaro_callFigaroProcessor(threadData_t *thre
 
   omc_System_systemCall(threadData, _command, _OMC_LIT21);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3722,6 +3782,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Figaro_fcElementListExt(threadDat
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -3821,6 +3884,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Figaro_fcElementListExt(threadDat
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Figaro_fcElementListExt(threadData_t *threadData, modelica_metatype _inFigaroBase, modelica_metatype _inFigaroType, modelica_metatype _inProgram, modelica_metatype _inClassName, modelica_metatype _inElementList, modelica_metatype _env)
@@ -3836,6 +3902,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Figaro_fcExtends(threadData_t *th
 {
   modelica_boolean _doExtend;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _doExtend has no default value.
@@ -3957,6 +4026,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Figaro_fcExtends(threadData_t *th
   }
   _doExtend = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _doExtend;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Figaro_fcExtends(threadData_t *threadData, modelica_metatype _inFigaroBase, modelica_metatype _inFigaroType, modelica_metatype _inProgram, modelica_metatype _inClassName, modelica_metatype _inElement, modelica_metatype _env)
@@ -4153,6 +4225,9 @@ void omc_Figaro_run(threadData_t *threadData, modelica_metatype _inProgram, mode
   modelica_string _xml = NULL;
   modelica_string _xml2 = NULL;
   modelica_metatype _sl = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = stringAppend(_workingDir,_OMC_LIT59);
@@ -4199,6 +4274,9 @@ void omc_Figaro_run(threadData_t *threadData, modelica_metatype _inProgram, mode
     MMC_THROW_INTERNAL();
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

@@ -734,6 +734,9 @@ DLLDirection
 void omc_NFInstUtil_mergeScalarsComponentBinding(threadData_t *threadData, modelica_metatype _node, modelica_metatype _nameMap)
 {
   modelica_metatype _comp = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _comp has no default value.
@@ -784,6 +787,9 @@ void omc_NFInstUtil_mergeScalarsComponentBinding(threadData_t *threadData, model
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -798,6 +804,9 @@ void omc_NFInstUtil_mergeScalarsComponentBindings(threadData_t *threadData, mode
   modelica_metatype _cls = NULL;
   modelica_metatype _cls_tree = NULL;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _cls has no default value.
@@ -813,6 +822,9 @@ void omc_NFInstUtil_mergeScalarsComponentBindings(threadData_t *threadData, mode
 
   omc_NFInstNode_InstNode_updateClass(threadData, _cls, _node);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1759,10 +1771,16 @@ modelica_metatype omc_NFInstUtil_mergeComponents(threadData_t *threadData, model
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFInstUtil_getModSignature_sub__mod__lt(threadData_t *threadData, modelica_metatype _m1, modelica_metatype _m2)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _res = (stringCompare((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_m1), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_m2), 2)))) < 0);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFInstUtil_getModSignature_sub__mod__lt(threadData_t *threadData, modelica_metatype _m1, modelica_metatype _m2)
@@ -1931,6 +1949,9 @@ modelica_boolean omc_NFInstUtil_isMergeableType(threadData_t *threadData, modeli
 {
   modelica_boolean _mergeable;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _mergeable has no default value.
@@ -1971,6 +1992,9 @@ modelica_boolean omc_NFInstUtil_isMergeableType(threadData_t *threadData, modeli
   }
   _mergeable = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _mergeable;
 }
 modelica_metatype boxptr_NFInstUtil_isMergeableType(threadData_t *threadData, modelica_metatype _ty)
@@ -1987,6 +2011,9 @@ modelica_boolean omc_NFInstUtil_isMergeableMod(threadData_t *threadData, modelic
 {
   modelica_boolean _mergeable;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _mergeable has no default value.
@@ -2049,6 +2076,9 @@ modelica_boolean omc_NFInstUtil_isMergeableMod(threadData_t *threadData, modelic
   }
   _mergeable = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _mergeable;
 }
 modelica_metatype boxptr_NFInstUtil_isMergeableMod(threadData_t *threadData, modelica_metatype _mod)
@@ -2065,6 +2095,9 @@ modelica_boolean omc_NFInstUtil_isMergeableComponent(threadData_t *threadData, m
 {
   modelica_boolean _isMergeable;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isMergeable has no default value.
@@ -2122,6 +2155,9 @@ modelica_boolean omc_NFInstUtil_isMergeableComponent(threadData_t *threadData, m
   }
   _isMergeable = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isMergeable;
 }
 modelica_metatype boxptr_NFInstUtil_isMergeableComponent(threadData_t *threadData, modelica_metatype _element)
@@ -3058,6 +3094,9 @@ void omc_NFInstUtil_printStructuralParameters(threadData_t *threadData, modelica
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta9;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _params has no default value.
@@ -3142,6 +3181,9 @@ void omc_NFInstUtil_printStructuralParameters(threadData_t *threadData, modelica
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3223,6 +3265,9 @@ DLLDirection
 void omc_NFInstUtil_dumpFlatModelDebug(threadData_t *threadData, modelica_string _stage, modelica_metatype _flatModel, modelica_metatype _functions)
 {
   modelica_metatype _flat_model = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _flat_model = _flatModel;
@@ -3253,6 +3298,9 @@ void omc_NFInstUtil_dumpFlatModelDebug(threadData_t *threadData, modelica_string
     fputs(MMC_STRINGDATA(_OMC_LIT103),stdout);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

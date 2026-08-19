@@ -49,6 +49,9 @@ modelica_boolean omc_AdjacencyMatrix_isEmpty(threadData_t *threadData, modelica_
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_integer tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _b = 1 /* true */;
@@ -66,6 +69,9 @@ modelica_boolean omc_AdjacencyMatrix_isEmpty(threadData_t *threadData, modelica_
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_AdjacencyMatrix_isEmpty(threadData_t *threadData, modelica_metatype _m)
@@ -259,11 +265,17 @@ modelica_metatype boxptr_AdjacencyMatrix_transposeAdjacencyMatrix(threadData_t *
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_AdjacencyMatrix_isAssigned(threadData_t *threadData, modelica_metatype _ass, modelica_integer _i)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (mmc_unbox_integer(arrayGet(_ass,_i) /* DAE.ASUB */) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AdjacencyMatrix_isAssigned(threadData_t *threadData, modelica_metatype _ass, modelica_metatype _i)

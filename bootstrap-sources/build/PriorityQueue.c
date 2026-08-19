@@ -305,6 +305,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PriorityQueue_rank(threadData_t *
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _rank has no default value.
@@ -314,6 +317,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PriorityQueue_rank(threadData_t *
   tmp3 = mmc_unbox_integer(tmpMeta2);
   _rank = tmp3  /* pattern as ty=Integer */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _rank;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PriorityQueue_rank(threadData_t *threadData, modelica_metatype _tree)
@@ -718,11 +724,17 @@ DLLDirection
 modelica_boolean omc_PriorityQueue_isEmpty(threadData_t *threadData, modelica_metatype _ts)
 {
   modelica_boolean _isEmpty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
   _isEmpty = listEmpty(_ts);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_PriorityQueue_isEmpty(threadData_t *threadData, modelica_metatype _ts)
@@ -746,6 +758,9 @@ modelica_boolean omc_PriorityQueue_compareElement(threadData_t *threadData, mode
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_integer tmp6;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -765,6 +780,9 @@ modelica_boolean omc_PriorityQueue_compareElement(threadData_t *threadData, mode
 
   _b = (_p1 <= _p2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_PriorityQueue_compareElement(threadData_t *threadData, modelica_metatype _el1, modelica_metatype _el2)

@@ -1055,7 +1055,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_createLabelVar(threadD
           tmpMeta39 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta40 = mmc_mk_box4(4, &DAE_ComponentRef_CREF__IDENT__desc, _name1, _OMC_LIT2, tmpMeta39);
           tmpMeta41 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta42 = mmc_mk_box(32, 3, &SimCodeVar_SimVar_SIMVAR__desc, tmpMeta40, _OMC_LIT3, _OMC_LIT9, _OMC_LIT9, _OMC_LIT9, mmc_mk_integer(_p), mmc_mk_none(), mmc_mk_none(), _OMC_LIT8, mmc_mk_none(), mmc_mk_boolean(1 /* true */), _OMC_LIT2, mmc_mk_boolean(0 /* false */), mmc_mk_none(), _OMC_LIT21, _OMC_LIT13, _OMC_LIT23, mmc_mk_none(), mmc_mk_none(), tmpMeta41, mmc_mk_boolean(0 /* false */), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), mmc_mk_boolean(0 /* false */));
+          tmpMeta42 = mmc_mk_box(33, 3, &SimCodeVar_SimVar_SIMVAR__desc, tmpMeta40, _OMC_LIT3, _OMC_LIT9, _OMC_LIT9, _OMC_LIT9, mmc_mk_integer(_p), mmc_mk_none(), mmc_mk_none(), _OMC_LIT8, mmc_mk_none(), mmc_mk_boolean(1 /* true */), _OMC_LIT2, mmc_mk_boolean(0 /* false */), mmc_mk_none(), _OMC_LIT21, _OMC_LIT13, _OMC_LIT23, mmc_mk_none(), mmc_mk_none(), tmpMeta41, mmc_mk_boolean(0 /* false */), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), mmc_mk_boolean(0 /* false */), mmc_mk_boolean(0 /* false */));
           _simVar_1 = tmpMeta42;
 
           _param = listReverse(_param);
@@ -1068,7 +1068,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_createLabelVar(threadD
           tmpMeta44 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta45 = mmc_mk_box4(4, &DAE_ComponentRef_CREF__IDENT__desc, _name2, _OMC_LIT2, tmpMeta44);
           tmpMeta46 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta47 = mmc_mk_box(32, 3, &SimCodeVar_SimVar_SIMVAR__desc, tmpMeta45, _OMC_LIT3, _OMC_LIT9, _OMC_LIT9, _OMC_LIT9, mmc_mk_integer(_p), mmc_mk_none(), mmc_mk_none(), _OMC_LIT19, mmc_mk_none(), mmc_mk_boolean(1 /* true */), _OMC_LIT2, mmc_mk_boolean(0 /* false */), mmc_mk_none(), _OMC_LIT21, _OMC_LIT13, _OMC_LIT23, mmc_mk_none(), mmc_mk_none(), tmpMeta46, mmc_mk_boolean(0 /* false */), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), mmc_mk_boolean(0 /* false */));
+          tmpMeta47 = mmc_mk_box(33, 3, &SimCodeVar_SimVar_SIMVAR__desc, tmpMeta45, _OMC_LIT3, _OMC_LIT9, _OMC_LIT9, _OMC_LIT9, mmc_mk_integer(_p), mmc_mk_none(), mmc_mk_none(), _OMC_LIT19, mmc_mk_none(), mmc_mk_boolean(1 /* true */), _OMC_LIT2, mmc_mk_boolean(0 /* false */), mmc_mk_none(), _OMC_LIT21, _OMC_LIT13, _OMC_LIT23, mmc_mk_none(), mmc_mk_none(), tmpMeta46, mmc_mk_boolean(0 /* false */), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_boolean(0 /* false */), mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), mmc_mk_boolean(0 /* false */), mmc_mk_boolean(0 /* false */));
           _simVar_2 = tmpMeta47;
 
           tmpMeta48 = mmc_mk_cons(_simVar_2, _param_1);
@@ -5279,6 +5279,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
       modelica_string _iter = NULL;
       modelica_metatype _conditions = NULL;
       modelica_boolean _initialCall;
+      modelica_metatype _sub_iters = NULL;
       volatile mmc_switch_type tmp4;
       int tmp5;
       // _vars has no default value.
@@ -5311,6 +5312,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
       // _iter has no default value.
       // _conditions has no default value.
       // _initialCall has no default value.
+      // _sub_iters has no default value.
       tmp4 = 0;
       MMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
@@ -5437,10 +5439,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
           modelica_metatype tmpMeta32;
           modelica_metatype tmpMeta33;
           modelica_metatype tmpMeta34;
+          modelica_metatype tmpMeta35;
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta24 = MMC_CAR(tmp4_1);
           tmpMeta25 = MMC_CDR(tmp4_1);
-          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta24,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta24,4,7) == 0) goto tmp3_end;
           tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 2));
           tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 3));
           tmp28 = mmc_unbox_integer(tmpMeta27);
@@ -5448,6 +5451,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
           tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 5));
           tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 6));
           tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 7));
+          tmpMeta33 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 8));
           
           _ty = tmpMeta26;
           _iterIsArray = tmp28  /* pattern as ty=Boolean */;
@@ -5455,6 +5459,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
           _e = tmpMeta30;
           _stmtLst = tmpMeta31;
           _source = tmpMeta32;
+          _sub_iters = tmpMeta33;
           _rest = tmpMeta25;
           _vars = tmp4_2;
           _idx = tmp4_3;
@@ -5469,34 +5474,34 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
           _rest2 = omc_ReduceDAE_addLabelToAlgorithms(threadData, _rest, _vars_1, _idx2, _reduceList, _inVarRepl ,&_vars_2 ,&_idx3 ,&_labels2);
 
           _labels3 = listAppend(_labels, _labels2);
-          tmpMeta34 = mmc_mk_box7(7, &DAE_Statement_STMT__FOR__desc, _ty, mmc_mk_boolean(_iterIsArray), _iter, _e, _stmtLst2, _source);
-          tmpMeta33 = mmc_mk_cons(tmpMeta34, _rest2);
-          tmpMeta[0+0] = tmpMeta33;
+          tmpMeta35 = mmc_mk_box8(7, &DAE_Statement_STMT__FOR__desc, _ty, mmc_mk_boolean(_iterIsArray), _iter, _e, _stmtLst2, _source, _sub_iters);
+          tmpMeta34 = mmc_mk_cons(tmpMeta35, _rest2);
+          tmpMeta[0+0] = tmpMeta34;
           tmpMeta[0+1] = _vars_2;
           tmpMeta[0+2] = _idx3;
           tmpMeta[0+3] = _labels3;
           goto tmp3_done;
         }
         case 4: {
-          modelica_metatype tmpMeta35;
           modelica_metatype tmpMeta36;
           modelica_metatype tmpMeta37;
           modelica_metatype tmpMeta38;
           modelica_metatype tmpMeta39;
           modelica_metatype tmpMeta40;
           modelica_metatype tmpMeta41;
+          modelica_metatype tmpMeta42;
           if (listEmpty(tmp4_1)) goto tmp3_end;
-          tmpMeta35 = MMC_CAR(tmp4_1);
-          tmpMeta36 = MMC_CDR(tmp4_1);
-          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta35,6,3) == 0) goto tmp3_end;
-          tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta35), 2));
-          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta35), 3));
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta35), 4));
+          tmpMeta36 = MMC_CAR(tmp4_1);
+          tmpMeta37 = MMC_CDR(tmp4_1);
+          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta36,6,3) == 0) goto tmp3_end;
+          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta36), 2));
+          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta36), 3));
+          tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta36), 4));
           
-          _e = tmpMeta37;
-          _stmtLst = tmpMeta38;
-          _source = tmpMeta39;
-          _rest = tmpMeta36;
+          _e = tmpMeta38;
+          _stmtLst = tmpMeta39;
+          _source = tmpMeta40;
+          _rest = tmpMeta37;
           _vars = tmp4_2;
           _idx = tmp4_3;
           tmp4 += 2; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -5510,45 +5515,45 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
           _rest2 = omc_ReduceDAE_addLabelToAlgorithms(threadData, _rest, _vars_1, _idx2, _reduceList, _inVarRepl ,&_vars_2 ,&_idx3 ,&_labels2);
 
           _labels3 = listAppend(_labels, _labels2);
-          tmpMeta41 = mmc_mk_box4(9, &DAE_Statement_STMT__WHILE__desc, _e, _stmtLst2, _source);
-          tmpMeta40 = mmc_mk_cons(tmpMeta41, _rest2);
-          tmpMeta[0+0] = tmpMeta40;
+          tmpMeta42 = mmc_mk_box4(9, &DAE_Statement_STMT__WHILE__desc, _e, _stmtLst2, _source);
+          tmpMeta41 = mmc_mk_cons(tmpMeta42, _rest2);
+          tmpMeta[0+0] = tmpMeta41;
           tmpMeta[0+1] = _vars_2;
           tmpMeta[0+2] = _idx3;
           tmpMeta[0+3] = _labels3;
           goto tmp3_done;
         }
         case 5: {
-          modelica_metatype tmpMeta42;
           modelica_metatype tmpMeta43;
           modelica_metatype tmpMeta44;
           modelica_metatype tmpMeta45;
           modelica_metatype tmpMeta46;
-          modelica_integer tmp47;
-          modelica_metatype tmpMeta48;
+          modelica_metatype tmpMeta47;
+          modelica_integer tmp48;
           modelica_metatype tmpMeta49;
           modelica_metatype tmpMeta50;
           modelica_metatype tmpMeta51;
           modelica_metatype tmpMeta52;
+          modelica_metatype tmpMeta53;
           if (listEmpty(tmp4_1)) goto tmp3_end;
-          tmpMeta42 = MMC_CAR(tmp4_1);
-          tmpMeta43 = MMC_CDR(tmp4_1);
-          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta42,7,6) == 0) goto tmp3_end;
-          tmpMeta44 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta42), 2));
-          tmpMeta45 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta42), 3));
-          tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta42), 4));
-          tmp47 = mmc_unbox_integer(tmpMeta46);
-          tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta42), 5));
-          tmpMeta49 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta42), 6));
-          if (!optionNone(tmpMeta49)) goto tmp3_end;
-          tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta42), 7));
+          tmpMeta43 = MMC_CAR(tmp4_1);
+          tmpMeta44 = MMC_CDR(tmp4_1);
+          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta43,7,6) == 0) goto tmp3_end;
+          tmpMeta45 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta43), 2));
+          tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta43), 3));
+          tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta43), 4));
+          tmp48 = mmc_unbox_integer(tmpMeta47);
+          tmpMeta49 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta43), 5));
+          tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta43), 6));
+          if (!optionNone(tmpMeta50)) goto tmp3_end;
+          tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta43), 7));
           
-          _e = tmpMeta44;
-          _conditions = tmpMeta45;
-          _initialCall = tmp47  /* pattern as ty=Boolean */;
-          _stmtLst = tmpMeta48;
-          _source = tmpMeta50;
-          _rest = tmpMeta43;
+          _e = tmpMeta45;
+          _conditions = tmpMeta46;
+          _initialCall = tmp48  /* pattern as ty=Boolean */;
+          _stmtLst = tmpMeta49;
+          _source = tmpMeta51;
+          _rest = tmpMeta44;
           _vars = tmp4_2;
           _idx = tmp4_3;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -5562,22 +5567,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
           _rest2 = omc_ReduceDAE_addLabelToAlgorithms(threadData, _rest, _vars_1, _idx2, _reduceList, _inVarRepl ,&_vars_2 ,&_idx3 ,&_labels2);
 
           _labels3 = listAppend(_labels, _labels2);
-          tmpMeta52 = mmc_mk_box7(10, &DAE_Statement_STMT__WHEN__desc, _e, _conditions, mmc_mk_boolean(_initialCall), _stmtLst2, mmc_mk_none(), _source);
-          tmpMeta51 = mmc_mk_cons(tmpMeta52, _rest2);
-          tmpMeta[0+0] = tmpMeta51;
+          tmpMeta53 = mmc_mk_box7(10, &DAE_Statement_STMT__WHEN__desc, _e, _conditions, mmc_mk_boolean(_initialCall), _stmtLst2, mmc_mk_none(), _source);
+          tmpMeta52 = mmc_mk_cons(tmpMeta53, _rest2);
+          tmpMeta[0+0] = tmpMeta52;
           tmpMeta[0+1] = _vars_2;
           tmpMeta[0+2] = _idx3;
           tmpMeta[0+3] = _labels3;
           goto tmp3_done;
         }
         case 6: {
-          modelica_metatype tmpMeta53;
           modelica_metatype tmpMeta54;
           modelica_metatype tmpMeta55;
           modelica_metatype tmpMeta56;
           modelica_metatype tmpMeta57;
-          modelica_integer tmp58;
-          modelica_metatype tmpMeta59;
+          modelica_metatype tmpMeta58;
+          modelica_integer tmp59;
           modelica_metatype tmpMeta60;
           modelica_metatype tmpMeta61;
           modelica_metatype tmpMeta62;
@@ -5590,27 +5594,28 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
           modelica_metatype tmpMeta69;
           modelica_metatype tmpMeta70;
           modelica_metatype tmpMeta71;
+          modelica_metatype tmpMeta72;
           if (listEmpty(tmp4_1)) goto tmp3_end;
-          tmpMeta53 = MMC_CAR(tmp4_1);
-          tmpMeta54 = MMC_CDR(tmp4_1);
-          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta53,7,6) == 0) goto tmp3_end;
-          tmpMeta55 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta53), 2));
-          tmpMeta56 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta53), 3));
-          tmpMeta57 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta53), 4));
-          tmp58 = mmc_unbox_integer(tmpMeta57);
-          tmpMeta59 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta53), 5));
-          tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta53), 6));
-          if (optionNone(tmpMeta60)) goto tmp3_end;
-          tmpMeta61 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta60), 1));
-          tmpMeta62 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta53), 7));
+          tmpMeta54 = MMC_CAR(tmp4_1);
+          tmpMeta55 = MMC_CDR(tmp4_1);
+          if (mmc__uniontype__metarecord__typedef__equal(tmpMeta54,7,6) == 0) goto tmp3_end;
+          tmpMeta56 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 2));
+          tmpMeta57 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 3));
+          tmpMeta58 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 4));
+          tmp59 = mmc_unbox_integer(tmpMeta58);
+          tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 5));
+          tmpMeta61 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 6));
+          if (optionNone(tmpMeta61)) goto tmp3_end;
+          tmpMeta62 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta61), 1));
+          tmpMeta63 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 7));
           
-          _e = tmpMeta55;
-          _conditions = tmpMeta56;
-          _initialCall = tmp58  /* pattern as ty=Boolean */;
-          _stmtLst = tmpMeta59;
-          _elseWhen = tmpMeta61;
-          _source = tmpMeta62;
-          _rest = tmpMeta54;
+          _e = tmpMeta56;
+          _conditions = tmpMeta57;
+          _initialCall = tmp59  /* pattern as ty=Boolean */;
+          _stmtLst = tmpMeta60;
+          _elseWhen = tmpMeta62;
+          _source = tmpMeta63;
+          _rest = tmpMeta55;
           _vars = tmp4_2;
           _idx = tmp4_3;
           /* Pattern matching succeeded */
@@ -5622,40 +5627,40 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
           _stmtLst2 = omc_ReduceDAE_addLabelToAlgorithms(threadData, _stmtLst, _vars, _idx, _reduceList, _inVarRepl ,&_vars_1 ,&_idx2 ,&_labels);
 
           /* Pattern-matching tuple assignment */
-          tmpMeta66 = mmc_mk_cons(_elseWhen, MMC_REFSTRUCTLIT(mmc_nil));
-          tmpMeta67 = omc_ReduceDAE_addLabelToAlgorithms(threadData, tmpMeta66, _vars_1, _idx2, _reduceList, _inVarRepl, &tmpMeta63, &tmpMeta64, &tmpMeta65);
-          if (listEmpty(tmpMeta67)) goto goto_2;
-          tmpMeta68 = MMC_CAR(tmpMeta67);
-          tmpMeta69 = MMC_CDR(tmpMeta67);
-          if (!listEmpty(tmpMeta69)) goto goto_2;
-          _elseWhen2 = tmpMeta68;
-          _vars_2 = tmpMeta63;
-          _idx3 = tmpMeta64;
-          _labels2 = tmpMeta65;
+          tmpMeta67 = mmc_mk_cons(_elseWhen, MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta68 = omc_ReduceDAE_addLabelToAlgorithms(threadData, tmpMeta67, _vars_1, _idx2, _reduceList, _inVarRepl, &tmpMeta64, &tmpMeta65, &tmpMeta66);
+          if (listEmpty(tmpMeta68)) goto goto_2;
+          tmpMeta69 = MMC_CAR(tmpMeta68);
+          tmpMeta70 = MMC_CDR(tmpMeta68);
+          if (!listEmpty(tmpMeta70)) goto goto_2;
+          _elseWhen2 = tmpMeta69;
+          _vars_2 = tmpMeta64;
+          _idx3 = tmpMeta65;
+          _labels2 = tmpMeta66;
 
           _rest2 = omc_ReduceDAE_addLabelToAlgorithms(threadData, _rest, _vars_2, _idx3, _reduceList, _inVarRepl ,&_vars_3 ,&_idx4 ,&_labels3);
 
           _labels4 = listAppend(_labels, _labels2);
 
           _labels5 = listAppend(_labels4, _labels3);
-          tmpMeta71 = mmc_mk_box7(10, &DAE_Statement_STMT__WHEN__desc, _e, _conditions, mmc_mk_boolean(_initialCall), _stmtLst2, mmc_mk_some(_elseWhen2), _source);
-          tmpMeta70 = mmc_mk_cons(tmpMeta71, _rest2);
-          tmpMeta[0+0] = tmpMeta70;
+          tmpMeta72 = mmc_mk_box7(10, &DAE_Statement_STMT__WHEN__desc, _e, _conditions, mmc_mk_boolean(_initialCall), _stmtLst2, mmc_mk_some(_elseWhen2), _source);
+          tmpMeta71 = mmc_mk_cons(tmpMeta72, _rest2);
+          tmpMeta[0+0] = tmpMeta71;
           tmpMeta[0+1] = _vars_3;
           tmpMeta[0+2] = _idx4;
           tmpMeta[0+3] = _labels5;
           goto tmp3_done;
         }
         case 7: {
-          modelica_metatype tmpMeta72;
           modelica_metatype tmpMeta73;
           modelica_metatype tmpMeta74;
+          modelica_metatype tmpMeta75;
           if (listEmpty(tmp4_1)) goto tmp3_end;
-          tmpMeta72 = MMC_CAR(tmp4_1);
-          tmpMeta73 = MMC_CDR(tmp4_1);
+          tmpMeta73 = MMC_CAR(tmp4_1);
+          tmpMeta74 = MMC_CDR(tmp4_1);
           
-          _stmt = tmpMeta72;
-          _rest = tmpMeta73;
+          _stmt = tmpMeta73;
+          _rest = tmpMeta74;
           _vars = tmp4_2;
           _idx = tmp4_3;
           /* Pattern matching succeeded */
@@ -5665,8 +5670,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ReduceDAE_addLabelToAlgorithms(t
           }
 
           _rest2 = omc_ReduceDAE_addLabelToAlgorithms(threadData, _rest, _vars, _idx, _reduceList, _inVarRepl ,&_vars_1 ,&_idx2 ,&_labels);
-          tmpMeta74 = mmc_mk_cons(_stmt, _rest2);
-          tmpMeta[0+0] = tmpMeta74;
+          tmpMeta75 = mmc_mk_cons(_stmt, _rest2);
+          tmpMeta[0+0] = tmpMeta75;
           tmpMeta[0+1] = _vars_1;
           tmpMeta[0+2] = _idx2;
           tmpMeta[0+3] = _labels;

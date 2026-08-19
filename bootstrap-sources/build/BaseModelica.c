@@ -138,10 +138,16 @@ DLLDirection
 modelica_boolean omc_BaseModelica_inlineFunctions(threadData_t *threadData)
 {
   modelica_boolean _enabled;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _enabled = omc_Flags_isConfigFlagSet(threadData, _OMC_LIT18, _OMC_LIT9);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _enabled;
 }
 modelica_metatype boxptr_BaseModelica_inlineFunctions(threadData_t *threadData)

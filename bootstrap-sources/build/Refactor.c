@@ -1073,6 +1073,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_Refactor_getValueFromExp(threadData_
 {
   modelica_real _value;
   modelica_real tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _value has no default value.
@@ -1148,6 +1151,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_Refactor_getValueFromExp(threadData_
   }
   _value = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _value;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_getValueFromExp(threadData_t *threadData, modelica_metatype _expr)
@@ -1181,6 +1187,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_Refactor_getMappedColor(threadDat
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
   modelica_integer tmp1_c2 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta[3] __attribute__((unused)) = {0};
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _color1 has no default value.
@@ -1235,6 +1244,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_Refactor_getMappedColor(threadDat
   _return: OMC_LABEL_UNUSED
   if (out_color2) { *out_color2 = _color2; }
   if (out_color3) { *out_color3 = _color3; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _color1;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_getMappedColor(threadData_t *threadData, modelica_metatype _inColor, modelica_metatype *out_color2, modelica_metatype *out_color3)
@@ -1428,6 +1440,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isFillColorInList(thread
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -1493,6 +1508,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isFillColorInList(thread
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_isFillColorInList(threadData_t *threadData, modelica_metatype _inList)
@@ -1665,6 +1683,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isFillPatternInList(thre
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -1730,6 +1751,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isFillPatternInList(thre
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_isFillPatternInList(threadData_t *threadData, modelica_metatype _inArgs)
@@ -1745,6 +1769,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isGradientInList(threadD
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -1810,6 +1837,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isGradientInList(threadD
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_isGradientInList(threadData_t *threadData, modelica_metatype _inArgs)
@@ -2779,6 +2809,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isLineGraphic(threadData
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -2821,6 +2854,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isLineGraphic(threadData
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_isLineGraphic(threadData_t *threadData, modelica_metatype _context)
@@ -2836,6 +2872,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isLinebasedGraphic(threa
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -2911,6 +2950,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isLinebasedGraphic(threa
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_isLinebasedGraphic(threadData_t *threadData, modelica_metatype _context)
@@ -2926,6 +2968,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isStyleModifier(threadDa
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -2970,6 +3015,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isStyleModifier(threadDa
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_isStyleModifier(threadData_t *threadData, modelica_metatype _arg)
@@ -2985,6 +3033,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isLineColorModifier(thre
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -3034,6 +3085,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isLineColorModifier(thre
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_isLineColorModifier(threadData_t *threadData, modelica_metatype _arg)
@@ -4167,6 +4221,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_nameArgWithName(threadDa
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -4203,6 +4260,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_nameArgWithName(threadDa
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_nameArgWithName(threadData_t *threadData, modelica_metatype _narg, modelica_metatype _argName)
@@ -4604,6 +4664,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isLayerAnnInList(threadD
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -4687,6 +4750,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Refactor_isLayerAnnInList(threadD
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Refactor_isLayerAnnInList(threadData_t *threadData, modelica_metatype _inList)

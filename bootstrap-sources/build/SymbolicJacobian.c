@@ -70,12 +70,12 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT27,87,_OMC_LIT27_data);
 #define _OMC_LIT28_data "SymbolicJacobian.LinearJacobian.solveRow key does not have an element in pivot row."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT28,83,_OMC_LIT28_data);
 #define _OMC_LIT28 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT28)
-#define _OMC_LIT29_data "/projects/OpenModelica-session2/OMCompiler/Compiler/BackEnd/SymbolicJacobian.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT29,79,_OMC_LIT29_data);
+#define _OMC_LIT29_data "//OpenModelica/OMCompiler/Compiler/BackEnd/SymbolicJacobian.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT29,85,_OMC_LIT29_data);
 #define _OMC_LIT29 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT29)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT30_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT30_6,1.784885415e9);
 #define _OMC_LIT30_6 MMC_REFREALLIT(_OMC_LIT_STRUCT30_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT30,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(4564)),MMC_IMMEDIATE(MMC_TAGFIXNUM(11)),MMC_IMMEDIATE(MMC_TAGFIXNUM(4564)),MMC_IMMEDIATE(MMC_TAGFIXNUM(107)),_OMC_LIT30_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT30,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(4568)),MMC_IMMEDIATE(MMC_TAGFIXNUM(11)),MMC_IMMEDIATE(MMC_TAGFIXNUM(4568)),MMC_IMMEDIATE(MMC_TAGFIXNUM(107)),_OMC_LIT30_6}};
 #define _OMC_LIT30 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT30)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT31,2,4) {&DAE_Operator_SUB__desc,_OMC_LIT0}};
 #define _OMC_LIT31 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT31)
@@ -217,9 +217,9 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT84,44,_OMC_LIT84_data);
 #define _OMC_LIT85_data "function createResidualSetEquations failed for equation: "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT85,57,_OMC_LIT85_data);
 #define _OMC_LIT85 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT85)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT86_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT86_6,1.784885415e9);
 #define _OMC_LIT86_6 MMC_REFREALLIT(_OMC_LIT_STRUCT86_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT86,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3514)),MMC_IMMEDIATE(MMC_TAGFIXNUM(11)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3514)),MMC_IMMEDIATE(MMC_TAGFIXNUM(142)),_OMC_LIT86_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT86,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3518)),MMC_IMMEDIATE(MMC_TAGFIXNUM(11)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3518)),MMC_IMMEDIATE(MMC_TAGFIXNUM(142)),_OMC_LIT86_6}};
 #define _OMC_LIT86 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT86)
 #define _OMC_LIT87_data "stateselection"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT87,14,_OMC_LIT87_data);
@@ -274,9 +274,9 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT105,1,1) {_OMC_LIT104}};
 #define _OMC_LIT106_data "function getSymbolicJacobian failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT106,35,_OMC_LIT106_data);
 #define _OMC_LIT106 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT106)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT107_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT107_6,1.784885415e9);
 #define _OMC_LIT107_6 MMC_REFREALLIT(_OMC_LIT_STRUCT107_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT107,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3268)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3268)),MMC_IMMEDIATE(MMC_TAGFIXNUM(82)),_OMC_LIT107_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT107,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3272)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3272)),MMC_IMMEDIATE(MMC_TAGFIXNUM(82)),_OMC_LIT107_6}};
 #define _OMC_LIT107 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT107)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT108,1,5) {&BackendDAE_Jacobian_EMPTY__JACOBIAN__desc,}};
 #define _OMC_LIT108 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT108)
@@ -371,9 +371,9 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT140,1,6) {&BackendDAE_JacobianType_
 #define _OMC_LIT141_data "function calculateJacobianComponent failed to check all non-linear iteration variables for start values."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT141,104,_OMC_LIT141_data);
 #define _OMC_LIT141 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT141)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT142_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT142_6,1.784885415e9);
 #define _OMC_LIT142_6 MMC_REFREALLIT(_OMC_LIT_STRUCT142_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT142,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2877)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2877)),MMC_IMMEDIATE(MMC_TAGFIXNUM(153)),_OMC_LIT142_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT142,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2881)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2881)),MMC_IMMEDIATE(MMC_TAGFIXNUM(153)),_OMC_LIT142_6}};
 #define _OMC_LIT142 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT142)
 #define _OMC_LIT143_data "NLS"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT143,3,_OMC_LIT143_data);
@@ -438,9 +438,9 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT163,17,_OMC_LIT163_data);
 #define _OMC_LIT164_data "function getJacobianDependencies failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT164,39,_OMC_LIT164_data);
 #define _OMC_LIT164 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT164)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT165_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT165_6,1.784885415e9);
 #define _OMC_LIT165_6 MMC_REFREALLIT(_OMC_LIT_STRUCT165_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT165,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2568)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2568)),MMC_IMMEDIATE(MMC_TAGFIXNUM(86)),_OMC_LIT165_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT165,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2572)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2572)),MMC_IMMEDIATE(MMC_TAGFIXNUM(86)),_OMC_LIT165_6}};
 #define _OMC_LIT165 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT165)
 #define _OMC_LIT166_data "Internal error %s"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT166,17,_OMC_LIT166_data);
@@ -493,9 +493,9 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT185,63,_OMC_LIT185_data);
 #define _OMC_LIT186_data "SymbolicJacobian.generateSymbolicJacobian failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT186,48,_OMC_LIT186_data);
 #define _OMC_LIT186 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT186)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT187_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT187_6,1.784885415e9);
 #define _OMC_LIT187_6 MMC_REFREALLIT(_OMC_LIT_STRUCT187_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT187,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2379)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2379)),MMC_IMMEDIATE(MMC_TAGFIXNUM(74)),_OMC_LIT187_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT187,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2383)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2383)),MMC_IMMEDIATE(MMC_TAGFIXNUM(74)),_OMC_LIT187_6}};
 #define _OMC_LIT187 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT187)
 #define _OMC_LIT188_data "analytical Jacobians -> optimize jacobians time: "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT188,49,_OMC_LIT188_data);
@@ -577,9 +577,9 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT217,2,1) {_OMC_LIT213,_OMC_LIT216}}
 #define _OMC_LIT218_data "function optimizeJacobianMatrix failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT218,38,_OMC_LIT218_data);
 #define _OMC_LIT218 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT218)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT219_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT219_6,1.784885415e9);
 #define _OMC_LIT219_6 MMC_REFREALLIT(_OMC_LIT_STRUCT219_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT219,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2260)),MMC_IMMEDIATE(MMC_TAGFIXNUM(10)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2260)),MMC_IMMEDIATE(MMC_TAGFIXNUM(88)),_OMC_LIT219_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT219,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2264)),MMC_IMMEDIATE(MMC_TAGFIXNUM(10)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2264)),MMC_IMMEDIATE(MMC_TAGFIXNUM(88)),_OMC_LIT219_6}};
 #define _OMC_LIT219 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT219)
 #define _OMC_LIT220_data "causalizeDaeMode"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT220,16,_OMC_LIT220_data);
@@ -621,9 +621,9 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT232,53,_OMC_LIT232_data);
 #define _OMC_LIT233_data "function createJacobian failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT233,30,_OMC_LIT233_data);
 #define _OMC_LIT233 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT233)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT234_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT234_6,1.784885415e9);
 #define _OMC_LIT234_6 MMC_REFREALLIT(_OMC_LIT_STRUCT234_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT234,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2178)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2178)),MMC_IMMEDIATE(MMC_TAGFIXNUM(79)),_OMC_LIT234_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT234,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2182)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2182)),MMC_IMMEDIATE(MMC_TAGFIXNUM(79)),_OMC_LIT234_6}};
 #define _OMC_LIT234 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT234)
 #define _OMC_LIT235_data "FMIDERINIT"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT235,10,_OMC_LIT235_data);
@@ -661,9 +661,9 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT245,20,_OMC_LIT245_data);
 #define _OMC_LIT246_data "Generation of LinearModel Matrices failed."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT246,42,_OMC_LIT246_data);
 #define _OMC_LIT246 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT246)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT247_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT247_6,1.784885415e9);
 #define _OMC_LIT247_6 MMC_REFREALLIT(_OMC_LIT_STRUCT247_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT247,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2058)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2058)),MMC_IMMEDIATE(MMC_TAGFIXNUM(91)),_OMC_LIT247_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT247,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2062)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(2062)),MMC_IMMEDIATE(MMC_TAGFIXNUM(91)),_OMC_LIT247_6}};
 #define _OMC_LIT247 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT247)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT248,1,3) {&BackendDAE_EquationKind_BINDING__EQUATION__desc,}};
 #define _OMC_LIT248 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT248)
@@ -683,9 +683,9 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT253,12,_OMC_LIT253_data);
 #define _OMC_LIT254_data "function createFMIModelDerivativesForInitialization failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT254,58,_OMC_LIT254_data);
 #define _OMC_LIT254 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT254)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT255_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT255_6,1.784885415e9);
 #define _OMC_LIT255_6 MMC_REFREALLIT(_OMC_LIT_STRUCT255_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT255,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1883)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1883)),MMC_IMMEDIATE(MMC_TAGFIXNUM(101)),_OMC_LIT255_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT255,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1886)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1886)),MMC_IMMEDIATE(MMC_TAGFIXNUM(101)),_OMC_LIT255_6}};
 #define _OMC_LIT255 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT255)
 #define _OMC_LIT256_data "FMIDER"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT256,6,_OMC_LIT256_data);
@@ -693,14 +693,14 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT256,6,_OMC_LIT256_data);
 #define _OMC_LIT257_data "function createFMIModelDerivatives failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT257,41,_OMC_LIT257_data);
 #define _OMC_LIT257 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT257)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT258_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT258_6,1.784885415e9);
 #define _OMC_LIT258_6 MMC_REFREALLIT(_OMC_LIT_STRUCT258_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT258,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1717)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1717)),MMC_IMMEDIATE(MMC_TAGFIXNUM(84)),_OMC_LIT258_6}};
 #define _OMC_LIT258 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT258)
 #define _OMC_LIT259_data "function getSparsePattern failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT259,32,_OMC_LIT259_data);
 #define _OMC_LIT259 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT259)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT260_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT260_6,1.784885415e9);
 #define _OMC_LIT260_6 MMC_REFREALLIT(_OMC_LIT_STRUCT260_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT260,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1497)),MMC_IMMEDIATE(MMC_TAGFIXNUM(10)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1497)),MMC_IMMEDIATE(MMC_TAGFIXNUM(82)),_OMC_LIT260_6}};
 #define _OMC_LIT260 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT260)
@@ -781,7 +781,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT286,5,3) {&Flags_DebugFlag_DEBUG__F
 #define _OMC_LIT287_data "function generateSparsePattern failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT287,37,_OMC_LIT287_data);
 #define _OMC_LIT287 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT287)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT288_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT288_6,1.784885415e9);
 #define _OMC_LIT288_6 MMC_REFREALLIT(_OMC_LIT_STRUCT288_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT288,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT29,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1356)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1356)),MMC_IMMEDIATE(MMC_TAGFIXNUM(86)),_OMC_LIT288_6}};
 #define _OMC_LIT288 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT288)
@@ -921,31 +921,41 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT337,40,_OMC_LIT337_data);
 #define _OMC_LIT337 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT337)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT338,2,0) {_OMC_LIT336,_OMC_LIT337}};
 #define _OMC_LIT338 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT338)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT339,2,1) {_OMC_LIT338,MMC_REFSTRUCTLIT(mmc_nil)}};
-#define _OMC_LIT339 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT339)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT340,2,1) {_OMC_LIT335,_OMC_LIT339}};
-#define _OMC_LIT340 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT340)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT341,2,1) {_OMC_LIT332,_OMC_LIT340}};
+#define _OMC_LIT339_data "bidirectional"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT339,13,_OMC_LIT339_data);
+#define _OMC_LIT339 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT339)
+#define _OMC_LIT340_data "Generates bidirectional Jacobian using star bicoloring (ColPack). Combines forward and adjoint modes."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT340,101,_OMC_LIT340_data);
+#define _OMC_LIT340 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT340)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT341,2,0) {_OMC_LIT339,_OMC_LIT340}};
 #define _OMC_LIT341 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT341)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT342,2,1) {_OMC_LIT330,_OMC_LIT341}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT342,2,1) {_OMC_LIT341,MMC_REFSTRUCTLIT(mmc_nil)}};
 #define _OMC_LIT342 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT342)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT343,2,4) {&Flags_ValidOptions_STRING__DESC__OPTION__desc,_OMC_LIT342}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT343,2,1) {_OMC_LIT338,_OMC_LIT342}};
 #define _OMC_LIT343 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT343)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT344,1,1) {_OMC_LIT343}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT344,2,1) {_OMC_LIT335,_OMC_LIT343}};
 #define _OMC_LIT344 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT344)
-#define _OMC_LIT345_data "Select how Jacobian matrix is generated, where der(x) is differentiated w.r.t. x."
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT345,81,_OMC_LIT345_data);
-#define _OMC_LIT345 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT345)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT346,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(51)),_OMC_LIT325,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT6,_OMC_LIT327,_OMC_LIT344,_OMC_LIT345}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT345,2,1) {_OMC_LIT332,_OMC_LIT344}};
+#define _OMC_LIT345 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT345)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT346,2,1) {_OMC_LIT330,_OMC_LIT345}};
 #define _OMC_LIT346 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT346)
-#define _OMC_LIT347_data "The optimization module SymbolicJacobian.symbolicJacobianDAE failed. This module will be skipped and the transformation process continued."
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT347,138,_OMC_LIT347_data);
-#define _OMC_LIT347 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT347)
-#define _OMC_LIT348_data "The optimization module detectJacobianSparsePattern failed. This module will be skipped and the transformation process continued."
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT348,129,_OMC_LIT348_data);
-#define _OMC_LIT348 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT348)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT349,2,0) {MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1))}};
-#define _OMC_LIT349 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT349)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT347,2,4) {&Flags_ValidOptions_STRING__DESC__OPTION__desc,_OMC_LIT346}};
+#define _OMC_LIT347 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT347)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT348,1,1) {_OMC_LIT347}};
+#define _OMC_LIT348 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT348)
+#define _OMC_LIT349_data "Select how Jacobian matrix is generated, where der(x) is differentiated w.r.t. x."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT349,81,_OMC_LIT349_data);
+#define _OMC_LIT349 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT349)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT350,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(51)),_OMC_LIT325,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT6,_OMC_LIT327,_OMC_LIT348,_OMC_LIT349}};
+#define _OMC_LIT350 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT350)
+#define _OMC_LIT351_data "The optimization module SymbolicJacobian.symbolicJacobianDAE failed. This module will be skipped and the transformation process continued."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT351,138,_OMC_LIT351_data);
+#define _OMC_LIT351 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT351)
+#define _OMC_LIT352_data "The optimization module detectJacobianSparsePattern failed. This module will be skipped and the transformation process continued."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT352,129,_OMC_LIT352_data);
+#define _OMC_LIT352 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT352)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT353,2,0) {MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1))}};
+#define _OMC_LIT353 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT353)
 #include "util/modelica.h"
 
 #include "SymbolicJacobian_includes.h"
@@ -1276,6 +1286,9 @@ modelica_boolean omc_SymbolicJacobian_LinearJacobian_anyChanges(threadData_t *th
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _changed = 0 /* false */;
@@ -1285,6 +1298,7 @@ modelica_boolean omc_SymbolicJacobian_LinearJacobian_anyChanges(threadData_t *th
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if(mmc_unbox_boolean(arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 5))),_i) /* DAE.ASUB */))
       {
         _changed = 1 /* true */;
@@ -1294,6 +1308,9 @@ modelica_boolean omc_SymbolicJacobian_LinearJacobian_anyChanges(threadData_t *th
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _changed;
 }
 modelica_metatype boxptr_SymbolicJacobian_LinearJacobian_anyChanges(threadData_t *threadData, modelica_metatype _linJac)
@@ -1338,6 +1355,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_LinearJacobian_
     modelica_integer _i;
     for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp6, tmp8); _i += tmp7)
     {
+
       tmpMeta3 = mmc_mk_box2(4, &DAE_Exp_RCONST__desc, arrayGet(_row_values,_i) /* DAE.ASUB */);
       tmpMeta4 = mmc_mk_box4(10, &DAE_Exp_BINARY__desc, tmpMeta3, _OMC_LIT1, omc_BackendVariable_varExp(threadData, omc_BackendVariable_getVarAt(threadData, _vars, mmc_unbox_integer(arrayGet(_row_indices,_i) /* DAE.ASUB */))));
       tmpMeta5 = mmc_mk_box4(10, &DAE_Exp_BINARY__desc, _lhs, _OMC_LIT4, tmpMeta4);
@@ -1401,6 +1419,7 @@ modelica_metatype omc_SymbolicJacobian_LinearJacobian_resolveASSC(threadData_t *
     modelica_integer _r;
     for(_r = ((modelica_integer) 1); in_range_integer(_r, tmp13, tmp15); _r += tmp14)
     {
+
       if((mmc_unbox_boolean(arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 5))),_r) /* DAE.ASUB */) && (omc_UnorderedMap_isEmpty(threadData, arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 2))),_r) /* DAE.ASUB */) || _fullASSC)))
       {
         /* Pattern-matching assignment */
@@ -1533,6 +1552,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SymbolicJacobian_LinearJacobian_g
 {
   modelica_integer _idx;
   modelica_real _value;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _idx has no default value.
@@ -1549,6 +1571,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SymbolicJacobian_LinearJacobian_g
   }
   _return: OMC_LABEL_UNUSED
   if (out_value) { *out_value = _value; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _idx;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_LinearJacobian_getPivot(threadData_t *threadData, modelica_metatype _pivot_row, modelica_metatype *out_value)
@@ -1569,6 +1594,9 @@ void omc_SymbolicJacobian_LinearJacobian_updatePivotRow(threadData_t *threadData
   modelica_metatype tmpMeta1;
   modelica_real tmp2;
   modelica_metatype tmpMeta3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _value has no default value.
@@ -1588,6 +1616,9 @@ void omc_SymbolicJacobian_LinearJacobian_updatePivotRow(threadData_t *threadData
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_SymbolicJacobian_LinearJacobian_updatePivotRow(threadData_t *threadData, modelica_metatype _pivot_row, modelica_metatype _piv_value)
@@ -1608,6 +1639,9 @@ void omc_SymbolicJacobian_LinearJacobian_solveRow(threadData_t *threadData, mode
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
   modelica_metatype tmpMeta20;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _idx has no default value.
@@ -1667,7 +1701,7 @@ void omc_SymbolicJacobian_LinearJacobian_solveRow(threadData_t *threadData, mode
               goto tmp3_done;
             }
             case 2: {
-              
+
               /* Pattern matching succeeded */
               omc_Error_terminate(threadData, _OMC_LIT28, _OMC_LIT30);
               goto tmp3_done;
@@ -1717,7 +1751,7 @@ void omc_SymbolicJacobian_LinearJacobian_solveRow(threadData_t *threadData, mode
               goto tmp15_done;
             }
             case 1: {
-              
+
               /* Pattern matching succeeded */
               goto tmp15_done;
             }
@@ -1736,6 +1770,9 @@ void omc_SymbolicJacobian_LinearJacobian_solveRow(threadData_t *threadData, mode
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_SymbolicJacobian_LinearJacobian_solveRow(threadData_t *threadData, modelica_metatype _pivot_row, modelica_metatype _row, modelica_metatype _piv_value, modelica_metatype _row_value)
@@ -1770,6 +1807,7 @@ modelica_metatype omc_SymbolicJacobian_LinearJacobian_solve(threadData_t *thread
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp13, tmp15); _i += tmp14)
     {
+
       { /* matchcontinue expression */
         {
           volatile mmc_switch_type tmp3;
@@ -1798,6 +1836,7 @@ modelica_metatype omc_SymbolicJacobian_LinearJacobian_solve(threadData_t *thread
                 modelica_integer _j;
                 for(_j = ((modelica_integer) 1) + _i; in_range_integer(_j, tmp10, tmp12); _j += tmp11)
                 {
+
                   _row_value = mmc_unbox_real(omc_UnorderedMap_getOrDefault(threadData, mmc_mk_integer(_col_index), arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 2))),_j) /* DAE.ASUB */, _OMC_LIT2));
 
                   if((!(_row_value == 0.0)))
@@ -1850,10 +1889,16 @@ DLLDirection
 modelica_boolean omc_SymbolicJacobian_LinearJacobian_emptyOrSingle(threadData_t *threadData, modelica_metatype _linJac)
 {
   modelica_boolean _empty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _empty = ((((arrayLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 2)))) < ((modelica_integer) 2)) && (arrayLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 3)))) < ((modelica_integer) 2))) && (arrayLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 4)))) < ((modelica_integer) 2))) && (arrayLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 5)))) < ((modelica_integer) 2)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _empty;
 }
 modelica_metatype boxptr_SymbolicJacobian_LinearJacobian_emptyOrSingle(threadData_t *threadData, modelica_metatype _linJac)
@@ -1868,11 +1913,17 @@ modelica_metatype boxptr_SymbolicJacobian_LinearJacobian_emptyOrSingle(threadDat
 PROTECTED_FUNCTION_STATIC modelica_real omc_SymbolicJacobian_LinearJacobian_generate_intWrapperFunc(threadData_t *threadData, modelica_metatype _e)
 {
   modelica_real _v;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
   _v = ((modelica_real)omc_Expression_getEvaluatedConstInteger(threadData, _e));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _v;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_LinearJacobian_generate_intWrapperFunc(threadData_t *threadData, modelica_metatype _e)
@@ -2209,6 +2260,7 @@ modelica_string omc_SymbolicJacobian_LinearJacobian_toString(threadData_t *threa
     modelica_integer _idx;
     for(_idx = ((modelica_integer) 1); in_range_integer(_idx, tmp6, tmp8); _idx += tmp7)
     {
+
       tmpMeta5 = stringAppend(_str,omc_SymbolicJacobian_LinearJacobian_rowToString(threadData, arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 2))),_idx) /* DAE.ASUB */, arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 3))),_idx) /* DAE.ASUB */, arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 4))),_idx) /* DAE.ASUB */, mmc_unbox_boolean(arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_linJac), 5))),_idx) /* DAE.ASUB */)));
       _str = tmpMeta5;
     }
@@ -2230,8 +2282,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_stripPartialDer
   _tailrecursive: OMC_LABEL_UNUSED
   _cref = __omcQ_24in_5Fcref;
   // _strip has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _cref;
@@ -2245,7 +2297,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_stripPartialDer
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,3) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_StringUtil_startsWith(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_cref), 2))), _OMC_LIT51)) goto tmp3_end;
@@ -2255,7 +2307,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_stripPartialDer
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,4) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_StringUtil_startsWith(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_cref), 2))), _OMC_LIT51)) goto tmp3_end;
@@ -2267,7 +2319,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_stripPartialDer
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,4) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           _cr = omc_SymbolicJacobian_stripPartialDerWork(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_cref), 5))) ,&_strip);
 
@@ -2286,7 +2338,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_stripPartialDer
           goto tmp3_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _cref;
           tmp1_c1 = 0 /* false */;
@@ -2698,7 +2750,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getNonlinearSta
           modelica_metatype tmpMeta15;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,4) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _exp = tmpMeta6;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
@@ -2791,7 +2843,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getNonlinearSta
           modelica_integer tmp18;
           modelica_metatype tmpMeta19;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _systs = tmpMeta6;
           /* Pattern matching succeeded */
           tmpMeta7 = mmc_mk_box4(0, _state, _diffVars, mmc_mk_integer(_nonlinearCount), _matrixName);
@@ -2816,7 +2868,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getNonlinearSta
                     case 0: {
                       modelica_metatype tmpMeta13;
                       tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp11_1), 3));
-                      
+
                       _eqnarray = tmpMeta13;
                       /* Pattern matching succeeded */
                       _tpl = omc_BackendEquation_traverseEquationArray(threadData, _eqnarray, boxvar_SymbolicJacobian_getNonlinearStateCount0, _tpl);
@@ -2903,7 +2955,7 @@ modelica_metatype omc_SymbolicJacobian_getFixedStatesForSelfdependentSets(thread
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           _sJac = tmpMeta7;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
@@ -3006,7 +3058,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_checkForNonLine
                       if (mmc__uniontype__metarecord__typedef__equal(tmp11_1,1,5) == 0) goto tmp10_end;
                       tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp11_1), 5));
                       if (mmc__uniontype__metarecord__typedef__equal(tmpMeta13,2,0) == 0) goto tmp10_end;
-                      
+
                       /* Pattern matching succeeded */
                       if(omc_Flags_isSet(threadData, _OMC_LIT57))
                       {
@@ -3024,7 +3076,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_checkForNonLine
                       if (mmc__uniontype__metarecord__typedef__equal(tmp11_1,1,5) == 0) goto tmp10_end;
                       tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp11_1), 5));
                       if (mmc__uniontype__metarecord__typedef__equal(tmpMeta16,4,0) == 0) goto tmp10_end;
-                      
+
                       /* Pattern matching succeeded */
                       if(omc_Flags_isSet(threadData, _OMC_LIT57))
                       {
@@ -3042,7 +3094,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_checkForNonLine
                       if (mmc__uniontype__metarecord__typedef__equal(tmp11_1,1,5) == 0) goto tmp10_end;
                       tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp11_1), 5));
                       if (mmc__uniontype__metarecord__typedef__equal(tmpMeta19,3,0) == 0) goto tmp10_end;
-                      
+
                       /* Pattern matching succeeded */
                       if(omc_Flags_isSet(threadData, _OMC_LIT57))
                       {
@@ -3062,7 +3114,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_checkForNonLine
                       tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp11_1), 4));
                       tmp23 = mmc_unbox_integer(tmpMeta22);
                       if (0 /* false */ != tmp23) goto tmp10_end;
-                      
+
                       /* Pattern matching succeeded */
                       if(omc_Flags_isSet(threadData, _OMC_LIT57))
                       {
@@ -3074,7 +3126,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_checkForNonLine
                       goto tmp10_done;
                     }
                     case 4: {
-                      
+
                       /* Pattern matching succeeded */
                       goto tmp10_done;
                     }
@@ -3131,6 +3183,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_checkForNonLinea
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -3189,6 +3244,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_checkForNonLinea
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_checkForNonLinearStrongComponents(threadData_t *threadData, modelica_metatype _symbolicJacobian)
@@ -3271,9 +3329,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_rhsConstant2(th
   // _outEq has no default value.
   // _cont has no default value.
   // _outTpl has no default value.
-  
-  
-  
+
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;
     tmp4_1 = _inEq;
@@ -3495,6 +3553,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_rhsConstant(thre
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_integer tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -3515,6 +3576,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_rhsConstant(thre
     _outBoolean = tmp4  /* pattern as ty=Boolean */;
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_rhsConstant(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _eqns)
@@ -3538,9 +3602,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_varsNotInRelati
   _exp = __omcQ_24in_5Fexp;
   // _cont has no default value.
   _tpl = __omcQ_24in_5Ftpl;
-  
-  
-  
+
+
+
   { /* match expression */
     modelica_metatype tmp4_1;modelica_metatype tmp4_2;
     tmp4_1 = _exp;
@@ -3640,7 +3704,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_varsNotInRelati
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta28,1,1) == 0) goto tmp3_end;
           tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta28), 2));
           if (3 != MMC_STRLEN(tmpMeta29) || strcmp(MMC_STRINGDATA(_OMC_LIT65), MMC_STRINGDATA(tmpMeta29)) != 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _exp;
           tmp1_c1 = 1 /* true */;
@@ -3655,7 +3719,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_varsNotInRelati
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta30,1,1) == 0) goto tmp3_end;
           tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 2));
           if (3 != MMC_STRLEN(tmpMeta31) || strcmp(MMC_STRINGDATA(_OMC_LIT66), MMC_STRINGDATA(tmpMeta31)) != 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _exp;
           tmp1_c1 = 0 /* false */;
@@ -3670,7 +3734,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_varsNotInRelati
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta32,1,1) == 0) goto tmp3_end;
           tmpMeta33 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta32), 2));
           if (8 != MMC_STRLEN(tmpMeta33) || strcmp(MMC_STRINGDATA(_OMC_LIT67), MMC_STRINGDATA(tmpMeta33)) != 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _exp;
           tmp1_c1 = 0 /* false */;
@@ -3681,7 +3745,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_varsNotInRelati
           modelica_metatype tmpMeta34;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,13,3) == 0) goto tmp3_end;
           tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _expLst = tmpMeta34;
           /* Pattern matching succeeded */
           omc_Expression_traverseExpListTopDown(threadData, _expLst, boxvar_BackendDAEUtil_getEqnsysRhsExp2, _tpl ,&_tpl);
@@ -3692,7 +3756,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_varsNotInRelati
         }
         case 5: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,9,3) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           omc_Expression_traverseExpTopDown(threadData, _exp, boxvar_BackendDAEUtil_getEqnsysRhsExp2, _tpl ,&_tpl);
           tmpMeta[0+0] = _exp;
@@ -3702,7 +3766,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_varsNotInRelati
         }
         case 6: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,10,2) == 0) goto tmp3_end;
-          
+
           _tpl = tmp4_2;
           /* Pattern matching succeeded */
           omc_Expression_traverseExpTopDown(threadData, _exp, boxvar_BackendDAEUtil_getEqnsysRhsExp2, _tpl ,&_tpl);
@@ -3713,7 +3777,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_varsNotInRelati
         }
         case 7: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,11,5) == 0) goto tmp3_end;
-          
+
           _tpl = tmp4_2;
           /* Pattern matching succeeded */
           omc_Expression_traverseExpTopDown(threadData, _exp, boxvar_BackendDAEUtil_getEqnsysRhsExp2, _tpl ,&_tpl);
@@ -3732,7 +3796,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_varsNotInRelati
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,21,2) == 0) goto tmp3_end;
           tmpMeta35 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta36 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _e1 = tmpMeta35;
           _subs = tmpMeta36;
           /* Pattern matching succeeded */
@@ -3833,6 +3897,9 @@ modelica_boolean omc_SymbolicJacobian_isJacobianGeneric(threadData_t *threadData
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -3847,13 +3914,13 @@ modelica_boolean omc_SymbolicJacobian_isJacobianGeneric(threadData_t *threadData
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,4) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -3871,6 +3938,9 @@ modelica_boolean omc_SymbolicJacobian_isJacobianGeneric(threadData_t *threadData
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 modelica_metatype boxptr_SymbolicJacobian_isJacobianGeneric(threadData_t *threadData, modelica_metatype _inJac)
@@ -3893,6 +3963,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianConstant
   modelica_metatype tmpMeta1;
   modelica_boolean tmp2 = 0;
   modelica_metatype tmpMeta14;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outBoolean = 1 /* true */;
@@ -3921,7 +3994,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianConstant
               if (mmc__uniontype__metarecord__typedef__equal(tmp5_1,0,4) == 0) goto tmp4_end;
               tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 2));
               tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 3));
-              
+
               _e1 = tmpMeta6;
               _e2 = tmpMeta7;
               /* Pattern matching succeeded */
@@ -3932,7 +4005,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianConstant
               modelica_metatype tmpMeta8;
               if (mmc__uniontype__metarecord__typedef__equal(tmp5_1,3,3) == 0) goto tmp4_end;
               tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 2));
-              
+
               _e = tmpMeta8;
               /* Pattern matching succeeded */
               tmp2 = omc_Expression_isConst(threadData, _e);
@@ -3942,7 +4015,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianConstant
               modelica_metatype tmpMeta9;
               if (mmc__uniontype__metarecord__typedef__equal(tmp5_1,2,4) == 0) goto tmp4_end;
               tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 3));
-              
+
               _e = tmpMeta9;
               /* Pattern matching succeeded */
               tmp2 = omc_Expression_isConst(threadData, _e);
@@ -3954,7 +4027,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianConstant
               if (mmc__uniontype__metarecord__typedef__equal(tmp5_1,1,6) == 0) goto tmp4_end;
               tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 3));
               tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 4));
-              
+
               _e1 = tmpMeta10;
               _e2 = tmpMeta11;
               /* Pattern matching succeeded */
@@ -3967,7 +4040,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianConstant
               if (mmc__uniontype__metarecord__typedef__equal(tmp5_1,6,5) == 0) goto tmp4_end;
               tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 3));
               tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 4));
-              
+
               _e1 = tmpMeta12;
               _e2 = tmpMeta13;
               /* Pattern matching succeeded */
@@ -3976,7 +4049,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianConstant
             }
             default:
             tmp4_default: OMC_LABEL_UNUSED; {
-              
+
               /* Pattern matching succeeded */
               tmp2 = 0 /* false */;
               goto tmp4_done;
@@ -4001,6 +4074,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianConstant
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_jacobianConstant(threadData_t *threadData, modelica_metatype _inTplIntegerIntegerEquationLst)
@@ -4024,9 +4100,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_traverserjacobi
   // _outExp has no default value.
   // _cont has no default value.
   // _outTpl has no default value.
-  
-  
-  
+
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;
     tmp4_1 = _inExp;
@@ -4058,7 +4134,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_traverserjacobi
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          
+
           _e = tmp4_1;
           _cr = tmpMeta6;
           _vars = tmpMeta7;
@@ -4096,7 +4172,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_traverserjacobi
           tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 2));
           if (!listEmpty(tmpMeta16)) goto tmp3_end;
           tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          
+
           _e = tmp4_1;
           _cr = tmpMeta17;
           _vars = tmpMeta18;
@@ -4116,7 +4192,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_traverserjacobi
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta20,1,1) == 0) goto tmp3_end;
           tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta20), 2));
           if (3 != MMC_STRLEN(tmpMeta21) || strcmp(MMC_STRINGDATA(_OMC_LIT66), MMC_STRINGDATA(tmpMeta21)) != 0) goto tmp3_end;
-          
+
           _e = tmp4_1;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta[0+0] = _e;
@@ -4132,7 +4208,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_traverserjacobi
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta22,1,1) == 0) goto tmp3_end;
           tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta22), 2));
           if (8 != MMC_STRLEN(tmpMeta23) || strcmp(MMC_STRINGDATA(_OMC_LIT67), MMC_STRINGDATA(tmpMeta23)) != 0) goto tmp3_end;
-          
+
           _e = tmp4_1;
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _e;
@@ -4197,6 +4273,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianNonlinea
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -4207,6 +4286,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianNonlinea
   tmp3 = mmc_unbox_integer(tmpMeta2);
   _outBoolean = tmp3  /* pattern as ty=Boolean */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_jacobianNonlinearExp(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _inExp)
@@ -4231,6 +4313,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianNonlinea
   modelica_metatype tmpMeta3;
   modelica_boolean tmp4 = 0;
   modelica_metatype tmpMeta12;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _isNonLinear = 0 /* false */;
@@ -4264,7 +4349,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianNonlinea
               if (mmc__uniontype__metarecord__typedef__equal(tmp7_1,0,4) == 0) goto tmp6_end;
               tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp7_1), 2));
               tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp7_1), 3));
-              
+
               _e1 = tmpMeta9;
               _e2 = tmpMeta10;
               /* Pattern matching succeeded */
@@ -4275,7 +4360,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianNonlinea
               modelica_metatype tmpMeta11;
               if (mmc__uniontype__metarecord__typedef__equal(tmp7_1,3,3) == 0) goto tmp6_end;
               tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp7_1), 2));
-              
+
               _e = tmpMeta11;
               /* Pattern matching succeeded */
               tmp4 = omc_SymbolicJacobian_jacobianNonlinearExp(threadData, _vars, _e);
@@ -4301,6 +4386,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianNonlinea
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isNonLinear;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_jacobianNonlinear(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _inTplIntegerIntegerEquationLst)
@@ -4323,8 +4411,8 @@ modelica_metatype omc_SymbolicJacobian_analyzeJacobian(threadData_t *threadData,
   _tailrecursive: OMC_LABEL_UNUSED
   // _outJacobianType has no default value.
   // _jacConstant has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _inTplIntegerIntegerEquationLstOption;
@@ -4688,9 +4776,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
   // _outLst has no default value.
   // _size has no default value.
   // _oShared has no default value.
-  
-  
-  
+
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _inEquation;
@@ -4732,7 +4820,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          
+
           _e1 = tmpMeta5;
           _e2 = tmpMeta6;
           _source = tmpMeta7;
@@ -4755,7 +4843,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,3) == 0) goto tmp3_end;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _e = tmpMeta8;
           _source = tmpMeta9;
           /* Pattern matching succeeded */
@@ -4779,7 +4867,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          
+
           _cr = tmpMeta10;
           _e2 = tmpMeta11;
           _source = tmpMeta12;
@@ -4808,7 +4896,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
           tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
-          
+
           _ds = tmpMeta13;
           _e1 = tmpMeta14;
           _e2 = tmpMeta15;
@@ -4843,7 +4931,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
           modelica_boolean tmp17;
           modelica_metatype tmpMeta18;
           modelica_metatype tmpMeta19;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp17 = omc_Flags_isSet(threadData, _OMC_LIT83);
@@ -4932,6 +5020,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
     modelica_integer _k;
     for(_k = ((modelica_integer) 1); in_range_integer(_k, tmp2, tmp4); _k += tmp3)
     {
+
       if(omc_ExpandableArray_occupied(threadData, _k, _inEquationArray))
       {
         _eqn = omc_ExpandableArray_get(threadData, _k, _inEquationArray);
@@ -4976,8 +5065,8 @@ modelica_metatype omc_SymbolicJacobian_calculateJacobian(threadData_t *threadDat
   _tailrecursive: OMC_LABEL_UNUSED
   // _outTplIntegerIntegerEquationLstOption has no default value.
   // _oShared has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;volatile modelica_metatype tmp4_3;
     tmp4_1 = _inVariables;
@@ -5003,7 +5092,7 @@ modelica_metatype omc_SymbolicJacobian_calculateJacobian(threadData_t *threadDat
       for (; tmp4 < 2; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
-          
+
           _vars = tmp4_1;
           _eqns = tmp4_2;
           _m = tmp4_3;
@@ -5014,7 +5103,7 @@ modelica_metatype omc_SymbolicJacobian_calculateJacobian(threadData_t *threadDat
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = mmc_mk_none();
           tmpMeta[0+1] = _iShared;
@@ -5162,7 +5251,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createResidualS
               default:
               tmp6_default: OMC_LABEL_UNUSED; {
                 modelica_metatype tmpMeta17;
-                
+
                 _eqn = tmp7_1;
                 /* Pattern matching succeeded */
                 tmpMeta17 = stringAppend(_OMC_LIT85,omc_BackendDump_equationString(threadData, _eqn));
@@ -5258,6 +5347,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_foundMarked(thre
 {
   modelica_boolean _found;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _found has no default value.
@@ -5324,6 +5416,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_foundMarked(thre
   }
   _found = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _found;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_foundMarked(threadData_t *threadData, modelica_metatype _ilst, modelica_metatype _marked)
@@ -5339,6 +5434,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_removeStateSetEq
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -5360,7 +5458,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_removeStateSetEq
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
           if (14 != MMC_STRLEN(tmpMeta8) || strcmp(MMC_STRINGDATA(_OMC_LIT87), MMC_STRINGDATA(tmpMeta8)) != 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -5374,13 +5472,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_removeStateSetEq
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 2));
           if (14 != MMC_STRLEN(tmpMeta11) || strcmp(MMC_STRINGDATA(_OMC_LIT87), MMC_STRINGDATA(tmpMeta11)) != 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -5398,6 +5496,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_removeStateSetEq
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_removeStateSetEqn(threadData_t *threadData, modelica_metatype _inEqn)
@@ -5412,11 +5513,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_removeStateS
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_removeStateSetStates(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _hs)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (!omc_BaseHashSet_has(threadData, omc_BackendVariable_varCref(threadData, _inVar), _hs));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_removeStateSetStates(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _hs)
@@ -5452,8 +5559,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateStateS
   _tailrecursive: OMC_LABEL_UNUSED
   // _outStateSet has no default value.
   // _outShared has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _inStateSet;
@@ -5546,7 +5653,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateStateS
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 10));
           tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 11));
           tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 12));
-          
+
           _index = tmp7  /* pattern as ty=Integer */;
           _rang = tmp9  /* pattern as ty=Integer */;
           _state = tmpMeta10;
@@ -5670,7 +5777,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateStateS
             for (; tmp7 < 1; tmp7++) {
               switch (MMC_SWITCH_CAST(tmp7)) {
               case 0: {
-                
+
                 _stateSet = tmp7_1;
                 /* Pattern matching succeeded */
                 _stateSet = omc_SymbolicJacobian_calculateStateSetJacobian(threadData, _stateSet, _inVars, _inEqns, _inComps, _outShared ,&_outShared);
@@ -5714,8 +5821,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateEqSyst
   _tailrecursive: OMC_LABEL_UNUSED
   // _outSyst has no default value.
   // _outShared has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;modelica_metatype tmp4_2;
     tmp4_1 = _inSyst;
@@ -5746,7 +5853,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateEqSyst
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
-          
+
           _syst = tmp4_1;
           _vars = tmpMeta6;
           _eqns = tmpMeta7;
@@ -5788,6 +5895,9 @@ modelica_boolean omc_SymbolicJacobian_hasGenericSymbolicJacobian(threadData_t *t
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -5807,13 +5917,13 @@ modelica_boolean omc_SymbolicJacobian_hasGenericSymbolicJacobian(threadData_t *t
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -5831,6 +5941,9 @@ modelica_boolean omc_SymbolicJacobian_hasGenericSymbolicJacobian(threadData_t *t
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 modelica_metatype boxptr_SymbolicJacobian_hasGenericSymbolicJacobian(threadData_t *threadData, modelica_metatype _inJacobian)
@@ -6079,6 +6192,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_isRecordInvoled(
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -6094,7 +6210,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_isRecordInvoled(
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 12: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -6103,7 +6219,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_isRecordInvoled(
           modelica_metatype tmpMeta5;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _ty = tmpMeta5;
           /* Pattern matching succeeded */
           /* Tail recursive call */
@@ -6116,7 +6232,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_isRecordInvoled(
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,11,4) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _ty = tmpMeta6;
           /* Pattern matching succeeded */
           /* Tail recursive call */
@@ -6129,7 +6245,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_isRecordInvoled(
           modelica_metatype tmpMeta7;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,14,2) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _types = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = omc_List_any(threadData, _types, boxvar_SymbolicJacobian_isRecordInvoled);
@@ -6137,7 +6253,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_isRecordInvoled(
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -6155,6 +6271,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_isRecordInvoled(
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_isRecordInvoled(threadData_t *threadData, modelica_metatype _inType)
@@ -6178,9 +6297,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_hasEqnNonDiffPa
   // _outExp has no default value.
   // _cont has no default value.
   // _outTpl has no default value.
-  
-  
-  
+
+
+
   { /* match expression */
     modelica_metatype tmp4_1;modelica_metatype tmp4_2;
     tmp4_1 = _inExp;
@@ -6255,7 +6374,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_hasEqnNonDiffPa
           modelica_integer tmp22;
           tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           tmp22 = mmc_unbox_integer(tmpMeta21);
-          
+
           _outExp = tmp4_1;
           _b = tmp22  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
@@ -6384,7 +6503,7 @@ modelica_metatype omc_SymbolicJacobian_getNonLinearVariables(threadData_t *threa
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 3));
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 6));
-          
+
           _diffVars = tmpMeta9;
           _dependentVarsCref = tmpMeta10;
           /* Pattern matching succeeded */
@@ -6419,7 +6538,7 @@ modelica_metatype omc_SymbolicJacobian_getNonLinearVariables(threadData_t *threa
         }
         case 1: {
           modelica_metatype tmpMeta17;
-          
+
           /* Pattern matching succeeded */
           tmpMeta17 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta2 = tmpMeta17;
@@ -6443,6 +6562,9 @@ modelica_metatype omc_SymbolicJacobian_getNonLinearVariables(threadData_t *threa
 
 PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_printNonLinIterVarsAndEqs(threadData_t *threadData, modelica_metatype _jacobian, modelica_metatype _eqnIndices, modelica_metatype _inEqns)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -6519,7 +6641,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_printNonLinIterVarsAndEqs(th
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 3));
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 5));
           tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 6));
-          
+
           _name = tmpMeta14;
           _diffVars = tmpMeta15;
           _allDiffedVars = tmpMeta16;
@@ -6595,7 +6717,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_printNonLinIterVarsAndEqs(th
           goto tmp5_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           goto tmp5_done;
         }
@@ -6612,6 +6734,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_printNonLinIterVarsAndEqs(th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -6626,8 +6751,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_existNonLinIterV
   _tailrecursive: OMC_LABEL_UNUSED
   // _existNonLin has no default value.
   // _jacName has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _jacobian_in;
@@ -6666,7 +6791,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_existNonLinIterV
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 3));
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 6));
-          
+
           _name = tmpMeta8;
           _diffVars = tmpMeta9;
           _dependentVarsCref = tmpMeta10;
@@ -6704,7 +6829,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_existNonLinIterV
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1_c0 = 0 /* false */;
           tmp1_c1 = _OMC_LIT10;
@@ -6746,6 +6871,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
   modelica_string tmp27_c1 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta38;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _name has no default value.
@@ -6790,7 +6918,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
             tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
             tmp11 = mmc_unbox_integer(tmpMeta10);
             if (0 /* false */ != tmp11) goto tmp3_end;
-            
+
             _resIndices = tmpMeta7;
             _innerEquations = tmpMeta8;
             _jac = tmpMeta9;
@@ -6816,7 +6944,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
                         if (mmc__uniontype__metarecord__typedef__equal(tmp16_1,0,2) == 0) goto tmp15_end;
                         tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp16_1), 2));
                         tmp18 = mmc_unbox_integer(tmpMeta17);
-                        
+
                         _idx = tmp18  /* pattern as ty=Integer */;
                         /* Pattern matching succeeded */
                         tmpMeta19 = mmc_mk_cons(mmc_mk_integer(_idx), _eqnIndices);
@@ -6830,7 +6958,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
                         if (mmc__uniontype__metarecord__typedef__equal(tmp16_1,1,3) == 0) goto tmp15_end;
                         tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp16_1), 2));
                         tmp21 = mmc_unbox_integer(tmpMeta20);
-                        
+
                         _idx = tmp21  /* pattern as ty=Integer */;
                         /* Pattern matching succeeded */
                         tmpMeta22 = mmc_mk_cons(mmc_mk_integer(_idx), _eqnIndices);
@@ -6839,7 +6967,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
                       }
                       default:
                       tmp15_default: OMC_LABEL_UNUSED; {
-                        
+
                         /* Pattern matching succeeded */
                         tmpMeta13 = _eqnIndices;
                         goto tmp15_done;
@@ -6873,7 +7001,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
             tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
             tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
             if (mmc__uniontype__metarecord__typedef__equal(tmpMeta26,2,0) == 0) goto tmp3_end;
-            
+
             _eqnIndices = tmpMeta24;
             _jac = tmpMeta25;
             /* Pattern matching succeeded */
@@ -6881,7 +7009,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
             goto tmp3_done;
           }
           case 2: {
-            
+
             /* Pattern matching succeeded */
             goto tmp3_done;
           }
@@ -6900,8 +7028,8 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
   }
   else
   {
-    
-    
+
+
     { /* match expression */
       modelica_metatype tmp30_1;
       tmp30_1 = _inComp;
@@ -6924,7 +7052,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
             tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp30_1), 4));
             tmp35 = mmc_unbox_integer(tmpMeta34);
             if (0 /* false */ != tmp35) goto tmp29_end;
-            
+
             _jac = tmpMeta33;
             /* Pattern matching succeeded */
             tmp27_c0 = omc_SymbolicJacobian_existNonLinIterVars(threadData, _jac, &tmp27_c1);
@@ -6937,14 +7065,14 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
             tmpMeta36 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp30_1), 4));
             tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp30_1), 5));
             if (mmc__uniontype__metarecord__typedef__equal(tmpMeta37,2,0) == 0) goto tmp29_end;
-            
+
             _jac = tmpMeta36;
             /* Pattern matching succeeded */
             tmp27_c0 = omc_SymbolicJacobian_existNonLinIterVars(threadData, _jac, &tmp27_c1);
             goto tmp29_done;
           }
           case 2: {
-            
+
             /* Pattern matching succeeded */
             tmp27_c0 = 0 /* false */;
             tmp27_c1 = _OMC_LIT10;
@@ -6973,6 +7101,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkNonLinDependecies(threa
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -6985,8 +7116,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
   _tailrecursive: OMC_LABEL_UNUSED
   // _outComp has no default value.
   // _outShared has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _inComp;
@@ -7093,7 +7224,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta15,0,0) == 0) goto tmp3_end;
-          
+
           _comp = tmp4_1;
           tmp4 += 2; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta[0+0] = _comp;
@@ -7143,7 +7274,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
           tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta25,1,0) == 0) goto tmp3_end;
-          
+
           _comp = tmp4_1;
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _comp;
@@ -7226,7 +7357,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
           goto tmp3_done;
         }
         case 5: {
-          
+
           _comp = tmp4_1;
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _comp;
@@ -7447,6 +7578,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_checkForSymbolic
   modelica_boolean _out;
   modelica_boolean _b1;
   modelica_boolean _b2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -7519,6 +7653,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_checkForSymbolic
     _out = 1 /* true */;
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_checkForSymbolicJacobian(threadData_t *threadData, modelica_metatype _inResidualEqns, modelica_metatype _inOtherEqns, modelica_metatype _name)
@@ -7802,7 +7939,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateJacobi
             for (; tmp7 < 1; tmp7++) {
               switch (MMC_SWITCH_CAST(tmp7)) {
               case 0: {
-                
+
                 _comp = tmp7_1;
                 /* Pattern matching succeeded */
                 _comp = omc_SymbolicJacobian_calculateJacobianComponent(threadData, _comp, _inVars, _inEqns, _outShared ,&_outShared);
@@ -7846,8 +7983,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateEqSyst
   _tailrecursive: OMC_LABEL_UNUSED
   // _outSyst has no default value.
   // _outShared has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;modelica_metatype tmp4_2;
     tmp4_1 = _inSyst;
@@ -7888,7 +8025,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_calculateEqSyst
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 3));
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 4));
-          
+
           _syst = tmp4_1;
           _vars = tmpMeta6;
           _eqns = tmpMeta7;
@@ -7952,7 +8089,7 @@ modelica_metatype omc_SymbolicJacobian_getJacobianDependencies(threadData_t *thr
           if (optionNone(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 6));
-          
+
           _dependencies = tmpMeta8;
           /* Pattern matching succeeded */
           tmpMeta1 = _dependencies;
@@ -7964,14 +8101,14 @@ modelica_metatype omc_SymbolicJacobian_getJacobianDependencies(threadData_t *thr
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,4) == 0) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           if (!optionNone(tmpMeta9)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta10 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta1 = tmpMeta10;
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           omc_Error_addInternalError(threadData, _OMC_LIT164, _OMC_LIT165);
           goto goto_2;
@@ -8078,7 +8215,7 @@ modelica_metatype omc_SymbolicJacobian_updateJacobianDependencies(threadData_t *
           modelica_metatype tmpMeta20;
           modelica_metatype tmpMeta21;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,4) == 0) goto tmp3_end;
-          
+
           _jac = tmp4_1;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
@@ -8119,7 +8256,7 @@ modelica_metatype omc_SymbolicJacobian_updateJacobianDependencies(threadData_t *
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _jacobian;
           goto tmp3_done;
@@ -8176,7 +8313,7 @@ modelica_metatype omc_SymbolicJacobian_getJacobianMatrixbyName(threadData_t *thr
           if (optionNone(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
-          
+
           _matrix = tmpMeta6;
           _name = tmpMeta10;
           /* Pattern matching succeeded */
@@ -8200,7 +8337,7 @@ modelica_metatype omc_SymbolicJacobian_getJacobianMatrixbyName(threadData_t *thr
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = mmc_mk_none();
           goto tmp3_done;
@@ -8355,7 +8492,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createAllDiffed
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (!listEmpty(tmp4_1)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = listReverse(_iVars);
           goto tmp3_done;
@@ -8372,7 +8509,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createAllDiffed
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,1,3) == 0) goto tmp3_end;
-          
+
           _v = tmpMeta6;
           _currVar = tmpMeta8;
           _restVar = tmpMeta7;
@@ -8459,7 +8596,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createAllDiffed
           tmpMeta16 = MMC_CAR(tmp4_1);
           tmpMeta17 = MMC_CDR(tmp4_1);
           tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta16), 2));
-          
+
           _v = tmpMeta16;
           _currVar = tmpMeta18;
           _restVar = tmpMeta17;
@@ -8640,8 +8777,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_generateSymboli
   _tailrecursive: OMC_LABEL_UNUSED
   // _outJacobian has no default value.
   // _outFunctions has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;volatile modelica_metatype tmp4_3;volatile modelica_string tmp4_4;
     tmp4_1 = _inBackendDAE;
@@ -8722,7 +8859,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_generateSymboli
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 11));
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 12));
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 17));
-          
+
           _cache = tmpMeta7;
           _graph = tmpMeta8;
           _functions = tmpMeta9;
@@ -8786,7 +8923,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_generateSymboli
           tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta21), 11));
           tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta21), 12));
           tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta21), 17));
-          
+
           _orderedVars = tmpMeta17;
           _orderedEqs = tmpMeta18;
           _ass2 = tmpMeta20;
@@ -8907,7 +9044,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_generateSymboli
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           omc_Error_addInternalError(threadData, _OMC_LIT186, _OMC_LIT187);
           goto goto_2;
@@ -9008,7 +9145,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_optimizeJacobia
           tmpMeta11 = MMC_CDR(tmpMeta9);
           if (!listEmpty(tmpMeta11)) goto tmp6_end;
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp7_1), 3));
-          
+
           _syst = tmpMeta10;
           _shared = tmpMeta12;
           /* Pattern matching succeeded */
@@ -9044,7 +9181,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_optimizeJacobia
           tmpMeta20 = MMC_CDR(tmpMeta18);
           if (!listEmpty(tmpMeta20)) goto tmp6_end;
           tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp7_1), 3));
-          
+
           _syst = tmpMeta19;
           _shared = tmpMeta21;
           /* Pattern matching succeeded */
@@ -9066,7 +9203,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_optimizeJacobia
         case 2: {
           modelica_metatype tmpMeta27;
           modelica_metatype tmpMeta28;
-          
+
           _backendDAE = tmp7_1;
           /* Pattern matching succeeded */
           if(omc_Flags_isSet(threadData, _OMC_LIT94))
@@ -9106,7 +9243,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_optimizeJacobia
           goto tmp6_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           omc_Error_addInternalError(threadData, _OMC_LIT218, _OMC_LIT219);
           goto goto_5;
@@ -9144,8 +9281,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createJacobian(
   _tailrecursive: OMC_LABEL_UNUSED
   // _outJacobian has no default value.
   // _outFunctionTree has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     {
       modelica_metatype _backendDAE = NULL;
@@ -9427,8 +9564,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createLinearMod
   _tailrecursive: OMC_LABEL_UNUSED
   // _outJacobianMatrices has no default value.
   // _outFunctionTree has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;modelica_boolean tmp4_2;
     tmp4_1 = _inBackendDAE;
@@ -9520,7 +9657,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createLinearMod
           modelica_metatype tmpMeta27;
           modelica_metatype tmpMeta28;
           if (0 /* false */ != tmp4_2) goto tmp3_end;
-          
+
           _backendDAE = tmp4_1;
           /* Pattern matching succeeded */
           _backendDAE2 = omc_BackendDAEUtil_copyBackendDAE(threadData, _backendDAE);
@@ -9656,7 +9793,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createLinearMod
           modelica_metatype tmpMeta50;
           modelica_metatype tmpMeta51;
           if (1 /* true */ != tmp4_2) goto tmp3_end;
-          
+
           _backendDAE = tmp4_1;
           /* Pattern matching succeeded */
           _backendDAE2 = omc_BackendDAEUtil_copyBackendDAE(threadData, _backendDAE);
@@ -9790,7 +9927,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createLinearMod
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           omc_Error_addInternalError(threadData, _OMC_LIT246, _OMC_LIT247);
           goto goto_2;
@@ -9825,10 +9962,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_createLinear
 }
 
 DLLDirection
-modelica_metatype omc_SymbolicJacobian_createFMIModelDerivativesForInitialization(threadData_t *threadData, modelica_metatype _initDAE, modelica_metatype _simDAE, modelica_metatype _depVars, modelica_metatype _indepVars, modelica_metatype _orderedVars, modelica_metatype _sparsePattern_, modelica_metatype _sparseColoring_)
+modelica_metatype omc_SymbolicJacobian_createFMIModelDerivativesForInitialization(threadData_t *threadData, modelica_metatype _initDAE, modelica_metatype _simDAE, modelica_metatype _depVars, modelica_metatype _indepVars, modelica_metatype _orderedVars, modelica_metatype _sparsePattern_, modelica_metatype _sparseColoring_, modelica_metatype *out_outFunctionTree)
 {
   modelica_metatype _outJacobianMatrices = NULL;
   modelica_metatype tmpMeta1;
+  modelica_metatype _outFunctionTree = NULL;
   modelica_metatype _backendDAE = NULL;
   modelica_metatype _backendDAE_1 = NULL;
   modelica_metatype _emptyBDAE = NULL;
@@ -9863,6 +10001,7 @@ modelica_metatype omc_SymbolicJacobian_createFMIModelDerivativesForInitializatio
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _outJacobianMatrices = tmpMeta1;
+  // _outFunctionTree has no default value.
   // _backendDAE has no default value.
   // _backendDAE_1 has no default value.
   // _emptyBDAE has no default value.
@@ -10134,6 +10273,8 @@ modelica_metatype omc_SymbolicJacobian_createFMIModelDerivativesForInitializatio
             tmpMeta41 = mmc_mk_box4(0, mmc_mk_some(tmpMeta39), _OMC_LIT73, tmpMeta40, _OMC_LIT73);
             tmpMeta34 = mmc_mk_cons(tmpMeta41, _outJacobianMatrices);
             _outJacobianMatrices = tmpMeta34;
+
+            _outFunctionTree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_initDAE), 3)))), 12)));
           }
           else
           {
@@ -10147,7 +10288,7 @@ modelica_metatype omc_SymbolicJacobian_createFMIModelDerivativesForInitializatio
 
             _depVarsArr = omc_BackendVariable_listVar1(threadData, _depVars);
 
-            _outJacobian = omc_SymbolicJacobian_generateGenericJacobian(threadData, _backendDAE_1, _indepVars, _statesarr, _inputvarsarr, _paramvarsarr, _depVarsArr, _varlst, _OMC_LIT235, omc_Flags_isSet(threadData, _OMC_LIT252), 0 /* false */, NULL, NULL, NULL, NULL);
+            _outJacobian = omc_SymbolicJacobian_generateGenericJacobian(threadData, _backendDAE_1, _indepVars, _statesarr, _inputvarsarr, _paramvarsarr, _depVarsArr, _varlst, _OMC_LIT235, omc_Flags_isSet(threadData, _OMC_LIT252), 0 /* false */ ,&_outFunctionTree ,NULL ,NULL, NULL);
 
             if(omc_Flags_isSet(threadData, _OMC_LIT94))
             {
@@ -10157,6 +10298,8 @@ modelica_metatype omc_SymbolicJacobian_createFMIModelDerivativesForInitializatio
             tmpMeta43 = mmc_mk_box4(0, _outJacobian, _sparsePattern_, _sparseColoring_, _OMC_LIT73);
             tmpMeta42 = mmc_mk_cons(tmpMeta43, _outJacobianMatrices);
             _outJacobianMatrices = tmpMeta42;
+
+            _outFunctionTree = omc_AvlTreePathFunction_join(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_initDAE), 3)))), 12))), _outFunctionTree, boxvar_AvlTreePathFunction_addConflictDefault);
           }
           goto tmp3_done;
         }
@@ -10167,6 +10310,8 @@ modelica_metatype omc_SymbolicJacobian_createFMIModelDerivativesForInitializatio
 
           tmpMeta44 = MMC_REFSTRUCTLIT(mmc_nil);
           _outJacobianMatrices = tmpMeta44;
+
+          _outFunctionTree = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_initDAE), 3)))), 12)));
           goto tmp3_done;
         }
         }
@@ -10189,6 +10334,7 @@ modelica_metatype omc_SymbolicJacobian_createFMIModelDerivativesForInitializatio
   }
   ;
   _return: OMC_LABEL_UNUSED
+  if (out_outFunctionTree) { *out_outFunctionTree = _outFunctionTree; }
   return _outJacobianMatrices;
 }
 
@@ -10578,6 +10724,7 @@ modelica_metatype omc_SymbolicJacobian_transposeSparsePatternTuple(threadData_t 
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp18, tmp20); _i += tmp19)
     {
+
       _tmpTuple = arrayGet(_outSparsePattern, _i);
 
       /* Pattern-matching assignment */
@@ -10724,6 +10871,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_getSparsePat
 PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_getSparsePattern2(threadData_t *threadData, modelica_metatype _inInputVars, modelica_metatype _inSolvedVars, modelica_metatype _inEqns, modelica_metatype _ineqnSparse, modelica_metatype _invarSparse, modelica_metatype _inMark, modelica_metatype _inUsed, modelica_integer _inmarkValue)
 {
   modelica_metatype _localList = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _localList has no default value.
@@ -10733,6 +10883,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_getSparsePattern2(threadData
 
   omc_List_map2__0(threadData, _inEqns, boxvar_Array_updateIndexFirst, _localList, _ineqnSparse);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_SymbolicJacobian_getSparsePattern2(threadData_t *threadData, modelica_metatype _inInputVars, modelica_metatype _inSolvedVars, modelica_metatype _inEqns, modelica_metatype _ineqnSparse, modelica_metatype _invarSparse, modelica_metatype _inMark, modelica_metatype _inUsed, modelica_metatype _inmarkValue)
@@ -10788,7 +10941,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (!listEmpty(tmp4_1)) goto tmp3_end;
-          
+
           _result = tmp4_2;
           /* Pattern matching succeeded */
           tmpMeta1 = _result;
@@ -10811,7 +10964,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
           tmp9 = mmc_unbox_integer(tmpMeta8);
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 3));
           tmp11 = mmc_unbox_integer(tmpMeta10);
-          
+
           _eqn = tmp9  /* pattern as ty=Integer */;
           _var = tmp11  /* pattern as ty=Integer */;
           _rest = tmpMeta7;
@@ -10847,7 +11000,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta14), 2));
           tmp17 = mmc_unbox_integer(tmpMeta16);
           tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta14), 3));
-          
+
           _eqn = tmp17  /* pattern as ty=Integer */;
           _solvedVars = tmpMeta18;
           _rest = tmpMeta15;
@@ -10917,7 +11070,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
           tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 2));
           tmp27 = mmc_unbox_integer(tmpMeta26);
           tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 3));
-          
+
           _eqn = tmp27  /* pattern as ty=Integer */;
           _solvedVars = tmpMeta28;
           _rest = tmpMeta25;
@@ -10987,7 +11140,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
           tmpMeta36 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta34), 2));
           tmp37 = mmc_unbox_integer(tmpMeta36);
           tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta34), 3));
-          
+
           _eqn = tmp37  /* pattern as ty=Integer */;
           _solvedVars = tmpMeta38;
           _rest = tmpMeta35;
@@ -11057,7 +11210,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
           tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta44), 2));
           tmp47 = mmc_unbox_integer(tmpMeta46);
           tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta44), 3));
-          
+
           _eqn = tmp47  /* pattern as ty=Integer */;
           _solvedVars = tmpMeta48;
           _rest = tmpMeta45;
@@ -11127,7 +11280,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
           tmpMeta56 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 2));
           tmp57 = mmc_unbox_integer(tmpMeta56);
           tmpMeta58 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 3));
-          
+
           _eqn = tmp57  /* pattern as ty=Integer */;
           _solvedVars = tmpMeta58;
           _rest = tmpMeta55;
@@ -11197,7 +11350,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
           tmpMeta66 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta64), 2));
           tmp67 = mmc_unbox_integer(tmpMeta66);
           tmpMeta68 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta64), 3));
-          
+
           _eqn = tmp67  /* pattern as ty=Integer */;
           _solvedVars = tmpMeta68;
           _rest = tmpMeta65;
@@ -11264,7 +11417,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta74,1,5) == 0) goto tmp3_end;
           tmpMeta76 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta74), 2));
           tmpMeta77 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta74), 3));
-          
+
           _eqns = tmpMeta76;
           _solvedVars = tmpMeta77;
           _rest = tmpMeta75;
@@ -11336,7 +11489,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
           tmpMeta85 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta84), 2));
           tmpMeta86 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta84), 3));
           tmpMeta87 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta84), 4));
-          
+
           _vars = tmpMeta85;
           _eqns = tmpMeta86;
           _innerEquations = tmpMeta87;
@@ -11405,7 +11558,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_getSparsePatter
           modelica_metatype tmpMeta92;
           modelica_metatype tmpMeta93;
           modelica_metatype tmpMeta94;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta92 = _inComponents;
@@ -11449,6 +11602,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SymbolicJacobian_findDegrees(thre
 {
   modelica_integer _outDegree;
   modelica_integer _outMaxDegree;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outDegree has no default value.
@@ -11458,6 +11614,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SymbolicJacobian_findDegrees(thre
   _outMaxDegree = modelica_integer_max((modelica_integer)(_inValue),(modelica_integer)(_outDegree));
   _return: OMC_LABEL_UNUSED
   if (out_outMaxDegree) { *out_outMaxDegree = _outMaxDegree; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outDegree;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_findDegrees(threadData_t *threadData, modelica_metatype _inList, modelica_metatype _inValue, modelica_metatype *out_outMaxDegree)
@@ -11487,6 +11646,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_dumpSparsePatternStatistics(
   modelica_string tmp9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _maxDegree has no default value.
@@ -11506,6 +11668,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_dumpSparsePatternStatistics(
   tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT18);
   fputs(MMC_STRINGDATA(tmpMeta11),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_SymbolicJacobian_dumpSparsePatternStatistics(threadData_t *threadData, modelica_metatype _nonZeroElements, modelica_metatype _sparsepatternT)
@@ -11530,8 +11695,8 @@ modelica_metatype omc_SymbolicJacobian_generateSparsePattern(threadData_t *threa
   // _outColoredCols has no default value.
   _debug = 0 /* false */;
   _patternName = (_nonlinearPattern?_OMC_LIT264:_OMC_LIT265);
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;volatile modelica_metatype tmp4_3;
     tmp4_1 = _inBackendDAE;
@@ -11619,7 +11784,7 @@ modelica_metatype omc_SymbolicJacobian_generateSparsePattern(threadData_t *threa
         case 0: {
           modelica_metatype tmpMeta6;
           if (!listEmpty(tmp4_3)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta6 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta[0+0] = _OMC_LIT74;
@@ -11680,7 +11845,7 @@ modelica_metatype omc_SymbolicJacobian_generateSparsePattern(threadData_t *threa
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 2));
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 4));
           if (!listEmpty(tmpMeta9)) goto tmp3_end;
-          
+
           _syst = tmpMeta8;
           _bdaeMatching = tmpMeta10;
           _ass1 = tmpMeta11;
@@ -12186,7 +12351,7 @@ modelica_metatype omc_SymbolicJacobian_generateSparsePattern(threadData_t *threa
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           omc_Error_addInternalError(threadData, _OMC_LIT287, _OMC_LIT288);
           goto goto_2;
@@ -12229,6 +12394,9 @@ modelica_metatype boxptr_SymbolicJacobian_generateSparsePattern(threadData_t *th
 
 PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkLinearSystem(threadData_t *threadData, modelica_integer _info, modelica_metatype _vars, modelica_metatype _jac, modelica_metatype _rhs, modelica_metatype _eqnlst)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -12266,7 +12434,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkLinearSystem(threadData
           modelica_boolean tmp5;
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp5 = (_info > ((modelica_integer) 0));
@@ -12296,7 +12464,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkLinearSystem(threadData
           modelica_boolean tmp8;
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp8 = (_info < ((modelica_integer) 0));
@@ -12338,6 +12506,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_checkLinearSystem(threadData
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_SymbolicJacobian_checkLinearSystem(threadData_t *threadData, modelica_metatype _info, modelica_metatype _vars, modelica_metatype _jac, modelica_metatype _rhs, modelica_metatype _eqnlst)
@@ -12350,6 +12521,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_SymbolicJacobian_checkLinearSystem(threadD
 
 PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_evaluateConstantJacobian2(threadData_t *threadData, modelica_metatype _jac, modelica_metatype _vals)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -12386,7 +12560,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_evaluateConstantJacobian2(th
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,3,3) == 0) goto tmp2_end;
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
-          
+
           _i1 = tmp6  /* pattern as ty=Integer */;
           _i2 = tmp8  /* pattern as ty=Integer */;
           _exp = tmpMeta10;
@@ -12414,6 +12588,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_evaluateConstantJacobian2(th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -12487,9 +12664,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_changeConstantL
   // _outVars has no default value.
   // _oeqns has no default value.
   // _oshared has no default value.
-  
-  
-  
+
+
+
   { /* match expression */
     modelica_metatype tmp4_1;modelica_metatype tmp4_2;modelica_metatype tmp4_3;modelica_metatype tmp4_4;modelica_metatype tmp4_5;modelica_metatype tmp4_6;
     tmp4_1 = _inVarLst;
@@ -12538,7 +12715,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_changeConstantL
           if (!listEmpty(tmp4_1)) goto tmp3_end;
           if (!listEmpty(tmp4_2)) goto tmp3_end;
           if (!listEmpty(tmp4_3)) goto tmp3_end;
-          
+
           _vars = tmp4_5;
           _eqns = tmp4_6;
           /* Pattern matching succeeded */
@@ -12579,7 +12756,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_changeConstantL
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta16,1,3) == 0) goto tmp3_end;
           tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 6));
-          
+
           _r = tmp8  /* pattern as ty=Real */;
           _rlst = tmpMeta7;
           _slst = tmpMeta10;
@@ -12635,7 +12812,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_changeConstantL
           tmpMeta27 = MMC_CAR(tmp4_4);
           tmpMeta28 = MMC_CDR(tmp4_4);
           tmp29 = mmc_unbox_integer(tmpMeta27);
-          
+
           _v = tmpMeta20;
           _varlst = tmpMeta21;
           _r = tmp24  /* pattern as ty=Real */;
@@ -12696,8 +12873,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_solveLinearSyst
   _tailrecursive: OMC_LABEL_UNUSED
   // _osyst has no default value.
   // _oshared has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;modelica_metatype tmp4_2;
     tmp4_1 = _inSyst;
@@ -12740,7 +12917,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_solveLinearSyst
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 12));
-          
+
           _syst = tmp4_1;
           _funcs = tmpMeta6;
           /* Pattern matching succeeded */
@@ -12816,11 +12993,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_constantLinearS
   // _outRunMatching has no default value.
   // _sysIdxOut has no default value.
   // _compIdxOut has no default value.
-  
-  
-  
-  
-  
+
+
+
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;volatile modelica_metatype tmp4_3;
     tmp4_1 = _isyst;
@@ -12888,7 +13065,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_constantLinearS
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 1));
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 5));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,0,0) == 0) goto tmp3_end;
-          
+
           _eindex = tmpMeta6;
           _vindx = tmpMeta7;
           _jac = tmpMeta10;
@@ -12933,7 +13110,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_constantLinearS
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta17,1,0) == 0) goto tmp3_end;
           tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _eindex = tmpMeta12;
           _vindx = tmpMeta13;
           _jac = tmpMeta16;
@@ -12995,7 +13172,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_constantLinearS
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _isyst;
           tmpMeta[0+1] = _ishared;
@@ -13068,10 +13245,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_constantLinearS
   // _oshared has no default value.
   // _runMatching has no default value.
   // _sysIdxOut has no default value.
-  
-  
-  
-  
+
+
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _inComps;
@@ -13192,7 +13369,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_constantLinearS
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (0 /* false */ != tmp4_1) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _isyst;
           goto tmp3_done;
@@ -13207,7 +13384,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_constantLinearS
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 8));
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 9));
-          
+
           _vars = tmpMeta6;
           _eqns = tmpMeta7;
           _stateSets = tmpMeta8;
@@ -13316,6 +13493,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SymbolicJacobian_getPivotElement(
   modelica_real _entry;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _pos = ((modelica_integer) 0);
@@ -13339,6 +13519,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SymbolicJacobian_getPivotElement(
   }
   _return: OMC_LABEL_UNUSED
   if (out_value) { *out_value = _value; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _pos;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_getPivotElement(threadData_t *threadData, modelica_metatype _A, modelica_metatype _rangeIn, modelica_metatype _startIdx, modelica_metatype _n, modelica_metatype *out_value)
@@ -13367,6 +13550,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_gauss(threadData_t *threadDa
   modelica_real _b_entry;
   modelica_real _first;
   modelica_metatype _range = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _pivotIdx has no default value.
@@ -13420,6 +13606,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_gauss(threadData_t *threadDa
             modelica_integer _ic;
             for(_ic = _indxIn; in_range_integer(_ic, tmp7, tmp9); _ic += tmp8)
             {
+
               _entry = mmc_unbox_real(arrayGet(arrayGet(_A,_pivotIdx) /* DAE.ASUB */, _ic));
 
               tmp6 = _pivot;
@@ -13436,6 +13623,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_gauss(threadData_t *threadDa
             modelica_integer _ic;
             for(_ic = ((modelica_integer) 1); in_range_integer(_ic, tmp11, tmp13); _ic += tmp12)
             {
+
               _pos = (((modelica_integer) -1) + _pivotIdx) * (_n) + _ic;
 
               _b_entry = mmc_unbox_real(arrayGet(_b, _pos));
@@ -13461,6 +13649,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_gauss(threadData_t *threadDa
                 modelica_integer _ic;
                 for(_ic = _indxIn; in_range_integer(_ic, tmp15, tmp17); _ic += tmp16)
                 {
+
                   _pos = (((modelica_integer) -1) + mmc_unbox_integer(_ir)) * (_n) + _ic;
 
                   _entry = mmc_unbox_real(arrayGet(arrayGet(_A,mmc_unbox_integer(_ir)) /* DAE.ASUB */, _ic));
@@ -13510,6 +13699,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_gauss(threadData_t *threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_SymbolicJacobian_gauss(threadData_t *threadData, modelica_metatype _A, modelica_metatype _b, modelica_metatype _indxIn, modelica_metatype _n, modelica_metatype _rangeIn, modelica_metatype _permutation)
@@ -13562,6 +13754,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createBVecVars(
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp12, tmp14); _i += tmp13)
     {
+
       tmpMeta3 = stringAppend(_OMC_LIT309,intString(_sysIdx));
       tmpMeta4 = stringAppend(tmpMeta3,_OMC_LIT139);
       tmpMeta5 = stringAppend(tmpMeta4,intString(_compIdx));
@@ -13663,6 +13856,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_createSysEquati
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp4, tmp6); _i += tmp5)
     {
+
       _row = mmc_unbox_integer(arrayGet(_order, _i));
 
       _coeffs = arrayList(arrayGet(_A,_row) /* DAE.ASUB */);
@@ -13805,6 +13999,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_solveConstJacLi
     modelica_integer _row;
     for(_row = ((modelica_integer) 1); in_range_integer(_row, tmp9, tmp11); _row += tmp10)
     {
+
       arrayUpdate(_b, (((modelica_integer) -1) + _row) * (_n) + _row, _OMC_LIT313);
     }
   }
@@ -13857,6 +14052,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_solveConstJa
 
 PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_updateAssignment(threadData_t *threadData, modelica_metatype _comp, modelica_metatype _ass1, modelica_metatype _ass2)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -13894,7 +14092,7 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_updateAssignment(threadData_
           goto tmp2_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
@@ -13918,6 +14116,9 @@ PROTECTED_FUNCTION_STATIC void omc_SymbolicJacobian_updateAssignment(threadData_
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -13968,7 +14169,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_replaceStrongCo
 
   omc_List_map2__0(threadData, _compsNew, boxvar_SymbolicJacobian_updateAssignment, _ass1, _ass2);
 
-  _comps = omc_List_replaceAtWithList(threadData, _compsNew, ((modelica_integer) -1) + _idx, _comps);
+  _comps = omc_List_replaceAtWithList(threadData, _compsNew, _idx, _comps);
 
   tmpMeta7 = mmc_mk_box4(4, &BackendDAE_Matching_MATCHING__desc, _ass1, _ass2, listAppend(_comps, _compsAdd));
   tmpMeta6 = MMC_TAGPTR(mmc_alloc_words(11));
@@ -13994,6 +14195,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_variableResidual
 {
   modelica_boolean _isNotConst;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isNotConst has no default value.
@@ -14011,13 +14215,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_variableResidual
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,3) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -14035,6 +14239,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_variableResidual
   }
   _isNotConst = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isNotConst;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_variableResidual(threadData_t *threadData, modelica_metatype _eq)
@@ -14050,6 +14257,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianIsConsta
 {
   modelica_boolean _isConst;
   modelica_metatype _eqs = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isConst has no default value.
@@ -14058,6 +14268,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SymbolicJacobian_jacobianIsConsta
 
   _isConst = (!omc_List_any(threadData, _eqs, boxvar_SymbolicJacobian_variableResidual));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isConst;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SymbolicJacobian_jacobianIsConstant(threadData_t *threadData, modelica_metatype _jac)
@@ -14081,9 +14294,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_traverserExpinp
   // _outExp has no default value.
   // _cont has no default value.
   // _outTpl has no default value.
-  
-  
-  
+
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;
     tmp4_1 = _inExp;
@@ -14209,7 +14422,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_traverserExpinp
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _inExp;
           tmp1_c1 = 1 /* true */;
@@ -14281,8 +14494,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_inputDerivative
   _outShared = _inShared;
   // _outChanged has no default value.
   _hasFailed = 0 /* false */;
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _isyst;
@@ -14311,7 +14524,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_inputDerivative
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _orderedEqs = tmpMeta6;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
@@ -14335,7 +14548,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_inputDerivative
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _isyst;
           tmp1_c1 = _inChanged;
@@ -14881,7 +15094,7 @@ modelica_metatype omc_SymbolicJacobian_symbolicJacobianDAE(threadData_t *threadD
 
           _inDepVars = listAppend((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_shared), 19)))), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_shared), 19)))), 3))));
 
-          if((stringEqual(omc_Flags_getConfigString(threadData, _OMC_LIT346), _OMC_LIT333)))
+          if((stringEqual(omc_Flags_getConfigString(threadData, _OMC_LIT350), _OMC_LIT333)))
           {
             _symjac = omc_SymbolicJacobian_generateGenericJacobian(threadData, _DAE, _inDepVars, omc_BackendVariable_emptyVars(threadData, ((modelica_integer) 4013)), omc_BackendVariable_emptyVars(threadData, ((modelica_integer) 4013)), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_shared), 2))), _resVars, omc_BackendVariable_varList(threadData, _v), _OMC_LIT236, 0 /* false */, 1 /* true */ ,&_funcs ,&_sparsePattern ,&_coloredCols ,&_nonlinearPattern);
 
@@ -14909,7 +15122,7 @@ modelica_metatype omc_SymbolicJacobian_symbolicJacobianDAE(threadData_t *threadD
         }
         case 1: {
           /* Pattern matching succeeded */
-          omc_Error_addCompilerWarning(threadData, _OMC_LIT347);
+          omc_Error_addCompilerWarning(threadData, _OMC_LIT351);
 
           _outBackendDAE = _inBackendDAE;
           goto tmp2_done;
@@ -15015,7 +15228,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SymbolicJacobian_detectSparsePat
         }
         case 1: {
           /* Pattern matching succeeded */
-          omc_Error_addCompilerWarning(threadData, _OMC_LIT348);
+          omc_Error_addCompilerWarning(threadData, _OMC_LIT352);
 
           _outBackendDAE = _inBackendDAE;
           goto tmp2_done;
@@ -15050,7 +15263,7 @@ modelica_metatype omc_SymbolicJacobian_constantLinearSystem(threadData_t *thread
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outDAE has no default value.
-  _outDAE = omc_BackendDAEUtil_mapEqSystemAndFold(threadData, _inDAE, boxvar_SymbolicJacobian_constantLinearSystem0, _OMC_LIT349, NULL);
+  _outDAE = omc_BackendDAEUtil_mapEqSystemAndFold(threadData, _inDAE, boxvar_SymbolicJacobian_constantLinearSystem0, _OMC_LIT353, NULL);
   _return: OMC_LABEL_UNUSED
   return _outDAE;
 }
@@ -15127,7 +15340,7 @@ modelica_metatype omc_SymbolicJacobian_symbolicJacobian(threadData_t *threadData
   // _outDAE has no default value.
   { /* match expression */
     modelica_string tmp4_1;
-    tmp4_1 = omc_Flags_getConfigString(threadData, _OMC_LIT346);
+    tmp4_1 = omc_Flags_getConfigString(threadData, _OMC_LIT350);
     {
       volatile mmc_switch_type tmp4;
       int tmp5;
@@ -15167,4 +15380,3 @@ modelica_metatype omc_SymbolicJacobian_symbolicJacobian(threadData_t *threadData
   _return: OMC_LABEL_UNUSED
   return _outDAE;
 }
-

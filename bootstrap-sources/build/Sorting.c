@@ -183,6 +183,7 @@ modelica_metatype omc_Sorting_TarjanTransposed(threadData_t *threadData, modelic
     modelica_integer _eqn;
     for(_eqn = ((modelica_integer) 1); in_range_integer(_eqn, tmp3, tmp5); _eqn += tmp4)
     {
+
       if(((mmc_unbox_integer(arrayGet(_number,_eqn) /* DAE.ASUB */) == ((modelica_integer) -1)) && (mmc_unbox_integer(arrayGet(_ass2,_eqn) /* DAE.ASUB */) > ((modelica_integer) 0))))
       {
         _stack = omc_Sorting_StrongConnectTransposed(threadData, _mT, _ass2, _eqn, _stack, _index, _number, _lowlink, _onStack, _outComponents ,&_index ,&_outComponents);
@@ -348,6 +349,7 @@ modelica_metatype omc_Sorting_Tarjan(threadData_t *threadData, modelica_metatype
     modelica_integer _var;
     for(_var = ((modelica_integer) 1); in_range_integer(_var, tmp3, tmp5); _var += tmp4)
     {
+
       _eqn = mmc_unbox_integer(arrayGet(_ass1,_var) /* DAE.ASUB */);
 
       if(((_eqn > ((modelica_integer) 0)) && (mmc_unbox_integer(arrayGet(_number,_eqn) /* DAE.ASUB */) == ((modelica_integer) -1))))

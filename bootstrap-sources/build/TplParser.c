@@ -15667,6 +15667,9 @@ modelica_metatype omc_TplParser_identifier(threadData_t *threadData, modelica_me
 DLLDirection
 void omc_TplParser_afterKeyword(threadData_t *threadData, modelica_metatype _inChars)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -15716,6 +15719,9 @@ void omc_TplParser_afterKeyword(threadData_t *threadData, modelica_metatype _inC
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -17639,6 +17645,9 @@ modelica_boolean omc_TplParser_wasFatalError(threadData_t *threadData, modelica_
 {
   modelica_boolean _outWasError;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outWasError has no default value.
@@ -17683,6 +17692,9 @@ modelica_boolean omc_TplParser_wasFatalError(threadData_t *threadData, modelica_
   }
   _outWasError = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outWasError;
 }
 modelica_metatype boxptr_TplParser_wasFatalError(threadData_t *threadData, modelica_metatype _inLineInfo)
@@ -18016,6 +18028,9 @@ modelica_metatype boxptr_TplParser_parseError(threadData_t *threadData, modelica
 DLLDirection
 void omc_TplParser_printAndFailIfError(threadData_t *threadData, modelica_metatype _inLineInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -18074,6 +18089,9 @@ void omc_TplParser_printAndFailIfError(threadData_t *threadData, modelica_metaty
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -18106,6 +18124,9 @@ modelica_integer omc_TplParser_charsTillEndOfLine(threadData_t *threadData, mode
   modelica_integer _i;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outCharsTillEnd = __omcQ_24in_5FoutCharsTillEnd;
@@ -18126,6 +18147,9 @@ modelica_integer omc_TplParser_charsTillEndOfLine(threadData_t *threadData, mode
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outCharsTillEnd;
 }
 modelica_metatype boxptr_TplParser_charsTillEndOfLine(threadData_t *threadData, modelica_metatype _inChars, modelica_metatype __omcQ_24in_5FoutCharsTillEnd)
@@ -18306,6 +18330,9 @@ modelica_integer omc_TplParser_getPosition(threadData_t *threadData, modelica_me
   modelica_integer tmp1_c0 __attribute__((unused)) = 0;
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outLineNumber has no default value.
@@ -18364,6 +18391,9 @@ modelica_integer omc_TplParser_getPosition(threadData_t *threadData, modelica_me
   _outColumnNumber = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_outColumnNumber) { *out_outColumnNumber = _outColumnNumber; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outLineNumber;
 }
 modelica_metatype boxptr_TplParser_getPosition(threadData_t *threadData, modelica_metatype _inChars, modelica_metatype _inLineInfo, modelica_metatype *out_outColumnNumber)
@@ -18798,6 +18828,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_TplParser_CacheTree_calculateBala
 {
   modelica_integer _outBalance;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBalance has no default value.
@@ -18840,6 +18873,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_TplParser_CacheTree_calculateBala
   }
   _outBalance = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBalance;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_TplParser_CacheTree_calculateBalance(threadData_t *threadData, modelica_metatype _inNode)
@@ -19054,6 +19090,9 @@ modelica_metatype omc_TplParser_CacheTree_fold__2(threadData_t *threadData, mode
 DLLDirection
 void omc_TplParser_CacheTree_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -19101,6 +19140,9 @@ void omc_TplParser_CacheTree_forEach(threadData_t *threadData, modelica_metatype
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -19379,6 +19421,9 @@ modelica_boolean omc_TplParser_CacheTree_hasKey(threadData_t *threadData, modeli
   modelica_metatype _tree = NULL;
   modelica_string tmp1 = 0;
   modelica_boolean tmp5 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _comp = 0 /* false */;
@@ -19489,6 +19534,9 @@ modelica_boolean omc_TplParser_CacheTree_hasKey(threadData_t *threadData, modeli
   }
   _comp = tmp5;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_TplParser_CacheTree_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey)
@@ -19504,6 +19552,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_TplParser_CacheTree_height(thread
 {
   modelica_integer _outHeight;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHeight has no default value.
@@ -19546,6 +19597,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_TplParser_CacheTree_height(thread
   }
   _outHeight = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHeight;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_TplParser_CacheTree_height(threadData_t *threadData, modelica_metatype _inNode)
@@ -19560,10 +19614,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_TplParser_CacheTree_height(th
 DLLDirection
 void omc_TplParser_CacheTree_intersection(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -19572,6 +19632,9 @@ modelica_boolean omc_TplParser_CacheTree_isEmpty(threadData_t *threadData, model
 {
   modelica_boolean _isEmpty;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -19609,6 +19672,9 @@ modelica_boolean omc_TplParser_CacheTree_isEmpty(threadData_t *threadData, model
   }
   _isEmpty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_TplParser_CacheTree_isEmpty(threadData_t *threadData, modelica_metatype _tree)
@@ -19680,11 +19746,17 @@ DLLDirection
 modelica_integer omc_TplParser_CacheTree_keyCompare(threadData_t *threadData, modelica_string _inKey1, modelica_string _inKey2)
 {
   modelica_integer _outResult;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
   _outResult = stringCompare(_inKey1, _inKey2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_TplParser_CacheTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
@@ -20332,6 +20404,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_TplParser_CacheTree_referenceEqOr
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -20371,6 +20446,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_TplParser_CacheTree_referenceEqOr
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_TplParser_CacheTree_referenceEqOrEmpty(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)

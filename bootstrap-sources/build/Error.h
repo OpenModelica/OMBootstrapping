@@ -12,6 +12,8 @@ extern "C" {
 
 extern struct record_description ErrorTypes_Message_MESSAGE__desc;
 
+extern struct record_description ErrorTypes_MessageType_SCRIPTING__desc;
+
 extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
 
 extern struct record_description ErrorTypes_Severity_ERROR__desc;
@@ -254,6 +256,13 @@ void omc_Error_addMessage(threadData_t *threadData, modelica_metatype _inErrorMs
 #define boxptr_Error_addMessage omc_Error_addMessage
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Error_addMessage,2,0) {(void*) boxptr_Error_addMessage,0}};
 #define boxvar_Error_addMessage MMC_REFSTRUCTLIT(boxvar_lit_Error_addMessage)
+
+
+DLLDirection
+void omc_Error_checkCancel(threadData_t *threadData);
+#define boxptr_Error_checkCancel omc_Error_checkCancel
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Error_checkCancel,2,0) {(void*) boxptr_Error_checkCancel,0}};
+#define boxvar_Error_checkCancel MMC_REFSTRUCTLIT(boxvar_lit_Error_checkCancel)
 
 
 DLLDirection

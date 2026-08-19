@@ -230,6 +230,9 @@ modelica_integer omc_Rational_compare(threadData_t *threadData, modelica_metatyp
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_integer tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _i has no default value.
@@ -245,6 +248,9 @@ modelica_integer omc_Rational_compare(threadData_t *threadData, modelica_metatyp
   if (tmp4 == 0) {MMC_THROW_INTERNAL();}
   _i = omc_Util_intCompare(threadData, (modelica_div_integer(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_r1), 2)))),tmp1).quot) * (modelica_div_integer(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_r2), 3)))),tmp2).quot), (modelica_div_integer(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_r2), 2)))),tmp3).quot) * (modelica_div_integer(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_r1), 3)))),tmp4).quot));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _i;
 }
 modelica_metatype boxptr_Rational_compare(threadData_t *threadData, modelica_metatype _r1, modelica_metatype _r2)
@@ -260,10 +266,16 @@ DLLDirection
 modelica_boolean omc_Rational_isEqual(threadData_t *threadData, modelica_metatype _r1, modelica_metatype _r2)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _b = ((mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_r1), 2)))) == mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_r2), 2))))) && (mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_r1), 3)))) == mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_r2), 3))))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_Rational_isEqual(threadData_t *threadData, modelica_metatype _r1, modelica_metatype _r2)

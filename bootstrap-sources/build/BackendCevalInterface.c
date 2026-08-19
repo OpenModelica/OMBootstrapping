@@ -111,10 +111,16 @@ modelica_metatype boxptr_BackendCevalInterface_cevalInteractiveFunctions(threadD
 DLLDirection
 void omc_BackendCevalInterface_initializeBackendInterface(threadData_t *threadData, modelica_metatype _inFunctions)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   setGlobalRoot(((modelica_integer) 32), _inFunctions);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

@@ -5,7 +5,6 @@ extern "C" {
 #include "ModelicaUtilities.h"  // Make Modelica C util functions available for external includes.
 
 #include "Array.h"
-#include "Coloring.h"
 #include "Error.h"
 #include "Flags.h"
 #include "List.h"
@@ -14,6 +13,7 @@ extern "C" {
 #include "NBEquation.h"
 #include "NBJacobian.h"
 #include "NBPartition.h"
+#include "NBReplacements.h"
 #include "NBSlice.h"
 #include "NBStrongComponent.h"
 #include "NBTearing.h"

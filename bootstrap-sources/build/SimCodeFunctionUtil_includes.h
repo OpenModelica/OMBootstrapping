@@ -26,6 +26,7 @@ extern "C" {
 #include "ProgramUtil.h"
 #include "Settings.h"
 #include "SimCodeFunctionUtil.h"
+#include "StringUtil.h"
 #include "System.h"
 #include "Testsuite.h"
 #include "Types.h"

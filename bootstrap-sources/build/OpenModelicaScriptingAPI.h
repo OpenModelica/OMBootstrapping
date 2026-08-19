@@ -906,9 +906,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_OpenModelicaScriptingAPI_translateModel
 
 
 DLLDirection
-modelica_string omc_OpenModelicaScriptingAPI_buildModelFMU(threadData_t *threadData, modelica_string _className, modelica_string _version, modelica_string _fmuType, modelica_string _fileNamePrefix, modelica_metatype _platforms, modelica_boolean _includeResources);
+modelica_string omc_OpenModelicaScriptingAPI_buildModelFMU(threadData_t *threadData, modelica_string _className, modelica_string _version, modelica_string _fmuType, modelica_string _fileNamePrefix, modelica_metatype _platforms, modelica_boolean _includeResources, modelica_string _method);
 DLLDirection
-modelica_metatype boxptr_OpenModelicaScriptingAPI_buildModelFMU(threadData_t *threadData, modelica_metatype _className, modelica_metatype _version, modelica_metatype _fmuType, modelica_metatype _fileNamePrefix, modelica_metatype _platforms, modelica_metatype _includeResources);
+modelica_metatype boxptr_OpenModelicaScriptingAPI_buildModelFMU(threadData_t *threadData, modelica_metatype _className, modelica_metatype _version, modelica_metatype _fmuType, modelica_metatype _fileNamePrefix, modelica_metatype _platforms, modelica_metatype _includeResources, modelica_metatype _method);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_OpenModelicaScriptingAPI_buildModelFMU,2,0) {(void*) boxptr_OpenModelicaScriptingAPI_buildModelFMU,0}};
 #define boxvar_OpenModelicaScriptingAPI_buildModelFMU MMC_REFSTRUCTLIT(boxvar_lit_OpenModelicaScriptingAPI_buildModelFMU)
 

@@ -38,6 +38,8 @@ extern struct record_description NBSlice_SLICE__desc;
 
 extern struct record_description NBStrongComponent_ALGEBRAIC__LOOP__desc;
 
+extern struct record_description NBStrongComponent_MULTI__COMPONENT__desc;
+
 extern struct record_description NBTearing_TEARING__SET__desc;
 
 extern struct record_description SourceInfo_SOURCEINFO__desc;

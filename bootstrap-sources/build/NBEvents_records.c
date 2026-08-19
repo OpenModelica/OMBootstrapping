@@ -6,7 +6,7 @@ extern "C" {
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBEvents_EventInfo_EVENT__INFO__desc_added
 #define NBEvents_EventInfo_EVENT__INFO__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBEvents_EventInfo_EVENT__INFO__desc__fields[4] = {"time_set","time_map","state_map","numberMathEvents"};
+ADD_METARECORD_DEFINITIONS const char* NBEvents_EventInfo_EVENT__INFO__desc__fields[5] = {"time_set","time_map","state_map","numberMathEvents","spatial_lst"};
 ADD_METARECORD_DEFINITIONS struct record_description NBEvents_EventInfo_EVENT__INFO__desc = {
   "NBEvents_EventInfo_EVENT__INFO",
   "NBEvents.EventInfo.EVENT_INFO",
@@ -19,7 +19,7 @@ extern struct record_description NBEvents_EventInfo_EVENT__INFO__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBEvents_EventInfo_EVENT__INFO__desc_added
 #define NBEvents_EventInfo_EVENT__INFO__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBEvents_EventInfo_EVENT__INFO__desc__fields[4] = {"time_set","time_map","state_map","numberMathEvents"};
+ADD_METARECORD_DEFINITIONS const char* NBEvents_EventInfo_EVENT__INFO__desc__fields[5] = {"time_set","time_map","state_map","numberMathEvents","spatial_lst"};
 ADD_METARECORD_DEFINITIONS struct record_description NBEvents_EventInfo_EVENT__INFO__desc = {
   "NBEvents_EventInfo_EVENT__INFO",
   "NBEvents.EventInfo.EVENT_INFO",
@@ -158,6 +158,32 @@ ADD_METARECORD_DEFINITIONS struct record_description NBEvents_Condition_CONDITIO
 #endif
 #else /* Only use the file as a header */
 extern struct record_description NBEvents_Condition_CONDITION__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc_added
+#define NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc_added
+ADD_METARECORD_DEFINITIONS const char* NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc__fields[9] = {"index","in0","in1","pos","dir","initPnts","initVals","initSize","condition"};
+ADD_METARECORD_DEFINITIONS struct record_description NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc = {
+  "NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION",
+  "NBEvents.SpatialDistribution.SPATIAL_DISTRIBUTION",
+  NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc_added
+#define NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc_added
+ADD_METARECORD_DEFINITIONS const char* NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc__fields[9] = {"index","in0","in1","pos","dir","initPnts","initVals","initSize","condition"};
+ADD_METARECORD_DEFINITIONS struct record_description NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc = {
+  "NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION",
+  "NBEvents.SpatialDistribution.SPATIAL_DISTRIBUTION",
+  NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NBEvents_SpatialDistribution_SPATIAL__DISTRIBUTION__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBEvents_Bucket_BUCKET__desc_added

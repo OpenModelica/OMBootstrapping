@@ -302,6 +302,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_InstFunction_checkExtObjOutputWo
 
 PROTECTED_FUNCTION_STATIC void omc_InstFunction_checkExtObjOutput(threadData_t *threadData, modelica_metatype _inType, modelica_metatype _info)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -351,6 +354,9 @@ PROTECTED_FUNCTION_STATIC void omc_InstFunction_checkExtObjOutput(threadData_t *
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -358,6 +364,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_InstFunction_isElementImportantFo
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -409,6 +418,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_InstFunction_isElementImportantFo
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_InstFunction_isElementImportantForFunction(threadData_t *threadData, modelica_metatype _elt)
@@ -786,6 +798,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_InstFunction_addExtVarToCall(thr
     modelica_integer _dim;
     for(_dim = ((modelica_integer) 1); in_range_integer(_dim, tmp6, tmp8); _dim += tmp7)
     {
+
       tmpMeta4 = mmc_mk_box2(3, &DAE_Exp_ICONST__desc, mmc_mk_integer(_dim));
       tmpMeta5 = mmc_mk_box4(5, &DAE_ExtArg_EXTARGSIZE__desc, _cr, omc_ComponentReference_crefTypeFull(threadData, _cr), tmpMeta4);
       tmpMeta3 = mmc_mk_cons(tmpMeta5, _fargs);
@@ -2524,6 +2537,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_InstFunction_instantiateExternal
 
 PROTECTED_FUNCTION_STATIC void omc_InstFunction_checkExternalObjectMod(threadData_t *threadData, modelica_metatype _inMod, modelica_string _inClassName)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2593,6 +2609,9 @@ PROTECTED_FUNCTION_STATIC void omc_InstFunction_checkExternalObjectMod(threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

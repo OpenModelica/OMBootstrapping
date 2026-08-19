@@ -213,8 +213,8 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT83,6,_OMC_LIT83_data);
 #define _OMC_LIT84_data "potentially present"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT84,19,_OMC_LIT84_data);
 #define _OMC_LIT84 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT84)
-#define _OMC_LIT85_data "virtual"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT85,7,_OMC_LIT85_data);
+#define _OMC_LIT85_data "undeclared"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT85,10,_OMC_LIT85_data);
 #define _OMC_LIT85 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT85)
 #define _OMC_LIT86_data "connector"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT86,9,_OMC_LIT86_data);
@@ -383,6 +383,9 @@ DLLDirection
 void omc_NFPrefixes_printPrefixError(threadData_t *threadData, modelica_string _outerPrefix, modelica_string _innerPrefix, modelica_metatype _node)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_cons(_outerPrefix, mmc_mk_cons(omc_NFInstNode_InstNode_typeName(threadData, _node), mmc_mk_cons(omc_NFInstNode_InstNode_name(threadData, _node), mmc_mk_cons(_innerPrefix, MMC_REFSTRUCTLIT(mmc_nil)))));
@@ -390,6 +393,9 @@ void omc_NFPrefixes_printPrefixError(threadData_t *threadData, modelica_string _
 
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -490,6 +496,9 @@ modelica_boolean omc_NFPrefixes_isReplaceable(threadData_t *threadData, modelica
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -528,6 +537,9 @@ modelica_boolean omc_NFPrefixes_isReplaceable(threadData_t *threadData, modelica
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_NFPrefixes_isReplaceable(threadData_t *threadData, modelica_metatype _repl)
@@ -543,10 +555,16 @@ DLLDirection
 modelica_integer omc_NFPrefixes_mergeVisibility(threadData_t *threadData, modelica_integer _outerVis, modelica_integer _innerVis)
 {
   modelica_integer _vis;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _vis = (((modelica_integer)_outerVis == 2)?(modelica_integer)_outerVis:(modelica_integer)_innerVis);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _vis;
 }
 modelica_metatype boxptr_NFPrefixes_mergeVisibility(threadData_t *threadData, modelica_metatype _outerVis, modelica_metatype _innerVis)
@@ -647,6 +665,9 @@ modelica_integer omc_NFPrefixes_visibilityFromSCode(threadData_t *threadData, mo
 {
   modelica_integer _vis;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _vis has no default value.
@@ -684,6 +705,9 @@ modelica_integer omc_NFPrefixes_visibilityFromSCode(threadData_t *threadData, mo
   }
   _vis = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _vis;
 }
 modelica_metatype boxptr_NFPrefixes_visibilityFromSCode(threadData_t *threadData, modelica_metatype _scodeVis)
@@ -894,6 +918,9 @@ modelica_integer omc_NFPrefixes_innerOuterFromSCode(threadData_t *threadData, mo
 {
   modelica_integer _io;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _io has no default value.
@@ -941,6 +968,9 @@ modelica_integer omc_NFPrefixes_innerOuterFromSCode(threadData_t *threadData, mo
   }
   _io = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _io;
 }
 modelica_metatype boxptr_NFPrefixes_innerOuterFromSCode(threadData_t *threadData, modelica_metatype _scodeIO)
@@ -956,6 +986,9 @@ DLLDirection
 modelica_integer omc_NFPrefixes_mergeDirection(threadData_t *threadData, modelica_integer _outerDir, modelica_integer _innerDir, modelica_metatype _node, modelica_boolean _allowSame)
 {
   modelica_integer _dir;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _dir has no default value.
@@ -982,6 +1015,9 @@ modelica_integer omc_NFPrefixes_mergeDirection(threadData_t *threadData, modelic
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _dir;
 }
 modelica_metatype boxptr_NFPrefixes_mergeDirection(threadData_t *threadData, modelica_metatype _outerDir, modelica_metatype _innerDir, modelica_metatype _node, modelica_metatype _allowSame)
@@ -1240,6 +1276,9 @@ modelica_integer omc_NFPrefixes_directionFromSCode(threadData_t *threadData, mod
 {
   modelica_integer _dir;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _dir has no default value.
@@ -1282,6 +1321,9 @@ modelica_integer omc_NFPrefixes_directionFromSCode(threadData_t *threadData, mod
   }
   _dir = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _dir;
 }
 modelica_metatype boxptr_NFPrefixes_directionFromSCode(threadData_t *threadData, modelica_metatype _scodeDir)
@@ -1297,10 +1339,16 @@ DLLDirection
 modelica_integer omc_NFPrefixes_purityMin(threadData_t *threadData, modelica_integer _p1, modelica_integer _p2)
 {
   modelica_integer _p;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _p = (((modelica_integer)_p1 == 2)?(modelica_integer)_p1:(modelica_integer)_p2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _p;
 }
 modelica_metatype boxptr_NFPrefixes_purityMin(threadData_t *threadData, modelica_metatype _p1, modelica_metatype _p2)
@@ -1375,6 +1423,9 @@ modelica_integer omc_NFPrefixes_effectiveVariability(threadData_t *threadData, m
 {
   modelica_integer _outVar;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outVar has no default value.
@@ -1423,6 +1474,9 @@ modelica_integer omc_NFPrefixes_effectiveVariability(threadData_t *threadData, m
   }
   _outVar = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outVar;
 }
 modelica_metatype boxptr_NFPrefixes_effectiveVariability(threadData_t *threadData, modelica_metatype _inVar)
@@ -1440,10 +1494,16 @@ DLLDirection
 modelica_integer omc_NFPrefixes_variabilityMin(threadData_t *threadData, modelica_integer _var1, modelica_integer _var2)
 {
   modelica_integer _var;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _var = (((modelica_integer)_var1 > (modelica_integer)_var2)?(modelica_integer)_var2:(modelica_integer)_var1);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _var;
 }
 modelica_metatype boxptr_NFPrefixes_variabilityMin(threadData_t *threadData, modelica_metatype _var1, modelica_metatype _var2)
@@ -1463,10 +1523,16 @@ DLLDirection
 modelica_integer omc_NFPrefixes_variabilityMax(threadData_t *threadData, modelica_integer _var1, modelica_integer _var2)
 {
   modelica_integer _var;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _var = (((modelica_integer)_var1 > (modelica_integer)_var2)?(modelica_integer)_var1:(modelica_integer)_var2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _var;
 }
 modelica_metatype boxptr_NFPrefixes_variabilityMax(threadData_t *threadData, modelica_metatype _var1, modelica_metatype _var2)
@@ -1871,6 +1937,9 @@ modelica_integer omc_NFPrefixes_variabilityFromSCode(threadData_t *threadData, m
 {
   modelica_integer _var;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var has no default value.
@@ -1918,6 +1987,9 @@ modelica_integer omc_NFPrefixes_variabilityFromSCode(threadData_t *threadData, m
   }
   _var = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _var;
 }
 modelica_metatype boxptr_NFPrefixes_variabilityFromSCode(threadData_t *threadData, modelica_metatype _scodeVar)
@@ -1933,6 +2005,9 @@ DLLDirection
 modelica_integer omc_NFPrefixes_mergeParallelism(threadData_t *threadData, modelica_integer _outerPar, modelica_integer _innerPar, modelica_metatype _node)
 {
   modelica_integer _par;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _par has no default value.
@@ -1959,6 +2034,9 @@ modelica_integer omc_NFPrefixes_mergeParallelism(threadData_t *threadData, model
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _par;
 }
 modelica_metatype boxptr_NFPrefixes_mergeParallelism(threadData_t *threadData, modelica_metatype _outerPar, modelica_metatype _innerPar, modelica_metatype _node)
@@ -2213,6 +2291,9 @@ modelica_integer omc_NFPrefixes_parallelismFromSCode(threadData_t *threadData, m
 {
   modelica_integer _par;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _par has no default value.
@@ -2254,6 +2335,9 @@ modelica_integer omc_NFPrefixes_parallelismFromSCode(threadData_t *threadData, m
   }
   _par = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _par;
 }
 modelica_metatype boxptr_NFPrefixes_parallelismFromSCode(threadData_t *threadData, modelica_metatype _scodePar)
@@ -2420,11 +2504,17 @@ DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isAugmented(threadData_t *threadData, modelica_integer _cty)
 {
   modelica_boolean _augmented;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _augmented has no default value.
   _augmented = (((_cty) & (((modelica_integer) 128))) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _augmented;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isAugmented(threadData_t *threadData, modelica_metatype _cty)
@@ -2442,11 +2532,17 @@ DLLDirection
 modelica_integer omc_NFPrefixes_ConnectorType_setPresent(threadData_t *threadData, modelica_integer __omcQ_24in_5Fcty)
 {
   modelica_integer _cty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _cty = __omcQ_24in_5Fcty;
   _cty = ((_cty) & ((~((modelica_integer) 8))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _cty;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_setPresent(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcty)
@@ -2464,11 +2560,17 @@ DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isPotentiallyPresent(threadData_t *threadData, modelica_integer _cty)
 {
   modelica_boolean _isPotentiallyPresent;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isPotentiallyPresent has no default value.
   _isPotentiallyPresent = (((_cty) & (((modelica_integer) 8))) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isPotentiallyPresent;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isPotentiallyPresent(threadData_t *threadData, modelica_metatype _cty)
@@ -2483,58 +2585,48 @@ modelica_metatype boxptr_NFPrefixes_ConnectorType_isPotentiallyPresent(threadDat
 }
 
 DLLDirection
-modelica_boolean omc_NFPrefixes_ConnectorType_isVirtual(threadData_t *threadData, modelica_integer _cty)
-{
-  modelica_boolean _isVirtual;
-  MMC_SO();
-  _tailrecursive: OMC_LABEL_UNUSED
-  // _isVirtual has no default value.
-  _isVirtual = (((_cty) & (((modelica_integer) 16))) > ((modelica_integer) 0));
-  _return: OMC_LABEL_UNUSED
-  return _isVirtual;
-}
-modelica_metatype boxptr_NFPrefixes_ConnectorType_isVirtual(threadData_t *threadData, modelica_metatype _cty)
-{
-  modelica_integer tmp1;
-  modelica_boolean _isVirtual;
-  modelica_metatype out_isVirtual;
-  tmp1 = mmc_unbox_integer(_cty);
-  _isVirtual = omc_NFPrefixes_ConnectorType_isVirtual(threadData, tmp1);
-  out_isVirtual = mmc_mk_icon(_isVirtual);
-  return out_isVirtual;
-}
-
-DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isUndeclared(threadData_t *threadData, modelica_integer _cty)
 {
-  modelica_boolean _isExpandableElement;
+  modelica_boolean _undeclared;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  // _isExpandableElement has no default value.
-  _isExpandableElement = (((_cty) & (((modelica_integer) 24))) > ((modelica_integer) 0));
+  // _undeclared has no default value.
+  _undeclared = (((_cty) & (((modelica_integer) 16))) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
-  return _isExpandableElement;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
+  return _undeclared;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isUndeclared(threadData_t *threadData, modelica_metatype _cty)
 {
   modelica_integer tmp1;
-  modelica_boolean _isExpandableElement;
-  modelica_metatype out_isExpandableElement;
+  modelica_boolean _undeclared;
+  modelica_metatype out_undeclared;
   tmp1 = mmc_unbox_integer(_cty);
-  _isExpandableElement = omc_NFPrefixes_ConnectorType_isUndeclared(threadData, tmp1);
-  out_isExpandableElement = mmc_mk_icon(_isExpandableElement);
-  return out_isExpandableElement;
+  _undeclared = omc_NFPrefixes_ConnectorType_isUndeclared(threadData, tmp1);
+  out_undeclared = mmc_mk_icon(_undeclared);
+  return out_undeclared;
 }
 
 DLLDirection
 modelica_integer omc_NFPrefixes_ConnectorType_setExpandable(threadData_t *threadData, modelica_integer __omcQ_24in_5Fcty)
 {
   modelica_integer _cty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _cty = __omcQ_24in_5Fcty;
   _cty = ((_cty) | (((modelica_integer) 64)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _cty;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_setExpandable(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcty)
@@ -2552,11 +2644,17 @@ DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isExpandable(threadData_t *threadData, modelica_integer _cty)
 {
   modelica_boolean _isExpandable;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isExpandable has no default value.
   _isExpandable = (((_cty) & (((modelica_integer) 64))) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isExpandable;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isExpandable(threadData_t *threadData, modelica_metatype _cty)
@@ -2574,11 +2672,17 @@ DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isConnectorType(threadData_t *threadData, modelica_integer _cty)
 {
   modelica_boolean _isConnector;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isConnector has no default value.
   _isConnector = (((_cty) & (((modelica_integer) 104))) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isConnector;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isConnectorType(threadData_t *threadData, modelica_metatype _cty)
@@ -2596,11 +2700,17 @@ DLLDirection
 modelica_integer omc_NFPrefixes_ConnectorType_setConnector(threadData_t *threadData, modelica_integer __omcQ_24in_5Fcty)
 {
   modelica_integer _cty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _cty = __omcQ_24in_5Fcty;
   _cty = ((_cty) | (((modelica_integer) 32)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _cty;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_setConnector(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcty)
@@ -2618,11 +2728,17 @@ DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isConnector(threadData_t *threadData, modelica_integer _cty)
 {
   modelica_boolean _isConnector;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isConnector has no default value.
   _isConnector = (((_cty) & (((modelica_integer) 32))) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isConnector;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isConnector(threadData_t *threadData, modelica_metatype _cty)
@@ -2640,11 +2756,17 @@ DLLDirection
 modelica_integer omc_NFPrefixes_ConnectorType_unsetFlowStream(threadData_t *threadData, modelica_integer __omcQ_24in_5Fcty)
 {
   modelica_integer _cty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _cty = __omcQ_24in_5Fcty;
   _cty = ((_cty) & ((~((modelica_integer) 6))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _cty;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_unsetFlowStream(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcty)
@@ -2662,11 +2784,17 @@ DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isFlowOrStream(threadData_t *threadData, modelica_integer _cty)
 {
   modelica_boolean _isFlowOrStream;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isFlowOrStream has no default value.
   _isFlowOrStream = (((_cty) & (((modelica_integer) 6))) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isFlowOrStream;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isFlowOrStream(threadData_t *threadData, modelica_metatype _cty)
@@ -2684,11 +2812,17 @@ DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isStream(threadData_t *threadData, modelica_integer _cty)
 {
   modelica_boolean _isStream;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isStream has no default value.
   _isStream = (((_cty) & (((modelica_integer) 4))) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isStream;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isStream(threadData_t *threadData, modelica_metatype _cty)
@@ -2706,11 +2840,17 @@ DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isFlow(threadData_t *threadData, modelica_integer _cty)
 {
   modelica_boolean _isFlow;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isFlow has no default value.
   _isFlow = (((_cty) & (((modelica_integer) 2))) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isFlow;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isFlow(threadData_t *threadData, modelica_metatype _cty)
@@ -2728,11 +2868,17 @@ DLLDirection
 modelica_integer omc_NFPrefixes_ConnectorType_setPotential(threadData_t *threadData, modelica_integer __omcQ_24in_5Fcty)
 {
   modelica_integer _cty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _cty = __omcQ_24in_5Fcty;
   _cty = ((_cty) | (((modelica_integer) 1)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _cty;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_setPotential(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcty)
@@ -2750,11 +2896,17 @@ DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isPotential(threadData_t *threadData, modelica_integer _cty)
 {
   modelica_boolean _isPotential;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isPotential has no default value.
   _isPotential = (((_cty) & (((modelica_integer) 1))) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isPotential;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isPotential(threadData_t *threadData, modelica_metatype _cty)
@@ -2772,6 +2924,9 @@ DLLDirection
 modelica_integer omc_NFPrefixes_ConnectorType_merge(threadData_t *threadData, modelica_integer _outerCty, modelica_integer _innerCty, modelica_metatype _node, modelica_boolean _isClass)
 {
   modelica_integer _cty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _cty has no default value.
@@ -2782,6 +2937,9 @@ modelica_integer omc_NFPrefixes_ConnectorType_merge(threadData_t *threadData, mo
 
   _cty = ((_outerCty) | (_innerCty));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _cty;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_merge(threadData_t *threadData, modelica_metatype _outerCty, modelica_metatype _innerCty, modelica_metatype _node, modelica_metatype _isClass)
@@ -2846,6 +3004,9 @@ modelica_integer omc_NFPrefixes_ConnectorType_fromSCode(threadData_t *threadData
 {
   modelica_integer _cty;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _cty has no default value.
@@ -2887,6 +3048,9 @@ modelica_integer omc_NFPrefixes_ConnectorType_fromSCode(threadData_t *threadData
   }
   _cty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _cty;
 }
 modelica_metatype boxptr_NFPrefixes_ConnectorType_fromSCode(threadData_t *threadData, modelica_metatype _scodeCty)

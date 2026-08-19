@@ -75,6 +75,9 @@ PROTECTED_FUNCTION_STATIC void omc_GraphML_printNode(threadData_t *threadData, m
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _id has no default value.
@@ -101,6 +104,9 @@ PROTECTED_FUNCTION_STATIC void omc_GraphML_printNode(threadData_t *threadData, m
   tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT4);
   fputs(MMC_STRINGDATA(tmpMeta10),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -128,6 +134,9 @@ void omc_GraphML_printGraphInfo(threadData_t *threadData, modelica_metatype _iGr
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
   modelica_metatype tmpMeta14;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphs has no default value.
@@ -167,6 +176,9 @@ void omc_GraphML_printGraphInfo(threadData_t *threadData, modelica_metatype _iGr
   tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT4);
   fputs(MMC_STRINGDATA(tmpMeta14),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -255,6 +267,9 @@ DLLDirection
 void omc_GraphML_dumpGraph(threadData_t *threadData, modelica_metatype _iGraphInfo, modelica_string _iFileName)
 {
   modelica_metatype _iGraphInfoArr = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _iGraphInfoArr has no default value.
@@ -262,6 +277,9 @@ void omc_GraphML_dumpGraph(threadData_t *threadData, modelica_metatype _iGraphIn
 
   omc_Tpl_tplNoret2(threadData, boxvar_GraphMLDumpTpl_dumpGraphInfo, _iGraphInfoArr, _iFileName);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -269,6 +287,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_GraphML_compareAttributeTarget0(t
 {
   modelica_integer _oCodec;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCodec has no default value.
@@ -310,6 +331,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_GraphML_compareAttributeTarget0(t
   }
   _oCodec = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oCodec;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_GraphML_compareAttributeTarget0(threadData_t *threadData, modelica_metatype _iTarget)
@@ -326,6 +350,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_GraphML_compareAttributeTargets(t
   modelica_boolean _oEqual;
   modelica_integer _tarInt1;
   modelica_integer _tarInt2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oEqual has no default value.
@@ -337,6 +364,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_GraphML_compareAttributeTargets(t
 
   _oEqual = (_tarInt1 == _tarInt2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oEqual;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_GraphML_compareAttributeTargets(threadData_t *threadData, modelica_metatype _iTarget1, modelica_metatype _iTarget2)

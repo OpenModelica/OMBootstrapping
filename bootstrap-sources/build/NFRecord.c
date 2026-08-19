@@ -3,10 +3,10 @@
 #define _OMC_LIT0_data "NFRecord.collectRecordParams got non-instantiated function"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT0,58,_OMC_LIT0_data);
 #define _OMC_LIT0 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT0)
-#define _OMC_LIT1_data "/projects/OpenModelica-session2/OMCompiler/Compiler/NFFrontEnd/NFRecord.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT1,74,_OMC_LIT1_data);
+#define _OMC_LIT1_data "//OpenModelica/OMCompiler/Compiler/NFFrontEnd/NFRecord.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT1,80,_OMC_LIT1_data);
 #define _OMC_LIT1 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT1)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT2_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT2_6,1.784622031e9);
 #define _OMC_LIT2_6 MMC_REFREALLIT(_OMC_LIT_STRUCT2_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT2,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(255)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(255)),MMC_IMMEDIATE(MMC_TAGFIXNUM(92)),_OMC_LIT2_6}};
 #define _OMC_LIT2 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT2)
@@ -198,14 +198,14 @@ modelica_metatype omc_NFRecord_fieldsToDAE(threadData_t *threadData, modelica_me
             case 0: {
               modelica_metatype tmpMeta7;
               if (mmc__uniontype__metarecord__typedef__equal(tmp5_1,0,1) == 0) goto tmp4_end;
-              
+
               /* Pattern matching succeeded */
               tmpMeta7 = mmc_mk_cons((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_field), 2))), _fieldNames);
               _fieldNames = tmpMeta7;
               goto tmp4_done;
             }
             case 1: {
-              
+
               /* Pattern matching succeeded */
               goto tmp4_done;
             }
@@ -306,10 +306,16 @@ modelica_metatype omc_NFRecord_collectRecordFields(threadData_t *threadData, mod
 DLLDirection
 void omc_NFRecord_setFieldDirection(threadData_t *threadData, modelica_metatype _field, modelica_integer _direction)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_NFInstNode_InstNode_componentApply(threadData, _field, boxvar_NFComponent_setDirection, mmc_mk_integer((modelica_integer)_direction));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFRecord_setFieldDirection(threadData_t *threadData, modelica_metatype _field, modelica_metatype _direction)
@@ -409,7 +415,7 @@ modelica_metatype omc_NFRecord_collectRecordParams(threadData_t *threadData, mod
           modelica_integer tmp11;
           if (mmc__uniontype__metarecord__typedef__equal(tmp6_1,3,5) == 0) goto tmp5_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp6_1), 4));
-          
+
           _comps = tmpMeta7;
           /* Pattern matching succeeded */
           tmp9 = arrayLength(_comps); tmp10 = ((modelica_integer) -1); tmp11 = ((modelica_integer) 1);
@@ -418,6 +424,7 @@ modelica_metatype omc_NFRecord_collectRecordParams(threadData_t *threadData, mod
             modelica_integer _i;
             for(_i = arrayLength(_comps); in_range_integer(_i, tmp9, tmp11); _i += tmp10)
             {
+
               _comp = arrayGet(_comps,_i) /* DAE.ASUB */;
 
               _inputs = omc_NFRecord_collectRecordParam(threadData, _comp, _inputs, _locals ,&_locals);
@@ -436,7 +443,7 @@ modelica_metatype omc_NFRecord_collectRecordParams(threadData_t *threadData, mod
           modelica_integer tmp16;
           if (mmc__uniontype__metarecord__typedef__equal(tmp6_1,2,7) == 0) goto tmp5_end;
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp6_1), 4));
-          
+
           _pcomps = tmpMeta12;
           /* Pattern matching succeeded */
           tmp14 = arrayLength(_pcomps); tmp15 = ((modelica_integer) -1); tmp16 = ((modelica_integer) 1);
@@ -445,6 +452,7 @@ modelica_metatype omc_NFRecord_collectRecordParams(threadData_t *threadData, mod
             modelica_integer _i;
             for(_i = arrayLength(_pcomps); in_range_integer(_i, tmp14, tmp16); _i += tmp15)
             {
+
               _comp = omc_Mutable_access(threadData, arrayGet(_pcomps,_i) /* DAE.ASUB */);
 
               _inputs = omc_NFRecord_collectRecordParam(threadData, _comp, _inputs, _locals ,&_locals);
@@ -457,7 +465,7 @@ modelica_metatype omc_NFRecord_collectRecordParams(threadData_t *threadData, mod
         }
         default:
         tmp5_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           omc_Error_terminate(threadData, _OMC_LIT0, _OMC_LIT2);
           goto goto_4;
@@ -495,6 +503,9 @@ void omc_NFRecord_checkLocalFieldOrder(threadData_t *threadData, modelica_metaty
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _locals_set has no default value.
@@ -536,6 +547,9 @@ void omc_NFRecord_checkLocalFieldOrder(threadData_t *threadData, modelica_metaty
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -713,14 +727,14 @@ modelica_string omc_NFRecord_Field_name(threadData_t *threadData, modelica_metat
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_field), 2)));
           goto tmp3_done;
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_field), 2)));
           goto tmp3_done;
@@ -746,6 +760,9 @@ modelica_boolean omc_NFRecord_Field_isInput(threadData_t *threadData, modelica_m
 {
   modelica_boolean _isInput;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isInput has no default value.
@@ -760,13 +777,13 @@ modelica_boolean omc_NFRecord_Field_isInput(threadData_t *threadData, modelica_m
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -784,6 +801,9 @@ modelica_boolean omc_NFRecord_Field_isInput(threadData_t *threadData, modelica_m
   }
   _isInput = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isInput;
 }
 modelica_metatype boxptr_NFRecord_Field_isInput(threadData_t *threadData, modelica_metatype _field)
@@ -794,4 +814,3 @@ modelica_metatype boxptr_NFRecord_Field_isInput(threadData_t *threadData, modeli
   out_isInput = mmc_mk_icon(_isInput);
   return out_isInput;
 }
-

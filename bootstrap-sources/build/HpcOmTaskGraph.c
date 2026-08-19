@@ -27,10 +27,10 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT7,17,_OMC_LIT7_data);
 #define _OMC_LIT8_data "HpcOmTaskGraph.getIndexBySimCodeEq failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT8,41,_OMC_LIT8_data);
 #define _OMC_LIT8 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT8)
-#define _OMC_LIT9_data "/projects/OpenModelica-session2/OMCompiler/Compiler/BackEnd/HpcOmTaskGraph.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT9,77,_OMC_LIT9_data);
+#define _OMC_LIT9_data "//OpenModelica/OMCompiler/Compiler/BackEnd/HpcOmTaskGraph.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT9,83,_OMC_LIT9_data);
 #define _OMC_LIT9 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT9)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT10_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT10_6,1.784622031e9);
 #define _OMC_LIT10_6 MMC_REFREALLIT(_OMC_LIT_STRUCT10_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT10,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT9,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6798)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6798)),MMC_IMMEDIATE(MMC_TAGFIXNUM(74)),_OMC_LIT10_6}};
 #define _OMC_LIT10 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT10)
@@ -82,7 +82,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT25,39,_OMC_LIT25_data);
 #define _OMC_LIT26_data "HpcOmTaskGraph.getNodeForVarIdx failed (there is a loop somewhere)"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT26,66,_OMC_LIT26_data);
 #define _OMC_LIT26 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT26)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT27_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT27_6,1.784622031e9);
 #define _OMC_LIT27_6 MMC_REFREALLIT(_OMC_LIT_STRUCT27_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT27,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT9,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6217)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6217)),MMC_IMMEDIATE(MMC_TAGFIXNUM(102)),_OMC_LIT27_6}};
 #define _OMC_LIT27 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT27)
@@ -1540,6 +1540,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpSccSimEqMapping(threadData
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _text has no default value.
@@ -1554,6 +1557,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpSccSimEqMapping(threadData
   tmpMeta4 = stringAppend(_text,_OMC_LIT5);
   fputs(MMC_STRINGDATA(tmpMeta4),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1618,6 +1624,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpSimEqSCCMapping(threadData
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _text has no default value.
@@ -1632,6 +1641,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpSimEqSCCMapping(threadData
   tmpMeta4 = stringAppend(_text,_OMC_LIT5);
   fputs(MMC_STRINGDATA(tmpMeta4),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1666,7 +1678,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqsByTa
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,3) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _eqIdc = tmpMeta6;
           /* Pattern matching succeeded */
           tmpMeta1 = omc_List_map1r(threadData, _eqIdc, boxvar_HpcOmTaskGraph_getSimCodeEqByIndexAndMapping, _iSimEqIdxSimEqMapping);
@@ -1675,7 +1687,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqsByTa
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
           modelica_metatype tmpMeta7;
-          
+
           /* Pattern matching succeeded */
           tmpMeta7 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta1 = tmpMeta7;
@@ -1721,14 +1733,17 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
   modelica_integer tmp1_c0 __attribute__((unused)) = 0;
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIdx has no default value.
   // _oIdx2 has no default value.
   // _index has no default value.
   // _index2 has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _iEq;
@@ -1744,7 +1759,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp7 = mmc_unbox_integer(tmpMeta6);
-          
+
           _index = tmp7  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1757,7 +1772,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,5) == 0) goto tmp3_end;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp9 = mmc_unbox_integer(tmpMeta8);
-          
+
           _index = tmp9  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1770,7 +1785,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,6) == 0) goto tmp3_end;
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp11 = mmc_unbox_integer(tmpMeta10);
-          
+
           _index = tmp11  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1783,7 +1798,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,5) == 0) goto tmp3_end;
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp13 = mmc_unbox_integer(tmpMeta12);
-          
+
           _index = tmp13  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1796,7 +1811,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,9,5) == 0) goto tmp3_end;
           tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp15 = mmc_unbox_integer(tmpMeta14);
-          
+
           _index = tmp15  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1809,7 +1824,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,10,3) == 0) goto tmp3_end;
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp17 = mmc_unbox_integer(tmpMeta16);
-          
+
           _index = tmp17  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1827,7 +1842,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           tmp20 = mmc_unbox_integer(tmpMeta19);
           tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (!optionNone(tmpMeta21)) goto tmp3_end;
-          
+
           _index = tmp20  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1845,7 +1860,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           tmp24 = mmc_unbox_integer(tmpMeta23);
           tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (!optionNone(tmpMeta25)) goto tmp3_end;
-          
+
           _index = tmp24  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1869,7 +1884,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta29), 1));
           tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 2));
           tmp32 = mmc_unbox_integer(tmpMeta31);
-          
+
           _index = tmp28  /* pattern as ty=Integer */;
           _index2 = tmp32  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -1894,7 +1909,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta36), 1));
           tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta37), 2));
           tmp39 = mmc_unbox_integer(tmpMeta38);
-          
+
           _index = tmp35  /* pattern as ty=Integer */;
           _index2 = tmp39  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -1908,7 +1923,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,14,6) == 0) goto tmp3_end;
           tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp41 = mmc_unbox_integer(tmpMeta40);
-          
+
           _index = tmp41  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1921,7 +1936,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,15,7) == 0) goto tmp3_end;
           tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp43 = mmc_unbox_integer(tmpMeta42);
-          
+
           _index = tmp43  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1941,7 +1956,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           goto tmp3_done;
         }
         case 13: {
-          
+
           /* Pattern matching succeeded */
           omc_Error_addInternalError(threadData, _OMC_LIT8, _OMC_LIT10);
           goto goto_2;
@@ -1962,6 +1977,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
   _oIdx2 = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_oIdx2) { *out_oIdx2 = _oIdx2; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oIdx;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getIndexBySimCodeEq(threadData_t *threadData, modelica_metatype _iEq, modelica_metatype *out_oIdx2)
@@ -2036,7 +2054,7 @@ modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByIndex(threadData_t *threadDat
         case 2: {
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
-          
+
           /* Pattern matching succeeded */
           tmpMeta11 = stringAppend(_OMC_LIT11,intString(_iIdx));
           tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT5);
@@ -2106,7 +2124,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByInd
         case 1: {
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          
+
           /* Pattern matching succeeded */
           tmpMeta7 = stringAppend(_OMC_LIT12,intString(_iIdx));
           tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT5);
@@ -2426,7 +2444,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_removeDummyStateF
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT13),stdout);
           tmpMeta1 = _iNewList;
@@ -2475,6 +2493,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_findHighestSccIdxI
   modelica_integer _sccIdx;
   modelica_metatype _rest = NULL;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIndex has no default value.
@@ -2540,7 +2561,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_findHighestSccIdxI
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _iHighestIndex;
           goto tmp3_done;
@@ -2565,6 +2586,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_findHighestSccIdxI
   }
   _oIndex = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oIndex;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_findHighestSccIdxInMapping(threadData_t *threadData, modelica_metatype _iEquationSccMapping, modelica_metatype _iHighestIndex)
@@ -2664,6 +2688,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpPartitionData(threadData_t
   modelica_integer tmp20;
   modelica_integer tmp21;
   modelica_integer tmp22;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _numPartitions has no default value.
@@ -2715,6 +2742,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpPartitionData(threadData_t
     modelica_integer _part;
     for(_part = ((modelica_integer) 1); in_range_integer(_part, tmp20, tmp22); _part += tmp21)
     {
+
       tmpMeta14 = stringAppend(_OMC_LIT18,omc_HpcOmTaskGraph_intLstString(threadData, listGet(_activatorsForPartitions, _part)));
       tmpMeta15 = stringAppend(tmpMeta14,_OMC_LIT19);
       tmpMeta16 = stringAppend(tmpMeta15,omc_HpcOmTaskGraph_intLstString(threadData, omc_List_map1(threadData, listGet(_activatorsForPartitions, _part), boxvar_List_getIndexFirst, _stateToActivators)));
@@ -2725,6 +2753,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpPartitionData(threadData_t
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2732,12 +2763,18 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpStateAssign(threadData_t *
 {
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = stringAppend(_OMC_LIT21,stringDelimitList(omc_List_mapArray(threadData, _stateAssign, boxvar_HpcOmTaskGraph_intLstString), _OMC_LIT5));
   tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT5);
   fputs(MMC_STRINGDATA(tmpMeta2),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2826,11 +2863,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__assign
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_hasSameStateAssign(threadData_t *threadData, modelica_integer _task, modelica_metatype _stateTaskAssign, modelica_metatype _refStateAssign)
 {
   modelica_boolean _sameStateAssign;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _sameStateAssign has no default value.
   _sameStateAssign = omc_List_isEqual(threadData, arrayGet(_stateTaskAssign, _task), _refStateAssign, 1 /* true */);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _sameStateAssign;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_hasSameStateAssign(threadData_t *threadData, modelica_metatype _task, modelica_metatype _stateTaskAssign, modelica_metatype _refStateAssign)
@@ -2847,11 +2890,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_hasSameStateAs
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_taskIsNotVisited(threadData_t *threadData, modelica_integer _task, modelica_metatype _visitedTasks)
 {
   modelica_boolean _isNotVisited;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isNotVisited has no default value.
   _isNotVisited = (((modelica_integer) -1) == mmc_unbox_integer(arrayGet(_visitedTasks, _task)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isNotVisited;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_taskIsNotVisited(threadData_t *threadData, modelica_metatype _task, modelica_metatype _visitedTasks)
@@ -2961,6 +3010,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_multirate__dispatchLeaveNodes(
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _numAss has no default value.
@@ -2984,6 +3036,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_multirate__dispatchLeaveNodes(
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3079,11 +3134,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimEqsIdxLstFo
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getSimEqIdxForSCCIdx(threadData_t *threadData, modelica_integer _sccIdx, modelica_metatype _sccSimEqMapping)
 {
   modelica_integer _simEqIdx;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _simEqIdx has no default value.
   _simEqIdx = mmc_unbox_integer(listHead(arrayGet(_sccSimEqMapping, _sccIdx)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _simEqIdx;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getSimEqIdxForSCCIdx(threadData_t *threadData, modelica_metatype _sccIdx, modelica_metatype _sccSimEqMapping)
@@ -3100,11 +3161,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getSimEqIdxFor
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_varMappingTupleCompEqual(threadData_t *threadData, modelica_metatype _tpl, modelica_integer _compIdx)
 {
   modelica_boolean _compEqual;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compEqual has no default value.
   _compEqual = (_compIdx == mmc_unbox_integer(omc_Util_tuple31(threadData, _tpl)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _compEqual;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_varMappingTupleCompEqual(threadData_t *threadData, modelica_metatype _tpl, modelica_metatype _compIdx)
@@ -3333,6 +3400,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForVarIdx(t
   modelica_integer tmp5;
   modelica_metatype tmpMeta6;
   modelica_integer tmp7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _node has no default value.
@@ -3395,6 +3465,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForVarIdx(t
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _node;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNodeForVarIdx(threadData_t *threadData, modelica_metatype _varIdx, modelica_metatype _eqSysIdx, modelica_metatype _varCompMapping, modelica_metatype _inTryThisIndex)
@@ -3421,14 +3494,17 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
   modelica_boolean tmp1_c2 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta[3] __attribute__((unused)) = {0};
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eqSysIdx has no default value.
   // _varIdx has no default value.
   // _found has no default value.
-  
-  
-  
+
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _eqSystems;
@@ -3478,7 +3554,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          
+
           _vars = tmpMeta8;
           /* Pattern matching succeeded */
           _varLst = omc_BackendVariable_getVar(threadData, _cref, _vars ,&_lst);
@@ -3528,7 +3604,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta24 = MMC_CAR(tmp4_1);
           tmpMeta25 = MMC_CDR(tmp4_1);
-          
+
           _rest = tmpMeta25;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmp1_c0 = omc_HpcOmTaskGraph_getNodeForCref1(threadData, _rest, _cref, ((modelica_integer) 1) + _eqSysIdxIn, &tmp1_c1, &tmp1_c2);
@@ -3566,6 +3642,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
   _return: OMC_LABEL_UNUSED
   if (out_varIdx) { *out_varIdx = _varIdx; }
   if (out_found) { *out_found = _found; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _eqSysIdx;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNodeForCref1(threadData_t *threadData, modelica_metatype _eqSystems, modelica_metatype _cref, modelica_metatype _eqSysIdxIn, modelica_metatype *out_varIdx, modelica_metatype *out_found)
@@ -3622,6 +3701,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_nodeIsDependent(th
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _dep has no default value.
@@ -3634,6 +3716,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_nodeIsDependent(th
 
   _dep = (_tpl1 != ((modelica_integer) -1));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _dep;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_nodeIsDependent(threadData_t *threadData, modelica_metatype _node)
@@ -3717,6 +3802,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isCommunicationChi
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEq has no default value.
@@ -3729,6 +3817,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isCommunicationChi
 
   _isEq = (_childNode != _iIdx);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEq;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_isCommunicationChildEqualToIdx(threadData_t *threadData, modelica_metatype _iComm, modelica_metatype _iIdx)
@@ -3950,8 +4041,8 @@ modelica_metatype omc_HpcOmTaskGraph_appendRemovedEquations(threadData_t *thread
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _graphDataOut has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     {
       modelica_integer _numNewComps;
@@ -4204,7 +4295,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsFor
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 10));
-          
+
           _inComps = tmpMeta6;
           _varCompMapping = tmpMeta7;
           _nodeMark = tmpMeta8;
@@ -4243,7 +4334,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsFor
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _annotInfoIn;
           goto tmp3_done;
@@ -4374,6 +4465,9 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
   modelica_real tmp13;
   modelica_real tmp14;
   modelica_real tmp15;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outReal has no default value.
@@ -4383,7 +4477,7 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
   if(tmp1 < 0.0 && tmp2 != 0.0)
   {
     tmp4 = modf(tmp2, &tmp5);
-    
+
     if(tmp4 > 0.5)
     {
       tmp4 -= 1.0;
@@ -4394,7 +4488,7 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
       tmp4 += 1.0;
       tmp5 -= 1.0;
     }
-    
+
     if(fabs(tmp4) < 1e-10)
       tmp3 = pow(tmp1, tmp5);
     else
@@ -4437,7 +4531,7 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
   if(tmp8 < 0.0 && tmp9 != 0.0)
   {
     tmp11 = modf(tmp9, &tmp12);
-    
+
     if(tmp11 > 0.5)
     {
       tmp11 -= 1.0;
@@ -4448,7 +4542,7 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
       tmp11 += 1.0;
       tmp12 -= 1.0;
     }
-    
+
     if(fabs(tmp11) < 1e-10)
       tmp10 = pow(tmp8, tmp12);
     else
@@ -4485,6 +4579,9 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
   if (tmp15 == 0) {MMC_THROW_INTERNAL();}
   _outReal = (_real) / tmp15;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outReal;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_metatype _inReal, modelica_metatype _nIn)
@@ -4540,6 +4637,7 @@ modelica_metatype omc_HpcOmTaskGraph_getAllSCCsOfGraph(threadData_t *threadData,
     modelica_integer _taskIdx;
     for(_taskIdx = ((modelica_integer) 1); in_range_integer(_taskIdx, tmp5, tmp7); _taskIdx += tmp6)
     {
+
       _comps = arrayGet(_inComps, _taskIdx);
 
       _tmpSccs = omc_List_append__reverse(threadData, _comps, _tmpSccs);
@@ -4586,7 +4684,7 @@ modelica_metatype omc_HpcOmTaskGraph_sumUpExeCosts(threadData_t *threadData, mod
           modelica_metatype tmpMeta8;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
-          
+
           _inComps = tmpMeta6;
           _exeCosts = tmpMeta7;
           /* Pattern matching succeeded */
@@ -4602,7 +4700,7 @@ modelica_metatype omc_HpcOmTaskGraph_sumUpExeCosts(threadData_t *threadData, mod
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT42;
           goto tmp3_done;
@@ -4683,7 +4781,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestCommCos
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta13 = MMC_CAR(tmp4_1);
           tmpMeta14 = MMC_CDR(tmp4_1);
-          
+
           _head = tmpMeta13;
           _rest = tmpMeta14;
           /* Pattern matching succeeded */
@@ -4691,7 +4789,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestCommCos
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _iHighestTuple;
           goto tmp3_done;
@@ -4726,6 +4824,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_getCommCostBetween
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oResult has no default value.
@@ -4738,6 +4839,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_getCommCostBetween
 
   _oResult = omc_List_exist1(threadData, _iChildComps, boxvar_intEq, mmc_mk_integer(_compIdx));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oResult;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCommCostBetweenNodes1(threadData_t *threadData, modelica_metatype _iCommCost, modelica_metatype _iChildComps)
@@ -4920,6 +5024,9 @@ modelica_real omc_HpcOmTaskGraph_getCommCostTimeBetweenNodes(threadData_t *threa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_real tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCommCost has no default value.
@@ -4932,6 +5039,9 @@ modelica_real omc_HpcOmTaskGraph_getCommCostTimeBetweenNodes(threadData_t *threa
 
   _oCommCost = _requiredTime;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oCommCost;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getCommCostTimeBetweenNodes(threadData_t *threadData, modelica_metatype _iParentNodeIdx, modelica_metatype _iChildNodeIdx, modelica_metatype _iTaskGraphMeta)
@@ -4983,7 +5093,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommunicationB
           tmpMeta7 = MMC_CDR(tmp4_1);
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 7));
           tmp9 = mmc_unbox_integer(tmpMeta8);
-          
+
           _currentCommChild = tmp9  /* pattern as ty=Integer */;
           _rest = tmpMeta7;
           /* Pattern matching succeeded */
@@ -5004,7 +5114,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommunicationB
           tmpMeta12 = MMC_CDR(tmp4_1);
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 7));
           tmp14 = mmc_unbox_integer(tmpMeta13);
-          
+
           _head = tmpMeta11;
           _currentCommChild = tmp14  /* pattern as ty=Integer */;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -5169,7 +5279,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_transposeCommCost
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _iCommCosts;
           goto tmp3_done;
@@ -5438,6 +5548,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getParallelSetForC
 {
   modelica_integer _parallelSetOut;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _parallelSetOut has no default value.
@@ -5511,6 +5624,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getParallelSetForC
   }
   _parallelSetOut = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _parallelSetOut;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getParallelSetForComp(threadData_t *threadData, modelica_metatype _compIn, modelica_metatype _setIdx, modelica_metatype _parallelSets)
@@ -5602,6 +5718,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForContracted
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_real tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _costsOut has no default value.
@@ -5614,6 +5733,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForContracted
 
   _costsOut = _costsIn + _exeCost;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _costsOut;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCostsForContractedNodes1(threadData_t *threadData, modelica_metatype _node, modelica_metatype _exeCosts, modelica_metatype _costsIn)
@@ -5633,11 +5755,17 @@ DLLDirection
 modelica_real omc_HpcOmTaskGraph_getCostsForContractedNodes(threadData_t *threadData, modelica_metatype _nodeList, modelica_metatype _exeCosts)
 {
   modelica_real _costsOut;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _costsOut has no default value.
   _costsOut = mmc_unbox_real(omc_List_fold1(threadData, _nodeList, boxvar_HpcOmTaskGraph_getCostsForContractedNodes1, _exeCosts, _OMC_LIT41));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _costsOut;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getCostsForContractedNodes(threadData_t *threadData, modelica_metatype _nodeList, modelica_metatype _exeCosts)
@@ -5653,6 +5781,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
 {
   modelica_real _costsOut;
   modelica_real tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _costsOut has no default value.
@@ -5725,7 +5856,7 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
           modelica_real tmp17;
-          
+
           /* Pattern matching succeeded */
           _primalChildLst = arrayGet(_inComps, _childNode);
 
@@ -5755,7 +5886,7 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
         }
         case 3: {
           modelica_boolean tmp18;
-          
+
           /* Pattern matching succeeded */
           _primalChildLst = arrayGet(_inComps, _childNode);
 
@@ -5768,7 +5899,7 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT50),stdout);
           goto goto_2;
@@ -5794,6 +5925,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
   }
   _costsOut = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _costsOut;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCostsForNode(threadData_t *threadData, modelica_metatype _parentNode, modelica_metatype _childNode, modelica_metatype _inComps, modelica_metatype _exeCosts, modelica_metatype _commCosts)
@@ -5855,6 +5989,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_numberOfLevels(thr
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _numLevelsOut has no default value.
@@ -5867,6 +6004,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_numberOfLevels(thr
 
   _numLevelsOut = modelica_integer_max((modelica_integer)(_levelIn),(modelica_integer)(_numLevelsIn));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _numLevelsOut;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_numberOfLevels(threadData_t *threadData, modelica_metatype _nodeInfoEntry, modelica_metatype _numLevelsIn)
@@ -5904,6 +6044,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_addUpExeCostsForNode(
   modelica_metatype _rest = NULL;
   modelica_real _cost;
   modelica_real tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oExeCost has no default value.
@@ -5948,7 +6091,7 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_addUpExeCostsForNode(
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _iExeCost;
           goto tmp3_done;
@@ -5966,6 +6109,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_addUpExeCostsForNode(
   }
   _oExeCost = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oExeCost;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_addUpExeCostsForNode(threadData_t *threadData, modelica_metatype _iNodeComps, modelica_metatype _iExeCosts, modelica_metatype _iExeCost)
@@ -5986,6 +6132,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getCriticalPath2(t
   modelica_metatype _criticalPath = NULL;
   modelica_metatype _rest = NULL;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oLongestPathIndex has no default value.
@@ -6047,7 +6196,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getCriticalPath2(t
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _iLongestPathIndex;
           goto tmp3_done;
@@ -6072,6 +6221,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getCriticalPath2(t
   }
   _oLongestPathIndex = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oLongestPathIndex;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCriticalPath2(threadData_t *threadData, modelica_metatype _iCriticalPaths, modelica_metatype _iListIdx, modelica_metatype _iLongestPath, modelica_metatype _iLongestPathIndex)
@@ -6143,7 +6295,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
           modelica_metatype tmpMeta13;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
-          
+
           _inComps = tmpMeta6;
           _exeCosts = tmpMeta7;
           /* Pattern matching succeeded */
@@ -6178,7 +6330,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
           modelica_metatype tmpMeta26;
           tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
-          
+
           _inComps = tmpMeta14;
           _exeCosts = tmpMeta15;
           /* Pattern matching succeeded */
@@ -6234,7 +6386,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
           modelica_metatype tmpMeta32;
           tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
-          
+
           _inComps = tmpMeta27;
           _exeCosts = tmpMeta28;
           /* Pattern matching succeeded */
@@ -6258,7 +6410,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
           goto tmp3_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT52),stdout);
           goto goto_2;
@@ -6361,8 +6513,8 @@ modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, 
   _tailrecursive: OMC_LABEL_UNUSED
   // _criticalPathOut has no default value.
   // _criticalPathOutWoC has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _graphDataIn;
@@ -6389,7 +6541,7 @@ modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, 
           modelica_boolean tmp6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp6 = (arrayLength(_graphIn) != ((modelica_integer) 0));
@@ -6412,7 +6564,7 @@ modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, 
         }
         case 1: {
           modelica_boolean tmp9;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp9 = (arrayLength(_graphIn) == ((modelica_integer) 0));
@@ -6422,7 +6574,7 @@ modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, 
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT56),stdout);
           tmpMeta[0+0] = _OMC_LIT55;
@@ -6477,6 +6629,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareComponents(
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -6532,6 +6687,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareComponents(
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_compareComponents(threadData_t *threadData, modelica_metatype _iComp1, modelica_metatype _iComp2)
@@ -6564,6 +6722,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_componentsEqual(th
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -6606,6 +6767,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_componentsEqual(th
     _res = (omc_System_strncmp(threadData, _comp1Str, _comp2Str, stringLength(_comp1Str)) == ((modelica_integer) 0));
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_componentsEqual(threadData_t *threadData, modelica_metatype _iComp1, modelica_metatype _iComp2)
@@ -6982,7 +7146,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicate
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
           tmp7 = mmc_unbox_integer(tmpMeta6);
           if (0 /* false */ != tmp7) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta8 = mmc_mk_box2(0, mmc_mk_boolean(0 /* false */), mmc_mk_some(_currentComp_idx));
           tmpMeta1 = tmpMeta8;
@@ -6993,7 +7157,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicate
           modelica_metatype tmpMeta10;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           if (!optionNone(tmpMeta9)) goto tmp3_end;
-          
+
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta10 = mmc_mk_box2(0, mmc_mk_boolean(1 /* true */), mmc_mk_some(_currentComp_idx));
           tmpMeta1 = tmpMeta10;
@@ -7052,7 +7216,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicate
         }
         case 3: {
           modelica_metatype tmpMeta29;
-          
+
           /* Pattern matching succeeded */
           tmpMeta29 = mmc_mk_box2(0, mmc_mk_boolean(1 /* true */), mmc_mk_some(_currentComp_idx));
           tmpMeta1 = tmpMeta29;
@@ -7088,6 +7252,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForDuplicates
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -7100,6 +7267,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForDuplicates
   tmp3 = mmc_unbox_integer(tmpMeta2);
   _res = tmp3  /* pattern as ty=Boolean */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkForDuplicates(threadData_t *threadData, modelica_metatype _iComps)
@@ -7124,6 +7294,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_validateComponents
   modelica_metatype _sortedGraphComps = NULL;
   modelica_metatype _sortedSystComps = NULL;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -7262,6 +7435,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_validateComponents
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_validateComponents(threadData_t *threadData, modelica_metatype _graphComps, modelica_metatype _systComps)
@@ -7345,7 +7521,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_validateTaskGraph
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _iCompsTpl;
           goto tmp3_done;
@@ -7371,6 +7547,9 @@ modelica_boolean omc_HpcOmTaskGraph_validateTaskGraphMeta(threadData_t *threadDa
 {
   modelica_boolean _valid;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _valid has no default value.
@@ -7470,6 +7649,9 @@ modelica_boolean omc_HpcOmTaskGraph_validateTaskGraphMeta(threadData_t *threadDa
   }
   _valid = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _valid;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_validateTaskGraphMeta(threadData_t *threadData, modelica_metatype _iMeta, modelica_metatype _iDae)
@@ -7584,7 +7766,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommCosts(t
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_boolean tmp6;
-          
+
           _tmpCosts = tmp4_1;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
@@ -7600,7 +7782,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommCosts(t
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _iCosts;
           goto tmp3_done;
@@ -7705,6 +7887,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_createExecCost
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_createExecCost(threadData_t *threadData, modelica_metatype _iNodeSccs, modelica_metatype _icomps_shared, modelica_metatype _iRequiredTime, modelica_metatype _iExecCosts, modelica_metatype _compMapping, modelica_integer _iNodeIdx)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -7750,6 +7935,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_createExecCost(threadData_t *t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_createExecCost(threadData_t *threadData, modelica_metatype _iNodeSccs, modelica_metatype _icomps_shared, modelica_metatype _iRequiredTime, modelica_metatype _iExecCosts, modelica_metatype _compMapping, modelica_metatype _iNodeIdx)
@@ -7799,7 +7987,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCosts1(thre
           tmp9 = mmc_unbox_integer(tmpMeta8);
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           tmp11 = mmc_unbox_real(tmpMeta10);
-          
+
           _calcTimeCount = tmp9  /* pattern as ty=Integer */;
           _calcTime = tmp11  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
@@ -7820,7 +8008,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCosts1(thre
           tmp15 = mmc_unbox_integer(tmpMeta14);
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           tmp17 = mmc_unbox_real(tmpMeta16);
-          
+
           _simEqIdx = tmp13  /* pattern as ty=Integer */;
           _calcTimeCount = tmp15  /* pattern as ty=Integer */;
           _calcTime = tmp17  /* pattern as ty=Real */;
@@ -7959,7 +8147,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
         case 0: {
           modelica_boolean tmp6;
           modelica_boolean tmp7;
-          
+
           _reqTime = tmp4_1;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
@@ -7975,7 +8163,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _iReqTime;
           goto tmp3_done;
@@ -8109,7 +8297,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT69),stdout);
           goto goto_2;
@@ -8192,7 +8380,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertNodeListTo
           modelica_boolean tmp6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          
+
           _tmpEdgeList = tmp4_1;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
@@ -8210,7 +8398,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertNodeListTo
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _iEdgeList;
           goto tmp3_done;
@@ -8270,6 +8458,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkTpl2ForZero(t
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_real tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _bOut has no default value.
@@ -8288,6 +8479,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkTpl2ForZero(t
 
   _bOut = (_b || _bIn);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _bOut;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkTpl2ForZero(threadData_t *threadData, modelica_metatype _comp, modelica_metatype _exeCosts, modelica_metatype _bIn)
@@ -8307,6 +8501,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForExecutionC
 {
   modelica_boolean _bOut;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _bOut has no default value.
@@ -8376,6 +8573,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForExecutionC
   }
   _bOut = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _bOut;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkForExecutionCosts1(threadData_t *threadData, modelica_metatype _exeCosts, modelica_metatype _inComps, modelica_metatype _nodeIdx)
@@ -8397,6 +8597,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForExecutionC
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isFine has no default value.
@@ -8416,6 +8619,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForExecutionC
     fputs(MMC_STRINGDATA(_OMC_LIT70),stdout);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isFine;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkForExecutionCosts(threadData_t *threadData, modelica_metatype _dataIn)
@@ -8773,7 +8979,7 @@ modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, mo
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT71),stdout);
           tmpMeta1 = _OMC_LIT72;
@@ -9006,7 +9212,7 @@ modelica_metatype omc_HpcOmTaskGraph_createCosts(threadData_t *threadData, model
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 9));
-          
+
           _shared = tmpMeta6;
           _inComps = tmpMeta7;
           _commCosts = tmpMeta8;
@@ -9045,7 +9251,7 @@ modelica_metatype omc_HpcOmTaskGraph_createCosts(threadData_t *threadData, model
         case 1: {
           modelica_metatype tmpMeta16;
           modelica_metatype tmpMeta17;
-          
+
           /* Pattern matching succeeded */
           _tmpTaskGraphMeta = omc_HpcOmTaskGraph_estimateCosts(threadData, _iDae, _iTaskGraphMeta);
 
@@ -9450,7 +9656,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
           goto tmp3_done;
         }
         case 8: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT75),stdout);
           goto goto_2;
@@ -9493,6 +9699,9 @@ modelica_boolean omc_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelic
 {
   modelica_boolean _outIsEqual;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsEqual has no default value.
@@ -9523,14 +9732,14 @@ modelica_boolean omc_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelic
         }
         case 1: {
           if (!listEmpty(tmp4_1)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
         }
         case 2: {
           if (!listEmpty(tmp4_2)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9565,7 +9774,7 @@ modelica_boolean omc_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelic
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -9583,6 +9792,9 @@ modelica_boolean omc_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelic
   }
   _outIsEqual = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsEqual;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelica_metatype _inList1, modelica_metatype _inList2)
@@ -9948,6 +10160,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareListLengthO
 {
   modelica_boolean _equalLength;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _equalLength has no default value.
@@ -9995,6 +10210,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareListLengthO
   }
   _equalLength = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _equalLength;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_compareListLengthOnTrue(threadData_t *threadData, modelica_metatype _inValue, modelica_metatype _inLst)
@@ -10099,6 +10317,9 @@ DLLDirection
 modelica_boolean omc_HpcOmTaskGraph_isNodeContracted(threadData_t *threadData, modelica_integer _iNode, modelica_metatype _iContrNodes)
 {
   modelica_boolean _oIsContracted;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIsContracted has no default value.
@@ -10111,6 +10332,9 @@ modelica_boolean omc_HpcOmTaskGraph_isNodeContracted(threadData_t *threadData, m
     _oIsContracted = 0 /* false */;
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oIsContracted;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_isNodeContracted(threadData_t *threadData, modelica_metatype _iNode, modelica_metatype _iContrNodes)
@@ -10172,6 +10396,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_updateInCompsInfo(threadData_t
   modelica_metatype _comps = NULL;
   modelica_metatype _contrComps = NULL;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _comps has no default value.
@@ -10185,6 +10412,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_updateInCompsInfo(threadData_t
 
   arrayUpdate(_inComps, _contrNode, _comps);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_updateInCompsInfo(threadData_t *threadData, modelica_metatype _contrNode, modelica_metatype _removedNodes, modelica_metatype _inComps)
@@ -10262,6 +10492,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getRealTaskIdxOfTa
 {
   modelica_integer _oTaskIdx;
   modelica_integer _contractionMark;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTaskIdx has no default value.
@@ -10281,6 +10514,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getRealTaskIdxOfTa
     _oTaskIdx = _iTaskIdx;
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oTaskIdx;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData_t *threadData, modelica_metatype _iTaskIdx, modelica_metatype _iContractedTasks)
@@ -10353,11 +10589,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getContractedN
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkIfNodeBelongsToCluster(threadData_t *threadData, modelica_integer _iNegativeRefValue, modelica_integer _iNodeIdx, modelica_metatype _iContractedTasks)
 {
   modelica_boolean _oIsNodePartOfCluster;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIsNodePartOfCluster has no default value.
   _oIsNodePartOfCluster = (_iNegativeRefValue == mmc_unbox_integer(arrayGet(_iContractedTasks, _iNodeIdx)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oIsNodePartOfCluster;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkIfNodeBelongsToCluster(threadData_t *threadData, modelica_metatype _iNegativeRefValue, modelica_metatype _iNodeIdx, modelica_metatype _iContractedTasks)
@@ -10820,7 +11062,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestExecCos
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _iHighestTuple;
           goto tmp3_done;
@@ -10934,11 +11176,17 @@ DLLDirection
 modelica_real omc_HpcOmTaskGraph_getExeCostReqCycles(threadData_t *threadData, modelica_integer _iNodeIdx, modelica_metatype _iGraphData)
 {
   modelica_real _oExeCost;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oExeCost has no default value.
   _oExeCost = mmc_unbox_real(omc_Util_tuple22(threadData, omc_HpcOmTaskGraph_getExeCost(threadData, _iNodeIdx, _iGraphData)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oExeCost;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getExeCostReqCycles(threadData_t *threadData, modelica_metatype _iNodeIdx, modelica_metatype _iGraphData)
@@ -11160,6 +11408,7 @@ modelica_metatype omc_HpcOmTaskGraph_markSystemComponents(threadData_t *threadDa
     modelica_integer _nodeIdx;
     for(_nodeIdx = ((modelica_integer) 1); in_range_integer(_nodeIdx, tmp17, tmp19); _nodeIdx += tmp18)
     {
+
       _nodeComps = arrayGet(_odeInComps, _nodeIdx);
 
       {
@@ -11298,7 +11547,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0
           modelica_metatype tmpMeta25;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 9));
-          
+
           _exeCosts = tmpMeta6;
           _commCosts = tmpMeta7;
           /* Pattern matching succeeded */
@@ -11367,7 +11616,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0
         }
         case 1: {
           modelica_boolean tmp26;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp26 = (_iNodeIdx <= arrayLength(_iGraphT));
@@ -11376,7 +11625,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _iMergedNodes;
           goto tmp3_done;
@@ -11517,6 +11766,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf
 {
   modelica_integer _powOf2;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _powOf2 has no default value.
@@ -11553,7 +11805,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf
           if(tmp6 < 0.0 && tmp7 != 0.0)
           {
             tmp9 = modf(tmp7, &tmp10);
-            
+
             if(tmp9 > 0.5)
             {
               tmp9 -= 1.0;
@@ -11564,7 +11816,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf
               tmp9 += 1.0;
               tmp10 -= 1.0;
             }
-            
+
             if(fabs(tmp9) < 1e-10)
               tmp8 = pow(tmp6, tmp10);
             else
@@ -11605,7 +11857,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf
           if(tmp14 < 0.0 && tmp15 != 0.0)
           {
             tmp17 = modf(tmp15, &tmp18);
-            
+
             if(tmp17 > 0.5)
             {
               tmp17 -= 1.0;
@@ -11616,7 +11868,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf
               tmp17 += 1.0;
               tmp18 -= 1.0;
             }
-            
+
             if(fabs(tmp17) < 1e-10)
               tmp16 = pow(tmp14, tmp18);
             else
@@ -11668,7 +11920,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf
           if(tmp21 < 0.0 && tmp22 != 0.0)
           {
             tmp24 = modf(tmp22, &tmp25);
-            
+
             if(tmp24 > 0.5)
             {
               tmp24 -= 1.0;
@@ -11679,7 +11931,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf
               tmp24 += 1.0;
               tmp25 -= 1.0;
             }
-            
+
             if(fabs(tmp24) < 1e-10)
               tmp23 = pow(tmp21, tmp25);
             else
@@ -11738,6 +11990,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf
   }
   _powOf2 = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _powOf2;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_nextGreaterPowerOf2__impl(threadData_t *threadData, modelica_metatype _n, modelica_metatype _pow)
@@ -11756,11 +12011,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_nextGreaterPow
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf2(threadData_t *threadData, modelica_real _n)
 {
   modelica_integer _powOf2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _powOf2 has no default value.
   _powOf2 = omc_HpcOmTaskGraph_nextGreaterPowerOf2__impl(threadData, _n, ((modelica_integer) 1));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _powOf2;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_nextGreaterPowerOf2(threadData_t *threadData, modelica_metatype _n)
@@ -11783,8 +12044,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
   _tailrecursive: OMC_LABEL_UNUSED
   // _clustersOut has no default value.
   // _clusterValuesOut has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;
     tmp4_1 = _tplIn;
@@ -11980,7 +12241,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
           goto tmp3_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT78),stdout);
           goto goto_2;
@@ -12103,9 +12364,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeSingleNodes(
   // _oTaskGraph has no default value.
   // _oTaskGraphMeta has no default value.
   // _changed has no default value.
-  
-  
-  
+
+
+
   { /* matchcontinue expression */
     {
       modelica_integer _numProc;
@@ -12209,6 +12470,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCriticalPathInfo1(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = stringAppend(intString(_cpIdx),_OMC_LIT86);
@@ -12216,6 +12480,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCriticalPathInfo1(threadD
   tmpMeta3 = stringAppend(tmpMeta2,_OMC_LIT5);
   fputs(MMC_STRINGDATA(tmpMeta3),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_printCriticalPathInfo1(threadData_t *threadData, modelica_metatype _criticalPathsIn, modelica_metatype _cpIdx)
@@ -12228,6 +12495,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_printCriticalPathInfo1(thre
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCriticalPathInfo(threadData_t *threadData, modelica_metatype _criticalPathsIn, modelica_real _cpCosts)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -12249,7 +12519,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCriticalPathInfo(threadDa
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
 
@@ -12279,6 +12549,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCriticalPathInfo(threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_printCriticalPathInfo(threadData_t *threadData, modelica_metatype _criticalPathsIn, modelica_metatype _cpCosts)
@@ -12343,7 +12616,7 @@ modelica_string omc_HpcOmTaskGraph_dumpCriticalPathInfo(threadData_t *threadData
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
           if (!listEmpty(tmpMeta6)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT92;
           goto tmp3_done;
@@ -12446,6 +12719,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentInformations(thr
   modelica_integer tmp16;
   modelica_integer tmp17;
   modelica_integer tmp18;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
@@ -12458,6 +12734,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentInformations(thr
     modelica_integer _compIdx;
     for(_compIdx = ((modelica_integer) 1); in_range_integer(_compIdx, tmp16, tmp18); _compIdx += tmp17)
     {
+
       /* Pattern-matching assignment */
       tmpMeta1 = arrayGet(_iComponentInformations, _compIdx);
       tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
@@ -12490,6 +12767,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentInformations(thr
 
   fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -12504,6 +12784,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printNodeMarks(threadData_t *t
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
@@ -12514,6 +12797,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printNodeMarks(threadData_t *t
     modelica_integer _compIdx;
     for(_compIdx = ((modelica_integer) 1); in_range_integer(_compIdx, tmp5, tmp7); _compIdx += tmp6)
     {
+
       _mark = mmc_unbox_integer(arrayGet(_iNodeMarks, _compIdx));
 
       tmpMeta1 = stringAppend(_OMC_LIT98,intString(_compIdx));
@@ -12526,6 +12810,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printNodeMarks(threadData_t *t
 
   fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -12627,6 +12914,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCommCosts(threadData_t *t
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodeIdx has no default value.
@@ -12637,6 +12927,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCommCosts(threadData_t *t
     modelica_integer _nodeIdx;
     for(_nodeIdx = ((modelica_integer) 1); in_range_integer(_nodeIdx, tmp5, tmp7); _nodeIdx += tmp6)
     {
+
       _nodeComms = arrayGet(_iCommCosts, _nodeIdx);
 
       tmpMeta1 = stringAppend(_OMC_LIT113,intString(_nodeIdx));
@@ -12649,6 +12940,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCommCosts(threadData_t *t
 
   fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -12671,6 +12965,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printExeCosts(threadData_t *th
   modelica_integer tmp12;
   modelica_integer tmp13;
   modelica_integer tmp14;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
@@ -12682,6 +12979,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printExeCosts(threadData_t *th
     modelica_integer _compIdx;
     for(_compIdx = ((modelica_integer) 1); in_range_integer(_compIdx, tmp12, tmp14); _compIdx += tmp13)
     {
+
       /* Pattern-matching assignment */
       tmpMeta1 = arrayGet(_iExeCosts, _compIdx);
       tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
@@ -12703,6 +13001,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printExeCosts(threadData_t *th
 
   fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -12717,6 +13018,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCompDescs(threadData_t *t
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
@@ -12727,6 +13031,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCompDescs(threadData_t *t
     modelica_integer _compIdx;
     for(_compIdx = ((modelica_integer) 1); in_range_integer(_compIdx, tmp5, tmp7); _compIdx += tmp6)
     {
+
       _compDesc = arrayGet(_iCompDescs, _compIdx);
 
       tmpMeta1 = stringAppend(_OMC_LIT98,intString(_compIdx));
@@ -12739,6 +13044,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCompDescs(threadData_t *t
 
   fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -12753,6 +13061,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentNames(threadData
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
@@ -12763,6 +13074,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentNames(threadData
     modelica_integer _compIdx;
     for(_compIdx = ((modelica_integer) 1); in_range_integer(_compIdx, tmp5, tmp7); _compIdx += tmp6)
     {
+
       _compName = arrayGet(_iCompNames, _compIdx);
 
       tmpMeta1 = stringAppend(_OMC_LIT98,intString(_compIdx));
@@ -12775,6 +13087,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentNames(threadData
 
   fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -12789,6 +13104,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCompParamMapping(threadDa
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
@@ -12799,6 +13117,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCompParamMapping(threadDa
     modelica_integer _compIdx;
     for(_compIdx = ((modelica_integer) 1); in_range_integer(_compIdx, tmp5, tmp7); _compIdx += tmp6)
     {
+
       _params = arrayGet(_iCompParamMapping, _compIdx);
 
       tmpMeta1 = stringAppend(_OMC_LIT98,intString(_compIdx));
@@ -12811,6 +13130,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCompParamMapping(threadDa
 
   fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -12838,6 +13160,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printEqCompMapping(threadData_
   modelica_integer tmp16;
   modelica_integer tmp17;
   modelica_integer tmp18;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eqIdx has no default value.
@@ -12850,6 +13175,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printEqCompMapping(threadData_
     modelica_integer _eqIdx;
     for(_eqIdx = ((modelica_integer) 1); in_range_integer(_eqIdx, tmp16, tmp18); _eqIdx += tmp17)
     {
+
       /* Pattern-matching assignment */
       tmpMeta1 = arrayGet(_iEqCompMapping, _eqIdx);
       tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
@@ -12876,6 +13202,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printEqCompMapping(threadData_
 
   fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -12903,6 +13232,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printVarCompMapping(threadData
   modelica_integer tmp16;
   modelica_integer tmp17;
   modelica_integer tmp18;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _varIdx has no default value.
@@ -12915,6 +13247,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printVarCompMapping(threadData
     modelica_integer _varIdx;
     for(_varIdx = ((modelica_integer) 1); in_range_integer(_varIdx, tmp16, tmp18); _varIdx += tmp17)
     {
+
       /* Pattern-matching assignment */
       tmpMeta1 = arrayGet(_iVarCompMapping, _varIdx);
       tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
@@ -12941,6 +13274,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printVarCompMapping(threadData
 
   fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -12955,6 +13291,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printInComps(threadData_t *thr
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodeIdx has no default value.
@@ -12965,6 +13304,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printInComps(threadData_t *thr
     modelica_integer _nodeIdx;
     for(_nodeIdx = ((modelica_integer) 1); in_range_integer(_nodeIdx, tmp5, tmp7); _nodeIdx += tmp6)
     {
+
       _compRow = arrayGet(_iInComps, _nodeIdx);
 
       tmpMeta1 = stringAppend(_OMC_LIT127,intString(_nodeIdx));
@@ -12977,6 +13317,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printInComps(threadData_t *thr
 
   fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -13008,6 +13351,9 @@ void omc_HpcOmTaskGraph_printTaskGraphMeta(threadData_t *threadData, modelica_me
   modelica_metatype tmpMeta13;
   modelica_metatype tmpMeta14;
   modelica_metatype tmpMeta15;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _inComps has no default value.
@@ -13097,11 +13443,17 @@ void omc_HpcOmTaskGraph_printTaskGraphMeta(threadData_t *threadData, modelica_me
 
   fputs(MMC_STRINGDATA(_OMC_LIT5),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyRow(threadData_t *threadData, modelica_metatype _inIntegerLst)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -13162,11 +13514,17 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyRow(threadData_t 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyLst(threadData_t *threadData, modelica_metatype _inIntegerLstLst, modelica_integer _rowIndex)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -13223,6 +13581,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyLst(threadData_t 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_dumpAdjacencyLst(threadData_t *threadData, modelica_metatype _inIntegerLstLst, modelica_metatype _rowIndex)
@@ -13237,6 +13598,9 @@ DLLDirection
 void omc_HpcOmTaskGraph_printTaskGraph(threadData_t *threadData, modelica_metatype _graphIn)
 {
   modelica_metatype _graphLst = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphLst has no default value.
@@ -13254,6 +13618,9 @@ void omc_HpcOmTaskGraph_printTaskGraph(threadData_t *threadData, modelica_metaty
 
   fputs(MMC_STRINGDATA(_OMC_LIT5),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -14509,6 +14876,9 @@ DLLDirection
 void omc_HpcOmTaskGraph_dumpAsGraphMLSccLevel(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_string _iFileName, modelica_string _iCriticalPathInfo, modelica_metatype _iCriticalPath, modelica_metatype _iCriticalPathWoC, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSchedulerInfo, modelica_metatype _iGraphDumpOptions)
 {
   modelica_metatype _graphInfo = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphInfo has no default value.
@@ -14516,6 +14886,9 @@ void omc_HpcOmTaskGraph_dumpAsGraphMLSccLevel(threadData_t *threadData, modelica
 
   omc_GraphML_dumpGraph(threadData, _graphInfo, _iFileName);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -14531,6 +14904,9 @@ void omc_HpcOmTaskGraph_dumpTaskGraph(threadData_t *threadData, modelica_metatyp
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _name has no default value.
@@ -14552,6 +14928,9 @@ void omc_HpcOmTaskGraph_dumpTaskGraph(threadData_t *threadData, modelica_metatyp
   tmpMeta4 = MMC_REFSTRUCTLIT(mmc_nil);
   omc_HpcOmTaskGraph_dumpAsGraphMLSccLevel(threadData, _taskGraph, _taskGraphData, _name, _OMC_LIT92, tmpMeta3, tmpMeta4, _sccSimEqMapping, _schedulerInfo, _OMC_LIT207);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -14562,12 +14941,15 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
   modelica_boolean tmp1_c0 __attribute__((unused)) = 0;
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSolvesDiscreteValue has no default value.
   // _oFirstEqIdx has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _inComp;
@@ -14620,7 +15002,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _eqns = tmpMeta10;
           _vars = tmpMeta11;
           tmp4 += 5; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -14724,7 +15106,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
           goto tmp3_done;
         }
         case 7: {
-          
+
           /* Pattern matching succeeded */
           tmp1_c0 = 0 /* false */;
           tmp1_c1 = ((modelica_integer) -1);
@@ -14752,6 +15134,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
   _oFirstEqIdx = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_oFirstEqIdx) { *out_oFirstEqIdx = _oFirstEqIdx; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oSolvesDiscreteValue;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_solvesDiscreteValue(threadData_t *threadData, modelica_metatype _inComp, modelica_metatype _iOrderedVars, modelica_metatype *out_oFirstEqIdx)
@@ -14954,6 +15339,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_getComponentsInclu
 {
   modelica_boolean _oIncludingTime;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIncludingTime has no default value.
@@ -14971,13 +15359,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_getComponentsInclu
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,3) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           if (4 != MMC_STRLEN(tmpMeta6) || strcmp(MMC_STRINGDATA(_OMC_LIT209), MMC_STRINGDATA(tmpMeta6)) != 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _iIncludingTime;
           goto tmp3_done;
@@ -14995,6 +15383,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_getComponentsInclu
   }
   _oIncludingTime = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oIncludingTime;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getComponentsIncludingTime2(threadData_t *threadData, modelica_metatype _iRef, modelica_metatype _iIncludingTime)
@@ -15018,8 +15409,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
   _tailrecursive: OMC_LABEL_UNUSED
   // _e has no default value.
   // _res has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;modelica_boolean tmp4_2;
     tmp4_1 = _inExp;
@@ -15032,7 +15423,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (0 /* false */ != tmp4_2) goto tmp3_end;
-          
+
           _e = tmp4_1;
           /* Pattern matching succeeded */
           _res = mmc_unbox_boolean(omc_Expression_traverseCrefsFromExp(threadData, _e, boxvar_HpcOmTaskGraph_getComponentsIncludingTime2, mmc_mk_boolean(0 /* false */)));
@@ -15041,7 +15432,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _inExp;
           tmp1_c1 = _inB;
@@ -15097,8 +15488,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
   // _sccIdx has no default value.
   // _resultList has no default value.
   // _eqCompMapping has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;
     tmp4_1 = _inEq;
@@ -15288,7 +15679,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsOfZe
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          
+
           _occurEquLst = tmpMeta6;
           /* Pattern matching succeeded */
           _occurEquLst = omc_List_filter1OnTrue(threadData, _occurEquLst, boxvar_intGt, mmc_mk_integer(((modelica_integer) 0)));
@@ -15309,7 +15700,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsOfZe
         }
         case 1: {
           modelica_metatype tmpMeta11;
-          
+
           /* Pattern matching succeeded */
           tmpMeta11 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta1 = tmpMeta11;
@@ -15547,6 +15938,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_reverseTaskGraphI
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp12, tmp14); _i += tmp13)
     {
+
       _idxMap = arrayUpdate(_idxMap, _i, mmc_mk_integer(((modelica_integer) 1) + _nTasks - _i));
     }
   }
@@ -16085,7 +16477,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes2(th
         case 0: {
           modelica_boolean tmp6;
           modelica_metatype tmpMeta7;
-          
+
           _tmpNodesWithRefZero = tmp4_1;
           /* Pattern matching succeeded */
           _refCounter = ((modelica_integer) -1) + mmc_unbox_integer(arrayGet(_iRefCounter, _iNodeIdx));
@@ -16100,7 +16492,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes2(th
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _iNodesWithRefZero;
           goto tmp3_done;
@@ -16196,7 +16588,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes0(th
         case 1: {
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
-          
+
           _zeroRefNodes = tmp4_1;
           /* Pattern matching succeeded */
           tmpMeta6 = mmc_mk_cons(_zeroRefNodes, _iLevelNodes);
@@ -16276,6 +16668,7 @@ modelica_metatype omc_HpcOmTaskGraph_getLeafNodes(threadData_t *threadData, mode
     modelica_integer _nodeIdx;
     for(_nodeIdx = ((modelica_integer) 1); in_range_integer(_nodeIdx, tmp3, tmp5); _nodeIdx += tmp4)
     {
+
       _nodeSuccessors = arrayGet(_iTaskGraph, _nodeIdx);
 
       if(listEmpty(_nodeSuccessors))
@@ -16422,6 +16815,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_removeContinuousEn
 {
   modelica_integer _entryOut;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _entryOut has no default value.
@@ -16469,6 +16865,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_removeContinuousEn
   }
   _entryOut = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _entryOut;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_removeContinuousEntries1(threadData_t *threadData, modelica_metatype _entryIn, modelica_metatype _deleteEntriesIn)
@@ -16489,12 +16888,15 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_setDeleteArr(threa
   modelica_integer tmp1_c0 __attribute__((unused)) = 0;
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _entryOut has no default value.
   // _offsetOut has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_integer tmp4_1;
     tmp4_1 = _entryIn;
@@ -16533,6 +16935,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_setDeleteArr(threa
   _offsetOut = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_offsetOut) { *out_offsetOut = _offsetOut; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _entryOut;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_setDeleteArr(threadData_t *threadData, modelica_metatype _entryIn, modelica_metatype _offsetIn, modelica_metatype *out_offsetOut)
@@ -16577,7 +16982,7 @@ modelica_metatype omc_HpcOmTaskGraph_updateContinuousEntriesInList(threadData_t 
         case 0: {
           modelica_metatype tmpMeta6;
           if (!listEmpty(tmp4_1)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta6 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta1 = tmpMeta6;
@@ -16585,7 +16990,7 @@ modelica_metatype omc_HpcOmTaskGraph_updateContinuousEntriesInList(threadData_t 
         }
         case 1: {
           if (!listEmpty(tmp4_2)) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _lstIn;
           goto tmp3_done;
@@ -16598,7 +17003,7 @@ modelica_metatype omc_HpcOmTaskGraph_updateContinuousEntriesInList(threadData_t 
           tmpMeta7 = MMC_CAR(tmp4_1);
           tmpMeta8 = MMC_CDR(tmp4_1);
           tmp9 = mmc_unbox_integer(tmpMeta7);
-          
+
           _start = tmp9  /* pattern as ty=Integer */;
           _rest = tmpMeta8;
           /* Pattern matching succeeded */
@@ -16728,7 +17133,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllSuccessors2
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           _successors1 = omc_List_flatten(threadData, omc_List_map1(threadData, _nodes, boxvar_Array_getIndexFirst, _graph));
 
@@ -16836,6 +17241,9 @@ modelica_integer omc_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, mod
 {
   modelica_integer _compOut;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compOut has no default value.
@@ -16930,6 +17338,9 @@ modelica_integer omc_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, mod
   }
   _compOut = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _compOut;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, modelica_metatype _compIn, modelica_metatype _compIdx, modelica_metatype _inComps, modelica_metatype _nodeMark)
@@ -17105,8 +17516,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph2(thr
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _cutNodesOut has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _daeNodes;
@@ -17226,8 +17637,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph(thre
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _cutNodesOut has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _exceptNodes;
@@ -17272,7 +17683,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph(thre
         case 1: {
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
-          
+
           /* Pattern matching succeeded */
           _sizeDAE = arrayLength(_graphIn);
 
@@ -17299,7 +17710,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph(thre
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT219),stdout);
           goto goto_2;
@@ -17540,7 +17951,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllStateNodes(
           modelica_metatype tmpMeta24;
           modelica_metatype tmpMeta25;
           modelica_metatype tmpMeta26;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta22 = _systIn;
@@ -17972,6 +18383,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
 {
   modelica_integer _oSccIdx;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSccIdx has no default value.
@@ -18256,7 +18670,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
         case 8: {
           modelica_metatype tmpMeta70;
           modelica_metatype tmpMeta71;
-          
+
           /* Pattern matching succeeded */
           _helperStr = omc_BackendDump_strongComponentString(threadData, _component);
 
@@ -18286,6 +18700,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
   }
   _oSccIdx = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oSccIdx;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getVarEqCompMapping0(threadData_t *threadData, modelica_metatype _component, modelica_metatype _varCompMapping, modelica_metatype _eqCompMapping, modelica_metatype _iEqSysIdx, modelica_metatype _iVarEqOffset, modelica_metatype _iSccIdx)
@@ -18339,6 +18756,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareIntTuple2(t
 {
   modelica_boolean _equals;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _equals has no default value.
@@ -18388,7 +18808,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareIntTuple2(t
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -18406,6 +18826,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareIntTuple2(t
   }
   _equals = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _equals;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_compareIntTuple2(threadData_t *threadData, modelica_metatype _tuple1, modelica_metatype _tuple2)
@@ -18652,8 +19075,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
   _tailrecursive: OMC_LABEL_UNUSED
   // _oVars has no default value.
   // _oParamVars has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _iComponent;
@@ -18678,7 +19101,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,2) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp7 = mmc_unbox_integer(tmpMeta6);
-          
+
           _eqnIdx = tmp7  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmpMeta8 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
@@ -18689,7 +19112,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _eqns = tmpMeta9;
           /* Pattern matching succeeded */
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getVarsByEqns(threadData, _eqns, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _iAnalyzeParameters, &tmpMeta[0+1]);
@@ -18702,7 +19125,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,2) == 0) goto tmp3_end;
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp11 = mmc_unbox_integer(tmpMeta10);
-          
+
           _eqnIdx = tmp11  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmpMeta12 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
@@ -18716,7 +19139,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,2) == 0) goto tmp3_end;
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp14 = mmc_unbox_integer(tmpMeta13);
-          
+
           _eqnIdx = tmp14  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmpMeta15 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
@@ -18730,7 +19153,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,2) == 0) goto tmp3_end;
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp17 = mmc_unbox_integer(tmpMeta16);
-          
+
           _eqnIdx = tmp17  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmpMeta18 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
@@ -18744,7 +19167,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,2) == 0) goto tmp3_end;
           tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp20 = mmc_unbox_integer(tmpMeta19);
-          
+
           _eqnIdx = tmp20  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmpMeta21 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
@@ -18758,7 +19181,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
           tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmp23 = mmc_unbox_integer(tmpMeta22);
-          
+
           _eqnIdx = tmp23  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmpMeta24 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
@@ -18773,7 +19196,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 3));
           tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 4));
-          
+
           _resEqns = tmpMeta26;
           _innerEquations = tmpMeta27;
           /* Pattern matching succeeded */
@@ -18782,7 +19205,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           goto tmp3_done;
         }
         case 8: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT223),stdout);
           goto goto_2;
@@ -18824,6 +19247,9 @@ modelica_boolean omc_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *threadD
   modelica_real _exeCosts2;
   modelica_metatype _taskComps1 = NULL;
   modelica_metatype _taskComps2 = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oResult has no default value.
@@ -18848,6 +19274,9 @@ modelica_boolean omc_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *threadD
     _oResult = (_exeCosts1 > _exeCosts2);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oResult;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *threadData, modelica_metatype _iTask1, modelica_metatype _iTask2, modelica_metatype _iTaskComps, modelica_metatype _iExeCosts, modelica_metatype _iDescending)
@@ -18868,11 +19297,17 @@ modelica_metatype boxptr_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *thr
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareTupleByVarIdx(threadData_t *threadData, modelica_integer _varIdx, modelica_metatype _var2Idx)
 {
   modelica_boolean _equal;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _equal has no default value.
   _equal = (mmc_unbox_integer(omc_Util_tuple21(threadData, _var2Idx)) == _varIdx);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _equal;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_compareTupleByVarIdx(threadData_t *threadData, modelica_metatype _varIdx, modelica_metatype _var2Idx)
@@ -18893,6 +19328,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isTupleMember(thre
   modelica_integer _varState;
   modelica_boolean _returnValue;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isNotMember has no default value.
@@ -18938,7 +19376,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isTupleMember(thre
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -18963,6 +19401,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isTupleMember(thre
   }
   _isNotMember = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isNotMember;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_isTupleMember(threadData_t *threadData, modelica_metatype _inTuple, modelica_metatype _varIdc)
@@ -19322,7 +19763,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
         case 6: {
           modelica_metatype tmpMeta66;
           modelica_metatype tmpMeta67;
-          
+
           /* Pattern matching succeeded */
           tmpMeta66 = stringAppend(_OMC_LIT224,intString(mmc_unbox_integer(omc_Util_tuple21(threadData, _iVarIdx))));
           tmpMeta67 = stringAppend(tmpMeta66,_OMC_LIT225);
@@ -19406,8 +19847,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
   _tailrecursive: OMC_LABEL_UNUSED
   // _oUnsolvedVars has no default value.
   // _oParamVars has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _iComponent;
@@ -19441,7 +19882,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          
+
           _varIdc = tmpMeta9;
           tmp4 += 6; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _varIdc, _iEventVarLst, _iAnalyzeParameters, &tmpMeta[0+1]);
@@ -19498,14 +19939,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,7,4) == 0) goto tmp3_end;
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 2));
-          
+
           _varIdc = tmpMeta16;
           /* Pattern matching succeeded */
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _varIdc, _iEventVarLst, _iAnalyzeParameters, &tmpMeta[0+1]);
           goto tmp3_done;
         }
         case 8: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT227),stdout);
           goto goto_2;
@@ -19569,6 +20010,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_fillRequiredSccs(threadData_t 
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
   modelica_metatype tmpMeta21;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var_idx has no default value.
@@ -19662,6 +20106,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_fillRequiredSccs(threadData_t 
     omc_UnorderedMap_add(threadData, mmc_mk_integer(_scc_idx), tmpMeta21, _requiredSccs);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_fillRequiredSccs(threadData_t *threadData, modelica_metatype _var, modelica_metatype _varType, modelica_metatype _varMapping, modelica_metatype _requiredSccs)
@@ -19676,6 +20123,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isWhenEquation(thr
 {
   modelica_boolean _isWhenEq;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isWhenEq has no default value.
@@ -19690,13 +20140,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isWhenEquation(thr
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -19714,6 +20164,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isWhenEquation(thr
   }
   _isWhenEq = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isWhenEq;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_isWhenEquation(threadData_t *threadData, modelica_metatype _inComp)
@@ -20082,7 +20535,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           tmp9 = mmc_unbox_integer(tmpMeta8);
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          
+
           _i = tmp7  /* pattern as ty=Integer */;
           _v = tmp9  /* pattern as ty=Integer */;
           _orderedVars = tmpMeta10;
@@ -20105,7 +20558,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta15,0,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 7; /* Pattern matching succeeded; we may skip some cases if we fail */
           _desc = _OMC_LIT230;
           tmpMeta16 = mmc_mk_cons(_desc, _iEqDesc);
@@ -20131,7 +20584,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
           tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta22,1,3) == 0) goto tmp3_end;
-          
+
           _i = tmp18  /* pattern as ty=Integer */;
           _vs = tmpMeta19;
           _orderedVars = tmpMeta20;
@@ -20168,7 +20621,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
           tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta32,1,3) == 0) goto tmp3_end;
-          
+
           _i = tmp28  /* pattern as ty=Integer */;
           _vs = tmpMeta29;
           _orderedVars = tmpMeta30;
@@ -20205,7 +20658,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           tmpMeta41 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
           tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta42,1,3) == 0) goto tmp3_end;
-          
+
           _i = tmp38  /* pattern as ty=Integer */;
           _vs = tmpMeta39;
           _orderedVars = tmpMeta40;
@@ -20242,7 +20695,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
           tmpMeta52 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta52,1,3) == 0) goto tmp3_end;
-          
+
           _i = tmp48  /* pattern as ty=Integer */;
           _vs = tmpMeta49;
           _orderedVars = tmpMeta50;
@@ -20279,7 +20732,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           tmpMeta61 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
           tmpMeta62 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta62,1,3) == 0) goto tmp3_end;
-          
+
           _i = tmp58  /* pattern as ty=Integer */;
           _vs = tmpMeta59;
           _orderedVars = tmpMeta60;
@@ -20308,7 +20761,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           tmpMeta68 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
           tmp69 = mmc_unbox_integer(tmpMeta68);
           if (1 /* true */ != tmp69) goto tmp3_end;
-          
+
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
           _desc = _OMC_LIT238;
           tmpMeta70 = mmc_mk_cons(_desc, _iEqDesc);
@@ -20326,7 +20779,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           tmpMeta72 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
           tmp73 = mmc_unbox_integer(tmpMeta72);
           if (0 /* false */ != tmp73) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           _desc = _OMC_LIT239;
           tmpMeta74 = mmc_mk_cons(_desc, _iEqDesc);
@@ -20335,7 +20788,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
         }
         case 9: {
           modelica_metatype tmpMeta75;
-          
+
           /* Pattern matching succeeded */
           _desc = _OMC_LIT240;
           tmpMeta75 = mmc_mk_cons(_desc, _iEqDesc);
@@ -21460,6 +21913,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNumberOfEqSyste
   modelica_metatype _matching = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNumOfComps has no default value.
@@ -21474,6 +21930,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNumberOfEqSyste
 
   _oNumOfComps = _iNumOfComps + listLength(_comps);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oNumOfComps;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNumberOfEqSystemComponents(threadData_t *threadData, modelica_metatype _iEqSystem, modelica_metatype _iNumOfComps)
@@ -21493,6 +21952,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNumberOfSystemC
   modelica_metatype _eqs = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNumOfComps has no default value.
@@ -21504,6 +21966,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNumberOfSystemC
 
   _oNumOfComps = mmc_unbox_integer(omc_List_fold(threadData, _eqs, boxvar_HpcOmTaskGraph_getNumberOfEqSystemComponents, mmc_mk_integer(((modelica_integer) 0))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oNumOfComps;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNumberOfSystemComponents(threadData_t *threadData, modelica_metatype _iDae)
@@ -21593,7 +22058,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSystemComponen
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           fputs(MMC_STRINGDATA(_OMC_LIT243),stdout);
           goto goto_2;
@@ -21631,8 +22096,8 @@ modelica_metatype omc_HpcOmTaskGraph_getSystemComponents(threadData_t *threadDat
   // _systs has no default value.
   // _tmpSystems has no default value.
   // _tmpComps has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;
     tmp4_1 = _iDae;
@@ -21648,7 +22113,7 @@ modelica_metatype omc_HpcOmTaskGraph_getSystemComponents(threadData_t *threadDat
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          
+
           _systs = tmpMeta6;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
@@ -21942,4 +22407,3 @@ modelica_metatype boxptr_HpcOmTaskGraph_createTaskGraph(threadData_t *threadData
   /* skip box _oGraphData; HpcOmTaskGraph.TaskGraphMeta */
   return _oGraph;
 }
-

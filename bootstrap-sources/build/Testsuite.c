@@ -215,11 +215,17 @@ DLLDirection
 modelica_boolean omc_Testsuite_isRunning(threadData_t *threadData)
 {
   modelica_boolean _runningTestsuite;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _runningTestsuite has no default value.
   _runningTestsuite = (!(stringEqual(omc_Flags_getConfigString(threadData, _OMC_LIT8), _OMC_LIT5)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _runningTestsuite;
 }
 modelica_metatype boxptr_Testsuite_isRunning(threadData_t *threadData)

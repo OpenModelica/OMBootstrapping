@@ -130,6 +130,7 @@ modelica_metatype omc_Array_generate(threadData_t *threadData, modelica_integer 
       modelica_integer _i;
       for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
       {
+
         arrayUpdateNoBoundsChecking(_arr, _i, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_generator), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_generator), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_generator), 2)))) : ((modelica_metatype(*)(threadData_t*)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_generator), 1)))) (threadData));
       }
     }
@@ -193,6 +194,7 @@ modelica_metatype omc_Array_threadMap(threadData_t *threadData, modelica_metatyp
     modelica_integer _i;
     for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
     {
+
       arrayUpdateNoBoundsChecking(_outArray, _i, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))), arrayGetNoBoundsChecking(_arr1, _i), arrayGetNoBoundsChecking(_arr2, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, arrayGetNoBoundsChecking(_arr1, _i), arrayGetNoBoundsChecking(_arr2, _i)));
     }
   }
@@ -254,6 +256,7 @@ modelica_metatype omc_Array_transpose(threadData_t *threadData, modelica_metatyp
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       arrayUpdateNoBoundsChecking(_outArray, _i, arrayCreateNoInit(_c_len, _val));
     }
   }
@@ -264,12 +267,14 @@ modelica_metatype omc_Array_transpose(threadData_t *threadData, modelica_metatyp
     modelica_integer _r;
     for(_r = ((modelica_integer) 1); in_range_integer(_r, tmp7, tmp9); _r += tmp8)
     {
+
       tmp4 = ((modelica_integer) 1); tmp5 = 1; tmp6 = _c_len;
       if(!(((tmp5 > 0) && (tmp4 > tmp6)) || ((tmp5 < 0) && (tmp4 < tmp6))))
       {
         modelica_integer _c;
         for(_c = ((modelica_integer) 1); in_range_integer(_c, tmp4, tmp6); _c += tmp5)
         {
+
           _val = arrayGetNoBoundsChecking(arrayGetNoBoundsChecking(_arr, _c), _r);
 
           arrayUpdateNoBoundsChecking(arrayGetNoBoundsChecking(_outArray, _r), _c, _val);
@@ -317,6 +322,7 @@ modelica_metatype omc_Array_mapFold(threadData_t *threadData, modelica_metatype 
       modelica_integer _i;
       for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
       {
+
         _res = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))), arrayGetNoBoundsChecking(_arr, _i), _outArg ,&_outArg) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, arrayGetNoBoundsChecking(_arr, _i), _outArg ,&_outArg);
 
         arrayUpdateNoBoundsChecking(_outArray, _i, _res);
@@ -337,6 +343,9 @@ modelica_integer omc_Array_compare(threadData_t *threadData, modelica_metatype _
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -359,6 +368,7 @@ modelica_integer omc_Array_compare(threadData_t *threadData, modelica_metatype _
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _res = mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_compFn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_compFn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_compFn), 2))), arrayGetNoBoundsChecking(_arr1, _i), arrayGetNoBoundsChecking(_arr2, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_compFn), 1)))) (threadData, arrayGetNoBoundsChecking(_arr1, _i), arrayGetNoBoundsChecking(_arr2, _i)));
 
       if((_res != ((modelica_integer) 0)))
@@ -368,6 +378,9 @@ modelica_integer omc_Array_compare(threadData_t *threadData, modelica_metatype _
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_Array_compare(threadData_t *threadData, modelica_metatype _arr1, modelica_metatype _arr2, modelica_fnptr _compFn)
@@ -399,6 +412,7 @@ modelica_metatype omc_Array_maxElement(threadData_t *threadData, modelica_metaty
     modelica_integer _i;
     for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _e = arrayGetNoBoundsChecking(_arr, _i);
 
       if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lessFn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lessFn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lessFn), 2))), _res, _e) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lessFn), 1)))) (threadData, _res, _e)))
@@ -431,6 +445,7 @@ modelica_metatype omc_Array_minElement(threadData_t *threadData, modelica_metaty
     modelica_integer _i;
     for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _e = arrayGetNoBoundsChecking(_arr, _i);
 
       if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lessFn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lessFn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lessFn), 2))), _e, _res) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lessFn), 1)))) (threadData, _e, _res)))
@@ -451,6 +466,9 @@ modelica_boolean omc_Array_any(threadData_t *threadData, modelica_metatype _arr,
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_integer tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
@@ -470,6 +488,9 @@ modelica_boolean omc_Array_any(threadData_t *threadData, modelica_metatype _arr,
 
   _outResult = 0 /* false */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_Array_any(threadData_t *threadData, modelica_metatype _arr, modelica_fnptr _inFunc)
@@ -489,6 +510,9 @@ modelica_boolean omc_Array_all(threadData_t *threadData, modelica_metatype _arr,
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_integer tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
@@ -508,6 +532,9 @@ modelica_boolean omc_Array_all(threadData_t *threadData, modelica_metatype _arr,
 
   _outResult = 1 /* true */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_Array_all(threadData_t *threadData, modelica_metatype _arr, modelica_fnptr _inFunc)
@@ -555,6 +582,7 @@ modelica_metatype omc_Array_remove(threadData_t *threadData, modelica_metatype _
       modelica_integer _i;
       for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp3, tmp5); _i += tmp4)
       {
+
         arrayUpdateNoBoundsChecking(_outArr, _i, arrayGetNoBoundsChecking(_arr, _i));
       }
     }
@@ -565,6 +593,7 @@ modelica_metatype omc_Array_remove(threadData_t *threadData, modelica_metatype _
       modelica_integer _i;
       for(_i = ((modelica_integer) 1) + _index; in_range_integer(_i, tmp6, tmp8); _i += tmp7)
       {
+
         arrayUpdateNoBoundsChecking(_outArr, ((modelica_integer) -1) + _i, arrayGetNoBoundsChecking(_arr, _i));
       }
     }
@@ -627,6 +656,9 @@ modelica_boolean omc_Array_isLess(threadData_t *threadData, modelica_metatype _a
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -644,6 +676,7 @@ modelica_boolean omc_Array_isLess(threadData_t *threadData, modelica_metatype _a
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _e1 = arrayGetNoBoundsChecking(_arr1, _i);
 
       _e2 = arrayGetNoBoundsChecking(_arr2, _i);
@@ -668,6 +701,9 @@ modelica_boolean omc_Array_isLess(threadData_t *threadData, modelica_metatype _a
 
   _res = (_len1 < _len2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_Array_isLess(threadData_t *threadData, modelica_metatype _arr1, modelica_metatype _arr2, modelica_fnptr _lessFn)
@@ -686,6 +722,9 @@ modelica_boolean omc_Array_allEqual(threadData_t *threadData, modelica_metatype 
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _equal = 1 /* true */;
@@ -700,6 +739,7 @@ modelica_boolean omc_Array_allEqual(threadData_t *threadData, modelica_metatype 
     modelica_integer _i;
     for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if((!mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_pred), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_pred), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_pred), 2))), arrayGetNoBoundsChecking(_arr, ((modelica_integer) 1)), arrayGetNoBoundsChecking(_arr, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_pred), 1)))) (threadData, arrayGetNoBoundsChecking(_arr, ((modelica_integer) 1)), arrayGetNoBoundsChecking(_arr, _i)))))
       {
         _equal = 0 /* false */;
@@ -709,6 +749,9 @@ modelica_boolean omc_Array_allEqual(threadData_t *threadData, modelica_metatype 
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _equal;
 }
 modelica_metatype boxptr_Array_allEqual(threadData_t *threadData, modelica_metatype _arr, modelica_fnptr _pred)
@@ -727,6 +770,9 @@ modelica_boolean omc_Array_isEqualOnTrue(threadData_t *threadData, modelica_meta
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _equal has no default value.
@@ -743,6 +789,7 @@ modelica_boolean omc_Array_isEqualOnTrue(threadData_t *threadData, modelica_meta
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if((!mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_pred), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_pred), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_pred), 2))), arrayGetNoBoundsChecking(_arr1, _i), arrayGetNoBoundsChecking(_arr2, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_pred), 1)))) (threadData, arrayGetNoBoundsChecking(_arr1, _i), arrayGetNoBoundsChecking(_arr2, _i)))))
       {
         _equal = 0 /* false */;
@@ -752,6 +799,9 @@ modelica_boolean omc_Array_isEqualOnTrue(threadData_t *threadData, modelica_meta
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _equal;
 }
 modelica_metatype boxptr_Array_isEqualOnTrue(threadData_t *threadData, modelica_metatype _arr1, modelica_metatype _arr2, modelica_fnptr _pred)
@@ -771,6 +821,9 @@ modelica_boolean omc_Array_isEqual(threadData_t *threadData, modelica_metatype _
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outIsEqual = 1 /* true */;
@@ -788,6 +841,7 @@ modelica_boolean omc_Array_isEqual(threadData_t *threadData, modelica_metatype _
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if((!valueEq(arrayGet(_inArr1,_i) /* DAE.ASUB */, arrayGet(_inArr2,_i) /* DAE.ASUB */)))
       {
         _outIsEqual = 0 /* false */;
@@ -797,6 +851,9 @@ modelica_boolean omc_Array_isEqual(threadData_t *threadData, modelica_metatype _
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsEqual;
 }
 modelica_metatype boxptr_Array_isEqual(threadData_t *threadData, modelica_metatype _inArr1, modelica_metatype _inArr2)
@@ -815,6 +872,9 @@ modelica_integer omc_Array_hashIntArray(threadData_t *threadData, modelica_metat
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _hash = ((modelica_integer) 5381);
@@ -824,10 +884,14 @@ modelica_integer omc_Array_hashIntArray(threadData_t *threadData, modelica_metat
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _hash = modelica_integer_mod((((modelica_integer) 31)) * (_hash) + mmc_unbox_integer(arrayGetNoBoundsChecking(_arr, _i)), ((modelica_integer) 536870911));
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _hash;
 }
 modelica_metatype boxptr_Array_hashIntArray(threadData_t *threadData, modelica_metatype _arr)
@@ -956,6 +1020,7 @@ modelica_metatype omc_Array_reverse(threadData_t *threadData, modelica_metatype 
     modelica_integer _i;
     for(_i = 1.0; in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _elem1 = arrayGet(_inArray, _i);
 
       _elem2 = arrayGet(_inArray, ((modelica_integer) 1) + _size - _i);
@@ -987,6 +1052,7 @@ modelica_metatype omc_Array_getMemberOnTrue(threadData_t *threadData, modelica_m
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inCompFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inCompFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inCompFunc), 2))), _inValue, arrayGetNoBoundsChecking(_inArray, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inCompFunc), 1)))) (threadData, _inValue, arrayGetNoBoundsChecking(_inArray, _i))))
       {
         _outElement = arrayGetNoBoundsChecking(_inArray, _i);
@@ -1020,6 +1086,9 @@ modelica_integer omc_Array_position(threadData_t *threadData, modelica_metatype 
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIndex has no default value.
@@ -1029,6 +1098,7 @@ modelica_integer omc_Array_position(threadData_t *threadData, modelica_metatype 
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if(valueEq(_inElement, arrayGet(_inArray,_i) /* DAE.ASUB */))
       {
         _outIndex = _i;
@@ -1040,6 +1110,9 @@ modelica_integer omc_Array_position(threadData_t *threadData, modelica_metatype 
 
   _outIndex = ((modelica_integer) 0);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIndex;
 }
 modelica_metatype boxptr_Array_position(threadData_t *threadData, modelica_metatype _inArray, modelica_metatype _inElement, modelica_metatype _inFilledSize)
@@ -1079,6 +1152,7 @@ modelica_metatype omc_Array_getRange(threadData_t *threadData, modelica_integer 
     modelica_integer _i;
     for(_i = _inStart; in_range_integer(_i, tmp3, tmp5); _i += tmp4)
     {
+
       _value = arrayGet(_inArray, _i);
 
       tmpMeta2 = mmc_mk_cons(_value, _outList);
@@ -1122,6 +1196,7 @@ modelica_metatype omc_Array_setRange(threadData_t *threadData, modelica_integer 
     modelica_integer _i;
     for(_i = _inStart; in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       arrayUpdate(_inArray, _i, _inValue);
     }
   }
@@ -1158,6 +1233,7 @@ modelica_metatype omc_Array_createIntRange(threadData_t *threadData, modelica_in
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       arrayUpdateNoBoundsChecking(_outArray, _i, mmc_mk_integer(_i));
     }
   }
@@ -1181,6 +1257,9 @@ void omc_Array_copyRange(threadData_t *threadData, modelica_metatype _srcArray, 
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _offset = _dstPos - _srcFirst;
@@ -1195,10 +1274,14 @@ void omc_Array_copyRange(threadData_t *threadData, modelica_metatype _srcArray, 
     modelica_integer _i;
     for(_i = _srcFirst; in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       arrayUpdateNoBoundsChecking(_dstArray, _offset + _i, arrayGetNoBoundsChecking(_srcArray, _i));
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_Array_copyRange(threadData_t *threadData, modelica_metatype _srcArray, modelica_metatype _dstArray, modelica_metatype _srcFirst, modelica_metatype _srcLast, modelica_metatype _dstPos)
@@ -1234,6 +1317,7 @@ modelica_metatype omc_Array_copyN(threadData_t *threadData, modelica_metatype _i
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       arrayUpdateNoBoundsChecking(_outArray, _i + _dstOffset, arrayGetNoBoundsChecking(_inArraySrc, _i + _srcOffset));
     }
   }
@@ -1275,6 +1359,7 @@ modelica_metatype omc_Array_copy(threadData_t *threadData, modelica_metatype _in
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       arrayUpdateNoBoundsChecking(_outArray, _i, arrayGetNoBoundsChecking(_inArraySrc, _i));
     }
   }
@@ -1363,6 +1448,7 @@ modelica_metatype omc_Array_appendList(threadData_t *threadData, modelica_metaty
         modelica_integer _i;
         for(_i = ((modelica_integer) 1) + _arr_len; in_range_integer(_i, tmp4, tmp6); _i += tmp5)
         {
+
           /* Pattern-matching assignment */
           tmpMeta1 = _rest;
           if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
@@ -1576,10 +1662,16 @@ modelica_metatype boxptr_Array_getIndexFirst(threadData_t *threadData, modelica_
 DLLDirection
 void omc_Array_updateIndexFirst(threadData_t *threadData, modelica_integer _inIndex, modelica_metatype _inValue, modelica_metatype _inArray)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   arrayUpdate(_inArray, _inIndex, _inValue);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_Array_updateIndexFirst(threadData_t *threadData, modelica_metatype _inIndex, modelica_metatype _inValue, modelica_metatype _inArray)
@@ -1608,6 +1700,7 @@ modelica_metatype omc_Array_reduce(threadData_t *threadData, modelica_metatype _
     modelica_integer _i;
     for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _outResult = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inReduceFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inReduceFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inReduceFunc), 2))), _outResult, arrayGet(_inArray, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inReduceFunc), 1)))) (threadData, _outResult, arrayGet(_inArray, _i));
     }
   }
@@ -1633,6 +1726,7 @@ modelica_metatype omc_Array_foldIndex(threadData_t *threadData, modelica_metatyp
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _e = arrayGet(_inArray, _i);
 
       _outResult = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFoldFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFoldFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFoldFunc), 2))), _e, mmc_mk_integer(_i), _outResult) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFoldFunc), 1)))) (threadData, _e, mmc_mk_integer(_i), _outResult);
@@ -1743,6 +1837,7 @@ modelica_metatype omc_Array_map1Ind(threadData_t *threadData, modelica_metatype 
       modelica_integer _i;
       for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
       {
+
         arrayUpdate(_outArray, _i, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 2))), arrayGetNoBoundsChecking(_inArray, _i), mmc_mk_integer(_i), _inArg) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 1)))) (threadData, arrayGetNoBoundsChecking(_inArray, _i), mmc_mk_integer(_i), _inArg));
       }
     }
@@ -1785,6 +1880,7 @@ modelica_metatype omc_Array_map1(threadData_t *threadData, modelica_metatype _in
       modelica_integer _i;
       for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
       {
+
         arrayUpdate(_outArray, _i, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 2))), arrayGetNoBoundsChecking(_inArray, _i), _inArg) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 1)))) (threadData, arrayGetNoBoundsChecking(_inArray, _i), _inArg));
       }
     }
@@ -1827,6 +1923,7 @@ modelica_metatype omc_Array_map(threadData_t *threadData, modelica_metatype _inA
       modelica_integer _i;
       for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
       {
+
         arrayUpdateNoBoundsChecking(_outArray, _i, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 2))), arrayGetNoBoundsChecking(_inArray, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 1)))) (threadData, arrayGetNoBoundsChecking(_inArray, _i)));
       }
     }
@@ -1966,6 +2063,7 @@ modelica_metatype omc_Array_heapSort(threadData_t *threadData, modelica_metatype
     modelica_integer _v;
     for(_v = ((modelica_integer) -1) + modelica_div_integer(_n,tmp4).quot; in_range_integer(_v, tmp1, tmp3); _v += tmp2)
     {
+
       _inArray = omc_Array_downheap(threadData, _inArray, _n, _v);
     }
   }
@@ -1976,6 +2074,7 @@ modelica_metatype omc_Array_heapSort(threadData_t *threadData, modelica_metatype
     modelica_integer _v;
     for(_v = _n; in_range_integer(_v, tmp5, tmp7); _v += tmp6)
     {
+
       _tmp = mmc_unbox_integer(arrayGet(_inArray,((modelica_integer) 1)) /* DAE.ASUB */);
 
       arrayUpdate(_inArray,((modelica_integer) 1),arrayGet(_inArray,_v) /* DAE.ASUB */);
@@ -2067,6 +2166,7 @@ modelica_metatype omc_Array_mapNoCopy__1(threadData_t *threadData, modelica_meta
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp6, tmp8); _i += tmp7)
     {
+
       /* Pattern-matching assignment */
       tmpMeta1 = mmc_mk_box2(0, arrayGetNoBoundsChecking(_inArray, _i), _outArg);
       tmpMeta2 = mmc_mk_box2(0, arrayGetNoBoundsChecking(_inArray, _i), _outArg);
@@ -2100,6 +2200,7 @@ modelica_metatype omc_Array_mapNoCopy(threadData_t *threadData, modelica_metatyp
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       arrayUpdateNoBoundsChecking(_inArray, _i, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 2))), arrayGetNoBoundsChecking(_inArray, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inFunc), 1)))) (threadData, arrayGetNoBoundsChecking(_inArray, _i)));
     }
   }

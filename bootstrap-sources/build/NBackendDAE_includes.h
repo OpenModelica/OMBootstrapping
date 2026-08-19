@@ -9,6 +9,7 @@ extern "C" {
 #include "ExecStat.h"
 #include "Flags.h"
 #include "List.h"
+#include "NBAdjacency.h"
 #include "NBAlias.h"
 #include "NBBindings.h"
 #include "NBCausalize.h"

@@ -58,6 +58,9 @@ void omc_NFEvalConstants_evaluateRecordDeclarationField(threadData_t *threadData
   modelica_metatype _cls_inst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _comp has no default value.
@@ -85,6 +88,9 @@ void omc_NFEvalConstants_evaluateRecordDeclarationField(threadData_t *threadData
 
   omc_NFInstNode_InstNode_updateComponent(threadData, _comp, _fieldNode);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -97,11 +103,17 @@ DLLDirection
 void omc_NFEvalConstants_evaluateRecordDeclaration(threadData_t *threadData, modelica_metatype _recordNode)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_box1(0, _recordNode);
   omc_NFClassTree_ClassTree_applyComponents(threadData, omc_NFClass_classTree(threadData, omc_NFInstNode_InstNode_getClass(threadData, _recordNode)), (modelica_fnptr) mmc_mk_box2(0,closure2_NFEvalConstants_evaluateRecordDeclarationField,tmpMeta1));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -112,6 +124,9 @@ modelica_boolean omc_NFEvalConstants_isLocalFunctionVariable(threadData_t *threa
   modelica_metatype _node = NULL;
   modelica_metatype _fnl = NULL;
   modelica_metatype _fn = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -154,6 +169,9 @@ modelica_boolean omc_NFEvalConstants_isLocalFunctionVariable(threadData_t *threa
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_NFEvalConstants_isLocalFunctionVariable(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _fnNode)
@@ -479,13 +497,13 @@ modelica_metatype omc_NFEvalConstants_evaluateStatement(threadData_t *threadData
           
           /* Pattern matching succeeded */
           tmpMeta8 = mmc_mk_box1(0, _info);
-          tmpMeta7 = MMC_TAGPTR(mmc_alloc_words(7));
-          memcpy(MMC_UNTAGPTR(tmpMeta7), MMC_UNTAGPTR(_stmt), 7*sizeof(modelica_metatype));
+          tmpMeta7 = MMC_TAGPTR(mmc_alloc_words(8));
+          memcpy(MMC_UNTAGPTR(tmpMeta7), MMC_UNTAGPTR(_stmt), 8*sizeof(modelica_metatype));
           ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta7))[3] = omc_Util_applyOption(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 3))), (modelica_fnptr) mmc_mk_box2(0,closure7_NFEvalConstants_evaluateExp,tmpMeta8));
           _stmt = tmpMeta7;
 
-          tmpMeta9 = MMC_TAGPTR(mmc_alloc_words(7));
-          memcpy(MMC_UNTAGPTR(tmpMeta9), MMC_UNTAGPTR(_stmt), 7*sizeof(modelica_metatype));
+          tmpMeta9 = MMC_TAGPTR(mmc_alloc_words(8));
+          memcpy(MMC_UNTAGPTR(tmpMeta9), MMC_UNTAGPTR(_stmt), 8*sizeof(modelica_metatype));
           ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta9))[4] = omc_NFEvalConstants_evaluateStatements(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 4))));
           _stmt = tmpMeta9;
           tmpMeta1 = _stmt;

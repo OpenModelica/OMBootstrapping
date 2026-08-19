@@ -160,6 +160,9 @@ void omc_SBFunctions_test3(threadData_t *threadData)
   modelica_metatype tmpMeta30;
   modelica_metatype tmpMeta31;
   modelica_metatype tmpMeta32;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _vss has no default value.
@@ -244,6 +247,9 @@ void omc_SBFunctions_test3(threadData_t *threadData)
   tmpMeta32 = stringAppend(omc_SBPWLinearMap_toString(threadData, _res),_OMC_LIT36);
   fputs(MMC_STRINGDATA(tmpMeta32),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -292,6 +298,9 @@ void omc_SBFunctions_test2(threadData_t *threadData)
   modelica_metatype tmpMeta33;
   modelica_metatype tmpMeta34;
   modelica_metatype tmpMeta35;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _vss has no default value.
@@ -379,6 +388,9 @@ void omc_SBFunctions_test2(threadData_t *threadData)
   tmpMeta35 = stringAppend(omc_SBPWLinearMap_toString(threadData, _res),_OMC_LIT36);
   fputs(MMC_STRINGDATA(tmpMeta35),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -425,6 +437,9 @@ void omc_SBFunctions_test1(threadData_t *threadData)
   modelica_metatype tmpMeta31;
   modelica_metatype tmpMeta32;
   modelica_metatype tmpMeta33;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _vss has no default value.
@@ -510,6 +525,9 @@ void omc_SBFunctions_test1(threadData_t *threadData)
   tmpMeta33 = stringAppend(omc_SBPWLinearMap_toString(threadData, _res),_OMC_LIT36);
   fputs(MMC_STRINGDATA(tmpMeta33),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -554,6 +572,9 @@ modelica_metatype omc_SBFunctions_make__set(threadData_t *threadData, modelica_m
 DLLDirection
 void omc_SBFunctions_test(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_SBFunctions_test1(threadData);
@@ -562,6 +583,9 @@ void omc_SBFunctions_test(threadData_t *threadData)
 
   omc_SBFunctions_test3(threadData);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -671,6 +695,7 @@ modelica_metatype omc_SBFunctions_minAdjMap(threadData_t *threadData, modelica_m
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _mapi = omc_SBPWLinearMap_newScalar(threadData, arrayGet(_dom2,_i) /* DAE.ASUB */, arrayGet(_lm2,_i) /* DAE.ASUB */);
 
       _min_adj = omc_SBFunctions_minAdjCompMap(threadData, _mapi, _pw1);
@@ -812,6 +837,7 @@ modelica_metatype omc_SBFunctions_minAdjCompMap(threadData_t *threadData, modeli
         modelica_integer _i;
         for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
         {
+
           _g = mmc_unbox_real(arrayGetNoBoundsChecking(_gain, _i));
 
           if((_g == _inf))
@@ -859,6 +885,7 @@ modelica_metatype omc_SBFunctions_minAdjCompMap(threadData_t *threadData, modeli
           modelica_integer _i;
           for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp4, tmp6); _i += tmp5)
           {
+
             _g = mmc_unbox_real(arrayGetNoBoundsChecking(_gain, _i));
 
             if((_g == _inf))
@@ -894,6 +921,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_SBFunctions_mapInf_max__inter(thread
   modelica_real _hi;
   modelica_real _lo;
   modelica_real tmp1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _its = __omcQ_24in_5Fits;
@@ -913,6 +943,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_SBFunctions_mapInf_max__inter(thread
   if (tmp1 == 0) {MMC_THROW_INTERNAL();}
   _its = fmax(_its,ceil((_hi - _lo) / tmp1));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _its;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SBFunctions_mapInf_max__inter(threadData_t *threadData, modelica_metatype _aset, modelica_metatype _offset, modelica_metatype _dim, modelica_metatype __omcQ_24in_5Fits)
@@ -994,6 +1027,7 @@ modelica_metatype omc_SBFunctions_mapInf(threadData_t *threadData, modelica_meta
     modelica_integer _i;
     for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _outMap = omc_SBFunctions_reduceMapN(threadData, _pw, _i);
     }
   }
@@ -1010,6 +1044,7 @@ modelica_metatype omc_SBFunctions_mapInf(threadData_t *threadData, modelica_meta
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp11, tmp13); _i += tmp12)
     {
+
       _d = arrayGet(_dom,_i) /* DAE.ASUB */;
 
       _lm = arrayGet(_lmap,_i) /* DAE.ASUB */;
@@ -1028,6 +1063,7 @@ modelica_metatype omc_SBFunctions_mapInf(threadData_t *threadData, modelica_meta
         modelica_integer _j;
         for(_j = ((modelica_integer) 1); in_range_integer(_j, tmp4, tmp6); _j += tmp5)
         {
+
           _a = fmax(_a,(mmc_unbox_real(arrayGet(_gain,_j) /* DAE.ASUB */)) * (fabs(mmc_unbox_real(arrayGet(_off,_j) /* DAE.ASUB */))));
 
           _b = fmin(_b,mmc_unbox_real(arrayGet(_gain,_j) /* DAE.ASUB */));
@@ -1044,6 +1080,7 @@ modelica_metatype omc_SBFunctions_mapInf(threadData_t *threadData, modelica_meta
           modelica_integer _dim;
           for(_dim = ((modelica_integer) 1); in_range_integer(_dim, tmp8, tmp10); _dim += tmp9)
           {
+
             if(((mmc_unbox_real(arrayGet(_gain,_dim) /* DAE.ASUB */) == 1.0) && (mmc_unbox_real(arrayGet(_off,_dim) /* DAE.ASUB */) < 0.0)))
             {
               tmpMeta7 = mmc_mk_box2(0, arrayGet(_off,_dim) /* DAE.ASUB */, mmc_mk_integer(_dim));
@@ -1070,6 +1107,7 @@ modelica_metatype omc_SBFunctions_mapInf(threadData_t *threadData, modelica_meta
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp14, tmp16); _i += tmp15)
     {
+
       _outMap = omc_SBPWLinearMap_compPW(threadData, _outMap, _outMap);
     }
   }
@@ -1162,6 +1200,7 @@ modelica_metatype omc_SBFunctions_reduceMapN(threadData_t *threadData, modelica_
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp12, tmp14); _i += tmp13)
     {
+
       _di = arrayGet(_dom,_i) /* DAE.ASUB */;
 
       _li = arrayGet(_lmap,_i) /* DAE.ASUB */;
@@ -1201,6 +1240,7 @@ modelica_metatype omc_SBFunctions_reduceMapN(threadData_t *threadData, modelica_
                 modelica_integer _k;
                 for(_k = ((modelica_integer) 1); in_range_integer(_k, tmp2, tmp4); _k += tmp3)
                 {
+
                   _resg = arrayCopy(omc_SBLinearMap_gain(threadData, _li));
 
                   _reso = arrayCopy(omc_SBLinearMap_offset(threadData, _li));
@@ -1329,6 +1369,7 @@ modelica_metatype omc_SBFunctions_minMap(threadData_t *threadData, modelica_meta
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp4, tmp6); _i += tmp5)
     {
+
       _d1i = arrayGet(_d1,_i) /* DAE.ASUB */;
 
       _lm1i = arrayGet(_lm1,_i) /* DAE.ASUB */;
@@ -1339,6 +1380,7 @@ modelica_metatype omc_SBFunctions_minMap(threadData_t *threadData, modelica_meta
         modelica_integer _j;
         for(_j = ((modelica_integer) 1); in_range_integer(_j, tmp1, tmp3); _j += tmp2)
         {
+
           _dom = omc_SBSet_intersection(threadData, _d1i, arrayGet(_d2,_j) /* DAE.ASUB */);
 
           if((!omc_SBSet_isEmpty(threadData, _dom)))
@@ -1430,6 +1472,7 @@ modelica_metatype omc_SBFunctions_minPW(threadData_t *threadData, modelica_metat
         modelica_integer _i;
         for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp6, tmp8); _i += tmp7)
         {
+
           _aux = omc_SBFunctions_minAtomPW(threadData, arrayGet(_asets,_i) /* DAE.ASUB */, _lm1, _lm2);
 
           _aux_dom = omc_SBPWLinearMap_dom(threadData, _aux);
@@ -1442,6 +1485,7 @@ modelica_metatype omc_SBFunctions_minPW(threadData_t *threadData, modelica_metat
             modelica_integer _i;
             for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp3, tmp5); _i += tmp4)
             {
+
               _d = arrayGet(_aux_dom,_i) /* DAE.ASUB */;
 
               _l = arrayGet(_aux_lm,_i) /* DAE.ASUB */;
@@ -1592,6 +1636,7 @@ modelica_metatype omc_SBFunctions_minAtomPW(threadData_t *threadData, modelica_m
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp5, tmp7); _i += tmp6)
     {
+
       _g1i = mmc_unbox_real(arrayGet(_g1,_i) /* DAE.ASUB */);
 
       _g2i = mmc_unbox_real(arrayGet(_g2,_i) /* DAE.ASUB */);

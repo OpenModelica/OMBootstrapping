@@ -2,6 +2,8 @@
 #include "IOStream.h"
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT0,2,4) {&IOStream_IOStreamData_LIST__DATA__desc,MMC_REFSTRUCTLIT(mmc_nil)}};
 #define _OMC_LIT0 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT0)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT1,1,4) {&IOStream_IOStreamType_LIST__desc,}};
+#define _OMC_LIT1 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT1)
 #include "util/modelica.h"
 
 #include "IOStream_includes.h"
@@ -11,6 +13,9 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT0,2,4) {&IOStream_IOStreamData_LIST
 DLLDirection
 void omc_IOStream_print(threadData_t *threadData, modelica_metatype _inStream, modelica_integer _whereToPrint)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -78,6 +83,9 @@ void omc_IOStream_print(threadData_t *threadData, modelica_metatype _inStream, m
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_IOStream_print(threadData_t *threadData, modelica_metatype _inStream, modelica_metatype _whereToPrint)
@@ -170,6 +178,9 @@ modelica_boolean omc_IOStream_empty(threadData_t *threadData, modelica_metatype 
   modelica_boolean _res;
   modelica_metatype _data = NULL;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -203,6 +214,9 @@ modelica_boolean omc_IOStream_empty(threadData_t *threadData, modelica_metatype 
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_IOStream_empty(threadData_t *threadData, modelica_metatype _inStream)
@@ -316,6 +330,9 @@ modelica_metatype omc_IOStream_clear(threadData_t *threadData, modelica_metatype
 DLLDirection
 void omc_IOStream_delete(threadData_t *threadData, modelica_metatype _inStream)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -378,6 +395,9 @@ void omc_IOStream_delete(threadData_t *threadData, modelica_metatype _inStream)
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

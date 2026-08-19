@@ -7,6 +7,7 @@ extern "C" {
 #include "Error.h"
 #include "Flags.h"
 #include "List.h"
+#include "NBAdjacency.h"
 #include "NBJacobian.h"
 #include "NBPartition.h"
 #include "NBVariable.h"
@@ -20,6 +21,7 @@ extern "C" {
 #include "Pointer.h"
 #include "StringUtil.h"
 #include "UnorderedMap.h"
+#include "UnorderedSet.h"
 #include "Util.h"
 #ifdef __cplusplus
 }

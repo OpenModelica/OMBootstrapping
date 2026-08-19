@@ -15,10 +15,10 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT3,14,_OMC_LIT3_data);
 #define _OMC_LIT4_data "Unable to parse rewrite rule: "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT4,30,_OMC_LIT4_data);
 #define _OMC_LIT4 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT4)
-#define _OMC_LIT5_data "/projects/OpenModelica-session2/OMCompiler/Compiler/Script/RewriteRules.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT5,74,_OMC_LIT5_data);
+#define _OMC_LIT5_data "//OpenModelica/OMCompiler/Compiler/Script/RewriteRules.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT5,80,_OMC_LIT5_data);
 #define _OMC_LIT5 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT5)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT6_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT6_6,1.784622031e9);
 #define _OMC_LIT6_6 MMC_REFREALLIT(_OMC_LIT_STRUCT6_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT6,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT5,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1211)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1211)),MMC_IMMEDIATE(MMC_TAGFIXNUM(115)),_OMC_LIT6_6}};
 #define _OMC_LIT6 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT6)
@@ -37,7 +37,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT10,14,_OMC_LIT10_data);
 #define _OMC_LIT11_data "Unable to parse rewrite rules file: "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT11,36,_OMC_LIT11_data);
 #define _OMC_LIT11 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT11)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT12_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT12_6,1.784622031e9);
 #define _OMC_LIT12_6 MMC_REFREALLIT(_OMC_LIT_STRUCT12_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT12,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT5,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1092)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1092)),MMC_IMMEDIATE(MMC_TAGFIXNUM(94)),_OMC_LIT12_6}};
 #define _OMC_LIT12 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT12)
@@ -181,7 +181,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_RewriteRules_stmtsToRules(thread
           if (!listEmpty(tmpMeta16)) goto tmp3_end;
           tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 3));
           if (!listEmpty(tmpMeta17)) goto tmp3_end;
-          
+
           _from = tmpMeta13;
           _to = tmpMeta15;
           _rest = tmpMeta7;
@@ -237,7 +237,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_RewriteRules_stmtsToRules(thread
           if (!listEmpty(tmpMeta34)) goto tmp3_end;
           tmpMeta35 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta29), 3));
           if (!listEmpty(tmpMeta35)) goto tmp3_end;
-          
+
           _from = tmpMeta31;
           _to = tmpMeta33;
           _rest = tmpMeta25;
@@ -293,7 +293,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_RewriteRules_stmtsToRules(thread
           if (!listEmpty(tmpMeta52)) goto tmp3_end;
           tmpMeta53 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta47), 3));
           if (!listEmpty(tmpMeta53)) goto tmp3_end;
-          
+
           _from = tmpMeta49;
           _to = tmpMeta51;
           _rest = tmpMeta43;
@@ -384,7 +384,7 @@ modelica_metatype omc_RewriteRules_getRulesBackEnd(threadData_t *threadData, mod
           tmpMeta7 = MMC_CAR(tmp4_1);
           tmpMeta8 = MMC_CDR(tmp4_1);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,1,2) == 0) goto tmp3_end;
-          
+
           _r = tmpMeta7;
           _rest = tmpMeta8;
           /* Pattern matching succeeded */
@@ -462,7 +462,7 @@ modelica_metatype omc_RewriteRules_getRulesFrontEnd(threadData_t *threadData, mo
           tmpMeta7 = MMC_CAR(tmp4_1);
           tmpMeta8 = MMC_CDR(tmp4_1);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,0,2) == 0) goto tmp3_end;
-          
+
           _r = tmpMeta7;
           _rest = tmpMeta8;
           /* Pattern matching succeeded */
@@ -526,16 +526,25 @@ modelica_metatype omc_RewriteRules_getAllRules(threadData_t *threadData)
 DLLDirection
 void omc_RewriteRules_clearRules(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   setGlobalRoot(((modelica_integer) 19), mmc_mk_none());
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_RewriteRules_loadRulesFromFile(threadData_t *threadData, modelica_string _inFile)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -564,7 +573,7 @@ void omc_RewriteRules_loadRulesFromFile(threadData_t *threadData, modelica_strin
         }
         case 1: {
           modelica_boolean tmp5;
-          
+
           /* Pattern matching succeeded */
           _oR = getGlobalRoot(((modelica_integer) 19));
 
@@ -578,7 +587,7 @@ void omc_RewriteRules_loadRulesFromFile(threadData_t *threadData, modelica_strin
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta6 = getGlobalRoot(((modelica_integer) 19));
@@ -599,7 +608,7 @@ void omc_RewriteRules_loadRulesFromFile(threadData_t *threadData, modelica_strin
         }
         case 3: {
           modelica_metatype tmpMeta10;
-          
+
           /* Pattern matching succeeded */
           tmpMeta10 = stringAppend(_OMC_LIT11,_inFile);
           omc_Error_addInternalError(threadData, tmpMeta10, _OMC_LIT12);
@@ -627,6 +636,9 @@ void omc_RewriteRules_loadRulesFromFile(threadData_t *threadData, modelica_strin
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -635,6 +647,9 @@ modelica_boolean omc_RewriteRules_noRewriteRulesBackEnd(threadData_t *threadData
 {
   modelica_boolean _noRules;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _noRules has no default value.
@@ -691,6 +706,9 @@ modelica_boolean omc_RewriteRules_noRewriteRulesBackEnd(threadData_t *threadData
   }
   _noRules = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _noRules;
 }
 modelica_metatype boxptr_RewriteRules_noRewriteRulesBackEnd(threadData_t *threadData)
@@ -707,6 +725,9 @@ modelica_boolean omc_RewriteRules_noRewriteRulesFrontEnd(threadData_t *threadDat
 {
   modelica_boolean _noRules;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _noRules has no default value.
@@ -763,6 +784,9 @@ modelica_boolean omc_RewriteRules_noRewriteRulesFrontEnd(threadData_t *threadDat
   }
   _noRules = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _noRules;
 }
 modelica_metatype boxptr_RewriteRules_noRewriteRulesFrontEnd(threadData_t *threadData)
@@ -779,6 +803,9 @@ modelica_boolean omc_RewriteRules_noRewriteRules(threadData_t *threadData)
 {
   modelica_boolean _noRules;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _noRules has no default value.
@@ -826,6 +853,9 @@ modelica_boolean omc_RewriteRules_noRewriteRules(threadData_t *threadData)
   }
   _noRules = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _noRules;
 }
 modelica_metatype boxptr_RewriteRules_noRewriteRules(threadData_t *threadData)
@@ -840,6 +870,9 @@ modelica_metatype boxptr_RewriteRules_noRewriteRules(threadData_t *threadData)
 DLLDirection
 void omc_RewriteRules_loadRules(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -871,6 +904,9 @@ void omc_RewriteRules_loadRules(threadData_t *threadData)
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -878,6 +914,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -894,7 +933,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,5,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -902,7 +941,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,7,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -910,7 +949,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 2: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,8,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -918,7 +957,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 3: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,9,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -926,7 +965,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 4: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,10,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -934,7 +973,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 5: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,11,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -942,7 +981,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 6: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,12,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -950,7 +989,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 7: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,13,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -958,7 +997,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 8: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,14,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -966,7 +1005,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 9: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,15,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -974,7 +1013,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 10: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,17,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -982,7 +1021,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 11: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,16,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -990,7 +1029,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 12: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,19,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -998,7 +1037,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 13: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,18,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -1006,7 +1045,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 14: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,20,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -1014,13 +1053,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
         case 15: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,21,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 16: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_Expression_operatorEqual(threadData, _op1, _op2);
           goto tmp3_done;
@@ -1038,6 +1077,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_operatorMatches(thre
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_RewriteRules_operatorMatches(threadData_t *threadData, modelica_metatype _op1, modelica_metatype _op2)
@@ -1053,6 +1095,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_expEqual(threadData_
 {
   modelica_boolean _isEqual;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEqual has no default value.
@@ -1116,7 +1161,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_expEqual(threadData_
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_ExpressionBasics_expEqual(threadData, _e1, _e2);
           goto tmp3_done;
@@ -1141,6 +1186,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_RewriteRules_expEqual(threadData_
   }
   _isEqual = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEqual;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_RewriteRules_expEqual(threadData_t *threadData, modelica_metatype _e1, modelica_metatype _e2)
@@ -1157,6 +1205,9 @@ modelica_boolean omc_RewriteRules_isPlaceHolderBackEnd(threadData_t *threadData,
 {
   modelica_boolean _isHolder;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isHolder has no default value.
@@ -1178,14 +1229,14 @@ modelica_boolean omc_RewriteRules_isPlaceHolderBackEnd(threadData_t *threadData,
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,3) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          
+
           _name = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = (omc_System_stringFind(threadData, _name, _OMC_LIT19) == ((modelica_integer) 0));
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -1203,6 +1254,9 @@ modelica_boolean omc_RewriteRules_isPlaceHolderBackEnd(threadData_t *threadData,
   }
   _isHolder = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isHolder;
 }
 modelica_metatype boxptr_RewriteRules_isPlaceHolderBackEnd(threadData_t *threadData, modelica_metatype _inExp)
@@ -1478,7 +1532,7 @@ modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, mode
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,6,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp6 = omc_RewriteRules_isPlaceHolderBackEnd(threadData, _inUnifyWith);
@@ -1491,7 +1545,7 @@ modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, mode
         case 1: {
           modelica_boolean tmp9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 19; /* Pattern matching succeeded; we may skip some cases if we fail */
           /* Pattern-matching assignment */
           tmp9 = omc_RewriteRules_expEqual(threadData, _inExp, _inUnifyWith);
@@ -1502,7 +1556,7 @@ modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, mode
         case 2: {
           modelica_boolean tmp10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 18; /* Pattern matching succeeded; we may skip some cases if we fail */
           /* Pattern-matching assignment */
           tmp10 = omc_RewriteRules_expEqual(threadData, _inExp, _inUnifyWith);
@@ -1513,7 +1567,7 @@ modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, mode
         case 3: {
           modelica_boolean tmp11;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 17; /* Pattern matching succeeded; we may skip some cases if we fail */
           /* Pattern-matching assignment */
           tmp11 = omc_RewriteRules_expEqual(threadData, _inExp, _inUnifyWith);
@@ -1524,7 +1578,7 @@ modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, mode
         case 4: {
           modelica_boolean tmp12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 16; /* Pattern matching succeeded; we may skip some cases if we fail */
           /* Pattern-matching assignment */
           tmp12 = omc_RewriteRules_expEqual(threadData, _inExp, _inUnifyWith);
@@ -1535,7 +1589,7 @@ modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, mode
         case 5: {
           modelica_boolean tmp13;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
-          
+
           tmp4 += 15; /* Pattern matching succeeded; we may skip some cases if we fail */
           /* Pattern-matching assignment */
           tmp13 = omc_RewriteRules_expEqual(threadData, _inExp, _inUnifyWith);
@@ -1667,7 +1721,7 @@ modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, mode
           tmpMeta41 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
           tmpMeta43 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          
+
           _e1a = tmpMeta38;
           _op1a = tmpMeta39;
           _e2a = tmpMeta40;
@@ -1723,7 +1777,7 @@ modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, mode
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
           tmpMeta53 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           tmpMeta54 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          
+
           _p1a = tmpMeta51;
           _exps1a = tmpMeta52;
           _p1b = tmpMeta53;
@@ -1747,7 +1801,7 @@ modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, mode
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,15,4) == 0) goto tmp3_end;
           tmpMeta58 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           tmpMeta59 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          
+
           _p1a = tmpMeta56;
           _exps1a = tmpMeta57;
           _p1b = tmpMeta58;
@@ -1849,7 +1903,7 @@ modelica_metatype omc_RewriteRules_matchesBackEnd(threadData_t *threadData, mode
         case 19: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,33,6) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,33,6) == 0) goto tmp3_end;
-          
+
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta1 = _inAcc;
           goto tmp3_done;
@@ -1943,8 +1997,8 @@ modelica_metatype omc_RewriteRules_replaceBindsBackEnd(threadData_t *threadData,
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExp has no default value.
   // _outBinds has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;modelica_metatype tmp4_2;
     tmp4_1 = _inExp;
@@ -1963,7 +2017,7 @@ modelica_metatype omc_RewriteRules_replaceBindsBackEnd(threadData_t *threadData,
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
-          
+
           _e1 = tmp4_1;
           _bnds = tmp4_2;
           /* Pattern matching succeeded */
@@ -1973,7 +2027,7 @@ modelica_metatype omc_RewriteRules_replaceBindsBackEnd(threadData_t *threadData,
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _inExp;
           tmpMeta[0+1] = _inBinds;
@@ -2020,8 +2074,8 @@ modelica_metatype omc_RewriteRules_matchAndRewriteExpBackEnd(threadData_t *threa
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExp has no default value.
   // _changed has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _inRules;
@@ -2172,8 +2226,8 @@ modelica_metatype omc_RewriteRules_rewriteBackEnd(threadData_t *threadData, mode
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExp has no default value.
   // _isChanged has no default value.
-  
-  
+
+
   { /* match expression */
     {
       modelica_metatype _rules = NULL;
@@ -2221,6 +2275,9 @@ modelica_boolean omc_RewriteRules_isPlaceHolderFrontEnd(threadData_t *threadData
 {
   modelica_boolean _isHolder;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isHolder has no default value.
@@ -2242,14 +2299,14 @@ modelica_boolean omc_RewriteRules_isPlaceHolderFrontEnd(threadData_t *threadData
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,2,2) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          
+
           _name = tmpMeta7;
           /* Pattern matching succeeded */
           tmp1 = (omc_System_stringFind(threadData, _name, _OMC_LIT19) == ((modelica_integer) 0));
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -2267,6 +2324,9 @@ modelica_boolean omc_RewriteRules_isPlaceHolderFrontEnd(threadData_t *threadData
   }
   _isHolder = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isHolder;
 }
 modelica_metatype boxptr_RewriteRules_isPlaceHolderFrontEnd(threadData_t *threadData, modelica_metatype _inExp)
@@ -2455,6 +2515,9 @@ modelica_boolean omc_RewriteRules_inNargComp(threadData_t *threadData, modelica_
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isGreater has no default value.
@@ -2472,6 +2535,9 @@ modelica_boolean omc_RewriteRules_inNargComp(threadData_t *threadData, modelica_
 
   _isGreater = (stringCompare(_id1, _id2) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isGreater;
 }
 modelica_metatype boxptr_RewriteRules_inNargComp(threadData_t *threadData, modelica_metatype _inNarg1, modelica_metatype _inNarg2)
@@ -2557,7 +2623,7 @@ modelica_metatype omc_RewriteRules_matchesFargsFrontEnd(threadData_t *threadData
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,3) == 0) goto tmp3_end;
           tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          
+
           _e1a = tmpMeta11;
           _e1b = tmpMeta12;
           /* Pattern matching succeeded */
@@ -2778,7 +2844,7 @@ modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, mod
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp6 = omc_RewriteRules_isPlaceHolderFrontEnd(threadData, _inUnifyWith);
@@ -2791,7 +2857,7 @@ modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, mod
         case 1: {
           modelica_boolean tmp9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 22; /* Pattern matching succeeded; we may skip some cases if we fail */
           /* Pattern-matching assignment */
           tmp9 = omc_AbsynUtil_expEqual(threadData, _inExp, _inUnifyWith);
@@ -2802,7 +2868,7 @@ modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, mod
         case 2: {
           modelica_boolean tmp10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 21; /* Pattern matching succeeded; we may skip some cases if we fail */
           /* Pattern-matching assignment */
           tmp10 = omc_AbsynUtil_expEqual(threadData, _inExp, _inUnifyWith);
@@ -2813,7 +2879,7 @@ modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, mod
         case 3: {
           modelica_boolean tmp11;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 20; /* Pattern matching succeeded; we may skip some cases if we fail */
           /* Pattern-matching assignment */
           tmp11 = omc_AbsynUtil_expEqual(threadData, _inExp, _inUnifyWith);
@@ -2824,7 +2890,7 @@ modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, mod
         case 4: {
           modelica_boolean tmp12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 19; /* Pattern matching succeeded; we may skip some cases if we fail */
           /* Pattern-matching assignment */
           tmp12 = omc_AbsynUtil_expEqual(threadData, _inExp, _inUnifyWith);
@@ -2835,7 +2901,7 @@ modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, mod
         case 5: {
           modelica_boolean tmp13;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 18; /* Pattern matching succeeded; we may skip some cases if we fail */
           /* Pattern-matching assignment */
           tmp13 = omc_AbsynUtil_expEqual(threadData, _inExp, _inUnifyWith);
@@ -2997,7 +3063,7 @@ modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, mod
           tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           tmpMeta49 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
           tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          
+
           _cond1a = tmpMeta45;
           _e1a = tmpMeta46;
           _e2a = tmpMeta47;
@@ -3023,7 +3089,7 @@ modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, mod
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,11,3) == 0) goto tmp3_end;
           tmpMeta53 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
           tmpMeta54 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          
+
           _cr1a = tmpMeta51;
           _fargs1a = tmpMeta52;
           _cr1b = tmpMeta53;
@@ -3135,7 +3201,7 @@ modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, mod
         case 19: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,18,1) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,18,1) == 0) goto tmp3_end;
-          
+
           tmp4 += 4; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta1 = _inAcc;
           goto tmp3_done;
@@ -3186,7 +3252,7 @@ modelica_metatype omc_RewriteRules_matchesFrontEnd(threadData_t *threadData, mod
         case 22: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,21,5) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,21,5) == 0) goto tmp3_end;
-          
+
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta1 = _inAcc;
           goto tmp3_done;
@@ -3276,8 +3342,8 @@ modelica_metatype omc_RewriteRules_replaceBindsFrontEnd(threadData_t *threadData
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExp has no default value.
   // _outBinds has no default value.
-  
-  
+
+
   { /* match expression */
     modelica_metatype tmp4_1;modelica_metatype tmp4_2;
     tmp4_1 = _inExp;
@@ -3296,7 +3362,7 @@ modelica_metatype omc_RewriteRules_replaceBindsFrontEnd(threadData_t *threadData
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,1) == 0) goto tmp3_end;
-          
+
           _e1 = tmp4_1;
           _bnds = tmp4_2;
           /* Pattern matching succeeded */
@@ -3306,7 +3372,7 @@ modelica_metatype omc_RewriteRules_replaceBindsFrontEnd(threadData_t *threadData
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta[0+0] = _inExp;
           tmpMeta[0+1] = _inBinds;
@@ -3353,8 +3419,8 @@ modelica_metatype omc_RewriteRules_matchAndRewriteExpFrontEnd(threadData_t *thre
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExp has no default value.
   // _changed has no default value.
-  
-  
+
+
   { /* matchcontinue expression */
     volatile modelica_metatype tmp4_1;
     tmp4_1 = _inRules;
@@ -3497,8 +3563,8 @@ modelica_metatype omc_RewriteRules_rewriteFrontEnd(threadData_t *threadData, mod
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExp has no default value.
   // _isChanged has no default value.
-  
-  
+
+
   { /* match expression */
     {
       modelica_metatype _rules = NULL;
@@ -3540,4 +3606,3 @@ modelica_metatype boxptr_RewriteRules_rewriteFrontEnd(threadData_t *threadData, 
   if (out_isChanged) { *out_isChanged = mmc_mk_icon(_isChanged); }
   return _outExp;
 }
-

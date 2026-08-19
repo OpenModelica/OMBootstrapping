@@ -1031,6 +1031,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_AvlTree_getHeight(threadData_t *t
 {
   modelica_integer _height;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _height has no default value.
@@ -1074,6 +1077,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_AvlTree_getHeight(threadData_t *t
   }
   _height = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _height;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AvlTree_getHeight(threadData_t *threadData, modelica_metatype _bt)
@@ -1139,6 +1145,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_AvlTree_differenceInHeight(thread
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _diff has no default value.
@@ -1154,6 +1163,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_AvlTree_differenceInHeight(thread
 
   _diff = omc_AvlTree_getHeight(threadData, _l) - omc_AvlTree_getHeight(threadData, _r);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _diff;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AvlTree_differenceInHeight(threadData_t *threadData, modelica_metatype _node)
@@ -2646,6 +2658,9 @@ modelica_boolean omc_AvlTree_hasUpdateCheckFunction(threadData_t *threadData, mo
   modelica_metatype _uf = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hasUpdateCheck has no default value.
@@ -2657,6 +2672,9 @@ modelica_boolean omc_AvlTree_hasUpdateCheckFunction(threadData_t *threadData, mo
 
   _hasUpdateCheck = (!valueEq(mmc_mk_none(), _uf));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _hasUpdateCheck;
 }
 modelica_metatype boxptr_AvlTree_hasUpdateCheckFunction(threadData_t *threadData, modelica_metatype _tree)
@@ -2677,6 +2695,9 @@ modelica_boolean omc_AvlTree_hasPrintingFunctions(threadData_t *threadData, mode
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hasPrinting has no default value.
@@ -2691,6 +2712,9 @@ modelica_boolean omc_AvlTree_hasPrintingFunctions(threadData_t *threadData, mode
 
   _hasPrinting = (!(valueEq(mmc_mk_none(), _kf) || valueEq(mmc_mk_none(), _vf)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _hasPrinting;
 }
 modelica_metatype boxptr_AvlTree_hasPrintingFunctions(threadData_t *threadData, modelica_metatype _tree)

@@ -2866,7 +2866,7 @@ extern struct record_description DAE_Statement_STMT__IF__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef DAE_Statement_STMT__FOR__desc_added
 #define DAE_Statement_STMT__FOR__desc_added
-ADD_METARECORD_DEFINITIONS const char* DAE_Statement_STMT__FOR__desc__fields[6] = {"type_","iterIsArray","iter","range","statementLst","source"};
+ADD_METARECORD_DEFINITIONS const char* DAE_Statement_STMT__FOR__desc__fields[7] = {"type_","iterIsArray","iter","range","statementLst","source","sub_iters"};
 ADD_METARECORD_DEFINITIONS struct record_description DAE_Statement_STMT__FOR__desc = {
   "DAE_Statement_STMT__FOR",
   "DAE.Statement.STMT_FOR",
@@ -3191,7 +3191,7 @@ extern struct record_description DAE_Statement_STMT__PARFOR__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef DAE_Statement_STMT__FOR__desc_added
 #define DAE_Statement_STMT__FOR__desc_added
-ADD_METARECORD_DEFINITIONS const char* DAE_Statement_STMT__FOR__desc__fields[6] = {"type_","iterIsArray","iter","range","statementLst","source"};
+ADD_METARECORD_DEFINITIONS const char* DAE_Statement_STMT__FOR__desc__fields[7] = {"type_","iterIsArray","iter","range","statementLst","source","sub_iters"};
 ADD_METARECORD_DEFINITIONS struct record_description DAE_Statement_STMT__FOR__desc = {
   "DAE_Statement_STMT__FOR",
   "DAE.Statement.STMT_FOR",

@@ -18,6 +18,8 @@ extern struct record_description IOStream_IOStreamData_FILE__DATA__desc;
 
 extern struct record_description IOStream_IOStreamData_LIST__DATA__desc;
 
+extern struct record_description IOStream_IOStreamType_LIST__desc;
+
 
 DLLDirection
 void omc_IOStream_print(threadData_t *threadData, modelica_metatype _inStream, modelica_integer _whereToPrint);

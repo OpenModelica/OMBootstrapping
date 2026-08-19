@@ -20,6 +20,8 @@ extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
 
 extern struct record_description NBEquation_Iterator_EMPTY__desc;
 
+extern struct record_description NFBackendExtension_VariableKind_STATE__desc;
+
 extern struct record_description NFExpression_BOOLEAN__desc;
 
 extern struct record_description NFExpression_LBINARY__desc;
@@ -34,6 +36,13 @@ void omc_NBDetectStates_updateStateOrder(threadData_t *threadData, modelica_meta
 #define boxptr_NBDetectStates_updateStateOrder omc_NBDetectStates_updateStateOrder
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBDetectStates_updateStateOrder,2,0) {(void*) boxptr_NBDetectStates_updateStateOrder,0}};
 #define boxvar_NBDetectStates_updateStateOrder MMC_REFSTRUCTLIT(boxvar_lit_NBDetectStates_updateStateOrder)
+
+
+DLLDirection
+modelica_metatype omc_NBDetectStates_promotePreferStates(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fvariables, modelica_metatype __omcQ_24in_5Funknowns, modelica_metatype __omcQ_24in_5Fknowns, modelica_metatype __omcQ_24in_5Finitials, modelica_metatype __omcQ_24in_5Fstates, modelica_metatype __omcQ_24in_5Fderivatives, modelica_metatype __omcQ_24in_5Falgebraics, modelica_metatype *out_unknowns, modelica_metatype *out_knowns, modelica_metatype *out_initials, modelica_metatype *out_states, modelica_metatype *out_derivatives, modelica_metatype *out_algebraics);
+#define boxptr_NBDetectStates_promotePreferStates omc_NBDetectStates_promotePreferStates
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBDetectStates_promotePreferStates,2,0) {(void*) boxptr_NBDetectStates_promotePreferStates,0}};
+#define boxvar_NBDetectStates_promotePreferStates MMC_REFSTRUCTLIT(boxvar_lit_NBDetectStates_promotePreferStates)
 
 
 DLLDirection

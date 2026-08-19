@@ -230,8 +230,6 @@ extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
 
 extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
 
-extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
-
 extern struct record_description MMath_Rational_RATIONAL__desc;
 
 extern struct record_description SourceInfo_SOURCEINFO__desc;
@@ -275,6 +273,14 @@ DLLDirection
 modelica_metatype boxptr_BackendDAEUtil_getLinearfromJacType(threadData_t *threadData, modelica_metatype _jacType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEUtil_getLinearfromJacType,2,0) {(void*) boxptr_BackendDAEUtil_getLinearfromJacType,0}};
 #define boxvar_BackendDAEUtil_getLinearfromJacType MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEUtil_getLinearfromJacType)
+
+
+DLLDirection
+modelica_boolean omc_BackendDAEUtil_useSparseSolver(threadData_t *threadData, modelica_integer _size, modelica_integer _nnz, modelica_boolean _isLinear);
+DLLDirection
+modelica_metatype boxptr_BackendDAEUtil_useSparseSolver(threadData_t *threadData, modelica_metatype _size, modelica_metatype _nnz, modelica_metatype _isLinear);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEUtil_useSparseSolver,2,0) {(void*) boxptr_BackendDAEUtil_useSparseSolver,0}};
+#define boxvar_BackendDAEUtil_useSparseSolver MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEUtil_useSparseSolver)
 
 
 #define boxptr_BackendDAEUtil_warnAboutIterationVariablesWithNoNominal omc_BackendDAEUtil_warnAboutIterationVariablesWithNoNominal

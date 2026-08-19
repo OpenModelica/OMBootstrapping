@@ -21,12 +21,12 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT5,1,_OMC_LIT5_data);
 #define _OMC_LIT6_data "\n  rhs: "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT6,8,_OMC_LIT6_data);
 #define _OMC_LIT6 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT6)
-#define _OMC_LIT7_data "/projects/OpenModelica-session2/OMCompiler/Compiler/NFFrontEnd/NFConnection.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT7,78,_OMC_LIT7_data);
+#define _OMC_LIT7_data "//OpenModelica/OMCompiler/Compiler/NFFrontEnd/NFConnection.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT7,84,_OMC_LIT7_data);
 #define _OMC_LIT7 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT7)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT8_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT8_6,1.784622031e9);
 #define _OMC_LIT8_6 MMC_REFREALLIT(_OMC_LIT_STRUCT8_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT8,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT7,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(138)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(140)),MMC_IMMEDIATE(MMC_TAGFIXNUM(109)),_OMC_LIT8_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT8,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT7,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(138)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(140)),MMC_IMMEDIATE(MMC_TAGFIXNUM(115)),_OMC_LIT8_6}};
 #define _OMC_LIT8 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT8)
 #define _OMC_LIT9_data "connect("
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT9,8,_OMC_LIT9_data);
@@ -53,19 +53,25 @@ PROTECTED_FUNCTION_STATIC void omc_NFConnection_checkBalance(threadData_t *threa
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if((listLength(_leftConnectors) != listLength(_rightConnectors)))
   {
     tmpMeta1 = stringAppend(_OMC_LIT0,omc_NFConnection_toString(threadData, _conn));
     tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT1);
-    tmpMeta3 = stringAppend(tmpMeta2,omc_List_toString(threadData, _leftConnectors, boxvar_NFConnector_toString, _OMC_LIT2, _OMC_LIT3, _OMC_LIT4, _OMC_LIT5, 1 /* true */, ((modelica_integer) 0)));
-    tmpMeta4 = stringAppend(tmpMeta3,omc_List_toString(threadData, _rightConnectors, boxvar_NFConnector_toString, _OMC_LIT6, _OMC_LIT3, _OMC_LIT4, _OMC_LIT5, 1 /* true */, ((modelica_integer) 0)));
+    tmpMeta3 = stringAppend(tmpMeta2,omc_List_toStringCustom(threadData, _leftConnectors, boxvar_NFConnector_toString, _OMC_LIT2, _OMC_LIT3, _OMC_LIT4, _OMC_LIT5, 1 /* true */, ((modelica_integer) 0)));
+    tmpMeta4 = stringAppend(tmpMeta3,omc_List_toStringCustom(threadData, _rightConnectors, boxvar_NFConnector_toString, _OMC_LIT6, _OMC_LIT3, _OMC_LIT4, _OMC_LIT5, 1 /* true */, ((modelica_integer) 0)));
     omc_Error_terminate(threadData, tmpMeta4, _OMC_LIT8);
 
     MMC_THROW_INTERNAL();
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -265,4 +271,3 @@ modelica_metatype omc_NFConnection_split(threadData_t *threadData, modelica_meta
   _return: OMC_LABEL_UNUSED
   return _conns;
 }
-

@@ -14,6 +14,9 @@ modelica_integer omc_BackendDAE_getSimIteratorSize(threadData_t *threadData, mod
   modelica_metatype tmpMeta1;
   modelica_integer tmp2 = 0;
   modelica_metatype tmpMeta7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _size = ((modelica_integer) 1);
@@ -63,6 +66,9 @@ modelica_integer omc_BackendDAE_getSimIteratorSize(threadData_t *threadData, mod
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _size;
 }
 modelica_metatype boxptr_BackendDAE_getSimIteratorSize(threadData_t *threadData, modelica_metatype _iters)

@@ -216,6 +216,9 @@ modelica_integer omc_NFCheckModel_countAlgorithmSize(threadData_t *threadData, m
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _equations = ((modelica_integer) 0);
@@ -241,6 +244,9 @@ modelica_integer omc_NFCheckModel_countAlgorithmSize(threadData_t *threadData, m
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _equations;
 }
 modelica_metatype boxptr_NFCheckModel_countAlgorithmSize(threadData_t *threadData, modelica_metatype _alg)
@@ -265,6 +271,9 @@ modelica_integer omc_NFCheckModel_countVariableSize(threadData_t *threadData, mo
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _variables = __omcQ_24in_5Fvariables;
@@ -307,6 +316,9 @@ modelica_integer omc_NFCheckModel_countVariableSize(threadData_t *threadData, mo
   }
   _return: OMC_LABEL_UNUSED
   if (out_equations) { *out_equations = _equations; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _variables;
 }
 modelica_metatype boxptr_NFCheckModel_countVariableSize(threadData_t *threadData, modelica_metatype _var, modelica_metatype __omcQ_24in_5Fvariables, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype *out_equations)
@@ -333,6 +345,9 @@ modelica_integer omc_NFCheckModel_checkModel(threadData_t *threadData, modelica_
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _variables = ((modelica_integer) 0);
@@ -358,6 +373,9 @@ modelica_integer omc_NFCheckModel_checkModel(threadData_t *threadData, modelica_
   }
   _return: OMC_LABEL_UNUSED
   if (out_equations) { *out_equations = _equations; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _variables;
 }
 modelica_metatype boxptr_NFCheckModel_checkModel(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype *out_equations)

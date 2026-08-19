@@ -144,6 +144,39 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBInline_inlineRecordTupleArrayEquation
 #define boxvar_NBInline_inlineRecordTupleArrayEquation MMC_REFSTRUCTLIT(boxvar_lit_NBInline_inlineRecordTupleArrayEquation)
 
 
+#define boxptr_NBInline_nodeVariableAttributes omc_NBInline_nodeVariableAttributes
+
+
+#define boxptr_NBInline_nodeRecordChildren omc_NBInline_nodeRecordChildren
+
+
+#define boxptr_NBInline_mergeNodeOntoCref omc_NBInline_mergeNodeOntoCref
+
+
+#define boxptr_NBInline_mergeNodeOntoArg omc_NBInline_mergeNodeOntoArg
+
+
+#define boxptr_NBInline_propagateInputExp omc_NBInline_propagateInputExp
+
+
+#define boxptr_NBInline_propagateOutput omc_NBInline_propagateOutput
+
+
+#define boxptr_NBInline_propagateEquationAttributes omc_NBInline_propagateEquationAttributes
+
+
+#define boxptr_NBInline_resolveAlias omc_NBInline_resolveAlias
+
+
+#define boxptr_NBInline_addFunctionAlias omc_NBInline_addFunctionAlias
+
+
+#define boxptr_NBInline_collectFunctionAlias omc_NBInline_collectFunctionAlias
+
+
+#define boxptr_NBInline_propagateAttributes omc_NBInline_propagateAttributes
+
+
 DLLDirection
 modelica_metatype omc_NBInline_inlineArrayConstructorSingle(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn, modelica_metatype _iter, modelica_metatype _variables, modelica_metatype _set, modelica_metatype _index, modelica_metatype _new_eqns, modelica_boolean *out_changed);
 DLLDirection

@@ -146,6 +146,9 @@ modelica_boolean omc_Obfuscate_isBuiltinCall(threadData_t *threadData, modelica_
   modelica_boolean _res;
   modelica_string _name = NULL;
   modelica_integer _ety;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -157,6 +160,9 @@ modelica_boolean omc_Obfuscate_isBuiltinCall(threadData_t *threadData, modelica_
 
   _res = (((modelica_integer)_ety == 2) || ((modelica_integer)_ety == 3));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_Obfuscate_isBuiltinCall(threadData_t *threadData, modelica_metatype _callName, modelica_metatype _env)
@@ -1786,6 +1792,9 @@ modelica_boolean omc_Obfuscate_isAllowedAnnotation(threadData_t *threadData, mod
 {
   modelica_boolean _allowed;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _allowed has no default value.
@@ -1906,6 +1915,9 @@ modelica_boolean omc_Obfuscate_isAllowedAnnotation(threadData_t *threadData, mod
   }
   _allowed = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _allowed;
 }
 modelica_metatype boxptr_Obfuscate_isAllowedAnnotation(threadData_t *threadData, modelica_metatype _mod)
@@ -2121,6 +2133,9 @@ modelica_boolean omc_Obfuscate_isBuiltinInContext(threadData_t *threadData, mode
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -2216,6 +2231,9 @@ modelica_boolean omc_Obfuscate_isBuiltinInContext(threadData_t *threadData, mode
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_Obfuscate_isBuiltinInContext(threadData_t *threadData, modelica_metatype _expectedType, modelica_metatype _actualType)

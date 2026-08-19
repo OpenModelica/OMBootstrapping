@@ -411,26 +411,28 @@ modelica_string omc_NSimPartition_toString(threadData_t *threadData, modelica_me
           modelica_metatype tmpMeta5;
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
+          modelica_metatype tmpMeta8;
           
           /* Pattern matching succeeded */
           tmpMeta5 = stringAppend(_OMC_LIT7,omc_NBPartitioning_BClock_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_part), 2)))));
           tmpMeta6 = mmc_mk_box1(0, _str);
-          tmpMeta7 = stringAppend(tmpMeta5,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_part), 3))), (modelica_fnptr) mmc_mk_box2(0,closure0_NSimPartition_toString,tmpMeta6), _OMC_LIT5, _OMC_LIT10, _OMC_LIT5, _OMC_LIT10, 1 /* true */, ((modelica_integer) 0)));
-          tmp1 = tmpMeta7;
+          tmpMeta7 = stringAppend(tmpMeta5,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_part), 3))), (modelica_fnptr) mmc_mk_box2(0,closure0_NSimPartition_toString,tmpMeta6), 6));
+          tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT10);
+          tmp1 = tmpMeta8;
           goto tmp3_done;
         }
         case 4: {
-          modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
+          modelica_metatype tmpMeta12;
           
           /* Pattern matching succeeded */
-          tmpMeta8 = stringAppend(_str,_OMC_LIT8);
-          tmpMeta9 = stringAppend(tmpMeta8,omc_NBPartitioning_BClock_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_part), 5)))));
-          tmpMeta10 = mmc_mk_box1(0, _str);
-          tmpMeta11 = stringAppend(tmpMeta9,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_part), 3))), (modelica_fnptr) mmc_mk_box2(0,closure1_NSimStrongComponent_Block_toString,tmpMeta10), _OMC_LIT5, _OMC_LIT10, _OMC_LIT5, _OMC_LIT5, 1 /* true */, ((modelica_integer) 0)));
-          tmp1 = tmpMeta11;
+          tmpMeta9 = stringAppend(_str,_OMC_LIT8);
+          tmpMeta10 = stringAppend(tmpMeta9,omc_NBPartitioning_BClock_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_part), 5)))));
+          tmpMeta11 = mmc_mk_box1(0, _str);
+          tmpMeta12 = stringAppend(tmpMeta10,omc_List_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_part), 3))), (modelica_fnptr) mmc_mk_box2(0,closure1_NSimStrongComponent_Block_toString,tmpMeta11), 6));
+          tmp1 = tmpMeta12;
           goto tmp3_done;
         }
         default:

@@ -534,6 +534,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnectBreakTree_EntryTree_calc
 {
   modelica_integer _outBalance;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBalance has no default value.
@@ -576,6 +579,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnectBreakTree_EntryTree_calc
   }
   _outBalance = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBalance;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnectBreakTree_EntryTree_calculateBalance(threadData_t *threadData, modelica_metatype _inNode)
@@ -790,6 +796,9 @@ modelica_metatype omc_NFConnectBreakTree_EntryTree_fold__2(threadData_t *threadD
 DLLDirection
 void omc_NFConnectBreakTree_EntryTree_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -837,6 +846,9 @@ void omc_NFConnectBreakTree_EntryTree_forEach(threadData_t *threadData, modelica
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1115,6 +1127,9 @@ modelica_boolean omc_NFConnectBreakTree_EntryTree_hasKey(threadData_t *threadDat
   modelica_metatype _tree = NULL;
   modelica_metatype tmpMeta1;
   modelica_boolean tmp5 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _comp = 0 /* false */;
@@ -1225,6 +1240,9 @@ modelica_boolean omc_NFConnectBreakTree_EntryTree_hasKey(threadData_t *threadDat
   }
   _comp = tmp5;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_NFConnectBreakTree_EntryTree_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey)
@@ -1240,6 +1258,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnectBreakTree_EntryTree_heig
 {
   modelica_integer _outHeight;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHeight has no default value.
@@ -1282,6 +1303,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnectBreakTree_EntryTree_heig
   }
   _outHeight = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHeight;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnectBreakTree_EntryTree_height(threadData_t *threadData, modelica_metatype _inNode)
@@ -1296,10 +1320,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnectBreakTree_EntryTree_
 DLLDirection
 void omc_NFConnectBreakTree_EntryTree_intersection(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1308,6 +1338,9 @@ modelica_boolean omc_NFConnectBreakTree_EntryTree_isEmpty(threadData_t *threadDa
 {
   modelica_boolean _isEmpty;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -1345,6 +1378,9 @@ modelica_boolean omc_NFConnectBreakTree_EntryTree_isEmpty(threadData_t *threadDa
   }
   _isEmpty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_NFConnectBreakTree_EntryTree_isEmpty(threadData_t *threadData, modelica_metatype _tree)
@@ -1416,11 +1452,17 @@ DLLDirection
 modelica_integer omc_NFConnectBreakTree_EntryTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
 {
   modelica_integer _outResult;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
   _outResult = omc_AbsynUtil_crefCompare(threadData, _inKey1, _inKey2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_NFConnectBreakTree_EntryTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
@@ -2068,6 +2110,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFConnectBreakTree_EntryTree_refe
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -2107,6 +2152,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFConnectBreakTree_EntryTree_refe
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnectBreakTree_EntryTree_referenceEqOrEmpty(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)
@@ -3074,6 +3122,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnectBreakTree_calculateBalan
 {
   modelica_integer _outBalance;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBalance has no default value.
@@ -3116,6 +3167,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnectBreakTree_calculateBalan
   }
   _outBalance = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBalance;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnectBreakTree_calculateBalance(threadData_t *threadData, modelica_metatype _inNode)
@@ -3141,6 +3195,9 @@ void omc_NFConnectBreakTree_checkUnmatchedBreaks(threadData_t *threadData, model
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _entry has no default value.
@@ -3174,6 +3231,9 @@ void omc_NFConnectBreakTree_checkUnmatchedBreaks(threadData_t *threadData, model
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3380,6 +3440,9 @@ modelica_metatype omc_NFConnectBreakTree_fold__2(threadData_t *threadData, model
 DLLDirection
 void omc_NFConnectBreakTree_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3427,6 +3490,9 @@ void omc_NFConnectBreakTree_forEach(threadData_t *threadData, modelica_metatype 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -3705,6 +3771,9 @@ modelica_boolean omc_NFConnectBreakTree_hasKey(threadData_t *threadData, modelic
   modelica_metatype _tree = NULL;
   modelica_metatype tmpMeta1;
   modelica_boolean tmp5 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _comp = 0 /* false */;
@@ -3815,6 +3884,9 @@ modelica_boolean omc_NFConnectBreakTree_hasKey(threadData_t *threadData, modelic
   }
   _comp = tmp5;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_NFConnectBreakTree_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey)
@@ -3830,6 +3902,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnectBreakTree_height(threadD
 {
   modelica_integer _outHeight;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHeight has no default value.
@@ -3872,6 +3947,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnectBreakTree_height(threadD
   }
   _outHeight = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHeight;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnectBreakTree_height(threadData_t *threadData, modelica_metatype _inNode)
@@ -3886,16 +3964,25 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnectBreakTree_height(thr
 DLLDirection
 void omc_NFConnectBreakTree_intersection(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFConnectBreakTree_isConnectBroken_is__broken(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _scope)
 {
   modelica_boolean _isBroken;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isBroken has no default value.
@@ -3939,6 +4026,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFConnectBreakTree_isConnectBroke
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isBroken;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnectBreakTree_isConnectBroken_is__broken(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _scope)
@@ -3961,6 +4051,9 @@ modelica_boolean omc_NFConnectBreakTree_isConnectBroken(threadData_t *threadData
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _isBroken = 0 /* false */;
@@ -3995,6 +4088,9 @@ modelica_boolean omc_NFConnectBreakTree_isConnectBroken(threadData_t *threadData
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isBroken;
 }
 modelica_metatype boxptr_NFConnectBreakTree_isConnectBroken(threadData_t *threadData, modelica_metatype _lhs, modelica_metatype _rhs, modelica_metatype _scope, modelica_metatype _connectBreaks)
@@ -4011,6 +4107,9 @@ modelica_boolean omc_NFConnectBreakTree_isEmpty(threadData_t *threadData, modeli
 {
   modelica_boolean _isEmpty;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -4048,6 +4147,9 @@ modelica_boolean omc_NFConnectBreakTree_isEmpty(threadData_t *threadData, modeli
   }
   _isEmpty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_NFConnectBreakTree_isEmpty(threadData_t *threadData, modelica_metatype _tree)
@@ -4119,11 +4221,17 @@ DLLDirection
 modelica_integer omc_NFConnectBreakTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
 {
   modelica_integer _outResult;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
   _outResult = omc_AbsynUtil_crefCompare(threadData, _inKey1, _inKey2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_NFConnectBreakTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
@@ -4771,6 +4879,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFConnectBreakTree_referenceEqOrE
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -4810,6 +4921,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFConnectBreakTree_referenceEqOrE
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnectBreakTree_referenceEqOrEmpty(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)

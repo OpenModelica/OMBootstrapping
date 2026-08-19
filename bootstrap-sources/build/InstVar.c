@@ -496,6 +496,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_InstVar_instArrayDimInteger(thre
     modelica_integer _i;
     for(_i = _inDimensionSize; in_range_integer(_i, tmp21, tmp23); _i += tmp22)
     {
+
       tmpMeta18 = mmc_mk_box2(3, &DAE_Exp_ICONST__desc, mmc_mk_integer(_i));
       _e = tmpMeta18;
 
@@ -1094,6 +1095,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_InstVar_checkArrayModBindingDimSi
 {
   modelica_boolean _outIsCorrect;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsCorrect has no default value.
@@ -1210,6 +1214,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_InstVar_checkArrayModBindingDimSi
   }
   _outIsCorrect = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsCorrect;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_InstVar_checkArrayModBindingDimSize(threadData_t *threadData, modelica_metatype _inBinding, modelica_metatype _inDimension, modelica_metatype _inPrefix, modelica_metatype _inIdent, modelica_metatype _inInfo)
@@ -1223,6 +1230,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_InstVar_checkArrayModBindingD
 
 PROTECTED_FUNCTION_STATIC void omc_InstVar_checkArraySubModDimSize(threadData_t *threadData, modelica_metatype _inSubMod, modelica_metatype _inDimension, modelica_metatype _inPrefix, modelica_string _inIdent, modelica_metatype _inInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1291,11 +1301,17 @@ PROTECTED_FUNCTION_STATIC void omc_InstVar_checkArraySubModDimSize(threadData_t 
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_InstVar_checkArrayModDimSize(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _inDimension, modelica_metatype _inPrefix, modelica_string _inIdent, modelica_metatype _inInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1335,11 +1351,17 @@ PROTECTED_FUNCTION_STATIC void omc_InstVar_checkArrayModDimSize(threadData_t *th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_InstVar_checkDimensionGreaterThanZero(threadData_t *threadData, modelica_metatype _inDim, modelica_metatype _inPrefix, modelica_string _inIdent, modelica_metatype _info)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1397,6 +1419,9 @@ PROTECTED_FUNCTION_STATIC void omc_InstVar_checkDimensionGreaterThanZero(threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

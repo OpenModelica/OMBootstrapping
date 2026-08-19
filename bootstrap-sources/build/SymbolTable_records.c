@@ -6,7 +6,7 @@ extern "C" {
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SymbolTable_SYMBOLTABLE__desc_added
 #define SymbolTable_SYMBOLTABLE__desc_added
-ADD_METARECORD_DEFINITIONS const char* SymbolTable_SYMBOLTABLE__desc__fields[5] = {"ast","explodedAst","vars","cachedAsts","cacheIndex"};
+ADD_METARECORD_DEFINITIONS const char* SymbolTable_SYMBOLTABLE__desc__fields[6] = {"ast","explodedAst","vars","cachedAsts","cacheIndex","connectorFlags"};
 ADD_METARECORD_DEFINITIONS struct record_description SymbolTable_SYMBOLTABLE__desc = {
   "SymbolTable_SYMBOLTABLE",
   "SymbolTable.SYMBOLTABLE",

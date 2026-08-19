@@ -4224,6 +4224,9 @@ modelica_integer omc_UnitAbsynBuilder_storeSize(threadData_t *threadData, modeli
 {
   modelica_integer _size;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _size has no default value.
@@ -4259,6 +4262,9 @@ modelica_integer omc_UnitAbsynBuilder_storeSize(threadData_t *threadData, modeli
   }
   _size = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _size;
 }
 modelica_metatype boxptr_UnitAbsynBuilder_storeSize(threadData_t *threadData, modelica_metatype _store)
@@ -5208,6 +5214,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_UnitAbsynBuilder_printBaseUnitsStr
 
 PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_printUnit(threadData_t *threadData, modelica_metatype _unit)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -5294,11 +5303,17 @@ PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_printUnit(threadData_t *thre
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_printStore2(threadData_t *threadData, modelica_metatype _lst, modelica_integer _indx)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5370,6 +5385,9 @@ PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_printStore2(threadData_t *th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_UnitAbsynBuilder_printStore2(threadData_t *threadData, modelica_metatype _lst, modelica_metatype _indx)
@@ -5383,6 +5401,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_UnitAbsynBuilder_printStore2(threadData_t 
 DLLDirection
 void omc_UnitAbsynBuilder_printStore(threadData_t *threadData, modelica_metatype _st)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5422,12 +5443,18 @@ void omc_UnitAbsynBuilder_printStore(threadData_t *threadData, modelica_metatype
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_UnitAbsynBuilder_printInstStore(threadData_t *threadData, modelica_metatype _st)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5480,6 +5507,9 @@ void omc_UnitAbsynBuilder_printInstStore(threadData_t *threadData, modelica_meta
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -5600,10 +5630,16 @@ modelica_string omc_UnitAbsynBuilder_printTermsStr(threadData_t *threadData, mod
 DLLDirection
 void omc_UnitAbsynBuilder_printTerms(threadData_t *threadData, modelica_metatype _terms)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   fputs(MMC_STRINGDATA(omc_UnitAbsynBuilder_printTermsStr(threadData, _terms)),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -6133,6 +6169,9 @@ modelica_metatype boxptr_UnitAbsynBuilder_add(threadData_t *threadData, modelica
 
 PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_registerDefineunits2(threadData_t *threadData, modelica_metatype _elts)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -6256,11 +6295,17 @@ PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_registerDefineunits2(threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_registerDefineunits(threadData_t *threadData, modelica_metatype _elts)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -6307,6 +6352,9 @@ PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_registerDefineunits(threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -6406,6 +6454,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_UnitAbsynBuilder_registerUnitInC
 DLLDirection
 void omc_UnitAbsynBuilder_registerUnits(threadData_t *threadData, modelica_metatype _prg)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -6440,11 +6491,17 @@ void omc_UnitAbsynBuilder_registerUnits(threadData_t *threadData, modelica_metat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_registerUnitWeightDefineunits2(threadData_t *threadData, modelica_metatype _idu)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -6545,11 +6602,17 @@ PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_registerUnitWeightDefineunit
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_registerUnitWeightDefineunits(threadData_t *threadData, modelica_metatype _du)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -6586,6 +6649,9 @@ PROTECTED_FUNCTION_STATIC void omc_UnitAbsynBuilder_registerUnitWeightDefineunit
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -6665,6 +6731,9 @@ void omc_UnitAbsynBuilder_registerUnitWeights(threadData_t *threadData, modelica
 {
   modelica_metatype _paths = NULL;
   modelica_metatype _du = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _paths has no default value.
@@ -6712,6 +6781,9 @@ void omc_UnitAbsynBuilder_registerUnitWeights(threadData_t *threadData, modelica
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

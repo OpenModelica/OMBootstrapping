@@ -16,7 +16,13 @@ extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
 
 extern struct record_description ErrorTypes_Severity_ERROR__desc;
 
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
 extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
 extern struct record_description Values_Value_STRING__desc;
 
@@ -68,6 +74,25 @@ void omc_ValuesDump_valString2(threadData_t *threadData, modelica_metatype _inVa
 #define boxptr_ValuesDump_valString2 omc_ValuesDump_valString2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ValuesDump_valString2,2,0) {(void*) boxptr_ValuesDump_valString2,0}};
 #define boxvar_ValuesDump_valString2 MMC_REFSTRUCTLIT(boxvar_lit_ValuesDump_valString2)
+
+
+#define boxptr_ValuesDump_printJSONString omc_ValuesDump_printJSONString
+
+
+#define boxptr_ValuesDump_valJSONRecord omc_ValuesDump_valJSONRecord
+
+
+#define boxptr_ValuesDump_valJSONArray omc_ValuesDump_valJSONArray
+
+
+#define boxptr_ValuesDump_valJSON omc_ValuesDump_valJSON
+
+
+DLLDirection
+modelica_string omc_ValuesDump_valStringJSON(threadData_t *threadData, modelica_metatype _inValue);
+#define boxptr_ValuesDump_valStringJSON omc_ValuesDump_valStringJSON
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ValuesDump_valStringJSON,2,0) {(void*) boxptr_ValuesDump_valStringJSON,0}};
+#define boxvar_ValuesDump_valStringJSON MMC_REFSTRUCTLIT(boxvar_lit_ValuesDump_valStringJSON)
 
 
 DLLDirection

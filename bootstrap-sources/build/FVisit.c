@@ -617,6 +617,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_FVisit_getHeight(threadData_t *th
 {
   modelica_integer _height;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _height has no default value.
@@ -662,6 +665,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_FVisit_getHeight(threadData_t *th
   }
   _height = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _height;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_FVisit_getHeight(threadData_t *threadData, modelica_metatype _bt)
@@ -1074,6 +1080,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_FVisit_differenceInHeight(threadD
 {
   modelica_integer _diff;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _diff has no default value.
@@ -1121,6 +1130,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_FVisit_differenceInHeight(threadD
   }
   _diff = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _diff;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_FVisit_differenceInHeight(threadData_t *threadData, modelica_metatype _node)
@@ -2222,11 +2234,17 @@ DLLDirection
 modelica_integer omc_FVisit_keyCompare(threadData_t *threadData, modelica_integer _k1, modelica_integer _k2)
 {
   modelica_integer _i;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _i has no default value.
   _i = ((_k1 > _k2)?((modelica_integer) 1):((_k1 < _k2)?((modelica_integer) -1):((modelica_integer) 0)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _i;
 }
 modelica_metatype boxptr_FVisit_keyCompare(threadData_t *threadData, modelica_metatype _k1, modelica_metatype _k2)
@@ -2392,6 +2410,9 @@ modelica_integer omc_FVisit_seq(threadData_t *threadData, modelica_metatype _v)
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _s has no default value.
@@ -2401,6 +2422,9 @@ modelica_integer omc_FVisit_seq(threadData_t *threadData, modelica_metatype _v)
   tmp3 = mmc_unbox_integer(tmpMeta2);
   _s = tmp3  /* pattern as ty=Integer */;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _s;
 }
 modelica_metatype boxptr_FVisit_seq(threadData_t *threadData, modelica_metatype _v)
@@ -2417,6 +2441,9 @@ modelica_boolean omc_FVisit_visited(threadData_t *threadData, modelica_metatype 
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -2472,6 +2499,9 @@ modelica_boolean omc_FVisit_visited(threadData_t *threadData, modelica_metatype 
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_FVisit_visited(threadData_t *threadData, modelica_metatype _inVisited, modelica_metatype _inRef)

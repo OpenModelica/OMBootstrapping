@@ -228,6 +228,48 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CevalScriptBackend_loadCommandLineOptio
 #define boxptr_CevalScriptBackend_getAnnotationNamedModifiers omc_CevalScriptBackend_getAnnotationNamedModifiers
 
 
+#define boxptr_CevalScriptBackend_figureRealBoundArg omc_CevalScriptBackend_figureRealBoundArg
+
+
+#define boxptr_CevalScriptBackend_figureRefArg omc_CevalScriptBackend_figureRefArg
+
+
+#define boxptr_CevalScriptBackend_figureArgString omc_CevalScriptBackend_figureArgString
+
+
+#define boxptr_CevalScriptBackend_figureStringArg omc_CevalScriptBackend_figureStringArg
+
+
+#define boxptr_CevalScriptBackend_figureArgExp omc_CevalScriptBackend_figureArgExp
+
+
+#define boxptr_CevalScriptBackend_figureArgs omc_CevalScriptBackend_figureArgs
+
+
+#define boxptr_CevalScriptBackend_axisScaleValue omc_CevalScriptBackend_axisScaleValue
+
+
+#define boxptr_CevalScriptBackend_axisValue omc_CevalScriptBackend_axisValue
+
+
+#define boxptr_CevalScriptBackend_curveValue omc_CevalScriptBackend_curveValue
+
+
+#define boxptr_CevalScriptBackend_plotValue omc_CevalScriptBackend_plotValue
+
+
+#define boxptr_CevalScriptBackend_figureValue omc_CevalScriptBackend_figureValue
+
+
+#define boxptr_CevalScriptBackend_figureExpElements omc_CevalScriptBackend_figureExpElements
+
+
+#define boxptr_CevalScriptBackend_figuresFromMod omc_CevalScriptBackend_figuresFromMod
+
+
+#define boxptr_CevalScriptBackend_getModelFigures omc_CevalScriptBackend_getModelFigures
+
+
 #define boxptr_CevalScriptBackend_getComponentitemsName omc_CevalScriptBackend_getComponentitemsName
 
 
@@ -485,6 +527,47 @@ modelica_metatype omc_CevalScriptBackend_translateGraphics(threadData_t *threadD
 #define boxptr_CevalScriptBackend_translateGraphics omc_CevalScriptBackend_translateGraphics
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CevalScriptBackend_translateGraphics,2,0) {(void*) boxptr_CevalScriptBackend_translateGraphics,0}};
 #define boxvar_CevalScriptBackend_translateGraphics MMC_REFSTRUCTLIT(boxvar_lit_CevalScriptBackend_translateGraphics)
+
+
+DLLDirection
+modelica_metatype omc_CevalScriptBackend_callBuildModelFMU(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _className, modelica_string _FMUVersion, modelica_string _inFMUType, modelica_string _inFileNamePrefix, modelica_boolean _addDummy, modelica_metatype _platforms, modelica_metatype _inSimSettings, modelica_metatype *out_outValue);
+DLLDirection
+modelica_metatype boxptr_CevalScriptBackend_callBuildModelFMU(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _className, modelica_metatype _FMUVersion, modelica_metatype _inFMUType, modelica_metatype _inFileNamePrefix, modelica_metatype _addDummy, modelica_metatype _platforms, modelica_metatype _inSimSettings, modelica_metatype *out_outValue);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_CevalScriptBackend_callBuildModelFMU,2,0) {(void*) boxptr_CevalScriptBackend_callBuildModelFMU,0}};
+#define boxvar_CevalScriptBackend_callBuildModelFMU MMC_REFSTRUCTLIT(boxvar_lit_CevalScriptBackend_callBuildModelFMU)
+
+
+#define boxptr_CevalScriptBackend_fmuSimulationSettings omc_CevalScriptBackend_fmuSimulationSettings
+
+
+
+extern int OMGraphics_writePlacedConnectorIconPNG(int /*_handle*/, int /*_index*/, const char* /*_path*/);
+
+
+extern int OMGraphics_writeIconPNGFromHandle(int /*_handle*/, const char* /*_modelName*/, const char* /*_path*/);
+
+
+extern const char* OMGraphics_placedConnectorIconSVG(int /*_handle*/, int /*_index*/);
+
+
+extern const char* OMGraphics_placedConnectorInfo(int /*_handle*/, int /*_index*/);
+
+
+extern int OMGraphics_placedConnectorCount(int /*_handle*/);
+
+
+extern const char* OMGraphics_graphicalRepresentationXMLFromHandle(int /*_handle*/, double /*_scaleToMm*/);
+
+
+extern const char* OMGraphics_iconSVGFromHandle(int /*_handle*/, const char* /*_modelName*/);
+
+#define boxptr_CevalScriptBackend_insertBeforeTerminalClose omc_CevalScriptBackend_insertBeforeTerminalClose
+
+
+#define boxptr_CevalScriptBackend_spliceGraphicalRepresentation omc_CevalScriptBackend_spliceGraphicalRepresentation
+
+
+#define boxptr_CevalScriptBackend_generateFMI3GraphicalRepresentation omc_CevalScriptBackend_generateFMI3GraphicalRepresentation
 
 
 DLLDirection

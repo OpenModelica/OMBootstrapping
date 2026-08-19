@@ -188,6 +188,23 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SymbolTable_getSCode,2,0) {(void*) boxp
 #define boxvar_SymbolTable_getSCode MMC_REFSTRUCTLIT(boxvar_lit_SymbolTable_getSCode)
 
 
+DLLDirection
+void omc_SymbolTable_setAbsynDeleted(threadData_t *threadData, modelica_metatype _ast, modelica_metatype _path);
+#define boxptr_SymbolTable_setAbsynDeleted omc_SymbolTable_setAbsynDeleted
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SymbolTable_setAbsynDeleted,2,0) {(void*) boxptr_SymbolTable_setAbsynDeleted,0}};
+#define boxvar_SymbolTable_setAbsynDeleted MMC_REFSTRUCTLIT(boxvar_lit_SymbolTable_setAbsynDeleted)
+
+
+#define boxptr_SymbolTable_setAbsynLoaded_update__element omc_SymbolTable_setAbsynLoaded_update__element
+
+
+DLLDirection
+void omc_SymbolTable_setAbsynLoaded(threadData_t *threadData, modelica_metatype _ast, modelica_metatype _loaded);
+#define boxptr_SymbolTable_setAbsynLoaded omc_SymbolTable_setAbsynLoaded
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SymbolTable_setAbsynLoaded,2,0) {(void*) boxptr_SymbolTable_setAbsynLoaded,0}};
+#define boxvar_SymbolTable_setAbsynLoaded MMC_REFSTRUCTLIT(boxvar_lit_SymbolTable_setAbsynLoaded)
+
+
 #define boxptr_SymbolTable_setAbsynClass_update__element omc_SymbolTable_setAbsynClass_update__element
 
 
@@ -234,6 +251,20 @@ void omc_SymbolTable_update(threadData_t *threadData, modelica_metatype _table);
 #define boxptr_SymbolTable_update omc_SymbolTable_update
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SymbolTable_update,2,0) {(void*) boxptr_SymbolTable_update,0}};
 #define boxvar_SymbolTable_update MMC_REFSTRUCTLIT(boxvar_lit_SymbolTable_update)
+
+
+DLLDirection
+void omc_SymbolTable_applyConnectorFlags(threadData_t *threadData, modelica_metatype _flags);
+#define boxptr_SymbolTable_applyConnectorFlags omc_SymbolTable_applyConnectorFlags
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SymbolTable_applyConnectorFlags,2,0) {(void*) boxptr_SymbolTable_applyConnectorFlags,0}};
+#define boxvar_SymbolTable_applyConnectorFlags MMC_REFSTRUCTLIT(boxvar_lit_SymbolTable_applyConnectorFlags)
+
+
+DLLDirection
+modelica_metatype omc_SymbolTable_currentConnectorFlags(threadData_t *threadData);
+#define boxptr_SymbolTable_currentConnectorFlags omc_SymbolTable_currentConnectorFlags
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SymbolTable_currentConnectorFlags,2,0) {(void*) boxptr_SymbolTable_currentConnectorFlags,0}};
+#define boxvar_SymbolTable_currentConnectorFlags MMC_REFSTRUCTLIT(boxvar_lit_SymbolTable_currentConnectorFlags)
 
 
 DLLDirection

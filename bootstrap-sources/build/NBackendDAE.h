@@ -253,9 +253,6 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceInst
 #define boxvar_NBackendDAE_lowerComponentReferenceInstNode MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceInstNode)
 
 
-#define boxptr_NBackendDAE_lowerInstNode omc_NBackendDAE_lowerInstNode
-
-
 #define boxptr_NBackendDAE_collectIterator omc_NBackendDAE_collectIterator
 
 
@@ -313,6 +310,13 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerAlgorithm,2,0) {(void*
 
 
 #define boxptr_NBackendDAE_lowerEquationData omc_NBackendDAE_lowerEquationData
+
+
+DLLDirection
+void omc_NBackendDAE_lowerUnkownRecordChildren(threadData_t *threadData, modelica_metatype _var_ptr, modelica_metatype _variables);
+#define boxptr_NBackendDAE_lowerUnkownRecordChildren omc_NBackendDAE_lowerUnkownRecordChildren
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerUnkownRecordChildren,2,0) {(void*) boxptr_NBackendDAE_lowerUnkownRecordChildren,0}};
+#define boxvar_NBackendDAE_lowerUnkownRecordChildren MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerUnkownRecordChildren)
 
 
 DLLDirection

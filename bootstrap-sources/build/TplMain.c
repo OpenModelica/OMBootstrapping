@@ -1258,21 +1258,24 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT528,2,_OMC_LIT528_data);
 #define _OMC_LIT529_data ".tpl*"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT529,5,_OMC_LIT529_data);
 #define _OMC_LIT529 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT529)
-#define _OMC_LIT530_data ".err.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT530,7,_OMC_LIT530_data);
+#define _OMC_LIT530_data "/"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT530,1,_OMC_LIT530_data);
 #define _OMC_LIT530 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT530)
-#define _OMC_LIT531_data "\nWriting result to file '"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT531,25,_OMC_LIT531_data);
+#define _OMC_LIT531_data ".err.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT531,7,_OMC_LIT531_data);
 #define _OMC_LIT531 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT531)
-#define _OMC_LIT532_data "\n### translation of file '"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT532,26,_OMC_LIT532_data);
+#define _OMC_LIT532_data "\nWriting result to file '"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT532,25,_OMC_LIT532_data);
 #define _OMC_LIT532 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT532)
-#define _OMC_LIT533_data "' failed!  ###\n"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT533,15,_OMC_LIT533_data);
+#define _OMC_LIT533_data "\n### translation of file '"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT533,26,_OMC_LIT533_data);
 #define _OMC_LIT533 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT533)
-#define _OMC_LIT534_data "SusanTest.tpl"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT534,13,_OMC_LIT534_data);
+#define _OMC_LIT534_data "' failed!  ###\n"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT534,15,_OMC_LIT534_data);
 #define _OMC_LIT534 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT534)
+#define _OMC_LIT535_data "SusanTest.tpl"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT535,13,_OMC_LIT535_data);
+#define _OMC_LIT535 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT535)
 #include "util/modelica.h"
 
 #include "TplMain_includes.h"
@@ -1887,6 +1890,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__1(threadData_t *thre
 DLLDirection
 void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -2970,6 +2976,9 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2978,6 +2987,9 @@ modelica_integer omc_TplMain_testTranslateTplFile(threadData_t *threadData, mode
 {
   modelica_integer _outNotPassedCnt;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outNotPassedCnt has no default value.
@@ -3025,7 +3037,7 @@ modelica_integer omc_TplMain_testTranslateTplFile(threadData_t *threadData, mode
           omc_System_writeFile(threadData, tmpMeta6, _OMC_LIT509);
 
           tmpMeta7 = stringAppend(_file,_OMC_LIT510);
-          omc_TplMain_translateFile(threadData, tmpMeta7);
+          omc_TplMain_translateFile(threadData, tmpMeta7, _OMC_LIT193);
 
           tmpMeta8 = stringAppend(_file,_OMC_LIT508);
           _res = omc_System_stringReplace(threadData, omc_System_readFile(threadData, tmpMeta8), _OMC_LIT511, _OMC_LIT193);
@@ -3082,6 +3094,9 @@ modelica_integer omc_TplMain_testTranslateTplFile(threadData_t *threadData, mode
   }
   _outNotPassedCnt = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outNotPassedCnt;
 }
 modelica_metatype boxptr_TplMain_testTranslateTplFile(threadData_t *threadData, modelica_metatype _inFile, modelica_metatype _inPrintResult, modelica_metatype _inPrintErrorBuffer, modelica_metatype _inNotPassedCnt)
@@ -3104,6 +3119,9 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
 {
   modelica_integer _outNotPassedCnt;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outNotPassedCnt has no default value.
@@ -3326,6 +3344,9 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
   }
   _outNotPassedCnt = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outNotPassedCnt;
 }
 modelica_metatype boxptr_TplMain_testStringEquality(threadData_t *threadData, modelica_metatype _inStringReturned, modelica_metatype _inStringShouldBe, modelica_metatype _inPrintResult, modelica_metatype _inPrintErrorBuffer, modelica_metatype _inTestLabel, modelica_metatype _inNotPassedCnt)
@@ -3344,8 +3365,11 @@ modelica_metatype boxptr_TplMain_testStringEquality(threadData_t *threadData, mo
 }
 
 DLLDirection
-void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile)
+void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile, modelica_string _inOutputDir)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -3384,7 +3408,9 @@ void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
-          modelica_boolean tmp12;
+          modelica_metatype tmpMeta12;
+          modelica_metatype tmpMeta13;
+          modelica_boolean tmp14;
           
           _file = tmp3_1;
           /* Pattern matching succeeded */
@@ -3401,6 +3427,13 @@ void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile
           tmp8 = (stringEqual(_file, _destFile));
           if (0 /* false */ != tmp8) goto goto_1;
 
+          if((!stringEqual(_inOutputDir, _OMC_LIT193)))
+          {
+            tmpMeta9 = stringAppend(_inOutputDir,_OMC_LIT530);
+            tmpMeta10 = stringAppend(tmpMeta9,omc_System_basename(threadData, _destFile));
+            _destFile = tmpMeta10;
+          }
+
           _tplPackage = omc_TplParser_templPackageFromFile(threadData, _file);
 
           _mmPckg = omc_TplAbsyn_transformAST(threadData, _tplPackage);
@@ -3413,29 +3446,29 @@ void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile
 
           _wasError = (_nErrors < omc_Error_getNumErrorMessages(threadData));
 
-          tmpMeta9 = stringAppend(_destFile,(_wasError?_OMC_LIT530:_OMC_LIT193));
-          _destFile = tmpMeta9;
+          tmpMeta11 = stringAppend(_destFile,(_wasError?_OMC_LIT531:_OMC_LIT193));
+          _destFile = tmpMeta11;
 
-          tmpMeta10 = stringAppend(_OMC_LIT531,_destFile);
-          tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT528);
-          fputs(MMC_STRINGDATA(tmpMeta11),stdout);
+          tmpMeta12 = stringAppend(_OMC_LIT532,_destFile);
+          tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT528);
+          fputs(MMC_STRINGDATA(tmpMeta13),stdout);
 
           omc_System_writeFile(threadData, _destFile, _res);
 
           /* Pattern-matching assignment */
-          tmp12 = _wasError;
-          if (0 /* false */ != tmp12) goto goto_1;
+          tmp14 = _wasError;
+          if (0 /* false */ != tmp14) goto goto_1;
           goto tmp2_done;
         }
         case 1: {
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
+          modelica_metatype tmpMeta15;
+          modelica_metatype tmpMeta16;
           
           _file = tmp3_1;
           /* Pattern matching succeeded */
-          tmpMeta13 = stringAppend(_OMC_LIT532,_file);
-          tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT533);
-          fputs(MMC_STRINGDATA(tmpMeta14),stdout);
+          tmpMeta15 = stringAppend(_OMC_LIT533,_file);
+          tmpMeta16 = stringAppend(tmpMeta15,_OMC_LIT534);
+          fputs(MMC_STRINGDATA(tmpMeta16),stdout);
 
           fputs(MMC_STRINGDATA(_OMC_LIT505),stdout);
 
@@ -3467,12 +3500,18 @@ void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
-void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile)
+void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile, modelica_string _inOutputDir)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3489,7 +3528,7 @@ void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile)
       for (; tmp3 < 2; tmp3++) {
         switch (MMC_SWITCH_CAST(tmp3)) {
         case 0: {
-          if (13 != MMC_STRLEN(tmp3_1) || strcmp(MMC_STRINGDATA(_OMC_LIT534), MMC_STRINGDATA(tmp3_1)) != 0) goto tmp2_end;
+          if (13 != MMC_STRLEN(tmp3_1) || strcmp(MMC_STRINGDATA(_OMC_LIT535), MMC_STRINGDATA(tmp3_1)) != 0) goto tmp2_end;
           /* Pattern matching succeeded */
           omc_TplMain_tplMainTest(threadData, _OMC_LIT507);
           goto tmp2_done;
@@ -3504,7 +3543,7 @@ void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile)
           /* Pattern matching succeeded */
           omc_Print_clearBuf(threadData);
 
-          omc_TplMain_translateFile(threadData, _file);
+          omc_TplMain_translateFile(threadData, _file, _inOutputDir);
 
           _strErrBuf = omc_Print_getErrorString(threadData);
 
@@ -3537,6 +3576,9 @@ void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile)
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

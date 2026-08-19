@@ -242,6 +242,9 @@ void omc_NFSimplifyModel_simplifyFunction(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta20;
   modelica_metatype tmpMeta21;
   modelica_metatype tmpMeta22;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _cls has no default value.
@@ -372,6 +375,9 @@ void omc_NFSimplifyModel_simplifyFunction(threadData_t *threadData, modelica_met
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1061,7 +1067,7 @@ modelica_metatype omc_NFSimplifyModel_simplifyStatement(threadData_t *threadData
         }
         case 1: {
           modelica_metatype tmpMeta6;
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,5) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,6) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
           if (!listEmpty(tmpMeta6)) goto tmp3_end;
           
@@ -1075,7 +1081,7 @@ modelica_metatype omc_NFSimplifyModel_simplifyStatement(threadData_t *threadData
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,5) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,6) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
           if (optionNone(tmpMeta7)) goto tmp3_end;
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
@@ -1086,13 +1092,13 @@ modelica_metatype omc_NFSimplifyModel_simplifyStatement(threadData_t *threadData
 
           if((!omc_NFDimension_isZero(threadData, _dim)))
           {
-            tmpMeta9 = MMC_TAGPTR(mmc_alloc_words(7));
-            memcpy(MMC_UNTAGPTR(tmpMeta9), MMC_UNTAGPTR(_stmt), 7*sizeof(modelica_metatype));
+            tmpMeta9 = MMC_TAGPTR(mmc_alloc_words(8));
+            memcpy(MMC_UNTAGPTR(tmpMeta9), MMC_UNTAGPTR(_stmt), 8*sizeof(modelica_metatype));
             ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta9))[3] = mmc_mk_some(omc_NFSimplifyExp_simplify(threadData, _e, 0 /* false */));
             _stmt = tmpMeta9;
 
-            tmpMeta10 = MMC_TAGPTR(mmc_alloc_words(7));
-            memcpy(MMC_UNTAGPTR(tmpMeta10), MMC_UNTAGPTR(_stmt), 7*sizeof(modelica_metatype));
+            tmpMeta10 = MMC_TAGPTR(mmc_alloc_words(8));
+            memcpy(MMC_UNTAGPTR(tmpMeta10), MMC_UNTAGPTR(_stmt), 8*sizeof(modelica_metatype));
             ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta10))[4] = omc_NFSimplifyModel_simplifyStatements(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 4))));
             _stmt = tmpMeta10;
 

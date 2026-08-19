@@ -477,25 +477,25 @@ modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatyp
             tmpMeta59 = mmc_mk_box1(0, _OMC_LIT12);
             tmpMeta60 = stringAppend(_OMC_LIT13,intString(listLength(_binding_cont)));
             tmpMeta61 = stringAppend(tmpMeta60,_OMC_LIT14);
-            tmpMeta62 = stringAppend(omc_List_toString(threadData, _binding_cont, (modelica_fnptr) mmc_mk_box2(0,closure0_NBEquation_Equation_pointerToString,tmpMeta59), omc_StringUtil_headline__4(threadData, tmpMeta61), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
+            tmpMeta62 = stringAppend(omc_List_toStringCustom(threadData, _binding_cont, (modelica_fnptr) mmc_mk_box2(0,closure0_NBEquation_Equation_pointerToString,tmpMeta59), omc_StringUtil_headline__4(threadData, tmpMeta61), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
             fputs(MMC_STRINGDATA(tmpMeta62),stdout);
 
             tmpMeta63 = mmc_mk_box1(0, _OMC_LIT12);
             tmpMeta64 = stringAppend(_OMC_LIT17,intString(listLength(_binding_clck)));
             tmpMeta65 = stringAppend(tmpMeta64,_OMC_LIT14);
-            tmpMeta66 = stringAppend(omc_List_toString(threadData, _binding_clck, (modelica_fnptr) mmc_mk_box2(0,closure1_NBEquation_Equation_pointerToString,tmpMeta63), omc_StringUtil_headline__4(threadData, tmpMeta65), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
+            tmpMeta66 = stringAppend(omc_List_toStringCustom(threadData, _binding_clck, (modelica_fnptr) mmc_mk_box2(0,closure1_NBEquation_Equation_pointerToString,tmpMeta63), omc_StringUtil_headline__4(threadData, tmpMeta65), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
             fputs(MMC_STRINGDATA(tmpMeta66),stdout);
 
             tmpMeta67 = mmc_mk_box1(0, _OMC_LIT12);
             tmpMeta68 = stringAppend(_OMC_LIT18,intString(listLength(_binding_disc)));
             tmpMeta69 = stringAppend(tmpMeta68,_OMC_LIT14);
-            tmpMeta70 = stringAppend(omc_List_toString(threadData, _binding_disc, (modelica_fnptr) mmc_mk_box2(0,closure2_NBEquation_Equation_pointerToString,tmpMeta67), omc_StringUtil_headline__4(threadData, tmpMeta69), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
+            tmpMeta70 = stringAppend(omc_List_toStringCustom(threadData, _binding_disc, (modelica_fnptr) mmc_mk_box2(0,closure2_NBEquation_Equation_pointerToString,tmpMeta67), omc_StringUtil_headline__4(threadData, tmpMeta69), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
             fputs(MMC_STRINGDATA(tmpMeta70),stdout);
 
             tmpMeta71 = mmc_mk_box1(0, _OMC_LIT12);
             tmpMeta72 = stringAppend(_OMC_LIT19,intString(listLength(_binding_rec)));
             tmpMeta73 = stringAppend(tmpMeta72,_OMC_LIT14);
-            tmpMeta74 = stringAppend(omc_List_toString(threadData, _binding_rec, (modelica_fnptr) mmc_mk_box2(0,closure3_NBEquation_Equation_pointerToString,tmpMeta71), omc_StringUtil_headline__4(threadData, tmpMeta73), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
+            tmpMeta74 = stringAppend(omc_List_toStringCustom(threadData, _binding_rec, (modelica_fnptr) mmc_mk_box2(0,closure3_NBEquation_Equation_pointerToString,tmpMeta71), omc_StringUtil_headline__4(threadData, tmpMeta73), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
             fputs(MMC_STRINGDATA(tmpMeta74),stdout);
           }
           tmpMeta1 = _bdae;

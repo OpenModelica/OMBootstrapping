@@ -152,6 +152,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnections_analyseArrayConnect
 {
   modelica_integer _outCount;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCount has no default value.
@@ -194,6 +197,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnections_analyseArrayConnect
   }
   _outCount = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outCount;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnections_analyseArrayConnector_update(threadData_t *threadData, modelica_metatype _count)
@@ -208,6 +214,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnections_analyseArrayCon
 DLLDirection
 void omc_NFConnections_analyseArrayConnector(threadData_t *threadData, modelica_metatype _conn, modelica_metatype _connectCounts)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if(omc_NFConnector_isArray(threadData, _conn))
@@ -222,6 +231,9 @@ void omc_NFConnections_analyseArrayConnector(threadData_t *threadData, modelica_
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -361,11 +373,17 @@ DLLDirection
 modelica_integer omc_NFConnections_connectCount(threadData_t *threadData, modelica_metatype _conn, modelica_metatype _connectCounts)
 {
   modelica_integer _count;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _count has no default value.
   _count = mmc_unbox_integer(omc_UnorderedMap_getOrDefault(threadData, _conn, _connectCounts, mmc_mk_integer(((modelica_integer) 0))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _count;
 }
 modelica_metatype boxptr_NFConnections_connectCount(threadData_t *threadData, modelica_metatype _conn, modelica_metatype _connectCounts)

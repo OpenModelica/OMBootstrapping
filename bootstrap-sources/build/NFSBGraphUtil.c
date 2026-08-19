@@ -3,16 +3,16 @@
 #define _OMC_LIT0_data "NFSBGraphUtil.linearMapFromIntervals got incompatible connect"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT0,61,_OMC_LIT0_data);
 #define _OMC_LIT0 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT0)
-#define _OMC_LIT1_data "/projects/OpenModelica-session2/OMCompiler/Compiler/NFFrontEnd/NFSBGraphUtil.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT1,79,_OMC_LIT1_data);
+#define _OMC_LIT1_data "//OpenModelica/OMCompiler/Compiler/NFFrontEnd/NFSBGraphUtil.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT1,85,_OMC_LIT1_data);
 #define _OMC_LIT1 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT1)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT2_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT2_6,1.784622031e9);
 #define _OMC_LIT2_6 MMC_REFREALLIT(_OMC_LIT_STRUCT2_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT2,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(307)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(307)),MMC_IMMEDIATE(MMC_TAGFIXNUM(85)),_OMC_LIT2_6}};
 #define _OMC_LIT2 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT2)
 static const MMC_DEFREALLIT(_OMC_LIT_STRUCT3,0.0);
 #define _OMC_LIT3 MMC_REFREALLIT(_OMC_LIT_STRUCT3)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT4_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT4_6,1.784622031e9);
 #define _OMC_LIT4_6 MMC_REFREALLIT(_OMC_LIT_STRUCT4_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT4,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(323)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(323)),MMC_IMMEDIATE(MMC_TAGFIXNUM(87)),_OMC_LIT4_6}};
 #define _OMC_LIT4 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT4)
@@ -25,7 +25,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT6,59,_OMC_LIT6_data);
 #define _OMC_LIT7_data "\n"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT7,1,_OMC_LIT7_data);
 #define _OMC_LIT7 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT7)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT8_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT8_6,1.784622031e9);
 #define _OMC_LIT8_6 MMC_REFREALLIT(_OMC_LIT_STRUCT8_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT8,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(245)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(246)),MMC_IMMEDIATE(MMC_TAGFIXNUM(83)),_OMC_LIT8_6}};
 #define _OMC_LIT8 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT8)
@@ -35,7 +35,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT9,57,_OMC_LIT9_data);
 #define _OMC_LIT10_data " "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT10,1,_OMC_LIT10_data);
 #define _OMC_LIT10 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT10)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT11_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT11_6,1.784622031e9);
 #define _OMC_LIT11_6 MMC_REFREALLIT(_OMC_LIT_STRUCT11_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT11,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(239)),MMC_IMMEDIATE(MMC_TAGFIXNUM(13)),MMC_IMMEDIATE(MMC_TAGFIXNUM(240)),MMC_IMMEDIATE(MMC_TAGFIXNUM(76)),_OMC_LIT11_6}};
 #define _OMC_LIT11 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT11)
@@ -49,14 +49,14 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT14,4,3) {&NFCeval_EvalTarget_EVAL__
 #define _OMC_LIT15_data "NFSBGraphUtil.intervalFromExp got unknown expression "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT15,53,_OMC_LIT15_data);
 #define _OMC_LIT15 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT15)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT16_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT16_6,1.784622031e9);
 #define _OMC_LIT16_6 MMC_REFREALLIT(_OMC_LIT_STRUCT16_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT16,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(198)),MMC_IMMEDIATE(MMC_TAGFIXNUM(11)),MMC_IMMEDIATE(MMC_TAGFIXNUM(199)),MMC_IMMEDIATE(MMC_TAGFIXNUM(71)),_OMC_LIT16_6}};
 #define _OMC_LIT16 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT16)
 #define _OMC_LIT17_data "NFSBGraphUtil.multiIntervalFromDimensions: unknown dimension "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT17,61,_OMC_LIT17_data);
 #define _OMC_LIT17 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT17)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT18_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT18_6,1.784622031e9);
 #define _OMC_LIT18_6 MMC_REFREALLIT(_OMC_LIT_STRUCT18_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT18,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(82)),MMC_IMMEDIATE(MMC_TAGFIXNUM(11)),MMC_IMMEDIATE(MMC_TAGFIXNUM(83)),MMC_IMMEDIATE(MMC_TAGFIXNUM(47)),_OMC_LIT18_6}};
 #define _OMC_LIT18 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT18)
@@ -170,6 +170,7 @@ modelica_string omc_NFSBGraphUtil_linearMapFromIntervals(threadData_t *threadDat
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _sz1 = omc_SBInterval_size(threadData, arrayGet(_ints1,_i) /* DAE.ASUB */);
 
       _sz2 = omc_SBInterval_size(threadData, arrayGet(_ints2,_i) /* DAE.ASUB */);
@@ -433,7 +434,7 @@ modelica_metatype omc_NFSBGraphUtil_intervalFromBinaryExp(threadData_t *threadDa
             default:
             tmp8_default: OMC_LABEL_UNUSED; {
               modelica_metatype tmpMeta13;
-              
+
               /* Pattern matching succeeded */
               tmpMeta13 = stringAppend(_OMC_LIT9,omc_NFOperator_symbol(threadData, _op, _OMC_LIT10));
               omc_Error_terminate(threadData, tmpMeta13, _OMC_LIT11);
@@ -481,37 +482,37 @@ modelica_metatype omc_NFSBGraphUtil_intervalFromExp(threadData_t *threadData, mo
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_SBInterval_new(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_e), 2)))), ((modelica_integer) 1), mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_e), 2)))));
           goto tmp3_done;
         }
         case 6: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_SBInterval_new(threadData, omc_Util_boolInt(threadData, mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_e), 2))))), ((modelica_integer) 1), omc_Util_boolInt(threadData, mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_e), 2))))));
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_SBInterval_new(threadData, ((modelica_integer)floor(mmc_unbox_real((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_e), 2)))))), ((modelica_integer) 1), ((modelica_integer)floor(mmc_unbox_real((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_e), 2)))))));
           goto tmp3_done;
         }
         case 19: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_NFSBGraphUtil_intervalFromBinaryExp(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_e), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_e), 3))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_e), 4))));
           goto tmp3_done;
         }
         case 20: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_NFSBGraphUtil_intervalFromUnaryExp(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_e), 3))));
           goto tmp3_done;
         }
         case 13: {
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = omc_NFSBGraphUtil_intervalFromRange(threadData, _e);
           goto tmp3_done;
@@ -519,7 +520,7 @@ modelica_metatype omc_NFSBGraphUtil_intervalFromExp(threadData_t *threadData, mo
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
           modelica_metatype tmpMeta5;
-          
+
           /* Pattern matching succeeded */
           tmpMeta5 = stringAppend(_OMC_LIT15,omc_NFExpression_toString(threadData, _e));
           omc_Error_terminate(threadData, tmpMeta5, _OMC_LIT16);
@@ -658,6 +659,7 @@ modelica_metatype omc_NFSBGraphUtil_multiIntervalFromSubscripts(threadData_t *th
       modelica_integer _i;
       for(_i = ((modelica_integer) 1) + listLength(_subs); in_range_integer(_i, tmp4, tmp6); _i += tmp5)
       {
+
         _aux_lo = omc_SBInterval_lowerBound(threadData, arrayGet(_miv,_i) /* DAE.ASUB */);
 
         arrayUpdate(_mi,_index,omc_SBInterval_new(threadData, _aux_lo, ((modelica_integer) 1), _aux_lo));
@@ -753,6 +755,7 @@ modelica_metatype omc_NFSBGraphUtil_multiIntervalFromDimensions(threadData_t *th
       modelica_integer _i;
       for(_i = ((modelica_integer) 1) + listLength(_dims); in_range_integer(_i, tmp5, tmp7); _i += tmp6)
       {
+
         _vc = mmc_unbox_integer(omc_Vector_get(threadData, _vCount, ((modelica_integer) 1)));
 
         arrayUpdate(_ints,_i,omc_SBInterval_new(threadData, _vc, ((modelica_integer) 1), _vc));
@@ -769,4 +772,3 @@ modelica_metatype omc_NFSBGraphUtil_multiIntervalFromDimensions(threadData_t *th
   _return: OMC_LABEL_UNUSED
   return _multiInt;
 }
-

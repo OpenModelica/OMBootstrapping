@@ -279,6 +279,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFFlatModelicaUtil_filterRootClas
 {
   modelica_boolean _keep;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _keep has no default value.
@@ -316,6 +319,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFFlatModelicaUtil_filterRootClas
   }
   _keep = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _keep;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFFlatModelicaUtil_filterRootClassAnnotations_filter(threadData_t *threadData, modelica_metatype _smod)

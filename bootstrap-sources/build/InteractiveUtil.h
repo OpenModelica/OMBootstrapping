@@ -108,8 +108,6 @@ extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
 extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
 
-extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
-
 extern struct record_description InstTypes_CallingScope_TOP__CALL__desc;
 
 extern struct record_description Interactive_GraphicEnvCache_GRAPHIC__ENV__FULL__CACHE__desc;

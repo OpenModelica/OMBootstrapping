@@ -52,8 +52,6 @@ extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
 extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
 
-extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
-
 extern struct record_description InstStateMachineUtil_AdjacencyTable_ADJACENCY__TABLE__desc;
 
 extern struct record_description InstStateMachineUtil_FlatSMGroup_FLAT__SM__GROUP__desc;

@@ -200,41 +200,27 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT84,2,1) {_OMC_LIT71,_OMC_LIT83}};
 #define _OMC_LIT84 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT84)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT85,3,10) {&Flags_FlagData_ENUM__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(1)),_OMC_LIT84}};
 #define _OMC_LIT85 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT85)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT86,2,1) {_OMC_LIT78,MMC_REFSTRUCTLIT(mmc_nil)}};
-#define _OMC_LIT86 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT86)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT87,2,1) {_OMC_LIT76,_OMC_LIT86}};
+#define _OMC_LIT86_data "Sets the grammar and semantics to accept."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT86,41,_OMC_LIT86_data);
+#define _OMC_LIT86 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT86)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT87,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(6)),_OMC_LIT67,_OMC_LIT69,_OMC_LIT13,_OMC_LIT85,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT86}};
 #define _OMC_LIT87 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT87)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT88,2,1) {_OMC_LIT74,_OMC_LIT87}};
-#define _OMC_LIT88 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT88)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT89,2,1) {_OMC_LIT72,_OMC_LIT88}};
-#define _OMC_LIT89 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT89)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT90,2,1) {_OMC_LIT70,_OMC_LIT89}};
+#define _OMC_LIT88_data "$con$"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT88,5,_OMC_LIT88_data);
+#define _OMC_LIT88 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT88)
+#define _OMC_LIT89_data "$finalCon$"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT89,10,_OMC_LIT89_data);
+#define _OMC_LIT89 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT89)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT90,1,17) {&BackendDAE_VarKind_OPT__FCONSTR__desc,}};
 #define _OMC_LIT90 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT90)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT91,2,3) {&Flags_ValidOptions_STRING__OPTION__desc,_OMC_LIT90}};
-#define _OMC_LIT91 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT91)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT92,1,1) {_OMC_LIT91}};
-#define _OMC_LIT92 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT92)
-#define _OMC_LIT93_data "Sets the grammar and semantics to accept."
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT93,41,_OMC_LIT93_data);
-#define _OMC_LIT93 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT93)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT94,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(6)),_OMC_LIT67,_OMC_LIT69,_OMC_LIT13,_OMC_LIT85,_OMC_LIT92,_OMC_LIT93}};
-#define _OMC_LIT94 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT94)
-#define _OMC_LIT95_data "$con$"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT95,5,_OMC_LIT95_data);
-#define _OMC_LIT95 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT95)
-#define _OMC_LIT96_data "$finalCon$"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT96,10,_OMC_LIT96_data);
-#define _OMC_LIT96 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT96)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT97,1,17) {&BackendDAE_VarKind_OPT__FCONSTR__desc,}};
-#define _OMC_LIT97 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT97)
-#define _OMC_LIT98_data "generateSymbolicLinearization"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT98,29,_OMC_LIT98_data);
-#define _OMC_LIT98 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT98)
-#define _OMC_LIT99_data "Generates symbolic linearization matrices A,B,C,D for linear model:\n		:math:`\\dot{x} = Ax + Bu`\n		:math:`y = Cx + Du`"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT99,117,_OMC_LIT99_data);
-#define _OMC_LIT99 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT99)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT100,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(52)),_OMC_LIT98,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT13,_OMC_LIT14,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT99}};
-#define _OMC_LIT100 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT100)
+#define _OMC_LIT91_data "generateSymbolicLinearization"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT91,29,_OMC_LIT91_data);
+#define _OMC_LIT91 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT91)
+#define _OMC_LIT92_data "Generates symbolic linearization matrices A,B,C,D for linear model:\n		:math:`\\dot{x} = Ax + Bu`\n		:math:`y = Cx + Du`"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT92,117,_OMC_LIT92_data);
+#define _OMC_LIT92 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT92)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT93,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(52)),_OMC_LIT91,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT13,_OMC_LIT14,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT92}};
+#define _OMC_LIT93 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT93)
 #include "util/modelica.h"
 
 #include "DynamicOptimization_includes.h"
@@ -1293,6 +1279,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_DynamicOptimization_isConstOrline
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -1335,6 +1324,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_DynamicOptimization_isConstOrline
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DynamicOptimization_isConstOrlinear(threadData_t *threadData, modelica_metatype _jacType)
@@ -2778,7 +2770,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DynamicOptimization_addOptimizat
     MMC_THROW_INTERNAL();
   }
 
-  omc_FlagsUtil_setConfigEnum(threadData, _OMC_LIT94, ((modelica_integer) 4));
+  omc_FlagsUtil_setConfigEnum(threadData, _OMC_LIT87, ((modelica_integer) 4));
 
   _mayer = omc_DynamicOptimization_getOptimicaArgs(threadData, _classAttrs ,&_lagrange ,&_startTimeE ,&_finalTimeE);
 
@@ -2792,12 +2784,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DynamicOptimization_addOptimizat
 
   _vars = omc_DynamicOptimization_joinObjectFun(threadData, omc_DynamicOptimization_makeObject(threadData, _OMC_LIT2, boxvar_DynamicOptimization_findLagrangeTerm, _varlst, _lagrange), _vars, _eqnsLst ,&_eqnsLst ,&_lagrange);
 
-  _vars = omc_DynamicOptimization_joinConstraints(threadData, _constraints, _OMC_LIT95, _OMC_LIT21, _globalKnownVars, _varlst, _vars, _eqnsLst, boxvar_BackendVariable_hasConTermAnno ,&_eqnsLst);
+  _vars = omc_DynamicOptimization_joinConstraints(threadData, _constraints, _OMC_LIT88, _OMC_LIT21, _globalKnownVars, _varlst, _vars, _eqnsLst, boxvar_BackendVariable_hasConTermAnno ,&_eqnsLst);
 
   tmpMeta2 = MMC_REFSTRUCTLIT(mmc_nil);
-  _vars = omc_DynamicOptimization_joinConstraints(threadData, tmpMeta2, _OMC_LIT96, _OMC_LIT97, _globalKnownVars, _varlst, _vars, _eqnsLst, boxvar_BackendVariable_hasFinalConTermAnno ,&_eqnsLst);
+  _vars = omc_DynamicOptimization_joinConstraints(threadData, tmpMeta2, _OMC_LIT89, _OMC_LIT90, _globalKnownVars, _varlst, _vars, _eqnsLst, boxvar_BackendVariable_hasFinalConTermAnno ,&_eqnsLst);
 
-  omc_FlagsUtil_setConfigBool(threadData, _OMC_LIT100, 1 /* true */);
+  omc_FlagsUtil_setConfigBool(threadData, _OMC_LIT93, 1 /* true */);
 
   tmpMeta5 = mmc_mk_box5(3, &DAE_ClassAttributes_OPTIMIZATION__ATTRS__desc, _mayer, _lagrange, _startTimeE, _finalTimeE);
   tmpMeta4 = mmc_mk_cons(tmpMeta5, MMC_REFSTRUCTLIT(mmc_nil));

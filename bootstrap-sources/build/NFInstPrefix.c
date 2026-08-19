@@ -104,6 +104,9 @@ modelica_boolean omc_NFInstPrefix_isPackagePrefix(threadData_t *threadData, mode
 {
   modelica_boolean _outIsPackagePrefix;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsPackagePrefix has no default value.
@@ -158,6 +161,9 @@ modelica_boolean omc_NFInstPrefix_isPackagePrefix(threadData_t *threadData, mode
   }
   _outIsPackagePrefix = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsPackagePrefix;
 }
 modelica_metatype boxptr_NFInstPrefix_isPackagePrefix(threadData_t *threadData, modelica_metatype _inPrefix)

@@ -137,6 +137,22 @@ extern void ASSC_setMatrix(int _nv, int _ne, int _nz, modelica_metatype _adj, mo
 
 }
 
+extern void ASSC_getMatrix(modelica_metatype _adj, modelica_metatype _val) {
+
+}
+
+extern void ASSC_bareiss() {
+
+}
+
+extern int ASSC_getNumberOfOperations(modelica_metatype _nop) {
+  return 0;
+}
+
+extern void ASSC_getOperations(modelica_metatype _op_modes, modelica_metatype _op_val1, modelica_metatype _op_val2, modelica_metatype _op_val3, modelica_metatype _op_val4) {
+
+}
+
 void* Inst_makeTopNode(void *program, void *annotationProgram) {
   return NULL;
 }

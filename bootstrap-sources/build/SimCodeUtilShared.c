@@ -44,10 +44,10 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT17,2,0) {MMC_REFSTRUCTLIT(mmc_none)
 #define _OMC_LIT18_data "Creation of Modelica functions failed."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT18,38,_OMC_LIT18_data);
 #define _OMC_LIT18 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT18)
-#define _OMC_LIT19_data "/projects/OpenModelica-session2/OMCompiler/Compiler/SimCode/SimCodeUtilShared.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT19,80,_OMC_LIT19_data);
+#define _OMC_LIT19_data "/home/andreas/workdir/OM/OpenModelica/OMCompiler/Compiler/SimCode/SimCodeUtilShared.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT19,86,_OMC_LIT19_data);
 #define _OMC_LIT19 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT19)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT20_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT20_6,1.784195231e9);
 #define _OMC_LIT20_6 MMC_REFREALLIT(_OMC_LIT_STRUCT20_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT20,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT19,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(106)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(106)),MMC_IMMEDIATE(MMC_TAGFIXNUM(83)),_OMC_LIT20_6}};
 #define _OMC_LIT20 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT20)
@@ -81,6 +81,9 @@ modelica_boolean omc_SimCodeUtilShared_isArrayVar(threadData_t *threadData, mode
 {
   modelica_boolean _isArray;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isArray has no default value.
@@ -121,6 +124,9 @@ modelica_boolean omc_SimCodeUtilShared_isArrayVar(threadData_t *threadData, mode
   }
   _isArray = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isArray;
 }
 modelica_metatype boxptr_SimCodeUtilShared_isArrayVar(threadData_t *threadData, modelica_metatype _var)
@@ -137,6 +143,9 @@ modelica_integer omc_SimCodeUtilShared_getNumElems(threadData_t *threadData, mod
 {
   modelica_integer _numElems;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _numElems has no default value.
@@ -189,6 +198,9 @@ modelica_integer omc_SimCodeUtilShared_getNumElems(threadData_t *threadData, mod
   }
   _numElems = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _numElems;
 }
 modelica_metatype boxptr_SimCodeUtilShared_getNumElems(threadData_t *threadData, modelica_metatype _var)
@@ -209,6 +221,9 @@ modelica_integer omc_SimCodeUtilShared_getScalarElementIndex(threadData_t *threa
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _arrayIndex has no default value.
@@ -224,6 +239,7 @@ modelica_integer omc_SimCodeUtilShared_getScalarElementIndex(threadData_t *threa
     modelica_integer _i;
     for(_i = listLength(_arraySubscripts); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _idx = omc_DAEUtil_getSubscriptIndex(threadData, listGet(_arraySubscripts, _i));
 
       _arrayIndex = _arrayIndex + (((modelica_integer) -1) + _idx) * (_fac);
@@ -232,6 +248,9 @@ modelica_integer omc_SimCodeUtilShared_getScalarElementIndex(threadData_t *threa
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _arrayIndex;
 }
 modelica_metatype boxptr_SimCodeUtilShared_getScalarElementIndex(threadData_t *threadData, modelica_metatype _arraySubscripts, modelica_metatype _arrayDimensions)
@@ -471,6 +490,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SimCodeUtilShared_checkIfSubscrip
   modelica_metatype _subscript = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _oContainsUnhandledSubscripts = 0 /* false */;
@@ -489,6 +511,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SimCodeUtilShared_checkIfSubscrip
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oContainsUnhandledSubscripts;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SimCodeUtilShared_checkIfSubscriptsContainsUnhandlableIndices(threadData_t *threadData, modelica_metatype _iSubscripts)

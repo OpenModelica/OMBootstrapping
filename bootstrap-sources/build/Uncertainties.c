@@ -919,6 +919,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_printSep,2,0) {(void*) bo
 
 PROTECTED_FUNCTION_STATIC void omc_Uncertainties_dumpAliasSets3(threadData_t *threadData, modelica_metatype _sourceIn)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -968,11 +971,17 @@ PROTECTED_FUNCTION_STATIC void omc_Uncertainties_dumpAliasSets3(threadData_t *th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Uncertainties_dumpAliasSets2(threadData_t *threadData, modelica_metatype _crefs, modelica_metatype _sign_values)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1048,11 +1057,17 @@ PROTECTED_FUNCTION_STATIC void omc_Uncertainties_dumpAliasSets2(threadData_t *th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Uncertainties_dumpAliasSets(threadData_t *threadData, modelica_metatype _sets)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1128,6 +1143,9 @@ PROTECTED_FUNCTION_STATIC void omc_Uncertainties_dumpAliasSets(threadData_t *thr
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1428,6 +1446,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_existsInSet(threadD
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -1464,6 +1485,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_existsInSet(threadD
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_existsInSet(threadData_t *threadData, modelica_metatype _set, modelica_metatype _cr)
@@ -2395,6 +2419,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isRemovableSymbol(t
 {
   modelica_boolean _out;
   modelica_metatype _var = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -2403,6 +2430,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isRemovableSymbol(t
 
   _out = omc_Uncertainties_isRemovableVarList(threadData, _var);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_isRemovableSymbol(threadData_t *threadData, modelica_metatype _cr, modelica_metatype _vars, modelica_metatype _globalKnownVars)
@@ -2418,6 +2448,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isRemovableVarList(
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -2472,6 +2505,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isRemovableVarList(
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_isRemovableVarList(threadData_t *threadData, modelica_metatype _vars)
@@ -2486,11 +2522,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_isRemovableVarL
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isRemovableVar(threadData_t *threadData, modelica_metatype _var)
 {
   modelica_boolean _out;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
   _out = ((!omc_BackendVariable_isStateVar(threadData, _var)) && (!omc_BackendVariable_varHasUncertainValueRefine(threadData, _var)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_isRemovableVar(threadData_t *threadData, modelica_metatype _var)
@@ -2544,6 +2586,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_setPairSortFunction
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_real tmp6;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -2563,6 +2608,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_setPairSortFunction
 
   _out = (_av < _bv);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_setPairSortFunction(threadData_t *threadData, modelica_metatype _a, modelica_metatype _b)
@@ -2595,6 +2643,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_Uncertainties_rateVariableList(threa
 {
   modelica_real _out;
   modelica_real tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -2649,6 +2700,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_Uncertainties_rateVariableList(threa
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_rateVariableList(threadData_t *threadData, modelica_metatype _vars)
@@ -2669,6 +2723,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_Uncertainties_rateVariable(threadDat
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_real tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -2702,6 +2759,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_Uncertainties_rateVariable(threadDat
 
   _out = _acc;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_rateVariable(threadData_t *threadData, modelica_metatype _var)
@@ -4898,6 +4958,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_containsAll(threadD
 {
   modelica_boolean _out;
   modelica_metatype _m3 = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -4906,6 +4969,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_containsAll(threadD
 
   _out = (listLength(_m3) == listLength(_m2));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_containsAll(threadData_t *threadData, modelica_metatype _m1, modelica_metatype _m2)
@@ -4921,6 +4987,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_containsAny(threadD
 {
   modelica_boolean _out;
   modelica_metatype _m3 = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -4929,6 +4998,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_containsAny(threadD
 
   _out = (!listEmpty(_m3));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_containsAny(threadData_t *threadData, modelica_metatype _m1, modelica_metatype _m2)
@@ -4942,6 +5014,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_containsAny(thr
 
 PROTECTED_FUNCTION_STATIC void omc_Uncertainties_dumpExtAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5008,6 +5083,9 @@ PROTECTED_FUNCTION_STATIC void omc_Uncertainties_dumpExtAdjacencyMatrix(threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -5711,6 +5789,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_Uncertainties_getSystemForUnknow
 
 PROTECTED_FUNCTION_STATIC void omc_Uncertainties_checkSystemContainsVars(threadData_t *threadData, modelica_metatype _m, modelica_metatype _knows, modelica_metatype _variables)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -5810,6 +5891,9 @@ PROTECTED_FUNCTION_STATIC void omc_Uncertainties_checkSystemContainsVars(threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -5828,6 +5912,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_removeUnrelatedEqua
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -5863,6 +5950,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_removeUnrelatedEqua
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_removeUnrelatedEquations2(threadData_t *threadData, modelica_metatype _row, modelica_metatype _knowns)
@@ -5889,6 +5979,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_getEquationsHelper(
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -5927,6 +6020,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_getEquationsHelper(
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_getEquationsHelper(threadData_t *threadData, modelica_metatype _m, modelica_metatype _eqns)
@@ -6102,12 +6198,18 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_removeVarsNotInSet_
 {
   modelica_boolean _out;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
   tmpMeta1 = mmc_mk_cons(mmc_mk_integer(_var), MMC_REFSTRUCTLIT(mmc_nil));
   _out = omc_Uncertainties_containsAny(threadData, tmpMeta1, _elems);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_removeVarsNotInSet__helper(threadData_t *threadData, modelica_metatype _var, modelica_metatype _elems)
@@ -6136,6 +6238,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_Uncertainties_countKnowns(threadD
 {
   modelica_integer _out;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -6171,6 +6276,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_Uncertainties_countKnowns(threadD
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_countKnowns(threadData_t *threadData, modelica_metatype _row, modelica_metatype _knowns)
@@ -6227,6 +6335,9 @@ PROTECTED_FUNCTION_STATIC void omc_Uncertainties_printIntList(threadData_t *thre
 {
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = stringAppend(_OMC_LIT29,intString(listLength(_l)));
@@ -6237,6 +6348,9 @@ PROTECTED_FUNCTION_STATIC void omc_Uncertainties_printIntList(threadData_t *thre
 
   fputs(MMC_STRINGDATA(_OMC_LIT7),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -7375,12 +7489,18 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Uncertainties_printVarReduction2(t
 
 PROTECTED_FUNCTION_STATIC void omc_Uncertainties_printVarReduction(threadData_t *threadData, modelica_metatype _elems)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   fputs(MMC_STRINGDATA(_OMC_LIT40),stdout);
 
   fputs(MMC_STRINGDATA(stringDelimitList(omc_List_map(threadData, _elems, boxvar_Uncertainties_printVarReduction2), _OMC_LIT7)),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -7802,6 +7922,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isApproximatedEquat
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -7856,6 +7979,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isApproximatedEquat
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_isApproximatedEquation3(threadData_t *threadData, modelica_metatype _m)
@@ -7871,6 +7997,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isApproximatedEquat
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -7950,6 +8079,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isApproximatedEquat
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_isApproximatedEquation2(threadData_t *threadData, modelica_metatype _commentIn)
@@ -7965,6 +8097,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isApproximatedEquat
 {
   modelica_boolean _out;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
@@ -8010,6 +8145,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Uncertainties_isApproximatedEquat
   }
   _out = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _out;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Uncertainties_isApproximatedEquation(threadData_t *threadData, modelica_metatype _eqn)
@@ -8894,6 +9032,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Uncertainties_wrapInList(threadDat
 
 PROTECTED_FUNCTION_STATIC void omc_Uncertainties_printSep(threadData_t *threadData, modelica_string _s)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_Print_printBuf(threadData, _OMC_LIT64);
@@ -8902,6 +9043,9 @@ PROTECTED_FUNCTION_STATIC void omc_Uncertainties_printSep(threadData_t *threadDa
 
   omc_Print_printBuf(threadData, _OMC_LIT65);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -8950,6 +9094,9 @@ modelica_integer omc_Uncertainties_getSolvedEquationNumber(threadData_t *threadD
   modelica_metatype tmpMeta5;
   modelica_integer tmp6;
   modelica_metatype tmpMeta7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _solvedeq has no default value.
@@ -8977,6 +9124,9 @@ modelica_integer omc_Uncertainties_getSolvedEquationNumber(threadData_t *threadD
 
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _solvedeq;
 }
 modelica_metatype boxptr_Uncertainties_getSolvedEquationNumber(threadData_t *threadData, modelica_metatype _varnumber, modelica_metatype _inlist)
@@ -9002,6 +9152,9 @@ modelica_integer omc_Uncertainties_getSolvedVariableNumber(threadData_t *threadD
   modelica_metatype tmpMeta5;
   modelica_integer tmp6;
   modelica_metatype tmpMeta7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _solvedvar has no default value.
@@ -9029,6 +9182,9 @@ modelica_integer omc_Uncertainties_getSolvedVariableNumber(threadData_t *threadD
 
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _solvedvar;
 }
 modelica_metatype boxptr_Uncertainties_getSolvedVariableNumber(threadData_t *threadData, modelica_metatype _eqnumber, modelica_metatype _inlist)
@@ -9453,6 +9609,9 @@ modelica_integer omc_Uncertainties_countKnownVariables(threadData_t *threadData,
   modelica_integer _count;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _count = ((modelica_integer) 0);
@@ -9468,6 +9627,9 @@ modelica_integer omc_Uncertainties_countKnownVariables(threadData_t *threadData,
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _count;
 }
 modelica_metatype boxptr_Uncertainties_countKnownVariables(threadData_t *threadData, modelica_metatype _inlist1)
@@ -11118,6 +11280,9 @@ void omc_Uncertainties_dumpListList(threadData_t *threadData, modelica_metatype 
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = stringAppend(_OMC_LIT7,_heading);
@@ -11130,6 +11295,9 @@ void omc_Uncertainties_dumpListList(threadData_t *threadData, modelica_metatype 
   tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT92);
   fputs(MMC_STRINGDATA(tmpMeta8),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -11459,6 +11627,9 @@ void omc_Uncertainties_VerifyDataReconciliation(threadData_t *threadData, modeli
   modelica_metatype tmpMeta28;
   modelica_metatype tmpMeta29;
   modelica_metatype tmpMeta30;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _matchedeq has no default value.
@@ -11643,6 +11814,9 @@ void omc_Uncertainties_VerifyDataReconciliation(threadData_t *threadData, modeli
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -11828,6 +12002,9 @@ void omc_Uncertainties_dumpDependencyTree(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _varnumber has no default value.
@@ -11883,6 +12060,9 @@ void omc_Uncertainties_dumpDependencyTree(threadData_t *threadData, modelica_met
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

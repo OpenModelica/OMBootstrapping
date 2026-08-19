@@ -19,10 +19,10 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT7,2,17) {&NFLookupState_LookupState
 #define _OMC_LIT8_data "NFLookupState.LookupState.next2 failed on unknown transition for element "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT8,73,_OMC_LIT8_data);
 #define _OMC_LIT8 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT8)
-#define _OMC_LIT9_data "/projects/OpenModelica-session2/OMCompiler/Compiler/NFFrontEnd/NFLookupState.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT9,79,_OMC_LIT9_data);
+#define _OMC_LIT9_data "//OpenModelica/OMCompiler/Compiler/NFFrontEnd/NFLookupState.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT9,85,_OMC_LIT9_data);
 #define _OMC_LIT9 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT9)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT10_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT10_6,1.784622031e9);
 #define _OMC_LIT10_6 MMC_REFREALLIT(_OMC_LIT_STRUCT10_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT10,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT9,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(578)),MMC_IMMEDIATE(MMC_TAGFIXNUM(11)),MMC_IMMEDIATE(MMC_TAGFIXNUM(578)),MMC_IMMEDIATE(MMC_TAGFIXNUM(128)),_OMC_LIT10_6}};
 #define _OMC_LIT10 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT10)
@@ -35,7 +35,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT13,1,9) {&NFLookupState_LookupState
 #define _OMC_LIT14_data "NFLookupState.LookupState.elementState got unknown element."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT14,59,_OMC_LIT14_data);
 #define _OMC_LIT14 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT14)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT15_6,1.782113391e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT15_6,1.784622031e9);
 #define _OMC_LIT15_6 MMC_REFREALLIT(_OMC_LIT_STRUCT15_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT15,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT9,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(493)),MMC_IMMEDIATE(MMC_TAGFIXNUM(11)),MMC_IMMEDIATE(MMC_TAGFIXNUM(493)),MMC_IMMEDIATE(MMC_TAGFIXNUM(85)),_OMC_LIT15_6}};
 #define _OMC_LIT15 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT15)
@@ -264,11 +264,17 @@ DLLDirection
 modelica_boolean omc_NFLookupState_LookupState_isNonConstantComponent(threadData_t *threadData, modelica_metatype _node)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   _res = (omc_NFInstNode_InstNode_isComponent(threadData, _node) && (!omc_NFComponent_isConst(threadData, omc_NFInstNode_InstNode_component(threadData, _node))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_NFLookupState_LookupState_isNonConstantComponent(threadData_t *threadData, modelica_metatype _node)
@@ -331,7 +337,7 @@ modelica_metatype omc_NFLookupState_LookupState_next2(threadData_t *threadData, 
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _elementState;
           goto tmp3_done;
@@ -352,7 +358,7 @@ modelica_metatype omc_NFLookupState_LookupState_next2(threadData_t *threadData, 
         }
         case 3: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT4;
           goto tmp3_done;
@@ -380,7 +386,7 @@ modelica_metatype omc_NFLookupState_LookupState_next2(threadData_t *threadData, 
         }
         case 7: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,5,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _elementState;
           goto tmp3_done;
@@ -394,7 +400,7 @@ modelica_metatype omc_NFLookupState_LookupState_next2(threadData_t *threadData, 
         }
         case 9: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,6,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _elementState;
           goto tmp3_done;
@@ -408,7 +414,7 @@ modelica_metatype omc_NFLookupState_LookupState_next2(threadData_t *threadData, 
         }
         case 11: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,7,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _elementState;
           goto tmp3_done;
@@ -457,21 +463,21 @@ modelica_metatype omc_NFLookupState_LookupState_next2(threadData_t *threadData, 
         }
         case 18: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT6;
           goto tmp3_done;
         }
         case 19: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT7;
           goto tmp3_done;
         }
         case 20: {
           modelica_metatype tmpMeta6;
-          
+
           /* Pattern matching succeeded */
           tmpMeta6 = stringAppend(_OMC_LIT8,omc_NFInstNode_InstNode_name(threadData, _node));
           omc_Error_terminate(threadData, tmpMeta6, _OMC_LIT10);
@@ -516,7 +522,7 @@ modelica_metatype omc_NFLookupState_LookupState_elementState(threadData_t *threa
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,8) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,8,0) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT11;
           goto tmp3_done;
@@ -526,20 +532,20 @@ modelica_metatype omc_NFLookupState_LookupState_elementState(threadData_t *threa
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,8) == 0) goto tmp3_end;
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,9,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT12;
           goto tmp3_done;
         }
         case 2: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,8) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta1 = _OMC_LIT13;
           goto tmp3_done;
         }
         case 3: {
-          
+
           /* Pattern matching succeeded */
           omc_Error_terminate(threadData, _OMC_LIT14, _OMC_LIT15);
           goto goto_2;
@@ -583,6 +589,9 @@ modelica_metatype omc_NFLookupState_LookupState_nodeState(threadData_t *threadDa
 DLLDirection
 void omc_NFLookupState_LookupState_checkProtection(threadData_t *threadData, modelica_metatype _node, modelica_metatype _currentState)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -601,7 +610,7 @@ void omc_NFLookupState_LookupState_checkProtection(threadData_t *threadData, mod
         }
         case 1: {
           modelica_metatype tmpMeta5;
-          
+
           /* Pattern matching succeeded */
           if((omc_NFInstNode_InstNode_isProtected(threadData, _node) && (!omc_Flags_isConfigFlagSet(threadData, _OMC_LIT70, _OMC_LIT38))))
           {
@@ -625,6 +634,9 @@ void omc_NFLookupState_LookupState_checkProtection(threadData_t *threadData, mod
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -667,6 +679,9 @@ void omc_NFLookupState_LookupState_printFoundWrongTypeError(threadData_t *thread
   modelica_string _found_str = NULL;
   modelica_string _expected_str = NULL;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _name_str has no default value.
@@ -681,6 +696,9 @@ void omc_NFLookupState_LookupState_printFoundWrongTypeError(threadData_t *thread
   tmpMeta1 = mmc_mk_cons(_name_str, mmc_mk_cons(_expected_str, mmc_mk_cons(_found_str, MMC_REFSTRUCTLIT(mmc_nil))));
   omc_Error_addSourceMessage(threadData, _OMC_LIT72, tmpMeta1, _info);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -700,61 +718,61 @@ modelica_string omc_NFLookupState_LookupState_lookupStateString(threadData_t *th
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 3: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT73;
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT74;
           goto tmp3_done;
         }
         case 5: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT74;
           goto tmp3_done;
         }
         case 6: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT75;
           goto tmp3_done;
         }
         case 7: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT76;
           goto tmp3_done;
         }
         case 8: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT77;
           goto tmp3_done;
         }
         case 9: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT75;
           goto tmp3_done;
         }
         case 10: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT76;
           goto tmp3_done;
         }
         case 11: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT74;
           goto tmp3_done;
         }
         case 12: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT75;
           goto tmp3_done;
@@ -780,6 +798,9 @@ modelica_boolean omc_NFLookupState_LookupState_isError(threadData_t *threadData,
 {
   modelica_boolean _isError;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isError has no default value.
@@ -794,13 +815,13 @@ modelica_boolean omc_NFLookupState_LookupState_isError(threadData_t *threadData,
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,14,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 1: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -818,6 +839,9 @@ modelica_boolean omc_NFLookupState_LookupState_isError(threadData_t *threadData,
   }
   _isError = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isError;
 }
 modelica_metatype boxptr_NFLookupState_LookupState_isError(threadData_t *threadData, modelica_metatype _state)
@@ -832,6 +856,9 @@ modelica_metatype boxptr_NFLookupState_LookupState_isError(threadData_t *threadD
 DLLDirection
 void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _expectedState, modelica_metatype _node, modelica_metatype _name, modelica_integer _context, modelica_metatype _info)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -943,7 +970,7 @@ void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelic
         case 14: {
           modelica_metatype tmpMeta5;
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,4,0) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           _name_str = omc_NFLookupState_LookupStateName_toString(threadData, _name);
 
@@ -955,7 +982,7 @@ void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelic
         case 15: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,3,0) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta6 = mmc_mk_cons(omc_NFLookupState_LookupStateName_toString(threadData, _name), MMC_REFSTRUCTLIT(mmc_nil));
           omc_Error_addSourceMessage(threadData, _OMC_LIT81, tmpMeta6, _info);
@@ -1000,7 +1027,7 @@ void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelic
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,14,1) == 0) goto tmp2_end;
           tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,4,0) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           _name_str = omc_NFInstNode_InstNode_name(threadData, _node);
 
@@ -1030,7 +1057,7 @@ void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelic
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,14,1) == 0) goto tmp2_end;
           tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta15,2,0) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           _name_str = omc_NFInstNode_InstNode_name(threadData, _node);
 
@@ -1045,7 +1072,7 @@ void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelic
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,14,1) == 0) goto tmp2_end;
           tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta17,10,0) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           _name_str = omc_NFInstNode_InstNode_name(threadData, _node);
 
@@ -1063,7 +1090,7 @@ void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelic
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,14,1) == 0) goto tmp2_end;
           tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta19,11,0) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           if((!(omc_NFInstContext_inRelaxed(threadData, _context) || omc_NFInstContext_inRedeclared(threadData, _context))))
           {
@@ -1093,7 +1120,7 @@ void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelic
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,14,1) == 0) goto tmp2_end;
           tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta24,12,0) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta25 = mmc_mk_cons(omc_NFInstNode_InstNode_name(threadData, _node), MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta26 = mmc_mk_cons(omc_NFInstNode_InstNode_info(threadData, _node), mmc_mk_cons(_info, MMC_REFSTRUCTLIT(mmc_nil)));
@@ -1108,7 +1135,7 @@ void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelic
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,14,1) == 0) goto tmp2_end;
           tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta27,13,0) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           tmpMeta28 = mmc_mk_cons(omc_NFInstNode_InstNode_name(threadData, omc_NFInstNode_InstNode_parent(threadData, _node)), mmc_mk_cons(omc_NFInstNode_InstNode_name(threadData, _node), MMC_REFSTRUCTLIT(mmc_nil)));
           tmpMeta29 = mmc_mk_cons(omc_NFInstNode_InstNode_info(threadData, _node), mmc_mk_cons(_info, MMC_REFSTRUCTLIT(mmc_nil)));
@@ -1118,12 +1145,12 @@ void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelic
         }
         case 25: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_2,10,0) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           goto tmp2_done;
         }
         case 26: {
-          
+
           /* Pattern matching succeeded */
           omc_NFLookupState_LookupState_printFoundWrongTypeError(threadData, _endState, _expectedState, _name, _info);
           goto goto_1;
@@ -1142,6 +1169,9 @@ void omc_NFLookupState_LookupState_assertState(threadData_t *threadData, modelic
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFLookupState_LookupState_assertState(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _expectedState, modelica_metatype _node, modelica_metatype _name, modelica_metatype _context, modelica_metatype _info)
@@ -1157,6 +1187,9 @@ modelica_boolean omc_NFLookupState_LookupState_isClass(threadData_t *threadData,
 {
   modelica_boolean _isClass;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isClass has no default value.
@@ -1168,26 +1201,26 @@ modelica_boolean omc_NFLookupState_LookupState_isClass(threadData_t *threadData,
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 6: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 9: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 12: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -1205,6 +1238,9 @@ modelica_boolean omc_NFLookupState_LookupState_isClass(threadData_t *threadData,
   }
   _isClass = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isClass;
 }
 modelica_metatype boxptr_NFLookupState_LookupState_isClass(threadData_t *threadData, modelica_metatype _state)
@@ -1221,6 +1257,9 @@ modelica_boolean omc_NFLookupState_LookupState_isFunction(threadData_t *threadDa
 {
   modelica_boolean _isFunction;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isFunction has no default value.
@@ -1232,32 +1271,32 @@ modelica_boolean omc_NFLookupState_LookupState_isFunction(threadData_t *threadDa
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 10: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 7: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 9: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_NFLookupState_LookupState_isCallableType(threadData, _node);
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_NFLookupState_LookupState_isCallableComponent(threadData, _node);
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -1275,6 +1314,9 @@ modelica_boolean omc_NFLookupState_LookupState_isFunction(threadData_t *threadDa
   }
   _isFunction = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isFunction;
 }
 modelica_metatype boxptr_NFLookupState_LookupState_isFunction(threadData_t *threadData, modelica_metatype _state, modelica_metatype _node)
@@ -1290,11 +1332,17 @@ DLLDirection
 modelica_boolean omc_NFLookupState_LookupState_isCallableComponent(threadData_t *threadData, modelica_metatype _node)
 {
   modelica_boolean _callable;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _callable has no default value.
   _callable = omc_NFClass_isFunction(threadData, omc_NFInstNode_InstNode_getClass(threadData, _node));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _callable;
 }
 modelica_metatype boxptr_NFLookupState_LookupState_isCallableComponent(threadData_t *threadData, modelica_metatype _node)
@@ -1312,6 +1360,9 @@ modelica_boolean omc_NFLookupState_LookupState_isCallableType(threadData_t *thre
   modelica_boolean _callable;
   modelica_metatype _n = NULL;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _callable has no default value.
@@ -1338,7 +1389,7 @@ modelica_boolean omc_NFLookupState_LookupState_isCallableType(threadData_t *thre
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,10,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
@@ -1364,7 +1415,7 @@ modelica_boolean omc_NFLookupState_LookupState_isCallableType(threadData_t *thre
           goto tmp3_done;
         }
         case 4: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_NFInstNode_InstNode_isClockType(threadData, _n);
           goto tmp3_done;
@@ -1382,6 +1433,9 @@ modelica_boolean omc_NFLookupState_LookupState_isCallableType(threadData_t *thre
   }
   _callable = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _callable;
 }
 modelica_metatype boxptr_NFLookupState_LookupState_isCallableType(threadData_t *threadData, modelica_metatype _node)
@@ -1397,11 +1451,17 @@ DLLDirection
 void omc_NFLookupState_LookupState_assertImport(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_metatype _info)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_box2(3, &NFLookupState_LookupStateName_PATH__desc, _name);
   omc_NFLookupState_LookupState_assertState(threadData, _endState, _OMC_LIT101, _node, tmpMeta1, ((modelica_integer) 0), _info);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1409,11 +1469,17 @@ DLLDirection
 void omc_NFLookupState_LookupState_assertComponent(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_integer _context, modelica_metatype _info)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_box2(4, &NFLookupState_LookupStateName_CREF__desc, _name);
   omc_NFLookupState_LookupState_assertState(threadData, _endState, _OMC_LIT2, _node, tmpMeta1, _context, _info);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFLookupState_LookupState_assertComponent(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_metatype _context, modelica_metatype _info)
@@ -1428,11 +1494,17 @@ DLLDirection
 void omc_NFLookupState_LookupState_assertFunction(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_integer _context, modelica_metatype _info)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_box2(4, &NFLookupState_LookupStateName_CREF__desc, _name);
   omc_NFLookupState_LookupState_assertState(threadData, _endState, _OMC_LIT12, _node, tmpMeta1, _context, _info);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFLookupState_LookupState_assertFunction(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_metatype _context, modelica_metatype _info)
@@ -1447,11 +1519,17 @@ DLLDirection
 void omc_NFLookupState_LookupState_assertClass(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_integer _context, modelica_metatype _info)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_box2(3, &NFLookupState_LookupStateName_PATH__desc, _name);
   omc_NFLookupState_LookupState_assertState(threadData, _endState, _OMC_LIT13, _node, tmpMeta1, _context, _info);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFLookupState_LookupState_assertClass(threadData_t *threadData, modelica_metatype _endState, modelica_metatype _node, modelica_metatype _name, modelica_metatype _context, modelica_metatype _info)
@@ -1481,14 +1559,14 @@ modelica_string omc_NFLookupState_LookupStateName_secondIdent(threadData_t *thre
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_AbsynUtil_pathSecondIdent(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_name), 2))));
           goto tmp3_done;
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_AbsynUtil_crefSecondIdent(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_name), 2))));
           goto tmp3_done;
@@ -1528,14 +1606,14 @@ modelica_string omc_NFLookupState_LookupStateName_firstIdent(threadData_t *threa
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_AbsynUtil_pathFirstIdent(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_name), 2))));
           goto tmp3_done;
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_AbsynUtil_crefFirstIdent(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_name), 2))));
           goto tmp3_done;
@@ -1575,14 +1653,14 @@ modelica_string omc_NFLookupState_LookupStateName_toString(threadData_t *threadD
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_AbsynUtil_pathString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_name), 2))), _OMC_LIT96, 1 /* true */, 0 /* false */);
           goto tmp3_done;
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_Dump_printComponentRefStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_name), 2))));
           goto tmp3_done;
@@ -1602,4 +1680,3 @@ modelica_string omc_NFLookupState_LookupStateName_toString(threadData_t *threadD
   _return: OMC_LABEL_UNUSED
   return _str;
 }
-

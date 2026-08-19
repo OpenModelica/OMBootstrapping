@@ -235,6 +235,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeFlatten_isClass(threadData
 {
   modelica_boolean _outIsClass;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsClass has no default value.
@@ -276,6 +279,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeFlatten_isClass(threadData
   }
   _outIsClass = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsClass;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeFlatten_isClass(threadData_t *threadData, modelica_metatype _inClass)

@@ -910,6 +910,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ExpressionSimplify_removeMinMaxFo
 {
   modelica_boolean _filter;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _filter has no default value.
@@ -958,6 +961,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ExpressionSimplify_removeMinMaxFo
   }
   _filter = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _filter;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ExpressionSimplify_removeMinMaxFoldableValues(threadData_t *threadData, modelica_metatype _e)
@@ -1628,6 +1634,9 @@ modelica_metatype omc_ExpressionSimplify_simplifyAddSymbolicOperation(threadData
 
 PROTECTED_FUNCTION_STATIC void omc_ExpressionSimplify_checkZeroLengthArrayOp(threadData_t *threadData, modelica_metatype _op)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1710,6 +1719,9 @@ PROTECTED_FUNCTION_STATIC void omc_ExpressionSimplify_checkZeroLengthArrayOp(thr
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1903,6 +1915,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ExpressionSimplify_hasZeroLengthI
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -2006,6 +2021,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ExpressionSimplify_hasZeroLengthI
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ExpressionSimplify_hasZeroLengthIterator(threadData_t *threadData, modelica_metatype _inIters)
@@ -9159,6 +9177,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ExpressionSimplify_simplifyRelati
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -9371,6 +9392,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ExpressionSimplify_simplifyRelati
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ExpressionSimplify_simplifyRelationConst(threadData_t *threadData, modelica_metatype _op, modelica_metatype _e1, modelica_metatype _e2)
@@ -12027,11 +12051,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ExpressionSimplify_simplifyAddMa
 PROTECTED_FUNCTION_STATIC modelica_real omc_ExpressionSimplify_simplifyAddJoinTerms_addCoeff(threadData_t *threadData, modelica_metatype _oldCoeff, modelica_real _newCoeff)
 {
   modelica_real _coeff;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _coeff has no default value.
   _coeff = (isSome(_oldCoeff)?mmc_unbox_real(omc_Util_getOption(threadData, _oldCoeff)) + _newCoeff:_newCoeff);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _coeff;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ExpressionSimplify_simplifyAddJoinTerms_addCoeff(threadData_t *threadData, modelica_metatype _oldCoeff, modelica_metatype _newCoeff)
@@ -14666,6 +14696,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ExpressionSimplify_simplifyBinary
 {
   modelica_boolean _found;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _found has no default value.
@@ -14786,6 +14819,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_ExpressionSimplify_simplifyBinary
   }
   _found = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _found;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ExpressionSimplify_simplifyBinaryArrayOp(threadData_t *threadData, modelica_metatype _inOperator)
@@ -17044,6 +17080,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ExpressionSimplify_simplifyCa
 
 PROTECTED_FUNCTION_STATIC void omc_ExpressionSimplify_simplifySymmetric(threadData_t *threadData, modelica_metatype _marr, modelica_integer _i1, modelica_integer _i2)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -17102,6 +17141,9 @@ PROTECTED_FUNCTION_STATIC void omc_ExpressionSimplify_simplifySymmetric(threadDa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_ExpressionSimplify_simplifySymmetric(threadData_t *threadData, modelica_metatype _marr, modelica_metatype _i1, modelica_metatype _i2)
@@ -19210,6 +19252,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_ExpressionSimplify_simplifyBuilt
             modelica_integer _j;
             for(_j = ((modelica_integer) 1); in_range_integer(_j, tmp500, tmp502); _j += tmp501)
             {
+
               _tp1 = omc_Types_liftArray(threadData, _tp, _OMC_LIT91);
 
               tmpMeta499 = mmc_mk_cons(_e1, MMC_REFSTRUCTLIT(mmc_nil));
@@ -21866,6 +21909,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_ExpressionSimplify_simplify1F
 
 PROTECTED_FUNCTION_STATIC void omc_ExpressionSimplify_checkSimplify(threadData_t *threadData, modelica_boolean _check, modelica_metatype _before, modelica_metatype _after)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -21963,6 +22009,9 @@ PROTECTED_FUNCTION_STATIC void omc_ExpressionSimplify_checkSimplify(threadData_t
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_ExpressionSimplify_checkSimplify(threadData_t *threadData, modelica_metatype _check, modelica_metatype _before, modelica_metatype _after)

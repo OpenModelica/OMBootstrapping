@@ -22,6 +22,7 @@ extern "C" {
 #include "NBTearing.h"
 #include "NBVariable.h"
 #include "NBackendDAE.h"
+#include "NFAlgorithm.h"
 #include "NFCall.h"
 #include "NFComponentRef.h"
 #include "NFExpression.h"

@@ -72,6 +72,16 @@ extern struct record_description DAE_InlineType_AFTER__INDEX__RED__INLINE__desc;
 
 extern struct record_description DAE_InlineType_NORM__INLINE__desc;
 
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__BOOL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__ENUMERATION__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__INT__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__REAL__desc;
+
+extern struct record_description DAE_VariableAttributes_VAR__ATTR__STRING__desc;
+
 extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
 
 extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
@@ -79,8 +89,6 @@ extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
 extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
 
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
-
-extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
 
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
@@ -137,6 +145,39 @@ DLLDirection
 modelica_metatype boxptr_BackendInline_inlineEq(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _fns, modelica_metatype *out_inlined);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_inlineEq,2,0) {(void*) boxptr_BackendInline_inlineEq,0}};
 #define boxvar_BackendInline_inlineEq MMC_REFSTRUCTLIT(boxvar_lit_BackendInline_inlineEq)
+
+
+#define boxptr_BackendInline_mergeOpt omc_BackendInline_mergeOpt
+
+
+#define boxptr_BackendInline_attrConst omc_BackendInline_attrConst
+
+
+#define boxptr_BackendInline_emptyAttrLike omc_BackendInline_emptyAttrLike
+
+
+#define boxptr_BackendInline_mergeDAEAttributes omc_BackendInline_mergeDAEAttributes
+
+
+#define boxptr_BackendInline_mergeVarOntoCref omc_BackendInline_mergeVarOntoCref
+
+
+#define boxptr_BackendInline_mergeVarOntoArg omc_BackendInline_mergeVarOntoArg
+
+
+#define boxptr_BackendInline_propagateInputsExp omc_BackendInline_propagateInputsExp
+
+
+#define boxptr_BackendInline_propagateOutput omc_BackendInline_propagateOutput
+
+
+#define boxptr_BackendInline_propagateInputsExpDeep omc_BackendInline_propagateInputsExpDeep
+
+
+#define boxptr_BackendInline_propagateEqnAttributes omc_BackendInline_propagateEqnAttributes
+
+
+#define boxptr_BackendInline_propagateAttributes omc_BackendInline_propagateAttributes
 
 
 #define boxptr_BackendInline_inlineEquationSystem omc_BackendInline_inlineEquationSystem

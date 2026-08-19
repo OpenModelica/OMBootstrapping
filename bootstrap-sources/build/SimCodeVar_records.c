@@ -32,7 +32,7 @@ extern struct record_description SimCodeVar_SimVars_SIMVARS__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCodeVar_SimVar_SIMVAR__desc_added
 #define SimCodeVar_SimVar_SIMVAR__desc_added
-ADD_METARECORD_DEFINITIONS const char* SimCodeVar_SimVar_SIMVAR__desc__fields[31] = {"name","varKind","comment","unit","displayUnit","index","minValue","maxValue","initialValue","nominalValue","isFixed","type_","isDiscrete","arrayCref","aliasvar","source","causality","variable_index","fmi_index","numArrayElement","isValueChangeable","isProtected","hideResult","isEncrypted","inputIndex","initNonlinear","matrixName","variability","initial_","exportVar","relativeQuantity"};
+ADD_METARECORD_DEFINITIONS const char* SimCodeVar_SimVar_SIMVAR__desc__fields[32] = {"name","varKind","comment","unit","displayUnit","index","minValue","maxValue","initialValue","nominalValue","isFixed","type_","isDiscrete","arrayCref","aliasvar","source","causality","variable_index","fmi_index","numArrayElement","isValueChangeable","isProtected","hideResult","isEncrypted","inputIndex","initNonlinear","matrixName","variability","initial_","exportVar","relativeQuantity","isConnectorFlow"};
 ADD_METARECORD_DEFINITIONS struct record_description SimCodeVar_SimVar_SIMVAR__desc = {
   "SimCodeVar_SimVar_SIMVAR",
   "SimCodeVar.SimVar.SIMVAR",
@@ -45,7 +45,7 @@ extern struct record_description SimCodeVar_SimVar_SIMVAR__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCodeVar_SimVar_SIMVAR__desc_added
 #define SimCodeVar_SimVar_SIMVAR__desc_added
-ADD_METARECORD_DEFINITIONS const char* SimCodeVar_SimVar_SIMVAR__desc__fields[31] = {"name","varKind","comment","unit","displayUnit","index","minValue","maxValue","initialValue","nominalValue","isFixed","type_","isDiscrete","arrayCref","aliasvar","source","causality","variable_index","fmi_index","numArrayElement","isValueChangeable","isProtected","hideResult","isEncrypted","inputIndex","initNonlinear","matrixName","variability","initial_","exportVar","relativeQuantity"};
+ADD_METARECORD_DEFINITIONS const char* SimCodeVar_SimVar_SIMVAR__desc__fields[32] = {"name","varKind","comment","unit","displayUnit","index","minValue","maxValue","initialValue","nominalValue","isFixed","type_","isDiscrete","arrayCref","aliasvar","source","causality","variable_index","fmi_index","numArrayElement","isValueChangeable","isProtected","hideResult","isEncrypted","inputIndex","initNonlinear","matrixName","variability","initial_","exportVar","relativeQuantity","isConnectorFlow"};
 ADD_METARECORD_DEFINITIONS struct record_description SimCodeVar_SimVar_SIMVAR__desc = {
   "SimCodeVar_SimVar_SIMVAR",
   "SimCodeVar.SimVar.SIMVAR",

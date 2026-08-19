@@ -4,6 +4,110 @@
 extern "C" {
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_Dependency_DEPENDENCY__desc_added
+#define SimCode_Dependency_DEPENDENCY__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_Dependency_DEPENDENCY__desc__fields[2] = {"skips","kinds"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_Dependency_DEPENDENCY__desc = {
+  "SimCode_Dependency_DEPENDENCY",
+  "SimCode.Dependency.DEPENDENCY",
+  SimCode_Dependency_DEPENDENCY__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_Dependency_DEPENDENCY__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_Dependency_DEPENDENCY__desc_added
+#define SimCode_Dependency_DEPENDENCY__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_Dependency_DEPENDENCY__desc__fields[2] = {"skips","kinds"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_Dependency_DEPENDENCY__desc = {
+  "SimCode_Dependency_DEPENDENCY",
+  "SimCode.Dependency.DEPENDENCY",
+  SimCode_Dependency_DEPENDENCY__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_Dependency_DEPENDENCY__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_SparsityRow_SPARSITY__ROW__desc_added
+#define SimCode_SparsityRow_SPARSITY__ROW__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_SparsityRow_SPARSITY__ROW__desc__fields[4] = {"equation_name","equation_iterators","dependencies","solved_crefs"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_SparsityRow_SPARSITY__ROW__desc = {
+  "SimCode_SparsityRow_SPARSITY__ROW",
+  "SimCode.SparsityRow.SPARSITY_ROW",
+  SimCode_SparsityRow_SPARSITY__ROW__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_SparsityRow_SPARSITY__ROW__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_SparsityRow_SPARSITY__ROW__desc_added
+#define SimCode_SparsityRow_SPARSITY__ROW__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_SparsityRow_SPARSITY__ROW__desc__fields[4] = {"equation_name","equation_iterators","dependencies","solved_crefs"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_SparsityRow_SPARSITY__ROW__desc = {
+  "SimCode_SparsityRow_SPARSITY__ROW",
+  "SimCode.SparsityRow.SPARSITY_ROW",
+  SimCode_SparsityRow_SPARSITY__ROW__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_SparsityRow_SPARSITY__ROW__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_Sparsity_SPARSITY__desc_added
+#define SimCode_Sparsity_SPARSITY__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_Sparsity_SPARSITY__desc__fields[1] = {"rows"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_Sparsity_SPARSITY__desc = {
+  "SimCode_Sparsity_SPARSITY",
+  "SimCode.Sparsity.SPARSITY",
+  SimCode_Sparsity_SPARSITY__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_Sparsity_SPARSITY__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_Sparsity_EMPTY__desc_added
+#define SimCode_Sparsity_EMPTY__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_Sparsity_EMPTY__desc__fields[1] = {"no fields"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_Sparsity_EMPTY__desc = {
+  "SimCode_Sparsity_EMPTY",
+  "SimCode.Sparsity.EMPTY",
+  SimCode_Sparsity_EMPTY__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_Sparsity_EMPTY__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_Sparsity_EMPTY__desc_added
+#define SimCode_Sparsity_EMPTY__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_Sparsity_EMPTY__desc__fields[1] = {"no fields"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_Sparsity_EMPTY__desc = {
+  "SimCode_Sparsity_EMPTY",
+  "SimCode.Sparsity.EMPTY",
+  SimCode_Sparsity_EMPTY__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_Sparsity_EMPTY__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_Sparsity_SPARSITY__desc_added
+#define SimCode_Sparsity_SPARSITY__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_Sparsity_SPARSITY__desc__fields[1] = {"rows"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_Sparsity_SPARSITY__desc = {
+  "SimCode_Sparsity_SPARSITY",
+  "SimCode.Sparsity.SPARSITY",
+  SimCode_Sparsity_SPARSITY__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_Sparsity_SPARSITY__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCode_JacobianColumn_JAC__COLUMN__desc_added
 #define SimCode_JacobianColumn_JAC__COLUMN__desc_added
 ADD_METARECORD_DEFINITIONS const char* SimCode_JacobianColumn_JAC__COLUMN__desc__fields[4] = {"columnEqns","columnVars","numberOfResultVars","constantEqns"};
@@ -32,7 +136,7 @@ extern struct record_description SimCode_JacobianColumn_JAC__COLUMN__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCode_JacobianMatrix_JAC__MATRIX__desc_added
 #define SimCode_JacobianMatrix_JAC__MATRIX__desc_added
-ADD_METARECORD_DEFINITIONS const char* SimCode_JacobianMatrix_JAC__MATRIX__desc__fields[15] = {"columns","seedVars","matrixName","sparsity","sparsityT","nonlinear","nonlinearT","coloredCols","coloredRows","maxColorCols","jacobianIndex","partitionIndex","generic_loop_calls","crefsHT","isAdjoint"};
+ADD_METARECORD_DEFINITIONS const char* SimCode_JacobianMatrix_JAC__MATRIX__desc__fields[19] = {"columns","seedVars","matrixName","sparsityMatrix","sparsity","sparsityT","nonlinear","nonlinearT","coloredCols","coloredRows","maxColorCols","jacobianIndex","partitionIndex","generic_loop_calls","crefsHT","isAdjoint","isBidirectional","adjointJacobianIndex","adjointMatrixName"};
 ADD_METARECORD_DEFINITIONS struct record_description SimCode_JacobianMatrix_JAC__MATRIX__desc = {
   "SimCode_JacobianMatrix_JAC__MATRIX",
   "SimCode.JacobianMatrix.JAC_MATRIX",
@@ -45,7 +149,7 @@ extern struct record_description SimCode_JacobianMatrix_JAC__MATRIX__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCode_JacobianMatrix_JAC__MATRIX__desc_added
 #define SimCode_JacobianMatrix_JAC__MATRIX__desc_added
-ADD_METARECORD_DEFINITIONS const char* SimCode_JacobianMatrix_JAC__MATRIX__desc__fields[15] = {"columns","seedVars","matrixName","sparsity","sparsityT","nonlinear","nonlinearT","coloredCols","coloredRows","maxColorCols","jacobianIndex","partitionIndex","generic_loop_calls","crefsHT","isAdjoint"};
+ADD_METARECORD_DEFINITIONS const char* SimCode_JacobianMatrix_JAC__MATRIX__desc__fields[19] = {"columns","seedVars","matrixName","sparsityMatrix","sparsity","sparsityT","nonlinear","nonlinearT","coloredCols","coloredRows","maxColorCols","jacobianIndex","partitionIndex","generic_loop_calls","crefsHT","isAdjoint","isBidirectional","adjointJacobianIndex","adjointMatrixName"};
 ADD_METARECORD_DEFINITIONS struct record_description SimCode_JacobianMatrix_JAC__MATRIX__desc = {
   "SimCode_JacobianMatrix_JAC__MATRIX",
   "SimCode.JacobianMatrix.JAC_MATRIX",
@@ -266,7 +370,7 @@ extern struct record_description SimCode_SpatialDistributionInfo_SPATIAL__DISTRI
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc_added
 #define SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc_added
-ADD_METARECORD_DEFINITIONS const char* SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc__fields[8] = {"index","in0","in1","pos","dir","initPnts","initVals","initSize"};
+ADD_METARECORD_DEFINITIONS const char* SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc__fields[9] = {"index","in0","in1","pos","dir","initPnts","initVals","initSize","condition"};
 ADD_METARECORD_DEFINITIONS struct record_description SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc = {
   "SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION",
   "SimCode.SpatialDistribution.SPATIAL_DISTRIBUTION",
@@ -279,7 +383,7 @@ extern struct record_description SimCode_SpatialDistribution_SPATIAL__DISTRIBUTI
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc_added
 #define SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc_added
-ADD_METARECORD_DEFINITIONS const char* SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc__fields[8] = {"index","in0","in1","pos","dir","initPnts","initVals","initSize"};
+ADD_METARECORD_DEFINITIONS const char* SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc__fields[9] = {"index","in0","in1","pos","dir","initPnts","initVals","initSize","condition"};
 ADD_METARECORD_DEFINITIONS struct record_description SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc = {
   "SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION",
   "SimCode.SpatialDistribution.SPATIAL_DISTRIBUTION",
@@ -1536,6 +1640,188 @@ ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiModelStructure_F
 #endif
 #else /* Only use the file as a header */
 extern struct record_description SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiTerminal_FMI__TERMINAL__desc_added
+#define SimCode_FmiTerminal_FMI__TERMINAL__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiTerminal_FMI__TERMINAL__desc__fields[4] = {"name","terminalKind","isExpandable","members"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiTerminal_FMI__TERMINAL__desc = {
+  "SimCode_FmiTerminal_FMI__TERMINAL",
+  "SimCode.FmiTerminal.FMI_TERMINAL",
+  SimCode_FmiTerminal_FMI__TERMINAL__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiTerminal_FMI__TERMINAL__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiTerminal_FMI__TERMINAL__desc_added
+#define SimCode_FmiTerminal_FMI__TERMINAL__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiTerminal_FMI__TERMINAL__desc__fields[4] = {"name","terminalKind","isExpandable","members"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiTerminal_FMI__TERMINAL__desc = {
+  "SimCode_FmiTerminal_FMI__TERMINAL",
+  "SimCode.FmiTerminal.FMI_TERMINAL",
+  SimCode_FmiTerminal_FMI__TERMINAL__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiTerminal_FMI__TERMINAL__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc_added
+#define SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc__fields[3] = {"variable","memberName","variableKind"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc = {
+  "SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER",
+  "SimCode.FmiTerminalMember.FMI_TERMINAL_MEMBER",
+  SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc_added
+#define SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc__fields[3] = {"variable","memberName","variableKind"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc = {
+  "SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER",
+  "SimCode.FmiTerminalMember.FMI_TERMINAL_MEMBER",
+  SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiFigure_FMI__FIGURE__desc_added
+#define SimCode_FmiFigure_FMI__FIGURE__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiFigure_FMI__FIGURE__desc__fields[5] = {"title","group","preferred","caption","plots"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiFigure_FMI__FIGURE__desc = {
+  "SimCode_FmiFigure_FMI__FIGURE",
+  "SimCode.FmiFigure.FMI_FIGURE",
+  SimCode_FmiFigure_FMI__FIGURE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiFigure_FMI__FIGURE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiFigure_FMI__FIGURE__desc_added
+#define SimCode_FmiFigure_FMI__FIGURE__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiFigure_FMI__FIGURE__desc__fields[5] = {"title","group","preferred","caption","plots"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiFigure_FMI__FIGURE__desc = {
+  "SimCode_FmiFigure_FMI__FIGURE",
+  "SimCode.FmiFigure.FMI_FIGURE",
+  SimCode_FmiFigure_FMI__FIGURE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiFigure_FMI__FIGURE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiPlot_FMI__PLOT__desc_added
+#define SimCode_FmiPlot_FMI__PLOT__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiPlot_FMI__PLOT__desc__fields[5] = {"title","curves","xAxis","yAxis","terminal"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiPlot_FMI__PLOT__desc = {
+  "SimCode_FmiPlot_FMI__PLOT",
+  "SimCode.FmiPlot.FMI_PLOT",
+  SimCode_FmiPlot_FMI__PLOT__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiPlot_FMI__PLOT__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiPlot_FMI__PLOT__desc_added
+#define SimCode_FmiPlot_FMI__PLOT__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiPlot_FMI__PLOT__desc__fields[5] = {"title","curves","xAxis","yAxis","terminal"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiPlot_FMI__PLOT__desc = {
+  "SimCode_FmiPlot_FMI__PLOT",
+  "SimCode.FmiPlot.FMI_PLOT",
+  SimCode_FmiPlot_FMI__PLOT__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiPlot_FMI__PLOT__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiCurve_FMI__CURVE__desc_added
+#define SimCode_FmiCurve_FMI__CURVE__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiCurve_FMI__CURVE__desc__fields[3] = {"xVariable","yVariable","legend"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiCurve_FMI__CURVE__desc = {
+  "SimCode_FmiCurve_FMI__CURVE",
+  "SimCode.FmiCurve.FMI_CURVE",
+  SimCode_FmiCurve_FMI__CURVE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiCurve_FMI__CURVE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiCurve_FMI__CURVE__desc_added
+#define SimCode_FmiCurve_FMI__CURVE__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiCurve_FMI__CURVE__desc__fields[3] = {"xVariable","yVariable","legend"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiCurve_FMI__CURVE__desc = {
+  "SimCode_FmiCurve_FMI__CURVE",
+  "SimCode.FmiCurve.FMI_CURVE",
+  SimCode_FmiCurve_FMI__CURVE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiCurve_FMI__CURVE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc_added
+#define SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc__fields[5] = {"label","unit","min","max","logScale"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc = {
+  "SimCode_FmiFigureAxis_FMI__FIGURE__AXIS",
+  "SimCode.FmiFigureAxis.FMI_FIGURE_AXIS",
+  SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc_added
+#define SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc__fields[5] = {"label","unit","min","max","logScale"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc = {
+  "SimCode_FmiFigureAxis_FMI__FIGURE__AXIS",
+  "SimCode.FmiFigureAxis.FMI_FIGURE_AXIS",
+  SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiClock_FMI__CLOCK__desc_added
+#define SimCode_FmiClock_FMI__CLOCK__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiClock_FMI__CLOCK__desc__fields[7] = {"valueReference","name","intervalVariability","supportsFraction","intervalDecimal","intervalCounter","resolution"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiClock_FMI__CLOCK__desc = {
+  "SimCode_FmiClock_FMI__CLOCK",
+  "SimCode.FmiClock.FMI_CLOCK",
+  SimCode_FmiClock_FMI__CLOCK__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiClock_FMI__CLOCK__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiClock_FMI__CLOCK__desc_added
+#define SimCode_FmiClock_FMI__CLOCK__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiClock_FMI__CLOCK__desc__fields[7] = {"valueReference","name","intervalVariability","supportsFraction","intervalDecimal","intervalCounter","resolution"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiClock_FMI__CLOCK__desc = {
+  "SimCode_FmiClock_FMI__CLOCK",
+  "SimCode.FmiClock.FMI_CLOCK",
+  SimCode_FmiClock_FMI__CLOCK__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiClock_FMI__CLOCK__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCode_FmiSimulationFlags_FMI__SIMULATION__FLAGS__desc_added

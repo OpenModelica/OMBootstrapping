@@ -202,14 +202,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TplMain_testStringEquality,2,0) {(void*
 
 
 DLLDirection
-void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile);
+void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile, modelica_string _inOutputDir);
 #define boxptr_TplMain_translateFile omc_TplMain_translateFile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplMain_translateFile,2,0) {(void*) boxptr_TplMain_translateFile,0}};
 #define boxvar_TplMain_translateFile MMC_REFSTRUCTLIT(boxvar_lit_TplMain_translateFile)
 
 
 DLLDirection
-void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile);
+void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile, modelica_string _inOutputDir);
 #define boxptr_TplMain_main omc_TplMain_main
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplMain_main,2,0) {(void*) boxptr_TplMain_main,0}};
 #define boxvar_TplMain_main MMC_REFSTRUCTLIT(boxvar_lit_TplMain_main)

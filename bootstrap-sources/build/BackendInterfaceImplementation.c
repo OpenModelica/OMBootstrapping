@@ -99,11 +99,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendInterfaceImplementatio
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_BackendInterfaceImplementation_noRewriteRulesFrontEnd(threadData_t *threadData)
 {
   modelica_boolean _noRules;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _noRules has no default value.
   _noRules = omc_RewriteRules_noRewriteRulesFrontEnd(threadData);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _noRules;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendInterfaceImplementation_noRewriteRulesFrontEnd(threadData_t *threadData)
@@ -198,6 +204,9 @@ void omc_BackendInterfaceImplementation_initializeBackendInterface(threadData_t 
 {
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_box5(3, &BackendInterface_BackendInterfaceFunctions_BACKEND__INTERFACE__FUNCTIONS__desc, boxvar_BackendInterfaceImplementation_noRewriteRulesFrontEnd, boxvar_BackendInterfaceImplementation_rewriteFrontEnd, boxvar_BackendInterfaceImplementation_appendLibrary, boxvar_InstHashTable_init);
@@ -206,6 +215,9 @@ void omc_BackendInterfaceImplementation_initializeBackendInterface(threadData_t 
   tmpMeta2 = mmc_mk_box4(3, &BackendCevalInterface_BackendInterfaceFunctions_BACKEND__INTERFACE__FUNCTIONS__desc, boxvar_BackendInterfaceImplementation_cevalInteractiveFunctions, boxvar_BackendInterfaceImplementation_cevalCallFunction, boxvar_BackendInterfaceImplementation_elabCallInteractive);
   omc_BackendCevalInterface_initializeBackendInterface(threadData, tmpMeta2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

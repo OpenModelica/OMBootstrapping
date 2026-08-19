@@ -265,6 +265,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTyping_typeIfEquation,2,0) {(void*) b
 
 
 DLLDirection
+modelica_metatype omc_NFTyping_typeForEquation(threadData_t *threadData, modelica_metatype _eq, modelica_integer _context);
+DLLDirection
+modelica_metatype boxptr_NFTyping_typeForEquation(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _context);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTyping_typeForEquation,2,0) {(void*) boxptr_NFTyping_typeForEquation,0}};
+#define boxvar_NFTyping_typeForEquation MMC_REFSTRUCTLIT(boxvar_lit_NFTyping_typeForEquation)
+
+
+DLLDirection
 modelica_metatype omc_NFTyping_typeCondition(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcondition, modelica_integer _context, modelica_metatype _source, modelica_metatype _errorMsg, modelica_boolean _allowVector, modelica_boolean _allowClock, modelica_metatype *out_ty, modelica_integer *out_variability);
 DLLDirection
 modelica_metatype boxptr_NFTyping_typeCondition(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcondition, modelica_metatype _context, modelica_metatype _source, modelica_metatype _errorMsg, modelica_metatype _allowVector, modelica_metatype _allowClock, modelica_metatype *out_ty, modelica_metatype *out_variability);

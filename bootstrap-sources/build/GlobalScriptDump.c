@@ -61,12 +61,18 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_GlobalScriptDump_classString(threa
 DLLDirection
 void omc_GlobalScriptDump_printGlobalScript(threadData_t *threadData, modelica_metatype _st)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   fputs(MMC_STRINGDATA(_OMC_LIT1),stdout);
 
   omc_GlobalScriptDump_printAST(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_st), 2))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -84,6 +90,9 @@ void omc_GlobalScriptDump_printAST(threadData_t *threadData, modelica_metatype _
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _s = _OMC_LIT2;
@@ -110,6 +119,9 @@ void omc_GlobalScriptDump_printAST(threadData_t *threadData, modelica_metatype _
 
   fputs(MMC_STRINGDATA(_s),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

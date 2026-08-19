@@ -194,6 +194,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeFlattenRedeclare_addElementRedec
 
 PROTECTED_FUNCTION_STATIC void omc_NFSCodeFlattenRedeclare_tracePushRedeclareIntoExtends(threadData_t *threadData, modelica_string _inName, modelica_metatype _inRedeclare, modelica_metatype _inBaseClasses, modelica_metatype _inEnv, modelica_metatype _inEtNew, modelica_metatype _inEtOld)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -295,11 +298,17 @@ PROTECTED_FUNCTION_STATIC void omc_NFSCodeFlattenRedeclare_tracePushRedeclareInt
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_NFSCodeFlattenRedeclare_traceReplaceElementInScope(threadData_t *threadData, modelica_string _inElementName, modelica_metatype _inOldItem, modelica_metatype _inNewItem, modelica_metatype _inEnv)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -374,6 +383,9 @@ PROTECTED_FUNCTION_STATIC void omc_NFSCodeFlattenRedeclare_traceReplaceElementIn
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

@@ -465,6 +465,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFStateMachineFlatten_groupStateMachine
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_crefHasPrefix(threadData_t *threadData, modelica_metatype _prefix, modelica_metatype _cref)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _res = 0 /* false */;
@@ -488,6 +491,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_crefHasPref
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_crefHasPrefix(threadData_t *threadData, modelica_metatype _prefix, modelica_metatype _cref)
@@ -1035,6 +1041,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isOuterStat
   modelica_boolean _res;
   modelica_metatype _eqScope = NULL;
   modelica_string _scopeName = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _res = 0 /* false */;
@@ -1118,6 +1127,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isOuterStat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isOuterStateEquation(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _stateCrefs)
@@ -1132,11 +1144,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isOuter
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isVariableOfState(threadData_t *threadData, modelica_metatype _var, modelica_metatype _stateCref)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   _res = omc_NFStateMachineFlatten_crefHasPrefix(threadData, _stateCref, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 2))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isVariableOfState(threadData_t *threadData, modelica_metatype _var, modelica_metatype _stateCref)
@@ -1153,6 +1171,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isEquationO
   modelica_boolean _res;
   modelica_metatype _eqScope = NULL;
   modelica_string _stateName = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _res = 0 /* false */;
@@ -1206,6 +1227,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isEquationO
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isEquationOfState(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _stateCref)
@@ -1221,6 +1245,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isInitialSt
 {
   modelica_boolean _res;
   modelica_metatype _cr = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _res = 0 /* false */;
@@ -1277,6 +1304,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isInitialSt
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isInitialStateForGroup(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _initStateCref)
@@ -1292,6 +1322,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isTransitio
 {
   modelica_boolean _res;
   modelica_metatype _cr = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _res = 0 /* false */;
@@ -1362,6 +1395,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isTransitio
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isTransitionForGroup(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _stateCrefs)
@@ -1376,6 +1412,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isTrans
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isTransitionOrInitialState(threadData_t *threadData, modelica_metatype _eq)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _res = 0 /* false */;
@@ -1460,6 +1499,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isTransitio
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isTransitionOrInitialState(threadData_t *threadData, modelica_metatype _eq)
@@ -1474,11 +1516,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isTrans
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_priorityGt(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)
 {
   modelica_boolean _gt;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _gt has no default value.
   _gt = (mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_t1), 8)))) > mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_t2), 8)))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _gt;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_priorityGt(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)
@@ -3000,6 +3048,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFStateMachineFlatten_addPropaga
     modelica_integer _j;
     for(_j = ((modelica_integer) 1); in_range_integer(_j, tmp38, tmp40); _j += tmp39)
     {
+
       _stateRef = arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inSem), 3))), _j);
 
       _activePlotVar = omc_NFStateMachineFlatten_createActiveIndicator(threadData, _stateRef, _preRef, _j ,&_activePlotEq);
@@ -3535,6 +3584,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFStateMachineFlatten_basicFlatS
     modelica_integer _j;
     for(_j = ((modelica_integer) 1); in_range_integer(_j, tmp111, tmp113); _j += tmp112)
     {
+
       tmpMeta98 = mmc_mk_box2(3, &NFExpression_INTEGER__desc, mmc_mk_integer(_j));
       tmpMeta99 = mmc_mk_box2(5, &NFSubscript_INDEX__desc, tmpMeta98);
       tmpMeta97 = mmc_mk_cons(tmpMeta99, MMC_REFSTRUCTLIT(mmc_nil));
@@ -3616,6 +3666,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFStateMachineFlatten_basicFlatS
     modelica_integer _j;
     for(_j = ((modelica_integer) 1); in_range_integer(_j, tmp128, tmp130); _j += tmp129)
     {
+
       _expCond = omc_NFStateMachineFlatten_makeRelationEq(threadData, omc_NFStateMachineFlatten_makeCrefExp(threadData, listGet(_tFromRefs, _j), _OMC_LIT38), omc_NFStateMachineFlatten_makeCrefExp(threadData, _selectedStateRef, _OMC_LIT38), _OMC_LIT38);
 
       _expIf = omc_NFStateMachineFlatten_makeIfExp(threadData, _expCond, omc_NFStateMachineFlatten_makeCrefExp(threadData, listGet(_cRefs, _j), _OMC_LIT49), _OMC_LIT4, _OMC_LIT49);
@@ -3667,6 +3718,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFStateMachineFlatten_basicFlatS
     modelica_integer _j;
     for(_j = ((modelica_integer) 1); in_range_integer(_j, tmp141, tmp143); _j += tmp142)
     {
+
       tmpMeta140 = mmc_mk_cons(omc_NFStateMachineFlatten_makeEq(threadData, omc_NFStateMachineFlatten_makeCrefExp(threadData, listGet(_activeResetStatesRefs, _j), _OMC_LIT49), omc_NFStateMachineFlatten_makeIfExp(threadData, omc_NFStateMachineFlatten_makeCrefExp(threadData, _resetRef, _OMC_LIT49), _OMC_LIT56, omc_NFStateMachineFlatten_makePreviousCall(threadData, omc_NFStateMachineFlatten_makeCrefExp(threadData, listGet(_nextResetStatesRefs, _j), _OMC_LIT49), _OMC_LIT49), _OMC_LIT49), _OMC_LIT49), _eqs);
       _eqs = tmpMeta140;
     }
@@ -3678,6 +3730,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFStateMachineFlatten_basicFlatS
     modelica_integer _j;
     for(_j = ((modelica_integer) 1); in_range_integer(_j, tmp146, tmp148); _j += tmp147)
     {
+
       tmpMeta144 = mmc_mk_box2(3, &NFExpression_INTEGER__desc, mmc_mk_integer(_j));
       _exp1 = omc_NFStateMachineFlatten_makeRelationEq(threadData, omc_NFStateMachineFlatten_makeCrefExp(threadData, _activeStateRef, _OMC_LIT38), tmpMeta144, _OMC_LIT38);
 
@@ -3696,6 +3749,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFStateMachineFlatten_basicFlatS
     modelica_integer _j;
     for(_j = ((modelica_integer) 1); in_range_integer(_j, tmp156, tmp158); _j += tmp157)
     {
+
       tmpMeta149 = MMC_REFSTRUCTLIT(mmc_nil);
       _expLst = tmpMeta149;
 
@@ -3705,6 +3759,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFStateMachineFlatten_basicFlatS
         modelica_integer _k;
         for(_k = ((modelica_integer) 1); in_range_integer(_k, tmp152, tmp154); _k += tmp153)
         {
+
           tmpMeta150 = mmc_mk_box2(3, &NFExpression_INTEGER__desc, mmc_mk_integer(_j));
           _expCond = omc_NFStateMachineFlatten_makeRelationEq(threadData, omc_NFStateMachineFlatten_makeCrefExp(threadData, listGet(_tFromRefs, _k), _OMC_LIT38), tmpMeta150, _OMC_LIT38);
 
@@ -3803,6 +3858,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isPreviousO
   modelica_metatype _args = NULL;
   modelica_metatype _argCref = NULL;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -3892,6 +3950,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isPreviousO
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isPreviousOfCref(threadData_t *threadData, modelica_metatype _e, modelica_metatype _varCref)
@@ -3917,6 +3978,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_equationHas
   modelica_boolean _found;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _found has no default value.
@@ -3924,6 +3988,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_equationHas
   tmpMeta1 = mmc_mk_box1(0, (modelica_fnptr) mmc_mk_box2(0,closure3_NFStateMachineFlatten_isPreviousOfCref,tmpMeta2));
   _found = omc_NFEquation_containsExp(threadData, _eq, (modelica_fnptr) mmc_mk_box2(0,closure2_NFExpression_contains,tmpMeta1));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _found;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_equationHasPrevious(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _varCref)
@@ -4511,11 +4578,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFStateMachineFlatten_addStateAc
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_isSimpleVarNamed(threadData_t *threadData, modelica_metatype _v, modelica_string _name)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   _res = (omc_NFComponentRef_isSimple(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 2)))) && (stringEqual(omc_NFComponentRef_firstName(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 2))), 0 /* false */), _name)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_isSimpleVarNamed(threadData_t *threadData, modelica_metatype _v, modelica_metatype _name)
@@ -4542,6 +4615,9 @@ PROTECTED_FUNCTION_STATIC void omc_NFStateMachineFlatten_addHierarchicalPassThro
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta10;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _stateStr has no default value.
@@ -4618,6 +4694,9 @@ PROTECTED_FUNCTION_STATIC void omc_NFStateMachineFlatten_addHierarchicalPassThro
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -4921,6 +5000,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_smGroupDept
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _lt has no default value.
@@ -4938,6 +5020,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_smGroupDept
 
   _lt = (omc_NFComponentRef_depth(threadData, _c1) < omc_NFComponentRef_depth(threadData, _c2));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _lt;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_smGroupDepthLt(threadData_t *threadData, modelica_metatype _g1, modelica_metatype _g2)
@@ -4952,6 +5037,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_smGroup
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_statePriorityGt(threadData_t *threadData, modelica_metatype _cr1, modelica_metatype _cr2, modelica_metatype _initCref)
 {
   modelica_boolean _gt;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _gt has no default value.
@@ -4971,6 +5059,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFStateMachineFlatten_statePriori
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _gt;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFStateMachineFlatten_statePriorityGt(threadData_t *threadData, modelica_metatype _cr1, modelica_metatype _cr2, modelica_metatype _initCref)
@@ -5043,6 +5134,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFStateMachineFlatten_collectRea
         modelica_integer _i;
         for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp11, tmp13); _i += tmp12)
         {
+
           if(omc_NFComponentRef_isEqual(threadData, listGet(_froms, _i), _cur))
           {
             tmpMeta9 = mmc_mk_cons(listGet(_tos, _i), _queue);

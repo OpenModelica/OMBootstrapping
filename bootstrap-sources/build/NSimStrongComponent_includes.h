@@ -22,6 +22,7 @@ extern "C" {
 #include "NFScalarize.h"
 #include "NFStatement.h"
 #include "NFSubscript.h"
+#include "NFType.h"
 #include "NFVariable.h"
 #include "NSimGenericCall.h"
 #include "NSimJacobian.h"

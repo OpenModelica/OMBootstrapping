@@ -331,6 +331,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertFunctionTree,2,0) {
 #define boxptr_NFConvertDAE_convertVarAttributes omc_NFConvertDAE_convertVarAttributes
 
 
+#define boxptr_NFConvertDAE_addComponentLevelTypeToSource omc_NFConvertDAE_addComponentLevelTypeToSource
+
+
 #define boxptr_NFConvertDAE_addComponentTypeToSource omc_NFConvertDAE_addComponentTypeToSource
 
 

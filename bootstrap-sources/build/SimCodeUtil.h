@@ -14,6 +14,8 @@ extern struct record_description Absyn_Msg_NO__MSG__desc;
 
 extern struct record_description Absyn_Path_IDENT__desc;
 
+extern struct record_description Absyn_Path_QUALIFIED__desc;
+
 extern struct record_description AvlSetString_Tree_EMPTY__desc;
 
 extern struct record_description AvlTreeCRToInt_Tree_EMPTY__desc;
@@ -116,9 +118,15 @@ extern struct record_description DAE_Exp_RELATION__desc;
 
 extern struct record_description DAE_Exp_SCONST__desc;
 
+extern struct record_description DAE_InlineType_AFTER__INDEX__RED__INLINE__desc;
+
+extern struct record_description DAE_InlineType_NORM__INLINE__desc;
+
 extern struct record_description DAE_InlineType_NO__INLINE__desc;
 
 extern struct record_description DAE_Operator_ADD__desc;
+
+extern struct record_description DAE_Operator_AND__desc;
 
 extern struct record_description DAE_Statement_STMT__ASSIGN__desc;
 
@@ -134,9 +142,13 @@ extern struct record_description DAE_TailCall_NO__TAIL__desc;
 
 extern struct record_description DAE_Type_T__ARRAY__desc;
 
+extern struct record_description DAE_Type_T__BOOL__desc;
+
 extern struct record_description DAE_Type_T__INTEGER__desc;
 
 extern struct record_description DAE_Type_T__REAL__desc;
+
+extern struct record_description DAE_Type_T__STRING__desc;
 
 extern struct record_description DAE_Type_T__UNKNOWN__desc;
 
@@ -168,8 +180,6 @@ extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
 
 extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
 
-extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
-
 extern struct record_description HpcOmSimCode_HpcOmData_HPCOMDATA__desc;
 
 extern struct record_description NFUnit_Unit_UNIT__desc;
@@ -192,9 +202,17 @@ extern struct record_description SimCode_ExtObjInfo_EXTOBJINFO__desc;
 
 extern struct record_description SimCode_FileInfo_FILEINFO__desc;
 
+extern struct record_description SimCode_FmiClock_FMI__CLOCK__desc;
+
+extern struct record_description SimCode_FmiCurve_FMI__CURVE__desc;
+
 extern struct record_description SimCode_FmiDerivatives_FMIDERIVATIVES__desc;
 
 extern struct record_description SimCode_FmiDiscreteStates_FMIDISCRETESTATES__desc;
+
+extern struct record_description SimCode_FmiFigure_FMI__FIGURE__desc;
+
+extern struct record_description SimCode_FmiFigureAxis_FMI__FIGURE__AXIS__desc;
 
 extern struct record_description SimCode_FmiInitialUnknowns_FMIINITIALUNKNOWNS__desc;
 
@@ -202,9 +220,15 @@ extern struct record_description SimCode_FmiModelStructure_FMIMODELSTRUCTURE__de
 
 extern struct record_description SimCode_FmiOutputs_FMIOUTPUTS__desc;
 
+extern struct record_description SimCode_FmiPlot_FMI__PLOT__desc;
+
 extern struct record_description SimCode_FmiSimulationFlags_FMI__SIMULATION__FLAGS__desc;
 
 extern struct record_description SimCode_FmiSimulationFlags_FMI__SIMULATION__FLAGS__FILE__desc;
+
+extern struct record_description SimCode_FmiTerminal_FMI__TERMINAL__desc;
+
+extern struct record_description SimCode_FmiTerminalMember_FMI__TERMINAL__MEMBER__desc;
 
 extern struct record_description SimCode_FmiUnknown_FMIUNKNOWN__desc;
 
@@ -257,6 +281,8 @@ extern struct record_description SimCode_SimEqSystem_SES__SIMPLE__ASSIGN__desc;
 extern struct record_description SimCode_SimEqSystem_SES__SIMPLE__ASSIGN__CONSTRAINTS__desc;
 
 extern struct record_description SimCode_SimEqSystem_SES__WHEN__desc;
+
+extern struct record_description SimCode_Sparsity_EMPTY__desc;
 
 extern struct record_description SimCode_SpatialDistribution_SPATIAL__DISTRIBUTION__desc;
 
@@ -320,6 +346,26 @@ modelica_metatype omc_SimCodeUtil_getExpNominal(threadData_t *threadData, modeli
 #define boxptr_SimCodeUtil_getExpNominal omc_SimCodeUtil_getExpNominal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getExpNominal,2,0) {(void*) boxptr_SimCodeUtil_getExpNominal,0}};
 #define boxvar_SimCodeUtil_getExpNominal MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getExpNominal)
+
+
+#define boxptr_SimCodeUtil_sparsityNonzeros omc_SimCodeUtil_sparsityNonzeros
+
+
+#define boxptr_SimCodeUtil_simJacNonzeros omc_SimCodeUtil_simJacNonzeros
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_nonlinearSystemMatrixFormat(threadData_t *threadData, modelica_metatype _nls);
+#define boxptr_SimCodeUtil_nonlinearSystemMatrixFormat omc_SimCodeUtil_nonlinearSystemMatrixFormat
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_nonlinearSystemMatrixFormat,2,0) {(void*) boxptr_SimCodeUtil_nonlinearSystemMatrixFormat,0}};
+#define boxvar_SimCodeUtil_nonlinearSystemMatrixFormat MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_nonlinearSystemMatrixFormat)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_linearSystemMatrixFormat(threadData_t *threadData, modelica_metatype _ls);
+#define boxptr_SimCodeUtil_linearSystemMatrixFormat omc_SimCodeUtil_linearSystemMatrixFormat
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_linearSystemMatrixFormat,2,0) {(void*) boxptr_SimCodeUtil_linearSystemMatrixFormat,0}};
+#define boxvar_SimCodeUtil_linearSystemMatrixFormat MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_linearSystemMatrixFormat)
 
 
 DLLDirection
@@ -412,7 +458,124 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_unbalancedEqSystemPartition
 #define boxptr_SimCodeUtil_getResources omc_SimCodeUtil_getResources
 
 
+#define boxptr_SimCodeUtil_clockConstString omc_SimCodeUtil_clockConstString
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getFMI3Clocks(threadData_t *threadData, modelica_metatype _simCode);
+#define boxptr_SimCodeUtil_getFMI3Clocks omc_SimCodeUtil_getFMI3Clocks
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3Clocks,2,0) {(void*) boxptr_SimCodeUtil_getFMI3Clocks,0}};
+#define boxvar_SimCodeUtil_getFMI3Clocks MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3Clocks)
+
+
+#define boxptr_SimCodeUtil_connectorTypePath omc_SimCodeUtil_connectorTypePath
+
+
+#define boxptr_SimCodeUtil_figureBoundArg omc_SimCodeUtil_figureBoundArg
+
+
+#define boxptr_SimCodeUtil_figureStrArg omc_SimCodeUtil_figureStrArg
+
+
+#define boxptr_SimCodeUtil_figureArgExp omc_SimCodeUtil_figureArgExp
+
+
+#define boxptr_SimCodeUtil_figureArgs omc_SimCodeUtil_figureArgs
+
+
+#define boxptr_SimCodeUtil_crefTerminalName omc_SimCodeUtil_crefTerminalName
+
+
+#define boxptr_SimCodeUtil_curvesCommonTerminal omc_SimCodeUtil_curvesCommonTerminal
+
+
+#define boxptr_SimCodeUtil_lookupFigureName omc_SimCodeUtil_lookupFigureName
+
+
+#define boxptr_SimCodeUtil_resolveFigureRef omc_SimCodeUtil_resolveFigureRef
+
+
+#define boxptr_SimCodeUtil_fmiAxisFromArg omc_SimCodeUtil_fmiAxisFromArg
+
+
+#define boxptr_SimCodeUtil_fmiCurveFromExp omc_SimCodeUtil_fmiCurveFromExp
+
+
+#define boxptr_SimCodeUtil_fmiCurvesFromExp omc_SimCodeUtil_fmiCurvesFromExp
+
+
+#define boxptr_SimCodeUtil_fmiPlotFromExp omc_SimCodeUtil_fmiPlotFromExp
+
+
+#define boxptr_SimCodeUtil_fmiPlotsFromExp omc_SimCodeUtil_fmiPlotsFromExp
+
+
+#define boxptr_SimCodeUtil_fmiFigureFromExp omc_SimCodeUtil_fmiFigureFromExp
+
+
+#define boxptr_SimCodeUtil_buildFmiFigureNameMap omc_SimCodeUtil_buildFmiFigureNameMap
+
+
+#define boxptr_SimCodeUtil_figureExpElements omc_SimCodeUtil_figureExpElements
+
+
+#define boxptr_SimCodeUtil_figureExpsFromMod omc_SimCodeUtil_figureExpsFromMod
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getFMI3VisualizationResource(threadData_t *threadData, modelica_metatype _simCode);
+#define boxptr_SimCodeUtil_getFMI3VisualizationResource omc_SimCodeUtil_getFMI3VisualizationResource
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3VisualizationResource,2,0) {(void*) boxptr_SimCodeUtil_getFMI3VisualizationResource,0}};
+#define boxvar_SimCodeUtil_getFMI3VisualizationResource MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3VisualizationResource)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getFMI3Figures(threadData_t *threadData, modelica_metatype _simCode);
+#define boxptr_SimCodeUtil_getFMI3Figures omc_SimCodeUtil_getFMI3Figures
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3Figures,2,0) {(void*) boxptr_SimCodeUtil_getFMI3Figures,0}};
+#define boxvar_SimCodeUtil_getFMI3Figures MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3Figures)
+
+
+#define boxptr_SimCodeUtil_connectorMemberOf omc_SimCodeUtil_connectorMemberOf
+
+
+#define boxptr_SimCodeUtil_simplePortTerminals omc_SimCodeUtil_simplePortTerminals
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getFMI3Terminals(threadData_t *threadData, modelica_metatype _simCode);
+#define boxptr_SimCodeUtil_getFMI3Terminals omc_SimCodeUtil_getFMI3Terminals
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3Terminals,2,0) {(void*) boxptr_SimCodeUtil_getFMI3Terminals,0}};
+#define boxvar_SimCodeUtil_getFMI3Terminals MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3Terminals)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getFMI3VariableAliases(threadData_t *threadData, modelica_metatype _simCode, modelica_metatype _canonical);
+#define boxptr_SimCodeUtil_getFMI3VariableAliases omc_SimCodeUtil_getFMI3VariableAliases
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3VariableAliases,2,0) {(void*) boxptr_SimCodeUtil_getFMI3VariableAliases,0}};
+#define boxvar_SimCodeUtil_getFMI3VariableAliases MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3VariableAliases)
+
+
+DLLDirection
+modelica_boolean omc_SimCodeUtil_isFMI3NestableAlias(threadData_t *threadData, modelica_metatype _simVar);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_isFMI3NestableAlias(threadData_t *threadData, modelica_metatype _simVar);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_isFMI3NestableAlias,2,0) {(void*) boxptr_SimCodeUtil_isFMI3NestableAlias,0}};
+#define boxvar_SimCodeUtil_isFMI3NestableAlias MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_isFMI3NestableAlias)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_createMinimalFMIModelStructure(threadData_t *threadData, modelica_metatype _modelInfo);
+#define boxptr_SimCodeUtil_createMinimalFMIModelStructure omc_SimCodeUtil_createMinimalFMIModelStructure
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createMinimalFMIModelStructure,2,0) {(void*) boxptr_SimCodeUtil_createMinimalFMIModelStructure,0}};
+#define boxvar_SimCodeUtil_createMinimalFMIModelStructure MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createMinimalFMIModelStructure)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getValueReferenceMapping(threadData_t *threadData, modelica_metatype _modelInfo);
 #define boxptr_SimCodeUtil_getValueReferenceMapping omc_SimCodeUtil_getValueReferenceMapping
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getValueReferenceMapping,2,0) {(void*) boxptr_SimCodeUtil_getValueReferenceMapping,0}};
+#define boxvar_SimCodeUtil_getValueReferenceMapping MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getValueReferenceMapping)
 
 
 DLLDirection
@@ -597,6 +760,43 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getLocalValueReference,2,0)
 #define boxvar_SimCodeUtil_getLocalValueReference MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getLocalValueReference)
 
 
+DLLDirection
+modelica_string omc_SimCodeUtil_getFMI3TimeValueReference(threadData_t *threadData, modelica_metatype _inSimCode);
+#define boxptr_SimCodeUtil_getFMI3TimeValueReference omc_SimCodeUtil_getFMI3TimeValueReference
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3TimeValueReference,2,0) {(void*) boxptr_SimCodeUtil_getFMI3TimeValueReference,0}};
+#define boxvar_SimCodeUtil_getFMI3TimeValueReference MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3TimeValueReference)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getFMI3ValueReferenceFromFMIIndex(threadData_t *threadData, modelica_metatype _inSimCode, modelica_integer _inFMIIndex);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getFMI3ValueReferenceFromFMIIndex(threadData_t *threadData, modelica_metatype _inSimCode, modelica_metatype _inFMIIndex);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3ValueReferenceFromFMIIndex,2,0) {(void*) boxptr_SimCodeUtil_getFMI3ValueReferenceFromFMIIndex,0}};
+#define boxvar_SimCodeUtil_getFMI3ValueReferenceFromFMIIndex MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3ValueReferenceFromFMIIndex)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getFMI3ValueReference(threadData_t *threadData, modelica_metatype _inSimVar, modelica_metatype _inSimCode);
+#define boxptr_SimCodeUtil_getFMI3ValueReference omc_SimCodeUtil_getFMI3ValueReference
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3ValueReference,2,0) {(void*) boxptr_SimCodeUtil_getFMI3ValueReference,0}};
+#define boxvar_SimCodeUtil_getFMI3ValueReference MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3ValueReference)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_getFMI2ValueReferenceOffsets(threadData_t *threadData, modelica_metatype _modelInfo);
+#define boxptr_SimCodeUtil_getFMI2ValueReferenceOffsets omc_SimCodeUtil_getFMI2ValueReferenceOffsets
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI2ValueReferenceOffsets,2,0) {(void*) boxptr_SimCodeUtil_getFMI2ValueReferenceOffsets,0}};
+#define boxvar_SimCodeUtil_getFMI2ValueReferenceOffsets MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI2ValueReferenceOffsets)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_getFMI3TypeOffset(threadData_t *threadData, modelica_metatype _inType, modelica_metatype _inModelInfo);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getFMI3TypeOffset(threadData_t *threadData, modelica_metatype _inType, modelica_metatype _inModelInfo);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3TypeOffset,2,0) {(void*) boxptr_SimCodeUtil_getFMI3TypeOffset,0}};
+#define boxvar_SimCodeUtil_getFMI3TypeOffset MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3TypeOffset)
+
+
 #define boxptr_SimCodeUtil_getDefaultValueReference omc_SimCodeUtil_getDefaultValueReference
 
 
@@ -632,6 +832,31 @@ modelica_metatype omc_SimCodeUtil_getScalarElements(threadData_t *threadData, mo
 #define boxptr_SimCodeUtil_getScalarElements omc_SimCodeUtil_getScalarElements
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getScalarElements,2,0) {(void*) boxptr_SimCodeUtil_getScalarElements,0}};
 #define boxvar_SimCodeUtil_getScalarElements MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getScalarElements)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getFMIScalarVRs(threadData_t *threadData, modelica_metatype _var, modelica_metatype _simCode);
+#define boxptr_SimCodeUtil_getFMIScalarVRs omc_SimCodeUtil_getFMIScalarVRs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMIScalarVRs,2,0) {(void*) boxptr_SimCodeUtil_getFMIScalarVRs,0}};
+#define boxvar_SimCodeUtil_getFMIScalarVRs MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMIScalarVRs)
+
+
+#define boxptr_SimCodeUtil_getFMIArrayStartValues omc_SimCodeUtil_getFMIArrayStartValues
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getFMI3ArrayStart(threadData_t *threadData, modelica_metatype _var);
+#define boxptr_SimCodeUtil_getFMI3ArrayStart omc_SimCodeUtil_getFMI3ArrayStart
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3ArrayStart,2,0) {(void*) boxptr_SimCodeUtil_getFMI3ArrayStart,0}};
+#define boxvar_SimCodeUtil_getFMI3ArrayStart MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getFMI3ArrayStart)
+
+
+DLLDirection
+modelica_integer omc_SimCodeUtil_numScalarElems(threadData_t *threadData, modelica_metatype _vars);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_numScalarElems(threadData_t *threadData, modelica_metatype _vars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_numScalarElems,2,0) {(void*) boxptr_SimCodeUtil_numScalarElems,0}};
+#define boxvar_SimCodeUtil_numScalarElems MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_numScalarElems)
 
 
 DLLDirection
@@ -673,10 +898,19 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getAllParamSimVars,2,0) {(v
 #define boxptr_SimCodeUtil_getCrefFromSimVar omc_SimCodeUtil_getCrefFromSimVar
 
 
+#define boxptr_SimCodeUtil_recordDeclarationName omc_SimCodeUtil_recordDeclarationName
+
+
+#define boxptr_SimCodeUtil_addFmiDerInitFunctions omc_SimCodeUtil_addFmiDerInitFunctions
+
+
+#define boxptr_SimCodeUtil_collectUsedFmiDerInitFunctions omc_SimCodeUtil_collectUsedFmiDerInitFunctions
+
+
 DLLDirection
-modelica_metatype omc_SimCodeUtil_createFMIModelStructure(threadData_t *threadData, modelica_metatype _inSymjacs, modelica_metatype _inModelInfo, modelica_integer _inUniqueEqIndex, modelica_metatype _inInitDAE, modelica_metatype _inSimDAE, modelica_metatype *out_outFmiModelStructure, modelica_metatype *out_outModelInfo, modelica_metatype *out_symJacs, modelica_integer *out_uniqueEqIndex);
+modelica_metatype omc_SimCodeUtil_createFMIModelStructure(threadData_t *threadData, modelica_metatype _inSymjacs, modelica_metatype _inModelInfo, modelica_integer _inUniqueEqIndex, modelica_metatype _inInitDAE, modelica_metatype _inSimDAE, modelica_metatype *out_outFmiModelStructure, modelica_metatype *out_outModelInfo, modelica_metatype *out_symJacs, modelica_integer *out_uniqueEqIndex, modelica_metatype *out_outFmiDerInitFuncTree);
 DLLDirection
-modelica_metatype boxptr_SimCodeUtil_createFMIModelStructure(threadData_t *threadData, modelica_metatype _inSymjacs, modelica_metatype _inModelInfo, modelica_metatype _inUniqueEqIndex, modelica_metatype _inInitDAE, modelica_metatype _inSimDAE, modelica_metatype *out_outFmiModelStructure, modelica_metatype *out_outModelInfo, modelica_metatype *out_symJacs, modelica_metatype *out_uniqueEqIndex);
+modelica_metatype boxptr_SimCodeUtil_createFMIModelStructure(threadData_t *threadData, modelica_metatype _inSymjacs, modelica_metatype _inModelInfo, modelica_metatype _inUniqueEqIndex, modelica_metatype _inInitDAE, modelica_metatype _inSimDAE, modelica_metatype *out_outFmiModelStructure, modelica_metatype *out_outModelInfo, modelica_metatype *out_symJacs, modelica_metatype *out_uniqueEqIndex, modelica_metatype *out_outFmiDerInitFuncTree);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createFMIModelStructure,2,0) {(void*) boxptr_SimCodeUtil_createFMIModelStructure,0}};
 #define boxvar_SimCodeUtil_createFMIModelStructure MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_createFMIModelStructure)
 
@@ -984,6 +1218,14 @@ DLLDirection
 modelica_metatype boxptr_SimCodeUtil_getVarIndexByMapping(threadData_t *threadData, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarName, modelica_metatype _iColumnMajor, modelica_metatype _iIndexForUndefinedReferences);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVarIndexByMapping,2,0) {(void*) boxptr_SimCodeUtil_getVarIndexByMapping,0}};
 #define boxvar_SimCodeUtil_getVarIndexByMapping MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVarIndexByMapping)
+
+
+DLLDirection
+modelica_string omc_SimCodeUtil_getVarIndexHeadByMapping(threadData_t *threadData, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarName, modelica_boolean _iColumnMajor, modelica_string _iIndexForUndefinedReferences);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_getVarIndexHeadByMapping(threadData_t *threadData, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarName, modelica_metatype _iColumnMajor, modelica_metatype _iIndexForUndefinedReferences);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVarIndexHeadByMapping,2,0) {(void*) boxptr_SimCodeUtil_getVarIndexHeadByMapping,0}};
+#define boxvar_SimCodeUtil_getVarIndexHeadByMapping MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_getVarIndexHeadByMapping)
 
 
 DLLDirection
@@ -1598,8 +1840,16 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_createExtObjInfo,2,0) {(voi
 
 
 DLLDirection
-modelica_metatype omc_SimCodeUtil_extractSpatialDistributionInfoExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5FcallExp, modelica_metatype __omcQ_24in_5FspatialInfo, modelica_metatype _maxIndex_ptr, modelica_metatype *out_spatialInfo);
-#define boxptr_SimCodeUtil_extractSpatialDistributionInfoExp omc_SimCodeUtil_extractSpatialDistributionInfoExp
+modelica_metatype omc_SimCodeUtil_combineGuardCondition(threadData_t *threadData, modelica_metatype _outerCond, modelica_metatype _branchCond);
+#define boxptr_SimCodeUtil_combineGuardCondition omc_SimCodeUtil_combineGuardCondition
+static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_combineGuardCondition,2,0) {(void*) boxptr_SimCodeUtil_combineGuardCondition,0}};
+#define boxvar_SimCodeUtil_combineGuardCondition MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_combineGuardCondition)
+
+
+DLLDirection
+modelica_metatype omc_SimCodeUtil_extractSpatialDistributionInfoExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5FcallExp, modelica_metatype __omcQ_24in_5Ftpl, modelica_metatype _maxIndex_ptr, modelica_boolean *out_cont, modelica_metatype *out_tpl);
+DLLDirection
+modelica_metatype boxptr_SimCodeUtil_extractSpatialDistributionInfoExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5FcallExp, modelica_metatype __omcQ_24in_5Ftpl, modelica_metatype _maxIndex_ptr, modelica_metatype *out_cont, modelica_metatype *out_tpl);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractSpatialDistributionInfoExp,2,0) {(void*) boxptr_SimCodeUtil_extractSpatialDistributionInfoExp,0}};
 #define boxvar_SimCodeUtil_extractSpatialDistributionInfoExp MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtil_extractSpatialDistributionInfoExp)
 

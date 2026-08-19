@@ -209,6 +209,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SCodeDump_filterElement(threadDat
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -310,6 +313,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SCodeDump_filterElement(threadDat
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SCodeDump_filterElement(threadData_t *threadData, modelica_metatype _element, modelica_metatype _options)

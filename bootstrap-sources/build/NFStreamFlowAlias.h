@@ -151,7 +151,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFStreamFlowAlias_contains,2,0) {(void*
 
 
 DLLDirection
-modelica_metatype omc_NFStreamFlowAlias_createAliases(threadData_t *threadData, modelica_metatype _sets, modelica_metatype __omcQ_24in_5FflatModel, modelica_metatype *out_aliases);
+modelica_metatype omc_NFStreamFlowAlias_createAliases(threadData_t *threadData, modelica_metatype _sets, modelica_metatype _vars, modelica_metatype __omcQ_24in_5FflatModel, modelica_metatype *out_aliases);
 #define boxptr_NFStreamFlowAlias_createAliases omc_NFStreamFlowAlias_createAliases
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFStreamFlowAlias_createAliases,2,0) {(void*) boxptr_NFStreamFlowAlias_createAliases,0}};
 #define boxvar_NFStreamFlowAlias_createAliases MMC_REFSTRUCTLIT(boxvar_lit_NFStreamFlowAlias_createAliases)

@@ -306,203 +306,266 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT111,11,_OMC_LIT111_data);
 #define _OMC_LIT112_data "_"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT112,1,_OMC_LIT112_data);
 #define _OMC_LIT112 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT112)
-#define _OMC_LIT113_data "File does not exist: "
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT113,21,_OMC_LIT113_data);
+#define _OMC_LIT113_data "fmiVersion"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT113,10,_OMC_LIT113_data);
 #define _OMC_LIT113 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT113)
-#define _OMC_LIT114_data "Error processing file: "
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT114,23,_OMC_LIT114_data);
+#define _OMC_LIT114_data "1.0"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT114,3,_OMC_LIT114_data);
 #define _OMC_LIT114 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT114)
-#define _OMC_LIT115_data "UTF-8"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT115,5,_OMC_LIT115_data);
-#define _OMC_LIT115 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT115)
-#define _OMC_LIT116_data "command-line argument"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT116,21,_OMC_LIT116_data);
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT115,2,0) {_OMC_LIT114,MMC_IMMEDIATE(MMC_TAGFIXNUM(10))}};
+#define _OMC_LIT115 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT115)
+#define _OMC_LIT116_data "2.0"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT116,3,_OMC_LIT116_data);
 #define _OMC_LIT116 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT116)
-#define _OMC_LIT117_data "default"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT117,7,_OMC_LIT117_data);
-#define _OMC_LIT117 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT117)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT118,2,1) {_OMC_LIT117,MMC_REFSTRUCTLIT(mmc_nil)}};
-#define _OMC_LIT118 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT118)
-#define _OMC_LIT119_data "Failed to load library: "
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT119,24,_OMC_LIT119_data);
-#define _OMC_LIT119 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT119)
-#define _OMC_LIT120_data "!\n"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT120,2,_OMC_LIT120_data);
-#define _OMC_LIT120 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT120)
-#define _OMC_LIT121_data "Failed to parse file: "
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT121,22,_OMC_LIT121_data);
-#define _OMC_LIT121 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT121)
-#define _OMC_LIT122_data "tpl"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT122,3,_OMC_LIT122_data);
-#define _OMC_LIT122 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT122)
-#define _OMC_LIT123_data "mos"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT123,3,_OMC_LIT123_data);
-#define _OMC_LIT123 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT123)
-#define _OMC_LIT124_data "mof"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT124,3,_OMC_LIT124_data);
-#define _OMC_LIT124 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT124)
-#define _OMC_LIT125_data "mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT125,2,_OMC_LIT125_data);
-#define _OMC_LIT125 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT125)
-#define _OMC_LIT126_data "{"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT126,1,_OMC_LIT126_data);
-#define _OMC_LIT126 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT126)
-#define _OMC_LIT127_data ","
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT127,1,_OMC_LIT127_data);
-#define _OMC_LIT127 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT127)
-#define _OMC_LIT128_data "}\n"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT128,2,_OMC_LIT128_data);
-#define _OMC_LIT128 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT128)
-#define _OMC_LIT129_data "Error occurred building AST\n"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT129,28,_OMC_LIT129_data);
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT117,2,0) {_OMC_LIT116,MMC_IMMEDIATE(MMC_TAGFIXNUM(20))}};
+#define _OMC_LIT117 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT117)
+#define _OMC_LIT118_data "3.0"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT118,3,_OMC_LIT118_data);
+#define _OMC_LIT118 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT118)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT119,2,0) {_OMC_LIT118,MMC_IMMEDIATE(MMC_TAGFIXNUM(30))}};
+#define _OMC_LIT119 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT119)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT120,2,1) {_OMC_LIT119,MMC_REFSTRUCTLIT(mmc_nil)}};
+#define _OMC_LIT120 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT120)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT121,2,1) {_OMC_LIT117,_OMC_LIT120}};
+#define _OMC_LIT121 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT121)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT122,2,1) {_OMC_LIT115,_OMC_LIT121}};
+#define _OMC_LIT122 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT122)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT123,3,10) {&Flags_FlagData_ENUM__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(20)),_OMC_LIT122}};
+#define _OMC_LIT123 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT123)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT124,2,1) {_OMC_LIT118,MMC_REFSTRUCTLIT(mmc_nil)}};
+#define _OMC_LIT124 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT124)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT125,2,1) {_OMC_LIT116,_OMC_LIT124}};
+#define _OMC_LIT125 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT125)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT126,2,1) {_OMC_LIT114,_OMC_LIT125}};
+#define _OMC_LIT126 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT126)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT127,2,3) {&Flags_ValidOptions_STRING__OPTION__desc,_OMC_LIT126}};
+#define _OMC_LIT127 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT127)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT128,1,1) {_OMC_LIT127}};
+#define _OMC_LIT128 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT128)
+#define _OMC_LIT129_data "FMI version for FMU export: 1.0, 2.0, 3.0."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT129,42,_OMC_LIT129_data);
 #define _OMC_LIT129 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT129)
-#define _OMC_LIT130_data "Syntax Error\n"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT130,13,_OMC_LIT130_data);
-#define _OMC_LIT130 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT130)
-#define _OMC_LIT131_data "Stack overflow occurred while evaluating %s."
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT131,44,_OMC_LIT131_data);
-#define _OMC_LIT131 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT131)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT132,5,3) {&ErrorTypes_Message_MESSAGE__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(205)),_OMC_LIT24,_OMC_LIT25,_OMC_LIT131}};
-#define _OMC_LIT132 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT132)
-#define _OMC_LIT133_data "Ok\n"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT133,3,_OMC_LIT133_data);
-#define _OMC_LIT133 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT133)
-#define _OMC_LIT134_data "quit()"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT134,6,_OMC_LIT134_data);
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT130,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(169)),_OMC_LIT113,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT2,_OMC_LIT123,_OMC_LIT128,_OMC_LIT129}};
+#define _OMC_LIT130 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT130)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT131,1,3) {&Flags_FlagVisibility_INTERNAL__desc,}};
+#define _OMC_LIT131 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT131)
+#define _OMC_LIT132_data "returns the FMI Version either 1.0 or 2.0."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT132,42,_OMC_LIT132_data);
+#define _OMC_LIT132 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT132)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT133,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(134)),_OMC_LIT28,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT131,_OMC_LIT77,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT132}};
+#define _OMC_LIT133 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT133)
+#define _OMC_LIT134_data "fmuType"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT134,7,_OMC_LIT134_data);
 #define _OMC_LIT134 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT134)
-#define _OMC_LIT135_data "parsestring"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT135,11,_OMC_LIT135_data);
+#define _OMC_LIT135_data "me"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT135,2,_OMC_LIT135_data);
 #define _OMC_LIT135 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT135)
-#define _OMC_LIT136_data "std"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT136,3,_OMC_LIT136_data);
-#define _OMC_LIT136 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT136)
-#define _OMC_LIT137_data "1.x"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT137,3,_OMC_LIT137_data);
-#define _OMC_LIT137 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT137)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT138,2,0) {_OMC_LIT137,MMC_IMMEDIATE(MMC_TAGFIXNUM(10))}};
-#define _OMC_LIT138 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT138)
-#define _OMC_LIT139_data "2.x"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT139,3,_OMC_LIT139_data);
-#define _OMC_LIT139 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT139)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT140,2,0) {_OMC_LIT139,MMC_IMMEDIATE(MMC_TAGFIXNUM(20))}};
-#define _OMC_LIT140 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT140)
-#define _OMC_LIT141_data "3.0"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT141,3,_OMC_LIT141_data);
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT136,2,1) {_OMC_LIT135,MMC_REFSTRUCTLIT(mmc_nil)}};
+#define _OMC_LIT136 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT136)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT137,2,9) {&Flags_FlagData_STRING__LIST__FLAG__desc,_OMC_LIT136}};
+#define _OMC_LIT137 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT137)
+#define _OMC_LIT138_data "FMI type for FMU export: me, cs, me_cs, se."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT138,43,_OMC_LIT138_data);
+#define _OMC_LIT138 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT138)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT139,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(167)),_OMC_LIT134,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT2,_OMC_LIT137,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT138}};
+#define _OMC_LIT139 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT139)
+#define _OMC_LIT140_data "fmuPlatforms"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT140,12,_OMC_LIT140_data);
+#define _OMC_LIT140 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT140)
+#define _OMC_LIT141_data "static"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT141,6,_OMC_LIT141_data);
 #define _OMC_LIT141 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT141)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT142,2,0) {_OMC_LIT141,MMC_IMMEDIATE(MMC_TAGFIXNUM(30))}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT142,2,8) {&Flags_FlagData_STRING__FLAG__desc,_OMC_LIT141}};
 #define _OMC_LIT142 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT142)
-#define _OMC_LIT143_data "3.1"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT143,3,_OMC_LIT143_data);
+#define _OMC_LIT143_data "Platforms for FMU export, comma-separated (e.g. static,dynamic)."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT143,64,_OMC_LIT143_data);
 #define _OMC_LIT143 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT143)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT144,2,0) {_OMC_LIT143,MMC_IMMEDIATE(MMC_TAGFIXNUM(31))}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT144,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(168)),_OMC_LIT140,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT2,_OMC_LIT142,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT143}};
 #define _OMC_LIT144 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT144)
-#define _OMC_LIT145_data "3.2"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT145,3,_OMC_LIT145_data);
+#define _OMC_LIT145_data ","
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT145,1,_OMC_LIT145_data);
 #define _OMC_LIT145 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT145)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT146,2,0) {_OMC_LIT145,MMC_IMMEDIATE(MMC_TAGFIXNUM(32))}};
-#define _OMC_LIT146 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT146)
-#define _OMC_LIT147_data "3.3"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT147,3,_OMC_LIT147_data);
-#define _OMC_LIT147 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT147)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT148,2,0) {_OMC_LIT147,MMC_IMMEDIATE(MMC_TAGFIXNUM(33))}};
-#define _OMC_LIT148 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT148)
-#define _OMC_LIT149_data "3.4"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT149,3,_OMC_LIT149_data);
-#define _OMC_LIT149 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT149)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT150,2,0) {_OMC_LIT149,MMC_IMMEDIATE(MMC_TAGFIXNUM(34))}};
-#define _OMC_LIT150 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT150)
-#define _OMC_LIT151_data "3.5"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT151,3,_OMC_LIT151_data);
+#define _OMC_LIT146_data "export-fmu"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT146,10,_OMC_LIT146_data);
+#define _OMC_LIT146 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT146)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT147,2,4) {&Flags_FlagData_BOOL__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */))}};
+#define _OMC_LIT147 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT147)
+#define _OMC_LIT148_data "Export the model as an FMU after loading. Combine with --fmuType and --fmuPlatforms to configure the export."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT148,108,_OMC_LIT148_data);
+#define _OMC_LIT148 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT148)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT149,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(166)),_OMC_LIT146,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT2,_OMC_LIT147,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT148}};
+#define _OMC_LIT149 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT149)
+#define _OMC_LIT150_data "tplOutputDir"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT150,12,_OMC_LIT150_data);
+#define _OMC_LIT150 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT150)
+#define _OMC_LIT151_data "Directory the .mo generated from a Susan .tpl is written to. Empty (the\ndefault) writes it next to the .tpl, which is how the templates used to be\ngenerated into the source tree."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT151,178,_OMC_LIT151_data);
 #define _OMC_LIT151 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT151)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT152,2,0) {_OMC_LIT151,MMC_IMMEDIATE(MMC_TAGFIXNUM(35))}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT152,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(172)),_OMC_LIT150,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT2,_OMC_LIT77,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT151}};
 #define _OMC_LIT152 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT152)
-#define _OMC_LIT153_data "3.6"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT153,3,_OMC_LIT153_data);
+#define _OMC_LIT153_data "File does not exist: "
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT153,21,_OMC_LIT153_data);
 #define _OMC_LIT153 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT153)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT154,2,0) {_OMC_LIT153,MMC_IMMEDIATE(MMC_TAGFIXNUM(36))}};
-#define _OMC_LIT154 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT154)
-#define _OMC_LIT155_data "latest"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT155,6,_OMC_LIT155_data);
+#define _OMC_LIT154_data "Error processing file: "
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT154,23,_OMC_LIT154_data);
+#define _OMC_LIT154 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT154)
+#define _OMC_LIT155_data "UTF-8"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT155,5,_OMC_LIT155_data);
 #define _OMC_LIT155 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT155)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT156,2,0) {_OMC_LIT155,MMC_IMMEDIATE(MMC_TAGFIXNUM(1000))}};
-#define _OMC_LIT156 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT156)
-#define _OMC_LIT157_data "experimental"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT157,12,_OMC_LIT157_data);
+#define _OMC_LIT156_data "command-line argument"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT156,21,_OMC_LIT156_data);
+#define _OMC_LIT156 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT156)
+#define _OMC_LIT157_data "default"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT157,7,_OMC_LIT157_data);
 #define _OMC_LIT157 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT157)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT158,2,0) {_OMC_LIT157,MMC_IMMEDIATE(MMC_TAGFIXNUM(9999))}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT158,2,1) {_OMC_LIT157,MMC_REFSTRUCTLIT(mmc_nil)}};
 #define _OMC_LIT158 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT158)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT159,2,1) {_OMC_LIT158,MMC_REFSTRUCTLIT(mmc_nil)}};
-#define _OMC_LIT159 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT159)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT160,2,1) {_OMC_LIT156,_OMC_LIT159}};
-#define _OMC_LIT160 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT160)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT161,2,1) {_OMC_LIT154,_OMC_LIT160}};
-#define _OMC_LIT161 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT161)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT162,2,1) {_OMC_LIT152,_OMC_LIT161}};
-#define _OMC_LIT162 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT162)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT163,2,1) {_OMC_LIT150,_OMC_LIT162}};
-#define _OMC_LIT163 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT163)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT164,2,1) {_OMC_LIT148,_OMC_LIT163}};
-#define _OMC_LIT164 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT164)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT165,2,1) {_OMC_LIT146,_OMC_LIT164}};
-#define _OMC_LIT165 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT165)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT166,2,1) {_OMC_LIT144,_OMC_LIT165}};
-#define _OMC_LIT166 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT166)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT167,2,1) {_OMC_LIT142,_OMC_LIT166}};
-#define _OMC_LIT167 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT167)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT168,2,1) {_OMC_LIT140,_OMC_LIT167}};
-#define _OMC_LIT168 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT168)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT169,2,1) {_OMC_LIT138,_OMC_LIT168}};
-#define _OMC_LIT169 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT169)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT170,3,10) {&Flags_FlagData_ENUM__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(1000)),_OMC_LIT169}};
-#define _OMC_LIT170 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT170)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT171,2,1) {_OMC_LIT157,MMC_REFSTRUCTLIT(mmc_nil)}};
+#define _OMC_LIT159_data "Failed to load library: "
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT159,24,_OMC_LIT159_data);
+#define _OMC_LIT159 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT159)
+#define _OMC_LIT160_data "!\n"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT160,2,_OMC_LIT160_data);
+#define _OMC_LIT160 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT160)
+#define _OMC_LIT161_data "Failed to parse file: "
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT161,22,_OMC_LIT161_data);
+#define _OMC_LIT161 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT161)
+#define _OMC_LIT162_data "tpl"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT162,3,_OMC_LIT162_data);
+#define _OMC_LIT162 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT162)
+#define _OMC_LIT163_data "mos"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT163,3,_OMC_LIT163_data);
+#define _OMC_LIT163 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT163)
+#define _OMC_LIT164_data "mof"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT164,3,_OMC_LIT164_data);
+#define _OMC_LIT164 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT164)
+#define _OMC_LIT165_data "mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT165,2,_OMC_LIT165_data);
+#define _OMC_LIT165 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT165)
+#define _OMC_LIT166_data "{"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT166,1,_OMC_LIT166_data);
+#define _OMC_LIT166 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT166)
+#define _OMC_LIT167_data "}\n"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT167,2,_OMC_LIT167_data);
+#define _OMC_LIT167 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT167)
+#define _OMC_LIT168_data "Error occurred building AST\n"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT168,28,_OMC_LIT168_data);
+#define _OMC_LIT168 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT168)
+#define _OMC_LIT169_data "Syntax Error\n"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT169,13,_OMC_LIT169_data);
+#define _OMC_LIT169 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT169)
+#define _OMC_LIT170_data "Stack overflow occurred while evaluating %s."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT170,44,_OMC_LIT170_data);
+#define _OMC_LIT170 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT170)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT171,5,3) {&ErrorTypes_Message_MESSAGE__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(205)),_OMC_LIT24,_OMC_LIT25,_OMC_LIT170}};
 #define _OMC_LIT171 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT171)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT172,2,1) {_OMC_LIT155,_OMC_LIT171}};
-#define _OMC_LIT172 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT172)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT173,2,1) {_OMC_LIT153,_OMC_LIT172}};
-#define _OMC_LIT173 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT173)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT174,2,1) {_OMC_LIT151,_OMC_LIT173}};
-#define _OMC_LIT174 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT174)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT175,2,1) {_OMC_LIT149,_OMC_LIT174}};
-#define _OMC_LIT175 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT175)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT176,2,1) {_OMC_LIT147,_OMC_LIT175}};
-#define _OMC_LIT176 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT176)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT177,2,1) {_OMC_LIT145,_OMC_LIT176}};
+#define _OMC_LIT172_data "Ok\n"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT172,3,_OMC_LIT172_data);
+#define _OMC_LIT172 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT172)
+#define _OMC_LIT173_data "quit()"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT173,6,_OMC_LIT173_data);
+#define _OMC_LIT173 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT173)
+#define _OMC_LIT174_data "parsestring"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT174,11,_OMC_LIT174_data);
+#define _OMC_LIT174 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT174)
+#define _OMC_LIT175_data "std"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT175,3,_OMC_LIT175_data);
+#define _OMC_LIT175 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT175)
+#define _OMC_LIT176_data "1.x"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT176,3,_OMC_LIT176_data);
+#define _OMC_LIT176 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT176)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT177,2,0) {_OMC_LIT176,MMC_IMMEDIATE(MMC_TAGFIXNUM(10))}};
 #define _OMC_LIT177 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT177)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT178,2,1) {_OMC_LIT143,_OMC_LIT177}};
-#define _OMC_LIT178 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT178)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT179,2,1) {_OMC_LIT139,_OMC_LIT178}};
+#define _OMC_LIT178_data "2.x"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT178,3,_OMC_LIT178_data);
+#define _OMC_LIT178 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT178)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT179,2,0) {_OMC_LIT178,MMC_IMMEDIATE(MMC_TAGFIXNUM(20))}};
 #define _OMC_LIT179 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT179)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT180,2,1) {_OMC_LIT137,_OMC_LIT179}};
-#define _OMC_LIT180 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT180)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT181,2,3) {&Flags_ValidOptions_STRING__OPTION__desc,_OMC_LIT180}};
+#define _OMC_LIT180_data "3.1"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT180,3,_OMC_LIT180_data);
+#define _OMC_LIT180 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT180)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT181,2,0) {_OMC_LIT180,MMC_IMMEDIATE(MMC_TAGFIXNUM(31))}};
 #define _OMC_LIT181 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT181)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT182,1,1) {_OMC_LIT181}};
-#define _OMC_LIT182 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT182)
-#define _OMC_LIT183_data "Sets the language standard that should be used."
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT183,47,_OMC_LIT183_data);
-#define _OMC_LIT183 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT183)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT184,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(8)),_OMC_LIT136,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT2,_OMC_LIT170,_OMC_LIT182,_OMC_LIT183}};
-#define _OMC_LIT184 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT184)
-#define _OMC_LIT185_data "strict"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT185,6,_OMC_LIT185_data);
-#define _OMC_LIT185 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT185)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT186,2,4) {&Flags_FlagData_BOOL__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */))}};
-#define _OMC_LIT186 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT186)
-#define _OMC_LIT187_data "Enables stricter enforcement of Modelica language rules."
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT187,56,_OMC_LIT187_data);
-#define _OMC_LIT187 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT187)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT188,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(44)),_OMC_LIT185,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT2,_OMC_LIT186,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT187}};
-#define _OMC_LIT188 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT188)
-#define _OMC_LIT189_data "\n---DEBUG("
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT189,10,_OMC_LIT189_data);
-#define _OMC_LIT189 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT189)
-#define _OMC_LIT190_data ")---\n"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT190,5,_OMC_LIT190_data);
+#define _OMC_LIT182_data "3.2"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT182,3,_OMC_LIT182_data);
+#define _OMC_LIT182 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT182)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT183,2,0) {_OMC_LIT182,MMC_IMMEDIATE(MMC_TAGFIXNUM(32))}};
+#define _OMC_LIT183 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT183)
+#define _OMC_LIT184_data "3.3"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT184,3,_OMC_LIT184_data);
+#define _OMC_LIT184 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT184)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT185,2,0) {_OMC_LIT184,MMC_IMMEDIATE(MMC_TAGFIXNUM(33))}};
+#define _OMC_LIT185 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT185)
+#define _OMC_LIT186_data "3.4"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT186,3,_OMC_LIT186_data);
+#define _OMC_LIT186 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT186)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT187,2,0) {_OMC_LIT186,MMC_IMMEDIATE(MMC_TAGFIXNUM(34))}};
+#define _OMC_LIT187 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT187)
+#define _OMC_LIT188_data "3.5"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT188,3,_OMC_LIT188_data);
+#define _OMC_LIT188 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT188)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT189,2,0) {_OMC_LIT188,MMC_IMMEDIATE(MMC_TAGFIXNUM(35))}};
+#define _OMC_LIT189 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT189)
+#define _OMC_LIT190_data "3.6"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT190,3,_OMC_LIT190_data);
 #define _OMC_LIT190 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT190)
-#define _OMC_LIT191_data "\n---/DEBUG("
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT191,11,_OMC_LIT191_data);
-#define _OMC_LIT191 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT191)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT191,2,0) {_OMC_LIT190,MMC_IMMEDIATE(MMC_TAGFIXNUM(36))}};
+#define _OMC_LIT191 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT191)
+#define _OMC_LIT192_data "latest"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT192,6,_OMC_LIT192_data);
+#define _OMC_LIT192 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT192)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT193,2,0) {_OMC_LIT192,MMC_IMMEDIATE(MMC_TAGFIXNUM(1000))}};
+#define _OMC_LIT193 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT193)
+#define _OMC_LIT194_data "experimental"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT194,12,_OMC_LIT194_data);
+#define _OMC_LIT194 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT194)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT195,2,0) {_OMC_LIT194,MMC_IMMEDIATE(MMC_TAGFIXNUM(9999))}};
+#define _OMC_LIT195 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT195)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT196,2,1) {_OMC_LIT195,MMC_REFSTRUCTLIT(mmc_nil)}};
+#define _OMC_LIT196 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT196)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT197,2,1) {_OMC_LIT193,_OMC_LIT196}};
+#define _OMC_LIT197 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT197)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT198,2,1) {_OMC_LIT191,_OMC_LIT197}};
+#define _OMC_LIT198 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT198)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT199,2,1) {_OMC_LIT189,_OMC_LIT198}};
+#define _OMC_LIT199 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT199)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT200,2,1) {_OMC_LIT187,_OMC_LIT199}};
+#define _OMC_LIT200 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT200)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT201,2,1) {_OMC_LIT185,_OMC_LIT200}};
+#define _OMC_LIT201 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT201)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT202,2,1) {_OMC_LIT183,_OMC_LIT201}};
+#define _OMC_LIT202 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT202)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT203,2,1) {_OMC_LIT181,_OMC_LIT202}};
+#define _OMC_LIT203 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT203)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT204,2,1) {_OMC_LIT119,_OMC_LIT203}};
+#define _OMC_LIT204 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT204)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT205,2,1) {_OMC_LIT179,_OMC_LIT204}};
+#define _OMC_LIT205 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT205)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT206,2,1) {_OMC_LIT177,_OMC_LIT205}};
+#define _OMC_LIT206 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT206)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT207,3,10) {&Flags_FlagData_ENUM__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(1000)),_OMC_LIT206}};
+#define _OMC_LIT207 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT207)
+#define _OMC_LIT208_data "Sets the language standard that should be used."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT208,47,_OMC_LIT208_data);
+#define _OMC_LIT208 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT208)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT209,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(8)),_OMC_LIT175,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT2,_OMC_LIT207,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT208}};
+#define _OMC_LIT209 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT209)
+#define _OMC_LIT210_data "strict"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT210,6,_OMC_LIT210_data);
+#define _OMC_LIT210 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT210)
+#define _OMC_LIT211_data "Enables stricter enforcement of Modelica language rules."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT211,56,_OMC_LIT211_data);
+#define _OMC_LIT211 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT211)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT212,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(44)),_OMC_LIT210,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT2,_OMC_LIT147,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT211}};
+#define _OMC_LIT212 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT212)
+#define _OMC_LIT213_data "\n---DEBUG("
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT213,10,_OMC_LIT213_data);
+#define _OMC_LIT213 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT213)
+#define _OMC_LIT214_data ")---\n"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT214,5,_OMC_LIT214_data);
+#define _OMC_LIT214 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT214)
+#define _OMC_LIT215_data "\n---/DEBUG("
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT215,11,_OMC_LIT215_data);
+#define _OMC_LIT215 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT215)
 #include "util/modelica.h"
 
 #include "Main_includes.h"
@@ -577,6 +640,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_main2(threadData_t *threadData, modelica
   modelica_string _interactiveMode = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _interactiveMode has no default value.
@@ -744,6 +810,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_main2(threadData_t *threadData, modelica
   ;
   _return: OMC_LABEL_UNUSED
   threadData->mmc_jumper = old_mmc_jumper;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -752,6 +821,9 @@ void omc_Main_main(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _args_1 = NULL;
   modelica_integer _seconds;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _args_1 has no default value.
@@ -859,6 +931,9 @@ void omc_Main_main(threadData_t *threadData, modelica_metatype _args)
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -896,6 +971,9 @@ modelica_metatype omc_Main_init(threadData_t *threadData, modelica_metatype _arg
 
 PROTECTED_FUNCTION_STATIC void omc_Main_setDefaultCC(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -937,12 +1015,18 @@ PROTECTED_FUNCTION_STATIC void omc_Main_setDefaultCC(threadData_t *threadData)
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_Main_setWindowsPaths(threadData_t *threadData, modelica_string _inOMHome)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1090,6 +1174,9 @@ void omc_Main_setWindowsPaths(threadData_t *threadData, modelica_string _inOMHom
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1098,6 +1185,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_readSettingsFile(threadData_t *threadDat
   modelica_string _command = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _command has no default value.
@@ -1110,6 +1200,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_readSettingsFile(threadData_t *threadDat
     omc_Main_handleCommand(threadData, _command, NULL);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1117,6 +1210,9 @@ DLLDirection
 void omc_Main_readSettings(threadData_t *threadData, modelica_metatype _inArguments)
 {
   modelica_string _settings_file = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _settings_file has no default value.
@@ -1129,6 +1225,9 @@ void omc_Main_readSettings(threadData_t *threadData, modelica_metatype _inArgume
     omc_Main_readSettingsFile(threadData, _settings_file);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1137,6 +1236,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_serverLoopCorba(threadData_t *threadData
   modelica_string _str = NULL;
   modelica_string _reply_str = NULL;
   modelica_boolean _cont;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
@@ -1165,6 +1267,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_serverLoopCorba(threadData_t *threadData
 
   omc_Corba_close(threadData);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1179,6 +1284,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_interactivemodeZMQ(threadData_t *threadD
   modelica_boolean tmp2;
   modelica_string tmp3;
   modelica_boolean tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _zmqSocket has no default value.
@@ -1232,11 +1340,17 @@ PROTECTED_FUNCTION_STATIC void omc_Main_interactivemodeZMQ(threadData_t *threadD
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Main_interactivemodeCorba(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -1283,6 +1397,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_interactivemodeCorba(threadData_t *threa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1292,6 +1409,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_interactivemode(threadData_t *threadData
   modelica_boolean _b;
   modelica_string _str = NULL;
   modelica_string _replystr = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _shandle has no default value.
@@ -1335,6 +1455,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_interactivemode(threadData_t *threadData
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1349,6 +1472,15 @@ PROTECTED_FUNCTION_STATIC void omc_Main_translateFile(threadData_t *threadData, 
   modelica_metatype _stmts = NULL;
   modelica_string _cls = NULL;
   modelica_string _fileNamePrefix = NULL;
+  modelica_string _fmuVersion = NULL;
+  modelica_string _fmuType = NULL;
+  modelica_string _fmuPlatformsStr = NULL;
+  modelica_integer _fmuVersionInt;
+  modelica_metatype _fmuPlatforms = NULL;
+  modelica_metatype _fmuTypeList = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _f has no default value.
@@ -1359,6 +1491,12 @@ PROTECTED_FUNCTION_STATIC void omc_Main_translateFile(threadData_t *threadData, 
   // _stmts has no default value.
   // _cls has no default value.
   // _fileNamePrefix has no default value.
+  // _fmuVersion has no default value.
+  // _fmuType has no default value.
+  // _fmuPlatformsStr has no default value.
+  // _fmuVersionInt has no default value.
+  // _fmuPlatforms has no default value.
+  // _fmuTypeList has no default value.
   if((!(stringLength(omc_Flags_getConfigString(threadData, _OMC_LIT97)) == ((modelica_integer) 0))))
   {
     _stmts = omc_Parser_parsestringexp(threadData, omc_Flags_getConfigString(threadData, _OMC_LIT97), _OMC_LIT98);
@@ -1389,6 +1527,7 @@ PROTECTED_FUNCTION_STATIC void omc_Main_translateFile(threadData_t *threadData, 
           modelica_metatype tmpMeta5;
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
+          modelica_string tmp8 = 0;
           
           _libs = tmp3_1;
           /* Pattern matching succeeded */
@@ -1435,33 +1574,94 @@ PROTECTED_FUNCTION_STATIC void omc_Main_translateFile(threadData_t *threadData, 
 
           _fileNamePrefix = omc_Util_stringReplaceChar(threadData, omc_AbsynUtil_pathString(threadData, _cname, _OMC_LIT80, 1 /* true */, 0 /* false */), _OMC_LIT80, _OMC_LIT112);
 
-          _runBackend = (omc_Config_simulationCg(threadData) || omc_Config_simulation(threadData));
+          if(omc_Flags_getConfigBool(threadData, _OMC_LIT149))
+          {
+            _fmuVersionInt = omc_Flags_getConfigEnum(threadData, _OMC_LIT130);
 
-          _runSilent = omc_Config_silent(threadData);
+            { /* match expression */
+              modelica_integer tmp11_1;
+              tmp11_1 = _fmuVersionInt;
+              {
+                int tmp11;
+                {
+                  switch (MMC_SWITCH_CAST(tmp11_1)) {
+                  case 10: {
+                    if (10 != tmp11_1) goto tmp10_end;
+                    /* Pattern matching succeeded */
+                    tmp8 = _OMC_LIT114;
+                    goto tmp10_done;
+                  }
+                  case 20: {
+                    if (20 != tmp11_1) goto tmp10_end;
+                    /* Pattern matching succeeded */
+                    tmp8 = _OMC_LIT116;
+                    goto tmp10_done;
+                  }
+                  case 30: {
+                    if (30 != tmp11_1) goto tmp10_end;
+                    /* Pattern matching succeeded */
+                    tmp8 = _OMC_LIT118;
+                    goto tmp10_done;
+                  }
+                  }
+                  goto tmp10_end;
+                  tmp10_end: ;
+                }
+                goto goto_9;
+                goto_9:;
+                goto goto_1;
+                goto tmp10_done;
+                tmp10_done:;
+              }
+            }
+            _fmuVersion = tmp8;
 
-          omc_CevalScriptBackend_translateModel(threadData, omc_FCore_emptyCache(threadData), omc_FGraph_empty(threadData), _cname, _fileNamePrefix, _runBackend, _runSilent, mmc_mk_none(), NULL, NULL, NULL, NULL);
+            omc_FlagsUtil_setConfigString(threadData, _OMC_LIT133, _fmuVersion);
 
-          omc_Main_showErrors(threadData, omc_Print_getErrorString(threadData), omc_ErrorExt_printMessagesStr(threadData, 0 /* false */));
+            _fmuTypeList = omc_Flags_getConfigStringList(threadData, _OMC_LIT139);
+
+            _fmuType = stringDelimitList(_fmuTypeList, _OMC_LIT112);
+
+            _fmuPlatformsStr = omc_Flags_getConfigString(threadData, _OMC_LIT144);
+
+            _fmuPlatforms = omc_Util_stringSplitAtChar(threadData, _fmuPlatformsStr, _OMC_LIT145);
+
+            omc_CevalScriptBackend_callBuildModelFMU(threadData, omc_FCore_emptyCache(threadData), omc_FGraph_empty(threadData), _cname, _fmuVersion, _fmuType, _fileNamePrefix, 1 /* true */, _fmuPlatforms, mmc_mk_none(), NULL);
+
+            omc_Main_showErrors(threadData, omc_Print_getErrorString(threadData), omc_ErrorExt_printMessagesStr(threadData, 0 /* false */));
+
+            omc_System_fflush(threadData);
+          }
+          else
+          {
+            _runBackend = (omc_Config_simulationCg(threadData) || omc_Config_simulation(threadData));
+
+            _runSilent = omc_Config_silent(threadData);
+
+            omc_CevalScriptBackend_translateModel(threadData, omc_FCore_emptyCache(threadData), omc_FGraph_empty(threadData), _cname, _fileNamePrefix, _runBackend, _runSilent, mmc_mk_none(), NULL, NULL, NULL, NULL);
+
+            omc_Main_showErrors(threadData, omc_Print_getErrorString(threadData), omc_ErrorExt_printMessagesStr(threadData, 0 /* false */));
+          }
           goto tmp2_done;
         }
         case 1: {
-          modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
+          modelica_metatype tmpMeta12;
+          modelica_metatype tmpMeta13;
+          modelica_metatype tmpMeta14;
+          modelica_metatype tmpMeta15;
           if (listEmpty(tmp3_1)) goto tmp2_end;
-          tmpMeta8 = MMC_CAR(tmp3_1);
-          tmpMeta9 = MMC_CDR(tmp3_1);
-          _f = tmpMeta8;
-          _libs = tmpMeta9;
+          tmpMeta12 = MMC_CAR(tmp3_1);
+          tmpMeta13 = MMC_CDR(tmp3_1);
+          _f = tmpMeta12;
+          _libs = tmpMeta13;
           /* Pattern matching succeeded */
           omc_Main_isModelicaScriptFile(threadData, _f);
 
           {
             modelica_metatype _lib;
-            for (tmpMeta10 = _libs; !listEmpty(tmpMeta10); tmpMeta10=MMC_CDR(tmpMeta10))
+            for (tmpMeta14 = _libs; !listEmpty(tmpMeta14); tmpMeta14=MMC_CDR(tmpMeta14))
             {
-              _lib = MMC_CAR(tmpMeta10);
+              _lib = MMC_CAR(tmpMeta14);
               omc_Main_loadLib(threadData, _lib);
             }
           }
@@ -1474,34 +1674,34 @@ PROTECTED_FUNCTION_STATIC void omc_Main_translateFile(threadData_t *threadData, 
           goto tmp2_done;
         }
         case 2: {
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
+          modelica_metatype tmpMeta16;
+          modelica_metatype tmpMeta17;
           if (listEmpty(tmp3_1)) goto tmp2_end;
-          tmpMeta12 = MMC_CAR(tmp3_1);
-          tmpMeta13 = MMC_CDR(tmp3_1);
-          if (!listEmpty(tmpMeta13)) goto tmp2_end;
-          _f = tmpMeta12;
+          tmpMeta16 = MMC_CAR(tmp3_1);
+          tmpMeta17 = MMC_CDR(tmp3_1);
+          if (!listEmpty(tmpMeta17)) goto tmp2_end;
+          _f = tmpMeta16;
           /* Pattern matching succeeded */
           omc_Main_isCodegenTemplateFile(threadData, _f);
 
-          omc_TplMain_main(threadData, _f);
+          omc_TplMain_main(threadData, _f, omc_Flags_getConfigString(threadData, _OMC_LIT152));
           goto tmp2_done;
         }
         case 3: {
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
+          modelica_metatype tmpMeta18;
+          modelica_metatype tmpMeta19;
           if (listEmpty(tmp3_1)) goto tmp2_end;
-          tmpMeta14 = MMC_CAR(tmp3_1);
-          tmpMeta15 = MMC_CDR(tmp3_1);
-          _f = tmpMeta14;
+          tmpMeta18 = MMC_CAR(tmp3_1);
+          tmpMeta19 = MMC_CDR(tmp3_1);
+          _f = tmpMeta18;
           /* Pattern matching succeeded */
           if(omc_System_regularFileExists(threadData, _f))
           {
-            fputs(MMC_STRINGDATA(_OMC_LIT114),stdout);
+            fputs(MMC_STRINGDATA(_OMC_LIT154),stdout);
           }
           else
           {
-            fputs(MMC_STRINGDATA(_OMC_LIT113),stdout);
+            fputs(MMC_STRINGDATA(_OMC_LIT153),stdout);
           }
 
           fputs(MMC_STRINGDATA(_f),stdout);
@@ -1535,12 +1735,18 @@ PROTECTED_FUNCTION_STATIC void omc_Main_translateFile(threadData_t *threadData, 
   ;
   _return: OMC_LABEL_UNUSED
   threadData->mmc_jumper = old_mmc_jumper;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Main_loadLib(threadData_t *threadData, modelica_string _inLib)
 {
   modelica_boolean _is_modelica_file;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _is_modelica_file has no default value.
@@ -1571,7 +1777,7 @@ PROTECTED_FUNCTION_STATIC void omc_Main_loadLib(threadData_t *threadData, modeli
           tmp3 += 2; /* Pattern matching succeeded; we may skip some cases if we fail */
           _p = omc_SymbolTable_getAbsyn(threadData);
 
-          _pnew = omc_CevalScript_loadFile(threadData, _inLib, _OMC_LIT115, _p, 1 /* true */, 1 /* true */, 0 /* false */, 1 /* true */);
+          _pnew = omc_CevalScript_loadFile(threadData, _inLib, _OMC_LIT155, _p, 1 /* true */, 1 /* true */, 0 /* false */, 1 /* true */);
 
           omc_SymbolTable_setAbsyn(threadData, _pnew);
           goto tmp2_done;
@@ -1590,7 +1796,7 @@ PROTECTED_FUNCTION_STATIC void omc_Main_loadLib(threadData_t *threadData, modeli
           _p = omc_SymbolTable_getAbsyn(threadData);
 
           /* Pattern-matching tuple assignment */
-          tmpMeta7 = mmc_mk_box4(0, _path, _OMC_LIT116, _OMC_LIT118, mmc_mk_boolean(0 /* false */));
+          tmpMeta7 = mmc_mk_box4(0, _path, _OMC_LIT156, _OMC_LIT158, mmc_mk_boolean(0 /* false */));
           tmpMeta6 = mmc_mk_cons(tmpMeta7, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta8 = omc_CevalScript_loadModel(threadData, tmpMeta6, _mp, _p, 1 /* true */, 1 /* true */, 1 /* true */, 0 /* false */, 0 /* false */, _OMC_LIT28, &tmp5);
           _pnew = tmpMeta8;
@@ -1604,8 +1810,8 @@ PROTECTED_FUNCTION_STATIC void omc_Main_loadLib(threadData_t *threadData, modeli
           modelica_metatype tmpMeta10;
           if (0 /* false */ != tmp3_1) goto tmp2_end;
           tmp3 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmpMeta9 = stringAppend(_OMC_LIT119,_inLib);
-          tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT120);
+          tmpMeta9 = stringAppend(_OMC_LIT159,_inLib);
+          tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT160);
           omc_Print_printErrorBuf(threadData, tmpMeta10);
           goto goto_1;
           goto tmp2_done;
@@ -1615,8 +1821,8 @@ PROTECTED_FUNCTION_STATIC void omc_Main_loadLib(threadData_t *threadData, modeli
           modelica_metatype tmpMeta12;
           if (1 /* true */ != tmp3_1) goto tmp2_end;
           /* Pattern matching succeeded */
-          tmpMeta11 = stringAppend(_OMC_LIT121,_inLib);
-          tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT120);
+          tmpMeta11 = stringAppend(_OMC_LIT161,_inLib);
+          tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT160);
           omc_Print_printErrorBuf(threadData, tmpMeta12);
           goto goto_1;
           goto tmp2_done;
@@ -1641,11 +1847,17 @@ PROTECTED_FUNCTION_STATIC void omc_Main_loadLib(threadData_t *threadData, modeli
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Main_showErrors(threadData_t *threadData, modelica_string _errorString, modelica_string _errorMessages)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if((!stringEqual(_errorString, _OMC_LIT28)))
@@ -1670,6 +1882,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_showErrors(threadData_t *threadData, mod
     omc_System_fflush(threadData);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1681,6 +1896,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_isCodegenTemplateFile(threadData_t *thre
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_boolean tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _lst has no default value.
@@ -1695,9 +1913,12 @@ PROTECTED_FUNCTION_STATIC void omc_Main_isCodegenTemplateFile(threadData_t *thre
   _last = tmpMeta2;
 
   /* Pattern-matching assignment */
-  tmp4 = (stringEqual(_last, _OMC_LIT122));
+  tmp4 = (stringEqual(_last, _OMC_LIT162));
   if (1 /* true */ != tmp4) MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1710,6 +1931,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_isModelicaScriptFile(threadData_t *threa
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
   modelica_boolean tmp5;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _lst has no default value.
@@ -1728,9 +1952,12 @@ PROTECTED_FUNCTION_STATIC void omc_Main_isModelicaScriptFile(threadData_t *threa
   _last = tmpMeta3;
 
   /* Pattern-matching assignment */
-  tmp5 = (stringEqual(_last, _OMC_LIT123));
+  tmp5 = (stringEqual(_last, _OMC_LIT163));
   if (1 /* true */ != tmp5) MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1742,6 +1969,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_isFlatModelicaFile(threadData_t *threadD
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_boolean tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _lst has no default value.
@@ -1756,14 +1986,20 @@ PROTECTED_FUNCTION_STATIC void omc_Main_isFlatModelicaFile(threadData_t *threadD
   _last = tmpMeta2;
 
   /* Pattern-matching assignment */
-  tmp4 = (stringEqual(_last, _OMC_LIT124));
+  tmp4 = (stringEqual(_last, _OMC_LIT164));
   if (1 /* true */ != tmp4) MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Main_isEmptyOrFirstIsModelicaFile(threadData_t *threadData, modelica_metatype _libs)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1809,6 +2045,9 @@ PROTECTED_FUNCTION_STATIC void omc_Main_isEmptyOrFirstIsModelicaFile(threadData_
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1817,6 +2056,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Main_isModelicaFile(threadData_t 
   modelica_boolean _outIsModelicaFile;
   modelica_metatype _lst = NULL;
   modelica_string _file_ext = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsModelicaFile has no default value.
@@ -1832,9 +2074,12 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Main_isModelicaFile(threadData_t 
   {
     _file_ext = omc_List_last(threadData, _lst);
 
-    _outIsModelicaFile = ((stringEqual(_file_ext, _OMC_LIT125)) || (stringEqual(_file_ext, _OMC_LIT124)));
+    _outIsModelicaFile = ((stringEqual(_file_ext, _OMC_LIT165)) || (stringEqual(_file_ext, _OMC_LIT164)));
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsModelicaFile;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Main_isModelicaFile(threadData_t *threadData, modelica_metatype _inFilename)
@@ -1952,8 +2197,8 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Main_makeClassDefResult(threadData
             *tmp15 = mmc_mk_nil();
             tmpMeta14 = __omcQ_24tmpVar3;
           }
-          tmpMeta18 = stringAppend(_OMC_LIT126,stringDelimitList(tmpMeta14, _OMC_LIT127));
-          tmpMeta19 = stringAppend(tmpMeta18,_OMC_LIT128);
+          tmpMeta18 = stringAppend(_OMC_LIT166,stringDelimitList(tmpMeta14, _OMC_LIT145));
+          tmpMeta19 = stringAppend(tmpMeta18,_OMC_LIT167);
           tmp1 = tmpMeta19;
           goto tmp3_done;
         }
@@ -2036,8 +2281,8 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Main_makeClassDefResult(threadData
             *tmp28 = mmc_mk_nil();
             tmpMeta27 = __omcQ_24tmpVar7;
           }
-          tmpMeta31 = stringAppend(_OMC_LIT126,stringDelimitList(tmpMeta27, _OMC_LIT127));
-          tmpMeta32 = stringAppend(tmpMeta31,_OMC_LIT128);
+          tmpMeta31 = stringAppend(_OMC_LIT166,stringDelimitList(tmpMeta27, _OMC_LIT145));
+          tmpMeta32 = stringAppend(tmpMeta31,_OMC_LIT167);
           tmp1 = tmpMeta32;
           goto tmp3_done;
         }
@@ -2142,11 +2387,11 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Main_handleCommand2(threadData_t *
           if (!optionNone(tmp4_1)) goto tmp3_end;
           if (!optionNone(tmp4_2)) goto tmp3_end;
           /* Pattern matching succeeded */
-          omc_Print_printBuf(threadData, _OMC_LIT129);
+          omc_Print_printBuf(threadData, _OMC_LIT168);
 
           _result = omc_Print_getString(threadData);
 
-          tmpMeta8 = stringAppend(_result,_OMC_LIT130);
+          tmpMeta8 = stringAppend(_result,_OMC_LIT169);
           _result = tmpMeta8;
           tmpMeta9 = stringAppend(_result,omc_Error_printMessagesStr(threadData, 0 /* false */));
           tmp1 = tmpMeta9;
@@ -2172,7 +2417,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Main_handleCommand2(threadData_t *
           if (1 /* true */ != tmp11) goto goto_2;
 
           tmpMeta12 = mmc_mk_cons(_inCommand, MMC_REFSTRUCTLIT(mmc_nil));
-          omc_Error_addMessage(threadData, _OMC_LIT132, tmpMeta12);
+          omc_Error_addMessage(threadData, _OMC_LIT171, tmpMeta12);
           tmp1 = _OMC_LIT28;
           goto tmp3_done;
         }
@@ -2214,11 +2459,11 @@ modelica_boolean omc_Main_handleCommand(threadData_t *threadData, modelica_strin
   // _prog has no default value.
   omc_Print_clearBuf(threadData);
 
-  if(omc_Util_strncmp(threadData, _OMC_LIT134, _inCommand, ((modelica_integer) 6)))
+  if(omc_Util_strncmp(threadData, _OMC_LIT173, _inCommand, ((modelica_integer) 6)))
   {
     _outContinue = 0 /* false */;
 
-    _outResult = _OMC_LIT133;
+    _outResult = _OMC_LIT172;
   }
   else
   {
@@ -2232,6 +2477,8 @@ modelica_boolean omc_Main_handleCommand(threadData_t *threadData, modelica_strin
 
     _outResult = omc_Main_makeDebugResult(threadData, _OMC_LIT110, _outResult);
   }
+
+  omc_System_reportProgress(threadData, ((modelica_integer) -1), ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
   if (out_outResult) { *out_outResult = _outResult; }
   return _outContinue;
@@ -2273,20 +2520,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_Main_parseCommand(threadData_t *
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           /* Pattern matching succeeded */
-          omc_ErrorExt_setCheckpoint(threadData, _OMC_LIT135);
+          omc_ErrorExt_setCheckpoint(threadData, _OMC_LIT174);
 
           _stmts = omc_Parser_parsestringexp(threadData, _inCommand, _OMC_LIT98);
 
-          omc_ErrorExt_delCheckpoint(threadData, _OMC_LIT135);
+          omc_ErrorExt_delCheckpoint(threadData, _OMC_LIT174);
           tmpMeta[0+0] = mmc_mk_some(_stmts);
           tmpMeta[0+1] = mmc_mk_none();
           goto tmp3_done;
         }
         case 1: {
           /* Pattern matching succeeded */
-          omc_ErrorExt_rollBack(threadData, _OMC_LIT135);
+          omc_ErrorExt_rollBack(threadData, _OMC_LIT174);
 
-          _prog = omc_Parser_parsestring(threadData, _inCommand, _OMC_LIT98, omc_Config_acceptedGrammar(threadData), omc_Flags_getConfigEnum(threadData, _OMC_LIT184), omc_Flags_getConfigBool(threadData, _OMC_LIT188));
+          _prog = omc_Parser_parsestring(threadData, _inCommand, _OMC_LIT98, omc_Config_acceptedGrammar(threadData), omc_Flags_getConfigEnum(threadData, _OMC_LIT209), omc_Flags_getConfigBool(threadData, _OMC_LIT212));
           tmpMeta[0+0] = mmc_mk_none();
           tmpMeta[0+1] = mmc_mk_some(_prog);
           goto tmp3_done;
@@ -2358,7 +2605,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Main_makeDebugResult(threadData_t 
           if (1 /* true */ != tmp7) goto goto_2;
 
           _debugstr = omc_Print_getString(threadData);
-          tmpMeta8 = mmc_mk_cons(_res, mmc_mk_cons(_OMC_LIT189, mmc_mk_cons(_flagstr, mmc_mk_cons(_OMC_LIT190, mmc_mk_cons(_debugstr, mmc_mk_cons(_OMC_LIT191, mmc_mk_cons(_flagstr, mmc_mk_cons(_OMC_LIT190, MMC_REFSTRUCTLIT(mmc_nil)))))))));
+          tmpMeta8 = mmc_mk_cons(_res, mmc_mk_cons(_OMC_LIT213, mmc_mk_cons(_flagstr, mmc_mk_cons(_OMC_LIT214, mmc_mk_cons(_debugstr, mmc_mk_cons(_OMC_LIT215, mmc_mk_cons(_flagstr, mmc_mk_cons(_OMC_LIT214, MMC_REFSTRUCTLIT(mmc_nil)))))))));
           tmp1 = stringAppendList(tmpMeta8);
           goto tmp3_done;
         }

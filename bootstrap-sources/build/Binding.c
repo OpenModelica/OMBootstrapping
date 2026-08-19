@@ -1773,6 +1773,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Binding_isAlreadyInList(threadDat
 {
   modelica_boolean _val;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _val has no default value.
@@ -1838,6 +1841,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Binding_isAlreadyInList(threadDat
   }
   _val = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _val;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Binding_isAlreadyInList(threadData_t *threadData, modelica_metatype _ts, modelica_metatype _predecessors)
@@ -4395,6 +4401,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Binding_isOfType(threadData_t *th
 {
   modelica_boolean _result;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
@@ -4470,6 +4479,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_Binding_isOfType(threadData_t *th
   }
   _result = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _result;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Binding_isOfType(threadData_t *threadData, modelica_metatype _elems, modelica_metatype _typeName)

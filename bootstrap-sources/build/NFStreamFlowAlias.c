@@ -43,10 +43,10 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT15,29,_OMC_LIT15_data);
 #define _OMC_LIT16_data " has no associated variable"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT16,27,_OMC_LIT16_data);
 #define _OMC_LIT16 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT16)
-#define _OMC_LIT17_data "/projects/OpenModelica-session2/OMCompiler/Compiler/NFFrontEnd/NFStreamFlowAlias.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT17,83,_OMC_LIT17_data);
+#define _OMC_LIT17_data "/home/andreas/workdir/OM/OpenModelica/OMCompiler/Compiler/NFFrontEnd/NFStreamFlowAlias.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT17,89,_OMC_LIT17_data);
 #define _OMC_LIT17 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT17)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT18_6,1.782064075e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT18_6,1.784885415e9);
 #define _OMC_LIT18_6 MMC_REFREALLIT(_OMC_LIT_STRUCT18_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT18,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT17,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(156)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(157)),MMC_IMMEDIATE(MMC_TAGFIXNUM(55)),_OMC_LIT18_6}};
 #define _OMC_LIT18 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT18)
@@ -100,11 +100,17 @@ DLLDirection
 modelica_boolean omc_NFStreamFlowAlias_EntryEqual(threadData_t *threadData, modelica_metatype _entry1, modelica_metatype _entry2)
 {
   modelica_boolean _isEqual;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEqual has no default value.
   _isEqual = omc_NFComponentRef_isEqual(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_entry1), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_entry2), 2))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEqual;
 }
 modelica_metatype boxptr_NFStreamFlowAlias_EntryEqual(threadData_t *threadData, modelica_metatype _entry1, modelica_metatype _entry2)
@@ -120,11 +126,17 @@ DLLDirection
 modelica_integer omc_NFStreamFlowAlias_EntryHash(threadData_t *threadData, modelica_metatype _entry)
 {
   modelica_integer _hash;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hash has no default value.
   _hash = omc_NFComponentRef_hash(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_entry), 2))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _hash;
 }
 modelica_metatype boxptr_NFStreamFlowAlias_EntryHash(threadData_t *threadData, modelica_metatype _entry)
@@ -159,10 +171,16 @@ DLLDirection
 modelica_boolean omc_NFStreamFlowAlias_FlowAlias_isNonFlow(threadData_t *threadData, modelica_metatype _alias)
 {
   modelica_boolean _isNonFlow;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _isNonFlow = (isSome((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_alias), 4)))) && (!omc_NFVariable_isFlow(threadData, omc_Util_getOption(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_alias), 4)))))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isNonFlow;
 }
 modelica_metatype boxptr_NFStreamFlowAlias_FlowAlias_isNonFlow(threadData_t *threadData, modelica_metatype _alias)
@@ -658,11 +676,17 @@ DLLDirection
 modelica_boolean omc_NFStreamFlowAlias_contains(threadData_t *threadData, modelica_metatype _entry, modelica_metatype _sets)
 {
   modelica_boolean _found;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _found has no default value.
   _found = isSome(omc_UnorderedMap_get(threadData, _entry, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sets), 3)))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _found;
 }
 modelica_metatype boxptr_NFStreamFlowAlias_contains(threadData_t *threadData, modelica_metatype _entry, modelica_metatype _sets)
@@ -675,7 +699,7 @@ modelica_metatype boxptr_NFStreamFlowAlias_contains(threadData_t *threadData, mo
 }
 
 DLLDirection
-modelica_metatype omc_NFStreamFlowAlias_createAliases(threadData_t *threadData, modelica_metatype _sets, modelica_metatype __omcQ_24in_5FflatModel, modelica_metatype *out_aliases)
+modelica_metatype omc_NFStreamFlowAlias_createAliases(threadData_t *threadData, modelica_metatype _sets, modelica_metatype _vars, modelica_metatype __omcQ_24in_5FflatModel, modelica_metatype *out_aliases)
 {
   modelica_metatype __omcQ_24mrfa_5F0 = NULL;
   modelica_metatype __omcQ_24mrfa_5F1 = NULL;
@@ -696,15 +720,16 @@ modelica_metatype omc_NFStreamFlowAlias_createAliases(threadData_t *threadData, 
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
-  modelica_metatype tmpMeta8;
+  modelica_boolean tmp8;
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
-  modelica_integer tmp14;
+  modelica_metatype tmpMeta14;
   modelica_integer tmp15;
-  modelica_metatype tmpMeta16;
+  modelica_integer tmp16;
+  modelica_metatype tmpMeta17;
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // __omcQ_24mrfa_5F0 has no default value.
@@ -726,9 +751,9 @@ modelica_metatype omc_NFStreamFlowAlias_createAliases(threadData_t *threadData, 
 
   {
     modelica_metatype _set;
-    for (tmpMeta4 = _extracted_sets, tmp15 = arrayLength(tmpMeta4), tmp14 = 1; tmp14 <= tmp15; tmp14++)
+    for (tmpMeta4 = _extracted_sets, tmp16 = arrayLength(tmpMeta4), tmp15 = 1; tmp15 <= tmp16; tmp15++)
     {
-      _set = arrayGet(tmpMeta4,tmp14);
+      _set = arrayGet(tmpMeta4,tmp15);
       _representative = omc_NFStreamFlowAlias_defineRepresentative(threadData, _set ,&_rest_aliases);
 
       /* Pattern-matching assignment */
@@ -740,25 +765,29 @@ modelica_metatype omc_NFStreamFlowAlias_createAliases(threadData_t *threadData, 
       tmpMeta7 = mmc_mk_cons(_repr_var, _alias_vars);
       _alias_vars = tmpMeta7;
 
+      /* Pattern-matching assignment */
+      tmp8 = omc_UnorderedMap_tryUpdate(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_repr_var), 2))), _repr_var, _vars);
+      if (1 /* true */ != tmp8) MMC_THROW_INTERNAL();
+
       _repr_binding = omc_NFVariable_asBinding(threadData, _repr_var, 4);
 
       {
         modelica_metatype _alias;
-        for (tmpMeta8 = _rest_aliases; !listEmpty(tmpMeta8); tmpMeta8=MMC_CDR(tmpMeta8))
+        for (tmpMeta9 = _rest_aliases; !listEmpty(tmpMeta9); tmpMeta9=MMC_CDR(tmpMeta9))
         {
-          _alias = MMC_CAR(tmpMeta8);
+          _alias = MMC_CAR(tmpMeta9);
           _negated = (!mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_representative), 3)))) != !mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_alias), 3)))));
 
           _alias = omc_NFStreamFlowAlias_defineAlias(threadData, _alias, _repr_binding, _negated, _alias_eqs ,&_alias_eqs);
 
-          tmpMeta9 = mmc_mk_cons(omc_Util_getOption(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_alias), 4)))), _alias_vars);
-          _alias_vars = tmpMeta9;
+          tmpMeta10 = mmc_mk_cons(omc_Util_getOption(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_alias), 4)))), _alias_vars);
+          _alias_vars = tmpMeta10;
         }
       }
 
-      tmpMeta12 = mmc_mk_box2(0, _representative, _rest_aliases);
-      tmpMeta11 = mmc_mk_cons(tmpMeta12, _aliases);
-      _aliases = tmpMeta11;
+      tmpMeta13 = mmc_mk_box2(0, _representative, _rest_aliases);
+      tmpMeta12 = mmc_mk_cons(tmpMeta13, _aliases);
+      _aliases = tmpMeta12;
     }
   }
 
@@ -768,8 +797,8 @@ modelica_metatype omc_NFStreamFlowAlias_createAliases(threadData_t *threadData, 
 
   __omcQ_24mrfa_5F1 = listAppend((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 4))), listReverseInPlace(_alias_eqs));
 
-  tmpMeta16 = mmc_mk_box8(3, &NFFlatModel_FLAT__MODEL__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 2))), __omcQ_24mrfa_5F0, __omcQ_24mrfa_5F1, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 5))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 6))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 7))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 8))));
-  _flatModel = tmpMeta16;
+  tmpMeta17 = mmc_mk_box8(3, &NFFlatModel_FLAT__MODEL__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 2))), __omcQ_24mrfa_5F0, __omcQ_24mrfa_5F1, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 5))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 6))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 7))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 8))));
+  _flatModel = tmpMeta17;
   _return: OMC_LABEL_UNUSED
   if (out_aliases) { *out_aliases = _aliases; }
   return _flatModel;
@@ -824,7 +853,7 @@ modelica_metatype omc_NFStreamFlowAlias_defineAlias(threadData_t *threadData, mo
 
   if(_negated)
   {
-    _b = omc_NFBinding_mapExp(threadData, _binding, boxvar_NFExpression_negate);
+    _b = omc_NFBinding_mapExpShallow(threadData, _binding, boxvar_NFExpression_negate);
   }
   else
   {
@@ -994,7 +1023,7 @@ modelica_metatype omc_NFStreamFlowAlias_eliminateAliases(threadData_t *threadDat
   // _aliases has no default value.
   _flatModel = omc_NFStreamFlowAlias_fromModel(threadData, _flatModel ,&_sets);
 
-  _flatModel = omc_NFStreamFlowAlias_createAliases(threadData, _sets, _flatModel ,&_aliases);
+  _flatModel = omc_NFStreamFlowAlias_createAliases(threadData, _sets, _vars, _flatModel ,&_aliases);
 
   _replacements = omc_NFStreamFlowAlias_buildReplacements(threadData, _aliases);
 
@@ -1143,7 +1172,7 @@ modelica_metatype omc_NFStreamFlowAlias_evalAliasAttributes(threadData_t *thread
 
                 if(_negated)
                 {
-                  _attr_binding = omc_NFBinding_mapExp(threadData, _attr_binding, boxvar_NFExpression_negate);
+                  _attr_binding = omc_NFBinding_mapExpShallow(threadData, _attr_binding, boxvar_NFExpression_negate);
                 }
 
                 tmpMeta14 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 2))), _attr_binding);
@@ -1163,7 +1192,7 @@ modelica_metatype omc_NFStreamFlowAlias_evalAliasAttributes(threadData_t *thread
 
                 if(_negated)
                 {
-                  _attr_binding = omc_NFBinding_mapExp(threadData, _attr_binding, boxvar_NFExpression_negate);
+                  _attr_binding = omc_NFBinding_mapExpShallow(threadData, _attr_binding, boxvar_NFExpression_negate);
                 }
 
                 tmpMeta17 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 2))), _attr_binding);
@@ -1183,7 +1212,7 @@ modelica_metatype omc_NFStreamFlowAlias_evalAliasAttributes(threadData_t *thread
 
                 if(_negated)
                 {
-                  tmpMeta19 = mmc_mk_cons(_attr_exp, _maxValues);
+                  tmpMeta19 = mmc_mk_cons(omc_NFExpression_negate(threadData, _attr_exp), _maxValues);
                   _maxValues = tmpMeta19;
                 }
                 else
@@ -1205,7 +1234,7 @@ modelica_metatype omc_NFStreamFlowAlias_evalAliasAttributes(threadData_t *thread
 
                 if(_negated)
                 {
-                  tmpMeta22 = mmc_mk_cons(_attr_exp, _minValues);
+                  tmpMeta22 = mmc_mk_cons(omc_NFExpression_negate(threadData, _attr_exp), _minValues);
                   _minValues = tmpMeta22;
                 }
                 else
@@ -1242,11 +1271,11 @@ modelica_metatype omc_NFStreamFlowAlias_evalAliasAttributes(threadData_t *thread
     }
   }
 
-  _attrs = listReverseInPlace(_attrs);
+  _accum_attrs = listReverseInPlace(_accum_attrs);
 
   tmpMeta27 = MMC_TAGPTR(mmc_alloc_words(12));
   memcpy(MMC_UNTAGPTR(tmpMeta27), MMC_UNTAGPTR(_var), 12*sizeof(modelica_metatype));
-  ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta27))[7] = _attrs;
+  ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta27))[7] = _accum_attrs;
   _var = tmpMeta27;
 
   tmpMeta28 = MMC_TAGPTR(mmc_alloc_words(5));
@@ -1314,6 +1343,7 @@ modelica_metatype omc_NFStreamFlowAlias_extractSets(threadData_t *threadData, mo
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if((mmc_unbox_integer(arrayGet(_nodes,_i) /* DAE.ASUB */) < ((modelica_integer) 0)))
       {
         _set_idx = ((modelica_integer) 1) + _set_idx;
@@ -1334,6 +1364,7 @@ modelica_metatype omc_NFStreamFlowAlias_extractSets(threadData_t *threadData, mo
     modelica_integer _i;
     for(_i = arrayLength(_entries); in_range_integer(_i, tmp10, tmp12); _i += tmp11)
     {
+
       /* Pattern-matching assignment */
       tmpMeta5 = arrayGetNoBoundsChecking(_entries, _i);
       tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 1));
@@ -1412,6 +1443,9 @@ void omc_NFStreamFlowAlias_findConstantBindings(threadData_t *threadData, modeli
 {
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   {
@@ -1423,6 +1457,9 @@ void omc_NFStreamFlowAlias_findConstantBindings(threadData_t *threadData, modeli
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1466,6 +1503,9 @@ void omc_NFStreamFlowAlias_findConstantBindingsInEq(threadData_t *threadData, mo
 {
   modelica_metatype _cref = NULL;
   modelica_metatype _exp = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _cref has no default value.
@@ -1545,6 +1585,9 @@ void omc_NFStreamFlowAlias_findConstantBindingsInEq(threadData_t *threadData, mo
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1554,6 +1597,9 @@ modelica_integer omc_NFStreamFlowAlias_findRoot(threadData_t *threadData, modeli
   modelica_integer _rootIndex;
   modelica_integer _parent;
   modelica_integer _idx;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _rootIndex = _nodeIndex;
@@ -1579,6 +1625,9 @@ modelica_integer omc_NFStreamFlowAlias_findRoot(threadData_t *threadData, modeli
     _parent = mmc_unbox_integer(arrayGet(_nodes,_parent) /* DAE.ASUB */);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _rootIndex;
 }
 modelica_metatype boxptr_NFStreamFlowAlias_findRoot(threadData_t *threadData, modelica_metatype _nodeIndex, modelica_metatype _nodes)
@@ -1624,6 +1673,9 @@ DLLDirection
 modelica_integer omc_NFStreamFlowAlias_findSetArrayIndex(threadData_t *threadData, modelica_metatype _entry, modelica_metatype _sets)
 {
   modelica_integer _set;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _set has no default value.
@@ -1637,6 +1689,9 @@ modelica_integer omc_NFStreamFlowAlias_findSetArrayIndex(threadData_t *threadDat
 
   _set = (-_set);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _set;
 }
 modelica_metatype boxptr_NFStreamFlowAlias_findSetArrayIndex(threadData_t *threadData, modelica_metatype _entry, modelica_metatype _sets)
@@ -1982,10 +2037,16 @@ DLLDirection
 modelica_integer omc_NFStreamFlowAlias_getNodeCount(threadData_t *threadData, modelica_metatype _sets)
 {
   modelica_integer _nodeCount;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _nodeCount = mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sets), 4))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _nodeCount;
 }
 modelica_metatype boxptr_NFStreamFlowAlias_getNodeCount(threadData_t *threadData, modelica_metatype _sets)
@@ -2002,6 +2063,9 @@ modelica_boolean omc_NFStreamFlowAlias_isStreamConnectorFlow(threadData_t *threa
 {
   modelica_boolean _isStreamFlow;
   modelica_metatype _node = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isStreamFlow has no default value.
@@ -2024,6 +2088,9 @@ modelica_boolean omc_NFStreamFlowAlias_isStreamConnectorFlow(threadData_t *threa
 
   _isStreamFlow = omc_NFType_isStreamConnector(threadData, omc_NFComponentRef_nodeType(threadData, omc_NFComponentRef_rest(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_alias), 2))))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isStreamFlow;
 }
 modelica_metatype boxptr_NFStreamFlowAlias_isStreamConnectorFlow(threadData_t *threadData, modelica_metatype _alias)
@@ -2090,6 +2157,7 @@ modelica_metatype omc_NFStreamFlowAlias_negateSet(threadData_t *threadData, mode
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
     {
+
       if((omc_NFStreamFlowAlias_findRoot(threadData, _i, _nodes) == _root))
       {
         _alias = omc_UnorderedMap_keyAt(threadData, _elements, _i);
@@ -2132,6 +2200,9 @@ void omc_NFStreamFlowAlias_printSets(threadData_t *threadData, modelica_metatype
   modelica_string tmp7;
   modelica_string tmp8;
   modelica_metatype tmpMeta9;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodes has no default value.
@@ -2176,6 +2247,9 @@ void omc_NFStreamFlowAlias_printSets(threadData_t *threadData, modelica_metatype
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

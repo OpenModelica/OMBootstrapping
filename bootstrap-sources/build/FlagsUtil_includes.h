@@ -9,6 +9,7 @@ extern "C" {
 #include "ErrorExt.h"
 #include "Flags.h"
 #include "FlagsUtil.h"
+#include "IOStream.h"
 #include "List.h"
 #include "Print.h"
 #include "Settings.h"

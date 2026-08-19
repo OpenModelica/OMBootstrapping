@@ -157,6 +157,13 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBStrongComponent_getVarCref,2,0) {(voi
 
 
 DLLDirection
+modelica_metatype omc_NBStrongComponent_getVariableCrefs(threadData_t *threadData, modelica_metatype _comp);
+#define boxptr_NBStrongComponent_getVariableCrefs omc_NBStrongComponent_getVariableCrefs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBStrongComponent_getVariableCrefs,2,0) {(void*) boxptr_NBStrongComponent_getVariableCrefs,0}};
+#define boxvar_NBStrongComponent_getVariableCrefs MMC_REFSTRUCTLIT(boxvar_lit_NBStrongComponent_getVariableCrefs)
+
+
+DLLDirection
 modelica_metatype omc_NBStrongComponent_getVariables(threadData_t *threadData, modelica_metatype _comp);
 #define boxptr_NBStrongComponent_getVariables omc_NBStrongComponent_getVariables
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBStrongComponent_getVariables,2,0) {(void*) boxptr_NBStrongComponent_getVariables,0}};
@@ -206,6 +213,9 @@ modelica_metatype omc_NBStrongComponent_toSolvedEquation(threadData_t *threadDat
 #define boxptr_NBStrongComponent_toSolvedEquation omc_NBStrongComponent_toSolvedEquation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBStrongComponent_toSolvedEquation,2,0) {(void*) boxptr_NBStrongComponent_toSolvedEquation,0}};
 #define boxvar_NBStrongComponent_toSolvedEquation MMC_REFSTRUCTLIT(boxvar_lit_NBStrongComponent_toSolvedEquation)
+
+
+#define boxptr_NBStrongComponent_fromSolvedEquationSlice_simpleSolvedEquation omc_NBStrongComponent_fromSolvedEquationSlice_simpleSolvedEquation
 
 
 DLLDirection

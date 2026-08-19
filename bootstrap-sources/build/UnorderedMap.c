@@ -35,10 +35,10 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT10,1,_OMC_LIT10_data);
 #define _OMC_LIT11_data ")"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT11,1,_OMC_LIT11_data);
 #define _OMC_LIT11 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT11)
-#define _OMC_LIT12_data "/projects/OpenModelica-session2/OMCompiler/Compiler/Util/UnorderedMap.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT12,72,_OMC_LIT12_data);
+#define _OMC_LIT12_data "//OpenModelica/OMCompiler/Compiler/Util/UnorderedMap.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT12,78,_OMC_LIT12_data);
 #define _OMC_LIT12 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT12)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT13_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT13_6,1.784195231e9);
 #define _OMC_LIT13_6 MMC_REFREALLIT(_OMC_LIT_STRUCT13_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT13,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT12,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(680)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(680)),MMC_IMMEDIATE(MMC_TAGFIXNUM(53)),_OMC_LIT13_6}};
 #define _OMC_LIT13 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT13)
@@ -74,6 +74,9 @@ PROTECTED_FUNCTION_STATIC void omc_UnorderedMap_addEntry(threadData_t *threadDat
 {
   modelica_metatype _buckets = NULL;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _buckets = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)));
@@ -91,6 +94,9 @@ PROTECTED_FUNCTION_STATIC void omc_UnorderedMap_addEntry(threadData_t *threadDat
     omc_Vector_update(threadData, _buckets, ((modelica_integer) 1) + _hash, tmpMeta1);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_UnorderedMap_addEntry(threadData_t *threadData, modelica_metatype _key, modelica_metatype _value, modelica_metatype _hash, modelica_metatype _map)
@@ -110,6 +116,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_UnorderedMap_find(threadData_t *t
   modelica_metatype _bucket = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _index = ((modelica_integer) -1);
@@ -143,6 +152,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_UnorderedMap_find(threadData_t *t
   }
   _return: OMC_LABEL_UNUSED
   if (out_hash) { *out_hash = _hash; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _index;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_UnorderedMap_find(threadData_t *threadData, modelica_metatype _key, modelica_metatype _map, modelica_metatype *out_hash)
@@ -196,6 +208,7 @@ modelica_string omc_UnorderedMap_toJSON(threadData_t *threadData, modelica_metat
       modelica_integer _i;
       for(_i = ((modelica_integer) 2); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
       {
+
         _io = omc_IOStream_append(threadData, _io, _OMC_LIT6);
 
         _io = omc_IOStream_append(threadData, _io, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyStringFn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyStringFn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyStringFn), 2))), omc_Vector_getNoBounds(threadData, _keys, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyStringFn), 1)))) (threadData, omc_Vector_getNoBounds(threadData, _keys, _i)));
@@ -245,6 +258,7 @@ modelica_string omc_UnorderedMap_toString(threadData_t *threadData, modelica_met
     modelica_integer _i;
     for(_i = omc_Vector_size(threadData, _keys); in_range_integer(_i, tmp7, tmp9); _i += tmp8)
     {
+
       tmpMeta3 = stringAppend(_OMC_LIT10,(MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyStringFn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyStringFn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyStringFn), 2))), omc_Vector_get(threadData, _keys, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyStringFn), 1)))) (threadData, omc_Vector_get(threadData, _keys, _i)));
       tmpMeta4 = stringAppend(tmpMeta3,_concatinator);
       tmpMeta5 = stringAppend(tmpMeta4,(MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_valueStringFn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_valueStringFn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_valueStringFn), 2))), omc_Vector_get(threadData, _values, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_valueStringFn), 1)))) (threadData, omc_Vector_get(threadData, _values, _i)));
@@ -272,6 +286,9 @@ void omc_UnorderedMap_rehash(threadData_t *threadData, modelica_metatype _map)
   modelica_integer tmp3;
   modelica_integer tmp4;
   modelica_integer tmp5;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _keys = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3)));
@@ -292,6 +309,7 @@ void omc_UnorderedMap_rehash(threadData_t *threadData, modelica_metatype _map)
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp3, tmp5); _i += tmp4)
     {
+
       _bucket_id = ((modelica_integer) 1) + modelica_integer_mod(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashfn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashfn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashfn), 2))), omc_Vector_get(threadData, _keys, _i)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashfn), 1)))) (threadData, omc_Vector_get(threadData, _keys, _i))), _bucket_count);
 
       tmpMeta2 = mmc_mk_cons(mmc_mk_integer(_i), omc_Vector_getNoBounds(threadData, _buckets, _bucket_id));
@@ -299,6 +317,9 @@ void omc_UnorderedMap_rehash(threadData_t *threadData, modelica_metatype _map)
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -307,12 +328,18 @@ modelica_real omc_UnorderedMap_loadFactor(threadData_t *threadData, modelica_met
 {
   modelica_real _load;
   modelica_real tmp1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmp1 = ((modelica_real)omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)))));
   if (tmp1 == 0) {MMC_THROW_INTERNAL();}
   _load = (((modelica_real)omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3)))))) / tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _load;
 }
 modelica_metatype boxptr_UnorderedMap_loadFactor(threadData_t *threadData, modelica_metatype _map)
@@ -329,10 +356,16 @@ DLLDirection
 modelica_integer omc_UnorderedMap_bucketCount(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_integer _count;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _count = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _count;
 }
 modelica_metatype boxptr_UnorderedMap_bucketCount(threadData_t *threadData, modelica_metatype _map)
@@ -348,10 +381,16 @@ DLLDirection
 modelica_boolean omc_UnorderedMap_isEmpty(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_boolean _empty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _empty = omc_Vector_isEmpty(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _empty;
 }
 modelica_metatype boxptr_UnorderedMap_isEmpty(threadData_t *threadData, modelica_metatype _map)
@@ -367,10 +406,16 @@ DLLDirection
 modelica_integer omc_UnorderedMap_size(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_integer _s;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _s = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _s;
 }
 modelica_metatype boxptr_UnorderedMap_size(threadData_t *threadData, modelica_metatype _map)
@@ -386,11 +431,17 @@ DLLDirection
 modelica_boolean omc_UnorderedMap_none(threadData_t *threadData, modelica_metatype _map, modelica_fnptr _fn)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   _res = omc_Vector_none(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 4))), ((modelica_fnptr) _fn));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_UnorderedMap_none(threadData_t *threadData, modelica_metatype _map, modelica_fnptr _fn)
@@ -406,11 +457,17 @@ DLLDirection
 modelica_boolean omc_UnorderedMap_any(threadData_t *threadData, modelica_metatype _map, modelica_fnptr _fn)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   _res = omc_Vector_any(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 4))), ((modelica_fnptr) _fn));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_UnorderedMap_any(threadData_t *threadData, modelica_metatype _map, modelica_fnptr _fn)
@@ -426,11 +483,17 @@ DLLDirection
 modelica_boolean omc_UnorderedMap_all(threadData_t *threadData, modelica_metatype _map, modelica_fnptr _fn)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   _res = omc_Vector_all(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 4))), ((modelica_fnptr) _fn));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_UnorderedMap_all(threadData_t *threadData, modelica_metatype _map, modelica_fnptr _fn)
@@ -508,6 +571,7 @@ modelica_metatype omc_UnorderedMap_merge(threadData_t *threadData, modelica_meta
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp5, tmp7); _i += tmp6)
     {
+
       _k = omc_Vector_getNoBounds(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tmp), 3))), _i);
 
       _v = omc_Vector_getNoBounds(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_tmp), 4))), _i);
@@ -560,10 +624,16 @@ modelica_metatype omc_UnorderedMap_merge(threadData_t *threadData, modelica_meta
 DLLDirection
 void omc_UnorderedMap_apply(threadData_t *threadData, modelica_metatype _map, modelica_fnptr _fn)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_Vector_apply(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 4))), ((modelica_fnptr) _fn));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -623,6 +693,7 @@ modelica_metatype omc_UnorderedMap_keySet(threadData_t *threadData, modelica_met
     modelica_integer _h;
     for(_h = ((modelica_integer) 1); in_range_integer(_h, tmp6, tmp8); _h += tmp7)
     {
+
       {
         modelica_metatype __omcQ_24tmpVar1;
         modelica_metatype* tmp3;
@@ -712,6 +783,7 @@ modelica_metatype omc_UnorderedMap_toVector(threadData_t *threadData, modelica_m
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
     {
+
       tmpMeta1 = mmc_mk_box2(0, omc_Vector_getNoBounds(threadData, _keys, _i), omc_Vector_getNoBounds(threadData, _values, _i));
       omc_Vector_updateNoBounds(threadData, _entries, _i, tmpMeta1);
     }
@@ -769,6 +841,7 @@ modelica_metatype omc_UnorderedMap_toArray(threadData_t *threadData, modelica_me
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
     {
+
       tmpMeta1 = mmc_mk_box2(0, omc_Vector_getNoBounds(threadData, _keys, _i), omc_Vector_getNoBounds(threadData, _values, _i));
       arrayUpdateNoBoundsChecking(_entries, _i, tmpMeta1);
     }
@@ -876,10 +949,16 @@ DLLDirection
 modelica_boolean omc_UnorderedMap_contains(threadData_t *threadData, modelica_metatype _key, modelica_metatype _map)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _res = (omc_UnorderedMap_find(threadData, _key, _map, NULL) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 modelica_metatype boxptr_UnorderedMap_contains(threadData_t *threadData, modelica_metatype _key, modelica_metatype _map)
@@ -894,10 +973,16 @@ modelica_metatype boxptr_UnorderedMap_contains(threadData_t *threadData, modelic
 DLLDirection
 void omc_UnorderedMap_updateKey(threadData_t *threadData, modelica_metatype _key, modelica_metatype _map)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_Vector_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3))), omc_UnorderedMap_find(threadData, _key, _map, NULL), _key);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1015,6 +1100,9 @@ DLLDirection
 void omc_UnorderedMap_clear(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_Vector_clear(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2))));
@@ -1026,6 +1114,9 @@ void omc_UnorderedMap_clear(threadData_t *threadData, modelica_metatype _map)
 
   omc_Vector_clear(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 4))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1095,6 +1186,9 @@ modelica_boolean omc_UnorderedMap_remove(threadData_t *threadData, modelica_meta
   modelica_integer _index;
   modelica_metatype _bucket = NULL;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _removed has no default value.
@@ -1123,6 +1217,9 @@ modelica_boolean omc_UnorderedMap_remove(threadData_t *threadData, modelica_meta
   tmpMeta1 = mmc_mk_box1(0, mmc_mk_integer(_index));
   omc_Vector_apply(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2))), (modelica_fnptr) mmc_mk_box2(0,closure0_UnorderedMap_remove_update__indices,tmpMeta1));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _removed;
 }
 modelica_metatype boxptr_UnorderedMap_remove(threadData_t *threadData, modelica_metatype _key, modelica_metatype _map)
@@ -1141,6 +1238,9 @@ modelica_boolean omc_UnorderedMap_tryAddUpdate(threadData_t *threadData, modelic
   modelica_integer _index;
   modelica_integer _hash;
   modelica_metatype _value = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _updated has no default value.
@@ -1158,6 +1258,9 @@ modelica_boolean omc_UnorderedMap_tryAddUpdate(threadData_t *threadData, modelic
     omc_Vector_updateNoBounds(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 4))), _index, _value);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _updated;
 }
 modelica_metatype boxptr_UnorderedMap_tryAddUpdate(threadData_t *threadData, modelica_metatype _key, modelica_fnptr _fn, modelica_metatype _map)
@@ -1204,6 +1307,9 @@ modelica_boolean omc_UnorderedMap_tryUpdate(threadData_t *threadData, modelica_m
   modelica_boolean _updated;
   modelica_integer _index;
   modelica_integer _hash;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _updated has no default value.
@@ -1218,6 +1324,9 @@ modelica_boolean omc_UnorderedMap_tryUpdate(threadData_t *threadData, modelica_m
     omc_Vector_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 4))), _index, _value);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _updated;
 }
 modelica_metatype boxptr_UnorderedMap_tryUpdate(threadData_t *threadData, modelica_metatype _key, modelica_metatype _value, modelica_metatype _map)
@@ -1262,6 +1371,9 @@ void omc_UnorderedMap_addUnique(threadData_t *threadData, modelica_metatype _key
   modelica_integer _index;
   modelica_integer _hash;
   modelica_boolean tmp1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _index has no default value.
@@ -1274,6 +1386,9 @@ void omc_UnorderedMap_addUnique(threadData_t *threadData, modelica_metatype _key
 
   omc_UnorderedMap_addEntry(threadData, _key, _value, _hash, _map);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1282,12 +1397,18 @@ void omc_UnorderedMap_addNew(threadData_t *threadData, modelica_metatype _key, m
 {
   modelica_fnptr _hashfn;
   modelica_integer _hash;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _hashfn = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 5)));
   _hash = modelica_integer_mod(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashfn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashfn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashfn), 2))), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashfn), 1)))) (threadData, _key)), omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)))));
   omc_UnorderedMap_addEntry(threadData, _key, _value, _hash, _map);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1296,6 +1417,9 @@ void omc_UnorderedMap_add(threadData_t *threadData, modelica_metatype _key, mode
 {
   modelica_integer _index;
   modelica_integer _hash;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _index has no default value.
@@ -1311,6 +1435,9 @@ void omc_UnorderedMap_add(threadData_t *threadData, modelica_metatype _key, mode
     omc_UnorderedMap_addEntry(threadData, _key, _value, _hash, _map);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1416,4 +1543,3 @@ modelica_metatype boxptr_UnorderedMap_new(threadData_t *threadData, modelica_fnp
   /* skip box _map; UnorderedMap<polymorphic<K>,polymorphic<V>> */
   return _map;
 }
-

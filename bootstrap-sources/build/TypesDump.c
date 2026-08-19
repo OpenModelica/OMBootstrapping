@@ -115,10 +115,10 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT38,13,_OMC_LIT38_data);
 #define _OMC_LIT39_data "TypesDump.printBindingStr failed."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT39,33,_OMC_LIT39_data);
 #define _OMC_LIT39 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT39)
-#define _OMC_LIT40_data "/projects/OpenModelica-session2/OMCompiler/Compiler/FrontEnd/TypesDump.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT40,73,_OMC_LIT40_data);
+#define _OMC_LIT40_data "/home/andreas/workdir/OM/OpenModelica/OMCompiler/Compiler/FrontEnd/TypesDump.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT40,79,_OMC_LIT40_data);
 #define _OMC_LIT40 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT40)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT41_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT41_6,1.784622031e9);
 #define _OMC_LIT41_6 MMC_REFREALLIT(_OMC_LIT_STRUCT41_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT41,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT40,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(787)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(787)),MMC_IMMEDIATE(MMC_TAGFIXNUM(77)),_OMC_LIT41_6}};
 #define _OMC_LIT41 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT41)
@@ -251,7 +251,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT83,5,_OMC_LIT83_data);
 #define _OMC_LIT84_data "TypesDump.printConstStr failed."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT84,31,_OMC_LIT84_data);
 #define _OMC_LIT84 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT84)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT85_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT85_6,1.784622031e9);
 #define _OMC_LIT85_6 MMC_REFREALLIT(_OMC_LIT_STRUCT85_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT85,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT40,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(349)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(349)),MMC_IMMEDIATE(MMC_TAGFIXNUM(75)),_OMC_LIT85_6}};
 #define _OMC_LIT85 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT85)
@@ -1158,6 +1158,9 @@ modelica_string omc_TypesDump_printFargStr(threadData_t *threadData, modelica_me
 DLLDirection
 void omc_TypesDump_printFarg(threadData_t *threadData, modelica_metatype _inFuncArg)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1202,6 +1205,9 @@ void omc_TypesDump_printFarg(threadData_t *threadData, modelica_metatype _inFunc
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2024,7 +2030,7 @@ modelica_string omc_TypesDump_printTypeStr(threadData_t *threadData, modelica_me
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           _vars = tmpMeta6;
           tmp4 += 28; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmp1 = omc_List_toString(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT22, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
+          tmp1 = omc_List_toStringCustom(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT22, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
           goto tmp3_done;
         }
         case 1: {
@@ -2033,7 +2039,7 @@ modelica_string omc_TypesDump_printTypeStr(threadData_t *threadData, modelica_me
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           _vars = tmpMeta7;
           tmp4 += 27; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmp1 = omc_List_toString(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT23, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
+          tmp1 = omc_List_toStringCustom(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT23, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
           goto tmp3_done;
         }
         case 2: {
@@ -2042,7 +2048,7 @@ modelica_string omc_TypesDump_printTypeStr(threadData_t *threadData, modelica_me
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           _vars = tmpMeta8;
           tmp4 += 26; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmp1 = omc_List_toString(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT24, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
+          tmp1 = omc_List_toStringCustom(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT24, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
           goto tmp3_done;
         }
         case 3: {
@@ -2051,7 +2057,7 @@ modelica_string omc_TypesDump_printTypeStr(threadData_t *threadData, modelica_me
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           _vars = tmpMeta9;
           tmp4 += 25; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmp1 = omc_List_toString(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT25, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
+          tmp1 = omc_List_toStringCustom(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT25, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
           goto tmp3_done;
         }
         case 4: {
@@ -2060,7 +2066,7 @@ modelica_string omc_TypesDump_printTypeStr(threadData_t *threadData, modelica_me
           tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           _vars = tmpMeta10;
           tmp4 += 24; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmp1 = omc_List_toString(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT26, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
+          tmp1 = omc_List_toStringCustom(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT26, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
           goto tmp3_done;
         }
         case 5: {
@@ -2070,7 +2076,7 @@ modelica_string omc_TypesDump_printTypeStr(threadData_t *threadData, modelica_me
           
           _vars = tmpMeta11;
           tmp4 += 23; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmp1 = omc_List_toString(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT55, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
+          tmp1 = omc_List_toStringCustom(threadData, _vars, boxvar_TypesDump_printVarStr, _OMC_LIT55, _OMC_LIT54, _OMC_LIT8, _OMC_LIT35, 0 /* false */, ((modelica_integer) 0));
           goto tmp3_done;
         }
         case 6: {

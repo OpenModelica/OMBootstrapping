@@ -22,9 +22,15 @@ modelica_metatype omc_CodegenWasmJitFunctions_loadAndExecute(threadData_t *threa
 DLLDirection
 void omc_CodegenWasmJitFunctions_translateFunctions(threadData_t *threadData, modelica_metatype _fnCode)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

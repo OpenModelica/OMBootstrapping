@@ -89,6 +89,7 @@ modelica_string omc_SBPWLinearMap_toString(threadData_t *threadData, modelica_me
     modelica_integer _i;
     for(_i = arrayLength(_dom); in_range_integer(_i, tmp4, tmp6); _i += tmp5)
     {
+
       tmpMeta3 = mmc_mk_box1(0, arrayGet(_lmap,_i) /* DAE.ASUB */);
       tmpMeta2 = mmc_mk_cons(omc_UnorderedSet_toString(threadData, omc_SBSet_asets(threadData, arrayGet(_dom,_i) /* DAE.ASUB */), (modelica_fnptr) mmc_mk_box2(0,closure0_SBPWLinearMap_toString_helper,tmpMeta3), _OMC_LIT2), _strl);
       _strl = tmpMeta2;
@@ -106,11 +107,17 @@ DLLDirection
 modelica_boolean omc_SBPWLinearMap_isEqual(threadData_t *threadData, modelica_metatype _map1, modelica_metatype _map2)
 {
   modelica_boolean _equal;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _equal has no default value.
   _equal = (omc_Array_isEqualOnTrue(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map1), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map2), 2))), boxvar_SBSet_isEqual) && omc_Array_isEqualOnTrue(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map1), 3))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map2), 3))), boxvar_SBLinearMap_isEqual));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _equal;
 }
 modelica_metatype boxptr_SBPWLinearMap_isEqual(threadData_t *threadData, modelica_metatype _map1, modelica_metatype _map2)
@@ -164,6 +171,7 @@ modelica_metatype omc_SBPWLinearMap_atomize(threadData_t *threadData, modelica_m
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp9, tmp11); _i += tmp10)
     {
+
       _d = arrayGet(_dom,_i) /* DAE.ASUB */;
 
       _l = arrayGet(_lm,_i) /* DAE.ASUB */;
@@ -248,6 +256,7 @@ modelica_metatype omc_SBPWLinearMap_combine(threadData_t *threadData, modelica_m
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _s2 = arrayGet(_dom2,_i) /* DAE.ASUB */;
 
       _new_dom = omc_SBSet_complement(threadData, _s2, _aux1);
@@ -350,6 +359,7 @@ modelica_metatype omc_SBPWLinearMap_minInvCompact(threadData_t *threadData, mode
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if((mmc_unbox_real(arrayGet(_g,_i) /* DAE.ASUB */) == ((modelica_real)intMaxLit())))
       {
         arrayUpdate(_resg,_i,_OMC_LIT6);
@@ -426,6 +436,7 @@ modelica_metatype omc_SBPWLinearMap_compPW(threadData_t *threadData, modelica_me
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp4, tmp6); _i += tmp5)
     {
+
       _d1 = arrayGetNoBoundsChecking(_dom1, _i);
 
       tmp1 = ((modelica_integer) 1); tmp2 = 1; tmp3 = arrayLength(_dom2);
@@ -434,6 +445,7 @@ modelica_metatype omc_SBPWLinearMap_compPW(threadData_t *threadData, modelica_me
         modelica_integer _j;
         for(_j = ((modelica_integer) 1); in_range_integer(_j, tmp1, tmp3); _j += tmp2)
         {
+
           _d2 = arrayGetNoBoundsChecking(_dom2, _j);
 
           _aux_dom = omc_SBPWLinearMap_image(threadData, _map2, _d2);
@@ -527,6 +539,7 @@ modelica_metatype omc_SBPWLinearMap_preImage(threadData_t *threadData, modelica_
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
     {
+
       _ss = arrayGet(_dom,_i) /* DAE.ASUB */;
 
       _partial_res = omc_SBSet_newEmpty(threadData);
@@ -586,6 +599,7 @@ modelica_metatype omc_SBPWLinearMap_image(threadData_t *threadData, modelica_met
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp2, tmp4); _i += tmp3)
     {
+
       _ss = arrayGet(_dom,_i) /* DAE.ASUB */;
 
       _ss = omc_SBSet_intersection(threadData, _ss, _set);
@@ -604,10 +618,16 @@ DLLDirection
 modelica_boolean omc_SBPWLinearMap_isEmpty(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_boolean _empty;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _empty = (arrayLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)))) == ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _empty;
 }
 modelica_metatype boxptr_SBPWLinearMap_isEmpty(threadData_t *threadData, modelica_metatype _map)
@@ -623,10 +643,16 @@ DLLDirection
 modelica_integer omc_SBPWLinearMap_ndim(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_integer _ndim;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _ndim = mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 4))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _ndim;
 }
 modelica_metatype boxptr_SBPWLinearMap_ndim(threadData_t *threadData, modelica_metatype _map)

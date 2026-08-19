@@ -2254,6 +2254,9 @@ PROTECTED_FUNCTION_STATIC void omc_OperatorOverloading_errorMultipleValid(thread
   modelica_string _str1 = NULL;
   modelica_string _str2 = NULL;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str1 has no default value.
@@ -2265,11 +2268,17 @@ PROTECTED_FUNCTION_STATIC void omc_OperatorOverloading_errorMultipleValid(thread
   tmpMeta1 = mmc_mk_cons(_str1, mmc_mk_cons(_str2, MMC_REFSTRUCTLIT(mmc_nil)));
   omc_Error_addSourceMessage(threadData, _OMC_LIT5, tmpMeta1, _info);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_OperatorOverloading_verifyOp(threadData_t *threadData, modelica_metatype _op)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2306,11 +2315,17 @@ PROTECTED_FUNCTION_STATIC void omc_OperatorOverloading_verifyOp(threadData_t *th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_OperatorOverloading_warnUnsafeRelations(threadData_t *threadData, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_metatype _variability, modelica_metatype _t1, modelica_metatype _t2, modelica_metatype _e1, modelica_metatype _e2, modelica_metatype _op, modelica_metatype _inPrefix, modelica_metatype _inInfo)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -2396,6 +2411,9 @@ PROTECTED_FUNCTION_STATIC void omc_OperatorOverloading_warnUnsafeRelations(threa
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2693,11 +2711,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_OperatorOverloading_elementType(
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_isValidMatrixProductDims(threadData_t *threadData, modelica_metatype _dim1, modelica_metatype _dim2)
 {
   modelica_boolean _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   _res = ((omc_Expression_dimensionsKnownAndEqual(threadData, _dim1, _dim2) || (!(omc_Expression_dimensionKnown(threadData, _dim1) || omc_Expression_dimensionKnown(threadData, _dim2)))) || (omc_Flags_getConfigBool(threadData, _OMC_LIT17) && omc_Expression_dimensionsEqual(threadData, _dim1, _dim2)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_isValidMatrixProductDims(threadData_t *threadData, modelica_metatype _dim1, modelica_metatype _dim2)
@@ -2713,6 +2737,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OperatorOverloading_nDims(threadD
 {
   modelica_integer _outInteger;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outInteger has no default value.
@@ -2788,6 +2815,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OperatorOverloading_nDims(threadD
   }
   _outInteger = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outInteger;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_nDims(threadData_t *threadData, modelica_metatype _inType)
@@ -4168,6 +4198,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_isOperatorUna
 {
   modelica_boolean _isBinaryFunc;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isBinaryFunc has no default value.
@@ -4219,6 +4252,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_isOperatorUna
   }
   _isBinaryFunc = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isBinaryFunc;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_isOperatorUnaryFunction(threadData_t *threadData, modelica_metatype _ty)
@@ -4234,6 +4270,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_isOperatorBin
 {
   modelica_boolean _isBinaryFunc;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isBinaryFunc has no default value.
@@ -4308,6 +4347,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_isOperatorBin
   }
   _isBinaryFunc = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isBinaryFunc;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_isOperatorBinaryFunctionOrWarn(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _info)
@@ -4323,6 +4365,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_checkOperator
 {
   modelica_boolean _isOK;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isOK has no default value.
@@ -4366,6 +4411,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_checkOperator
   }
   _isOK = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isOK;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_checkOperatorFunctionOutput(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _expected, modelica_metatype _info)
@@ -4379,6 +4427,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_checkOper
 
 PROTECTED_FUNCTION_STATIC void omc_OperatorOverloading_checkOperatorFunctionOneOutputError(threadData_t *threadData, modelica_boolean _ok, modelica_metatype _opType, modelica_metatype _ty, modelica_metatype _info)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -4425,6 +4476,9 @@ PROTECTED_FUNCTION_STATIC void omc_OperatorOverloading_checkOperatorFunctionOneO
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_OperatorOverloading_checkOperatorFunctionOneOutputError(threadData_t *threadData, modelica_metatype _ok, modelica_metatype _opType, modelica_metatype _ty, modelica_metatype _info)
@@ -4439,6 +4493,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_checkOperator
 {
   modelica_boolean _isOK;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isOK has no default value.
@@ -4543,6 +4600,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_checkOperator
   }
   _isOK = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isOK;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_checkOperatorFunctionOneOutput(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _opType, modelica_metatype _info)
@@ -5230,6 +5290,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OperatorOverloading_AvlTreePathOp
 {
   modelica_integer _outBalance;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBalance has no default value.
@@ -5272,6 +5335,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OperatorOverloading_AvlTreePathOp
   }
   _outBalance = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBalance;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_AvlTreePathOperatorTypes_calculateBalance(threadData_t *threadData, modelica_metatype _inNode)
@@ -5486,6 +5552,9 @@ modelica_metatype omc_OperatorOverloading_AvlTreePathOperatorTypes_fold__2(threa
 DLLDirection
 void omc_OperatorOverloading_AvlTreePathOperatorTypes_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -5533,6 +5602,9 @@ void omc_OperatorOverloading_AvlTreePathOperatorTypes_forEach(threadData_t *thre
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -5811,6 +5883,9 @@ modelica_boolean omc_OperatorOverloading_AvlTreePathOperatorTypes_hasKey(threadD
   modelica_metatype _tree = NULL;
   modelica_metatype tmpMeta1;
   modelica_boolean tmp5 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _comp = 0 /* false */;
@@ -5921,6 +5996,9 @@ modelica_boolean omc_OperatorOverloading_AvlTreePathOperatorTypes_hasKey(threadD
   }
   _comp = tmp5;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_OperatorOverloading_AvlTreePathOperatorTypes_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey)
@@ -5936,6 +6014,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OperatorOverloading_AvlTreePathOp
 {
   modelica_integer _outHeight;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHeight has no default value.
@@ -5978,6 +6059,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OperatorOverloading_AvlTreePathOp
   }
   _outHeight = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHeight;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_AvlTreePathOperatorTypes_height(threadData_t *threadData, modelica_metatype _inNode)
@@ -5992,10 +6076,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_AvlTreePa
 DLLDirection
 void omc_OperatorOverloading_AvlTreePathOperatorTypes_intersection(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -6004,6 +6094,9 @@ modelica_boolean omc_OperatorOverloading_AvlTreePathOperatorTypes_isEmpty(thread
 {
   modelica_boolean _isEmpty;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -6041,6 +6134,9 @@ modelica_boolean omc_OperatorOverloading_AvlTreePathOperatorTypes_isEmpty(thread
   }
   _isEmpty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_OperatorOverloading_AvlTreePathOperatorTypes_isEmpty(threadData_t *threadData, modelica_metatype _tree)
@@ -6112,11 +6208,17 @@ DLLDirection
 modelica_integer omc_OperatorOverloading_AvlTreePathOperatorTypes_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
 {
   modelica_integer _outResult;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
   _outResult = omc_AbsynUtil_pathCompareNoQual(threadData, _inKey1, _inKey2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_OperatorOverloading_AvlTreePathOperatorTypes_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
@@ -6764,6 +6866,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_AvlTreePathOp
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -6803,6 +6908,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_AvlTreePathOp
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_AvlTreePathOperatorTypes_referenceEqOrEmpty(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)
@@ -7614,6 +7722,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OperatorOverloading_AvlTreePathPa
 {
   modelica_integer _outBalance;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBalance has no default value.
@@ -7656,6 +7767,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OperatorOverloading_AvlTreePathPa
   }
   _outBalance = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBalance;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_AvlTreePathPathEnv_calculateBalance(threadData_t *threadData, modelica_metatype _inNode)
@@ -7870,6 +7984,9 @@ modelica_metatype omc_OperatorOverloading_AvlTreePathPathEnv_fold__2(threadData_
 DLLDirection
 void omc_OperatorOverloading_AvlTreePathPathEnv_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -7917,6 +8034,9 @@ void omc_OperatorOverloading_AvlTreePathPathEnv_forEach(threadData_t *threadData
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -8195,6 +8315,9 @@ modelica_boolean omc_OperatorOverloading_AvlTreePathPathEnv_hasKey(threadData_t 
   modelica_metatype _tree = NULL;
   modelica_metatype tmpMeta1;
   modelica_boolean tmp5 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _comp = 0 /* false */;
@@ -8305,6 +8428,9 @@ modelica_boolean omc_OperatorOverloading_AvlTreePathPathEnv_hasKey(threadData_t 
   }
   _comp = tmp5;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_OperatorOverloading_AvlTreePathPathEnv_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey)
@@ -8320,6 +8446,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OperatorOverloading_AvlTreePathPa
 {
   modelica_integer _outHeight;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHeight has no default value.
@@ -8362,6 +8491,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_OperatorOverloading_AvlTreePathPa
   }
   _outHeight = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHeight;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_AvlTreePathPathEnv_height(threadData_t *threadData, modelica_metatype _inNode)
@@ -8376,10 +8508,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_AvlTreePa
 DLLDirection
 void omc_OperatorOverloading_AvlTreePathPathEnv_intersection(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -8388,6 +8526,9 @@ modelica_boolean omc_OperatorOverloading_AvlTreePathPathEnv_isEmpty(threadData_t
 {
   modelica_boolean _isEmpty;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -8425,6 +8566,9 @@ modelica_boolean omc_OperatorOverloading_AvlTreePathPathEnv_isEmpty(threadData_t
   }
   _isEmpty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_OperatorOverloading_AvlTreePathPathEnv_isEmpty(threadData_t *threadData, modelica_metatype _tree)
@@ -8496,11 +8640,17 @@ DLLDirection
 modelica_integer omc_OperatorOverloading_AvlTreePathPathEnv_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
 {
   modelica_integer _outResult;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
   _outResult = omc_AbsynUtil_pathCompareNoQual(threadData, _inKey1, _inKey2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_OperatorOverloading_AvlTreePathPathEnv_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
@@ -9148,6 +9298,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_AvlTreePathPa
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -9187,6 +9340,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_OperatorOverloading_AvlTreePathPa
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_OperatorOverloading_AvlTreePathPathEnv_referenceEqOrEmpty(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)
@@ -12188,10 +12344,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_OperatorOverloading_deoverloadBi
 DLLDirection
 void omc_OperatorOverloading_initCache(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   setGlobalRoot(((modelica_integer) 24), _OMC_LIT800);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

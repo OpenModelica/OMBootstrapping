@@ -223,11 +223,17 @@ DLLDirection
 modelica_boolean omc_StringUtil_endsWithNewline(threadData_t *threadData, modelica_string _str)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (((modelica_integer) 10) == stringGetNoBoundsChecking(_str, stringLength(_str)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_StringUtil_endsWithNewline(threadData_t *threadData, modelica_metatype _str)
@@ -245,6 +251,9 @@ modelica_boolean omc_StringUtil_endsWith(threadData_t *threadData, modelica_stri
   modelica_boolean _endsWith;
   modelica_integer _str_len;
   modelica_integer _suf_len;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _endsWith = 0 /* false */;
@@ -255,6 +264,9 @@ modelica_boolean omc_StringUtil_endsWith(threadData_t *threadData, modelica_stri
     _endsWith = (((modelica_integer) 0) == omc_System_strcmp__offset(threadData, _str, ((modelica_integer) 1) + _str_len - _suf_len, _str_len, _suffix, ((modelica_integer) 1), _suf_len));
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _endsWith;
 }
 modelica_metatype boxptr_StringUtil_endsWith(threadData_t *threadData, modelica_metatype _str, modelica_metatype _suffix)
@@ -270,10 +282,16 @@ DLLDirection
 modelica_boolean omc_StringUtil_startsWith(threadData_t *threadData, modelica_string _str, modelica_string _prefix)
 {
   modelica_boolean _startsWith;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _startsWith = (((modelica_integer) 0) == omc_System_strncmp(threadData, _str, _prefix, stringLength(_prefix)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _startsWith;
 }
 modelica_metatype boxptr_StringUtil_startsWith(threadData_t *threadData, modelica_metatype _str, modelica_metatype _prefix)
@@ -378,6 +396,9 @@ modelica_boolean omc_StringUtil_equalIgnoreSpace(threadData_t *threadData, model
   modelica_integer tmp7;
   modelica_integer tmp8;
   modelica_integer tmp9;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -390,6 +411,7 @@ modelica_boolean omc_StringUtil_equalIgnoreSpace(threadData_t *threadData, model
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp4, tmp6); _i += tmp5)
     {
+
       if((stringGetNoBoundsChecking(_s1, _i) != ((modelica_integer) 32)))
       {
         _b = 0 /* false */;
@@ -400,6 +422,7 @@ modelica_boolean omc_StringUtil_equalIgnoreSpace(threadData_t *threadData, model
           modelica_integer _j2;
           for(_j2 = _j; in_range_integer(_j2, tmp1, tmp3); _j2 += tmp2)
           {
+
             if((stringGetNoBoundsChecking(_s2, _j2) != ((modelica_integer) 32)))
             {
               if((stringGetNoBoundsChecking(_s2, _j2) != stringGetNoBoundsChecking(_s1, _i)))
@@ -430,6 +453,7 @@ modelica_boolean omc_StringUtil_equalIgnoreSpace(threadData_t *threadData, model
     modelica_integer _j2;
     for(_j2 = _j; in_range_integer(_j2, tmp7, tmp9); _j2 += tmp8)
     {
+
       if((stringGetNoBoundsChecking(_s2, _j2) != ((modelica_integer) 32)))
       {
         _b = 0 /* false */;
@@ -439,6 +463,9 @@ modelica_boolean omc_StringUtil_equalIgnoreSpace(threadData_t *threadData, model
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_StringUtil_equalIgnoreSpace(threadData_t *threadData, modelica_metatype _s1, modelica_metatype _s2)
@@ -483,6 +510,7 @@ modelica_string omc_StringUtil_repeat(threadData_t *threadData, modelica_string 
     modelica_integer _i;
     for(_i = ((modelica_integer) 0); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       omc_System_stringAllocatorStringCopy(threadData, _ext, _str, (_len) * (_i));
     }
   }
@@ -653,10 +681,16 @@ DLLDirection
 modelica_boolean omc_StringUtil_isAlpha(threadData_t *threadData, modelica_integer _inChar)
 {
   modelica_boolean _outIsAlpha;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outIsAlpha = (((_inChar >= ((modelica_integer) 65)) && (_inChar <= ((modelica_integer) 90))) || ((_inChar >= ((modelica_integer) 97)) && (_inChar <= ((modelica_integer) 122))));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsAlpha;
 }
 modelica_metatype boxptr_StringUtil_isAlpha(threadData_t *threadData, modelica_metatype _inChar)
@@ -680,6 +714,9 @@ modelica_integer omc_StringUtil_rfindCharNot(threadData_t *threadData, modelica_
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outIndex = ((modelica_integer) 0);
@@ -696,6 +733,7 @@ modelica_integer omc_StringUtil_rfindCharNot(threadData_t *threadData, modelica_
     modelica_integer _i;
     for(_i = _start_pos; in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if((stringGetNoBoundsChecking(_inString, _i) != _inChar))
       {
         _outIndex = _i;
@@ -705,6 +743,9 @@ modelica_integer omc_StringUtil_rfindCharNot(threadData_t *threadData, modelica_
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIndex;
 }
 modelica_metatype boxptr_StringUtil_rfindCharNot(threadData_t *threadData, modelica_metatype _inString, modelica_metatype _inChar, modelica_metatype _inStartPos, modelica_metatype _inEndPos)
@@ -732,6 +773,9 @@ modelica_integer omc_StringUtil_findCharNot(threadData_t *threadData, modelica_s
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outIndex = ((modelica_integer) 0);
@@ -748,6 +792,7 @@ modelica_integer omc_StringUtil_findCharNot(threadData_t *threadData, modelica_s
     modelica_integer _i;
     for(_i = _start_pos; in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if((stringGetNoBoundsChecking(_inString, _i) != _inChar))
       {
         _outIndex = _i;
@@ -757,6 +802,9 @@ modelica_integer omc_StringUtil_findCharNot(threadData_t *threadData, modelica_s
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIndex;
 }
 modelica_metatype boxptr_StringUtil_findCharNot(threadData_t *threadData, modelica_metatype _inString, modelica_metatype _inChar, modelica_metatype _inStartPos, modelica_metatype _inEndPos)
@@ -784,6 +832,9 @@ modelica_integer omc_StringUtil_rfindChar(threadData_t *threadData, modelica_str
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outIndex = ((modelica_integer) 0);
@@ -800,6 +851,7 @@ modelica_integer omc_StringUtil_rfindChar(threadData_t *threadData, modelica_str
     modelica_integer _i;
     for(_i = _start_pos; in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if((stringGetNoBoundsChecking(_inString, _i) == _inChar))
       {
         _outIndex = _i;
@@ -809,6 +861,9 @@ modelica_integer omc_StringUtil_rfindChar(threadData_t *threadData, modelica_str
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIndex;
 }
 modelica_metatype boxptr_StringUtil_rfindChar(threadData_t *threadData, modelica_metatype _inString, modelica_metatype _inChar, modelica_metatype _inStartPos, modelica_metatype _inEndPos)
@@ -836,6 +891,9 @@ modelica_integer omc_StringUtil_findChar(threadData_t *threadData, modelica_stri
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outIndex = ((modelica_integer) 0);
@@ -852,6 +910,7 @@ modelica_integer omc_StringUtil_findChar(threadData_t *threadData, modelica_stri
     modelica_integer _i;
     for(_i = _start_pos; in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       if((stringGetNoBoundsChecking(_inString, _i) == _inChar))
       {
         _outIndex = _i;
@@ -861,6 +920,9 @@ modelica_integer omc_StringUtil_findChar(threadData_t *threadData, modelica_stri
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIndex;
 }
 modelica_metatype boxptr_StringUtil_findChar(threadData_t *threadData, modelica_metatype _inString, modelica_metatype _inChar, modelica_metatype _inStartPos, modelica_metatype _inEndPos)

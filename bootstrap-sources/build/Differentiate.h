@@ -70,6 +70,8 @@ extern struct record_description DAE_Else_NOELSE__desc;
 
 extern struct record_description DAE_Exp_ARRAY__desc;
 
+extern struct record_description DAE_Exp_BCONST__desc;
+
 extern struct record_description DAE_Exp_BINARY__desc;
 
 extern struct record_description DAE_Exp_CALL__desc;
@@ -77,6 +79,8 @@ extern struct record_description DAE_Exp_CALL__desc;
 extern struct record_description DAE_Exp_CAST__desc;
 
 extern struct record_description DAE_Exp_CREF__desc;
+
+extern struct record_description DAE_Exp_ENUM__LITERAL__desc;
 
 extern struct record_description DAE_Exp_ICONST__desc;
 
@@ -93,6 +97,8 @@ extern struct record_description DAE_Exp_REDUCTION__desc;
 extern struct record_description DAE_Exp_RELATION__desc;
 
 extern struct record_description DAE_Exp_RSUB__desc;
+
+extern struct record_description DAE_Exp_SCONST__desc;
 
 extern struct record_description DAE_Exp_TSUB__desc;
 
@@ -230,6 +236,12 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_getFunctionMapper,2,0) {(
 
 
 #define boxptr_Differentiate_getlowerOrderDerivative omc_Differentiate_getlowerOrderDerivative
+
+
+#define boxptr_Differentiate_typedZeroSeed omc_Differentiate_typedZeroSeed
+
+
+#define boxptr_Differentiate_zeroOfType omc_Differentiate_zeroOfType
 
 
 #define boxptr_Differentiate_checkDerFunctionConds omc_Differentiate_checkDerFunctionConds

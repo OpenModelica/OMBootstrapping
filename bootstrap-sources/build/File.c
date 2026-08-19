@@ -29,6 +29,7 @@ void omc_File_writeSpace(threadData_t *threadData, modelica_complex _file, model
     modelica_integer _i;
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       omc_File_write(threadData, _file, _OMC_LIT0);
     }
   }

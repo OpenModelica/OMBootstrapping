@@ -123,10 +123,10 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT39,4,_OMC_LIT39_data);
 #define _OMC_LIT40_data "SerializeInitXML.scalarVariableType: "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT40,37,_OMC_LIT40_data);
 #define _OMC_LIT40 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT40)
-#define _OMC_LIT41_data "/projects/OpenModelica-session2/OMCompiler/Compiler/SimCode/SerializeInitXML.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT41,79,_OMC_LIT41_data);
+#define _OMC_LIT41_data "//OpenModelica/OMCompiler/Compiler/SimCode/SerializeInitXML.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT41,85,_OMC_LIT41_data);
 #define _OMC_LIT41 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT41)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT42_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT42_6,1.784622031e9);
 #define _OMC_LIT42_6 MMC_REFREALLIT(_OMC_LIT_STRUCT42_6)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT42,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT41,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(480)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(480)),MMC_IMMEDIATE(MMC_TAGFIXNUM(102)),_OMC_LIT42_6}};
 #define _OMC_LIT42 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT42)
@@ -574,35 +574,35 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_SerializeInitXML_expString(threadD
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2)))));
           goto tmp3_done;
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = realString(mmc_unbox_real((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2)))));
           goto tmp3_done;
         }
         case 2: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = omc_Util_escapeModelicaStringToXmlString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))));
           goto tmp3_done;
         }
         case 3: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,1) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))))?_OMC_LIT0:_OMC_LIT1);
           goto tmp3_done;
         }
         case 4: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,2) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           tmp1 = intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 3)))));
           goto tmp3_done;
@@ -610,7 +610,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_SerializeInitXML_expString(threadD
         case 5: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,16,3) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!omc_Expression_isSimpleLiteralValue(threadData, _exp, 1 /* true */)) goto tmp3_end;
@@ -651,7 +651,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_SerializeInitXML_expString(threadD
         }
         case 6: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,27,3) == 0) goto tmp3_end;
-          
+
           /* Pattern matching succeeded */
           /* Tail recursive call */
           _exp = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 3)));
@@ -718,7 +718,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_getAliasVar(threadData_t *th
           modelica_metatype tmpMeta5;
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 16));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta5,1,1) == 0) goto tmp2_end;
-          
+
           _aliasvar = tmpMeta5;
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT8);
@@ -736,7 +736,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_getAliasVar(threadData_t *th
           modelica_metatype tmpMeta6;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 16));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,2,1) == 0) goto tmp2_end;
-          
+
           _aliasvar = tmpMeta6;
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT11);
@@ -751,7 +751,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_getAliasVar(threadData_t *th
           goto tmp2_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT12);
           goto tmp2_done;
@@ -792,26 +792,26 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_SerializeInitXML_getVariablity(thr
       {
         switch (MMC_SWITCH_CAST(valueConstructor(tmp4_1))) {
         case 9: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT13;
           goto tmp3_done;
         }
         case 10: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT14;
           goto tmp3_done;
         }
         case 11: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT15;
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT16;
           goto tmp3_done;
@@ -903,7 +903,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_SerializeInitXML_getCausality(thre
           goto tmp3_done;
         }
         case 6: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = _OMC_LIT20;
           goto tmp3_done;
@@ -1079,7 +1079,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_scalarVariableType(threadDat
         switch (MMC_SWITCH_CAST(tmp3)) {
         case 0: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,0,1) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT25);
 
@@ -1100,7 +1100,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_scalarVariableType(threadDat
         }
         case 1: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,1,1) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT32);
 
@@ -1123,7 +1123,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_scalarVariableType(threadDat
         }
         case 2: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,3,1) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT35);
 
@@ -1140,7 +1140,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_scalarVariableType(threadDat
         }
         case 3: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,2,1) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT36);
 
@@ -1157,7 +1157,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_scalarVariableType(threadDat
         }
         case 4: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,5,5) == 0) goto tmp2_end;
-          
+
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT25);
 
@@ -1179,7 +1179,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_scalarVariableType(threadDat
           tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta5,17,1) == 0) goto tmp2_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
-          
+
           _path = tmpMeta6;
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT37);
@@ -1191,7 +1191,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_scalarVariableType(threadDat
         }
         case 6: {
           modelica_metatype tmpMeta7;
-          
+
           /* Pattern matching succeeded */
           tmpMeta7 = stringAppend(_OMC_LIT40,omc_TypesDump_unparseType(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 13)))));
           omc_Error_addInternalError(threadData, tmpMeta7, _OMC_LIT42);
@@ -1480,7 +1480,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeInitXML_modelVariables(threadData_t 
           goto tmp3_done;
         }
         case 2: {
-          
+
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 1000);
           goto tmp3_done;
@@ -1600,7 +1600,7 @@ modelica_boolean omc_SerializeInitXML_simulationInitFileReturnBool(threadData_t 
                 }
                 case 1: {
                   modelica_metatype tmpMeta13;
-                  
+
                   /* Pattern matching succeeded */
                   tmpMeta13 = stringAppend((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_simCode), 37))),_OMC_LIT93);
                   tmp5 = tmpMeta13;
@@ -1651,7 +1651,7 @@ modelica_boolean omc_SerializeInitXML_simulationInitFileReturnBool(threadData_t 
                   goto tmp18_done;
                 }
                 case 2: {
-                  
+
                   /* Pattern matching succeeded */
                   tmp16 = _OMC_LIT95;
                   goto tmp18_done;
@@ -1936,12 +1936,17 @@ DLLDirection
 void omc_SerializeInitXML_simulationInitFile(threadData_t *threadData, modelica_metatype _simCode, modelica_string _guid)
 {
   modelica_boolean tmp1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   /* Pattern-matching assignment */
   tmp1 = omc_SerializeInitXML_simulationInitFileReturnBool(threadData, _simCode, _guid);
   if (1 /* true */ != tmp1) MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
-

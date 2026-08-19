@@ -44,6 +44,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SemanticVersion_splitPrereleaseAndMeta,
 PROTECTED_FUNCTION_STATIC modelica_integer omc_SemanticVersion_compareIdentifier(threadData_t *threadData, modelica_string _s1, modelica_string _s2)
 {
   modelica_integer _c;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _c has no default value.
@@ -61,6 +64,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SemanticVersion_compareIdentifier
 
   _c = stringCompare(_s1, _s2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _c;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SemanticVersion_compareIdentifier(threadData_t *threadData, modelica_metatype _s1, modelica_metatype _s2)
@@ -81,6 +87,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SemanticVersion_compareIdentifier
   modelica_string _s2 = NULL;
   modelica_integer tmp1_c0 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta[3] __attribute__((unused)) = {0};
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _c has no default value.
@@ -188,6 +197,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SemanticVersion_compareIdentifier
 
   _c = ((modelica_integer) 0);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _c;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SemanticVersion_compareIdentifierList(threadData_t *threadData, modelica_metatype _w1, modelica_metatype _w2)
@@ -305,6 +317,9 @@ modelica_boolean omc_SemanticVersion_isSemVer(threadData_t *threadData, modelica
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -343,6 +358,9 @@ modelica_boolean omc_SemanticVersion_isSemVer(threadData_t *threadData, modelica
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_SemanticVersion_isSemVer(threadData_t *threadData, modelica_metatype _v)
@@ -359,6 +377,9 @@ modelica_boolean omc_SemanticVersion_hasMetaInformation(threadData_t *threadData
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -406,6 +427,9 @@ modelica_boolean omc_SemanticVersion_hasMetaInformation(threadData_t *threadData
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_SemanticVersion_hasMetaInformation(threadData_t *threadData, modelica_metatype _v)
@@ -422,6 +446,9 @@ modelica_boolean omc_SemanticVersion_isPrerelease(threadData_t *threadData, mode
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -467,6 +494,9 @@ modelica_boolean omc_SemanticVersion_isPrerelease(threadData_t *threadData, mode
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_SemanticVersion_isPrerelease(threadData_t *threadData, modelica_metatype _v)
@@ -563,6 +593,9 @@ modelica_integer omc_SemanticVersion_compare(threadData_t *threadData, modelica_
 {
   modelica_integer _c;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _c has no default value.
@@ -656,6 +689,9 @@ modelica_integer omc_SemanticVersion_compare(threadData_t *threadData, modelica_
   }
   _c = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _c;
 }
 modelica_metatype boxptr_SemanticVersion_compare(threadData_t *threadData, modelica_metatype _v1, modelica_metatype _v2, modelica_metatype _comparePrerelease, modelica_metatype _compareBuildInformation)

@@ -32,6 +32,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FMI_getEnumerationTypeFromTypes,2,0) {(
 
 
 DLLDirection
+modelica_boolean omc_FMI_isFMISEType(threadData_t *threadData, modelica_string _inFMIType);
+DLLDirection
+modelica_metatype boxptr_FMI_isFMISEType(threadData_t *threadData, modelica_metatype _inFMIType);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_FMI_isFMISEType,2,0) {(void*) boxptr_FMI_isFMISEType,0}};
+#define boxvar_FMI_isFMISEType MMC_REFSTRUCTLIT(boxvar_lit_FMI_isFMISEType)
+
+
+DLLDirection
 modelica_boolean omc_FMI_isFMICSType(threadData_t *threadData, modelica_string _inFMIType);
 DLLDirection
 modelica_metatype boxptr_FMI_isFMICSType(threadData_t *threadData, modelica_metatype _inFMIType);
@@ -68,6 +76,14 @@ modelica_string omc_FMI_getFMIVersionString(threadData_t *threadData);
 #define boxptr_FMI_getFMIVersionString omc_FMI_getFMIVersionString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FMI_getFMIVersionString,2,0) {(void*) boxptr_FMI_getFMIVersionString,0}};
 #define boxvar_FMI_getFMIVersionString MMC_REFSTRUCTLIT(boxvar_lit_FMI_getFMIVersionString)
+
+
+DLLDirection
+modelica_boolean omc_FMI_isFMIVersion30(threadData_t *threadData, modelica_string _inFMUVersion);
+DLLDirection
+modelica_metatype boxptr_FMI_isFMIVersion30(threadData_t *threadData, modelica_metatype _inFMUVersion);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_FMI_isFMIVersion30,2,0) {(void*) boxptr_FMI_isFMIVersion30,0}};
+#define boxvar_FMI_isFMIVersion30 MMC_REFSTRUCTLIT(boxvar_lit_FMI_isFMIVersion30)
 
 
 DLLDirection

@@ -15,8 +15,8 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT5,1,4) {&NFPrefixes_Replaceable_NOT
 #define _OMC_LIT5 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT5)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT6,10,3) {&NFAttributes_ATTRIBUTES__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(128)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1)),MMC_IMMEDIATE(MMC_TAGFIXNUM(1)),MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT5,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */))}};
 #define _OMC_LIT6 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT6)
-#define _OMC_LIT7_data "virtual variable in expandable connector"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT7,40,_OMC_LIT7_data);
+#define _OMC_LIT7_data "variable added to expandable connector"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT7,38,_OMC_LIT7_data);
 #define _OMC_LIT7 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT7)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT8,1,1) {_OMC_LIT7}};
 #define _OMC_LIT8 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT8)
@@ -38,12 +38,12 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT15,1,11) {&NFInstNode_InstNode_EMPT
 #define _OMC_LIT16_data "NFExpandableConnectors.augmentExpandableConnector got non-component element"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT16,75,_OMC_LIT16_data);
 #define _OMC_LIT16 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT16)
-#define _OMC_LIT17_data "/projects/OpenModelica-session2/OMCompiler/Compiler/NFFrontEnd/NFExpandableConnectors.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT17,88,_OMC_LIT17_data);
+#define _OMC_LIT17_data "//OpenModelica/OMCompiler/Compiler/NFFrontEnd/NFExpandableConnectors.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT17,94,_OMC_LIT17_data);
 #define _OMC_LIT17 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT17)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT18_6,1.781983298e9);
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT18_6,1.784885415e9);
 #define _OMC_LIT18_6 MMC_REFREALLIT(_OMC_LIT_STRUCT18_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT18,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT17,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(409)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(409)),MMC_IMMEDIATE(MMC_TAGFIXNUM(95)),_OMC_LIT18_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT18,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT17,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(405)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(405)),MMC_IMMEDIATE(MMC_TAGFIXNUM(95)),_OMC_LIT18_6}};
 #define _OMC_LIT18 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT18)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT19,1,3) {&DAE_Prefix_NOPRE__desc,}};
 #define _OMC_LIT19 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT19)
@@ -109,9 +109,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_makeVirtualConne
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_addConnectionToSets(threadData_t *threadData, modelica_metatype _c1, modelica_metatype _c2, modelica_metatype __omcQ_24in_5Fcsets);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_addConnectionToSets,2,0) {(void*) boxptr_NFExpandableConnectors_addConnectionToSets,0}};
 #define boxvar_NFExpandableConnectors_addConnectionToSets MMC_REFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_addConnectionToSets)
-PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_addUndeclaredConnectorToSets(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fconn, modelica_metatype __omcQ_24in_5Fcsets, modelica_metatype *out_csets);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_addUndeclaredConnectorToSets,2,0) {(void*) boxptr_NFExpandableConnectors_addUndeclaredConnectorToSets,0}};
-#define boxvar_NFExpandableConnectors_addUndeclaredConnectorToSets MMC_REFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_addUndeclaredConnectorToSets)
+PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_addExpandableConnectorElementToSets(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fconn, modelica_metatype __omcQ_24in_5Fcsets, modelica_metatype *out_csets);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_addExpandableConnectorElementToSets,2,0) {(void*) boxptr_NFExpandableConnectors_addExpandableConnectorElementToSets,0}};
+#define boxvar_NFExpandableConnectors_addExpandableConnectorElementToSets MMC_REFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_addExpandableConnectorElementToSets)
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_getExpandableConnectorsInConnector(threadData_t *threadData, modelica_metatype _c1);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_getExpandableConnectorsInConnector,2,0) {(void*) boxptr_NFExpandableConnectors_getExpandableConnectorsInConnector,0}};
 #define boxvar_NFExpandableConnectors_getExpandableConnectorsInConnector MMC_REFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_getExpandableConnectorsInConnector)
@@ -128,11 +128,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_sortConnections,
 PROTECTED_FUNCTION_STATIC modelica_integer omc_NFExpandableConnectors_hashConnector(threadData_t *threadData, modelica_metatype _conn)
 {
   modelica_integer _res;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   _res = stringHashDjb2(omc_NFComponentRef_firstName(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conn), 2))), 0 /* false */));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFExpandableConnectors_hashConnector(threadData_t *threadData, modelica_metatype _conn)
@@ -479,6 +485,9 @@ PROTECTED_FUNCTION_STATIC void omc_NFExpandableConnectors_markComponentPresent(t
   modelica_metatype _comp = NULL;
   modelica_integer _cty;
   modelica_metatype _cls = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _comp has no default value.
@@ -504,6 +513,9 @@ PROTECTED_FUNCTION_STATIC void omc_NFExpandableConnectors_markComponentPresent(t
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -540,7 +552,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_elaborate
       }
       else
       {
-        if(omc_NFPrefixes_ConnectorType_isUndeclared(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 5))))))
+        if((omc_NFPrefixes_ConnectorType_isUndeclared(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 5))))) || omc_NFPrefixes_ConnectorType_isPotentiallyPresent(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 5)))))))
         {
           omc_UnorderedSet_add(threadData, _c, _exp_set);
 
@@ -616,7 +628,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_addConnec
   return _csets;
 }
 
-PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_addUndeclaredConnectorToSets(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fconn, modelica_metatype __omcQ_24in_5Fcsets, modelica_metatype *out_csets)
+PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_addExpandableConnectorElementToSets(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fconn, modelica_metatype __omcQ_24in_5Fcsets, modelica_metatype *out_csets)
 {
   modelica_metatype _conn = NULL;
   modelica_metatype _csets = NULL;
@@ -648,27 +660,28 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_addUndecl
 
   if(omc_NFPrefixes_ConnectorType_isUndeclared(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c1), 5))))))
   {
-    if(omc_NFPrefixes_ConnectorType_isVirtual(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c1), 5))))))
-    {
-      _c1 = omc_NFExpandableConnectors_makeVirtualConnector(threadData, _c1, _c2);
+    _c1 = omc_NFExpandableConnectors_makeVirtualConnector(threadData, _c1, _c2);
 
-      tmpMeta4 = mmc_mk_box3(3, &NFConnection_CONNECTION__desc, _c1, _c2);
-      _conn = tmpMeta4;
-    }
+    tmpMeta4 = mmc_mk_box3(3, &NFConnection_CONNECTION__desc, _c1, _c2);
+    _conn = tmpMeta4;
 
     _c = _c1;
   }
   else
   {
-    if(omc_NFPrefixes_ConnectorType_isVirtual(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c2), 5))))))
+    if(omc_NFPrefixes_ConnectorType_isUndeclared(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c2), 5))))))
     {
       _c2 = omc_NFExpandableConnectors_makeVirtualConnector(threadData, _c2, _c1);
 
       tmpMeta5 = mmc_mk_box3(3, &NFConnection_CONNECTION__desc, _c1, _c2);
       _conn = tmpMeta5;
-    }
 
-    _c = _c2;
+      _c = _c2;
+    }
+    else
+    {
+      _c = (omc_NFPrefixes_ConnectorType_isPotentiallyPresent(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c1), 5)))))?_c1:_c2);
+    }
   }
 
   tmpMeta6 = mmc_mk_box6(3, &NFConnector_CONNECTOR__desc, omc_NFComponentRef_rest(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 2)))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 3))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 4))), mmc_mk_integer(((modelica_integer) 64)), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 6))));
@@ -721,7 +734,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_getExpand
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 3));
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,3,2) == 0) goto tmp3_end;
           tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 3));
-          
+
           _par_name = tmpMeta6;
           _nodes = tmpMeta9;
           /* Pattern matching succeeded */
@@ -747,7 +760,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_getExpand
         }
         case 1: {
           modelica_metatype tmpMeta15;
-          
+
           /* Pattern matching succeeded */
           tmpMeta15 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta1 = tmpMeta15;
@@ -907,9 +920,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFExpandableConnectors_sortConne
       _c1 = tmpMeta6;
       _c2 = tmpMeta7;
 
-      _is_undeclared1 = omc_NFPrefixes_ConnectorType_isUndeclared(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c1), 5)))));
+      _is_undeclared1 = (omc_NFPrefixes_ConnectorType_isUndeclared(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c1), 5))))) || omc_NFPrefixes_ConnectorType_isPotentiallyPresent(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c1), 5))))));
 
-      _is_undeclared2 = omc_NFPrefixes_ConnectorType_isUndeclared(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c2), 5)))));
+      _is_undeclared2 = (omc_NFPrefixes_ConnectorType_isUndeclared(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c2), 5))))) || omc_NFPrefixes_ConnectorType_isPotentiallyPresent(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c2), 5))))));
 
       _is_expandable1 = omc_NFPrefixes_ConnectorType_isExpandable(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c1), 5)))));
 
@@ -998,7 +1011,7 @@ modelica_metatype omc_NFExpandableConnectors_elaborate(threadData_t *threadData,
 
   _csets = omc_NFExpandableConnectors_addExpandableConnectorsToSets(threadData, _expandable_conns, _csets);
 
-  _undeclared_conns = omc_List_mapFold(threadData, _undeclared_conns, boxvar_NFExpandableConnectors_addUndeclaredConnectorToSets, _csets ,&_csets);
+  _undeclared_conns = omc_List_mapFold(threadData, _undeclared_conns, boxvar_NFExpandableConnectors_addExpandableConnectorElementToSets, _csets ,&_csets);
 
   _csets_array = omc_NFConnectionSets_ConnectionSets_extractSets(threadData, _csets, NULL);
 
@@ -1064,4 +1077,3 @@ modelica_metatype omc_NFExpandableConnectors_elaborate(threadData_t *threadData,
   if (out_connections) { *out_connections = _connections; }
   return _flatModel;
 }
-

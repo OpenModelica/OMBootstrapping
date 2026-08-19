@@ -146,6 +146,8 @@ extern struct record_description Absyn_Exp_MATRIX__desc;
 
 extern struct record_description Absyn_Exp_RANGE__desc;
 
+extern struct record_description Absyn_Exp_REAL__desc;
+
 extern struct record_description Absyn_Exp_RELATION__desc;
 
 extern struct record_description Absyn_Exp_STRING__desc;
@@ -259,8 +261,6 @@ extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
 extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
 
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
-
-extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
 
 extern struct record_description GlobalScript_Statements_ISTMTS__desc;
 
@@ -1857,6 +1857,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getTypeOfVariable,2,0) {(vo
 
 
 #define boxptr_Interactive_makeTupleCrefs omc_Interactive_makeTupleCrefs
+
+
+DLLDirection
+modelica_string omc_Interactive_simulateModel(threadData_t *threadData, modelica_string _className, modelica_real _stopTime, modelica_integer _numberOfIntervals, modelica_real _tolerance, modelica_string _method, modelica_string _simflags);
+DLLDirection
+modelica_metatype boxptr_Interactive_simulateModel(threadData_t *threadData, modelica_metatype _className, modelica_metatype _stopTime, modelica_metatype _numberOfIntervals, modelica_metatype _tolerance, modelica_metatype _method, modelica_metatype _simflags);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_simulateModel,2,0) {(void*) boxptr_Interactive_simulateModel,0}};
+#define boxvar_Interactive_simulateModel MMC_REFSTRUCTLIT(boxvar_lit_Interactive_simulateModel)
 
 
 #define boxptr_Interactive_evaluateExprToStr omc_Interactive_evaluateExprToStr

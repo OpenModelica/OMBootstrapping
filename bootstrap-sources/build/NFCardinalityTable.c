@@ -29,6 +29,9 @@ void omc_NFCardinalityTable_print(threadData_t *threadData, modelica_metatype _t
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   {
@@ -44,6 +47,9 @@ void omc_NFCardinalityTable_print(threadData_t *threadData, modelica_metatype _t
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -69,6 +75,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFCardinalityTable_addConnector_u
 {
   modelica_integer _outCount;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCount has no default value.
@@ -111,6 +120,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFCardinalityTable_addConnector_u
   }
   _outCount = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outCount;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFCardinalityTable_addConnector_update(threadData_t *threadData, modelica_metatype _count)
@@ -126,6 +138,9 @@ DLLDirection
 void omc_NFCardinalityTable_addConnector(threadData_t *threadData, modelica_metatype _conn, modelica_metatype _table)
 {
   modelica_string _conn_str = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _conn_str has no default value.
@@ -133,6 +148,9 @@ void omc_NFCardinalityTable_addConnector(threadData_t *threadData, modelica_meta
 
   omc_UnorderedMap_addUpdate(threadData, _conn_str, boxvar_NFCardinalityTable_addConnector_update, _table);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

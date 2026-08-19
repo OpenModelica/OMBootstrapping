@@ -28,6 +28,9 @@ void omc_NFBuiltin_makeBuiltinLookupTree(threadData_t *threadData, modelica_stri
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _ltree = omc_NFLookupTree_new(threadData);
@@ -66,6 +69,9 @@ void omc_NFBuiltin_makeBuiltinLookupTree(threadData_t *threadData, modelica_stri
 
   fputs(MMC_STRINGDATA(_OMC_LIT2),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

@@ -1157,6 +1157,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInst_instClassForConnection,2,0) {(vo
 
 
 DLLDirection
+modelica_metatype omc_NFInst_instClassInProgram2(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program, modelica_metatype _annotationProgram, modelica_boolean _relaxedFrontend, modelica_boolean _dumpFlat, modelica_metatype *out_functions, modelica_string *out_flatString);
+DLLDirection
+modelica_metatype boxptr_NFInst_instClassInProgram2(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program, modelica_metatype _annotationProgram, modelica_metatype _relaxedFrontend, modelica_metatype _dumpFlat, modelica_metatype *out_functions, modelica_metatype *out_flatString);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInst_instClassInProgram2,2,0) {(void*) boxptr_NFInst_instClassInProgram2,0}};
+#define boxvar_NFInst_instClassInProgram2 MMC_REFSTRUCTLIT(boxvar_lit_NFInst_instClassInProgram2)
+
+
+DLLDirection
 modelica_metatype omc_NFInst_instClassInProgram(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program, modelica_metatype _annotationProgram, modelica_boolean _relaxedFrontend, modelica_boolean _dumpFlat, modelica_metatype *out_functions, modelica_string *out_flatString);
 DLLDirection
 modelica_metatype boxptr_NFInst_instClassInProgram(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program, modelica_metatype _annotationProgram, modelica_metatype _relaxedFrontend, modelica_metatype _dumpFlat, modelica_metatype *out_functions, modelica_metatype *out_flatString);

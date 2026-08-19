@@ -104,6 +104,8 @@ extern struct record_description DAE_Exp_REDUCTION__desc;
 
 extern struct record_description DAE_Exp_RELATION__desc;
 
+extern struct record_description DAE_Exp_RSUB__desc;
+
 extern struct record_description DAE_Exp_SIZE__desc;
 
 extern struct record_description DAE_Exp_TSUB__desc;

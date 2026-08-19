@@ -59,6 +59,9 @@ modelica_integer omc_InstBasics_getFunctionRestrictionPurity(threadData_t *threa
 {
   modelica_integer _outPurity;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outPurity has no default value.
@@ -116,6 +119,9 @@ modelica_integer omc_InstBasics_getFunctionRestrictionPurity(threadData_t *threa
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outPurity;
 }
 modelica_metatype boxptr_InstBasics_getFunctionRestrictionPurity(threadData_t *threadData, modelica_metatype _purity, modelica_metatype _cmt, modelica_metatype _newFrontend)
@@ -136,6 +142,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_InstBasics_commentGenerateEvents_
   modelica_metatype tmpMeta1;
   modelica_boolean tmp2 = 0;
   modelica_metatype tmpMeta13;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
@@ -205,6 +214,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_InstBasics_commentGenerateEvents_
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _res;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_InstBasics_commentGenerateEvents_commentGenerateEvents2(threadData_t *threadData, modelica_metatype _inSubModList)
@@ -221,6 +233,9 @@ modelica_boolean omc_InstBasics_commentGenerateEvents(threadData_t *threadData, 
 {
   modelica_boolean _generateEvents;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _generateEvents has no default value.
@@ -271,6 +286,9 @@ modelica_boolean omc_InstBasics_commentGenerateEvents(threadData_t *threadData, 
   }
   _generateEvents = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _generateEvents;
 }
 modelica_metatype boxptr_InstBasics_commentGenerateEvents(threadData_t *threadData, modelica_metatype _cmt)

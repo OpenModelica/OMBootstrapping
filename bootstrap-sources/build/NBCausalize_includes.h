@@ -7,7 +7,6 @@ extern "C" {
 #include "Error.h"
 #include "Flags.h"
 #include "List.h"
-#include "NBASSC.h"
 #include "NBAdjacency.h"
 #include "NBCausalize.h"
 #include "NBEquation.h"

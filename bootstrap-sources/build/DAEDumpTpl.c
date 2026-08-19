@@ -3010,7 +3010,7 @@ modelica_metatype omc_DAEDumpTpl_dumpForStatement(threadData_t *threadData, mode
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,7) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 5));
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 6));
@@ -3908,7 +3908,7 @@ modelica_metatype omc_DAEDumpTpl_dumpStatement(threadData_t *threadData, modelic
           goto tmp3_done;
         }
         case 4: {
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,4,7) == 0) goto tmp3_end;
           
           _i_stmt = tmp4_2;
           _txt = tmp4_1;

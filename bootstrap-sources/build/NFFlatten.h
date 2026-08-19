@@ -399,6 +399,20 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatten_evaluateConnectionOperators,2
 
 
 DLLDirection
+modelica_metatype omc_NFFlatten_causalizeAcausalVar(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fvar, modelica_metatype _unconnectedFlows, modelica_metatype _boundaryConnectors);
+#define boxptr_NFFlatten_causalizeAcausalVar omc_NFFlatten_causalizeAcausalVar
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatten_causalizeAcausalVar,2,0) {(void*) boxptr_NFFlatten_causalizeAcausalVar,0}};
+#define boxvar_NFFlatten_causalizeAcausalVar MMC_REFSTRUCTLIT(boxvar_lit_NFFlatten_causalizeAcausalVar)
+
+
+DLLDirection
+modelica_metatype omc_NFFlatten_causalizeAcausalConnectors(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel);
+#define boxptr_NFFlatten_causalizeAcausalConnectors omc_NFFlatten_causalizeAcausalConnectors
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFlatten_causalizeAcausalConnectors,2,0) {(void*) boxptr_NFFlatten_causalizeAcausalConnectors,0}};
+#define boxvar_NFFlatten_causalizeAcausalConnectors MMC_REFSTRUCTLIT(boxvar_lit_NFFlatten_causalizeAcausalConnectors)
+
+
+DLLDirection
 modelica_metatype omc_NFFlatten_generateTopLevelIOs(threadData_t *threadData, modelica_metatype _variables, modelica_metatype _connectedLocalIOs, modelica_integer _exposeLocalIOs, modelica_metatype *out_tlio_eql);
 DLLDirection
 modelica_metatype boxptr_NFFlatten_generateTopLevelIOs(threadData_t *threadData, modelica_metatype _variables, modelica_metatype _connectedLocalIOs, modelica_metatype _exposeLocalIOs, modelica_metatype *out_tlio_eql);

@@ -79,6 +79,9 @@ extern struct record_description Tpl_Text_MEM__TEXT__desc;
 extern struct record_description Values_Value_REAL__desc;
 
 
+#define boxptr_SimCodeMain_objectFilesOf omc_SimCodeMain_objectFilesOf
+
+
 #define boxptr_SimCodeMain_copyFiles omc_SimCodeMain_copyFiles
 
 
@@ -120,7 +123,13 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeMain_translateModel,2,0) {(void*
 #define boxptr_SimCodeMain_callTargetTemplatesXML omc_SimCodeMain_callTargetTemplatesXML
 
 
+#define boxptr_SimCodeMain_htmlDocumentation omc_SimCodeMain_htmlDocumentation
+
+
 #define boxptr_SimCodeMain_callTargetTemplatesFMU omc_SimCodeMain_callTargetTemplatesFMU
+
+
+#define boxptr_SimCodeMain_visualizationCadFiles omc_SimCodeMain_visualizationCadFiles
 
 
 #define boxptr_SimCodeMain_callTargetTemplatesOMSICpp omc_SimCodeMain_callTargetTemplatesOMSICpp

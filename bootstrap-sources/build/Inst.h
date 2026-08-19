@@ -164,8 +164,6 @@ extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
 extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
 
-extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
-
 extern struct record_description InstHashTable_CachedInstItem_FUNC__instClassIn__desc;
 
 extern struct record_description InstHashTable_CachedInstItem_FUNC__partialInstClassIn__desc;

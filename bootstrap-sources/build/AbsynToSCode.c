@@ -461,6 +461,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateClass2,2,0) {(voi
 
 PROTECTED_FUNCTION_STATIC void omc_AbsynToSCode_checkTypeSpec(threadData_t *threadData, modelica_metatype _ts, modelica_metatype _info)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -594,6 +597,9 @@ PROTECTED_FUNCTION_STATIC void omc_AbsynToSCode_checkTypeSpec(threadData_t *thre
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2372,6 +2378,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_AbsynToSCode_translateRedeclareke
   modelica_boolean tmp1_c0 __attribute__((unused)) = 0;
   modelica_boolean tmp1_c1 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsReplaceable has no default value.
@@ -2439,6 +2448,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_AbsynToSCode_translateRedeclareke
   _outIsRedeclared = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_outIsRedeclared) { *out_outIsRedeclared = _outIsRedeclared; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsReplaceable;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AbsynToSCode_translateRedeclarekeywords(threadData_t *threadData, modelica_metatype _inRedeclKeywords, modelica_metatype *out_outIsRedeclared)
@@ -2454,6 +2466,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AbsynToSCode_translateRedecla
 
 PROTECTED_FUNCTION_STATIC void omc_AbsynToSCode_setHasStreamConnectorsHandler(threadData_t *threadData, modelica_boolean _streamPrefix)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2489,6 +2504,9 @@ PROTECTED_FUNCTION_STATIC void omc_AbsynToSCode_setHasStreamConnectorsHandler(th
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_AbsynToSCode_setHasStreamConnectorsHandler(threadData_t *threadData, modelica_metatype _streamPrefix)
@@ -2501,6 +2519,9 @@ PROTECTED_FUNCTION_STATIC void boxptr_AbsynToSCode_setHasStreamConnectorsHandler
 
 PROTECTED_FUNCTION_STATIC void omc_AbsynToSCode_setHasInnerOuterDefinitionsHandler(threadData_t *threadData, modelica_metatype _io)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2536,6 +2557,9 @@ PROTECTED_FUNCTION_STATIC void omc_AbsynToSCode_setHasInnerOuterDefinitionsHandl
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -5038,6 +5062,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_AbsynToSCode_translateAlternative
 {
   modelica_boolean _keep;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _keep has no default value.
@@ -5099,6 +5126,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_AbsynToSCode_translateAlternative
   }
   _keep = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _keep;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AbsynToSCode_translateAlternativeExternalAnnotation_whitelist__mod(threadData_t *threadData, modelica_metatype _submod)
@@ -5695,6 +5725,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_AbsynToSCode_containsExternalFunc
 {
   modelica_boolean _outBoolean;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBoolean has no default value.
@@ -5752,6 +5785,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_AbsynToSCode_containsExternalFunc
   }
   _outBoolean = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBoolean;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AbsynToSCode_containsExternalFuncDecl(threadData_t *threadData, modelica_metatype _inClass)

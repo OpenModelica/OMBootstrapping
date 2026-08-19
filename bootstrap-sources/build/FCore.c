@@ -241,6 +241,9 @@ modelica_boolean omc_FCore_isDeletedComp(threadData_t *threadData, modelica_meta
 {
   modelica_boolean _isDeleted;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isDeleted has no default value.
@@ -278,6 +281,9 @@ modelica_boolean omc_FCore_isDeletedComp(threadData_t *threadData, modelica_meta
   }
   _isDeleted = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isDeleted;
 }
 modelica_metatype boxptr_FCore_isDeletedComp(threadData_t *threadData, modelica_metatype _status)
@@ -294,6 +300,9 @@ modelica_boolean omc_FCore_isTyped(threadData_t *threadData, modelica_metatype _
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -331,6 +340,9 @@ modelica_boolean omc_FCore_isTyped(threadData_t *threadData, modelica_metatype _
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_FCore_isTyped(threadData_t *threadData, modelica_metatype _is)
@@ -345,6 +357,9 @@ modelica_metatype boxptr_FCore_isTyped(threadData_t *threadData, modelica_metaty
 DLLDirection
 void omc_FCore_setCachedFunctionTree(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inFunctions)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -381,6 +396,9 @@ void omc_FCore_setCachedFunctionTree(threadData_t *threadData, modelica_metatype
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -613,6 +631,9 @@ modelica_metatype omc_FCore_getFunctionTree(threadData_t *threadData, modelica_m
 DLLDirection
 void omc_FCore_checkCachedInstFuncGuard(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _path)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -649,6 +670,9 @@ void omc_FCore_checkCachedInstFuncGuard(threadData_t *threadData, modelica_metat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -709,6 +733,9 @@ modelica_boolean omc_FCore_isImplicitScope(threadData_t *threadData, modelica_st
 {
   modelica_boolean _isImplicit;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isImplicit has no default value.
@@ -759,6 +786,9 @@ modelica_boolean omc_FCore_isImplicitScope(threadData_t *threadData, modelica_st
   }
   _isImplicit = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isImplicit;
 }
 modelica_metatype boxptr_FCore_isImplicitScope(threadData_t *threadData, modelica_metatype _inName)
@@ -844,6 +874,9 @@ void omc_FCore_printNumStructuralParameters(threadData_t *threadData, modelica_m
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _crs has no default value.
@@ -861,6 +894,9 @@ void omc_FCore_printNumStructuralParameters(threadData_t *threadData, modelica_m
   tmpMeta7 = stringAppend(tmpMeta6,_OMC_LIT3);
   fputs(MMC_STRINGDATA(tmpMeta7),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1044,11 +1080,17 @@ DLLDirection
 modelica_integer omc_FCore_next(threadData_t *threadData, modelica_integer _inext)
 {
   modelica_integer _onext;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _onext has no default value.
   _onext = ((modelica_integer) 1) + _inext;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _onext;
 }
 modelica_metatype boxptr_FCore_next(threadData_t *threadData, modelica_metatype _inext)
@@ -1483,6 +1525,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_FCore_RefTree_calculateBalance(th
 {
   modelica_integer _outBalance;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBalance has no default value.
@@ -1525,6 +1570,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_FCore_RefTree_calculateBalance(th
   }
   _outBalance = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outBalance;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_FCore_RefTree_calculateBalance(threadData_t *threadData, modelica_metatype _inNode)
@@ -1739,6 +1787,9 @@ modelica_metatype omc_FCore_RefTree_fold__2(threadData_t *threadData, modelica_m
 DLLDirection
 void omc_FCore_RefTree_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1786,6 +1837,9 @@ void omc_FCore_RefTree_forEach(threadData_t *threadData, modelica_metatype _tree
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2064,6 +2118,9 @@ modelica_boolean omc_FCore_RefTree_hasKey(threadData_t *threadData, modelica_met
   modelica_metatype _tree = NULL;
   modelica_string tmp1 = 0;
   modelica_boolean tmp5 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _comp = 0 /* false */;
@@ -2174,6 +2231,9 @@ modelica_boolean omc_FCore_RefTree_hasKey(threadData_t *threadData, modelica_met
   }
   _comp = tmp5;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _comp;
 }
 modelica_metatype boxptr_FCore_RefTree_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey)
@@ -2189,6 +2249,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_FCore_RefTree_height(threadData_t
 {
   modelica_integer _outHeight;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHeight has no default value.
@@ -2231,6 +2294,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_FCore_RefTree_height(threadData_t
   }
   _outHeight = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outHeight;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_FCore_RefTree_height(threadData_t *threadData, modelica_metatype _inNode)
@@ -2245,10 +2311,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_FCore_RefTree_height(threadDa
 DLLDirection
 void omc_FCore_RefTree_intersection(threadData_t *threadData)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   MMC_THROW_INTERNAL();
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2257,6 +2329,9 @@ modelica_boolean omc_FCore_RefTree_isEmpty(threadData_t *threadData, modelica_me
 {
   modelica_boolean _isEmpty;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
@@ -2294,6 +2369,9 @@ modelica_boolean omc_FCore_RefTree_isEmpty(threadData_t *threadData, modelica_me
   }
   _isEmpty = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEmpty;
 }
 modelica_metatype boxptr_FCore_RefTree_isEmpty(threadData_t *threadData, modelica_metatype _tree)
@@ -2365,11 +2443,17 @@ DLLDirection
 modelica_integer omc_FCore_RefTree_keyCompare(threadData_t *threadData, modelica_string _inKey1, modelica_string _inKey2)
 {
   modelica_integer _outResult;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outResult has no default value.
   _outResult = stringCompare(_inKey1, _inKey2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outResult;
 }
 modelica_metatype boxptr_FCore_RefTree_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2)
@@ -3017,6 +3101,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_FCore_RefTree_referenceEqOrEmpty(
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -3056,6 +3143,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_FCore_RefTree_referenceEqOrEmpty(
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_FCore_RefTree_referenceEqOrEmpty(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)

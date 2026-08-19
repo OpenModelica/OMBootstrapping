@@ -84,7 +84,7 @@ extern struct record_description NFStatement_FUNCTION__ARRAY__INIT__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFStatement_FOR__desc_added
 #define NFStatement_FOR__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFStatement_FOR__desc__fields[5] = {"iterator","range","body","forType","source"};
+ADD_METARECORD_DEFINITIONS const char* NFStatement_FOR__desc__fields[6] = {"iterator","range","body","forType","source","sub_iters"};
 ADD_METARECORD_DEFINITIONS struct record_description NFStatement_FOR__desc = {
   "NFStatement_FOR",
   "NFStatement.FOR",

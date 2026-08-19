@@ -2194,6 +2194,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Expression_expressionCollector,2,0) {(v
 
 
 DLLDirection
+modelica_metatype omc_Expression_replaceExpNoEvent(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inSourceExp, modelica_metatype _inTargetExp, modelica_integer *out_i);
+DLLDirection
+modelica_metatype boxptr_Expression_replaceExpNoEvent(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inSourceExp, modelica_metatype _inTargetExp, modelica_metatype *out_i);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_Expression_replaceExpNoEvent,2,0) {(void*) boxptr_Expression_replaceExpNoEvent,0}};
+#define boxvar_Expression_replaceExpNoEvent MMC_REFSTRUCTLIT(boxvar_lit_Expression_replaceExpNoEvent)
+
+
+DLLDirection
 modelica_metatype omc_Expression_replaceExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inSourceExp, modelica_metatype _inTargetExp, modelica_integer *out_i);
 DLLDirection
 modelica_metatype boxptr_Expression_replaceExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inSourceExp, modelica_metatype _inTargetExp, modelica_metatype *out_i);

@@ -67,6 +67,18 @@ extern struct record_description VisualXML_Visualization_VECTOR__desc;
 #define boxptr_VisualXML_getConstCrefBinding omc_VisualXML_getConstCrefBinding
 
 
+#define boxptr_VisualXML_tryConstCrefValue omc_VisualXML_tryConstCrefValue
+
+
+#define boxptr_VisualXML_inlineConstExp omc_VisualXML_inlineConstExp
+
+
+#define boxptr_VisualXML_inlineConstExpList omc_VisualXML_inlineConstExpList
+
+
+#define boxptr_VisualXML_inlineConstVisAttributes omc_VisualXML_inlineConstVisAttributes
+
+
 #define boxptr_VisualXML_replaceVisualBinding omc_VisualXML_replaceVisualBinding
 
 

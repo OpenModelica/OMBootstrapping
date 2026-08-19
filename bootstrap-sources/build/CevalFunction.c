@@ -578,6 +578,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CevalFunction_optimizeExpTravers
 
 PROTECTED_FUNCTION_STATIC void omc_CevalFunction_checkCyclicalComponents(threadData_t *threadData, modelica_metatype _inCycles, modelica_metatype _inSource)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -654,6 +657,9 @@ PROTECTED_FUNCTION_STATIC void omc_CevalFunction_checkCyclicalComponents(threadD
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -668,6 +674,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_CevalFunction_isElementEqual(thre
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEqual has no default value.
@@ -689,6 +698,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_CevalFunction_isElementEqual(thre
 
   _isEqual = omc_ComponentReferenceBasics_crefEqualWithoutSubs(threadData, _cr1, _cr2);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isEqual;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CevalFunction_isElementEqual(threadData_t *threadData, modelica_metatype _inElement1, modelica_metatype _inElement2)
@@ -707,6 +719,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_CevalFunction_isElementNamed(thre
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isNamed has no default value.
@@ -720,6 +735,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_CevalFunction_isElementNamed(thre
 
   _isNamed = omc_ComponentReferenceBasics_crefEqualWithoutSubs(threadData, _name, _inName);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _isNamed;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CevalFunction_isElementNamed(threadData_t *threadData, modelica_metatype _inName, modelica_metatype _inElement)
@@ -4356,7 +4374,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CevalFunction_evaluateForStateme
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,7) == 0) goto tmp3_end;
           tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
           tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
           tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
@@ -4382,7 +4400,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CevalFunction_evaluateForStateme
         case 1: {
           modelica_metatype tmpMeta13;
           modelica_boolean tmp14;
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,7) == 0) goto tmp3_end;
           tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
           
           _range = tmpMeta13;
@@ -4948,7 +4966,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CevalFunction_evaluateStatement(
           goto tmp3_done;
         }
         case 4: {
-          if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,6) == 0) goto tmp3_end;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,7) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
           tmpMeta[0+0] = omc_CevalFunction_evaluateForStatement(threadData, _inStatement, _inCache, _inEnv, &tmpMeta[0+1], &tmpMeta[0+2]);
@@ -7877,6 +7895,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_CevalFunction_isCrefNamed(threadD
 {
   modelica_boolean _outIsNamed;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsNamed has no default value.
@@ -7920,6 +7941,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_CevalFunction_isCrefNamed(threadD
   }
   _outIsNamed = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsNamed;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CevalFunction_isCrefNamed(threadData_t *threadData, modelica_metatype _inName, modelica_metatype _inCref)

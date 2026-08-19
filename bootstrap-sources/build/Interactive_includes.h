@@ -6,6 +6,7 @@ extern "C" {
 
 #include "AbsynToSCode.h"
 #include "AbsynUtil.h"
+#include "Builtin.h"
 #include "Ceval.h"
 #include "CevalScript.h"
 #include "ClassInfUtil.h"

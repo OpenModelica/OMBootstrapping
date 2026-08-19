@@ -641,6 +641,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet3(threadData
 {
   modelica_integer _outValue;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outValue has no default value.
@@ -725,6 +728,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet3(threadData
   }
   _outValue = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outValue;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BinaryTreeInt_treeGet3(threadData_t *threadData, modelica_metatype _inBinTree, modelica_metatype _ikey, modelica_metatype _inCompResult)
@@ -744,6 +750,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet2(threadData
 {
   modelica_integer _compResult;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compResult has no default value.
@@ -787,6 +796,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet2(threadData
   }
   _compResult = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _compResult;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BinaryTreeInt_treeGet2(threadData_t *threadData, modelica_metatype _inBinTree, modelica_metatype _ikey)
@@ -804,11 +816,17 @@ DLLDirection
 modelica_integer omc_BinaryTreeInt_treeGet(threadData_t *threadData, modelica_metatype _bt, modelica_integer _key)
 {
   modelica_integer _v;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
   _v = omc_BinaryTreeInt_treeGet3(threadData, _bt, _key, omc_BinaryTreeInt_treeGet2(threadData, _bt, _key));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _v;
 }
 modelica_metatype boxptr_BinaryTreeInt_treeGet(threadData_t *threadData, modelica_metatype _bt, modelica_metatype _key)
@@ -825,11 +843,17 @@ modelica_metatype boxptr_BinaryTreeInt_treeGet(threadData_t *threadData, modelic
 PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_keyCmp(threadData_t *threadData, modelica_integer _keya, modelica_integer _keyb)
 {
   modelica_integer _cmp;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _cmp has no default value.
   _cmp = omc_Util_intSign(threadData, _keya - _keyb);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _cmp;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BinaryTreeInt_keyCmp(threadData_t *threadData, modelica_metatype _keya, modelica_metatype _keyb)

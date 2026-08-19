@@ -515,6 +515,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DiffAlgorithm_myersGreedyDiff(th
     modelica_integer _D;
     for(_D = ((modelica_integer) 0); in_range_integer(_D, tmp9, tmp11); _D += tmp10)
     {
+
       tmp6 = (-_D); tmp7 = ((modelica_integer) 2); tmp8 = _D;
       if(!tmp7) {
         omc_assert(threadData, omc_dummyFileInfo, "assertion range step != 0 failed");
@@ -523,6 +524,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DiffAlgorithm_myersGreedyDiff(th
         modelica_integer _k;
         for(_k = (-_D); in_range_integer(_k, tmp6, tmp8); _k += tmp7)
         {
+
           if(((_k == (-_D)) || ((_k != _D) && (mmc_unbox_integer(arrayGet(_V,((modelica_integer) -1) + _k + _middle) /* DAE.ASUB */) < mmc_unbox_integer(arrayGet(_V,((modelica_integer) 1) + _k + _middle) /* DAE.ASUB */)))))
           {
             _x = mmc_unbox_integer(arrayGet(_V,((modelica_integer) 1) + _k + _middle) /* DAE.ASUB */);

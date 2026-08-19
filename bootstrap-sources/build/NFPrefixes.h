@@ -436,14 +436,6 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPrefixes_ConnectorType_isPotentiallyP
 
 
 DLLDirection
-modelica_boolean omc_NFPrefixes_ConnectorType_isVirtual(threadData_t *threadData, modelica_integer _cty);
-DLLDirection
-modelica_metatype boxptr_NFPrefixes_ConnectorType_isVirtual(threadData_t *threadData, modelica_metatype _cty);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_NFPrefixes_ConnectorType_isVirtual,2,0) {(void*) boxptr_NFPrefixes_ConnectorType_isVirtual,0}};
-#define boxvar_NFPrefixes_ConnectorType_isVirtual MMC_REFSTRUCTLIT(boxvar_lit_NFPrefixes_ConnectorType_isVirtual)
-
-
-DLLDirection
 modelica_boolean omc_NFPrefixes_ConnectorType_isUndeclared(threadData_t *threadData, modelica_integer _cty);
 DLLDirection
 modelica_metatype boxptr_NFPrefixes_ConnectorType_isUndeclared(threadData_t *threadData, modelica_metatype _cty);

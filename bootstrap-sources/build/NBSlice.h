@@ -47,6 +47,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBSlice_getCrefInFrameIndicesLocal,2,0)
 #define boxptr_NBSlice_keyString omc_NBSlice_keyString
 
 
+#define boxptr_NBSlice_getReplacedAndStripped omc_NBSlice_getReplacedAndStripped
+
+
+DLLDirection
+modelica_integer omc_NBSlice_getSingleIndex(threadData_t *threadData, modelica_metatype _cref);
+DLLDirection
+modelica_metatype boxptr_NBSlice_getSingleIndex(threadData_t *threadData, modelica_metatype _cref);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBSlice_getSingleIndex,2,0) {(void*) boxptr_NBSlice_getSingleIndex,0}};
+#define boxvar_NBSlice_getSingleIndex MMC_REFSTRUCTLIT(boxvar_lit_NBSlice_getSingleIndex)
+
+
 DLLDirection
 void omc_NBSlice_upgradeRow(threadData_t *threadData, modelica_metatype _eqn_name, modelica_integer _eqn_arr_idx, modelica_metatype _iter, modelica_metatype _ty, modelica_metatype _dependencies, modelica_metatype _dep, modelica_metatype _rep, modelica_metatype _map, modelica_metatype _fullmap, modelica_metatype _m, modelica_metatype _mapping, modelica_metatype _modes);
 DLLDirection
@@ -290,9 +301,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBSlice_isFull,2,0) {(void*) boxptr_NBS
 
 
 DLLDirection
-modelica_string omc_NBSlice_lstToString(threadData_t *threadData, modelica_metatype _lst, modelica_fnptr _func, modelica_integer _maxLength);
+modelica_string omc_NBSlice_lstToString(threadData_t *threadData, modelica_metatype _lst, modelica_fnptr _func, modelica_string _indent, modelica_integer _maxLength);
 DLLDirection
-modelica_metatype boxptr_NBSlice_lstToString(threadData_t *threadData, modelica_metatype _lst, modelica_fnptr _func, modelica_metatype _maxLength);
+modelica_metatype boxptr_NBSlice_lstToString(threadData_t *threadData, modelica_metatype _lst, modelica_fnptr _func, modelica_metatype _indent, modelica_metatype _maxLength);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBSlice_lstToString,2,0) {(void*) boxptr_NBSlice_lstToString,0}};
 #define boxvar_NBSlice_lstToString MMC_REFSTRUCTLIT(boxvar_lit_NBSlice_lstToString)
 

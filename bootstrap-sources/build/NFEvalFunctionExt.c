@@ -57,6 +57,9 @@ PROTECTED_FUNCTION_STATIC void omc_NFEvalFunctionExt_assignVariableExt(threadDat
 {
   modelica_metatype _exp = NULL;
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _exp has no default value.
@@ -157,6 +160,9 @@ PROTECTED_FUNCTION_STATIC void omc_NFEvalFunctionExt_assignVariableExt(threadDat
 
   omc_NFEvalFunction_assignVariable(threadData, _variable, _exp);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -479,6 +485,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_NFEvalFunctionExt_getExtRealValue(th
 {
   modelica_real _value;
   modelica_real tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _value has no default value.
@@ -518,6 +527,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_NFEvalFunctionExt_getExtRealValue(th
   }
   _value = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _value;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFEvalFunctionExt_getExtRealValue(threadData_t *threadData, modelica_metatype _exp)
@@ -532,10 +544,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFEvalFunctionExt_getExtRealV
 PROTECTED_FUNCTION_STATIC modelica_real omc_NFEvalFunctionExt_evaluateExtRealArg(threadData_t *threadData, modelica_metatype _arg)
 {
   modelica_real _value;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _value = omc_NFEvalFunctionExt_getExtRealValue(threadData, omc_NFCeval_evalExp(threadData, _arg, _OMC_LIT3));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _value;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFEvalFunctionExt_evaluateExtRealArg(threadData_t *threadData, modelica_metatype _arg)
@@ -551,6 +569,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFEvalFunctionExt_getExtIntValue(
 {
   modelica_integer _value;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _value has no default value.
@@ -590,6 +611,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFEvalFunctionExt_getExtIntValue(
   }
   _value = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _value;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFEvalFunctionExt_getExtIntValue(threadData_t *threadData, modelica_metatype _exp)
@@ -604,10 +628,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFEvalFunctionExt_getExtIntVa
 PROTECTED_FUNCTION_STATIC modelica_integer omc_NFEvalFunctionExt_evaluateExtIntArg(threadData_t *threadData, modelica_metatype _arg)
 {
   modelica_integer _value;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _value = omc_NFEvalFunctionExt_getExtIntValue(threadData, omc_NFCeval_evalExp(threadData, _arg, _OMC_LIT3));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _value;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFEvalFunctionExt_evaluateExtIntArg(threadData_t *threadData, modelica_metatype _arg)
@@ -679,6 +709,9 @@ void omc_NFEvalFunctionExt_Lapack__dhseqr(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta27;
   modelica_metatype tmpMeta28;
   modelica_metatype tmpMeta29;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _job has no default value.
@@ -805,6 +838,9 @@ void omc_NFEvalFunctionExt_Lapack__dhseqr(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -848,6 +884,9 @@ void omc_NFEvalFunctionExt_Lapack__dorgqr(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta17;
   modelica_metatype tmpMeta18;
   modelica_metatype tmpMeta19;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
@@ -932,6 +971,9 @@ void omc_NFEvalFunctionExt_Lapack__dorgqr(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -971,6 +1013,9 @@ void omc_NFEvalFunctionExt_Lapack__dgeqpf(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
@@ -1047,6 +1092,9 @@ void omc_NFEvalFunctionExt_Lapack__dgeqpf(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1082,6 +1130,9 @@ void omc_NFEvalFunctionExt_Lapack__dgetri(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta13;
   modelica_metatype tmpMeta14;
   modelica_metatype tmpMeta15;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _n has no default value.
@@ -1150,6 +1201,9 @@ void omc_NFEvalFunctionExt_Lapack__dgetri(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1193,6 +1247,9 @@ void omc_NFEvalFunctionExt_Lapack__dgetrs(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta17;
   modelica_metatype tmpMeta18;
   modelica_metatype tmpMeta19;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _trans has no default value.
@@ -1275,6 +1332,9 @@ void omc_NFEvalFunctionExt_Lapack__dgetrs(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1306,6 +1366,9 @@ void omc_NFEvalFunctionExt_Lapack__dgetrf(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
@@ -1364,6 +1427,9 @@ void omc_NFEvalFunctionExt_Lapack__dgetrf(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1427,6 +1493,9 @@ void omc_NFEvalFunctionExt_Lapack__dgesvd(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta27;
   modelica_metatype tmpMeta28;
   modelica_metatype tmpMeta29;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _jobu has no default value.
@@ -1551,6 +1620,9 @@ void omc_NFEvalFunctionExt_Lapack__dgesvd(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1598,6 +1670,9 @@ void omc_NFEvalFunctionExt_Lapack__dgbsv(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta19;
   modelica_metatype tmpMeta20;
   modelica_metatype tmpMeta21;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _n has no default value.
@@ -1690,6 +1765,9 @@ void omc_NFEvalFunctionExt_Lapack__dgbsv(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1729,6 +1807,9 @@ void omc_NFEvalFunctionExt_Lapack__dgtsv(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _n has no default value.
@@ -1809,6 +1890,9 @@ void omc_NFEvalFunctionExt_Lapack__dgtsv(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1868,6 +1952,9 @@ void omc_NFEvalFunctionExt_Lapack__dgglse(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta25;
   modelica_metatype tmpMeta26;
   modelica_metatype tmpMeta27;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
@@ -1990,6 +2077,9 @@ void omc_NFEvalFunctionExt_Lapack__dgglse(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2029,6 +2119,9 @@ void omc_NFEvalFunctionExt_Lapack__dgesv(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _n has no default value.
@@ -2105,6 +2198,9 @@ void omc_NFEvalFunctionExt_Lapack__dgesv(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2164,6 +2260,9 @@ void omc_NFEvalFunctionExt_Lapack__dgelsy(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta25;
   modelica_metatype tmpMeta26;
   modelica_metatype tmpMeta27;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
@@ -2284,6 +2383,9 @@ void omc_NFEvalFunctionExt_Lapack__dgelsy(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2366,6 +2468,9 @@ void omc_NFEvalFunctionExt_Lapack__dgelsx(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta50;
   modelica_metatype tmpMeta51;
   modelica_metatype tmpMeta52;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
@@ -2536,6 +2641,9 @@ void omc_NFEvalFunctionExt_Lapack__dgelsx(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2587,6 +2695,9 @@ void omc_NFEvalFunctionExt_Lapack__dgels(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta21;
   modelica_metatype tmpMeta22;
   modelica_metatype tmpMeta23;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _trans has no default value.
@@ -2689,6 +2800,9 @@ void omc_NFEvalFunctionExt_Lapack__dgels(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2764,6 +2878,9 @@ void omc_NFEvalFunctionExt_Lapack__dgegv(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta33;
   modelica_metatype tmpMeta34;
   modelica_metatype tmpMeta35;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _jobvl has no default value.
@@ -2910,6 +3027,9 @@ void omc_NFEvalFunctionExt_Lapack__dgegv(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2973,6 +3093,9 @@ void omc_NFEvalFunctionExt_Lapack__dgeev(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta27;
   modelica_metatype tmpMeta28;
   modelica_metatype tmpMeta29;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _jobvl has no default value.
@@ -3097,6 +3220,9 @@ void omc_NFEvalFunctionExt_Lapack__dgeev(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

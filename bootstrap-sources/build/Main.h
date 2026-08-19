@@ -32,7 +32,11 @@ extern struct record_description Flags_FlagData_INT__FLAG__desc;
 
 extern struct record_description Flags_FlagData_STRING__FLAG__desc;
 
+extern struct record_description Flags_FlagData_STRING__LIST__FLAG__desc;
+
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
 
 extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
 

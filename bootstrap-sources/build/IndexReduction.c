@@ -1702,6 +1702,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_debugdifferentiateEqns(threadD
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _a has no default value.
@@ -1727,6 +1730,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_debugdifferentiateEqns(threadD
   tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT27);
   fputs(MMC_STRINGDATA(tmpMeta13),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -4152,6 +4158,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_setHigerDerivativeAssignment(t
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
   modelica_integer tmp5;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _i has no default value.
@@ -4174,6 +4183,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_setHigerDerivativeAssignment(t
 
   arrayUpdate(_ass2, _e, mmc_mk_integer(_j));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -4525,6 +4537,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_IndexReduction_checkAssignment(t
     modelica_integer _indx;
     for(_indx = _index; in_range_integer(_indx, tmp9, tmp11); _indx += tmp10)
     {
+
       /* Pattern-matching assignment */
       tmpMeta3 = omc_BackendVariable_getVarAt(threadData, _vars, _indx);
       tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 2));
@@ -5234,6 +5247,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectPrioAtt
   modelica_real _prio;
   modelica_metatype _ss = NULL;
   modelica_real tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _prio has no default value.
@@ -5290,6 +5306,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectPrioAtt
   }
   _prio = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _prio;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_varStateSelectPrioAttribute(threadData_t *threadData, modelica_metatype _v)
@@ -5305,6 +5324,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectHeurist
 {
   modelica_real _prio;
   modelica_real tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _prio has no default value.
@@ -5359,6 +5381,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectHeurist
   }
   _prio = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _prio;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_varStateSelectHeuristicPrio3(threadData_t *threadData, modelica_metatype _v)
@@ -5374,6 +5399,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectHeurist
 {
   modelica_real _prio;
   modelica_real tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _prio has no default value.
@@ -5439,6 +5467,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectHeurist
   }
   _prio = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _prio;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_varStateSelectHeuristicPrio4(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _vars)
@@ -5454,6 +5485,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectHeurist
 {
   modelica_real _prio;
   modelica_real tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _prio has no default value.
@@ -5508,6 +5542,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectHeurist
   }
   _prio = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _prio;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_varStateSelectHeuristicPrio5(threadData_t *threadData, modelica_metatype _v, modelica_metatype _index, modelica_metatype _om)
@@ -5533,6 +5570,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_printVarListtateSelectHeuristi
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if(omc_Flags_isSet(threadData, _OMC_LIT75))
@@ -5558,6 +5598,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_printVarListtateSelectHeuristi
     fputs(MMC_STRINGDATA(tmpMeta10),stdout);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_IndexReduction_printVarListtateSelectHeuristicPrio(threadData_t *threadData, modelica_metatype _Prio1, modelica_metatype _Prio2, modelica_metatype _Prio3, modelica_metatype _Prio4, modelica_metatype _Prio5)
@@ -5586,6 +5629,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectHeurist
   modelica_real _prio5;
   modelica_boolean _bstart;
   modelica_boolean _bfixed;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _prio has no default value.
@@ -5641,6 +5687,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectHeurist
 
   omc_IndexReduction_printVarListtateSelectHeuristicPrio(threadData, _prio1, _prio2, _prio3, _prio4, _prio5);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _prio;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_varStateSelectHeuristicPrio(threadData_t *threadData, modelica_metatype _v, modelica_metatype _vars, modelica_metatype _index, modelica_metatype _m)
@@ -5658,6 +5707,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectPrio(th
 {
   modelica_real _prio_att;
   modelica_real _prio_heu;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _prio_att has no default value.
@@ -5667,6 +5719,9 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_IndexReduction_varStateSelectPrio(th
   _prio_heu = omc_IndexReduction_varStateSelectHeuristicPrio(threadData, _v, _vars, _index, _m);
   _return: OMC_LABEL_UNUSED
   if (out_prio_heu) { *out_prio_heu = _prio_heu; }
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _prio_att;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_varStateSelectPrio(threadData_t *threadData, modelica_metatype _v, modelica_metatype _vars, modelica_metatype _index, modelica_metatype _m, modelica_metatype *out_prio_heu)
@@ -5685,11 +5740,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_varStateSelect
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_IndexReduction_sortprioTuples(threadData_t *threadData, modelica_metatype _inTpl1, modelica_metatype _inTpl2)
 {
   modelica_boolean _b;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   _b = (mmc_unbox_real(omc_Util_tuple22(threadData, _inTpl1)) > mmc_unbox_real(omc_Util_tuple22(threadData, _inTpl2)));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_sortprioTuples(threadData_t *threadData, modelica_metatype _inTpl1, modelica_metatype _inTpl2)
@@ -5747,6 +5808,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_IndexReduction_sortStateCandidat
     modelica_integer _idx;
     for(_idx = ((modelica_integer) 1); in_range_integer(_idx, tmp1, tmp3); _idx += tmp2)
     {
+
       _v = omc_BackendVariable_getVarAt(threadData, _inVars, _idx);
 
       _prio1 = omc_IndexReduction_varStateSelectPrio(threadData, _v, _allVars, _idx, _m ,&_prio2);
@@ -5908,6 +5970,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_IndexReduction_removeFirstOrgEqn
     modelica_integer _e;
     for(_e = ((modelica_integer) 1); in_range_integer(_e, tmp14, tmp16); _e += tmp15)
     {
+
       _orgeqns = arrayGet(_outOrgEqns, _e);
 
       if((!listEmpty(_orgeqns)))
@@ -6948,6 +7011,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_IndexReduction_partitionSystemstr
 {
   modelica_integer _oNSystems;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNSystems has no default value.
@@ -7049,6 +7115,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_IndexReduction_partitionSystemstr
   }
   _oNSystems = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oNSystems;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_partitionSystemstraverseRows(threadData_t *threadData, modelica_metatype _iRows, modelica_metatype _iQueue, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _rowmarkarr, modelica_metatype _collmarkarr, modelica_metatype _iNSystems)
@@ -7066,6 +7135,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_IndexReduction_partitionSystem1(t
 {
   modelica_integer _oNSystems;
   modelica_integer tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNSystems has no default value.
@@ -7129,6 +7201,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_IndexReduction_partitionSystem1(t
   }
   _oNSystems = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oNSystems;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_partitionSystem1(threadData_t *threadData, modelica_metatype _index, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _rowmarkarr, modelica_metatype _collmarkarr, modelica_metatype _iNSystems)
@@ -7181,6 +7256,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_IndexReduction_partitionSystem(t
 
 PROTECTED_FUNCTION_STATIC void omc_IndexReduction_getAdjacencyMatrixLevelEquations(threadData_t *threadData, modelica_metatype _iEqns, modelica_metatype _vars, modelica_integer _index, modelica_integer _sindex, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _om, modelica_metatype _mapEqnIncRow, modelica_metatype _mapIncRowEqn, modelica_metatype _stateindexs, modelica_metatype _functionTree, modelica_boolean _isInitial)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -7276,6 +7354,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_getAdjacencyMatrixLevelEquatio
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_IndexReduction_getAdjacencyMatrixLevelEquations(threadData_t *threadData, modelica_metatype _iEqns, modelica_metatype _vars, modelica_metatype _index, modelica_metatype _sindex, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _om, modelica_metatype _mapEqnIncRow, modelica_metatype _mapIncRowEqn, modelica_metatype _stateindexs, modelica_metatype _functionTree, modelica_metatype _isInitial)
@@ -7295,6 +7376,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_IndexReduction_replaceStateIndex(
   modelica_integer _oR;
   modelica_integer _s;
   modelica_integer _r;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oR has no default value.
@@ -7314,6 +7398,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_IndexReduction_replaceStateIndex(
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oR;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_replaceStateIndex(threadData_t *threadData, modelica_metatype _iR, modelica_metatype _stateindexs)
@@ -7334,6 +7421,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_getAdjacencyMatrixSelectStates
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _row has no default value.
@@ -7344,6 +7434,7 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_getAdjacencyMatrixSelectStates
     modelica_integer _i;
     for(_i = _nEqns; in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _row = arrayGet(_mo,_i) /* DAE.ASUB */;
 
       _row = omc_List_map1(threadData, _row, boxvar_IndexReduction_replaceStateIndex, _stateindexs);
@@ -7360,6 +7451,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_getAdjacencyMatrixSelectStates
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_IndexReduction_getAdjacencyMatrixSelectStates(threadData_t *threadData, modelica_metatype _nEqns, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _mo, modelica_metatype _stateindexs)
@@ -7527,6 +7621,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_dumpBlock(threadData_t *thread
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eqns has no default value.
@@ -7569,6 +7666,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_dumpBlock(threadData_t *thread
 
   fputs(MMC_STRINGDATA(omc_BackendDump_dumpMarkedEqns(threadData, _syst, _eqns)),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_IndexReduction_dumpBlock(threadData_t *threadData, modelica_metatype _comp, modelica_metatype _iMapIncRowEqn, modelica_metatype _nvars, modelica_metatype _syst)
@@ -7635,6 +7735,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_IndexReduction_selectBlock(thread
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -7698,6 +7801,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_IndexReduction_selectBlock(thread
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_selectBlock(threadData_t *threadData, modelica_metatype _comp, modelica_metatype _ne)
@@ -10100,6 +10206,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_IndexReduction_inlineOrgEqns(thr
     modelica_integer _e;
     for(_e = ((modelica_integer) 1); in_range_integer(_e, tmp2, tmp4); _e += tmp3)
     {
+
       _orgeqns = arrayGet(_inOrgEqns, _e);
 
       tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
@@ -10122,6 +10229,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_IndexReduction_countOrgEqns(threa
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _oCount = _iCount;
@@ -10137,6 +10247,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_IndexReduction_countOrgEqns(threa
     modelica_integer _e;
     for(_e = ((modelica_integer) 1); in_range_integer(_e, tmp1, tmp3); _e += tmp2)
     {
+
       _orgeqns = arrayGet(_inOrgEqns, _e);
 
       _size = omc_BackendEquation_equationLstSize(threadData, _orgeqns);
@@ -10145,6 +10256,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_IndexReduction_countOrgEqns(threa
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _oCount;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_countOrgEqns(threadData_t *threadData, modelica_metatype _inOrgEqns, modelica_metatype _iCount)
@@ -11664,6 +11778,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_IndexReduction_isStateonIndex(thr
 {
   modelica_boolean _b;
   modelica_metatype _v = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -11672,6 +11789,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_IndexReduction_isStateonIndex(thr
 
   _b = omc_BackendVariable_isStateVar(threadData, _v);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_isStateonIndex(threadData_t *threadData, modelica_metatype _index, modelica_metatype _vars)
@@ -12606,6 +12726,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_IndexReduction_isMarked(threadDat
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_integer tmp4;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -12621,6 +12744,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_IndexReduction_isMarked(threadDat
 
   _b = (mmc_unbox_integer(arrayGet(_arr,labs(_indx)) /* DAE.ASUB */) == _mark);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_isMarked(threadData_t *threadData, modelica_metatype _ass, modelica_metatype _indx)
@@ -12815,6 +12941,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_IndexReduction_unassignedCont
 
 PROTECTED_FUNCTION_STATIC void omc_IndexReduction_singularSystemError(threadData_t *threadData, modelica_boolean _b, modelica_metatype _unassignedStates, modelica_metatype _unassignedEqns, modelica_metatype _eqns, modelica_metatype _inSystem, modelica_metatype _inShared, modelica_metatype _inAssignments1, modelica_metatype _inAssignments2, modelica_metatype _inArg)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -12956,6 +13085,9 @@ PROTECTED_FUNCTION_STATIC void omc_IndexReduction_singularSystemError(threadData
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_IndexReduction_singularSystemError(threadData_t *threadData, modelica_metatype _b, modelica_metatype _unassignedStates, modelica_metatype _unassignedEqns, modelica_metatype _eqns, modelica_metatype _inSystem, modelica_metatype _inShared, modelica_metatype _inAssignments1, modelica_metatype _inAssignments2, modelica_metatype _inArg)
@@ -13598,6 +13730,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_IndexReduction_getChangedEqnsAnd
     modelica_integer _i;
     for(_i = _index; in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
+
       _oAcc = omc_List_consOnTrue(threadData, (mmc_unbox_integer(arrayGet(_ass2,_i) /* DAE.ASUB */) < ((modelica_integer) 1)), mmc_mk_integer(_i), _oAcc);
 
       _oLowest = _i;

@@ -358,6 +358,9 @@ modelica_boolean omc_NFFlatModel_hasArrayConnections(threadData_t *threadData, m
   modelica_boolean _hasArrays;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _hasArrays = 0 /* false */;
@@ -375,6 +378,9 @@ modelica_boolean omc_NFFlatModel_hasArrayConnections(threadData_t *threadData, m
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _hasArrays;
 }
 modelica_metatype boxptr_NFFlatModel_hasArrayConnections(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _minSize)
@@ -691,6 +697,9 @@ modelica_boolean omc_NFFlatModel_isAllowedAnnotation(threadData_t *threadData, m
 {
   modelica_boolean _allowed;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _allowed has no default value.
@@ -811,6 +820,9 @@ modelica_boolean omc_NFFlatModel_isAllowedAnnotation(threadData_t *threadData, m
   }
   _allowed = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _allowed;
 }
 modelica_metatype boxptr_NFFlatModel_isAllowedAnnotation(threadData_t *threadData, modelica_metatype _mod)
@@ -1490,6 +1502,9 @@ void omc_NFFlatModel_addObfuscatedVariable(threadData_t *threadData, modelica_me
   modelica_string tmp3;
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodes has no default value.
@@ -1512,6 +1527,9 @@ void omc_NFFlatModel_addObfuscatedVariable(threadData_t *threadData, modelica_me
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFFlatModel_addObfuscatedVariable(threadData_t *threadData, modelica_metatype _var, modelica_metatype _onlyEncrypted, modelica_metatype _obfuscationMap)
@@ -1798,6 +1816,9 @@ DLLDirection
 void omc_NFFlatModel_collectComponentFlatTypes(threadData_t *threadData, modelica_metatype _component, modelica_metatype _types)
 {
   modelica_metatype _comp = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _comp has no default value.
@@ -1807,6 +1828,9 @@ void omc_NFFlatModel_collectComponentFlatTypes(threadData_t *threadData, modelic
 
   omc_NFFlatModel_collectBindingFlatTypes(threadData, omc_NFComponent_getBinding(threadData, _comp), _types);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1819,6 +1843,9 @@ DLLDirection
 void omc_NFFlatModel_collectFunctionFlatTypes(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _types)
 {
   modelica_metatype tmpMeta1;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = mmc_mk_box1(0, _types);
@@ -1829,6 +1856,9 @@ void omc_NFFlatModel_collectFunctionFlatTypes(threadData_t *threadData, modelica
     omc_NFFlatModel_collectStatementsFlatTypes(threadData, omc_NFFunction_Function_getBody(threadData, _fn), _types);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1847,28 +1877,43 @@ modelica_metatype omc_NFFlatModel_collectExpFlatTypes__traverse(threadData_t *th
 DLLDirection
 void omc_NFFlatModel_collectExpFlatTypes(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _types)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_NFExpression_fold(threadData, _exp, boxvar_NFFlatModel_collectExpFlatTypes__traverse, _types);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFFlatModel_collectStmtBranchFlatTypes(threadData_t *threadData, modelica_metatype _branch, modelica_metatype _types)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_NFFlatModel_collectExpFlatTypes(threadData, omc_Util_tuple21(threadData, _branch), _types);
 
   omc_NFFlatModel_collectStatementsFlatTypes(threadData, omc_Util_tuple22(threadData, _branch), _types);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFFlatModel_collectStatementFlatTypes(threadData_t *threadData, modelica_metatype _stmt, modelica_metatype _types)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -1965,6 +2010,9 @@ void omc_NFFlatModel_collectStatementFlatTypes(threadData_t *threadData, modelic
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -1973,6 +2021,9 @@ void omc_NFFlatModel_collectStatementsFlatTypes(threadData_t *threadData, modeli
 {
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   {
@@ -1984,22 +2035,34 @@ void omc_NFFlatModel_collectStatementsFlatTypes(threadData_t *threadData, modeli
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFFlatModel_collectAlgorithmFlatTypes(threadData_t *threadData, modelica_metatype _alg, modelica_metatype _types)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_NFFlatModel_collectStatementsFlatTypes(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_alg), 2))), _types);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFFlatModel_collectEqBranchFlatTypes(threadData_t *threadData, modelica_metatype _branch, modelica_metatype _types)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2038,12 +2101,18 @@ void omc_NFFlatModel_collectEqBranchFlatTypes(threadData_t *threadData, modelica
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFFlatModel_collectEquationFlatTypes(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _types)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2133,12 +2202,18 @@ void omc_NFFlatModel_collectEquationFlatTypes(threadData_t *threadData, modelica
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFFlatModel_collectBindingFlatTypes(threadData_t *threadData, modelica_metatype _binding, modelica_metatype _types)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if(omc_NFBinding_isExplicitlyBound(threadData, _binding))
@@ -2146,12 +2221,18 @@ void omc_NFFlatModel_collectBindingFlatTypes(threadData_t *threadData, modelica_
     omc_NFFlatModel_collectExpFlatTypes(threadData, omc_NFBinding_getTypedExp(threadData, _binding), _types);
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFFlatModel_collectFlatType(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _types)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2234,6 +2315,9 @@ void omc_NFFlatModel_collectFlatType(threadData_t *threadData, modelica_metatype
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2242,6 +2326,9 @@ void omc_NFFlatModel_collectVariableFlatTypes(threadData_t *threadData, modelica
 {
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_NFFlatModel_collectFlatType(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 3))), _types);
@@ -2257,6 +2344,9 @@ void omc_NFFlatModel_collectVariableFlatTypes(threadData_t *threadData, modelica
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2334,6 +2424,9 @@ void omc_NFFlatModel_collectFunction(threadData_t *threadData, modelica_metatype
   modelica_metatype tmpMeta6;
   modelica_integer tmp7;
   modelica_integer tmp8;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if((!omc_NFFunction_Function_isBuiltin(threadData, _fn)))
@@ -2366,12 +2459,18 @@ void omc_NFFlatModel_collectFunction(threadData_t *threadData, modelica_metatype
     }
   }
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFFlatModel_collectFunctions(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _funcs)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -2408,6 +2507,9 @@ void omc_NFFlatModel_collectFunctions(threadData_t *threadData, modelica_metatyp
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -2839,6 +2941,9 @@ DLLDirection
 void omc_NFFlatModel_printFlatString(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_boolean _printBindingTypes)
 {
   modelica_metatype _s = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _s has no default value.
@@ -2846,6 +2951,9 @@ void omc_NFFlatModel_printFlatString(threadData_t *threadData, modelica_metatype
 
   omc_IOStream_print(threadData, _s, ((modelica_integer) 1));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFFlatModel_printFlatString(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_metatype _printBindingTypes)
@@ -3010,6 +3118,9 @@ DLLDirection
 void omc_NFFlatModel_printString(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_boolean _printBindingTypes)
 {
   modelica_metatype _s = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _s has no default value.
@@ -3017,6 +3128,9 @@ void omc_NFFlatModel_printString(threadData_t *threadData, modelica_metatype _fl
 
   omc_IOStream_print(threadData, _s, ((modelica_integer) 1));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 void boxptr_NFFlatModel_printString(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_metatype _printBindingTypes)

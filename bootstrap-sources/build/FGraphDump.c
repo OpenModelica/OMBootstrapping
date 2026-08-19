@@ -1001,6 +1001,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_FGraphDump_addNodes(threadData_t
 DLLDirection
 void omc_FGraphDump_dumpGraph(threadData_t *threadData, modelica_metatype _inGraph, modelica_string _fileName)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
@@ -1091,6 +1094,9 @@ void omc_FGraphDump_dumpGraph(threadData_t *threadData, modelica_metatype _inGra
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

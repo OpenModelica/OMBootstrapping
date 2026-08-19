@@ -15,6 +15,7 @@ extern "C" {
 #include "BackendVariable.h"
 #include "ComponentReference.h"
 #include "DAEDump.h"
+#include "DAEUtil.h"
 #include "Debug.h"
 #include "DoubleEnded.h"
 #include "ExpandableArray.h"

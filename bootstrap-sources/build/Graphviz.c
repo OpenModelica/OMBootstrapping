@@ -252,6 +252,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Graphviz_makeEdge(threadData_t *th
 PROTECTED_FUNCTION_STATIC void omc_Graphviz_printEdge(threadData_t *threadData, modelica_string _n1, modelica_string _n2)
 {
   modelica_string _str = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
@@ -261,6 +264,9 @@ PROTECTED_FUNCTION_STATIC void omc_Graphviz_printEdge(threadData_t *threadData, 
 
   fputs(MMC_STRINGDATA(_OMC_LIT7),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -287,6 +293,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Graphviz_nodename(threadData_t *th
 
 PROTECTED_FUNCTION_STATIC void omc_Graphviz_dumpChildren(threadData_t *threadData, modelica_string _inIdent, modelica_metatype _inChildren)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -349,6 +358,9 @@ PROTECTED_FUNCTION_STATIC void omc_Graphviz_dumpChildren(threadData_t *threadDat
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
@@ -604,6 +616,9 @@ DLLDirection
 void omc_Graphviz_dump(threadData_t *threadData, modelica_metatype _node)
 {
   modelica_string _nm = NULL;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nm has no default value.
@@ -613,6 +628,9 @@ void omc_Graphviz_dump(threadData_t *threadData, modelica_metatype _node)
 
   fputs(MMC_STRINGDATA(_OMC_LIT13),stdout);
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

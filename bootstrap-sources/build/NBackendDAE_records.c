@@ -19,7 +19,7 @@ extern struct record_description NBackendDAE_MAIN__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBackendDAE_JACOBIAN__desc_added
 #define NBackendDAE_JACOBIAN__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBackendDAE_JACOBIAN__desc__fields[7] = {"name","jacType","varData","comps","sparsityPattern","sparsityColoring","isAdjoint"};
+ADD_METARECORD_DEFINITIONS const char* NBackendDAE_JACOBIAN__desc__fields[6] = {"name","jacType","varData","comps","sparsity","isAdjoint"};
 ADD_METARECORD_DEFINITIONS struct record_description NBackendDAE_JACOBIAN__desc = {
   "NBackendDAE_JACOBIAN",
   "NBackendDAE.JACOBIAN",

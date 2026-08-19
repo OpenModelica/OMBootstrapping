@@ -867,6 +867,9 @@ modelica_boolean omc_ProgramUtil_classElementItemIsNamed(threadData_t *threadDat
 {
   modelica_boolean _outIsNamed;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsNamed has no default value.
@@ -918,6 +921,9 @@ modelica_boolean omc_ProgramUtil_classElementItemIsNamed(threadData_t *threadDat
   }
   _outIsNamed = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outIsNamed;
 }
 modelica_metatype boxptr_ProgramUtil_classElementItemIsNamed(threadData_t *threadData, modelica_metatype _inClassName, modelica_metatype _inElement)
@@ -2098,6 +2104,9 @@ modelica_boolean omc_ProgramUtil_classInProgram(threadData_t *threadData, modeli
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
@@ -2153,6 +2162,9 @@ modelica_boolean omc_ProgramUtil_classInProgram(threadData_t *threadData, modeli
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _b;
 }
 modelica_metatype boxptr_ProgramUtil_classInProgram(threadData_t *threadData, modelica_metatype _name, modelica_metatype _p)
@@ -3737,6 +3749,9 @@ modelica_boolean omc_ProgramUtil_replaceClassInProgram2(threadData_t *threadData
   modelica_string _cls_name = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outReplace has no default value.
@@ -3748,6 +3763,9 @@ modelica_boolean omc_ProgramUtil_replaceClassInProgram2(threadData_t *threadData
 
   _outReplace = (stringEqual(_cls_name, _inClassName));
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outReplace;
 }
 modelica_metatype boxptr_ProgramUtil_replaceClassInProgram2(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inClassName)

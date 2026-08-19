@@ -96,9 +96,31 @@ extern struct record_description SimCodeVar_AliasVariable_NEGATEDALIAS__desc;
 
 extern struct record_description SimCodeVar_AliasVariable_NOALIAS__desc;
 
+extern struct record_description SimCodeVar_Causality_CALCULATED__PARAMETER__desc;
+
+extern struct record_description SimCodeVar_Causality_INPUT__desc;
+
+extern struct record_description SimCodeVar_Causality_LOCAL__desc;
+
+extern struct record_description SimCodeVar_Causality_NONECAUS__desc;
+
+extern struct record_description SimCodeVar_Causality_OUTPUT__desc;
+
+extern struct record_description SimCodeVar_Causality_PARAMETER__desc;
+
+extern struct record_description SimCodeVar_Initial_EXACT__desc;
+
 extern struct record_description SimCodeVar_SimVar_SIMVAR__desc;
 
 extern struct record_description SimCodeVar_SimVars_SIMVARS__desc;
+
+extern struct record_description SimCodeVar_Variability_CONSTANT__desc;
+
+extern struct record_description SimCodeVar_Variability_CONTINUOUS__desc;
+
+extern struct record_description SimCodeVar_Variability_DISCRETE__desc;
+
+extern struct record_description SimCodeVar_Variability_FIXED__desc;
 
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
@@ -138,7 +160,23 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimVar_VarInfo_create,2,0) {(void*) bo
 #define boxvar_NSimVar_VarInfo_create MMC_REFSTRUCTLIT(boxvar_lit_NSimVar_VarInfo_create)
 
 
+DLLDirection
+modelica_integer omc_NSimVar_VarInfo_listScalarSize(threadData_t *threadData, modelica_metatype _vars);
+DLLDirection
+modelica_metatype boxptr_NSimVar_VarInfo_listScalarSize(threadData_t *threadData, modelica_metatype _vars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimVar_VarInfo_listScalarSize,2,0) {(void*) boxptr_NSimVar_VarInfo_listScalarSize,0}};
+#define boxvar_NSimVar_VarInfo_listScalarSize MMC_REFSTRUCTLIT(boxvar_lit_NSimVar_VarInfo_listScalarSize)
+
+
 #define boxptr_NSimVar_SimVars_getVars omc_NSimVar_SimVars_getVars
+
+
+DLLDirection
+modelica_integer omc_NSimVar_SimVars_numScalarElems(threadData_t *threadData, modelica_metatype _vars);
+DLLDirection
+modelica_metatype boxptr_NSimVar_SimVars_numScalarElems(threadData_t *threadData, modelica_metatype _vars);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimVar_SimVars_numScalarElems,2,0) {(void*) boxptr_NSimVar_SimVars_numScalarElems,0}};
+#define boxvar_NSimVar_SimVars_numScalarElems MMC_REFSTRUCTLIT(boxvar_lit_NSimVar_SimVars_numScalarElems)
 
 
 DLLDirection
@@ -238,6 +276,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimVar_Alias_fromBinding,2,0) {(void*)
 
 
 DLLDirection
+modelica_boolean omc_NSimVar_SimVar_isOutputSimVar(threadData_t *threadData, modelica_metatype _v);
+DLLDirection
+modelica_metatype boxptr_NSimVar_SimVar_isOutputSimVar(threadData_t *threadData, modelica_metatype _v);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_isOutputSimVar,2,0) {(void*) boxptr_NSimVar_SimVar_isOutputSimVar,0}};
+#define boxvar_NSimVar_SimVar_isOutputSimVar MMC_REFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_isOutputSimVar)
+
+
+DLLDirection
 modelica_metatype omc_NSimVar_SimVar_convertTpl(threadData_t *threadData, modelica_metatype _tpl);
 #define boxptr_NSimVar_SimVar_convertTpl omc_NSimVar_SimVar_convertTpl
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_convertTpl,2,0) {(void*) boxptr_NSimVar_SimVar_convertTpl,0}};
@@ -249,6 +295,28 @@ modelica_metatype omc_NSimVar_SimVar_convertList(threadData_t *threadData, model
 #define boxptr_NSimVar_SimVar_convertList omc_NSimVar_SimVar_convertList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_convertList,2,0) {(void*) boxptr_NSimVar_SimVar_convertList,0}};
 #define boxvar_NSimVar_SimVar_convertList MMC_REFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_convertList)
+
+
+DLLDirection
+modelica_metatype omc_NSimVar_SimVar_convertInitial(threadData_t *threadData, modelica_metatype _v, modelica_metatype _c);
+#define boxptr_NSimVar_SimVar_convertInitial omc_NSimVar_SimVar_convertInitial
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_convertInitial,2,0) {(void*) boxptr_NSimVar_SimVar_convertInitial,0}};
+#define boxvar_NSimVar_SimVar_convertInitial MMC_REFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_convertInitial)
+
+
+DLLDirection
+modelica_metatype omc_NSimVar_SimVar_convertVariability(threadData_t *threadData, modelica_metatype _vk);
+#define boxptr_NSimVar_SimVar_convertVariability omc_NSimVar_SimVar_convertVariability
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_convertVariability,2,0) {(void*) boxptr_NSimVar_SimVar_convertVariability,0}};
+#define boxvar_NSimVar_SimVar_convertVariability MMC_REFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_convertVariability)
+
+
+DLLDirection
+modelica_metatype omc_NSimVar_SimVar_convertCausality(threadData_t *threadData, modelica_integer _c);
+DLLDirection
+modelica_metatype boxptr_NSimVar_SimVar_convertCausality(threadData_t *threadData, modelica_metatype _c);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_convertCausality,2,0) {(void*) boxptr_NSimVar_SimVar_convertCausality,0}};
+#define boxvar_NSimVar_SimVar_convertCausality MMC_REFSTRUCTLIT(boxvar_lit_NSimVar_SimVar_convertCausality)
 
 
 DLLDirection

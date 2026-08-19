@@ -3204,6 +3204,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeLookup_checkVisitedScopes(
 {
   modelica_boolean _outRes;
   modelica_boolean tmp1 = 0;
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outRes has no default value.
@@ -3273,6 +3276,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeLookup_checkVisitedScopes(
   }
   _outRes = tmp1;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return _outRes;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeLookup_checkVisitedScopes(threadData_t *threadData, modelica_metatype _inVisitedScopes, modelica_metatype _inEnv, modelica_metatype _inBaseClass)
@@ -3804,6 +3810,9 @@ modelica_metatype omc_NFSCodeLookup_lookupInLocalScope(threadData_t *threadData,
 
 PROTECTED_FUNCTION_STATIC void omc_NFSCodeLookup_checkBuiltinItem(threadData_t *threadData, modelica_metatype _inItem)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3844,12 +3853,18 @@ PROTECTED_FUNCTION_STATIC void omc_NFSCodeLookup_checkBuiltinItem(threadData_t *
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 
 DLLDirection
 void omc_NFSCodeLookup_frameNotEncapsulated(threadData_t *threadData, modelica_metatype _frameType)
 {
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  MemPoolState omc_pool_state = omc_util_get_pool_state();
+  #endif
   MMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
@@ -3885,6 +3900,9 @@ void omc_NFSCodeLookup_frameNotEncapsulated(threadData_t *threadData, modelica_m
   }
   ;
   _return: OMC_LABEL_UNUSED
+  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
+  omc_util_restore_pool_state(omc_pool_state);
+  #endif
   return;
 }
 

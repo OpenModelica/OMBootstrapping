@@ -19,7 +19,6 @@ extern "C" {
 #include "NBSolve.h"
 #include "NBStrongComponent.h"
 #include "NBVariable.h"
-#include "NFCall.h"
 #include "NFComponentRef.h"
 #include "NFDimension.h"
 #include "NFExpression.h"

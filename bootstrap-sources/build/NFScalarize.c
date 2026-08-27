@@ -40,7 +40,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT13,2,4) {&Flags_FlagData_BOOL__FLAG
 #define _OMC_LIT14_data "Is true when building an FMU (so the compiler can look for URIs to package as FMI resources)."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT14,93,_OMC_LIT14_data);
 #define _OMC_LIT14 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT14)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT15,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(114)),_OMC_LIT8,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT12,_OMC_LIT13,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT14}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT15,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(112)),_OMC_LIT8,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT12,_OMC_LIT13,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT14}};
 #define _OMC_LIT15 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT15)
 #define _OMC_LIT16_data "NFScalarize.scalarizeVariable failed on "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT16,40,_OMC_LIT16_data);

@@ -188,7 +188,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT80,29,_OMC_LIT80_data);
 #define _OMC_LIT81_data "Used when bootstrapping to preserve the input output parsing of the code output by the list command."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT81,100,_OMC_LIT81_data);
 #define _OMC_LIT81 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT81)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT82,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(144)),_OMC_LIT80,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT81}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT82,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(143)),_OMC_LIT80,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT81}};
 #define _OMC_LIT82 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT82)
 #define _OMC_LIT83_data "AbsynToSCode.translateElementspec failed"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT83,40,_OMC_LIT83_data);

@@ -106,7 +106,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT42,2,4) {&Flags_FlagData_BOOL__FLAG
 #define _OMC_LIT43_data "Keeps the input/output prefix for all variables in the flat model, not only top-level ones."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT43,91,_OMC_LIT43_data);
 #define _OMC_LIT43 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT43)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT44,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(71)),_OMC_LIT40,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT41,_OMC_LIT42,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT43}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT44,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(69)),_OMC_LIT40,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT41,_OMC_LIT42,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT43}};
 #define _OMC_LIT44 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT44)
 #define _OMC_LIT45_data "- Inst.instScalar failed on "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT45,28,_OMC_LIT45_data);

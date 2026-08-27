@@ -286,7 +286,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT110,19,_OMC_LIT110_data);
 #define _OMC_LIT111_data "Accepts passing records with more fields than expected to a function. This is not allowed, but is used in Fluid.Dissipation. See https://trac.modelica.org/Modelica/ticket/1245 for details."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT111,188,_OMC_LIT111_data);
 #define _OMC_LIT111 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT111)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT112,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(102)),_OMC_LIT110,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT111}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT112,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(101)),_OMC_LIT110,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT111}};
 #define _OMC_LIT112 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT112)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT113,2,34) {&DAE_Exp_META__OPTION__desc,MMC_REFSTRUCTLIT(mmc_none)}};
 #define _OMC_LIT113 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT113)

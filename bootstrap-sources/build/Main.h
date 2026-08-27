@@ -80,13 +80,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Main_readSettings,2,0) {(void*) boxptr_
 #define boxvar_Main_readSettings MMC_REFSTRUCTLIT(boxvar_lit_Main_readSettings)
 
 
-#define boxptr_Main_serverLoopCorba omc_Main_serverLoopCorba
-
-
 #define boxptr_Main_interactivemodeZMQ omc_Main_interactivemodeZMQ
-
-
-#define boxptr_Main_interactivemodeCorba omc_Main_interactivemodeCorba
 
 
 #define boxptr_Main_interactivemode omc_Main_interactivemode

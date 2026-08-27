@@ -244,7 +244,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT85,13,_OMC_LIT85_data);
 #define _OMC_LIT86_data "Dumps information about resizable paremeter handling."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT86,53,_OMC_LIT86_data);
 #define _OMC_LIT86 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT86)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT87,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(194)),_OMC_LIT85,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT86}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT87,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(193)),_OMC_LIT85,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT86}};
 #define _OMC_LIT87 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT87)
 #define _OMC_LIT88_data "[dumpResizable] No resizable parameters were detected in the model."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT88,67,_OMC_LIT88_data);

@@ -444,7 +444,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT156,2,4) {&Flags_FlagData_BOOL__FLA
 #define _OMC_LIT157_data "If this is activated, then the specified pre-/post-/init-optimization modules will be rearranged to the recommended ordering."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT157,125,_OMC_LIT157_data);
 #define _OMC_LIT157 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT157)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT158,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(72)),_OMC_LIT154,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT155,_OMC_LIT156,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT157}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT158,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(70)),_OMC_LIT154,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT155,_OMC_LIT156,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT157}};
 #define _OMC_LIT158 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT158)
 #define _OMC_LIT159_data "removeSimpleEquations"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT159,21,_OMC_LIT159_data);
@@ -12688,7 +12688,7 @@ modelica_metatype omc_Uncertainties_modelEquationsUC(threadData_t *threadData, m
       // _distributions has no default value.
       tmpMeta4 = mmc_mk_box1(4, &Flags_FlagVisibility_EXTERNAL__desc);
       tmpMeta5 = mmc_mk_box2(4, &Flags_FlagData_BOOL__FLAG__desc, mmc_mk_boolean(1 /* true */));
-      tmpMeta7 = mmc_mk_box8(3, &Flags_ConfigFlag_CONFIG__FLAG__desc, mmc_mk_integer(((modelica_integer) 72)), MMC_REFSTRINGLIT(tmp3), mmc_mk_none(), tmpMeta4, tmpMeta5, mmc_mk_none(), MMC_REFSTRINGLIT(tmp6));
+      tmpMeta7 = mmc_mk_box8(3, &Flags_ConfigFlag_CONFIG__FLAG__desc, mmc_mk_integer(((modelica_integer) 70)), MMC_REFSTRINGLIT(tmp3), mmc_mk_none(), tmpMeta4, tmpMeta5, mmc_mk_none(), MMC_REFSTRINGLIT(tmp6));
       _forceOrdering = omc_Flags_getConfigBool(threadData, tmpMeta7);
       tmp9 = 0;
       MMC_TRY_INTERNAL(mmc_jumper)

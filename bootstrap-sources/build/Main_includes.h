@@ -10,7 +10,6 @@ extern "C" {
 #include "CevalScript.h"
 #include "CevalScriptBackend.h"
 #include "Config.h"
-#include "Corba.h"
 #include "Debug.h"
 #include "Dump.h"
 #include "DumpGraphviz.h"

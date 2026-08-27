@@ -7,7 +7,6 @@ extern "C" {
 #include "AbsynDumpTpl.h"
 #include "Config.h"
 #include "Dump.h"
-#include "Error.h"
 #include "File.h"
 #include "Flags.h"
 #include "FlagsUtil.h"

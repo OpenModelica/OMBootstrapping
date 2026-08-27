@@ -40,7 +40,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT15,2,4) {&Flags_FlagData_BOOL__FLAG
 #define _OMC_LIT16_data "Set when checkModel is used to turn on specific features for checking."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT16,70,_OMC_LIT16_data);
 #define _OMC_LIT16 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT16)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT17,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(29)),_OMC_LIT13,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT14,_OMC_LIT15,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT16}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT17,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(28)),_OMC_LIT13,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT14,_OMC_LIT15,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT16}};
 #define _OMC_LIT17 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT17)
 #define _OMC_LIT18_data "Incompatible argument types to operation %s in component %s, left type: %s, right type: %s"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT18,90,_OMC_LIT18_data);

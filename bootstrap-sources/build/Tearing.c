@@ -9,7 +9,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT1,12,_OMC_LIT1_data);
 #define _OMC_LIT2_data "Dumps verbose tearing information."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT2,34,_OMC_LIT2_data);
 #define _OMC_LIT2 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT2)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT3,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(89)),_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT2}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT3,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(88)),_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT2}};
 #define _OMC_LIT3 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT3)
 #define _OMC_LIT4_data "\nMatching failed, choose different tearing set!\n\n\n"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT4,50,_OMC_LIT4_data);
@@ -77,7 +77,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT26,11,_OMC_LIT26_data);
 #define _OMC_LIT27_data "Dumps tearing information."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT27,26,_OMC_LIT27_data);
 #define _OMC_LIT27 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT27)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT28,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(44)),_OMC_LIT26,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT27}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT28,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(43)),_OMC_LIT26,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT27}};
 #define _OMC_LIT28 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT28)
 #define _OMC_LIT29_data "The number of tearing variables and residual equations is not identical."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT29,72,_OMC_LIT29_data);
@@ -158,7 +158,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT54,16,_OMC_LIT54_data);
 #define _OMC_LIT55_data "Dumps total tearing information."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT55,32,_OMC_LIT55_data);
 #define _OMC_LIT55 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT55)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT56,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(146)),_OMC_LIT54,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT55}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT56,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(145)),_OMC_LIT54,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT55}};
 #define _OMC_LIT56 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT56)
 #define _OMC_LIT57_data "totaltearingdumpV"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT57,17,_OMC_LIT57_data);
@@ -166,7 +166,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT57,17,_OMC_LIT57_data);
 #define _OMC_LIT58_data "Dumps verbose total tearing information."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT58,40,_OMC_LIT58_data);
 #define _OMC_LIT58 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT58)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT59,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(147)),_OMC_LIT57,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT58}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT59,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(146)),_OMC_LIT57,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT58}};
 #define _OMC_LIT59 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT59)
 #define _OMC_LIT60_data "\n\n###BEGIN TO LOOP#####################\n****************************************\n\n\n"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT60,83,_OMC_LIT60_data);
@@ -222,7 +222,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT76,13,_OMC_LIT76_data);
 #define _OMC_LIT77_data "Shows a list of all iteration variables."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT77,40,_OMC_LIT77_data);
 #define _OMC_LIT77 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT77)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT78,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(101)),_OMC_LIT76,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT77}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT78,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(100)),_OMC_LIT76,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT77}};
 #define _OMC_LIT78 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT78)
 #define _OMC_LIT79_data "{"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT79,1,_OMC_LIT79_data);
@@ -280,7 +280,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT99,1,1) {_OMC_LIT98}};
 #define _OMC_LIT100_data "Inline and repeat tearing."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT100,26,_OMC_LIT100_data);
 #define _OMC_LIT100 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT100)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT101,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(65)),_OMC_LIT83,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT85,_OMC_LIT99,_OMC_LIT100}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT101,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(63)),_OMC_LIT83,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT85,_OMC_LIT99,_OMC_LIT100}};
 #define _OMC_LIT101 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT101)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT102,1,8) {&BackendDAE_IndexType_SPARSE__desc,}};
 #define _OMC_LIT102 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT102)
@@ -299,7 +299,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT106,20,_OMC_LIT106_data);
 #define _OMC_LIT107_data "Dump between steps of recursiveTearing"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT107,38,_OMC_LIT107_data);
 #define _OMC_LIT107 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT107)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT108,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(128)),_OMC_LIT106,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT107}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT108,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(127)),_OMC_LIT106,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT107}};
 #define _OMC_LIT108 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT108)
 static const MMC_DEFREALLIT(_OMC_LIT_STRUCT109,0.0);
 #define _OMC_LIT109 MMC_REFREALLIT(_OMC_LIT_STRUCT109)
@@ -749,7 +749,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT260,2,4) {&Flags_FlagData_BOOL__FLA
 #define _OMC_LIT261_data "Prefer tearing variables with start value for initialization."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT261,61,_OMC_LIT261_data);
 #define _OMC_LIT261 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT261)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT262,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(97)),_OMC_LIT259,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT260,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT261}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT262,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(95)),_OMC_LIT259,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT260,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT261}};
 #define _OMC_LIT262 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT262)
 #define _OMC_LIT263_data "initialization"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT263,14,_OMC_LIT263_data);
@@ -762,7 +762,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT265,2,4) {&Flags_FlagData_BOOL__FLA
 #define _OMC_LIT266_data "Always choose state derivatives as iteration variables in strong components."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT266,76,_OMC_LIT266_data);
 #define _OMC_LIT266 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT266)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT267,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(146)),_OMC_LIT264,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT265,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT266}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT267,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(144)),_OMC_LIT264,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT265,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT266}};
 #define _OMC_LIT267 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT267)
 #define _OMC_LIT268_data "\nExternal influence on selection of iteration variables by variable annotations (__OpenModelica_tearingSelect)"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT268,110,_OMC_LIT268_data);
@@ -803,7 +803,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT280,31,_OMC_LIT280_data);
 #define _OMC_LIT281_data "Enable Dynamic Tearing also for the initialization system."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT281,58,_OMC_LIT281_data);
 #define _OMC_LIT281 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT281)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT282,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(96)),_OMC_LIT280,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT265,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT281}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT282,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(94)),_OMC_LIT280,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT265,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT281}};
 #define _OMC_LIT282 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT282)
 #define _OMC_LIT283_data "linear"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT283,6,_OMC_LIT283_data);
@@ -881,7 +881,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT307,12,_OMC_LIT307_data);
 #define _OMC_LIT308_data "Use tearing set even if it is not smaller than the original component."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT308,70,_OMC_LIT308_data);
 #define _OMC_LIT308 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT308)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT309,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(63)),_OMC_LIT307,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT265,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT308}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT309,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(61)),_OMC_LIT307,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT265,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT308}};
 #define _OMC_LIT309 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT309)
 #define _OMC_LIT310_data "\n\nDetermine CASUAL TEARING SET\n********************************************************************************\n\n"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT310,113,_OMC_LIT310_data);
@@ -995,7 +995,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT347,1,1) {_OMC_LIT346}};
 #define _OMC_LIT348_data "Sets the strictness of the tearing method regarding the solvability restrictions."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT348,81,_OMC_LIT348_data);
 #define _OMC_LIT348 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT348)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT349,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(105)),_OMC_LIT332,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT334,_OMC_LIT347,_OMC_LIT348}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT349,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(103)),_OMC_LIT332,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT334,_OMC_LIT347,_OMC_LIT348}};
 #define _OMC_LIT349 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT349)
 #define _OMC_LIT350_data "Assign Eqns: "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT350,13,_OMC_LIT350_data);
@@ -1231,7 +1231,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT427,11,_OMC_LIT427_data);
 #define _OMC_LIT428_data "Dumps the estimated cost of every torn system against solving it untorn."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT428,72,_OMC_LIT428_data);
 #define _OMC_LIT428 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT428)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT429,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(201)),_OMC_LIT427,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT428}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT429,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(200)),_OMC_LIT427,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT428}};
 #define _OMC_LIT429 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT429)
 #define _OMC_LIT430_data "Tearing is skipped for linear strong component %s: solving it torn to %s iteration variables is estimated at %s flops against %s for the untorn system of size %s."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT430,162,_OMC_LIT430_data);
@@ -1248,7 +1248,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT434,2,7) {&Flags_FlagData_REAL__FLA
 #define _OMC_LIT435_data "How much cheaper solving a linear system untorn has to be estimated before its\ntearing set is dropped. Raise it to keep tearing systems the estimate would give\nup on, lower it towards 0 to tear less (default 2)."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT435,211,_OMC_LIT435_data);
 #define _OMC_LIT435 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT435)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT436,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(170)),_OMC_LIT432,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT434,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT435}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT436,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(168)),_OMC_LIT432,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT434,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT435}};
 #define _OMC_LIT436 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT436)
 #define _OMC_LIT437_data "Tearing is skipped for linear strong component %s: substituting through its %s inner equations amplifies an error by 1e%s, which double precision cannot carry."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT437,159,_OMC_LIT437_data);
@@ -1263,7 +1263,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT440,2,5) {&Flags_FlagData_INT__FLAG
 #define _OMC_LIT441_data "Sets the maximum system size for tearing of linear systems (default 200)."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT441,73,_OMC_LIT441_data);
 #define _OMC_LIT441 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT441)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT442,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(83)),_OMC_LIT439,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT440,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT441}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT442,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(81)),_OMC_LIT439,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT440,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT441}};
 #define _OMC_LIT442 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT442)
 #define _OMC_LIT443_data "maxSizeNonlinearTearing"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT443,23,_OMC_LIT443_data);
@@ -1273,7 +1273,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT444,2,5) {&Flags_FlagData_INT__FLAG
 #define _OMC_LIT445_data "Sets the maximum system size for tearing of nonlinear systems (default 10000)."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT445,78,_OMC_LIT445_data);
 #define _OMC_LIT445 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT445)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT446,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(84)),_OMC_LIT443,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT444,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT445}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT446,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(82)),_OMC_LIT443,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT444,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT445}};
 #define _OMC_LIT446 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT446)
 #define _OMC_LIT447_data "matrixFormat"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT447,12,_OMC_LIT447_data);
@@ -1283,7 +1283,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT448,2,8) {&Flags_FlagData_STRING__F
 #define _OMC_LIT449_data "Sets the matrix format type in cpp runtime which should be used (dense | sparse ). Default: dense."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT449,98,_OMC_LIT449_data);
 #define _OMC_LIT449 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT449)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT450,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(67)),_OMC_LIT447,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT448,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT449}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT450,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(65)),_OMC_LIT447,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT448,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT449}};
 #define _OMC_LIT450 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT450)
 #define _OMC_LIT451_data "Tearing is skipped for strong component %s because system size of %s exceeds maximum system size for tearing of %s systems (%s).\nTo adjust the maximum system size for tearing use --%s=<size>.\n"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT451,192,_OMC_LIT451_data);
@@ -1306,7 +1306,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT457,2,6) {&Flags_FlagData_INT__LIST
 #define _OMC_LIT458_data "Deactivates tearing for the specified components.\nUse '-d=tearingdump' to find out the relevant indexes."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT458,104,_OMC_LIT458_data);
 #define _OMC_LIT458 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT458)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT459,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(85)),_OMC_LIT456,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT457,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT458}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT459,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(83)),_OMC_LIT456,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT457,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT458}};
 #define _OMC_LIT459 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT459)
 #define _OMC_LIT460_data "Handle strong component with index: "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT460,36,_OMC_LIT460_data);
@@ -1353,7 +1353,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT473,14,_OMC_LIT473_data);
 #define _OMC_LIT474_data "Sets the tearing variables by its strong component indexes. Use '-d=tearingdump' to find out the relevant indexes.\nUse following format: '--setTearingVars=(sci,n,t1,...,tn)*', with sci = strong component index, n = number of tearing variables, t1,...tn = tearing variables.\nE.g.: '--setTearingVars=4,2,3,5' would select variables 3 and 5 in strong component 4."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT474,360,_OMC_LIT474_data);
 #define _OMC_LIT474 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT474)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT475,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(89)),_OMC_LIT473,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT457,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT474}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT475,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(87)),_OMC_LIT473,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT457,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT474}};
 #define _OMC_LIT475 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT475)
 #define _OMC_LIT476_data "setResidualEqns"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT476,15,_OMC_LIT476_data);
@@ -1361,7 +1361,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT476,15,_OMC_LIT476_data);
 #define _OMC_LIT477_data "Sets the residual equations by its strong component indexes. Use '-d=tearingdump' to find out the relevant indexes for the collective equations.\nUse following format: '--setResidualEqns=(sci,n,r1,...,rn)*', with sci = strong component index, n = number of residual equations, r1,...rn = residual equations.\nE.g.: '--setResidualEqns=4,2,3,5' would select equations 3 and 5 in strong component 4.\nOnly works in combination with 'setTearingVars'."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT477,443,_OMC_LIT477_data);
 #define _OMC_LIT477 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT477)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT478,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(90)),_OMC_LIT476,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT457,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT477}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT478,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(88)),_OMC_LIT476,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT457,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT477}};
 #define _OMC_LIT478 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT478)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT479,1,7) {&Tearing_TearingMethod_USER__DEFINED__TEARING__desc,}};
 #define _OMC_LIT479 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT479)
@@ -1373,7 +1373,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT481,12,_OMC_LIT481_data);
 #define _OMC_LIT482_data "Activates total tearing (determination of all possible tearing sets) for the specified components.\nUse '-d=tearingdump' to find out the relevant indexes."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT482,153,_OMC_LIT482_data);
 #define _OMC_LIT482 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT482)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT483,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(94)),_OMC_LIT481,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT457,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT482}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT483,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(92)),_OMC_LIT481,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT84,_OMC_LIT457,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT482}};
 #define _OMC_LIT483 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT483)
 #define _OMC_LIT484_data "\nTearing type: heuristic\n"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT484,25,_OMC_LIT484_data);

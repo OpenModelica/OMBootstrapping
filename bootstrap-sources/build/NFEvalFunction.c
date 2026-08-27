@@ -168,7 +168,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT58,2,5) {&Flags_FlagData_INT__FLAG_
 #define _OMC_LIT59_data "The loop iteration limit used when evaluating constant function calls."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT59,70,_OMC_LIT59_data);
 #define _OMC_LIT59 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT59)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT60,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(117)),_OMC_LIT56,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT57,_OMC_LIT58,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT59}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT60,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(115)),_OMC_LIT56,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT57,_OMC_LIT58,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT59}};
 #define _OMC_LIT60 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT60)
 #define _OMC_LIT61_data "The loop iteration limit (--evalLoopLimit=%s) was exceeded during evaluation."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT61,77,_OMC_LIT61_data);
@@ -261,7 +261,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT90,2,5) {&Flags_FlagData_INT__FLAG_
 #define _OMC_LIT91_data "The recursion limit used when evaluating constant function calls."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT91,65,_OMC_LIT91_data);
 #define _OMC_LIT91 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT91)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT92,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(118)),_OMC_LIT89,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT57,_OMC_LIT90,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT91}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT92,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(116)),_OMC_LIT89,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT57,_OMC_LIT90,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT91}};
 #define _OMC_LIT92 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT92)
 #define _OMC_LIT93_data "The recursion limit (--evalRecursionLimit=%s) was exceeded during evaluation of %s."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT93,83,_OMC_LIT93_data);
@@ -280,7 +280,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT97,12,_OMC_LIT97_data);
 #define _OMC_LIT98_data "dumps debug information about the function evaluation"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT98,53,_OMC_LIT98_data);
 #define _OMC_LIT98 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT98)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT99,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(99)),_OMC_LIT97,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT98}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT99,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(98)),_OMC_LIT97,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT98}};
 #define _OMC_LIT99 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT99)
 #include "util/modelica.h"
 

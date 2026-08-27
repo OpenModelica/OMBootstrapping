@@ -18,7 +18,6 @@ extern "C" {
 #include "CodegenWasmJitFunctions.h"
 #include "ComponentReference.h"
 #include "Config.h"
-#include "Corba.h"
 #include "DAEToMid.h"
 #include "DAEUtil.h"
 #include "Debug.h"

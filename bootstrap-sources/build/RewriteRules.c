@@ -54,7 +54,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT16,2,8) {&Flags_FlagData_STRING__FL
 #define _OMC_LIT17_data "Activates user given rewrite rules for Absyn expressions. The rules are read from the given file and are of the form rewrite(fromExp, toExp);"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT17,141,_OMC_LIT17_data);
 #define _OMC_LIT17 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT17)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT18,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(49)),_OMC_LIT14,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT15,_OMC_LIT16,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT17}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT18,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(47)),_OMC_LIT14,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT15,_OMC_LIT16,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT17}};
 #define _OMC_LIT18 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT18)
 #define _OMC_LIT19_data "'$"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT19,2,_OMC_LIT19_data);

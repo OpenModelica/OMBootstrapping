@@ -152,7 +152,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT59,15,_OMC_LIT59_data);
 #define _OMC_LIT60_data "Adds features to the FMI export that are considered experimental as of now: fmi2GetSpecificDerivatives, canGetSetFMUState, canSerializeFMUstate"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT60,143,_OMC_LIT60_data);
 #define _OMC_LIT60 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT60)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT61,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(135)),_OMC_LIT59,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT60}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT61,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(134)),_OMC_LIT59,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT60}};
 #define _OMC_LIT61 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT61)
 #define _OMC_LIT62_data "  -DOMC_MODEL_PREFIX="
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT62,21,_OMC_LIT62_data);

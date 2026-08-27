@@ -102,7 +102,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT32,11,_OMC_LIT32_data);
 #define _OMC_LIT33_data "Enables short output of the simulate() command. Useful for tools like OMNotebook."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT33,81,_OMC_LIT33_data);
 #define _OMC_LIT33 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT33)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT34,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(59)),_OMC_LIT32,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT33}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT34,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(58)),_OMC_LIT32,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT33}};
 #define _OMC_LIT34 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT34)
 #define _OMC_LIT35_data "end SimulationResult;"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT35,21,_OMC_LIT35_data);
@@ -211,7 +211,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT72,3,10) {&Flags_FlagData_ENUM__FLA
 #define _OMC_LIT73_data "Selects the format interactive API calls use to print result values.\ndefault : The OpenModelica textual value format.\njson    : JSON, for programmatic consumers such as the web clients."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT73,185,_OMC_LIT73_data);
 #define _OMC_LIT73 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT73)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT74,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(165)),_OMC_LIT64,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT65,_OMC_LIT72,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT73}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT74,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(163)),_OMC_LIT64,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT65,_OMC_LIT72,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT73}};
 #define _OMC_LIT74 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT74)
 #include "util/modelica.h"
 

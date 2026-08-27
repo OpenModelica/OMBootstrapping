@@ -631,13 +631,6 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_OpenModelicaScriptingAPI_getLanguageSta
 
 
 DLLDirection
-modelica_string omc_OpenModelicaScriptingAPI_getAstAsCorbaString(threadData_t *threadData, modelica_string _fileName);
-#define boxptr_OpenModelicaScriptingAPI_getAstAsCorbaString omc_OpenModelicaScriptingAPI_getAstAsCorbaString
-static const MMC_DEFSTRUCTLIT(boxvar_lit_OpenModelicaScriptingAPI_getAstAsCorbaString,2,0) {(void*) boxptr_OpenModelicaScriptingAPI_getAstAsCorbaString,0}};
-#define boxvar_OpenModelicaScriptingAPI_getAstAsCorbaString MMC_REFSTRUCTLIT(boxvar_lit_OpenModelicaScriptingAPI_getAstAsCorbaString)
-
-
-DLLDirection
 modelica_string omc_OpenModelicaScriptingAPI_cd(threadData_t *threadData, modelica_string _newWorkingDirectory);
 #define boxptr_OpenModelicaScriptingAPI_cd omc_OpenModelicaScriptingAPI_cd
 static const MMC_DEFSTRUCTLIT(boxvar_lit_OpenModelicaScriptingAPI_cd,2,0) {(void*) boxptr_OpenModelicaScriptingAPI_cd,0}};

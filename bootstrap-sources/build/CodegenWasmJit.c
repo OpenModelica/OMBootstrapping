@@ -8,21 +8,21 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT1,17,_OMC_LIT1_data);
 #define _OMC_LIT1 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT1)
 static const MMC_DEFREALLIT(_OMC_LIT_STRUCT2_6,0.0);
 #define _OMC_LIT2_6 MMC_REFREALLIT(_OMC_LIT_STRUCT2_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT2,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(164)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3)),MMC_IMMEDIATE(MMC_TAGFIXNUM(164)),MMC_IMMEDIATE(MMC_TAGFIXNUM(132)),_OMC_LIT2_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT2,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(167)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3)),MMC_IMMEDIATE(MMC_TAGFIXNUM(167)),MMC_IMMEDIATE(MMC_TAGFIXNUM(132)),_OMC_LIT2_6}};
 #define _OMC_LIT2 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT2)
 #define _OMC_LIT3_data "CodegenWasmJit.emitCsFmu: the wasm FMU target is only implemented in the Rust omc build"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT3,87,_OMC_LIT3_data);
 #define _OMC_LIT3 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT3)
 static const MMC_DEFREALLIT(_OMC_LIT_STRUCT4_6,0.0);
 #define _OMC_LIT4_6 MMC_REFREALLIT(_OMC_LIT_STRUCT4_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT4,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(149)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3)),MMC_IMMEDIATE(MMC_TAGFIXNUM(149)),MMC_IMMEDIATE(MMC_TAGFIXNUM(130)),_OMC_LIT4_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT4,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(151)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3)),MMC_IMMEDIATE(MMC_TAGFIXNUM(151)),MMC_IMMEDIATE(MMC_TAGFIXNUM(130)),_OMC_LIT4_6}};
 #define _OMC_LIT4 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT4)
 #define _OMC_LIT5_data "CodegenWasmJit.emitMeFmu: the wasm FMU target is only implemented in the Rust omc build"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT5,87,_OMC_LIT5_data);
 #define _OMC_LIT5 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT5)
 static const MMC_DEFREALLIT(_OMC_LIT_STRUCT6_6,0.0);
 #define _OMC_LIT6_6 MMC_REFREALLIT(_OMC_LIT_STRUCT6_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT6,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(134)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3)),MMC_IMMEDIATE(MMC_TAGFIXNUM(134)),MMC_IMMEDIATE(MMC_TAGFIXNUM(130)),_OMC_LIT6_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT6,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT1,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(135)),MMC_IMMEDIATE(MMC_TAGFIXNUM(3)),MMC_IMMEDIATE(MMC_TAGFIXNUM(135)),MMC_IMMEDIATE(MMC_TAGFIXNUM(130)),_OMC_LIT6_6}};
 #define _OMC_LIT6 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT6)
 #define _OMC_LIT7_data "CodegenWasmJit.translateFmu: the wasm FMU target is only implemented in the Rust omc build"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT7,90,_OMC_LIT7_data);
@@ -99,7 +99,7 @@ modelica_metatype boxptr_CodegenWasmJit_runSimulationWasmtime(threadData_t *thre
 }
 
 DLLDirection
-void omc_CodegenWasmJit_emitMeCsFmu(threadData_t *threadData, modelica_metatype _simCode, modelica_string _fmuPath, modelica_string _guid, modelica_string _modelDescription, modelica_metatype _extraFiles, modelica_string _simulationFlagsJson)
+void omc_CodegenWasmJit_emitMeCsFmu(threadData_t *threadData, modelica_metatype _simCode, modelica_string _fmuPath, modelica_string _guid, modelica_string _modelDescription, modelica_metatype _extraFiles, modelica_string _terminalsDir, modelica_string _simulationFlagsJson)
 {
   #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
   MemPoolState omc_pool_state = omc_util_get_pool_state();
@@ -117,7 +117,7 @@ void omc_CodegenWasmJit_emitMeCsFmu(threadData_t *threadData, modelica_metatype 
 }
 
 DLLDirection
-void omc_CodegenWasmJit_emitCsFmu(threadData_t *threadData, modelica_metatype _simCode, modelica_string _fmuPath, modelica_string _guid, modelica_string _modelDescription, modelica_metatype _extraFiles, modelica_string _simulationFlagsJson)
+void omc_CodegenWasmJit_emitCsFmu(threadData_t *threadData, modelica_metatype _simCode, modelica_string _fmuPath, modelica_string _guid, modelica_string _modelDescription, modelica_metatype _extraFiles, modelica_string _terminalsDir, modelica_string _simulationFlagsJson)
 {
   #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
   MemPoolState omc_pool_state = omc_util_get_pool_state();
@@ -135,7 +135,7 @@ void omc_CodegenWasmJit_emitCsFmu(threadData_t *threadData, modelica_metatype _s
 }
 
 DLLDirection
-void omc_CodegenWasmJit_emitMeFmu(threadData_t *threadData, modelica_metatype _simCode, modelica_string _fmuPath, modelica_string _guid, modelica_string _modelDescription, modelica_metatype _extraFiles, modelica_string _simulationFlagsJson)
+void omc_CodegenWasmJit_emitMeFmu(threadData_t *threadData, modelica_metatype _simCode, modelica_string _fmuPath, modelica_string _guid, modelica_string _modelDescription, modelica_metatype _extraFiles, modelica_string _terminalsDir, modelica_string _simulationFlagsJson)
 {
   #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
   MemPoolState omc_pool_state = omc_util_get_pool_state();

@@ -354,6 +354,13 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ComponentReference_crefStripSubsExceptM
 
 
 DLLDirection
+modelica_metatype omc_ComponentReference_crefRenameSeedRoot(threadData_t *threadData, modelica_metatype _inCref, modelica_string _newJacName);
+#define boxptr_ComponentReference_crefRenameSeedRoot omc_ComponentReference_crefRenameSeedRoot
+static const MMC_DEFSTRUCTLIT(boxvar_lit_ComponentReference_crefRenameSeedRoot,2,0) {(void*) boxptr_ComponentReference_crefRenameSeedRoot,0}};
+#define boxvar_ComponentReference_crefRenameSeedRoot MMC_REFSTRUCTLIT(boxvar_lit_ComponentReference_crefRenameSeedRoot)
+
+
+DLLDirection
 modelica_metatype omc_ComponentReference_crefStripSubs(threadData_t *threadData, modelica_metatype _inCref);
 #define boxptr_ComponentReference_crefStripSubs omc_ComponentReference_crefStripSubs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ComponentReference_crefStripSubs,2,0) {(void*) boxptr_ComponentReference_crefStripSubs,0}};

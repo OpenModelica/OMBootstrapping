@@ -69,7 +69,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT27,2,7) {&Flags_FlagData_REAL__FLAG
 #define _OMC_LIT28_data "Sets the minium threshold for stream flow rates"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT28,47,_OMC_LIT28_data);
 #define _OMC_LIT28 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT28)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT29,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(66)),_OMC_LIT24,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT25,_OMC_LIT27,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT28}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT29,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(64)),_OMC_LIT24,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT25,_OMC_LIT27,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT28}};
 #define _OMC_LIT29 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT29)
 #define _OMC_LIT30_data "NFConnectEquations.evaluateOperatorArrayConstructorExp failed to expand call containing stream operator: "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT30,105,_OMC_LIT30_data);
@@ -128,7 +128,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT51,2,4) {&Flags_FlagData_BOOL__FLAG
 #define _OMC_LIT52_data "Outputs experimental Base Modelica."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT52,35,_OMC_LIT52_data);
 #define _OMC_LIT52 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT52)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT53,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(135)),_OMC_LIT48,_OMC_LIT50,_OMC_LIT25,_OMC_LIT51,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT52}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT53,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(133)),_OMC_LIT48,_OMC_LIT50,_OMC_LIT25,_OMC_LIT51,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT52}};
 #define _OMC_LIT53 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT53)
 #define _OMC_LIT54_data "nominal"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT54,7,_OMC_LIT54_data);
@@ -184,7 +184,7 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT74,2,5) {&Flags_FlagData_INT__FLAG_
 #define _OMC_LIT75_data "Introduces top-level inputs/outputs for unconnected input/output connectors at requested levels, provided they are public, 0 meaning top-level (standard Modelica), 1 inputs/outputs of top-level components, >1 going deeper. This flag is particularly useful for FMI export."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT75,271,_OMC_LIT75_data);
 #define _OMC_LIT75 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT75)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT76,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(152)),_OMC_LIT73,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT25,_OMC_LIT74,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT75}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT76,8,3) {&Flags_ConfigFlag_CONFIG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(150)),_OMC_LIT73,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT25,_OMC_LIT74,MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT75}};
 #define _OMC_LIT76 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT76)
 #define _OMC_LIT77_data "cardinality"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT77,11,_OMC_LIT77_data);
@@ -195,7 +195,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT78,20,_OMC_LIT78_data);
 #define _OMC_LIT79_data "Enables simple alias elimination of flow variables in stream connectors."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT79,72,_OMC_LIT79_data);
 #define _OMC_LIT79 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT79)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT80,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(198)),_OMC_LIT78,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT79}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT80,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(197)),_OMC_LIT78,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT79}};
 #define _OMC_LIT80 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT80)
 #define _OMC_LIT81_data "NFConnectEquations.generateEquations got connection set with invalid type '"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT81,75,_OMC_LIT81_data);

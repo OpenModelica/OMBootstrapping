@@ -35,7 +35,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT12,18,_OMC_LIT12_data);
 #define _OMC_LIT13_data "Show DynamicSelect(static, dynamic) in annotations. Default to false and will select the first (static) expression"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT13,114,_OMC_LIT13_data);
 #define _OMC_LIT13 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT13)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT14,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(172)),_OMC_LIT12,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT13}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT14,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(171)),_OMC_LIT12,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT13}};
 #define _OMC_LIT14 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT14)
 #define _OMC_LIT15_data "Operand '%s' to operator '%s' is not a stream variable."
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT15,55,_OMC_LIT15_data);

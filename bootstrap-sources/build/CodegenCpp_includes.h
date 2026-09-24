@@ -12,6 +12,7 @@ extern "C" {
 #include "CodegenUtil.h"
 #include "CodegenUtilSimulation.h"
 #include "ComponentReference.h"
+#include "ComponentReferenceBasics.h"
 #include "Config.h"
 #include "ElementSource.h"
 #include "Error.h"

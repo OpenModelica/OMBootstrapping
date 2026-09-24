@@ -48,9 +48,9 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_InstDAE_showDAE omc_InstDAE_showDAE
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstDAE_daeDeclare(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inParentEnv, modelica_metatype _inClassEnv, modelica_metatype _inComponentRef, modelica_metatype _inState, modelica_metatype _inType, modelica_metatype _inAttributes, modelica_metatype _visibility, modelica_metatype _inBinding, modelica_metatype _inInstDims, modelica_metatype _inStartValue, modelica_metatype _inVarAttr, modelica_metatype _inComment, modelica_metatype _io, modelica_metatype _finalPrefix, modelica_metatype _source, modelica_boolean _declareComplexVars);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_InstDAE_daeDeclare(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inParentEnv, modelica_metatype _inClassEnv, modelica_metatype _inComponentRef, modelica_metatype _inState, modelica_metatype _inType, modelica_metatype _inAttributes, modelica_metatype _visibility, modelica_metatype _inBinding, modelica_metatype _inInstDims, modelica_metatype _inStartValue, modelica_metatype _inVarAttr, modelica_metatype _inComment, modelica_metatype _io, modelica_metatype _finalPrefix, modelica_metatype _source, modelica_metatype _declareComplexVars);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstDAE_daeDeclare,2,0) {(void*) boxptr_InstDAE_daeDeclare,0}};
 #define boxvar_InstDAE_daeDeclare MMC_REFSTRUCTLIT(boxvar_lit_InstDAE_daeDeclare)

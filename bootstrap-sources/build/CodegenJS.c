@@ -743,12 +743,13 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT214,2,4) {&Tpl_StringToken_ST__STRI
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenJS_markdownContents(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -792,21 +793,21 @@ modelica_metatype omc_CodegenJS_markdownContents(threadData_t *threadData, model
           modelica_metatype tmpMeta17;
           modelica_real tmp18;
           modelica_metatype tmpMeta19;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 10));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 11));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 32));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 36));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 2);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 10);
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta6, 11);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 32);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 36);
           if (optionNone(tmpMeta11)) goto tmp3_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 1));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 3));
-          tmp14 = mmc_unbox_real(tmpMeta13);
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 4));
-          tmp16 = mmc_unbox_integer(tmpMeta15);
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 6));
-          tmp18 = mmc_unbox_real(tmpMeta17);
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 37));
+          tmpMeta12 = OMC_BOX_FIELD(tmpMeta11, 1);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 3);
+          tmp14 = omc_unbox_real(tmpMeta13);
+          tmpMeta15 = OMC_BOX_FIELD(tmpMeta12, 4);
+          tmp16 = omc_unbox_integer(tmpMeta15);
+          tmpMeta17 = OMC_BOX_FIELD(tmpMeta12, 6);
+          tmp18 = omc_unbox_real(tmpMeta17);
+          tmpMeta19 = OMC_BOX_FIELD(tmp4_2, 37);
           
           _i_modelInfo_name = tmpMeta7;
           _i_s_stopTime = tmp14  /* pattern as ty=Real */;
@@ -819,7 +820,7 @@ modelica_metatype omc_CodegenJS_markdownContents(threadData_t *threadData, model
 
           _txt_0 = omc_CodegenUtil_dotPath(threadData, _OMC_LIT5, _i_modelInfo_name);
 
-          _ret_1 = omc_Util_escapeModelicaStringToXmlString(threadData, omc_Tpl_textString(threadData, _txt_0));
+          omc_string_store(&(_ret_1), omc_Util_escapeModelicaStringToXmlString(threadData, omc_Tpl_textString(threadData, _txt_0)));
 
           _txt = omc_Tpl_writeStr(threadData, _txt, _ret_1);
 
@@ -892,22 +893,24 @@ modelica_metatype omc_CodegenJS_markdownContents(threadData_t *threadData, model
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenJS_nodeJSDriver(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -931,11 +934,11 @@ modelica_metatype omc_CodegenJS_nodeJSDriver(threadData_t *threadData, modelica_
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 36));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 36);
           if (optionNone(tmpMeta6)) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 9));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 37));
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 9);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 37);
           
           _i_s_outputFormat = tmpMeta8;
           _i_fileNamePrefix = tmpMeta9;
@@ -984,22 +987,24 @@ modelica_metatype omc_CodegenJS_nodeJSDriver(threadData_t *threadData, modelica_
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenJS_markdownFile(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -1028,7 +1033,7 @@ modelica_metatype omc_CodegenJS_markdownFile(threadData_t *threadData, modelica_
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 37));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 37);
           
           _txt = tmp4_1;
           _i_simCode = tmp4_2;
@@ -1065,13 +1070,14 @@ modelica_metatype omc_CodegenJS_markdownFile(threadData_t *threadData, modelica_
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 

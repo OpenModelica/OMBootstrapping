@@ -13,7 +13,7 @@ extern "C" {
 extern struct record_description DAE_CallAttributes_CALL__ATTR__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFCallAttributes_toDAE(threadData_t *threadData, modelica_metatype _attr, modelica_metatype _returnType);
 #define boxptr_NFCallAttributes_toDAE omc_NFCallAttributes_toDAE
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCallAttributes_toDAE,2,0) {(void*) boxptr_NFCallAttributes_toDAE,0}};

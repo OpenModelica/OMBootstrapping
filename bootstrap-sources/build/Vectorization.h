@@ -55,23 +55,23 @@ extern struct record_description DAE_Type_T__REAL__desc;
 extern struct record_description Values_Value_REAL__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Vectorization_replaceFirstSubsInCref(threadData_t *threadData, modelica_metatype _crefIn, modelica_metatype _subs);
 #define boxptr_Vectorization_replaceFirstSubsInCref omc_Vectorization_replaceFirstSubsInCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Vectorization_replaceFirstSubsInCref,2,0) {(void*) boxptr_Vectorization_replaceFirstSubsInCref,0}};
 #define boxvar_Vectorization_replaceFirstSubsInCref MMC_REFSTRUCTLIT(boxvar_lit_Vectorization_replaceFirstSubsInCref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Vectorization_insertSUMexp(threadData_t *threadData, modelica_metatype _expIn, modelica_metatype _tplIn, modelica_metatype *out_tplOut);
 #define boxptr_Vectorization_insertSUMexp omc_Vectorization_insertSUMexp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Vectorization_insertSUMexp,2,0) {(void*) boxptr_Vectorization_insertSUMexp,0}};
 #define boxvar_Vectorization_insertSUMexp MMC_REFSTRUCTLIT(boxvar_lit_Vectorization_insertSUMexp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Vectorization_reduceLoopExpressions(threadData_t *threadData, modelica_metatype _expIn, modelica_integer _maxSub, modelica_boolean *out_notRemoved);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Vectorization_reduceLoopExpressions(threadData_t *threadData, modelica_metatype _expIn, modelica_metatype _maxSub, modelica_metatype *out_notRemoved);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Vectorization_reduceLoopExpressions,2,0) {(void*) boxptr_Vectorization_reduceLoopExpressions,0}};
 #define boxvar_Vectorization_reduceLoopExpressions MMC_REFSTRUCTLIT(boxvar_lit_Vectorization_reduceLoopExpressions)
@@ -98,23 +98,23 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Vectorization_reduceLoopExpressions,2,0
 #define boxptr_Vectorization_buildBackendDAEForEquations omc_Vectorization_buildBackendDAEForEquations
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Vectorization_expEqualNoCrefSubs(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Vectorization_expEqualNoCrefSubs(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Vectorization_expEqualNoCrefSubs,2,0) {(void*) boxptr_Vectorization_expEqualNoCrefSubs,0}};
 #define boxvar_Vectorization_expEqualNoCrefSubs MMC_REFSTRUCTLIT(boxvar_lit_Vectorization_expEqualNoCrefSubs)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Vectorization_equationEqualNoCrefSubs(threadData_t *threadData, modelica_metatype _e1, modelica_metatype _e2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Vectorization_equationEqualNoCrefSubs(threadData_t *threadData, modelica_metatype _e1, modelica_metatype _e2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Vectorization_equationEqualNoCrefSubs,2,0) {(void*) boxptr_Vectorization_equationEqualNoCrefSubs,0}};
 #define boxvar_Vectorization_equationEqualNoCrefSubs MMC_REFSTRUCTLIT(boxvar_lit_Vectorization_equationEqualNoCrefSubs)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Vectorization_replaceSubscriptInCrefExp(threadData_t *threadData, modelica_metatype _expIn, modelica_metatype _subsIn, modelica_metatype *out_subsOut);
 #define boxptr_Vectorization_replaceSubscriptInCrefExp omc_Vectorization_replaceSubscriptInCrefExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Vectorization_replaceSubscriptInCrefExp,2,0) {(void*) boxptr_Vectorization_replaceSubscriptInCrefExp,0}};
@@ -133,7 +133,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Vectorization_replaceSubscriptInCrefExp
 #define boxptr_Vectorization_unexpandArrayVariables omc_Vectorization_unexpandArrayVariables
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Vectorization_collectForLoops(threadData_t *threadData, modelica_metatype _varsIn, modelica_metatype _eqsIn, modelica_metatype *out_eqsOut);
 #define boxptr_Vectorization_collectForLoops omc_Vectorization_collectForLoops
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Vectorization_collectForLoops,2,0) {(void*) boxptr_Vectorization_collectForLoops,0}};

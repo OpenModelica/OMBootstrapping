@@ -58,9 +58,9 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NBFunctionAlias_aliasListToString omc_NBFunctionAlias_aliasListToString
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBFunctionAlias_Call__Aux_createName(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _iter, modelica_metatype _aux_index, modelica_string _aux_name, modelica_boolean _init);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBFunctionAlias_Call__Aux_createName(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _iter, modelica_metatype _aux_index, modelica_metatype _aux_name, modelica_metatype _init);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_createName,2,0) {(void*) boxptr_NBFunctionAlias_Call__Aux_createName,0}};
 #define boxvar_NBFunctionAlias_Call__Aux_createName MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_createName)
@@ -69,61 +69,61 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_createName,2,
 #define boxptr_NBFunctionAlias_Call__Aux_getVars_getVarsExp omc_NBFunctionAlias_Call__Aux_getVars_getVarsExp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBFunctionAlias_Call__Aux_getVars(threadData_t *threadData, modelica_metatype _aux);
 #define boxptr_NBFunctionAlias_Call__Aux_getVars omc_NBFunctionAlias_Call__Aux_getVars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_getVars,2,0) {(void*) boxptr_NBFunctionAlias_Call__Aux_getVars,0}};
 #define boxvar_NBFunctionAlias_Call__Aux_getVars MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_getVars)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBFunctionAlias_Call__Aux_toString(threadData_t *threadData, modelica_metatype _aux);
 #define boxptr_NBFunctionAlias_Call__Aux_toString omc_NBFunctionAlias_Call__Aux_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_toString,2,0) {(void*) boxptr_NBFunctionAlias_Call__Aux_toString,0}};
 #define boxvar_NBFunctionAlias_Call__Aux_toString MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Aux_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBFunctionAlias_Call__Id_isEqual(threadData_t *threadData, modelica_metatype _id1, modelica_metatype _id2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBFunctionAlias_Call__Id_isEqual(threadData_t *threadData, modelica_metatype _id1, modelica_metatype _id2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_isEqual,2,0) {(void*) boxptr_NBFunctionAlias_Call__Id_isEqual,0}};
 #define boxvar_NBFunctionAlias_Call__Id_isEqual MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_isEqual)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NBFunctionAlias_Call__Id_hash(threadData_t *threadData, modelica_metatype _id);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBFunctionAlias_Call__Id_hash(threadData_t *threadData, modelica_metatype _id);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_hash,2,0) {(void*) boxptr_NBFunctionAlias_Call__Id_hash,0}};
 #define boxvar_NBFunctionAlias_Call__Id_hash MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_hash)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBFunctionAlias_Call__Id_toString(threadData_t *threadData, modelica_metatype _id);
 #define boxptr_NBFunctionAlias_Call__Id_toString omc_NBFunctionAlias_Call__Id_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_toString,2,0) {(void*) boxptr_NBFunctionAlias_Call__Id_toString,0}};
 #define boxvar_NBFunctionAlias_Call__Id_toString MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_Call__Id_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBFunctionAlias_introduceSlicedStateAlias(threadData_t *threadData, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype __omcQ_24in_5FeqData, modelica_integer _kind, modelica_metatype *out_eqData);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBFunctionAlias_introduceSlicedStateAlias(threadData_t *threadData, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype __omcQ_24in_5FeqData, modelica_metatype _kind, modelica_metatype *out_eqData);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_introduceSlicedStateAlias,2,0) {(void*) boxptr_NBFunctionAlias_introduceSlicedStateAlias,0}};
 #define boxvar_NBFunctionAlias_introduceSlicedStateAlias MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_introduceSlicedStateAlias)
 
 
-DLLDirection
+DLLModelDirection
 modelica_fnptr omc_NBFunctionAlias_getModule(threadData_t *threadData);
 #define boxptr_NBFunctionAlias_getModule omc_NBFunctionAlias_getModule
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_getModule,2,0) {(void*) boxptr_NBFunctionAlias_getModule,0}};
 #define boxvar_NBFunctionAlias_getModule MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_getModule)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBFunctionAlias_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBFunctionAlias_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBFunctionAlias_main,2,0) {(void*) boxptr_NBFunctionAlias_main,0}};
 #define boxvar_NBFunctionAlias_main MMC_REFSTRUCTLIT(boxvar_lit_NBFunctionAlias_main)

@@ -57,27 +57,37 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT17,3,_OMC_LIT17_data);
 #define _OMC_LIT18_data "FIN"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT18,3,_OMC_LIT18_data);
 #define _OMC_LIT18 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT18)
-#define _OMC_LIT19_data "SIM"
+#define _OMC_LIT19_data "FMB"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT19,3,_OMC_LIT19_data);
 #define _OMC_LIT19 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT19)
-#define _OMC_LIT20_data "INI"
+#define _OMC_LIT20_data "FMS"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT20,3,_OMC_LIT20_data);
 #define _OMC_LIT20 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT20)
-#define _OMC_LIT21_data "ERR"
+#define _OMC_LIT21_data "FMT"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT21,3,_OMC_LIT21_data);
 #define _OMC_LIT21 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT21)
+#define _OMC_LIT22_data "SIM"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT22,3,_OMC_LIT22_data);
+#define _OMC_LIT22 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT22)
+#define _OMC_LIT23_data "INI"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT23,3,_OMC_LIT23_data);
+#define _OMC_LIT23 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT23)
+#define _OMC_LIT24_data "ERR"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT24,3,_OMC_LIT24_data);
+#define _OMC_LIT24 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT24)
 #include "util/modelica.h"
 
 #include "ClockIndexes_includes.h"
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ClockIndexes_toString(threadData_t *threadData, modelica_integer _clockIndex)
 {
   modelica_string _str = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
   { /* match expression */
@@ -201,23 +211,41 @@ modelica_string omc_ClockIndexes_toString(threadData_t *threadData, modelica_int
           tmp1 = _OMC_LIT18;
           goto tmp3_done;
         }
+        case 27: {
+          if (27 != tmp4_1) goto tmp3_end;
+          /* Pattern matching succeeded */
+          tmp1 = _OMC_LIT19;
+          goto tmp3_done;
+        }
+        case 28: {
+          if (28 != tmp4_1) goto tmp3_end;
+          /* Pattern matching succeeded */
+          tmp1 = _OMC_LIT20;
+          goto tmp3_done;
+        }
+        case 31: {
+          if (31 != tmp4_1) goto tmp3_end;
+          /* Pattern matching succeeded */
+          tmp1 = _OMC_LIT21;
+          goto tmp3_done;
+        }
         case 29: {
           if (29 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmp1 = _OMC_LIT19;
+          tmp1 = _OMC_LIT22;
           goto tmp3_done;
         }
         case 30: {
           if (30 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmp1 = _OMC_LIT20;
+          tmp1 = _OMC_LIT23;
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
           
           /* Pattern matching succeeded */
-          tmp1 = _OMC_LIT21;
+          tmp1 = _OMC_LIT24;
           goto tmp3_done;
         }
         }
@@ -226,20 +254,21 @@ modelica_string omc_ClockIndexes_toString(threadData_t *threadData, modelica_int
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _str = tmp1;
+  omc_string_store(&(_str), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 modelica_metatype boxptr_ClockIndexes_toString(threadData_t *threadData, modelica_metatype _clockIndex)
 {
   modelica_integer tmp1;
   modelica_string _str = NULL;
-  tmp1 = mmc_unbox_integer(_clockIndex);
+  tmp1 = omc_unbox_integer(_clockIndex);
   _str = omc_ClockIndexes_toString(threadData, tmp1);
   /* skip box _str; String */
   return _str;

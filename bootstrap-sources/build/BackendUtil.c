@@ -111,7 +111,8 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr2(
 {
   modelica_string _outDerName = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outDerName has no default value.
   { /* matchcontinue expression */
@@ -127,7 +128,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr2(
       // _derName has no default value.
       // _names has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -137,7 +138,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr2(
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
+          modelica_string tmp10;
           
           _derName = tmp4_1;
           /* Pattern matching succeeded */
@@ -152,9 +153,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr2(
           tmpMeta9 = MMC_CDR(tmpMeta7);
           _names = tmpMeta9;
 
-          _names = omc_List_map1(threadData, _names, boxvar_BackendUtil_modelicaStringToCStr, mmc_mk_boolean(0 /* false */));
-          tmpMeta10 = stringAppend(_OMC_LIT2,stringAppendList(_names));
-          tmp1 = tmpMeta10;
+          _names = omc_List_map1(threadData, _names, boxvar_BackendUtil_modelicaStringToCStr, omc_mk_boolean(0 /* false */));
+          tmp10 = stringAppend(_OMC_LIT2,stringAppendList(_names));
+          tmp1 = tmp10;
           goto tmp3_done;
         }
         case 1: {
@@ -164,8 +165,8 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr2(
           modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
-          modelica_metatype tmpMeta18;
+          modelica_string tmp17;
+          modelica_string tmp18;
           
           _derName = tmp4_1;
           /* Pattern matching succeeded */
@@ -182,9 +183,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr2(
           tmpMeta15 = MMC_CAR(tmpMeta14);
           tmpMeta16 = MMC_CDR(tmpMeta14);
           _name = tmpMeta15;
-          tmpMeta17 = stringAppend(_OMC_LIT3,omc_BackendUtil_modelicaStringToCStr(threadData, _name, 0 /* false */));
-          tmpMeta18 = stringAppend(tmpMeta17,_OMC_LIT4);
-          tmp1 = tmpMeta18;
+          tmp17 = stringAppend(_OMC_LIT3,omc_BackendUtil_modelicaStringToCStr(threadData, _name, 0 /* false */));
+          tmp18 = stringAppend(tmp17,_OMC_LIT4);
+          tmp1 = tmp18;
           goto tmp3_done;
         }
         case 2: {
@@ -201,27 +202,29 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr2(
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
-  _outDerName = tmp1;
+  omc_string_store(&(_outDerName), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _outDerName;
+  omc_ret_ = _outDerName;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr1(threadData_t *threadData, modelica_string _inString, modelica_metatype _inReplacePatternLst)
 {
   modelica_string _outString = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
   { /* matchcontinue expression */
@@ -242,7 +245,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr1(
       // _to has no default value.
       // _res has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -263,26 +266,26 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr1(
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_2);
           tmpMeta7 = MMC_CDR(tmp4_2);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 3));
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 2);
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta6, 3);
           
           _from = tmpMeta8;
           _to = tmpMeta9;
           _res = tmpMeta7;
           _str = tmp4_1;
           /* Pattern matching succeeded */
-          _str_1 = omc_BackendUtil_modelicaStringToCStr1(threadData, _str, _res);
+          omc_string_store(&(_str_1), omc_BackendUtil_modelicaStringToCStr1(threadData, _str, _res));
           tmp1 = omc_System_stringReplace(threadData, _str_1, _from, _to);
           goto tmp3_done;
         }
         case 2: {
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
+          modelica_string tmp10;
+          modelica_string tmp11;
           
           /* Pattern matching succeeded */
-          tmpMeta10 = stringAppend(_OMC_LIT5,_inString);
-          tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT6);
-          fputs(MMC_STRINGDATA(tmpMeta11),stdout);
+          tmp10 = stringAppend(_OMC_LIT5,_inString);
+          tmp11 = stringAppend(tmp10,_OMC_LIT6);
+          fputs(omc_string_data(tmp11),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -293,28 +296,30 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_BackendUtil_modelicaStringToCStr1(
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
-  _outString = tmp1;
+  omc_string_store(&(_outString), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_BackendUtil_modelicaStringToCStr(threadData_t *threadData, modelica_string _str, modelica_boolean _changeDerCall)
 {
   modelica_string _res_str = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res_str has no default value.
   { /* match expression */
@@ -330,12 +335,12 @@ modelica_string omc_BackendUtil_modelicaStringToCStr(threadData_t *threadData, m
       for (; tmp4 < 2; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
-          modelica_metatype tmpMeta6;
+          modelica_string tmp6;
           if (0 /* false */ != tmp4_2) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta6 = stringAppend(_OMC_LIT7,omc_BackendUtil_modelicaStringToCStr1(threadData, _str, _OMC_LIT34));
-          tmp1 = tmpMeta6;
+          tmp6 = stringAppend(_OMC_LIT7,omc_BackendUtil_modelicaStringToCStr1(threadData, _str, _OMC_LIT34));
+          tmp1 = tmp6;
           goto tmp3_done;
         }
         case 1: {
@@ -352,20 +357,21 @@ modelica_string omc_BackendUtil_modelicaStringToCStr(threadData_t *threadData, m
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _res_str = tmp1;
+  omc_string_store(&(_res_str), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _res_str;
+  omc_ret_ = _res_str;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BackendUtil_modelicaStringToCStr(threadData_t *threadData, modelica_metatype _str, modelica_metatype _changeDerCall)
 {
   modelica_integer tmp1;
   modelica_string _res_str = NULL;
-  tmp1 = mmc_unbox_integer(_changeDerCall);
+  tmp1 = omc_unbox_integer(_changeDerCall);
   _res_str = omc_BackendUtil_modelicaStringToCStr(threadData, _str, tmp1);
   /* skip box _res_str; String */
   return _res_str;

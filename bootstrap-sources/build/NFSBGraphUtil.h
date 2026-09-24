@@ -19,36 +19,36 @@ extern struct record_description NFExpression_INTEGER__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFSBGraphUtil_linearMapFromIntervals(threadData_t *threadData, modelica_integer _d1, modelica_integer _d2, modelica_metatype _mi1, modelica_metatype _mi2, modelica_metatype _eCount, modelica_metatype *out_pw1, modelica_metatype *out_pw2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFSBGraphUtil_linearMapFromIntervals(threadData_t *threadData, modelica_metatype _d1, modelica_metatype _d2, modelica_metatype _mi1, modelica_metatype _mi2, modelica_metatype _eCount, modelica_metatype *out_pw1, modelica_metatype *out_pw2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_linearMapFromIntervals,2,0) {(void*) boxptr_NFSBGraphUtil_linearMapFromIntervals,0}};
 #define boxvar_NFSBGraphUtil_linearMapFromIntervals MMC_REFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_linearMapFromIntervals)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSBGraphUtil_intervalFromRange(threadData_t *threadData, modelica_metatype _e);
 #define boxptr_NFSBGraphUtil_intervalFromRange omc_NFSBGraphUtil_intervalFromRange
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_intervalFromRange,2,0) {(void*) boxptr_NFSBGraphUtil_intervalFromRange,0}};
 #define boxvar_NFSBGraphUtil_intervalFromRange MMC_REFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_intervalFromRange)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSBGraphUtil_intervalFromUnaryExp(threadData_t *threadData, modelica_metatype _e);
 #define boxptr_NFSBGraphUtil_intervalFromUnaryExp omc_NFSBGraphUtil_intervalFromUnaryExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_intervalFromUnaryExp,2,0) {(void*) boxptr_NFSBGraphUtil_intervalFromUnaryExp,0}};
 #define boxvar_NFSBGraphUtil_intervalFromUnaryExp MMC_REFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_intervalFromUnaryExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSBGraphUtil_intervalFromBinaryExp(threadData_t *threadData, modelica_metatype _lhs, modelica_metatype _op, modelica_metatype _rhs);
 #define boxptr_NFSBGraphUtil_intervalFromBinaryExp omc_NFSBGraphUtil_intervalFromBinaryExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_intervalFromBinaryExp,2,0) {(void*) boxptr_NFSBGraphUtil_intervalFromBinaryExp,0}};
 #define boxvar_NFSBGraphUtil_intervalFromBinaryExp MMC_REFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_intervalFromBinaryExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSBGraphUtil_intervalFromExp(threadData_t *threadData, modelica_metatype _e);
 #define boxptr_NFSBGraphUtil_intervalFromExp omc_NFSBGraphUtil_intervalFromExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_intervalFromExp,2,0) {(void*) boxptr_NFSBGraphUtil_intervalFromExp,0}};
@@ -58,28 +58,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_intervalFromExp,2,0) {(vo
 #define boxptr_NFSBGraphUtil_evalCrefs_evalCref omc_NFSBGraphUtil_evalCrefs_evalCref
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSBGraphUtil_evalCrefs(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fe);
 #define boxptr_NFSBGraphUtil_evalCrefs omc_NFSBGraphUtil_evalCrefs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_evalCrefs,2,0) {(void*) boxptr_NFSBGraphUtil_evalCrefs,0}};
 #define boxvar_NFSBGraphUtil_evalCrefs MMC_REFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_evalCrefs)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSBGraphUtil_make__lo__interval(threadData_t *threadData, modelica_metatype _i);
 #define boxptr_NFSBGraphUtil_make__lo__interval omc_NFSBGraphUtil_make__lo__interval
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_make__lo__interval,2,0) {(void*) boxptr_NFSBGraphUtil_make__lo__interval,0}};
 #define boxvar_NFSBGraphUtil_make__lo__interval MMC_REFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_make__lo__interval)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSBGraphUtil_multiIntervalFromSubscripts(threadData_t *threadData, modelica_metatype _subs, modelica_metatype _vCount, modelica_metatype __omcQ_24in_5FmultiInt);
 #define boxptr_NFSBGraphUtil_multiIntervalFromSubscripts omc_NFSBGraphUtil_multiIntervalFromSubscripts
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_multiIntervalFromSubscripts,2,0) {(void*) boxptr_NFSBGraphUtil_multiIntervalFromSubscripts,0}};
 #define boxvar_NFSBGraphUtil_multiIntervalFromSubscripts MMC_REFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_multiIntervalFromSubscripts)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSBGraphUtil_multiIntervalFromDimensions(threadData_t *threadData, modelica_metatype _dims, modelica_metatype _vCount);
 #define boxptr_NFSBGraphUtil_multiIntervalFromDimensions omc_NFSBGraphUtil_multiIntervalFromDimensions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSBGraphUtil_multiIntervalFromDimensions,2,0) {(void*) boxptr_NFSBGraphUtil_multiIntervalFromDimensions,0}};

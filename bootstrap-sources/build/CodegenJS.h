@@ -19,21 +19,21 @@ extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenJS_markdownContents(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenJS_markdownContents omc_CodegenJS_markdownContents
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenJS_markdownContents,2,0) {(void*) boxptr_CodegenJS_markdownContents,0}};
 #define boxvar_CodegenJS_markdownContents MMC_REFSTRUCTLIT(boxvar_lit_CodegenJS_markdownContents)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenJS_nodeJSDriver(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenJS_nodeJSDriver omc_CodegenJS_nodeJSDriver
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenJS_nodeJSDriver,2,0) {(void*) boxptr_CodegenJS_nodeJSDriver,0}};
 #define boxvar_CodegenJS_nodeJSDriver MMC_REFSTRUCTLIT(boxvar_lit_CodegenJS_nodeJSDriver)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenJS_markdownFile(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenJS_markdownFile omc_CodegenJS_markdownFile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenJS_markdownFile,2,0) {(void*) boxptr_CodegenJS_markdownFile,0}};

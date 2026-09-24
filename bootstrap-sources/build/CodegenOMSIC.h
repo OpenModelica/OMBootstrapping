@@ -27,7 +27,7 @@ extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenOMSIC_createMakefileIn(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_string _a_target, modelica_string _a_FileNamePrefix, modelica_string _a_makeflieName);
 #define boxptr_CodegenOMSIC_createMakefileIn omc_CodegenOMSIC_createMakefileIn
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSIC_createMakefileIn,2,0) {(void*) boxptr_CodegenOMSIC_createMakefileIn,0}};
@@ -49,12 +49,6 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSIC_createMakefileIn,2,0) {(vo
 #define boxptr_CodegenOMSIC_fun__93 omc_CodegenOMSIC_fun__93
 
 
-#define boxptr_CodegenOMSIC_fun__92 omc_CodegenOMSIC_fun__92
-
-
-#define boxptr_CodegenOMSIC_fun__91 omc_CodegenOMSIC_fun__91
-
-
 #define boxptr_CodegenOMSIC_lm__90 omc_CodegenOMSIC_lm__90
 
 
@@ -71,12 +65,6 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSIC_createMakefileIn,2,0) {(vo
 
 
 #define boxptr_CodegenOMSIC_fun__83 omc_CodegenOMSIC_fun__83
-
-
-#define boxptr_CodegenOMSIC_fun__82 omc_CodegenOMSIC_fun__82
-
-
-#define boxptr_CodegenOMSIC_fun__81 omc_CodegenOMSIC_fun__81
 
 
 #define boxptr_CodegenOMSIC_lm__80 omc_CodegenOMSIC_lm__80
@@ -103,7 +91,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSIC_createMakefileIn,2,0) {(vo
 #define boxptr_CodegenOMSIC_fun__73 omc_CodegenOMSIC_fun__73
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenOMSIC_createMakefile(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_string _a_target, modelica_string _a_makeflieName);
 #define boxptr_CodegenOMSIC_createMakefile omc_CodegenOMSIC_createMakefile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSIC_createMakefile,2,0) {(void*) boxptr_CodegenOMSIC_createMakefile,0}};
@@ -161,7 +149,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSIC_createMakefile,2,0) {(void
 #define boxptr_CodegenOMSIC_fun__54 omc_CodegenOMSIC_fun__54
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenOMSIC_generateOMSIC(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode);
 #define boxptr_CodegenOMSIC_generateOMSIC omc_CodegenOMSIC_generateOMSIC
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSIC_generateOMSIC,2,0) {(void*) boxptr_CodegenOMSIC_generateOMSIC,0}};

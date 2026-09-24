@@ -42,9 +42,9 @@ static int rml_execution_failed()
   return 1;
 }
 
-DLLDirection int __omc_main(int argc, char **argv)
+DLLModelDirection int __omc_main(int argc, char **argv)
 {
-  MMC_INIT(0);
+  OMC_INIT(0);
   {
   void *lst = mmc_mk_nil();
   int i = 0;
@@ -54,21 +54,21 @@ DLLDirection int __omc_main(int argc, char **argv)
   }
 
   {
-    MMC_TRY_TOP()
+    OMC_TRY_TOP()
   
-    MMC_TRY_STACK()
+    OMC_TRY_STACK()
   
     omc_Main_main(threadData, lst);
     
-    MMC_ELSE()
+    OMC_ELSE()
     rml_execution_failed();
     fprintf(stderr, "Stack overflow detected and was not caught.\nSend us a bug report at https://trac.openmodelica.org/OpenModelica/newticket\n    Include the following trace:\n");
     printStacktraceMessages();
     fflush(NULL);
     return 1;
-    MMC_CATCH_STACK()
+    OMC_CATCH_STACK()
     
-    MMC_CATCH_TOP(return rml_execution_failed());
+    OMC_CATCH_TOP(return rml_execution_failed());
   }
   }
   

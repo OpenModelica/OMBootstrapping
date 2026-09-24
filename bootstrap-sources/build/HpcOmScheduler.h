@@ -79,9 +79,9 @@ extern struct record_description SimCode_VarInfo_VARINFO__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_expandSchedule(threadData_t *threadData, modelica_integer _iNumProc, modelica_integer _iNumUsedProc, modelica_metatype _iSchedule);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_expandSchedule(threadData_t *threadData, modelica_metatype _iNumProc, modelica_metatype _iNumUsedProc, modelica_metatype _iSchedule);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_expandSchedule,2,0) {(void*) boxptr_HpcOmScheduler_expandSchedule,0}};
 #define boxvar_HpcOmScheduler_expandSchedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_expandSchedule)
@@ -111,17 +111,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_expandSchedule,2,0) {(vo
 #define boxptr_HpcOmScheduler_setScheduleLockIds omc_HpcOmScheduler_setScheduleLockIds
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_convertFixedLevelScheduleToTaskLists(threadData_t *threadData, modelica_metatype _iOdeSchedule, modelica_metatype _iDaeSchedule, modelica_metatype _iZeroFuncSchedule, modelica_integer _iNumOfThreads);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_convertFixedLevelScheduleToTaskLists(threadData_t *threadData, modelica_metatype _iOdeSchedule, modelica_metatype _iDaeSchedule, modelica_metatype _iZeroFuncSchedule, modelica_metatype _iNumOfThreads);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_convertFixedLevelScheduleToTaskLists,2,0) {(void*) boxptr_HpcOmScheduler_convertFixedLevelScheduleToTaskLists,0}};
 #define boxvar_HpcOmScheduler_convertFixedLevelScheduleToTaskLists MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_convertFixedLevelScheduleToTaskLists)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_convertFixedLevelScheduleToLevelThreadLists(threadData_t *threadData, modelica_metatype _iSchedule, modelica_integer _iNumOfThreads);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_convertFixedLevelScheduleToLevelThreadLists(threadData_t *threadData, modelica_metatype _iSchedule, modelica_metatype _iNumOfThreads);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_convertFixedLevelScheduleToLevelThreadLists,2,0) {(void*) boxptr_HpcOmScheduler_convertFixedLevelScheduleToLevelThreadLists,0}};
 #define boxvar_HpcOmScheduler_convertFixedLevelScheduleToLevelThreadLists MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_convertFixedLevelScheduleToLevelThreadLists)
@@ -133,17 +133,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_convertFixedLevelSchedul
 #define boxptr_HpcOmScheduler_computeFinishingTimeForOneTask omc_HpcOmScheduler_computeFinishingTimeForOneTask
 
 
-DLLDirection
+DLLModelDirection
 modelica_real omc_HpcOmScheduler_getSerialExecutionTime(threadData_t *threadData, modelica_metatype _taskGraphMetaIn);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_getSerialExecutionTime(threadData_t *threadData, modelica_metatype _taskGraphMetaIn);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_getSerialExecutionTime,2,0) {(void*) boxptr_HpcOmScheduler_getSerialExecutionTime,0}};
 #define boxvar_HpcOmScheduler_getSerialExecutionTime MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_getSerialExecutionTime)
 
 
-DLLDirection
+DLLModelDirection
 modelica_real omc_HpcOmScheduler_predictExecutionTime(threadData_t *threadData, modelica_metatype _scheduleIn, modelica_metatype _cpCostsOption, modelica_integer _numProc, modelica_metatype _taskGraphIn, modelica_metatype _taskGraphMetaIn, modelica_real *out_parallelTimeOut, modelica_real *out_speedUpOut, modelica_real *out_speedUpMaxOut);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_predictExecutionTime(threadData_t *threadData, modelica_metatype _scheduleIn, modelica_metatype _cpCostsOption, modelica_metatype _numProc, modelica_metatype _taskGraphIn, modelica_metatype _taskGraphMetaIn, modelica_metatype *out_parallelTimeOut, modelica_metatype *out_speedUpOut, modelica_metatype *out_speedUpMaxOut);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_predictExecutionTime,2,0) {(void*) boxptr_HpcOmScheduler_predictExecutionTime,0}};
 #define boxvar_HpcOmScheduler_predictExecutionTime MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_predictExecutionTime)
@@ -158,9 +158,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_predictExecutionTime,2,0
 #define boxptr_HpcOmScheduler_getLevelParallelTime1 omc_HpcOmScheduler_getLevelParallelTime1
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_HpcOmScheduler_analyseScheduledTaskGraph(threadData_t *threadData, modelica_metatype _scheduleIn, modelica_integer _numProcIn, modelica_metatype _taskGraphIn, modelica_metatype _taskGraphMetaIn, modelica_string _inSystemName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_analyseScheduledTaskGraph(threadData_t *threadData, modelica_metatype _scheduleIn, modelica_metatype _numProcIn, modelica_metatype _taskGraphIn, modelica_metatype _taskGraphMetaIn, modelica_metatype _inSystemName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_analyseScheduledTaskGraph,2,0) {(void*) boxptr_HpcOmScheduler_analyseScheduledTaskGraph,0}};
 #define boxvar_HpcOmScheduler_analyseScheduledTaskGraph MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_analyseScheduledTaskGraph)
@@ -169,7 +169,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_analyseScheduledTaskGrap
 #define boxptr_HpcOmScheduler_dumpSchedule omc_HpcOmScheduler_dumpSchedule
 
 
-DLLDirection
+DLLModelDirection
 void omc_HpcOmScheduler_printSchedule(threadData_t *threadData, modelica_metatype _iSchedule);
 #define boxptr_HpcOmScheduler_printSchedule omc_HpcOmScheduler_printSchedule
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_printSchedule,2,0) {(void*) boxptr_HpcOmScheduler_printSchedule,0}};
@@ -191,7 +191,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_printSchedule,2,0) {(voi
 #define boxptr_HpcOmScheduler_computeGraphValuesBottomUp omc_HpcOmScheduler_computeGraphValuesBottomUp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_quicksortWithOrder(threadData_t *threadData, modelica_metatype _lstIn, modelica_metatype *out_orderOut);
 #define boxptr_HpcOmScheduler_quicksortWithOrder omc_HpcOmScheduler_quicksortWithOrder
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_quicksortWithOrder,2,0) {(void*) boxptr_HpcOmScheduler_quicksortWithOrder,0}};
@@ -225,17 +225,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_quicksortWithOrder,2,0) 
 #define boxptr_HpcOmScheduler_MCP__getTaskAssignment1 omc_HpcOmScheduler_MCP__getTaskAssignment1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createMCPschedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_integer _numProc, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_createMCPschedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _numProc, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createMCPschedule,2,0) {(void*) boxptr_HpcOmScheduler_createMCPschedule,0}};
 #define boxvar_HpcOmScheduler_createMCPschedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createMCPschedule)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createSingleThreadSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iSccSimEqMapping, modelica_integer _numProc);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_createSingleThreadSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iSccSimEqMapping, modelica_metatype _numProc);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createSingleThreadSchedule,2,0) {(void*) boxptr_HpcOmScheduler_createSingleThreadSchedule,0}};
 #define boxvar_HpcOmScheduler_createSingleThreadSchedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createSingleThreadSchedule)
@@ -244,9 +244,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createSingleThreadSchedu
 #define boxptr_HpcOmScheduler_reassignPartitions omc_HpcOmScheduler_reassignPartitions
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createPartSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_integer _numProc, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_createPartSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _numProc, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createPartSchedule,2,0) {(void*) boxptr_HpcOmScheduler_createPartSchedule,0}};
 #define boxvar_HpcOmScheduler_createPartSchedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createPartSchedule)
@@ -321,9 +321,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createPartSchedule,2,0) 
 #define boxptr_HpcOmScheduler_insertLocksInSchedule omc_HpcOmScheduler_insertLocksInSchedule
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_TDS__schedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_integer _numProc, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping, modelica_metatype _iSimCode, modelica_metatype *out_oSimCode, modelica_metatype *out_oTaskGraph, modelica_metatype *out_oTaskGraphMeta, modelica_metatype *out_oSccSimEqMapping);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_TDS__schedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _numProc, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping, modelica_metatype _iSimCode, modelica_metatype *out_oSimCode, modelica_metatype *out_oTaskGraph, modelica_metatype *out_oTaskGraphMeta, modelica_metatype *out_oSccSimEqMapping);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_TDS__schedule,2,0) {(void*) boxptr_HpcOmScheduler_TDS__schedule,0}};
 #define boxvar_HpcOmScheduler_TDS__schedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_TDS__schedule)
@@ -332,9 +332,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_TDS__schedule,2,0) {(voi
 #define boxptr_HpcOmScheduler_createExtSchedule1 omc_HpcOmScheduler_createExtSchedule1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createExtSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_integer _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping, modelica_string _iGraphMLFile);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_createExtSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping, modelica_metatype _iGraphMLFile);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createExtSchedule,2,0) {(void*) boxptr_HpcOmScheduler_createExtSchedule,0}};
 #define boxvar_HpcOmScheduler_createExtSchedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createExtSchedule)
@@ -352,9 +352,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createExtSchedule,2,0) {
 #define boxptr_HpcOmScheduler_getRelations omc_HpcOmScheduler_getRelations
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createHMetisSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_integer _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_createHMetisSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createHMetisSchedule,2,0) {(void*) boxptr_HpcOmScheduler_createHMetisSchedule,0}};
 #define boxvar_HpcOmScheduler_createHMetisSchedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createHMetisSchedule)
@@ -366,9 +366,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createHMetisSchedule,2,0
 #define boxptr_HpcOmScheduler_createMetisSchedule2 omc_HpcOmScheduler_createMetisSchedule2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createMetisSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_integer _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_createMetisSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createMetisSchedule,2,0) {(void*) boxptr_HpcOmScheduler_createMetisSchedule,0}};
 #define boxvar_HpcOmScheduler_createMetisSchedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createMetisSchedule)
@@ -380,7 +380,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createMetisSchedule,2,0)
 #define boxptr_HpcOmScheduler_createNodeLevelMapping omc_HpcOmScheduler_createNodeLevelMapping
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createTaskDepSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iSccSimEqMapping);
 #define boxptr_HpcOmScheduler_createTaskDepSchedule omc_HpcOmScheduler_createTaskDepSchedule
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createTaskDepSchedule,2,0) {(void*) boxptr_HpcOmScheduler_createTaskDepSchedule,0}};
@@ -390,17 +390,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createTaskDepSchedule,2,
 #define boxptr_HpcOmScheduler_createFixedLevelScheduleForLevel0 omc_HpcOmScheduler_createFixedLevelScheduleForLevel0
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createFixedLevelSchedule(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iMeta, modelica_integer _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype *out_oMeta);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_createFixedLevelSchedule(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iMeta, modelica_metatype _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype *out_oMeta);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createFixedLevelSchedule,2,0) {(void*) boxptr_HpcOmScheduler_createFixedLevelSchedule,0}};
 #define boxvar_HpcOmScheduler_createFixedLevelSchedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createFixedLevelSchedule)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_makeCalcTask(threadData_t *threadData, modelica_metatype _simEqs, modelica_integer _node, modelica_integer _threadIdx);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_makeCalcTask(threadData_t *threadData, modelica_metatype _simEqs, modelica_metatype _node, modelica_metatype _threadIdx);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_makeCalcTask,2,0) {(void*) boxptr_HpcOmScheduler_makeCalcTask,0}};
 #define boxvar_HpcOmScheduler_makeCalcTask MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_makeCalcTask)
@@ -421,7 +421,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_makeCalcTask,2,0) {(void
 #define boxptr_HpcOmScheduler_createLevelScheduleForLevel omc_HpcOmScheduler_createLevelScheduleForLevel
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createLevelSchedule(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iMeta, modelica_metatype _iSccSimEqMapping, modelica_metatype *out_oMeta);
 #define boxptr_HpcOmScheduler_createLevelSchedule omc_HpcOmScheduler_createLevelSchedule
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createLevelSchedule,2,0) {(void*) boxptr_HpcOmScheduler_createLevelSchedule,0}};
@@ -440,7 +440,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createLevelSchedule,2,0)
 #define boxptr_HpcOmScheduler_BLS__generateSchedule omc_HpcOmScheduler_BLS__generateSchedule
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createBalancedLevelScheduling(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iMeta, modelica_metatype _iSccSimEqMapping, modelica_metatype *out_oMeta);
 #define boxptr_HpcOmScheduler_createBalancedLevelScheduling omc_HpcOmScheduler_createBalancedLevelScheduling
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createBalancedLevelScheduling,2,0) {(void*) boxptr_HpcOmScheduler_createBalancedLevelScheduling,0}};
@@ -453,15 +453,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createBalancedLevelSched
 #define boxptr_HpcOmScheduler_convertScheduleStrucToInfo0 omc_HpcOmScheduler_convertScheduleStrucToInfo0
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_convertScheduleStrucToInfo(threadData_t *threadData, modelica_metatype _iSchedule, modelica_integer _iTaskCount);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_convertScheduleStrucToInfo(threadData_t *threadData, modelica_metatype _iSchedule, modelica_metatype _iTaskCount);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_convertScheduleStrucToInfo,2,0) {(void*) boxptr_HpcOmScheduler_convertScheduleStrucToInfo,0}};
 #define boxvar_HpcOmScheduler_convertScheduleStrucToInfo MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_convertScheduleStrucToInfo)
 
 
-DLLDirection
+DLLModelDirection
 void omc_HpcOmScheduler_printTask(threadData_t *threadData, modelica_metatype _iTask);
 #define boxptr_HpcOmScheduler_printTask omc_HpcOmScheduler_printTask
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_printTask,2,0) {(void*) boxptr_HpcOmScheduler_printTask,0}};
@@ -480,7 +480,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_printTask,2,0) {(void*) 
 #define boxptr_HpcOmScheduler_dumpTaskDepSchedule omc_HpcOmScheduler_dumpTaskDepSchedule
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_getSuccessorsByTask(threadData_t *threadData, modelica_metatype _iTask, modelica_metatype _iTaskGraph, modelica_metatype _iAllCalcTasks, modelica_metatype *out_oTaskIdc);
 #define boxptr_HpcOmScheduler_getSuccessorsByTask omc_HpcOmScheduler_getSuccessorsByTask
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_getSuccessorsByTask,2,0) {(void*) boxptr_HpcOmScheduler_getSuccessorsByTask,0}};
@@ -502,7 +502,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_getSuccessorsByTask,2,0)
 #define boxptr_HpcOmScheduler_getCommunicationObjBetweenMergedTasks1 omc_HpcOmScheduler_getCommunicationObjBetweenMergedTasks1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_getSimEqSysIdcsForNodeLst(threadData_t *threadData, modelica_metatype _nodeIdcs, modelica_metatype _iSccSimEqMapping);
 #define boxptr_HpcOmScheduler_getSimEqSysIdcsForNodeLst omc_HpcOmScheduler_getSimEqSysIdcsForNodeLst
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_getSimEqSysIdcsForNodeLst,2,0) {(void*) boxptr_HpcOmScheduler_getSimEqSysIdcsForNodeLst,0}};
@@ -527,17 +527,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_getSimEqSysIdcsForNodeLs
 #define boxptr_HpcOmScheduler_addSuccessorLocksToSchedule omc_HpcOmScheduler_addSuccessorLocksToSchedule
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createListScheduleReverse(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_integer _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_createListScheduleReverse(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createListScheduleReverse,2,0) {(void*) boxptr_HpcOmScheduler_createListScheduleReverse,0}};
 #define boxvar_HpcOmScheduler_createListScheduleReverse MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createListScheduleReverse)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createRandomSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_integer _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_createRandomSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createRandomSchedule,2,0) {(void*) boxptr_HpcOmScheduler_createRandomSchedule,0}};
 #define boxvar_HpcOmScheduler_createRandomSchedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createRandomSchedule)
@@ -546,15 +546,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createRandomSchedule,2,0
 #define boxptr_HpcOmScheduler_createListSchedule1 omc_HpcOmScheduler_createListSchedule1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createListSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_integer _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmScheduler_createListSchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iNumberOfThreads, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSimVarMapping);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createListSchedule,2,0) {(void*) boxptr_HpcOmScheduler_createListSchedule,0}};
 #define boxvar_HpcOmScheduler_createListSchedule MMC_REFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createListSchedule)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmScheduler_createEmptySchedule(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iSccSimEqMapping);
 #define boxptr_HpcOmScheduler_createEmptySchedule omc_HpcOmScheduler_createEmptySchedule
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmScheduler_createEmptySchedule,2,0) {(void*) boxptr_HpcOmScheduler_createEmptySchedule,0}};

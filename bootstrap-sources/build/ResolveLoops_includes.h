@@ -23,6 +23,7 @@ extern "C" {
 #include "List.h"
 #include "ResolveLoops.h"
 #include "Tearing.h"
+#include "UnorderedMap.h"
 #include "Util.h"
 #ifdef __cplusplus
 }

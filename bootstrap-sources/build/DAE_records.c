@@ -2136,6 +2136,136 @@ ADD_METARECORD_DEFINITIONS struct record_description DAE_derivativeCond_ZERO__DE
 extern struct record_description DAE_derivativeCond_ZERO__DERIVATIVE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
+#ifndef DAE_StartOrigin_UNDEFINED__ORIGIN__desc_added
+#define DAE_StartOrigin_UNDEFINED__ORIGIN__desc_added
+ADD_METARECORD_DEFINITIONS const char* DAE_StartOrigin_UNDEFINED__ORIGIN__desc__fields[1] = {"no fields"};
+ADD_METARECORD_DEFINITIONS struct record_description DAE_StartOrigin_UNDEFINED__ORIGIN__desc = {
+  "DAE_StartOrigin_UNDEFINED__ORIGIN",
+  "DAE.StartOrigin.UNDEFINED_ORIGIN",
+  DAE_StartOrigin_UNDEFINED__ORIGIN__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description DAE_StartOrigin_UNDEFINED__ORIGIN__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef DAE_StartOrigin_TYPE__ORIGIN__desc_added
+#define DAE_StartOrigin_TYPE__ORIGIN__desc_added
+ADD_METARECORD_DEFINITIONS const char* DAE_StartOrigin_TYPE__ORIGIN__desc__fields[1] = {"no fields"};
+ADD_METARECORD_DEFINITIONS struct record_description DAE_StartOrigin_TYPE__ORIGIN__desc = {
+  "DAE_StartOrigin_TYPE__ORIGIN",
+  "DAE.StartOrigin.TYPE_ORIGIN",
+  DAE_StartOrigin_TYPE__ORIGIN__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description DAE_StartOrigin_TYPE__ORIGIN__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef DAE_StartOrigin_BINDING__ORIGIN__desc_added
+#define DAE_StartOrigin_BINDING__ORIGIN__desc_added
+ADD_METARECORD_DEFINITIONS const char* DAE_StartOrigin_BINDING__ORIGIN__desc__fields[1] = {"no fields"};
+ADD_METARECORD_DEFINITIONS struct record_description DAE_StartOrigin_BINDING__ORIGIN__desc = {
+  "DAE_StartOrigin_BINDING__ORIGIN",
+  "DAE.StartOrigin.BINDING_ORIGIN",
+  DAE_StartOrigin_BINDING__ORIGIN__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description DAE_StartOrigin_BINDING__ORIGIN__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef DAE_StartOrigin_CONFIDENCE__desc_added
+#define DAE_StartOrigin_CONFIDENCE__desc_added
+ADD_METARECORD_DEFINITIONS const char* DAE_StartOrigin_CONFIDENCE__desc__fields[2] = {"actual","raw"};
+ADD_METARECORD_DEFINITIONS struct record_description DAE_StartOrigin_CONFIDENCE__desc = {
+  "DAE_StartOrigin_CONFIDENCE",
+  "DAE.StartOrigin.CONFIDENCE",
+  DAE_StartOrigin_CONFIDENCE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description DAE_StartOrigin_CONFIDENCE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef DAE_StartOrigin_TYPE__CONFIDENCE__desc_added
+#define DAE_StartOrigin_TYPE__CONFIDENCE__desc_added
+ADD_METARECORD_DEFINITIONS const char* DAE_StartOrigin_TYPE__CONFIDENCE__desc__fields[1] = {"level"};
+ADD_METARECORD_DEFINITIONS struct record_description DAE_StartOrigin_TYPE__CONFIDENCE__desc = {
+  "DAE_StartOrigin_TYPE__CONFIDENCE",
+  "DAE.StartOrigin.TYPE_CONFIDENCE",
+  DAE_StartOrigin_TYPE__CONFIDENCE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description DAE_StartOrigin_TYPE__CONFIDENCE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef DAE_StartOrigin_TYPE__CONFIDENCE__desc_added
+#define DAE_StartOrigin_TYPE__CONFIDENCE__desc_added
+ADD_METARECORD_DEFINITIONS const char* DAE_StartOrigin_TYPE__CONFIDENCE__desc__fields[1] = {"level"};
+ADD_METARECORD_DEFINITIONS struct record_description DAE_StartOrigin_TYPE__CONFIDENCE__desc = {
+  "DAE_StartOrigin_TYPE__CONFIDENCE",
+  "DAE.StartOrigin.TYPE_CONFIDENCE",
+  DAE_StartOrigin_TYPE__CONFIDENCE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description DAE_StartOrigin_TYPE__CONFIDENCE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef DAE_StartOrigin_CONFIDENCE__desc_added
+#define DAE_StartOrigin_CONFIDENCE__desc_added
+ADD_METARECORD_DEFINITIONS const char* DAE_StartOrigin_CONFIDENCE__desc__fields[2] = {"actual","raw"};
+ADD_METARECORD_DEFINITIONS struct record_description DAE_StartOrigin_CONFIDENCE__desc = {
+  "DAE_StartOrigin_CONFIDENCE",
+  "DAE.StartOrigin.CONFIDENCE",
+  DAE_StartOrigin_CONFIDENCE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description DAE_StartOrigin_CONFIDENCE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef DAE_StartOrigin_BINDING__ORIGIN__desc_added
+#define DAE_StartOrigin_BINDING__ORIGIN__desc_added
+ADD_METARECORD_DEFINITIONS const char* DAE_StartOrigin_BINDING__ORIGIN__desc__fields[1] = {"no fields"};
+ADD_METARECORD_DEFINITIONS struct record_description DAE_StartOrigin_BINDING__ORIGIN__desc = {
+  "DAE_StartOrigin_BINDING__ORIGIN",
+  "DAE.StartOrigin.BINDING_ORIGIN",
+  DAE_StartOrigin_BINDING__ORIGIN__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description DAE_StartOrigin_BINDING__ORIGIN__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef DAE_StartOrigin_TYPE__ORIGIN__desc_added
+#define DAE_StartOrigin_TYPE__ORIGIN__desc_added
+ADD_METARECORD_DEFINITIONS const char* DAE_StartOrigin_TYPE__ORIGIN__desc__fields[1] = {"no fields"};
+ADD_METARECORD_DEFINITIONS struct record_description DAE_StartOrigin_TYPE__ORIGIN__desc = {
+  "DAE_StartOrigin_TYPE__ORIGIN",
+  "DAE.StartOrigin.TYPE_ORIGIN",
+  DAE_StartOrigin_TYPE__ORIGIN__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description DAE_StartOrigin_TYPE__ORIGIN__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef DAE_StartOrigin_UNDEFINED__ORIGIN__desc_added
+#define DAE_StartOrigin_UNDEFINED__ORIGIN__desc_added
+ADD_METARECORD_DEFINITIONS const char* DAE_StartOrigin_UNDEFINED__ORIGIN__desc__fields[1] = {"no fields"};
+ADD_METARECORD_DEFINITIONS struct record_description DAE_StartOrigin_UNDEFINED__ORIGIN__desc = {
+  "DAE_StartOrigin_UNDEFINED__ORIGIN",
+  "DAE.StartOrigin.UNDEFINED_ORIGIN",
+  DAE_StartOrigin_UNDEFINED__ORIGIN__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description DAE_StartOrigin_UNDEFINED__ORIGIN__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
 #ifndef DAE_VariableAttributes_VAR__ATTR__REAL__desc_added
 #define DAE_VariableAttributes_VAR__ATTR__REAL__desc_added
 ADD_METARECORD_DEFINITIONS const char* DAE_VariableAttributes_VAR__ATTR__REAL__desc__fields[15] = {"quantity","unit","displayUnit","min","max","start","fixed","nominal","stateSelectOption","uncertainOption","distributionOption","equationBound","isProtected","finalPrefix","startOrigin"};

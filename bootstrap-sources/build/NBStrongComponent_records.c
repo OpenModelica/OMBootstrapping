@@ -110,7 +110,7 @@ extern struct record_description NBStrongComponent_ENTWINED__COMPONENT__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBStrongComponent_ALGEBRAIC__LOOP__desc_added
 #define NBStrongComponent_ALGEBRAIC__LOOP__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBStrongComponent_ALGEBRAIC__LOOP__desc__fields[7] = {"idx","strict","casual","linear","mixed","homotopy","status"};
+ADD_METARECORD_DEFINITIONS const char* NBStrongComponent_ALGEBRAIC__LOOP__desc__fields[8] = {"idx","strict","casual","linear","mixed","homotopy","status","implicitlyCreated"};
 ADD_METARECORD_DEFINITIONS struct record_description NBStrongComponent_ALGEBRAIC__LOOP__desc = {
   "NBStrongComponent_ALGEBRAIC__LOOP",
   "NBStrongComponent.ALGEBRAIC_LOOP",

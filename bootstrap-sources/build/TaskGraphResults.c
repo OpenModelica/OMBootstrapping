@@ -12,7 +12,7 @@ modelica_metatype omc_TaskGraphResults_checkCodeGraph(threadData_t *threadData, 
   modelica_metatype _res = NULL;
   // _res has no default value.
 
-  _res_ext = TaskGraphResults_checkCodeGraph(MMC_STRINGDATA(_graphfile), MMC_STRINGDATA(_codefile));
+  _res_ext = TaskGraphResults_checkCodeGraph(omc_string_data(_graphfile), omc_string_data(_codefile));
   _res = (modelica_metatype)_res_ext;
   return _res;
 }
@@ -23,7 +23,7 @@ modelica_metatype omc_TaskGraphResults_checkTaskGraph(threadData_t *threadData, 
   modelica_metatype _res = NULL;
   // _res has no default value.
 
-  _res_ext = TaskGraphResults_checkTaskGraph(MMC_STRINGDATA(_filename), MMC_STRINGDATA(_reffilename));
+  _res_ext = TaskGraphResults_checkTaskGraph(omc_string_data(_filename), omc_string_data(_reffilename));
   _res = (modelica_metatype)_res_ext;
   return _res;
 }

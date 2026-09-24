@@ -12,9 +12,9 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FHashTableUnitToString_emptyHashTableSized(threadData_t *threadData, modelica_integer _size);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_FHashTableUnitToString_emptyHashTableSized(threadData_t *threadData, modelica_metatype _size);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FHashTableUnitToString_emptyHashTableSized,2,0) {(void*) boxptr_FHashTableUnitToString_emptyHashTableSized,0}};
 #define boxvar_FHashTableUnitToString_emptyHashTableSized MMC_REFSTRUCTLIT(boxvar_lit_FHashTableUnitToString_emptyHashTableSized)
@@ -23,7 +23,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FHashTableUnitToString_emptyHashTableSi
 #define boxptr_FHashTableUnitToString_id omc_FHashTableUnitToString_id
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FHashTableUnitToString_emptyHashTable(threadData_t *threadData);
 #define boxptr_FHashTableUnitToString_emptyHashTable omc_FHashTableUnitToString_emptyHashTable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FHashTableUnitToString_emptyHashTable,2,0) {(void*) boxptr_FHashTableUnitToString_emptyHashTable,0}};

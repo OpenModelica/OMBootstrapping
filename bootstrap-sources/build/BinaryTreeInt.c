@@ -51,8 +51,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToListOpt(t
 {
   modelica_metatype _outKeyLst = NULL;
   modelica_metatype _outValueLst = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outKeyLst has no default value.
   // _outValueLst has no default value.
@@ -88,7 +89,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToListOpt(t
         case 1: {
           modelica_metatype tmpMeta6;
           if (optionNone(tmp4_1)) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
           
           _bt = tmpMeta6;
           _klst = tmp4_2;
@@ -103,7 +104,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToListOpt(t
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -112,15 +113,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToListOpt(t
   _outValueLst = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_outValueLst) { *out_outValueLst = _outValueLst; }
-  return _outKeyLst;
+  omc_ret_ = _outKeyLst;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToList2(threadData_t *threadData, modelica_metatype _inBinTree, modelica_metatype _inKeyLst, modelica_metatype _inValueLst, modelica_metatype *out_outValueLst)
 {
   modelica_metatype _outKeyLst = NULL;
   modelica_metatype _outValueLst = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outKeyLst has no default value.
   // _outValueLst has no default value.
@@ -147,7 +150,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToList2(thr
       // _left has no default value.
       // _right has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -156,11 +159,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToList2(thr
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
           if (!optionNone(tmpMeta6)) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 3);
           if (!optionNone(tmpMeta7)) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 4);
           if (!optionNone(tmpMeta8)) goto tmp3_end;
           
           _klst = tmp4_2;
@@ -181,15 +184,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToList2(thr
           modelica_metatype tmpMeta16;
           modelica_metatype tmpMeta17;
           modelica_metatype tmpMeta18;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta9)) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 1));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 2));
-          tmp12 = mmc_unbox_integer(tmpMeta11);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 3));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 1);
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta10, 2);
+          tmp12 = omc_unbox_integer(tmpMeta11);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta10, 3);
+          tmp14 = omc_unbox_integer(tmpMeta13);
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 4);
           
           _key = tmp12  /* pattern as ty=Integer */;
           _value = tmp14  /* pattern as ty=Integer */;
@@ -201,8 +204,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToList2(thr
           _klst = omc_BinaryTreeInt_bintreeToListOpt(threadData, _left, _klst, _vlst ,&_vlst);
 
           _klst = omc_BinaryTreeInt_bintreeToListOpt(threadData, _right, _klst, _vlst ,&_vlst);
-          tmpMeta17 = mmc_mk_cons(mmc_mk_integer(_key), _klst);
-          tmpMeta18 = mmc_mk_cons(mmc_mk_integer(_value), _vlst);
+          tmpMeta17 = mmc_mk_cons(omc_mk_integer(_key), _klst);
+          tmpMeta18 = mmc_mk_cons(omc_mk_integer(_value), _vlst);
           tmpMeta[0+0] = tmpMeta17;
           tmpMeta[0+1] = tmpMeta18;
           goto tmp3_done;
@@ -210,9 +213,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToList2(thr
         case 2: {
           modelica_metatype tmpMeta19;
           modelica_metatype tmpMeta20;
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta19 = OMC_BOX_FIELD(tmp4_1, 2);
           if (!optionNone(tmpMeta19)) goto tmp3_end;
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_1, 3);
           
           _left = tmpMeta20;
           _klst = tmp4_2;
@@ -229,14 +232,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToList2(thr
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -244,16 +247,18 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BinaryTreeInt_bintreeToList2(thr
   _outValueLst = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_outValueLst) { *out_outValueLst = _outValueLst; }
-  return _outKeyLst;
+  omc_ret_ = _outKeyLst;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BinaryTreeInt_bintreeToList(threadData_t *threadData, modelica_metatype _inBinTree, modelica_metatype *out_outValueLst)
 {
   modelica_metatype _outKeyLst = NULL;
   modelica_metatype _outValueLst = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outKeyLst has no default value.
   // _outValueLst has no default value.
@@ -268,7 +273,7 @@ modelica_metatype omc_BinaryTreeInt_bintreeToList(threadData_t *threadData, mode
       int tmp5;
       // _bt has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -287,7 +292,7 @@ modelica_metatype omc_BinaryTreeInt_bintreeToList(threadData_t *threadData, mode
         case 1: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT0),stdout);
+          fputs(omc_string_data(_OMC_LIT0),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -298,14 +303,14 @@ modelica_metatype omc_BinaryTreeInt_bintreeToList(threadData_t *threadData, mode
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -313,15 +318,17 @@ modelica_metatype omc_BinaryTreeInt_bintreeToList(threadData_t *threadData, mode
   _outValueLst = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_outValueLst) { *out_outValueLst = _outValueLst; }
-  return _outKeyLst;
+  omc_ret_ = _outKeyLst;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_metatype _inBinTree, modelica_integer _inKey, modelica_integer _inValue)
 {
   modelica_metatype _outBinTree = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBinTree has no default value.
   { /* matchcontinue expression */
@@ -347,7 +354,7 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
       // _left_1 has no default value.
       // _optVal has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 7; tmp4++) {
@@ -358,15 +365,15 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
           if (!optionNone(tmpMeta6)) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 3);
           if (!optionNone(tmpMeta7)) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 4);
           if (!optionNone(tmpMeta8)) goto tmp3_end;
           tmp4 += 5; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmpMeta9 = mmc_mk_box3(3, &BinaryTreeInt_TreeValue_TREEVALUE__desc, mmc_mk_integer(_inKey), mmc_mk_integer(_inValue));
-          tmpMeta10 = mmc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, mmc_mk_some(tmpMeta9), mmc_mk_none(), mmc_mk_none());
+          tmpMeta9 = omc_mk_box3(3, &BinaryTreeInt_TreeValue_TREEVALUE__desc, omc_mk_integer(_inKey), omc_mk_integer(_inValue));
+          tmpMeta10 = omc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, mmc_mk_some(tmpMeta9), mmc_mk_none(), mmc_mk_none());
           tmpMeta1 = tmpMeta10;
           goto tmp3_done;
         }
@@ -380,13 +387,13 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           modelica_integer tmp17;
           modelica_metatype tmpMeta18;
           modelica_metatype tmpMeta19;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta11)) goto tmp3_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 1));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 2));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta12 = OMC_BOX_FIELD(tmpMeta11, 1);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 2);
+          tmp14 = omc_unbox_integer(tmpMeta13);
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 4);
           _rkey = tmp14  /* pattern as ty=Integer */;
           _left = tmpMeta15;
           _right = tmpMeta16;
@@ -394,8 +401,8 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           /* Pattern-matching assignment */
           tmp17 = omc_BinaryTreeInt_keyCmp(threadData, _rkey, _inKey);
           if (0 != tmp17) goto goto_2;
-          tmpMeta18 = mmc_mk_box3(3, &BinaryTreeInt_TreeValue_TREEVALUE__desc, mmc_mk_integer(_rkey), mmc_mk_integer(_inValue));
-          tmpMeta19 = mmc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, mmc_mk_some(tmpMeta18), _left, _right);
+          tmpMeta18 = omc_mk_box3(3, &BinaryTreeInt_TreeValue_TREEVALUE__desc, omc_mk_integer(_rkey), omc_mk_integer(_inValue));
+          tmpMeta19 = omc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, mmc_mk_some(tmpMeta18), _left, _right);
           tmpMeta1 = tmpMeta19;
           goto tmp3_done;
         }
@@ -409,15 +416,15 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           modelica_metatype tmpMeta26;
           modelica_integer tmp27;
           modelica_metatype tmpMeta28;
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta20)) goto tmp3_end;
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta20), 1));
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta21), 2));
-          tmp23 = mmc_unbox_integer(tmpMeta22);
-          tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta21 = OMC_BOX_FIELD(tmpMeta20, 1);
+          tmpMeta22 = OMC_BOX_FIELD(tmpMeta21, 2);
+          tmp23 = omc_unbox_integer(tmpMeta22);
+          tmpMeta24 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta25 = OMC_BOX_FIELD(tmp4_1, 4);
           if (optionNone(tmpMeta25)) goto tmp3_end;
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 1));
+          tmpMeta26 = OMC_BOX_FIELD(tmpMeta25, 1);
           _optVal = tmpMeta20;
           _rkey = tmp23  /* pattern as ty=Integer */;
           _left = tmpMeta24;
@@ -428,7 +435,7 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           if (1 != tmp27) goto goto_2;
 
           _t_1 = omc_BinaryTreeInt_treeAdd(threadData, _t, _inKey, _inValue);
-          tmpMeta28 = mmc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, _optVal, _left, mmc_mk_some(_t_1));
+          tmpMeta28 = omc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, _optVal, _left, mmc_mk_some(_t_1));
           tmpMeta1 = tmpMeta28;
           goto tmp3_done;
         }
@@ -441,13 +448,13 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           modelica_metatype tmpMeta34;
           modelica_integer tmp35;
           modelica_metatype tmpMeta36;
-          tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta29 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta29)) goto tmp3_end;
-          tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta29), 1));
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 2));
-          tmp32 = mmc_unbox_integer(tmpMeta31);
-          tmpMeta33 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta30 = OMC_BOX_FIELD(tmpMeta29, 1);
+          tmpMeta31 = OMC_BOX_FIELD(tmpMeta30, 2);
+          tmp32 = omc_unbox_integer(tmpMeta31);
+          tmpMeta33 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta34 = OMC_BOX_FIELD(tmp4_1, 4);
           if (!optionNone(tmpMeta34)) goto tmp3_end;
           _optVal = tmpMeta29;
           _rkey = tmp32  /* pattern as ty=Integer */;
@@ -458,7 +465,7 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           if (1 != tmp35) goto goto_2;
 
           _right_1 = omc_BinaryTreeInt_treeAdd(threadData, _OMC_LIT1, _inKey, _inValue);
-          tmpMeta36 = mmc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, _optVal, _left, mmc_mk_some(_right_1));
+          tmpMeta36 = omc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, _optVal, _left, mmc_mk_some(_right_1));
           tmpMeta1 = tmpMeta36;
           goto tmp3_done;
         }
@@ -472,15 +479,15 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           modelica_metatype tmpMeta43;
           modelica_integer tmp44;
           modelica_metatype tmpMeta45;
-          tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta37 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta37)) goto tmp3_end;
-          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta37), 1));
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta38), 2));
-          tmp40 = mmc_unbox_integer(tmpMeta39);
-          tmpMeta41 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta38 = OMC_BOX_FIELD(tmpMeta37, 1);
+          tmpMeta39 = OMC_BOX_FIELD(tmpMeta38, 2);
+          tmp40 = omc_unbox_integer(tmpMeta39);
+          tmpMeta41 = OMC_BOX_FIELD(tmp4_1, 3);
           if (optionNone(tmpMeta41)) goto tmp3_end;
-          tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta41), 1));
-          tmpMeta43 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta42 = OMC_BOX_FIELD(tmpMeta41, 1);
+          tmpMeta43 = OMC_BOX_FIELD(tmp4_1, 4);
           _optVal = tmpMeta37;
           _rkey = tmp40  /* pattern as ty=Integer */;
           _t = tmpMeta42;
@@ -491,7 +498,7 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           if (-1 != tmp44) goto goto_2;
 
           _t_1 = omc_BinaryTreeInt_treeAdd(threadData, _t, _inKey, _inValue);
-          tmpMeta45 = mmc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, _optVal, mmc_mk_some(_t_1), _right);
+          tmpMeta45 = omc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, _optVal, mmc_mk_some(_t_1), _right);
           tmpMeta1 = tmpMeta45;
           goto tmp3_done;
         }
@@ -504,14 +511,14 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           modelica_metatype tmpMeta51;
           modelica_integer tmp52;
           modelica_metatype tmpMeta53;
-          tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta46 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta46)) goto tmp3_end;
-          tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta46), 1));
-          tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta47), 2));
-          tmp49 = mmc_unbox_integer(tmpMeta48);
-          tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta47 = OMC_BOX_FIELD(tmpMeta46, 1);
+          tmpMeta48 = OMC_BOX_FIELD(tmpMeta47, 2);
+          tmp49 = omc_unbox_integer(tmpMeta48);
+          tmpMeta50 = OMC_BOX_FIELD(tmp4_1, 3);
           if (!optionNone(tmpMeta50)) goto tmp3_end;
-          tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta51 = OMC_BOX_FIELD(tmp4_1, 4);
           _optVal = tmpMeta46;
           _rkey = tmp49  /* pattern as ty=Integer */;
           _right = tmpMeta51;
@@ -521,7 +528,7 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
           if (-1 != tmp52) goto goto_2;
 
           _left_1 = omc_BinaryTreeInt_treeAdd(threadData, _OMC_LIT1, _inKey, _inValue);
-          tmpMeta53 = mmc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, _optVal, mmc_mk_some(_left_1), _right);
+          tmpMeta53 = omc_mk_box4(3, &BinaryTreeInt_BinTree_TREENODE__desc, _optVal, mmc_mk_some(_left_1), _right);
           tmpMeta1 = tmpMeta53;
           goto tmp3_done;
         }
@@ -539,39 +546,41 @@ modelica_metatype omc_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_m
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 7) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _outBinTree = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outBinTree;
+  omc_ret_ = _outBinTree;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BinaryTreeInt_treeAdd(threadData_t *threadData, modelica_metatype _inBinTree, modelica_metatype _inKey, modelica_metatype _inValue)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outBinTree = NULL;
-  tmp1 = mmc_unbox_integer(_inKey);
-  tmp2 = mmc_unbox_integer(_inValue);
+  tmp1 = omc_unbox_integer(_inKey);
+  tmp2 = omc_unbox_integer(_inValue);
   _outBinTree = omc_BinaryTreeInt_treeAdd(threadData, _inBinTree, tmp1, tmp2);
   /* skip box _outBinTree; BinaryTreeInt.BinTree */
   return _outBinTree;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BinaryTreeInt_treeAddList(threadData_t *threadData, modelica_metatype _inBinTree, modelica_metatype _inKeyLst)
 {
   modelica_metatype _outBinTree = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outBinTree has no default value.
   { /* match expression */
@@ -607,7 +616,7 @@ modelica_metatype omc_BinaryTreeInt_treeAddList(threadData_t *threadData, modeli
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_2);
           tmpMeta7 = MMC_CDR(tmp4_2);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           
           _key = tmp8  /* pattern as ty=Integer */;
           _res = tmpMeta7;
@@ -627,24 +636,23 @@ modelica_metatype omc_BinaryTreeInt_treeAddList(threadData_t *threadData, modeli
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outBinTree = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outBinTree;
+  omc_ret_ = _outBinTree;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet3(threadData_t *threadData, modelica_metatype _inBinTree, modelica_integer _ikey, modelica_integer _inCompResult)
 {
   modelica_integer _outValue;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outValue has no default value.
   { /* match expression */
@@ -669,11 +677,11 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet3(threadData
           modelica_metatype tmpMeta7;
           modelica_integer tmp8;
           if (0 != tmp4_2) goto tmp3_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta5 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta5)) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 3));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
+          tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 3);
+          tmp8 = omc_unbox_integer(tmpMeta7);
           
           _rval = tmp8  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -684,9 +692,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet3(threadData
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
           if (1 != tmp4_2) goto tmp3_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_1, 4);
           if (optionNone(tmpMeta9)) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 1));
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 1);
           _right = tmpMeta10;
           /* Pattern matching succeeded */
           _compResult = omc_BinaryTreeInt_treeGet2(threadData, _right, _ikey);
@@ -701,9 +709,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet3(threadData
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
           if (-1 != tmp4_2) goto tmp3_end;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_1, 3);
           if (optionNone(tmpMeta11)) goto tmp3_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 1));
+          tmpMeta12 = OMC_BOX_FIELD(tmpMeta11, 1);
           
           _left = tmpMeta12;
           /* Pattern matching succeeded */
@@ -721,17 +729,15 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet3(threadData
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outValue = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _outValue;
+  omc_ret_ = _outValue;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BinaryTreeInt_treeGet3(threadData_t *threadData, modelica_metatype _inBinTree, modelica_metatype _ikey, modelica_metatype _inCompResult)
 {
@@ -739,10 +745,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BinaryTreeInt_treeGet3(thread
   modelica_integer tmp2;
   modelica_integer _outValue;
   modelica_metatype out_outValue;
-  tmp1 = mmc_unbox_integer(_ikey);
-  tmp2 = mmc_unbox_integer(_inCompResult);
+  tmp1 = omc_unbox_integer(_ikey);
+  tmp2 = omc_unbox_integer(_inCompResult);
   _outValue = omc_BinaryTreeInt_treeGet3(threadData, _inBinTree, tmp1, tmp2);
-  out_outValue = mmc_mk_icon(_outValue);
+  out_outValue = omc_mk_icon(_outValue);
   return out_outValue;
 }
 
@@ -750,10 +756,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet2(threadData
 {
   modelica_integer _compResult;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compResult has no default value.
   { /* match expression */
@@ -772,11 +776,11 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet2(threadData
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           modelica_integer tmp9;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta6)) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
           
           _key = tmp9  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -789,72 +793,62 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_treeGet2(threadData
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _compResult = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _compResult;
+  omc_ret_ = _compResult;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BinaryTreeInt_treeGet2(threadData_t *threadData, modelica_metatype _inBinTree, modelica_metatype _ikey)
 {
   modelica_integer tmp1;
   modelica_integer _compResult;
   modelica_metatype out_compResult;
-  tmp1 = mmc_unbox_integer(_ikey);
+  tmp1 = omc_unbox_integer(_ikey);
   _compResult = omc_BinaryTreeInt_treeGet2(threadData, _inBinTree, tmp1);
-  out_compResult = mmc_mk_icon(_compResult);
+  out_compResult = omc_mk_icon(_compResult);
   return out_compResult;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_BinaryTreeInt_treeGet(threadData_t *threadData, modelica_metatype _bt, modelica_integer _key)
 {
   modelica_integer _v;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
   _v = omc_BinaryTreeInt_treeGet3(threadData, _bt, _key, omc_BinaryTreeInt_treeGet2(threadData, _bt, _key));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _v;
+  omc_ret_ = _v;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BinaryTreeInt_treeGet(threadData_t *threadData, modelica_metatype _bt, modelica_metatype _key)
 {
   modelica_integer tmp1;
   modelica_integer _v;
   modelica_metatype out_v;
-  tmp1 = mmc_unbox_integer(_key);
+  tmp1 = omc_unbox_integer(_key);
   _v = omc_BinaryTreeInt_treeGet(threadData, _bt, tmp1);
-  out_v = mmc_mk_icon(_v);
+  out_v = omc_mk_icon(_v);
   return out_v;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_BinaryTreeInt_keyCmp(threadData_t *threadData, modelica_integer _keya, modelica_integer _keyb)
 {
   modelica_integer _cmp;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _cmp has no default value.
   _cmp = omc_Util_intSign(threadData, _keya - _keyb);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _cmp;
+  omc_ret_ = _cmp;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BinaryTreeInt_keyCmp(threadData_t *threadData, modelica_metatype _keya, modelica_metatype _keyb)
 {
@@ -862,10 +856,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BinaryTreeInt_keyCmp(threadDa
   modelica_integer tmp2;
   modelica_integer _cmp;
   modelica_metatype out_cmp;
-  tmp1 = mmc_unbox_integer(_keya);
-  tmp2 = mmc_unbox_integer(_keyb);
+  tmp1 = omc_unbox_integer(_keya);
+  tmp2 = omc_unbox_integer(_keyb);
   _cmp = omc_BinaryTreeInt_keyCmp(threadData, tmp1, tmp2);
-  out_cmp = mmc_mk_icon(_cmp);
+  out_cmp = omc_mk_icon(_cmp);
   return out_cmp;
 }
 

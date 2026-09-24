@@ -35,7 +35,7 @@ extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_fmuMakefile(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_target, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_string _a_FMUVersion, modelica_string _a_additionalLinkerFlags__GCC, modelica_string _a_additionalLinkerFlags__MSVC, modelica_string _a_additionalCFlags__GCC, modelica_string _a_additionalCFlags__MSVC, modelica_string _a_extraAnnotations, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace);
 #define boxptr_CodegenFMUCpp_fmuMakefile omc_CodegenFMUCpp_fmuMakefile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmuMakefile,2,0) {(void*) boxptr_CodegenFMUCpp_fmuMakefile,0}};
@@ -90,7 +90,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmuMakefile,2,0) {(void*)
 #define boxptr_CodegenFMUCpp_fun__142 omc_CodegenFMUCpp_fun__142
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_directionalDerivativeFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenFMUCpp_directionalDerivativeFunction omc_CodegenFMUCpp_directionalDerivativeFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_directionalDerivativeFunction,2,0) {(void*) boxptr_CodegenFMUCpp_directionalDerivativeFunction,0}};
@@ -103,7 +103,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_directionalDerivativeFunc
 #define boxptr_CodegenFMUCpp_fun__138 omc_CodegenFMUCpp_fun__138
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_getCppSign(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_simVar);
 #define boxptr_CodegenFMUCpp_getCppSign omc_CodegenFMUCpp_getCppSign
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_getCppSign,2,0) {(void*) boxptr_CodegenFMUCpp_getCppSign,0}};
@@ -119,7 +119,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_getCppSign,2,0) {(void*) 
 #define boxptr_CodegenFMUCpp_fun__134 omc_CodegenFMUCpp_fun__134
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_getCppName(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_simVar);
 #define boxptr_CodegenFMUCpp_getCppName omc_CodegenFMUCpp_getCppName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_getCppName,2,0) {(void*) boxptr_CodegenFMUCpp_getCppName,0}};
@@ -132,9 +132,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_getCppName,2,0) {(void*) 
 #define boxptr_CodegenFMUCpp_fun__131 omc_CodegenFMUCpp_fun__131
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_accessVar(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_string _a_direction, modelica_metatype _a_simVar, modelica_integer _a_offset);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenFMUCpp_accessVar(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_direction, modelica_metatype _a_simVar, modelica_metatype _a_offset);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_accessVar,2,0) {(void*) boxptr_CodegenFMUCpp_accessVar,0}};
 #define boxvar_CodegenFMUCpp_accessVar MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_accessVar)
@@ -143,15 +143,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_accessVar,2,0) {(void*) b
 #define boxptr_CodegenFMUCpp_fun__127 omc_CodegenFMUCpp_fun__127
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_accessVarsFunction(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_string _a_direction, modelica_string _a_modelShortName, modelica_string _a_typeName, modelica_string _a_pointerName, modelica_string _a_typeImpl, modelica_integer _a_offset, modelica_metatype _a_aliasVars);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenFMUCpp_accessVarsFunction(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_direction, modelica_metatype _a_modelShortName, modelica_metatype _a_typeName, modelica_metatype _a_pointerName, modelica_metatype _a_typeImpl, modelica_metatype _a_offset, modelica_metatype _a_aliasVars);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_accessVarsFunction,2,0) {(void*) boxptr_CodegenFMUCpp_accessVarsFunction,0}};
 #define boxvar_CodegenFMUCpp_accessVarsFunction MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_accessVarsFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_accessFunctions(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_string _a_direction, modelica_string _a_modelShortName, modelica_metatype _a_modelInfo);
 #define boxptr_CodegenFMUCpp_accessFunctions omc_CodegenFMUCpp_accessFunctions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_accessFunctions,2,0) {(void*) boxptr_CodegenFMUCpp_accessFunctions,0}};
@@ -161,14 +161,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_accessFunctions,2,0) {(vo
 #define boxptr_CodegenFMUCpp_fun__120 omc_CodegenFMUCpp_fun__120
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_setExternalFunctionSwitch(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn);
 #define boxptr_CodegenFMUCpp_setExternalFunctionSwitch omc_CodegenFMUCpp_setExternalFunctionSwitch
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_setExternalFunctionSwitch,2,0) {(void*) boxptr_CodegenFMUCpp_setExternalFunctionSwitch,0}};
 #define boxvar_CodegenFMUCpp_setExternalFunctionSwitch MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_setExternalFunctionSwitch)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_setExternalFunctionsSwitch(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_functions);
 #define boxptr_CodegenFMUCpp_setExternalFunctionsSwitch omc_CodegenFMUCpp_setExternalFunctionsSwitch
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_setExternalFunctionsSwitch,2,0) {(void*) boxptr_CodegenFMUCpp_setExternalFunctionsSwitch,0}};
@@ -178,21 +178,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_setExternalFunctionsSwitc
 #define boxptr_CodegenFMUCpp_lm__117 omc_CodegenFMUCpp_lm__117
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_setExternalFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_modelInfo);
 #define boxptr_CodegenFMUCpp_setExternalFunction omc_CodegenFMUCpp_setExternalFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_setExternalFunction,2,0) {(void*) boxptr_CodegenFMUCpp_setExternalFunction,0}};
 #define boxvar_CodegenFMUCpp_setExternalFunction MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_setExternalFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_initVal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_initialValue);
 #define boxptr_CodegenFMUCpp_initVal omc_CodegenFMUCpp_initVal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initVal,2,0) {(void*) boxptr_CodegenFMUCpp_initVal,0}};
 #define boxvar_CodegenFMUCpp_initVal MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initVal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_initParamsDefault(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_string _in_a_arrayName);
 #define boxptr_CodegenFMUCpp_initParamsDefault omc_CodegenFMUCpp_initParamsDefault
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initParamsDefault,2,0) {(void*) boxptr_CodegenFMUCpp_initParamsDefault,0}};
@@ -202,9 +202,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initParamsDefault,2,0) {(
 #define boxptr_CodegenFMUCpp_fun__112 omc_CodegenFMUCpp_fun__112
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_initValsDefault(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_string _in_a_arrayName, modelica_integer _in_a_offset);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenFMUCpp_initValsDefault(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_metatype _in_a_arrayName, modelica_metatype _in_a_offset);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initValsDefault,2,0) {(void*) boxptr_CodegenFMUCpp_initValsDefault,0}};
 #define boxvar_CodegenFMUCpp_initValsDefault MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initValsDefault)
@@ -216,22 +216,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initValsDefault,2,0) {(vo
 #define boxptr_CodegenFMUCpp_fun__109 omc_CodegenFMUCpp_fun__109
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_initParams(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_string _in_a_arrayName);
 #define boxptr_CodegenFMUCpp_initParams omc_CodegenFMUCpp_initParams
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initParams,2,0) {(void*) boxptr_CodegenFMUCpp_initParams,0}};
 #define boxvar_CodegenFMUCpp_initParams MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initParams)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_initVals(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_string _in_a_arrayName, modelica_integer _in_a_offset);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenFMUCpp_initVals(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_metatype _in_a_arrayName, modelica_metatype _in_a_offset);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initVals,2,0) {(void*) boxptr_CodegenFMUCpp_initVals,0}};
 #define boxvar_CodegenFMUCpp_initVals MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_initVals)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_setStartValues(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_modelInfo);
 #define boxptr_CodegenFMUCpp_setStartValues omc_CodegenFMUCpp_setStartValues
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_setStartValues,2,0) {(void*) boxptr_CodegenFMUCpp_setStartValues,0}};
@@ -262,7 +262,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_setStartValues,2,0) {(voi
 #define boxptr_CodegenFMUCpp_lm__93 omc_CodegenFMUCpp_lm__93
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_setDefaultStartValues(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_modelInfo);
 #define boxptr_CodegenFMUCpp_setDefaultStartValues omc_CodegenFMUCpp_setDefaultStartValues
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_setDefaultStartValues,2,0) {(void*) boxptr_CodegenFMUCpp_setDefaultStartValues,0}};
@@ -293,16 +293,16 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_setDefaultStartValues,2,0
 #define boxptr_CodegenFMUCpp_lm__81 omc_CodegenFMUCpp_lm__81
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_defineExternalFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn);
 #define boxptr_CodegenFMUCpp_defineExternalFunction omc_CodegenFMUCpp_defineExternalFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_defineExternalFunction,2,0) {(void*) boxptr_CodegenFMUCpp_defineExternalFunction,0}};
 #define boxvar_CodegenFMUCpp_defineExternalFunction MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_defineExternalFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_DefineVariables(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenFMUCpp_DefineVariables(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_DefineVariables,2,0) {(void*) boxptr_CodegenFMUCpp_DefineVariables,0}};
 #define boxvar_CodegenFMUCpp_DefineVariables MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_DefineVariables)
@@ -311,7 +311,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_DefineVariables,2,0) {(vo
 #define boxptr_CodegenFMUCpp_fun__76 omc_CodegenFMUCpp_fun__76
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_ModelDefineData(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_modelInfo);
 #define boxptr_CodegenFMUCpp_ModelDefineData omc_CodegenFMUCpp_ModelDefineData
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_ModelDefineData,2,0) {(void*) boxptr_CodegenFMUCpp_ModelDefineData,0}};
@@ -321,14 +321,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_ModelDefineData,2,0) {(vo
 #define boxptr_CodegenFMUCpp_lm__74 omc_CodegenFMUCpp_lm__74
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_fmi3CppOffsetDefines(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenFMUCpp_fmi3CppOffsetDefines omc_CodegenFMUCpp_fmi3CppOffsetDefines
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmi3CppOffsetDefines,2,0) {(void*) boxptr_CodegenFMUCpp_fmi3CppOffsetDefines,0}};
 #define boxvar_CodegenFMUCpp_fmi3CppOffsetDefines MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmi3CppOffsetDefines)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_fmuModelCppFile(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_string _in_a_guid, modelica_string _in_a_FMUVersion, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace);
 #define boxptr_CodegenFMUCpp_fmuModelCppFile omc_CodegenFMUCpp_fmuModelCppFile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmuModelCppFile,2,0) {(void*) boxptr_CodegenFMUCpp_fmuModelCppFile,0}};
@@ -353,7 +353,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmuModelCppFile,2,0) {(vo
 #define boxptr_CodegenFMUCpp_lm__62 omc_CodegenFMUCpp_lm__62
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_fmuModelHeaderFile(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_string _a_guid, modelica_string _a_FMUVersion, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace);
 #define boxptr_CodegenFMUCpp_fmuModelHeaderFile omc_CodegenFMUCpp_fmuModelHeaderFile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmuModelHeaderFile,2,0) {(void*) boxptr_CodegenFMUCpp_fmuModelHeaderFile,0}};
@@ -363,7 +363,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmuModelHeaderFile,2,0) {
 #define boxptr_CodegenFMUCpp_fun__60 omc_CodegenFMUCpp_fun__60
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_fmuWriteOutputHeaderFile(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace);
 #define boxptr_CodegenFMUCpp_fmuWriteOutputHeaderFile omc_CodegenFMUCpp_fmuWriteOutputHeaderFile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmuWriteOutputHeaderFile,2,0) {(void*) boxptr_CodegenFMUCpp_fmuWriteOutputHeaderFile,0}};
@@ -373,14 +373,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmuWriteOutputHeaderFile,
 #define boxptr_CodegenFMUCpp_fun__58 omc_CodegenFMUCpp_fun__58
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_fmuCalcHelperMainfile(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenFMUCpp_fmuCalcHelperMainfile omc_CodegenFMUCpp_fmuCalcHelperMainfile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmuCalcHelperMainfile,2,0) {(void*) boxptr_CodegenFMUCpp_fmuCalcHelperMainfile,0}};
 #define boxvar_CodegenFMUCpp_fmuCalcHelperMainfile MMC_REFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_fmuCalcHelperMainfile)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenFMUCpp_translateModel(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode, modelica_string _in_a_FMUVersion, modelica_string _in_a_FMUType, modelica_metatype _in_a_sourceFiles);
 #define boxptr_CodegenFMUCpp_translateModel omc_CodegenFMUCpp_translateModel
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenFMUCpp_translateModel,2,0) {(void*) boxptr_CodegenFMUCpp_translateModel,0}};

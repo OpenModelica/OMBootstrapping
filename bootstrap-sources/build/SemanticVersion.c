@@ -44,10 +44,8 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SemanticVersion_splitPrereleaseAndMeta,
 PROTECTED_FUNCTION_STATIC modelica_integer omc_SemanticVersion_compareIdentifier(threadData_t *threadData, modelica_string _s1, modelica_string _s2)
 {
   modelica_integer _c;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _c has no default value.
   if(omc_Util_isIntegerString(threadData, _s1))
@@ -64,17 +62,15 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SemanticVersion_compareIdentifier
 
   _c = stringCompare(_s1, _s2);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _c;
+  omc_ret_ = _c;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SemanticVersion_compareIdentifier(threadData_t *threadData, modelica_metatype _s1, modelica_metatype _s2)
 {
   modelica_integer _c;
   modelica_metatype out_c;
   _c = omc_SemanticVersion_compareIdentifier(threadData, _s1, _s2);
-  out_c = mmc_mk_icon(_c);
+  out_c = omc_mk_icon(_c);
   return out_c;
 }
 
@@ -86,11 +82,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SemanticVersion_compareIdentifier
   modelica_string _s1 = NULL;
   modelica_string _s2 = NULL;
   modelica_integer tmp1_c0 __attribute__((unused)) = 0;
+  modelica_integer omc_ret_;
   modelica_metatype tmpMeta[3] __attribute__((unused)) = {0};
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _c has no default value.
   // _l1 has no default value.
@@ -180,7 +174,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SemanticVersion_compareIdentifier
         }
         goto goto_2;
         goto_2:;
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
         goto tmp3_done;
         tmp3_done:;
       }
@@ -197,17 +191,15 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SemanticVersion_compareIdentifier
 
   _c = ((modelica_integer) 0);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _c;
+  omc_ret_ = _c;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SemanticVersion_compareIdentifierList(threadData_t *threadData, modelica_metatype _w1, modelica_metatype _w2)
 {
   modelica_integer _c;
   modelica_metatype out_c;
   _c = omc_SemanticVersion_compareIdentifierList(threadData, _w1, _w2);
-  out_c = mmc_mk_icon(_c);
+  out_c = omc_mk_icon(_c);
   return out_c;
 }
 
@@ -232,7 +224,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SemanticVersion_splitPrereleaseA
   modelica_metatype tmpMeta12;
   modelica_boolean tmp13;
   modelica_metatype tmpMeta14;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _prereleaseLst has no default value.
   // _metaLst has no default value.
@@ -271,17 +264,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SemanticVersion_splitPrereleaseA
 
   /* Pattern-matching assignment */
   tmpMeta6 = _split;
-  if (listEmpty(tmpMeta6)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta6)) OMC_THROW_INTERNAL();
   tmpMeta7 = MMC_CAR(tmpMeta6);
   tmpMeta8 = MMC_CDR(tmpMeta6);
   _prerelease = tmpMeta7;
   _split = tmpMeta8;
 
-  _meta = (listEmpty(_split)?_OMC_LIT2:listGet(_split, ((modelica_integer) 1)));
+  omc_string_store(&(_meta), (listEmpty(_split)?_OMC_LIT2:listGet(_split, ((modelica_integer) 1))));
 
   if((stringEqual(stringGetStringChar(_prerelease, ((modelica_integer) 1)), _OMC_LIT3)))
   {
-    _prerelease = omc_StringUtil_rest(threadData, _prerelease);
+    omc_string_store(&(_prerelease), omc_StringUtil_rest(threadData, _prerelease));
   }
 
   tmp10 = (modelica_boolean)(stringLength(_prerelease) > ((modelica_integer) 0));
@@ -309,18 +302,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SemanticVersion_splitPrereleaseA
   _metaLst = tmpMeta14;
   _return: OMC_LABEL_UNUSED
   if (out_metaLst) { *out_metaLst = _metaLst; }
-  return _prereleaseLst;
+  omc_ret_ = _prereleaseLst;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SemanticVersion_isSemVer(threadData_t *threadData, modelica_metatype _v)
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   { /* match expression */
@@ -351,36 +343,32 @@ modelica_boolean omc_SemanticVersion_isSemVer(threadData_t *threadData, modelica
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _b;
+  omc_ret_ = _b;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SemanticVersion_isSemVer(threadData_t *threadData, modelica_metatype _v)
 {
   modelica_boolean _b;
   modelica_metatype out_b;
   _b = omc_SemanticVersion_isSemVer(threadData, _v);
-  out_b = mmc_mk_icon(_b);
+  out_b = omc_mk_icon(_b);
   return out_b;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SemanticVersion_hasMetaInformation(threadData_t *threadData, modelica_metatype _v)
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   { /* match expression */
@@ -395,7 +383,7 @@ modelica_boolean omc_SemanticVersion_hasMetaInformation(threadData_t *threadData
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 6);
           if (!listEmpty(tmpMeta6)) goto tmp3_end;
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
@@ -420,36 +408,32 @@ modelica_boolean omc_SemanticVersion_hasMetaInformation(threadData_t *threadData
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _b;
+  omc_ret_ = _b;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SemanticVersion_hasMetaInformation(threadData_t *threadData, modelica_metatype _v)
 {
   modelica_boolean _b;
   modelica_metatype out_b;
   _b = omc_SemanticVersion_hasMetaInformation(threadData, _v);
-  out_b = mmc_mk_icon(_b);
+  out_b = omc_mk_icon(_b);
   return out_b;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SemanticVersion_isPrerelease(threadData_t *threadData, modelica_metatype _v)
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   { /* match expression */
@@ -466,7 +450,7 @@ modelica_boolean omc_SemanticVersion_isPrerelease(threadData_t *threadData, mode
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 5);
           if (listEmpty(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_CAR(tmpMeta6);
           tmpMeta8 = MMC_CDR(tmpMeta6);
@@ -487,33 +471,32 @@ modelica_boolean omc_SemanticVersion_isPrerelease(threadData_t *threadData, mode
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _b;
+  omc_ret_ = _b;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SemanticVersion_isPrerelease(threadData_t *threadData, modelica_metatype _v)
 {
   modelica_boolean _b;
   modelica_metatype out_b;
   _b = omc_SemanticVersion_isPrerelease(threadData, _v);
-  out_b = mmc_mk_icon(_b);
+  out_b = omc_mk_icon(_b);
   return out_b;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SemanticVersion_toString(threadData_t *threadData, modelica_metatype _v)
 {
   modelica_string _out = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out has no default value.
   { /* match expression */
@@ -527,40 +510,40 @@ modelica_string omc_SemanticVersion_toString(threadData_t *threadData, modelica_
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_string tmp6;
-          modelica_metatype tmpMeta7;
+          modelica_string tmp7;
           modelica_string tmp8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
+          modelica_string tmp9;
+          modelica_string tmp10;
           modelica_string tmp11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
+          modelica_string tmp12;
+          modelica_string tmp13;
+          modelica_string tmp14;
+          modelica_string tmp15;
+          modelica_string tmp16;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmp6 = modelica_integer_to_modelica_string(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 2)))), ((modelica_integer) 0), 1 /* true */);
-          tmpMeta7 = stringAppend(tmp6,_OMC_LIT0);
-          tmp8 = modelica_integer_to_modelica_string(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 3)))), ((modelica_integer) 0), 1 /* true */);
-          tmpMeta9 = stringAppend(tmpMeta7,tmp8);
-          tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT0);
-          tmp11 = modelica_integer_to_modelica_string(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 4)))), ((modelica_integer) 0), 1 /* true */);
-          tmpMeta12 = stringAppend(tmpMeta10,tmp11);
-          _out = tmpMeta12;
+          tmp6 = modelica_integer_to_modelica_string(omc_unbox_integer((OMC_BOX_FIELD(_v, 2))), ((modelica_integer) 0), 1 /* true */);
+          tmp7 = stringAppend(tmp6,_OMC_LIT0);
+          tmp8 = modelica_integer_to_modelica_string(omc_unbox_integer((OMC_BOX_FIELD(_v, 3))), ((modelica_integer) 0), 1 /* true */);
+          tmp9 = stringAppend(tmp7,tmp8);
+          tmp10 = stringAppend(tmp9,_OMC_LIT0);
+          tmp11 = modelica_integer_to_modelica_string(omc_unbox_integer((OMC_BOX_FIELD(_v, 4))), ((modelica_integer) 0), 1 /* true */);
+          tmp12 = stringAppend(tmp10,tmp11);
+          omc_string_store(&(_out), tmp12);
 
-          if((!listEmpty((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 5))))))
+          if((!listEmpty((OMC_BOX_FIELD(_v, 5)))))
           {
-            tmpMeta13 = stringAppend(_out,_OMC_LIT3);
-            tmpMeta14 = stringAppend(tmpMeta13,stringDelimitList((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 5))), _OMC_LIT0));
-            _out = tmpMeta14;
+            tmp13 = stringAppend(_out,_OMC_LIT3);
+            tmp14 = stringAppend(tmp13,stringDelimitList((OMC_BOX_FIELD(_v, 5)), _OMC_LIT0));
+            omc_string_store(&(_out), tmp14);
           }
 
-          if((!listEmpty((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 6))))))
+          if((!listEmpty((OMC_BOX_FIELD(_v, 6)))))
           {
-            tmpMeta15 = stringAppend(_out,_OMC_LIT1);
-            tmpMeta16 = stringAppend(tmpMeta15,stringDelimitList((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 6))), _OMC_LIT0));
-            _out = tmpMeta16;
+            tmp15 = stringAppend(_out,_OMC_LIT1);
+            tmp16 = stringAppend(tmp15,stringDelimitList((OMC_BOX_FIELD(_v, 6)), _OMC_LIT0));
+            omc_string_store(&(_out), tmp16);
           }
           tmp1 = _out;
           goto tmp3_done;
@@ -569,7 +552,7 @@ modelica_string omc_SemanticVersion_toString(threadData_t *threadData, modelica_
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 2)));
+          tmp1 = (OMC_BOX_FIELD(_v, 2));
           goto tmp3_done;
         }
         }
@@ -578,25 +561,24 @@ modelica_string omc_SemanticVersion_toString(threadData_t *threadData, modelica_
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _out = tmp1;
+  omc_string_store(&(_out), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _out;
+  omc_ret_ = _out;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SemanticVersion_compare(threadData_t *threadData, modelica_metatype _v1, modelica_metatype _v2, modelica_boolean _comparePrerelease, modelica_boolean _compareBuildInformation)
 {
   modelica_integer _c;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _c has no default value.
   { /* match expression */
@@ -614,7 +596,7 @@ modelica_integer omc_SemanticVersion_compare(threadData_t *threadData, modelica_
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmp1 = stringCompare((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v1), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v2), 2))));
+          tmp1 = stringCompare((OMC_BOX_FIELD(_v1, 2)), (OMC_BOX_FIELD(_v2, 2)));
           goto tmp3_done;
         }
         case 1: {
@@ -636,27 +618,27 @@ modelica_integer omc_SemanticVersion_compare(threadData_t *threadData, modelica_
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,5) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          if(((((mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v1), 2)))) == ((modelica_integer) 0)) && (mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v1), 3)))) == ((modelica_integer) 0))) && (mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v1), 4)))) == ((modelica_integer) 0))) || (((mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v2), 2)))) == ((modelica_integer) 0)) && (mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v2), 3)))) == ((modelica_integer) 0))) && (mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v2), 4)))) == ((modelica_integer) 0)))))
+          if(((((omc_unbox_integer((OMC_BOX_FIELD(_v1, 2))) == ((modelica_integer) 0)) && (omc_unbox_integer((OMC_BOX_FIELD(_v1, 3))) == ((modelica_integer) 0))) && (omc_unbox_integer((OMC_BOX_FIELD(_v1, 4))) == ((modelica_integer) 0))) || (((omc_unbox_integer((OMC_BOX_FIELD(_v2, 2))) == ((modelica_integer) 0)) && (omc_unbox_integer((OMC_BOX_FIELD(_v2, 3))) == ((modelica_integer) 0))) && (omc_unbox_integer((OMC_BOX_FIELD(_v2, 4))) == ((modelica_integer) 0)))))
           {
             _c = ((modelica_integer) 0);
           }
           else
           {
-            _c = omc_Util_intCompare(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v1), 2)))), mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v2), 2)))));
+            _c = omc_Util_intCompare(threadData, omc_unbox_integer((OMC_BOX_FIELD(_v1, 2))), omc_unbox_integer((OMC_BOX_FIELD(_v2, 2))));
 
             if((_c != ((modelica_integer) 0)))
             {
               goto _return;
             }
 
-            _c = omc_Util_intCompare(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v1), 3)))), mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v2), 3)))));
+            _c = omc_Util_intCompare(threadData, omc_unbox_integer((OMC_BOX_FIELD(_v1, 3))), omc_unbox_integer((OMC_BOX_FIELD(_v2, 3))));
 
             if((_c != ((modelica_integer) 0)))
             {
               goto _return;
             }
 
-            _c = omc_Util_intCompare(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v1), 4)))), mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v2), 4)))));
+            _c = omc_Util_intCompare(threadData, omc_unbox_integer((OMC_BOX_FIELD(_v1, 4))), omc_unbox_integer((OMC_BOX_FIELD(_v2, 4))));
 
             if((_c != ((modelica_integer) 0)))
             {
@@ -666,12 +648,12 @@ modelica_integer omc_SemanticVersion_compare(threadData_t *threadData, modelica_
 
           if(_comparePrerelease)
           {
-            _c = omc_SemanticVersion_compareIdentifierList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v1), 5))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v2), 5))));
+            _c = omc_SemanticVersion_compareIdentifierList(threadData, (OMC_BOX_FIELD(_v1, 5)), (OMC_BOX_FIELD(_v2, 5)));
           }
 
           if(((_c == ((modelica_integer) 0)) && _compareBuildInformation))
           {
-            _c = omc_SemanticVersion_compareIdentifierList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v1), 6))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v2), 6))));
+            _c = omc_SemanticVersion_compareIdentifierList(threadData, (OMC_BOX_FIELD(_v1, 6)), (OMC_BOX_FIELD(_v2, 6)));
           }
           tmp1 = _c;
           goto tmp3_done;
@@ -682,17 +664,15 @@ modelica_integer omc_SemanticVersion_compare(threadData_t *threadData, modelica_
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _c = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _c;
+  omc_ret_ = _c;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SemanticVersion_compare(threadData_t *threadData, modelica_metatype _v1, modelica_metatype _v2, modelica_metatype _comparePrerelease, modelica_metatype _compareBuildInformation)
 {
@@ -700,14 +680,14 @@ modelica_metatype boxptr_SemanticVersion_compare(threadData_t *threadData, model
   modelica_integer tmp2;
   modelica_integer _c;
   modelica_metatype out_c;
-  tmp1 = mmc_unbox_integer(_comparePrerelease);
-  tmp2 = mmc_unbox_integer(_compareBuildInformation);
+  tmp1 = omc_unbox_integer(_comparePrerelease);
+  tmp2 = omc_unbox_integer(_compareBuildInformation);
   _c = omc_SemanticVersion_compare(threadData, _v1, _v2, tmp1, tmp2);
-  out_c = mmc_mk_icon(_c);
+  out_c = omc_mk_icon(_c);
   return out_c;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SemanticVersion_parse(threadData_t *threadData, modelica_string _s, modelica_boolean _nonsemverAsZeroZeroZero)
 {
   modelica_metatype _v = NULL;
@@ -739,7 +719,8 @@ modelica_metatype omc_SemanticVersion_parse(threadData_t *threadData, modelica_s
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
   // _n has no default value.
@@ -768,12 +749,12 @@ modelica_metatype omc_SemanticVersion_parse(threadData_t *threadData, modelica_s
     {
       _prereleaseLst = omc_SemanticVersion_splitPrereleaseAndMeta(threadData, _s ,&_metaLst);
 
-      tmpMeta1 = mmc_mk_box6(3, &SemanticVersion_Version_SEMVER__desc, mmc_mk_integer(((modelica_integer) 0)), mmc_mk_integer(((modelica_integer) 0)), mmc_mk_integer(((modelica_integer) 0)), _prereleaseLst, _metaLst);
+      tmpMeta1 = omc_mk_box6(3, &SemanticVersion_Version_SEMVER__desc, omc_mk_integer(((modelica_integer) 0)), omc_mk_integer(((modelica_integer) 0)), omc_mk_integer(((modelica_integer) 0)), _prereleaseLst, _metaLst);
       _v = tmpMeta1;
     }
     else
     {
-      tmpMeta2 = mmc_mk_box2(4, &SemanticVersion_Version_NONSEMVER__desc, _s);
+      tmpMeta2 = omc_mk_box2(4, &SemanticVersion_Version_NONSEMVER__desc, _s);
       _v = tmpMeta2;
     }
 
@@ -782,10 +763,10 @@ modelica_metatype omc_SemanticVersion_parse(threadData_t *threadData, modelica_s
 
   /* Pattern-matching assignment */
   tmpMeta3 = _matches;
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
   _versions = tmpMeta6;
@@ -795,7 +776,7 @@ modelica_metatype omc_SemanticVersion_parse(threadData_t *threadData, modelica_s
 
   /* Pattern-matching assignment */
   tmpMeta8 = _versionsLst;
-  if (listEmpty(tmpMeta8)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta8)) OMC_THROW_INTERNAL();
   tmpMeta9 = MMC_CAR(tmpMeta8);
   tmpMeta10 = MMC_CDR(tmpMeta8);
   _major = tmpMeta9;
@@ -805,7 +786,7 @@ modelica_metatype omc_SemanticVersion_parse(threadData_t *threadData, modelica_s
   {
     /* Pattern-matching assignment */
     tmpMeta11 = _versionsLst;
-    if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
     tmpMeta12 = MMC_CAR(tmpMeta11);
     tmpMeta13 = MMC_CDR(tmpMeta11);
     _minor = tmpMeta12;
@@ -813,14 +794,14 @@ modelica_metatype omc_SemanticVersion_parse(threadData_t *threadData, modelica_s
   }
   else
   {
-    _minor = _OMC_LIT6;
+    omc_string_store(&(_minor), _OMC_LIT6);
   }
 
   if((!listEmpty(_versionsLst)))
   {
     /* Pattern-matching assignment */
     tmpMeta14 = _versionsLst;
-    if (listEmpty(tmpMeta14)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta14)) OMC_THROW_INTERNAL();
     tmpMeta15 = MMC_CAR(tmpMeta14);
     tmpMeta16 = MMC_CDR(tmpMeta14);
     _patch = tmpMeta15;
@@ -828,21 +809,22 @@ modelica_metatype omc_SemanticVersion_parse(threadData_t *threadData, modelica_s
   }
   else
   {
-    _patch = _OMC_LIT6;
+    omc_string_store(&(_patch), _OMC_LIT6);
   }
 
   _prereleaseLst = omc_SemanticVersion_splitPrereleaseAndMeta(threadData, (listEmpty(_split)?_OMC_LIT2:listGet(_split, ((modelica_integer) 1))) ,&_metaLst);
 
-  tmpMeta17 = mmc_mk_box6(3, &SemanticVersion_Version_SEMVER__desc, mmc_mk_integer(stringInt(_major)), mmc_mk_integer(stringInt(_minor)), mmc_mk_integer(stringInt(_patch)), _prereleaseLst, _metaLst);
+  tmpMeta17 = omc_mk_box6(3, &SemanticVersion_Version_SEMVER__desc, omc_mk_integer(stringInt(_major)), omc_mk_integer(stringInt(_minor)), omc_mk_integer(stringInt(_patch)), _prereleaseLst, _metaLst);
   _v = tmpMeta17;
   _return: OMC_LABEL_UNUSED
-  return _v;
+  omc_ret_ = _v;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SemanticVersion_parse(threadData_t *threadData, modelica_metatype _s, modelica_metatype _nonsemverAsZeroZeroZero)
 {
   modelica_integer tmp1;
   modelica_metatype _v = NULL;
-  tmp1 = mmc_unbox_integer(_nonsemverAsZeroZeroZero);
+  tmp1 = omc_unbox_integer(_nonsemverAsZeroZeroZero);
   _v = omc_SemanticVersion_parse(threadData, _s, tmp1);
   /* skip box _v; SemanticVersion.Version */
   return _v;

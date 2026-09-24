@@ -25,7 +25,7 @@ extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtInterfaceFunc(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_name, modelica_metatype _a_args, modelica_metatype _a_res, modelica_string _a_className);
 #define boxptr_GenerateAPIFunctionsTpl_getQtInterfaceFunc omc_GenerateAPIFunctionsTpl_getQtInterfaceFunc
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInterfaceFunc,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtInterfaceFunc,0}};
@@ -47,7 +47,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInterfaceF
 #define boxptr_GenerateAPIFunctionsTpl_lm__87 omc_GenerateAPIFunctionsTpl_lm__87
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtResponseLogText(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_ty, modelica_metatype _a_responseLog, modelica_metatype *out_out_a_name, modelica_metatype *out_out_a_responseLog);
 #define boxptr_GenerateAPIFunctionsTpl_getQtResponseLogText omc_GenerateAPIFunctionsTpl_getQtResponseLogText
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtResponseLogText,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtResponseLogText,0}};
@@ -57,7 +57,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtResponseLo
 #define boxptr_GenerateAPIFunctionsTpl_fun__85 omc_GenerateAPIFunctionsTpl_fun__85
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtOutArgArray(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_shortName, modelica_metatype _a_mm, modelica_metatype _a_ty, modelica_metatype *out_out_a_name, modelica_metatype *out_out_a_shortName, modelica_metatype *out_out_a_mm);
 #define boxptr_GenerateAPIFunctionsTpl_getQtOutArgArray omc_GenerateAPIFunctionsTpl_getQtOutArgArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtOutArgArray,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtOutArgArray,0}};
@@ -67,7 +67,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtOutArgArra
 #define boxptr_GenerateAPIFunctionsTpl_fun__83 omc_GenerateAPIFunctionsTpl_fun__83
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtOutArg(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_shortName, modelica_metatype _a_ty, modelica_metatype _a_varDecl, modelica_metatype _a_postCall, modelica_metatype *out_out_a_name, modelica_metatype *out_out_a_shortName, modelica_metatype *out_out_a_varDecl, modelica_metatype *out_out_a_postCall);
 #define boxptr_GenerateAPIFunctionsTpl_getQtOutArg omc_GenerateAPIFunctionsTpl_getQtOutArg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtOutArg,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtOutArg,0}};
@@ -77,7 +77,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtOutArg,2,0
 #define boxptr_GenerateAPIFunctionsTpl_fun__81 omc_GenerateAPIFunctionsTpl_fun__81
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtCommandLogText(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_ty, modelica_metatype _a_commandLog, modelica_metatype *out_out_a_name, modelica_metatype *out_out_a_commandLog);
 #define boxptr_GenerateAPIFunctionsTpl_getQtCommandLogText omc_GenerateAPIFunctionsTpl_getQtCommandLogText
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtCommandLogText,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtCommandLogText,0}};
@@ -87,7 +87,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtCommandLog
 #define boxptr_GenerateAPIFunctionsTpl_fun__79 omc_GenerateAPIFunctionsTpl_fun__79
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtInArgBoxed(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_ty, modelica_metatype *out_out_a_name);
 #define boxptr_GenerateAPIFunctionsTpl_getQtInArgBoxed omc_GenerateAPIFunctionsTpl_getQtInArgBoxed
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInArgBoxed,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtInArgBoxed,0}};
@@ -97,7 +97,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInArgBoxed
 #define boxptr_GenerateAPIFunctionsTpl_fun__77 omc_GenerateAPIFunctionsTpl_fun__77
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtInArg(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_ty, modelica_metatype _a_varDecl, modelica_metatype *out_out_a_name, modelica_metatype *out_out_a_varDecl);
 #define boxptr_GenerateAPIFunctionsTpl_getQtInArg omc_GenerateAPIFunctionsTpl_getQtInArg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInArg,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtInArg,0}};
@@ -107,9 +107,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInArg,2,0)
 #define boxptr_GenerateAPIFunctionsTpl_fun__75 omc_GenerateAPIFunctionsTpl_fun__75
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtInterfaceHeader(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_name, modelica_string _a_prefix, modelica_metatype _a_args, modelica_metatype _a_res, modelica_string _a_className, modelica_boolean _a_addStructs);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_GenerateAPIFunctionsTpl_getQtInterfaceHeader(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_prefix, modelica_metatype _a_args, modelica_metatype _a_res, modelica_metatype _a_className, modelica_metatype _a_addStructs);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInterfaceHeader,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtInterfaceHeader,0}};
 #define boxvar_GenerateAPIFunctionsTpl_getQtInterfaceHeader MMC_REFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInterfaceHeader)
@@ -124,38 +124,38 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInterfaceH
 #define boxptr_GenerateAPIFunctionsTpl_lm__69 omc_GenerateAPIFunctionsTpl_lm__69
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_structToString(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_res, modelica_metatype _a_ty, modelica_integer _a_index, modelica_metatype _a_name, modelica_metatype *out_out_a_name);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_GenerateAPIFunctionsTpl_structToString(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_res, modelica_metatype _a_ty, modelica_metatype _a_index, modelica_metatype _a_name, modelica_metatype *out_out_a_name);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_structToString,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_structToString,0}};
 #define boxvar_GenerateAPIFunctionsTpl_structToString MMC_REFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_structToString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtTupleTypeOutputName(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty, modelica_integer _in_a_index);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_GenerateAPIFunctionsTpl_getQtTupleTypeOutputName(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty, modelica_metatype _in_a_index);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtTupleTypeOutputName,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtTupleTypeOutputName,0}};
 #define boxvar_GenerateAPIFunctionsTpl_getQtTupleTypeOutputName MMC_REFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtTupleTypeOutputName)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtTupleTypeOutputNameHelper(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_names, modelica_integer _in_a_index);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_GenerateAPIFunctionsTpl_getQtTupleTypeOutputNameHelper(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_names, modelica_metatype _in_a_index);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtTupleTypeOutputNameHelper,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtTupleTypeOutputNameHelper,0}};
 #define boxvar_GenerateAPIFunctionsTpl_getQtTupleTypeOutputNameHelper MMC_REFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtTupleTypeOutputNameHelper)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty);
 #define boxptr_GenerateAPIFunctionsTpl_getQtType omc_GenerateAPIFunctionsTpl_getQtType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtType,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtType,0}};
 #define boxvar_GenerateAPIFunctionsTpl_getQtType MMC_REFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtType)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtInterfaceHeaders(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_tys, modelica_string _a_className);
 #define boxptr_GenerateAPIFunctionsTpl_getQtInterfaceHeaders omc_GenerateAPIFunctionsTpl_getQtInterfaceHeaders
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInterfaceHeaders,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtInterfaceHeaders,0}};
@@ -165,7 +165,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInterfaceH
 #define boxptr_GenerateAPIFunctionsTpl_lm__62 omc_GenerateAPIFunctionsTpl_lm__62
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getQtInterface(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_tys, modelica_string _a_classNameWithColons, modelica_string _a_className);
 #define boxptr_GenerateAPIFunctionsTpl_getQtInterface omc_GenerateAPIFunctionsTpl_getQtInterface
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInterface,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getQtInterface,0}};
@@ -175,7 +175,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getQtInterface,
 #define boxptr_GenerateAPIFunctionsTpl_lm__60 omc_GenerateAPIFunctionsTpl_lm__60
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getCevalScriptInterfaceFunc(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_name, modelica_metatype _a_args, modelica_metatype _a_res);
 #define boxptr_GenerateAPIFunctionsTpl_getCevalScriptInterfaceFunc omc_GenerateAPIFunctionsTpl_getCevalScriptInterfaceFunc
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getCevalScriptInterfaceFunc,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getCevalScriptInterfaceFunc,0}};
@@ -203,7 +203,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getCevalScriptI
 #define boxptr_GenerateAPIFunctionsTpl_lm__52 omc_GenerateAPIFunctionsTpl_lm__52
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getOutValueArray(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_ty, modelica_metatype *out_out_a_name);
 #define boxptr_GenerateAPIFunctionsTpl_getOutValueArray omc_GenerateAPIFunctionsTpl_getOutValueArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getOutValueArray,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getOutValueArray,0}};
@@ -213,7 +213,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getOutValueArra
 #define boxptr_GenerateAPIFunctionsTpl_fun__50 omc_GenerateAPIFunctionsTpl_fun__50
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getOutValue(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_ty, modelica_metatype _a_varDecl, modelica_metatype _a_postMatch, modelica_metatype *out_out_a_name, modelica_metatype *out_out_a_varDecl, modelica_metatype *out_out_a_postMatch);
 #define boxptr_GenerateAPIFunctionsTpl_getOutValue omc_GenerateAPIFunctionsTpl_getOutValue
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getOutValue,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getOutValue,0}};
@@ -223,7 +223,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getOutValue,2,0
 #define boxptr_GenerateAPIFunctionsTpl_fun__48 omc_GenerateAPIFunctionsTpl_fun__48
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getInValue(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_name, modelica_metatype _a_ty, modelica_metatype *out_out_a_name);
 #define boxptr_GenerateAPIFunctionsTpl_getInValue omc_GenerateAPIFunctionsTpl_getInValue
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getInValue,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getInValue,0}};
@@ -233,14 +233,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getInValue,2,0)
 #define boxptr_GenerateAPIFunctionsTpl_fun__46 omc_GenerateAPIFunctionsTpl_fun__46
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getInType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty);
 #define boxptr_GenerateAPIFunctionsTpl_getInType omc_GenerateAPIFunctionsTpl_getInType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getInType,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getInType,0}};
 #define boxvar_GenerateAPIFunctionsTpl_getInType MMC_REFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getInType)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GenerateAPIFunctionsTpl_getCevalScriptInterface(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_tys);
 #define boxptr_GenerateAPIFunctionsTpl_getCevalScriptInterface omc_GenerateAPIFunctionsTpl_getCevalScriptInterface
 static const MMC_DEFSTRUCTLIT(boxvar_lit_GenerateAPIFunctionsTpl_getCevalScriptInterface,2,0) {(void*) boxptr_GenerateAPIFunctionsTpl_getCevalScriptInterface,0}};

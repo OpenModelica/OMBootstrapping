@@ -143,28 +143,28 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_Inline_getReplacementCheckComplex omc_Inline_getReplacementCheckComplex
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_inlineEquationExp(threadData_t *threadData, modelica_metatype _inExp, modelica_fnptr _fn, modelica_metatype _inSource, modelica_metatype *out_source);
 #define boxptr_Inline_inlineEquationExp omc_Inline_inlineEquationExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_inlineEquationExp,2,0) {(void*) boxptr_Inline_inlineEquationExp,0}};
 #define boxvar_Inline_inlineEquationExp MMC_REFSTRUCTLIT(boxvar_lit_Inline_inlineEquationExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_simplifyAndForceInlineEquationExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _fns, modelica_metatype _inSource, modelica_metatype *out_source);
 #define boxptr_Inline_simplifyAndForceInlineEquationExp omc_Inline_simplifyAndForceInlineEquationExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_simplifyAndForceInlineEquationExp,2,0) {(void*) boxptr_Inline_simplifyAndForceInlineEquationExp,0}};
 #define boxvar_Inline_simplifyAndForceInlineEquationExp MMC_REFSTRUCTLIT(boxvar_lit_Inline_simplifyAndForceInlineEquationExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_simplifyAndInlineEquationExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _fns, modelica_metatype _inSource, modelica_metatype *out_source);
 #define boxptr_Inline_simplifyAndInlineEquationExp omc_Inline_simplifyAndInlineEquationExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_simplifyAndInlineEquationExp,2,0) {(void*) boxptr_Inline_simplifyAndInlineEquationExp,0}};
 #define boxvar_Inline_simplifyAndInlineEquationExp MMC_REFSTRUCTLIT(boxvar_lit_Inline_simplifyAndInlineEquationExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Inline_printInlineTypeStr(threadData_t *threadData, modelica_metatype _it);
 #define boxptr_Inline_printInlineTypeStr omc_Inline_printInlineTypeStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_printInlineTypeStr,2,0) {(void*) boxptr_Inline_printInlineTypeStr,0}};
@@ -183,7 +183,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_printInlineTypeStr,2,0) {(void*)
 #define boxptr_Inline_boxIfUnboxedFunRef omc_Inline_boxIfUnboxedFunRef
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_replaceArgs(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inTuple, modelica_metatype *out_outTuple);
 #define boxptr_Inline_replaceArgs omc_Inline_replaceArgs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_replaceArgs,2,0) {(void*) boxptr_Inline_replaceArgs,0}};
@@ -193,14 +193,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_replaceArgs,2,0) {(void*) boxptr
 #define boxptr_Inline_getRhsExp omc_Inline_getRhsExp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_getFunction(threadData_t *threadData, modelica_metatype _p, modelica_metatype _fns);
 #define boxptr_Inline_getFunction omc_Inline_getFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_getFunction,2,0) {(void*) boxptr_Inline_getFunction,0}};
 #define boxvar_Inline_getFunction MMC_REFSTRUCTLIT(boxvar_lit_Inline_getFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_getFunctionBody(threadData_t *threadData, modelica_metatype _p, modelica_metatype _fns, modelica_metatype *out_oComment);
 #define boxptr_Inline_getFunctionBody omc_Inline_getFunctionBody
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_getFunctionBody,2,0) {(void*) boxptr_Inline_getFunctionBody,0}};
@@ -216,16 +216,16 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_getFunctionBody,2,0) {(void*) bo
 #define boxptr_Inline_getCheckCref omc_Inline_getCheckCref
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_extendCrefRecords(threadData_t *threadData, modelica_metatype _inArgmap, modelica_metatype _inCheckCr, modelica_metatype *out_outCheckCr);
 #define boxptr_Inline_extendCrefRecords omc_Inline_extendCrefRecords
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_extendCrefRecords,2,0) {(void*) boxptr_Inline_extendCrefRecords,0}};
 #define boxvar_Inline_extendCrefRecords MMC_REFSTRUCTLIT(boxvar_lit_Inline_extendCrefRecords)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Inline_checkInlineType(threadData_t *threadData, modelica_metatype _inIT, modelica_metatype _fns);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Inline_checkInlineType(threadData_t *threadData, modelica_metatype _inIT, modelica_metatype _fns);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_checkInlineType,2,0) {(void*) boxptr_Inline_checkInlineType,0}};
 #define boxvar_Inline_checkInlineType MMC_REFSTRUCTLIT(boxvar_lit_Inline_checkInlineType)
@@ -246,7 +246,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_checkInlineType,2,0) {(void*) bo
 #define boxptr_Inline_mergeFunctionBody omc_Inline_mergeFunctionBody
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_forceInlineCall(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5FassrtLst, modelica_metatype _fns, modelica_metatype _visitedPaths, modelica_metatype *out_assrtLst);
 #define boxptr_Inline_forceInlineCall omc_Inline_forceInlineCall
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_forceInlineCall,2,0) {(void*) boxptr_Inline_forceInlineCall,0}};
@@ -256,9 +256,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_forceInlineCall,2,0) {(void*) bo
 #define boxptr_Inline_dumpArgmap omc_Inline_dumpArgmap
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Inline_hasGenerateEventsAnnotation(threadData_t *threadData, modelica_metatype _comment);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Inline_hasGenerateEventsAnnotation(threadData_t *threadData, modelica_metatype _comment);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_hasGenerateEventsAnnotation,2,0) {(void*) boxptr_Inline_hasGenerateEventsAnnotation,0}};
 #define boxvar_Inline_hasGenerateEventsAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Inline_hasGenerateEventsAnnotation)
@@ -267,79 +267,79 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_hasGenerateEventsAnnotation,2,0)
 #define boxptr_Inline_inlineAssert omc_Inline_inlineAssert
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_inlineCall(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5FassrtLst, modelica_metatype _fns, modelica_metatype *out_assrtLst);
 #define boxptr_Inline_inlineCall omc_Inline_inlineCall
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_inlineCall,2,0) {(void*) boxptr_Inline_inlineCall,0}};
 #define boxvar_Inline_inlineCall MMC_REFSTRUCTLIT(boxvar_lit_Inline_inlineCall)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Inline_checkExpsTypeEquiv(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Inline_checkExpsTypeEquiv(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_checkExpsTypeEquiv,2,0) {(void*) boxptr_Inline_checkExpsTypeEquiv,0}};
 #define boxvar_Inline_checkExpsTypeEquiv MMC_REFSTRUCTLIT(boxvar_lit_Inline_checkExpsTypeEquiv)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_inlineExps(threadData_t *threadData, modelica_metatype _inExps, modelica_metatype _inElementList, modelica_metatype _inSource, modelica_metatype *out_outSource, modelica_boolean *out_inlined);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Inline_inlineExps(threadData_t *threadData, modelica_metatype _inExps, modelica_metatype _inElementList, modelica_metatype _inSource, modelica_metatype *out_outSource, modelica_metatype *out_inlined);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_inlineExps,2,0) {(void*) boxptr_Inline_inlineExps,0}};
 #define boxvar_Inline_inlineExps MMC_REFSTRUCTLIT(boxvar_lit_Inline_inlineExps)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_forceInlineExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inElementList, modelica_metatype _inSource, modelica_fnptr _cevalConst, modelica_metatype *out_outSource, modelica_boolean *out_inlineperformed);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Inline_forceInlineExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inElementList, modelica_metatype _inSource, modelica_fnptr _cevalConst, modelica_metatype *out_outSource, modelica_metatype *out_inlineperformed);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_forceInlineExp,2,0) {(void*) boxptr_Inline_forceInlineExp,0}};
 #define boxvar_Inline_forceInlineExp MMC_REFSTRUCTLIT(boxvar_lit_Inline_forceInlineExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_inlineExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inElementList, modelica_metatype _inSource, modelica_metatype *out_outSource, modelica_boolean *out_inlined, modelica_metatype *out_assrtLstOut);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Inline_inlineExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inElementList, modelica_metatype _inSource, modelica_metatype *out_outSource, modelica_metatype *out_inlined, modelica_metatype *out_assrtLstOut);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_inlineExp,2,0) {(void*) boxptr_Inline_inlineExp,0}};
 #define boxvar_Inline_inlineExp MMC_REFSTRUCTLIT(boxvar_lit_Inline_inlineExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_inlineExpOpt(threadData_t *threadData, modelica_metatype _inExpOption, modelica_metatype _inElementList, modelica_metatype _inSource, modelica_metatype *out_outSource, modelica_boolean *out_inlined);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Inline_inlineExpOpt(threadData_t *threadData, modelica_metatype _inExpOption, modelica_metatype _inElementList, modelica_metatype _inSource, modelica_metatype *out_outSource, modelica_metatype *out_inlined);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_inlineExpOpt,2,0) {(void*) boxptr_Inline_inlineExpOpt,0}};
 #define boxvar_Inline_inlineExpOpt MMC_REFSTRUCTLIT(boxvar_lit_Inline_inlineExpOpt)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_inlineStatements(threadData_t *threadData, modelica_metatype _inStatements, modelica_metatype _inElementList, modelica_metatype _iAcc, modelica_boolean _iInlined, modelica_boolean *out_OInlined);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Inline_inlineStatements(threadData_t *threadData, modelica_metatype _inStatements, modelica_metatype _inElementList, modelica_metatype _iAcc, modelica_metatype _iInlined, modelica_metatype *out_OInlined);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_inlineStatements,2,0) {(void*) boxptr_Inline_inlineStatements,0}};
 #define boxvar_Inline_inlineStatements MMC_REFSTRUCTLIT(boxvar_lit_Inline_inlineStatements)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_inlineAlgorithm(threadData_t *threadData, modelica_metatype _inAlgorithm, modelica_metatype _inElementList, modelica_boolean *out_inlined);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Inline_inlineAlgorithm(threadData_t *threadData, modelica_metatype _inAlgorithm, modelica_metatype _inElementList, modelica_metatype *out_inlined);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_inlineAlgorithm,2,0) {(void*) boxptr_Inline_inlineAlgorithm,0}};
 #define boxvar_Inline_inlineAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_Inline_inlineAlgorithm)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_inlineCallsInFunctions(threadData_t *threadData, modelica_metatype _inElementList, modelica_metatype _inFunctions);
 #define boxptr_Inline_inlineCallsInFunctions omc_Inline_inlineCallsInFunctions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_inlineCallsInFunctions,2,0) {(void*) boxptr_Inline_inlineCallsInFunctions,0}};
 #define boxvar_Inline_inlineCallsInFunctions MMC_REFSTRUCTLIT(boxvar_lit_Inline_inlineCallsInFunctions)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Inline_inlineStartAttribute(threadData_t *threadData, modelica_metatype _inVariableAttributesOption, modelica_metatype _isource, modelica_metatype _fns, modelica_metatype *out_osource, modelica_boolean *out_b);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Inline_inlineStartAttribute(threadData_t *threadData, modelica_metatype _inVariableAttributesOption, modelica_metatype _isource, modelica_metatype _fns, modelica_metatype *out_osource, modelica_metatype *out_b);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Inline_inlineStartAttribute,2,0) {(void*) boxptr_Inline_inlineStartAttribute,0}};
 #define boxvar_Inline_inlineStartAttribute MMC_REFSTRUCTLIT(boxvar_lit_Inline_inlineStartAttribute)

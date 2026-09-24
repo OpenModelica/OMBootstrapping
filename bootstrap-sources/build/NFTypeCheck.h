@@ -96,6 +96,8 @@ extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
 
 extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
 
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
+
 extern struct record_description NFOperator_OPERATOR__desc;
 
 extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
@@ -121,304 +123,318 @@ extern struct record_description SCode_Comment_COMMENT__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchIfBranches(threadData_t *threadData, modelica_metatype __omcQ_24in_5FtrueBranch, modelica_metatype _trueType, modelica_metatype __omcQ_24in_5FfalseBranch, modelica_metatype _falseType, modelica_integer _context, modelica_integer _options, modelica_metatype *out_falseBranch, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchIfBranches(threadData_t *threadData, modelica_metatype __omcQ_24in_5FtrueBranch, modelica_metatype _trueType, modelica_metatype __omcQ_24in_5FfalseBranch, modelica_metatype _falseType, modelica_metatype _context, modelica_metatype _options, modelica_metatype *out_falseBranch, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchIfBranches,2,0) {(void*) boxptr_NFTypeCheck_matchIfBranches,0}};
 #define boxvar_NFTypeCheck_matchIfBranches MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchIfBranches)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_checkSumComplexType(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _exp, modelica_metatype _info);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_checkSumComplexType(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _exp, modelica_metatype _info);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkSumComplexType,2,0) {(void*) boxptr_NFTypeCheck_checkSumComplexType,0}};
 #define boxvar_NFTypeCheck_checkSumComplexType MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkSumComplexType)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFTypeCheck_checkReductionType(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _name, modelica_metatype _exp, modelica_metatype _info);
 #define boxptr_NFTypeCheck_checkReductionType omc_NFTypeCheck_checkReductionType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkReductionType,2,0) {(void*) boxptr_NFTypeCheck_checkReductionType,0}};
 #define boxvar_NFTypeCheck_checkReductionType MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkReductionType)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFTypeCheck_checkDimensionType(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _ty, modelica_metatype _info);
 #define boxptr_NFTypeCheck_checkDimensionType omc_NFTypeCheck_checkDimensionType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkDimensionType,2,0) {(void*) boxptr_NFTypeCheck_checkDimensionType,0}};
 #define boxvar_NFTypeCheck_checkDimensionType MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkDimensionType)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFTypeCheck_printBindingTypeError(threadData_t *threadData, modelica_string _name, modelica_metatype _binding, modelica_metatype _componentType, modelica_metatype _bindingType, modelica_metatype _component, modelica_integer _context);
-DLLDirection
+DLLModelDirection
 void boxptr_NFTypeCheck_printBindingTypeError(threadData_t *threadData, modelica_metatype _name, modelica_metatype _binding, modelica_metatype _componentType, modelica_metatype _bindingType, modelica_metatype _component, modelica_metatype _context);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_printBindingTypeError,2,0) {(void*) boxptr_NFTypeCheck_printBindingTypeError,0}};
 #define boxvar_NFTypeCheck_printBindingTypeError MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_printBindingTypeError)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_elaborateBindingType(threadData_t *threadData, modelica_metatype _bindingExp, modelica_metatype _component, modelica_metatype __omcQ_24in_5FbindingType, modelica_metatype __omcQ_24in_5FcomponentType, modelica_metatype *out_componentType);
 #define boxptr_NFTypeCheck_elaborateBindingType omc_NFTypeCheck_elaborateBindingType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_elaborateBindingType,2,0) {(void*) boxptr_NFTypeCheck_elaborateBindingType,0}};
 #define boxvar_NFTypeCheck_elaborateBindingType MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_elaborateBindingType)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchBinding(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbinding, modelica_metatype _componentType, modelica_string _name, modelica_metatype _component, modelica_integer _context);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchBinding(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbinding, modelica_metatype _componentType, modelica_metatype _name, modelica_metatype _component, modelica_metatype _context);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchBinding,2,0) {(void*) boxptr_NFTypeCheck_matchBinding,0}};
 #define boxvar_NFTypeCheck_matchBinding MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchBinding)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_getRangeTypeEnum(threadData_t *threadData, modelica_metatype _startExp, modelica_metatype _stopExp);
 #define boxptr_NFTypeCheck_getRangeTypeEnum omc_NFTypeCheck_getRangeTypeEnum
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_getRangeTypeEnum,2,0) {(void*) boxptr_NFTypeCheck_getRangeTypeEnum,0}};
 #define boxvar_NFTypeCheck_getRangeTypeEnum MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_getRangeTypeEnum)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_getRangeTypeBool(threadData_t *threadData, modelica_metatype _startExp, modelica_metatype _stopExp);
 #define boxptr_NFTypeCheck_getRangeTypeBool omc_NFTypeCheck_getRangeTypeBool
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_getRangeTypeBool,2,0) {(void*) boxptr_NFTypeCheck_getRangeTypeBool,0}};
 #define boxvar_NFTypeCheck_getRangeTypeBool MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_getRangeTypeBool)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_getRangeTypeReal(threadData_t *threadData, modelica_metatype _startExp, modelica_metatype _stepExp, modelica_metatype _stopExp, modelica_metatype _info);
 #define boxptr_NFTypeCheck_getRangeTypeReal omc_NFTypeCheck_getRangeTypeReal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_getRangeTypeReal,2,0) {(void*) boxptr_NFTypeCheck_getRangeTypeReal,0}};
 #define boxvar_NFTypeCheck_getRangeTypeReal MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_getRangeTypeReal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_getRangeTypeInt(threadData_t *threadData, modelica_metatype _startExp, modelica_metatype _stepExp, modelica_metatype _stopExp, modelica_metatype _info);
 #define boxptr_NFTypeCheck_getRangeTypeInt omc_NFTypeCheck_getRangeTypeInt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_getRangeTypeInt,2,0) {(void*) boxptr_NFTypeCheck_getRangeTypeInt,0}};
 #define boxvar_NFTypeCheck_getRangeTypeInt MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_getRangeTypeInt)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_getRangeType(threadData_t *threadData, modelica_metatype _startExp, modelica_metatype _stepExp, modelica_metatype _stopExp, modelica_metatype _rangeElemType, modelica_metatype _info);
 #define boxptr_NFTypeCheck_getRangeType omc_NFTypeCheck_getRangeType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_getRangeType,2,0) {(void*) boxptr_NFTypeCheck_getRangeType,0}};
 #define boxvar_NFTypeCheck_getRangeType MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_getRangeType)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchPolymorphic(threadData_t *threadData, modelica_string _polymorphicName, modelica_metatype _actualType, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchPolymorphic(threadData_t *threadData, modelica_metatype _polymorphicName, modelica_metatype _actualType, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchPolymorphic,2,0) {(void*) boxptr_NFTypeCheck_matchPolymorphic,0}};
 #define boxvar_NFTypeCheck_matchPolymorphic MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchPolymorphic)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchTypes__cast(threadData_t *threadData, modelica_metatype _actualType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexpression, modelica_integer _options, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchTypes__cast(threadData_t *threadData, modelica_metatype _actualType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexpression, modelica_metatype _options, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchTypes__cast,2,0) {(void*) boxptr_NFTypeCheck_matchTypes__cast,0}};
 #define boxvar_NFTypeCheck_matchTypes__cast MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchTypes__cast)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchConditionalArrayTypes__cast(threadData_t *threadData, modelica_metatype _condType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexp, modelica_integer _options, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchConditionalArrayTypes__cast(threadData_t *threadData, modelica_metatype _condType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _options, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchConditionalArrayTypes__cast,2,0) {(void*) boxptr_NFTypeCheck_matchConditionalArrayTypes__cast,0}};
 #define boxvar_NFTypeCheck_matchConditionalArrayTypes__cast MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchConditionalArrayTypes__cast)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchConditionalArrayTypes(threadData_t *threadData, modelica_metatype _actualType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexp, modelica_integer _options, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchConditionalArrayTypes(threadData_t *threadData, modelica_metatype _actualType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _options, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchConditionalArrayTypes,2,0) {(void*) boxptr_NFTypeCheck_matchConditionalArrayTypes,0}};
 #define boxvar_NFTypeCheck_matchConditionalArrayTypes MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchConditionalArrayTypes)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchConditionalArrayExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5FcondExp, modelica_metatype _condType, modelica_metatype __omcQ_24in_5FotherExp, modelica_metatype _otherType, modelica_integer _options, modelica_metatype *out_otherExp, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchConditionalArrayExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5FcondExp, modelica_metatype _condType, modelica_metatype __omcQ_24in_5FotherExp, modelica_metatype _otherType, modelica_metatype _options, modelica_metatype *out_otherExp, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchConditionalArrayExp,2,0) {(void*) boxptr_NFTypeCheck_matchConditionalArrayExp,0}};
 #define boxvar_NFTypeCheck_matchConditionalArrayExp MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchConditionalArrayExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchBoxedExpressions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp1, modelica_metatype _type1, modelica_metatype __omcQ_24in_5Fexp2, modelica_metatype _type2, modelica_integer _options, modelica_metatype *out_exp2, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchBoxedExpressions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp1, modelica_metatype _type1, modelica_metatype __omcQ_24in_5Fexp2, modelica_metatype _type2, modelica_metatype _options, modelica_metatype *out_exp2, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchBoxedExpressions,2,0) {(void*) boxptr_NFTypeCheck_matchBoxedExpressions,0}};
 #define boxvar_NFTypeCheck_matchBoxedExpressions MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchBoxedExpressions)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchTupleTypes(threadData_t *threadData, modelica_metatype _tupleType1, modelica_metatype _tupleType2, modelica_metatype __omcQ_24in_5Fexpression, modelica_integer _options, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchTupleTypes(threadData_t *threadData, modelica_metatype _tupleType1, modelica_metatype _tupleType2, modelica_metatype __omcQ_24in_5Fexpression, modelica_metatype _options, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchTupleTypes,2,0) {(void*) boxptr_NFTypeCheck_matchTupleTypes,0}};
 #define boxvar_NFTypeCheck_matchTupleTypes MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchTupleTypes)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchDimensions(threadData_t *threadData, modelica_metatype _dim1, modelica_metatype _dim2, modelica_boolean *out_compatible);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchDimensions(threadData_t *threadData, modelica_metatype _dim1, modelica_metatype _dim2, modelica_metatype *out_compatible);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchDimensions,2,0) {(void*) boxptr_NFTypeCheck_matchDimensions,0}};
 #define boxvar_NFTypeCheck_matchDimensions MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchDimensions)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchArrayDims(threadData_t *threadData, modelica_metatype _dims1, modelica_metatype _dims2, modelica_metatype __omcQ_24in_5Fty, modelica_integer __omcQ_24in_5FmatchKind, modelica_integer _options, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchArrayDims(threadData_t *threadData, modelica_metatype _dims1, modelica_metatype _dims2, modelica_metatype __omcQ_24in_5Fty, modelica_metatype __omcQ_24in_5FmatchKind, modelica_metatype _options, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchArrayDims,2,0) {(void*) boxptr_NFTypeCheck_matchArrayDims,0}};
 #define boxvar_NFTypeCheck_matchArrayDims MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchArrayDims)
 
 
-DLLDirection
+DLLModelDirection
+modelica_metatype omc_NFTypeCheck_setRangeSize(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _ty);
+#define boxptr_NFTypeCheck_setRangeSize omc_NFTypeCheck_setRangeSize
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_setRangeSize,2,0) {(void*) boxptr_NFTypeCheck_setRangeSize,0}};
+#define boxvar_NFTypeCheck_setRangeSize MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_setRangeSize)
+
+
+DLLModelDirection
+modelica_metatype omc_NFTypeCheck_keepRangeSize(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fty, modelica_metatype _oldTy);
+#define boxptr_NFTypeCheck_keepRangeSize omc_NFTypeCheck_keepRangeSize
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_keepRangeSize,2,0) {(void*) boxptr_NFTypeCheck_keepRangeSize,0}};
+#define boxvar_NFTypeCheck_keepRangeSize MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_keepRangeSize)
+
+
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchArrayTypes(threadData_t *threadData, modelica_metatype _arrayType1, modelica_metatype _arrayType2, modelica_metatype __omcQ_24in_5Fexpression, modelica_integer _options, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchArrayTypes(threadData_t *threadData, modelica_metatype _arrayType1, modelica_metatype _arrayType2, modelica_metatype __omcQ_24in_5Fexpression, modelica_metatype _options, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchArrayTypes,2,0) {(void*) boxptr_NFTypeCheck_matchArrayTypes,0}};
 #define boxvar_NFTypeCheck_matchArrayTypes MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchArrayTypes)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchArrayExpressions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp1, modelica_metatype _type1, modelica_metatype __omcQ_24in_5Fexp2, modelica_metatype _type2, modelica_integer _options, modelica_metatype *out_exp2, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchArrayExpressions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp1, modelica_metatype _type1, modelica_metatype __omcQ_24in_5Fexp2, modelica_metatype _type2, modelica_metatype _options, modelica_metatype *out_exp2, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchArrayExpressions,2,0) {(void*) boxptr_NFTypeCheck_matchArrayExpressions,0}};
 #define boxvar_NFTypeCheck_matchArrayExpressions MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchArrayExpressions)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NFTypeCheck_matchEnumerationTypes(threadData_t *threadData, modelica_metatype _type1, modelica_metatype _type2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchEnumerationTypes(threadData_t *threadData, modelica_metatype _type1, modelica_metatype _type2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchEnumerationTypes,2,0) {(void*) boxptr_NFTypeCheck_matchEnumerationTypes,0}};
 #define boxvar_NFTypeCheck_matchEnumerationTypes MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchEnumerationTypes)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_matchFunctionParameters(threadData_t *threadData, modelica_metatype _params1, modelica_metatype _params2, modelica_integer _options);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchFunctionParameters(threadData_t *threadData, modelica_metatype _params1, modelica_metatype _params2, modelica_metatype _options);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchFunctionParameters,2,0) {(void*) boxptr_NFTypeCheck_matchFunctionParameters,0}};
 #define boxvar_NFTypeCheck_matchFunctionParameters MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchFunctionParameters)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchFunctionTypes(threadData_t *threadData, modelica_metatype _actualType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexpression, modelica_integer _options, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchFunctionTypes(threadData_t *threadData, modelica_metatype _actualType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexpression, modelica_metatype _options, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchFunctionTypes,2,0) {(void*) boxptr_NFTypeCheck_matchFunctionTypes,0}};
 #define boxvar_NFTypeCheck_matchFunctionTypes MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchFunctionTypes)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NFTypeCheck_matchComponentList(threadData_t *threadData, modelica_metatype _comps1, modelica_metatype _comps2, modelica_integer _options);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchComponentList(threadData_t *threadData, modelica_metatype _comps1, modelica_metatype _comps2, modelica_metatype _options);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchComponentList,2,0) {(void*) boxptr_NFTypeCheck_matchComponentList,0}};
 #define boxvar_NFTypeCheck_matchComponentList MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchComponentList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_typeCastRecord(threadData_t *threadData, modelica_metatype _expressions, modelica_metatype _node, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexpression);
 #define boxptr_NFTypeCheck_typeCastRecord omc_NFTypeCheck_typeCastRecord
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_typeCastRecord,2,0) {(void*) boxptr_NFTypeCheck_typeCastRecord,0}};
 #define boxvar_NFTypeCheck_typeCastRecord MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_typeCastRecord)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchComplexComponents(threadData_t *threadData, modelica_metatype _actualComponents, modelica_metatype _expectedComponents, modelica_metatype _expressions, modelica_metatype _classTree, modelica_integer _options, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchComplexComponents(threadData_t *threadData, modelica_metatype _actualComponents, modelica_metatype _expectedComponents, modelica_metatype _expressions, modelica_metatype _classTree, modelica_metatype _options, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchComplexComponents,2,0) {(void*) boxptr_NFTypeCheck_matchComplexComponents,0}};
 #define boxvar_NFTypeCheck_matchComplexComponents MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchComplexComponents)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchComplexTypes(threadData_t *threadData, modelica_metatype _actualType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexpression, modelica_integer _options, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchComplexTypes(threadData_t *threadData, modelica_metatype _actualType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexpression, modelica_metatype _options, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchComplexTypes,2,0) {(void*) boxptr_NFTypeCheck_matchComplexTypes,0}};
 #define boxvar_NFTypeCheck_matchComplexTypes MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchComplexTypes)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchExpressions__cast(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp1, modelica_metatype _type1, modelica_metatype __omcQ_24in_5Fexp2, modelica_metatype _type2, modelica_integer _options, modelica_metatype *out_exp2, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchExpressions__cast(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp1, modelica_metatype _type1, modelica_metatype __omcQ_24in_5Fexp2, modelica_metatype _type2, modelica_metatype _options, modelica_metatype *out_exp2, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchExpressions__cast,2,0) {(void*) boxptr_NFTypeCheck_matchExpressions__cast,0}};
 #define boxvar_NFTypeCheck_matchExpressions__cast MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchExpressions__cast)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchTypes(threadData_t *threadData, modelica_metatype _actualType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexpression, modelica_integer _options, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchTypes(threadData_t *threadData, modelica_metatype _actualType, modelica_metatype _expectedType, modelica_metatype __omcQ_24in_5Fexpression, modelica_metatype _options, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchTypes,2,0) {(void*) boxptr_NFTypeCheck_matchTypes,0}};
 #define boxvar_NFTypeCheck_matchTypes MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchTypes)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchExpressions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp1, modelica_metatype _type1, modelica_metatype __omcQ_24in_5Fexp2, modelica_metatype _type2, modelica_integer _options, modelica_metatype *out_exp2, modelica_metatype *out_compatibleType, modelica_integer *out_matchKind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchExpressions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp1, modelica_metatype _type1, modelica_metatype __omcQ_24in_5Fexp2, modelica_metatype _type2, modelica_metatype _options, modelica_metatype *out_exp2, modelica_metatype *out_compatibleType, modelica_metatype *out_matchKind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchExpressions,2,0) {(void*) boxptr_NFTypeCheck_matchExpressions,0}};
 #define boxvar_NFTypeCheck_matchExpressions MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchExpressions)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFTypeCheck_printUnresolvableTypeError(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _types, modelica_metatype _info, modelica_boolean _printError);
-DLLDirection
+DLLModelDirection
 void boxptr_NFTypeCheck_printUnresolvableTypeError(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _types, modelica_metatype _info, modelica_metatype _printError);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_printUnresolvableTypeError,2,0) {(void*) boxptr_NFTypeCheck_printUnresolvableTypeError,0}};
 #define boxvar_NFTypeCheck_printUnresolvableTypeError MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_printUnresolvableTypeError)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_checkRelationOperation(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_integer _var1, modelica_metatype _operator, modelica_metatype _exp2, modelica_metatype _type2, modelica_integer _var2, modelica_integer _index, modelica_integer _context, modelica_metatype _info, modelica_metatype *out_resultType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_checkRelationOperation(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_metatype _var1, modelica_metatype _operator, modelica_metatype _exp2, modelica_metatype _type2, modelica_metatype _var2, modelica_metatype _index, modelica_metatype _context, modelica_metatype _info, modelica_metatype *out_resultType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkRelationOperation,2,0) {(void*) boxptr_NFTypeCheck_checkRelationOperation,0}};
 #define boxvar_NFTypeCheck_checkRelationOperation MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkRelationOperation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_checkLogicalUnaryOperation(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_integer _var1, modelica_metatype _operator, modelica_integer _context, modelica_metatype _info, modelica_metatype *out_resultType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_checkLogicalUnaryOperation(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_metatype _var1, modelica_metatype _operator, modelica_metatype _context, modelica_metatype _info, modelica_metatype *out_resultType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkLogicalUnaryOperation,2,0) {(void*) boxptr_NFTypeCheck_checkLogicalUnaryOperation,0}};
 #define boxvar_NFTypeCheck_checkLogicalUnaryOperation MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkLogicalUnaryOperation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_checkLogicalBinaryOperation(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_integer _var1, modelica_metatype _operator, modelica_metatype _exp2, modelica_metatype _type2, modelica_integer _var2, modelica_integer _context, modelica_metatype _info, modelica_metatype *out_resultType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_checkLogicalBinaryOperation(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_metatype _var1, modelica_metatype _operator, modelica_metatype _exp2, modelica_metatype _type2, modelica_metatype _var2, modelica_metatype _context, modelica_metatype _info, modelica_metatype *out_resultType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkLogicalBinaryOperation,2,0) {(void*) boxptr_NFTypeCheck_checkLogicalBinaryOperation,0}};
 #define boxvar_NFTypeCheck_checkLogicalBinaryOperation MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkLogicalBinaryOperation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_checkOverloadedUnaryOperator(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inType1, modelica_integer _var, modelica_metatype _inOp, modelica_integer _context, modelica_metatype _info, modelica_metatype *out_outType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_checkOverloadedUnaryOperator(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inType1, modelica_metatype _var, modelica_metatype _inOp, modelica_metatype _context, modelica_metatype _info, modelica_metatype *out_outType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkOverloadedUnaryOperator,2,0) {(void*) boxptr_NFTypeCheck_checkOverloadedUnaryOperator,0}};
 #define boxvar_NFTypeCheck_checkOverloadedUnaryOperator MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkOverloadedUnaryOperator)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_checkUnaryOperation(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_integer _var1, modelica_metatype _operator, modelica_integer _context, modelica_metatype _info, modelica_metatype *out_unaryType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_checkUnaryOperation(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_metatype _var1, modelica_metatype _operator, modelica_metatype _context, modelica_metatype _info, modelica_metatype *out_unaryType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkUnaryOperation,2,0) {(void*) boxptr_NFTypeCheck_checkUnaryOperation,0}};
 #define boxvar_NFTypeCheck_checkUnaryOperation MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkUnaryOperation)
@@ -442,113 +458,113 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkUnaryOperation,2,0) {(
 #define boxptr_NFTypeCheck_implicitConstructAndMatch omc_NFTypeCheck_implicitConstructAndMatch
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_checkBinaryOperationBoxed(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_integer _var1, modelica_metatype _op, modelica_metatype _exp2, modelica_metatype _type2, modelica_integer _var2, modelica_integer _context, modelica_metatype _info, modelica_boolean _retype, modelica_metatype *out_outType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_checkBinaryOperationBoxed(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_metatype _var1, modelica_metatype _op, modelica_metatype _exp2, modelica_metatype _type2, modelica_metatype _var2, modelica_metatype _context, modelica_metatype _info, modelica_metatype _retype, modelica_metatype *out_outType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkBinaryOperationBoxed,2,0) {(void*) boxptr_NFTypeCheck_checkBinaryOperationBoxed,0}};
 #define boxvar_NFTypeCheck_checkBinaryOperationBoxed MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkBinaryOperationBoxed)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_matchOverloadedBinaryOperator(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_integer _var1, modelica_metatype _op, modelica_metatype _exp2, modelica_metatype _type2, modelica_integer _var2, modelica_metatype _candidates, modelica_integer _context, modelica_metatype _info, modelica_boolean _showErrors, modelica_metatype *out_outType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_matchOverloadedBinaryOperator(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_metatype _var1, modelica_metatype _op, modelica_metatype _exp2, modelica_metatype _type2, modelica_metatype _var2, modelica_metatype _candidates, modelica_metatype _context, modelica_metatype _info, modelica_metatype _showErrors, modelica_metatype *out_outType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchOverloadedBinaryOperator,2,0) {(void*) boxptr_NFTypeCheck_matchOverloadedBinaryOperator,0}};
 #define boxvar_NFTypeCheck_matchOverloadedBinaryOperator MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_matchOverloadedBinaryOperator)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_checkOverloadedBinaryOperator(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_integer _var1, modelica_metatype _op, modelica_metatype _exp2, modelica_metatype _type2, modelica_integer _var2, modelica_integer _context, modelica_metatype _info, modelica_metatype *out_outType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_checkOverloadedBinaryOperator(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_metatype _var1, modelica_metatype _op, modelica_metatype _exp2, modelica_metatype _type2, modelica_metatype _var2, modelica_metatype _context, modelica_metatype _info, modelica_metatype *out_outType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkOverloadedBinaryOperator,2,0) {(void*) boxptr_NFTypeCheck_checkOverloadedBinaryOperator,0}};
 #define boxvar_NFTypeCheck_checkOverloadedBinaryOperator MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkOverloadedBinaryOperator)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFTypeCheck_checkBinaryOperation(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_integer _var1, modelica_metatype _operator, modelica_metatype _exp2, modelica_metatype _type2, modelica_integer _var2, modelica_integer _context, modelica_metatype _info, modelica_boolean _retype, modelica_metatype *out_resultType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_checkBinaryOperation(threadData_t *threadData, modelica_metatype _exp1, modelica_metatype _type1, modelica_metatype _var1, modelica_metatype _operator, modelica_metatype _exp2, modelica_metatype _type2, modelica_metatype _var2, modelica_metatype _context, modelica_metatype _info, modelica_metatype _retype, modelica_metatype *out_resultType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkBinaryOperation,2,0) {(void*) boxptr_NFTypeCheck_checkBinaryOperation,0}};
 #define boxvar_NFTypeCheck_checkBinaryOperation MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_checkBinaryOperation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_getOption(threadData_t *threadData, modelica_integer _options, modelica_integer _option);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_getOption(threadData_t *threadData, modelica_metatype _options, modelica_metatype _option);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_getOption,2,0) {(void*) boxptr_NFTypeCheck_getOption,0}};
 #define boxvar_NFTypeCheck_getOption MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_getOption)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NFTypeCheck_setOption(threadData_t *threadData, modelica_integer _currentOptions, modelica_integer _newOption);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_setOption(threadData_t *threadData, modelica_metatype _currentOptions, modelica_metatype _newOption);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_setOption,2,0) {(void*) boxptr_NFTypeCheck_setOption,0}};
 #define boxvar_NFTypeCheck_setOption MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_setOption)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_isValidPlugCompatibleMatch(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_isValidPlugCompatibleMatch(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_isValidPlugCompatibleMatch,2,0) {(void*) boxptr_NFTypeCheck_isValidPlugCompatibleMatch,0}};
 #define boxvar_NFTypeCheck_isValidPlugCompatibleMatch MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_isValidPlugCompatibleMatch)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_isValidArgumentMatch(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_isValidArgumentMatch(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_isValidArgumentMatch,2,0) {(void*) boxptr_NFTypeCheck_isValidArgumentMatch,0}};
 #define boxvar_NFTypeCheck_isValidArgumentMatch MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_isValidArgumentMatch)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_isValidAssignmentMatch(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_isValidAssignmentMatch(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_isValidAssignmentMatch,2,0) {(void*) boxptr_NFTypeCheck_isValidAssignmentMatch,0}};
 #define boxvar_NFTypeCheck_isValidAssignmentMatch MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_isValidAssignmentMatch)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_isGenericMatch(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_isGenericMatch(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_isGenericMatch,2,0) {(void*) boxptr_NFTypeCheck_isGenericMatch,0}};
 #define boxvar_NFTypeCheck_isGenericMatch MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_isGenericMatch)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_isCastMatch(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_isCastMatch(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_isCastMatch,2,0) {(void*) boxptr_NFTypeCheck_isCastMatch,0}};
 #define boxvar_NFTypeCheck_isCastMatch MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_isCastMatch)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_isExactMatch(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_isExactMatch(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_isExactMatch,2,0) {(void*) boxptr_NFTypeCheck_isExactMatch,0}};
 #define boxvar_NFTypeCheck_isExactMatch MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_isExactMatch)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_isIncompatibleMatch(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_isIncompatibleMatch(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_isIncompatibleMatch,2,0) {(void*) boxptr_NFTypeCheck_isIncompatibleMatch,0}};
 #define boxvar_NFTypeCheck_isIncompatibleMatch MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_isIncompatibleMatch)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFTypeCheck_isCompatibleMatch(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFTypeCheck_isCompatibleMatch(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFTypeCheck_isCompatibleMatch,2,0) {(void*) boxptr_NFTypeCheck_isCompatibleMatch,0}};
 #define boxvar_NFTypeCheck_isCompatibleMatch MMC_REFSTRUCTLIT(boxvar_lit_NFTypeCheck_isCompatibleMatch)

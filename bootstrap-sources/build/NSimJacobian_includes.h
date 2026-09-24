@@ -21,7 +21,6 @@ extern "C" {
 #include "NSimJacobian.h"
 #include "NSimStrongComponent.h"
 #include "NSimVar.h"
-#include "Pointer.h"
 #include "StringUtil.h"
 #include "UnorderedMap.h"
 #include "UnorderedSet.h"

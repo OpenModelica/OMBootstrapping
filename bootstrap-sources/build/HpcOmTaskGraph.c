@@ -32,7 +32,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT9,17,_OMC_LIT9_data);
 #define _OMC_LIT9 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT9)
 static const MMC_DEFREALLIT(_OMC_LIT_STRUCT10_6,0.0);
 #define _OMC_LIT10_6 MMC_REFREALLIT(_OMC_LIT_STRUCT10_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT10,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT9,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6798)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6798)),MMC_IMMEDIATE(MMC_TAGFIXNUM(74)),_OMC_LIT10_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT10,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT9,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6761)),MMC_IMMEDIATE(MMC_TAGFIXNUM(9)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6761)),MMC_IMMEDIATE(MMC_TAGFIXNUM(74)),_OMC_LIT10_6}};
 #define _OMC_LIT10 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT10)
 #define _OMC_LIT11_data "getSimCodeEqByIndex failed. Looking for Index "
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT11,46,_OMC_LIT11_data);
@@ -84,7 +84,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT26,66,_OMC_LIT26_data);
 #define _OMC_LIT26 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT26)
 static const MMC_DEFREALLIT(_OMC_LIT_STRUCT27_6,0.0);
 #define _OMC_LIT27_6 MMC_REFREALLIT(_OMC_LIT_STRUCT27_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT27,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT9,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6217)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6217)),MMC_IMMEDIATE(MMC_TAGFIXNUM(102)),_OMC_LIT27_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT27,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT9,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6184)),MMC_IMMEDIATE(MMC_TAGFIXNUM(7)),MMC_IMMEDIATE(MMC_TAGFIXNUM(6184)),MMC_IMMEDIATE(MMC_TAGFIXNUM(102)),_OMC_LIT27_6}};
 #define _OMC_LIT27 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT27)
 #define _OMC_LIT28_data "Check if there is a assert or something that is dependent of arrayEquations"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT28,75,_OMC_LIT28_data);
@@ -1467,22 +1467,24 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmTaskGraph_getSystemComponents0,2,0
 PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_dumpSccSimEqMapping2(threadData_t *threadData, modelica_integer _iIndex, modelica_string _iText)
 {
   modelica_string _oText = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oText has no default value.
-  tmpMeta1 = stringAppend(_iText,intString(_iIndex));
-  tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT0);
-  _oText = tmpMeta2;
+  tmp1 = stringAppend(_iText,intString(_iIndex));
+  tmp2 = stringAppend(tmp1,_OMC_LIT0);
+  omc_string_store(&(_oText), tmp2);
   _return: OMC_LABEL_UNUSED
-  return _oText;
+  omc_ret_ = _oText;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_dumpSccSimEqMapping2(threadData_t *threadData, modelica_metatype _iIndex, modelica_metatype _iText)
 {
   modelica_integer tmp1;
   modelica_string _oText = NULL;
-  tmp1 = mmc_unbox_integer(_iIndex);
+  tmp1 = omc_unbox_integer(_iIndex);
   _oText = omc_HpcOmTaskGraph_dumpSccSimEqMapping2(threadData, tmp1, _iText);
   /* skip box _oText; String */
   return _oText;
@@ -1498,13 +1500,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_dumpSccSimEqMappi
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
-  modelica_metatype tmpMeta7;
-  modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
+  modelica_string tmp5;
+  modelica_string tmp6;
+  modelica_string tmp7;
+  modelica_string tmp8;
+  modelica_string tmp9;
   modelica_metatype tmpMeta10;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIndexText has no default value.
   // _iIndex has no default value.
@@ -1512,25 +1515,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_dumpSccSimEqMappi
   // _iText has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iIndexText;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
   _iIndex = tmp3  /* pattern as ty=Integer */;
   _iText = tmpMeta4;
 
-  _text = omc_List_fold(threadData, _iMapping, boxvar_HpcOmTaskGraph_dumpSccSimEqMapping2, _OMC_LIT0);
+  omc_string_store(&(_text), omc_List_fold(threadData, _iMapping, boxvar_HpcOmTaskGraph_dumpSccSimEqMapping2, _OMC_LIT0));
 
-  tmpMeta5 = stringAppend(_iText,_OMC_LIT1);
-  tmpMeta6 = stringAppend(tmpMeta5,intString(_iIndex));
-  tmpMeta7 = stringAppend(tmpMeta6,_OMC_LIT2);
-  tmpMeta8 = stringAppend(tmpMeta7,_text);
-  tmpMeta9 = stringAppend(tmpMeta8,_OMC_LIT3);
-  _text = tmpMeta9;
+  tmp5 = stringAppend(_iText,_OMC_LIT1);
+  tmp6 = stringAppend(tmp5,intString(_iIndex));
+  tmp7 = stringAppend(tmp6,_OMC_LIT2);
+  tmp8 = stringAppend(tmp7,_text);
+  tmp9 = stringAppend(tmp8,_OMC_LIT3);
+  omc_string_store(&(_text), tmp9);
 
-  tmpMeta10 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1) + _iIndex), _text);
+  tmpMeta10 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1) + _iIndex), _text);
   _oIndexText = tmpMeta10;
   _return: OMC_LABEL_UNUSED
-  return _oIndexText;
+  omc_ret_ = _oIndexText;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpSccSimEqMapping(threadData_t *threadData, modelica_metatype _iSccMapping)
@@ -1539,27 +1543,21 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpSccSimEqMapping(threadData
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_string tmp4;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _text has no default value.
-  _text = _OMC_LIT4;
+  omc_string_store(&(_text), _OMC_LIT4);
 
   /* Pattern-matching assignment */
-  tmpMeta1 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1)), _text);
+  tmpMeta1 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1)), _text);
   tmpMeta2 = omc_Array_fold(threadData, _iSccMapping, boxvar_HpcOmTaskGraph_dumpSccSimEqMapping1, tmpMeta1);
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 2));
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta2, 2);
   _text = tmpMeta3;
 
-  tmpMeta4 = stringAppend(_text,_OMC_LIT5);
-  fputs(MMC_STRINGDATA(tmpMeta4),stdout);
+  tmp4 = stringAppend(_text,_OMC_LIT5);
+  fputs(omc_string_data(tmp4),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -1573,13 +1571,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_dumpSimEqSCCMappi
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
-  modelica_metatype tmpMeta7;
-  modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
+  modelica_string tmp5;
+  modelica_string tmp6;
+  modelica_string tmp7;
+  modelica_string tmp8;
+  modelica_string tmp9;
   modelica_metatype tmpMeta10;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIndexText has no default value.
   // _iIndex has no default value.
@@ -1587,31 +1586,32 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_dumpSimEqSCCMappi
   // _iText has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iIndexText;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
   _iIndex = tmp3  /* pattern as ty=Integer */;
   _iText = tmpMeta4;
 
-  _text = intString(_iMapping);
+  omc_string_store(&(_text), intString(_iMapping));
 
-  tmpMeta5 = stringAppend(_iText,_OMC_LIT6);
-  tmpMeta6 = stringAppend(tmpMeta5,intString(_iIndex));
-  tmpMeta7 = stringAppend(tmpMeta6,_OMC_LIT2);
-  tmpMeta8 = stringAppend(tmpMeta7,_text);
-  tmpMeta9 = stringAppend(tmpMeta8,_OMC_LIT3);
-  _text = tmpMeta9;
+  tmp5 = stringAppend(_iText,_OMC_LIT6);
+  tmp6 = stringAppend(tmp5,intString(_iIndex));
+  tmp7 = stringAppend(tmp6,_OMC_LIT2);
+  tmp8 = stringAppend(tmp7,_text);
+  tmp9 = stringAppend(tmp8,_OMC_LIT3);
+  omc_string_store(&(_text), tmp9);
 
-  tmpMeta10 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1) + _iIndex), _text);
+  tmpMeta10 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1) + _iIndex), _text);
   _oIndexText = tmpMeta10;
   _return: OMC_LABEL_UNUSED
-  return _oIndexText;
+  omc_ret_ = _oIndexText;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_dumpSimEqSCCMapping1(threadData_t *threadData, modelica_metatype _iMapping, modelica_metatype _iIndexText)
 {
   modelica_integer tmp1;
   modelica_metatype _oIndexText = NULL;
-  tmp1 = mmc_unbox_integer(_iMapping);
+  tmp1 = omc_unbox_integer(_iMapping);
   _oIndexText = omc_HpcOmTaskGraph_dumpSimEqSCCMapping1(threadData, tmp1, _iIndexText);
   /* skip box _oIndexText; tuple<#Integer, String> */
   return _oIndexText;
@@ -1623,27 +1623,21 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpSimEqSCCMapping(threadData
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_string tmp4;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _text has no default value.
-  _text = _OMC_LIT7;
+  omc_string_store(&(_text), _OMC_LIT7);
 
   /* Pattern-matching assignment */
-  tmpMeta1 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1)), _text);
+  tmpMeta1 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1)), _text);
   tmpMeta2 = omc_Array_fold(threadData, _iSccMapping, boxvar_HpcOmTaskGraph_dumpSimEqSCCMapping1, tmpMeta1);
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 2));
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta2, 2);
   _text = tmpMeta3;
 
-  tmpMeta4 = stringAppend(_text,_OMC_LIT5);
-  fputs(MMC_STRINGDATA(tmpMeta4),stdout);
+  tmp4 = stringAppend(_text,_OMC_LIT5);
+  fputs(omc_string_data(tmp4),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -1653,7 +1647,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqsByTa
   modelica_metatype _eqIdc = NULL;
   modelica_metatype _tmpSimEqs = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSimEqs has no default value.
   // _eqIdc has no default value.
@@ -1668,7 +1663,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqsByTa
         case 4: {
           modelica_metatype tmpMeta5;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,6) == 0) goto tmp3_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
+          tmpMeta5 = OMC_BOX_FIELD(tmp4_1, 7);
           _eqIdc = tmpMeta5;
           /* Pattern matching succeeded */
           tmpMeta1 = omc_List_map1r(threadData, _eqIdc, boxvar_HpcOmTaskGraph_getSimCodeEqByIndexAndMapping, _iSimEqIdxSimEqMapping);
@@ -1677,7 +1672,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqsByTa
         case 5: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,3) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _eqIdc = tmpMeta6;
           /* Pattern matching succeeded */
@@ -1699,21 +1694,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqsByTa
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oSimEqs = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oSimEqs;
+  omc_ret_ = _oSimEqs;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqsByTaskList(threadData_t *threadData, modelica_metatype _iTaskList, modelica_metatype _iSimEqIdxSimEqMapping)
 {
   modelica_metatype _oSimEqs = NULL;
   modelica_metatype _tmpSimEqs = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSimEqs has no default value.
   // _tmpSimEqs has no default value.
@@ -1721,7 +1718,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqsByTa
 
   _oSimEqs = omc_List_flatten(threadData, _tmpSimEqs);
   _return: OMC_LABEL_UNUSED
-  return _oSimEqs;
+  omc_ret_ = _oSimEqs;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeEq(threadData_t *threadData, modelica_metatype _iEq, modelica_integer *out_oIdx2)
@@ -1732,11 +1730,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
   modelica_integer _index2;
   modelica_integer tmp1_c0 __attribute__((unused)) = 0;
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
+  modelica_integer omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIdx has no default value.
   // _oIdx2 has no default value.
@@ -1757,8 +1753,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta6;
           modelica_integer tmp7;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,5) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           
           _index = tmp7  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -1770,8 +1766,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta8;
           modelica_integer tmp9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,5) == 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
           
           _index = tmp9  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -1783,8 +1779,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta10;
           modelica_integer tmp11;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,6) == 0) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp11 = omc_unbox_integer(tmpMeta10);
           
           _index = tmp11  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -1796,8 +1792,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta12;
           modelica_integer tmp13;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,5) == 0) goto tmp3_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp13 = omc_unbox_integer(tmpMeta12);
           
           _index = tmp13  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -1809,8 +1805,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta14;
           modelica_integer tmp15;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,9,5) == 0) goto tmp3_end;
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp15 = mmc_unbox_integer(tmpMeta14);
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp15 = omc_unbox_integer(tmpMeta14);
           
           _index = tmp15  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -1822,8 +1818,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta16;
           modelica_integer tmp17;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,10,3) == 0) goto tmp3_end;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp17 = mmc_unbox_integer(tmpMeta16);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp17 = omc_unbox_integer(tmpMeta16);
           
           _index = tmp17  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -1837,10 +1833,10 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_integer tmp20;
           modelica_metatype tmpMeta21;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,12,3) == 0) goto tmp3_end;
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta18), 2));
-          tmp20 = mmc_unbox_integer(tmpMeta19);
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta19 = OMC_BOX_FIELD(tmpMeta18, 2);
+          tmp20 = omc_unbox_integer(tmpMeta19);
+          tmpMeta21 = OMC_BOX_FIELD(tmp4_1, 3);
           if (!optionNone(tmpMeta21)) goto tmp3_end;
           
           _index = tmp20  /* pattern as ty=Integer */;
@@ -1855,10 +1851,10 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_integer tmp24;
           modelica_metatype tmpMeta25;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,13,3) == 0) goto tmp3_end;
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta22), 2));
-          tmp24 = mmc_unbox_integer(tmpMeta23);
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta23 = OMC_BOX_FIELD(tmpMeta22, 2);
+          tmp24 = omc_unbox_integer(tmpMeta23);
+          tmpMeta25 = OMC_BOX_FIELD(tmp4_1, 3);
           if (!optionNone(tmpMeta25)) goto tmp3_end;
           
           _index = tmp24  /* pattern as ty=Integer */;
@@ -1876,14 +1872,14 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta31;
           modelica_integer tmp32;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,12,3) == 0) goto tmp3_end;
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta26), 2));
-          tmp28 = mmc_unbox_integer(tmpMeta27);
-          tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta26 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta27 = OMC_BOX_FIELD(tmpMeta26, 2);
+          tmp28 = omc_unbox_integer(tmpMeta27);
+          tmpMeta29 = OMC_BOX_FIELD(tmp4_1, 3);
           if (optionNone(tmpMeta29)) goto tmp3_end;
-          tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta29), 1));
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 2));
-          tmp32 = mmc_unbox_integer(tmpMeta31);
+          tmpMeta30 = OMC_BOX_FIELD(tmpMeta29, 1);
+          tmpMeta31 = OMC_BOX_FIELD(tmpMeta30, 2);
+          tmp32 = omc_unbox_integer(tmpMeta31);
           
           _index = tmp28  /* pattern as ty=Integer */;
           _index2 = tmp32  /* pattern as ty=Integer */;
@@ -1901,14 +1897,14 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta38;
           modelica_integer tmp39;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,13,3) == 0) goto tmp3_end;
-          tmpMeta33 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta33), 2));
-          tmp35 = mmc_unbox_integer(tmpMeta34);
-          tmpMeta36 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta33 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta34 = OMC_BOX_FIELD(tmpMeta33, 2);
+          tmp35 = omc_unbox_integer(tmpMeta34);
+          tmpMeta36 = OMC_BOX_FIELD(tmp4_1, 3);
           if (optionNone(tmpMeta36)) goto tmp3_end;
-          tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta36), 1));
-          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta37), 2));
-          tmp39 = mmc_unbox_integer(tmpMeta38);
+          tmpMeta37 = OMC_BOX_FIELD(tmpMeta36, 1);
+          tmpMeta38 = OMC_BOX_FIELD(tmpMeta37, 2);
+          tmp39 = omc_unbox_integer(tmpMeta38);
           
           _index = tmp35  /* pattern as ty=Integer */;
           _index2 = tmp39  /* pattern as ty=Integer */;
@@ -1921,8 +1917,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta40;
           modelica_integer tmp41;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,14,6) == 0) goto tmp3_end;
-          tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp41 = mmc_unbox_integer(tmpMeta40);
+          tmpMeta40 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp41 = omc_unbox_integer(tmpMeta40);
           
           _index = tmp41  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -1934,8 +1930,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta42;
           modelica_integer tmp43;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,15,7) == 0) goto tmp3_end;
-          tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp43 = mmc_unbox_integer(tmpMeta42);
+          tmpMeta42 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp43 = omc_unbox_integer(tmpMeta42);
           
           _index = tmp43  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -1947,8 +1943,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
           modelica_metatype tmpMeta44;
           modelica_integer tmp45;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,18,2) == 0) goto tmp3_end;
-          tmpMeta44 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp45 = mmc_unbox_integer(tmpMeta44);
+          tmpMeta44 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp45 = omc_unbox_integer(tmpMeta44);
           _index = tmp45  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1_c0 = _index;
@@ -1968,7 +1964,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -1977,10 +1973,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getIndexBySimCodeE
   _oIdx2 = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_oIdx2) { *out_oIdx2 = _oIdx2; }
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oIdx;
+  omc_ret_ = _oIdx;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getIndexBySimCodeEq(threadData_t *threadData, modelica_metatype _iEq, modelica_metatype *out_oIdx2)
 {
@@ -1988,12 +1982,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getIndexBySimC
   modelica_integer _oIdx;
   modelica_metatype out_oIdx;
   _oIdx = omc_HpcOmTaskGraph_getIndexBySimCodeEq(threadData, _iEq, &_oIdx2);
-  out_oIdx = mmc_mk_icon(_oIdx);
-  if (out_oIdx2) { *out_oIdx2 = mmc_mk_icon(_oIdx2); }
+  out_oIdx = omc_mk_icon(_oIdx);
+  if (out_oIdx2) { *out_oIdx2 = omc_mk_icon(_oIdx2); }
   return out_oIdx;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByIndex(threadData_t *threadData, modelica_metatype _iEqs, modelica_integer _iIdx)
 {
   modelica_metatype _oEq = NULL;
@@ -2002,7 +1996,8 @@ modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByIndex(threadData_t *threadDat
   modelica_integer _headIdx;
   modelica_integer _headIdx2;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oEq has no default value.
   // _rest has no default value.
@@ -2016,7 +2011,7 @@ modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByIndex(threadData_t *threadDat
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -2052,13 +2047,13 @@ modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByIndex(threadData_t *threadDat
           goto tmp3_done;
         }
         case 2: {
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
+          modelica_string tmp11;
+          modelica_string tmp12;
           
           /* Pattern matching succeeded */
-          tmpMeta11 = stringAppend(_OMC_LIT11,intString(_iIdx));
-          tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT5);
-          fputs(MMC_STRINGDATA(tmpMeta12),stdout);
+          tmp11 = stringAppend(_OMC_LIT11,intString(_iIdx));
+          tmp12 = stringAppend(tmp11,_OMC_LIT5);
+          fputs(omc_string_data(tmp12),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -2069,26 +2064,27 @@ modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByIndex(threadData_t *threadDat
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oEq = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oEq;
+  omc_ret_ = _oEq;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getSimCodeEqByIndex(threadData_t *threadData, modelica_metatype _iEqs, modelica_metatype _iIdx)
 {
   modelica_integer tmp1;
   modelica_metatype _oEq = NULL;
-  tmp1 = mmc_unbox_integer(_iIdx);
+  tmp1 = omc_unbox_integer(_iIdx);
   _oEq = omc_HpcOmTaskGraph_getSimCodeEqByIndex(threadData, _iEqs, tmp1);
   /* skip box _oEq; SimCode.SimEqSystem */
   return _oEq;
@@ -2099,7 +2095,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByInd
   modelica_metatype _oSimEqSystem = NULL;
   modelica_metatype _tmpSys = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSimEqSystem has no default value.
   // _tmpSys has no default value.
@@ -2115,20 +2112,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByInd
         case 0: {
           modelica_metatype tmpMeta6;
           if (optionNone(tmp4_1)) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
           _tmpSys = tmpMeta6;
           /* Pattern matching succeeded */
           tmpMeta1 = _tmpSys;
           goto tmp3_done;
         }
         case 1: {
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
+          modelica_string tmp7;
+          modelica_string tmp8;
           
           /* Pattern matching succeeded */
-          tmpMeta7 = stringAppend(_OMC_LIT12,intString(_iIdx));
-          tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT5);
-          fputs(MMC_STRINGDATA(tmpMeta8),stdout);
+          tmp7 = stringAppend(_OMC_LIT12,intString(_iIdx));
+          tmp8 = stringAppend(tmp7,_OMC_LIT5);
+          fputs(omc_string_data(tmp8),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -2138,20 +2135,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByInd
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oSimEqSystem = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oSimEqSystem;
+  omc_ret_ = _oSimEqSystem;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getSimCodeEqByIndexAndMapping1(threadData_t *threadData, modelica_metatype _iSimEqSystem, modelica_metatype _iIdx)
 {
   modelica_integer tmp1;
   modelica_metatype _oSimEqSystem = NULL;
-  tmp1 = mmc_unbox_integer(_iIdx);
+  tmp1 = omc_unbox_integer(_iIdx);
   _oSimEqSystem = omc_HpcOmTaskGraph_getSimCodeEqByIndexAndMapping1(threadData, _iSimEqSystem, tmp1);
   /* skip box _oSimEqSystem; SimCode.SimEqSystem */
   return _oSimEqSystem;
@@ -2161,7 +2159,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByInd
 {
   modelica_metatype _oSimEqSystem = NULL;
   modelica_metatype _tmpSimEqSystem = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSimEqSystem has no default value.
   // _tmpSimEqSystem has no default value.
@@ -2169,13 +2168,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimCodeEqByInd
 
   _oSimEqSystem = omc_HpcOmTaskGraph_getSimCodeEqByIndexAndMapping1(threadData, _tmpSimEqSystem, _iIdx);
   _return: OMC_LABEL_UNUSED
-  return _oSimEqSystem;
+  omc_ret_ = _oSimEqSystem;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getSimCodeEqByIndexAndMapping(threadData_t *threadData, modelica_metatype _iSimEqIdxSimEqMapping, modelica_metatype _iIdx)
 {
   modelica_integer tmp1;
   modelica_metatype _oSimEqSystem = NULL;
-  tmp1 = mmc_unbox_integer(_iIdx);
+  tmp1 = omc_unbox_integer(_iIdx);
   _oSimEqSystem = omc_HpcOmTaskGraph_getSimCodeEqByIndexAndMapping(threadData, _iSimEqIdxSimEqMapping, tmp1);
   /* skip box _oSimEqSystem; SimCode.SimEqSystem */
   return _oSimEqSystem;
@@ -2187,7 +2187,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimEqIdxSimEqM
   modelica_integer _simEqIdx;
   modelica_metatype _tmpMapping = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMapping has no default value.
   // _simEqIdx has no default value.
@@ -2197,7 +2198,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimEqIdxSimEqM
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -2221,27 +2222,29 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimEqIdxSimEqM
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oMapping = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oMapping;
+  omc_ret_ = _oMapping;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimEqIdxSimEqMapping(threadData_t *threadData, modelica_metatype _iAllEquations, modelica_integer _iSimEqSystemHighestIdx)
 {
   modelica_metatype _oMapping = NULL;
   modelica_metatype _tmpMapping = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMapping has no default value.
   // _tmpMapping has no default value.
@@ -2249,13 +2252,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimEqIdxSimEqM
 
   _oMapping = omc_List_fold(threadData, _iAllEquations, boxvar_HpcOmTaskGraph_getSimEqIdxSimEqMapping1, _tmpMapping);
   _return: OMC_LABEL_UNUSED
-  return _oMapping;
+  omc_ret_ = _oMapping;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getSimEqIdxSimEqMapping(threadData_t *threadData, modelica_metatype _iAllEquations, modelica_metatype _iSimEqSystemHighestIdx)
 {
   modelica_integer tmp1;
   modelica_metatype _oMapping = NULL;
-  tmp1 = mmc_unbox_integer(_iSimEqSystemHighestIdx);
+  tmp1 = omc_unbox_integer(_iSimEqSystemHighestIdx);
   _oMapping = omc_HpcOmTaskGraph_getSimEqIdxSimEqMapping(threadData, _iAllEquations, tmp1);
   /* skip box _oMapping; array<Option<SimCode.SimEqSystem>> */
   return _oMapping;
@@ -2271,44 +2275,48 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertToSimeqCom
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
   modelica_integer tmp5;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMapping has no default value.
   // _simEqIdx has no default value.
   // _sccIdx has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iSimEqTuple;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
   _simEqIdx = tmp3  /* pattern as ty=Integer */;
   _sccIdx = tmp5  /* pattern as ty=Integer */;
 
-  _oMapping = arrayUpdate(_iMapping, _simEqIdx, mmc_mk_integer(_sccIdx));
+  _oMapping = arrayUpdate(_iMapping, _simEqIdx, omc_mk_integer(_sccIdx));
   _return: OMC_LABEL_UNUSED
-  return _oMapping;
+  omc_ret_ = _oMapping;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertToSimeqCompMapping(threadData_t *threadData, modelica_metatype _iMapping, modelica_integer _numOfSimEqs)
 {
   modelica_metatype _oMapping = NULL;
   modelica_metatype _tmpMapping = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMapping has no default value.
   // _tmpMapping has no default value.
-  _tmpMapping = arrayCreate(_numOfSimEqs, mmc_mk_integer(((modelica_integer) -1)));
+  _tmpMapping = arrayCreate(_numOfSimEqs, omc_mk_integer(((modelica_integer) -1)));
 
   _oMapping = omc_List_fold(threadData, _iMapping, boxvar_HpcOmTaskGraph_convertToSimeqCompMapping1, _tmpMapping);
   _return: OMC_LABEL_UNUSED
-  return _oMapping;
+  omc_ret_ = _oMapping;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_convertToSimeqCompMapping(threadData_t *threadData, modelica_metatype _iMapping, modelica_metatype _numOfSimEqs)
 {
   modelica_integer tmp1;
   modelica_metatype _oMapping = NULL;
-  tmp1 = mmc_unbox_integer(_numOfSimEqs);
+  tmp1 = omc_unbox_integer(_numOfSimEqs);
   _oMapping = omc_HpcOmTaskGraph_convertToSimeqCompMapping(threadData, _iMapping, tmp1);
   /* skip box _oMapping; array<#Integer> */
   return _oMapping;
@@ -2326,7 +2334,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertToSccSimEq
   modelica_metatype tmpMeta4;
   modelica_integer tmp5;
   modelica_metatype tmpMeta6;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSccMapping has no default value.
   // _i1 has no default value.
@@ -2334,21 +2343,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertToSccSimEq
   // _tmpList has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iMapping;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
   _i1 = tmp3  /* pattern as ty=Integer */;
   _i2 = tmp5  /* pattern as ty=Integer */;
 
   _tmpList = arrayGet(_iSccMapping, _i2);
 
-  tmpMeta6 = mmc_mk_cons(mmc_mk_integer(_i1), _tmpList);
+  tmpMeta6 = mmc_mk_cons(omc_mk_integer(_i1), _tmpList);
   _tmpList = tmpMeta6;
 
   _oSccMapping = arrayUpdate(_iSccMapping, _i2, _tmpList);
   _return: OMC_LABEL_UNUSED
-  return _oSccMapping;
+  omc_ret_ = _oSccMapping;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertToSccSimEqMapping(threadData_t *threadData, modelica_metatype _iMapping, modelica_integer _numOfSccs)
@@ -2356,7 +2366,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertToSccSimEq
   modelica_metatype _oMapping = NULL;
   modelica_metatype _tmpMapping = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMapping has no default value.
   // _tmpMapping has no default value.
@@ -2367,13 +2378,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertToSccSimEq
 
   _oMapping = _tmpMapping;
   _return: OMC_LABEL_UNUSED
-  return _oMapping;
+  omc_ret_ = _oMapping;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_convertToSccSimEqMapping(threadData_t *threadData, modelica_metatype _iMapping, modelica_metatype _numOfSccs)
 {
   modelica_integer tmp1;
   modelica_metatype _oMapping = NULL;
-  tmp1 = mmc_unbox_integer(_numOfSccs);
+  tmp1 = omc_unbox_integer(_numOfSccs);
   _oMapping = omc_HpcOmTaskGraph_convertToSccSimEqMapping(threadData, _iMapping, tmp1);
   /* skip box _oMapping; array<list<#Integer>> */
   return _oMapping;
@@ -2386,22 +2398,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_removeDummyStateF
   modelica_integer _sccIdx;
   modelica_metatype _newElem = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNewList has no default value.
   // _eqIdx has no default value.
   // _sccIdx has no default value.
   // _newElem has no default value.
-  { /* matchcontinue expression */
-    volatile modelica_metatype tmp4_1;
+  { /* match expression */
+    modelica_metatype tmp4_1;
     tmp4_1 = _iTuple;
     {
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
-      tmp3_top:
-      threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
@@ -2409,44 +2419,42 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_removeDummyStateF
           modelica_integer tmp7;
           modelica_metatype tmpMeta8;
           modelica_integer tmp9;
-          modelica_boolean tmp10;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
           _eqIdx = tmp7  /* pattern as ty=Integer */;
           _sccIdx = tmp9  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp10 = (_sccIdx == ((modelica_integer) 1));
-          if (1 /* true */ != tmp10) goto goto_2;
+          /* Check guard condition after assignments */
+          if (!(_sccIdx == ((modelica_integer) 1))) goto tmp3_end;
           tmpMeta1 = _iNewList;
           goto tmp3_done;
         }
         case 1: {
-          modelica_metatype tmpMeta11;
-          modelica_integer tmp12;
-          modelica_metatype tmpMeta13;
-          modelica_integer tmp14;
+          modelica_metatype tmpMeta10;
+          modelica_integer tmp11;
+          modelica_metatype tmpMeta12;
+          modelica_integer tmp13;
+          modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp12 = mmc_unbox_integer(tmpMeta11);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
-          _eqIdx = tmp12  /* pattern as ty=Integer */;
-          _sccIdx = tmp14  /* pattern as ty=Integer */;
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp11 = omc_unbox_integer(tmpMeta10);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp13 = omc_unbox_integer(tmpMeta12);
+          _eqIdx = tmp11  /* pattern as ty=Integer */;
+          _sccIdx = tmp13  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta15 = mmc_mk_box2(0, mmc_mk_integer(_eqIdx), mmc_mk_integer(((modelica_integer) -1) + _sccIdx));
-          _newElem = tmpMeta15;
-          tmpMeta16 = mmc_mk_cons(_newElem, _iNewList);
-          tmpMeta1 = tmpMeta16;
+          tmpMeta14 = omc_mk_box2(0, omc_mk_integer(_eqIdx), omc_mk_integer(((modelica_integer) -1) + _sccIdx));
+          _newElem = tmpMeta14;
+          tmpMeta15 = mmc_mk_cons(_newElem, _iNewList);
+          tmpMeta1 = tmpMeta15;
           goto tmp3_done;
         }
         case 2: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT13),stdout);
+          fputs(omc_string_data(_OMC_LIT13),stdout);
           tmpMeta1 = _iNewList;
           goto tmp3_done;
         }
@@ -2455,35 +2463,31 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_removeDummyStateF
         tmp3_end: ;
       }
       goto goto_2;
-      tmp3_done:
-      (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
-      goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
-      if (++tmp4 < 3) {
-        goto tmp3_top;
-      }
-      MMC_THROW_INTERNAL();
-      tmp3_done2:;
+      OMC_THROW_INTERNAL();
+      goto tmp3_done;
+      tmp3_done:;
     }
   }
   _oNewList = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oNewList;
+  omc_ret_ = _oNewList;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_removeDummyStateFromMapping(threadData_t *threadData, modelica_metatype _iEquationSccMapping)
 {
   modelica_metatype _oEquationSccMapping = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oEquationSccMapping has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _oEquationSccMapping = omc_List_fold(threadData, _iEquationSccMapping, boxvar_HpcOmTaskGraph_removeDummyStateFromMapping1, tmpMeta1);
   _return: OMC_LABEL_UNUSED
-  return _oEquationSccMapping;
+  omc_ret_ = _oEquationSccMapping;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_findHighestSccIdxInMapping(threadData_t *threadData, modelica_metatype _iEquationSccMapping, modelica_integer _iHighestIndex)
@@ -2493,25 +2497,20 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_findHighestSccIdxI
   modelica_integer _sccIdx;
   modelica_metatype _rest = NULL;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIndex has no default value.
   // _eqIdx has no default value.
   // _sccIdx has no default value.
   // _rest has no default value.
-  { /* matchcontinue expression */
-    volatile modelica_metatype tmp4_1;
+  { /* match expression */
+    modelica_metatype tmp4_1;
     tmp4_1 = _iEquationSccMapping;
     {
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
-      tmp3_top:
-      threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
@@ -2521,43 +2520,48 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_findHighestSccIdxI
           modelica_integer tmp9;
           modelica_metatype tmpMeta10;
           modelica_integer tmp11;
-          modelica_boolean tmp12;
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 1);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta6, 2);
+          tmp11 = omc_unbox_integer(tmpMeta10);
           _eqIdx = tmp9  /* pattern as ty=Integer */;
           _sccIdx = tmp11  /* pattern as ty=Integer */;
           _rest = tmpMeta7;
           /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp12 = (_sccIdx > _iHighestIndex);
-          if (1 /* true */ != tmp12) goto goto_2;
-          tmp1 = omc_HpcOmTaskGraph_findHighestSccIdxInMapping(threadData, _rest, _sccIdx);
+          /* Check guard condition after assignments */
+          if (!(_sccIdx > _iHighestIndex)) goto tmp3_end;
+          /* Tail recursive call */
+          _iEquationSccMapping = _rest;
+          _iHighestIndex = _sccIdx;
+          goto _tailrecursive;
+          /* TODO: Make sure any eventual dead code below is never generated */
           goto tmp3_done;
         }
         case 1: {
+          modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
           modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_integer tmp16;
-          modelica_metatype tmpMeta17;
-          modelica_integer tmp18;
+          modelica_integer tmp15;
+          modelica_metatype tmpMeta16;
+          modelica_integer tmp17;
           if (listEmpty(tmp4_1)) goto tmp3_end;
-          tmpMeta13 = MMC_CAR(tmp4_1);
-          tmpMeta14 = MMC_CDR(tmp4_1);
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 1));
-          tmp16 = mmc_unbox_integer(tmpMeta15);
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 2));
-          tmp18 = mmc_unbox_integer(tmpMeta17);
-          _eqIdx = tmp16  /* pattern as ty=Integer */;
-          _sccIdx = tmp18  /* pattern as ty=Integer */;
-          _rest = tmpMeta14;
+          tmpMeta12 = MMC_CAR(tmp4_1);
+          tmpMeta13 = MMC_CDR(tmp4_1);
+          tmpMeta14 = OMC_BOX_FIELD(tmpMeta12, 1);
+          tmp15 = omc_unbox_integer(tmpMeta14);
+          tmpMeta16 = OMC_BOX_FIELD(tmpMeta12, 2);
+          tmp17 = omc_unbox_integer(tmpMeta16);
+          _eqIdx = tmp15  /* pattern as ty=Integer */;
+          _sccIdx = tmp17  /* pattern as ty=Integer */;
+          _rest = tmpMeta13;
           /* Pattern matching succeeded */
-          tmp1 = omc_HpcOmTaskGraph_findHighestSccIdxInMapping(threadData, _rest, _iHighestIndex);
+          /* Tail recursive call */
+          _iEquationSccMapping = _rest;
+          goto _tailrecursive;
+          /* TODO: Make sure any eventual dead code below is never generated */
           goto tmp3_done;
         }
         case 2: {
@@ -2571,38 +2575,29 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_findHighestSccIdxI
         tmp3_end: ;
       }
       goto goto_2;
-      tmp3_done:
-      (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
-      goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
-      if (++tmp4 < 3) {
-        goto tmp3_top;
-      }
-      MMC_THROW_INTERNAL();
-      tmp3_done2:;
+      OMC_THROW_INTERNAL();
+      goto tmp3_done;
+      tmp3_done:;
     }
   }
   _oIndex = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oIndex;
+  omc_ret_ = _oIndex;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_findHighestSccIdxInMapping(threadData_t *threadData, modelica_metatype _iEquationSccMapping, modelica_metatype _iHighestIndex)
 {
   modelica_integer tmp1;
   modelica_integer _oIndex;
   modelica_metatype out_oIndex;
-  tmp1 = mmc_unbox_integer(_iHighestIndex);
+  tmp1 = omc_unbox_integer(_iHighestIndex);
   _oIndex = omc_HpcOmTaskGraph_findHighestSccIdxInMapping(threadData, _iEquationSccMapping, tmp1);
-  out_oIndex = mmc_mk_icon(_oIndex);
+  out_oIndex = omc_mk_icon(_oIndex);
   return out_oIndex;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_setUpHpcOmMapping(threadData_t *threadData, modelica_metatype _daeIn, modelica_metatype _simCodeIn, modelica_integer _lastEqMappingIdx, modelica_metatype _equationSccMappingIn, modelica_metatype *out_sccSimEqMapping, modelica_metatype *out_daeSccSimEqMapping)
 {
   modelica_metatype _simeqCompMapping = NULL;
@@ -2613,7 +2608,8 @@ modelica_metatype omc_HpcOmTaskGraph_setUpHpcOmMapping(threadData_t *threadData,
   modelica_metatype _equationSccMapping = NULL;
   modelica_metatype _equationSccMapping1 = NULL;
   modelica_metatype _allComps = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _simeqCompMapping has no default value.
   // _sccSimEqMapping has no default value.
@@ -2643,13 +2639,14 @@ modelica_metatype omc_HpcOmTaskGraph_setUpHpcOmMapping(threadData_t *threadData,
   _return: OMC_LABEL_UNUSED
   if (out_sccSimEqMapping) { *out_sccSimEqMapping = _sccSimEqMapping; }
   if (out_daeSccSimEqMapping) { *out_daeSccSimEqMapping = _daeSccSimEqMapping; }
-  return _simeqCompMapping;
+  omc_ret_ = _simeqCompMapping;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_setUpHpcOmMapping(threadData_t *threadData, modelica_metatype _daeIn, modelica_metatype _simCodeIn, modelica_metatype _lastEqMappingIdx, modelica_metatype _equationSccMappingIn, modelica_metatype *out_sccSimEqMapping, modelica_metatype *out_daeSccSimEqMapping)
 {
   modelica_integer tmp1;
   modelica_metatype _simeqCompMapping = NULL;
-  tmp1 = mmc_unbox_integer(_lastEqMappingIdx);
+  tmp1 = omc_unbox_integer(_lastEqMappingIdx);
   _simeqCompMapping = omc_HpcOmTaskGraph_setUpHpcOmMapping(threadData, _daeIn, _simCodeIn, tmp1, _equationSccMappingIn, out_sccSimEqMapping, out_daeSccSimEqMapping);
   /* skip box _simeqCompMapping; array<#Integer> */
   /* skip box _sccSimEqMapping; array<list<#Integer>> */
@@ -2672,26 +2669,23 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpPartitionData(threadData_t
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
-  modelica_metatype tmpMeta7;
+  modelica_string tmp7;
   modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
-  modelica_metatype tmpMeta10;
-  modelica_metatype tmpMeta11;
-  modelica_metatype tmpMeta12;
+  modelica_string tmp9;
+  modelica_string tmp10;
+  modelica_string tmp11;
+  modelica_string tmp12;
   modelica_metatype tmpMeta13;
-  modelica_metatype tmpMeta14;
-  modelica_metatype tmpMeta15;
-  modelica_metatype tmpMeta16;
-  modelica_metatype tmpMeta17;
-  modelica_metatype tmpMeta18;
-  modelica_metatype tmpMeta19;
+  modelica_string tmp14;
+  modelica_string tmp15;
+  modelica_string tmp16;
+  modelica_string tmp17;
+  modelica_string tmp18;
+  modelica_string tmp19;
   modelica_integer tmp20;
   modelica_integer tmp21;
   modelica_integer tmp22;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _numPartitions has no default value.
   // _act has no default value.
@@ -2702,20 +2696,20 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpPartitionData(threadData_t
   // _stateToActivators has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _partData;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 5);
   _numPartitions = tmp3  /* pattern as ty=Integer */;
   _partitions = tmpMeta4;
   _activatorsForPartitions = tmpMeta5;
   _stateToActivators = tmpMeta6;
 
-  fputs(MMC_STRINGDATA(_OMC_LIT14),stdout);
+  fputs(omc_string_data(_OMC_LIT14),stdout);
 
-  tmpMeta7 = stringAppend(intString(_numPartitions),_OMC_LIT15);
-  fputs(MMC_STRINGDATA(tmpMeta7),stdout);
+  tmp7 = stringAppend(intString(_numPartitions),_OMC_LIT15);
+  fputs(omc_string_data(tmp7),stdout);
 
   _act = ((modelica_integer) 1);
 
@@ -2724,17 +2718,17 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpPartitionData(threadData_t
     for (tmpMeta8 = _stateToActivators; !listEmpty(tmpMeta8); tmpMeta8=MMC_CDR(tmpMeta8))
     {
       _state = MMC_CAR(tmpMeta8);
-      tmpMeta9 = stringAppend(_OMC_LIT16,intString(_act));
-      tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT17);
-      tmpMeta11 = stringAppend(tmpMeta10,intString(mmc_unbox_integer(_state)));
-      tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta12),stdout);
+      tmp9 = stringAppend(_OMC_LIT16,intString(_act));
+      tmp10 = stringAppend(tmp9,_OMC_LIT17);
+      tmp11 = stringAppend(tmp10,intString(omc_unbox_integer(_state)));
+      tmp12 = stringAppend(tmp11,_OMC_LIT5);
+      fputs(omc_string_data(tmp12),stdout);
 
       _act = ((modelica_integer) 1) + _act;
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT5),stdout);
+  fputs(omc_string_data(_OMC_LIT5),stdout);
 
   tmp20 = ((modelica_integer) 1); tmp21 = 1; tmp22 = _numPartitions;
   if(!(((tmp21 > 0) && (tmp20 > tmp22)) || ((tmp21 < 0) && (tmp20 < tmp22))))
@@ -2743,56 +2737,49 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpPartitionData(threadData_t
     for(_part = ((modelica_integer) 1); in_range_integer(_part, tmp20, tmp22); _part += tmp21)
     {
 
-      tmpMeta14 = stringAppend(_OMC_LIT18,omc_HpcOmTaskGraph_intLstString(threadData, listGet(_activatorsForPartitions, _part)));
-      tmpMeta15 = stringAppend(tmpMeta14,_OMC_LIT19);
-      tmpMeta16 = stringAppend(tmpMeta15,omc_HpcOmTaskGraph_intLstString(threadData, omc_List_map1(threadData, listGet(_activatorsForPartitions, _part), boxvar_List_getIndexFirst, _stateToActivators)));
-      tmpMeta17 = stringAppend(tmpMeta16,_OMC_LIT20);
-      tmpMeta18 = stringAppend(tmpMeta17,omc_HpcOmTaskGraph_intLstString(threadData, listGet(_partitions, _part)));
-      tmpMeta19 = stringAppend(tmpMeta18,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta19),stdout);
+      tmp14 = stringAppend(_OMC_LIT18,omc_HpcOmTaskGraph_intLstString(threadData, listGet(_activatorsForPartitions, _part)));
+      tmp15 = stringAppend(tmp14,_OMC_LIT19);
+      tmp16 = stringAppend(tmp15,omc_HpcOmTaskGraph_intLstString(threadData, omc_List_map1(threadData, listGet(_activatorsForPartitions, _part), boxvar_List_getIndexFirst, _stateToActivators)));
+      tmp17 = stringAppend(tmp16,_OMC_LIT20);
+      tmp18 = stringAppend(tmp17,omc_HpcOmTaskGraph_intLstString(threadData, listGet(_partitions, _part)));
+      tmp19 = stringAppend(tmp18,_OMC_LIT5);
+      fputs(omc_string_data(tmp19),stdout);
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpStateAssign(threadData_t *threadData, modelica_metatype _stateAssign)
 {
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  tmpMeta1 = stringAppend(_OMC_LIT21,stringDelimitList(omc_List_mapArray(threadData, _stateAssign, boxvar_HpcOmTaskGraph_intLstString), _OMC_LIT5));
-  tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT5);
-  fputs(MMC_STRINGDATA(tmpMeta2),stdout);
+  tmp1 = stringAppend(_OMC_LIT21,stringDelimitList(omc_List_mapArray(threadData, _stateAssign, boxvar_HpcOmTaskGraph_intLstString), _OMC_LIT5));
+  tmp2 = stringAppend(tmp1,_OMC_LIT5);
+  fputs(omc_string_data(tmp2),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_appendToElementUnique(threadData_t *threadData, modelica_integer _inIndex, modelica_metatype _inElements, modelica_metatype _inArray)
 {
   modelica_metatype _outArray = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outArray has no default value.
   _outArray = arrayUpdate(_inArray, _inIndex, omc_List_unique(threadData, listAppend(arrayGet(_inArray,_inIndex) /* DAE.ASUB */, _inElements)));
   _return: OMC_LABEL_UNUSED
-  return _outArray;
+  omc_ret_ = _outArray;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_appendToElementUnique(threadData_t *threadData, modelica_metatype _inIndex, modelica_metatype _inElements, modelica_metatype _inArray)
 {
   modelica_integer tmp1;
   modelica_metatype _outArray = NULL;
-  tmp1 = mmc_unbox_integer(_inIndex);
+  tmp1 = omc_unbox_integer(_inIndex);
   _outArray = omc_HpcOmTaskGraph_appendToElementUnique(threadData, tmp1, _inElements, _inArray);
   /* skip box _outArray; array<list<polymorphic<T>>> */
   return _outArray;
@@ -2812,7 +2799,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__assign
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _stateTaskAssignOut has no default value.
   // _taskIdx has no default value.
@@ -2828,8 +2816,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__assign
     for (tmpMeta2 = _stateTasks; !listEmpty(tmpMeta2); tmpMeta2=MMC_CDR(tmpMeta2))
     {
       _task = MMC_CAR(tmpMeta2);
-      tmpMeta3 = mmc_mk_cons(mmc_mk_integer(_taskIdx), MMC_REFSTRUCTLIT(mmc_nil));
-      _stateTaskAssignOut = arrayUpdate(_stateTaskAssignOut, mmc_unbox_integer(_task), tmpMeta3);
+      tmpMeta3 = mmc_mk_cons(omc_mk_integer(_taskIdx), MMC_REFSTRUCTLIT(mmc_nil));
+      _stateTaskAssignOut = arrayUpdate(_stateTaskAssignOut, omc_unbox_integer(_task), tmpMeta3);
 
       _taskIdx = ((modelica_integer) 1) + _taskIdx;
     }
@@ -2845,9 +2833,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__assign
         for (tmpMeta6 = _levelTasks; !listEmpty(tmpMeta6); tmpMeta6=MMC_CDR(tmpMeta6))
         {
           _task = MMC_CAR(tmpMeta6);
-          _assignments = arrayGet(_stateTaskAssignOut, mmc_unbox_integer(_task));
+          _assignments = arrayGet(_stateTaskAssignOut, omc_unbox_integer(_task));
 
-          _predecessors = arrayGet(_odeGraphT, mmc_unbox_integer(_task));
+          _predecessors = arrayGet(_odeGraphT, omc_unbox_integer(_task));
 
           _stateTaskAssignOut = omc_List_fold1(threadData, _predecessors, boxvar_HpcOmTaskGraph_appendToElementUnique, _assignments, _stateTaskAssignOut);
         }
@@ -2857,67 +2845,60 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__assign
 
   _stateTaskAssignOut = omc_Array_map1(threadData, _stateTaskAssignOut, boxvar_List_sort, boxvar_intGt);
   _return: OMC_LABEL_UNUSED
-  return _stateTaskAssignOut;
+  omc_ret_ = _stateTaskAssignOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_hasSameStateAssign(threadData_t *threadData, modelica_integer _task, modelica_metatype _stateTaskAssign, modelica_metatype _refStateAssign)
 {
   modelica_boolean _sameStateAssign;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _sameStateAssign has no default value.
   _sameStateAssign = omc_List_isEqual(threadData, arrayGet(_stateTaskAssign, _task), _refStateAssign, 1 /* true */);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _sameStateAssign;
+  omc_ret_ = _sameStateAssign;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_hasSameStateAssign(threadData_t *threadData, modelica_metatype _task, modelica_metatype _stateTaskAssign, modelica_metatype _refStateAssign)
 {
   modelica_integer tmp1;
   modelica_boolean _sameStateAssign;
   modelica_metatype out_sameStateAssign;
-  tmp1 = mmc_unbox_integer(_task);
+  tmp1 = omc_unbox_integer(_task);
   _sameStateAssign = omc_HpcOmTaskGraph_hasSameStateAssign(threadData, tmp1, _stateTaskAssign, _refStateAssign);
-  out_sameStateAssign = mmc_mk_icon(_sameStateAssign);
+  out_sameStateAssign = omc_mk_icon(_sameStateAssign);
   return out_sameStateAssign;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_taskIsNotVisited(threadData_t *threadData, modelica_integer _task, modelica_metatype _visitedTasks)
 {
   modelica_boolean _isNotVisited;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isNotVisited has no default value.
-  _isNotVisited = (((modelica_integer) -1) == mmc_unbox_integer(arrayGet(_visitedTasks, _task)));
+  _isNotVisited = (((modelica_integer) -1) == omc_unbox_integer(arrayGet(_visitedTasks, _task)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _isNotVisited;
+  omc_ret_ = _isNotVisited;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_taskIsNotVisited(threadData_t *threadData, modelica_metatype _task, modelica_metatype _visitedTasks)
 {
   modelica_integer tmp1;
   modelica_boolean _isNotVisited;
   modelica_metatype out_isNotVisited;
-  tmp1 = mmc_unbox_integer(_task);
+  tmp1 = omc_unbox_integer(_task);
   _isNotVisited = omc_HpcOmTaskGraph_taskIsNotVisited(threadData, tmp1, _visitedTasks);
-  out_isNotVisited = mmc_mk_icon(_isNotVisited);
+  out_isNotVisited = omc_mk_icon(_isNotVisited);
   return out_isNotVisited;
 }
 
 static modelica_metatype closure0_HpcOmTaskGraph_hasSameStateAssign(threadData_t *thData, modelica_metatype closure, modelica_metatype task)
 {
-  modelica_metatype stateTaskAssign = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype refStateAssign = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
+  modelica_metatype stateTaskAssign = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype refStateAssign = OMC_BOX_FIELD(closure, 2);
   return boxptr_HpcOmTaskGraph_hasSameStateAssign(thData, task, stateTaskAssign, refStateAssign);
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPartitionPredecessors(threadData_t *threadData, modelica_metatype _leavesIn, modelica_metatype _odeGraphT, modelica_metatype _stateTaskAssign, modelica_metatype _refStateAssign, modelica_metatype _visitedTasks, modelica_metatype *out_otherLeaveNodes)
@@ -2938,7 +2919,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPar
   modelica_integer tmp6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _partitionTasks = tmpMeta1;
@@ -2959,10 +2941,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPar
     if(!_cont) break;
     /* Pattern-matching assignment */
     tmpMeta3 = _tasks;
-    if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
     tmpMeta4 = MMC_CAR(tmpMeta3);
     tmpMeta5 = MMC_CDR(tmpMeta3);
-    tmp6 = mmc_unbox_integer(tmpMeta4);
+    tmp6 = omc_unbox_integer(tmpMeta4);
     _task = tmp6  /* pattern as ty=Integer */;
     _tasks = tmpMeta5;
 
@@ -2970,10 +2952,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPar
 
     _predecessors = omc_List_filter1OnTrue(threadData, _predecessors, boxvar_HpcOmTaskGraph_taskIsNotVisited, _visitedTasks);
 
-    tmpMeta7 = mmc_mk_box2(0, _stateTaskAssign, _refStateAssign);
-    _samePartTasks = omc_List_separateOnTrue(threadData, _predecessors, (modelica_fnptr) mmc_mk_box2(0,closure0_HpcOmTaskGraph_hasSameStateAssign,tmpMeta7) ,&_otherLeaves);
+    tmpMeta7 = omc_mk_box2(0, _stateTaskAssign, _refStateAssign);
+    _samePartTasks = omc_List_separateOnTrue(threadData, _predecessors, (modelica_fnptr) omc_mk_box2(0,closure0_HpcOmTaskGraph_hasSameStateAssign,tmpMeta7) ,&_otherLeaves);
 
-    tmpMeta8 = mmc_mk_cons(mmc_mk_integer(_task), _partitionTasks);
+    tmpMeta8 = mmc_mk_cons(omc_mk_integer(_task), _partitionTasks);
     _partitionTasks = tmpMeta8;
 
     _partitionTasks = listAppend(_samePartTasks, _partitionTasks);
@@ -2982,11 +2964,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPar
 
     _otherLeaveNodes = listAppend(_otherLeaves, _otherLeaveNodes);
 
-    arrayUpdate(_visitedTasks, _task, mmc_mk_integer(((modelica_integer) 0)));
+    arrayUpdate(_visitedTasks, _task, omc_mk_integer(((modelica_integer) 0)));
 
-    omc_List_map2__0(threadData, _samePartTasks, boxvar_Array_updateIndexFirst, mmc_mk_integer(((modelica_integer) 0)), _visitedTasks);
+    omc_List_map2__0(threadData, _samePartTasks, boxvar_Array_updateIndexFirst, omc_mk_integer(((modelica_integer) 0)), _visitedTasks);
 
-    omc_List_map2__0(threadData, _otherLeaves, boxvar_Array_updateIndexFirst, mmc_mk_integer(((modelica_integer) 0)), _visitedTasks);
+    omc_List_map2__0(threadData, _otherLeaves, boxvar_Array_updateIndexFirst, omc_mk_integer(((modelica_integer) 0)), _visitedTasks);
 
     if(listEmpty(_tasks))
     {
@@ -2999,7 +2981,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPar
   _otherLeaveNodes = omc_List_unique(threadData, _otherLeaveNodes);
   _return: OMC_LABEL_UNUSED
   if (out_otherLeaveNodes) { *out_otherLeaveNodes = _otherLeaveNodes; }
-  return _partitionTasks;
+  omc_ret_ = _partitionTasks;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_multirate__dispatchLeaveNodes(threadData_t *threadData, modelica_metatype _tasksIn, modelica_metatype _stateTaskAssign, modelica_metatype _leaveNodesWithNassigns)
@@ -3010,10 +2993,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_multirate__dispatchLeaveNodes(
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _numAss has no default value.
   // _stateAss has no default value.
@@ -3023,7 +3003,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_multirate__dispatchLeaveNodes(
     for (tmpMeta1 = _tasksIn; !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
     {
       _task = MMC_CAR(tmpMeta1);
-      _stateAss = arrayGet(_stateTaskAssign, mmc_unbox_integer(_task));
+      _stateAss = arrayGet(_stateTaskAssign, omc_unbox_integer(_task));
 
       _numAss = listLength(_stateAss);
 
@@ -3036,16 +3016,13 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_multirate__dispatchLeaveNodes(
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
 static modelica_metatype closure1_HpcOmTaskGraph_hasSameStateAssign(threadData_t *thData, modelica_metatype closure, modelica_metatype task)
 {
-  modelica_metatype stateTaskAssign = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype refStateAssign = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
+  modelica_metatype stateTaskAssign = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype refStateAssign = OMC_BOX_FIELD(closure, 2);
   return boxptr_HpcOmTaskGraph_hasSameStateAssign(thData, task, stateTaskAssign, refStateAssign);
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPartitions(threadData_t *threadData, modelica_metatype _stateTaskAssign, modelica_metatype _stateTasks, modelica_metatype _odeGraphT)
@@ -3066,7 +3043,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPar
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _partitions = tmpMeta1;
@@ -3079,7 +3057,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPar
   // _stateAss has no default value.
   // _visitedTasks has no default value.
   // _leaveNodesWithNassigns has no default value.
-  _visitedTasks = arrayCreate(arrayLength(_odeGraphT), mmc_mk_integer(((modelica_integer) -1)));
+  _visitedTasks = arrayCreate(arrayLength(_odeGraphT), omc_mk_integer(((modelica_integer) -1)));
 
   _numStates = listLength(_stateTasks);
 
@@ -3093,17 +3071,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPar
     for (tmpMeta3 = omc_List_intRange(threadData, _numStates); !listEmpty(tmpMeta3); tmpMeta3=MMC_CDR(tmpMeta3))
     {
       _numAssigns = MMC_CAR(tmpMeta3);
-      _leaveNodes = arrayGet(_leaveNodesWithNassigns, mmc_unbox_integer(_numAssigns));
+      _leaveNodes = arrayGet(_leaveNodesWithNassigns, omc_unbox_integer(_numAssigns));
 
       _leaveNodes = omc_List_unique(threadData, _leaveNodes);
 
       while(1)
       {
         if(!(!listEmpty(_leaveNodes))) break;
-        _stateAss = arrayGet(_stateTaskAssign, mmc_unbox_integer(listHead(_leaveNodes)));
+        _stateAss = arrayGet(_stateTaskAssign, omc_unbox_integer(listHead(_leaveNodes)));
 
-        tmpMeta4 = mmc_mk_box2(0, _stateTaskAssign, _stateAss);
-        _samePartTasks = omc_List_separateOnTrue(threadData, _leaveNodes, (modelica_fnptr) mmc_mk_box2(0,closure1_HpcOmTaskGraph_hasSameStateAssign,tmpMeta4) ,&_leaveNodes);
+        tmpMeta4 = omc_mk_box2(0, _stateTaskAssign, _stateAss);
+        _samePartTasks = omc_List_separateOnTrue(threadData, _leaveNodes, (modelica_fnptr) omc_mk_box2(0,closure1_HpcOmTaskGraph_hasSameStateAssign,tmpMeta4) ,&_leaveNodes);
 
         _partition = omc_HpcOmTaskGraph_multirate__getPartitionPredecessors(threadData, _samePartTasks, _odeGraphT, _stateTaskAssign, _stateAss, _visitedTasks ,&_otherPartTasks);
 
@@ -3117,77 +3095,72 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__getPar
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _partitions;
+  omc_ret_ = _partitions;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSimEqsIdxLstForSCCIdxLst(threadData_t *threadData, modelica_metatype _sccIdxs, modelica_metatype _sccSimEqMapping)
 {
   modelica_metatype _simEqIdxs = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _simEqIdxs has no default value.
   _simEqIdxs = omc_List_map1(threadData, _sccIdxs, boxvar_HpcOmTaskGraph_getSimEqIdxForSCCIdx, _sccSimEqMapping);
   _return: OMC_LABEL_UNUSED
-  return _simEqIdxs;
+  omc_ret_ = _simEqIdxs;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getSimEqIdxForSCCIdx(threadData_t *threadData, modelica_integer _sccIdx, modelica_metatype _sccSimEqMapping)
 {
   modelica_integer _simEqIdx;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _simEqIdx has no default value.
-  _simEqIdx = mmc_unbox_integer(listHead(arrayGet(_sccSimEqMapping, _sccIdx)));
+  _simEqIdx = omc_unbox_integer(listHead(arrayGet(_sccSimEqMapping, _sccIdx)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _simEqIdx;
+  omc_ret_ = _simEqIdx;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getSimEqIdxForSCCIdx(threadData_t *threadData, modelica_metatype _sccIdx, modelica_metatype _sccSimEqMapping)
 {
   modelica_integer tmp1;
   modelica_integer _simEqIdx;
   modelica_metatype out_simEqIdx;
-  tmp1 = mmc_unbox_integer(_sccIdx);
+  tmp1 = omc_unbox_integer(_sccIdx);
   _simEqIdx = omc_HpcOmTaskGraph_getSimEqIdxForSCCIdx(threadData, tmp1, _sccSimEqMapping);
-  out_simEqIdx = mmc_mk_icon(_simEqIdx);
+  out_simEqIdx = omc_mk_icon(_simEqIdx);
   return out_simEqIdx;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_varMappingTupleCompEqual(threadData_t *threadData, modelica_metatype _tpl, modelica_integer _compIdx)
 {
   modelica_boolean _compEqual;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compEqual has no default value.
-  _compEqual = (_compIdx == mmc_unbox_integer(omc_Util_tuple31(threadData, _tpl)));
+  _compEqual = (_compIdx == omc_unbox_integer(omc_Util_tuple31(threadData, _tpl)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _compEqual;
+  omc_ret_ = _compEqual;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_varMappingTupleCompEqual(threadData_t *threadData, modelica_metatype _tpl, modelica_metatype _compIdx)
 {
   modelica_integer tmp1;
   modelica_boolean _compEqual;
   modelica_metatype out_compEqual;
-  tmp1 = mmc_unbox_integer(_compIdx);
+  tmp1 = omc_unbox_integer(_compIdx);
   _compEqual = omc_HpcOmTaskGraph_varMappingTupleCompEqual(threadData, _tpl, tmp1);
-  out_compEqual = mmc_mk_icon(_compEqual);
+  out_compEqual = omc_mk_icon(_compEqual);
   return out_compEqual;
 }
 
 static modelica_metatype closure2_HpcOmTaskGraph_varMappingTupleCompEqual(threadData_t *thData, modelica_metatype closure, modelica_metatype tpl)
 {
-  modelica_metatype compIdx = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype compIdx = OMC_BOX_FIELD(closure, 1);
   return boxptr_HpcOmTaskGraph_varMappingTupleCompEqual(thData, tpl, compIdx);
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__orderStateTasksInSimVarStateOrder(threadData_t *threadData, modelica_metatype _stateTasks, modelica_metatype _taskGraphData, modelica_metatype _dae, modelica_metatype _simCode)
@@ -3227,7 +3200,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__orderS
   modelica_metatype tmpMeta18;
   modelica_metatype tmpMeta19;
   modelica_metatype tmpMeta20;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _orderedTasks has no default value.
   // _state has no default value.
@@ -3246,7 +3220,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__orderS
   // _eqSystems has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _dae;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _eqSystems = tmpMeta2;
 
   tmpMeta3 = MMC_REFSTRUCTLIT(mmc_nil);
@@ -3257,19 +3231,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__orderS
     for (tmpMeta4 = _stateTasks; !listEmpty(tmpMeta4); tmpMeta4=MMC_CDR(tmpMeta4))
     {
       _state = MMC_CAR(tmpMeta4);
-      _compIdx = mmc_unbox_integer(listHead(arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_taskGraphData), 2))), mmc_unbox_integer(_state))));
+      _compIdx = omc_unbox_integer(listHead(arrayGet((OMC_BOX_FIELD(_taskGraphData, 2)), omc_unbox_integer(_state))));
 
       /* Pattern-matching tuple assignment */
-      tmpMeta6 = mmc_mk_box1(0, mmc_mk_integer(_compIdx));
-      tmpMeta7 = omc_Array_findFirstOnTrueWithIdx(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_taskGraphData), 3))), (modelica_fnptr) mmc_mk_box2(0,closure2_HpcOmTaskGraph_varMappingTupleCompEqual,tmpMeta6), &tmp5);
-      if (optionNone(tmpMeta7)) MMC_THROW_INTERNAL();
-      tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
-      tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-      tmp10 = mmc_unbox_integer(tmpMeta9);
-      tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
-      tmp12 = mmc_unbox_integer(tmpMeta11);
-      tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 3));
-      tmp14 = mmc_unbox_integer(tmpMeta13);
+      tmpMeta6 = omc_mk_box1(0, omc_mk_integer(_compIdx));
+      tmpMeta7 = omc_Array_findFirstOnTrueWithIdx(threadData, (OMC_BOX_FIELD(_taskGraphData, 3)), (modelica_fnptr) omc_mk_box2(0,closure2_HpcOmTaskGraph_varMappingTupleCompEqual,tmpMeta6), &tmp5);
+      if (optionNone(tmpMeta7)) OMC_THROW_INTERNAL();
+      tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 1);
+      tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 1);
+      tmp10 = omc_unbox_integer(tmpMeta9);
+      tmpMeta11 = OMC_BOX_FIELD(tmpMeta8, 2);
+      tmp12 = omc_unbox_integer(tmpMeta11);
+      tmpMeta13 = OMC_BOX_FIELD(tmpMeta8, 3);
+      tmp14 = omc_unbox_integer(tmpMeta13);
       _compIdx = tmp10  /* pattern as ty=Integer */;
       _eqSysIdx = tmp12  /* pattern as ty=Integer */;
       _offset = tmp14  /* pattern as ty=Integer */;
@@ -3279,22 +3253,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__orderS
 
       _varIdx = _varIdx - _offset;
 
-      _var = omc_BackendVariable_getVarAt(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqSys), 2))), _varIdx);
+      _var = omc_BackendVariable_getVarAt(threadData, (OMC_BOX_FIELD(_eqSys, 2)), _varIdx);
 
-      _cref = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 2)));
+      _cref = (OMC_BOX_FIELD(_var, 2));
 
       /* Pattern-matching assignment */
       tmpMeta15 = mmc_mk_cons(_cref, MMC_REFSTRUCTLIT(mmc_nil));
-      tmpMeta16 = omc_SimCodeUtil_getSimVars2Crefs(threadData, tmpMeta15, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_simCode), 44))));
-      if (listEmpty(tmpMeta16)) MMC_THROW_INTERNAL();
+      tmpMeta16 = omc_SimCodeUtil_getSimVars2Crefs(threadData, tmpMeta15, (OMC_BOX_FIELD(_simCode, 44)));
+      if (listEmpty(tmpMeta16)) OMC_THROW_INTERNAL();
       tmpMeta17 = MMC_CAR(tmpMeta16);
       tmpMeta18 = MMC_CDR(tmpMeta16);
-      if (!listEmpty(tmpMeta18)) MMC_THROW_INTERNAL();
+      if (!listEmpty(tmpMeta18)) OMC_THROW_INTERNAL();
       _simVar = tmpMeta17;
 
-      _simVarIdx = mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_simVar), 7))));
+      _simVarIdx = omc_unbox_integer((OMC_BOX_FIELD(_simVar, 7)));
 
-      tmpMeta19 = mmc_mk_cons(mmc_mk_integer(_simVarIdx), _simVarIdxs);
+      tmpMeta19 = mmc_mk_cons(omc_mk_integer(_simVarIdx), _simVarIdxs);
       _simVarIdxs = tmpMeta19;
     }
   }
@@ -3303,15 +3277,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_multirate__orderS
 
   _orderedTasks = omc_List_map1(threadData, _order, boxvar_List_getIndexFirst, _stateTasks);
   _return: OMC_LABEL_UNUSED
-  return _orderedTasks;
+  omc_ret_ = _orderedTasks;
+  return omc_ret_;
 }
 
 static modelica_metatype closure3_Array_getIndexFirst(threadData_t *thData, modelica_metatype closure, modelica_metatype inIndex)
 {
-  modelica_metatype inArray = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype inArray = OMC_BOX_FIELD(closure, 1);
   return boxptr_Array_getIndexFirst(thData, inIndex, inArray);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_multirate__partitioning(threadData_t *threadData, modelica_metatype _odeGraph, modelica_metatype _odeGraphData, modelica_metatype _backendDAE, modelica_metatype _simCode, modelica_metatype _sccSimEqMapping)
 {
   modelica_metatype _partitionDataOut = NULL;
@@ -3323,15 +3298,16 @@ modelica_metatype omc_HpcOmTaskGraph_multirate__partitioning(threadData_t *threa
   modelica_integer _numPartitions;
   modelica_metatype _activatorsForPartitions = NULL;
   modelica_metatype _stateToActivators = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
+  modelica_string tmp5;
+  modelica_string tmp6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _partitionDataOut has no default value.
   // _stateTaskAssign has no default value.
@@ -3344,17 +3320,17 @@ modelica_metatype omc_HpcOmTaskGraph_multirate__partitioning(threadData_t *threa
   // _stateToActivators has no default value.
   _tasksPerLevel = omc_HpcOmTaskGraph_getLevelNodes(threadData, _odeGraph);
 
-  tmpMeta1 = stringAppend(_OMC_LIT22,stringDelimitList(omc_List_map(threadData, _tasksPerLevel, boxvar_HpcOmTaskGraph_intLstString), _OMC_LIT5));
-  tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT5);
-  fputs(MMC_STRINGDATA(tmpMeta2),stdout);
+  tmp1 = stringAppend(_OMC_LIT22,stringDelimitList(omc_List_map(threadData, _tasksPerLevel, boxvar_HpcOmTaskGraph_intLstString), _OMC_LIT5));
+  tmp2 = stringAppend(tmp1,_OMC_LIT5);
+  fputs(omc_string_data(tmp2),stdout);
 
   _stateTasks = omc_HpcOmTaskGraph_getLeafNodes(threadData, _odeGraph);
 
   _stateTasks = omc_HpcOmTaskGraph_multirate__orderStateTasksInSimVarStateOrder(threadData, _stateTasks, _odeGraphData, _backendDAE, _simCode);
 
-  tmpMeta3 = stringAppend(_OMC_LIT23,omc_HpcOmTaskGraph_intLstString(threadData, _stateTasks));
-  tmpMeta4 = stringAppend(tmpMeta3,_OMC_LIT5);
-  fputs(MMC_STRINGDATA(tmpMeta4),stdout);
+  tmp3 = stringAppend(_OMC_LIT23,omc_HpcOmTaskGraph_intLstString(threadData, _stateTasks));
+  tmp4 = stringAppend(tmp3,_OMC_LIT5);
+  fputs(omc_string_data(tmp4),stdout);
 
   _odeGraphT = omc_AdjacencyMatrix_transposeAdjacencyMatrix(threadData, _odeGraph, arrayLength(_odeGraph));
 
@@ -3364,12 +3340,12 @@ modelica_metatype omc_HpcOmTaskGraph_multirate__partitioning(threadData_t *threa
 
   _partitions = omc_HpcOmTaskGraph_multirate__getPartitions(threadData, _stateTaskAssign, _stateTasks, _odeGraphT);
 
-  tmpMeta5 = stringAppend(_OMC_LIT24,stringDelimitList(omc_List_map(threadData, _partitions, boxvar_HpcOmTaskGraph_intLstString), _OMC_LIT5));
-  tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT5);
-  fputs(MMC_STRINGDATA(tmpMeta6),stdout);
+  tmp5 = stringAppend(_OMC_LIT24,stringDelimitList(omc_List_map(threadData, _partitions, boxvar_HpcOmTaskGraph_intLstString), _OMC_LIT5));
+  tmp6 = stringAppend(tmp5,_OMC_LIT5);
+  fputs(omc_string_data(tmp6),stdout);
 
-  tmpMeta7 = mmc_mk_box1(0, _stateTaskAssign);
-  _activatorsForPartitions = omc_List_mapMap(threadData, _partitions, boxvar_listHead, (modelica_fnptr) mmc_mk_box2(0,closure3_Array_getIndexFirst,tmpMeta7));
+  tmpMeta7 = omc_mk_box1(0, _stateTaskAssign);
+  _activatorsForPartitions = omc_List_mapMap(threadData, _partitions, boxvar_listHead, (modelica_fnptr) omc_mk_box2(0,closure3_Array_getIndexFirst,tmpMeta7));
 
   _partitions = omc_List_map1(threadData, _partitions, boxvar_HpcOmTaskGraph_getSimEqsIdxLstForSCCIdxLst, _sccSimEqMapping);
 
@@ -3377,12 +3353,13 @@ modelica_metatype omc_HpcOmTaskGraph_multirate__partitioning(threadData_t *threa
 
   _stateToActivators = omc_List_intRange(threadData, listLength(_stateTasks));
 
-  tmpMeta8 = mmc_mk_box5(3, &SimCode_PartitionData_PARTITIONDATA__desc, mmc_mk_integer(_numPartitions), _partitions, _activatorsForPartitions, _stateToActivators);
+  tmpMeta8 = omc_mk_box5(3, &SimCode_PartitionData_PARTITIONDATA__desc, omc_mk_integer(_numPartitions), _partitions, _activatorsForPartitions, _stateToActivators);
   _partitionDataOut = tmpMeta8;
 
   omc_HpcOmTaskGraph_dumpPartitionData(threadData, _partitionDataOut);
   _return: OMC_LABEL_UNUSED
-  return _partitionDataOut;
+  omc_ret_ = _partitionDataOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForVarIdx(threadData_t *threadData, modelica_integer _varIdx, modelica_integer _eqSysIdx, modelica_metatype _varCompMapping, modelica_integer _inTryThisIndex)
@@ -3400,10 +3377,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForVarIdx(t
   modelica_integer tmp5;
   modelica_metatype tmpMeta6;
   modelica_integer tmp7;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _node has no default value.
   // _offset has no default value.
@@ -3420,12 +3395,12 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForVarIdx(t
     {
       /* Pattern-matching assignment */
       tmpMeta1 = arrayGet(_varCompMapping, _tryThisIndex);
-      tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-      tmp3 = mmc_unbox_integer(tmpMeta2);
-      tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-      tmp5 = mmc_unbox_integer(tmpMeta4);
-      tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-      tmp7 = mmc_unbox_integer(tmpMeta6);
+      tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+      tmp3 = omc_unbox_integer(tmpMeta2);
+      tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+      tmp5 = omc_unbox_integer(tmpMeta4);
+      tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
+      tmp7 = omc_unbox_integer(tmpMeta6);
       _node = tmp3  /* pattern as ty=Integer */;
       _eqSys = tmp5  /* pattern as ty=Integer */;
       _offset = tmp7  /* pattern as ty=Integer */;
@@ -3451,7 +3426,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForVarIdx(t
       }
       else
       {
-        fputs(MMC_STRINGDATA(_OMC_LIT25),stdout);
+        fputs(omc_string_data(_OMC_LIT25),stdout);
       }
     }
 
@@ -3461,14 +3436,12 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForVarIdx(t
     {
       omc_Error_addInternalError(threadData, _OMC_LIT26, _OMC_LIT27);
 
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _node;
+  omc_ret_ = _node;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNodeForVarIdx(threadData_t *threadData, modelica_metatype _varIdx, modelica_metatype _eqSysIdx, modelica_metatype _varCompMapping, modelica_metatype _inTryThisIndex)
 {
@@ -3477,11 +3450,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNodeForVarI
   modelica_integer tmp3;
   modelica_integer _node;
   modelica_metatype out_node;
-  tmp1 = mmc_unbox_integer(_varIdx);
-  tmp2 = mmc_unbox_integer(_eqSysIdx);
-  tmp3 = mmc_unbox_integer(_inTryThisIndex);
+  tmp1 = omc_unbox_integer(_varIdx);
+  tmp2 = omc_unbox_integer(_eqSysIdx);
+  tmp3 = omc_unbox_integer(_inTryThisIndex);
   _node = omc_HpcOmTaskGraph_getNodeForVarIdx(threadData, tmp1, tmp2, _varCompMapping, tmp3);
-  out_node = mmc_mk_icon(_node);
+  out_node = omc_mk_icon(_node);
   return out_node;
 }
 
@@ -3493,11 +3466,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
   modelica_integer tmp1_c0 __attribute__((unused)) = 0;
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
   modelica_boolean tmp1_c2 __attribute__((unused)) = 0;
+  modelica_integer omc_ret_;
   modelica_metatype tmpMeta[3] __attribute__((unused)) = {0};
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eqSysIdx has no default value.
   // _varIdx has no default value.
@@ -3526,7 +3497,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
       // _vars has no default value.
       // _varLst has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -3553,7 +3524,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 2);
           
           _vars = tmpMeta8;
           /* Pattern matching succeeded */
@@ -3561,19 +3532,19 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
 
           if((listLength(_lst) != ((modelica_integer) 1)))
           {
-            fputs(MMC_STRINGDATA(_OMC_LIT28),stdout);
+            fputs(omc_string_data(_OMC_LIT28),stdout);
           }
 
           if(omc_BackendVariable_isStateVar(threadData, listHead(_varLst)))
           {
             /* Pattern-matching assignment */
             tmpMeta9 = _OMC_LIT29;
-            tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 1));
-            tmp11 = mmc_unbox_integer(tmpMeta10);
-            tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
-            tmp13 = mmc_unbox_integer(tmpMeta12);
-            tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 3));
-            tmp15 = mmc_unbox_integer(tmpMeta14);
+            tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 1);
+            tmp11 = omc_unbox_integer(tmpMeta10);
+            tmpMeta12 = OMC_BOX_FIELD(tmpMeta9, 2);
+            tmp13 = omc_unbox_integer(tmpMeta12);
+            tmpMeta14 = OMC_BOX_FIELD(tmpMeta9, 3);
+            tmp15 = omc_unbox_integer(tmpMeta14);
             _esIdx = tmp11  /* pattern as ty=Integer */;
             _vIdx = tmp13  /* pattern as ty=Integer */;
             _b = tmp15  /* pattern as ty=Boolean */;
@@ -3581,14 +3552,14 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
           else
           {
             /* Pattern-matching assignment */
-            tmpMeta16 = mmc_mk_box3(0, mmc_mk_integer(_eqSysIdxIn), listHead(_lst), mmc_mk_boolean(1 /* true */));
+            tmpMeta16 = omc_mk_box3(0, omc_mk_integer(_eqSysIdxIn), listHead(_lst), omc_mk_boolean(1 /* true */));
             tmpMeta17 = tmpMeta16;
-            tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 1));
-            tmp19 = mmc_unbox_integer(tmpMeta18);
-            tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 2));
-            tmp21 = mmc_unbox_integer(tmpMeta20);
-            tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 3));
-            tmp23 = mmc_unbox_integer(tmpMeta22);
+            tmpMeta18 = OMC_BOX_FIELD(tmpMeta17, 1);
+            tmp19 = omc_unbox_integer(tmpMeta18);
+            tmpMeta20 = OMC_BOX_FIELD(tmpMeta17, 2);
+            tmp21 = omc_unbox_integer(tmpMeta20);
+            tmpMeta22 = OMC_BOX_FIELD(tmpMeta17, 3);
+            tmp23 = omc_unbox_integer(tmpMeta22);
             _esIdx = tmp19  /* pattern as ty=Integer */;
             _vIdx = tmp21  /* pattern as ty=Integer */;
             _b = tmp23  /* pattern as ty=Boolean */;
@@ -3625,14 +3596,14 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -3642,10 +3613,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNodeForCref1(th
   _return: OMC_LABEL_UNUSED
   if (out_varIdx) { *out_varIdx = _varIdx; }
   if (out_found) { *out_found = _found; }
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _eqSysIdx;
+  omc_ret_ = _eqSysIdx;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNodeForCref1(threadData_t *threadData, modelica_metatype _eqSystems, modelica_metatype _cref, modelica_metatype _eqSysIdxIn, modelica_metatype *out_varIdx, modelica_metatype *out_found)
 {
@@ -3654,11 +3623,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNodeForCref
   modelica_boolean _found;
   modelica_integer _eqSysIdx;
   modelica_metatype out_eqSysIdx;
-  tmp1 = mmc_unbox_integer(_eqSysIdxIn);
+  tmp1 = omc_unbox_integer(_eqSysIdxIn);
   _eqSysIdx = omc_HpcOmTaskGraph_getNodeForCref1(threadData, _eqSystems, _cref, tmp1, &_varIdx, &_found);
-  out_eqSysIdx = mmc_mk_icon(_eqSysIdx);
-  if (out_varIdx) { *out_varIdx = mmc_mk_icon(_varIdx); }
-  if (out_found) { *out_found = mmc_mk_icon(_found); }
+  out_eqSysIdx = omc_mk_icon(_eqSysIdx);
+  if (out_varIdx) { *out_varIdx = omc_mk_icon(_varIdx); }
+  if (out_found) { *out_found = omc_mk_icon(_found); }
   return out_eqSysIdx;
 }
 
@@ -3672,7 +3641,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodeForCref(th
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNodeVarIdx has no default value.
   // _eqSysIdx has no default value.
@@ -3681,17 +3651,18 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodeForCref(th
   // _eqSystems has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iDae;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _eqSystems = tmpMeta2;
 
   _eqSysIdx = omc_HpcOmTaskGraph_getNodeForCref1(threadData, _eqSystems, _iCref, ((modelica_integer) 1) ,&_varIdx ,NULL);
 
   _nodeIdx = omc_HpcOmTaskGraph_getNodeForVarIdx(threadData, _varIdx, _eqSysIdx, _iVarCompMapping, _varIdx);
 
-  tmpMeta3 = mmc_mk_box2(0, mmc_mk_integer(_nodeIdx), mmc_mk_integer(_varIdx));
+  tmpMeta3 = omc_mk_box2(0, omc_mk_integer(_nodeIdx), omc_mk_integer(_varIdx));
   _oNodeVarIdx = tmpMeta3;
   _return: OMC_LABEL_UNUSED
-  return _oNodeVarIdx;
+  omc_ret_ = _oNodeVarIdx;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_nodeIsDependent(threadData_t *threadData, modelica_metatype _node)
@@ -3701,32 +3672,28 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_nodeIsDependent(th
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _dep has no default value.
   // _tpl1 has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _node;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
   _tpl1 = tmp3  /* pattern as ty=Integer */;
 
   _dep = (_tpl1 != ((modelica_integer) -1));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _dep;
+  omc_ret_ = _dep;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_nodeIsDependent(threadData_t *threadData, modelica_metatype _node)
 {
   modelica_boolean _dep;
   modelica_metatype out_dep;
   _dep = omc_HpcOmTaskGraph_nodeIsDependent(threadData, _node);
-  out_dep = mmc_mk_icon(_dep);
+  out_dep = omc_mk_icon(_dep);
   return out_dep;
 }
 
@@ -3734,7 +3701,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodeForCrefLst
 {
   modelica_metatype _oNodeVarLst = NULL;
   modelica_metatype _tmpNodeVarLst = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNodeVarLst has no default value.
   // _tmpNodeVarLst has no default value.
@@ -3742,7 +3710,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodeForCrefLst
 
   _oNodeVarLst = omc_List_filterOnTrue(threadData, _tmpNodeVarLst, boxvar_HpcOmTaskGraph_nodeIsDependent);
   _return: OMC_LABEL_UNUSED
-  return _oNodeVarLst;
+  omc_ret_ = _oNodeVarLst;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addEdgeToGraph(threadData_t *threadData, modelica_integer _parent, modelica_integer _child, modelica_metatype _graphIn)
@@ -3750,26 +3719,28 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addEdgeToGraph(th
   modelica_metatype _graphOut = NULL;
   modelica_metatype _row = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _row has no default value.
   _row = arrayGet(_graphIn, _parent);
 
-  tmpMeta1 = mmc_mk_cons(mmc_mk_integer(_child), _row);
+  tmpMeta1 = mmc_mk_cons(omc_mk_integer(_child), _row);
   _row = omc_List_unique(threadData, tmpMeta1);
 
   _graphOut = arrayUpdate(_graphIn, _parent, _row);
   _return: OMC_LABEL_UNUSED
-  return _graphOut;
+  omc_ret_ = _graphOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_addEdgeToGraph(threadData_t *threadData, modelica_metatype _parent, modelica_metatype _child, modelica_metatype _graphIn)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _graphOut = NULL;
-  tmp1 = mmc_unbox_integer(_parent);
-  tmp2 = mmc_unbox_integer(_child);
+  tmp1 = omc_unbox_integer(_parent);
+  tmp2 = omc_unbox_integer(_child);
   _graphOut = omc_HpcOmTaskGraph_addEdgeToGraph(threadData, tmp1, tmp2, _graphIn);
   /* skip box _graphOut; array<list<#Integer>> */
   return _graphOut;
@@ -3778,18 +3749,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_addEdgeToGraph
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addEdgesToGraph(threadData_t *threadData, modelica_metatype _parents, modelica_integer _child, modelica_metatype _graphIn)
 {
   modelica_metatype _graphOut = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
-  _graphOut = omc_List_fold1(threadData, omc_List_map(threadData, _parents, boxvar_Util_tuple21), boxvar_HpcOmTaskGraph_addEdgeToGraph, mmc_mk_integer(_child), _graphIn);
+  _graphOut = omc_List_fold1(threadData, omc_List_map(threadData, _parents, boxvar_Util_tuple21), boxvar_HpcOmTaskGraph_addEdgeToGraph, omc_mk_integer(_child), _graphIn);
   _return: OMC_LABEL_UNUSED
-  return _graphOut;
+  omc_ret_ = _graphOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_addEdgesToGraph(threadData_t *threadData, modelica_metatype _parents, modelica_metatype _child, modelica_metatype _graphIn)
 {
   modelica_integer tmp1;
   modelica_metatype _graphOut = NULL;
-  tmp1 = mmc_unbox_integer(_child);
+  tmp1 = omc_unbox_integer(_child);
   _graphOut = omc_HpcOmTaskGraph_addEdgesToGraph(threadData, _parents, tmp1, _graphIn);
   /* skip box _graphOut; array<list<#Integer>> */
   return _graphOut;
@@ -3802,34 +3775,30 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isCommunicationChi
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEq has no default value.
   // _childNode has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iComm;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmp3 = omc_unbox_integer(tmpMeta2);
   _childNode = tmp3  /* pattern as ty=Integer */;
 
   _isEq = (_childNode != _iIdx);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _isEq;
+  omc_ret_ = _isEq;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_isCommunicationChildEqualToIdx(threadData_t *threadData, modelica_metatype _iComm, modelica_metatype _iIdx)
 {
   modelica_integer tmp1;
   modelica_boolean _isEq;
   modelica_metatype out_isEq;
-  tmp1 = mmc_unbox_integer(_iIdx);
+  tmp1 = omc_unbox_integer(_iIdx);
   _isEq = omc_HpcOmTaskGraph_isCommunicationChildEqualToIdx(threadData, _iComm, tmp1);
-  out_isEq = mmc_mk_icon(_isEq);
+  out_isEq = omc_mk_icon(_isEq);
   return out_isEq;
 }
 
@@ -3850,7 +3819,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setCommCosts(thre
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _commCostsOut has no default value.
   // _row has no default value.
@@ -3858,36 +3828,37 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setCommCosts(thre
   // _varIdx has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _parent;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
   _parentNodeIdx = tmp3  /* pattern as ty=Integer */;
   _varIdx = tmp5  /* pattern as ty=Integer */;
 
   _row = arrayGet(_commCostsIn, _parentNodeIdx);
 
-  _row = omc_List_filter1OnTrue(threadData, _row, boxvar_HpcOmTaskGraph_isCommunicationChildEqualToIdx, mmc_mk_integer(_child));
+  _row = omc_List_filter1OnTrue(threadData, _row, boxvar_HpcOmTaskGraph_isCommunicationChildEqualToIdx, omc_mk_integer(_child));
 
   tmpMeta7 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta8 = mmc_mk_cons(mmc_mk_integer(_varIdx), MMC_REFSTRUCTLIT(mmc_nil));
+  tmpMeta8 = mmc_mk_cons(omc_mk_integer(_varIdx), MMC_REFSTRUCTLIT(mmc_nil));
   tmpMeta9 = MMC_REFSTRUCTLIT(mmc_nil);
   tmpMeta10 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta11 = mmc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, mmc_mk_integer(((modelica_integer) 1)), tmpMeta7, tmpMeta8, tmpMeta9, tmpMeta10, mmc_mk_integer(_child), mmc_mk_real(_reqCycles));
+  tmpMeta11 = omc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, omc_mk_integer(((modelica_integer) 1)), tmpMeta7, tmpMeta8, tmpMeta9, tmpMeta10, omc_mk_integer(_child), omc_mk_real(_reqCycles));
   tmpMeta6 = mmc_mk_cons(tmpMeta11, _row);
   _row = tmpMeta6;
 
   _commCostsOut = arrayUpdate(_commCostsIn, _parentNodeIdx, _row);
   _return: OMC_LABEL_UNUSED
-  return _commCostsOut;
+  omc_ret_ = _commCostsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_setCommCosts(threadData_t *threadData, modelica_metatype _parent, modelica_metatype _child, modelica_metatype _reqCycles, modelica_metatype _commCostsIn)
 {
   modelica_integer tmp1;
   modelica_real tmp2;
   modelica_metatype _commCostsOut = NULL;
-  tmp1 = mmc_unbox_integer(_child);
-  tmp2 = mmc_unbox_real(_reqCycles);
+  tmp1 = omc_unbox_integer(_child);
+  tmp2 = omc_unbox_real(_reqCycles);
   _commCostsOut = omc_HpcOmTaskGraph_setCommCosts(threadData, _parent, tmp1, tmp2, _commCostsIn);
   /* skip box _commCostsOut; array<list<HpcOmTaskGraph.Communication>> */
   return _commCostsOut;
@@ -3896,20 +3867,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_setCommCosts(t
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setCommCostsToParent(threadData_t *threadData, modelica_metatype _parents, modelica_integer _child, modelica_real _reqCycles, modelica_metatype _commCostsIn)
 {
   modelica_metatype _commCostsOut = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _commCostsOut has no default value.
-  _commCostsOut = omc_List_fold2(threadData, _parents, boxvar_HpcOmTaskGraph_setCommCosts, mmc_mk_integer(_child), mmc_mk_real(_reqCycles), _commCostsIn);
+  _commCostsOut = omc_List_fold2(threadData, _parents, boxvar_HpcOmTaskGraph_setCommCosts, omc_mk_integer(_child), omc_mk_real(_reqCycles), _commCostsIn);
   _return: OMC_LABEL_UNUSED
-  return _commCostsOut;
+  omc_ret_ = _commCostsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_setCommCostsToParent(threadData_t *threadData, modelica_metatype _parents, modelica_metatype _child, modelica_metatype _reqCycles, modelica_metatype _commCostsIn)
 {
   modelica_integer tmp1;
   modelica_real tmp2;
   modelica_metatype _commCostsOut = NULL;
-  tmp1 = mmc_unbox_integer(_child);
-  tmp2 = mmc_unbox_real(_reqCycles);
+  tmp1 = omc_unbox_integer(_child);
+  tmp2 = omc_unbox_real(_reqCycles);
   _commCostsOut = omc_HpcOmTaskGraph_setCommCostsToParent(threadData, _parents, tmp1, tmp2, _commCostsIn);
   /* skip box _commCostsOut; array<list<HpcOmTaskGraph.Communication>> */
   return _commCostsOut;
@@ -3918,38 +3891,42 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_setCommCostsTo
 PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_printNodeVars1(threadData_t *threadData, modelica_metatype _node)
 {
   modelica_string _s = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _s has no default value.
-  tmpMeta1 = stringAppend(_OMC_LIT30,intString(mmc_unbox_integer(omc_Util_tuple21(threadData, _node))));
-  tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT31);
-  tmpMeta3 = stringAppend(tmpMeta2,intString(mmc_unbox_integer(omc_Util_tuple22(threadData, _node))));
-  tmpMeta4 = stringAppend(tmpMeta3,_OMC_LIT32);
-  _s = tmpMeta4;
+  tmp1 = stringAppend(_OMC_LIT30,intString(omc_unbox_integer(omc_Util_tuple21(threadData, _node))));
+  tmp2 = stringAppend(tmp1,_OMC_LIT31);
+  tmp3 = stringAppend(tmp2,intString(omc_unbox_integer(omc_Util_tuple22(threadData, _node))));
+  tmp4 = stringAppend(tmp3,_OMC_LIT32);
+  omc_string_store(&(_s), tmp4);
   _return: OMC_LABEL_UNUSED
-  return _s;
+  omc_ret_ = _s;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_printNodeVars(threadData_t *threadData, modelica_metatype _nodes)
 {
   modelica_string _s = NULL;
-  modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _s has no default value.
-  tmpMeta1 = stringAppend(_OMC_LIT33,stringDelimitList(omc_List_map(threadData, _nodes, boxvar_HpcOmTaskGraph_printNodeVars1), _OMC_LIT34));
-  _s = tmpMeta1;
+  tmp1 = stringAppend(_OMC_LIT33,stringDelimitList(omc_List_map(threadData, _nodes, boxvar_HpcOmTaskGraph_printNodeVars1), _OMC_LIT34));
+  omc_string_store(&(_s), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _s;
+  omc_ret_ = _s;
+  return omc_ret_;
 }
 
 static modelica_metatype closure4_BackendDAEOptimize_countOperationsExp(threadData_t *thData, modelica_metatype closure, modelica_metatype inExp, modelica_metatype inTpl, modelica_metatype tmp18)
 {
-  modelica_metatype shared = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype shared = OMC_BOX_FIELD(closure, 1);
   return boxptr_BackendDAEOptimize_countOperationsExp(thData, inExp, shared, inTpl, tmp18);
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateEquationCosts(threadData_t *threadData, modelica_metatype _eqIn, modelica_metatype _sharedIn)
@@ -3983,7 +3960,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateEquationC
   modelica_integer tmp17;
   modelica_metatype tmpMeta19;
   modelica_metatype tmpMeta20;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _tplOut has no default value.
   // _numAdd has no default value.
@@ -3996,24 +3974,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateEquationC
   // _numLog has no default value.
   // _compInfo has no default value.
   /* Pattern-matching tuple assignment, wild first pattern */
-  tmpMeta19 = mmc_mk_box1(0, _sharedIn);
-  omc_BackendEquation_traverseExpsOfEquation(threadData, _eqIn, (modelica_fnptr) mmc_mk_box2(0,closure4_BackendDAEOptimize_countOperationsExp,tmpMeta19), _OMC_LIT35, &tmpMeta1);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmp7 = mmc_unbox_integer(tmpMeta6);
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmp9 = mmc_unbox_integer(tmpMeta8);
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmp11 = mmc_unbox_integer(tmpMeta10);
-  tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmp13 = mmc_unbox_integer(tmpMeta12);
-  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmp15 = mmc_unbox_integer(tmpMeta14);
-  tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmp17 = mmc_unbox_integer(tmpMeta16);
+  tmpMeta19 = omc_mk_box1(0, _sharedIn);
+  omc_BackendEquation_traverseExpsOfEquation(threadData, _eqIn, (modelica_fnptr) omc_mk_box2(0,closure4_BackendDAEOptimize_countOperationsExp,tmpMeta19), _OMC_LIT35, &tmpMeta1);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmp7 = omc_unbox_integer(tmpMeta6);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmp9 = omc_unbox_integer(tmpMeta8);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmp11 = omc_unbox_integer(tmpMeta10);
+  tmpMeta12 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmp13 = omc_unbox_integer(tmpMeta12);
+  tmpMeta14 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmp15 = omc_unbox_integer(tmpMeta14);
+  tmpMeta16 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmp17 = omc_unbox_integer(tmpMeta16);
   _numAdd = tmp3  /* pattern as ty=Integer */;
   _numMul = tmp5  /* pattern as ty=Integer */;
   _numDiv = tmp7  /* pattern as ty=Integer */;
@@ -4023,21 +4001,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateEquationC
   _numOth = tmp15  /* pattern as ty=Integer */;
   _numFuncs = tmp17  /* pattern as ty=Integer */;
 
-  tmpMeta20 = mmc_mk_box9(6, &BackendDAE_CompInfo_NO__COMP__desc, mmc_mk_integer(_numAdd), mmc_mk_integer(_numMul), mmc_mk_integer(_numDiv), mmc_mk_integer(_numTrig), mmc_mk_integer(_numRel), mmc_mk_integer(_numLog), mmc_mk_integer(_numOth), mmc_mk_integer(_numFuncs));
+  tmpMeta20 = omc_mk_box9(6, &BackendDAE_CompInfo_NO__COMP__desc, omc_mk_integer(_numAdd), omc_mk_integer(_numMul), omc_mk_integer(_numDiv), omc_mk_integer(_numTrig), omc_mk_integer(_numRel), omc_mk_integer(_numLog), omc_mk_integer(_numOth), omc_mk_integer(_numFuncs));
   _compInfo = tmpMeta20;
 
   _tplOut = omc_HpcOmTaskGraph_calculateCosts(threadData, _compInfo);
   _return: OMC_LABEL_UNUSED
-  return _tplOut;
+  omc_ret_ = _tplOut;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_appendRemovedEquations(threadData_t *threadData, modelica_metatype _dae, modelica_metatype _graphIn, modelica_metatype _graphDataIn, modelica_metatype *out_graphDataOut)
 {
   modelica_metatype _graphOut = NULL;
   modelica_metatype _graphDataOut = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _graphDataOut has no default value.
@@ -4100,7 +4080,7 @@ modelica_metatype omc_HpcOmTaskGraph_appendRemovedEquations(threadData_t *thread
       // _compInformations1 has no default value.
       // _compInformations2 has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -4127,14 +4107,14 @@ modelica_metatype omc_HpcOmTaskGraph_appendRemovedEquations(threadData_t *thread
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta6 = _dae;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 3));
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 3);
           _shared = tmpMeta7;
 
           _remEqs = omc_BackendDAEUtil_collapseRemovedEqs(threadData, _dae);
 
           /* Pattern-matching assignment */
           tmpMeta8 = _graphDataIn;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 3));
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 3);
           _varCompMap = tmpMeta9;
 
           _eqLst = omc_BackendEquation_equationList(threadData, _remEqs);
@@ -4151,16 +4131,16 @@ modelica_metatype omc_HpcOmTaskGraph_appendRemovedEquations(threadData_t *thread
 
           /* Pattern-matching assignment */
           tmpMeta11 = _graphDataIn;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 2));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 3));
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 4));
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 5));
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 6));
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 7));
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 8));
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 9));
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 10));
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 11));
+          tmpMeta12 = OMC_BOX_FIELD(tmpMeta11, 2);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta11, 3);
+          tmpMeta14 = OMC_BOX_FIELD(tmpMeta11, 4);
+          tmpMeta15 = OMC_BOX_FIELD(tmpMeta11, 5);
+          tmpMeta16 = OMC_BOX_FIELD(tmpMeta11, 6);
+          tmpMeta17 = OMC_BOX_FIELD(tmpMeta11, 7);
+          tmpMeta18 = OMC_BOX_FIELD(tmpMeta11, 8);
+          tmpMeta19 = OMC_BOX_FIELD(tmpMeta11, 9);
+          tmpMeta20 = OMC_BOX_FIELD(tmpMeta11, 10);
+          tmpMeta21 = OMC_BOX_FIELD(tmpMeta11, 11);
           _inComps1 = tmpMeta12;
           _varCompMapping1 = tmpMeta13;
           _eqCompMapping1 = tmpMeta14;
@@ -4185,7 +4165,7 @@ modelica_metatype omc_HpcOmTaskGraph_appendRemovedEquations(threadData_t *thread
 
           _compDescs2 = listArray(omc_List_map(threadData, _eqLst, boxvar_BackendDump_equationString));
 
-          _nodeMark2 = arrayCreate(_numNewComps, mmc_mk_integer(((modelica_integer) -2)));
+          _nodeMark2 = arrayCreate(_numNewComps, omc_mk_integer(((modelica_integer) -2)));
 
           _exeCosts2 = listArray(omc_List_map1(threadData, _eqLst, boxvar_HpcOmTaskGraph_estimateEquationCosts, _shared));
 
@@ -4205,7 +4185,7 @@ modelica_metatype omc_HpcOmTaskGraph_appendRemovedEquations(threadData_t *thread
 
           _commCosts1 = omc_List_threadFold1(threadData, _nodeVarLst, _newComps, boxvar_HpcOmTaskGraph_setCommCostsToParent, _OMC_LIT38, _commCosts1);
 
-          tmpMeta23 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps1, _varCompMapping1, _eqCompMapping1, _compParamMapping1, _compNames1, _compDescs1, _exeCosts1, _commCosts1, _nodeMark1, _compInformations1);
+          tmpMeta23 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps1, _varCompMapping1, _eqCompMapping1, _compParamMapping1, _compNames1, _compDescs1, _exeCosts1, _commCosts1, _nodeMark1, _compInformations1);
           _graphData = tmpMeta23;
           tmpMeta[0+0] = _graph;
           tmpMeta[0+1] = _graphData;
@@ -4224,14 +4204,14 @@ modelica_metatype omc_HpcOmTaskGraph_appendRemovedEquations(threadData_t *thread
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -4239,14 +4219,16 @@ modelica_metatype omc_HpcOmTaskGraph_appendRemovedEquations(threadData_t *thread
   _graphDataOut = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_graphDataOut) { *out_graphDataOut = _graphDataOut; }
-  return _graphOut;
+  omc_ret_ = _graphOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsForVar(threadData_t *threadData, modelica_integer _backendVarIdx, modelica_metatype _vars, modelica_metatype _taskGraphInfo, modelica_integer _eqSysOffset, modelica_metatype _annotInfoIn)
 {
   modelica_metatype _annotInfoOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _annotInfoOut has no default value.
   { /* matchcontinue expression */
@@ -4274,7 +4256,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsFor
       // _varCompMapping has no default value.
       // _nodeMark has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -4287,14 +4269,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsFor
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
           modelica_integer tmp12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 10));
+          modelica_string tmp13;
+          modelica_string tmp14;
+          modelica_string tmp15;
+          modelica_string tmp16;
+          modelica_string tmp17;
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 10);
           
           _inComps = tmpMeta6;
           _varCompMapping = tmpMeta7;
@@ -4310,24 +4292,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsFor
 
           /* Pattern-matching assignment */
           tmpMeta10 = arrayGet(_varCompMapping, _backendVarIdx + _eqSysOffset);
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 1));
-          tmp12 = mmc_unbox_integer(tmpMeta11);
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta10, 1);
+          tmp12 = omc_unbox_integer(tmpMeta11);
           _compIdx = tmp12  /* pattern as ty=Integer */;
 
           _taskIdx = omc_HpcOmTaskGraph_getCompInComps(threadData, _compIdx, ((modelica_integer) 1), _inComps, _nodeMark);
 
           _annot = omc_BackendVariable_getAnnotationComment(threadData, _var);
 
-          _annotString = arrayGet(_annotInfoIn, _taskIdx);
+          omc_string_store(&(_annotString), arrayGet(_annotInfoIn, _taskIdx));
 
           _cr = omc_BackendVariable_varCref(threadData, _var);
 
-          tmpMeta13 = stringAppend(_annotString,_OMC_LIT30);
-          tmpMeta14 = stringAppend(tmpMeta13,omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
-          tmpMeta15 = stringAppend(tmpMeta14,_OMC_LIT39);
-          tmpMeta16 = stringAppend(tmpMeta15,omc_DAEDumpTypes_dumpCommentAnnotationStr(threadData, _annot));
-          tmpMeta17 = stringAppend(tmpMeta16,_OMC_LIT40);
-          _annotString = tmpMeta17;
+          tmp13 = stringAppend(_annotString,_OMC_LIT30);
+          tmp14 = stringAppend(tmp13,omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
+          tmp15 = stringAppend(tmp14,_OMC_LIT39);
+          tmp16 = stringAppend(tmp15,omc_DAEDumpTypes_dumpCommentAnnotationStr(threadData, _annot));
+          tmp17 = stringAppend(tmp16,_OMC_LIT40);
+          omc_string_store(&(_annotString), tmp17);
 
           arrayUpdate(_annotInfoIn, _taskIdx, _annotString);
           tmpMeta1 = _annotInfoIn;
@@ -4346,28 +4328,29 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsFor
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _annotInfoOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _annotInfoOut;
+  omc_ret_ = _annotInfoOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_setAnnotationsForVar(threadData_t *threadData, modelica_metatype _backendVarIdx, modelica_metatype _vars, modelica_metatype _taskGraphInfo, modelica_metatype _eqSysOffset, modelica_metatype _annotInfoIn)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _annotInfoOut = NULL;
-  tmp1 = mmc_unbox_integer(_backendVarIdx);
-  tmp2 = mmc_unbox_integer(_eqSysOffset);
+  tmp1 = omc_unbox_integer(_backendVarIdx);
+  tmp2 = omc_unbox_integer(_eqSysOffset);
   _annotInfoOut = omc_HpcOmTaskGraph_setAnnotationsForVar(threadData, tmp1, _vars, _taskGraphInfo, tmp2, _annotInfoIn);
   /* skip box _annotInfoOut; array<String> */
   return _annotInfoOut;
@@ -4388,7 +4371,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsFor
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _infoOut has no default value.
   // _idx has no default value.
@@ -4397,25 +4381,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsFor
   // _eqs has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _infoIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
   _idx = tmp3  /* pattern as ty=Integer */;
   _annots = tmpMeta4;
 
   /* Pattern-matching assignment */
   tmpMeta5 = _syst;
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 3));
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 2);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta5, 3);
   _vars = tmpMeta6;
   _eqs = tmpMeta7;
 
-  _annots = omc_List_fold3(threadData, omc_List_intRange(threadData, omc_BackendVariable_varsSize(threadData, _vars)), boxvar_HpcOmTaskGraph_setAnnotationsForVar, _vars, _taskGraphInfo, mmc_mk_integer(_idx), _annots);
+  _annots = omc_List_fold3(threadData, omc_List_intRange(threadData, omc_BackendVariable_varsSize(threadData, _vars)), boxvar_HpcOmTaskGraph_setAnnotationsForVar, _vars, _taskGraphInfo, omc_mk_integer(_idx), _annots);
 
-  tmpMeta8 = mmc_mk_box2(0, mmc_mk_integer(omc_BackendVariable_varsSize(threadData, _vars) + _idx), _annots);
+  tmpMeta8 = omc_mk_box2(0, omc_mk_integer(omc_BackendVariable_varsSize(threadData, _vars) + _idx), _annots);
   _infoOut = tmpMeta8;
   _return: OMC_LABEL_UNUSED
-  return _infoOut;
+  omc_ret_ = _infoOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsForTasks(threadData_t *threadData, modelica_metatype _taskGraphInfo, modelica_metatype _backendDAE, modelica_metatype _annotInfoIn)
@@ -4427,25 +4412,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setAnnotationsFor
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _annotInfoOut has no default value.
   // _systs has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _backendDAE;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _systs = tmpMeta2;
 
   /* Pattern-matching assignment */
-  tmpMeta3 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 0)), _annotInfoIn);
+  tmpMeta3 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 0)), _annotInfoIn);
   tmpMeta4 = omc_List_fold1(threadData, _systs, boxvar_HpcOmTaskGraph_setAnnotationsForTasks1, _taskGraphInfo, tmpMeta3);
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 2));
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta4, 2);
   _annotInfoOut = tmpMeta5;
   _return: OMC_LABEL_UNUSED
-  return _annotInfoOut;
+  omc_ret_ = _annotInfoOut;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_real _inReal, modelica_integer _nIn)
 {
   modelica_real _outReal;
@@ -4465,10 +4452,8 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
   modelica_real tmp13;
   modelica_real tmp14;
   modelica_real tmp15;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_real omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outReal has no default value.
   // _real has no default value.
@@ -4510,7 +4495,7 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
       }
       else
       {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
   }
@@ -4520,7 +4505,7 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
   }
   if(isnan(tmp3) || isinf(tmp3))
   {
-    MMC_THROW_INTERNAL();
+    OMC_THROW_INTERNAL();
   }
   _real = (_inReal) * (tmp3);
 
@@ -4564,7 +4549,7 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
       }
       else
       {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
   }
@@ -4574,15 +4559,13 @@ modelica_real omc_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_re
   }
   if(isnan(tmp10) || isinf(tmp10))
   {
-    MMC_THROW_INTERNAL();
+    OMC_THROW_INTERNAL();
   }tmp15 = tmp10;
-  if (tmp15 == 0) {MMC_THROW_INTERNAL();}
+  if (tmp15 == 0) {OMC_THROW_INTERNAL();}
   _outReal = (_real) / tmp15;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _outReal;
+  omc_ret_ = _outReal;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_roundReal(threadData_t *threadData, modelica_metatype _inReal, modelica_metatype _nIn)
 {
@@ -4590,14 +4573,14 @@ modelica_metatype boxptr_HpcOmTaskGraph_roundReal(threadData_t *threadData, mode
   modelica_integer tmp2;
   modelica_real _outReal;
   modelica_metatype out_outReal;
-  tmp1 = mmc_unbox_real(_inReal);
-  tmp2 = mmc_unbox_integer(_nIn);
+  tmp1 = omc_unbox_real(_inReal);
+  tmp2 = omc_unbox_integer(_nIn);
   _outReal = omc_HpcOmTaskGraph_roundReal(threadData, tmp1, tmp2);
-  out_outReal = mmc_mk_rcon(_outReal);
+  out_outReal = omc_mk_rcon(_outReal);
   return out_outReal;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getAllSCCsOfGraph(threadData_t *threadData, modelica_metatype _iTaskGraphMeta)
 {
   modelica_metatype _oSccs = NULL;
@@ -4613,7 +4596,8 @@ modelica_metatype omc_HpcOmTaskGraph_getAllSCCsOfGraph(threadData_t *threadData,
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSccs has no default value.
   // _taskIdx has no default value.
@@ -4626,8 +4610,8 @@ modelica_metatype omc_HpcOmTaskGraph_getAllSCCsOfGraph(threadData_t *threadData,
 
   /* Pattern-matching assignment */
   tmpMeta2 = _iTaskGraphMeta;
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 2));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 10));
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta2, 2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta2, 10);
   _inComps = tmpMeta3;
   _nodeMark = tmpMeta4;
 
@@ -4646,10 +4630,11 @@ modelica_metatype omc_HpcOmTaskGraph_getAllSCCsOfGraph(threadData_t *threadData,
 
   _oSccs = listReverse(_tmpSccs);
   _return: OMC_LABEL_UNUSED
-  return _oSccs;
+  omc_ret_ = _oSccs;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_sumUpExeCosts(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iMeta)
 {
   modelica_metatype _execCosts = NULL;
@@ -4660,7 +4645,8 @@ modelica_metatype omc_HpcOmTaskGraph_sumUpExeCosts(threadData_t *threadData, mod
   modelica_metatype _exeCosts = NULL;
   modelica_metatype _exeCostLst = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _execCosts has no default value.
   // _cost1 has no default value.
@@ -4682,8 +4668,8 @@ modelica_metatype omc_HpcOmTaskGraph_sumUpExeCosts(threadData_t *threadData, mod
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 8);
           
           _inComps = tmpMeta6;
           _exeCosts = tmpMeta7;
@@ -4692,10 +4678,10 @@ modelica_metatype omc_HpcOmTaskGraph_sumUpExeCosts(threadData_t *threadData, mod
 
           _exeCostLst = omc_List_map1(threadData, _comps, boxvar_Array_getIndexFirst, _exeCosts);
 
-          _cost1 = mmc_unbox_integer(omc_List_fold(threadData, omc_List_map(threadData, _exeCostLst, boxvar_Util_tuple21), boxvar_intAdd, mmc_mk_integer(((modelica_integer) 0))));
+          _cost1 = omc_unbox_integer(omc_List_fold(threadData, omc_List_map(threadData, _exeCostLst, boxvar_Util_tuple21), boxvar_intAdd, omc_mk_integer(((modelica_integer) 0))));
 
-          _cost2 = mmc_unbox_real(omc_List_fold(threadData, omc_List_map(threadData, _exeCostLst, boxvar_Util_tuple22), boxvar_realAdd, _OMC_LIT41));
-          tmpMeta8 = mmc_mk_box2(0, mmc_mk_integer(_cost1), mmc_mk_real(_cost2));
+          _cost2 = omc_unbox_real(omc_List_fold(threadData, omc_List_map(threadData, _exeCostLst, boxvar_Util_tuple22), boxvar_realAdd, _OMC_LIT41));
+          tmpMeta8 = omc_mk_box2(0, omc_mk_integer(_cost1), omc_mk_real(_cost2));
           tmpMeta1 = tmpMeta8;
           goto tmp3_done;
         }
@@ -4711,14 +4697,15 @@ modelica_metatype omc_HpcOmTaskGraph_sumUpExeCosts(threadData_t *threadData, mod
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _execCosts = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _execCosts;
+  omc_ret_ = _execCosts;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestCommCost(threadData_t *threadData, modelica_metatype _iCommCosts, modelica_metatype _iHighestTuple)
@@ -4729,24 +4716,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestCommCos
   modelica_metatype _head = NULL;
   modelica_metatype _rest = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oHighestTuple has no default value.
   // _highestCost has no default value.
   // _currentCost has no default value.
   // _head has no default value.
   // _rest has no default value.
-  { /* matchcontinue expression */
-    volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;
+  { /* match expression */
+    modelica_metatype tmp4_1;modelica_metatype tmp4_2;
     tmp4_1 = _iCommCosts;
     tmp4_2 = _iHighestTuple;
     {
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
-      tmp3_top:
-      threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
@@ -4756,36 +4741,41 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestCommCos
           modelica_real tmp9;
           modelica_metatype tmpMeta10;
           modelica_real tmp11;
-          modelica_boolean tmp12;
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 8));
-          tmp9 = mmc_unbox_real(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 8));
-          tmp11 = mmc_unbox_real(tmpMeta10);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 8);
+          tmp9 = omc_unbox_real(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 8);
+          tmp11 = omc_unbox_real(tmpMeta10);
           _head = tmpMeta6;
           _currentCost = tmp9  /* pattern as ty=Real */;
           _rest = tmpMeta7;
           _highestCost = tmp11  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp12 = (_currentCost > _highestCost);
-          if (1 /* true */ != tmp12) goto goto_2;
-          tmpMeta1 = omc_HpcOmTaskGraph_getHighestCommCost(threadData, _rest, _head);
+          /* Check guard condition after assignments */
+          if (!(_currentCost > _highestCost)) goto tmp3_end;
+          /* Tail recursive call */
+          _iCommCosts = _rest;
+          _iHighestTuple = _head;
+          goto _tailrecursive;
+          /* TODO: Make sure any eventual dead code below is never generated */
           goto tmp3_done;
         }
         case 1: {
+          modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
           if (listEmpty(tmp4_1)) goto tmp3_end;
-          tmpMeta13 = MMC_CAR(tmp4_1);
-          tmpMeta14 = MMC_CDR(tmp4_1);
+          tmpMeta12 = MMC_CAR(tmp4_1);
+          tmpMeta13 = MMC_CDR(tmp4_1);
           
-          _head = tmpMeta13;
-          _rest = tmpMeta14;
+          _head = tmpMeta12;
+          _rest = tmpMeta13;
           /* Pattern matching succeeded */
-          tmpMeta1 = omc_HpcOmTaskGraph_getHighestCommCost(threadData, _rest, _iHighestTuple);
+          /* Tail recursive call */
+          _iCommCosts = _rest;
+          goto _tailrecursive;
+          /* TODO: Make sure any eventual dead code below is never generated */
           goto tmp3_done;
         }
         case 2: {
@@ -4799,22 +4789,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestCommCos
         tmp3_end: ;
       }
       goto goto_2;
-      tmp3_done:
-      (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
-      goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
-      if (++tmp4 < 3) {
-        goto tmp3_top;
-      }
-      MMC_THROW_INTERNAL();
-      tmp3_done2:;
+      OMC_THROW_INTERNAL();
+      goto tmp3_done;
+      tmp3_done:;
     }
   }
   _oHighestTuple = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oHighestTuple;
+  omc_ret_ = _oHighestTuple;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_getCommCostBetweenNodes1(threadData_t *threadData, modelica_metatype _iCommCost, modelica_metatype _iChildComps)
@@ -4824,32 +4808,28 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_getCommCostBetween
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oResult has no default value.
   // _compIdx has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iCommCost;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmp3 = omc_unbox_integer(tmpMeta2);
   _compIdx = tmp3  /* pattern as ty=Integer */;
 
-  _oResult = omc_List_exist1(threadData, _iChildComps, boxvar_intEq, mmc_mk_integer(_compIdx));
+  _oResult = omc_List_exist1(threadData, _iChildComps, boxvar_intEq, omc_mk_integer(_compIdx));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oResult;
+  omc_ret_ = _oResult;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCommCostBetweenNodes1(threadData_t *threadData, modelica_metatype _iCommCost, modelica_metatype _iChildComps)
 {
   modelica_boolean _oResult;
   modelica_metatype out_oResult;
   _oResult = omc_HpcOmTaskGraph_getCommCostBetweenNodes1(threadData, _iCommCost, _iChildComps);
-  out_oResult = mmc_mk_icon(_oResult);
+  out_oResult = omc_mk_icon(_oResult);
   return out_oResult;
 }
 
@@ -4860,7 +4840,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommCostBetwee
   modelica_metatype _filteredCommCosts = NULL;
   modelica_metatype _highestCommCost = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oHighestComm has no default value.
   // _commCosts has no default value.
@@ -4871,7 +4852,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommCostBetwee
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -4903,26 +4884,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommCostBetwee
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oHighestComm = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oHighestComm;
+  omc_ret_ = _oHighestComm;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCommCostBetweenNodes0(threadData_t *threadData, modelica_metatype _iParentComp, modelica_metatype _iChildComps, modelica_metatype _iCommCosts)
 {
   modelica_integer tmp1;
   modelica_metatype _oHighestComm = NULL;
-  tmp1 = mmc_unbox_integer(_iParentComp);
+  tmp1 = omc_unbox_integer(_iParentComp);
   _oHighestComm = omc_HpcOmTaskGraph_getCommCostBetweenNodes0(threadData, tmp1, _iChildComps, _iCommCosts);
   /* skip box _oHighestComm; Option<HpcOmTaskGraph.Communication> */
   return _oHighestComm;
@@ -4941,7 +4923,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommCostBetwee
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCommCost has no default value.
   // _childComps has no default value.
@@ -4952,8 +4935,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommCostBetwee
   // _concreteCommCosts has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iTaskGraphMeta;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 9);
   _inComps = tmpMeta2;
   _commCosts = tmpMeta3;
 
@@ -4992,7 +4975,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommCostBetwee
       } else if (tmp7 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp5 = mmc_mk_nil();
@@ -5002,21 +4985,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommCostBetwee
 
   _oCommCost = omc_HpcOmTaskGraph_getHighestCommCost(threadData, _concreteCommCosts, _OMC_LIT44);
   _return: OMC_LABEL_UNUSED
-  return _oCommCost;
+  omc_ret_ = _oCommCost;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCommCostBetweenNodes(threadData_t *threadData, modelica_metatype _iParentNodeIdx, modelica_metatype _iChildNodeIdx, modelica_metatype _iTaskGraphMeta)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _oCommCost = NULL;
-  tmp1 = mmc_unbox_integer(_iParentNodeIdx);
-  tmp2 = mmc_unbox_integer(_iChildNodeIdx);
+  tmp1 = omc_unbox_integer(_iParentNodeIdx);
+  tmp2 = omc_unbox_integer(_iChildNodeIdx);
   _oCommCost = omc_HpcOmTaskGraph_getCommCostBetweenNodes(threadData, tmp1, tmp2, _iTaskGraphMeta);
   /* skip box _oCommCost; HpcOmTaskGraph.Communication */
   return _oCommCost;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_real omc_HpcOmTaskGraph_getCommCostTimeBetweenNodes(threadData_t *threadData, modelica_integer _iParentNodeIdx, modelica_integer _iChildNodeIdx, modelica_metatype _iTaskGraphMeta)
 {
   modelica_real _oCommCost;
@@ -5024,25 +5008,21 @@ modelica_real omc_HpcOmTaskGraph_getCommCostTimeBetweenNodes(threadData_t *threa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_real tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_real omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCommCost has no default value.
   // _requiredTime has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = omc_HpcOmTaskGraph_getCommCostBetweenNodes(threadData, _iParentNodeIdx, _iChildNodeIdx, _iTaskGraphMeta);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmp3 = mmc_unbox_real(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmp3 = omc_unbox_real(tmpMeta2);
   _requiredTime = tmp3  /* pattern as ty=Real */;
 
   _oCommCost = _requiredTime;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oCommCost;
+  omc_ret_ = _oCommCost;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getCommCostTimeBetweenNodes(threadData_t *threadData, modelica_metatype _iParentNodeIdx, modelica_metatype _iChildNodeIdx, modelica_metatype _iTaskGraphMeta)
 {
@@ -5050,10 +5030,10 @@ modelica_metatype boxptr_HpcOmTaskGraph_getCommCostTimeBetweenNodes(threadData_t
   modelica_integer tmp2;
   modelica_real _oCommCost;
   modelica_metatype out_oCommCost;
-  tmp1 = mmc_unbox_integer(_iParentNodeIdx);
-  tmp2 = mmc_unbox_integer(_iChildNodeIdx);
+  tmp1 = omc_unbox_integer(_iParentNodeIdx);
+  tmp2 = omc_unbox_integer(_iChildNodeIdx);
   _oCommCost = omc_HpcOmTaskGraph_getCommCostTimeBetweenNodes(threadData, tmp1, tmp2, _iTaskGraphMeta);
-  out_oCommCost = mmc_mk_rcon(_oCommCost);
+  out_oCommCost = omc_mk_rcon(_oCommCost);
   return out_oCommCost;
 }
 
@@ -5061,7 +5041,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommunicationB
 {
   modelica_metatype _oComm = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oComm has no default value.
   { /* matchcontinue expression */
@@ -5077,7 +5058,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommunicationB
       // _head has no default value.
       // _rest has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -5091,8 +5072,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommunicationB
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 7));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 7);
+          tmp9 = omc_unbox_integer(tmpMeta8);
           
           _currentCommChild = tmp9  /* pattern as ty=Integer */;
           _rest = tmpMeta7;
@@ -5112,8 +5093,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommunicationB
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta11 = MMC_CAR(tmp4_1);
           tmpMeta12 = MMC_CDR(tmp4_1);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 7));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta11, 7);
+          tmp14 = omc_unbox_integer(tmpMeta13);
           
           _head = tmpMeta11;
           _currentCommChild = tmp14  /* pattern as ty=Integer */;
@@ -5125,13 +5106,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommunicationB
           goto tmp3_done;
         }
         case 2: {
-          modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
+          modelica_string tmp16;
+          modelica_string tmp17;
           if (!listEmpty(tmp4_1)) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmpMeta16 = stringAppend(_OMC_LIT45,intString(_iChildIdx));
-          tmpMeta17 = stringAppend(tmpMeta16,_OMC_LIT46);
-          fputs(MMC_STRINGDATA(tmpMeta17),stdout);
+          tmp16 = stringAppend(_OMC_LIT45,intString(_iChildIdx));
+          tmp17 = stringAppend(tmp16,_OMC_LIT46);
+          fputs(omc_string_data(tmp17),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -5142,26 +5123,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommunicationB
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oComm = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oComm;
+  omc_ret_ = _oComm;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCommunicationByChildIdx(threadData_t *threadData, modelica_metatype _iComms, modelica_metatype _iChildIdx)
 {
   modelica_integer tmp1;
   modelica_metatype _oComm = NULL;
-  tmp1 = mmc_unbox_integer(_iChildIdx);
+  tmp1 = omc_unbox_integer(_iChildIdx);
   _oComm = omc_HpcOmTaskGraph_getCommunicationByChildIdx(threadData, _iComms, tmp1);
   /* skip box _oComm; HpcOmTaskGraph.Communication */
   return _oComm;
@@ -5172,7 +5154,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommunicationC
   modelica_metatype _oComm = NULL;
   modelica_metatype _commRow = NULL;
   modelica_metatype _commEntry = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oComm has no default value.
   // _commRow has no default value.
@@ -5183,15 +5166,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommunicationC
 
   _oComm = _commEntry;
   _return: OMC_LABEL_UNUSED
-  return _oComm;
+  omc_ret_ = _oComm;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCommunicationCost(threadData_t *threadData, modelica_metatype _childIdx, modelica_metatype _parentIdx, modelica_metatype _commCosts)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _oComm = NULL;
-  tmp1 = mmc_unbox_integer(_childIdx);
-  tmp2 = mmc_unbox_integer(_parentIdx);
+  tmp1 = omc_unbox_integer(_childIdx);
+  tmp2 = omc_unbox_integer(_parentIdx);
   _oComm = omc_HpcOmTaskGraph_getCommunicationCost(threadData, tmp1, tmp2, _commCosts);
   /* skip box _oComm; HpcOmTaskGraph.Communication */
   return _oComm;
@@ -5210,7 +5194,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_transposeCommCost
   modelica_metatype _stringVars = NULL;
   modelica_real _requiredTime;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCommCosts has no default value.
   // _tmpCommCosts has no default value.
@@ -5229,7 +5214,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_transposeCommCost
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -5248,16 +5233,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_transposeCommCost
           modelica_boolean tmp16;
           modelica_metatype tmpMeta17;
           modelica_metatype tmpMeta18;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
-          tmp15 = mmc_unbox_real(tmpMeta14);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_1, 4);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 5);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_1, 6);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_1, 7);
+          tmp13 = omc_unbox_integer(tmpMeta12);
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_1, 8);
+          tmp15 = omc_unbox_real(tmpMeta14);
           _numberOfVars = tmp7  /* pattern as ty=Integer */;
           _integerVars = tmpMeta8;
           _floatVars = tmpMeta9;
@@ -5272,7 +5257,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_transposeCommCost
 
           _costs = arrayGet(_iCommCosts, _nodeIdx);
 
-          tmpMeta18 = mmc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, mmc_mk_integer(_numberOfVars), _integerVars, _floatVars, _booleanVars, _stringVars, mmc_mk_integer(_iParentCompIdx), mmc_mk_real(_requiredTime));
+          tmpMeta18 = omc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, omc_mk_integer(_numberOfVars), _integerVars, _floatVars, _booleanVars, _stringVars, omc_mk_integer(_iParentCompIdx), omc_mk_real(_requiredTime));
           tmpMeta17 = mmc_mk_cons(tmpMeta18, _costs);
           _costs = tmpMeta17;
           tmpMeta1 = arrayUpdate(_iCommCosts, _nodeIdx, _costs);
@@ -5291,26 +5276,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_transposeCommCost
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oCommCosts = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oCommCosts;
+  omc_ret_ = _oCommCosts;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_transposeCommCosts1(threadData_t *threadData, modelica_metatype _iCost, modelica_metatype _iParentCompIdx, modelica_metatype _iCommCosts)
 {
   modelica_integer tmp1;
   modelica_metatype _oCommCosts = NULL;
-  tmp1 = mmc_unbox_integer(_iParentCompIdx);
+  tmp1 = omc_unbox_integer(_iParentCompIdx);
   _oCommCosts = omc_HpcOmTaskGraph_transposeCommCosts1(threadData, _iCost, tmp1, _iCommCosts);
   /* skip box _oCommCosts; array<list<HpcOmTaskGraph.Communication>> */
   return _oCommCosts;
@@ -5326,28 +5312,30 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_transposeCommCost
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCommCosts has no default value.
   // _iParentCompIdx has no default value.
   // _tmpCommCosts has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iCommCosts;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
   _iParentCompIdx = tmp3  /* pattern as ty=Integer */;
   _tmpCommCosts = tmpMeta4;
 
-  _tmpCommCosts = omc_List_fold1(threadData, _iCosts, boxvar_HpcOmTaskGraph_transposeCommCosts1, mmc_mk_integer(_iParentCompIdx), _tmpCommCosts);
+  _tmpCommCosts = omc_List_fold1(threadData, _iCosts, boxvar_HpcOmTaskGraph_transposeCommCosts1, omc_mk_integer(_iParentCompIdx), _tmpCommCosts);
 
-  tmpMeta5 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1) + _iParentCompIdx), _tmpCommCosts);
+  tmpMeta5 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1) + _iParentCompIdx), _tmpCommCosts);
   _oCommCosts = tmpMeta5;
   _return: OMC_LABEL_UNUSED
-  return _oCommCosts;
+  omc_ret_ = _oCommCosts;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_transposeCommCosts(threadData_t *threadData, modelica_metatype _iCommCosts)
 {
   modelica_metatype _oCommCosts = NULL;
@@ -5356,7 +5344,8 @@ modelica_metatype omc_HpcOmTaskGraph_transposeCommCosts(threadData_t *threadData
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCommCosts has no default value.
   // _tmpCommCosts has no default value.
@@ -5364,21 +5353,23 @@ modelica_metatype omc_HpcOmTaskGraph_transposeCommCosts(threadData_t *threadData
   _tmpCommCosts = arrayCreate(arrayLength(_iCommCosts), tmpMeta1);
 
   /* Pattern-matching assignment */
-  tmpMeta2 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1)), _tmpCommCosts);
+  tmpMeta2 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1)), _tmpCommCosts);
   tmpMeta3 = omc_Array_fold(threadData, _iCommCosts, boxvar_HpcOmTaskGraph_transposeCommCosts0, tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 2));
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta3, 2);
   _tmpCommCosts = tmpMeta4;
 
   _oCommCosts = _tmpCommCosts;
   _return: OMC_LABEL_UNUSED
-  return _oCommCosts;
+  omc_ret_ = _oCommCosts;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_tupleToStringIntRealInt(threadData_t *threadData, modelica_metatype _inTuple)
 {
   modelica_string _result = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
   { /* match expression */
@@ -5403,29 +5394,29 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_tupleToStringIntRea
           modelica_real tmp9;
           modelica_metatype tmpMeta10;
           modelica_integer tmp11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp9 = mmc_unbox_real(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
+          modelica_string tmp12;
+          modelica_string tmp13;
+          modelica_string tmp14;
+          modelica_string tmp15;
+          modelica_string tmp16;
+          modelica_string tmp17;
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp9 = omc_unbox_real(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp11 = omc_unbox_integer(tmpMeta10);
           _int1 = tmp7  /* pattern as ty=Integer */;
           _real1 = tmp9  /* pattern as ty=Real */;
           _int2 = tmp11  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta12 = stringAppend(_OMC_LIT30,intString(_int1));
-          tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT31);
-          tmpMeta14 = stringAppend(tmpMeta13,realString(_real1));
-          tmpMeta15 = stringAppend(tmpMeta14,_OMC_LIT47);
-          tmpMeta16 = stringAppend(tmpMeta15,intString(_int2));
-          tmpMeta17 = stringAppend(tmpMeta16,_OMC_LIT32);
-          tmp1 = tmpMeta17;
+          tmp12 = stringAppend(_OMC_LIT30,intString(_int1));
+          tmp13 = stringAppend(tmp12,_OMC_LIT31);
+          tmp14 = stringAppend(tmp13,realString(_real1));
+          tmp15 = stringAppend(tmp14,_OMC_LIT47);
+          tmp16 = stringAppend(tmp15,intString(_int2));
+          tmp17 = stringAppend(tmp16,_OMC_LIT32);
+          tmp1 = tmp17;
           goto tmp3_done;
         }
         }
@@ -5434,21 +5425,23 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_tupleToStringIntRea
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _result = tmp1;
+  omc_string_store(&(_result), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _result;
+  omc_ret_ = _result;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setLevelInNodeMark(threadData_t *threadData, modelica_integer _nodeIdx, modelica_metatype _inComps, modelica_metatype _nodeCoords, modelica_metatype _nodeMarkIn)
 {
   modelica_metatype _nodeMarkOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodeMarkOut has no default value.
   { /* matchcontinue expression */
@@ -5464,7 +5457,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setLevelInNodeMar
       // _nodeMarkEntry has no default value.
       // _yCoord has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -5472,13 +5465,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setLevelInNodeMar
         case 0: {
           modelica_boolean tmp6;
           /* Pattern matching succeeded */
-          _nodeMarkEntry = mmc_unbox_integer(arrayGet(_nodeMarkIn, _nodeIdx));
+          _nodeMarkEntry = omc_unbox_integer(arrayGet(_nodeMarkIn, _nodeIdx));
 
           _components = arrayGet(_inComps, _nodeIdx);
 
-          _primalComp = mmc_unbox_integer(omc_List_last(threadData, _components));
+          _primalComp = omc_unbox_integer(omc_List_last(threadData, _components));
 
-          _nodeMarkEntry = mmc_unbox_integer(arrayGet(_nodeMarkIn, _primalComp));
+          _nodeMarkEntry = omc_unbox_integer(arrayGet(_nodeMarkIn, _primalComp));
 
           /* Pattern-matching assignment */
           tmp6 = (((modelica_integer) -1) == _nodeMarkEntry);
@@ -5492,13 +5485,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setLevelInNodeMar
           modelica_metatype tmpMeta9;
           modelica_integer tmp10;
           /* Pattern matching succeeded */
-          _nodeMarkEntry = mmc_unbox_integer(arrayGet(_nodeMarkIn, _nodeIdx));
+          _nodeMarkEntry = omc_unbox_integer(arrayGet(_nodeMarkIn, _nodeIdx));
 
           _components = arrayGet(_inComps, _nodeIdx);
 
-          _primalComp = mmc_unbox_integer(omc_List_last(threadData, _components));
+          _primalComp = omc_unbox_integer(omc_List_last(threadData, _components));
 
-          _nodeMarkEntry = mmc_unbox_integer(arrayGet(_nodeMarkIn, _primalComp));
+          _nodeMarkEntry = omc_unbox_integer(arrayGet(_nodeMarkIn, _primalComp));
 
           /* Pattern-matching assignment */
           tmp7 = (((modelica_integer) -1) == _nodeMarkEntry);
@@ -5506,10 +5499,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setLevelInNodeMar
 
           /* Pattern-matching assignment */
           tmpMeta8 = arrayGet(_nodeCoords, _nodeIdx);
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
-          tmp10 = mmc_unbox_integer(tmpMeta9);
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 2);
+          tmp10 = omc_unbox_integer(tmpMeta9);
           _yCoord = tmp10  /* pattern as ty=Integer */;
-          tmpMeta1 = arrayUpdate(_nodeMarkIn, _primalComp, mmc_mk_integer(_yCoord));
+          tmpMeta1 = arrayUpdate(_nodeMarkIn, _primalComp, omc_mk_integer(_yCoord));
           goto tmp3_done;
         }
         }
@@ -5519,26 +5512,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_setLevelInNodeMar
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _nodeMarkOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _nodeMarkOut;
+  omc_ret_ = _nodeMarkOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_setLevelInNodeMark(threadData_t *threadData, modelica_metatype _nodeIdx, modelica_metatype _inComps, modelica_metatype _nodeCoords, modelica_metatype _nodeMarkIn)
 {
   modelica_integer tmp1;
   modelica_metatype _nodeMarkOut = NULL;
-  tmp1 = mmc_unbox_integer(_nodeIdx);
+  tmp1 = omc_unbox_integer(_nodeIdx);
   _nodeMarkOut = omc_HpcOmTaskGraph_setLevelInNodeMark(threadData, tmp1, _inComps, _nodeCoords, _nodeMarkIn);
   /* skip box _nodeMarkOut; array<#Integer> */
   return _nodeMarkOut;
@@ -5548,10 +5542,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getParallelSetForC
 {
   modelica_integer _parallelSetOut;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _parallelSetOut has no default value.
   { /* matchcontinue expression */
@@ -5561,7 +5553,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getParallelSetForC
       int tmp5;
       // _parallelSet has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -5577,7 +5569,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getParallelSetForC
           _parallelSet = listGet(_parallelSets, _setIdx);
 
           /* Pattern-matching assignment */
-          tmp7 = omc_List_isMemberOnTrue(threadData, mmc_mk_integer(_compIn), _parallelSet, boxvar_intEq);
+          tmp7 = omc_List_isMemberOnTrue(threadData, omc_mk_integer(_compIn), _parallelSet, boxvar_intEq);
           if (1 /* true */ != tmp7) goto goto_2;
           tmp1 = _setIdx;
           goto tmp3_done;
@@ -5593,14 +5585,14 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getParallelSetForC
           _parallelSet = listGet(_parallelSets, _setIdx);
 
           /* Pattern-matching assignment */
-          tmp9 = omc_List_isMemberOnTrue(threadData, mmc_mk_integer(_compIn), _parallelSet, boxvar_intEq);
+          tmp9 = omc_List_isMemberOnTrue(threadData, omc_mk_integer(_compIn), _parallelSet, boxvar_intEq);
           if (0 /* false */ != tmp9) goto goto_2;
           tmp1 = omc_HpcOmTaskGraph_getParallelSetForComp(threadData, _compIn, ((modelica_integer) 1) + _setIdx, _parallelSets);
           goto tmp3_done;
         }
         case 2: {
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT48),stdout);
+          fputs(omc_string_data(_OMC_LIT48),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -5611,23 +5603,21 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getParallelSetForC
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _parallelSetOut = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _parallelSetOut;
+  omc_ret_ = _parallelSetOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getParallelSetForComp(threadData_t *threadData, modelica_metatype _compIn, modelica_metatype _setIdx, modelica_metatype _parallelSets)
 {
@@ -5635,10 +5625,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getParallelSet
   modelica_integer tmp2;
   modelica_integer _parallelSetOut;
   modelica_metatype out_parallelSetOut;
-  tmp1 = mmc_unbox_integer(_compIn);
-  tmp2 = mmc_unbox_integer(_setIdx);
+  tmp1 = omc_unbox_integer(_compIn);
+  tmp2 = omc_unbox_integer(_setIdx);
   _parallelSetOut = omc_HpcOmTaskGraph_getParallelSetForComp(threadData, tmp1, tmp2, _parallelSets);
-  out_parallelSetOut = mmc_mk_icon(_parallelSetOut);
+  out_parallelSetOut = omc_mk_icon(_parallelSetOut);
   return out_parallelSetOut;
 }
 
@@ -5655,7 +5645,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getYCoordForNode(
   modelica_metatype tmpMeta4;
   modelica_integer tmp5;
   modelica_metatype tmpMeta6;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodeCoordsOut has no default value.
   // _parallelSetIdx has no default value.
@@ -5666,25 +5657,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getYCoordForNode(
 
   /* Pattern-matching assignment */
   tmpMeta1 = arrayGet(_nodeCoordsIn, _compIdx);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
   _xCoord = tmp3  /* pattern as ty=Integer */;
   _yCoord = tmp5  /* pattern as ty=Integer */;
 
-  tmpMeta6 = mmc_mk_box2(0, mmc_mk_integer(_xCoord), mmc_mk_integer(_parallelSetIdx));
+  tmpMeta6 = omc_mk_box2(0, omc_mk_integer(_xCoord), omc_mk_integer(_parallelSetIdx));
   _coords = tmpMeta6;
 
   _nodeCoordsOut = arrayUpdate(_nodeCoordsIn, _compIdx, _coords);
   _return: OMC_LABEL_UNUSED
-  return _nodeCoordsOut;
+  omc_ret_ = _nodeCoordsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getYCoordForNode(threadData_t *threadData, modelica_metatype _compIdx, modelica_metatype _parallelSets, modelica_metatype _nodeCoordsIn)
 {
   modelica_integer tmp1;
   modelica_metatype _nodeCoordsOut = NULL;
-  tmp1 = mmc_unbox_integer(_compIdx);
+  tmp1 = omc_unbox_integer(_compIdx);
   _nodeCoordsOut = omc_HpcOmTaskGraph_getYCoordForNode(threadData, tmp1, _parallelSets, _nodeCoordsIn);
   /* skip box _nodeCoordsOut; array<tuple<#Integer, #Integer>> */
   return _nodeCoordsOut;
@@ -5695,7 +5687,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodeCoords(thr
   modelica_metatype _nodeCoordsOut = NULL;
   modelica_metatype _nodeCoords = NULL;
   modelica_integer _size;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodeCoordsOut has no default value.
   // _nodeCoords has no default value.
@@ -5708,7 +5701,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodeCoords(thr
 
   _nodeCoordsOut = _nodeCoords;
   _return: OMC_LABEL_UNUSED
-  return _nodeCoordsOut;
+  omc_ret_ = _nodeCoordsOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForContractedNodes1(threadData_t *threadData, modelica_integer _node, modelica_metatype _exeCosts, modelica_real _costsIn)
@@ -5718,25 +5712,21 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForContracted
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_real tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_real omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _costsOut has no default value.
   // _exeCost has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = arrayGet(_exeCosts, _node);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp3 = mmc_unbox_real(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp3 = omc_unbox_real(tmpMeta2);
   _exeCost = tmp3  /* pattern as ty=Real */;
 
   _costsOut = _costsIn + _exeCost;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _costsOut;
+  omc_ret_ = _costsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCostsForContractedNodes1(threadData_t *threadData, modelica_metatype _node, modelica_metatype _exeCosts, modelica_metatype _costsIn)
 {
@@ -5744,36 +5734,32 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCostsForCon
   modelica_real tmp2;
   modelica_real _costsOut;
   modelica_metatype out_costsOut;
-  tmp1 = mmc_unbox_integer(_node);
-  tmp2 = mmc_unbox_real(_costsIn);
+  tmp1 = omc_unbox_integer(_node);
+  tmp2 = omc_unbox_real(_costsIn);
   _costsOut = omc_HpcOmTaskGraph_getCostsForContractedNodes1(threadData, tmp1, _exeCosts, tmp2);
-  out_costsOut = mmc_mk_rcon(_costsOut);
+  out_costsOut = omc_mk_rcon(_costsOut);
   return out_costsOut;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_real omc_HpcOmTaskGraph_getCostsForContractedNodes(threadData_t *threadData, modelica_metatype _nodeList, modelica_metatype _exeCosts)
 {
   modelica_real _costsOut;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_real omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _costsOut has no default value.
-  _costsOut = mmc_unbox_real(omc_List_fold1(threadData, _nodeList, boxvar_HpcOmTaskGraph_getCostsForContractedNodes1, _exeCosts, _OMC_LIT41));
+  _costsOut = omc_unbox_real(omc_List_fold1(threadData, _nodeList, boxvar_HpcOmTaskGraph_getCostsForContractedNodes1, _exeCosts, _OMC_LIT41));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _costsOut;
+  omc_ret_ = _costsOut;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getCostsForContractedNodes(threadData_t *threadData, modelica_metatype _nodeList, modelica_metatype _exeCosts)
 {
   modelica_real _costsOut;
   modelica_metatype out_costsOut;
   _costsOut = omc_HpcOmTaskGraph_getCostsForContractedNodes(threadData, _nodeList, _exeCosts);
-  out_costsOut = mmc_mk_rcon(_costsOut);
+  out_costsOut = omc_mk_rcon(_costsOut);
   return out_costsOut;
 }
 
@@ -5781,10 +5767,8 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
 {
   modelica_real _costsOut;
   modelica_real tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_real omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _costsOut has no default value.
   { /* matchcontinue expression */
@@ -5806,7 +5790,7 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
       // _primalChildLst has no default value.
       // _primalParentLst has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 5; tmp4++) {
@@ -5824,12 +5808,12 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
           tmp6 = (listLength(_primalChildLst) == ((modelica_integer) 1));
           if (1 /* true */ != tmp6) goto goto_2;
 
-          _primalChild = mmc_unbox_integer(listGet(_primalChildLst, ((modelica_integer) 1)));
+          _primalChild = omc_unbox_integer(listGet(_primalChildLst, ((modelica_integer) 1)));
 
           /* Pattern-matching assignment */
           tmpMeta7 = arrayGet(_exeCosts, _primalChild);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
-          tmp9 = mmc_unbox_real(tmpMeta8);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 2);
+          tmp9 = omc_unbox_real(tmpMeta8);
           _costs = tmp9  /* pattern as ty=Real */;
           tmp1 = _costs;
           goto tmp3_done;
@@ -5866,20 +5850,20 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
           tmp11 = (listLength(_primalChildLst) == ((modelica_integer) 1));
           if (1 /* true */ != tmp11) goto goto_2;
 
-          _primalChild = mmc_unbox_integer(listGet(_primalChildLst, ((modelica_integer) 1)));
+          _primalChild = omc_unbox_integer(listGet(_primalChildLst, ((modelica_integer) 1)));
 
-          _primalParent = mmc_unbox_integer(listGet(_primalParentLst, ((modelica_integer) 1)));
+          _primalParent = omc_unbox_integer(listGet(_primalParentLst, ((modelica_integer) 1)));
 
           /* Pattern-matching assignment */
           tmpMeta12 = arrayGet(_exeCosts, _primalChild);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 2));
-          tmp14 = mmc_unbox_real(tmpMeta13);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 2);
+          tmp14 = omc_unbox_real(tmpMeta13);
           _costs = tmp14  /* pattern as ty=Real */;
 
           /* Pattern-matching assignment */
           tmpMeta15 = omc_HpcOmTaskGraph_getCommunicationCost(threadData, _primalChild, _primalParent, _commCosts);
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 8));
-          tmp17 = mmc_unbox_real(tmpMeta16);
+          tmpMeta16 = OMC_BOX_FIELD(tmpMeta15, 8);
+          tmp17 = omc_unbox_real(tmpMeta16);
           _commCost = tmp17  /* pattern as ty=Real */;
           tmp1 = _costs + _commCost;
           goto tmp3_done;
@@ -5901,7 +5885,7 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
         case 4: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT50),stdout);
+          fputs(omc_string_data(_OMC_LIT50),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -5912,23 +5896,21 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_getCostsForNode(threa
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 5) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _costsOut = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _costsOut;
+  omc_ret_ = _costsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCostsForNode(threadData_t *threadData, modelica_metatype _parentNode, modelica_metatype _childNode, modelica_metatype _inComps, modelica_metatype _exeCosts, modelica_metatype _commCosts)
 {
@@ -5936,10 +5918,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCostsForNod
   modelica_integer tmp2;
   modelica_real _costsOut;
   modelica_metatype out_costsOut;
-  tmp1 = mmc_unbox_integer(_parentNode);
-  tmp2 = mmc_unbox_integer(_childNode);
+  tmp1 = omc_unbox_integer(_parentNode);
+  tmp2 = omc_unbox_integer(_childNode);
   _costsOut = omc_HpcOmTaskGraph_getCostsForNode(threadData, tmp1, tmp2, _inComps, _exeCosts, _commCosts);
-  out_costsOut = mmc_mk_rcon(_costsOut);
+  out_costsOut = omc_mk_rcon(_costsOut);
   return out_costsOut;
 }
 
@@ -5952,31 +5934,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_gatherParallelSet
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _parallelSetOut has no default value.
   // _level has no default value.
   // _pSet has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = arrayGet(_nodeInfo, _idx);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
   _level = tmp3  /* pattern as ty=Integer */;
 
   _pSet = listGet(_parallelSetIn, _level);
 
-  tmpMeta4 = mmc_mk_cons(mmc_mk_integer(_idx), _pSet);
+  tmpMeta4 = mmc_mk_cons(omc_mk_integer(_idx), _pSet);
   _pSet = tmpMeta4;
 
   _parallelSetOut = omc_List_replaceAt(threadData, _pSet, _level, _parallelSetIn);
   _return: OMC_LABEL_UNUSED
-  return _parallelSetOut;
+  omc_ret_ = _parallelSetOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_gatherParallelSets1(threadData_t *threadData, modelica_metatype _idx, modelica_metatype _nodeInfo, modelica_metatype _parallelSetIn)
 {
   modelica_integer tmp1;
   modelica_metatype _parallelSetOut = NULL;
-  tmp1 = mmc_unbox_integer(_idx);
+  tmp1 = omc_unbox_integer(_idx);
   _parallelSetOut = omc_HpcOmTaskGraph_gatherParallelSets1(threadData, tmp1, _nodeInfo, _parallelSetIn);
   /* skip box _parallelSetOut; list<list<#Integer>> */
   return _parallelSetOut;
@@ -5989,34 +5973,30 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_numberOfLevels(thr
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _numLevelsOut has no default value.
   // _levelIn has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _nodeInfoEntry;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
   _levelIn = tmp3  /* pattern as ty=Integer */;
 
   _numLevelsOut = modelica_integer_max((modelica_integer)(_levelIn),(modelica_integer)(_numLevelsIn));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _numLevelsOut;
+  omc_ret_ = _numLevelsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_numberOfLevels(threadData_t *threadData, modelica_metatype _nodeInfoEntry, modelica_metatype _numLevelsIn)
 {
   modelica_integer tmp1;
   modelica_integer _numLevelsOut;
   modelica_metatype out_numLevelsOut;
-  tmp1 = mmc_unbox_integer(_numLevelsIn);
+  tmp1 = omc_unbox_integer(_numLevelsIn);
   _numLevelsOut = omc_HpcOmTaskGraph_numberOfLevels(threadData, _nodeInfoEntry, tmp1);
-  out_numLevelsOut = mmc_mk_icon(_numLevelsOut);
+  out_numLevelsOut = omc_mk_icon(_numLevelsOut);
   return out_numLevelsOut;
 }
 
@@ -6025,16 +6005,18 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_gatherParallelSet
   modelica_metatype _parallelSetsOut = NULL;
   modelica_integer _numLevels;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _parallelSetsOut has no default value.
   // _numLevels has no default value.
-  _numLevels = mmc_unbox_integer(omc_Array_fold(threadData, _nodeInfo, boxvar_HpcOmTaskGraph_numberOfLevels, mmc_mk_integer(((modelica_integer) 0))));
+  _numLevels = omc_unbox_integer(omc_Array_fold(threadData, _nodeInfo, boxvar_HpcOmTaskGraph_numberOfLevels, omc_mk_integer(((modelica_integer) 0))));
 
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _parallelSetsOut = omc_List_fold1(threadData, omc_List_intRange(threadData, arrayLength(_nodeInfo)), boxvar_HpcOmTaskGraph_gatherParallelSets1, _nodeInfo, omc_List_fill(threadData, tmpMeta1, _numLevels));
   _return: OMC_LABEL_UNUSED
-  return _parallelSetsOut;
+  omc_ret_ = _parallelSetsOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_addUpExeCostsForNode(threadData_t *threadData, modelica_metatype _iNodeComps, modelica_metatype _iExeCosts, modelica_real _iExeCost)
@@ -6044,10 +6026,8 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_addUpExeCostsForNode(
   modelica_metatype _rest = NULL;
   modelica_real _cost;
   modelica_real tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_real omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oExeCost has no default value.
   // _head has no default value.
@@ -6072,14 +6052,14 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_addUpExeCostsForNode(
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           _head = tmp8  /* pattern as ty=Integer */;
           _rest = tmpMeta7;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta9 = arrayGet(_iExeCosts, _head);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
-          tmp11 = mmc_unbox_real(tmpMeta10);
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 2);
+          tmp11 = omc_unbox_real(tmpMeta10);
           _cost = tmp11  /* pattern as ty=Real */;
 
           _cost = _cost + _iExeCost;
@@ -6102,26 +6082,24 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_HpcOmTaskGraph_addUpExeCostsForNode(
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oExeCost = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oExeCost;
+  omc_ret_ = _oExeCost;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_addUpExeCostsForNode(threadData_t *threadData, modelica_metatype _iNodeComps, modelica_metatype _iExeCosts, modelica_metatype _iExeCost)
 {
   modelica_real tmp1;
   modelica_real _oExeCost;
   modelica_metatype out_oExeCost;
-  tmp1 = mmc_unbox_real(_iExeCost);
+  tmp1 = omc_unbox_real(_iExeCost);
   _oExeCost = omc_HpcOmTaskGraph_addUpExeCostsForNode(threadData, _iNodeComps, _iExeCosts, tmp1);
-  out_oExeCost = mmc_mk_rcon(_oExeCost);
+  out_oExeCost = omc_mk_rcon(_oExeCost);
   return out_oExeCost;
 }
 
@@ -6132,25 +6110,20 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getCriticalPath2(t
   modelica_metatype _criticalPath = NULL;
   modelica_metatype _rest = NULL;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oLongestPathIndex has no default value.
   // _cpCost has no default value.
   // _criticalPath has no default value.
   // _rest has no default value.
-  { /* matchcontinue expression */
-    volatile modelica_metatype tmp4_1;
+  { /* match expression */
+    modelica_metatype tmp4_1;
     tmp4_1 = _iCriticalPaths;
     {
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
-      tmp3_top:
-      threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
@@ -6159,21 +6132,27 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getCriticalPath2(t
           modelica_metatype tmpMeta8;
           modelica_real tmp9;
           modelica_metatype tmpMeta10;
-          modelica_boolean tmp11;
+          modelica_integer tmp11;
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          tmp9 = mmc_unbox_real(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 1);
+          tmp9 = omc_unbox_real(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta6, 2);
           _cpCost = tmp9  /* pattern as ty=Real */;
           _criticalPath = tmpMeta10;
           _rest = tmpMeta7;
           /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp11 = (_cpCost > _iLongestPath);
-          if (1 /* true */ != tmp11) goto goto_2;
-          tmp1 = omc_HpcOmTaskGraph_getCriticalPath2(threadData, _rest, ((modelica_integer) 1) + _iListIdx, _cpCost, _iListIdx);
+          /* Check guard condition after assignments */
+          if (!(_cpCost > _iLongestPath)) goto tmp3_end;
+          /* Tail recursive call */
+          _iCriticalPaths = _rest;
+          tmp11 = ((modelica_integer) 1) + _iListIdx;
+          _iLongestPath = _cpCost;
+          _iLongestPathIndex = _iListIdx;
+          _iListIdx = tmp11;
+          goto _tailrecursive;
+          /* TODO: Make sure any eventual dead code below is never generated */
           goto tmp3_done;
         }
         case 1: {
@@ -6185,14 +6164,18 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getCriticalPath2(t
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta12 = MMC_CAR(tmp4_1);
           tmpMeta13 = MMC_CDR(tmp4_1);
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-          tmp15 = mmc_unbox_real(tmpMeta14);
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 2));
+          tmpMeta14 = OMC_BOX_FIELD(tmpMeta12, 1);
+          tmp15 = omc_unbox_real(tmpMeta14);
+          tmpMeta16 = OMC_BOX_FIELD(tmpMeta12, 2);
           _cpCost = tmp15  /* pattern as ty=Real */;
           _criticalPath = tmpMeta16;
           _rest = tmpMeta13;
           /* Pattern matching succeeded */
-          tmp1 = omc_HpcOmTaskGraph_getCriticalPath2(threadData, _rest, ((modelica_integer) 1) + _iListIdx, _iLongestPath, _iLongestPathIndex);
+          /* Tail recursive call */
+          _iCriticalPaths = _rest;
+          _iListIdx = ((modelica_integer) 1) + _iListIdx;
+          goto _tailrecursive;
+          /* TODO: Make sure any eventual dead code below is never generated */
           goto tmp3_done;
         }
         case 2: {
@@ -6206,25 +6189,16 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getCriticalPath2(t
         tmp3_end: ;
       }
       goto goto_2;
-      tmp3_done:
-      (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
-      goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
-      if (++tmp4 < 3) {
-        goto tmp3_top;
-      }
-      MMC_THROW_INTERNAL();
-      tmp3_done2:;
+      OMC_THROW_INTERNAL();
+      goto tmp3_done;
+      tmp3_done:;
     }
   }
   _oLongestPathIndex = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oLongestPathIndex;
+  omc_ret_ = _oLongestPathIndex;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCriticalPath2(threadData_t *threadData, modelica_metatype _iCriticalPaths, modelica_metatype _iListIdx, modelica_metatype _iLongestPath, modelica_metatype _iLongestPathIndex)
 {
@@ -6233,11 +6207,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCriticalPat
   modelica_integer tmp3;
   modelica_integer _oLongestPathIndex;
   modelica_metatype out_oLongestPathIndex;
-  tmp1 = mmc_unbox_integer(_iListIdx);
-  tmp2 = mmc_unbox_real(_iLongestPath);
-  tmp3 = mmc_unbox_integer(_iLongestPathIndex);
+  tmp1 = omc_unbox_integer(_iListIdx);
+  tmp2 = omc_unbox_real(_iLongestPath);
+  tmp3 = omc_unbox_integer(_iLongestPathIndex);
   _oLongestPathIndex = omc_HpcOmTaskGraph_getCriticalPath2(threadData, _iCriticalPaths, tmp1, tmp2, tmp3);
-  out_oLongestPathIndex = mmc_mk_icon(_oLongestPathIndex);
+  out_oLongestPathIndex = omc_mk_icon(_oLongestPathIndex);
   return out_oLongestPathIndex;
 }
 
@@ -6257,7 +6231,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
   modelica_metatype _exeCosts = NULL;
   modelica_metatype _inComps = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _criticalPathOut has no default value.
   // _cpCalcTime has no default value.
@@ -6279,7 +6254,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 4; tmp4++) {
@@ -6293,24 +6268,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
           modelica_metatype tmpMeta11;
           modelica_boolean tmp12;
           modelica_metatype tmpMeta13;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 8);
           
           _inComps = tmpMeta6;
           _exeCosts = tmpMeta7;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta8 = arrayGet(_iNodeCriticalPaths, _iNode);
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          tmp10 = mmc_unbox_real(tmpMeta9);
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 1);
+          tmp10 = omc_unbox_real(tmpMeta9);
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta8, 2);
           _cpCalcTime = tmp10  /* pattern as ty=Real */;
           _criticalPath = tmpMeta11;
 
           /* Pattern-matching assignment */
           tmp12 = (_cpCalcTime >= 0.0);
           if (1 /* true */ != tmp12) goto goto_2;
-          tmpMeta13 = mmc_mk_box2(0, mmc_mk_real(_cpCalcTime), _criticalPath);
+          tmpMeta13 = omc_mk_box2(0, omc_mk_real(_cpCalcTime), _criticalPath);
           tmpMeta1 = tmpMeta13;
           goto tmp3_done;
         }
@@ -6328,8 +6303,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
           modelica_real tmp24;
           modelica_metatype tmpMeta25;
           modelica_metatype tmpMeta26;
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_1, 8);
           
           _inComps = tmpMeta14;
           _exeCosts = tmpMeta15;
@@ -6340,22 +6315,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
           tmp16 = listEmpty(_childNodes);
           if (0 /* false */ != tmp16) goto goto_2;
 
-          _criticalPaths = omc_List_map4(threadData, _childNodes, boxvar_HpcOmTaskGraph_getCriticalPath1, _iGraph, _iGraphData, mmc_mk_boolean(_iHandleCommCosts), _iNodeCriticalPaths);
+          _criticalPaths = omc_List_map4(threadData, _childNodes, boxvar_HpcOmTaskGraph_getCriticalPath1, _iGraph, _iGraphData, omc_mk_boolean(_iHandleCommCosts), _iNodeCriticalPaths);
 
           _criticalPathIdx = omc_HpcOmTaskGraph_getCriticalPath2(threadData, _criticalPaths, ((modelica_integer) 1), -1.0, ((modelica_integer) -1));
 
           /* Pattern-matching assignment */
           tmpMeta17 = listGet(_criticalPaths, _criticalPathIdx);
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 1));
-          tmp19 = mmc_unbox_real(tmpMeta18);
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 2));
+          tmpMeta18 = OMC_BOX_FIELD(tmpMeta17, 1);
+          tmp19 = omc_unbox_real(tmpMeta18);
+          tmpMeta20 = OMC_BOX_FIELD(tmpMeta17, 2);
           _cpCalcTime = tmp19  /* pattern as ty=Real */;
           _criticalPathChild = tmpMeta20;
 
-          tmpMeta21 = mmc_mk_cons(mmc_mk_integer(_iNode), _criticalPathChild);
+          tmpMeta21 = mmc_mk_cons(omc_mk_integer(_iNode), _criticalPathChild);
           _criticalPath = tmpMeta21;
 
-          _commCost = (_iHandleCommCosts?omc_HpcOmTaskGraph_getCommCostBetweenNodes(threadData, _iNode, mmc_unbox_integer(listHead(_criticalPathChild)), _iGraphData):_OMC_LIT51);
+          _commCost = (_iHandleCommCosts?omc_HpcOmTaskGraph_getCommCostBetweenNodes(threadData, _iNode, omc_unbox_integer(listHead(_criticalPathChild)), _iGraphData):_OMC_LIT51);
 
           _nodeComps = arrayGet(_inComps, _iNode);
 
@@ -6365,15 +6340,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
 
           /* Pattern-matching assignment */
           tmpMeta22 = _commCost;
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta22), 8));
-          tmp24 = mmc_unbox_real(tmpMeta23);
+          tmpMeta23 = OMC_BOX_FIELD(tmpMeta22, 8);
+          tmp24 = omc_unbox_real(tmpMeta23);
           _commTime = tmp24  /* pattern as ty=Real */;
 
           _calcTime = _calcTime + _commTime;
 
-          tmpMeta25 = mmc_mk_box2(0, mmc_mk_real(_calcTime), _criticalPath);
+          tmpMeta25 = omc_mk_box2(0, omc_mk_real(_calcTime), _criticalPath);
           arrayUpdate(_iNodeCriticalPaths, _iNode, tmpMeta25);
-          tmpMeta26 = mmc_mk_box2(0, mmc_mk_real(_calcTime), _criticalPath);
+          tmpMeta26 = omc_mk_box2(0, omc_mk_real(_calcTime), _criticalPath);
           tmpMeta1 = tmpMeta26;
           goto tmp3_done;
         }
@@ -6384,8 +6359,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
           modelica_metatype tmpMeta30;
           modelica_metatype tmpMeta31;
           modelica_metatype tmpMeta32;
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
+          tmpMeta27 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta28 = OMC_BOX_FIELD(tmp4_1, 8);
           
           _inComps = tmpMeta27;
           _exeCosts = tmpMeta28;
@@ -6396,23 +6371,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
           tmp29 = listEmpty(_childNodes);
           if (1 /* true */ != tmp29) goto goto_2;
 
-          tmpMeta30 = mmc_mk_cons(mmc_mk_integer(_iNode), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta30 = mmc_mk_cons(omc_mk_integer(_iNode), MMC_REFSTRUCTLIT(mmc_nil));
           _criticalPath = tmpMeta30;
 
           _nodeComps = arrayGet(_inComps, _iNode);
 
           _calcTime = omc_HpcOmTaskGraph_addUpExeCostsForNode(threadData, _nodeComps, _exeCosts, 0.0);
 
-          tmpMeta31 = mmc_mk_box2(0, mmc_mk_real(_calcTime), _criticalPath);
+          tmpMeta31 = omc_mk_box2(0, omc_mk_real(_calcTime), _criticalPath);
           arrayUpdate(_iNodeCriticalPaths, _iNode, tmpMeta31);
-          tmpMeta32 = mmc_mk_box2(0, mmc_mk_real(_calcTime), _criticalPath);
+          tmpMeta32 = omc_mk_box2(0, omc_mk_real(_calcTime), _criticalPath);
           tmpMeta1 = tmpMeta32;
           goto tmp3_done;
         }
         case 3: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT52),stdout);
+          fputs(omc_string_data(_OMC_LIT52),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -6423,28 +6398,29 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath1(
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 4) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _criticalPathOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _criticalPathOut;
+  omc_ret_ = _criticalPathOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCriticalPath1(threadData_t *threadData, modelica_metatype _iNode, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_metatype _iHandleCommCosts, modelica_metatype _iNodeCriticalPaths)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _criticalPathOut = NULL;
-  tmp1 = mmc_unbox_integer(_iNode);
-  tmp2 = mmc_unbox_integer(_iHandleCommCosts);
+  tmp1 = omc_unbox_integer(_iNode);
+  tmp2 = omc_unbox_integer(_iHandleCommCosts);
   _criticalPathOut = omc_HpcOmTaskGraph_getCriticalPath1(threadData, tmp1, _iGraph, _iGraphData, tmp2, _iNodeCriticalPaths);
   /* skip box _criticalPathOut; tuple<#Real, list<#Integer>> */
   return _criticalPathOut;
@@ -6463,7 +6439,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath(t
   modelica_real tmp3;
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCriticalPathsOut has no default value.
   // _oCpCosts has no default value.
@@ -6473,15 +6450,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath(t
   // _criticalPath has no default value.
   _nodeCriticalPaths = arrayCreate(arrayLength(_iGraph), _OMC_LIT53);
 
-  _criticalPaths = omc_List_map4(threadData, _iRootNodes, boxvar_HpcOmTaskGraph_getCriticalPath1, _iGraph, _iGraphData, mmc_mk_boolean(_iHandleCommCosts), _nodeCriticalPaths);
+  _criticalPaths = omc_List_map4(threadData, _iRootNodes, boxvar_HpcOmTaskGraph_getCriticalPath1, _iGraph, _iGraphData, omc_mk_boolean(_iHandleCommCosts), _nodeCriticalPaths);
 
   _criticalPathIdx = omc_HpcOmTaskGraph_getCriticalPath2(threadData, _criticalPaths, ((modelica_integer) 1), -1.0, ((modelica_integer) -1));
 
   /* Pattern-matching assignment */
   tmpMeta1 = listGet(_criticalPaths, _criticalPathIdx);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_real(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_real(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
   _oCpCosts = tmp3  /* pattern as ty=Real */;
   _criticalPath = tmpMeta4;
 
@@ -6489,27 +6466,29 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCriticalPath(t
   _oCriticalPathsOut = tmpMeta5;
   _return: OMC_LABEL_UNUSED
   if (out_oCpCosts) { *out_oCpCosts = _oCpCosts; }
-  return _oCriticalPathsOut;
+  omc_ret_ = _oCriticalPathsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getCriticalPath(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_metatype _iRootNodes, modelica_metatype _iHandleCommCosts, modelica_metatype *out_oCpCosts)
 {
   modelica_integer tmp1;
   modelica_real _oCpCosts;
   modelica_metatype _oCriticalPathsOut = NULL;
-  tmp1 = mmc_unbox_integer(_iHandleCommCosts);
+  tmp1 = omc_unbox_integer(_iHandleCommCosts);
   _oCriticalPathsOut = omc_HpcOmTaskGraph_getCriticalPath(threadData, _iGraph, _iGraphData, _iRootNodes, tmp1, &_oCpCosts);
   /* skip box _oCriticalPathsOut; list<list<#Integer>> */
-  if (out_oCpCosts) { *out_oCpCosts = mmc_mk_rcon(_oCpCosts); }
+  if (out_oCpCosts) { *out_oCpCosts = omc_mk_rcon(_oCpCosts); }
   return _oCriticalPathsOut;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphDataIn, modelica_metatype *out_criticalPathOutWoC)
 {
   modelica_metatype _criticalPathOut = NULL;
   modelica_metatype _criticalPathOutWoC = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _criticalPathOut has no default value.
   // _criticalPathOutWoC has no default value.
@@ -6532,7 +6511,7 @@ modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, 
       // _cpWCcosts has no default value.
       // _cpWoCcosts has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -6556,8 +6535,8 @@ modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, 
           _cpWCcosts = omc_HpcOmTaskGraph_roundReal(threadData, _cpWCcosts, ((modelica_integer) 2));
 
           _cpWoCcosts = omc_HpcOmTaskGraph_roundReal(threadData, _cpWoCcosts, ((modelica_integer) 2));
-          tmpMeta7 = mmc_mk_box2(0, _cpWCpaths, mmc_mk_real(_cpWCcosts));
-          tmpMeta8 = mmc_mk_box2(0, _CpWoCpaths, mmc_mk_real(_cpWoCcosts));
+          tmpMeta7 = omc_mk_box2(0, _cpWCpaths, omc_mk_real(_cpWCcosts));
+          tmpMeta8 = omc_mk_box2(0, _CpWoCpaths, omc_mk_real(_cpWoCcosts));
           tmpMeta[0+0] = tmpMeta7;
           tmpMeta[0+1] = tmpMeta8;
           goto tmp3_done;
@@ -6576,7 +6555,7 @@ modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, 
         case 2: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT56),stdout);
+          fputs(omc_string_data(_OMC_LIT56),stdout);
           tmpMeta[0+0] = _OMC_LIT55;
           tmpMeta[0+1] = _OMC_LIT55;
           goto tmp3_done;
@@ -6588,14 +6567,14 @@ modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, 
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -6603,7 +6582,8 @@ modelica_metatype omc_HpcOmTaskGraph_getCriticalPaths(threadData_t *threadData, 
   _criticalPathOutWoC = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_criticalPathOutWoC) { *out_criticalPathOutWoC = _criticalPathOutWoC; }
-  return _criticalPathOut;
+  omc_ret_ = _criticalPathOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareComponents(threadData_t *threadData, modelica_metatype _iComp1, modelica_metatype _iComp2)
@@ -6625,14 +6605,12 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareComponents(
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_integer tmp8;
-  modelica_metatype tmpMeta9;
-  modelica_metatype tmpMeta10;
-  modelica_metatype tmpMeta11;
-  modelica_metatype tmpMeta12;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_string tmp9;
+  modelica_string tmp10;
+  modelica_string tmp11;
+  modelica_string tmp12;
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   // _comp1Str has no default value.
@@ -6651,27 +6629,27 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareComponents(
   {
     /* Pattern-matching assignment */
     tmpMeta1 = _iComp1;
-    tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-    tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-    tmp4 = mmc_unbox_integer(tmpMeta3);
+    tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+    tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
+    tmp4 = omc_unbox_integer(tmpMeta3);
     _comp1 = tmpMeta2;
     _comp1Idx = tmp4  /* pattern as ty=Integer */;
 
     /* Pattern-matching assignment */
     tmpMeta5 = _iComp2;
-    tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 1));
-    tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
-    tmp8 = mmc_unbox_integer(tmpMeta7);
+    tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 1);
+    tmpMeta7 = OMC_BOX_FIELD(tmpMeta5, 2);
+    tmp8 = omc_unbox_integer(tmpMeta7);
     _comp2 = tmpMeta6;
     _comp2Idx = tmp8  /* pattern as ty=Integer */;
 
-    tmpMeta9 = stringAppend(omc_BackendDump_printComponent(threadData, _comp1, mmc_mk_none()),_OMC_LIT57);
-    tmpMeta10 = stringAppend(tmpMeta9,intString(_comp1Idx));
-    _comp1Str = tmpMeta10;
+    tmp9 = stringAppend(omc_BackendDump_printComponent(threadData, _comp1, mmc_mk_none()),_OMC_LIT57);
+    tmp10 = stringAppend(tmp9,intString(_comp1Idx));
+    omc_string_store(&(_comp1Str), tmp10);
 
-    tmpMeta11 = stringAppend(omc_BackendDump_printComponent(threadData, _comp2, mmc_mk_none()),_OMC_LIT57);
-    tmpMeta12 = stringAppend(tmpMeta11,intString(_comp2Idx));
-    _comp2Str = tmpMeta12;
+    tmp11 = stringAppend(omc_BackendDump_printComponent(threadData, _comp2, mmc_mk_none()),_OMC_LIT57);
+    tmp12 = stringAppend(tmp11,intString(_comp2Idx));
+    omc_string_store(&(_comp2Str), tmp12);
 
     _minLength = modelica_integer_min((modelica_integer)(stringLength(_comp1Str)),(modelica_integer)(stringLength(_comp2Str)));
 
@@ -6687,17 +6665,15 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareComponents(
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_compareComponents(threadData_t *threadData, modelica_metatype _iComp1, modelica_metatype _iComp2)
 {
   modelica_boolean _res;
   modelica_metatype out_res;
   _res = omc_HpcOmTaskGraph_compareComponents(threadData, _iComp1, _iComp2);
-  out_res = mmc_mk_icon(_res);
+  out_res = omc_mk_icon(_res);
   return out_res;
 }
 
@@ -6718,14 +6694,12 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_componentsEqual(th
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_integer tmp8;
-  modelica_metatype tmpMeta9;
-  modelica_metatype tmpMeta10;
-  modelica_metatype tmpMeta11;
-  modelica_metatype tmpMeta12;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_string tmp9;
+  modelica_string tmp10;
+  modelica_string tmp11;
+  modelica_string tmp12;
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   // _comp1Str has no default value.
@@ -6736,27 +6710,27 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_componentsEqual(th
   // _comp2 has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iComp1;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp4 = mmc_unbox_integer(tmpMeta3);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp4 = omc_unbox_integer(tmpMeta3);
   _comp1 = tmpMeta2;
   _comp1Idx = tmp4  /* pattern as ty=Integer */;
 
   /* Pattern-matching assignment */
   tmpMeta5 = _iComp2;
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 1));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
-  tmp8 = mmc_unbox_integer(tmpMeta7);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 1);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta5, 2);
+  tmp8 = omc_unbox_integer(tmpMeta7);
   _comp2 = tmpMeta6;
   _comp2Idx = tmp8  /* pattern as ty=Integer */;
 
-  tmpMeta9 = stringAppend(omc_BackendDump_printComponent(threadData, _comp1, mmc_mk_none()),_OMC_LIT57);
-  tmpMeta10 = stringAppend(tmpMeta9,intString(_comp1Idx));
-  _comp1Str = tmpMeta10;
+  tmp9 = stringAppend(omc_BackendDump_printComponent(threadData, _comp1, mmc_mk_none()),_OMC_LIT57);
+  tmp10 = stringAppend(tmp9,intString(_comp1Idx));
+  omc_string_store(&(_comp1Str), tmp10);
 
-  tmpMeta11 = stringAppend(omc_BackendDump_printComponent(threadData, _comp2, mmc_mk_none()),_OMC_LIT57);
-  tmpMeta12 = stringAppend(tmpMeta11,intString(_comp2Idx));
-  _comp2Str = tmpMeta12;
+  tmp11 = stringAppend(omc_BackendDump_printComponent(threadData, _comp2, mmc_mk_none()),_OMC_LIT57);
+  tmp12 = stringAppend(tmp11,intString(_comp2Idx));
+  omc_string_store(&(_comp2Str), tmp12);
 
   if((stringLength(_comp1Str) != stringLength(_comp2Str)))
   {
@@ -6767,17 +6741,15 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_componentsEqual(th
     _res = (omc_System_strncmp(threadData, _comp1Str, _comp2Str, stringLength(_comp1Str)) == ((modelica_integer) 0));
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_componentsEqual(threadData_t *threadData, modelica_metatype _iComp1, modelica_metatype _iComp2)
 {
   modelica_boolean _res;
   modelica_metatype out_res;
   _res = omc_HpcOmTaskGraph_componentsEqual(threadData, _iComp1, _iComp2);
-  out_res = mmc_mk_icon(_res);
+  out_res = omc_mk_icon(_res);
   return out_res;
 }
 
@@ -6790,7 +6762,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
   modelica_metatype _comps = NULL;
   modelica_metatype _eqSysts = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype tmpMeta2;
+  modelica_integer tmp3;
+  modelica_metatype tmpMeta4;
+  modelica_metatype tmpMeta5;
+  modelica_metatype tmpMeta6;
+  modelica_metatype tmpMeta7;
+  modelica_metatype tmpMeta8;
+  modelica_metatype tmpMeta9;
+  modelica_metatype tmpMeta10;
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNodeComps_Mapping has no default value.
   // _nodeIdx has no default value.
@@ -6798,130 +6780,42 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
   // _eqSyst has no default value.
   // _comps has no default value.
   // _eqSysts has no default value.
-  { /* matchcontinue expression */
-    volatile modelica_metatype tmp4_1;
-    tmp4_1 = _iNodeComps_Mapping;
-    {
-      volatile mmc_switch_type tmp4;
-      int tmp5;
-      tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
-      tmp3_top:
-      threadData->mmc_jumper = &new_mmc_jumper;
-      for (; tmp4 < 3; tmp4++) {
-        switch (MMC_SWITCH_CAST(tmp4)) {
-        case 0: {
-          modelica_metatype tmpMeta6;
-          modelica_integer tmp7;
-          modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
-          modelica_boolean tmp11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
-          _nodeIdx = tmp7  /* pattern as ty=Integer */;
-          _comps = tmpMeta9;
-          _eqSysts = tmpMeta10;
-          /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp11 = (_nodeMark >= ((modelica_integer) 0));
-          if (1 /* true */ != tmp11) goto goto_2;
-          tmpMeta12 = mmc_mk_box2(0, _comps, _eqSysts);
-          tmpMeta13 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1) + _nodeIdx), tmpMeta12);
-          tmpMeta1 = tmpMeta13;
-          goto tmp3_done;
-        }
-        case 1: {
-          modelica_metatype tmpMeta14;
-          modelica_integer tmp15;
-          modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
-          modelica_metatype tmpMeta18;
-          modelica_boolean tmp19;
-          modelica_metatype tmpMeta20;
-          modelica_metatype tmpMeta21;
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp15 = mmc_unbox_integer(tmpMeta14);
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta16), 1));
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta16), 2));
-          _nodeIdx = tmp15  /* pattern as ty=Integer */;
-          _comps = tmpMeta17;
-          _eqSysts = tmpMeta18;
-          /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp19 = (_nodeMark == ((modelica_integer) -2));
-          if (1 /* true */ != tmp19) goto goto_2;
-          tmpMeta20 = mmc_mk_box2(0, _comps, _eqSysts);
-          tmpMeta21 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1) + _nodeIdx), tmpMeta20);
-          tmpMeta1 = tmpMeta21;
-          goto tmp3_done;
-        }
-        case 2: {
-          modelica_metatype tmpMeta22;
-          modelica_integer tmp23;
-          modelica_metatype tmpMeta24;
-          modelica_metatype tmpMeta25;
-          modelica_metatype tmpMeta26;
-          modelica_metatype tmpMeta27;
-          modelica_metatype tmpMeta28;
-          modelica_metatype tmpMeta29;
-          modelica_metatype tmpMeta30;
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp23 = mmc_unbox_integer(tmpMeta22);
-          tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 1));
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 2));
-          _nodeIdx = tmp23  /* pattern as ty=Integer */;
-          _comps = tmpMeta25;
-          _eqSysts = tmpMeta26;
-          /* Pattern matching succeeded */
-          _comp = arrayGet(_systComps, _nodeIdx);
+  /* Pattern-matching assignment */
+  tmpMeta1 = _iNodeComps_Mapping;
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta4, 1);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta4, 2);
+  _nodeIdx = tmp3  /* pattern as ty=Integer */;
+  _comps = tmpMeta5;
+  _eqSysts = tmpMeta6;
 
-          _eqSyst = arrayGet(_iCompEqSysMapping, _nodeIdx);
+  if((!((_nodeMark >= ((modelica_integer) 0)) || (_nodeMark == ((modelica_integer) -2)))))
+  {
+    _comp = arrayGet(_systComps, _nodeIdx);
 
-          tmpMeta27 = mmc_mk_cons(_comp, _comps);
-          _comps = tmpMeta27;
+    _eqSyst = arrayGet(_iCompEqSysMapping, _nodeIdx);
 
-          tmpMeta28 = mmc_mk_cons(_eqSyst, _eqSysts);
-          _eqSysts = tmpMeta28;
-          tmpMeta29 = mmc_mk_box2(0, _comps, _eqSysts);
-          tmpMeta30 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1) + _nodeIdx), tmpMeta29);
-          tmpMeta1 = tmpMeta30;
-          goto tmp3_done;
-        }
-        }
-        goto tmp3_end;
-        tmp3_end: ;
-      }
-      goto goto_2;
-      tmp3_done:
-      (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
-      goto tmp3_done2;
-      goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
-      if (++tmp4 < 3) {
-        goto tmp3_top;
-      }
-      MMC_THROW_INTERNAL();
-      tmp3_done2:;
-    }
+    tmpMeta7 = mmc_mk_cons(_comp, _comps);
+    _comps = tmpMeta7;
+
+    tmpMeta8 = mmc_mk_cons(_eqSyst, _eqSysts);
+    _eqSysts = tmpMeta8;
   }
-  _oNodeComps_Mapping = tmpMeta1;
+
+  tmpMeta9 = omc_mk_box2(0, _comps, _eqSysts);
+  tmpMeta10 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1) + _nodeIdx), tmpMeta9);
+  _oNodeComps_Mapping = tmpMeta10;
   _return: OMC_LABEL_UNUSED
-  return _oNodeComps_Mapping;
+  omc_ret_ = _oNodeComps_Mapping;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getGraphComponents2(threadData_t *threadData, modelica_metatype _nodeMark, modelica_metatype _systComps, modelica_metatype _iCompEqSysMapping, modelica_metatype _iNodeComps_Mapping)
 {
   modelica_integer tmp1;
   modelica_metatype _oNodeComps_Mapping = NULL;
-  tmp1 = mmc_unbox_integer(_nodeMark);
+  tmp1 = omc_unbox_integer(_nodeMark);
   _oNodeComps_Mapping = omc_HpcOmTaskGraph_getGraphComponents2(threadData, tmp1, _systComps, _iCompEqSysMapping, _iNodeComps_Mapping);
   /* skip box _oNodeComps_Mapping; tuple<#Integer, tuple<list<BackendDAE.StrongComponent>, list<tuple<BackendDAE.EqSystem, #Integer>>>> */
   return _oNodeComps_Mapping;
@@ -6940,7 +6834,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNodeComps_Mapping has no default value.
   // _comp has no default value.
@@ -6949,8 +6844,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
   // _tmpSysts has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iNodeComps_Mapping;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
   _tmpComps = tmpMeta2;
   _tmpSysts = tmpMeta3;
 
@@ -6964,16 +6859,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
   tmpMeta5 = mmc_mk_cons(_eqSyst, _tmpSysts);
   _tmpSysts = tmpMeta5;
 
-  tmpMeta6 = mmc_mk_box2(0, _tmpComps, _tmpSysts);
+  tmpMeta6 = omc_mk_box2(0, _tmpComps, _tmpSysts);
   _oNodeComps_Mapping = tmpMeta6;
   _return: OMC_LABEL_UNUSED
-  return _oNodeComps_Mapping;
+  omc_ret_ = _oNodeComps_Mapping;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getGraphComponents1(threadData_t *threadData, modelica_metatype _compIdx, modelica_metatype _systComps, modelica_metatype _iCompEqSysMapping, modelica_metatype _iNodeComps_Mapping)
 {
   modelica_integer tmp1;
   modelica_metatype _oNodeComps_Mapping = NULL;
-  tmp1 = mmc_unbox_integer(_compIdx);
+  tmp1 = omc_unbox_integer(_compIdx);
   _oNodeComps_Mapping = omc_HpcOmTaskGraph_getGraphComponents1(threadData, tmp1, _systComps, _iCompEqSysMapping, _iNodeComps_Mapping);
   /* skip box _oNodeComps_Mapping; tuple<list<BackendDAE.StrongComponent>, list<tuple<BackendDAE.EqSystem, #Integer>>> */
   return _oNodeComps_Mapping;
@@ -6993,7 +6889,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNodeComps_Mapping has no default value.
   // _iNodeComps has no default value.
@@ -7002,15 +6899,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
   // _tmpCompsMapping has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iNodeComps_Mapping;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
   _iNodeComps = tmpMeta2;
   _iCompsMapping = tmpMeta3;
 
   /* Pattern-matching assignment */
   tmpMeta4 = omc_List_fold2(threadData, _inComp, boxvar_HpcOmTaskGraph_getGraphComponents1, _systComps, _iCompEqSysMapping, _OMC_LIT58);
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 1));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 2));
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta4, 1);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta4, 2);
   _tmpNodeComps = tmpMeta5;
   _tmpCompsMapping = tmpMeta6;
 
@@ -7018,21 +6915,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
 
   _tmpCompsMapping = listAppend(_iCompsMapping, _tmpCompsMapping);
 
-  tmpMeta7 = mmc_mk_box2(0, _tmpNodeComps, _tmpCompsMapping);
+  tmpMeta7 = omc_mk_box2(0, _tmpNodeComps, _tmpCompsMapping);
   _oNodeComps_Mapping = tmpMeta7;
   _return: OMC_LABEL_UNUSED
-  return _oNodeComps_Mapping;
+  omc_ret_ = _oNodeComps_Mapping;
+  return omc_ret_;
 }
 
 static modelica_metatype closure5_HpcOmTaskGraph_getGraphComponents0(threadData_t *thData, modelica_metatype closure, modelica_metatype inComp, modelica_metatype iNodeComps_Mapping)
 {
-  modelica_metatype systComps = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype iCompEqSysMapping = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
+  modelica_metatype systComps = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype iCompEqSysMapping = OMC_BOX_FIELD(closure, 2);
   return boxptr_HpcOmTaskGraph_getGraphComponents0(thData, inComp, systComps, iCompEqSysMapping, iNodeComps_Mapping);
 }static modelica_metatype closure6_HpcOmTaskGraph_getGraphComponents2(threadData_t *thData, modelica_metatype closure, modelica_metatype nodeMark, modelica_metatype iNodeComps_Mapping)
 {
-  modelica_metatype systComps = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype iCompEqSysMapping = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
+  modelica_metatype systComps = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype iCompEqSysMapping = OMC_BOX_FIELD(closure, 2);
   return boxptr_HpcOmTaskGraph_getGraphComponents2(thData, nodeMark, systComps, iCompEqSysMapping, iNodeComps_Mapping);
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponents(threadData_t *threadData, modelica_metatype _iTaskGraphMeta, modelica_metatype _iSystComps, modelica_metatype _iCompEqSysMapping, modelica_metatype *out_oCompEqGraphMapping)
@@ -7060,7 +6958,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oComps has no default value.
   // _oCompEqGraphMapping has no default value.
@@ -7076,28 +6975,28 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
 
   /* Pattern-matching assignment */
   tmpMeta3 = _iTaskGraphMeta;
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 2));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 10));
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta3, 2);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta3, 10);
   _inComps = tmpMeta4;
   _nodeMarks = tmpMeta5;
 
   /* Pattern-matching assignment */
-  tmpMeta6 = mmc_mk_box2(0, _iSystComps, _iCompEqSysMapping);
-  tmpMeta7 = mmc_mk_box2(0, _tmpComps, _tmpMapping);
-  tmpMeta8 = omc_Array_fold(threadData, _inComps, (modelica_fnptr) mmc_mk_box2(0,closure5_HpcOmTaskGraph_getGraphComponents0,tmpMeta6), tmpMeta7);
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
+  tmpMeta6 = omc_mk_box2(0, _iSystComps, _iCompEqSysMapping);
+  tmpMeta7 = omc_mk_box2(0, _tmpComps, _tmpMapping);
+  tmpMeta8 = omc_Array_fold(threadData, _inComps, (modelica_fnptr) omc_mk_box2(0,closure5_HpcOmTaskGraph_getGraphComponents0,tmpMeta6), tmpMeta7);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 1);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta8, 2);
   _tmpComps = tmpMeta9;
   _tmpMapping = tmpMeta10;
 
   /* Pattern-matching assignment */
-  tmpMeta11 = mmc_mk_box2(0, _iSystComps, _iCompEqSysMapping);
-  tmpMeta12 = mmc_mk_box2(0, _tmpComps, _tmpMapping);
-  tmpMeta13 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1)), tmpMeta12);
-  tmpMeta14 = omc_Array_fold(threadData, _nodeMarks, (modelica_fnptr) mmc_mk_box2(0,closure6_HpcOmTaskGraph_getGraphComponents2,tmpMeta11), tmpMeta13);
-  tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta14), 2));
-  tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 1));
-  tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 2));
+  tmpMeta11 = omc_mk_box2(0, _iSystComps, _iCompEqSysMapping);
+  tmpMeta12 = omc_mk_box2(0, _tmpComps, _tmpMapping);
+  tmpMeta13 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1)), tmpMeta12);
+  tmpMeta14 = omc_Array_fold(threadData, _nodeMarks, (modelica_fnptr) omc_mk_box2(0,closure6_HpcOmTaskGraph_getGraphComponents2,tmpMeta11), tmpMeta13);
+  tmpMeta15 = OMC_BOX_FIELD(tmpMeta14, 2);
+  tmpMeta16 = OMC_BOX_FIELD(tmpMeta15, 1);
+  tmpMeta17 = OMC_BOX_FIELD(tmpMeta15, 2);
   _tmpComps = tmpMeta16;
   _tmpMapping = tmpMeta17;
 
@@ -7106,7 +7005,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getGraphComponent
   _oCompEqGraphMapping = listArray(_tmpMapping);
   _return: OMC_LABEL_UNUSED
   if (out_oCompEqGraphMapping) { *out_oCompEqGraphMapping = _oCompEqGraphMapping; }
-  return _oComps;
+  omc_ret_ = _oComps;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicates0(threadData_t *threadData, modelica_metatype _currentComp_idx, modelica_metatype _iLastComp)
@@ -7118,7 +7018,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicate
   modelica_integer _idxLast;
   modelica_integer _idxCurrent;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oLastComp has no default value.
   // _lastComp has no default value.
@@ -7134,7 +7035,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicate
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 4; tmp4++) {
@@ -7143,23 +7044,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicate
           modelica_metatype tmpMeta6;
           modelica_integer tmp7;
           modelica_metatype tmpMeta8;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           if (0 /* false */ != tmp7) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta8 = mmc_mk_box2(0, mmc_mk_boolean(0 /* false */), mmc_mk_some(_currentComp_idx));
+          tmpMeta8 = omc_mk_box2(0, omc_mk_boolean(0 /* false */), mmc_mk_some(_currentComp_idx));
           tmpMeta1 = tmpMeta8;
           goto tmp3_done;
         }
         case 1: {
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 2);
           if (!optionNone(tmpMeta9)) goto tmp3_end;
           
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmpMeta10 = mmc_mk_box2(0, mmc_mk_boolean(1 /* true */), mmc_mk_some(_currentComp_idx));
+          tmpMeta10 = omc_mk_box2(0, omc_mk_boolean(1 /* true */), mmc_mk_some(_currentComp_idx));
           tmpMeta1 = tmpMeta10;
           goto tmp3_done;
         }
@@ -7173,24 +7074,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicate
           modelica_metatype tmpMeta17;
           modelica_integer tmp18;
           modelica_boolean tmp19;
-          modelica_metatype tmpMeta20;
-          modelica_metatype tmpMeta21;
-          modelica_metatype tmpMeta22;
-          modelica_metatype tmpMeta23;
-          modelica_metatype tmpMeta24;
-          modelica_metatype tmpMeta25;
-          modelica_metatype tmpMeta26;
-          modelica_metatype tmpMeta27;
+          modelica_string tmp20;
+          modelica_string tmp21;
+          modelica_string tmp22;
+          modelica_string tmp23;
+          modelica_string tmp24;
+          modelica_string tmp25;
+          modelica_string tmp26;
+          modelica_string tmp27;
           modelica_metatype tmpMeta28;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 2);
           if (optionNone(tmpMeta11)) goto tmp3_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 1));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 2));
-          tmp15 = mmc_unbox_integer(tmpMeta14);
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp18 = mmc_unbox_integer(tmpMeta17);
+          tmpMeta12 = OMC_BOX_FIELD(tmpMeta11, 1);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 1);
+          tmpMeta14 = OMC_BOX_FIELD(tmpMeta12, 2);
+          tmp15 = omc_unbox_integer(tmpMeta14);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta17 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp18 = omc_unbox_integer(tmpMeta17);
           _lastComp_idx = tmpMeta12;
           _lastComp = tmpMeta13;
           _idxLast = tmp15  /* pattern as ty=Integer */;
@@ -7201,16 +7102,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicate
           tmp19 = omc_HpcOmTaskGraph_componentsEqual(threadData, _currentComp_idx, _lastComp_idx);
           if (1 /* true */ != tmp19) goto goto_2;
 
-          tmpMeta20 = stringAppend(_OMC_LIT59,omc_BackendDump_printComponent(threadData, _currentComp, mmc_mk_none()));
-          tmpMeta21 = stringAppend(tmpMeta20,_OMC_LIT60);
-          tmpMeta22 = stringAppend(tmpMeta21,intString(_idxCurrent));
-          tmpMeta23 = stringAppend(tmpMeta22,_OMC_LIT61);
-          tmpMeta24 = stringAppend(tmpMeta23,omc_BackendDump_printComponent(threadData, _lastComp, mmc_mk_none()));
-          tmpMeta25 = stringAppend(tmpMeta24,_OMC_LIT60);
-          tmpMeta26 = stringAppend(tmpMeta25,intString(_idxLast));
-          tmpMeta27 = stringAppend(tmpMeta26,_OMC_LIT62);
-          fputs(MMC_STRINGDATA(tmpMeta27),stdout);
-          tmpMeta28 = mmc_mk_box2(0, mmc_mk_boolean(0 /* false */), mmc_mk_some(_currentComp_idx));
+          tmp20 = stringAppend(_OMC_LIT59,omc_BackendDump_printComponent(threadData, _currentComp, mmc_mk_none()));
+          tmp21 = stringAppend(tmp20,_OMC_LIT60);
+          tmp22 = stringAppend(tmp21,intString(_idxCurrent));
+          tmp23 = stringAppend(tmp22,_OMC_LIT61);
+          tmp24 = stringAppend(tmp23,omc_BackendDump_printComponent(threadData, _lastComp, mmc_mk_none()));
+          tmp25 = stringAppend(tmp24,_OMC_LIT60);
+          tmp26 = stringAppend(tmp25,intString(_idxLast));
+          tmp27 = stringAppend(tmp26,_OMC_LIT62);
+          fputs(omc_string_data(tmp27),stdout);
+          tmpMeta28 = omc_mk_box2(0, omc_mk_boolean(0 /* false */), mmc_mk_some(_currentComp_idx));
           tmpMeta1 = tmpMeta28;
           goto tmp3_done;
         }
@@ -7218,7 +7119,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicate
           modelica_metatype tmpMeta29;
           
           /* Pattern matching succeeded */
-          tmpMeta29 = mmc_mk_box2(0, mmc_mk_boolean(1 /* true */), mmc_mk_some(_currentComp_idx));
+          tmpMeta29 = omc_mk_box2(0, omc_mk_boolean(1 /* true */), mmc_mk_some(_currentComp_idx));
           tmpMeta1 = tmpMeta29;
           goto tmp3_done;
         }
@@ -7229,20 +7130,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkForDuplicate
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 4) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oLastComp = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oLastComp;
+  omc_ret_ = _oLastComp;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForDuplicates(threadData_t *threadData, modelica_metatype _iComps)
@@ -7252,10 +7154,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForDuplicates
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   // _sortedComps has no default value.
@@ -7263,21 +7163,19 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForDuplicates
 
   /* Pattern-matching assignment */
   tmpMeta1 = omc_List_fold(threadData, _sortedComps, boxvar_HpcOmTaskGraph_checkForDuplicates0, _OMC_LIT63);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
   _res = tmp3  /* pattern as ty=Boolean */;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkForDuplicates(threadData_t *threadData, modelica_metatype _iComps)
 {
   modelica_boolean _res;
   modelica_metatype out_res;
   _res = omc_HpcOmTaskGraph_checkForDuplicates(threadData, _iComps);
-  out_res = mmc_mk_icon(_res);
+  out_res = omc_mk_icon(_res);
   return out_res;
 }
 
@@ -7294,10 +7192,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_validateComponents
   modelica_metatype _sortedGraphComps = NULL;
   modelica_metatype _sortedSystComps = NULL;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   // _isEqual has no default value.
@@ -7314,7 +7210,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_validateComponents
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -7334,13 +7230,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_validateComponents
           modelica_metatype tmpMeta17;
           modelica_metatype tmpMeta18;
           modelica_integer tmp19;
-          modelica_metatype tmpMeta20;
-          modelica_metatype tmpMeta21;
-          modelica_metatype tmpMeta22;
-          modelica_metatype tmpMeta23;
-          modelica_metatype tmpMeta24;
-          modelica_metatype tmpMeta25;
-          modelica_metatype tmpMeta26;
+          modelica_string tmp20;
+          modelica_string tmp21;
+          modelica_string tmp22;
+          modelica_string tmp23;
+          modelica_string tmp24;
+          modelica_string tmp25;
+          modelica_string tmp26;
           /* Pattern matching succeeded */
           _sortedGraphComps = omc_List_sort(threadData, _graphComps, boxvar_HpcOmTaskGraph_compareComponents);
 
@@ -7348,7 +7244,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_validateComponents
 
           if((listLength(_sortedSystComps) != listLength(_sortedGraphComps)))
           {
-            fputs(MMC_STRINGDATA(_OMC_LIT64),stdout);
+            fputs(omc_string_data(_OMC_LIT64),stdout);
           }
 
           _isEqual = 1 /* true */;
@@ -7374,17 +7270,17 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_validateComponents
 
             /* Pattern-matching assignment */
             tmpMeta12 = _tpl1;
-            tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-            tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 2));
-            tmp15 = mmc_unbox_integer(tmpMeta14);
+            tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 1);
+            tmpMeta14 = OMC_BOX_FIELD(tmpMeta12, 2);
+            tmp15 = omc_unbox_integer(tmpMeta14);
             _comp1 = tmpMeta13;
             _i1 = tmp15  /* pattern as ty=Integer */;
 
             /* Pattern-matching assignment */
             tmpMeta16 = _tpl2;
-            tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta16), 1));
-            tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta16), 2));
-            tmp19 = mmc_unbox_integer(tmpMeta18);
+            tmpMeta17 = OMC_BOX_FIELD(tmpMeta16, 1);
+            tmpMeta18 = OMC_BOX_FIELD(tmpMeta16, 2);
+            tmp19 = omc_unbox_integer(tmpMeta18);
             _comp2 = tmpMeta17;
             _i2 = tmp19  /* pattern as ty=Integer */;
 
@@ -7396,14 +7292,14 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_validateComponents
             {
               _isEqual = 0 /* false */;
 
-              tmpMeta20 = stringAppend(_OMC_LIT65,intString(_i1));
-              tmpMeta21 = stringAppend(tmpMeta20,omc_BackendDump_printComponent(threadData, _comp1, mmc_mk_none()));
-              tmpMeta22 = stringAppend(tmpMeta21,_OMC_LIT66);
-              tmpMeta23 = stringAppend(tmpMeta22,_OMC_LIT67);
-              tmpMeta24 = stringAppend(tmpMeta23,intString(_i2));
-              tmpMeta25 = stringAppend(tmpMeta24,omc_BackendDump_printComponent(threadData, _comp2, mmc_mk_none()));
-              tmpMeta26 = stringAppend(tmpMeta25,_OMC_LIT5);
-              fputs(MMC_STRINGDATA(tmpMeta26),stdout);
+              tmp20 = stringAppend(_OMC_LIT65,intString(_i1));
+              tmp21 = stringAppend(tmp20,omc_BackendDump_printComponent(threadData, _comp1, mmc_mk_none()));
+              tmp22 = stringAppend(tmp21,_OMC_LIT66);
+              tmp23 = stringAppend(tmp22,_OMC_LIT67);
+              tmp24 = stringAppend(tmp23,intString(_i2));
+              tmp25 = stringAppend(tmp24,omc_BackendDump_printComponent(threadData, _comp2, mmc_mk_none()));
+              tmp26 = stringAppend(tmp25,_OMC_LIT5);
+              fputs(omc_string_data(tmp26),stdout);
             }
           }
           tmp1 = 1 /* true */;
@@ -7411,7 +7307,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_validateComponents
         }
         case 1: {
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT68),stdout);
+          fputs(omc_string_data(_OMC_LIT68),stdout);
           tmp1 = 0 /* false */;
           goto tmp3_done;
         }
@@ -7422,30 +7318,28 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_validateComponents
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_validateComponents(threadData_t *threadData, modelica_metatype _graphComps, modelica_metatype _systComps)
 {
   modelica_boolean _res;
   modelica_metatype out_res;
   _res = omc_HpcOmTaskGraph_validateComponents(threadData, _graphComps, _systComps);
-  out_res = mmc_mk_icon(_res);
+  out_res = omc_mk_icon(_res);
   return out_res;
 }
 
@@ -7460,7 +7354,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_validateTaskGraph
   modelica_metatype _oCompEqSysMapping = NULL;
   modelica_metatype _tmpCompsTpl = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCompsTpl has no default value.
   // _currentIdx has no default value.
@@ -7492,13 +7387,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_validateTaskGraph
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
           modelica_metatype tmpMeta17;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
           if (listEmpty(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_CAR(tmpMeta8);
           tmpMeta10 = MMC_CDR(tmpMeta8);
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_1, 3);
           _currentIdx = tmp7  /* pattern as ty=Integer */;
           _head = tmpMeta9;
           _rest = tmpMeta10;
@@ -7506,14 +7401,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_validateTaskGraph
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta12 = arrayGet(_iEqSysMapping, _currentIdx);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 2));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 2);
+          tmp14 = omc_unbox_integer(tmpMeta13);
           _eqSysIdx = tmp14  /* pattern as ty=Integer */;
 
-          tmpMeta16 = mmc_mk_box2(0, _head, mmc_mk_integer(_eqSysIdx));
+          tmpMeta16 = omc_mk_box2(0, _head, omc_mk_integer(_eqSysIdx));
           tmpMeta15 = mmc_mk_cons(tmpMeta16, _iCompEqSysMapping);
           _oCompEqSysMapping = tmpMeta15;
-          tmpMeta17 = mmc_mk_box3(0, mmc_mk_integer(((modelica_integer) 1) + _currentIdx), _rest, _oCompEqSysMapping);
+          tmpMeta17 = omc_mk_box3(0, omc_mk_integer(((modelica_integer) 1) + _currentIdx), _rest, _oCompEqSysMapping);
           /* Tail recursive call */
           _iCompsTpl = tmpMeta17;
           goto _tailrecursive;
@@ -7532,25 +7427,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_validateTaskGraph
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oCompsTpl = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oCompsTpl;
+  omc_ret_ = _oCompsTpl;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_HpcOmTaskGraph_validateTaskGraphMeta(threadData_t *threadData, modelica_metatype _iMeta, modelica_metatype _iDae)
 {
   modelica_boolean _valid;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _valid has no default value.
   { /* matchcontinue expression */
@@ -7572,7 +7466,7 @@ modelica_boolean omc_HpcOmTaskGraph_validateTaskGraphMeta(threadData_t *threadDa
       // _systCompEqSysMappingIdx has no default value.
       // _graphCompEqSysMappingIdx has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -7598,16 +7492,16 @@ modelica_boolean omc_HpcOmTaskGraph_validateTaskGraphMeta(threadData_t *threadDa
 
           /* Pattern-matching assignment */
           tmpMeta6 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta7 = mmc_mk_box3(0, mmc_mk_integer(((modelica_integer) 1)), _systComps, tmpMeta6);
+          tmpMeta7 = omc_mk_box3(0, omc_mk_integer(((modelica_integer) 1)), _systComps, tmpMeta6);
           tmpMeta8 = omc_HpcOmTaskGraph_validateTaskGraphMeta0(threadData, _systCompEqSysMapping, tmpMeta7);
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 3));
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 3);
           _systCompEqSysMappingIdx = tmpMeta9;
 
           /* Pattern-matching assignment */
           tmpMeta10 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta11 = mmc_mk_box3(0, mmc_mk_integer(((modelica_integer) 1)), _graphComps, tmpMeta10);
+          tmpMeta11 = omc_mk_box3(0, omc_mk_integer(((modelica_integer) 1)), _graphComps, tmpMeta10);
           tmpMeta12 = omc_HpcOmTaskGraph_validateTaskGraphMeta0(threadData, _graphCompEqSysMapping, tmpMeta11);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 3));
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 3);
           _graphCompEqSysMappingIdx = tmpMeta13;
 
           /* Pattern-matching assignment */
@@ -7636,30 +7530,28 @@ modelica_boolean omc_HpcOmTaskGraph_validateTaskGraphMeta(threadData_t *threadDa
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _valid = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _valid;
+  omc_ret_ = _valid;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_validateTaskGraphMeta(threadData_t *threadData, modelica_metatype _iMeta, modelica_metatype _iDae)
 {
   modelica_boolean _valid;
   modelica_metatype out_valid;
   _valid = omc_HpcOmTaskGraph_validateTaskGraphMeta(threadData, _iMeta, _iDae);
-  out_valid = mmc_mk_icon(_valid);
+  out_valid = omc_mk_icon(_valid);
   return out_valid;
 }
 
@@ -7692,7 +7584,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommCosts0(
   modelica_metatype tmpMeta15;
   modelica_integer tmp16;
   modelica_metatype tmpMeta17;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oComm has no default value.
   // _childNode has no default value.
@@ -7706,16 +7599,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommCosts0(
   // _stringVars has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iComm;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmp9 = mmc_unbox_integer(tmpMeta8);
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmp11 = mmc_unbox_real(tmpMeta10);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmp9 = omc_unbox_integer(tmpMeta8);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmp11 = omc_unbox_real(tmpMeta10);
   _numberOfVars = tmp3  /* pattern as ty=Integer */;
   _integerVars = tmpMeta4;
   _floatVars = tmpMeta5;
@@ -7726,19 +7619,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommCosts0(
 
   /* Pattern-matching assignment */
   tmpMeta12 = _iReqTimeCom;
-  tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-  tmp14 = mmc_unbox_integer(tmpMeta13);
-  tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 2));
-  tmp16 = mmc_unbox_integer(tmpMeta15);
+  tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 1);
+  tmp14 = omc_unbox_integer(tmpMeta13);
+  tmpMeta15 = OMC_BOX_FIELD(tmpMeta12, 2);
+  tmp16 = omc_unbox_integer(tmpMeta15);
   _reqTimeM = tmp14  /* pattern as ty=Integer */;
   _reqTimeN = tmp16  /* pattern as ty=Integer */;
 
   _requiredTime = ((modelica_real)_reqTimeN + ((_numberOfVars) * (_reqTimeM)));
 
-  tmpMeta17 = mmc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, mmc_mk_integer(_numberOfVars), _integerVars, _floatVars, _booleanVars, _stringVars, mmc_mk_integer(_childNode), mmc_mk_real(_requiredTime));
+  tmpMeta17 = omc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, omc_mk_integer(_numberOfVars), _integerVars, _floatVars, _booleanVars, _stringVars, omc_mk_integer(_childNode), omc_mk_real(_requiredTime));
   _oComm = tmpMeta17;
   _return: OMC_LABEL_UNUSED
-  return _oComm;
+  omc_ret_ = _oComm;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommCosts(threadData_t *threadData, modelica_metatype _iCosts, modelica_integer _iCurrentIndex, modelica_metatype _iReqTimeCom)
@@ -7747,7 +7641,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommCosts(t
   modelica_metatype _tmpCosts = NULL;
   modelica_metatype _currentCom = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCosts has no default value.
   // _tmpCosts has no default value.
@@ -7759,7 +7654,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommCosts(t
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -7794,26 +7689,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommCosts(t
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oCosts = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oCosts;
+  omc_ret_ = _oCosts;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_createCommCosts(threadData_t *threadData, modelica_metatype _iCosts, modelica_metatype _iCurrentIndex, modelica_metatype _iReqTimeCom)
 {
   modelica_integer tmp1;
   modelica_metatype _oCosts = NULL;
-  tmp1 = mmc_unbox_integer(_iCurrentIndex);
+  tmp1 = omc_unbox_integer(_iCurrentIndex);
   _oCosts = omc_HpcOmTaskGraph_createCommCosts(threadData, _iCosts, tmp1, _iReqTimeCom);
   /* skip box _oCosts; array<list<HpcOmTaskGraph.Communication>> */
   return _oCosts;
@@ -7838,7 +7734,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createExecCost0(t
   modelica_metatype tmpMeta7;
   modelica_real tmp8;
   modelica_metatype tmpMeta9;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCosts has no default value.
   // _iCosts_op has no default value.
@@ -7850,17 +7747,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createExecCost0(t
   // _reqTime has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _icomps_shared;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
   _comps = tmpMeta2;
   _shared = tmpMeta3;
 
   /* Pattern-matching assignment */
   tmpMeta4 = _iCosts;
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 1));
-  tmp6 = mmc_unbox_integer(tmpMeta5);
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 2));
-  tmp8 = mmc_unbox_real(tmpMeta7);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta4, 1);
+  tmp6 = omc_unbox_integer(tmpMeta5);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta4, 2);
+  tmp8 = omc_unbox_real(tmpMeta7);
   _iCosts_op = tmp6  /* pattern as ty=Integer */;
   _iCosts_cyc = tmp8  /* pattern as ty=Real */;
 
@@ -7868,18 +7765,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createExecCost0(t
 
   _syst = arrayGet(_compMapping, _sccIndex);
 
-  _reqTime = mmc_unbox_real(arrayGet(_iRequiredTime, _sccIndex));
+  _reqTime = omc_unbox_real(arrayGet(_iRequiredTime, _sccIndex));
 
-  tmpMeta9 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) -100) + _iCosts_op), mmc_mk_real(_iCosts_cyc + _reqTime));
+  tmpMeta9 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) -100) + _iCosts_op), omc_mk_real(_iCosts_cyc + _reqTime));
   _oCosts = tmpMeta9;
   _return: OMC_LABEL_UNUSED
-  return _oCosts;
+  omc_ret_ = _oCosts;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_createExecCost0(threadData_t *threadData, modelica_metatype _sccIndex, modelica_metatype _icomps_shared, modelica_metatype _compMapping, modelica_metatype _iRequiredTime, modelica_metatype _iCosts)
 {
   modelica_integer tmp1;
   modelica_metatype _oCosts = NULL;
-  tmp1 = mmc_unbox_integer(_sccIndex);
+  tmp1 = omc_unbox_integer(_sccIndex);
   _oCosts = omc_HpcOmTaskGraph_createExecCost0(threadData, tmp1, _icomps_shared, _compMapping, _iRequiredTime, _iCosts);
   /* skip box _oCosts; tuple<#Integer, #Real> */
   return _oCosts;
@@ -7887,10 +7785,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_createExecCost
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_createExecCost(threadData_t *threadData, modelica_metatype _iNodeSccs, modelica_metatype _icomps_shared, modelica_metatype _iRequiredTime, modelica_metatype _iExecCosts, modelica_metatype _compMapping, modelica_integer _iNodeIdx)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
     {
@@ -7899,7 +7794,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_createExecCost(threadData_t *t
       int tmp4;
       // _execCost has no default value.
       tmp3 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp2_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp3 < 2; tmp3++) {
@@ -7922,28 +7817,25 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_createExecCost(threadData_t *t
       goto goto_1;
       tmp2_done:
       (void)tmp3;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp2_done2;
       goto_1:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp3 < 2) {
         goto tmp2_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp2_done2:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_createExecCost(threadData_t *threadData, modelica_metatype _iNodeSccs, modelica_metatype _icomps_shared, modelica_metatype _iRequiredTime, modelica_metatype _iExecCosts, modelica_metatype _compMapping, modelica_metatype _iNodeIdx)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_iNodeIdx);
+  tmp1 = omc_unbox_integer(_iNodeIdx);
   omc_HpcOmTaskGraph_createExecCost(threadData, _iNodeSccs, _icomps_shared, _iRequiredTime, _iExecCosts, _compMapping, tmp1);
   return;
 }
@@ -7956,7 +7848,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCosts1(thre
   modelica_integer _calcTimeCount;
   modelica_real _calcTime;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oReqTime has no default value.
   // _tmpArray has no default value.
@@ -7980,13 +7873,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCosts1(thre
           modelica_integer tmp9;
           modelica_metatype tmpMeta10;
           modelica_real tmp11;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           if (0 != tmp7) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp11 = mmc_unbox_real(tmpMeta10);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp11 = omc_unbox_real(tmpMeta10);
           
           _calcTimeCount = tmp9  /* pattern as ty=Integer */;
           _calcTime = tmp11  /* pattern as ty=Real */;
@@ -8002,19 +7895,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCosts1(thre
           modelica_metatype tmpMeta16;
           modelica_real tmp17;
           modelica_metatype tmpMeta18;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp15 = mmc_unbox_integer(tmpMeta14);
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp17 = mmc_unbox_real(tmpMeta16);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp13 = omc_unbox_integer(tmpMeta12);
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp15 = omc_unbox_integer(tmpMeta14);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp17 = omc_unbox_real(tmpMeta16);
           
           _simEqIdx = tmp13  /* pattern as ty=Integer */;
           _calcTimeCount = tmp15  /* pattern as ty=Integer */;
           _calcTime = tmp17  /* pattern as ty=Real */;
           _tmpArray = tmp4_2;
           /* Pattern matching succeeded */
-          tmpMeta18 = mmc_mk_box2(0, mmc_mk_integer(_calcTimeCount), mmc_mk_real(_calcTime));
+          tmpMeta18 = omc_mk_box2(0, omc_mk_integer(_calcTimeCount), omc_mk_real(_calcTime));
           tmpMeta1 = arrayUpdate(_iReqTime, _simEqIdx, tmpMeta18);
           goto tmp3_done;
         }
@@ -8024,14 +7917,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCosts1(thre
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oReqTime = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oReqTime;
+  omc_ret_ = _oReqTime;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCosts0(threadData_t *threadData, modelica_metatype _iNode, modelica_metatype _iComps_shared, modelica_metatype _iCompMapping, modelica_metatype _reqTimeOp, modelica_metatype _reqTimeCom, modelica_metatype _iTaskGraphMeta)
@@ -8066,7 +7960,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCosts0(thre
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTaskGraphMeta has no default value.
   // _varCompMapping has no default value.
@@ -8083,24 +7978,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCosts0(thre
   // _compInformations has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iTaskGraphMeta;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
   _nodeNumber = tmp3  /* pattern as ty=Integer */;
   _taskGraphMeta = tmpMeta4;
 
   /* Pattern-matching assignment */
   tmpMeta5 = _taskGraphMeta;
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 3));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 4));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 5));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 6));
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 7));
-  tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 8));
-  tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 9));
-  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 10));
-  tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 11));
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 2);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta5, 3);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta5, 4);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta5, 5);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta5, 6);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta5, 7);
+  tmpMeta12 = OMC_BOX_FIELD(tmpMeta5, 8);
+  tmpMeta13 = OMC_BOX_FIELD(tmpMeta5, 9);
+  tmpMeta14 = OMC_BOX_FIELD(tmpMeta5, 10);
+  tmpMeta15 = OMC_BOX_FIELD(tmpMeta5, 11);
   _inComps = tmpMeta6;
   _varCompMapping = tmpMeta7;
   _eqCompMapping = tmpMeta8;
@@ -8114,11 +8009,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCosts0(thre
 
   omc_HpcOmTaskGraph_createExecCost(threadData, _iNode, _iComps_shared, _reqTimeOp, _execCosts, _iCompMapping, _nodeNumber);
 
-  tmpMeta16 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _execCosts, _commCosts, _nodeRefCount, _compInformations);
-  tmpMeta17 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1) + _nodeNumber), tmpMeta16);
+  tmpMeta16 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _execCosts, _commCosts, _nodeRefCount, _compInformations);
+  tmpMeta17 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1) + _nodeNumber), tmpMeta16);
   _oTaskGraphMeta = tmpMeta17;
   _return: OMC_LABEL_UNUSED
-  return _oTaskGraphMeta;
+  omc_ret_ = _oTaskGraphMeta;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToSccCosts2(threadData_t *threadData, modelica_metatype _iReqTime, modelica_real _iSimEqCalcTime, modelica_integer _iSimEqIdx, modelica_metatype _iSimeqCompMapping)
@@ -8127,7 +8023,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
   modelica_metatype _reqTime = NULL;
   modelica_integer _sccIdx;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oReqTime has no default value.
   // _reqTime has no default value.
@@ -8139,7 +8036,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -8154,12 +8051,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
           tmp6 = (arrayLength(_iSimeqCompMapping) >= _iSimEqIdx);
           if (1 /* true */ != tmp6) goto goto_2;
 
-          _sccIdx = mmc_unbox_integer(arrayGet(_iSimeqCompMapping, _iSimEqIdx));
+          _sccIdx = omc_unbox_integer(arrayGet(_iSimeqCompMapping, _iSimEqIdx));
 
           /* Pattern-matching assignment */
           tmp7 = (_sccIdx > ((modelica_integer) 0));
           if (1 /* true */ != tmp7) goto goto_2;
-          tmpMeta1 = arrayUpdate(_reqTime, _sccIdx, mmc_mk_real(_iSimEqCalcTime));
+          tmpMeta1 = arrayUpdate(_reqTime, _sccIdx, omc_mk_real(_iSimEqCalcTime));
           goto tmp3_done;
         }
         case 1: {
@@ -8175,28 +8072,29 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oReqTime = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oReqTime;
+  omc_ret_ = _oReqTime;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_convertSimEqToSccCosts2(threadData_t *threadData, modelica_metatype _iReqTime, modelica_metatype _iSimEqCalcTime, modelica_metatype _iSimEqIdx, modelica_metatype _iSimeqCompMapping)
 {
   modelica_real tmp1;
   modelica_integer tmp2;
   modelica_metatype _oReqTime = NULL;
-  tmp1 = mmc_unbox_real(_iSimEqCalcTime);
-  tmp2 = mmc_unbox_integer(_iSimEqIdx);
+  tmp1 = omc_unbox_real(_iSimEqCalcTime);
+  tmp2 = omc_unbox_integer(_iSimEqIdx);
   _oReqTime = omc_HpcOmTaskGraph_convertSimEqToSccCosts2(threadData, _iReqTime, tmp1, tmp2, _iSimeqCompMapping);
   /* skip box _oReqTime; array<#Real> */
   return _oReqTime;
@@ -8211,7 +8109,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
   modelica_real _realSimEqCalcCount;
   modelica_metatype _reqTime = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oReqTimeOp has no default value.
   // _simEqCalcCount has no default value.
@@ -8227,7 +8126,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -8243,13 +8142,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
           modelica_boolean tmp13;
           modelica_real tmp14;
           modelica_metatype tmpMeta15;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp9 = mmc_unbox_real(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp9 = omc_unbox_real(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp11 = omc_unbox_integer(tmpMeta10);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 2);
           _simEqCalcCount = tmp7  /* pattern as ty=Integer */;
           _simEqCalcTime = tmp9  /* pattern as ty=Real */;
           _simEqIdx = tmp11  /* pattern as ty=Integer */;
@@ -8264,7 +8163,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
           tmp14 = _realSimEqCalcCount;
           if (tmp14 == 0) {goto goto_2;}
           _reqTime = omc_HpcOmTaskGraph_convertSimEqToSccCosts2(threadData, _reqTime, (_simEqCalcTime) / tmp14, _simEqIdx, _iSimeqCompMapping);
-          tmpMeta15 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1) + _simEqIdx), _reqTime);
+          tmpMeta15 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1) + _simEqIdx), _reqTime);
           tmpMeta1 = tmpMeta15;
           goto tmp3_done;
         }
@@ -8277,13 +8176,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
           modelica_integer tmp21;
           modelica_metatype tmpMeta22;
           modelica_metatype tmpMeta23;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp17 = mmc_unbox_integer(tmpMeta16);
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp19 = mmc_unbox_real(tmpMeta18);
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp21 = mmc_unbox_integer(tmpMeta20);
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp17 = omc_unbox_integer(tmpMeta16);
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp19 = omc_unbox_real(tmpMeta18);
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp21 = omc_unbox_integer(tmpMeta20);
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_2, 2);
           _simEqCalcCount = tmp17  /* pattern as ty=Integer */;
           _simEqCalcTime = tmp19  /* pattern as ty=Real */;
           _simEqIdx = tmp21  /* pattern as ty=Integer */;
@@ -8292,14 +8191,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
           _realSimEqCalcCount = ((modelica_real)_simEqCalcCount);
 
           _reqTime = omc_HpcOmTaskGraph_convertSimEqToSccCosts2(threadData, _reqTime, 0.0, _simEqIdx, _iSimeqCompMapping);
-          tmpMeta23 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1) + _simEqIdx), _reqTime);
+          tmpMeta23 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1) + _simEqIdx), _reqTime);
           tmpMeta1 = tmpMeta23;
           goto tmp3_done;
         }
         case 2: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT69),stdout);
+          fputs(omc_string_data(_OMC_LIT69),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -8310,25 +8209,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oReqTimeOp = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oReqTimeOp;
+  omc_ret_ = _oReqTimeOp;
+  return omc_ret_;
 }
 
 static modelica_metatype closure7_HpcOmTaskGraph_convertSimEqToSccCosts1(threadData_t *thData, modelica_metatype closure, modelica_metatype iReqTimeOpSimCode, modelica_metatype iReqTimeOp)
 {
-  modelica_metatype iSimeqCompMapping = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype iSimeqCompMapping = OMC_BOX_FIELD(closure, 1);
   return boxptr_HpcOmTaskGraph_convertSimEqToSccCosts1(thData, iReqTimeOpSimCode, iSimeqCompMapping, iReqTimeOp);
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToSccCosts(threadData_t *threadData, modelica_metatype _iReqTimeOpSimCode, modelica_metatype _iSimeqCompMapping, modelica_metatype _iReqTimeOp)
@@ -8338,17 +8238,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertSimEqToScc
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oReqTimeOp has no default value.
   /* Pattern-matching assignment */
-  tmpMeta1 = mmc_mk_box1(0, _iSimeqCompMapping);
-  tmpMeta2 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1)), _iReqTimeOp);
-  tmpMeta3 = omc_Array_fold(threadData, _iReqTimeOpSimCode, (modelica_fnptr) mmc_mk_box2(0,closure7_HpcOmTaskGraph_convertSimEqToSccCosts1,tmpMeta1), tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 2));
+  tmpMeta1 = omc_mk_box1(0, _iSimeqCompMapping);
+  tmpMeta2 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1)), _iReqTimeOp);
+  tmpMeta3 = omc_Array_fold(threadData, _iReqTimeOpSimCode, (modelica_fnptr) omc_mk_box2(0,closure7_HpcOmTaskGraph_convertSimEqToSccCosts1,tmpMeta1), tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta3, 2);
   _oReqTimeOp = tmpMeta4;
   _return: OMC_LABEL_UNUSED
-  return _oReqTimeOp;
+  omc_ret_ = _oReqTimeOp;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertNodeListToEdgeTuples0(threadData_t *threadData, modelica_metatype _iNodeList, modelica_integer _iNodeIdx, modelica_metatype _iEdgeList)
@@ -8358,7 +8260,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertNodeListTo
   modelica_integer _elem;
   modelica_integer _preElem;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oEdgeList has no default value.
   // _tmpEdgeList has no default value.
@@ -8371,7 +8274,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertNodeListTo
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -8387,11 +8290,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertNodeListTo
           tmp6 = (_iNodeIdx > ((modelica_integer) 1));
           if (1 /* true */ != tmp6) goto goto_2;
 
-          _elem = mmc_unbox_integer(listGet(_iNodeList, _iNodeIdx));
+          _elem = omc_unbox_integer(listGet(_iNodeList, _iNodeIdx));
 
-          _preElem = mmc_unbox_integer(listGet(_iNodeList, ((modelica_integer) -1) + _iNodeIdx));
+          _preElem = omc_unbox_integer(listGet(_iNodeList, ((modelica_integer) -1) + _iNodeIdx));
 
-          tmpMeta8 = mmc_mk_box2(0, mmc_mk_integer(_preElem), mmc_mk_integer(_elem));
+          tmpMeta8 = omc_mk_box2(0, omc_mk_integer(_preElem), omc_mk_integer(_elem));
           tmpMeta7 = mmc_mk_cons(tmpMeta8, _tmpEdgeList);
           _tmpEdgeList = tmpMeta7;
           tmpMeta1 = omc_HpcOmTaskGraph_convertNodeListToEdgeTuples0(threadData, _iNodeList, ((modelica_integer) -1) + _iNodeIdx, _tmpEdgeList);
@@ -8410,43 +8313,46 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_convertNodeListTo
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oEdgeList = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oEdgeList;
+  omc_ret_ = _oEdgeList;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_convertNodeListToEdgeTuples0(threadData_t *threadData, modelica_metatype _iNodeList, modelica_metatype _iNodeIdx, modelica_metatype _iEdgeList)
 {
   modelica_integer tmp1;
   modelica_metatype _oEdgeList = NULL;
-  tmp1 = mmc_unbox_integer(_iNodeIdx);
+  tmp1 = omc_unbox_integer(_iNodeIdx);
   _oEdgeList = omc_HpcOmTaskGraph_convertNodeListToEdgeTuples0(threadData, _iNodeList, tmp1, _iEdgeList);
   /* skip box _oEdgeList; list<tuple<#Integer, #Integer>> */
   return _oEdgeList;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_convertNodeListToEdgeTuples(threadData_t *threadData, modelica_metatype _iNodeList)
 {
   modelica_metatype _oEdgeList = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oEdgeList has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _oEdgeList = omc_HpcOmTaskGraph_convertNodeListToEdgeTuples0(threadData, _iNodeList, listLength(_iNodeList), tmpMeta1);
   _return: OMC_LABEL_UNUSED
-  return _oEdgeList;
+  omc_ret_ = _oEdgeList;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkTpl2ForZero(threadData_t *threadData, modelica_integer _comp, modelica_metatype _exeCosts, modelica_boolean _bIn)
@@ -8458,10 +8364,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkTpl2ForZero(t
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_real tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _bOut has no default value.
   // _b has no default value.
@@ -8471,18 +8375,16 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkTpl2ForZero(t
 
   /* Pattern-matching assignment */
   tmpMeta1 = _tpl;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp3 = mmc_unbox_real(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp3 = omc_unbox_real(tmpMeta2);
   _value = tmp3  /* pattern as ty=Real */;
 
   _b = (_value == 0.0);
 
   _bOut = (_b || _bIn);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _bOut;
+  omc_ret_ = _bOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkTpl2ForZero(threadData_t *threadData, modelica_metatype _comp, modelica_metatype _exeCosts, modelica_metatype _bIn)
 {
@@ -8490,10 +8392,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkTpl2ForZe
   modelica_integer tmp2;
   modelica_boolean _bOut;
   modelica_metatype out_bOut;
-  tmp1 = mmc_unbox_integer(_comp);
-  tmp2 = mmc_unbox_integer(_bIn);
+  tmp1 = omc_unbox_integer(_comp);
+  tmp2 = omc_unbox_integer(_bIn);
   _bOut = omc_HpcOmTaskGraph_checkTpl2ForZero(threadData, tmp1, _exeCosts, tmp2);
-  out_bOut = mmc_mk_icon(_bOut);
+  out_bOut = omc_mk_icon(_bOut);
   return out_bOut;
 }
 
@@ -8501,10 +8403,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForExecutionC
 {
   modelica_boolean _bOut;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _bOut has no default value.
   { /* matchcontinue expression */
@@ -8516,7 +8416,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForExecutionC
       // _isZero has no default value.
       // _comps has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -8531,7 +8431,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForExecutionC
 
           _comps = arrayGet(_inComps, _nodeIdx);
 
-          _isZero = mmc_unbox_boolean(omc_List_fold1(threadData, _comps, boxvar_HpcOmTaskGraph_checkTpl2ForZero, _exeCosts, mmc_mk_boolean(0 /* false */)));
+          _isZero = omc_unbox_boolean(omc_List_fold1(threadData, _comps, boxvar_HpcOmTaskGraph_checkTpl2ForZero, _exeCosts, omc_mk_boolean(0 /* false */)));
 
           /* Pattern-matching assignment */
           tmp7 = _isZero;
@@ -8560,32 +8460,30 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForExecutionC
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _bOut = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _bOut;
+  omc_ret_ = _bOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkForExecutionCosts1(threadData_t *threadData, modelica_metatype _exeCosts, modelica_metatype _inComps, modelica_metatype _nodeIdx)
 {
   modelica_integer tmp1;
   modelica_boolean _bOut;
   modelica_metatype out_bOut;
-  tmp1 = mmc_unbox_integer(_nodeIdx);
+  tmp1 = omc_unbox_integer(_nodeIdx);
   _bOut = omc_HpcOmTaskGraph_checkForExecutionCosts1(threadData, _exeCosts, _inComps, tmp1);
-  out_bOut = mmc_mk_icon(_bOut);
+  out_bOut = omc_mk_icon(_bOut);
   return out_bOut;
 }
 
@@ -8597,18 +8495,16 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForExecutionC
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isFine has no default value.
   // _inComps has no default value.
   // _exeCosts has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _dataIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 8);
   _inComps = tmpMeta2;
   _exeCosts = tmpMeta3;
 
@@ -8616,20 +8512,18 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkForExecutionC
 
   if((!_isFine))
   {
-    fputs(MMC_STRINGDATA(_OMC_LIT70),stdout);
+    fputs(omc_string_data(_OMC_LIT70),stdout);
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _isFine;
+  omc_ret_ = _isFine;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkForExecutionCosts(threadData_t *threadData, modelica_metatype _dataIn)
 {
   modelica_boolean _isFine;
   modelica_metatype out_isFine;
   _isFine = omc_HpcOmTaskGraph_checkForExecutionCosts(threadData, _dataIn);
-  out_isFine = mmc_mk_icon(_isFine);
+  out_isFine = omc_mk_icon(_isFine);
   return out_isFine;
 }
 
@@ -8639,21 +8533,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getCommCostsOnly(
   modelica_metatype _reqTimeCom = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _commCostsOut has no default value.
   // _reqTimeCom has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = omc_HpcOmBenchmark_benchSystem(threadData);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _reqTimeCom = tmpMeta2;
 
   _commCostsOut = omc_HpcOmTaskGraph_createCommCosts(threadData, _commCostsIn, ((modelica_integer) 1), _reqTimeCom);
   _return: OMC_LABEL_UNUSED
-  return _commCostsOut;
+  omc_ret_ = _commCostsOut;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_copyCosts(threadData_t *threadData, modelica_metatype _iSourceTaskGraphData, modelica_metatype _iTargetTaskGraphData)
 {
   modelica_metatype _oTaskGraphData = NULL;
@@ -8673,7 +8569,8 @@ modelica_metatype omc_HpcOmTaskGraph_copyCosts(threadData_t *threadData, modelic
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTaskGraphData has no default value.
   // _inCompsSource has no default value.
@@ -8685,16 +8582,16 @@ modelica_metatype omc_HpcOmTaskGraph_copyCosts(threadData_t *threadData, modelic
   // _reqTimeCom has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iSourceTaskGraphData;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 8);
   _inCompsSource = tmpMeta2;
   _exeCostsSource = tmpMeta3;
 
   /* Pattern-matching assignment */
   tmpMeta4 = _iTargetTaskGraphData;
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 2));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 8));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 9));
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta4, 2);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta4, 8);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta4, 9);
   _inCompsTarget = tmpMeta5;
   _exeCostsTarget = tmpMeta6;
   _commCostsTarget = tmpMeta7;
@@ -8711,22 +8608,24 @@ modelica_metatype omc_HpcOmTaskGraph_copyCosts(threadData_t *threadData, modelic
 
   /* Pattern-matching assignment */
   tmpMeta8 = omc_HpcOmBenchmark_benchSystem(threadData);
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 2);
   _reqTimeCom = tmpMeta9;
 
   _commCostsTarget = omc_HpcOmTaskGraph_createCommCosts(threadData, _commCostsTarget, ((modelica_integer) 1), _reqTimeCom);
 
   _oTaskGraphData = _iTargetTaskGraphData;
   _return: OMC_LABEL_UNUSED
-  return _oTaskGraphData;
+  omc_ret_ = _oTaskGraphData;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, modelica_metatype _compInfo)
 {
   modelica_metatype _exeCost = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _exeCost has no default value.
   { /* match expression */
@@ -8796,23 +8695,23 @@ modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, mo
           modelica_integer tmp21;
           modelica_metatype tmpMeta22;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,9) == 0) goto tmp3_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
-          tmp15 = mmc_unbox_integer(tmpMeta14);
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
-          tmp17 = mmc_unbox_integer(tmpMeta16);
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 9));
-          tmp19 = mmc_unbox_integer(tmpMeta18);
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 10));
-          tmp21 = mmc_unbox_integer(tmpMeta20);
+          tmpMeta5 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 4);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 5);
+          tmp11 = omc_unbox_integer(tmpMeta10);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_1, 6);
+          tmp13 = omc_unbox_integer(tmpMeta12);
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_1, 7);
+          tmp15 = omc_unbox_integer(tmpMeta14);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 8);
+          tmp17 = omc_unbox_integer(tmpMeta16);
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_1, 9);
+          tmp19 = omc_unbox_integer(tmpMeta18);
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_1, 10);
+          tmp21 = omc_unbox_integer(tmpMeta20);
           _comp = tmpMeta5;
           _numAdds = tmp7  /* pattern as ty=Integer */;
           _numMul = tmp9  /* pattern as ty=Integer */;
@@ -8849,7 +8748,7 @@ modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, mo
           }
 
           _costs = _offset + ((((modelica_integer) 12)) * (_numAdds) + ((((modelica_integer) 32)) * (_numMul) + ((((modelica_integer) 37)) * (_numDiv) + ((((modelica_integer) 236)) * (_numTrig) + ((((modelica_integer) 2)) * (_numRel) + ((((modelica_integer) 4)) * (_numLog) + ((((modelica_integer) 110)) * (_numOth) + ((((modelica_integer) 375)) * (_numFuncs)))))))));
-          tmpMeta22 = mmc_mk_box2(0, mmc_mk_integer(_ops), mmc_mk_real(((modelica_real)_costs)));
+          tmpMeta22 = omc_mk_box2(0, omc_mk_integer(_ops), omc_mk_real(((modelica_real)_costs)));
           tmpMeta1 = tmpMeta22;
           goto tmp3_done;
         }
@@ -8861,16 +8760,16 @@ modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, mo
           modelica_real tmp27;
           modelica_metatype tmpMeta28;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,4) == 0) goto tmp3_end;
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          tmp24 = mmc_unbox_integer(tmpMeta23);
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
-          tmp26 = mmc_unbox_real(tmpMeta25);
+          tmpMeta23 = OMC_BOX_FIELD(tmp4_1, 4);
+          tmp24 = omc_unbox_integer(tmpMeta23);
+          tmpMeta25 = OMC_BOX_FIELD(tmp4_1, 5);
+          tmp26 = omc_unbox_real(tmpMeta25);
           _size = tmp24  /* pattern as ty=Integer */;
           _dens = tmp26  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           tmp27 = (((modelica_real)_size)) * (1.0 + ((19.0) * (_dens)));
           _allOpCosts = (0.049) * ((tmp27 * tmp27 * tmp27));
-          tmpMeta28 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1)), mmc_mk_real(_allOpCosts));
+          tmpMeta28 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1)), omc_mk_real(_allOpCosts));
           tmpMeta1 = tmpMeta28;
           goto tmp3_done;
         }
@@ -8892,35 +8791,35 @@ modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, mo
           modelica_real tmp43;
           modelica_metatype tmpMeta44;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,4) == 0) goto tmp3_end;
-          tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
-          tmp32 = mmc_unbox_integer(tmpMeta31);
+          tmpMeta29 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta30 = OMC_BOX_FIELD(tmp4_1, 4);
+          tmpMeta31 = OMC_BOX_FIELD(tmp4_1, 5);
+          tmp32 = omc_unbox_integer(tmpMeta31);
           _torn = tmpMeta29;
           _other = tmpMeta30;
           _size = tmp32  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta33 = omc_HpcOmTaskGraph_calculateCosts(threadData, _torn);
-          tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta33), 1));
-          tmp35 = mmc_unbox_integer(tmpMeta34);
-          tmpMeta36 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta33), 2));
-          tmp37 = mmc_unbox_real(tmpMeta36);
+          tmpMeta34 = OMC_BOX_FIELD(tmpMeta33, 1);
+          tmp35 = omc_unbox_integer(tmpMeta34);
+          tmpMeta36 = OMC_BOX_FIELD(tmpMeta33, 2);
+          tmp37 = omc_unbox_real(tmpMeta36);
           _ops = tmp35  /* pattern as ty=Integer */;
           _tornCosts = tmp37  /* pattern as ty=Real */;
 
           /* Pattern-matching assignment */
           tmpMeta38 = omc_HpcOmTaskGraph_calculateCosts(threadData, _other);
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta38), 1));
-          tmp40 = mmc_unbox_integer(tmpMeta39);
-          tmpMeta41 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta38), 2));
-          tmp42 = mmc_unbox_real(tmpMeta41);
+          tmpMeta39 = OMC_BOX_FIELD(tmpMeta38, 1);
+          tmp40 = omc_unbox_integer(tmpMeta39);
+          tmpMeta41 = OMC_BOX_FIELD(tmpMeta38, 2);
+          tmp42 = omc_unbox_real(tmpMeta41);
           _ops1 = tmp40  /* pattern as ty=Integer */;
           _otherCosts = tmp42  /* pattern as ty=Real */;
 
           tmp43 = ((modelica_real)_size);
           _allOpCosts = 3000.0 + ((7.62) * ((tmp43 * tmp43 * tmp43)) + ((2.0) * (_tornCosts) + ((1.4) * (_otherCosts))));
-          tmpMeta44 = mmc_mk_box2(0, mmc_mk_integer(_ops + _ops1), mmc_mk_real(_allOpCosts));
+          tmpMeta44 = omc_mk_box2(0, omc_mk_integer(_ops + _ops1), omc_mk_real(_allOpCosts));
           tmpMeta1 = tmpMeta44;
           goto tmp3_done;
         }
@@ -8943,22 +8842,22 @@ modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, mo
           modelica_integer tmp60;
           modelica_metatype tmpMeta61;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,8) == 0) goto tmp3_end;
-          tmpMeta45 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp46 = mmc_unbox_integer(tmpMeta45);
-          tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp48 = mmc_unbox_integer(tmpMeta47);
-          tmpMeta49 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          tmp50 = mmc_unbox_integer(tmpMeta49);
-          tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
-          tmp52 = mmc_unbox_integer(tmpMeta51);
-          tmpMeta53 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
-          tmp54 = mmc_unbox_integer(tmpMeta53);
-          tmpMeta55 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
-          tmp56 = mmc_unbox_integer(tmpMeta55);
-          tmpMeta57 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
-          tmp58 = mmc_unbox_integer(tmpMeta57);
-          tmpMeta59 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 9));
-          tmp60 = mmc_unbox_integer(tmpMeta59);
+          tmpMeta45 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp46 = omc_unbox_integer(tmpMeta45);
+          tmpMeta47 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp48 = omc_unbox_integer(tmpMeta47);
+          tmpMeta49 = OMC_BOX_FIELD(tmp4_1, 4);
+          tmp50 = omc_unbox_integer(tmpMeta49);
+          tmpMeta51 = OMC_BOX_FIELD(tmp4_1, 5);
+          tmp52 = omc_unbox_integer(tmpMeta51);
+          tmpMeta53 = OMC_BOX_FIELD(tmp4_1, 6);
+          tmp54 = omc_unbox_integer(tmpMeta53);
+          tmpMeta55 = OMC_BOX_FIELD(tmp4_1, 7);
+          tmp56 = omc_unbox_integer(tmpMeta55);
+          tmpMeta57 = OMC_BOX_FIELD(tmp4_1, 8);
+          tmp58 = omc_unbox_integer(tmpMeta57);
+          tmpMeta59 = OMC_BOX_FIELD(tmp4_1, 9);
+          tmp60 = omc_unbox_integer(tmpMeta59);
           _numAdds = tmp46  /* pattern as ty=Integer */;
           _numMul = tmp48  /* pattern as ty=Integer */;
           _numDiv = tmp50  /* pattern as ty=Integer */;
@@ -8973,7 +8872,7 @@ modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, mo
           _offset = ((modelica_integer) 50);
 
           _costs = _offset + ((((modelica_integer) 12)) * (_numAdds) + ((((modelica_integer) 32)) * (_numMul) + ((((modelica_integer) 37)) * (_numDiv) + ((((modelica_integer) 236)) * (_numTrig) + ((((modelica_integer) 2)) * (_numRel) + ((((modelica_integer) 4)) * (_numLog) + ((((modelica_integer) 110)) * (_numOth) + ((((modelica_integer) 375)) * (_numFuncs)))))))));
-          tmpMeta61 = mmc_mk_box2(0, mmc_mk_integer(_ops), mmc_mk_real(((modelica_real)_costs)));
+          tmpMeta61 = omc_mk_box2(0, omc_mk_integer(_ops), omc_mk_real(((modelica_real)_costs)));
           tmpMeta1 = tmpMeta61;
           goto tmp3_done;
         }
@@ -8981,7 +8880,7 @@ modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, mo
         tmp3_default: OMC_LABEL_UNUSED; {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT71),stdout);
+          fputs(omc_string_data(_OMC_LIT71),stdout);
           tmpMeta1 = _OMC_LIT72;
           goto tmp3_done;
         }
@@ -8991,14 +8890,15 @@ modelica_metatype omc_HpcOmTaskGraph_calculateCosts(threadData_t *threadData, mo
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _exeCost = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _exeCost;
+  omc_ret_ = _exeCost;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateCosts0(threadData_t *threadData, modelica_integer _systIdx, modelica_metatype _compsLstIn, modelica_metatype _eqSystemsIn, modelica_metatype _sharedIn)
@@ -9008,7 +8908,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateCosts0(th
   modelica_metatype _eqSys = NULL;
   modelica_metatype _compsInfos = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _exeCostsOut has no default value.
   // _comps has no default value.
@@ -9023,13 +8924,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateCosts0(th
 
   _exeCostsOut = omc_List_map(threadData, _compsInfos, boxvar_HpcOmTaskGraph_calculateCosts);
   _return: OMC_LABEL_UNUSED
-  return _exeCostsOut;
+  omc_ret_ = _exeCostsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_estimateCosts0(threadData_t *threadData, modelica_metatype _systIdx, modelica_metatype _compsLstIn, modelica_metatype _eqSystemsIn, modelica_metatype _sharedIn)
 {
   modelica_integer tmp1;
   modelica_metatype _exeCostsOut = NULL;
-  tmp1 = mmc_unbox_integer(_systIdx);
+  tmp1 = omc_unbox_integer(_systIdx);
   _exeCostsOut = omc_HpcOmTaskGraph_estimateCosts0(threadData, tmp1, _compsLstIn, _eqSystemsIn, _sharedIn);
   /* skip box _exeCostsOut; list<tuple<#Integer, #Real>> */
   return _exeCostsOut;
@@ -9071,7 +8973,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateCosts(thr
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _taskGraphMetaOut has no default value.
   // _inComps has no default value.
@@ -9092,8 +8995,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateCosts(thr
   // _compIdx has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _daeIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
   _eqSystems = tmpMeta2;
   _shared = tmpMeta3;
 
@@ -9103,16 +9006,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateCosts(thr
 
   /* Pattern-matching assignment */
   tmpMeta4 = _taskGraphMetaIn;
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 2));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 3));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 4));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 5));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 6));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 7));
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 8));
-  tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 9));
-  tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 10));
-  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 11));
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta4, 2);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta4, 3);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta4, 4);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta4, 5);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta4, 6);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta4, 7);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta4, 8);
+  tmpMeta12 = OMC_BOX_FIELD(tmpMeta4, 9);
+  tmpMeta13 = OMC_BOX_FIELD(tmpMeta4, 10);
+  tmpMeta14 = OMC_BOX_FIELD(tmpMeta4, 11);
   _inComps = tmpMeta5;
   _varCompMapping = tmpMeta6;
   _eqCompMapping = tmpMeta7;
@@ -9141,21 +9044,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_estimateCosts(thr
     }
   }
 
-  tmpMeta17 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
+  tmpMeta17 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
   _taskGraphMetaOut = tmpMeta17;
   _return: OMC_LABEL_UNUSED
-  return _taskGraphMetaOut;
+  omc_ret_ = _taskGraphMetaOut;
+  return omc_ret_;
 }
 
 static modelica_metatype closure8_HpcOmTaskGraph_createCosts0(threadData_t *thData, modelica_metatype closure, modelica_metatype iNode, modelica_metatype iTaskGraphMeta)
 {
-  modelica_metatype iComps_shared = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype iCompMapping = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
-  modelica_metatype reqTimeOp = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),3));
-  modelica_metatype reqTimeCom = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),4));
+  modelica_metatype iComps_shared = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype iCompMapping = OMC_BOX_FIELD(closure, 2);
+  modelica_metatype reqTimeOp = OMC_BOX_FIELD(closure, 3);
+  modelica_metatype reqTimeCom = OMC_BOX_FIELD(closure, 4);
   return boxptr_HpcOmTaskGraph_createCosts0(thData, iNode, iComps_shared, iCompMapping, reqTimeOp, reqTimeCom, iTaskGraphMeta);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_createCosts(threadData_t *threadData, modelica_metatype _iDae, modelica_string _iBenchFilePrefix, modelica_metatype _iSimEqCompMapping, modelica_metatype _iTaskGraphMeta)
 {
   modelica_metatype _oTaskGraphMeta = NULL;
@@ -9171,7 +9075,8 @@ modelica_metatype omc_HpcOmTaskGraph_createCosts(threadData_t *threadData, model
   modelica_metatype _inComps = NULL;
   modelica_metatype _commCosts = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTaskGraphMeta has no default value.
   // _compMapping has no default value.
@@ -9193,7 +9098,7 @@ modelica_metatype omc_HpcOmTaskGraph_createCosts(threadData_t *threadData, model
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -9209,9 +9114,9 @@ modelica_metatype omc_HpcOmTaskGraph_createCosts(threadData_t *threadData, model
           modelica_metatype tmpMeta13;
           modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 9));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 9);
           
           _shared = tmpMeta6;
           _inComps = tmpMeta7;
@@ -9223,7 +9128,7 @@ modelica_metatype omc_HpcOmTaskGraph_createCosts(threadData_t *threadData, model
 
           /* Pattern-matching assignment */
           tmpMeta9 = omc_HpcOmBenchmark_benchSystem(threadData);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 2);
           _reqTimeCom = tmpMeta10;
 
           _reqTimeOpLstSimCode = omc_HpcOmBenchmark_readCalcTimesFromFile(threadData, _iBenchFilePrefix);
@@ -9239,25 +9144,25 @@ modelica_metatype omc_HpcOmTaskGraph_createCosts(threadData_t *threadData, model
           _commCosts = omc_HpcOmTaskGraph_createCommCosts(threadData, _commCosts, ((modelica_integer) 1), _reqTimeCom);
 
           /* Pattern-matching assignment */
-          tmpMeta12 = mmc_mk_box2(0, _comps, _shared);
-          tmpMeta11 = mmc_mk_box4(0, tmpMeta12, _compMapping, _reqTimeOp, _reqTimeCom);
-          tmpMeta13 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1)), _iTaskGraphMeta);
-          tmpMeta14 = omc_Array_fold(threadData, _inComps, (modelica_fnptr) mmc_mk_box2(0,closure8_HpcOmTaskGraph_createCosts0,tmpMeta11), tmpMeta13);
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta14), 2));
+          tmpMeta12 = omc_mk_box2(0, _comps, _shared);
+          tmpMeta11 = omc_mk_box4(0, tmpMeta12, _compMapping, _reqTimeOp, _reqTimeCom);
+          tmpMeta13 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1)), _iTaskGraphMeta);
+          tmpMeta14 = omc_Array_fold(threadData, _inComps, (modelica_fnptr) omc_mk_box2(0,closure8_HpcOmTaskGraph_createCosts0,tmpMeta11), tmpMeta13);
+          tmpMeta15 = OMC_BOX_FIELD(tmpMeta14, 2);
           _tmpTaskGraphMeta = tmpMeta15;
           tmpMeta1 = _tmpTaskGraphMeta;
           goto tmp3_done;
         }
         case 1: {
-          modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
+          modelica_string tmp16;
+          modelica_string tmp17;
           
           /* Pattern matching succeeded */
           _tmpTaskGraphMeta = omc_HpcOmTaskGraph_estimateCosts(threadData, _iDae, _iTaskGraphMeta);
 
-          tmpMeta16 = stringAppend(_OMC_LIT73,_iBenchFilePrefix);
-          tmpMeta17 = stringAppend(tmpMeta16,_OMC_LIT74);
-          fputs(MMC_STRINGDATA(tmpMeta17),stdout);
+          tmp16 = stringAppend(_OMC_LIT73,_iBenchFilePrefix);
+          tmp17 = stringAppend(tmp16,_OMC_LIT74);
+          fputs(omc_string_data(tmp17),stdout);
           tmpMeta1 = _tmpTaskGraphMeta;
           goto tmp3_done;
         }
@@ -9268,27 +9173,29 @@ modelica_metatype omc_HpcOmTaskGraph_createCosts(threadData_t *threadData, model
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oTaskGraphMeta = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oTaskGraphMeta;
+  omc_ret_ = _oTaskGraphMeta;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkParentNode(threadData_t *threadData, modelica_integer _lstIdx, modelica_metatype _graphIn, modelica_metatype _lstIn)
 {
   modelica_metatype _lstOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _lstOut has no default value.
   { /* matchcontinue expression */
@@ -9304,7 +9211,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkParentNode(t
       // _parent has no default value.
       // _parents has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -9315,7 +9222,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkParentNode(t
           /* Pattern matching succeeded */
           _childLst = listGet(_lstIn, _lstIdx);
 
-          _child = mmc_unbox_integer(omc_List_last(threadData, _childLst));
+          _child = omc_unbox_integer(omc_List_last(threadData, _childLst));
 
           _parents = omc_HpcOmTaskGraph_getParentNodes(threadData, _child, _graphIn);
 
@@ -9323,11 +9230,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkParentNode(t
           tmp6 = (listLength(_parents) == ((modelica_integer) 1));
           if (1 /* true */ != tmp6) goto goto_2;
 
-          _parent = mmc_unbox_integer(listGet(_parents, ((modelica_integer) 1)));
+          _parent = omc_unbox_integer(listGet(_parents, ((modelica_integer) 1)));
 
           _childLst = listReverse(_childLst);
 
-          tmpMeta7 = mmc_mk_cons(mmc_mk_integer(_parent), _childLst);
+          tmpMeta7 = mmc_mk_cons(omc_mk_integer(_parent), _childLst);
           _childLst = tmpMeta7;
 
           _childLst = listReverse(_childLst);
@@ -9339,7 +9246,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkParentNode(t
           /* Pattern matching succeeded */
           _childLst = listGet(_lstIn, _lstIdx);
 
-          _child = mmc_unbox_integer(omc_List_last(threadData, _childLst));
+          _child = omc_unbox_integer(omc_List_last(threadData, _childLst));
 
           _parents = omc_HpcOmTaskGraph_getParentNodes(threadData, _child, _graphIn);
 
@@ -9356,26 +9263,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_checkParentNode(t
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _lstOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _lstOut;
+  omc_ret_ = _lstOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkParentNode(threadData_t *threadData, modelica_metatype _lstIdx, modelica_metatype _graphIn, modelica_metatype _lstIn)
 {
   modelica_integer tmp1;
   modelica_metatype _lstOut = NULL;
-  tmp1 = mmc_unbox_integer(_lstIdx);
+  tmp1 = omc_unbox_integer(_lstIdx);
   _lstOut = omc_HpcOmTaskGraph_checkParentNode(threadData, tmp1, _graphIn, _lstIn);
   /* skip box _lstOut; list<list<#Integer>> */
   return _lstOut;
@@ -9385,7 +9293,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getParentNodes(th
 {
   modelica_metatype _parentNodes = NULL;
   modelica_metatype _graphInT = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _parentNodes has no default value.
   // _graphInT has no default value.
@@ -9393,13 +9302,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getParentNodes(th
 
   _parentNodes = arrayGet(_graphInT, _nodeIdx);
   _return: OMC_LABEL_UNUSED
-  return _parentNodes;
+  omc_ret_ = _parentNodes;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getParentNodes(threadData_t *threadData, modelica_metatype _nodeIdx, modelica_metatype _graphIn)
 {
   modelica_integer tmp1;
   modelica_metatype _parentNodes = NULL;
-  tmp1 = mmc_unbox_integer(_nodeIdx);
+  tmp1 = omc_unbox_integer(_nodeIdx);
   _parentNodes = omc_HpcOmTaskGraph_getParentNodes(threadData, tmp1, _graphIn);
   /* skip box _parentNodes; list<#Integer> */
   return _parentNodes;
@@ -9409,7 +9319,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
 {
   modelica_metatype _lstOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _lstOut has no default value.
   { /* matchcontinue expression */
@@ -9433,7 +9344,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
       // _rest has no default value.
       // _lstTmp has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 9; tmp4++) {
@@ -9453,7 +9364,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           _head = tmp8  /* pattern as ty=Integer */;
           _rest = tmpMeta7;
           /* Pattern matching succeeded */
@@ -9480,7 +9391,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta11 = MMC_CAR(tmp4_1);
           tmpMeta12 = MMC_CDR(tmp4_1);
-          tmp13 = mmc_unbox_integer(tmpMeta11);
+          tmp13 = omc_unbox_integer(tmpMeta11);
           _head = tmp13  /* pattern as ty=Integer */;
           _rest = tmpMeta12;
           /* Pattern matching succeeded */
@@ -9489,7 +9400,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
           if (1 /* true */ != tmp14) goto goto_2;
 
           /* Pattern-matching assignment */
-          tmp15 = listMember(mmc_mk_integer(_head), _doNotMerge);
+          tmp15 = listMember(omc_mk_integer(_head), _doNotMerge);
           if (1 /* true */ != tmp15) goto goto_2;
           tmpMeta1 = omc_HpcOmTaskGraph_findOneChildParents(threadData, _rest, _graphIn, _doNotMerge, _lstIn, ((modelica_integer) 0), _contrNodes);
           goto tmp3_done;
@@ -9504,7 +9415,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta16 = MMC_CAR(tmp4_1);
           tmpMeta17 = MMC_CDR(tmp4_1);
-          tmp18 = mmc_unbox_integer(tmpMeta16);
+          tmp18 = omc_unbox_integer(tmpMeta16);
           _head = tmp18  /* pattern as ty=Integer */;
           _rest = tmpMeta17;
           /* Pattern matching succeeded */
@@ -9520,10 +9431,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
           tmp20 = (listLength(_nodeChildren) == ((modelica_integer) 1));
           if (1 /* true */ != tmp20) goto goto_2;
 
-          _child = mmc_unbox_integer(listGet(_nodeChildren, ((modelica_integer) 1)));
+          _child = omc_unbox_integer(listGet(_nodeChildren, ((modelica_integer) 1)));
 
           /* Pattern-matching assignment */
-          tmp21 = listMember(mmc_mk_integer(_child), _doNotMerge);
+          tmp21 = listMember(omc_mk_integer(_child), _doNotMerge);
           if (1 /* true */ != tmp21) goto goto_2;
           tmpMeta1 = omc_HpcOmTaskGraph_findOneChildParents(threadData, _rest, _graphIn, _doNotMerge, _lstIn, _child, _contrNodes);
           goto tmp3_done;
@@ -9539,7 +9450,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta22 = MMC_CAR(tmp4_1);
           tmpMeta23 = MMC_CDR(tmp4_1);
-          tmp24 = mmc_unbox_integer(tmpMeta22);
+          tmp24 = omc_unbox_integer(tmpMeta22);
           _head = tmp24  /* pattern as ty=Integer */;
           _rest = tmpMeta23;
           /* Pattern matching succeeded */
@@ -9555,9 +9466,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
           tmp26 = (listLength(_nodeChildren) == ((modelica_integer) 1));
           if (1 /* true */ != tmp26) goto goto_2;
 
-          _child = mmc_unbox_integer(listGet(_nodeChildren, ((modelica_integer) 1)));
+          _child = omc_unbox_integer(listGet(_nodeChildren, ((modelica_integer) 1)));
 
-          tmpMeta28 = mmc_mk_cons(mmc_mk_integer(_head), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta28 = mmc_mk_cons(omc_mk_integer(_head), MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta27 = mmc_mk_cons(tmpMeta28, _lstIn);
           _lstTmp = tmpMeta27;
           tmpMeta1 = omc_HpcOmTaskGraph_findOneChildParents(threadData, _rest, _graphIn, _doNotMerge, _lstTmp, _child, _contrNodes);
@@ -9577,7 +9488,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
           if (0 /* false */ != tmp31) goto goto_2;
 
           /* Pattern-matching assignment */
-          tmp32 = listMember(mmc_mk_integer(_inPath), _doNotMerge);
+          tmp32 = listMember(omc_mk_integer(_inPath), _doNotMerge);
           if (1 /* true */ != tmp32) goto goto_2;
           tmpMeta1 = omc_HpcOmTaskGraph_findOneChildParents(threadData, _allNodes, _graphIn, _doNotMerge, _lstIn, ((modelica_integer) 0), _contrNodes);
           goto tmp3_done;
@@ -9609,16 +9520,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
           tmp36 = (((listLength(_nodeChildren) == ((modelica_integer) 1)) && (!listEmpty(_nodeChildren))) && (listLength(_parents) == ((modelica_integer) 1)));
           if (1 /* true */ != tmp36) goto goto_2;
 
-          _child = mmc_unbox_integer(listGet(_nodeChildren, ((modelica_integer) 1)));
+          _child = omc_unbox_integer(listGet(_nodeChildren, ((modelica_integer) 1)));
 
           _pathLst = listHead(_lstIn);
 
-          tmpMeta37 = mmc_mk_cons(mmc_mk_integer(_inPath), _pathLst);
+          tmpMeta37 = mmc_mk_cons(omc_mk_integer(_inPath), _pathLst);
           _pathLst = tmpMeta37;
 
           _lstTmp = omc_List_replaceAt(threadData, _pathLst, ((modelica_integer) 1), _lstIn);
 
-          _rest = omc_List_deleteMemberOnTrue(threadData, mmc_mk_integer(_inPath), _allNodes, boxvar_intEq, NULL);
+          _rest = omc_List_deleteMemberOnTrue(threadData, omc_mk_integer(_inPath), _allNodes, boxvar_intEq, NULL);
           tmpMeta1 = omc_HpcOmTaskGraph_findOneChildParents(threadData, _rest, _graphIn, _doNotMerge, _lstTmp, _child, _contrNodes);
           goto tmp3_done;
         }
@@ -9646,19 +9557,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
 
           _pathLst = listHead(_lstIn);
 
-          tmpMeta41 = mmc_mk_cons(mmc_mk_integer(_inPath), _pathLst);
+          tmpMeta41 = mmc_mk_cons(omc_mk_integer(_inPath), _pathLst);
           _pathLst = tmpMeta41;
 
           _lstTmp = omc_List_replaceAt(threadData, _pathLst, ((modelica_integer) 1), _lstIn);
 
-          _rest = omc_List_deleteMemberOnTrue(threadData, mmc_mk_integer(_inPath), _allNodes, boxvar_intEq, NULL);
+          _rest = omc_List_deleteMemberOnTrue(threadData, omc_mk_integer(_inPath), _allNodes, boxvar_intEq, NULL);
           tmpMeta1 = omc_HpcOmTaskGraph_findOneChildParents(threadData, _rest, _graphIn, _doNotMerge, _lstTmp, ((modelica_integer) 0), _contrNodes);
           goto tmp3_done;
         }
         case 8: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT75),stdout);
+          fputs(omc_string_data(_OMC_LIT75),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -9669,40 +9580,39 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_findOneChildParen
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 9) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _lstOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _lstOut;
+  omc_ret_ = _lstOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_findOneChildParents(threadData_t *threadData, modelica_metatype _allNodes, modelica_metatype _graphIn, modelica_metatype _doNotMerge, modelica_metatype _lstIn, modelica_metatype _inPath, modelica_metatype _contrNodes)
 {
   modelica_integer tmp1;
   modelica_metatype _lstOut = NULL;
-  tmp1 = mmc_unbox_integer(_inPath);
+  tmp1 = omc_unbox_integer(_inPath);
   _lstOut = omc_HpcOmTaskGraph_findOneChildParents(threadData, _allNodes, _graphIn, _doNotMerge, _lstIn, tmp1, _contrNodes);
   /* skip box _lstOut; list<list<#Integer>> */
   return _lstOut;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelica_metatype _inList1, modelica_metatype _inList2)
 {
   modelica_boolean _outIsEqual;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsEqual has no default value.
   { /* match expression */
@@ -9754,11 +9664,11 @@ modelica_boolean omc_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelic
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta9 = MMC_CAR(tmp4_2);
           tmpMeta10 = MMC_CDR(tmp4_2);
-          tmp11 = mmc_unbox_integer(tmpMeta9);
+          tmp11 = omc_unbox_integer(tmpMeta9);
           _e1 = tmp8  /* pattern as ty=Integer */;
           _rest1 = tmpMeta7;
           _e2 = tmp11  /* pattern as ty=Integer */;
@@ -9785,24 +9695,22 @@ modelica_boolean omc_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelic
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outIsEqual = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _outIsEqual;
+  omc_ret_ = _outIsEqual;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_equalLists(threadData_t *threadData, modelica_metatype _inList1, modelica_metatype _inList2)
 {
   modelica_boolean _outIsEqual;
   modelica_metatype out_outIsEqual;
   _outIsEqual = omc_HpcOmTaskGraph_equalLists(threadData, _inList1, _inList2);
-  out_outIsEqual = mmc_mk_icon(_outIsEqual);
+  out_outIsEqual = omc_mk_icon(_outIsEqual);
   return out_outIsEqual;
 }
 
@@ -9810,19 +9718,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateInComps2(th
 {
   modelica_metatype _inCompLstOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _inCompLstOut has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _inCompLstOut = omc_List_replaceAt(threadData, tmpMeta1, _iNodeIdx, _inCompLstIn);
   _return: OMC_LABEL_UNUSED
-  return _inCompLstOut;
+  omc_ret_ = _inCompLstOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateInComps2(threadData_t *threadData, modelica_metatype _iNodeIdx, modelica_metatype _inCompLstIn)
 {
   modelica_integer tmp1;
   modelica_metatype _inCompLstOut = NULL;
-  tmp1 = mmc_unbox_integer(_iNodeIdx);
+  tmp1 = omc_unbox_integer(_iNodeIdx);
   _inCompLstOut = omc_HpcOmTaskGraph_updateInComps2(threadData, tmp1, _inCompLstIn);
   /* skip box _inCompLstOut; list<list<#Integer>> */
   return _inCompLstOut;
@@ -9832,7 +9742,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateInComps1(th
 {
   modelica_metatype _inCompLstOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _inCompLstOut has no default value.
   { /* matchcontinue expression */
@@ -9854,7 +9765,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateInComps1(th
       // _mergedPaths has no default value.
       // _inCompLstTmp has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -9867,8 +9778,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateInComps1(th
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta6 = _mergeInfo;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 3));
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 3);
           _startNodes = tmpMeta7;
           _mergedPaths = tmpMeta8;
 
@@ -9877,10 +9788,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateInComps1(th
           listGet(_inComps, ((modelica_integer) 1));
 
           /* Pattern-matching assignment */
-          tmp9 = omc_List_isMemberOnTrue(threadData, mmc_mk_integer(_nodeIdx), _startNodes, boxvar_intEq);
+          tmp9 = omc_List_isMemberOnTrue(threadData, omc_mk_integer(_nodeIdx), _startNodes, boxvar_intEq);
           if (1 /* true */ != tmp9) goto goto_2;
 
-          _mergeGroupIdx = omc_List_position(threadData, mmc_mk_integer(_nodeIdx), _startNodes);
+          _mergeGroupIdx = omc_List_position(threadData, omc_mk_integer(_nodeIdx), _startNodes);
 
           _mergedNodes = listGet(_mergedPaths, _mergeGroupIdx);
 
@@ -9902,26 +9813,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateInComps1(th
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _inCompLstOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _inCompLstOut;
+  omc_ret_ = _inCompLstOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateInComps1(threadData_t *threadData, modelica_metatype _nodeIdx, modelica_metatype _mergeInfo, modelica_metatype _primInComps, modelica_metatype _inCompLstIn)
 {
   modelica_integer tmp1;
   modelica_metatype _inCompLstOut = NULL;
-  tmp1 = mmc_unbox_integer(_nodeIdx);
+  tmp1 = omc_unbox_integer(_nodeIdx);
   _inCompLstOut = omc_HpcOmTaskGraph_updateInComps1(threadData, tmp1, _mergeInfo, _primInComps, _inCompLstIn);
   /* skip box _inCompLstOut; list<list<#Integer>> */
   return _inCompLstOut;
@@ -9935,7 +9847,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateInCompsForM
   modelica_metatype _startNodes = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _inCompsOut has no default value.
   // _inCompsLst has no default value.
@@ -9947,7 +9860,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateInCompsForM
 
   _inCompsLst = arrayList(_inCompsIn);
 
-  tmpMeta1 = mmc_mk_box3(0, _startNodes, _deleteNodes, _mergedPaths);
+  tmpMeta1 = omc_mk_box3(0, _startNodes, _deleteNodes, _mergedPaths);
   _inCompsLst = omc_List_fold2(threadData, omc_List_intRange(threadData, arrayLength(_inCompsIn)), boxvar_HpcOmTaskGraph_updateInComps1, tmpMeta1, _inCompsIn, _inCompsLst);
 
   tmpMeta2 = MMC_REFSTRUCTLIT(mmc_nil);
@@ -9955,14 +9868,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateInCompsForM
 
   _inCompsOut = listArray(_inCompsLst);
   _return: OMC_LABEL_UNUSED
-  return _inCompsOut;
+  omc_ret_ = _inCompsOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCompNamesForMerging(threadData_t *threadData, modelica_integer _compIdx, modelica_metatype _inComps, modelica_metatype _nodeMark, modelica_metatype _compNamesIn)
 {
   modelica_metatype _compNamesOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compNamesOut has no default value.
   { /* matchcontinue expression */
@@ -9976,7 +9891,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCompNamesFo
       // _mergedComps has no default value.
       // _compName has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 4; tmp4++) {
@@ -10008,7 +9923,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCompNamesFo
           modelica_boolean tmp9;
           modelica_boolean tmp10;
           modelica_boolean tmp11;
-          modelica_metatype tmpMeta12;
+          modelica_string tmp12;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp9 = (_compIdx <= arrayLength(_compNamesIn));
@@ -10026,8 +9941,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCompNamesFo
           tmp11 = (listLength(_mergedComps) == ((modelica_integer) 1));
           if (0 /* false */ != tmp11) goto goto_2;
 
-          tmpMeta12 = stringAppend(_OMC_LIT76,stringDelimitList(omc_List_map(threadData, _mergedComps, boxvar_intString), _OMC_LIT31));
-          _compName = tmpMeta12;
+          tmp12 = stringAppend(_OMC_LIT76,stringDelimitList(omc_List_map(threadData, _mergedComps, boxvar_intString), _OMC_LIT31));
+          omc_string_store(&(_compName), tmp12);
           tmpMeta1 = arrayUpdate(_compNamesIn, _compIdx, _compName);
           goto tmp3_done;
         }
@@ -10049,7 +9964,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCompNamesFo
         }
         case 3: {
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT77),stdout);
+          fputs(omc_string_data(_OMC_LIT77),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -10060,26 +9975,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCompNamesFo
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 4) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _compNamesOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _compNamesOut;
+  omc_ret_ = _compNamesOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateCompNamesForMerging(threadData_t *threadData, modelica_metatype _compIdx, modelica_metatype _inComps, modelica_metatype _nodeMark, modelica_metatype _compNamesIn)
 {
   modelica_integer tmp1;
   modelica_metatype _compNamesOut = NULL;
-  tmp1 = mmc_unbox_integer(_compIdx);
+  tmp1 = omc_unbox_integer(_compIdx);
   _compNamesOut = omc_HpcOmTaskGraph_updateCompNamesForMerging(threadData, tmp1, _inComps, _nodeMark, _compNamesIn);
   /* skip box _compNamesOut; array<String> */
   return _compNamesOut;
@@ -10110,7 +10026,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getMergedSystemDa
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphDataOut has no default value.
   // _inComps has no default value.
@@ -10125,16 +10042,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getMergedSystemDa
   // _compInformations has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _graphDataIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 10));
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 11));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta1, 9);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 10);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta1, 11);
   _inComps = tmpMeta2;
   _varCompMapping = tmpMeta3;
   _eqCompMapping = tmpMeta4;
@@ -10150,79 +10067,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getMergedSystemDa
 
   _compNames = omc_List_fold2(threadData, omc_List_intRange(threadData, arrayLength(_compNames)), boxvar_HpcOmTaskGraph_updateCompNamesForMerging, _inComps, _nodeMark, _compNames);
 
-  tmpMeta12 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
+  tmpMeta12 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
   _graphDataOut = tmpMeta12;
   _return: OMC_LABEL_UNUSED
-  return _graphDataOut;
+  omc_ret_ = _graphDataOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareListLengthOnTrue(threadData_t *threadData, modelica_integer _inValue, modelica_metatype _inLst)
 {
   modelica_boolean _equalLength;
-  modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _equalLength has no default value.
-  { /* matchcontinue expression */
-    {
-      volatile mmc_switch_type tmp4;
-      int tmp5;
-      tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
-      tmp3_top:
-      threadData->mmc_jumper = &new_mmc_jumper;
-      for (; tmp4 < 2; tmp4++) {
-        switch (MMC_SWITCH_CAST(tmp4)) {
-        case 0: {
-          modelica_boolean tmp6;
-          /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp6 = (_inValue == listLength(_inLst));
-          if (1 /* true */ != tmp6) goto goto_2;
-          tmp1 = 1 /* true */;
-          goto tmp3_done;
-        }
-        case 1: {
-          /* Pattern matching succeeded */
-          tmp1 = 0 /* false */;
-          goto tmp3_done;
-        }
-        }
-        goto tmp3_end;
-        tmp3_end: ;
-      }
-      goto goto_2;
-      tmp3_done:
-      (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
-      goto tmp3_done2;
-      goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
-      if (++tmp4 < 2) {
-        goto tmp3_top;
-      }
-      MMC_THROW_INTERNAL();
-      tmp3_done2:;
-    }
-  }
-  _equalLength = tmp1;
+  _equalLength = (_inValue == listLength(_inLst));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _equalLength;
+  omc_ret_ = _equalLength;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_compareListLengthOnTrue(threadData_t *threadData, modelica_metatype _inValue, modelica_metatype _inLst)
 {
   modelica_integer tmp1;
   modelica_boolean _equalLength;
   modelica_metatype out_equalLength;
-  tmp1 = mmc_unbox_integer(_inValue);
+  tmp1 = omc_unbox_integer(_inValue);
   _equalLength = omc_HpcOmTaskGraph_compareListLengthOnTrue(threadData, tmp1, _inLst);
-  out_equalLength = mmc_mk_icon(_equalLength);
+  out_equalLength = omc_mk_icon(_equalLength);
   return out_equalLength;
 }
 
@@ -10231,7 +10102,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_contractNodesInGr
   modelica_metatype _oGraph = NULL;
   modelica_metatype _adjLstEntry = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oGraph has no default value.
   // _adjLstEntry has no default value.
@@ -10239,22 +10111,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_contractNodesInGr
 
   _adjLstEntry = omc_List_setDifferenceOnTrue(threadData, _adjLstEntry, _iDeletedNodes, boxvar_intEq);
 
-  tmpMeta1 = mmc_mk_cons(mmc_mk_integer(_iNewNodeIdx), _adjLstEntry);
+  tmpMeta1 = mmc_mk_cons(omc_mk_integer(_iNewNodeIdx), _adjLstEntry);
   _adjLstEntry = tmpMeta1;
 
   _adjLstEntry = omc_List_sortedUnique(threadData, omc_List_sort(threadData, _adjLstEntry, boxvar_intGt), boxvar_intEq);
 
   _oGraph = arrayUpdate(_iGraph, _iParentNode, _adjLstEntry);
   _return: OMC_LABEL_UNUSED
-  return _oGraph;
+  omc_ret_ = _oGraph;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_contractNodesInGraph2(threadData_t *threadData, modelica_metatype _iParentNode, modelica_metatype _iDeletedNodes, modelica_metatype _iNewNodeIdx, modelica_metatype _iGraph)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _oGraph = NULL;
-  tmp1 = mmc_unbox_integer(_iParentNode);
-  tmp2 = mmc_unbox_integer(_iNewNodeIdx);
+  tmp1 = omc_unbox_integer(_iParentNode);
+  tmp2 = omc_unbox_integer(_iNewNodeIdx);
   _oGraph = omc_HpcOmTaskGraph_contractNodesInGraph2(threadData, tmp1, _iDeletedNodes, tmp2, _iGraph);
   /* skip box _oGraph; array<list<#Integer>> */
   return _oGraph;
@@ -10271,7 +10144,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_contractNodesInGr
   modelica_metatype _endChildren = NULL;
   modelica_metatype _deleteNodesParents = NULL;
   modelica_metatype _graphTmp = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _graphInT has no default value.
@@ -10284,9 +10158,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_contractNodesInGr
   // _graphTmp has no default value.
   _graphInT = omc_AdjacencyMatrix_transposeAdjacencyMatrix(threadData, _graphIn, arrayLength(_graphIn));
 
-  _startNode = mmc_unbox_integer(omc_List_last(threadData, _contractNodes));
+  _startNode = omc_unbox_integer(omc_List_last(threadData, _contractNodes));
 
-  _deleteEntries = omc_List_deleteMemberOnTrue(threadData, mmc_mk_integer(_startNode), _contractNodes, boxvar_intEq, NULL);
+  _deleteEntries = omc_List_deleteMemberOnTrue(threadData, omc_mk_integer(_startNode), _contractNodes, boxvar_intEq, NULL);
 
   _deleteNodesParents = omc_List_flatten(threadData, omc_List_map1(threadData, _deleteEntries, boxvar_Array_getIndexFirst, _graphInT));
 
@@ -10294,7 +10168,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_contractNodesInGr
 
   _deleteNodesParents = omc_List_setDifferenceOnTrue(threadData, _deleteNodesParents, _contractNodes, boxvar_intEq);
 
-  _endNode = mmc_unbox_integer(listHead(_contractNodes));
+  _endNode = omc_unbox_integer(listHead(_contractNodes));
 
   _endChildren = arrayGet(_graphIn, _endNode);
 
@@ -10304,91 +10178,92 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_contractNodesInGr
 
   _graphTmp = arrayUpdate(_graphIn, _startNode, _startNodeChildren);
 
-  _graphTmp = omc_List_fold2(threadData, _deleteNodesParents, boxvar_HpcOmTaskGraph_contractNodesInGraph2, _deleteEntries, mmc_mk_integer(_startNode), _graphTmp);
+  _graphTmp = omc_List_fold2(threadData, _deleteNodesParents, boxvar_HpcOmTaskGraph_contractNodesInGraph2, _deleteEntries, omc_mk_integer(_startNode), _graphTmp);
 
   _graphTmp = arrayUpdate(_graphIn, _startNode, _endChildren);
 
   _graphOut = _graphTmp;
   _return: OMC_LABEL_UNUSED
-  return _graphOut;
+  omc_ret_ = _graphOut;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_HpcOmTaskGraph_isNodeContracted(threadData_t *threadData, modelica_integer _iNode, modelica_metatype _iContrNodes)
 {
   modelica_boolean _oIsContracted;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIsContracted has no default value.
   if((_iNode <= arrayLength(_iContrNodes)))
   {
-    _oIsContracted = (mmc_unbox_integer(arrayGet(_iContrNodes, _iNode)) < ((modelica_integer) 0));
+    _oIsContracted = (omc_unbox_integer(arrayGet(_iContrNodes, _iNode)) < ((modelica_integer) 0));
   }
   else
   {
     _oIsContracted = 0 /* false */;
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oIsContracted;
+  omc_ret_ = _oIsContracted;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_isNodeContracted(threadData_t *threadData, modelica_metatype _iNode, modelica_metatype _iContrNodes)
 {
   modelica_integer tmp1;
   modelica_boolean _oIsContracted;
   modelica_metatype out_oIsContracted;
-  tmp1 = mmc_unbox_integer(_iNode);
+  tmp1 = omc_unbox_integer(_iNode);
   _oIsContracted = omc_HpcOmTaskGraph_isNodeContracted(threadData, tmp1, _iContrNodes);
-  out_oIsContracted = mmc_mk_icon(_oIsContracted);
+  out_oIsContracted = omc_mk_icon(_oIsContracted);
   return out_oIsContracted;
 }
 
 static modelica_metatype closure9_HpcOmTaskGraph_isNodeContracted(threadData_t *thData, modelica_metatype closure, modelica_metatype iNode)
 {
-  modelica_metatype iContrNodes = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype iContrNodes = OMC_BOX_FIELD(closure, 1);
   return boxptr_HpcOmTaskGraph_isNodeContracted(thData, iNode, iContrNodes);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_filterNonContractedNodes(threadData_t *threadData, modelica_metatype _nodesIn, modelica_metatype _contrNodes)
 {
   modelica_metatype _nodesOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodesOut has no default value.
-  tmpMeta1 = mmc_mk_box1(0, _contrNodes);
-  _nodesOut = omc_List_filterOnTrue(threadData, _nodesIn, (modelica_fnptr) mmc_mk_box2(0,closure9_HpcOmTaskGraph_isNodeContracted,tmpMeta1));
+  tmpMeta1 = omc_mk_box1(0, _contrNodes);
+  _nodesOut = omc_List_filterOnTrue(threadData, _nodesIn, (modelica_fnptr) omc_mk_box2(0,closure9_HpcOmTaskGraph_isNodeContracted,tmpMeta1));
   _return: OMC_LABEL_UNUSED
-  return _nodesOut;
+  omc_ret_ = _nodesOut;
+  return omc_ret_;
 }
 
 static modelica_metatype closure10_HpcOmTaskGraph_isNodeContracted(threadData_t *thData, modelica_metatype closure, modelica_metatype iNode)
 {
-  modelica_metatype iContrNodes = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype iContrNodes = OMC_BOX_FIELD(closure, 1);
   return boxptr_HpcOmTaskGraph_isNodeContracted(thData, iNode, iContrNodes);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_filterContractedNodes(threadData_t *threadData, modelica_metatype _nodesIn, modelica_metatype _contrNodes)
 {
   modelica_metatype _nodesOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodesOut has no default value.
-  tmpMeta1 = mmc_mk_box1(0, _contrNodes);
-  _nodesOut = omc_List_filterOnFalse(threadData, _nodesIn, (modelica_fnptr) mmc_mk_box2(0,closure10_HpcOmTaskGraph_isNodeContracted,tmpMeta1));
+  tmpMeta1 = omc_mk_box1(0, _contrNodes);
+  _nodesOut = omc_List_filterOnFalse(threadData, _nodesIn, (modelica_fnptr) omc_mk_box2(0,closure10_HpcOmTaskGraph_isNodeContracted,tmpMeta1));
   _return: OMC_LABEL_UNUSED
-  return _nodesOut;
+  omc_ret_ = _nodesOut;
+  return omc_ret_;
 }
 
 static modelica_metatype closure11_Array_getIndexFirst(threadData_t *thData, modelica_metatype closure, modelica_metatype inIndex)
 {
-  modelica_metatype inArray = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype inArray = OMC_BOX_FIELD(closure, 1);
   return boxptr_Array_getIndexFirst(thData, inIndex, inArray);
 }
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_updateInCompsInfo(threadData_t *threadData, modelica_integer _contrNode, modelica_metatype _removedNodes, modelica_metatype _inComps)
@@ -10396,36 +10271,30 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_updateInCompsInfo(threadData_t
   modelica_metatype _comps = NULL;
   modelica_metatype _contrComps = NULL;
   modelica_metatype tmpMeta1;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _comps has no default value.
   // _contrComps has no default value.
   _comps = arrayGet(_inComps, _contrNode);
 
-  tmpMeta1 = mmc_mk_box1(0, _inComps);
-  _contrComps = omc_List_flatten(threadData, omc_List_map(threadData, _removedNodes, (modelica_fnptr) mmc_mk_box2(0,closure11_Array_getIndexFirst,tmpMeta1)));
+  tmpMeta1 = omc_mk_box1(0, _inComps);
+  _contrComps = omc_List_flatten(threadData, omc_List_map(threadData, _removedNodes, (modelica_fnptr) omc_mk_box2(0,closure11_Array_getIndexFirst,tmpMeta1)));
 
   _comps = omc_List_unique(threadData, listAppend(_contrComps, _comps));
 
   arrayUpdate(_inComps, _contrNode, _comps);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_updateInCompsInfo(threadData_t *threadData, modelica_metatype _contrNode, modelica_metatype _removedNodes, modelica_metatype _inComps)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_contrNode);
+  tmp1 = omc_unbox_integer(_contrNode);
   omc_HpcOmTaskGraph_updateInCompsInfo(threadData, tmp1, _removedNodes, _inComps);
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_setInCompsInMeta(threadData_t *threadData, modelica_metatype _inComps, modelica_metatype _metaIn)
 {
   modelica_metatype _metaOut = NULL;
@@ -10449,7 +10318,8 @@ modelica_metatype omc_HpcOmTaskGraph_setInCompsInMeta(threadData_t *threadData, 
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _metaOut has no default value.
   // _varCompMapping has no default value.
@@ -10463,15 +10333,15 @@ modelica_metatype omc_HpcOmTaskGraph_setInCompsInMeta(threadData_t *threadData, 
   // _compInformations has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _metaIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 10));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 11));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 9);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta1, 10);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 11);
   _varCompMapping = tmpMeta2;
   _eqCompMapping = tmpMeta3;
   _compParamMapping = tmpMeta4;
@@ -10482,24 +10352,23 @@ modelica_metatype omc_HpcOmTaskGraph_setInCompsInMeta(threadData_t *threadData, 
   _nodeMark = tmpMeta9;
   _compInformations = tmpMeta10;
 
-  tmpMeta11 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
+  tmpMeta11 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
   _metaOut = tmpMeta11;
   _return: OMC_LABEL_UNUSED
-  return _metaOut;
+  omc_ret_ = _metaOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData_t *threadData, modelica_integer _iTaskIdx, modelica_metatype _iContractedTasks)
 {
   modelica_integer _oTaskIdx;
   modelica_integer _contractionMark;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTaskIdx has no default value.
   // _contractionMark has no default value.
-  _contractionMark = mmc_unbox_integer(arrayGet(_iContractedTasks, _iTaskIdx));
+  _contractionMark = omc_unbox_integer(arrayGet(_iContractedTasks, _iTaskIdx));
 
   if((_contractionMark < ((modelica_integer) 0)))
   {
@@ -10514,19 +10383,17 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getRealTaskIdxOfTa
     _oTaskIdx = _iTaskIdx;
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oTaskIdx;
+  omc_ret_ = _oTaskIdx;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData_t *threadData, modelica_metatype _iTaskIdx, modelica_metatype _iContractedTasks)
 {
   modelica_integer tmp1;
   modelica_integer _oTaskIdx;
   modelica_metatype out_oTaskIdx;
-  tmp1 = mmc_unbox_integer(_iTaskIdx);
+  tmp1 = omc_unbox_integer(_iTaskIdx);
   _oTaskIdx = omc_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData, tmp1, _iContractedTasks);
-  out_oTaskIdx = mmc_mk_icon(_oTaskIdx);
+  out_oTaskIdx = omc_mk_icon(_oTaskIdx);
   return out_oTaskIdx;
 }
 
@@ -10541,7 +10408,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getContractedNode
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oChildTasks has no default value.
   // _task has no default value.
@@ -10556,31 +10424,32 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getContractedNode
     for (tmpMeta2 = _childTasks; !listEmpty(tmpMeta2); tmpMeta2=MMC_CDR(tmpMeta2))
     {
       _task = MMC_CAR(tmpMeta2);
-      _task = mmc_mk_integer(omc_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData, mmc_unbox_integer(_task), _iContractedTasks));
+      _task = omc_mk_integer(omc_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData, omc_unbox_integer(_task), _iContractedTasks));
 
-      _taskMark = mmc_unbox_integer(arrayGet(_iNodeMarks, mmc_unbox_integer(_task)));
+      _taskMark = omc_unbox_integer(arrayGet(_iNodeMarks, omc_unbox_integer(_task)));
 
-      if(((_taskMark != _iRefValue) && (mmc_unbox_integer(_task) != _iRefValue)))
+      if(((_taskMark != _iRefValue) && (omc_unbox_integer(_task) != _iRefValue)))
       {
         tmpMeta3 = mmc_mk_cons(_task, _resultTasks);
         _resultTasks = tmpMeta3;
 
-        arrayUpdate(_iNodeMarks, mmc_unbox_integer(_task), mmc_mk_integer(_iRefValue));
+        arrayUpdate(_iNodeMarks, omc_unbox_integer(_task), omc_mk_integer(_iRefValue));
       }
     }
   }
 
   _oChildTasks = _resultTasks;
   _return: OMC_LABEL_UNUSED
-  return _oChildTasks;
+  omc_ret_ = _oChildTasks;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getContractedNodeChildren(threadData_t *threadData, modelica_metatype _iParentTask, modelica_metatype _iRefValue, modelica_metatype _iTaskGraph, modelica_metatype _iContractedTasks, modelica_metatype _iNodeMarks)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _oChildTasks = NULL;
-  tmp1 = mmc_unbox_integer(_iParentTask);
-  tmp2 = mmc_unbox_integer(_iRefValue);
+  tmp1 = omc_unbox_integer(_iParentTask);
+  tmp2 = omc_unbox_integer(_iRefValue);
   _oChildTasks = omc_HpcOmTaskGraph_getContractedNodeChildren(threadData, tmp1, tmp2, _iTaskGraph, _iContractedTasks, _iNodeMarks);
   /* skip box _oChildTasks; list<#Integer> */
   return _oChildTasks;
@@ -10589,18 +10458,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getContractedN
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_checkIfNodeBelongsToCluster(threadData_t *threadData, modelica_integer _iNegativeRefValue, modelica_integer _iNodeIdx, modelica_metatype _iContractedTasks)
 {
   modelica_boolean _oIsNodePartOfCluster;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIsNodePartOfCluster has no default value.
-  _oIsNodePartOfCluster = (_iNegativeRefValue == mmc_unbox_integer(arrayGet(_iContractedTasks, _iNodeIdx)));
+  _oIsNodePartOfCluster = (_iNegativeRefValue == omc_unbox_integer(arrayGet(_iContractedTasks, _iNodeIdx)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oIsNodePartOfCluster;
+  omc_ret_ = _oIsNodePartOfCluster;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkIfNodeBelongsToCluster(threadData_t *threadData, modelica_metatype _iNegativeRefValue, modelica_metatype _iNodeIdx, modelica_metatype _iContractedTasks)
 {
@@ -10608,43 +10473,43 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_checkIfNodeBel
   modelica_integer tmp2;
   modelica_boolean _oIsNodePartOfCluster;
   modelica_metatype out_oIsNodePartOfCluster;
-  tmp1 = mmc_unbox_integer(_iNegativeRefValue);
-  tmp2 = mmc_unbox_integer(_iNodeIdx);
+  tmp1 = omc_unbox_integer(_iNegativeRefValue);
+  tmp2 = omc_unbox_integer(_iNodeIdx);
   _oIsNodePartOfCluster = omc_HpcOmTaskGraph_checkIfNodeBelongsToCluster(threadData, tmp1, tmp2, _iContractedTasks);
-  out_oIsNodePartOfCluster = mmc_mk_icon(_oIsNodePartOfCluster);
+  out_oIsNodePartOfCluster = omc_mk_icon(_oIsNodePartOfCluster);
   return out_oIsNodePartOfCluster;
 }
 
 static modelica_metatype closure12_HpcOmTaskGraph_checkIfNodeBelongsToCluster(threadData_t *thData, modelica_metatype closure, modelica_metatype iNegativeRefValue, modelica_metatype iNodeIdx)
 {
-  modelica_metatype iContractedTasks = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype iContractedTasks = OMC_BOX_FIELD(closure, 1);
   return boxptr_HpcOmTaskGraph_checkIfNodeBelongsToCluster(thData, iNegativeRefValue, iNodeIdx, iContractedTasks);
 }static void closure13_Array_updateIndexFirst(threadData_t *thData, modelica_metatype closure, modelica_metatype inIndex)
 {
-  modelica_metatype inValue = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype inArray = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
+  modelica_metatype inValue = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype inArray = OMC_BOX_FIELD(closure, 2);
   boxptr_Array_updateIndexFirst(thData, inIndex, inValue, inArray);
 }static void closure14_Array_updateIndexFirst(threadData_t *thData, modelica_metatype closure, modelica_metatype inIndex)
 {
-  modelica_metatype inValue = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype inArray = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
+  modelica_metatype inValue = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype inArray = OMC_BOX_FIELD(closure, 2);
   boxptr_Array_updateIndexFirst(thData, inIndex, inValue, inArray);
 }static modelica_metatype closure15_HpcOmTaskGraph_getContractedNodeChildren(threadData_t *thData, modelica_metatype closure, modelica_metatype iParentTask)
 {
-  modelica_metatype iRefValue = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype iTaskGraph = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
-  modelica_metatype iContractedTasks = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),3));
-  modelica_metatype iNodeMarks = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),4));
+  modelica_metatype iRefValue = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype iTaskGraph = OMC_BOX_FIELD(closure, 2);
+  modelica_metatype iContractedTasks = OMC_BOX_FIELD(closure, 3);
+  modelica_metatype iNodeMarks = OMC_BOX_FIELD(closure, 4);
   return boxptr_HpcOmTaskGraph_getContractedNodeChildren(thData, iParentTask, iRefValue, iTaskGraph, iContractedTasks, iNodeMarks);
 }static modelica_metatype closure16_HpcOmTaskGraph_getContractedNodeChildren(threadData_t *thData, modelica_metatype closure, modelica_metatype iParentTask)
 {
-  modelica_metatype iRefValue = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype iTaskGraph = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
-  modelica_metatype iContractedTasks = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),3));
-  modelica_metatype iNodeMarks = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),4));
+  modelica_metatype iRefValue = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype iTaskGraph = OMC_BOX_FIELD(closure, 2);
+  modelica_metatype iContractedTasks = OMC_BOX_FIELD(closure, 3);
+  modelica_metatype iNodeMarks = OMC_BOX_FIELD(closure, 4);
   return boxptr_HpcOmTaskGraph_getContractedNodeChildren(thData, iParentTask, iRefValue, iTaskGraph, iContractedTasks, iNodeMarks);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadData, modelica_metatype _iContractNodes, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphT, modelica_metatype _iTaskGraphMeta, modelica_metatype _iContractedTasks, modelica_metatype *out_oTaskGraphT, modelica_metatype *out_oTaskGraphMeta, modelica_metatype *out_oContractedTasks)
 {
   modelica_metatype _oTaskGraph = NULL;
@@ -10718,7 +10583,8 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
   modelica_metatype tmpMeta43;
   modelica_metatype tmpMeta44;
   modelica_metatype tmpMeta45;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTaskGraph has no default value.
   // _oTaskGraphT has no default value.
@@ -10748,12 +10614,12 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
   // _parentNodes has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iTaskGraphMeta;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _inComps = tmpMeta2;
 
-  _nodeMarks = arrayCreate(arrayLength(_iTaskGraph), mmc_mk_integer(((modelica_integer) 0)));
+  _nodeMarks = arrayCreate(arrayLength(_iTaskGraph), omc_mk_integer(((modelica_integer) 0)));
 
-  _nodeMarksT = arrayCreate(arrayLength(_iTaskGraph), mmc_mk_integer(((modelica_integer) 0)));
+  _nodeMarksT = arrayCreate(arrayLength(_iTaskGraph), omc_mk_integer(((modelica_integer) 0)));
 
   {
     modelica_metatype _iNodeList;
@@ -10765,10 +10631,10 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
 
       /* Pattern-matching assignment */
       tmpMeta5 = _iNodeList;
-      if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+      if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
       tmpMeta6 = MMC_CAR(tmpMeta5);
       tmpMeta7 = MMC_CDR(tmpMeta5);
-      tmp8 = mmc_unbox_integer(tmpMeta6);
+      tmp8 = omc_unbox_integer(tmpMeta6);
       _nodeListHeadIdx = tmp8  /* pattern as ty=Integer */;
       _nodeListRestIdc = tmpMeta7;
 
@@ -10777,11 +10643,11 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
         for (tmpMeta9 = _iNodeList; !listEmpty(tmpMeta9); tmpMeta9=MMC_CDR(tmpMeta9))
         {
           _nodeIdx = MMC_CAR(tmpMeta9);
-          _nodeIdx = mmc_mk_integer(omc_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData, mmc_unbox_integer(_nodeIdx), _tmpContractedTasks));
+          _nodeIdx = omc_mk_integer(omc_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData, omc_unbox_integer(_nodeIdx), _tmpContractedTasks));
 
-          if((mmc_unbox_integer(arrayGet(_nodeMarks, mmc_unbox_integer(_nodeIdx))) != _nodeListHeadIdx))
+          if((omc_unbox_integer(arrayGet(_nodeMarks, omc_unbox_integer(_nodeIdx))) != _nodeListHeadIdx))
           {
-            _nodeMarks = arrayUpdate(_nodeMarks, mmc_unbox_integer(_nodeIdx), mmc_mk_integer(_nodeListHeadIdx));
+            _nodeMarks = arrayUpdate(_nodeMarks, omc_unbox_integer(_nodeIdx), omc_mk_integer(_nodeListHeadIdx));
 
             tmpMeta10 = mmc_mk_cons(_nodeIdx, _nodeList);
             _nodeList = tmpMeta10;
@@ -10791,10 +10657,10 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
 
       /* Pattern-matching assignment */
       tmpMeta12 = _nodeList;
-      if (listEmpty(tmpMeta12)) MMC_THROW_INTERNAL();
+      if (listEmpty(tmpMeta12)) OMC_THROW_INTERNAL();
       tmpMeta13 = MMC_CAR(tmpMeta12);
       tmpMeta14 = MMC_CDR(tmpMeta12);
-      tmp15 = mmc_unbox_integer(tmpMeta13);
+      tmp15 = omc_unbox_integer(tmpMeta13);
       _nodeListHeadIdx = tmp15  /* pattern as ty=Integer */;
       _nodeListRestIdc = tmpMeta14;
 
@@ -10807,36 +10673,36 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
         for (tmpMeta16 = _nodeListRestIdc; !listEmpty(tmpMeta16); tmpMeta16=MMC_CDR(tmpMeta16))
         {
           _nodeIdx = MMC_CAR(tmpMeta16);
-          _nodeMarks = arrayUpdate(_nodeMarks, mmc_unbox_integer(_nodeIdx), mmc_mk_integer(_nodeListHeadIdx));
+          _nodeMarks = arrayUpdate(_nodeMarks, omc_unbox_integer(_nodeIdx), omc_mk_integer(_nodeListHeadIdx));
 
-          _nodeMarksT = arrayUpdate(_nodeMarksT, mmc_unbox_integer(_nodeIdx), mmc_mk_integer(_nodeListHeadIdx));
+          _nodeMarksT = arrayUpdate(_nodeMarksT, omc_unbox_integer(_nodeIdx), omc_mk_integer(_nodeListHeadIdx));
 
-          _tmpContractedTasks = arrayUpdate(_tmpContractedTasks, mmc_unbox_integer(_nodeIdx), mmc_mk_integer(_negNodeListHeadIdx));
+          _tmpContractedTasks = arrayUpdate(_tmpContractedTasks, omc_unbox_integer(_nodeIdx), omc_mk_integer(_negNodeListHeadIdx));
         }
       }
 
-      _nodeMarks = arrayUpdate(_nodeMarks, _nodeListHeadIdx, mmc_mk_integer(_nodeListHeadIdx));
+      _nodeMarks = arrayUpdate(_nodeMarks, _nodeListHeadIdx, omc_mk_integer(_nodeListHeadIdx));
 
-      _nodeMarksT = arrayUpdate(_nodeMarksT, _nodeListHeadIdx, mmc_mk_integer(_nodeListHeadIdx));
+      _nodeMarksT = arrayUpdate(_nodeMarksT, _nodeListHeadIdx, omc_mk_integer(_nodeListHeadIdx));
 
       _outgoingEdges = arrayGet(_tmpTaskGraph, _nodeListHeadIdx);
 
-      tmpMeta18 = mmc_mk_box1(0, _tmpContractedTasks);
-      _outgoingEdges = omc_List_deleteMemberOnTrue(threadData, mmc_mk_integer(_negNodeListHeadIdx), _outgoingEdges, (modelica_fnptr) mmc_mk_box2(0,closure12_HpcOmTaskGraph_checkIfNodeBelongsToCluster,tmpMeta18), NULL);
+      tmpMeta18 = omc_mk_box1(0, _tmpContractedTasks);
+      _outgoingEdges = omc_List_deleteMemberOnTrue(threadData, omc_mk_integer(_negNodeListHeadIdx), _outgoingEdges, (modelica_fnptr) omc_mk_box2(0,closure12_HpcOmTaskGraph_checkIfNodeBelongsToCluster,tmpMeta18), NULL);
 
       _incomingEdges = arrayGet(_tmpTaskGraphT, _nodeListHeadIdx);
 
-      tmpMeta19 = mmc_mk_box2(0, mmc_mk_integer(_nodeListHeadIdx), _nodeMarks);
-      omc_List_map__0(threadData, _outgoingEdges, (modelica_fnptr) mmc_mk_box2(0,closure13_Array_updateIndexFirst,tmpMeta19));
+      tmpMeta19 = omc_mk_box2(0, omc_mk_integer(_nodeListHeadIdx), _nodeMarks);
+      omc_List_map__0(threadData, _outgoingEdges, (modelica_fnptr) omc_mk_box2(0,closure13_Array_updateIndexFirst,tmpMeta19));
 
-      tmpMeta20 = mmc_mk_box2(0, mmc_mk_integer(_nodeListHeadIdx), _nodeMarksT);
-      omc_List_map__0(threadData, _incomingEdges, (modelica_fnptr) mmc_mk_box2(0,closure14_Array_updateIndexFirst,tmpMeta20));
+      tmpMeta20 = omc_mk_box2(0, omc_mk_integer(_nodeListHeadIdx), _nodeMarksT);
+      omc_List_map__0(threadData, _incomingEdges, (modelica_fnptr) omc_mk_box2(0,closure14_Array_updateIndexFirst,tmpMeta20));
 
-      tmpMeta21 = mmc_mk_box4(0, mmc_mk_integer(_nodeListHeadIdx), _tmpTaskGraph, _tmpContractedTasks, _nodeMarks);
-      _childNodes = omc_List_flatten(threadData, omc_List_map(threadData, _nodeListRestIdc, (modelica_fnptr) mmc_mk_box2(0,closure15_HpcOmTaskGraph_getContractedNodeChildren,tmpMeta21)));
+      tmpMeta21 = omc_mk_box4(0, omc_mk_integer(_nodeListHeadIdx), _tmpTaskGraph, _tmpContractedTasks, _nodeMarks);
+      _childNodes = omc_List_flatten(threadData, omc_List_map(threadData, _nodeListRestIdc, (modelica_fnptr) omc_mk_box2(0,closure15_HpcOmTaskGraph_getContractedNodeChildren,tmpMeta21)));
 
-      tmpMeta22 = mmc_mk_box4(0, mmc_mk_integer(_nodeListHeadIdx), _iTaskGraphT, _tmpContractedTasks, _nodeMarks);
-      _parentNodes = omc_List_flatten(threadData, omc_List_map(threadData, _nodeList, (modelica_fnptr) mmc_mk_box2(0,closure16_HpcOmTaskGraph_getContractedNodeChildren,tmpMeta22)));
+      tmpMeta22 = omc_mk_box4(0, omc_mk_integer(_nodeListHeadIdx), _iTaskGraphT, _tmpContractedTasks, _nodeMarks);
+      _parentNodes = omc_List_flatten(threadData, omc_List_map(threadData, _nodeList, (modelica_fnptr) omc_mk_box2(0,closure16_HpcOmTaskGraph_getContractedNodeChildren,tmpMeta22)));
 
       _headCompIdc = arrayGet(_inComps, _nodeListHeadIdx);
 
@@ -10846,15 +10712,15 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
         {
           _nodeIdx = MMC_CAR(tmpMeta23);
           tmpMeta24 = MMC_REFSTRUCTLIT(mmc_nil);
-          _tmpTaskGraph = arrayUpdate(_tmpTaskGraph, mmc_unbox_integer(_nodeIdx), tmpMeta24);
+          _tmpTaskGraph = arrayUpdate(_tmpTaskGraph, omc_unbox_integer(_nodeIdx), tmpMeta24);
 
           tmpMeta25 = MMC_REFSTRUCTLIT(mmc_nil);
-          _tmpTaskGraphT = arrayUpdate(_tmpTaskGraphT, mmc_unbox_integer(_nodeIdx), tmpMeta25);
+          _tmpTaskGraphT = arrayUpdate(_tmpTaskGraphT, omc_unbox_integer(_nodeIdx), tmpMeta25);
 
-          _nodeCompIdc = arrayGet(_inComps, mmc_unbox_integer(_nodeIdx));
+          _nodeCompIdc = arrayGet(_inComps, omc_unbox_integer(_nodeIdx));
 
           tmpMeta26 = MMC_REFSTRUCTLIT(mmc_nil);
-          _inComps = arrayUpdate(_inComps, mmc_unbox_integer(_nodeIdx), tmpMeta26);
+          _inComps = arrayUpdate(_inComps, omc_unbox_integer(_nodeIdx), tmpMeta26);
 
           _headCompIdc = omc_List_insertListSorted(threadData, _headCompIdc, _nodeCompIdc, boxvar_intLt);
         }
@@ -10867,7 +10733,7 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
         for (tmpMeta28 = _parentNodes; !listEmpty(tmpMeta28); tmpMeta28=MMC_CDR(tmpMeta28))
         {
           _nodeIdx = MMC_CAR(tmpMeta28);
-          if((mmc_unbox_integer(arrayGet(_nodeMarksT, mmc_unbox_integer(_nodeIdx))) != _nodeListHeadIdx))
+          if((omc_unbox_integer(arrayGet(_nodeMarksT, omc_unbox_integer(_nodeIdx))) != _nodeListHeadIdx))
           {
             tmpMeta29 = mmc_mk_cons(_nodeIdx, _incomingEdges);
             _incomingEdges = tmpMeta29;
@@ -10882,7 +10748,7 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
         for (tmpMeta31 = _childNodes; !listEmpty(tmpMeta31); tmpMeta31=MMC_CDR(tmpMeta31))
         {
           _nodeIdx = MMC_CAR(tmpMeta31);
-          _parentNodeChildList = arrayGet(_tmpTaskGraphT, mmc_unbox_integer(_nodeIdx));
+          _parentNodeChildList = arrayGet(_tmpTaskGraphT, omc_unbox_integer(_nodeIdx));
 
           tmpMeta32 = MMC_REFSTRUCTLIT(mmc_nil);
           _parentNodeChildListNew = tmpMeta32;
@@ -10892,18 +10758,18 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
             for (tmpMeta33 = _parentNodeChildList; !listEmpty(tmpMeta33); tmpMeta33=MMC_CDR(tmpMeta33))
             {
               _parentChild = MMC_CAR(tmpMeta33);
-              _parentChildContractionValue = mmc_unbox_integer(arrayGet(_tmpContractedTasks, mmc_unbox_integer(_parentChild)));
+              _parentChildContractionValue = omc_unbox_integer(arrayGet(_tmpContractedTasks, omc_unbox_integer(_parentChild)));
 
-              _parentChild = mmc_mk_integer(omc_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData, mmc_unbox_integer(_parentChild), _tmpContractedTasks));
+              _parentChild = omc_mk_integer(omc_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData, omc_unbox_integer(_parentChild), _tmpContractedTasks));
 
-              if(((mmc_unbox_integer(_parentChild) == _nodeListHeadIdx) || (_parentChildContractionValue == _negNodeListHeadIdx)))
+              if(((omc_unbox_integer(_parentChild) == _nodeListHeadIdx) || (_parentChildContractionValue == _negNodeListHeadIdx)))
               {
-                if((mmc_unbox_integer(arrayGet(_nodeMarksT, mmc_unbox_integer(_parentChild))) != mmc_unbox_integer(_nodeIdx)))
+                if((omc_unbox_integer(arrayGet(_nodeMarksT, omc_unbox_integer(_parentChild))) != omc_unbox_integer(_nodeIdx)))
                 {
-                  tmpMeta34 = mmc_mk_cons(mmc_mk_integer(_nodeListHeadIdx), _parentNodeChildListNew);
+                  tmpMeta34 = mmc_mk_cons(omc_mk_integer(_nodeListHeadIdx), _parentNodeChildListNew);
                   _parentNodeChildListNew = tmpMeta34;
 
-                  arrayUpdate(_nodeMarksT, mmc_unbox_integer(_parentChild), _nodeIdx);
+                  arrayUpdate(_nodeMarksT, omc_unbox_integer(_parentChild), _nodeIdx);
                 }
               }
               else
@@ -10914,20 +10780,20 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
             }
           }
 
-          _tmpTaskGraphT = arrayUpdate(_tmpTaskGraphT, mmc_unbox_integer(_nodeIdx), _parentNodeChildListNew);
+          _tmpTaskGraphT = arrayUpdate(_tmpTaskGraphT, omc_unbox_integer(_nodeIdx), _parentNodeChildListNew);
         }
       }
 
       _outgoingEdges = listAppend(_outgoingEdges, _childNodes);
 
-      _nodeMarks = arrayUpdate(_nodeMarks, _nodeListHeadIdx, mmc_mk_integer(((modelica_integer) 0)));
+      _nodeMarks = arrayUpdate(_nodeMarks, _nodeListHeadIdx, omc_mk_integer(((modelica_integer) 0)));
 
       {
         modelica_metatype _nodeIdx;
         for (tmpMeta38 = _parentNodes; !listEmpty(tmpMeta38); tmpMeta38=MMC_CDR(tmpMeta38))
         {
           _nodeIdx = MMC_CAR(tmpMeta38);
-          _parentNodeChildList = arrayGet(_tmpTaskGraph, mmc_unbox_integer(_nodeIdx));
+          _parentNodeChildList = arrayGet(_tmpTaskGraph, omc_unbox_integer(_nodeIdx));
 
           tmpMeta39 = MMC_REFSTRUCTLIT(mmc_nil);
           _parentNodeChildListNew = tmpMeta39;
@@ -10937,18 +10803,18 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
             for (tmpMeta40 = _parentNodeChildList; !listEmpty(tmpMeta40); tmpMeta40=MMC_CDR(tmpMeta40))
             {
               _parentChild = MMC_CAR(tmpMeta40);
-              _parentChildContractionValue = mmc_unbox_integer(arrayGet(_tmpContractedTasks, mmc_unbox_integer(_parentChild)));
+              _parentChildContractionValue = omc_unbox_integer(arrayGet(_tmpContractedTasks, omc_unbox_integer(_parentChild)));
 
-              _parentChild = mmc_mk_integer(omc_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData, mmc_unbox_integer(_parentChild), _tmpContractedTasks));
+              _parentChild = omc_mk_integer(omc_HpcOmTaskGraph_getRealTaskIdxOfTask(threadData, omc_unbox_integer(_parentChild), _tmpContractedTasks));
 
-              if(((mmc_unbox_integer(_parentChild) == _nodeListHeadIdx) || (_parentChildContractionValue == _negNodeListHeadIdx)))
+              if(((omc_unbox_integer(_parentChild) == _nodeListHeadIdx) || (_parentChildContractionValue == _negNodeListHeadIdx)))
               {
-                if((mmc_unbox_integer(arrayGet(_nodeMarks, mmc_unbox_integer(_parentChild))) != mmc_unbox_integer(_nodeIdx)))
+                if((omc_unbox_integer(arrayGet(_nodeMarks, omc_unbox_integer(_parentChild))) != omc_unbox_integer(_nodeIdx)))
                 {
-                  tmpMeta41 = mmc_mk_cons(mmc_mk_integer(_nodeListHeadIdx), _parentNodeChildListNew);
+                  tmpMeta41 = mmc_mk_cons(omc_mk_integer(_nodeListHeadIdx), _parentNodeChildListNew);
                   _parentNodeChildListNew = tmpMeta41;
 
-                  arrayUpdate(_nodeMarks, mmc_unbox_integer(_parentChild), _nodeIdx);
+                  arrayUpdate(_nodeMarks, omc_unbox_integer(_parentChild), _nodeIdx);
                 }
               }
               else
@@ -10959,7 +10825,7 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
             }
           }
 
-          _tmpTaskGraph = arrayUpdate(_tmpTaskGraph, mmc_unbox_integer(_nodeIdx), _parentNodeChildListNew);
+          _tmpTaskGraph = arrayUpdate(_tmpTaskGraph, omc_unbox_integer(_nodeIdx), _parentNodeChildListNew);
         }
       }
 
@@ -10978,7 +10844,8 @@ modelica_metatype omc_HpcOmTaskGraph_contractNodesInGraph(threadData_t *threadDa
   if (out_oTaskGraphT) { *out_oTaskGraphT = _oTaskGraphT; }
   if (out_oTaskGraphMeta) { *out_oTaskGraphMeta = _oTaskGraphMeta; }
   if (out_oContractedTasks) { *out_oContractedTasks = _oContractedTasks; }
-  return _oTaskGraph;
+  omc_ret_ = _oTaskGraph;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestExecCost(threadData_t *threadData, modelica_metatype _iExecCosts, modelica_metatype _iHighestTuple)
@@ -10989,24 +10856,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestExecCos
   modelica_metatype _head = NULL;
   modelica_metatype _rest = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oHighestTuple has no default value.
   // _highestCost has no default value.
   // _currentCost has no default value.
   // _head has no default value.
   // _rest has no default value.
-  { /* matchcontinue expression */
-    volatile modelica_metatype tmp4_1;volatile modelica_metatype tmp4_2;
+  { /* match expression */
+    modelica_metatype tmp4_1;modelica_metatype tmp4_2;
     tmp4_1 = _iExecCosts;
     tmp4_2 = _iHighestTuple;
     {
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
-      tmp3_top:
-      threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
@@ -11016,49 +10881,40 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestExecCos
           modelica_real tmp9;
           modelica_metatype tmpMeta10;
           modelica_real tmp11;
-          modelica_boolean tmp12;
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          tmp9 = mmc_unbox_real(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp11 = mmc_unbox_real(tmpMeta10);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 2);
+          tmp9 = omc_unbox_real(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp11 = omc_unbox_real(tmpMeta10);
           _head = tmpMeta6;
           _currentCost = tmp9  /* pattern as ty=Real */;
           _rest = tmpMeta7;
           _highestCost = tmp11  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp12 = (_currentCost > _highestCost);
-          if (1 /* true */ != tmp12) goto goto_2;
-          tmpMeta1 = omc_HpcOmTaskGraph_getHighestExecCost(threadData, _rest, _head);
+          /* Check guard condition after assignments */
+          if (!(_currentCost > _highestCost)) goto tmp3_end;
+          /* Tail recursive call */
+          _iExecCosts = _rest;
+          _iHighestTuple = _head;
+          goto _tailrecursive;
+          /* TODO: Make sure any eventual dead code below is never generated */
           goto tmp3_done;
         }
         case 1: {
+          modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_real tmp16;
-          modelica_metatype tmpMeta17;
-          modelica_real tmp18;
-          modelica_boolean tmp19;
           if (listEmpty(tmp4_1)) goto tmp3_end;
-          tmpMeta13 = MMC_CAR(tmp4_1);
-          tmpMeta14 = MMC_CDR(tmp4_1);
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 2));
-          tmp16 = mmc_unbox_real(tmpMeta15);
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp18 = mmc_unbox_real(tmpMeta17);
-          _head = tmpMeta13;
-          _currentCost = tmp16  /* pattern as ty=Real */;
-          _rest = tmpMeta14;
-          _highestCost = tmp18  /* pattern as ty=Real */;
+          tmpMeta12 = MMC_CAR(tmp4_1);
+          tmpMeta13 = MMC_CDR(tmp4_1);
+          
+          _rest = tmpMeta13;
           /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp19 = (_currentCost > _highestCost);
-          if (1 /* true */ != tmp19) goto goto_2;
-          tmpMeta1 = omc_HpcOmTaskGraph_getHighestExecCost(threadData, _rest, _iHighestTuple);
+          /* Tail recursive call */
+          _iExecCosts = _rest;
+          goto _tailrecursive;
+          /* TODO: Make sure any eventual dead code below is never generated */
           goto tmp3_done;
         }
         case 2: {
@@ -11072,25 +10928,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getHighestExecCos
         tmp3_end: ;
       }
       goto goto_2;
-      tmp3_done:
-      (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
-      goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
-      if (++tmp4 < 3) {
-        goto tmp3_top;
-      }
-      MMC_THROW_INTERNAL();
-      tmp3_done2:;
+      OMC_THROW_INTERNAL();
+      goto tmp3_done;
+      tmp3_done:;
     }
   }
   _oHighestTuple = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oHighestTuple;
+  omc_ret_ = _oHighestTuple;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getExeCost(threadData_t *threadData, modelica_integer _iNodeIdx, modelica_metatype _iGraphData)
 {
   modelica_metatype _oExeCost = NULL;
@@ -11113,7 +10963,8 @@ modelica_metatype omc_HpcOmTaskGraph_getExeCost(threadData_t *threadData, modeli
   modelica_real tmp9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oExeCost has no default value.
   // _comp has no default value.
@@ -11126,8 +10977,8 @@ modelica_metatype omc_HpcOmTaskGraph_getExeCost(threadData_t *threadData, modeli
   // _exeCosts has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iGraphData;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 8);
   _inComps = tmpMeta2;
   _exeCosts = tmpMeta3;
 
@@ -11143,11 +10994,11 @@ modelica_metatype omc_HpcOmTaskGraph_getExeCost(threadData_t *threadData, modeli
     {
       _comp = MMC_CAR(tmpMeta4);
       /* Pattern-matching assignment */
-      tmpMeta5 = arrayGet(_exeCosts, mmc_unbox_integer(_comp));
-      tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 1));
-      tmp7 = mmc_unbox_integer(tmpMeta6);
-      tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
-      tmp9 = mmc_unbox_real(tmpMeta8);
+      tmpMeta5 = arrayGet(_exeCosts, omc_unbox_integer(_comp));
+      tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 1);
+      tmp7 = omc_unbox_integer(tmpMeta6);
+      tmpMeta8 = OMC_BOX_FIELD(tmpMeta5, 2);
+      tmp9 = omc_unbox_real(tmpMeta8);
       _opCount1 = tmp7  /* pattern as ty=Integer */;
       _exeCost1 = tmp9  /* pattern as ty=Real */;
 
@@ -11157,46 +11008,43 @@ modelica_metatype omc_HpcOmTaskGraph_getExeCost(threadData_t *threadData, modeli
     }
   }
 
-  tmpMeta11 = mmc_mk_box2(0, mmc_mk_integer(_opCount), mmc_mk_real(_exeCost));
+  tmpMeta11 = omc_mk_box2(0, omc_mk_integer(_opCount), omc_mk_real(_exeCost));
   _oExeCost = tmpMeta11;
   _return: OMC_LABEL_UNUSED
-  return _oExeCost;
+  omc_ret_ = _oExeCost;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getExeCost(threadData_t *threadData, modelica_metatype _iNodeIdx, modelica_metatype _iGraphData)
 {
   modelica_integer tmp1;
   modelica_metatype _oExeCost = NULL;
-  tmp1 = mmc_unbox_integer(_iNodeIdx);
+  tmp1 = omc_unbox_integer(_iNodeIdx);
   _oExeCost = omc_HpcOmTaskGraph_getExeCost(threadData, tmp1, _iGraphData);
   /* skip box _oExeCost; tuple<#Integer, #Real> */
   return _oExeCost;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_real omc_HpcOmTaskGraph_getExeCostReqCycles(threadData_t *threadData, modelica_integer _iNodeIdx, modelica_metatype _iGraphData)
 {
   modelica_real _oExeCost;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_real omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oExeCost has no default value.
-  _oExeCost = mmc_unbox_real(omc_Util_tuple22(threadData, omc_HpcOmTaskGraph_getExeCost(threadData, _iNodeIdx, _iGraphData)));
+  _oExeCost = omc_unbox_real(omc_Util_tuple22(threadData, omc_HpcOmTaskGraph_getExeCost(threadData, _iNodeIdx, _iGraphData)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oExeCost;
+  omc_ret_ = _oExeCost;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getExeCostReqCycles(threadData_t *threadData, modelica_metatype _iNodeIdx, modelica_metatype _iGraphData)
 {
   modelica_integer tmp1;
   modelica_real _oExeCost;
   modelica_metatype out_oExeCost;
-  tmp1 = mmc_unbox_integer(_iNodeIdx);
+  tmp1 = omc_unbox_integer(_iNodeIdx);
   _oExeCost = omc_HpcOmTaskGraph_getExeCostReqCycles(threadData, tmp1, _iGraphData);
-  out_oExeCost = mmc_mk_rcon(_oExeCost);
+  out_oExeCost = omc_mk_rcon(_oExeCost);
   return out_oExeCost;
 }
 
@@ -11218,7 +11066,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addUpExeCosts(thr
   modelica_metatype tmpMeta9;
   modelica_real tmp10;
   modelica_metatype tmpMeta11;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oExeCost has no default value.
   // _ex1 has no default value.
@@ -11227,26 +11076,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addUpExeCosts(thr
   // _op2 has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iExeCost1;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_real(tmpMeta4);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_real(tmpMeta4);
   _op1 = tmp3  /* pattern as ty=Integer */;
   _ex1 = tmp5  /* pattern as ty=Real */;
 
   /* Pattern-matching assignment */
   tmpMeta6 = _iExeCost2;
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-  tmp8 = mmc_unbox_integer(tmpMeta7);
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-  tmp10 = mmc_unbox_real(tmpMeta9);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+  tmp8 = omc_unbox_integer(tmpMeta7);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta6, 2);
+  tmp10 = omc_unbox_real(tmpMeta9);
   _op2 = tmp8  /* pattern as ty=Integer */;
   _ex2 = tmp10  /* pattern as ty=Real */;
 
-  tmpMeta11 = mmc_mk_box2(0, mmc_mk_integer(_op1 + _op2), mmc_mk_real(_ex1 + _ex2));
+  tmpMeta11 = omc_mk_box2(0, omc_mk_integer(_op1 + _op2), omc_mk_real(_ex1 + _ex2));
   _oExeCost = tmpMeta11;
   _return: OMC_LABEL_UNUSED
-  return _oExeCost;
+  omc_ret_ = _oExeCost;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_combineComponentInformations(threadData_t *threadData, modelica_metatype _iComponentInfo, modelica_metatype _iComponentInfo2)
@@ -11273,7 +11123,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_combineComponentI
   modelica_metatype tmpMeta13;
   modelica_integer tmp14;
   modelica_metatype tmpMeta15;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oComponentInfo has no default value.
   // _isPartOfODESystem has no default value.
@@ -11284,35 +11135,36 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_combineComponentI
   // _iIsRemovedComponent has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iComponentInfo;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmp7 = mmc_unbox_integer(tmpMeta6);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmp7 = omc_unbox_integer(tmpMeta6);
   _isPartOfODESystem = tmp3  /* pattern as ty=Boolean */;
   _isPartOfZeroFuncSystem = tmp5  /* pattern as ty=Boolean */;
   _isRemovedComponent = tmp7  /* pattern as ty=Boolean */;
 
   /* Pattern-matching assignment */
   tmpMeta8 = _iComponentInfo2;
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
-  tmp10 = mmc_unbox_integer(tmpMeta9);
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 3));
-  tmp12 = mmc_unbox_integer(tmpMeta11);
-  tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 4));
-  tmp14 = mmc_unbox_integer(tmpMeta13);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 2);
+  tmp10 = omc_unbox_integer(tmpMeta9);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta8, 3);
+  tmp12 = omc_unbox_integer(tmpMeta11);
+  tmpMeta13 = OMC_BOX_FIELD(tmpMeta8, 4);
+  tmp14 = omc_unbox_integer(tmpMeta13);
   _iIsPartOfODESystem = tmp10  /* pattern as ty=Boolean */;
   _iisPartOfZeroFuncSystem = tmp12  /* pattern as ty=Boolean */;
   _iIsRemovedComponent = tmp14  /* pattern as ty=Boolean */;
 
-  tmpMeta15 = mmc_mk_box4(3, &HpcOmTaskGraph_ComponentInfo_COMPONENTINFO__desc, mmc_mk_boolean((_isPartOfODESystem || _iIsPartOfODESystem)), mmc_mk_boolean((_isPartOfZeroFuncSystem || _iisPartOfZeroFuncSystem)), mmc_mk_boolean((_isRemovedComponent || _iIsRemovedComponent)));
+  tmpMeta15 = omc_mk_box4(3, &HpcOmTaskGraph_ComponentInfo_COMPONENTINFO__desc, omc_mk_boolean((_isPartOfODESystem || _iIsPartOfODESystem)), omc_mk_boolean((_isPartOfZeroFuncSystem || _iisPartOfZeroFuncSystem)), omc_mk_boolean((_isRemovedComponent || _iIsRemovedComponent)));
   _oComponentInfo = tmpMeta15;
   _return: OMC_LABEL_UNUSED
-  return _oComponentInfo;
+  omc_ret_ = _oComponentInfo;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_markSystemComponents(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iComponentMarks, modelica_metatype _iTargetTaskGraphMeta)
 {
   modelica_metatype _oTargetTaskGraphMeta = NULL;
@@ -11352,7 +11204,8 @@ modelica_metatype omc_HpcOmTaskGraph_markSystemComponents(threadData_t *threadDa
   modelica_integer tmp18;
   modelica_integer tmp19;
   modelica_metatype tmpMeta20;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTargetTaskGraphMeta has no default value.
   // _odeInComps has no default value.
@@ -11371,26 +11224,26 @@ modelica_metatype omc_HpcOmTaskGraph_markSystemComponents(threadData_t *threadDa
   // _compInformations has no default value.
   // _componentInformation has no default value.
   // _iComponentInformation has no default value.
-  tmpMeta1 = mmc_mk_box4(3, &HpcOmTaskGraph_ComponentInfo_COMPONENTINFO__desc, omc_Util_tuple31(threadData, _iComponentMarks), omc_Util_tuple32(threadData, _iComponentMarks), omc_Util_tuple33(threadData, _iComponentMarks));
+  tmpMeta1 = omc_mk_box4(3, &HpcOmTaskGraph_ComponentInfo_COMPONENTINFO__desc, omc_Util_tuple31(threadData, _iComponentMarks), omc_Util_tuple32(threadData, _iComponentMarks), omc_Util_tuple33(threadData, _iComponentMarks));
   _iComponentInformation = tmpMeta1;
 
   /* Pattern-matching assignment */
   tmpMeta2 = _iTaskGraphMeta;
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 2));
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta2, 2);
   _odeInComps = tmpMeta3;
 
   /* Pattern-matching assignment */
   tmpMeta4 = _iTargetTaskGraphMeta;
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 2));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 3));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 4));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 5));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 6));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 7));
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 8));
-  tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 9));
-  tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 10));
-  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 11));
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta4, 2);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta4, 3);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta4, 4);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta4, 5);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta4, 6);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta4, 7);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta4, 8);
+  tmpMeta12 = OMC_BOX_FIELD(tmpMeta4, 9);
+  tmpMeta13 = OMC_BOX_FIELD(tmpMeta4, 10);
+  tmpMeta14 = OMC_BOX_FIELD(tmpMeta4, 11);
   _inComps = tmpMeta5;
   _varCompMapping = tmpMeta6;
   _eqCompMapping = tmpMeta7;
@@ -11416,18 +11269,19 @@ modelica_metatype omc_HpcOmTaskGraph_markSystemComponents(threadData_t *threadDa
         for (tmpMeta15 = _nodeComps; !listEmpty(tmpMeta15); tmpMeta15=MMC_CDR(tmpMeta15))
         {
           _compIdx = MMC_CAR(tmpMeta15);
-          _componentInformation = omc_HpcOmTaskGraph_combineComponentInformations(threadData, arrayGet(_compInformations, mmc_unbox_integer(_compIdx)), _iComponentInformation);
+          _componentInformation = omc_HpcOmTaskGraph_combineComponentInformations(threadData, arrayGet(_compInformations, omc_unbox_integer(_compIdx)), _iComponentInformation);
 
-          _compInformations = arrayUpdate(_compInformations, mmc_unbox_integer(_compIdx), _componentInformation);
+          _compInformations = arrayUpdate(_compInformations, omc_unbox_integer(_compIdx), _componentInformation);
         }
       }
     }
   }
 
-  tmpMeta20 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
+  tmpMeta20 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
   _oTargetTaskGraphMeta = tmpMeta20;
   _return: OMC_LABEL_UNUSED
-  return _oTargetTaskGraphMeta;
+  omc_ret_ = _oTargetTaskGraphMeta;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeSinkNodes(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphTIn, modelica_metatype _graphDataIn, modelica_metatype _contractedTasksIn, modelica_metatype *out_graphTOut, modelica_metatype *out_graphDataOut, modelica_metatype *out_contractedTasksOut, modelica_boolean *out_changed)
@@ -11440,7 +11294,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeSinkNodes(th
   modelica_metatype _alreadyMerged = NULL;
   modelica_metatype _mergedNodes = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _graphTOut has no default value.
@@ -11449,7 +11304,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeSinkNodes(th
   // _changed has no default value.
   // _alreadyMerged has no default value.
   // _mergedNodes has no default value.
-  _alreadyMerged = arrayCreate(arrayLength(_graphIn), mmc_mk_integer(((modelica_integer) 0)));
+  _alreadyMerged = arrayCreate(arrayLength(_graphIn), omc_mk_integer(((modelica_integer) 0)));
 
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _mergedNodes = omc_HpcOmTaskGraph_mergeParentNodes0(threadData, _graphIn, _graphTIn, _graphDataIn, _contractedTasksIn, _alreadyMerged, ((modelica_integer) 1), tmpMeta1);
@@ -11462,7 +11317,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeSinkNodes(th
   if (out_graphDataOut) { *out_graphDataOut = _graphDataOut; }
   if (out_contractedTasksOut) { *out_contractedTasksOut = _contractedTasksOut; }
   if (out_changed) { *out_changed = _changed; }
-  return _graphOut;
+  omc_ret_ = _graphOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_mergeSinkNodes(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphTIn, modelica_metatype _graphDataIn, modelica_metatype _contractedTasksIn, modelica_metatype *out_graphTOut, modelica_metatype *out_graphDataOut, modelica_metatype *out_contractedTasksOut, modelica_metatype *out_changed)
 {
@@ -11473,14 +11329,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_mergeSinkNodes
   /* skip box _graphTOut; array<list<#Integer>> */
   /* skip box _graphDataOut; HpcOmTaskGraph.TaskGraphMeta */
   /* skip box _contractedTasksOut; array<#Integer> */
-  if (out_changed) { *out_changed = mmc_mk_icon(_changed); }
+  if (out_changed) { *out_changed = omc_mk_icon(_changed); }
   return _graphOut;
 }
 
 static void closure17_Array_updateIndexFirst(threadData_t *thData, modelica_metatype closure, modelica_metatype inIndex)
 {
-  modelica_metatype inValue = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype inArray = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
+  modelica_metatype inValue = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype inArray = OMC_BOX_FIELD(closure, 2);
   boxptr_Array_updateIndexFirst(thData, inIndex, inValue, inArray);
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphT, modelica_metatype _iGraphData, modelica_metatype _contractedTasksIn, modelica_metatype _alreadyMerged, modelica_integer _iNodeIdx, modelica_metatype _iMergedNodes)
@@ -11498,7 +11354,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0
   modelica_metatype _parentChilds = NULL;
   modelica_metatype _tmpMergedNodes = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMergedNodes has no default value.
   // _highestParentExeCost has no default value.
@@ -11519,7 +11376,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -11545,8 +11402,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0
           modelica_metatype tmpMeta23;
           modelica_metatype tmpMeta24;
           modelica_metatype tmpMeta25;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 8));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 9));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 8);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 9);
           
           _exeCosts = tmpMeta6;
           _commCosts = tmpMeta7;
@@ -11556,11 +11413,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0
           if (1 /* true */ != tmp8) goto goto_2;
 
           /* Pattern-matching assignment */
-          tmp9 = (mmc_unbox_integer(arrayGet(_contractedTasksIn, _iNodeIdx)) != ((modelica_integer) -1));
+          tmp9 = (omc_unbox_integer(arrayGet(_contractedTasksIn, _iNodeIdx)) != ((modelica_integer) -1));
           if (1 /* true */ != tmp9) goto goto_2;
 
           /* Pattern-matching assignment */
-          tmp10 = (mmc_unbox_integer(arrayGet(_alreadyMerged, _iNodeIdx)) != ((modelica_integer) -1));
+          tmp10 = (omc_unbox_integer(arrayGet(_alreadyMerged, _iNodeIdx)) != ((modelica_integer) -1));
           if (1 /* true */ != tmp10) goto goto_2;
 
           _parentNodes = arrayGet(_iGraphT, _iNodeIdx);
@@ -11571,26 +11428,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0
           tmp11 = omc_List_exist1(threadData, _parentNodes, boxvar_HpcOmTaskGraph_isNodeContracted, _alreadyMerged);
           if (0 /* false */ != tmp11) goto goto_2;
 
-          _parentCommCosts = omc_List_map2(threadData, _parentNodes, boxvar_HpcOmTaskGraph_getCommCostBetweenNodes, mmc_mk_integer(_iNodeIdx), _iGraphData);
+          _parentCommCosts = omc_List_map2(threadData, _parentNodes, boxvar_HpcOmTaskGraph_getCommCostBetweenNodes, omc_mk_integer(_iNodeIdx), _iGraphData);
 
           /* Pattern-matching assignment */
           tmpMeta12 = omc_HpcOmTaskGraph_getHighestCommCost(threadData, _parentCommCosts, _OMC_LIT44);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 8));
-          tmp14 = mmc_unbox_real(tmpMeta13);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 8);
+          tmp14 = omc_unbox_real(tmpMeta13);
           _highestCommCost = tmp14  /* pattern as ty=Real */;
 
           _parentExeCosts = omc_List_map1(threadData, _parentNodes, boxvar_HpcOmTaskGraph_getExeCost, _iGraphData);
 
           /* Pattern-matching assignment */
           tmpMeta15 = omc_List_fold(threadData, _parentExeCosts, boxvar_HpcOmTaskGraph_addUpExeCosts, _OMC_LIT42);
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 2));
-          tmp17 = mmc_unbox_real(tmpMeta16);
+          tmpMeta16 = OMC_BOX_FIELD(tmpMeta15, 2);
+          tmp17 = omc_unbox_real(tmpMeta16);
           _sumParentExeCosts = tmp17  /* pattern as ty=Real */;
 
           /* Pattern-matching assignment */
           tmpMeta18 = omc_HpcOmTaskGraph_getHighestExecCost(threadData, _parentExeCosts, _OMC_LIT42);
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta18), 2));
-          tmp20 = mmc_unbox_real(tmpMeta19);
+          tmpMeta19 = OMC_BOX_FIELD(tmpMeta18, 2);
+          tmp20 = omc_unbox_real(tmpMeta19);
           _highestParentExeCost = tmp20  /* pattern as ty=Real */;
 
           /* Pattern-matching assignment */
@@ -11600,17 +11457,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0
           _parentChilds = omc_List_map1(threadData, _parentNodes, boxvar_Array_getIndexFirst, _iGraph);
 
           /* Pattern-matching assignment */
-          tmp22 = listEmpty(omc_List_removeOnTrue(threadData, mmc_mk_integer(((modelica_integer) 1)), boxvar_intEq, omc_List_map(threadData, _parentChilds, boxvar_listLength)));
+          tmp22 = listEmpty(omc_List_removeOnTrue(threadData, omc_mk_integer(((modelica_integer) 1)), boxvar_intEq, omc_List_map(threadData, _parentChilds, boxvar_listLength)));
           if (1 /* true */ != tmp22) goto goto_2;
 
-          tmpMeta23 = mmc_mk_cons(mmc_mk_integer(_iNodeIdx), _parentNodes);
+          tmpMeta23 = mmc_mk_cons(omc_mk_integer(_iNodeIdx), _parentNodes);
           _mergeNodeList = tmpMeta23;
 
           tmpMeta24 = mmc_mk_cons(_mergeNodeList, _iMergedNodes);
           _tmpMergedNodes = tmpMeta24;
 
-          tmpMeta25 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) -1)), _alreadyMerged);
-          omc_List_map__0(threadData, _mergeNodeList, (modelica_fnptr) mmc_mk_box2(0,closure17_Array_updateIndexFirst,tmpMeta25));
+          tmpMeta25 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) -1)), _alreadyMerged);
+          omc_List_map__0(threadData, _mergeNodeList, (modelica_fnptr) omc_mk_box2(0,closure17_Array_updateIndexFirst,tmpMeta25));
           tmpMeta1 = omc_HpcOmTaskGraph_mergeParentNodes0(threadData, _iGraph, _iGraphT, _iGraphData, _contractedTasksIn, _alreadyMerged, ((modelica_integer) 1) + _iNodeIdx, _tmpMergedNodes);
           goto tmp3_done;
         }
@@ -11637,32 +11494,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes0
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oMergedNodes = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oMergedNodes;
+  omc_ret_ = _oMergedNodes;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_mergeParentNodes0(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphT, modelica_metatype _iGraphData, modelica_metatype _contractedTasksIn, modelica_metatype _alreadyMerged, modelica_metatype _iNodeIdx, modelica_metatype _iMergedNodes)
 {
   modelica_integer tmp1;
   modelica_metatype _oMergedNodes = NULL;
-  tmp1 = mmc_unbox_integer(_iNodeIdx);
+  tmp1 = omc_unbox_integer(_iNodeIdx);
   _oMergedNodes = omc_HpcOmTaskGraph_mergeParentNodes0(threadData, _iGraph, _iGraphT, _iGraphData, _contractedTasksIn, _alreadyMerged, tmp1, _iMergedNodes);
   /* skip box _oMergedNodes; list<list<#Integer>> */
   return _oMergedNodes;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphTIn, modelica_metatype _graphDataIn, modelica_metatype _contractedTasksIn, modelica_metatype *out_graphTOut, modelica_metatype *out_graphDataOut, modelica_metatype *out_contractedTasksOut, modelica_boolean *out_changed)
 {
   modelica_metatype _graphOut = NULL;
@@ -11673,7 +11531,8 @@ modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes(threadData_t *threadData, 
   modelica_metatype _alreadyMerged = NULL;
   modelica_metatype _mergedNodes = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _graphTOut has no default value.
@@ -11682,7 +11541,7 @@ modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes(threadData_t *threadData, 
   // _changed has no default value.
   // _alreadyMerged has no default value.
   // _mergedNodes has no default value.
-  _alreadyMerged = arrayCreate(arrayLength(_graphIn), mmc_mk_integer(((modelica_integer) 0)));
+  _alreadyMerged = arrayCreate(arrayLength(_graphIn), omc_mk_integer(((modelica_integer) 0)));
 
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _mergedNodes = omc_HpcOmTaskGraph_mergeParentNodes0(threadData, _graphIn, _graphTIn, _graphDataIn, _contractedTasksIn, _alreadyMerged, ((modelica_integer) 1), tmpMeta1);
@@ -11695,7 +11554,8 @@ modelica_metatype omc_HpcOmTaskGraph_mergeParentNodes(threadData_t *threadData, 
   if (out_graphDataOut) { *out_graphDataOut = _graphDataOut; }
   if (out_contractedTasksOut) { *out_contractedTasksOut = _contractedTasksOut; }
   if (out_changed) { *out_changed = _changed; }
-  return _graphOut;
+  omc_ret_ = _graphOut;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_mergeParentNodes(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphTIn, modelica_metatype _graphDataIn, modelica_metatype _contractedTasksIn, modelica_metatype *out_graphTOut, modelica_metatype *out_graphDataOut, modelica_metatype *out_contractedTasksOut, modelica_metatype *out_changed)
 {
@@ -11706,11 +11566,11 @@ modelica_metatype boxptr_HpcOmTaskGraph_mergeParentNodes(threadData_t *threadDat
   /* skip box _graphTOut; array<list<#Integer>> */
   /* skip box _graphDataOut; HpcOmTaskGraph.TaskGraphMeta */
   /* skip box _contractedTasksOut; array<#Integer> */
-  if (out_changed) { *out_changed = mmc_mk_icon(_changed); }
+  if (out_changed) { *out_changed = omc_mk_icon(_changed); }
   return _graphOut;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_mergeSimpleNodes(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphTIn, modelica_metatype _graphDataIn, modelica_metatype _contractedTasksIn, modelica_metatype *out_graphTOut, modelica_metatype *out_graphDataOut, modelica_metatype *out_contractedTasksOut, modelica_boolean *out_changed)
 {
   modelica_metatype _graphOut = NULL;
@@ -11721,7 +11581,8 @@ modelica_metatype omc_HpcOmTaskGraph_mergeSimpleNodes(threadData_t *threadData, 
   modelica_metatype _allNodes = NULL;
   modelica_metatype _oneChildren = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _graphTOut has no default value.
@@ -11737,7 +11598,7 @@ modelica_metatype omc_HpcOmTaskGraph_mergeSimpleNodes(threadData_t *threadData, 
 
   _oneChildren = listDelete(_oneChildren, listLength(_oneChildren));
 
-  _oneChildren = omc_List_removeOnTrue(threadData, mmc_mk_integer(((modelica_integer) 1)), boxvar_HpcOmTaskGraph_compareListLengthOnTrue, _oneChildren);
+  _oneChildren = omc_List_removeOnTrue(threadData, omc_mk_integer(((modelica_integer) 1)), boxvar_HpcOmTaskGraph_compareListLengthOnTrue, _oneChildren);
 
   _graphOut = omc_HpcOmTaskGraph_contractNodesInGraph(threadData, _oneChildren, _graphIn, _graphTIn, _graphDataIn, _contractedTasksIn ,&_graphTOut ,&_graphDataOut ,&_contractedTasksOut);
 
@@ -11747,7 +11608,8 @@ modelica_metatype omc_HpcOmTaskGraph_mergeSimpleNodes(threadData_t *threadData, 
   if (out_graphDataOut) { *out_graphDataOut = _graphDataOut; }
   if (out_contractedTasksOut) { *out_contractedTasksOut = _contractedTasksOut; }
   if (out_changed) { *out_changed = _changed; }
-  return _graphOut;
+  omc_ret_ = _graphOut;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_mergeSimpleNodes(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphTIn, modelica_metatype _graphDataIn, modelica_metatype _contractedTasksIn, modelica_metatype *out_graphTOut, modelica_metatype *out_graphDataOut, modelica_metatype *out_contractedTasksOut, modelica_metatype *out_changed)
 {
@@ -11758,242 +11620,96 @@ modelica_metatype boxptr_HpcOmTaskGraph_mergeSimpleNodes(threadData_t *threadDat
   /* skip box _graphTOut; array<list<#Integer>> */
   /* skip box _graphDataOut; HpcOmTaskGraph.TaskGraphMeta */
   /* skip box _contractedTasksOut; array<#Integer> */
-  if (out_changed) { *out_changed = mmc_mk_icon(_changed); }
+  if (out_changed) { *out_changed = omc_mk_icon(_changed); }
   return _graphOut;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf2__impl(threadData_t *threadData, modelica_real _n, modelica_integer _pow)
 {
   modelica_integer _powOf2;
-  modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_real _p;
+  modelica_real tmp1;
+  modelica_real tmp2;
+  modelica_real tmp3;
+  modelica_real tmp4;
+  modelica_real tmp5;
+  modelica_real tmp6;
+  modelica_real tmp7;
+  modelica_boolean tmp8;
+  modelica_integer tmp9;
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _powOf2 has no default value.
-  { /* matchcontinue expression */
+  // _p has no default value.
+  tmp1 = 2.0;
+  tmp2 = ((modelica_real)_pow);
+  if(tmp1 < 0.0 && tmp2 != 0.0)
+  {
+    tmp4 = modf(tmp2, &tmp5);
+    
+    if(tmp4 > 0.5)
     {
-      volatile mmc_switch_type tmp4;
-      int tmp5;
-      tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
-      tmp3_top:
-      threadData->mmc_jumper = &new_mmc_jumper;
-      for (; tmp4 < 2; tmp4++) {
-        switch (MMC_SWITCH_CAST(tmp4)) {
-        case 0: {
-          modelica_real tmp6;
-          modelica_real tmp7;
-          modelica_real tmp8;
-          modelica_real tmp9;
-          modelica_real tmp10;
-          modelica_real tmp11;
-          modelica_real tmp12;
-          modelica_boolean tmp13;
-          modelica_real tmp14;
-          modelica_real tmp15;
-          modelica_real tmp16;
-          modelica_real tmp17;
-          modelica_real tmp18;
-          modelica_real tmp19;
-          modelica_real tmp20;
-          /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp6 = 2.0;
-          tmp7 = ((modelica_real)_pow);
-          if(tmp6 < 0.0 && tmp7 != 0.0)
-          {
-            tmp9 = modf(tmp7, &tmp10);
-            
-            if(tmp9 > 0.5)
-            {
-              tmp9 -= 1.0;
-              tmp10 += 1.0;
-            }
-            else if(tmp9 < -0.5)
-            {
-              tmp9 += 1.0;
-              tmp10 -= 1.0;
-            }
-            
-            if(fabs(tmp9) < 1e-10)
-              tmp8 = pow(tmp6, tmp10);
-            else
-            {
-              tmp12 = modf(1.0/tmp7, &tmp11);
-              if(tmp12 > 0.5)
-              {
-                tmp12 -= 1.0;
-                tmp11 += 1.0;
-              }
-              else if(tmp12 < -0.5)
-              {
-                tmp12 += 1.0;
-                tmp11 -= 1.0;
-              }
-              if(fabs(tmp12) < 1e-10 && ((unsigned long)tmp11 & 1))
-              {
-                tmp8 = -pow(-tmp6, tmp9)*pow(tmp6, tmp10);
-              }
-              else
-              {
-                goto goto_2;
-              }
-            }
-          }
-          else
-          {
-            tmp8 = pow(tmp6, tmp7);
-          }
-          if(isnan(tmp8) || isinf(tmp8))
-          {
-            goto goto_2;
-          }
-          tmp13 = (_n <= tmp8);
-          if (1 /* true */ != tmp13) goto goto_2;
-          tmp14 = 2.0;
-          tmp15 = ((modelica_real)_pow);
-          if(tmp14 < 0.0 && tmp15 != 0.0)
-          {
-            tmp17 = modf(tmp15, &tmp18);
-            
-            if(tmp17 > 0.5)
-            {
-              tmp17 -= 1.0;
-              tmp18 += 1.0;
-            }
-            else if(tmp17 < -0.5)
-            {
-              tmp17 += 1.0;
-              tmp18 -= 1.0;
-            }
-            
-            if(fabs(tmp17) < 1e-10)
-              tmp16 = pow(tmp14, tmp18);
-            else
-            {
-              tmp20 = modf(1.0/tmp15, &tmp19);
-              if(tmp20 > 0.5)
-              {
-                tmp20 -= 1.0;
-                tmp19 += 1.0;
-              }
-              else if(tmp20 < -0.5)
-              {
-                tmp20 += 1.0;
-                tmp19 -= 1.0;
-              }
-              if(fabs(tmp20) < 1e-10 && ((unsigned long)tmp19 & 1))
-              {
-                tmp16 = -pow(-tmp14, tmp17)*pow(tmp14, tmp18);
-              }
-              else
-              {
-                goto goto_2;
-              }
-            }
-          }
-          else
-          {
-            tmp16 = pow(tmp14, tmp15);
-          }
-          if(isnan(tmp16) || isinf(tmp16))
-          {
-            goto goto_2;
-          }tmp1 = ((modelica_integer)floor(tmp16));
-          goto tmp3_done;
-        }
-        case 1: {
-          modelica_real tmp21;
-          modelica_real tmp22;
-          modelica_real tmp23;
-          modelica_real tmp24;
-          modelica_real tmp25;
-          modelica_real tmp26;
-          modelica_real tmp27;
-          modelica_boolean tmp28;
-          /* Pattern matching succeeded */
-          /* Pattern-matching assignment */
-          tmp21 = 2.0;
-          tmp22 = ((modelica_real)_pow);
-          if(tmp21 < 0.0 && tmp22 != 0.0)
-          {
-            tmp24 = modf(tmp22, &tmp25);
-            
-            if(tmp24 > 0.5)
-            {
-              tmp24 -= 1.0;
-              tmp25 += 1.0;
-            }
-            else if(tmp24 < -0.5)
-            {
-              tmp24 += 1.0;
-              tmp25 -= 1.0;
-            }
-            
-            if(fabs(tmp24) < 1e-10)
-              tmp23 = pow(tmp21, tmp25);
-            else
-            {
-              tmp27 = modf(1.0/tmp22, &tmp26);
-              if(tmp27 > 0.5)
-              {
-                tmp27 -= 1.0;
-                tmp26 += 1.0;
-              }
-              else if(tmp27 < -0.5)
-              {
-                tmp27 += 1.0;
-                tmp26 -= 1.0;
-              }
-              if(fabs(tmp27) < 1e-10 && ((unsigned long)tmp26 & 1))
-              {
-                tmp23 = -pow(-tmp21, tmp24)*pow(tmp21, tmp25);
-              }
-              else
-              {
-                goto goto_2;
-              }
-            }
-          }
-          else
-          {
-            tmp23 = pow(tmp21, tmp22);
-          }
-          if(isnan(tmp23) || isinf(tmp23))
-          {
-            goto goto_2;
-          }
-          tmp28 = (_n > tmp23);
-          if (1 /* true */ != tmp28) goto goto_2;
-          tmp1 = omc_HpcOmTaskGraph_nextGreaterPowerOf2__impl(threadData, _n, ((modelica_integer) 1) + _pow);
-          goto tmp3_done;
-        }
-        }
-        goto tmp3_end;
-        tmp3_end: ;
+      tmp4 -= 1.0;
+      tmp5 += 1.0;
+    }
+    else if(tmp4 < -0.5)
+    {
+      tmp4 += 1.0;
+      tmp5 -= 1.0;
+    }
+    
+    if(fabs(tmp4) < 1e-10)
+      tmp3 = pow(tmp1, tmp5);
+    else
+    {
+      tmp7 = modf(1.0/tmp2, &tmp6);
+      if(tmp7 > 0.5)
+      {
+        tmp7 -= 1.0;
+        tmp6 += 1.0;
       }
-      goto goto_2;
-      tmp3_done:
-      (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
-      goto tmp3_done2;
-      goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
-      if (++tmp4 < 2) {
-        goto tmp3_top;
+      else if(tmp7 < -0.5)
+      {
+        tmp7 += 1.0;
+        tmp6 -= 1.0;
       }
-      MMC_THROW_INTERNAL();
-      tmp3_done2:;
+      if(fabs(tmp7) < 1e-10 && ((unsigned long)tmp6 & 1))
+      {
+        tmp3 = -pow(-tmp1, tmp4)*pow(tmp1, tmp5);
+      }
+      else
+      {
+        OMC_THROW_INTERNAL();
+      }
     }
   }
-  _powOf2 = tmp1;
+  else
+  {
+    tmp3 = pow(tmp1, tmp2);
+  }
+  if(isnan(tmp3) || isinf(tmp3))
+  {
+    OMC_THROW_INTERNAL();
+  }
+  _p = tmp3;
+
+  tmp8 = (modelica_boolean)(_n <= _p);
+  if(tmp8)
+  {
+    tmp9 = ((modelica_integer)floor(_p));
+  }
+  else
+  {
+    /* Tail recursive call */
+    _pow = ((modelica_integer) 1) + _pow;
+    goto _tailrecursive;
+    /* TODO: Make sure any eventual dead code below is never generated */
+  }
+  _powOf2 = tmp9;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _powOf2;
+  omc_ret_ = _powOf2;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_nextGreaterPowerOf2__impl(threadData_t *threadData, modelica_metatype _n, modelica_metatype _pow)
 {
@@ -12001,37 +11717,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_nextGreaterPow
   modelica_integer tmp2;
   modelica_integer _powOf2;
   modelica_metatype out_powOf2;
-  tmp1 = mmc_unbox_real(_n);
-  tmp2 = mmc_unbox_integer(_pow);
+  tmp1 = omc_unbox_real(_n);
+  tmp2 = omc_unbox_integer(_pow);
   _powOf2 = omc_HpcOmTaskGraph_nextGreaterPowerOf2__impl(threadData, tmp1, tmp2);
-  out_powOf2 = mmc_mk_icon(_powOf2);
+  out_powOf2 = omc_mk_icon(_powOf2);
   return out_powOf2;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_nextGreaterPowerOf2(threadData_t *threadData, modelica_real _n)
 {
   modelica_integer _powOf2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _powOf2 has no default value.
   _powOf2 = omc_HpcOmTaskGraph_nextGreaterPowerOf2__impl(threadData, _n, ((modelica_integer) 1));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _powOf2;
+  omc_ret_ = _powOf2;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_nextGreaterPowerOf2(threadData_t *threadData, modelica_metatype _n)
 {
   modelica_real tmp1;
   modelica_integer _powOf2;
   modelica_metatype out_powOf2;
-  tmp1 = mmc_unbox_real(_n);
+  tmp1 = omc_unbox_real(_n);
   _powOf2 = omc_HpcOmTaskGraph_nextGreaterPowerOf2(threadData, tmp1);
-  out_powOf2 = mmc_mk_icon(_powOf2);
+  out_powOf2 = omc_mk_icon(_powOf2);
   return out_powOf2;
 }
 
@@ -12039,8 +11751,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
 {
   modelica_metatype _clustersOut = NULL;
   modelica_metatype _clusterValuesOut = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _clustersOut has no default value.
   // _clusterValuesOut has no default value.
@@ -12086,7 +11799,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
       // _clusterValues has no default value.
       // _clusterValuesFinal has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 4; tmp4++) {
@@ -12096,9 +11809,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           modelica_boolean tmp9;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
           _itemsIn = tmpMeta6;
           _clusters = tmpMeta7;
           _clusterValues = tmpMeta8;
@@ -12125,10 +11838,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
           modelica_boolean tmp15;
           modelica_metatype tmpMeta16;
           modelica_metatype tmpMeta17;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_2, 2);
           _itemsIn = tmpMeta10;
           _valuesIn = tmpMeta11;
           _clusters = tmpMeta12;
@@ -12167,8 +11880,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
           _values = omc_List_threadMap(threadData, _values, _addValues, boxvar_realAdd);
 
           omc_List_threadMap1__0(threadData, _idcsLst1, _values, boxvar_Array_updateIndexFirst, _clusterValues);
-          tmpMeta16 = mmc_mk_box2(0, _lst1, _valuesIn);
-          tmpMeta17 = mmc_mk_box2(0, _clusters, _clusterValues);
+          tmpMeta16 = omc_mk_box2(0, _lst1, _valuesIn);
+          tmpMeta17 = omc_mk_box2(0, _clusters, _clusterValues);
           tmpMeta[0+0] = omc_HpcOmTaskGraph_distributeToClusters1(threadData, tmpMeta16, tmpMeta17, _numClusters, &tmpMeta[0+1]);
           goto tmp3_done;
         }
@@ -12185,10 +11898,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
           modelica_integer tmp27;
           modelica_metatype tmpMeta28;
           modelica_metatype tmpMeta29;
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta19 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta21 = OMC_BOX_FIELD(tmp4_2, 2);
           _itemsIn = tmpMeta18;
           _valuesIn = tmpMeta19;
           _clusters = tmpMeta20;
@@ -12235,15 +11948,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
           _values = omc_List_threadMap(threadData, _values, _addValues, boxvar_realAdd);
 
           omc_List_threadMap1__0(threadData, _idcsLst1_2, _values, boxvar_Array_updateIndexFirst, _clusterValues);
-          tmpMeta28 = mmc_mk_box2(0, _lst1, _valuesIn);
-          tmpMeta29 = mmc_mk_box2(0, _clusters, _clusterValues);
+          tmpMeta28 = omc_mk_box2(0, _lst1, _valuesIn);
+          tmpMeta29 = omc_mk_box2(0, _clusters, _clusterValues);
           tmpMeta[0+0] = omc_HpcOmTaskGraph_distributeToClusters1(threadData, tmpMeta28, tmpMeta29, _numClusters, &tmpMeta[0+1]);
           goto tmp3_done;
         }
         case 3: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT78),stdout);
+          fputs(omc_string_data(_OMC_LIT78),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -12254,14 +11967,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 4) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -12269,20 +11982,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_distributeToClust
   _clusterValuesOut = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_clusterValuesOut) { *out_clusterValuesOut = _clusterValuesOut; }
-  return _clustersOut;
+  omc_ret_ = _clustersOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_distributeToClusters1(threadData_t *threadData, modelica_metatype _tplIn, modelica_metatype _tplFold, modelica_metatype _numClusters, modelica_metatype *out_clusterValuesOut)
 {
   modelica_integer tmp1;
   modelica_metatype _clustersOut = NULL;
-  tmp1 = mmc_unbox_integer(_numClusters);
+  tmp1 = omc_unbox_integer(_numClusters);
   _clustersOut = omc_HpcOmTaskGraph_distributeToClusters1(threadData, _tplIn, _tplFold, tmp1, out_clusterValuesOut);
   /* skip box _clustersOut; array<list<#Integer>> */
   /* skip box _clusterValuesOut; array<#Real> */
   return _clustersOut;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_distributeToClusters(threadData_t *threadData, modelica_metatype _items, modelica_metatype _values, modelica_integer _numClusters, modelica_metatype *out_clusterValuesOut)
 {
   modelica_metatype _clustersOut = NULL;
@@ -12298,7 +12012,8 @@ modelica_metatype omc_HpcOmTaskGraph_distributeToClusters(threadData_t *threadDa
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _clustersOut has no default value.
   // _clusterValuesOut has no default value.
@@ -12323,29 +12038,30 @@ modelica_metatype omc_HpcOmTaskGraph_distributeToClusters(threadData_t *threadDa
 
   if(_b)
   {
-    tmpMeta1 = mmc_mk_box2(0, _items, _values);
-    tmpMeta2 = mmc_mk_box2(0, _clusters, _clusterValues);
+    tmpMeta1 = omc_mk_box2(0, _items, _values);
+    tmpMeta2 = omc_mk_box2(0, _clusters, _clusterValues);
     _clustersOut = omc_HpcOmTaskGraph_distributeToClusters1(threadData, tmpMeta1, tmpMeta2, _numClusters ,&_clusterValuesOut);
   }
   else
   {
     /* Pattern-matching assignment */
-    tmpMeta3 = mmc_mk_box2(0, _clusters, _clusterValues);
+    tmpMeta3 = omc_mk_box2(0, _clusters, _clusterValues);
     tmpMeta4 = tmpMeta3;
-    tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 1));
-    tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 2));
+    tmpMeta5 = OMC_BOX_FIELD(tmpMeta4, 1);
+    tmpMeta6 = OMC_BOX_FIELD(tmpMeta4, 2);
     _clustersOut = tmpMeta5;
     _clusterValuesOut = tmpMeta6;
   }
   _return: OMC_LABEL_UNUSED
   if (out_clusterValuesOut) { *out_clusterValuesOut = _clusterValuesOut; }
-  return _clustersOut;
+  omc_ret_ = _clustersOut;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_distributeToClusters(threadData_t *threadData, modelica_metatype _items, modelica_metatype _values, modelica_metatype _numClusters, modelica_metatype *out_clusterValuesOut)
 {
   modelica_integer tmp1;
   modelica_metatype _clustersOut = NULL;
-  tmp1 = mmc_unbox_integer(_numClusters);
+  tmp1 = omc_unbox_integer(_numClusters);
   _clustersOut = omc_HpcOmTaskGraph_distributeToClusters(threadData, _items, _values, tmp1, out_clusterValuesOut);
   /* skip box _clustersOut; array<list<#Integer>> */
   /* skip box _clusterValuesOut; array<#Real> */
@@ -12358,8 +12074,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeSingleNodes(
   modelica_metatype _oTaskGraphMeta = NULL;
   modelica_boolean _changed;
   modelica_boolean tmp1_c2 __attribute__((unused)) = 0;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[3] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTaskGraph has no default value.
   // _oTaskGraphMeta has no default value.
@@ -12384,7 +12101,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeSingleNodes(
       // _exeCosts has no default value.
       // _taskGraphT has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -12435,14 +12152,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeSingleNodes(
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -12452,7 +12169,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mergeSingleNodes(
   _return: OMC_LABEL_UNUSED
   if (out_oTaskGraphMeta) { *out_oTaskGraphMeta = _oTaskGraphMeta; }
   if (out_changed) { *out_changed = _changed; }
-  return _oTaskGraph;
+  omc_ret_ = _oTaskGraph;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_mergeSingleNodes(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _doNotMergeIn, modelica_metatype *out_oTaskGraphMeta, modelica_metatype *out_changed)
 {
@@ -12461,44 +12179,35 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_mergeSingleNod
   _oTaskGraph = omc_HpcOmTaskGraph_mergeSingleNodes(threadData, _iTaskGraph, _iTaskGraphMeta, _doNotMergeIn, out_oTaskGraphMeta, &_changed);
   /* skip box _oTaskGraph; array<list<#Integer>> */
   /* skip box _oTaskGraphMeta; HpcOmTaskGraph.TaskGraphMeta */
-  if (out_changed) { *out_changed = mmc_mk_icon(_changed); }
+  if (out_changed) { *out_changed = omc_mk_icon(_changed); }
   return _oTaskGraph;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCriticalPathInfo1(threadData_t *threadData, modelica_metatype _criticalPathsIn, modelica_integer _cpIdx)
 {
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  tmpMeta1 = stringAppend(intString(_cpIdx),_OMC_LIT86);
-  tmpMeta2 = stringAppend(tmpMeta1,omc_HpcOmTaskGraph_intLstString(threadData, listGet(_criticalPathsIn, _cpIdx)));
-  tmpMeta3 = stringAppend(tmpMeta2,_OMC_LIT5);
-  fputs(MMC_STRINGDATA(tmpMeta3),stdout);
+  tmp1 = stringAppend(intString(_cpIdx),_OMC_LIT86);
+  tmp2 = stringAppend(tmp1,omc_HpcOmTaskGraph_intLstString(threadData, listGet(_criticalPathsIn, _cpIdx)));
+  tmp3 = stringAppend(tmp2,_OMC_LIT5);
+  fputs(omc_string_data(tmp3),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_printCriticalPathInfo1(threadData_t *threadData, modelica_metatype _criticalPathsIn, modelica_metatype _cpIdx)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_cpIdx);
+  tmp1 = omc_unbox_integer(_cpIdx);
   omc_HpcOmTaskGraph_printCriticalPathInfo1(threadData, _criticalPathsIn, tmp1);
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCriticalPathInfo(threadData_t *threadData, modelica_metatype _criticalPathsIn, modelica_real _cpCosts)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_metatype tmp3_1;
@@ -12515,23 +12224,23 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCriticalPathInfo(threadDa
           goto tmp2_done;
         }
         case 1: {
-          modelica_metatype tmpMeta5;
-          modelica_metatype tmpMeta6;
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
+          modelica_string tmp5;
+          modelica_string tmp6;
+          modelica_string tmp7;
+          modelica_string tmp8;
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+          fputs(omc_string_data(_OMC_LIT87),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT88),stdout);
+          fputs(omc_string_data(_OMC_LIT88),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+          fputs(omc_string_data(_OMC_LIT87),stdout);
 
-          tmpMeta5 = stringAppend(_OMC_LIT89,intString(listLength(_criticalPathsIn)));
-          tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT90);
-          tmpMeta7 = stringAppend(tmpMeta6,realString(_cpCosts));
-          tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT91);
-          fputs(MMC_STRINGDATA(tmpMeta8),stdout);
+          tmp5 = stringAppend(_OMC_LIT89,intString(listLength(_criticalPathsIn)));
+          tmp6 = stringAppend(tmp5,_OMC_LIT90);
+          tmp7 = stringAppend(tmp6,realString(_cpCosts));
+          tmp8 = stringAppend(tmp7,_OMC_LIT91);
+          fputs(omc_string_data(tmp8),stdout);
 
           omc_HpcOmTaskGraph_printCriticalPathInfo1(threadData, _criticalPathsIn, ((modelica_integer) 1));
           goto tmp2_done;
@@ -12542,22 +12251,19 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCriticalPathInfo(threadDa
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_printCriticalPathInfo(threadData_t *threadData, modelica_metatype _criticalPathsIn, modelica_metatype _cpCosts)
 {
   modelica_real tmp1;
-  tmp1 = mmc_unbox_real(_cpCosts);
+  tmp1 = omc_unbox_real(_cpCosts);
   omc_HpcOmTaskGraph_printCriticalPathInfo(threadData, _criticalPathsIn, tmp1);
   return;
 }
@@ -12565,26 +12271,28 @@ PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_printCriticalPathInfo(threa
 PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_dumpCriticalPathInfo1(threadData_t *threadData, modelica_metatype _criticalPathsIn, modelica_integer _cpIdx)
 {
   modelica_string _oString = NULL;
-  modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oString has no default value.
-  tmpMeta1 = stringAppend(omc_HpcOmTaskGraph_intLstString(threadData, listGet(_criticalPathsIn, _cpIdx)),_OMC_LIT92);
-  _oString = tmpMeta1;
+  tmp1 = stringAppend(omc_HpcOmTaskGraph_intLstString(threadData, listGet(_criticalPathsIn, _cpIdx)),_OMC_LIT92);
+  omc_string_store(&(_oString), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _oString;
+  omc_ret_ = _oString;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_dumpCriticalPathInfo1(threadData_t *threadData, modelica_metatype _criticalPathsIn, modelica_metatype _cpIdx)
 {
   modelica_integer tmp1;
   modelica_string _oString = NULL;
-  tmp1 = mmc_unbox_integer(_cpIdx);
+  tmp1 = omc_unbox_integer(_cpIdx);
   _oString = omc_HpcOmTaskGraph_dumpCriticalPathInfo1(threadData, _criticalPathsIn, tmp1);
   /* skip box _oString; String */
   return _oString;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_HpcOmTaskGraph_dumpCriticalPathInfo(threadData_t *threadData, modelica_metatype _iCriticalPaths, modelica_metatype _iCriticalPathsWoC)
 {
   modelica_string _oString = NULL;
@@ -12594,7 +12302,8 @@ modelica_string omc_HpcOmTaskGraph_dumpCriticalPathInfo(threadData_t *threadData
   modelica_real _costPath;
   modelica_real _costPathWoC;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oString has no default value.
   // _tmpString has no default value.
@@ -12614,7 +12323,7 @@ modelica_string omc_HpcOmTaskGraph_dumpCriticalPathInfo(threadData_t *threadData
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
           if (!listEmpty(tmpMeta6)) goto tmp3_end;
           
           /* Pattern matching succeeded */
@@ -12628,39 +12337,39 @@ modelica_string omc_HpcOmTaskGraph_dumpCriticalPathInfo(threadData_t *threadData
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
           modelica_real tmp12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
-          modelica_metatype tmpMeta18;
-          modelica_metatype tmpMeta19;
-          modelica_metatype tmpMeta20;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp9 = mmc_unbox_real(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp12 = mmc_unbox_real(tmpMeta11);
+          modelica_string tmp13;
+          modelica_string tmp14;
+          modelica_string tmp15;
+          modelica_string tmp16;
+          modelica_string tmp17;
+          modelica_string tmp18;
+          modelica_string tmp19;
+          modelica_string tmp20;
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp9 = omc_unbox_real(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp12 = omc_unbox_real(tmpMeta11);
           _critPath = tmpMeta7;
           _costPath = tmp9  /* pattern as ty=Real */;
           _critPathWoC = tmpMeta10;
           _costPathWoC = tmp12  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
-          tmpMeta13 = stringAppend(_OMC_LIT93,realString(_costPath));
-          tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT94);
-          _tmpString = tmpMeta14;
+          tmp13 = stringAppend(_OMC_LIT93,realString(_costPath));
+          tmp14 = stringAppend(tmp13,_OMC_LIT94);
+          omc_string_store(&(_tmpString), tmp14);
 
-          tmpMeta15 = stringAppend(_tmpString,omc_HpcOmTaskGraph_dumpCriticalPathInfo1(threadData, _critPath, ((modelica_integer) 1)));
-          _tmpString = tmpMeta15;
+          tmp15 = stringAppend(_tmpString,omc_HpcOmTaskGraph_dumpCriticalPathInfo1(threadData, _critPath, ((modelica_integer) 1)));
+          omc_string_store(&(_tmpString), tmp15);
 
-          tmpMeta16 = stringAppend(_OMC_LIT95,_tmpString);
-          tmpMeta17 = stringAppend(tmpMeta16,_OMC_LIT96);
-          tmpMeta18 = stringAppend(tmpMeta17,realString(_costPathWoC));
-          tmpMeta19 = stringAppend(tmpMeta18,_OMC_LIT94);
-          _tmpString = tmpMeta19;
-          tmpMeta20 = stringAppend(_tmpString,omc_HpcOmTaskGraph_dumpCriticalPathInfo1(threadData, _critPathWoC, ((modelica_integer) 1)));
-          tmp1 = tmpMeta20;
+          tmp16 = stringAppend(_OMC_LIT95,_tmpString);
+          tmp17 = stringAppend(tmp16,_OMC_LIT96);
+          tmp18 = stringAppend(tmp17,realString(_costPathWoC));
+          tmp19 = stringAppend(tmp18,_OMC_LIT94);
+          omc_string_store(&(_tmpString), tmp19);
+          tmp20 = stringAppend(_tmpString,omc_HpcOmTaskGraph_dumpCriticalPathInfo1(threadData, _critPathWoC, ((modelica_integer) 1)));
+          tmp1 = tmp20;
           goto tmp3_done;
         }
         }
@@ -12669,30 +12378,33 @@ modelica_string omc_HpcOmTaskGraph_dumpCriticalPathInfo(threadData_t *threadData
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _oString = tmp1;
+  omc_string_store(&(_oString), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _oString;
+  omc_ret_ = _oString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_HpcOmTaskGraph_intLstString(threadData_t *threadData, modelica_metatype _lstIn)
 {
   modelica_string _strOut = NULL;
   modelica_string _str = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _strOut has no default value.
   // _str has no default value.
-  _str = stringDelimitList(omc_List_map(threadData, _lstIn, boxvar_intString), _OMC_LIT31);
+  omc_string_store(&(_str), stringDelimitList(omc_List_map(threadData, _lstIn, boxvar_intString), _OMC_LIT31));
 
-  _strOut = (listEmpty(_lstIn)?_OMC_LIT97:_str);
+  omc_string_store(&(_strOut), (listEmpty(_lstIn)?_OMC_LIT97:_str));
   _return: OMC_LABEL_UNUSED
-  return _strOut;
+  omc_ret_ = _strOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentInformations(threadData_t *threadData, modelica_metatype _iComponentInformations)
@@ -12708,21 +12420,18 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentInformations(thr
   modelica_integer tmp5;
   modelica_metatype tmpMeta6;
   modelica_integer tmp7;
-  modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
-  modelica_metatype tmpMeta10;
-  modelica_metatype tmpMeta11;
-  modelica_metatype tmpMeta12;
-  modelica_metatype tmpMeta13;
-  modelica_metatype tmpMeta14;
-  modelica_metatype tmpMeta15;
+  modelica_string tmp8;
+  modelica_string tmp9;
+  modelica_string tmp10;
+  modelica_string tmp11;
+  modelica_string tmp12;
+  modelica_string tmp13;
+  modelica_string tmp14;
+  modelica_string tmp15;
   modelica_integer tmp16;
   modelica_integer tmp17;
   modelica_integer tmp18;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
   // _isPartOfODESystem has no default value.
@@ -12737,39 +12446,36 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentInformations(thr
 
       /* Pattern-matching assignment */
       tmpMeta1 = arrayGet(_iComponentInformations, _compIdx);
-      tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-      tmp3 = mmc_unbox_integer(tmpMeta2);
-      tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-      tmp5 = mmc_unbox_integer(tmpMeta4);
-      tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-      tmp7 = mmc_unbox_integer(tmpMeta6);
+      tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+      tmp3 = omc_unbox_integer(tmpMeta2);
+      tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 3);
+      tmp5 = omc_unbox_integer(tmpMeta4);
+      tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 4);
+      tmp7 = omc_unbox_integer(tmpMeta6);
       _isPartOfODESystem = tmp3  /* pattern as ty=Boolean */;
       _isPartOfZeroFuncSystem = tmp5  /* pattern as ty=Boolean */;
       _isRemovedComponent = tmp7  /* pattern as ty=Boolean */;
 
-      tmpMeta8 = stringAppend(_OMC_LIT98,intString(_compIdx));
-      tmpMeta9 = stringAppend(tmpMeta8,_OMC_LIT99);
-      fputs(MMC_STRINGDATA(tmpMeta9),stdout);
+      tmp8 = stringAppend(_OMC_LIT98,intString(_compIdx));
+      tmp9 = stringAppend(tmp8,_OMC_LIT99);
+      fputs(omc_string_data(tmp9),stdout);
 
-      tmpMeta10 = stringAppend(_OMC_LIT100,(_isPartOfODESystem?_OMC_LIT101:_OMC_LIT102));
-      tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta11),stdout);
+      tmp10 = stringAppend(_OMC_LIT100,(_isPartOfODESystem?_OMC_LIT101:_OMC_LIT102));
+      tmp11 = stringAppend(tmp10,_OMC_LIT5);
+      fputs(omc_string_data(tmp11),stdout);
 
-      tmpMeta12 = stringAppend(_OMC_LIT103,(_isPartOfZeroFuncSystem?_OMC_LIT101:_OMC_LIT102));
-      tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta13),stdout);
+      tmp12 = stringAppend(_OMC_LIT103,(_isPartOfZeroFuncSystem?_OMC_LIT101:_OMC_LIT102));
+      tmp13 = stringAppend(tmp12,_OMC_LIT5);
+      fputs(omc_string_data(tmp13),stdout);
 
-      tmpMeta14 = stringAppend(_OMC_LIT104,(_isRemovedComponent?_OMC_LIT101:_OMC_LIT102));
-      tmpMeta15 = stringAppend(tmpMeta14,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta15),stdout);
+      tmp14 = stringAppend(_OMC_LIT104,(_isRemovedComponent?_OMC_LIT101:_OMC_LIT102));
+      tmp15 = stringAppend(tmp14,_OMC_LIT5);
+      fputs(omc_string_data(tmp15),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -12777,17 +12483,14 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printNodeMarks(threadData_t *t
 {
   modelica_integer _compIdx;
   modelica_integer _mark;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
   // _mark has no default value.
@@ -12798,21 +12501,18 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printNodeMarks(threadData_t *t
     for(_compIdx = ((modelica_integer) 1); in_range_integer(_compIdx, tmp5, tmp7); _compIdx += tmp6)
     {
 
-      _mark = mmc_unbox_integer(arrayGet(_iNodeMarks, _compIdx));
+      _mark = omc_unbox_integer(arrayGet(_iNodeMarks, _compIdx));
 
-      tmpMeta1 = stringAppend(_OMC_LIT98,intString(_compIdx));
-      tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT105);
-      tmpMeta3 = stringAppend(tmpMeta2,intString(_mark));
-      tmpMeta4 = stringAppend(tmpMeta3,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta4),stdout);
+      tmp1 = stringAppend(_OMC_LIT98,intString(_compIdx));
+      tmp2 = stringAppend(tmp1,_OMC_LIT105);
+      tmp3 = stringAppend(tmp2,intString(_mark));
+      tmp4 = stringAppend(tmp3,_OMC_LIT5);
+      fputs(omc_string_data(tmp4),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -12838,19 +12538,20 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_printCommCost(threa
   modelica_integer tmp8;
   modelica_metatype tmpMeta9;
   modelica_real tmp10;
-  modelica_metatype tmpMeta11;
-  modelica_metatype tmpMeta12;
-  modelica_metatype tmpMeta13;
-  modelica_metatype tmpMeta14;
-  modelica_metatype tmpMeta15;
-  modelica_metatype tmpMeta16;
-  modelica_metatype tmpMeta17;
-  modelica_metatype tmpMeta18;
-  modelica_metatype tmpMeta19;
-  modelica_metatype tmpMeta20;
-  modelica_metatype tmpMeta21;
-  modelica_metatype tmpMeta22;
-  MMC_SO();
+  modelica_string tmp11;
+  modelica_string tmp12;
+  modelica_string tmp13;
+  modelica_string tmp14;
+  modelica_string tmp15;
+  modelica_string tmp16;
+  modelica_string tmp17;
+  modelica_string tmp18;
+  modelica_string tmp19;
+  modelica_string tmp20;
+  modelica_string tmp21;
+  modelica_string tmp22;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCommString has no default value.
   // _numberOfVars has no default value.
@@ -12864,15 +12565,15 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_printCommCost(threa
   // _requiredTime has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iComm;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmp8 = mmc_unbox_integer(tmpMeta7);
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmp10 = mmc_unbox_real(tmpMeta9);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmp8 = omc_unbox_integer(tmpMeta7);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmp10 = omc_unbox_real(tmpMeta9);
   _numberOfVars = tmp3  /* pattern as ty=Integer */;
   _integerVars = tmpMeta4;
   _floatVars = tmpMeta5;
@@ -12886,38 +12587,36 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_printCommCost(threa
 
   _numberOfBooleans = listLength(_booleanVars);
 
-  tmpMeta11 = stringAppend(_OMC_LIT106,intString(_childNode));
-  tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT107);
-  tmpMeta13 = stringAppend(tmpMeta12,intString(_numberOfIntegers));
-  tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT108);
-  tmpMeta15 = stringAppend(tmpMeta14,intString(_numberOfFloats));
-  tmpMeta16 = stringAppend(tmpMeta15,_OMC_LIT109);
-  tmpMeta17 = stringAppend(tmpMeta16,intString(_numberOfBooleans));
-  tmpMeta18 = stringAppend(tmpMeta17,_OMC_LIT110);
-  tmpMeta19 = stringAppend(tmpMeta18,realString(_requiredTime));
-  tmpMeta20 = stringAppend(tmpMeta19,_OMC_LIT111);
-  tmpMeta21 = stringAppend(tmpMeta20,intString(_numberOfVars));
-  tmpMeta22 = stringAppend(tmpMeta21,_OMC_LIT112);
-  _oCommString = tmpMeta22;
+  tmp11 = stringAppend(_OMC_LIT106,intString(_childNode));
+  tmp12 = stringAppend(tmp11,_OMC_LIT107);
+  tmp13 = stringAppend(tmp12,intString(_numberOfIntegers));
+  tmp14 = stringAppend(tmp13,_OMC_LIT108);
+  tmp15 = stringAppend(tmp14,intString(_numberOfFloats));
+  tmp16 = stringAppend(tmp15,_OMC_LIT109);
+  tmp17 = stringAppend(tmp16,intString(_numberOfBooleans));
+  tmp18 = stringAppend(tmp17,_OMC_LIT110);
+  tmp19 = stringAppend(tmp18,realString(_requiredTime));
+  tmp20 = stringAppend(tmp19,_OMC_LIT111);
+  tmp21 = stringAppend(tmp20,intString(_numberOfVars));
+  tmp22 = stringAppend(tmp21,_OMC_LIT112);
+  omc_string_store(&(_oCommString), tmp22);
   _return: OMC_LABEL_UNUSED
-  return _oCommString;
+  omc_ret_ = _oCommString;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCommCosts(threadData_t *threadData, modelica_metatype _iCommCosts)
 {
   modelica_integer _nodeIdx;
   modelica_metatype _nodeComms = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodeIdx has no default value.
   // _nodeComms has no default value.
@@ -12930,19 +12629,16 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCommCosts(threadData_t *t
 
       _nodeComms = arrayGet(_iCommCosts, _nodeIdx);
 
-      tmpMeta1 = stringAppend(_OMC_LIT113,intString(_nodeIdx));
-      tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT114);
-      tmpMeta3 = stringAppend(tmpMeta2,stringDelimitList(omc_List_map(threadData, _nodeComms, boxvar_HpcOmTaskGraph_printCommCost), _OMC_LIT115));
-      tmpMeta4 = stringAppend(tmpMeta3,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta4),stdout);
+      tmp1 = stringAppend(_OMC_LIT113,intString(_nodeIdx));
+      tmp2 = stringAppend(tmp1,_OMC_LIT114);
+      tmp3 = stringAppend(tmp2,stringDelimitList(omc_List_map(threadData, _nodeComms, boxvar_HpcOmTaskGraph_printCommCost), _OMC_LIT115));
+      tmp4 = stringAppend(tmp3,_OMC_LIT5);
+      fputs(omc_string_data(tmp4),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -12956,19 +12652,16 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printExeCosts(threadData_t *th
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
   modelica_real tmp5;
-  modelica_metatype tmpMeta6;
-  modelica_metatype tmpMeta7;
-  modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
-  modelica_metatype tmpMeta10;
-  modelica_metatype tmpMeta11;
+  modelica_string tmp6;
+  modelica_string tmp7;
+  modelica_string tmp8;
+  modelica_string tmp9;
+  modelica_string tmp10;
+  modelica_string tmp11;
   modelica_integer tmp12;
   modelica_integer tmp13;
   modelica_integer tmp14;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
   // _opCount has no default value.
@@ -12982,28 +12675,25 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printExeCosts(threadData_t *th
 
       /* Pattern-matching assignment */
       tmpMeta1 = arrayGet(_iExeCosts, _compIdx);
-      tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-      tmp3 = mmc_unbox_integer(tmpMeta2);
-      tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-      tmp5 = mmc_unbox_real(tmpMeta4);
+      tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+      tmp3 = omc_unbox_integer(tmpMeta2);
+      tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+      tmp5 = omc_unbox_real(tmpMeta4);
       _opCount = tmp3  /* pattern as ty=Integer */;
       _execTime = tmp5  /* pattern as ty=Real */;
 
-      tmpMeta6 = stringAppend(_OMC_LIT98,intString(_compIdx));
-      tmpMeta7 = stringAppend(tmpMeta6,_OMC_LIT116);
-      tmpMeta8 = stringAppend(tmpMeta7,intString(_opCount));
-      tmpMeta9 = stringAppend(tmpMeta8,_OMC_LIT31);
-      tmpMeta10 = stringAppend(tmpMeta9,realString(_execTime));
-      tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT117);
-      fputs(MMC_STRINGDATA(tmpMeta11),stdout);
+      tmp6 = stringAppend(_OMC_LIT98,intString(_compIdx));
+      tmp7 = stringAppend(tmp6,_OMC_LIT116);
+      tmp8 = stringAppend(tmp7,intString(_opCount));
+      tmp9 = stringAppend(tmp8,_OMC_LIT31);
+      tmp10 = stringAppend(tmp9,realString(_execTime));
+      tmp11 = stringAppend(tmp10,_OMC_LIT117);
+      fputs(omc_string_data(tmp11),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -13011,17 +12701,14 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCompDescs(threadData_t *t
 {
   modelica_integer _compIdx;
   modelica_string _compDesc = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
   // _compDesc has no default value.
@@ -13032,21 +12719,18 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCompDescs(threadData_t *t
     for(_compIdx = ((modelica_integer) 1); in_range_integer(_compIdx, tmp5, tmp7); _compIdx += tmp6)
     {
 
-      _compDesc = arrayGet(_iCompDescs, _compIdx);
+      omc_string_store(&(_compDesc), arrayGet(_iCompDescs, _compIdx));
 
-      tmpMeta1 = stringAppend(_OMC_LIT98,intString(_compIdx));
-      tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT118);
-      tmpMeta3 = stringAppend(tmpMeta2,_compDesc);
-      tmpMeta4 = stringAppend(tmpMeta3,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta4),stdout);
+      tmp1 = stringAppend(_OMC_LIT98,intString(_compIdx));
+      tmp2 = stringAppend(tmp1,_OMC_LIT118);
+      tmp3 = stringAppend(tmp2,_compDesc);
+      tmp4 = stringAppend(tmp3,_OMC_LIT5);
+      fputs(omc_string_data(tmp4),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -13054,17 +12738,14 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentNames(threadData
 {
   modelica_integer _compIdx;
   modelica_string _compName = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
   // _compName has no default value.
@@ -13075,21 +12756,18 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printComponentNames(threadData
     for(_compIdx = ((modelica_integer) 1); in_range_integer(_compIdx, tmp5, tmp7); _compIdx += tmp6)
     {
 
-      _compName = arrayGet(_iCompNames, _compIdx);
+      omc_string_store(&(_compName), arrayGet(_iCompNames, _compIdx));
 
-      tmpMeta1 = stringAppend(_OMC_LIT98,intString(_compIdx));
-      tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT119);
-      tmpMeta3 = stringAppend(tmpMeta2,_compName);
-      tmpMeta4 = stringAppend(tmpMeta3,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta4),stdout);
+      tmp1 = stringAppend(_OMC_LIT98,intString(_compIdx));
+      tmp2 = stringAppend(tmp1,_OMC_LIT119);
+      tmp3 = stringAppend(tmp2,_compName);
+      tmp4 = stringAppend(tmp3,_OMC_LIT5);
+      fputs(omc_string_data(tmp4),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -13097,17 +12775,14 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCompParamMapping(threadDa
 {
   modelica_integer _compIdx;
   modelica_metatype _params = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compIdx has no default value.
   // _params has no default value.
@@ -13120,19 +12795,16 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printCompParamMapping(threadDa
 
       _params = arrayGet(_iCompParamMapping, _compIdx);
 
-      tmpMeta1 = stringAppend(_OMC_LIT98,intString(_compIdx));
-      tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT120);
-      tmpMeta3 = stringAppend(tmpMeta2,stringDelimitList(omc_List_map(threadData, _params, boxvar_intString), _OMC_LIT31));
-      tmpMeta4 = stringAppend(tmpMeta3,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta4),stdout);
+      tmp1 = stringAppend(_OMC_LIT98,intString(_compIdx));
+      tmp2 = stringAppend(tmp1,_OMC_LIT120);
+      tmp3 = stringAppend(tmp2,stringDelimitList(omc_List_map(threadData, _params, boxvar_intString), _OMC_LIT31));
+      tmp4 = stringAppend(tmp3,_OMC_LIT5);
+      fputs(omc_string_data(tmp4),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -13149,21 +12821,18 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printEqCompMapping(threadData_
   modelica_integer tmp5;
   modelica_metatype tmpMeta6;
   modelica_integer tmp7;
-  modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
-  modelica_metatype tmpMeta10;
-  modelica_metatype tmpMeta11;
-  modelica_metatype tmpMeta12;
-  modelica_metatype tmpMeta13;
-  modelica_metatype tmpMeta14;
-  modelica_metatype tmpMeta15;
+  modelica_string tmp8;
+  modelica_string tmp9;
+  modelica_string tmp10;
+  modelica_string tmp11;
+  modelica_string tmp12;
+  modelica_string tmp13;
+  modelica_string tmp14;
+  modelica_string tmp15;
   modelica_integer tmp16;
   modelica_integer tmp17;
   modelica_integer tmp18;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eqIdx has no default value.
   // _comp has no default value.
@@ -13178,33 +12847,30 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printEqCompMapping(threadData_
 
       /* Pattern-matching assignment */
       tmpMeta1 = arrayGet(_iEqCompMapping, _eqIdx);
-      tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-      tmp3 = mmc_unbox_integer(tmpMeta2);
-      tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-      tmp5 = mmc_unbox_integer(tmpMeta4);
-      tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-      tmp7 = mmc_unbox_integer(tmpMeta6);
+      tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+      tmp3 = omc_unbox_integer(tmpMeta2);
+      tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+      tmp5 = omc_unbox_integer(tmpMeta4);
+      tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
+      tmp7 = omc_unbox_integer(tmpMeta6);
       _comp = tmp3  /* pattern as ty=Integer */;
       _eqSysIdx = tmp5  /* pattern as ty=Integer */;
       _eqOffset = tmp7  /* pattern as ty=Integer */;
 
-      tmpMeta8 = stringAppend(_OMC_LIT121,intString(_eqIdx));
-      tmpMeta9 = stringAppend(tmpMeta8,_OMC_LIT122);
-      tmpMeta10 = stringAppend(tmpMeta9,intString(_eqOffset));
-      tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT123);
-      tmpMeta12 = stringAppend(tmpMeta11,intString(_eqSysIdx));
-      tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT124);
-      tmpMeta14 = stringAppend(tmpMeta13,intString(_comp));
-      tmpMeta15 = stringAppend(tmpMeta14,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta15),stdout);
+      tmp8 = stringAppend(_OMC_LIT121,intString(_eqIdx));
+      tmp9 = stringAppend(tmp8,_OMC_LIT122);
+      tmp10 = stringAppend(tmp9,intString(_eqOffset));
+      tmp11 = stringAppend(tmp10,_OMC_LIT123);
+      tmp12 = stringAppend(tmp11,intString(_eqSysIdx));
+      tmp13 = stringAppend(tmp12,_OMC_LIT124);
+      tmp14 = stringAppend(tmp13,intString(_comp));
+      tmp15 = stringAppend(tmp14,_OMC_LIT5);
+      fputs(omc_string_data(tmp15),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -13221,21 +12887,18 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printVarCompMapping(threadData
   modelica_integer tmp5;
   modelica_metatype tmpMeta6;
   modelica_integer tmp7;
-  modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
-  modelica_metatype tmpMeta10;
-  modelica_metatype tmpMeta11;
-  modelica_metatype tmpMeta12;
-  modelica_metatype tmpMeta13;
-  modelica_metatype tmpMeta14;
-  modelica_metatype tmpMeta15;
+  modelica_string tmp8;
+  modelica_string tmp9;
+  modelica_string tmp10;
+  modelica_string tmp11;
+  modelica_string tmp12;
+  modelica_string tmp13;
+  modelica_string tmp14;
+  modelica_string tmp15;
   modelica_integer tmp16;
   modelica_integer tmp17;
   modelica_integer tmp18;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _varIdx has no default value.
   // _comp has no default value.
@@ -13250,33 +12913,30 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printVarCompMapping(threadData
 
       /* Pattern-matching assignment */
       tmpMeta1 = arrayGet(_iVarCompMapping, _varIdx);
-      tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-      tmp3 = mmc_unbox_integer(tmpMeta2);
-      tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-      tmp5 = mmc_unbox_integer(tmpMeta4);
-      tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-      tmp7 = mmc_unbox_integer(tmpMeta6);
+      tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+      tmp3 = omc_unbox_integer(tmpMeta2);
+      tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+      tmp5 = omc_unbox_integer(tmpMeta4);
+      tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
+      tmp7 = omc_unbox_integer(tmpMeta6);
       _comp = tmp3  /* pattern as ty=Integer */;
       _eqSysIdx = tmp5  /* pattern as ty=Integer */;
       _varOffset = tmp7  /* pattern as ty=Integer */;
 
-      tmpMeta8 = stringAppend(_OMC_LIT125,intString(_varIdx - _varOffset));
-      tmpMeta9 = stringAppend(tmpMeta8,_OMC_LIT122);
-      tmpMeta10 = stringAppend(tmpMeta9,intString(_varOffset));
-      tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT123);
-      tmpMeta12 = stringAppend(tmpMeta11,intString(_eqSysIdx));
-      tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT126);
-      tmpMeta14 = stringAppend(tmpMeta13,intString(_comp));
-      tmpMeta15 = stringAppend(tmpMeta14,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta15),stdout);
+      tmp8 = stringAppend(_OMC_LIT125,intString(_varIdx - _varOffset));
+      tmp9 = stringAppend(tmp8,_OMC_LIT122);
+      tmp10 = stringAppend(tmp9,intString(_varOffset));
+      tmp11 = stringAppend(tmp10,_OMC_LIT123);
+      tmp12 = stringAppend(tmp11,intString(_eqSysIdx));
+      tmp13 = stringAppend(tmp12,_OMC_LIT126);
+      tmp14 = stringAppend(tmp13,intString(_comp));
+      tmp15 = stringAppend(tmp14,_OMC_LIT5);
+      fputs(omc_string_data(tmp15),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -13284,17 +12944,14 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printInComps(threadData_t *thr
 {
   modelica_integer _nodeIdx;
   modelica_metatype _compRow = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
   modelica_integer tmp5;
   modelica_integer tmp6;
   modelica_integer tmp7;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodeIdx has no default value.
   // _compRow has no default value.
@@ -13307,23 +12964,20 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_printInComps(threadData_t *thr
 
       _compRow = arrayGet(_iInComps, _nodeIdx);
 
-      tmpMeta1 = stringAppend(_OMC_LIT127,intString(_nodeIdx));
-      tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT128);
-      tmpMeta3 = stringAppend(tmpMeta2,stringDelimitList(omc_List_map(threadData, _compRow, boxvar_intString), _OMC_LIT115));
-      tmpMeta4 = stringAppend(tmpMeta3,_OMC_LIT5);
-      fputs(MMC_STRINGDATA(tmpMeta4),stdout);
+      tmp1 = stringAppend(_OMC_LIT127,intString(_nodeIdx));
+      tmp2 = stringAppend(tmp1,_OMC_LIT128);
+      tmp3 = stringAppend(tmp2,stringDelimitList(omc_List_map(threadData, _compRow, boxvar_intString), _OMC_LIT115));
+      tmp4 = stringAppend(tmp3,_OMC_LIT5);
+      fputs(omc_string_data(tmp4),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_HpcOmTaskGraph_printTaskGraphMeta(threadData_t *threadData, modelica_metatype _metaDataIn)
 {
   modelica_metatype _inComps = NULL;
@@ -13347,14 +13001,11 @@ void omc_HpcOmTaskGraph_printTaskGraphMeta(threadData_t *threadData, modelica_me
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
-  modelica_metatype tmpMeta12;
-  modelica_metatype tmpMeta13;
-  modelica_metatype tmpMeta14;
-  modelica_metatype tmpMeta15;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_string tmp12;
+  modelica_string tmp13;
+  modelica_string tmp14;
+  modelica_string tmp15;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _inComps has no default value.
   // _varCompMapping has no default value.
@@ -13368,16 +13019,16 @@ void omc_HpcOmTaskGraph_printTaskGraphMeta(threadData_t *threadData, modelica_me
   // _compInformations has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _metaDataIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 10));
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 11));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta1, 9);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 10);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta1, 11);
   _inComps = tmpMeta2;
   _varCompMapping = tmpMeta3;
   _eqCompMapping = tmpMeta4;
@@ -13389,72 +13040,66 @@ void omc_HpcOmTaskGraph_printTaskGraphMeta(threadData_t *threadData, modelica_me
   _nodeMark = tmpMeta10;
   _compInformations = tmpMeta11;
 
-  fputs(MMC_STRINGDATA(_OMC_LIT5),stdout);
+  fputs(omc_string_data(_OMC_LIT5),stdout);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT129),stdout);
+  fputs(omc_string_data(_OMC_LIT129),stdout);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
 
-  tmpMeta12 = stringAppend(intString(arrayLength(_inComps)),_OMC_LIT130);
-  fputs(MMC_STRINGDATA(tmpMeta12),stdout);
+  tmp12 = stringAppend(intString(arrayLength(_inComps)),_OMC_LIT130);
+  fputs(omc_string_data(tmp12),stdout);
 
   omc_HpcOmTaskGraph_printInComps(threadData, _inComps);
 
-  tmpMeta13 = stringAppend(intString(arrayLength(_varCompMapping)),_OMC_LIT131);
-  fputs(MMC_STRINGDATA(tmpMeta13),stdout);
+  tmp13 = stringAppend(intString(arrayLength(_varCompMapping)),_OMC_LIT131);
+  fputs(omc_string_data(tmp13),stdout);
 
   omc_HpcOmTaskGraph_printVarCompMapping(threadData, _varCompMapping);
 
-  tmpMeta14 = stringAppend(intString(arrayLength(_eqCompMapping)),_OMC_LIT132);
-  fputs(MMC_STRINGDATA(tmpMeta14),stdout);
+  tmp14 = stringAppend(intString(arrayLength(_eqCompMapping)),_OMC_LIT132);
+  fputs(omc_string_data(tmp14),stdout);
 
   omc_HpcOmTaskGraph_printEqCompMapping(threadData, _eqCompMapping);
 
-  tmpMeta15 = stringAppend(intString(arrayLength(_compParamMapping)),_OMC_LIT133);
-  fputs(MMC_STRINGDATA(tmpMeta15),stdout);
+  tmp15 = stringAppend(intString(arrayLength(_compParamMapping)),_OMC_LIT133);
+  fputs(omc_string_data(tmp15),stdout);
 
   omc_HpcOmTaskGraph_printCompParamMapping(threadData, _compParamMapping);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT134),stdout);
+  fputs(omc_string_data(_OMC_LIT134),stdout);
 
   omc_HpcOmTaskGraph_printComponentNames(threadData, _compNames);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT135),stdout);
+  fputs(omc_string_data(_OMC_LIT135),stdout);
 
   omc_HpcOmTaskGraph_printCompDescs(threadData, _compDescs);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT136),stdout);
+  fputs(omc_string_data(_OMC_LIT136),stdout);
 
   omc_HpcOmTaskGraph_printExeCosts(threadData, _exeCosts);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT137),stdout);
+  fputs(omc_string_data(_OMC_LIT137),stdout);
 
   omc_HpcOmTaskGraph_printCommCosts(threadData, _commCosts);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT138),stdout);
+  fputs(omc_string_data(_OMC_LIT138),stdout);
 
   omc_HpcOmTaskGraph_printNodeMarks(threadData, _nodeMark);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT139),stdout);
+  fputs(omc_string_data(_OMC_LIT139),stdout);
 
   omc_HpcOmTaskGraph_printComponentInformations(threadData, _compInformations);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT5),stdout);
+  fputs(omc_string_data(_OMC_LIT5),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyRow(threadData_t *threadData, modelica_metatype _inIntegerLst)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_metatype tmp3_1;
@@ -13474,7 +13119,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyRow(threadData_t 
         case 0: {
           if (!listEmpty(tmp3_1)) goto tmp2_end;
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT5),stdout);
+          fputs(omc_string_data(_OMC_LIT5),stdout);
           goto tmp2_done;
         }
         case 1: {
@@ -13484,15 +13129,15 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyRow(threadData_t 
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta5 = MMC_CAR(tmp3_1);
           tmpMeta6 = MMC_CDR(tmp3_1);
-          tmp7 = mmc_unbox_integer(tmpMeta5);
+          tmp7 = omc_unbox_integer(tmpMeta5);
           _x = tmp7  /* pattern as ty=Integer */;
           _xs = tmpMeta6;
           /* Pattern matching succeeded */
-          _s = intString(_x);
+          omc_string_store(&(_s), intString(_x));
 
-          fputs(MMC_STRINGDATA(_s),stdout);
+          fputs(omc_string_data(_s),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT0),stdout);
+          fputs(omc_string_data(_OMC_LIT0),stdout);
 
           /* Tail recursive call */
           _inIntegerLst = _xs;
@@ -13507,25 +13152,19 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyRow(threadData_t 
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyLst(threadData_t *threadData, modelica_metatype _inIntegerLstLst, modelica_integer _rowIndex)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_metatype tmp3_1;
@@ -13554,9 +13193,9 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyLst(threadData_t 
           _row = tmpMeta5;
           _rows = tmpMeta6;
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(intString(_rowIndex)),stdout);
+          fputs(omc_string_data(intString(_rowIndex)),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT33),stdout);
+          fputs(omc_string_data(_OMC_LIT33),stdout);
 
           omc_HpcOmTaskGraph_dumpAdjacencyRow(threadData, _row);
 
@@ -13574,53 +13213,44 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_dumpAdjacencyLst(threadData_t 
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_dumpAdjacencyLst(threadData_t *threadData, modelica_metatype _inIntegerLstLst, modelica_metatype _rowIndex)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_rowIndex);
+  tmp1 = omc_unbox_integer(_rowIndex);
   omc_HpcOmTaskGraph_dumpAdjacencyLst(threadData, _inIntegerLstLst, tmp1);
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_HpcOmTaskGraph_printTaskGraph(threadData_t *threadData, modelica_metatype _graphIn)
 {
   modelica_metatype _graphLst = NULL;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphLst has no default value.
-  fputs(MMC_STRINGDATA(_OMC_LIT5),stdout);
+  fputs(omc_string_data(_OMC_LIT5),stdout);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT140),stdout);
+  fputs(omc_string_data(_OMC_LIT140),stdout);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT87),stdout);
+  fputs(omc_string_data(_OMC_LIT87),stdout);
 
   _graphLst = arrayList(_graphIn);
 
   omc_HpcOmTaskGraph_dumpAdjacencyLst(threadData, _graphLst, ((modelica_integer) 1));
 
-  fputs(MMC_STRINGDATA(_OMC_LIT5),stdout);
+  fputs(omc_string_data(_OMC_LIT5),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -13642,7 +13272,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodeMembership
   modelica_metatype tmpMeta8;
   modelica_integer tmp9;
   modelica_metatype tmpMeta10;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMembership has no default value.
   // _isPartOfODESystem has no default value.
@@ -13657,26 +13288,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodeMembership
     for (tmpMeta1 = _iNodeComponents; !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
     {
       _compIdx = MMC_CAR(tmpMeta1);
-      _tmpComponentInformation = omc_HpcOmTaskGraph_combineComponentInformations(threadData, arrayGet(_iCompInformations, mmc_unbox_integer(_compIdx)), _tmpComponentInformation);
+      _tmpComponentInformation = omc_HpcOmTaskGraph_combineComponentInformations(threadData, arrayGet(_iCompInformations, omc_unbox_integer(_compIdx)), _tmpComponentInformation);
     }
   }
 
   /* Pattern-matching assignment */
   tmpMeta3 = _tmpComponentInformation;
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 3));
-  tmp7 = mmc_unbox_integer(tmpMeta6);
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 4));
-  tmp9 = mmc_unbox_integer(tmpMeta8);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta3, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta3, 3);
+  tmp7 = omc_unbox_integer(tmpMeta6);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta3, 4);
+  tmp9 = omc_unbox_integer(tmpMeta8);
   _isPartOfODESystem = tmp5  /* pattern as ty=Boolean */;
   _isPartOfZeroFuncSystem = tmp7  /* pattern as ty=Boolean */;
   _isRemovedComponent = tmp9  /* pattern as ty=Boolean */;
 
-  tmpMeta10 = mmc_mk_box3(0, mmc_mk_boolean(_isPartOfODESystem), mmc_mk_boolean(_isPartOfZeroFuncSystem), mmc_mk_boolean(_isRemovedComponent));
+  tmpMeta10 = omc_mk_box3(0, omc_mk_boolean(_isPartOfODESystem), omc_mk_boolean(_isPartOfZeroFuncSystem), omc_mk_boolean(_isRemovedComponent));
   _oMembership = tmpMeta10;
   _return: OMC_LABEL_UNUSED
-  return _oMembership;
+  omc_ret_ = _oMembership;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addDepToGraph(threadData_t *threadData, modelica_integer _childIdx, modelica_integer _parentIdx, modelica_metatype _tGraphDataIn, modelica_metatype _iCommAttIdc, modelica_metatype _iCriticalPathEdges, modelica_metatype _iGraphDumpOptions, modelica_metatype _iGraph)
@@ -13745,17 +13377,18 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addDepToGraph(thr
   modelica_metatype tmpMeta35;
   modelica_boolean tmp36;
   modelica_metatype tmpMeta37;
-  modelica_metatype tmpMeta38;
-  modelica_metatype tmpMeta39;
-  modelica_metatype tmpMeta40;
-  modelica_metatype tmpMeta41;
+  modelica_string tmp38;
+  modelica_string tmp39;
+  modelica_string tmp40;
+  modelica_string tmp41;
   modelica_metatype tmpMeta42;
   modelica_metatype tmpMeta43;
   modelica_metatype tmpMeta44;
   modelica_metatype tmpMeta45;
   modelica_metatype tmpMeta46;
   modelica_metatype tmpMeta47;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oGraph has no default value.
   // _commCosts has no default value.
@@ -13786,25 +13419,25 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addDepToGraph(thr
   // _lineWidth has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _tGraphDataIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 10));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 9);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 10);
   _inComps = tmpMeta2;
   _commCosts = tmpMeta3;
   _nodeMark = tmpMeta4;
 
   /* Pattern-matching assignment */
   tmpMeta5 = _iCommAttIdc;
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 1));
-  tmp7 = mmc_unbox_integer(tmpMeta6);
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
-  tmp9 = mmc_unbox_integer(tmpMeta8);
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 3));
-  tmp11 = mmc_unbox_integer(tmpMeta10);
-  tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 4));
-  tmp13 = mmc_unbox_integer(tmpMeta12);
-  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 5));
-  tmp15 = mmc_unbox_integer(tmpMeta14);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 1);
+  tmp7 = omc_unbox_integer(tmpMeta6);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta5, 2);
+  tmp9 = omc_unbox_integer(tmpMeta8);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta5, 3);
+  tmp11 = omc_unbox_integer(tmpMeta10);
+  tmpMeta12 = OMC_BOX_FIELD(tmpMeta5, 4);
+  tmp13 = omc_unbox_integer(tmpMeta12);
+  tmpMeta14 = OMC_BOX_FIELD(tmpMeta5, 5);
+  tmp15 = omc_unbox_integer(tmpMeta14);
   _commCostAttIdx = tmp7  /* pattern as ty=Integer */;
   _commVarsAttIdx = tmp9  /* pattern as ty=Integer */;
   _commVarsAttIntIdx = tmp11  /* pattern as ty=Integer */;
@@ -13813,26 +13446,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addDepToGraph(thr
 
   /* Pattern-matching assignment */
   tmpMeta16 = _iCriticalPathEdges;
-  tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta16), 1));
-  tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta16), 2));
+  tmpMeta17 = OMC_BOX_FIELD(tmpMeta16, 1);
+  tmpMeta18 = OMC_BOX_FIELD(tmpMeta16, 2);
   _criticalPathEdges = tmpMeta17;
   _criticalPathEdgesWoC = tmpMeta18;
 
   /* Pattern-matching assignment */
   tmpMeta19 = _iGraphDumpOptions;
-  tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta19), 2));
-  tmp21 = mmc_unbox_integer(tmpMeta20);
-  tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta19), 5));
-  tmp23 = mmc_unbox_integer(tmpMeta22);
+  tmpMeta20 = OMC_BOX_FIELD(tmpMeta19, 2);
+  tmp21 = omc_unbox_integer(tmpMeta20);
+  tmpMeta22 = OMC_BOX_FIELD(tmpMeta19, 5);
+  tmp23 = omc_unbox_integer(tmpMeta22);
   _visualizeCriticalPath = tmp21  /* pattern as ty=Boolean */;
   _visualizeCommTime = tmp23  /* pattern as ty=Boolean */;
 
-  tmpMeta24 = mmc_mk_box2(0, mmc_mk_integer(_parentIdx), mmc_mk_integer(_childIdx));
+  tmpMeta24 = omc_mk_box2(0, omc_mk_integer(_parentIdx), omc_mk_integer(_childIdx));
   if(omc_List_exist1(threadData, _criticalPathEdges, boxvar_HpcOmTaskGraph_compareIntTuple2, tmpMeta24))
   {
     _lineWidth = 4.0;
 
-    _edgeColor = (_visualizeCriticalPath?_OMC_LIT143:_edgeColor);
+    omc_string_store(&(_edgeColor), (_visualizeCriticalPath?_OMC_LIT143:_edgeColor));
   }
   else
   {
@@ -13841,33 +13474,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addDepToGraph(thr
 
   /* Pattern-matching assignment */
   tmpMeta25 = omc_HpcOmTaskGraph_getCommCostBetweenNodes(threadData, _parentIdx, _childIdx, _tGraphDataIn);
-  tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 2));
-  tmp27 = mmc_unbox_integer(tmpMeta26);
-  tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 3));
-  tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 4));
-  tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 5));
-  tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 8));
-  tmp32 = mmc_unbox_real(tmpMeta31);
+  tmpMeta26 = OMC_BOX_FIELD(tmpMeta25, 2);
+  tmp27 = omc_unbox_integer(tmpMeta26);
+  tmpMeta28 = OMC_BOX_FIELD(tmpMeta25, 3);
+  tmpMeta29 = OMC_BOX_FIELD(tmpMeta25, 4);
+  tmpMeta30 = OMC_BOX_FIELD(tmpMeta25, 5);
+  tmpMeta31 = OMC_BOX_FIELD(tmpMeta25, 8);
+  tmp32 = omc_unbox_real(tmpMeta31);
   _numOfCommVars = tmp27  /* pattern as ty=Integer */;
   _integerVars = tmpMeta28;
   _floatVars = tmpMeta29;
   _booleanVars = tmpMeta30;
   _commCost = tmp32  /* pattern as ty=Real */;
 
-  _numOfCommVarsString = intString(_numOfCommVars);
+  omc_string_store(&(_numOfCommVarsString), intString(_numOfCommVars));
 
-  _numOfCommVarsIntString = intString(listLength(_integerVars));
+  omc_string_store(&(_numOfCommVarsIntString), intString(listLength(_integerVars)));
 
-  _numOfCommVarsFloatString = intString(listLength(_floatVars));
+  omc_string_store(&(_numOfCommVarsFloatString), intString(listLength(_floatVars)));
 
-  _numOfCommVarsBoolString = intString(listLength(_booleanVars));
+  omc_string_store(&(_numOfCommVarsBoolString), intString(listLength(_booleanVars)));
 
-  _commCostString = omc_System_snprintff(threadData, _OMC_LIT144, ((modelica_integer) 25), _commCost);
+  omc_string_store(&(_commCostString), omc_System_snprintff(threadData, _OMC_LIT144, ((modelica_integer) 25), _commCost));
 
   tmp36 = (modelica_boolean)_visualizeCommTime;
   if(tmp36)
   {
-    tmpMeta34 = mmc_mk_box4(3, &GraphML_EdgeLabel_EDGELABEL__desc, _commCostString, mmc_mk_some(_edgeColor), mmc_mk_integer(((modelica_integer) 12)));
+    tmpMeta34 = omc_mk_box4(3, &GraphML_EdgeLabel_EDGELABEL__desc, _commCostString, mmc_mk_some(_edgeColor), omc_mk_integer(((modelica_integer) 12)));
     tmpMeta33 = mmc_mk_cons(tmpMeta34, MMC_REFSTRUCTLIT(mmc_nil));
     tmpMeta37 = tmpMeta33;
   }
@@ -13878,29 +13511,30 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addDepToGraph(thr
   }
   _edgeLabels = tmpMeta37;
 
-  tmpMeta38 = stringAppend(_OMC_LIT145,intString(_parentIdx));
-  tmpMeta39 = stringAppend(tmpMeta38,intString(_childIdx));
-  tmpMeta40 = stringAppend(_OMC_LIT146,intString(_childIdx));
-  tmpMeta41 = stringAppend(_OMC_LIT146,intString(_parentIdx));
-  tmpMeta43 = mmc_mk_box2(0, mmc_mk_integer(_commCostAttIdx), _commCostString);
-  tmpMeta44 = mmc_mk_box2(0, mmc_mk_integer(_commVarsAttIdx), _numOfCommVarsString);
-  tmpMeta45 = mmc_mk_box2(0, mmc_mk_integer(_commVarsAttIntIdx), _numOfCommVarsIntString);
-  tmpMeta46 = mmc_mk_box2(0, mmc_mk_integer(_commVarsAttFloatIdx), _numOfCommVarsFloatString);
-  tmpMeta47 = mmc_mk_box2(0, mmc_mk_integer(_commVarsAttBoolIdx), _numOfCommVarsBoolString);
+  tmp38 = stringAppend(_OMC_LIT145,intString(_parentIdx));
+  tmp39 = stringAppend(tmp38,intString(_childIdx));
+  tmp40 = stringAppend(_OMC_LIT146,intString(_childIdx));
+  tmp41 = stringAppend(_OMC_LIT146,intString(_parentIdx));
+  tmpMeta43 = omc_mk_box2(0, omc_mk_integer(_commCostAttIdx), _commCostString);
+  tmpMeta44 = omc_mk_box2(0, omc_mk_integer(_commVarsAttIdx), _numOfCommVarsString);
+  tmpMeta45 = omc_mk_box2(0, omc_mk_integer(_commVarsAttIntIdx), _numOfCommVarsIntString);
+  tmpMeta46 = omc_mk_box2(0, omc_mk_integer(_commVarsAttFloatIdx), _numOfCommVarsFloatString);
+  tmpMeta47 = omc_mk_box2(0, omc_mk_integer(_commVarsAttBoolIdx), _numOfCommVarsBoolString);
   tmpMeta42 = mmc_mk_cons(tmpMeta43, mmc_mk_cons(tmpMeta44, mmc_mk_cons(tmpMeta45, mmc_mk_cons(tmpMeta46, mmc_mk_cons(tmpMeta47, MMC_REFSTRUCTLIT(mmc_nil))))));
-  _tmpGraph = omc_GraphML_addEdge(threadData, tmpMeta39, tmpMeta40, tmpMeta41, _edgeColor, _OMC_LIT147, _lineWidth, 0 /* false */, _edgeLabels, _OMC_LIT150, tmpMeta42, _iGraph, NULL);
+  _tmpGraph = omc_GraphML_addEdge(threadData, tmp39, tmp40, tmp41, _edgeColor, _OMC_LIT147, _lineWidth, 0 /* false */, _edgeLabels, _OMC_LIT150, tmpMeta42, _iGraph, NULL);
 
   _oGraph = _tmpGraph;
   _return: OMC_LABEL_UNUSED
-  return _oGraph;
+  omc_ret_ = _oGraph;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_addDepToGraph(threadData_t *threadData, modelica_metatype _childIdx, modelica_metatype _parentIdx, modelica_metatype _tGraphDataIn, modelica_metatype _iCommAttIdc, modelica_metatype _iCriticalPathEdges, modelica_metatype _iGraphDumpOptions, modelica_metatype _iGraph)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _oGraph = NULL;
-  tmp1 = mmc_unbox_integer(_childIdx);
-  tmp2 = mmc_unbox_integer(_parentIdx);
+  tmp1 = omc_unbox_integer(_childIdx);
+  tmp2 = omc_unbox_integer(_parentIdx);
   _oGraph = omc_HpcOmTaskGraph_addDepToGraph(threadData, tmp1, tmp2, _tGraphDataIn, _iCommAttIdc, _iCriticalPathEdges, _iGraphDumpOptions, _iGraph);
   /* skip box _oGraph; GraphML.GraphInfo */
   return _oGraph;
@@ -13924,7 +13558,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML1
   modelica_metatype tmpMeta9;
   modelica_real tmp10;
   modelica_metatype tmpMeta11;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _exeCostsOut has no default value.
   // _opCount has no default value.
@@ -13933,32 +13568,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML1
   // _exeTime has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _exeCostsIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_real(tmpMeta4);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_real(tmpMeta4);
   _opCountIn = tmp3  /* pattern as ty=Integer */;
   _exeTimeIn = tmp5  /* pattern as ty=Real */;
 
   /* Pattern-matching assignment */
   tmpMeta6 = arrayGet(_exeCosts, _compIdx);
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-  tmp8 = mmc_unbox_integer(tmpMeta7);
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-  tmp10 = mmc_unbox_real(tmpMeta9);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+  tmp8 = omc_unbox_integer(tmpMeta7);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta6, 2);
+  tmp10 = omc_unbox_real(tmpMeta9);
   _opCount = tmp8  /* pattern as ty=Integer */;
   _exeTime = tmp10  /* pattern as ty=Real */;
 
-  tmpMeta11 = mmc_mk_box2(0, mmc_mk_integer(_opCountIn + _opCount), mmc_mk_real(_exeTimeIn + _exeTime));
+  tmpMeta11 = omc_mk_box2(0, omc_mk_integer(_opCountIn + _opCount), omc_mk_real(_exeTimeIn + _exeTime));
   _exeCostsOut = tmpMeta11;
   _return: OMC_LABEL_UNUSED
-  return _exeCostsOut;
+  omc_ret_ = _exeCostsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_addNodeToGraphML1(threadData_t *threadData, modelica_metatype _compIdx, modelica_metatype _exeCosts, modelica_metatype _exeCostsIn)
 {
   modelica_integer tmp1;
   modelica_metatype _exeCostsOut = NULL;
-  tmp1 = mmc_unbox_integer(_compIdx);
+  tmp1 = omc_unbox_integer(_compIdx);
   _exeCostsOut = omc_HpcOmTaskGraph_addNodeToGraphML1(threadData, tmp1, _exeCosts, _exeCostsIn);
   /* skip box _exeCostsOut; tuple<#Integer, #Real> */
   return _exeCostsOut;
@@ -13966,11 +13602,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_addNodeToGraph
 
 static modelica_metatype closure18_HpcOmTaskGraph_addDepToGraph(threadData_t *thData, modelica_metatype closure, modelica_metatype childIdx, modelica_metatype iGraph)
 {
-  modelica_metatype parentIdx = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype tGraphDataIn = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
-  modelica_metatype iCommAttIdc = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),3));
-  modelica_metatype iCriticalPathEdges = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),4));
-  modelica_metatype iGraphDumpOptions = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),5));
+  modelica_metatype parentIdx = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype tGraphDataIn = OMC_BOX_FIELD(closure, 2);
+  modelica_metatype iCommAttIdc = OMC_BOX_FIELD(closure, 3);
+  modelica_metatype iCriticalPathEdges = OMC_BOX_FIELD(closure, 4);
+  modelica_metatype iGraphDumpOptions = OMC_BOX_FIELD(closure, 5);
   return boxptr_HpcOmTaskGraph_addDepToGraph(thData, childIdx, parentIdx, tGraphDataIn, iCommAttIdc, iCriticalPathEdges, iGraphDumpOptions, iGraph);
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(threadData_t *threadData, modelica_integer _nodeIdx, modelica_metatype _tGraphDataTuple, modelica_metatype _attIdc, modelica_metatype _sccSimEqMapping, modelica_metatype _iSchedulerInfoCritPath, modelica_metatype _iGraphDumpOptions, modelica_metatype _iGraph)
@@ -14119,10 +13755,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
   modelica_integer tmp79;
   modelica_metatype tmpMeta80;
   modelica_real tmp81;
-  modelica_metatype tmpMeta82;
-  modelica_metatype tmpMeta83;
-  modelica_metatype tmpMeta84;
-  modelica_metatype tmpMeta85;
+  modelica_string tmp82;
+  modelica_string tmp83;
+  modelica_string tmp84;
+  modelica_string tmp85;
   modelica_metatype tmpMeta86;
   modelica_metatype tmpMeta87;
   modelica_integer tmp88;
@@ -14130,7 +13766,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
   modelica_integer tmp90;
   modelica_metatype tmpMeta91;
   modelica_real tmp92;
-  modelica_metatype tmpMeta93;
+  modelica_string tmp93;
   modelica_metatype tmpMeta94;
   modelica_metatype tmpMeta95;
   modelica_metatype tmpMeta96;
@@ -14142,7 +13778,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
   modelica_metatype tmpMeta102;
   modelica_boolean tmp103;
   modelica_metatype tmpMeta104;
-  modelica_metatype tmpMeta105;
+  modelica_string tmp105;
   modelica_metatype tmpMeta106;
   modelica_metatype tmpMeta107;
   modelica_metatype tmpMeta108;
@@ -14161,7 +13797,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
   modelica_metatype tmpMeta121;
   modelica_metatype tmpMeta122;
   modelica_metatype tmpMeta123;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oGraph has no default value.
   // _tGraphIn has no default value.
@@ -14228,9 +13865,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
   // _compInformations has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iGraph;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp4 = mmc_unbox_integer(tmpMeta3);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp4 = omc_unbox_integer(tmpMeta3);
   _tmpGraph = tmpMeta2;
   _graphIdx = tmp4  /* pattern as ty=Integer */;
 
@@ -14238,19 +13875,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
   {
     /* Pattern-matching assignment */
     tmpMeta5 = _tGraphDataTuple;
-    tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 1));
-    tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
+    tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 1);
+    tmpMeta7 = OMC_BOX_FIELD(tmpMeta5, 2);
     _tGraphIn = tmpMeta6;
     _tGraphDataIn = tmpMeta7;
 
     /* Pattern-matching assignment */
     tmpMeta8 = _tGraphDataIn;
-    tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
-    tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 6));
-    tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 7));
-    tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 8));
-    tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 10));
-    tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 11));
+    tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 2);
+    tmpMeta10 = OMC_BOX_FIELD(tmpMeta8, 6);
+    tmpMeta11 = OMC_BOX_FIELD(tmpMeta8, 7);
+    tmpMeta12 = OMC_BOX_FIELD(tmpMeta8, 8);
+    tmpMeta13 = OMC_BOX_FIELD(tmpMeta8, 10);
+    tmpMeta14 = OMC_BOX_FIELD(tmpMeta8, 11);
     _inComps = tmpMeta9;
     _compNames = tmpMeta10;
     _compDescs = tmpMeta11;
@@ -14260,42 +13897,42 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
 
     /* Pattern-matching assignment */
     tmpMeta15 = _attIdc;
-    tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 1));
-    tmp17 = mmc_unbox_integer(tmpMeta16);
-    tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 2));
-    tmp19 = mmc_unbox_integer(tmpMeta18);
-    tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 3));
-    tmp21 = mmc_unbox_integer(tmpMeta20);
-    tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 4));
-    tmp23 = mmc_unbox_integer(tmpMeta22);
-    tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 5));
-    tmp25 = mmc_unbox_integer(tmpMeta24);
-    tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 6));
-    tmp27 = mmc_unbox_integer(tmpMeta26);
-    tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 7));
-    tmp29 = mmc_unbox_integer(tmpMeta28);
-    tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 8));
-    tmp31 = mmc_unbox_integer(tmpMeta30);
-    tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 9));
-    tmp33 = mmc_unbox_integer(tmpMeta32);
-    tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 10));
-    tmp35 = mmc_unbox_integer(tmpMeta34);
-    tmpMeta36 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 11));
-    tmp37 = mmc_unbox_integer(tmpMeta36);
-    tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 12));
-    tmp39 = mmc_unbox_integer(tmpMeta38);
-    tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 13));
-    tmp41 = mmc_unbox_integer(tmpMeta40);
-    tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 14));
-    tmp43 = mmc_unbox_integer(tmpMeta42);
-    tmpMeta44 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 15));
-    tmp45 = mmc_unbox_integer(tmpMeta44);
-    tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 16));
-    tmp47 = mmc_unbox_integer(tmpMeta46);
-    tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 17));
-    tmp49 = mmc_unbox_integer(tmpMeta48);
-    tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 18));
-    tmp51 = mmc_unbox_integer(tmpMeta50);
+    tmpMeta16 = OMC_BOX_FIELD(tmpMeta15, 1);
+    tmp17 = omc_unbox_integer(tmpMeta16);
+    tmpMeta18 = OMC_BOX_FIELD(tmpMeta15, 2);
+    tmp19 = omc_unbox_integer(tmpMeta18);
+    tmpMeta20 = OMC_BOX_FIELD(tmpMeta15, 3);
+    tmp21 = omc_unbox_integer(tmpMeta20);
+    tmpMeta22 = OMC_BOX_FIELD(tmpMeta15, 4);
+    tmp23 = omc_unbox_integer(tmpMeta22);
+    tmpMeta24 = OMC_BOX_FIELD(tmpMeta15, 5);
+    tmp25 = omc_unbox_integer(tmpMeta24);
+    tmpMeta26 = OMC_BOX_FIELD(tmpMeta15, 6);
+    tmp27 = omc_unbox_integer(tmpMeta26);
+    tmpMeta28 = OMC_BOX_FIELD(tmpMeta15, 7);
+    tmp29 = omc_unbox_integer(tmpMeta28);
+    tmpMeta30 = OMC_BOX_FIELD(tmpMeta15, 8);
+    tmp31 = omc_unbox_integer(tmpMeta30);
+    tmpMeta32 = OMC_BOX_FIELD(tmpMeta15, 9);
+    tmp33 = omc_unbox_integer(tmpMeta32);
+    tmpMeta34 = OMC_BOX_FIELD(tmpMeta15, 10);
+    tmp35 = omc_unbox_integer(tmpMeta34);
+    tmpMeta36 = OMC_BOX_FIELD(tmpMeta15, 11);
+    tmp37 = omc_unbox_integer(tmpMeta36);
+    tmpMeta38 = OMC_BOX_FIELD(tmpMeta15, 12);
+    tmp39 = omc_unbox_integer(tmpMeta38);
+    tmpMeta40 = OMC_BOX_FIELD(tmpMeta15, 13);
+    tmp41 = omc_unbox_integer(tmpMeta40);
+    tmpMeta42 = OMC_BOX_FIELD(tmpMeta15, 14);
+    tmp43 = omc_unbox_integer(tmpMeta42);
+    tmpMeta44 = OMC_BOX_FIELD(tmpMeta15, 15);
+    tmp45 = omc_unbox_integer(tmpMeta44);
+    tmpMeta46 = OMC_BOX_FIELD(tmpMeta15, 16);
+    tmp47 = omc_unbox_integer(tmpMeta46);
+    tmpMeta48 = OMC_BOX_FIELD(tmpMeta15, 17);
+    tmp49 = omc_unbox_integer(tmpMeta48);
+    tmpMeta50 = OMC_BOX_FIELD(tmpMeta15, 18);
+    tmp51 = omc_unbox_integer(tmpMeta50);
     _nameAttIdx = tmp17  /* pattern as ty=Integer */;
     _opCountAttIdx = tmp19  /* pattern as ty=Integer */;
     _calcTimeAttIdx = tmp21  /* pattern as ty=Integer */;
@@ -14317,10 +13954,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
 
     /* Pattern-matching assignment */
     tmpMeta52 = _iSchedulerInfoCritPath;
-    tmpMeta53 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta52), 1));
-    tmpMeta54 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta52), 2));
-    tmpMeta55 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta52), 3));
-    tmpMeta56 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta52), 4));
+    tmpMeta53 = OMC_BOX_FIELD(tmpMeta52, 1);
+    tmpMeta54 = OMC_BOX_FIELD(tmpMeta52, 2);
+    tmpMeta55 = OMC_BOX_FIELD(tmpMeta52, 3);
+    tmpMeta56 = OMC_BOX_FIELD(tmpMeta52, 4);
     _criticalPath = tmpMeta53;
     _criticalPathWoC = tmpMeta54;
     _schedulerInfo = tmpMeta55;
@@ -14328,10 +13965,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
 
     /* Pattern-matching assignment */
     tmpMeta57 = _iGraphDumpOptions;
-    tmpMeta58 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta57), 3));
-    tmp59 = mmc_unbox_integer(tmpMeta58);
-    tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta57), 4));
-    tmp61 = mmc_unbox_integer(tmpMeta60);
+    tmpMeta58 = OMC_BOX_FIELD(tmpMeta57, 3);
+    tmp59 = omc_unbox_integer(tmpMeta58);
+    tmpMeta60 = OMC_BOX_FIELD(tmpMeta57, 4);
+    tmp61 = omc_unbox_integer(tmpMeta60);
     _visualizeTaskStartAndFinishTime = tmp59  /* pattern as ty=Boolean */;
     _visualizeTaskCalcTime = tmp61  /* pattern as ty=Boolean */;
 
@@ -14339,114 +13976,114 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
 
     /* Pattern-matching assignment */
     tmpMeta62 = omc_HpcOmTaskGraph_getNodeMembershipByComponents(threadData, _components, _compInformations);
-    tmpMeta63 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta62), 1));
-    tmp64 = mmc_unbox_integer(tmpMeta63);
-    tmpMeta65 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta62), 2));
-    tmp66 = mmc_unbox_integer(tmpMeta65);
-    tmpMeta67 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta62), 3));
-    tmp68 = mmc_unbox_integer(tmpMeta67);
+    tmpMeta63 = OMC_BOX_FIELD(tmpMeta62, 1);
+    tmp64 = omc_unbox_integer(tmpMeta63);
+    tmpMeta65 = OMC_BOX_FIELD(tmpMeta62, 2);
+    tmp66 = omc_unbox_integer(tmpMeta65);
+    tmpMeta67 = OMC_BOX_FIELD(tmpMeta62, 3);
+    tmp68 = omc_unbox_integer(tmpMeta67);
     _isPartOfODESystem = tmp64  /* pattern as ty=Boolean */;
     _isPartOfZeroFuncSystem = tmp66  /* pattern as ty=Boolean */;
     _isRemovedComponent = tmp68  /* pattern as ty=Boolean */;
 
     if((listLength(_components) != ((modelica_integer) 1)))
     {
-      _primalComp = mmc_unbox_integer(omc_List_last(threadData, _components));
+      _primalComp = omc_unbox_integer(omc_List_last(threadData, _components));
 
       _simCodeEqs = omc_List_flatten(threadData, omc_List_map1(threadData, _components, boxvar_Array_getIndexFirst, _sccSimEqMapping));
 
-      _nodeDesc = stringDelimitList(omc_List_map1(threadData, _components, boxvar_Array_getIndexFirst, _compDescs), _OMC_LIT5);
+      omc_string_store(&(_nodeDesc), stringDelimitList(omc_List_map1(threadData, _components, boxvar_Array_getIndexFirst, _compDescs), _OMC_LIT5));
 
       /* Pattern-matching assignment */
       tmpMeta69 = omc_List_fold1(threadData, _components, boxvar_HpcOmTaskGraph_addNodeToGraphML1, _exeCosts, _OMC_LIT42);
-      tmpMeta70 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta69), 1));
-      tmp71 = mmc_unbox_integer(tmpMeta70);
-      tmpMeta72 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta69), 2));
-      tmp73 = mmc_unbox_real(tmpMeta72);
+      tmpMeta70 = OMC_BOX_FIELD(tmpMeta69, 1);
+      tmp71 = omc_unbox_integer(tmpMeta70);
+      tmpMeta72 = OMC_BOX_FIELD(tmpMeta69, 2);
+      tmp73 = omc_unbox_real(tmpMeta72);
       _opCount = tmp71  /* pattern as ty=Integer */;
       _calcTime = tmp73  /* pattern as ty=Real */;
     }
     else
     {
-      _primalComp = mmc_unbox_integer(listGet(_components, ((modelica_integer) 1)));
+      _primalComp = omc_unbox_integer(listGet(_components, ((modelica_integer) 1)));
 
       _simCodeEqs = arrayGet(_sccSimEqMapping, _primalComp);
 
-      _nodeDesc = arrayGet(_compDescs, _primalComp);
+      omc_string_store(&(_nodeDesc), arrayGet(_compDescs, _primalComp));
 
       /* Pattern-matching assignment */
       tmpMeta74 = arrayGet(_exeCosts, _primalComp);
-      tmpMeta75 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta74), 2));
-      tmp76 = mmc_unbox_real(tmpMeta75);
+      tmpMeta75 = OMC_BOX_FIELD(tmpMeta74, 2);
+      tmp76 = omc_unbox_real(tmpMeta75);
       _calcTime = tmp76  /* pattern as ty=Real */;
 
       /* Pattern-matching assignment */
       tmpMeta77 = arrayGet(_exeCosts, _primalComp);
-      tmpMeta78 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta77), 1));
-      tmp79 = mmc_unbox_integer(tmpMeta78);
-      tmpMeta80 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta77), 2));
-      tmp81 = mmc_unbox_real(tmpMeta80);
+      tmpMeta78 = OMC_BOX_FIELD(tmpMeta77, 1);
+      tmp79 = omc_unbox_integer(tmpMeta78);
+      tmpMeta80 = OMC_BOX_FIELD(tmpMeta77, 2);
+      tmp81 = omc_unbox_real(tmpMeta80);
       _opCount = tmp79  /* pattern as ty=Integer */;
       _calcTime = tmp81  /* pattern as ty=Real */;
     }
 
-    _compText = arrayGet(_compNames, _primalComp);
+    omc_string_store(&(_compText), arrayGet(_compNames, _primalComp));
 
-    tmpMeta82 = stringAppend(_OMC_LIT157,stringDelimitList(omc_List_map(threadData, _components, boxvar_intString), _OMC_LIT31));
-    tmpMeta83 = stringAppend(tmpMeta82,_OMC_LIT3);
-    _compsText = tmpMeta83;
+    tmp82 = stringAppend(_OMC_LIT157,stringDelimitList(omc_List_map(threadData, _components, boxvar_intString), _OMC_LIT31));
+    tmp83 = stringAppend(tmp82,_OMC_LIT3);
+    omc_string_store(&(_compsText), tmp83);
 
-    _annotationString = arrayGet(_annotationInfo, _nodeIdx);
+    omc_string_store(&(_annotationString), arrayGet(_annotationInfo, _nodeIdx));
 
-    _calcTimeString = realString(_calcTime);
+    omc_string_store(&(_calcTimeString), realString(_calcTime));
 
-    _yCoord = (((modelica_integer) 100)) * (mmc_unbox_integer(arrayGet(_nodeMark, _nodeIdx)));
+    _yCoord = (((modelica_integer) 100)) * (omc_unbox_integer(arrayGet(_nodeMark, _nodeIdx)));
 
-    _opCountString = intString(_opCount);
+    omc_string_store(&(_opCountString), intString(_opCount));
 
-    _yCoordString = intString(_yCoord);
+    omc_string_store(&(_yCoordString), intString(_yCoord));
 
     _childNodes = arrayGet(_tGraphIn, _nodeIdx);
 
-    _simCodeEqString = stringDelimitList(omc_List_map(threadData, _simCodeEqs, boxvar_intString), _OMC_LIT115);
+    omc_string_store(&(_simCodeEqString), stringDelimitList(omc_List_map(threadData, _simCodeEqs, boxvar_intString), _OMC_LIT115));
 
-    tmpMeta84 = stringAppend(_OMC_LIT0,intString(_nodeIdx));
-    tmpMeta85 = stringAppend(tmpMeta84,_OMC_LIT0);
-    _componentsString = tmpMeta85;
+    tmp84 = stringAppend(_OMC_LIT0,intString(_nodeIdx));
+    tmp85 = stringAppend(tmp84,_OMC_LIT0);
+    omc_string_store(&(_componentsString), tmp85);
 
     /* Pattern-matching assignment */
     tmpMeta86 = arrayGet(_schedulerInfo, _nodeIdx);
-    tmpMeta87 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta86), 1));
-    tmp88 = mmc_unbox_integer(tmpMeta87);
-    tmpMeta89 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta86), 2));
-    tmp90 = mmc_unbox_integer(tmpMeta89);
-    tmpMeta91 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta86), 3));
-    tmp92 = mmc_unbox_real(tmpMeta91);
+    tmpMeta87 = OMC_BOX_FIELD(tmpMeta86, 1);
+    tmp88 = omc_unbox_integer(tmpMeta87);
+    tmpMeta89 = OMC_BOX_FIELD(tmpMeta86, 2);
+    tmp90 = omc_unbox_integer(tmpMeta89);
+    tmpMeta91 = OMC_BOX_FIELD(tmpMeta86, 3);
+    tmp92 = omc_unbox_real(tmpMeta91);
     _schedulerThreadId = tmp88  /* pattern as ty=Integer */;
     _schedulerTaskNumber = tmp90  /* pattern as ty=Integer */;
     _taskFinishTime = tmp92  /* pattern as ty=Real */;
 
     _taskStartTime = _taskFinishTime - _calcTime;
 
-    tmpMeta93 = stringAppend(_OMC_LIT158,intString(_schedulerThreadId));
-    _threadIdxString = tmpMeta93;
+    tmp93 = stringAppend(_OMC_LIT158,intString(_schedulerThreadId));
+    omc_string_store(&(_threadIdxString), tmp93);
 
-    _taskNumberString = intString(_schedulerTaskNumber);
+    omc_string_store(&(_taskNumberString), intString(_schedulerTaskNumber));
 
-    _calcTimeString = omc_System_snprintff(threadData, _OMC_LIT144, ((modelica_integer) 25), _calcTime);
+    omc_string_store(&(_calcTimeString), omc_System_snprintff(threadData, _OMC_LIT144, ((modelica_integer) 25), _calcTime));
 
-    _taskFinishTimeString = omc_System_snprintff(threadData, _OMC_LIT144, ((modelica_integer) 25), _taskFinishTime);
+    omc_string_store(&(_taskFinishTimeString), omc_System_snprintff(threadData, _OMC_LIT144, ((modelica_integer) 25), _taskFinishTime));
 
-    _taskStartTimeString = omc_System_snprintff(threadData, _OMC_LIT144, ((modelica_integer) 25), _taskStartTime);
+    omc_string_store(&(_taskStartTimeString), omc_System_snprintff(threadData, _OMC_LIT144, ((modelica_integer) 25), _taskStartTime));
 
-    tmpMeta95 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _componentsString, mmc_mk_none(), _OMC_LIT159);
+    tmpMeta95 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _componentsString, mmc_mk_none(), _OMC_LIT159);
     tmpMeta94 = mmc_mk_cons(tmpMeta95, MMC_REFSTRUCTLIT(mmc_nil));
     _nodeLabels = tmpMeta94;
 
     tmp98 = (modelica_boolean)_visualizeTaskCalcTime;
     if(tmp98)
     {
-      tmpMeta97 = mmc_mk_box5(4, &GraphML_NodeLabel_NODELABEL__CORNER__desc, _calcTimeString, _OMC_LIT161, _OMC_LIT162, _OMC_LIT163);
+      tmpMeta97 = omc_mk_box5(4, &GraphML_NodeLabel_NODELABEL__CORNER__desc, _calcTimeString, _OMC_LIT161, _OMC_LIT162, _OMC_LIT163);
       tmpMeta96 = mmc_mk_cons(tmpMeta97, _nodeLabels);
       tmpMeta99 = tmpMeta96;
     }
@@ -14459,8 +14096,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
     tmp103 = (modelica_boolean)_visualizeTaskStartAndFinishTime;
     if(tmp103)
     {
-      tmpMeta101 = mmc_mk_box5(4, &GraphML_NodeLabel_NODELABEL__CORNER__desc, _taskStartTimeString, _OMC_LIT165, _OMC_LIT162, _OMC_LIT166);
-      tmpMeta102 = mmc_mk_box5(4, &GraphML_NodeLabel_NODELABEL__CORNER__desc, _taskFinishTimeString, _OMC_LIT168, _OMC_LIT162, _OMC_LIT169);
+      tmpMeta101 = omc_mk_box5(4, &GraphML_NodeLabel_NODELABEL__CORNER__desc, _taskStartTimeString, _OMC_LIT165, _OMC_LIT162, _OMC_LIT166);
+      tmpMeta102 = omc_mk_box5(4, &GraphML_NodeLabel_NODELABEL__CORNER__desc, _taskFinishTimeString, _OMC_LIT168, _OMC_LIT162, _OMC_LIT169);
       tmpMeta100 = mmc_mk_cons(tmpMeta101, mmc_mk_cons(tmpMeta102, MMC_REFSTRUCTLIT(mmc_nil)));
       tmpMeta104 = listAppend(_nodeLabels, tmpMeta100);
     }
@@ -14470,43 +14107,44 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_addNodeToGraphML(
     }
     _nodeLabels = tmpMeta104;
 
-    tmpMeta105 = stringAppend(_OMC_LIT146,intString(_nodeIdx));
-    tmpMeta107 = mmc_mk_box2(0, mmc_mk_integer(_nameAttIdx), _compText);
-    tmpMeta108 = mmc_mk_box2(0, mmc_mk_integer(_calcTimeAttIdx), _calcTimeString);
-    tmpMeta109 = mmc_mk_box2(0, mmc_mk_integer(_opCountAttIdx), _opCountString);
-    tmpMeta110 = mmc_mk_box2(0, mmc_mk_integer(_taskIdAttIdx), _componentsString);
-    tmpMeta111 = mmc_mk_box2(0, mmc_mk_integer(_compsIdAttIdx), _compsText);
-    tmpMeta112 = mmc_mk_box2(0, mmc_mk_integer(_yCoordAttIdx), _yCoordString);
-    tmpMeta113 = mmc_mk_box2(0, mmc_mk_integer(_simCodeEqAttIdx), _simCodeEqString);
-    tmpMeta114 = mmc_mk_box2(0, mmc_mk_integer(_threadIdAttIdx), _threadIdxString);
-    tmpMeta115 = mmc_mk_box2(0, mmc_mk_integer(_taskNumberAttIdx), _taskNumberString);
-    tmpMeta116 = mmc_mk_box2(0, mmc_mk_integer(_annotationAttIdx), _annotationString);
-    tmpMeta117 = mmc_mk_box2(0, mmc_mk_integer(_partOfEventAttIdx), (_isPartOfODESystem?_OMC_LIT101:_OMC_LIT102));
-    tmpMeta118 = mmc_mk_box2(0, mmc_mk_integer(_partOfOdeAttIdx), (_isPartOfZeroFuncSystem?_OMC_LIT101:_OMC_LIT102));
-    tmpMeta119 = mmc_mk_box2(0, mmc_mk_integer(_removedCompAttIdx), (_isRemovedComponent?_OMC_LIT101:_OMC_LIT102));
+    tmp105 = stringAppend(_OMC_LIT146,intString(_nodeIdx));
+    tmpMeta107 = omc_mk_box2(0, omc_mk_integer(_nameAttIdx), _compText);
+    tmpMeta108 = omc_mk_box2(0, omc_mk_integer(_calcTimeAttIdx), _calcTimeString);
+    tmpMeta109 = omc_mk_box2(0, omc_mk_integer(_opCountAttIdx), _opCountString);
+    tmpMeta110 = omc_mk_box2(0, omc_mk_integer(_taskIdAttIdx), _componentsString);
+    tmpMeta111 = omc_mk_box2(0, omc_mk_integer(_compsIdAttIdx), _compsText);
+    tmpMeta112 = omc_mk_box2(0, omc_mk_integer(_yCoordAttIdx), _yCoordString);
+    tmpMeta113 = omc_mk_box2(0, omc_mk_integer(_simCodeEqAttIdx), _simCodeEqString);
+    tmpMeta114 = omc_mk_box2(0, omc_mk_integer(_threadIdAttIdx), _threadIdxString);
+    tmpMeta115 = omc_mk_box2(0, omc_mk_integer(_taskNumberAttIdx), _taskNumberString);
+    tmpMeta116 = omc_mk_box2(0, omc_mk_integer(_annotationAttIdx), _annotationString);
+    tmpMeta117 = omc_mk_box2(0, omc_mk_integer(_partOfEventAttIdx), (_isPartOfODESystem?_OMC_LIT101:_OMC_LIT102));
+    tmpMeta118 = omc_mk_box2(0, omc_mk_integer(_partOfOdeAttIdx), (_isPartOfZeroFuncSystem?_OMC_LIT101:_OMC_LIT102));
+    tmpMeta119 = omc_mk_box2(0, omc_mk_integer(_removedCompAttIdx), (_isRemovedComponent?_OMC_LIT101:_OMC_LIT102));
     tmpMeta106 = mmc_mk_cons(tmpMeta107, mmc_mk_cons(tmpMeta108, mmc_mk_cons(tmpMeta109, mmc_mk_cons(tmpMeta110, mmc_mk_cons(tmpMeta111, mmc_mk_cons(tmpMeta112, mmc_mk_cons(tmpMeta113, mmc_mk_cons(tmpMeta114, mmc_mk_cons(tmpMeta115, mmc_mk_cons(tmpMeta116, mmc_mk_cons(tmpMeta117, mmc_mk_cons(tmpMeta118, mmc_mk_cons(tmpMeta119, MMC_REFSTRUCTLIT(mmc_nil))))))))))))));
-    _tmpGraph = omc_GraphML_addNode(threadData, tmpMeta105, _OMC_LIT170, 1.0, _nodeLabels, _OMC_LIT171, mmc_mk_some(_nodeDesc), tmpMeta106, _graphIdx, _tmpGraph, NULL);
+    _tmpGraph = omc_GraphML_addNode(threadData, tmp105, _OMC_LIT170, 1.0, _nodeLabels, _OMC_LIT171, mmc_mk_some(_nodeDesc), tmpMeta106, _graphIdx, _tmpGraph, NULL);
 
-    tmpMeta121 = mmc_mk_box5(0, mmc_mk_integer(_commCostAttIdx), mmc_mk_integer(_commVarsAttIdx), mmc_mk_integer(_commVarsAttIntIdx), mmc_mk_integer(_commVarsAttFloatIdx), mmc_mk_integer(_commVarsAttBoolIdx));
-    tmpMeta122 = mmc_mk_box2(0, _criticalPath, _criticalPathWoC);
-    tmpMeta120 = mmc_mk_box5(0, mmc_mk_integer(_nodeIdx), _tGraphDataIn, tmpMeta121, tmpMeta122, _iGraphDumpOptions);
-    _tmpGraph = omc_List_fold(threadData, _childNodes, (modelica_fnptr) mmc_mk_box2(0,closure18_HpcOmTaskGraph_addDepToGraph,tmpMeta120), _tmpGraph);
+    tmpMeta121 = omc_mk_box5(0, omc_mk_integer(_commCostAttIdx), omc_mk_integer(_commVarsAttIdx), omc_mk_integer(_commVarsAttIntIdx), omc_mk_integer(_commVarsAttFloatIdx), omc_mk_integer(_commVarsAttBoolIdx));
+    tmpMeta122 = omc_mk_box2(0, _criticalPath, _criticalPathWoC);
+    tmpMeta120 = omc_mk_box5(0, omc_mk_integer(_nodeIdx), _tGraphDataIn, tmpMeta121, tmpMeta122, _iGraphDumpOptions);
+    _tmpGraph = omc_List_fold(threadData, _childNodes, (modelica_fnptr) omc_mk_box2(0,closure18_HpcOmTaskGraph_addDepToGraph,tmpMeta120), _tmpGraph);
   }
   else
   {
     omc_Error_addMessage(threadData, _OMC_LIT154, _OMC_LIT156);
   }
 
-  tmpMeta123 = mmc_mk_box2(0, _tmpGraph, mmc_mk_integer(_graphIdx));
+  tmpMeta123 = omc_mk_box2(0, _tmpGraph, omc_mk_integer(_graphIdx));
   _oGraph = tmpMeta123;
   _return: OMC_LABEL_UNUSED
-  return _oGraph;
+  omc_ret_ = _oGraph;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_addNodeToGraphML(threadData_t *threadData, modelica_metatype _nodeIdx, modelica_metatype _tGraphDataTuple, modelica_metatype _attIdc, modelica_metatype _sccSimEqMapping, modelica_metatype _iSchedulerInfoCritPath, modelica_metatype _iGraphDumpOptions, modelica_metatype _iGraph)
 {
   modelica_integer tmp1;
   modelica_metatype _oGraph = NULL;
-  tmp1 = mmc_unbox_integer(_nodeIdx);
+  tmp1 = omc_unbox_integer(_nodeIdx);
   _oGraph = omc_HpcOmTaskGraph_addNodeToGraphML(threadData, tmp1, _tGraphDataTuple, _attIdc, _sccSimEqMapping, _iSchedulerInfoCritPath, _iGraphDumpOptions, _iGraph);
   /* skip box _oGraph; tuple<GraphML.GraphInfo, #Integer> */
   return _oGraph;
@@ -14514,14 +14152,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_addNodeToGraph
 
 static modelica_metatype closure19_HpcOmTaskGraph_addNodeToGraphML(threadData_t *thData, modelica_metatype closure, modelica_metatype nodeIdx, modelica_metatype iGraph)
 {
-  modelica_metatype tGraphDataTuple = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype attIdc = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
-  modelica_metatype sccSimEqMapping = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),3));
-  modelica_metatype iSchedulerInfoCritPath = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),4));
-  modelica_metatype iGraphDumpOptions = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),5));
+  modelica_metatype tGraphDataTuple = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype attIdc = OMC_BOX_FIELD(closure, 2);
+  modelica_metatype sccSimEqMapping = OMC_BOX_FIELD(closure, 3);
+  modelica_metatype iSchedulerInfoCritPath = OMC_BOX_FIELD(closure, 4);
+  modelica_metatype iGraphDumpOptions = OMC_BOX_FIELD(closure, 5);
   return boxptr_HpcOmTaskGraph_addNodeToGraphML(thData, nodeIdx, tGraphDataTuple, attIdc, sccSimEqMapping, iSchedulerInfoCritPath, iGraphDumpOptions, iGraph);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_string _iCriticalPathInfo, modelica_metatype _iCriticalPath, modelica_metatype _iCriticalPathWoC, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSchedulerInfo, modelica_metatype _iAnnotationInfo, modelica_integer _iGraphIdx, modelica_metatype _iGraphDumpOptions, modelica_metatype _iGraphInfo)
 {
   modelica_metatype _oGraphInfo = NULL;
@@ -14547,7 +14185,8 @@ modelica_metatype omc_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph(threadData
   modelica_integer _removedCompAttIdx;
   modelica_metatype _nodeIdc = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oGraphInfo has no default value.
   // _graphInfo has no default value.
@@ -14667,149 +14306,149 @@ modelica_metatype omc_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph(threadData
           /* Pattern-matching tuple assignment */
           tmpMeta9 = omc_GraphML_addAttribute(threadData, _OMC_LIT92, _OMC_LIT172, _OMC_LIT173, _OMC_LIT174, _iGraphInfo, &tmpMeta6);
           _graphInfo = tmpMeta9;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 2);
+          tmp8 = omc_unbox_integer(tmpMeta7);
           _nameAttIdx = tmp8  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta13 = omc_GraphML_addAttribute(threadData, _OMC_LIT175, _OMC_LIT176, _OMC_LIT177, _OMC_LIT174, _graphInfo, &tmpMeta10);
           _graphInfo = tmpMeta13;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 2));
-          tmp12 = mmc_unbox_integer(tmpMeta11);
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta10, 2);
+          tmp12 = omc_unbox_integer(tmpMeta11);
           _opCountAttIdx = tmp12  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta17 = omc_GraphML_addAttribute(threadData, _OMC_LIT175, _OMC_LIT178, _OMC_LIT179, _OMC_LIT174, _graphInfo, &tmpMeta14);
           _graphInfo = tmpMeta17;
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta14), 2));
-          tmp16 = mmc_unbox_integer(tmpMeta15);
+          tmpMeta15 = OMC_BOX_FIELD(tmpMeta14, 2);
+          tmp16 = omc_unbox_integer(tmpMeta15);
           _calcTimeAttIdx = tmp16  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta21 = omc_GraphML_addAttribute(threadData, _OMC_LIT92, _OMC_LIT180, _OMC_LIT173, _OMC_LIT174, _graphInfo, &tmpMeta18);
           _graphInfo = tmpMeta21;
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta18), 2));
-          tmp20 = mmc_unbox_integer(tmpMeta19);
+          tmpMeta19 = OMC_BOX_FIELD(tmpMeta18, 2);
+          tmp20 = omc_unbox_integer(tmpMeta19);
           _taskIdAttIdx = tmp20  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta25 = omc_GraphML_addAttribute(threadData, _OMC_LIT92, _OMC_LIT181, _OMC_LIT173, _OMC_LIT174, _graphInfo, &tmpMeta22);
           _graphInfo = tmpMeta25;
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta22), 2));
-          tmp24 = mmc_unbox_integer(tmpMeta23);
+          tmpMeta23 = OMC_BOX_FIELD(tmpMeta22, 2);
+          tmp24 = omc_unbox_integer(tmpMeta23);
           _compsIdAttIdx = tmp24  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta29 = omc_GraphML_addAttribute(threadData, _OMC_LIT182, _OMC_LIT183, _OMC_LIT177, _OMC_LIT174, _graphInfo, &tmpMeta26);
           _graphInfo = tmpMeta29;
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta26), 2));
-          tmp28 = mmc_unbox_integer(tmpMeta27);
+          tmpMeta27 = OMC_BOX_FIELD(tmpMeta26, 2);
+          tmp28 = omc_unbox_integer(tmpMeta27);
           _yCoordAttIdx = tmp28  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta33 = omc_GraphML_addAttribute(threadData, _OMC_LIT92, _OMC_LIT184, _OMC_LIT173, _OMC_LIT174, _graphInfo, &tmpMeta30);
           _graphInfo = tmpMeta33;
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 2));
-          tmp32 = mmc_unbox_integer(tmpMeta31);
+          tmpMeta31 = OMC_BOX_FIELD(tmpMeta30, 2);
+          tmp32 = omc_unbox_integer(tmpMeta31);
           _simCodeEqAttIdx = tmp32  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta37 = omc_GraphML_addAttribute(threadData, _OMC_LIT92, _OMC_LIT185, _OMC_LIT173, _OMC_LIT174, _graphInfo, &tmpMeta34);
           _graphInfo = tmpMeta37;
-          tmpMeta35 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta34), 2));
-          tmp36 = mmc_unbox_integer(tmpMeta35);
+          tmpMeta35 = OMC_BOX_FIELD(tmpMeta34, 2);
+          tmp36 = omc_unbox_integer(tmpMeta35);
           _threadIdAttIdx = tmp36  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta41 = omc_GraphML_addAttribute(threadData, _OMC_LIT175, _OMC_LIT186, _OMC_LIT177, _OMC_LIT174, _graphInfo, &tmpMeta38);
           _graphInfo = tmpMeta41;
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta38), 2));
-          tmp40 = mmc_unbox_integer(tmpMeta39);
+          tmpMeta39 = OMC_BOX_FIELD(tmpMeta38, 2);
+          tmp40 = omc_unbox_integer(tmpMeta39);
           _taskNumberAttIdx = tmp40  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta45 = omc_GraphML_addAttribute(threadData, _OMC_LIT175, _OMC_LIT187, _OMC_LIT179, _OMC_LIT188, _graphInfo, &tmpMeta42);
           _graphInfo = tmpMeta45;
-          tmpMeta43 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta42), 2));
-          tmp44 = mmc_unbox_integer(tmpMeta43);
+          tmpMeta43 = OMC_BOX_FIELD(tmpMeta42, 2);
+          tmp44 = omc_unbox_integer(tmpMeta43);
           _commCostAttIdx = tmp44  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta49 = omc_GraphML_addAttribute(threadData, _OMC_LIT175, _OMC_LIT189, _OMC_LIT177, _OMC_LIT188, _graphInfo, &tmpMeta46);
           _graphInfo = tmpMeta49;
-          tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta46), 2));
-          tmp48 = mmc_unbox_integer(tmpMeta47);
+          tmpMeta47 = OMC_BOX_FIELD(tmpMeta46, 2);
+          tmp48 = omc_unbox_integer(tmpMeta47);
           _commVarsAttIdx = tmp48  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta53 = omc_GraphML_addAttribute(threadData, _OMC_LIT175, _OMC_LIT190, _OMC_LIT177, _OMC_LIT188, _graphInfo, &tmpMeta50);
           _graphInfo = tmpMeta53;
-          tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta50), 2));
-          tmp52 = mmc_unbox_integer(tmpMeta51);
+          tmpMeta51 = OMC_BOX_FIELD(tmpMeta50, 2);
+          tmp52 = omc_unbox_integer(tmpMeta51);
           _commVarsIntAttIdx = tmp52  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta57 = omc_GraphML_addAttribute(threadData, _OMC_LIT175, _OMC_LIT191, _OMC_LIT177, _OMC_LIT188, _graphInfo, &tmpMeta54);
           _graphInfo = tmpMeta57;
-          tmpMeta55 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 2));
-          tmp56 = mmc_unbox_integer(tmpMeta55);
+          tmpMeta55 = OMC_BOX_FIELD(tmpMeta54, 2);
+          tmp56 = omc_unbox_integer(tmpMeta55);
           _commVarsFloatAttIdx = tmp56  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta61 = omc_GraphML_addAttribute(threadData, _OMC_LIT175, _OMC_LIT192, _OMC_LIT177, _OMC_LIT188, _graphInfo, &tmpMeta58);
           _graphInfo = tmpMeta61;
-          tmpMeta59 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta58), 2));
-          tmp60 = mmc_unbox_integer(tmpMeta59);
+          tmpMeta59 = OMC_BOX_FIELD(tmpMeta58, 2);
+          tmp60 = omc_unbox_integer(tmpMeta59);
           _commVarsBoolAttIdx = tmp60  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta65 = omc_GraphML_addAttribute(threadData, _OMC_LIT193, _OMC_LIT194, _OMC_LIT173, _OMC_LIT174, _graphInfo, &tmpMeta62);
           _graphInfo = tmpMeta65;
-          tmpMeta63 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta62), 2));
-          tmp64 = mmc_unbox_integer(tmpMeta63);
+          tmpMeta63 = OMC_BOX_FIELD(tmpMeta62, 2);
+          tmp64 = omc_unbox_integer(tmpMeta63);
           _annotAttIdx = tmp64  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta69 = omc_GraphML_addAttribute(threadData, _OMC_LIT92, _OMC_LIT195, _OMC_LIT173, _OMC_LIT196, _graphInfo, &tmpMeta66);
           _graphInfo = tmpMeta69;
-          tmpMeta67 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta66), 2));
-          tmp68 = mmc_unbox_integer(tmpMeta67);
+          tmpMeta67 = OMC_BOX_FIELD(tmpMeta66, 2);
+          tmp68 = omc_unbox_integer(tmpMeta67);
           _critPathAttIdx = tmp68  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta73 = omc_GraphML_addAttribute(threadData, _OMC_LIT102, _OMC_LIT197, _OMC_LIT198, _OMC_LIT174, _graphInfo, &tmpMeta70);
           _graphInfo = tmpMeta73;
-          tmpMeta71 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta70), 2));
-          tmp72 = mmc_unbox_integer(tmpMeta71);
+          tmpMeta71 = OMC_BOX_FIELD(tmpMeta70, 2);
+          tmp72 = omc_unbox_integer(tmpMeta71);
           _partOfEventAttIdx = tmp72  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta77 = omc_GraphML_addAttribute(threadData, _OMC_LIT102, _OMC_LIT199, _OMC_LIT198, _OMC_LIT174, _graphInfo, &tmpMeta74);
           _graphInfo = tmpMeta77;
-          tmpMeta75 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta74), 2));
-          tmp76 = mmc_unbox_integer(tmpMeta75);
+          tmpMeta75 = OMC_BOX_FIELD(tmpMeta74, 2);
+          tmp76 = omc_unbox_integer(tmpMeta75);
           _partOfOdeAttIdx = tmp76  /* pattern as ty=Integer */;
 
           /* Pattern-matching tuple assignment */
           tmpMeta81 = omc_GraphML_addAttribute(threadData, _OMC_LIT102, _OMC_LIT200, _OMC_LIT198, _OMC_LIT174, _graphInfo, &tmpMeta78);
           _graphInfo = tmpMeta81;
-          tmpMeta79 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta78), 2));
-          tmp80 = mmc_unbox_integer(tmpMeta79);
+          tmpMeta79 = OMC_BOX_FIELD(tmpMeta78, 2);
+          tmp80 = omc_unbox_integer(tmpMeta79);
           _removedCompAttIdx = tmp80  /* pattern as ty=Integer */;
 
-          tmpMeta82 = mmc_mk_box2(0, mmc_mk_integer(_critPathAttIdx), _iCriticalPathInfo);
+          tmpMeta82 = omc_mk_box2(0, omc_mk_integer(_critPathAttIdx), _iCriticalPathInfo);
           _graphInfo = omc_GraphML_addGraphAttributeValue(threadData, tmpMeta82, _iGraphIdx, _graphInfo);
 
           _nodeIdc = omc_List_intRange(threadData, arrayLength(_iGraph));
 
           /* Pattern-matching assignment */
-          tmpMeta84 = mmc_mk_box2(0, _iGraph, _iGraphData);
-          tmpMeta85 = mmc_mk_box18(0, mmc_mk_integer(_nameAttIdx), mmc_mk_integer(_opCountAttIdx), mmc_mk_integer(_calcTimeAttIdx), mmc_mk_integer(_taskIdAttIdx), mmc_mk_integer(_compsIdAttIdx), mmc_mk_integer(_yCoordAttIdx), mmc_mk_integer(_commCostAttIdx), mmc_mk_integer(_commVarsAttIdx), mmc_mk_integer(_commVarsIntAttIdx), mmc_mk_integer(_commVarsFloatAttIdx), mmc_mk_integer(_commVarsBoolAttIdx), mmc_mk_integer(_simCodeEqAttIdx), mmc_mk_integer(_threadIdAttIdx), mmc_mk_integer(_taskNumberAttIdx), mmc_mk_integer(_annotAttIdx), mmc_mk_integer(_partOfEventAttIdx), mmc_mk_integer(_partOfOdeAttIdx), mmc_mk_integer(_removedCompAttIdx));
-          tmpMeta86 = mmc_mk_box4(0, _iCriticalPath, _iCriticalPathWoC, _iSchedulerInfo, _iAnnotationInfo);
-          tmpMeta83 = mmc_mk_box5(0, tmpMeta84, tmpMeta85, _iSccSimEqMapping, tmpMeta86, _iGraphDumpOptions);
-          tmpMeta87 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_iGraphIdx));
-          tmpMeta88 = omc_List_fold(threadData, _nodeIdc, (modelica_fnptr) mmc_mk_box2(0,closure19_HpcOmTaskGraph_addNodeToGraphML,tmpMeta83), tmpMeta87);
-          tmpMeta89 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta88), 1));
+          tmpMeta84 = omc_mk_box2(0, _iGraph, _iGraphData);
+          tmpMeta85 = omc_mk_box18(0, omc_mk_integer(_nameAttIdx), omc_mk_integer(_opCountAttIdx), omc_mk_integer(_calcTimeAttIdx), omc_mk_integer(_taskIdAttIdx), omc_mk_integer(_compsIdAttIdx), omc_mk_integer(_yCoordAttIdx), omc_mk_integer(_commCostAttIdx), omc_mk_integer(_commVarsAttIdx), omc_mk_integer(_commVarsIntAttIdx), omc_mk_integer(_commVarsFloatAttIdx), omc_mk_integer(_commVarsBoolAttIdx), omc_mk_integer(_simCodeEqAttIdx), omc_mk_integer(_threadIdAttIdx), omc_mk_integer(_taskNumberAttIdx), omc_mk_integer(_annotAttIdx), omc_mk_integer(_partOfEventAttIdx), omc_mk_integer(_partOfOdeAttIdx), omc_mk_integer(_removedCompAttIdx));
+          tmpMeta86 = omc_mk_box4(0, _iCriticalPath, _iCriticalPathWoC, _iSchedulerInfo, _iAnnotationInfo);
+          tmpMeta83 = omc_mk_box5(0, tmpMeta84, tmpMeta85, _iSccSimEqMapping, tmpMeta86, _iGraphDumpOptions);
+          tmpMeta87 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_iGraphIdx));
+          tmpMeta88 = omc_List_fold(threadData, _nodeIdc, (modelica_fnptr) omc_mk_box2(0,closure19_HpcOmTaskGraph_addNodeToGraphML,tmpMeta83), tmpMeta87);
+          tmpMeta89 = OMC_BOX_FIELD(tmpMeta88, 1);
           _graphInfo = tmpMeta89;
           tmpMeta1 = _graphInfo;
           goto tmp3_done;
@@ -14820,26 +14459,27 @@ modelica_metatype omc_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph(threadData
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oGraphInfo = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oGraphInfo;
+  omc_ret_ = _oGraphInfo;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_metatype _iCriticalPathInfo, modelica_metatype _iCriticalPath, modelica_metatype _iCriticalPathWoC, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSchedulerInfo, modelica_metatype _iAnnotationInfo, modelica_metatype _iGraphIdx, modelica_metatype _iGraphDumpOptions, modelica_metatype _iGraphInfo)
 {
   modelica_integer tmp1;
   modelica_metatype _oGraphInfo = NULL;
-  tmp1 = mmc_unbox_integer(_iGraphIdx);
+  tmp1 = omc_unbox_integer(_iGraphIdx);
   _oGraphInfo = omc_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph(threadData, _iGraph, _iGraphData, _iCriticalPathInfo, _iCriticalPath, _iCriticalPathWoC, _iSccSimEqMapping, _iSchedulerInfo, _iAnnotationInfo, tmp1, _iGraphDumpOptions, _iGraphInfo);
   /* skip box _oGraphInfo; GraphML.GraphInfo */
   return _oGraphInfo;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_convertToGraphMLSccLevel(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_string _iCriticalPathInfo, modelica_metatype _iCriticalPath, modelica_metatype _iCriticalPathWoC, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSchedulerInfo, modelica_metatype _iGraphDumpOptions)
 {
   modelica_metatype _oGraphInfo = NULL;
@@ -14850,7 +14490,8 @@ modelica_metatype omc_HpcOmTaskGraph_convertToGraphMLSccLevel(threadData_t *thre
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oGraphInfo has no default value.
   // _graphIdx has no default value.
@@ -14861,38 +14502,33 @@ modelica_metatype omc_HpcOmTaskGraph_convertToGraphMLSccLevel(threadData_t *thre
   /* Pattern-matching tuple assignment */
   tmpMeta4 = omc_GraphML_addGraph(threadData, _OMC_LIT201, 1 /* true */, _graphInfo, &tmpMeta1);
   _graphInfo = tmpMeta4;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp3 = omc_unbox_integer(tmpMeta2);
   _graphIdx = tmp3  /* pattern as ty=Integer */;
 
   _annotationInfo = arrayCreate(arrayLength(_iGraph), _OMC_LIT202);
 
   _oGraphInfo = omc_HpcOmTaskGraph_convertToGraphMLSccLevelSubgraph(threadData, _iGraph, _iGraphData, _iCriticalPathInfo, _iCriticalPath, _iCriticalPathWoC, _iSccSimEqMapping, _iSchedulerInfo, _annotationInfo, _graphIdx, _iGraphDumpOptions, _graphInfo);
   _return: OMC_LABEL_UNUSED
-  return _oGraphInfo;
+  omc_ret_ = _oGraphInfo;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_HpcOmTaskGraph_dumpAsGraphMLSccLevel(threadData_t *threadData, modelica_metatype _iGraph, modelica_metatype _iGraphData, modelica_string _iFileName, modelica_string _iCriticalPathInfo, modelica_metatype _iCriticalPath, modelica_metatype _iCriticalPathWoC, modelica_metatype _iSccSimEqMapping, modelica_metatype _iSchedulerInfo, modelica_metatype _iGraphDumpOptions)
 {
   modelica_metatype _graphInfo = NULL;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphInfo has no default value.
   _graphInfo = omc_HpcOmTaskGraph_convertToGraphMLSccLevel(threadData, _iGraph, _iGraphData, _iCriticalPathInfo, _iCriticalPath, _iCriticalPathWoC, _iSccSimEqMapping, _iSchedulerInfo, _iGraphDumpOptions);
 
   omc_GraphML_dumpGraph(threadData, _graphInfo, _iFileName);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_HpcOmTaskGraph_dumpTaskGraph(threadData_t *threadData, modelica_metatype _dae, modelica_string _fileName)
 {
   modelica_string _name = NULL;
@@ -14900,14 +14536,11 @@ void omc_HpcOmTaskGraph_dumpTaskGraph(threadData_t *threadData, modelica_metatyp
   modelica_metatype _taskGraphData = NULL;
   modelica_metatype _schedulerInfo = NULL;
   modelica_metatype _sccSimEqMapping = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
+  modelica_string tmp1;
+  modelica_string tmp2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _name has no default value.
   // _taskGraph has no default value.
@@ -14916,9 +14549,9 @@ void omc_HpcOmTaskGraph_dumpTaskGraph(threadData_t *threadData, modelica_metatyp
   // _sccSimEqMapping has no default value.
   _taskGraph = omc_HpcOmTaskGraph_createTaskGraph(threadData, _dae, 0 /* false */ ,&_taskGraphData);
 
-  tmpMeta1 = stringAppend(_OMC_LIT203,_fileName);
-  tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT204);
-  _name = tmpMeta2;
+  tmp1 = stringAppend(_OMC_LIT203,_fileName);
+  tmp2 = stringAppend(tmp1,_OMC_LIT204);
+  omc_string_store(&(_name), tmp2);
 
   _schedulerInfo = arrayCreate(arrayLength(_taskGraph), _OMC_LIT205);
 
@@ -14928,9 +14561,6 @@ void omc_HpcOmTaskGraph_dumpTaskGraph(threadData_t *threadData, modelica_metatyp
   tmpMeta4 = MMC_REFSTRUCTLIT(mmc_nil);
   omc_HpcOmTaskGraph_dumpAsGraphMLSccLevel(threadData, _taskGraph, _taskGraphData, _name, _OMC_LIT92, tmpMeta3, tmpMeta4, _sccSimEqMapping, _schedulerInfo, _OMC_LIT207);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -14940,11 +14570,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
   modelica_integer _oFirstEqIdx;
   modelica_boolean tmp1_c0 __attribute__((unused)) = 0;
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
+  modelica_boolean omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSolvesDiscreteValue has no default value.
   // _oFirstEqIdx has no default value.
@@ -14971,7 +14599,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
       // _backendVar has no default value.
       // _solvesDiscreteValue has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 8; tmp4++) {
@@ -14982,10 +14610,10 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
           modelica_metatype tmpMeta8;
           modelica_integer tmp9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,2) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp9 = omc_unbox_integer(tmpMeta8);
           _eqn = tmp7  /* pattern as ty=Integer */;
           _var = tmp9  /* pattern as ty=Integer */;
           tmp4 += 6; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -15000,8 +14628,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_1, 3);
           
           _eqns = tmpMeta10;
           _vars = tmpMeta11;
@@ -15010,7 +14638,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
 
           _solvesDiscreteValue = omc_BackendVariable_hasDiscreteVar(threadData, _backendVars);
 
-          _eqn = mmc_unbox_integer(listHead(_eqns));
+          _eqn = omc_unbox_integer(listHead(_eqns));
           tmp1_c0 = _solvesDiscreteValue;
           tmp1_c1 = _eqn;
           goto tmp3_done;
@@ -15020,9 +14648,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
           modelica_integer tmp13;
           modelica_metatype tmpMeta14;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,2) == 0) goto tmp3_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp13 = omc_unbox_integer(tmpMeta12);
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_1, 3);
           _eqn = tmp13  /* pattern as ty=Integer */;
           _vars = tmpMeta14;
           tmp4 += 4; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -15038,9 +14666,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
           modelica_integer tmp16;
           modelica_metatype tmpMeta17;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,2) == 0) goto tmp3_end;
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp16 = mmc_unbox_integer(tmpMeta15);
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp16 = omc_unbox_integer(tmpMeta15);
+          tmpMeta17 = OMC_BOX_FIELD(tmp4_1, 3);
           _eqn = tmp16  /* pattern as ty=Integer */;
           _vars = tmpMeta17;
           tmp4 += 3; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -15056,9 +14684,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
           modelica_integer tmp19;
           modelica_metatype tmpMeta20;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,2) == 0) goto tmp3_end;
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp19 = mmc_unbox_integer(tmpMeta18);
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp19 = omc_unbox_integer(tmpMeta18);
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_1, 3);
           _eqn = tmp19  /* pattern as ty=Integer */;
           _vars = tmpMeta20;
           tmp4 += 2; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -15074,9 +14702,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
           modelica_integer tmp22;
           modelica_metatype tmpMeta23;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,2) == 0) goto tmp3_end;
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp22 = mmc_unbox_integer(tmpMeta21);
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta21 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp22 = omc_unbox_integer(tmpMeta21);
+          tmpMeta23 = OMC_BOX_FIELD(tmp4_1, 3);
           _eqn = tmp22  /* pattern as ty=Integer */;
           _vars = tmpMeta23;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -15092,9 +14720,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
           modelica_integer tmp25;
           modelica_metatype tmpMeta26;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
-          tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp25 = mmc_unbox_integer(tmpMeta24);
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta24 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp25 = omc_unbox_integer(tmpMeta24);
+          tmpMeta26 = OMC_BOX_FIELD(tmp4_1, 3);
           _eqn = tmp25  /* pattern as ty=Integer */;
           _vars = tmpMeta26;
           /* Pattern matching succeeded */
@@ -15119,14 +14747,14 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 8) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -15134,10 +14762,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_solvesDiscreteValu
   _oFirstEqIdx = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_oFirstEqIdx) { *out_oFirstEqIdx = _oFirstEqIdx; }
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oSolvesDiscreteValue;
+  omc_ret_ = _oSolvesDiscreteValue;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_solvesDiscreteValue(threadData_t *threadData, modelica_metatype _inComp, modelica_metatype _iOrderedVars, modelica_metatype *out_oFirstEqIdx)
 {
@@ -15145,8 +14771,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_solvesDiscrete
   modelica_boolean _oSolvesDiscreteValue;
   modelica_metatype out_oSolvesDiscreteValue;
   _oSolvesDiscreteValue = omc_HpcOmTaskGraph_solvesDiscreteValue(threadData, _inComp, _iOrderedVars, &_oFirstEqIdx);
-  out_oSolvesDiscreteValue = mmc_mk_icon(_oSolvesDiscreteValue);
-  if (out_oFirstEqIdx) { *out_oFirstEqIdx = mmc_mk_icon(_oFirstEqIdx); }
+  out_oSolvesDiscreteValue = omc_mk_icon(_oSolvesDiscreteValue);
+  if (out_oFirstEqIdx) { *out_oFirstEqIdx = omc_mk_icon(_oFirstEqIdx); }
   return out_oSolvesDiscreteValue;
 }
 
@@ -15154,7 +14780,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getDiscreteNodesE
 {
   modelica_metatype _discreteEqsOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _discreteEqsOut has no default value.
   { /* matchcontinue expression */
@@ -15170,7 +14797,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getDiscreteNodesE
       // _rest has no default value.
       // _head has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -15193,7 +14820,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getDiscreteNodesE
           _eqn = tmp8;
 
           _eqn = _eqn + _offset;
-          tmpMeta10 = mmc_mk_cons(mmc_mk_integer(_eqn), _discreteEqsIn);
+          tmpMeta10 = mmc_mk_cons(omc_mk_integer(_eqn), _discreteEqsIn);
           tmpMeta1 = omc_HpcOmTaskGraph_getDiscreteNodesEqs1(threadData, _rest, _offset, _iOrderedVars, tmpMeta10);
           goto tmp3_done;
         }
@@ -15221,26 +14848,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getDiscreteNodesE
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _discreteEqsOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _discreteEqsOut;
+  omc_ret_ = _discreteEqsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getDiscreteNodesEqs1(threadData_t *threadData, modelica_metatype _comps, modelica_metatype _offset, modelica_metatype _iOrderedVars, modelica_metatype _discreteEqsIn)
 {
   modelica_integer tmp1;
   modelica_metatype _discreteEqsOut = NULL;
-  tmp1 = mmc_unbox_integer(_offset);
+  tmp1 = omc_unbox_integer(_offset);
   _discreteEqsOut = omc_HpcOmTaskGraph_getDiscreteNodesEqs1(threadData, _comps, tmp1, _iOrderedVars, _discreteEqsIn);
   /* skip box _discreteEqsOut; list<#Integer> */
   return _discreteEqsOut;
@@ -15266,7 +14894,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getDiscreteNodesE
   modelica_integer tmp8;
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eventInfoOut has no default value.
   // _comps has no default value.
@@ -15278,9 +14907,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getDiscreteNodesE
   // _offset has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _systIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 7);
   _orderedVars = tmpMeta2;
   _orderedEqs = tmpMeta3;
   _matching = tmpMeta4;
@@ -15289,9 +14918,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getDiscreteNodesE
 
   /* Pattern-matching assignment */
   tmpMeta5 = _eventInfoIn;
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 1));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
-  tmp8 = mmc_unbox_integer(tmpMeta7);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 1);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta5, 2);
+  tmp8 = omc_unbox_integer(tmpMeta7);
   _eventEqsIn = tmpMeta6;
   _offset = tmp8  /* pattern as ty=Integer */;
 
@@ -15300,10 +14929,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getDiscreteNodesE
 
   _offset = _offset + omc_ExpandableArray_getNumberOfElements(threadData, _orderedEqs);
 
-  tmpMeta10 = mmc_mk_box2(0, listAppend(_eventEqs, _eventEqsIn), mmc_mk_integer(_offset));
+  tmpMeta10 = omc_mk_box2(0, listAppend(_eventEqs, _eventEqsIn), omc_mk_integer(_offset));
   _eventInfoOut = tmpMeta10;
   _return: OMC_LABEL_UNUSED
-  return _eventInfoOut;
+  omc_ret_ = _eventInfoOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getDiscreteNodes(threadData_t *threadData, modelica_metatype _systIn, modelica_metatype _eqCompMapping)
@@ -15315,34 +14945,34 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getDiscreteNodes(
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eventNodes has no default value.
   // _eqLst has no default value.
   // _systemsIn has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _systIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _systemsIn = tmpMeta2;
 
   /* Pattern-matching assignment */
   tmpMeta3 = omc_List_fold(threadData, _systemsIn, boxvar_HpcOmTaskGraph_getDiscreteNodesEqs, _OMC_LIT208);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 1));
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta3, 1);
   _eqLst = tmpMeta4;
 
   _eventNodes = omc_HpcOmTaskGraph_getArrayTuple31(threadData, _eqLst, _eqCompMapping);
   _return: OMC_LABEL_UNUSED
-  return _eventNodes;
+  omc_ret_ = _eventNodes;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_getComponentsIncludingTime2(threadData_t *threadData, modelica_metatype _iRef, modelica_boolean _iIncludingTime)
 {
   modelica_boolean _oIncludingTime;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oIncludingTime has no default value.
   { /* match expression */
@@ -15357,8 +14987,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_getComponentsInclu
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,3) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          if (4 != MMC_STRLEN(tmpMeta6) || strcmp(MMC_STRINGDATA(_OMC_LIT209), MMC_STRINGDATA(tmpMeta6)) != 0) goto tmp3_end;
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          if (4 != omc_string_len(tmpMeta6) || strcmp(omc_string_data(_OMC_LIT209), omc_string_data(tmpMeta6)) != 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
@@ -15376,26 +15006,24 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_getComponentsInclu
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oIncludingTime = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oIncludingTime;
+  omc_ret_ = _oIncludingTime;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getComponentsIncludingTime2(threadData_t *threadData, modelica_metatype _iRef, modelica_metatype _iIncludingTime)
 {
   modelica_integer tmp1;
   modelica_boolean _oIncludingTime;
   modelica_metatype out_oIncludingTime;
-  tmp1 = mmc_unbox_integer(_iIncludingTime);
+  tmp1 = omc_unbox_integer(_iIncludingTime);
   _oIncludingTime = omc_HpcOmTaskGraph_getComponentsIncludingTime2(threadData, _iRef, tmp1);
-  out_oIncludingTime = mmc_mk_icon(_oIncludingTime);
+  out_oIncludingTime = omc_mk_icon(_oIncludingTime);
   return out_oIncludingTime;
 }
 
@@ -15404,8 +15032,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
   modelica_metatype _e = NULL;
   modelica_boolean _res;
   modelica_boolean tmp1_c1 __attribute__((unused)) = 0;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _e has no default value.
   // _res has no default value.
@@ -15426,7 +15055,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
           
           _e = tmp4_1;
           /* Pattern matching succeeded */
-          _res = mmc_unbox_boolean(omc_Expression_traverseCrefsFromExp(threadData, _e, boxvar_HpcOmTaskGraph_getComponentsIncludingTime2, mmc_mk_boolean(0 /* false */)));
+          _res = omc_unbox_boolean(omc_Expression_traverseCrefsFromExp(threadData, _e, boxvar_HpcOmTaskGraph_getComponentsIncludingTime2, omc_mk_boolean(0 /* false */)));
           tmpMeta[0+0] = _e;
           tmp1_c1 = _res;
           goto tmp3_done;
@@ -15444,7 +15073,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -15453,17 +15082,18 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
   _res = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_res) { *out_res = _res; }
-  return _e;
+  omc_ret_ = _e;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getComponentsIncludingTime1(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inB, modelica_metatype *out_res)
 {
   modelica_integer tmp1;
   modelica_boolean _res;
   modelica_metatype _e = NULL;
-  tmp1 = mmc_unbox_integer(_inB);
+  tmp1 = omc_unbox_integer(_inB);
   _e = omc_HpcOmTaskGraph_getComponentsIncludingTime1(threadData, _inExp, tmp1, &_res);
   /* skip box _e; DAE.Exp */
-  if (out_res) { *out_res = mmc_mk_icon(_res); }
+  if (out_res) { *out_res = omc_mk_icon(_res); }
   return _e;
 }
 
@@ -15477,8 +15107,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
   modelica_integer _sccIdx;
   modelica_metatype _resultList = NULL;
   modelica_metatype _eqCompMapping = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outEq has no default value.
   // _oOffsetResList has no default value.
@@ -15498,7 +15129,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -15517,12 +15148,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
           modelica_integer tmp16;
           modelica_metatype tmpMeta17;
           modelica_metatype tmpMeta18;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmp11 = omc_unbox_integer(tmpMeta10);
           _eq = tmp4_1;
           _offset = tmp7  /* pattern as ty=Integer */;
           _resultList = tmpMeta8;
@@ -15531,18 +15162,18 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta12 = arrayGet(_eqCompMapping, _eqIdx + _offset);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 1);
+          tmp14 = omc_unbox_integer(tmpMeta13);
           _sccIdx = tmp14  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmpMeta15 = omc_BackendDAEUtil_traverseBackendDAEExpsOptEqn(threadData, mmc_mk_some(_eq), boxvar_HpcOmTaskGraph_getComponentsIncludingTime1, mmc_mk_boolean(0 /* false */));
-          tmp16 = mmc_unbox_integer(tmpMeta15);
+          tmpMeta15 = omc_BackendDAEUtil_traverseBackendDAEExpsOptEqn(threadData, mmc_mk_some(_eq), boxvar_HpcOmTaskGraph_getComponentsIncludingTime1, omc_mk_boolean(0 /* false */));
+          tmp16 = omc_unbox_integer(tmpMeta15);
           if (1 /* true */ != tmp16) goto goto_2;
 
-          tmpMeta17 = mmc_mk_cons(mmc_mk_integer(_sccIdx), _resultList);
+          tmpMeta17 = mmc_mk_cons(omc_mk_integer(_sccIdx), _resultList);
           _resultList = tmpMeta17;
-          tmpMeta18 = mmc_mk_box4(0, mmc_mk_integer(_offset), _resultList, _eqCompMapping, mmc_mk_integer(((modelica_integer) 1) + _eqIdx));
+          tmpMeta18 = omc_mk_box4(0, omc_mk_integer(_offset), _resultList, _eqCompMapping, omc_mk_integer(((modelica_integer) 1) + _eqIdx));
           tmpMeta[0+0] = _eq;
           tmpMeta[0+1] = tmpMeta18;
           goto tmp3_done;
@@ -15555,19 +15186,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
           modelica_metatype tmpMeta23;
           modelica_integer tmp24;
           modelica_metatype tmpMeta25;
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp20 = mmc_unbox_integer(tmpMeta19);
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmp24 = mmc_unbox_integer(tmpMeta23);
+          tmpMeta19 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp20 = omc_unbox_integer(tmpMeta19);
+          tmpMeta21 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta23 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmp24 = omc_unbox_integer(tmpMeta23);
           _eq = tmp4_1;
           _offset = tmp20  /* pattern as ty=Integer */;
           _resultList = tmpMeta21;
           _eqCompMapping = tmpMeta22;
           _eqIdx = tmp24  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta25 = mmc_mk_box4(0, mmc_mk_integer(_offset), _resultList, _eqCompMapping, mmc_mk_integer(((modelica_integer) 1) + _eqIdx));
+          tmpMeta25 = omc_mk_box4(0, omc_mk_integer(_offset), _resultList, _eqCompMapping, omc_mk_integer(((modelica_integer) 1) + _eqIdx));
           tmpMeta[0+0] = _eq;
           tmpMeta[0+1] = tmpMeta25;
           goto tmp3_done;
@@ -15579,14 +15210,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -15594,7 +15225,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
   _oOffsetResList = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_oOffsetResList) { *out_oOffsetResList = _oOffsetResList; }
-  return _outEq;
+  omc_ret_ = _outEq;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncludingTime(threadData_t *threadData, modelica_metatype _iSystem, modelica_metatype _iEqCompMapping, modelica_metatype _iOffsetResList)
@@ -15615,7 +15247,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
   modelica_integer tmp10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oOffsetResList has no default value.
   // _orderedEqs has no default value.
@@ -15623,30 +15256,31 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsIncl
   // _resultList has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iSystem;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 3);
   _orderedEqs = tmpMeta2;
 
   /* Pattern-matching assignment */
   tmpMeta3 = _iOffsetResList;
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 1));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 2));
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta3, 1);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta3, 2);
   _offset = tmp5  /* pattern as ty=Integer */;
   _resultList = tmpMeta6;
 
   /* Pattern-matching assignment */
-  tmpMeta7 = mmc_mk_box4(0, mmc_mk_integer(_offset), _resultList, _iEqCompMapping, mmc_mk_integer(((modelica_integer) 1)));
+  tmpMeta7 = omc_mk_box4(0, omc_mk_integer(_offset), _resultList, _iEqCompMapping, omc_mk_integer(((modelica_integer) 1)));
   tmpMeta8 = omc_BackendEquation_traverseEquationArray(threadData, _orderedEqs, boxvar_HpcOmTaskGraph_getComponentsIncludingTime0, tmpMeta7);
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-  tmp10 = mmc_unbox_integer(tmpMeta9);
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 1);
+  tmp10 = omc_unbox_integer(tmpMeta9);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta8, 2);
   _offset = tmp10  /* pattern as ty=Integer */;
   _resultList = tmpMeta11;
 
-  tmpMeta12 = mmc_mk_box2(0, mmc_mk_integer(_offset), _resultList);
+  tmpMeta12 = omc_mk_box2(0, omc_mk_integer(_offset), _resultList);
   _oOffsetResList = tmpMeta12;
   _return: OMC_LABEL_UNUSED
-  return _oOffsetResList;
+  omc_ret_ = _oOffsetResList;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsOfZeroCrossing(threadData_t *threadData, modelica_metatype _iZeroCrossing, modelica_metatype _iSimCodeEqCompMapping)
@@ -15655,7 +15289,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsOfZe
   modelica_metatype _occurEquLst = NULL;
   modelica_metatype _tmpCompIdc = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCompIdc has no default value.
   // _occurEquLst has no default value.
@@ -15667,34 +15302,34 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsOfZe
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          modelica_string tmp7;
+          modelica_string tmp8;
+          modelica_string tmp9;
+          modelica_string tmp10;
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 4);
           
           _occurEquLst = tmpMeta6;
           /* Pattern matching succeeded */
-          _occurEquLst = omc_List_filter1OnTrue(threadData, _occurEquLst, boxvar_intGt, mmc_mk_integer(((modelica_integer) 0)));
+          _occurEquLst = omc_List_filter1OnTrue(threadData, _occurEquLst, boxvar_intGt, omc_mk_integer(((modelica_integer) 0)));
 
-          tmpMeta7 = stringAppend(_OMC_LIT210,stringDelimitList(omc_List_map(threadData, _occurEquLst, boxvar_intString), _OMC_LIT31));
-          tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT5);
-          fputs(MMC_STRINGDATA(tmpMeta8),stdout);
+          tmp7 = stringAppend(_OMC_LIT210,stringDelimitList(omc_List_map(threadData, _occurEquLst, boxvar_intString), _OMC_LIT31));
+          tmp8 = stringAppend(tmp7,_OMC_LIT5);
+          fputs(omc_string_data(tmp8),stdout);
 
           _tmpCompIdc = omc_List_map1(threadData, _occurEquLst, boxvar_Array_getIndexFirst, _iSimCodeEqCompMapping);
 
-          _tmpCompIdc = omc_List_filter1OnTrue(threadData, _tmpCompIdc, boxvar_intGt, mmc_mk_integer(((modelica_integer) 0)));
+          _tmpCompIdc = omc_List_filter1OnTrue(threadData, _tmpCompIdc, boxvar_intGt, omc_mk_integer(((modelica_integer) 0)));
 
-          tmpMeta9 = stringAppend(_OMC_LIT211,stringDelimitList(omc_List_map(threadData, _tmpCompIdc, boxvar_intString), _OMC_LIT31));
-          tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT5);
-          fputs(MMC_STRINGDATA(tmpMeta10),stdout);
+          tmp9 = stringAppend(_OMC_LIT211,stringDelimitList(omc_List_map(threadData, _tmpCompIdc, boxvar_intString), _OMC_LIT31));
+          tmp10 = stringAppend(tmp9,_OMC_LIT5);
+          fputs(omc_string_data(tmp10),stdout);
           tmpMeta1 = _tmpCompIdc;
           goto tmp3_done;
         }
@@ -15713,20 +15348,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getComponentsOfZe
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oCompIdc = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oCompIdc;
+  omc_ret_ = _oCompIdc;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventSystem(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iSyst, modelica_metatype _iZeroCrossings, modelica_metatype _iSimCodeEqCompMapping, modelica_metatype *out_oTaskGraphMeta)
@@ -15754,7 +15390,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventSystem(th
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTaskGraph has no default value.
   // _oTaskGraphMeta has no default value.
@@ -15771,17 +15408,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventSystem(th
   // _graphTmp has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iTaskGraphMeta;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 4);
   _inComps = tmpMeta2;
   _varCompMapping = tmpMeta3;
   _eqCompMapping = tmpMeta4;
 
   /* Pattern-matching assignment */
   tmpMeta5 = _iSyst;
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 3));
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 2);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta5, 3);
   _systs = tmpMeta6;
   _shared = tmpMeta7;
 
@@ -15809,7 +15446,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventSystem(th
   _oTaskGraph = _graphTmp;
   _return: OMC_LABEL_UNUSED
   if (out_oTaskGraphMeta) { *out_oTaskGraphMeta = _oTaskGraphMeta; }
-  return _oTaskGraph;
+  omc_ret_ = _oTaskGraph;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mapIntegers(threadData_t *threadData, modelica_metatype _iTpl)
@@ -15826,7 +15464,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mapIntegers(threa
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTpl has no default value.
   // _map has no default value.
@@ -15835,8 +15474,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mapIntegers(threa
   _oLst = tmpMeta1;
   /* Pattern-matching assignment */
   tmpMeta2 = _iTpl;
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 1));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 2));
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta2, 1);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta2, 2);
   _iLst = tmpMeta3;
   _map = tmpMeta4;
 
@@ -15845,17 +15484,18 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_mapIntegers(threa
     for (tmpMeta5 = _iLst; !listEmpty(tmpMeta5); tmpMeta5=MMC_CDR(tmpMeta5))
     {
       _i = MMC_CAR(tmpMeta5);
-      tmpMeta6 = mmc_mk_cons(arrayGet(_map, mmc_unbox_integer(_i)), _oLst);
+      tmpMeta6 = mmc_mk_cons(arrayGet(_map, omc_unbox_integer(_i)), _oLst);
       _oLst = tmpMeta6;
     }
   }
 
   _oLst = listReverse(_oLst);
 
-  tmpMeta8 = mmc_mk_box2(0, _oLst, _map);
+  tmpMeta8 = omc_mk_box2(0, _oLst, _map);
   _oTpl = tmpMeta8;
   _return: OMC_LABEL_UNUSED
-  return _oTpl;
+  omc_ret_ = _oTpl;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_reverseTaskGraphIndices(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype *out_oTaskGraphMeta)
@@ -15889,7 +15529,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_reverseTaskGraphI
   modelica_integer tmp13;
   modelica_integer tmp14;
   modelica_metatype tmpMeta15;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTaskGraph has no default value.
   // _oTaskGraphMeta has no default value.
@@ -15907,20 +15548,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_reverseTaskGraphI
   // _compInformations has no default value.
   _nTasks = arrayLength(_iTaskGraph);
 
-  _idxMap = arrayCreate(_nTasks, mmc_mk_integer(((modelica_integer) -1)));
+  _idxMap = arrayCreate(_nTasks, omc_mk_integer(((modelica_integer) -1)));
 
   /* Pattern-matching assignment */
   tmpMeta1 = _iTaskGraphMeta;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 10));
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 11));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta1, 9);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 10);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta1, 11);
   _inComps = tmpMeta2;
   _varCompMapping = tmpMeta3;
   _eqCompMapping = tmpMeta4;
@@ -15939,7 +15580,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_reverseTaskGraphI
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp12, tmp14); _i += tmp13)
     {
 
-      _idxMap = arrayUpdate(_idxMap, _i, mmc_mk_integer(((modelica_integer) 1) + (_nTasks - _i)));
+      _idxMap = arrayUpdate(_idxMap, _i, omc_mk_integer(((modelica_integer) 1) + (_nTasks - _i)));
     }
   }
 
@@ -15949,14 +15590,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_reverseTaskGraphI
 
   _inComps = omc_Array_reverse(threadData, _inComps);
 
-  tmpMeta15 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
+  tmpMeta15 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
   _oTaskGraphMeta = tmpMeta15;
   _return: OMC_LABEL_UNUSED
   if (out_oTaskGraphMeta) { *out_oTaskGraphMeta = _oTaskGraphMeta; }
-  return _oTaskGraph;
+  omc_ret_ = _oTaskGraph;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iBackendDAE, modelica_integer _iNumberOfSccs, modelica_metatype _iZeroCrossingEquationIdc, modelica_metatype _iSimCodeEqCompMapping, modelica_metatype *out_oTaskGraphMeta)
 {
   modelica_metatype _oTaskGraph = NULL;
@@ -16016,7 +15658,8 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
   modelica_metatype tmpMeta24;
   modelica_integer tmp25;
   modelica_metatype tmpMeta26;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oTaskGraph has no default value.
   // _oTaskGraphMeta has no default value.
@@ -16051,20 +15694,20 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
   // _stop has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iTaskGraphMeta;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 4);
   _inComps = tmpMeta2;
   _eqCompMapping = tmpMeta3;
 
-  _zeroFuncNodeMarks = arrayCreate(arrayLength(_iTaskGraph), mmc_mk_integer(((modelica_integer) 0)));
+  _zeroFuncNodeMarks = arrayCreate(arrayLength(_iTaskGraph), omc_mk_integer(((modelica_integer) 0)));
 
-  _handledNodes = arrayCreate(arrayLength(_iTaskGraph), mmc_mk_boolean(0 /* false */));
+  _handledNodes = arrayCreate(arrayLength(_iTaskGraph), omc_mk_boolean(0 /* false */));
 
-  _nodeToZeroFuncNodeMapping = arrayCreate(arrayLength(_iTaskGraph), mmc_mk_integer(((modelica_integer) -1)));
+  _nodeToZeroFuncNodeMapping = arrayCreate(arrayLength(_iTaskGraph), omc_mk_integer(((modelica_integer) -1)));
 
   _whenNodes = omc_HpcOmTaskGraph_getEventNodes(threadData, _iBackendDAE, _eqCompMapping);
 
-  _whenNodeMarks = arrayCreate(arrayLength(_iTaskGraph), mmc_mk_boolean(0 /* false */));
+  _whenNodeMarks = arrayCreate(arrayLength(_iTaskGraph), omc_mk_boolean(0 /* false */));
 
   _sccNodeMapping = omc_HpcOmTaskGraph_getSccNodeMapping(threadData, _iNumberOfSccs, _iTaskGraphMeta);
 
@@ -16077,11 +15720,11 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
     for (tmpMeta4 = _iZeroCrossingEquationIdc; !listEmpty(tmpMeta4); tmpMeta4=MMC_CDR(tmpMeta4))
     {
       _eqIdx = MMC_CAR(tmpMeta4);
-      _compIdx = mmc_unbox_integer(arrayGet(_iSimCodeEqCompMapping, mmc_unbox_integer(_eqIdx)));
+      _compIdx = omc_unbox_integer(arrayGet(_iSimCodeEqCompMapping, omc_unbox_integer(_eqIdx)));
 
-      _nodeIdx = mmc_unbox_integer(arrayGet(_sccNodeMapping, _compIdx));
+      _nodeIdx = omc_unbox_integer(arrayGet(_sccNodeMapping, _compIdx));
 
-      _zeroFuncNodeMarks = arrayUpdate(_zeroFuncNodeMarks, _nodeIdx, mmc_mk_integer(((modelica_integer) 1)));
+      _zeroFuncNodeMarks = arrayUpdate(_zeroFuncNodeMarks, _nodeIdx, omc_mk_integer(((modelica_integer) 1)));
     }
   }
 
@@ -16090,7 +15733,7 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
     for (tmpMeta6 = _whenNodes; !listEmpty(tmpMeta6); tmpMeta6=MMC_CDR(tmpMeta6))
     {
       _nodeIdx = MMC_CAR(tmpMeta6);
-      _whenNodeMarks = arrayUpdate(_whenNodeMarks, mmc_unbox_integer(_nodeIdx), mmc_mk_boolean(1 /* true */));
+      _whenNodeMarks = arrayUpdate(_whenNodeMarks, omc_unbox_integer(_nodeIdx), omc_mk_boolean(1 /* true */));
     }
   }
 
@@ -16111,26 +15754,26 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
       for (tmpMeta9 = _nodeList; !listEmpty(tmpMeta9); tmpMeta9=MMC_CDR(tmpMeta9))
       {
         _nodeIdx = MMC_CAR(tmpMeta9);
-        if((!mmc_unbox_boolean(arrayGet(_handledNodes, mmc_unbox_integer(_nodeIdx)))))
+        if((!omc_unbox_boolean(arrayGet(_handledNodes, omc_unbox_integer(_nodeIdx)))))
         {
-          _handledNodes = arrayUpdate(_handledNodes, mmc_unbox_integer(_nodeIdx), mmc_mk_boolean(1 /* true */));
+          _handledNodes = arrayUpdate(_handledNodes, omc_unbox_integer(_nodeIdx), omc_mk_boolean(1 /* true */));
 
-          _predecessors = arrayGet(_iTaskGraphTCopy, mmc_unbox_integer(_nodeIdx));
+          _predecessors = arrayGet(_iTaskGraphTCopy, omc_unbox_integer(_nodeIdx));
 
-          _successors = arrayGet(_iTaskGraphCopy, mmc_unbox_integer(_nodeIdx));
+          _successors = arrayGet(_iTaskGraphCopy, omc_unbox_integer(_nodeIdx));
 
           _zeroFuncNodeMark = ((modelica_integer) -1);
 
-          if(mmc_unbox_boolean(arrayGet(_whenNodeMarks, mmc_unbox_integer(_nodeIdx))))
+          if(omc_unbox_boolean(arrayGet(_whenNodeMarks, omc_unbox_integer(_nodeIdx))))
           {
             {
               modelica_metatype _predecessor;
               for (tmpMeta10 = _predecessors; !listEmpty(tmpMeta10); tmpMeta10=MMC_CDR(tmpMeta10))
               {
                 _predecessor = MMC_CAR(tmpMeta10);
-                _successorsTmp = arrayGet(_iTaskGraphCopy, mmc_unbox_integer(_predecessor));
+                _successorsTmp = arrayGet(_iTaskGraphCopy, omc_unbox_integer(_predecessor));
 
-                arrayUpdate(_iTaskGraphCopy, mmc_unbox_integer(_predecessor), listAppend(_successorsTmp, _successors));
+                arrayUpdate(_iTaskGraphCopy, omc_unbox_integer(_predecessor), listAppend(_successorsTmp, _successors));
               }
             }
 
@@ -16139,15 +15782,15 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
               for (tmpMeta12 = _successors; !listEmpty(tmpMeta12); tmpMeta12=MMC_CDR(tmpMeta12))
               {
                 _successor = MMC_CAR(tmpMeta12);
-                _predecessorsTmp = arrayGet(_iTaskGraphTCopy, mmc_unbox_integer(_successor));
+                _predecessorsTmp = arrayGet(_iTaskGraphTCopy, omc_unbox_integer(_successor));
 
-                arrayUpdate(_iTaskGraphTCopy, mmc_unbox_integer(_successor), listAppend(_predecessorsTmp, _predecessors));
+                arrayUpdate(_iTaskGraphTCopy, omc_unbox_integer(_successor), listAppend(_predecessorsTmp, _predecessors));
               }
             }
           }
           else
           {
-            if((mmc_unbox_integer(arrayGet(_zeroFuncNodeMarks, mmc_unbox_integer(_nodeIdx))) > ((modelica_integer) 0)))
+            if((omc_unbox_integer(arrayGet(_zeroFuncNodeMarks, omc_unbox_integer(_nodeIdx))) > ((modelica_integer) 0)))
             {
               _zeroFuncNodeMark = _zeroFuncNodeIdx;
             }
@@ -16160,14 +15803,14 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
                 if(!((!_stop) && (!listEmpty(_successors)))) break;
                 /* Pattern-matching assignment */
                 tmpMeta14 = _successors;
-                if (listEmpty(tmpMeta14)) MMC_THROW_INTERNAL();
+                if (listEmpty(tmpMeta14)) OMC_THROW_INTERNAL();
                 tmpMeta15 = MMC_CAR(tmpMeta14);
                 tmpMeta16 = MMC_CDR(tmpMeta14);
-                tmp17 = mmc_unbox_integer(tmpMeta15);
+                tmp17 = omc_unbox_integer(tmpMeta15);
                 _successor = tmp17  /* pattern as ty=Integer */;
                 _successors = tmpMeta16;
 
-                _successorMark = mmc_unbox_integer(arrayGet(_zeroFuncNodeMarks, _successor));
+                _successorMark = omc_unbox_integer(arrayGet(_zeroFuncNodeMarks, _successor));
 
                 if((_successorMark > ((modelica_integer) 0)))
                 {
@@ -16182,13 +15825,13 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
             {
               _zeroFuncNodeCount = ((modelica_integer) 1) + _zeroFuncNodeCount;
 
-              _nodeToZeroFuncNodeMapping = arrayUpdate(_nodeToZeroFuncNodeMapping, mmc_unbox_integer(_nodeIdx), mmc_mk_integer(_zeroFuncNodeCount));
+              _nodeToZeroFuncNodeMapping = arrayUpdate(_nodeToZeroFuncNodeMapping, omc_unbox_integer(_nodeIdx), omc_mk_integer(_zeroFuncNodeCount));
 
               _zeroFuncNodeIdx = ((modelica_integer) 1) + _zeroFuncNodeIdx;
             }
           }
 
-          _zeroFuncNodeMarks = arrayUpdate(_zeroFuncNodeMarks, mmc_unbox_integer(_nodeIdx), mmc_mk_integer(_zeroFuncNodeMark));
+          _zeroFuncNodeMarks = arrayUpdate(_zeroFuncNodeMarks, omc_unbox_integer(_nodeIdx), omc_mk_integer(_zeroFuncNodeMark));
 
           _newNodeList = omc_List_append__reverse(threadData, _predecessors, _newNodeList);
         }
@@ -16209,7 +15852,7 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
   while(1)
   {
     if(!(_nodeIdx > ((modelica_integer) 0))) break;
-    _zeroFuncNodeIdx = mmc_unbox_integer(arrayGet(_zeroFuncNodeMarks, _nodeIdx));
+    _zeroFuncNodeIdx = omc_unbox_integer(arrayGet(_zeroFuncNodeMarks, _nodeIdx));
 
     if((_zeroFuncNodeIdx > ((modelica_integer) 0)))
     {
@@ -16225,18 +15868,18 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
         if(!(!listEmpty(_successors))) break;
         /* Pattern-matching assignment */
         tmpMeta22 = _successors;
-        if (listEmpty(tmpMeta22)) MMC_THROW_INTERNAL();
+        if (listEmpty(tmpMeta22)) OMC_THROW_INTERNAL();
         tmpMeta23 = MMC_CAR(tmpMeta22);
         tmpMeta24 = MMC_CDR(tmpMeta22);
-        tmp25 = mmc_unbox_integer(tmpMeta23);
+        tmp25 = omc_unbox_integer(tmpMeta23);
         _successor = tmp25  /* pattern as ty=Integer */;
         _successors = tmpMeta24;
 
-        _successor = mmc_unbox_integer(arrayGet(_zeroFuncNodeMarks, _successor));
+        _successor = omc_unbox_integer(arrayGet(_zeroFuncNodeMarks, _successor));
 
         if((_successor > ((modelica_integer) 0)))
         {
-          tmpMeta26 = mmc_mk_cons(mmc_mk_integer(_successor), _newNodeList);
+          tmpMeta26 = mmc_mk_cons(omc_mk_integer(_successor), _newNodeList);
           _newNodeList = tmpMeta26;
         }
       }
@@ -16258,13 +15901,14 @@ modelica_metatype omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData
   _oTaskGraph = omc_HpcOmTaskGraph_reverseTaskGraphIndices(threadData, _zeroFuncTaskGraph, _zeroFuncTaskGraphMeta ,&_oTaskGraphMeta);
   _return: OMC_LABEL_UNUSED
   if (out_oTaskGraphMeta) { *out_oTaskGraphMeta = _oTaskGraphMeta; }
-  return _oTaskGraph;
+  omc_ret_ = _oTaskGraph;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getZeroFuncsSystem(threadData_t *threadData, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphMeta, modelica_metatype _iBackendDAE, modelica_metatype _iNumberOfSccs, modelica_metatype _iZeroCrossingEquationIdc, modelica_metatype _iSimCodeEqCompMapping, modelica_metatype *out_oTaskGraphMeta)
 {
   modelica_integer tmp1;
   modelica_metatype _oTaskGraph = NULL;
-  tmp1 = mmc_unbox_integer(_iNumberOfSccs);
+  tmp1 = omc_unbox_integer(_iNumberOfSccs);
   _oTaskGraph = omc_HpcOmTaskGraph_getZeroFuncsSystem(threadData, _iTaskGraph, _iTaskGraphMeta, _iBackendDAE, tmp1, _iZeroCrossingEquationIdc, _iSimCodeEqCompMapping, out_oTaskGraphMeta);
   /* skip box _oTaskGraph; array<list<#Integer>> */
   /* skip box _oTaskGraphMeta; HpcOmTaskGraph.TaskGraphMeta */
@@ -16277,7 +15921,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodesWithRefCo
   modelica_metatype _resultList = NULL;
   modelica_integer _currentNodeIdx;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oZeroIdc has no default value.
   // _resultList has no default value.
@@ -16299,15 +15944,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodesWithRefCo
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
           if (0 != tmp4_1) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp8 = omc_unbox_integer(tmpMeta7);
           _resultList = tmpMeta6;
           _currentNodeIdx = tmp8  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta9 = mmc_mk_cons(mmc_mk_integer(_currentNodeIdx), _resultList);
+          tmpMeta9 = mmc_mk_cons(omc_mk_integer(_currentNodeIdx), _resultList);
           _resultList = tmpMeta9;
-          tmpMeta10 = mmc_mk_box2(0, _resultList, mmc_mk_integer(((modelica_integer) 1) + _currentNodeIdx));
+          tmpMeta10 = omc_mk_box2(0, _resultList, omc_mk_integer(((modelica_integer) 1) + _currentNodeIdx));
           tmpMeta1 = tmpMeta10;
           goto tmp3_done;
         }
@@ -16316,13 +15961,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodesWithRefCo
           modelica_metatype tmpMeta12;
           modelica_integer tmp13;
           modelica_metatype tmpMeta14;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp13 = omc_unbox_integer(tmpMeta12);
           _resultList = tmpMeta11;
           _currentNodeIdx = tmp13  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta14 = mmc_mk_box2(0, _resultList, mmc_mk_integer(((modelica_integer) 1) + _currentNodeIdx));
+          tmpMeta14 = omc_mk_box2(0, _resultList, omc_mk_integer(((modelica_integer) 1) + _currentNodeIdx));
           tmpMeta1 = tmpMeta14;
           goto tmp3_done;
         }
@@ -16332,20 +15977,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodesWithRefCo
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oZeroIdc = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oZeroIdc;
+  omc_ret_ = _oZeroIdc;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNodesWithRefCountZero0(threadData_t *threadData, modelica_metatype _iRefCount, modelica_metatype _iZeroIdc)
 {
   modelica_integer tmp1;
   modelica_metatype _oZeroIdc = NULL;
-  tmp1 = mmc_unbox_integer(_iRefCount);
+  tmp1 = omc_unbox_integer(_iRefCount);
   _oZeroIdc = omc_HpcOmTaskGraph_getNodesWithRefCountZero0(threadData, tmp1, _iZeroIdc);
   /* skip box _oZeroIdc; tuple<list<#Integer>, #Integer> */
   return _oZeroIdc;
@@ -16356,15 +16002,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getNodesWithRefCo
   modelica_metatype _oZeroIdc = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oZeroIdc has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = omc_Array_fold(threadData, _iRefCounter, boxvar_HpcOmTaskGraph_getNodesWithRefCountZero0, _OMC_LIT212);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
   _oZeroIdc = tmpMeta2;
   _return: OMC_LABEL_UNUSED
-  return _oZeroIdc;
+  omc_ret_ = _oZeroIdc;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createRefCounter0(threadData_t *threadData, modelica_metatype _iChildNodes, modelica_metatype _iRefCounter)
@@ -16375,7 +16023,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createRefCounter0
   modelica_integer _head;
   modelica_metatype _tail = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oRefCounter has no default value.
   // _tmpRefCounter has no default value.
@@ -16404,13 +16053,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createRefCounter0
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           _head = tmp8  /* pattern as ty=Integer */;
           _tail = tmpMeta7;
           /* Pattern matching succeeded */
-          _counter = ((modelica_integer) 1) + (mmc_unbox_integer(arrayGet(_iRefCounter, _head)));
+          _counter = ((modelica_integer) 1) + (omc_unbox_integer(arrayGet(_iRefCounter, _head)));
 
-          _tmpRefCounter = arrayUpdate(_iRefCounter, _head, mmc_mk_integer(_counter));
+          _tmpRefCounter = arrayUpdate(_iRefCounter, _head, omc_mk_integer(_counter));
           /* Tail recursive call */
           _iChildNodes = _tail;
           _iRefCounter = _tmpRefCounter;
@@ -16424,31 +16073,34 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createRefCounter0
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oRefCounter = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oRefCounter;
+  omc_ret_ = _oRefCounter;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createRefCounter(threadData_t *threadData, modelica_metatype _iTaskGraph)
 {
   modelica_metatype _oRefCounter = NULL;
   modelica_metatype _tmpRefCounter = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oRefCounter has no default value.
   // _tmpRefCounter has no default value.
-  _tmpRefCounter = arrayCreate(arrayLength(_iTaskGraph), mmc_mk_integer(((modelica_integer) 0)));
+  _tmpRefCounter = arrayCreate(arrayLength(_iTaskGraph), omc_mk_integer(((modelica_integer) 0)));
 
   _tmpRefCounter = omc_Array_fold(threadData, _iTaskGraph, boxvar_HpcOmTaskGraph_createRefCounter0, _tmpRefCounter);
 
   _oRefCounter = _tmpRefCounter;
   _return: OMC_LABEL_UNUSED
-  return _oRefCounter;
+  omc_ret_ = _oRefCounter;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes2(threadData_t *threadData, modelica_integer _iNodeIdx, modelica_metatype _iRefCounter, modelica_metatype _iNodesWithRefZero)
@@ -16457,7 +16109,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes2(th
   modelica_metatype _tmpNodesWithRefZero = NULL;
   modelica_integer _refCounter;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNodesWithRefZero has no default value.
   // _tmpNodesWithRefZero has no default value.
@@ -16469,7 +16122,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes2(th
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -16480,14 +16133,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes2(th
           
           _tmpNodesWithRefZero = tmp4_1;
           /* Pattern matching succeeded */
-          _refCounter = ((modelica_integer) -1) + (mmc_unbox_integer(arrayGet(_iRefCounter, _iNodeIdx)));
+          _refCounter = ((modelica_integer) -1) + (omc_unbox_integer(arrayGet(_iRefCounter, _iNodeIdx)));
 
-          arrayUpdate(_iRefCounter, _iNodeIdx, mmc_mk_integer(_refCounter));
+          arrayUpdate(_iRefCounter, _iNodeIdx, omc_mk_integer(_refCounter));
 
           /* Pattern-matching assignment */
           tmp6 = (_refCounter == ((modelica_integer) 0));
           if (1 /* true */ != tmp6) goto goto_2;
-          tmpMeta7 = mmc_mk_cons(mmc_mk_integer(_iNodeIdx), _tmpNodesWithRefZero);
+          tmpMeta7 = mmc_mk_cons(omc_mk_integer(_iNodeIdx), _tmpNodesWithRefZero);
           tmpMeta1 = tmpMeta7;
           goto tmp3_done;
         }
@@ -16504,26 +16157,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes2(th
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oNodesWithRefZero = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oNodesWithRefZero;
+  omc_ret_ = _oNodesWithRefZero;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getLevelNodes2(threadData_t *threadData, modelica_metatype _iNodeIdx, modelica_metatype _iRefCounter, modelica_metatype _iNodesWithRefZero)
 {
   modelica_integer tmp1;
   modelica_metatype _oNodesWithRefZero = NULL;
-  tmp1 = mmc_unbox_integer(_iNodeIdx);
+  tmp1 = omc_unbox_integer(_iNodeIdx);
   _oNodesWithRefZero = omc_HpcOmTaskGraph_getLevelNodes2(threadData, tmp1, _iRefCounter, _iNodesWithRefZero);
   /* skip box _oNodesWithRefZero; list<#Integer> */
   return _oNodesWithRefZero;
@@ -16535,7 +16189,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes1(th
   modelica_metatype _childNodes = NULL;
   modelica_metatype _tmpNodesWithRefZero = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNodesWithRefZero has no default value.
   // _childNodes has no default value.
@@ -16547,13 +16202,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes1(th
 
   _oNodesWithRefZero = listAppend(_tmpNodesWithRefZero, _iNodesWithRefZero);
   _return: OMC_LABEL_UNUSED
-  return _oNodesWithRefZero;
+  omc_ret_ = _oNodesWithRefZero;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getLevelNodes1(threadData_t *threadData, modelica_metatype _iNodeIdx, modelica_metatype _iTaskGraph, modelica_metatype _iRefCounter, modelica_metatype _iNodesWithRefZero)
 {
   modelica_integer tmp1;
   modelica_metatype _oNodesWithRefZero = NULL;
-  tmp1 = mmc_unbox_integer(_iNodeIdx);
+  tmp1 = omc_unbox_integer(_iNodeIdx);
   _oNodesWithRefZero = omc_HpcOmTaskGraph_getLevelNodes1(threadData, tmp1, _iTaskGraph, _iRefCounter, _iNodesWithRefZero);
   /* skip box _oNodesWithRefZero; list<#Integer> */
   return _oNodesWithRefZero;
@@ -16565,7 +16221,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes0(th
   modelica_metatype _tmpLevelNodes = NULL;
   modelica_metatype _zeroRefNodes = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oLevelNodes has no default value.
   // _tmpLevelNodes has no default value.
@@ -16609,24 +16266,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getLevelNodes0(th
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oLevelNodes = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oLevelNodes;
+  omc_ret_ = _oLevelNodes;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getLevelNodes(threadData_t *threadData, modelica_metatype _iTaskGraph)
 {
   modelica_metatype _oLevelNodes = NULL;
   modelica_metatype _refCounter = NULL;
   modelica_metatype _roots = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oLevelNodes has no default value.
   // _refCounter has no default value.
@@ -16638,10 +16297,11 @@ modelica_metatype omc_HpcOmTaskGraph_getLevelNodes(threadData_t *threadData, mod
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _oLevelNodes = omc_HpcOmTaskGraph_getLevelNodes0(threadData, _iTaskGraph, _refCounter, _roots, tmpMeta1);
   _return: OMC_LABEL_UNUSED
-  return _oLevelNodes;
+  omc_ret_ = _oLevelNodes;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getLeafNodes(threadData_t *threadData, modelica_metatype _iTaskGraph)
 {
   modelica_metatype _oLeafNodes = NULL;
@@ -16653,7 +16313,8 @@ modelica_metatype omc_HpcOmTaskGraph_getLeafNodes(threadData_t *threadData, mode
   modelica_integer tmp3;
   modelica_integer tmp4;
   modelica_integer tmp5;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oLeafNodes has no default value.
   // _tmpLeafNodes has no default value.
@@ -16673,7 +16334,7 @@ modelica_metatype omc_HpcOmTaskGraph_getLeafNodes(threadData_t *threadData, mode
 
       if(listEmpty(_nodeSuccessors))
       {
-        tmpMeta2 = mmc_mk_cons(mmc_mk_integer(_nodeIdx), _tmpLeafNodes);
+        tmpMeta2 = mmc_mk_cons(omc_mk_integer(_nodeIdx), _tmpLeafNodes);
         _tmpLeafNodes = tmpMeta2;
       }
     }
@@ -16681,16 +16342,18 @@ modelica_metatype omc_HpcOmTaskGraph_getLeafNodes(threadData_t *threadData, mode
 
   _oLeafNodes = _tmpLeafNodes;
   _return: OMC_LABEL_UNUSED
-  return _oLeafNodes;
+  omc_ret_ = _oLeafNodes;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getRootNodes(threadData_t *threadData, modelica_metatype _iTaskGraph)
 {
   modelica_metatype _rootsOut = NULL;
   modelica_integer _size;
   modelica_metatype _taskGraphT = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _rootsOut has no default value.
   // _size has no default value.
@@ -16701,14 +16364,16 @@ modelica_metatype omc_HpcOmTaskGraph_getRootNodes(threadData_t *threadData, mode
 
   _rootsOut = omc_HpcOmTaskGraph_getLeafNodes(threadData, _taskGraphT);
   _return: OMC_LABEL_UNUSED
-  return _rootsOut;
+  omc_ret_ = _rootsOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_arrayCopyRows(threadData_t *threadData, modelica_metatype _inArray, modelica_metatype _newArray, modelica_metatype _copiedRows, modelica_integer _Idx)
 {
   modelica_metatype _outArray = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outArray has no default value.
   { /* matchcontinue expression */
@@ -16722,7 +16387,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_arrayCopyRows(thr
       // _row has no default value.
       // _arrayTmp has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -16734,7 +16399,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_arrayCopyRows(thr
           tmp6 = (listLength(_copiedRows) >= _Idx);
           if (1 /* true */ != tmp6) goto goto_2;
 
-          _copyRow = mmc_unbox_integer(listGet(_copiedRows, _Idx));
+          _copyRow = omc_unbox_integer(listGet(_copiedRows, _Idx));
 
           _row = arrayGet(_inArray, _copyRow);
 
@@ -16754,26 +16419,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_arrayCopyRows(thr
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _outArray = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outArray;
+  omc_ret_ = _outArray;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_arrayCopyRows(threadData_t *threadData, modelica_metatype _inArray, modelica_metatype _newArray, modelica_metatype _copiedRows, modelica_metatype _Idx)
 {
   modelica_integer tmp1;
   modelica_metatype _outArray = NULL;
-  tmp1 = mmc_unbox_integer(_Idx);
+  tmp1 = omc_unbox_integer(_Idx);
   _outArray = omc_HpcOmTaskGraph_arrayCopyRows(threadData, _inArray, _newArray, _copiedRows, tmp1);
   /* skip box _outArray; array<list<#Integer>> */
   return _outArray;
@@ -16787,7 +16453,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_deleteRowInAdjLst
   modelica_metatype _copiedRows = NULL;
   modelica_integer _size;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _adjacencyLstOut has no default value.
   // _odeMapping has no default value.
@@ -16808,17 +16475,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_deleteRowInAdjLst
   _odeMapping = _copiedRows;
   _return: OMC_LABEL_UNUSED
   if (out_odeMapping) { *out_odeMapping = _odeMapping; }
-  return _adjacencyLstOut;
+  omc_ret_ = _adjacencyLstOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_removeContinuousEntries1(threadData_t *threadData, modelica_integer _entryIn, modelica_metatype _deleteEntriesIn)
 {
   modelica_integer _entryOut;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _entryOut has no default value.
   { /* matchcontinue expression */
@@ -16828,20 +16494,20 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_removeContinuousEn
       int tmp5;
       // _offset has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           /* Pattern matching succeeded */
-          _offset = mmc_unbox_integer(arrayGet(_deleteEntriesIn, _entryIn));
+          _offset = omc_unbox_integer(arrayGet(_deleteEntriesIn, _entryIn));
           tmp1 = _entryIn - _offset;
           goto tmp3_done;
         }
         case 1: {
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT215),stdout);
+          fputs(omc_string_data(_OMC_LIT215),stdout);
           tmp1 = _entryIn;
           goto tmp3_done;
         }
@@ -16852,32 +16518,30 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_removeContinuousEn
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _entryOut = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _entryOut;
+  omc_ret_ = _entryOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_removeContinuousEntries1(threadData_t *threadData, modelica_metatype _entryIn, modelica_metatype _deleteEntriesIn)
 {
   modelica_integer tmp1;
   modelica_integer _entryOut;
   modelica_metatype out_entryOut;
-  tmp1 = mmc_unbox_integer(_entryIn);
+  tmp1 = omc_unbox_integer(_entryIn);
   _entryOut = omc_HpcOmTaskGraph_removeContinuousEntries1(threadData, tmp1, _deleteEntriesIn);
-  out_entryOut = mmc_mk_icon(_entryOut);
+  out_entryOut = omc_mk_icon(_entryOut);
   return out_entryOut;
 }
 
@@ -16887,11 +16551,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_setDeleteArr(threa
   modelica_integer _offsetOut;
   modelica_integer tmp1_c0 __attribute__((unused)) = 0;
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
+  modelica_integer omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _entryOut has no default value.
   // _offsetOut has no default value.
@@ -16926,7 +16588,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_setDeleteArr(threa
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -16935,10 +16597,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_setDeleteArr(threa
   _offsetOut = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_offsetOut) { *out_offsetOut = _offsetOut; }
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _entryOut;
+  omc_ret_ = _entryOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_setDeleteArr(threadData_t *threadData, modelica_metatype _entryIn, modelica_metatype _offsetIn, modelica_metatype *out_offsetOut)
 {
@@ -16947,20 +16607,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_setDeleteArr(t
   modelica_integer _offsetOut;
   modelica_integer _entryOut;
   modelica_metatype out_entryOut;
-  tmp1 = mmc_unbox_integer(_entryIn);
-  tmp2 = mmc_unbox_integer(_offsetIn);
+  tmp1 = omc_unbox_integer(_entryIn);
+  tmp2 = omc_unbox_integer(_offsetIn);
   _entryOut = omc_HpcOmTaskGraph_setDeleteArr(threadData, tmp1, tmp2, &_offsetOut);
-  out_entryOut = mmc_mk_icon(_entryOut);
-  if (out_offsetOut) { *out_offsetOut = mmc_mk_icon(_offsetOut); }
+  out_entryOut = omc_mk_icon(_entryOut);
+  if (out_offsetOut) { *out_offsetOut = omc_mk_icon(_offsetOut); }
   return out_entryOut;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_updateContinuousEntriesInList(threadData_t *threadData, modelica_metatype _lstIn, modelica_metatype _deleteEntriesIn)
 {
   modelica_metatype _lstOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _lstOut has no default value.
   { /* match expression */
@@ -17002,16 +16663,16 @@ modelica_metatype omc_HpcOmTaskGraph_updateContinuousEntriesInList(threadData_t 
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta7 = MMC_CAR(tmp4_1);
           tmpMeta8 = MMC_CDR(tmp4_1);
-          tmp9 = mmc_unbox_integer(tmpMeta7);
+          tmp9 = omc_unbox_integer(tmpMeta7);
           
           _start = tmp9  /* pattern as ty=Integer */;
           _rest = tmpMeta8;
           /* Pattern matching succeeded */
-          _deleteArr = arrayCreate(mmc_unbox_integer(omc_List_fold(threadData, listAppend(_rest, _deleteEntriesIn), boxvar_intMax, mmc_mk_integer(_start))), mmc_mk_integer(((modelica_integer) 0)));
+          _deleteArr = arrayCreate(omc_unbox_integer(omc_List_fold(threadData, listAppend(_rest, _deleteEntriesIn), boxvar_intMax, omc_mk_integer(_start))), omc_mk_integer(((modelica_integer) 0)));
 
-          omc_List_map2__0(threadData, _deleteEntriesIn, boxvar_Array_updateIndexFirst, mmc_mk_integer(((modelica_integer) 1)), _deleteArr);
+          omc_List_map2__0(threadData, _deleteEntriesIn, boxvar_Array_updateIndexFirst, omc_mk_integer(((modelica_integer) 1)), _deleteArr);
 
-          _deleteArr = omc_Array_mapFold(threadData, _deleteArr, boxvar_HpcOmTaskGraph_setDeleteArr, mmc_mk_integer(((modelica_integer) 0)), NULL);
+          _deleteArr = omc_Array_mapFold(threadData, _deleteArr, boxvar_HpcOmTaskGraph_setDeleteArr, omc_mk_integer(((modelica_integer) 0)), NULL);
           tmpMeta1 = omc_List_map1(threadData, _lstIn, boxvar_HpcOmTaskGraph_removeContinuousEntries1, _deleteArr);
           goto tmp3_done;
         }
@@ -17021,21 +16682,23 @@ modelica_metatype omc_HpcOmTaskGraph_updateContinuousEntriesInList(threadData_t 
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _lstOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _lstOut;
+  omc_ret_ = _lstOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getChildNodes(threadData_t *threadData, modelica_metatype _adjacencyLstIn, modelica_metatype _parents, modelica_metatype _childLstTmp, modelica_integer _Idx)
 {
   modelica_metatype _childLsts = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _childLsts has no default value.
   { /* matchcontinue expression */
@@ -17049,7 +16712,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getChildNodes(thr
       // _row has no default value.
       // _childLst has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -17061,7 +16724,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getChildNodes(thr
           tmp6 = (listLength(_parents) >= _Idx);
           if (1 /* true */ != tmp6) goto goto_2;
 
-          _parent = mmc_unbox_integer(listGet(_parents, _Idx));
+          _parent = omc_unbox_integer(listGet(_parents, _Idx));
 
           _row = arrayGet(_adjacencyLstIn, _parent);
 
@@ -17081,26 +16744,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getChildNodes(thr
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _childLsts = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _childLsts;
+  omc_ret_ = _childLsts;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getChildNodes(threadData_t *threadData, modelica_metatype _adjacencyLstIn, modelica_metatype _parents, modelica_metatype _childLstTmp, modelica_metatype _Idx)
 {
   modelica_integer tmp1;
   modelica_metatype _childLsts = NULL;
-  tmp1 = mmc_unbox_integer(_Idx);
+  tmp1 = omc_unbox_integer(_Idx);
   _childLsts = omc_HpcOmTaskGraph_getChildNodes(threadData, _adjacencyLstIn, _parents, _childLstTmp, tmp1);
   /* skip box _childLsts; list<#Integer> */
   return _childLsts;
@@ -17110,7 +16774,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllSuccessors2
 {
   modelica_metatype _successorsOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _successorsOut has no default value.
   { /* match expression */
@@ -17143,7 +16808,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllSuccessors2
 
           _successors1 = omc_List_unique(threadData, _successors1);
 
-          omc_List_map2__0(threadData, _successors1, boxvar_Array_updateIndexFirst, mmc_mk_boolean(1 /* true */), _alreadyVisited);
+          omc_List_map2__0(threadData, _successors1, boxvar_Array_updateIndexFirst, omc_mk_boolean(1 /* true */), _alreadyVisited);
           /* Tail recursive call */
           _nodes = _successors1;
           _successorsIn = listAppend(_successors1, _successorsIn);
@@ -17157,22 +16822,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllSuccessors2
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _successorsOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _successorsOut;
+  omc_ret_ = _successorsOut;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getAllSuccessors(threadData_t *threadData, modelica_metatype _nodes, modelica_metatype _graph)
 {
   modelica_metatype _successors = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _successors has no default value.
   { /* matchcontinue expression */
@@ -17186,16 +16853,16 @@ modelica_metatype omc_HpcOmTaskGraph_getAllSuccessors(threadData_t *threadData, 
       // _check has no default value.
       // _successors1 has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           /* Pattern matching succeeded */
-          _alreadyVisited = arrayCreate(arrayLength(_graph), mmc_mk_boolean(0 /* false */));
+          _alreadyVisited = arrayCreate(arrayLength(_graph), omc_mk_boolean(0 /* false */));
 
-          omc_List_map2__0(threadData, _nodes, boxvar_Array_updateIndexFirst, mmc_mk_boolean(1 /* true */), _alreadyVisited);
+          omc_List_map2__0(threadData, _nodes, boxvar_Array_updateIndexFirst, omc_mk_boolean(1 /* true */), _alreadyVisited);
 
           _successors1 = omc_List_flatten(threadData, omc_List_map1(threadData, _nodes, boxvar_Array_getIndexFirst, _graph));
 
@@ -17209,7 +16876,7 @@ modelica_metatype omc_HpcOmTaskGraph_getAllSuccessors(threadData_t *threadData, 
         }
         case 1: {
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT216),stdout);
+          fputs(omc_string_data(_OMC_LIT216),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -17220,31 +16887,30 @@ modelica_metatype omc_HpcOmTaskGraph_getAllSuccessors(threadData_t *threadData, 
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _successors = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _successors;
+  omc_ret_ = _successors;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, modelica_integer _compIn, modelica_integer _compIdx, modelica_metatype _inComps, modelica_metatype _nodeMark)
 {
   modelica_integer _compOut;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _compOut has no default value.
   { /* matchcontinue expression */
@@ -17256,7 +16922,7 @@ modelica_integer omc_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, mod
       // _mergedComp has no default value.
       // _nodeMarkEntry has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 4; tmp4++) {
@@ -17272,7 +16938,7 @@ modelica_integer omc_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, mod
           _mergedComp = arrayGet(_inComps, _compIdx);
 
           /* Pattern-matching assignment */
-          tmp7 = omc_List_isMemberOnTrue(threadData, mmc_mk_integer(_compIn), _mergedComp, boxvar_intEq);
+          tmp7 = omc_List_isMemberOnTrue(threadData, omc_mk_integer(_compIn), _mergedComp, boxvar_intEq);
           if (0 /* false */ != tmp7) goto goto_2;
           tmp1 = omc_HpcOmTaskGraph_getCompInComps(threadData, _compIn, ((modelica_integer) 1) + _compIdx, _inComps, _nodeMark);
           goto tmp3_done;
@@ -17288,7 +16954,7 @@ modelica_integer omc_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, mod
           _mergedComp = arrayGet(_inComps, _compIdx);
 
           /* Pattern-matching assignment */
-          tmp9 = omc_List_isMemberOnTrue(threadData, mmc_mk_integer(_compIn), _mergedComp, boxvar_intEq);
+          tmp9 = omc_List_isMemberOnTrue(threadData, omc_mk_integer(_compIn), _mergedComp, boxvar_intEq);
           if (1 /* true */ != tmp9) goto goto_2;
           tmp1 = _compIdx;
           goto tmp3_done;
@@ -17296,7 +16962,7 @@ modelica_integer omc_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, mod
         case 2: {
           modelica_boolean tmp10;
           /* Pattern matching succeeded */
-          _nodeMarkEntry = mmc_unbox_integer(arrayGet(_nodeMark, _compIn));
+          _nodeMarkEntry = omc_unbox_integer(arrayGet(_nodeMark, _compIn));
 
           /* Pattern-matching assignment */
           tmp10 = (_nodeMarkEntry < ((modelica_integer) 0));
@@ -17305,16 +16971,16 @@ modelica_integer omc_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, mod
           goto tmp3_done;
         }
         case 3: {
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
+          modelica_string tmp11;
+          modelica_string tmp12;
+          modelica_string tmp13;
+          modelica_string tmp14;
           /* Pattern matching succeeded */
-          tmpMeta11 = stringAppend(_OMC_LIT217,intString(_compIn));
-          tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT218);
-          tmpMeta13 = stringAppend(tmpMeta12,intString(arrayLength(_inComps)));
-          tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT5);
-          fputs(MMC_STRINGDATA(tmpMeta14),stdout);
+          tmp11 = stringAppend(_OMC_LIT217,intString(_compIn));
+          tmp12 = stringAppend(tmp11,_OMC_LIT218);
+          tmp13 = stringAppend(tmp12,intString(arrayLength(_inComps)));
+          tmp14 = stringAppend(tmp13,_OMC_LIT5);
+          fputs(omc_string_data(tmp14),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -17325,23 +16991,21 @@ modelica_integer omc_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, mod
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 4) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _compOut = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _compOut;
+  omc_ret_ = _compOut;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getCompInComps(threadData_t *threadData, modelica_metatype _compIn, modelica_metatype _compIdx, modelica_metatype _inComps, modelica_metatype _nodeMark)
 {
@@ -17349,10 +17013,10 @@ modelica_metatype boxptr_HpcOmTaskGraph_getCompInComps(threadData_t *threadData,
   modelica_integer tmp2;
   modelica_integer _compOut;
   modelica_metatype out_compOut;
-  tmp1 = mmc_unbox_integer(_compIn);
-  tmp2 = mmc_unbox_integer(_compIdx);
+  tmp1 = omc_unbox_integer(_compIn);
+  tmp2 = omc_unbox_integer(_compIdx);
   _compOut = omc_HpcOmTaskGraph_getCompInComps(threadData, tmp1, tmp2, _inComps, _nodeMark);
-  out_compOut = mmc_mk_icon(_compOut);
+  out_compOut = omc_mk_icon(_compOut);
   return out_compOut;
 }
 
@@ -17360,7 +17024,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_markRemovedNodes(
 {
   modelica_metatype _nodeMarkOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _nodeMarkOut has no default value.
   { /* matchcontinue expression */
@@ -17368,7 +17033,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_markRemovedNodes(
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -17377,7 +17042,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_markRemovedNodes(
           modelica_boolean tmp6;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
-          tmp6 = (((modelica_integer) -2) == mmc_unbox_integer(arrayGet(_nodeMarkIn, _nodeMarkIdx)));
+          tmp6 = (((modelica_integer) -2) == omc_unbox_integer(arrayGet(_nodeMarkIn, _nodeMarkIdx)));
           if (1 /* true */ != tmp6) goto goto_2;
           tmpMeta1 = _nodeMarkIn;
           goto tmp3_done;
@@ -17386,7 +17051,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_markRemovedNodes(
           modelica_boolean tmp7;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
-          tmp7 = omc_List_isMemberOnTrue(threadData, mmc_mk_integer(_nodeMarkIdx), _removedNodes, boxvar_intEq);
+          tmp7 = omc_List_isMemberOnTrue(threadData, omc_mk_integer(_nodeMarkIdx), _removedNodes, boxvar_intEq);
           if (0 /* false */ != tmp7) goto goto_2;
           tmpMeta1 = _nodeMarkIn;
           goto tmp3_done;
@@ -17395,9 +17060,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_markRemovedNodes(
           modelica_boolean tmp8;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
-          tmp8 = omc_List_isMemberOnTrue(threadData, mmc_mk_integer(_nodeMarkIdx), _removedNodes, boxvar_intEq);
+          tmp8 = omc_List_isMemberOnTrue(threadData, omc_mk_integer(_nodeMarkIdx), _removedNodes, boxvar_intEq);
           if (1 /* true */ != tmp8) goto goto_2;
-          tmpMeta1 = omc_Array_replaceAtWithFill(threadData, _nodeMarkIdx, mmc_mk_integer(((modelica_integer) -1)), mmc_mk_integer(((modelica_integer) 999)), _nodeMarkIn);
+          tmpMeta1 = omc_Array_replaceAtWithFill(threadData, _nodeMarkIdx, omc_mk_integer(((modelica_integer) -1)), omc_mk_integer(((modelica_integer) 999)), _nodeMarkIn);
           goto tmp3_done;
         }
         }
@@ -17407,26 +17072,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_markRemovedNodes(
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _nodeMarkOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _nodeMarkOut;
+  omc_ret_ = _nodeMarkOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_markRemovedNodes(threadData_t *threadData, modelica_metatype _nodeMarkIdx, modelica_metatype _removedNodes, modelica_metatype _nodeMarkIn)
 {
   modelica_integer tmp1;
   modelica_metatype _nodeMarkOut = NULL;
-  tmp1 = mmc_unbox_integer(_nodeMarkIdx);
+  tmp1 = omc_unbox_integer(_nodeMarkIdx);
   _nodeMarkOut = omc_HpcOmTaskGraph_markRemovedNodes(threadData, tmp1, _removedNodes, _nodeMarkIn);
   /* skip box _nodeMarkOut; array<#Integer> */
   return _nodeMarkOut;
@@ -17458,7 +17124,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutSystemData(thr
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphDataOut has no default value.
   // _inComps has no default value.
@@ -17474,16 +17141,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutSystemData(thr
   // _compInformations has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _graphDataIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 10));
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 11));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta1, 9);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 10);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta1, 11);
   _inComps = tmpMeta2;
   _varCompMapping = tmpMeta3;
   _eqCompMapping = tmpMeta4;
@@ -17501,18 +17168,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutSystemData(thr
 
   _nodeMark = omc_List_fold1(threadData, _rangeLst, boxvar_HpcOmTaskGraph_markRemovedNodes, _cutNodes, _nodeMark);
 
-  tmpMeta12 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
+  tmpMeta12 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
   _graphDataOut = tmpMeta12;
   _return: OMC_LABEL_UNUSED
-  return _graphDataOut;
+  omc_ret_ = _graphDataOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph2(threadData_t *threadData, modelica_metatype _daeNodes, modelica_metatype _graphODE, modelica_metatype _cutNodesIn, modelica_metatype _graphDAE, modelica_metatype _odeMap, modelica_metatype *out_cutNodesOut)
 {
   modelica_metatype _graphOut = NULL;
   modelica_metatype _cutNodesOut = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _cutNodesOut has no default value.
@@ -17535,7 +17204,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph2(thr
       // _row has no default value.
       // _cutNodes has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -17548,11 +17217,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph2(thr
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           _daeIdx = tmp8  /* pattern as ty=Integer */;
           _rest = tmpMeta7;
           /* Pattern matching succeeded */
-          _odeIdx = mmc_unbox_integer(arrayGet(_odeMap, _daeIdx));
+          _odeIdx = omc_unbox_integer(arrayGet(_odeMap, _daeIdx));
 
           /* Pattern-matching assignment */
           tmp9 = (_odeIdx > ((modelica_integer) 0));
@@ -17562,7 +17231,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph2(thr
 
           _row = omc_List_map1(threadData, _row, boxvar_Array_getIndexFirst, _odeMap);
 
-          _row = omc_List_filter1OnTrue(threadData, _row, boxvar_intGt, mmc_mk_integer(((modelica_integer) 0)));
+          _row = omc_List_filter1OnTrue(threadData, _row, boxvar_intGt, omc_mk_integer(((modelica_integer) 0)));
 
           arrayUpdate(_graphODE, _odeIdx, _row);
 
@@ -17580,17 +17249,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph2(thr
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta10 = MMC_CAR(tmp4_1);
           tmpMeta11 = MMC_CDR(tmp4_1);
-          tmp12 = mmc_unbox_integer(tmpMeta10);
+          tmp12 = omc_unbox_integer(tmpMeta10);
           _daeIdx = tmp12  /* pattern as ty=Integer */;
           _rest = tmpMeta11;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _odeIdx = mmc_unbox_integer(arrayGet(_odeMap, _daeIdx));
+          _odeIdx = omc_unbox_integer(arrayGet(_odeMap, _daeIdx));
 
           /* Pattern-matching assignment */
           tmp13 = (_odeIdx == ((modelica_integer) -1));
           if (1 /* true */ != tmp13) goto goto_2;
 
-          tmpMeta14 = mmc_mk_cons(mmc_mk_integer(_daeIdx), _cutNodesIn);
+          tmpMeta14 = mmc_mk_cons(omc_mk_integer(_daeIdx), _cutNodesIn);
           omc_HpcOmTaskGraph_cutTaskGraph2(threadData, _rest, _graphODE, tmpMeta14, _graphDAE, _odeMap ,&_cutNodes);
           tmpMeta[0+0] = _graphODE;
           tmpMeta[0+1] = _cutNodes;
@@ -17610,14 +17279,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph2(thr
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -17625,15 +17294,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph2(thr
   _cutNodesOut = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_cutNodesOut) { *out_cutNodesOut = _cutNodesOut; }
-  return _graphOut;
+  omc_ret_ = _graphOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _exceptNodes, modelica_metatype _whenNodes, modelica_metatype *out_cutNodesOut)
 {
   modelica_metatype _graphOut = NULL;
   modelica_metatype _cutNodesOut = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _cutNodesOut has no default value.
@@ -17658,7 +17329,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph(thre
       // _odeNodes has no default value.
       // _odeMap has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -17671,7 +17342,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph(thre
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           if (-1 != tmp8) goto tmp3_end;
           if (!listEmpty(tmpMeta7)) goto tmp3_end;
           /* Pattern matching succeeded */
@@ -17699,7 +17370,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph(thre
 
           _sizeODE = listLength(_odeNodes);
 
-          _odeMap = arrayCreate(_sizeDAE, mmc_mk_integer(((modelica_integer) -1)));
+          _odeMap = arrayCreate(_sizeDAE, omc_mk_integer(((modelica_integer) -1)));
 
           omc_List_threadMap1__0(threadData, _odeNodes, omc_List_intRange(threadData, _sizeODE), boxvar_Array_updateIndexFirst, _odeMap);
 
@@ -17712,7 +17383,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph(thre
         case 2: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT219),stdout);
+          fputs(omc_string_data(_OMC_LIT219),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -17723,14 +17394,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph(thre
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -17738,14 +17409,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_cutTaskGraph(thre
   _cutNodesOut = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_cutNodesOut) { *out_cutNodesOut = _cutNodesOut; }
-  return _graphOut;
+  omc_ret_ = _graphOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getStates(threadData_t *threadData, modelica_metatype _inVarLst, modelica_metatype _stateVarsIn, modelica_integer _Idx)
 {
   modelica_metatype _stateVarsOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _stateVarsOut has no default value.
   { /* matchcontinue expression */
@@ -17759,7 +17432,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getStates(threadD
       // _head has no default value.
       // _rest has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -17794,7 +17467,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getStates(threadD
           /* Pattern-matching assignment */
           tmp11 = omc_BackendVariable_isStateVar(threadData, _head);
           if (1 /* true */ != tmp11) goto goto_2;
-          tmpMeta12 = mmc_mk_cons(mmc_mk_integer(_Idx), _stateVarsIn);
+          tmpMeta12 = mmc_mk_cons(omc_mk_integer(_Idx), _stateVarsIn);
           tmpMeta1 = omc_HpcOmTaskGraph_getStates(threadData, _rest, tmpMeta12, ((modelica_integer) 1) + _Idx);
           goto tmp3_done;
         }
@@ -17811,26 +17484,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getStates(threadD
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _stateVarsOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _stateVarsOut;
+  omc_ret_ = _stateVarsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getStates(threadData_t *threadData, modelica_metatype _inVarLst, modelica_metatype _stateVarsIn, modelica_metatype _Idx)
 {
   modelica_integer tmp1;
   modelica_metatype _stateVarsOut = NULL;
-  tmp1 = mmc_unbox_integer(_Idx);
+  tmp1 = omc_unbox_integer(_Idx);
   _stateVarsOut = omc_HpcOmTaskGraph_getStates(threadData, _inVarLst, _stateVarsIn, tmp1);
   /* skip box _stateVarsOut; list<#Integer> */
   return _stateVarsOut;
@@ -17840,7 +17514,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllStateNodes(
 {
   modelica_metatype _stateInfoOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _stateInfoOut has no default value.
   { /* matchcontinue expression */
@@ -17864,7 +17539,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllStateNodes(
       // _orderedVars has no default value.
       // _varLst has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -17878,15 +17553,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllStateNodes(
           modelica_metatype tmpMeta11;
           modelica_boolean tmp12;
           modelica_metatype tmpMeta13;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp8 = omc_unbox_integer(tmpMeta7);
           _stateNodesIn = tmpMeta6;
           _varOffset = tmp8  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta9 = _systIn;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 2);
           _orderedVars = tmpMeta10;
 
           _varLst = omc_BackendVariable_varList(threadData, _orderedVars);
@@ -17898,16 +17573,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllStateNodes(
           tmp12 = listEmpty(_stateVars);
           if (0 /* false */ != tmp12) goto goto_2;
 
-          _stateVars = omc_List_map1(threadData, _stateVars, boxvar_intAdd, mmc_mk_integer(_varOffset));
+          _stateVars = omc_List_map1(threadData, _stateVars, boxvar_intAdd, omc_mk_integer(_varOffset));
 
           _stateNodes = omc_HpcOmTaskGraph_getArrayTuple31(threadData, _stateVars, _varCompMapping);
 
-          _stateNodes = omc_List_map3(threadData, _stateNodes, boxvar_HpcOmTaskGraph_getCompInComps, mmc_mk_integer(((modelica_integer) 1)), _inComps, arrayCreate(arrayLength(_inComps), mmc_mk_integer(((modelica_integer) 0))));
+          _stateNodes = omc_List_map3(threadData, _stateNodes, boxvar_HpcOmTaskGraph_getCompInComps, omc_mk_integer(((modelica_integer) 1)), _inComps, arrayCreate(arrayLength(_inComps), omc_mk_integer(((modelica_integer) 0))));
 
           _stateNodes = listAppend(_stateNodesIn, _stateNodes);
 
           _varOffsetNew = listLength(_varLst) + _varOffset;
-          tmpMeta13 = mmc_mk_box2(0, _stateNodes, mmc_mk_integer(_varOffsetNew));
+          tmpMeta13 = omc_mk_box2(0, _stateNodes, omc_mk_integer(_varOffsetNew));
           tmpMeta1 = tmpMeta13;
           goto tmp3_done;
         }
@@ -17920,15 +17595,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllStateNodes(
           modelica_metatype tmpMeta19;
           modelica_boolean tmp20;
           modelica_metatype tmpMeta21;
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp16 = mmc_unbox_integer(tmpMeta15);
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp16 = omc_unbox_integer(tmpMeta15);
           _stateNodesIn = tmpMeta14;
           _varOffset = tmp16  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta17 = _systIn;
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 2));
+          tmpMeta18 = OMC_BOX_FIELD(tmpMeta17, 2);
           _orderedVars = tmpMeta18;
 
           _varLst = omc_BackendVariable_varList(threadData, _orderedVars);
@@ -17941,7 +17616,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllStateNodes(
           if (1 /* true */ != tmp20) goto goto_2;
 
           _varOffsetNew = listLength(_varLst) + _varOffset;
-          tmpMeta21 = mmc_mk_box2(0, _stateNodesIn, mmc_mk_integer(_varOffsetNew));
+          tmpMeta21 = omc_mk_box2(0, _stateNodesIn, omc_mk_integer(_varOffsetNew));
           tmpMeta1 = tmpMeta21;
           goto tmp3_done;
         }
@@ -17949,13 +17624,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllStateNodes(
           modelica_metatype tmpMeta22;
           modelica_metatype tmpMeta23;
           modelica_metatype tmpMeta24;
-          modelica_metatype tmpMeta25;
-          modelica_metatype tmpMeta26;
+          modelica_string tmp25;
+          modelica_string tmp26;
           
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta22 = _systIn;
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta22), 2));
+          tmpMeta23 = OMC_BOX_FIELD(tmpMeta22, 2);
           _orderedVars = tmpMeta23;
 
           _varLst = omc_BackendVariable_varList(threadData, _orderedVars);
@@ -17963,9 +17638,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllStateNodes(
           tmpMeta24 = MMC_REFSTRUCTLIT(mmc_nil);
           _stateVars = omc_HpcOmTaskGraph_getStates(threadData, _varLst, tmpMeta24, ((modelica_integer) 1));
 
-          tmpMeta25 = stringAppend(_OMC_LIT220,intString(listLength(_stateVars)));
-          tmpMeta26 = stringAppend(tmpMeta25,_OMC_LIT5);
-          fputs(MMC_STRINGDATA(tmpMeta26),stdout);
+          tmp25 = stringAppend(_OMC_LIT220,intString(listLength(_stateVars)));
+          tmp26 = stringAppend(tmp25,_OMC_LIT5);
+          fputs(omc_string_data(tmp26),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -17976,23 +17651,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getAllStateNodes(
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _stateInfoOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _stateInfoOut;
+  omc_ret_ = _stateInfoOut;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getOdeSystem(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _graphDataIn, modelica_metatype _systIn, modelica_metatype *out_graphDataOdeOut)
 {
   modelica_metatype _graphOdeOut = NULL;
@@ -18014,7 +17690,8 @@ modelica_metatype omc_HpcOmTaskGraph_getOdeSystem(threadData_t *threadData, mode
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOdeOut has no default value.
   // _graphDataOdeOut has no default value.
@@ -18029,21 +17706,21 @@ modelica_metatype omc_HpcOmTaskGraph_getOdeSystem(threadData_t *threadData, mode
   // _graphTmp has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _graphDataIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 4);
   _inComps = tmpMeta2;
   _varCompMapping = tmpMeta3;
   _eqCompMapping = tmpMeta4;
 
   /* Pattern-matching assignment */
   tmpMeta5 = _systIn;
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 2);
   _systs = tmpMeta6;
 
   /* Pattern-matching assignment */
   tmpMeta7 = omc_List_fold2(threadData, _systs, boxvar_HpcOmTaskGraph_getAllStateNodes, _varCompMapping, _inComps, _OMC_LIT208);
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 1);
   _stateNodes = tmpMeta8;
 
   _whenNodes = omc_HpcOmTaskGraph_getEventNodes(threadData, _systIn, _eqCompMapping);
@@ -18059,20 +17736,23 @@ modelica_metatype omc_HpcOmTaskGraph_getOdeSystem(threadData_t *threadData, mode
   _graphDataOdeOut = omc_HpcOmTaskGraph_cutSystemData(threadData, _graphDataIn, _cutNodes, _cutNodeChildren);
   _return: OMC_LABEL_UNUSED
   if (out_graphDataOdeOut) { *out_graphDataOdeOut = _graphDataOdeOut; }
-  return _graphOdeOut;
+  omc_ret_ = _graphOdeOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateMappingTuple(threadData_t *threadData, modelica_integer _varIdx, modelica_integer _sccIdx, modelica_integer _iEqSysIdx, modelica_integer _iVarOffset, modelica_metatype _iMapping)
 {
   modelica_metatype _oMapping = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMapping has no default value.
-  tmpMeta1 = mmc_mk_box3(0, mmc_mk_integer(_sccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iVarOffset));
+  tmpMeta1 = omc_mk_box3(0, omc_mk_integer(_sccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iVarOffset));
   _oMapping = arrayUpdate(_iMapping, _varIdx + _iVarOffset, tmpMeta1);
   _return: OMC_LABEL_UNUSED
-  return _oMapping;
+  omc_ret_ = _oMapping;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateMappingTuple(threadData_t *threadData, modelica_metatype _varIdx, modelica_metatype _sccIdx, modelica_metatype _iEqSysIdx, modelica_metatype _iVarOffset, modelica_metatype _iMapping)
 {
@@ -18081,10 +17761,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateMappingT
   modelica_integer tmp3;
   modelica_integer tmp4;
   modelica_metatype _oMapping = NULL;
-  tmp1 = mmc_unbox_integer(_varIdx);
-  tmp2 = mmc_unbox_integer(_sccIdx);
-  tmp3 = mmc_unbox_integer(_iEqSysIdx);
-  tmp4 = mmc_unbox_integer(_iVarOffset);
+  tmp1 = omc_unbox_integer(_varIdx);
+  tmp2 = omc_unbox_integer(_sccIdx);
+  tmp3 = omc_unbox_integer(_iEqSysIdx);
+  tmp4 = omc_unbox_integer(_iVarOffset);
   _oMapping = omc_HpcOmTaskGraph_updateMappingTuple(threadData, tmp1, tmp2, tmp3, tmp4, _iMapping);
   /* skip box _oMapping; array<tuple<#Integer, #Integer, #Integer>> */
   return _oMapping;
@@ -18093,20 +17773,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateMappingT
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateMapping(threadData_t *threadData, modelica_integer _varIdx, modelica_integer _sccIdx, modelica_metatype _iMapping)
 {
   modelica_metatype _oMapping = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMapping has no default value.
-  _oMapping = arrayUpdate(_iMapping, _varIdx, mmc_mk_integer(_sccIdx));
+  _oMapping = arrayUpdate(_iMapping, _varIdx, omc_mk_integer(_sccIdx));
   _return: OMC_LABEL_UNUSED
-  return _oMapping;
+  omc_ret_ = _oMapping;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateMapping(threadData_t *threadData, modelica_metatype _varIdx, modelica_metatype _sccIdx, modelica_metatype _iMapping)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _oMapping = NULL;
-  tmp1 = mmc_unbox_integer(_varIdx);
-  tmp2 = mmc_unbox_integer(_sccIdx);
+  tmp1 = omc_unbox_integer(_varIdx);
+  tmp2 = omc_unbox_integer(_sccIdx);
   _oMapping = omc_HpcOmTaskGraph_updateMapping(threadData, tmp1, tmp2, _iMapping);
   /* skip box _oMapping; array<#Integer> */
   return _oMapping;
@@ -18116,7 +17798,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_othersInTearComp(
 {
   modelica_metatype _othersOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _othersOut has no default value.
   { /* matchcontinue expression */
@@ -18132,7 +17815,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_othersInTearComp(
       // _varTplLst has no default value.
       // _varLst has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -18150,9 +17833,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_othersInTearComp(
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta6 = _otherEqnVarTpl;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+          tmp8 = omc_unbox_integer(tmpMeta7);
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta6, 2);
           _eq = tmp8  /* pattern as ty=Integer */;
           _varTplLst = tmpMeta9;
 
@@ -18160,22 +17843,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_othersInTearComp(
 
           /* Pattern-matching assignment */
           tmpMeta10 = _othersIn;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 1));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 2));
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta10, 1);
+          tmpMeta12 = OMC_BOX_FIELD(tmpMeta10, 2);
           _eqLst = tmpMeta11;
           _varLst = tmpMeta12;
 
           _varLst = listAppend(_varTplLst, _varLst);
 
-          tmpMeta13 = mmc_mk_cons(mmc_mk_integer(_eq), _eqLst);
+          tmpMeta13 = mmc_mk_cons(omc_mk_integer(_eq), _eqLst);
           _eqLst = tmpMeta13;
-          tmpMeta14 = mmc_mk_box2(0, _eqLst, _varLst);
+          tmpMeta14 = omc_mk_box2(0, _eqLst, _varLst);
           tmpMeta1 = tmpMeta14;
           goto tmp3_done;
         }
         case 1: {
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT221),stdout);
+          fputs(omc_string_data(_OMC_LIT221),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -18186,20 +17869,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_othersInTearComp(
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _othersOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _othersOut;
+  omc_ret_ = _othersOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSccNodeMapping1(threadData_t *threadData, modelica_integer _iCompIdx, modelica_metatype _iNodeMark, modelica_metatype _iArrayNodeIdx)
@@ -18209,7 +17893,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSccNodeMapping
   modelica_integer _nodeMark;
   modelica_metatype _iMappingArray = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oArrayNodeIdx has no default value.
   // _iNodeIdx has no default value.
@@ -18222,7 +17907,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSccNodeMapping
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -18233,20 +17918,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSccNodeMapping
           modelica_integer tmp8;
           modelica_boolean tmp9;
           modelica_metatype tmpMeta10;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp8 = omc_unbox_integer(tmpMeta7);
           _iMappingArray = tmpMeta6;
           _iNodeIdx = tmp8  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          _nodeMark = mmc_unbox_integer(arrayGet(_iNodeMark, _iCompIdx));
+          _nodeMark = omc_unbox_integer(arrayGet(_iNodeMark, _iCompIdx));
 
           /* Pattern-matching assignment */
           tmp9 = (((modelica_integer) -1) != _nodeMark);
           if (1 /* true */ != tmp9) goto goto_2;
 
-          _iMappingArray = arrayUpdate(_iMappingArray, _iCompIdx, mmc_mk_integer(_iNodeIdx));
-          tmpMeta10 = mmc_mk_box2(0, _iMappingArray, mmc_mk_integer(_iNodeIdx));
+          _iMappingArray = arrayUpdate(_iMappingArray, _iCompIdx, omc_mk_integer(_iNodeIdx));
+          tmpMeta10 = omc_mk_box2(0, _iMappingArray, omc_mk_integer(_iNodeIdx));
           tmpMeta1 = tmpMeta10;
           goto tmp3_done;
         }
@@ -18255,13 +17940,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSccNodeMapping
           modelica_metatype tmpMeta12;
           modelica_integer tmp13;
           modelica_metatype tmpMeta14;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp13 = omc_unbox_integer(tmpMeta12);
           _iMappingArray = tmpMeta11;
           _iNodeIdx = tmp13  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta14 = mmc_mk_box2(0, _iMappingArray, mmc_mk_integer(_iNodeIdx));
+          tmpMeta14 = omc_mk_box2(0, _iMappingArray, omc_mk_integer(_iNodeIdx));
           tmpMeta1 = tmpMeta14;
           goto tmp3_done;
         }
@@ -18272,26 +17957,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSccNodeMapping
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oArrayNodeIdx = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oArrayNodeIdx;
+  omc_ret_ = _oArrayNodeIdx;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getSccNodeMapping1(threadData_t *threadData, modelica_metatype _iCompIdx, modelica_metatype _iNodeMark, modelica_metatype _iArrayNodeIdx)
 {
   modelica_integer tmp1;
   modelica_metatype _oArrayNodeIdx = NULL;
-  tmp1 = mmc_unbox_integer(_iCompIdx);
+  tmp1 = omc_unbox_integer(_iCompIdx);
   _oArrayNodeIdx = omc_HpcOmTaskGraph_getSccNodeMapping1(threadData, tmp1, _iNodeMark, _iArrayNodeIdx);
   /* skip box _oArrayNodeIdx; tuple<array<#Integer>, #Integer> */
   return _oArrayNodeIdx;
@@ -18307,31 +17993,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSccNodeMapping
   modelica_metatype tmpMeta3;
   modelica_integer tmp4;
   modelica_metatype tmpMeta5;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oArrayNodeIdx has no default value.
   // _tmpMappingArray has no default value.
   // _nodeIdx has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = omc_List_fold1(threadData, _iCompsOfNode, boxvar_HpcOmTaskGraph_getSccNodeMapping1, _iNodeMarks, _iArrayNodeIdx);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp4 = mmc_unbox_integer(tmpMeta3);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp4 = omc_unbox_integer(tmpMeta3);
   _tmpMappingArray = tmpMeta2;
   _nodeIdx = tmp4  /* pattern as ty=Integer */;
 
-  tmpMeta5 = mmc_mk_box2(0, _tmpMappingArray, mmc_mk_integer(((modelica_integer) 1) + _nodeIdx));
+  tmpMeta5 = omc_mk_box2(0, _tmpMappingArray, omc_mk_integer(((modelica_integer) 1) + _nodeIdx));
   _oArrayNodeIdx = tmpMeta5;
   _return: OMC_LABEL_UNUSED
-  return _oArrayNodeIdx;
+  omc_ret_ = _oArrayNodeIdx;
+  return omc_ret_;
 }
 
 static modelica_metatype closure20_HpcOmTaskGraph_getSccNodeMapping0(threadData_t *thData, modelica_metatype closure, modelica_metatype iCompsOfNode, modelica_metatype iArrayNodeIdx)
 {
-  modelica_metatype iNodeMarks = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype iNodeMarks = OMC_BOX_FIELD(closure, 1);
   return boxptr_HpcOmTaskGraph_getSccNodeMapping0(thData, iCompsOfNode, iNodeMarks, iArrayNodeIdx);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getSccNodeMapping(threadData_t *threadData, modelica_integer _iNumberOfSccs, modelica_metatype _iTaskGraphMeta)
 {
   modelica_metatype _oMapping = NULL;
@@ -18345,35 +18033,37 @@ modelica_metatype omc_HpcOmTaskGraph_getSccNodeMapping(threadData_t *threadData,
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMapping has no default value.
   // _tmpMappingArray has no default value.
   // _inComps has no default value.
   // _nodeMark has no default value.
-  _tmpMappingArray = arrayCreate(_iNumberOfSccs, mmc_mk_integer(((modelica_integer) -1)));
+  _tmpMappingArray = arrayCreate(_iNumberOfSccs, omc_mk_integer(((modelica_integer) -1)));
 
   /* Pattern-matching assignment */
   tmpMeta1 = _iTaskGraphMeta;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 10));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 10);
   _inComps = tmpMeta2;
   _nodeMark = tmpMeta3;
 
   /* Pattern-matching assignment */
-  tmpMeta4 = mmc_mk_box1(0, _nodeMark);
-  tmpMeta5 = mmc_mk_box2(0, _tmpMappingArray, mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta6 = omc_Array_fold(threadData, _inComps, (modelica_fnptr) mmc_mk_box2(0,closure20_HpcOmTaskGraph_getSccNodeMapping0,tmpMeta4), tmpMeta5);
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
+  tmpMeta4 = omc_mk_box1(0, _nodeMark);
+  tmpMeta5 = omc_mk_box2(0, _tmpMappingArray, omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta6 = omc_Array_fold(threadData, _inComps, (modelica_fnptr) omc_mk_box2(0,closure20_HpcOmTaskGraph_getSccNodeMapping0,tmpMeta4), tmpMeta5);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
   _oMapping = tmpMeta7;
   _return: OMC_LABEL_UNUSED
-  return _oMapping;
+  omc_ret_ = _oMapping;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getSccNodeMapping(threadData_t *threadData, modelica_metatype _iNumberOfSccs, modelica_metatype _iTaskGraphMeta)
 {
   modelica_integer tmp1;
   modelica_metatype _oMapping = NULL;
-  tmp1 = mmc_unbox_integer(_iNumberOfSccs);
+  tmp1 = omc_unbox_integer(_iNumberOfSccs);
   _oMapping = omc_HpcOmTaskGraph_getSccNodeMapping(threadData, tmp1, _iTaskGraphMeta);
   /* skip box _oMapping; array<#Integer> */
   return _oMapping;
@@ -18383,10 +18073,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
 {
   modelica_integer _oSccIdx;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSccIdx has no default value.
   { /* matchcontinue expression */
@@ -18421,7 +18109,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
       // _innerEquations has no default value.
       // _helperStr has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 9; tmp4++) {
@@ -18438,23 +18126,23 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
           modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,2) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp11 = omc_unbox_integer(tmpMeta10);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp13 = omc_unbox_integer(tmpMeta12);
           _eq = tmp7  /* pattern as ty=Integer */;
           _compVarIdx = tmp9  /* pattern as ty=Integer */;
           _iVarOffset = tmp11  /* pattern as ty=Integer */;
           _iEqOffset = tmp13  /* pattern as ty=Integer */;
           tmp4 += 7; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmpMeta14 = mmc_mk_box3(0, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iVarOffset));
+          tmpMeta14 = omc_mk_box3(0, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iVarOffset));
           arrayUpdate(_varCompMapping, _compVarIdx + _iVarOffset, tmpMeta14);
 
-          tmpMeta15 = mmc_mk_box3(0, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iEqOffset));
+          tmpMeta15 = omc_mk_box3(0, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iEqOffset));
           arrayUpdate(_eqCompMapping, _eq + _iEqOffset, tmpMeta15);
           tmp1 = ((modelica_integer) 1) + _iSccIdx;
           goto tmp3_done;
@@ -18467,20 +18155,20 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
           modelica_metatype tmpMeta20;
           modelica_integer tmp21;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp19 = mmc_unbox_integer(tmpMeta18);
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp21 = mmc_unbox_integer(tmpMeta20);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta17 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp19 = omc_unbox_integer(tmpMeta18);
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp21 = omc_unbox_integer(tmpMeta20);
           _eqns = tmpMeta16;
           _compVarIdc = tmpMeta17;
           _iVarOffset = tmp19  /* pattern as ty=Integer */;
           _iEqOffset = tmp21  /* pattern as ty=Integer */;
           tmp4 += 6; /* Pattern matching succeeded; we may skip some cases if we fail */
-          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iVarOffset), _varCompMapping);
+          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iVarOffset), _varCompMapping);
 
-          omc_List_fold3(threadData, _eqns, boxvar_HpcOmTaskGraph_updateMappingTuple, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iEqOffset), _eqCompMapping);
+          omc_List_fold3(threadData, _eqns, boxvar_HpcOmTaskGraph_updateMappingTuple, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iEqOffset), _eqCompMapping);
           tmp1 = ((modelica_integer) 1) + _iSccIdx;
           goto tmp3_done;
         }
@@ -18494,21 +18182,21 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
           modelica_integer tmp28;
           modelica_metatype tmpMeta29;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,2) == 0) goto tmp3_end;
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp23 = mmc_unbox_integer(tmpMeta22);
-          tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp26 = mmc_unbox_integer(tmpMeta25);
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp28 = mmc_unbox_integer(tmpMeta27);
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp23 = omc_unbox_integer(tmpMeta22);
+          tmpMeta24 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta25 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp26 = omc_unbox_integer(tmpMeta25);
+          tmpMeta27 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp28 = omc_unbox_integer(tmpMeta27);
           _eq = tmp23  /* pattern as ty=Integer */;
           _compVarIdc = tmpMeta24;
           _iVarOffset = tmp26  /* pattern as ty=Integer */;
           _iEqOffset = tmp28  /* pattern as ty=Integer */;
           tmp4 += 5; /* Pattern matching succeeded; we may skip some cases if we fail */
-          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iVarOffset), _varCompMapping);
+          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iVarOffset), _varCompMapping);
 
-          tmpMeta29 = mmc_mk_box3(0, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iEqOffset));
+          tmpMeta29 = omc_mk_box3(0, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iEqOffset));
           arrayUpdate(_eqCompMapping, _eq + _iEqOffset, tmpMeta29);
           tmp1 = ((modelica_integer) 1) + _iSccIdx;
           goto tmp3_done;
@@ -18523,21 +18211,21 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
           modelica_integer tmp36;
           modelica_metatype tmpMeta37;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,2) == 0) goto tmp3_end;
-          tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp31 = mmc_unbox_integer(tmpMeta30);
-          tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta33 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp34 = mmc_unbox_integer(tmpMeta33);
-          tmpMeta35 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp36 = mmc_unbox_integer(tmpMeta35);
+          tmpMeta30 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp31 = omc_unbox_integer(tmpMeta30);
+          tmpMeta32 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta33 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp34 = omc_unbox_integer(tmpMeta33);
+          tmpMeta35 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp36 = omc_unbox_integer(tmpMeta35);
           _eq = tmp31  /* pattern as ty=Integer */;
           _compVarIdc = tmpMeta32;
           _iVarOffset = tmp34  /* pattern as ty=Integer */;
           _iEqOffset = tmp36  /* pattern as ty=Integer */;
           tmp4 += 4; /* Pattern matching succeeded; we may skip some cases if we fail */
-          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iVarOffset), _varCompMapping);
+          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iVarOffset), _varCompMapping);
 
-          tmpMeta37 = mmc_mk_box3(0, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iEqOffset));
+          tmpMeta37 = omc_mk_box3(0, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iEqOffset));
           arrayUpdate(_eqCompMapping, _eq + _iEqOffset, tmpMeta37);
           tmp1 = ((modelica_integer) 1) + _iSccIdx;
           goto tmp3_done;
@@ -18552,21 +18240,21 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
           modelica_integer tmp44;
           modelica_metatype tmpMeta45;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,2) == 0) goto tmp3_end;
-          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp39 = mmc_unbox_integer(tmpMeta38);
-          tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta41 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp42 = mmc_unbox_integer(tmpMeta41);
-          tmpMeta43 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp44 = mmc_unbox_integer(tmpMeta43);
+          tmpMeta38 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp39 = omc_unbox_integer(tmpMeta38);
+          tmpMeta40 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta41 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp42 = omc_unbox_integer(tmpMeta41);
+          tmpMeta43 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp44 = omc_unbox_integer(tmpMeta43);
           _eq = tmp39  /* pattern as ty=Integer */;
           _compVarIdc = tmpMeta40;
           _iVarOffset = tmp42  /* pattern as ty=Integer */;
           _iEqOffset = tmp44  /* pattern as ty=Integer */;
           tmp4 += 3; /* Pattern matching succeeded; we may skip some cases if we fail */
-          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iVarOffset), _varCompMapping);
+          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iVarOffset), _varCompMapping);
 
-          tmpMeta45 = mmc_mk_box3(0, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iEqOffset));
+          tmpMeta45 = omc_mk_box3(0, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iEqOffset));
           arrayUpdate(_eqCompMapping, _eq + _iEqOffset, tmpMeta45);
           tmp1 = ((modelica_integer) 1) + _iSccIdx;
           goto tmp3_done;
@@ -18581,21 +18269,21 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
           modelica_integer tmp52;
           modelica_metatype tmpMeta53;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,2) == 0) goto tmp3_end;
-          tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp47 = mmc_unbox_integer(tmpMeta46);
-          tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta49 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp50 = mmc_unbox_integer(tmpMeta49);
-          tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp52 = mmc_unbox_integer(tmpMeta51);
+          tmpMeta46 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp47 = omc_unbox_integer(tmpMeta46);
+          tmpMeta48 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta49 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp50 = omc_unbox_integer(tmpMeta49);
+          tmpMeta51 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp52 = omc_unbox_integer(tmpMeta51);
           _eq = tmp47  /* pattern as ty=Integer */;
           _compVarIdc = tmpMeta48;
           _iVarOffset = tmp50  /* pattern as ty=Integer */;
           _iEqOffset = tmp52  /* pattern as ty=Integer */;
           tmp4 += 2; /* Pattern matching succeeded; we may skip some cases if we fail */
-          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iVarOffset), _varCompMapping);
+          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iVarOffset), _varCompMapping);
 
-          tmpMeta53 = mmc_mk_box3(0, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iEqOffset));
+          tmpMeta53 = omc_mk_box3(0, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iEqOffset));
           arrayUpdate(_eqCompMapping, _eq + _iEqOffset, tmpMeta53);
           tmp1 = ((modelica_integer) 1) + _iSccIdx;
           goto tmp3_done;
@@ -18610,14 +18298,14 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
           modelica_metatype tmpMeta60;
           modelica_integer tmp61;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,7,4) == 0) goto tmp3_end;
-          tmpMeta54 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta55 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 2));
-          tmpMeta56 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 3));
-          tmpMeta57 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta54), 4));
-          tmpMeta58 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp59 = mmc_unbox_integer(tmpMeta58);
-          tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp61 = mmc_unbox_integer(tmpMeta60);
+          tmpMeta54 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta55 = OMC_BOX_FIELD(tmpMeta54, 2);
+          tmpMeta56 = OMC_BOX_FIELD(tmpMeta54, 3);
+          tmpMeta57 = OMC_BOX_FIELD(tmpMeta54, 4);
+          tmpMeta58 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp59 = omc_unbox_integer(tmpMeta58);
+          tmpMeta60 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp61 = omc_unbox_integer(tmpMeta60);
           _compVarIdc = tmpMeta55;
           _residuals = tmpMeta56;
           _innerEquations = tmpMeta57;
@@ -18632,9 +18320,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
 
           _eqns = listAppend(_othereqs, _residuals);
 
-          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iVarOffset), _varCompMapping);
+          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iVarOffset), _varCompMapping);
 
-          omc_List_fold3(threadData, _eqns, boxvar_HpcOmTaskGraph_updateMappingTuple, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iEqOffset), _eqCompMapping);
+          omc_List_fold3(threadData, _eqns, boxvar_HpcOmTaskGraph_updateMappingTuple, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iEqOffset), _eqCompMapping);
           tmp1 = ((modelica_integer) 1) + _iSccIdx;
           goto tmp3_done;
         }
@@ -18648,35 +18336,35 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
           modelica_integer tmp68;
           modelica_metatype tmpMeta69;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
-          tmpMeta62 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp63 = mmc_unbox_integer(tmpMeta62);
-          tmpMeta64 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta65 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp66 = mmc_unbox_integer(tmpMeta65);
-          tmpMeta67 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp68 = mmc_unbox_integer(tmpMeta67);
+          tmpMeta62 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp63 = omc_unbox_integer(tmpMeta62);
+          tmpMeta64 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta65 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp66 = omc_unbox_integer(tmpMeta65);
+          tmpMeta67 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp68 = omc_unbox_integer(tmpMeta67);
           _eq = tmp63  /* pattern as ty=Integer */;
           _compVarIdc = tmpMeta64;
           _iVarOffset = tmp66  /* pattern as ty=Integer */;
           _iEqOffset = tmp68  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iVarOffset), _varCompMapping);
+          omc_List_fold3(threadData, _compVarIdc, boxvar_HpcOmTaskGraph_updateMappingTuple, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iVarOffset), _varCompMapping);
 
-          tmpMeta69 = mmc_mk_box3(0, mmc_mk_integer(_iSccIdx), mmc_mk_integer(_iEqSysIdx), mmc_mk_integer(_iEqOffset));
+          tmpMeta69 = omc_mk_box3(0, omc_mk_integer(_iSccIdx), omc_mk_integer(_iEqSysIdx), omc_mk_integer(_iEqOffset));
           arrayUpdate(_eqCompMapping, _eq + _iEqOffset, tmpMeta69);
           tmp1 = ((modelica_integer) 1) + _iSccIdx;
           goto tmp3_done;
         }
         case 8: {
-          modelica_metatype tmpMeta70;
-          modelica_metatype tmpMeta71;
+          modelica_string tmp70;
+          modelica_string tmp71;
           
           /* Pattern matching succeeded */
-          _helperStr = omc_BackendDump_strongComponentString(threadData, _component);
+          omc_string_store(&(_helperStr), omc_BackendDump_strongComponentString(threadData, _component));
 
-          tmpMeta70 = stringAppend(_OMC_LIT222,_helperStr);
-          tmpMeta71 = stringAppend(tmpMeta70,_OMC_LIT5);
-          fputs(MMC_STRINGDATA(tmpMeta71),stdout);
+          tmp70 = stringAppend(_OMC_LIT222,_helperStr);
+          tmp71 = stringAppend(tmp70,_OMC_LIT5);
+          fputs(omc_string_data(tmp71),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -18687,23 +18375,21 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getVarEqCompMappin
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 9) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oSccIdx = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oSccIdx;
+  omc_ret_ = _oSccIdx;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getVarEqCompMapping0(threadData_t *threadData, modelica_metatype _component, modelica_metatype _varCompMapping, modelica_metatype _eqCompMapping, modelica_metatype _iEqSysIdx, modelica_metatype _iVarEqOffset, modelica_metatype _iSccIdx)
 {
@@ -18711,10 +18397,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getVarEqCompMa
   modelica_integer tmp2;
   modelica_integer _oSccIdx;
   modelica_metatype out_oSccIdx;
-  tmp1 = mmc_unbox_integer(_iEqSysIdx);
-  tmp2 = mmc_unbox_integer(_iSccIdx);
+  tmp1 = omc_unbox_integer(_iEqSysIdx);
+  tmp2 = omc_unbox_integer(_iSccIdx);
   _oSccIdx = omc_HpcOmTaskGraph_getVarEqCompMapping0(threadData, _component, _varCompMapping, _eqCompMapping, tmp1, _iVarEqOffset, tmp2);
-  out_oSccIdx = mmc_mk_icon(_oSccIdx);
+  out_oSccIdx = omc_mk_icon(_oSccIdx);
   return out_oSccIdx;
 }
 
@@ -18723,19 +18409,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarEqCompMappi
   modelica_metatype _ovarCompMapping = NULL;
   modelica_metatype _oeqCompMapping = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ovarCompMapping has no default value.
   // _oeqCompMapping has no default value.
-  tmpMeta1 = mmc_mk_box2(0, mmc_mk_integer(_iVarIdxOffset), mmc_mk_integer(_iEqIdxOffset));
-  omc_List_fold4(threadData, _components, boxvar_HpcOmTaskGraph_getVarEqCompMapping0, _ivarCompMapping, _ieqCompMapping, mmc_mk_integer(_iEqSysIdx), tmpMeta1, mmc_mk_integer(((modelica_integer) 1)));
+  tmpMeta1 = omc_mk_box2(0, omc_mk_integer(_iVarIdxOffset), omc_mk_integer(_iEqIdxOffset));
+  omc_List_fold4(threadData, _components, boxvar_HpcOmTaskGraph_getVarEqCompMapping0, _ivarCompMapping, _ieqCompMapping, omc_mk_integer(_iEqSysIdx), tmpMeta1, omc_mk_integer(((modelica_integer) 1)));
 
   _ovarCompMapping = _ivarCompMapping;
 
   _oeqCompMapping = _ieqCompMapping;
   _return: OMC_LABEL_UNUSED
   if (out_oeqCompMapping) { *out_oeqCompMapping = _oeqCompMapping; }
-  return _ovarCompMapping;
+  omc_ret_ = _ovarCompMapping;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getVarEqCompMapping(threadData_t *threadData, modelica_metatype _components, modelica_metatype _iEqSysIdx, modelica_metatype _iVarIdxOffset, modelica_metatype _iEqIdxOffset, modelica_metatype _ivarCompMapping, modelica_metatype _ieqCompMapping, modelica_metatype *out_oeqCompMapping)
 {
@@ -18743,9 +18431,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getVarEqCompMa
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_metatype _ovarCompMapping = NULL;
-  tmp1 = mmc_unbox_integer(_iEqSysIdx);
-  tmp2 = mmc_unbox_integer(_iVarIdxOffset);
-  tmp3 = mmc_unbox_integer(_iEqIdxOffset);
+  tmp1 = omc_unbox_integer(_iEqSysIdx);
+  tmp2 = omc_unbox_integer(_iVarIdxOffset);
+  tmp3 = omc_unbox_integer(_iEqIdxOffset);
   _ovarCompMapping = omc_HpcOmTaskGraph_getVarEqCompMapping(threadData, _components, tmp1, tmp2, tmp3, _ivarCompMapping, _ieqCompMapping, out_oeqCompMapping);
   /* skip box _ovarCompMapping; array<tuple<#Integer, #Integer, #Integer>> */
   /* skip box _oeqCompMapping; array<tuple<#Integer, #Integer, #Integer>> */
@@ -18756,10 +18444,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareIntTuple2(t
 {
   modelica_boolean _equals;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _equals has no default value.
   { /* match expression */
@@ -18789,14 +18475,14 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareIntTuple2(t
           modelica_integer tmp11;
           modelica_metatype tmpMeta12;
           modelica_integer tmp13;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp11 = omc_unbox_integer(tmpMeta10);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp13 = omc_unbox_integer(tmpMeta12);
           _int1 = tmp7  /* pattern as ty=Integer */;
           _int2 = tmp9  /* pattern as ty=Integer */;
           _int3 = tmp11  /* pattern as ty=Integer */;
@@ -18819,24 +18505,22 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareIntTuple2(t
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _equals = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _equals;
+  omc_ret_ = _equals;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_compareIntTuple2(threadData_t *threadData, modelica_metatype _tuple1, modelica_metatype _tuple2)
 {
   modelica_boolean _equals;
   modelica_metatype out_equals;
   _equals = omc_HpcOmTaskGraph_compareIntTuple2(threadData, _tuple1, _tuple2);
-  out_equals = mmc_mk_icon(_equals);
+  out_equals = omc_mk_icon(_equals);
   return out_equals;
 }
 
@@ -18847,29 +18531,31 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarTuple(threa
   modelica_metatype tmpMeta2;
   modelica_boolean tmp3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIdx has no default value.
   tmp3 = (modelica_boolean)(((modelica_integer) 0) <= _varIdx);
   if(tmp3)
   {
-    tmpMeta1 = mmc_mk_box2(0, mmc_mk_integer(_varIdx), mmc_mk_integer(((modelica_integer) 1)));
+    tmpMeta1 = omc_mk_box2(0, omc_mk_integer(_varIdx), omc_mk_integer(((modelica_integer) 1)));
     tmpMeta4 = tmpMeta1;
   }
   else
   {
-    tmpMeta2 = mmc_mk_box2(0, mmc_mk_integer((-_varIdx)), mmc_mk_integer(((modelica_integer) 0)));
+    tmpMeta2 = omc_mk_box2(0, omc_mk_integer((-_varIdx)), omc_mk_integer(((modelica_integer) 0)));
     tmpMeta4 = tmpMeta2;
   }
   _outIdx = tmpMeta4;
   _return: OMC_LABEL_UNUSED
-  return _outIdx;
+  omc_ret_ = _outIdx;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getVarTuple(threadData_t *threadData, modelica_metatype _varIdx)
 {
   modelica_integer tmp1;
   modelica_metatype _outIdx = NULL;
-  tmp1 = mmc_unbox_integer(_varIdx);
+  tmp1 = omc_unbox_integer(_varIdx);
   _outIdx = omc_HpcOmTaskGraph_getVarTuple(threadData, tmp1);
   /* skip box _outIdx; tuple<#Integer, #Integer> */
   return _outIdx;
@@ -18889,7 +18575,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsByEqns(thr
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oAdjacencyVars has no default value.
   // _oParamVars has no default value.
@@ -18904,9 +18591,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsByEqns(thr
     for (tmpMeta4 = _iEqnIdc; !listEmpty(tmpMeta4); tmpMeta4=MMC_CDR(tmpMeta4))
     {
       _eqIdx = MMC_CAR(tmpMeta4);
-      _adjacencyVars = listAppend(arrayGet(_iAdjacencyMatrix, mmc_unbox_integer(_eqIdx)), _adjacencyVars);
+      _adjacencyVars = listAppend(arrayGet(_iAdjacencyMatrix, omc_unbox_integer(_eqIdx)), _adjacencyVars);
 
-      tmpMeta5 = mmc_mk_cons(omc_BackendEquation_get(threadData, _iOrderedEquations, mmc_unbox_integer(_eqIdx)), _eqs);
+      tmpMeta5 = mmc_mk_cons(omc_BackendEquation_get(threadData, _iOrderedEquations, omc_unbox_integer(_eqIdx)), _eqs);
       _eqs = tmpMeta5;
     }
   }
@@ -18924,13 +18611,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsByEqns(thr
   }
   _return: OMC_LABEL_UNUSED
   if (out_oParamVars) { *out_oParamVars = _oParamVars; }
-  return _oAdjacencyVars;
+  omc_ret_ = _oAdjacencyVars;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getVarsByEqns(threadData_t *threadData, modelica_metatype _iEqnIdc, modelica_metatype _iAdjacencyMatrix, modelica_metatype _iOrderedVars, modelica_metatype _iKnownVars, modelica_metatype _iOrderedEquations, modelica_metatype _iAnalyzeParameters, modelica_metatype *out_oParamVars)
 {
   modelica_integer tmp1;
   modelica_metatype _oAdjacencyVars = NULL;
-  tmp1 = mmc_unbox_integer(_iAnalyzeParameters);
+  tmp1 = omc_unbox_integer(_iAnalyzeParameters);
   _oAdjacencyVars = omc_HpcOmTaskGraph_getVarsByEqns(threadData, _iEqnIdc, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, tmp1, out_oParamVars);
   /* skip box _oAdjacencyVars; list<tuple<#Integer, #Integer>> */
   /* skip box _oParamVars; list<#Integer> */
@@ -18941,7 +18629,8 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_tuple3ToString(thre
 {
   modelica_string _result = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
   { /* match expression */
@@ -18966,29 +18655,29 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_tuple3ToString(thre
           modelica_integer tmp9;
           modelica_metatype tmpMeta10;
           modelica_integer tmp11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
+          modelica_string tmp12;
+          modelica_string tmp13;
+          modelica_string tmp14;
+          modelica_string tmp15;
+          modelica_string tmp16;
+          modelica_string tmp17;
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp11 = omc_unbox_integer(tmpMeta10);
           _int1 = tmp7  /* pattern as ty=Integer */;
           _int2 = tmp9  /* pattern as ty=Integer */;
           _int3 = tmp11  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta12 = stringAppend(_OMC_LIT30,intString(_int1));
-          tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT31);
-          tmpMeta14 = stringAppend(tmpMeta13,intString(_int2));
-          tmpMeta15 = stringAppend(tmpMeta14,_OMC_LIT31);
-          tmpMeta16 = stringAppend(tmpMeta15,intString(_int3));
-          tmpMeta17 = stringAppend(tmpMeta16,_OMC_LIT32);
-          tmp1 = tmpMeta17;
+          tmp12 = stringAppend(_OMC_LIT30,intString(_int1));
+          tmp13 = stringAppend(tmp12,_OMC_LIT31);
+          tmp14 = stringAppend(tmp13,intString(_int2));
+          tmp15 = stringAppend(tmp14,_OMC_LIT31);
+          tmp16 = stringAppend(tmp15,intString(_int3));
+          tmp17 = stringAppend(tmp16,_OMC_LIT32);
+          tmp1 = tmp17;
           goto tmp3_done;
         }
         }
@@ -18997,21 +18686,23 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_tuple3ToString(thre
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _result = tmp1;
+  omc_string_store(&(_result), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _result;
+  omc_ret_ = _result;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_tupleToString(threadData_t *threadData, modelica_metatype _inTuple)
 {
   modelica_string _result = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _result has no default value.
   { /* match expression */
@@ -19032,22 +18723,22 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_tupleToString(threa
           modelica_integer tmp7;
           modelica_metatype tmpMeta8;
           modelica_integer tmp9;
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
+          modelica_string tmp10;
+          modelica_string tmp11;
+          modelica_string tmp12;
+          modelica_string tmp13;
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
           _int1 = tmp7  /* pattern as ty=Integer */;
           _int2 = tmp9  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta10 = stringAppend(_OMC_LIT30,intString(_int1));
-          tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT31);
-          tmpMeta12 = stringAppend(tmpMeta11,intString(_int2));
-          tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT32);
-          tmp1 = tmpMeta13;
+          tmp10 = stringAppend(_OMC_LIT30,intString(_int1));
+          tmp11 = stringAppend(tmp10,_OMC_LIT31);
+          tmp12 = stringAppend(tmp11,intString(_int2));
+          tmp13 = stringAppend(tmp12,_OMC_LIT32);
+          tmp1 = tmp13;
           goto tmp3_done;
         }
         }
@@ -19056,22 +18747,24 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HpcOmTaskGraph_tupleToString(threa
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _result = tmp1;
+  omc_string_store(&(_result), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _result;
+  omc_ret_ = _result;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(threadData_t *threadData, modelica_metatype _iComponent, modelica_metatype _iAdjacencyMatrix, modelica_metatype _iOrderedVars, modelica_metatype _iKnownVars, modelica_metatype _iOrderedEquations, modelica_boolean _iAnalyzeParameters, modelica_metatype *out_oParamVars)
 {
   modelica_metatype _oVars = NULL;
   modelica_metatype _oParamVars = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oVars has no default value.
   // _oParamVars has no default value.
@@ -19099,19 +18792,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           modelica_integer tmp7;
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,2) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           
           _eqnIdx = tmp7  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta8 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta8 = mmc_mk_cons(omc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getVarsByEqns(threadData, tmpMeta8, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _iAnalyzeParameters, &tmpMeta[0+1]);
           goto tmp3_done;
         }
         case 1: {
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _eqns = tmpMeta9;
           /* Pattern matching succeeded */
@@ -19123,12 +18816,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           modelica_integer tmp11;
           modelica_metatype tmpMeta12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,2) == 0) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp11 = omc_unbox_integer(tmpMeta10);
           
           _eqnIdx = tmp11  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta12 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta12 = mmc_mk_cons(omc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getVarsByEqns(threadData, tmpMeta12, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _iAnalyzeParameters, &tmpMeta[0+1]);
           goto tmp3_done;
         }
@@ -19137,12 +18830,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           modelica_integer tmp14;
           modelica_metatype tmpMeta15;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,2) == 0) goto tmp3_end;
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp14 = omc_unbox_integer(tmpMeta13);
           
           _eqnIdx = tmp14  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta15 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta15 = mmc_mk_cons(omc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getVarsByEqns(threadData, tmpMeta15, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _iAnalyzeParameters, &tmpMeta[0+1]);
           goto tmp3_done;
         }
@@ -19151,12 +18844,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           modelica_integer tmp17;
           modelica_metatype tmpMeta18;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,2) == 0) goto tmp3_end;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp17 = mmc_unbox_integer(tmpMeta16);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp17 = omc_unbox_integer(tmpMeta16);
           
           _eqnIdx = tmp17  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta18 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta18 = mmc_mk_cons(omc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getVarsByEqns(threadData, tmpMeta18, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _iAnalyzeParameters, &tmpMeta[0+1]);
           goto tmp3_done;
         }
@@ -19165,12 +18858,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           modelica_integer tmp20;
           modelica_metatype tmpMeta21;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,2) == 0) goto tmp3_end;
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp20 = mmc_unbox_integer(tmpMeta19);
+          tmpMeta19 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp20 = omc_unbox_integer(tmpMeta19);
           
           _eqnIdx = tmp20  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta21 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta21 = mmc_mk_cons(omc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getVarsByEqns(threadData, tmpMeta21, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _iAnalyzeParameters, &tmpMeta[0+1]);
           goto tmp3_done;
         }
@@ -19179,12 +18872,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           modelica_integer tmp23;
           modelica_metatype tmpMeta24;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp23 = mmc_unbox_integer(tmpMeta22);
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp23 = omc_unbox_integer(tmpMeta22);
           
           _eqnIdx = tmp23  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          tmpMeta24 = mmc_mk_cons(mmc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta24 = mmc_mk_cons(omc_mk_integer(_eqnIdx), MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getVarsByEqns(threadData, tmpMeta24, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _iAnalyzeParameters, &tmpMeta[0+1]);
           goto tmp3_done;
         }
@@ -19193,9 +18886,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
           modelica_metatype tmpMeta26;
           modelica_metatype tmpMeta27;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,7,4) == 0) goto tmp3_end;
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 3));
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 4));
+          tmpMeta25 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta26 = OMC_BOX_FIELD(tmpMeta25, 3);
+          tmpMeta27 = OMC_BOX_FIELD(tmpMeta25, 4);
           
           _resEqns = tmpMeta26;
           _innerEquations = tmpMeta27;
@@ -19207,7 +18900,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
         case 8: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT223),stdout);
+          fputs(omc_string_data(_OMC_LIT223),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -19217,7 +18910,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -19226,20 +18919,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getVarsBySCC(thre
   _oParamVars = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_oParamVars) { *out_oParamVars = _oParamVars; }
-  return _oVars;
+  omc_ret_ = _oVars;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getVarsBySCC(threadData_t *threadData, modelica_metatype _iComponent, modelica_metatype _iAdjacencyMatrix, modelica_metatype _iOrderedVars, modelica_metatype _iKnownVars, modelica_metatype _iOrderedEquations, modelica_metatype _iAnalyzeParameters, modelica_metatype *out_oParamVars)
 {
   modelica_integer tmp1;
   modelica_metatype _oVars = NULL;
-  tmp1 = mmc_unbox_integer(_iAnalyzeParameters);
+  tmp1 = omc_unbox_integer(_iAnalyzeParameters);
   _oVars = omc_HpcOmTaskGraph_getVarsBySCC(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, tmp1, out_oParamVars);
   /* skip box _oVars; list<tuple<#Integer, #Integer>> */
   /* skip box _oParamVars; list<#Integer> */
   return _oVars;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *threadData, modelica_integer _iTask1, modelica_integer _iTask2, modelica_metatype _iTaskComps, modelica_metatype _iExeCosts, modelica_boolean _iDescending)
 {
   modelica_boolean _oResult;
@@ -19247,10 +18941,8 @@ modelica_boolean omc_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *threadD
   modelica_real _exeCosts2;
   modelica_metatype _taskComps1 = NULL;
   modelica_metatype _taskComps2 = NULL;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oResult has no default value.
   // _exeCosts1 has no default value.
@@ -19274,10 +18966,8 @@ modelica_boolean omc_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *threadD
     _oResult = (_exeCosts1 > _exeCosts2);
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oResult;
+  omc_ret_ = _oResult;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *threadData, modelica_metatype _iTask1, modelica_metatype _iTask2, modelica_metatype _iTaskComps, modelica_metatype _iExeCosts, modelica_metatype _iDescending)
 {
@@ -19286,38 +18976,34 @@ modelica_metatype boxptr_HpcOmTaskGraph_compareTasksByExecTime(threadData_t *thr
   modelica_integer tmp3;
   modelica_boolean _oResult;
   modelica_metatype out_oResult;
-  tmp1 = mmc_unbox_integer(_iTask1);
-  tmp2 = mmc_unbox_integer(_iTask2);
-  tmp3 = mmc_unbox_integer(_iDescending);
+  tmp1 = omc_unbox_integer(_iTask1);
+  tmp2 = omc_unbox_integer(_iTask2);
+  tmp3 = omc_unbox_integer(_iDescending);
   _oResult = omc_HpcOmTaskGraph_compareTasksByExecTime(threadData, tmp1, tmp2, _iTaskComps, _iExeCosts, tmp3);
-  out_oResult = mmc_mk_icon(_oResult);
+  out_oResult = omc_mk_icon(_oResult);
   return out_oResult;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_compareTupleByVarIdx(threadData_t *threadData, modelica_integer _varIdx, modelica_metatype _var2Idx)
 {
   modelica_boolean _equal;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _equal has no default value.
-  _equal = (mmc_unbox_integer(omc_Util_tuple21(threadData, _var2Idx)) == _varIdx);
+  _equal = (omc_unbox_integer(omc_Util_tuple21(threadData, _var2Idx)) == _varIdx);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _equal;
+  omc_ret_ = _equal;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_compareTupleByVarIdx(threadData_t *threadData, modelica_metatype _varIdx, modelica_metatype _var2Idx)
 {
   modelica_integer tmp1;
   modelica_boolean _equal;
   modelica_metatype out_equal;
-  tmp1 = mmc_unbox_integer(_varIdx);
+  tmp1 = omc_unbox_integer(_varIdx);
   _equal = omc_HpcOmTaskGraph_compareTupleByVarIdx(threadData, tmp1, _var2Idx);
-  out_equal = mmc_mk_icon(_equal);
+  out_equal = omc_mk_icon(_equal);
   return out_equal;
 }
 
@@ -19328,10 +19014,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isTupleMember(thre
   modelica_integer _varState;
   modelica_boolean _returnValue;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isNotMember has no default value.
   // _varIdx has no default value.
@@ -19344,7 +19028,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isTupleMember(thre
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -19356,10 +19040,10 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isTupleMember(thre
           modelica_integer tmp9;
           modelica_boolean tmp10;
           modelica_boolean tmp11;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
           _varIdx = tmp7  /* pattern as ty=Integer */;
           _varState = tmp9  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
@@ -19371,7 +19055,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isTupleMember(thre
           tmp11 = (_varState == ((modelica_integer) 1));
           if (1 /* true */ != tmp11) goto goto_2;
 
-          _returnValue = omc_List_isMemberOnTrue(threadData, mmc_mk_integer(_varIdx), _varIdc, boxvar_intEq);
+          _returnValue = omc_List_isMemberOnTrue(threadData, omc_mk_integer(_varIdx), _varIdc, boxvar_intEq);
           tmp1 = (!_returnValue);
           goto tmp3_done;
         }
@@ -19388,30 +19072,28 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isTupleMember(thre
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _isNotMember = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _isNotMember;
+  omc_ret_ = _isNotMember;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_isTupleMember(threadData_t *threadData, modelica_metatype _inTuple, modelica_metatype _varIdc)
 {
   modelica_boolean _isNotMember;
   modelica_metatype out_isNotMember;
   _isNotMember = omc_HpcOmTaskGraph_isTupleMember(threadData, _inTuple, _varIdc);
-  out_isNotMember = mmc_mk_icon(_isNotMember);
+  out_isNotMember = omc_mk_icon(_isNotMember);
   return out_isNotMember;
 }
 
@@ -19419,7 +19101,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_removeEventVars(t
 {
   modelica_metatype _varLstOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _varLstOut has no default value.
   { /* matchcontinue expression */
@@ -19433,7 +19116,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_removeEventVars(t
       // _varLst has no default value.
       // _var has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -19453,12 +19136,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_removeEventVars(t
 
           /* Pattern-matching assignment */
           tmpMeta7 = _varTpl;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 1);
+          tmp9 = omc_unbox_integer(tmpMeta8);
           _var = tmp9  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmp10 = omc_List_isMemberOnTrue(threadData, mmc_mk_integer(_var), _eventVarLst, boxvar_intEq);
+          tmp10 = omc_List_isMemberOnTrue(threadData, omc_mk_integer(_var), _eventVarLst, boxvar_intEq);
           if (1 /* true */ != tmp10) goto goto_2;
 
           _varLst = listDelete(_varLstIn, _varIdx);
@@ -19480,12 +19163,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_removeEventVars(t
 
           /* Pattern-matching assignment */
           tmpMeta12 = _varTpl;
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 1);
+          tmp14 = omc_unbox_integer(tmpMeta13);
           _var = tmp14  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmp15 = omc_List_isMemberOnTrue(threadData, mmc_mk_integer(_var), _eventVarLst, boxvar_intEq);
+          tmp15 = omc_List_isMemberOnTrue(threadData, omc_mk_integer(_var), _eventVarLst, boxvar_intEq);
           if (0 /* false */ != tmp15) goto goto_2;
           tmpMeta1 = omc_HpcOmTaskGraph_removeEventVars(threadData, _eventVarLst, _varLstIn, ((modelica_integer) 1) + _varIdx);
           goto tmp3_done;
@@ -19502,26 +19185,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_removeEventVars(t
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _varLstOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _varLstOut;
+  omc_ret_ = _varLstOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_removeEventVars(threadData_t *threadData, modelica_metatype _eventVarLst, modelica_metatype _varLstIn, modelica_metatype _varIdx)
 {
   modelica_integer tmp1;
   modelica_metatype _varLstOut = NULL;
-  tmp1 = mmc_unbox_integer(_varIdx);
+  tmp1 = omc_unbox_integer(_varIdx);
   _varLstOut = omc_HpcOmTaskGraph_removeEventVars(threadData, _eventVarLst, _varLstIn, tmp1);
   /* skip box _varLstOut; list<tuple<#Integer, #Integer>> */
   return _varLstOut;
@@ -19538,7 +19222,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
   modelica_integer _derived;
   modelica_metatype _ty = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oUnsolvedVars has no default value.
   // _intVarIdc has no default value.
@@ -19571,14 +19256,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 1));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 2));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 3));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 4));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_3, 1);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_3, 2);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_3, 3);
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_3, 4);
           _varIdx = tmp7  /* pattern as ty=Integer */;
           _derived = tmp9  /* pattern as ty=Integer */;
           _intVarIdc = tmpMeta10;
@@ -19586,9 +19271,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           _boolVarIdc = tmpMeta12;
           _stringVarIdc = tmpMeta13;
           /* Pattern matching succeeded */
-          tmpMeta14 = mmc_mk_cons(mmc_mk_integer(_varIdx), _intVarIdc);
+          tmpMeta14 = mmc_mk_cons(omc_mk_integer(_varIdx), _intVarIdc);
           _intVarIdc = tmpMeta14;
-          tmpMeta15 = mmc_mk_box4(0, _intVarIdc, _realVarIdc, _boolVarIdc, _stringVarIdc);
+          tmpMeta15 = omc_mk_box4(0, _intVarIdc, _realVarIdc, _boolVarIdc, _stringVarIdc);
           tmpMeta1 = tmpMeta15;
           goto tmp3_done;
         }
@@ -19605,14 +19290,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           modelica_metatype tmpMeta25;
           modelica_metatype tmpMeta26;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp17 = mmc_unbox_integer(tmpMeta16);
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp19 = mmc_unbox_integer(tmpMeta18);
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 1));
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 2));
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 3));
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 4));
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp17 = omc_unbox_integer(tmpMeta16);
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp19 = omc_unbox_integer(tmpMeta18);
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_3, 1);
+          tmpMeta21 = OMC_BOX_FIELD(tmp4_3, 2);
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_3, 3);
+          tmpMeta23 = OMC_BOX_FIELD(tmp4_3, 4);
           _varIdx = tmp17  /* pattern as ty=Integer */;
           _derived = tmp19  /* pattern as ty=Integer */;
           _intVarIdc = tmpMeta20;
@@ -19620,10 +19305,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           _boolVarIdc = tmpMeta22;
           _stringVarIdc = tmpMeta23;
           /* Pattern matching succeeded */
-          tmpMeta25 = mmc_mk_box2(0, mmc_mk_integer(_varIdx), mmc_mk_integer(_derived));
+          tmpMeta25 = omc_mk_box2(0, omc_mk_integer(_varIdx), omc_mk_integer(_derived));
           tmpMeta24 = mmc_mk_cons(tmpMeta25, _realVarIdc);
           _realVarIdc = tmpMeta24;
-          tmpMeta26 = mmc_mk_box4(0, _intVarIdc, _realVarIdc, _boolVarIdc, _stringVarIdc);
+          tmpMeta26 = omc_mk_box4(0, _intVarIdc, _realVarIdc, _boolVarIdc, _stringVarIdc);
           tmpMeta1 = tmpMeta26;
           goto tmp3_done;
         }
@@ -19639,14 +19324,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           modelica_metatype tmpMeta35;
           modelica_metatype tmpMeta36;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,1) == 0) goto tmp3_end;
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp28 = mmc_unbox_integer(tmpMeta27);
-          tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp30 = mmc_unbox_integer(tmpMeta29);
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 1));
-          tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 2));
-          tmpMeta33 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 3));
-          tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 4));
+          tmpMeta27 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp28 = omc_unbox_integer(tmpMeta27);
+          tmpMeta29 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp30 = omc_unbox_integer(tmpMeta29);
+          tmpMeta31 = OMC_BOX_FIELD(tmp4_3, 1);
+          tmpMeta32 = OMC_BOX_FIELD(tmp4_3, 2);
+          tmpMeta33 = OMC_BOX_FIELD(tmp4_3, 3);
+          tmpMeta34 = OMC_BOX_FIELD(tmp4_3, 4);
           _varIdx = tmp28  /* pattern as ty=Integer */;
           _derived = tmp30  /* pattern as ty=Integer */;
           _intVarIdc = tmpMeta31;
@@ -19654,9 +19339,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           _boolVarIdc = tmpMeta33;
           _stringVarIdc = tmpMeta34;
           /* Pattern matching succeeded */
-          tmpMeta35 = mmc_mk_cons(mmc_mk_integer(_varIdx), _boolVarIdc);
+          tmpMeta35 = mmc_mk_cons(omc_mk_integer(_varIdx), _boolVarIdc);
           _boolVarIdc = tmpMeta35;
-          tmpMeta36 = mmc_mk_box4(0, _intVarIdc, _realVarIdc, _boolVarIdc, _stringVarIdc);
+          tmpMeta36 = omc_mk_box4(0, _intVarIdc, _realVarIdc, _boolVarIdc, _stringVarIdc);
           tmpMeta1 = tmpMeta36;
           goto tmp3_done;
         }
@@ -19671,15 +19356,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           modelica_metatype tmpMeta44;
           modelica_metatype tmpMeta45;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
-          tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp39 = mmc_unbox_integer(tmpMeta38);
-          tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp41 = mmc_unbox_integer(tmpMeta40);
-          tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 1));
-          tmpMeta43 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 2));
-          tmpMeta44 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 3));
-          tmpMeta45 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 4));
+          tmpMeta37 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta38 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp39 = omc_unbox_integer(tmpMeta38);
+          tmpMeta40 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp41 = omc_unbox_integer(tmpMeta40);
+          tmpMeta42 = OMC_BOX_FIELD(tmp4_3, 1);
+          tmpMeta43 = OMC_BOX_FIELD(tmp4_3, 2);
+          tmpMeta44 = OMC_BOX_FIELD(tmp4_3, 3);
+          tmpMeta45 = OMC_BOX_FIELD(tmp4_3, 4);
           _ty = tmpMeta37;
           _varIdx = tmp39  /* pattern as ty=Integer */;
           _derived = tmp41  /* pattern as ty=Integer */;
@@ -19706,14 +19391,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           modelica_metatype tmpMeta54;
           modelica_metatype tmpMeta55;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,5) == 0) goto tmp3_end;
-          tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp47 = mmc_unbox_integer(tmpMeta46);
-          tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp49 = mmc_unbox_integer(tmpMeta48);
-          tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 1));
-          tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 2));
-          tmpMeta52 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 3));
-          tmpMeta53 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 4));
+          tmpMeta46 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp47 = omc_unbox_integer(tmpMeta46);
+          tmpMeta48 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp49 = omc_unbox_integer(tmpMeta48);
+          tmpMeta50 = OMC_BOX_FIELD(tmp4_3, 1);
+          tmpMeta51 = OMC_BOX_FIELD(tmp4_3, 2);
+          tmpMeta52 = OMC_BOX_FIELD(tmp4_3, 3);
+          tmpMeta53 = OMC_BOX_FIELD(tmp4_3, 4);
           _varIdx = tmp47  /* pattern as ty=Integer */;
           _derived = tmp49  /* pattern as ty=Integer */;
           _intVarIdc = tmpMeta50;
@@ -19721,9 +19406,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           _boolVarIdc = tmpMeta52;
           _stringVarIdc = tmpMeta53;
           /* Pattern matching succeeded */
-          tmpMeta54 = mmc_mk_cons(mmc_mk_integer(_varIdx), _stringVarIdc);
+          tmpMeta54 = mmc_mk_cons(omc_mk_integer(_varIdx), _stringVarIdc);
           _stringVarIdc = tmpMeta54;
-          tmpMeta55 = mmc_mk_box4(0, _intVarIdc, _realVarIdc, _boolVarIdc, _stringVarIdc);
+          tmpMeta55 = omc_mk_box4(0, _intVarIdc, _realVarIdc, _boolVarIdc, _stringVarIdc);
           tmpMeta1 = tmpMeta55;
           goto tmp3_done;
         }
@@ -19739,14 +19424,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           modelica_metatype tmpMeta64;
           modelica_metatype tmpMeta65;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,1) == 0) goto tmp3_end;
-          tmpMeta56 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp57 = mmc_unbox_integer(tmpMeta56);
-          tmpMeta58 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp59 = mmc_unbox_integer(tmpMeta58);
-          tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 1));
-          tmpMeta61 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 2));
-          tmpMeta62 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 3));
-          tmpMeta63 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 4));
+          tmpMeta56 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp57 = omc_unbox_integer(tmpMeta56);
+          tmpMeta58 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp59 = omc_unbox_integer(tmpMeta58);
+          tmpMeta60 = OMC_BOX_FIELD(tmp4_3, 1);
+          tmpMeta61 = OMC_BOX_FIELD(tmp4_3, 2);
+          tmpMeta62 = OMC_BOX_FIELD(tmp4_3, 3);
+          tmpMeta63 = OMC_BOX_FIELD(tmp4_3, 4);
           _varIdx = tmp57  /* pattern as ty=Integer */;
           _derived = tmp59  /* pattern as ty=Integer */;
           _intVarIdc = tmpMeta60;
@@ -19754,20 +19439,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           _boolVarIdc = tmpMeta62;
           _stringVarIdc = tmpMeta63;
           /* Pattern matching succeeded */
-          tmpMeta64 = mmc_mk_cons(mmc_mk_integer(_varIdx), _stringVarIdc);
+          tmpMeta64 = mmc_mk_cons(omc_mk_integer(_varIdx), _stringVarIdc);
           _stringVarIdc = tmpMeta64;
-          tmpMeta65 = mmc_mk_box4(0, _intVarIdc, _realVarIdc, _boolVarIdc, _stringVarIdc);
+          tmpMeta65 = omc_mk_box4(0, _intVarIdc, _realVarIdc, _boolVarIdc, _stringVarIdc);
           tmpMeta1 = tmpMeta65;
           goto tmp3_done;
         }
         case 6: {
-          modelica_metatype tmpMeta66;
-          modelica_metatype tmpMeta67;
+          modelica_string tmp66;
+          modelica_string tmp67;
           
           /* Pattern matching succeeded */
-          tmpMeta66 = stringAppend(_OMC_LIT224,intString(mmc_unbox_integer(omc_Util_tuple21(threadData, _iVarIdx))));
-          tmpMeta67 = stringAppend(tmpMeta66,_OMC_LIT225);
-          fputs(MMC_STRINGDATA(tmpMeta67),stdout);
+          tmp66 = stringAppend(_OMC_LIT224,intString(omc_unbox_integer(omc_Util_tuple21(threadData, _iVarIdx))));
+          tmp67 = stringAppend(tmp66,_OMC_LIT225);
+          fputs(omc_string_data(tmp67),stdout);
           tmpMeta1 = _iUnsolvedVars;
           goto tmp3_done;
         }
@@ -19777,14 +19462,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oUnsolvedVars = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oUnsolvedVars;
+  omc_ret_ = _oUnsolvedVars;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBySCC1(threadData_t *threadData, modelica_metatype _iVarIdx, modelica_metatype _orderedVars, modelica_metatype _iUnsolvedVars)
@@ -19792,18 +19478,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
   modelica_metatype _oUnsolvedVars = NULL;
   modelica_metatype _var = NULL;
   modelica_metatype _varType = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oUnsolvedVars has no default value.
   // _var has no default value.
   // _varType has no default value.
-  _var = omc_BackendVariable_getVarAt(threadData, _orderedVars, mmc_unbox_integer(omc_Util_tuple21(threadData, _iVarIdx)));
+  _var = omc_BackendVariable_getVarAt(threadData, _orderedVars, omc_unbox_integer(omc_Util_tuple21(threadData, _iVarIdx)));
 
   _varType = omc_BackendVariable_getVarType(threadData, _var);
 
   _oUnsolvedVars = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC2(threadData, _varType, _iVarIdx, _iUnsolvedVars);
   _return: OMC_LABEL_UNUSED
-  return _oUnsolvedVars;
+  omc_ret_ = _oUnsolvedVars;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData_t *threadData, modelica_metatype _iComponent, modelica_metatype _iAdjacencyMatrix, modelica_metatype _iOrderedVars, modelica_metatype _iKnownVars, modelica_metatype _iOrderedEquations, modelica_metatype _iVarIdc, modelica_metatype _iEventVarLst, modelica_boolean _iAnalyzeParameters, modelica_metatype *out_oParamVars)
@@ -19811,7 +19499,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
   modelica_metatype _oUnsolvedVars = NULL;
   modelica_metatype _oParamVars = NULL;
   modelica_metatype _tmpVars = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oUnsolvedVars has no default value.
   // _oParamVars has no default value.
@@ -19825,13 +19514,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
   _oUnsolvedVars = omc_List_fold1(threadData, _tmpVars, boxvar_HpcOmTaskGraph_getUnsolvedVarsBySCC1, _iOrderedVars, _OMC_LIT226);
   _return: OMC_LABEL_UNUSED
   if (out_oParamVars) { *out_oParamVars = _oParamVars; }
-  return _oUnsolvedVars;
+  omc_ret_ = _oUnsolvedVars;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData_t *threadData, modelica_metatype _iComponent, modelica_metatype _iAdjacencyMatrix, modelica_metatype _iOrderedVars, modelica_metatype _iKnownVars, modelica_metatype _iOrderedEquations, modelica_metatype _iVarIdc, modelica_metatype _iEventVarLst, modelica_metatype _iAnalyzeParameters, modelica_metatype *out_oParamVars)
 {
   modelica_integer tmp1;
   modelica_metatype _oUnsolvedVars = NULL;
-  tmp1 = mmc_unbox_integer(_iAnalyzeParameters);
+  tmp1 = omc_unbox_integer(_iAnalyzeParameters);
   _oUnsolvedVars = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _iVarIdc, _iEventVarLst, tmp1, out_oParamVars);
   /* skip box _oUnsolvedVars; tuple<list<#Integer>, list<tuple<#Integer, #Integer>>, list<#Integer>, list<#Integer>> */
   /* skip box _oParamVars; list<#Integer> */
@@ -19842,8 +19532,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
 {
   modelica_metatype _oUnsolvedVars = NULL;
   modelica_metatype _oParamVars = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oUnsolvedVars has no default value.
   // _oParamVars has no default value.
@@ -19860,7 +19551,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
       // _varIdx has no default value.
       // _varIdc has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 9; tmp4++) {
@@ -19870,18 +19561,18 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           modelica_integer tmp7;
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,2) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           _varIdx = tmp7  /* pattern as ty=Integer */;
           tmp4 += 7; /* Pattern matching succeeded; we may skip some cases if we fail */
-          tmpMeta8 = mmc_mk_cons(mmc_mk_integer(_varIdx), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta8 = mmc_mk_cons(omc_mk_integer(_varIdx), MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, tmpMeta8, _iEventVarLst, _iAnalyzeParameters, &tmpMeta[0+1]);
           goto tmp3_done;
         }
         case 1: {
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_1, 3);
           
           _varIdc = tmpMeta9;
           tmp4 += 6; /* Pattern matching succeeded; we may skip some cases if we fail */
@@ -19891,7 +19582,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
         case 2: {
           modelica_metatype tmpMeta10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,2) == 0) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 3);
           _varIdc = tmpMeta10;
           tmp4 += 5; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _varIdc, _iEventVarLst, _iAnalyzeParameters, &tmpMeta[0+1]);
@@ -19900,7 +19591,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
         case 3: {
           modelica_metatype tmpMeta11;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,2) == 0) goto tmp3_end;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_1, 3);
           _varIdc = tmpMeta11;
           tmp4 += 4; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _varIdc, _iEventVarLst, _iAnalyzeParameters, &tmpMeta[0+1]);
@@ -19909,7 +19600,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
         case 4: {
           modelica_metatype tmpMeta12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,2) == 0) goto tmp3_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_1, 3);
           _varIdc = tmpMeta12;
           tmp4 += 3; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _varIdc, _iEventVarLst, _iAnalyzeParameters, &tmpMeta[0+1]);
@@ -19918,7 +19609,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
         case 5: {
           modelica_metatype tmpMeta13;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,2) == 0) goto tmp3_end;
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_1, 3);
           _varIdc = tmpMeta13;
           tmp4 += 2; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _varIdc, _iEventVarLst, _iAnalyzeParameters, &tmpMeta[0+1]);
@@ -19927,7 +19618,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
         case 6: {
           modelica_metatype tmpMeta14;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_1, 3);
           _varIdc = tmpMeta14;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
           tmpMeta[0+0] = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC0(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _varIdc, _iEventVarLst, _iAnalyzeParameters, &tmpMeta[0+1]);
@@ -19937,8 +19628,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,7,4) == 0) goto tmp3_end;
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 2));
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta16 = OMC_BOX_FIELD(tmpMeta15, 2);
           
           _varIdc = tmpMeta16;
           /* Pattern matching succeeded */
@@ -19948,7 +19639,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
         case 8: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT227),stdout);
+          fputs(omc_string_data(_OMC_LIT227),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -19959,14 +19650,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 9) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -19974,13 +19665,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getUnsolvedVarsBy
   _oParamVars = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_oParamVars) { *out_oParamVars = _oParamVars; }
-  return _oUnsolvedVars;
+  omc_ret_ = _oUnsolvedVars;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getUnsolvedVarsBySCC(threadData_t *threadData, modelica_metatype _iComponent, modelica_metatype _iAdjacencyMatrix, modelica_metatype _iOrderedVars, modelica_metatype _iKnownVars, modelica_metatype _iOrderedEquations, modelica_metatype _iEventVarLst, modelica_metatype _iAnalyzeParameters, modelica_metatype *out_oParamVars)
 {
   modelica_integer tmp1;
   modelica_metatype _oUnsolvedVars = NULL;
-  tmp1 = mmc_unbox_integer(_iAnalyzeParameters);
+  tmp1 = omc_unbox_integer(_iAnalyzeParameters);
   _oUnsolvedVars = omc_HpcOmTaskGraph_getUnsolvedVarsBySCC(threadData, _iComponent, _iAdjacencyMatrix, _iOrderedVars, _iKnownVars, _iOrderedEquations, _iEventVarLst, tmp1, out_oParamVars);
   /* skip box _oUnsolvedVars; tuple<list<#Integer>, list<tuple<#Integer, #Integer>>, list<#Integer>, list<#Integer>> */
   /* skip box _oParamVars; list<#Integer> */
@@ -20010,10 +19702,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_fillRequiredSccs(threadData_t 
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
   modelica_metatype tmpMeta21;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var_idx has no default value.
   // _scc_idx has no default value.
@@ -20024,10 +19713,10 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_fillRequiredSccs(threadData_t 
   // _stringVars has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _var;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
   _var_idx = tmp3  /* pattern as ty=Integer */;
   _not_derived = tmp5  /* pattern as ty=Integer */;
 
@@ -20035,16 +19724,16 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_fillRequiredSccs(threadData_t 
   {
     /* Pattern-matching assignment */
     tmpMeta6 = arrayGet(_varMapping,_var_idx) /* DAE.ASUB */;
-    tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-    tmp8 = mmc_unbox_integer(tmpMeta7);
+    tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+    tmp8 = omc_unbox_integer(tmpMeta7);
     _scc_idx = tmp8  /* pattern as ty=Integer */;
 
     /* Pattern-matching assignment */
-    tmpMeta9 = omc_UnorderedMap_getOrDefault(threadData, mmc_mk_integer(_scc_idx), _requiredSccs, _OMC_LIT226);
-    tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 1));
-    tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
-    tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 3));
-    tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 4));
+    tmpMeta9 = omc_UnorderedMap_getOrDefault(threadData, omc_mk_integer(_scc_idx), _requiredSccs, _OMC_LIT226);
+    tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 1);
+    tmpMeta11 = OMC_BOX_FIELD(tmpMeta9, 2);
+    tmpMeta12 = OMC_BOX_FIELD(tmpMeta9, 3);
+    tmpMeta13 = OMC_BOX_FIELD(tmpMeta9, 4);
     _integerVars = tmpMeta10;
     _floatVars = tmpMeta11;
     _booleanVars = tmpMeta12;
@@ -20061,7 +19750,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_fillRequiredSccs(threadData_t 
             modelica_metatype tmpMeta17;
             if (1 != tmp16_1) goto tmp15_end;
             /* Pattern matching succeeded */
-            tmpMeta17 = mmc_mk_cons(mmc_mk_integer(_var_idx), _integerVars);
+            tmpMeta17 = mmc_mk_cons(omc_mk_integer(_var_idx), _integerVars);
             _integerVars = tmpMeta17;
             goto tmp15_done;
           }
@@ -20069,7 +19758,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_fillRequiredSccs(threadData_t 
             modelica_metatype tmpMeta18;
             if (2 != tmp16_1) goto tmp15_end;
             /* Pattern matching succeeded */
-            tmpMeta18 = mmc_mk_cons(mmc_mk_integer(_var_idx), _floatVars);
+            tmpMeta18 = mmc_mk_cons(omc_mk_integer(_var_idx), _floatVars);
             _floatVars = tmpMeta18;
             goto tmp15_done;
           }
@@ -20077,7 +19766,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_fillRequiredSccs(threadData_t 
             modelica_metatype tmpMeta19;
             if (3 != tmp16_1) goto tmp15_end;
             /* Pattern matching succeeded */
-            tmpMeta19 = mmc_mk_cons(mmc_mk_integer(_var_idx), _booleanVars);
+            tmpMeta19 = mmc_mk_cons(omc_mk_integer(_var_idx), _booleanVars);
             _booleanVars = tmpMeta19;
             goto tmp15_done;
           }
@@ -20085,7 +19774,7 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_fillRequiredSccs(threadData_t 
             modelica_metatype tmpMeta20;
             if (4 != tmp16_1) goto tmp15_end;
             /* Pattern matching succeeded */
-            tmpMeta20 = mmc_mk_cons(mmc_mk_integer(_var_idx), _stringVars);
+            tmpMeta20 = mmc_mk_cons(omc_mk_integer(_var_idx), _stringVars);
             _stringVars = tmpMeta20;
             goto tmp15_done;
           }
@@ -20095,26 +19784,23 @@ PROTECTED_FUNCTION_STATIC void omc_HpcOmTaskGraph_fillRequiredSccs(threadData_t 
         }
         goto goto_14;
         goto_14:;
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
         goto tmp15_done;
         tmp15_done:;
       }
     }
     ;
 
-    tmpMeta21 = mmc_mk_box4(0, _integerVars, _floatVars, _booleanVars, _stringVars);
-    omc_UnorderedMap_add(threadData, mmc_mk_integer(_scc_idx), tmpMeta21, _requiredSccs);
+    tmpMeta21 = omc_mk_box4(0, _integerVars, _floatVars, _booleanVars, _stringVars);
+    omc_UnorderedMap_add(threadData, omc_mk_integer(_scc_idx), tmpMeta21, _requiredSccs);
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_HpcOmTaskGraph_fillRequiredSccs(threadData_t *threadData, modelica_metatype _var, modelica_metatype _varType, modelica_metatype _varMapping, modelica_metatype _requiredSccs)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_varType);
+  tmp1 = omc_unbox_integer(_varType);
   omc_HpcOmTaskGraph_fillRequiredSccs(threadData, _var, tmp1, _varMapping, _requiredSccs);
   return;
 }
@@ -20123,10 +19809,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isWhenEquation(thr
 {
   modelica_boolean _isWhenEq;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isWhenEq has no default value.
   { /* match expression */
@@ -20157,24 +19841,22 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HpcOmTaskGraph_isWhenEquation(thr
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _isWhenEq = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _isWhenEq;
+  omc_ret_ = _isWhenEq;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_isWhenEquation(threadData_t *threadData, modelica_metatype _inComp)
 {
   modelica_boolean _isWhenEq;
   modelica_metatype out_isWhenEq;
   _isWhenEq = omc_HpcOmTaskGraph_isWhenEquation(threadData, _inComp);
-  out_isWhenEq = mmc_mk_icon(_isWhenEq);
+  out_isWhenEq = omc_mk_icon(_isWhenEq);
   return out_isWhenEq;
 }
 
@@ -20182,7 +19864,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getArrayTuple31(t
 {
   modelica_metatype _list2Out = NULL;
   modelica_metatype _tplLst = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _list2Out has no default value.
   // _tplLst has no default value.
@@ -20190,14 +19873,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getArrayTuple31(t
 
   _list2Out = omc_List_map(threadData, _tplLst, boxvar_Util_tuple31);
   _return: OMC_LABEL_UNUSED
-  return _list2Out;
+  omc_ret_ = _list2Out;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventNodeEqs1(threadData_t *threadData, modelica_metatype _comps, modelica_integer _offset, modelica_metatype _eventEqsIn)
 {
   modelica_metatype _eventEqsOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eventEqsOut has no default value.
   { /* matchcontinue expression */
@@ -20213,7 +19898,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventNodeEqs1(
       // _rest has no default value.
       // _head has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -20239,12 +19924,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventNodeEqs1(
           /* Pattern-matching assignment */
           tmpMeta9 = _head;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,5,2) == 0) goto goto_2;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 2);
+          tmp11 = omc_unbox_integer(tmpMeta10);
           _eqn = tmp11  /* pattern as ty=Integer */;
 
           _eqn = _eqn + _offset;
-          tmpMeta12 = mmc_mk_cons(mmc_mk_integer(_eqn), _eventEqsIn);
+          tmpMeta12 = mmc_mk_cons(omc_mk_integer(_eqn), _eventEqsIn);
           tmpMeta1 = omc_HpcOmTaskGraph_getEventNodeEqs1(threadData, _rest, _offset, tmpMeta12);
           goto tmp3_done;
         }
@@ -20277,26 +19962,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventNodeEqs1(
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _eventEqsOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _eventEqsOut;
+  omc_ret_ = _eventEqsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getEventNodeEqs1(threadData_t *threadData, modelica_metatype _comps, modelica_metatype _offset, modelica_metatype _eventEqsIn)
 {
   modelica_integer tmp1;
   modelica_metatype _eventEqsOut = NULL;
-  tmp1 = mmc_unbox_integer(_offset);
+  tmp1 = omc_unbox_integer(_offset);
   _eventEqsOut = omc_HpcOmTaskGraph_getEventNodeEqs1(threadData, _comps, tmp1, _eventEqsIn);
   /* skip box _eventEqsOut; list<#Integer> */
   return _eventEqsOut;
@@ -20320,7 +20006,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventNodeEqs(t
   modelica_integer tmp7;
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eventInfoOut has no default value.
   // _comps has no default value.
@@ -20331,8 +20018,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventNodeEqs(t
   // _offset has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _systIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 7);
   _orderedEqs = tmpMeta2;
   _matching = tmpMeta3;
 
@@ -20340,9 +20027,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventNodeEqs(t
 
   /* Pattern-matching assignment */
   tmpMeta4 = _eventInfoIn;
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 1));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 2));
-  tmp7 = mmc_unbox_integer(tmpMeta6);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta4, 1);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta4, 2);
+  tmp7 = omc_unbox_integer(tmpMeta6);
   _eventEqsIn = tmpMeta5;
   _offset = tmp7  /* pattern as ty=Integer */;
 
@@ -20351,10 +20038,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventNodeEqs(t
 
   _offset = _offset + omc_ExpandableArray_getNumberOfElements(threadData, _orderedEqs);
 
-  tmpMeta9 = mmc_mk_box2(0, listAppend(_eventEqs, _eventEqsIn), mmc_mk_integer(_offset));
+  tmpMeta9 = omc_mk_box2(0, listAppend(_eventEqs, _eventEqsIn), omc_mk_integer(_offset));
   _eventInfoOut = tmpMeta9;
   _return: OMC_LABEL_UNUSED
-  return _eventInfoOut;
+  omc_ret_ = _eventInfoOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventNodes(threadData_t *threadData, modelica_metatype _systIn, modelica_metatype _eqCompMapping)
@@ -20366,31 +20054,34 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEventNodes(thr
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eventNodes has no default value.
   // _eqLst has no default value.
   // _systemsIn has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _systIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _systemsIn = tmpMeta2;
 
   /* Pattern-matching assignment */
   tmpMeta3 = omc_List_fold(threadData, _systemsIn, boxvar_HpcOmTaskGraph_getEventNodeEqs, _OMC_LIT208);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 1));
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta3, 1);
   _eqLst = tmpMeta4;
 
   _eventNodes = omc_HpcOmTaskGraph_getArrayTuple31(threadData, _eqLst, _eqCompMapping);
   _return: OMC_LABEL_UNUSED
-  return _eventNodes;
+  omc_ret_ = _eventNodes;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_shortenVarString(threadData_t *threadData, modelica_metatype _iString)
 {
   modelica_metatype _oString = NULL;
   modelica_integer _pos;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oString has no default value.
   // _pos has no default value.
@@ -20398,15 +20089,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_shortenVarString(
 
   _oString = omc_List_split(threadData, _iString, _pos, NULL);
   _return: OMC_LABEL_UNUSED
-  return _oString;
+  omc_ret_ = _oString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_HpcOmTaskGraph_getVarString(threadData_t *threadData, modelica_metatype _inVar)
 {
   modelica_string _varString = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _varString has no default value.
   { /* matchcontinue expression */
@@ -20416,7 +20109,7 @@ modelica_string omc_HpcOmTaskGraph_getVarString(threadData_t *threadData, modeli
       int tmp5;
       // _varDescLst has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -20428,7 +20121,7 @@ modelica_string omc_HpcOmTaskGraph_getVarString(threadData_t *threadData, modeli
           tmp6 = omc_BackendVariable_isNonStateVar(threadData, _inVar);
           if (1 /* true */ != tmp6) goto goto_2;
 
-          _varString = omc_BackendDump_varString(threadData, _inVar);
+          omc_string_store(&(_varString), omc_BackendDump_varString(threadData, _inVar));
 
           _varDescLst = stringListStringChar(_varString);
 
@@ -20438,23 +20131,23 @@ modelica_string omc_HpcOmTaskGraph_getVarString(threadData_t *threadData, modeli
         }
         case 1: {
           modelica_boolean tmp7;
-          modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
+          modelica_string tmp8;
+          modelica_string tmp9;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp7 = omc_BackendVariable_isNonStateVar(threadData, _inVar);
           if (0 /* false */ != tmp7) goto goto_2;
 
-          _varString = omc_BackendDump_varString(threadData, _inVar);
+          omc_string_store(&(_varString), omc_BackendDump_varString(threadData, _inVar));
 
           _varDescLst = stringListStringChar(_varString);
 
           _varDescLst = omc_HpcOmTaskGraph_shortenVarString(threadData, _varDescLst);
 
-          _varString = stringAppendList(_varDescLst);
-          tmpMeta8 = stringAppend(_OMC_LIT228,_varString);
-          tmpMeta9 = stringAppend(tmpMeta8,_OMC_LIT32);
-          tmp1 = tmpMeta9;
+          omc_string_store(&(_varString), stringAppendList(_varDescLst));
+          tmp8 = stringAppend(_OMC_LIT228,_varString);
+          tmp9 = stringAppend(tmp8,_OMC_LIT32);
+          tmp1 = tmp9;
           goto tmp3_done;
         }
         }
@@ -20464,27 +20157,29 @@ modelica_string omc_HpcOmTaskGraph_getVarString(threadData_t *threadData, modeli
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
-  _varString = tmp1;
+  omc_string_store(&(_varString), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _varString;
+  omc_ret_ = _varString;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationStrings2(threadData_t *threadData, modelica_metatype _comp, modelica_metatype _iEqSystem, modelica_metatype _iEqDesc)
 {
   modelica_metatype _oEqDesc = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oEqDesc has no default value.
   { /* matchcontinue expression */
@@ -20513,7 +20208,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
       // _orderedEqs has no default value.
       // _orderedVars has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 10; tmp4++) {
@@ -20525,29 +20220,29 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           modelica_integer tmp9;
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
+          modelica_string tmp12;
+          modelica_string tmp13;
           modelica_metatype tmpMeta14;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,2) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 3);
           
           _i = tmp7  /* pattern as ty=Integer */;
           _v = tmp9  /* pattern as ty=Integer */;
           _orderedVars = tmpMeta10;
           _orderedEqs = tmpMeta11;
           tmp4 += 8; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _eqString = omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i));
+          omc_string_store(&(_eqString), omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i)));
 
-          _varString = omc_HpcOmTaskGraph_getVarString(threadData, omc_BackendVariable_getVarAt(threadData, _orderedVars, _v));
+          omc_string_store(&(_varString), omc_HpcOmTaskGraph_getVarString(threadData, omc_BackendVariable_getVarAt(threadData, _orderedVars, _v)));
 
-          tmpMeta12 = stringAppend(_eqString,_OMC_LIT229);
-          tmpMeta13 = stringAppend(tmpMeta12,_varString);
-          _desc = tmpMeta13;
+          tmp12 = stringAppend(_eqString,_OMC_LIT229);
+          tmp13 = stringAppend(tmp12,_varString);
+          omc_string_store(&(_desc), tmp13);
           tmpMeta14 = mmc_mk_cons(_desc, _iEqDesc);
           tmpMeta1 = tmpMeta14;
           goto tmp3_done;
@@ -20556,11 +20251,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,5) == 0) goto tmp3_end;
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_1, 4);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta15,0,1) == 0) goto tmp3_end;
           
           tmp4 += 7; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _desc = _OMC_LIT230;
+          omc_string_store(&(_desc), _OMC_LIT230);
           tmpMeta16 = mmc_mk_cons(_desc, _iEqDesc);
           tmpMeta1 = tmpMeta16;
           goto tmp3_done;
@@ -20572,17 +20267,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           modelica_metatype tmpMeta20;
           modelica_metatype tmpMeta21;
           modelica_metatype tmpMeta22;
-          modelica_metatype tmpMeta23;
-          modelica_metatype tmpMeta24;
-          modelica_metatype tmpMeta25;
+          modelica_string tmp23;
+          modelica_string tmp24;
+          modelica_string tmp25;
           modelica_metatype tmpMeta26;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,2) == 0) goto tmp3_end;
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp18 = mmc_unbox_integer(tmpMeta17);
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
+          tmpMeta17 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp18 = omc_unbox_integer(tmpMeta17);
+          tmpMeta19 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta21 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_2, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta22,1,3) == 0) goto tmp3_end;
           
           _i = tmp18  /* pattern as ty=Integer */;
@@ -20590,14 +20285,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           _orderedVars = tmpMeta20;
           _orderedEqs = tmpMeta21;
           tmp4 += 6; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _eqString = omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i));
+          omc_string_store(&(_eqString), omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i)));
 
           _varLst = omc_BackendVariable_varList(threadData, _orderedVars);
 
-          tmpMeta23 = stringAppend(_OMC_LIT231,_eqString);
-          tmpMeta24 = stringAppend(tmpMeta23,_OMC_LIT232);
-          tmpMeta25 = stringAppend(tmpMeta24,stringDelimitList(omc_List_map1(threadData, _vs, boxvar_List_getIndexFirst, omc_List_map(threadData, _varLst, boxvar_HpcOmTaskGraph_getVarString)), _OMC_LIT233));
-          _desc = tmpMeta25;
+          tmp23 = stringAppend(_OMC_LIT231,_eqString);
+          tmp24 = stringAppend(tmp23,_OMC_LIT232);
+          tmp25 = stringAppend(tmp24,stringDelimitList(omc_List_map1(threadData, _vs, boxvar_List_getIndexFirst, omc_List_map(threadData, _varLst, boxvar_HpcOmTaskGraph_getVarString)), _OMC_LIT233));
+          omc_string_store(&(_desc), tmp25);
           tmpMeta26 = mmc_mk_cons(_desc, _iEqDesc);
           tmpMeta1 = tmpMeta26;
           goto tmp3_done;
@@ -20609,17 +20304,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           modelica_metatype tmpMeta30;
           modelica_metatype tmpMeta31;
           modelica_metatype tmpMeta32;
-          modelica_metatype tmpMeta33;
-          modelica_metatype tmpMeta34;
-          modelica_metatype tmpMeta35;
+          modelica_string tmp33;
+          modelica_string tmp34;
+          modelica_string tmp35;
           modelica_metatype tmpMeta36;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,2) == 0) goto tmp3_end;
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp28 = mmc_unbox_integer(tmpMeta27);
-          tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
+          tmpMeta27 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp28 = omc_unbox_integer(tmpMeta27);
+          tmpMeta29 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta30 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta31 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta32 = OMC_BOX_FIELD(tmp4_2, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta32,1,3) == 0) goto tmp3_end;
           
           _i = tmp28  /* pattern as ty=Integer */;
@@ -20627,14 +20322,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           _orderedVars = tmpMeta30;
           _orderedEqs = tmpMeta31;
           tmp4 += 5; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _eqString = omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i));
+          omc_string_store(&(_eqString), omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i)));
 
           _varLst = omc_BackendVariable_varList(threadData, _orderedVars);
 
-          tmpMeta33 = stringAppend(_OMC_LIT234,_eqString);
-          tmpMeta34 = stringAppend(tmpMeta33,_OMC_LIT232);
-          tmpMeta35 = stringAppend(tmpMeta34,stringDelimitList(omc_List_map1(threadData, _vs, boxvar_List_getIndexFirst, omc_List_map(threadData, _varLst, boxvar_HpcOmTaskGraph_getVarString)), _OMC_LIT233));
-          _desc = tmpMeta35;
+          tmp33 = stringAppend(_OMC_LIT234,_eqString);
+          tmp34 = stringAppend(tmp33,_OMC_LIT232);
+          tmp35 = stringAppend(tmp34,stringDelimitList(omc_List_map1(threadData, _vs, boxvar_List_getIndexFirst, omc_List_map(threadData, _varLst, boxvar_HpcOmTaskGraph_getVarString)), _OMC_LIT233));
+          omc_string_store(&(_desc), tmp35);
           tmpMeta36 = mmc_mk_cons(_desc, _iEqDesc);
           tmpMeta1 = tmpMeta36;
           goto tmp3_done;
@@ -20646,17 +20341,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           modelica_metatype tmpMeta40;
           modelica_metatype tmpMeta41;
           modelica_metatype tmpMeta42;
-          modelica_metatype tmpMeta43;
-          modelica_metatype tmpMeta44;
-          modelica_metatype tmpMeta45;
+          modelica_string tmp43;
+          modelica_string tmp44;
+          modelica_string tmp45;
           modelica_metatype tmpMeta46;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,4,2) == 0) goto tmp3_end;
-          tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp38 = mmc_unbox_integer(tmpMeta37);
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta41 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
+          tmpMeta37 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp38 = omc_unbox_integer(tmpMeta37);
+          tmpMeta39 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta40 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta41 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta42 = OMC_BOX_FIELD(tmp4_2, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta42,1,3) == 0) goto tmp3_end;
           
           _i = tmp38  /* pattern as ty=Integer */;
@@ -20664,14 +20359,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           _orderedVars = tmpMeta40;
           _orderedEqs = tmpMeta41;
           tmp4 += 4; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _eqString = omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i));
+          omc_string_store(&(_eqString), omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i)));
 
           _varLst = omc_BackendVariable_varList(threadData, _orderedVars);
 
-          tmpMeta43 = stringAppend(_OMC_LIT235,_eqString);
-          tmpMeta44 = stringAppend(tmpMeta43,_OMC_LIT232);
-          tmpMeta45 = stringAppend(tmpMeta44,stringDelimitList(omc_List_map1(threadData, _vs, boxvar_List_getIndexFirst, omc_List_map(threadData, _varLst, boxvar_HpcOmTaskGraph_getVarString)), _OMC_LIT233));
-          _desc = tmpMeta45;
+          tmp43 = stringAppend(_OMC_LIT235,_eqString);
+          tmp44 = stringAppend(tmp43,_OMC_LIT232);
+          tmp45 = stringAppend(tmp44,stringDelimitList(omc_List_map1(threadData, _vs, boxvar_List_getIndexFirst, omc_List_map(threadData, _varLst, boxvar_HpcOmTaskGraph_getVarString)), _OMC_LIT233));
+          omc_string_store(&(_desc), tmp45);
           tmpMeta46 = mmc_mk_cons(_desc, _iEqDesc);
           tmpMeta1 = tmpMeta46;
           goto tmp3_done;
@@ -20683,17 +20378,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           modelica_metatype tmpMeta50;
           modelica_metatype tmpMeta51;
           modelica_metatype tmpMeta52;
-          modelica_metatype tmpMeta53;
-          modelica_metatype tmpMeta54;
-          modelica_metatype tmpMeta55;
+          modelica_string tmp53;
+          modelica_string tmp54;
+          modelica_string tmp55;
           modelica_metatype tmpMeta56;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,2) == 0) goto tmp3_end;
-          tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp48 = mmc_unbox_integer(tmpMeta47);
-          tmpMeta49 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta52 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
+          tmpMeta47 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp48 = omc_unbox_integer(tmpMeta47);
+          tmpMeta49 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta50 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta51 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta52 = OMC_BOX_FIELD(tmp4_2, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta52,1,3) == 0) goto tmp3_end;
           
           _i = tmp48  /* pattern as ty=Integer */;
@@ -20701,14 +20396,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           _orderedVars = tmpMeta50;
           _orderedEqs = tmpMeta51;
           tmp4 += 3; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _eqString = omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i));
+          omc_string_store(&(_eqString), omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i)));
 
           _varLst = omc_BackendVariable_varList(threadData, _orderedVars);
 
-          tmpMeta53 = stringAppend(_OMC_LIT236,_eqString);
-          tmpMeta54 = stringAppend(tmpMeta53,_OMC_LIT232);
-          tmpMeta55 = stringAppend(tmpMeta54,stringDelimitList(omc_List_map1(threadData, _vs, boxvar_List_getIndexFirst, omc_List_map(threadData, _varLst, boxvar_HpcOmTaskGraph_getVarString)), _OMC_LIT233));
-          _desc = tmpMeta55;
+          tmp53 = stringAppend(_OMC_LIT236,_eqString);
+          tmp54 = stringAppend(tmp53,_OMC_LIT232);
+          tmp55 = stringAppend(tmp54,stringDelimitList(omc_List_map1(threadData, _vs, boxvar_List_getIndexFirst, omc_List_map(threadData, _varLst, boxvar_HpcOmTaskGraph_getVarString)), _OMC_LIT233));
+          omc_string_store(&(_desc), tmp55);
           tmpMeta56 = mmc_mk_cons(_desc, _iEqDesc);
           tmpMeta1 = tmpMeta56;
           goto tmp3_done;
@@ -20720,17 +20415,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           modelica_metatype tmpMeta60;
           modelica_metatype tmpMeta61;
           modelica_metatype tmpMeta62;
-          modelica_metatype tmpMeta63;
-          modelica_metatype tmpMeta64;
-          modelica_metatype tmpMeta65;
+          modelica_string tmp63;
+          modelica_string tmp64;
+          modelica_string tmp65;
           modelica_metatype tmpMeta66;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
-          tmpMeta57 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp58 = mmc_unbox_integer(tmpMeta57);
-          tmpMeta59 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta61 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta62 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
+          tmpMeta57 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp58 = omc_unbox_integer(tmpMeta57);
+          tmpMeta59 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta60 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta61 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta62 = OMC_BOX_FIELD(tmp4_2, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta62,1,3) == 0) goto tmp3_end;
           
           _i = tmp58  /* pattern as ty=Integer */;
@@ -20738,14 +20433,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           _orderedVars = tmpMeta60;
           _orderedEqs = tmpMeta61;
           tmp4 += 2; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _eqString = omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i));
+          omc_string_store(&(_eqString), omc_BackendDump_equationString(threadData, omc_BackendEquation_get(threadData, _orderedEqs, _i)));
 
           _varLst = omc_BackendVariable_varList(threadData, _orderedVars);
 
-          tmpMeta63 = stringAppend(_OMC_LIT237,_eqString);
-          tmpMeta64 = stringAppend(tmpMeta63,_OMC_LIT232);
-          tmpMeta65 = stringAppend(tmpMeta64,stringDelimitList(omc_List_map1(threadData, _vs, boxvar_List_getIndexFirst, omc_List_map(threadData, _varLst, boxvar_HpcOmTaskGraph_getVarString)), _OMC_LIT233));
-          _desc = tmpMeta65;
+          tmp63 = stringAppend(_OMC_LIT237,_eqString);
+          tmp64 = stringAppend(tmp63,_OMC_LIT232);
+          tmp65 = stringAppend(tmp64,stringDelimitList(omc_List_map1(threadData, _vs, boxvar_List_getIndexFirst, omc_List_map(threadData, _varLst, boxvar_HpcOmTaskGraph_getVarString)), _OMC_LIT233));
+          omc_string_store(&(_desc), tmp65);
           tmpMeta66 = mmc_mk_cons(_desc, _iEqDesc);
           tmpMeta1 = tmpMeta66;
           goto tmp3_done;
@@ -20755,15 +20450,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           modelica_metatype tmpMeta68;
           modelica_integer tmp69;
           modelica_metatype tmpMeta70;
-          tmpMeta67 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
+          tmpMeta67 = OMC_BOX_FIELD(tmp4_2, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta67,1,3) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,7,4) == 0) goto tmp3_end;
-          tmpMeta68 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          tmp69 = mmc_unbox_integer(tmpMeta68);
+          tmpMeta68 = OMC_BOX_FIELD(tmp4_1, 4);
+          tmp69 = omc_unbox_integer(tmpMeta68);
           if (1 /* true */ != tmp69) goto tmp3_end;
           
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _desc = _OMC_LIT238;
+          omc_string_store(&(_desc), _OMC_LIT238);
           tmpMeta70 = mmc_mk_cons(_desc, _iEqDesc);
           tmpMeta1 = tmpMeta70;
           goto tmp3_done;
@@ -20773,15 +20468,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           modelica_metatype tmpMeta72;
           modelica_integer tmp73;
           modelica_metatype tmpMeta74;
-          tmpMeta71 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
+          tmpMeta71 = OMC_BOX_FIELD(tmp4_2, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta71,1,3) == 0) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,7,4) == 0) goto tmp3_end;
-          tmpMeta72 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          tmp73 = mmc_unbox_integer(tmpMeta72);
+          tmpMeta72 = OMC_BOX_FIELD(tmp4_1, 4);
+          tmp73 = omc_unbox_integer(tmpMeta72);
           if (0 /* false */ != tmp73) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          _desc = _OMC_LIT239;
+          omc_string_store(&(_desc), _OMC_LIT239);
           tmpMeta74 = mmc_mk_cons(_desc, _iEqDesc);
           tmpMeta1 = tmpMeta74;
           goto tmp3_done;
@@ -20790,7 +20485,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
           modelica_metatype tmpMeta75;
           
           /* Pattern matching succeeded */
-          _desc = _OMC_LIT240;
+          omc_string_store(&(_desc), _OMC_LIT240);
           tmpMeta75 = mmc_mk_cons(_desc, _iEqDesc);
           tmpMeta1 = tmpMeta75;
           goto tmp3_done;
@@ -20802,20 +20497,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 10) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _oEqDesc = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oEqDesc;
+  omc_ret_ = _oEqDesc;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationStrings(threadData_t *threadData, modelica_metatype _iComps, modelica_metatype _iEqSystem)
@@ -20823,7 +20519,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
   modelica_metatype _eqDescsOut = NULL;
   modelica_metatype _eqDescs = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _eqDescsOut has no default value.
   // _eqDescs has no default value.
@@ -20834,14 +20531,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getEquationString
 
   _eqDescsOut = listArray(_eqDescs);
   _return: OMC_LABEL_UNUSED
-  return _eqDescsOut;
+  omc_ret_ = _eqDescsOut;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_fillAdjacencyList(threadData_t *threadData, modelica_metatype _adjLstIn, modelica_integer _childNode, modelica_metatype _parentLst, modelica_integer _Idx)
 {
   modelica_metatype _adjLstOut = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _adjLstOut has no default value.
   { /* matchcontinue expression */
@@ -20857,7 +20556,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_fillAdjacencyList
       // _adjLst has no default value.
       // _parentNodeIdx has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -20877,16 +20576,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_fillAdjacencyList
 
           /* Pattern-matching assignment */
           tmpMeta7 = _parentNode;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 7));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 7);
+          tmp9 = omc_unbox_integer(tmpMeta8);
           _parentNodeIdx = tmp9  /* pattern as ty=Integer */;
 
           _parentRow = arrayGet(_adjLstIn, _parentNodeIdx);
 
-          tmpMeta10 = mmc_mk_cons(mmc_mk_integer(_childNode), _parentRow);
+          tmpMeta10 = mmc_mk_cons(omc_mk_integer(_childNode), _parentRow);
           _parentRow = tmpMeta10;
 
-          _parentRow = omc_List_removeOnTrue(threadData, mmc_mk_integer(_parentNodeIdx), boxvar_intEq, _parentRow);
+          _parentRow = omc_List_removeOnTrue(threadData, omc_mk_integer(_parentNodeIdx), boxvar_intEq, _parentRow);
 
           _adjLst = arrayUpdate(_adjLstIn, _parentNodeIdx, _parentRow);
           tmpMeta1 = omc_HpcOmTaskGraph_fillAdjacencyList(threadData, _adjLst, _childNode, _parentLst, ((modelica_integer) 1) + _Idx);
@@ -20904,28 +20603,29 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_fillAdjacencyList
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _adjLstOut = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _adjLstOut;
+  omc_ret_ = _adjLstOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_fillAdjacencyList(threadData_t *threadData, modelica_metatype _adjLstIn, modelica_metatype _childNode, modelica_metatype _parentLst, modelica_metatype _Idx)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _adjLstOut = NULL;
-  tmp1 = mmc_unbox_integer(_childNode);
-  tmp2 = mmc_unbox_integer(_Idx);
+  tmp1 = omc_unbox_integer(_childNode);
+  tmp2 = omc_unbox_integer(_Idx);
   _adjLstOut = omc_HpcOmTaskGraph_fillAdjacencyList(threadData, _adjLstIn, tmp1, _parentLst, tmp2);
   /* skip box _adjLstOut; array<list<#Integer>> */
   return _adjLstOut;
@@ -20956,7 +20656,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCommCostByS
   modelica_real tmp11;
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCommCosts has no default value.
   // _oldComms has no default value.
@@ -20970,16 +20671,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCommCostByS
   // _tmpComm has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iEdgeSource;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmp9 = mmc_unbox_integer(tmpMeta8);
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmp11 = mmc_unbox_real(tmpMeta10);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmp9 = omc_unbox_integer(tmpMeta8);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmp11 = omc_unbox_real(tmpMeta10);
   _numberOfVars = tmp3  /* pattern as ty=Integer */;
   _integerVars = tmpMeta4;
   _floatVars = tmpMeta5;
@@ -20990,19 +20691,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCommCostByS
 
   _oldComms = arrayGet(_iCommCosts, _sourceSccIdx);
 
-  tmpMeta12 = mmc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, mmc_mk_integer(_numberOfVars), _integerVars, _floatVars, _booleanVars, _stringVars, mmc_mk_integer(_iEdgeTarget), mmc_mk_real(_requiredTime));
+  tmpMeta12 = omc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, omc_mk_integer(_numberOfVars), _integerVars, _floatVars, _booleanVars, _stringVars, omc_mk_integer(_iEdgeTarget), omc_mk_real(_requiredTime));
   _tmpComm = tmpMeta12;
 
   tmpMeta13 = mmc_mk_cons(_tmpComm, _oldComms);
   _oCommCosts = arrayUpdate(_iCommCosts, _sourceSccIdx, tmpMeta13);
   _return: OMC_LABEL_UNUSED
-  return _oCommCosts;
+  omc_ret_ = _oCommCosts;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateCommCostBySccRef1(threadData_t *threadData, modelica_metatype _iEdgeSource, modelica_metatype _iEdgeTarget, modelica_metatype _iCommCosts)
 {
   modelica_integer tmp1;
   modelica_metatype _oCommCosts = NULL;
-  tmp1 = mmc_unbox_integer(_iEdgeTarget);
+  tmp1 = omc_unbox_integer(_iEdgeTarget);
   _oCommCosts = omc_HpcOmTaskGraph_updateCommCostBySccRef1(threadData, _iEdgeSource, tmp1, _iCommCosts);
   /* skip box _oCommCosts; array<list<HpcOmTaskGraph.Communication>> */
   return _oCommCosts;
@@ -21025,7 +20727,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommunicati
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oComm has no default value.
   // _integerVars has no default value.
@@ -21036,12 +20739,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommunicati
   // _refCountSum has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iTuple;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 5);
   _sccIdx = tmp3  /* pattern as ty=Integer */;
   _integerVars = tmpMeta4;
   _floatVars = tmpMeta5;
@@ -21050,16 +20753,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createCommunicati
 
   _refCountSum = listLength(_integerVars) + (listLength(_floatVars) + (listLength(_booleanVars) + listLength(_stringVars)));
 
-  tmpMeta8 = mmc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, mmc_mk_integer(_refCountSum), _integerVars, _floatVars, _booleanVars, _stringVars, mmc_mk_integer(_sccIdx), mmc_mk_real(_requiredTime));
+  tmpMeta8 = omc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, omc_mk_integer(_refCountSum), _integerVars, _floatVars, _booleanVars, _stringVars, omc_mk_integer(_sccIdx), omc_mk_real(_requiredTime));
   _oComm = tmpMeta8;
   _return: OMC_LABEL_UNUSED
-  return _oComm;
+  omc_ret_ = _oComm;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_createCommunicationObject(threadData_t *threadData, modelica_metatype _iTuple, modelica_metatype _requiredTime)
 {
   modelica_real tmp1;
   modelica_metatype _oComm = NULL;
-  tmp1 = mmc_unbox_real(_requiredTime);
+  tmp1 = omc_unbox_real(_requiredTime);
   _oComm = omc_HpcOmTaskGraph_createCommunicationObject(threadData, _iTuple, tmp1);
   /* skip box _oComm; HpcOmTaskGraph.Communication */
   return _oComm;
@@ -21070,25 +20774,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCommCostByS
   modelica_metatype _oCommCosts = NULL;
   modelica_metatype _oNodeComms = NULL;
   modelica_metatype _tmpComms = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oCommCosts has no default value.
   // _oNodeComms has no default value.
   // _tmpComms has no default value.
   _tmpComms = omc_List_map1(threadData, _requiredSccs_RefCount, boxvar_HpcOmTaskGraph_createCommunicationObject, _OMC_LIT43);
 
-  _oCommCosts = omc_List_fold1(threadData, _tmpComms, boxvar_HpcOmTaskGraph_updateCommCostBySccRef1, mmc_mk_integer(_nodeIdx), _iCommCosts);
+  _oCommCosts = omc_List_fold1(threadData, _tmpComms, boxvar_HpcOmTaskGraph_updateCommCostBySccRef1, omc_mk_integer(_nodeIdx), _iCommCosts);
 
   _oNodeComms = _tmpComms;
   _return: OMC_LABEL_UNUSED
   if (out_oNodeComms) { *out_oNodeComms = _oNodeComms; }
-  return _oCommCosts;
+  omc_ret_ = _oCommCosts;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateCommCostBySccRef(threadData_t *threadData, modelica_metatype _requiredSccs_RefCount, modelica_metatype _nodeIdx, modelica_metatype _iCommCosts, modelica_metatype *out_oNodeComms)
 {
   modelica_integer tmp1;
   modelica_metatype _oCommCosts = NULL;
-  tmp1 = mmc_unbox_integer(_nodeIdx);
+  tmp1 = omc_unbox_integer(_nodeIdx);
   _oCommCosts = omc_HpcOmTaskGraph_updateCommCostBySccRef(threadData, _requiredSccs_RefCount, tmp1, _iCommCosts, out_oNodeComms);
   /* skip box _oCommCosts; array<list<HpcOmTaskGraph.Communication>> */
   /* skip box _oNodeComms; list<HpcOmTaskGraph.Communication> */
@@ -21116,7 +20822,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createRequiredScc
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _requiredSccsRefCount = tmpMeta1;
@@ -21132,26 +20839,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createRequiredScc
       _e = MMC_CAR(tmpMeta2);
       /* Pattern-matching assignment */
       tmpMeta3 = _e;
-      tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 1));
-      tmp5 = mmc_unbox_integer(tmpMeta4);
-      tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta3), 2));
-      tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-      tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-      tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 3));
-      tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 4));
+      tmpMeta4 = OMC_BOX_FIELD(tmpMeta3, 1);
+      tmp5 = omc_unbox_integer(tmpMeta4);
+      tmpMeta6 = OMC_BOX_FIELD(tmpMeta3, 2);
+      tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+      tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 2);
+      tmpMeta9 = OMC_BOX_FIELD(tmpMeta6, 3);
+      tmpMeta10 = OMC_BOX_FIELD(tmpMeta6, 4);
       _scc_idx = tmp5  /* pattern as ty=Integer */;
       _int_vars = tmpMeta7;
       _float_vars = tmpMeta8;
       _bool_vars = tmpMeta9;
       _string_vars = tmpMeta10;
 
-      tmpMeta12 = mmc_mk_box5(0, mmc_mk_integer(_scc_idx), _int_vars, _float_vars, _bool_vars, _string_vars);
+      tmpMeta12 = omc_mk_box5(0, omc_mk_integer(_scc_idx), _int_vars, _float_vars, _bool_vars, _string_vars);
       tmpMeta11 = mmc_mk_cons(tmpMeta12, _requiredSccsRefCount);
       _requiredSccsRefCount = tmpMeta11;
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _requiredSccsRefCount;
+  omc_ret_ = _requiredSccsRefCount;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createTaskGraph1(threadData_t *threadData, modelica_metatype _iComponent, modelica_metatype _iSystInfo, modelica_metatype _iVarInfo, modelica_boolean _iAnalyzeParameters, modelica_metatype _graphInfoIn)
@@ -21221,7 +20929,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createTaskGraph1(
   modelica_metatype tmpMeta36;
   modelica_metatype tmpMeta37;
   modelica_metatype tmpMeta38;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphInfoOut has no default value.
   // _adjacencyMatrix has no default value.
@@ -21252,11 +20961,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createTaskGraph1(
   // _requiredSccs has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iSystInfo;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmp6 = mmc_unbox_integer(tmpMeta5);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmp6 = omc_unbox_integer(tmpMeta5);
   _adjacencyMatrix = tmpMeta2;
   _isyst = tmpMeta3;
   _ishared = tmpMeta4;
@@ -21264,37 +20973,37 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createTaskGraph1(
 
   /* Pattern-matching assignment */
   tmpMeta7 = _ishared;
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 3));
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 2);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta7, 3);
   _globalKnownVars = tmpMeta8;
   _localKnownVars = tmpMeta9;
 
   /* Pattern-matching assignment */
   tmpMeta10 = _isyst;
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 2));
-  tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 3));
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta10, 2);
+  tmpMeta12 = OMC_BOX_FIELD(tmpMeta10, 3);
   _orderedVars = tmpMeta11;
   _orderedEqs = tmpMeta12;
 
   /* Pattern-matching assignment */
   tmpMeta13 = _iVarInfo;
-  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 1));
-  tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 2));
-  tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 3));
+  tmpMeta14 = OMC_BOX_FIELD(tmpMeta13, 1);
+  tmpMeta15 = OMC_BOX_FIELD(tmpMeta13, 2);
+  tmpMeta16 = OMC_BOX_FIELD(tmpMeta13, 3);
   _varCompMapping = tmpMeta14;
   _eqCompMapping = tmpMeta15;
   _eventVarLst = tmpMeta16;
 
   /* Pattern-matching assignment */
   tmpMeta17 = _graphInfoIn;
-  tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 1));
-  tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 2));
-  tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 3));
-  tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 4));
-  tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 5));
-  tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 6));
-  tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 7));
-  tmp25 = mmc_unbox_integer(tmpMeta24);
+  tmpMeta18 = OMC_BOX_FIELD(tmpMeta17, 1);
+  tmpMeta19 = OMC_BOX_FIELD(tmpMeta17, 2);
+  tmpMeta20 = OMC_BOX_FIELD(tmpMeta17, 3);
+  tmpMeta21 = OMC_BOX_FIELD(tmpMeta17, 4);
+  tmpMeta22 = OMC_BOX_FIELD(tmpMeta17, 5);
+  tmpMeta23 = OMC_BOX_FIELD(tmpMeta17, 6);
+  tmpMeta24 = OMC_BOX_FIELD(tmpMeta17, 7);
+  tmp25 = omc_unbox_integer(tmpMeta24);
   _graphIn = tmpMeta18;
   _inComps = tmpMeta19;
   _compParamMapping = tmpMeta20;
@@ -21303,10 +21012,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createTaskGraph1(
   _nodeMark = tmpMeta23;
   _componentIndex = tmp25  /* pattern as ty=Integer */;
 
-  tmpMeta26 = mmc_mk_cons(mmc_mk_integer(_componentIndex), MMC_REFSTRUCTLIT(mmc_nil));
+  tmpMeta26 = mmc_mk_cons(omc_mk_integer(_componentIndex), MMC_REFSTRUCTLIT(mmc_nil));
   _inComps = arrayUpdate(_inComps, _componentIndex, tmpMeta26);
 
-  _compName = omc_BackendDump_strongComponentString(threadData, _iComponent);
+  omc_string_store(&(_compName), omc_BackendDump_strongComponentString(threadData, _iComponent));
 
   _compNames = arrayUpdate(_compNames, _componentIndex, _compName);
 
@@ -21332,7 +21041,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createTaskGraph1(
     for (tmpMeta27 = omc_Util_tuple41(threadData, _unsolvedVars); !listEmpty(tmpMeta27); tmpMeta27=MMC_CDR(tmpMeta27))
     {
       _intVar = MMC_CAR(tmpMeta27);
-      tmpMeta28 = mmc_mk_box2(0, _intVar, mmc_mk_integer(((modelica_integer) 1)));
+      tmpMeta28 = omc_mk_box2(0, _intVar, omc_mk_integer(((modelica_integer) 1)));
       omc_HpcOmTaskGraph_fillRequiredSccs(threadData, tmpMeta28, 1, _varCompMapping, _requiredSccs);
     }
   }
@@ -21351,7 +21060,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createTaskGraph1(
     for (tmpMeta32 = omc_Util_tuple43(threadData, _unsolvedVars); !listEmpty(tmpMeta32); tmpMeta32=MMC_CDR(tmpMeta32))
     {
       _boolVar = MMC_CAR(tmpMeta32);
-      tmpMeta33 = mmc_mk_box2(0, _boolVar, mmc_mk_integer(((modelica_integer) 1)));
+      tmpMeta33 = omc_mk_box2(0, _boolVar, omc_mk_integer(((modelica_integer) 1)));
       omc_HpcOmTaskGraph_fillRequiredSccs(threadData, tmpMeta33, 3, _varCompMapping, _requiredSccs);
     }
   }
@@ -21361,7 +21070,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createTaskGraph1(
     for (tmpMeta35 = omc_Util_tuple44(threadData, _unsolvedVars); !listEmpty(tmpMeta35); tmpMeta35=MMC_CDR(tmpMeta35))
     {
       _stringVar = MMC_CAR(tmpMeta35);
-      tmpMeta36 = mmc_mk_box2(0, _stringVar, mmc_mk_integer(((modelica_integer) 1)));
+      tmpMeta36 = omc_mk_box2(0, _stringVar, omc_mk_integer(((modelica_integer) 1)));
       omc_HpcOmTaskGraph_fillRequiredSccs(threadData, tmpMeta36, 4, _varCompMapping, _requiredSccs);
     }
   }
@@ -21372,16 +21081,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_createTaskGraph1(
 
   _graphTmp = omc_HpcOmTaskGraph_fillAdjacencyList(threadData, _graphIn, _componentIndex, _commCostsOfNode, ((modelica_integer) 1));
 
-  tmpMeta38 = mmc_mk_box7(0, _graphTmp, _inComps, _compParamMapping, _commCosts, _compNames, _nodeMark, mmc_mk_integer(((modelica_integer) 1) + _componentIndex));
+  tmpMeta38 = omc_mk_box7(0, _graphTmp, _inComps, _compParamMapping, _commCosts, _compNames, _nodeMark, omc_mk_integer(((modelica_integer) 1) + _componentIndex));
   _graphInfoOut = tmpMeta38;
   _return: OMC_LABEL_UNUSED
-  return _graphInfoOut;
+  omc_ret_ = _graphInfoOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_createTaskGraph1(threadData_t *threadData, modelica_metatype _iComponent, modelica_metatype _iSystInfo, modelica_metatype _iVarInfo, modelica_metatype _iAnalyzeParameters, modelica_metatype _graphInfoIn)
 {
   modelica_integer tmp1;
   modelica_metatype _graphInfoOut = NULL;
-  tmp1 = mmc_unbox_integer(_iAnalyzeParameters);
+  tmp1 = omc_unbox_integer(_iAnalyzeParameters);
   _graphInfoOut = omc_HpcOmTaskGraph_createTaskGraph1(threadData, _iComponent, _iSystInfo, _iVarInfo, tmp1, _graphInfoIn);
   /* skip box _graphInfoOut; tuple<array<list<#Integer>>, array<list<#Integer>>, array<list<#Integer>>, array<list<HpcOmTaskGraph.Communication>>, array<String>, array<#Integer>, #Integer> */
   return _graphInfoOut;
@@ -21390,18 +21100,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_createTaskGrap
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateTaskGraphSystem(threadData_t *threadData, modelica_metatype _graphRowIn, modelica_integer _idxOffset)
 {
   modelica_metatype _graphRowOut = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphRowOut has no default value.
-  _graphRowOut = omc_List_map1(threadData, _graphRowIn, boxvar_intAdd, mmc_mk_integer(_idxOffset));
+  _graphRowOut = omc_List_map1(threadData, _graphRowIn, boxvar_intAdd, omc_mk_integer(_idxOffset));
   _return: OMC_LABEL_UNUSED
-  return _graphRowOut;
+  omc_ret_ = _graphRowOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateTaskGraphSystem(threadData_t *threadData, modelica_metatype _graphRowIn, modelica_metatype _idxOffset)
 {
   modelica_integer tmp1;
   modelica_metatype _graphRowOut = NULL;
-  tmp1 = mmc_unbox_integer(_idxOffset);
+  tmp1 = omc_unbox_integer(_idxOffset);
   _graphRowOut = omc_HpcOmTaskGraph_updateTaskGraphSystem(threadData, _graphRowIn, tmp1);
   /* skip box _graphRowOut; list<#Integer> */
   return _graphRowOut;
@@ -21429,7 +21141,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCommCosts1(
   modelica_metatype tmpMeta10;
   modelica_real tmp11;
   modelica_metatype tmpMeta12;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _commCostsOut has no default value.
   // _numberOfVars has no default value.
@@ -21441,16 +21154,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCommCosts1(
   // _requiredTime has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _commCostsIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmp9 = mmc_unbox_integer(tmpMeta8);
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmp11 = mmc_unbox_real(tmpMeta10);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmp9 = omc_unbox_integer(tmpMeta8);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmp11 = omc_unbox_real(tmpMeta10);
   _numberOfVars = tmp3  /* pattern as ty=Integer */;
   _integerVars = tmpMeta4;
   _floatVars = tmpMeta5;
@@ -21461,16 +21174,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCommCosts1(
 
   _childNode = _childNode + _idxOffset;
 
-  tmpMeta12 = mmc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, mmc_mk_integer(_numberOfVars), _integerVars, _floatVars, _booleanVars, _stringVars, mmc_mk_integer(_childNode), mmc_mk_real(_requiredTime));
+  tmpMeta12 = omc_mk_box8(3, &HpcOmTaskGraph_Communication_COMMUNICATION__desc, omc_mk_integer(_numberOfVars), _integerVars, _floatVars, _booleanVars, _stringVars, omc_mk_integer(_childNode), omc_mk_real(_requiredTime));
   _commCostsOut = tmpMeta12;
   _return: OMC_LABEL_UNUSED
-  return _commCostsOut;
+  omc_ret_ = _commCostsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateCommCosts1(threadData_t *threadData, modelica_metatype _commCostsIn, modelica_metatype _idxOffset)
 {
   modelica_integer tmp1;
   modelica_metatype _commCostsOut = NULL;
-  tmp1 = mmc_unbox_integer(_idxOffset);
+  tmp1 = omc_unbox_integer(_idxOffset);
   _commCostsOut = omc_HpcOmTaskGraph_updateCommCosts1(threadData, _commCostsIn, tmp1);
   /* skip box _commCostsOut; HpcOmTaskGraph.Communication */
   return _commCostsOut;
@@ -21479,18 +21193,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateCommCost
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_updateCommCosts(threadData_t *threadData, modelica_metatype _commCostsIn, modelica_integer _idxOffset)
 {
   modelica_metatype _commCostsOut = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _commCostsOut has no default value.
-  _commCostsOut = omc_List_map1(threadData, _commCostsIn, boxvar_HpcOmTaskGraph_updateCommCosts1, mmc_mk_integer(_idxOffset));
+  _commCostsOut = omc_List_map1(threadData, _commCostsIn, boxvar_HpcOmTaskGraph_updateCommCosts1, omc_mk_integer(_idxOffset));
   _return: OMC_LABEL_UNUSED
-  return _commCostsOut;
+  omc_ret_ = _commCostsOut;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_updateCommCosts(threadData_t *threadData, modelica_metatype _commCostsIn, modelica_metatype _idxOffset)
 {
   modelica_integer tmp1;
   modelica_metatype _commCostsOut = NULL;
-  tmp1 = mmc_unbox_integer(_idxOffset);
+  tmp1 = omc_unbox_integer(_idxOffset);
   _commCostsOut = omc_HpcOmTaskGraph_updateCommCosts(threadData, _commCostsIn, tmp1);
   /* skip box _commCostsOut; list<HpcOmTaskGraph.Communication> */
   return _commCostsOut;
@@ -21510,7 +21226,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_modifyMapping(thr
   modelica_metatype tmpMeta6;
   modelica_integer tmp7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMappingTuple has no default value.
   // _i1 has no default value.
@@ -21518,26 +21235,27 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_modifyMapping(thr
   // _i3 has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iMappingTuple;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmp7 = mmc_unbox_integer(tmpMeta6);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmp7 = omc_unbox_integer(tmpMeta6);
   _i1 = tmp3  /* pattern as ty=Integer */;
   _i2 = tmp5  /* pattern as ty=Integer */;
   _i3 = tmp7  /* pattern as ty=Integer */;
 
-  tmpMeta8 = mmc_mk_box3(0, mmc_mk_integer(_i1 + _iOffset), mmc_mk_integer(_i2), mmc_mk_integer(_iOffset));
+  tmpMeta8 = omc_mk_box3(0, omc_mk_integer(_i1 + _iOffset), omc_mk_integer(_i2), omc_mk_integer(_iOffset));
   _oMappingTuple = tmpMeta8;
   _return: OMC_LABEL_UNUSED
-  return _oMappingTuple;
+  omc_ret_ = _oMappingTuple;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_modifyMapping(threadData_t *threadData, modelica_metatype _iMappingTuple, modelica_metatype _iOffset)
 {
   modelica_integer tmp1;
   modelica_metatype _oMappingTuple = NULL;
-  tmp1 = mmc_unbox_integer(_iOffset);
+  tmp1 = omc_unbox_integer(_iOffset);
   _oMappingTuple = omc_HpcOmTaskGraph_modifyMapping(threadData, _iMappingTuple, tmp1);
   /* skip box _oMappingTuple; tuple<#Integer, #Integer, #Integer> */
   return _oMappingTuple;
@@ -21594,7 +21312,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_taskGraphAppend(t
   modelica_metatype tmpMeta21;
   modelica_metatype tmpMeta22;
   modelica_metatype tmpMeta23;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphOut has no default value.
   // _graphDataOut has no default value.
@@ -21624,16 +21343,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_taskGraphAppend(t
   // _graph2 has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _graphData1In;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 10));
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 11));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta1, 9);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 10);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta1, 11);
   _inComps1 = tmpMeta2;
   _varCompMapping1 = tmpMeta3;
   _eqCompMapping1 = tmpMeta4;
@@ -21647,16 +21366,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_taskGraphAppend(t
 
   /* Pattern-matching assignment */
   tmpMeta12 = _graphData2In;
-  tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 2));
-  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 3));
-  tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 4));
-  tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 5));
-  tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 6));
-  tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 7));
-  tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 8));
-  tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 9));
-  tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 10));
-  tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 11));
+  tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 2);
+  tmpMeta14 = OMC_BOX_FIELD(tmpMeta12, 3);
+  tmpMeta15 = OMC_BOX_FIELD(tmpMeta12, 4);
+  tmpMeta16 = OMC_BOX_FIELD(tmpMeta12, 5);
+  tmpMeta17 = OMC_BOX_FIELD(tmpMeta12, 6);
+  tmpMeta18 = OMC_BOX_FIELD(tmpMeta12, 7);
+  tmpMeta19 = OMC_BOX_FIELD(tmpMeta12, 8);
+  tmpMeta20 = OMC_BOX_FIELD(tmpMeta12, 9);
+  tmpMeta21 = OMC_BOX_FIELD(tmpMeta12, 10);
+  tmpMeta22 = OMC_BOX_FIELD(tmpMeta12, 11);
   _inComps2 = tmpMeta13;
   _varCompMapping2 = tmpMeta14;
   _eqCompMapping2 = tmpMeta15;
@@ -21676,19 +21395,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_taskGraphAppend(t
 
   _eqOffset = arrayLength(_eqCompMapping1);
 
-  _graph2 = omc_Array_map1(threadData, _graph2In, boxvar_HpcOmTaskGraph_updateTaskGraphSystem, mmc_mk_integer(_idxOffset));
+  _graph2 = omc_Array_map1(threadData, _graph2In, boxvar_HpcOmTaskGraph_updateTaskGraphSystem, omc_mk_integer(_idxOffset));
 
   _graphOut = arrayAppend(_graph1In, _graph2);
 
-  _inComps2 = omc_Array_map1(threadData, _inComps2, boxvar_HpcOmTaskGraph_updateTaskGraphSystem, mmc_mk_integer(_idxOffset));
+  _inComps2 = omc_Array_map1(threadData, _inComps2, boxvar_HpcOmTaskGraph_updateTaskGraphSystem, omc_mk_integer(_idxOffset));
 
   _inComps2 = arrayAppend(_inComps1, _inComps2);
 
-  _varCompMapping2 = omc_Array_map1(threadData, _varCompMapping2, boxvar_HpcOmTaskGraph_modifyMapping, mmc_mk_integer(_idxOffset));
+  _varCompMapping2 = omc_Array_map1(threadData, _varCompMapping2, boxvar_HpcOmTaskGraph_modifyMapping, omc_mk_integer(_idxOffset));
 
   _varCompMapping2 = arrayAppend(_varCompMapping1, _varCompMapping2);
 
-  _eqCompMapping2 = omc_Array_map1(threadData, _eqCompMapping2, boxvar_HpcOmTaskGraph_modifyMapping, mmc_mk_integer(_idxOffset));
+  _eqCompMapping2 = omc_Array_map1(threadData, _eqCompMapping2, boxvar_HpcOmTaskGraph_modifyMapping, omc_mk_integer(_idxOffset));
 
   _eqCompMapping2 = arrayAppend(_eqCompMapping1, _eqCompMapping2);
 
@@ -21702,7 +21421,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_taskGraphAppend(t
 
   _exeCosts2 = arrayAppend(_exeCosts1, _exeCosts2);
 
-  _commCosts2 = omc_Array_map1(threadData, _commCosts2, boxvar_HpcOmTaskGraph_updateCommCosts, mmc_mk_integer(_idxOffset));
+  _commCosts2 = omc_Array_map1(threadData, _commCosts2, boxvar_HpcOmTaskGraph_updateCommCosts, omc_mk_integer(_idxOffset));
 
   _commCosts2 = arrayAppend(_commCosts1, _commCosts2);
 
@@ -21710,14 +21429,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_taskGraphAppend(t
 
   _compInformations2 = arrayAppend(_compInformations1, _compInformations2);
 
-  tmpMeta23 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps2, _varCompMapping2, _eqCompMapping2, _compParamMapping2, _compNames2, _compDescs2, _exeCosts2, _commCosts2, _nodeMark2, _compInformations2);
+  tmpMeta23 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps2, _varCompMapping2, _eqCompMapping2, _compParamMapping2, _compNames2, _compDescs2, _exeCosts2, _commCosts2, _nodeMark2, _compInformations2);
   _graphDataOut = tmpMeta23;
   _return: OMC_LABEL_UNUSED
   if (out_graphDataOut) { *out_graphDataOut = _graphDataOut; }
-  return _graphOut;
+  omc_ret_ = _graphOut;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_copyTaskGraphMeta(threadData_t *threadData, modelica_metatype _graphDataIn)
 {
   modelica_metatype _graphDataOut = NULL;
@@ -21753,7 +21473,8 @@ modelica_metatype omc_HpcOmTaskGraph_copyTaskGraphMeta(threadData_t *threadData,
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graphDataOut has no default value.
   // _inComps has no default value.
@@ -21778,16 +21499,16 @@ modelica_metatype omc_HpcOmTaskGraph_copyTaskGraphMeta(threadData_t *threadData,
   // _compInformations1 has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _graphDataIn;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 10));
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 11));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta1, 9);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 10);
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta1, 11);
   _inComps = tmpMeta2;
   _varCompMapping = tmpMeta3;
   _eqCompMapping = tmpMeta4;
@@ -21819,13 +21540,14 @@ modelica_metatype omc_HpcOmTaskGraph_copyTaskGraphMeta(threadData_t *threadData,
 
   _compInformations1 = arrayCopy(_compInformations);
 
-  tmpMeta12 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps1, _varCompMapping1, _eqCompMapping1, _compParamMapping1, _compNames1, _compDescs1, _exeCosts1, _commCosts1, _nodeMark1, _compInformations1);
+  tmpMeta12 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps1, _varCompMapping1, _eqCompMapping1, _compParamMapping1, _compNames1, _compDescs1, _exeCosts1, _commCosts1, _nodeMark1, _compInformations1);
   _graphDataOut = tmpMeta12;
   _return: OMC_LABEL_UNUSED
-  return _graphDataOut;
+  omc_ret_ = _graphDataOut;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getEmptyTaskGraph(threadData_t *threadData, modelica_integer _numComps, modelica_integer _numVars, modelica_integer _numEqs, modelica_metatype *out_graphData)
 {
   modelica_metatype _graph = NULL;
@@ -21845,7 +21567,8 @@ modelica_metatype omc_HpcOmTaskGraph_getEmptyTaskGraph(threadData_t *threadData,
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _graph has no default value.
   // _graphData has no default value.
@@ -21881,15 +21604,16 @@ modelica_metatype omc_HpcOmTaskGraph_getEmptyTaskGraph(threadData_t *threadData,
   tmpMeta4 = MMC_REFSTRUCTLIT(mmc_nil);
   _commCosts = arrayCreate(_numComps, tmpMeta4);
 
-  _nodeMark = arrayCreate(_numComps, mmc_mk_integer(((modelica_integer) 0)));
+  _nodeMark = arrayCreate(_numComps, omc_mk_integer(((modelica_integer) 0)));
 
   _compInformations = arrayCreate(_numComps, _OMC_LIT141);
 
-  tmpMeta5 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
+  tmpMeta5 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
   _graphData = tmpMeta5;
   _return: OMC_LABEL_UNUSED
   if (out_graphData) { *out_graphData = _graphData; }
-  return _graph;
+  omc_ret_ = _graph;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_getEmptyTaskGraph(threadData_t *threadData, modelica_metatype _numComps, modelica_metatype _numVars, modelica_metatype _numEqs, modelica_metatype *out_graphData)
 {
@@ -21897,9 +21621,9 @@ modelica_metatype boxptr_HpcOmTaskGraph_getEmptyTaskGraph(threadData_t *threadDa
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_metatype _graph = NULL;
-  tmp1 = mmc_unbox_integer(_numComps);
-  tmp2 = mmc_unbox_integer(_numVars);
-  tmp3 = mmc_unbox_integer(_numEqs);
+  tmp1 = omc_unbox_integer(_numComps);
+  tmp2 = omc_unbox_integer(_numVars);
+  tmp3 = omc_unbox_integer(_numEqs);
   _graph = omc_HpcOmTaskGraph_getEmptyTaskGraph(threadData, tmp1, tmp2, tmp3, out_graphData);
   /* skip box _graph; array<list<#Integer>> */
   /* skip box _graphData; HpcOmTaskGraph.TaskGraphMeta */
@@ -21913,36 +21637,32 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNumberOfEqSyste
   modelica_metatype _matching = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNumOfComps has no default value.
   // _comps has no default value.
   // _matching has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iEqSystem;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 7);
   _matching = tmpMeta2;
 
   _comps = omc_BackendDAEUtil_getCompsOfMatching(threadData, _matching);
 
   _oNumOfComps = _iNumOfComps + listLength(_comps);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oNumOfComps;
+  omc_ret_ = _oNumOfComps;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNumberOfEqSystemComponents(threadData_t *threadData, modelica_metatype _iEqSystem, modelica_metatype _iNumOfComps)
 {
   modelica_integer tmp1;
   modelica_integer _oNumOfComps;
   modelica_metatype out_oNumOfComps;
-  tmp1 = mmc_unbox_integer(_iNumOfComps);
+  tmp1 = omc_unbox_integer(_iNumOfComps);
   _oNumOfComps = omc_HpcOmTaskGraph_getNumberOfEqSystemComponents(threadData, _iEqSystem, tmp1);
-  out_oNumOfComps = mmc_mk_icon(_oNumOfComps);
+  out_oNumOfComps = omc_mk_icon(_oNumOfComps);
   return out_oNumOfComps;
 }
 
@@ -21952,31 +21672,27 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_HpcOmTaskGraph_getNumberOfSystemC
   modelica_metatype _eqs = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oNumOfComps has no default value.
   // _eqs has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iDae;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _eqs = tmpMeta2;
 
-  _oNumOfComps = mmc_unbox_integer(omc_List_fold(threadData, _eqs, boxvar_HpcOmTaskGraph_getNumberOfEqSystemComponents, mmc_mk_integer(((modelica_integer) 0))));
+  _oNumOfComps = omc_unbox_integer(omc_List_fold(threadData, _eqs, boxvar_HpcOmTaskGraph_getNumberOfEqSystemComponents, omc_mk_integer(((modelica_integer) 0))));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oNumOfComps;
+  omc_ret_ = _oNumOfComps;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getNumberOfSystemComponents(threadData_t *threadData, modelica_metatype _iDae)
 {
   modelica_integer _oNumOfComps;
   modelica_metatype out_oNumOfComps;
   _oNumOfComps = omc_HpcOmTaskGraph_getNumberOfSystemComponents(threadData, _iDae);
-  out_oNumOfComps = mmc_mk_icon(_oNumOfComps);
+  out_oNumOfComps = omc_mk_icon(_oNumOfComps);
   return out_oNumOfComps;
 }
 
@@ -21985,20 +21701,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSystemComponen
   modelica_metatype _oMapping = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oMapping has no default value.
-  tmpMeta2 = mmc_mk_box2(0, _isyst, mmc_mk_integer(_isystIdx));
+  tmpMeta2 = omc_mk_box2(0, _isyst, omc_mk_integer(_isystIdx));
   tmpMeta1 = mmc_mk_cons(tmpMeta2, MMC_REFSTRUCTLIT(mmc_nil));
   _oMapping = listAppend(_iMapping, tmpMeta1);
   _return: OMC_LABEL_UNUSED
-  return _oMapping;
+  omc_ret_ = _oMapping;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HpcOmTaskGraph_getSystemComponents1(threadData_t *threadData, modelica_metatype _icomp, modelica_metatype _isyst, modelica_metatype _isystIdx, modelica_metatype _iMapping)
 {
   modelica_integer tmp1;
   modelica_metatype _oMapping = NULL;
-  tmp1 = mmc_unbox_integer(_isystIdx);
+  tmp1 = omc_unbox_integer(_isystIdx);
   _oMapping = omc_HpcOmTaskGraph_getSystemComponents1(threadData, _icomp, _isyst, tmp1, _iMapping);
   /* skip box _oMapping; list<tuple<BackendDAE.EqSystem, #Integer>> */
   return _oMapping;
@@ -22013,7 +21731,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSystemComponen
   modelica_metatype _tmpSystMapping = NULL;
   modelica_integer _currentIdx;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oSystMapping has no default value.
   // _tmpComps has no default value.
@@ -22038,11 +21757,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSystemComponen
           modelica_metatype tmpMeta9;
           modelica_integer tmp10;
           modelica_metatype tmpMeta11;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmp10 = mmc_unbox_integer(tmpMeta9);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 7);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmp10 = omc_unbox_integer(tmpMeta9);
           _matching = tmpMeta6;
           _tmpComps = tmpMeta7;
           _tmpSystMapping = tmpMeta8;
@@ -22050,17 +21769,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSystemComponen
           /* Pattern matching succeeded */
           _comps = omc_BackendDAEUtil_getCompsOfMatching(threadData, _matching);
 
-          _tmpSystMapping = omc_List_fold2(threadData, _comps, boxvar_HpcOmTaskGraph_getSystemComponents1, _iSyst, mmc_mk_integer(_currentIdx), _tmpSystMapping);
+          _tmpSystMapping = omc_List_fold2(threadData, _comps, boxvar_HpcOmTaskGraph_getSystemComponents1, _iSyst, omc_mk_integer(_currentIdx), _tmpSystMapping);
 
           _comps = listAppend(_tmpComps, _comps);
-          tmpMeta11 = mmc_mk_box3(0, _comps, _tmpSystMapping, mmc_mk_integer(((modelica_integer) 1) + _currentIdx));
+          tmpMeta11 = omc_mk_box3(0, _comps, _tmpSystMapping, omc_mk_integer(((modelica_integer) 1) + _currentIdx));
           tmpMeta1 = tmpMeta11;
           goto tmp3_done;
         }
         case 1: {
           
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT243),stdout);
+          fputs(omc_string_data(_OMC_LIT243),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -22070,17 +21789,18 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_HpcOmTaskGraph_getSystemComponen
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oSystMapping = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oSystMapping;
+  omc_ret_ = _oSystMapping;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_getSystemComponents(threadData_t *threadData, modelica_metatype _iDae, modelica_metatype *out_oMapping)
 {
   modelica_metatype _oComps = NULL;
@@ -22088,8 +21808,9 @@ modelica_metatype omc_HpcOmTaskGraph_getSystemComponents(threadData_t *threadDat
   modelica_metatype _systs = NULL;
   modelica_metatype _tmpSystems = NULL;
   modelica_metatype _tmpComps = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oComps has no default value.
   // _oMapping has no default value.
@@ -22112,14 +21833,14 @@ modelica_metatype omc_HpcOmTaskGraph_getSystemComponents(threadData_t *threadDat
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _systs = tmpMeta6;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta7 = omc_List_fold(threadData, _systs, boxvar_HpcOmTaskGraph_getSystemComponents0, _OMC_LIT244);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 1);
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta7, 2);
           _tmpComps = tmpMeta8;
           _tmpSystems = tmpMeta9;
           tmpMeta[0+0] = _tmpComps;
@@ -22132,7 +21853,7 @@ modelica_metatype omc_HpcOmTaskGraph_getSystemComponents(threadData_t *threadDat
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -22141,21 +21862,22 @@ modelica_metatype omc_HpcOmTaskGraph_getSystemComponents(threadData_t *threadDat
   _oMapping = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_oMapping) { *out_oMapping = _oMapping; }
-  return _oComps;
+  omc_ret_ = _oComps;
+  return omc_ret_;
 }
 
 static modelica_metatype closure21_HpcOmTaskGraph_createTaskGraph1(threadData_t *thData, modelica_metatype closure, modelica_metatype iComponent, modelica_metatype graphInfoIn)
 {
-  modelica_metatype iSystInfo = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype iVarInfo = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
-  modelica_metatype iAnalyzeParameters = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),3));
+  modelica_metatype iSystInfo = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype iVarInfo = OMC_BOX_FIELD(closure, 2);
+  modelica_metatype iAnalyzeParameters = OMC_BOX_FIELD(closure, 3);
   return boxptr_HpcOmTaskGraph_createTaskGraph1(thData, iComponent, iSystInfo, iVarInfo, iAnalyzeParameters, graphInfoIn);
 }static modelica_metatype closure22_List_sort(threadData_t *thData, modelica_metatype closure, modelica_metatype inList)
 {
-  modelica_fnptr inCompFunc = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_fnptr inCompFunc = OMC_BOX_FIELD(closure, 1);
   return boxptr_List_sort(thData, inList, inCompFunc);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, modelica_metatype _iSyst, modelica_metatype _iShared, modelica_boolean _iAnalyzeParameters, modelica_metatype _iGraphInfo)
 {
   modelica_metatype _oGrapInfo = NULL;
@@ -22217,7 +21939,8 @@ modelica_metatype omc_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, 
   modelica_metatype tmpMeta34;
   modelica_metatype tmpMeta35;
   modelica_metatype tmpMeta36;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oGrapInfo has no default value.
   // _comps has no default value.
@@ -22244,9 +21967,9 @@ modelica_metatype omc_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, 
   // _adjacencyMatrix has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iSyst;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 7);
   _vars = tmpMeta2;
   _orderedEqs = tmpMeta3;
   _matching = tmpMeta4;
@@ -22255,15 +21978,15 @@ modelica_metatype omc_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, 
 
   /* Pattern-matching assignment */
   tmpMeta5 = _iShared;
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 12));
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 12);
   _sharedFuncs = tmpMeta6;
 
   /* Pattern-matching assignment */
   tmpMeta7 = _iGraphInfo;
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
-  tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 3));
-  tmp11 = mmc_unbox_integer(tmpMeta10);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 1);
+  tmpMeta9 = OMC_BOX_FIELD(tmpMeta7, 2);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta7, 3);
+  tmp11 = omc_unbox_integer(tmpMeta10);
   _iGraph = tmpMeta8;
   _iGraphData = tmpMeta9;
   _eqSysIdx = tmp11  /* pattern as ty=Integer */;
@@ -22276,15 +21999,15 @@ modelica_metatype omc_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, 
 
   /* Pattern-matching assignment */
   tmpMeta12 = _tmpGraphData;
-  tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 2));
-  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 3));
-  tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 4));
-  tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 5));
-  tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 6));
-  tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 8));
-  tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 9));
-  tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 10));
-  tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 11));
+  tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 2);
+  tmpMeta14 = OMC_BOX_FIELD(tmpMeta12, 3);
+  tmpMeta15 = OMC_BOX_FIELD(tmpMeta12, 4);
+  tmpMeta16 = OMC_BOX_FIELD(tmpMeta12, 5);
+  tmpMeta17 = OMC_BOX_FIELD(tmpMeta12, 6);
+  tmpMeta18 = OMC_BOX_FIELD(tmpMeta12, 8);
+  tmpMeta19 = OMC_BOX_FIELD(tmpMeta12, 9);
+  tmpMeta20 = OMC_BOX_FIELD(tmpMeta12, 10);
+  tmpMeta21 = OMC_BOX_FIELD(tmpMeta12, 11);
   _inComps = tmpMeta13;
   _varCompMapping = tmpMeta14;
   _eqCompMapping = tmpMeta15;
@@ -22300,18 +22023,18 @@ modelica_metatype omc_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, 
   _compDescs = omc_HpcOmTaskGraph_getEquationStrings(threadData, _comps, _iSyst);
 
   /* Pattern-matching assignment */
-  tmpMeta23 = mmc_mk_box4(0, _adjacencyMatrix, _iSyst, _iShared, mmc_mk_integer(listLength(_comps)));
+  tmpMeta23 = omc_mk_box4(0, _adjacencyMatrix, _iSyst, _iShared, omc_mk_integer(listLength(_comps)));
   tmpMeta24 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta25 = mmc_mk_box3(0, _varCompMapping, _eqCompMapping, tmpMeta24);
-  tmpMeta22 = mmc_mk_box3(0, tmpMeta23, tmpMeta25, mmc_mk_boolean(_iAnalyzeParameters));
-  tmpMeta26 = mmc_mk_box7(0, _tmpGraph, _inComps, _compParamMapping, _commCosts, _compNames, _nodeMark, mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta27 = omc_List_fold(threadData, _comps, (modelica_fnptr) mmc_mk_box2(0,closure21_HpcOmTaskGraph_createTaskGraph1,tmpMeta22), tmpMeta26);
-  tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 1));
-  tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 2));
-  tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 3));
-  tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 4));
-  tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 5));
-  tmpMeta33 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 6));
+  tmpMeta25 = omc_mk_box3(0, _varCompMapping, _eqCompMapping, tmpMeta24);
+  tmpMeta22 = omc_mk_box3(0, tmpMeta23, tmpMeta25, omc_mk_boolean(_iAnalyzeParameters));
+  tmpMeta26 = omc_mk_box7(0, _tmpGraph, _inComps, _compParamMapping, _commCosts, _compNames, _nodeMark, omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta27 = omc_List_fold(threadData, _comps, (modelica_fnptr) omc_mk_box2(0,closure21_HpcOmTaskGraph_createTaskGraph1,tmpMeta22), tmpMeta26);
+  tmpMeta28 = OMC_BOX_FIELD(tmpMeta27, 1);
+  tmpMeta29 = OMC_BOX_FIELD(tmpMeta27, 2);
+  tmpMeta30 = OMC_BOX_FIELD(tmpMeta27, 3);
+  tmpMeta31 = OMC_BOX_FIELD(tmpMeta27, 4);
+  tmpMeta32 = OMC_BOX_FIELD(tmpMeta27, 5);
+  tmpMeta33 = OMC_BOX_FIELD(tmpMeta27, 6);
   _tmpGraph = tmpMeta28;
   _inComps = tmpMeta29;
   _compParamMapping = tmpMeta30;
@@ -22319,10 +22042,10 @@ modelica_metatype omc_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, 
   _compNames = tmpMeta32;
   _nodeMark = tmpMeta33;
 
-  tmpMeta34 = mmc_mk_box1(0, boxvar_intGt);
-  _tmpGraph = omc_Array_mapNoCopy(threadData, _tmpGraph, (modelica_fnptr) mmc_mk_box2(0,closure22_List_sort,tmpMeta34));
+  tmpMeta34 = omc_mk_box1(0, boxvar_intGt);
+  _tmpGraph = omc_Array_mapNoCopy(threadData, _tmpGraph, (modelica_fnptr) omc_mk_box2(0,closure22_List_sort,tmpMeta34));
 
-  tmpMeta35 = mmc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
+  tmpMeta35 = omc_mk_box11(3, &HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__desc, _inComps, _varCompMapping, _eqCompMapping, _compParamMapping, _compNames, _compDescs, _exeCosts, _commCosts, _nodeMark, _compInformations);
   _tmpGraphData = tmpMeta35;
 
   if((_eqSysIdx > ((modelica_integer) 1)))
@@ -22330,16 +22053,17 @@ modelica_metatype omc_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, 
     _tmpGraph = omc_HpcOmTaskGraph_taskGraphAppend(threadData, _iGraph, _iGraphData, _tmpGraph, _tmpGraphData ,&_tmpGraphData);
   }
 
-  tmpMeta36 = mmc_mk_box3(0, _tmpGraph, _tmpGraphData, mmc_mk_integer(((modelica_integer) 1) + _eqSysIdx));
+  tmpMeta36 = omc_mk_box3(0, _tmpGraph, _tmpGraphData, omc_mk_integer(((modelica_integer) 1) + _eqSysIdx));
   _oGrapInfo = tmpMeta36;
   _return: OMC_LABEL_UNUSED
-  return _oGrapInfo;
+  omc_ret_ = _oGrapInfo;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadData, modelica_metatype _iSyst, modelica_metatype _iShared, modelica_metatype _iAnalyzeParameters, modelica_metatype _iGraphInfo)
 {
   modelica_integer tmp1;
   modelica_metatype _oGrapInfo = NULL;
-  tmp1 = mmc_unbox_integer(_iAnalyzeParameters);
+  tmp1 = omc_unbox_integer(_iAnalyzeParameters);
   _oGrapInfo = omc_HpcOmTaskGraph_createTaskGraph0(threadData, _iSyst, _iShared, tmp1, _iGraphInfo);
   /* skip box _oGrapInfo; tuple<array<list<#Integer>>, HpcOmTaskGraph.TaskGraphMeta, #Integer> */
   return _oGrapInfo;
@@ -22347,11 +22071,11 @@ modelica_metatype boxptr_HpcOmTaskGraph_createTaskGraph0(threadData_t *threadDat
 
 static modelica_metatype closure23_HpcOmTaskGraph_createTaskGraph0(threadData_t *thData, modelica_metatype closure, modelica_metatype iSyst, modelica_metatype iGraphInfo)
 {
-  modelica_metatype iShared = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype iAnalyzeParameters = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
+  modelica_metatype iShared = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype iAnalyzeParameters = OMC_BOX_FIELD(closure, 2);
   return boxptr_HpcOmTaskGraph_createTaskGraph0(thData, iSyst, iShared, iAnalyzeParameters, iGraphInfo);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmTaskGraph_createTaskGraph(threadData_t *threadData, modelica_metatype _iDAE, modelica_boolean _iAnalyzeParameters, modelica_metatype *out_oGraphData)
 {
   modelica_metatype _oGraph = NULL;
@@ -22368,7 +22092,8 @@ modelica_metatype omc_HpcOmTaskGraph_createTaskGraph(threadData_t *threadData, m
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oGraph has no default value.
   // _oGraphData has no default value.
@@ -22378,30 +22103,31 @@ modelica_metatype omc_HpcOmTaskGraph_createTaskGraph(threadData_t *threadData, m
   // _graphData has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _iDAE;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
   _systs = tmpMeta2;
   _shared = tmpMeta3;
 
   _graph = omc_HpcOmTaskGraph_getEmptyTaskGraph(threadData, ((modelica_integer) 0), ((modelica_integer) 0), ((modelica_integer) 0) ,&_graphData);
 
   /* Pattern-matching assignment */
-  tmpMeta4 = mmc_mk_box2(0, _shared, mmc_mk_boolean(_iAnalyzeParameters));
-  tmpMeta5 = mmc_mk_box3(0, _graph, _graphData, mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta6 = omc_List_fold(threadData, _systs, (modelica_fnptr) mmc_mk_box2(0,closure23_HpcOmTaskGraph_createTaskGraph0,tmpMeta4), tmpMeta5);
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
+  tmpMeta4 = omc_mk_box2(0, _shared, omc_mk_boolean(_iAnalyzeParameters));
+  tmpMeta5 = omc_mk_box3(0, _graph, _graphData, omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta6 = omc_List_fold(threadData, _systs, (modelica_fnptr) omc_mk_box2(0,closure23_HpcOmTaskGraph_createTaskGraph0,tmpMeta4), tmpMeta5);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 2);
   _oGraph = tmpMeta7;
   _oGraphData = tmpMeta8;
   _return: OMC_LABEL_UNUSED
   if (out_oGraphData) { *out_oGraphData = _oGraphData; }
-  return _oGraph;
+  omc_ret_ = _oGraph;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HpcOmTaskGraph_createTaskGraph(threadData_t *threadData, modelica_metatype _iDAE, modelica_metatype _iAnalyzeParameters, modelica_metatype *out_oGraphData)
 {
   modelica_integer tmp1;
   modelica_metatype _oGraph = NULL;
-  tmp1 = mmc_unbox_integer(_iAnalyzeParameters);
+  tmp1 = omc_unbox_integer(_iAnalyzeParameters);
   _oGraph = omc_HpcOmTaskGraph_createTaskGraph(threadData, _iDAE, tmp1, out_oGraphData);
   /* skip box _oGraph; array<list<#Integer>> */
   /* skip box _oGraphData; HpcOmTaskGraph.TaskGraphMeta */

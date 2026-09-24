@@ -28,6 +28,8 @@ extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
 extern struct record_description NFCeval_EvalTarget_EVAL__TARGET__desc;
 
+extern struct record_description NFExpression_ARRAY__desc;
+
 extern struct record_description NFExpression_CALL__desc;
 
 extern struct record_description NFExpression_CREF__desc;
@@ -73,7 +75,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFEvalFunction_describeLibraryFailure omc_NFEvalFunction_describeLibraryFailure
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunction_clearLibraryCache(threadData_t *threadData);
 #define boxptr_NFEvalFunction_clearLibraryCache omc_NFEvalFunction_clearLibraryCache
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_clearLibraryCache,2,0) {(void*) boxptr_NFEvalFunction_clearLibraryCache,0}};
@@ -98,14 +100,11 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_clearLibraryCache,2,0) {
 #define boxptr_NFEvalFunction_assignSubscriptedVariable omc_NFEvalFunction_assignSubscriptedVariable
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunction_assignVariable(threadData_t *threadData, modelica_metatype _variable, modelica_metatype _value);
 #define boxptr_NFEvalFunction_assignVariable omc_NFEvalFunction_assignVariable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_assignVariable,2,0) {(void*) boxptr_NFEvalFunction_assignVariable,0}};
 #define boxvar_NFEvalFunction_assignVariable MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunction_assignVariable)
-
-
-#define boxptr_NFEvalFunction_assertAssignedOutput omc_NFEvalFunction_assertAssignedOutput
 
 
 #define boxptr_NFEvalFunction_createResult omc_NFEvalFunction_createResult
@@ -144,30 +143,30 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_assignVariable,2,0) {(vo
 #define boxptr_NFEvalFunction_applyReplacementsDim omc_NFEvalFunction_applyReplacementsDim
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFEvalFunction_evaluateRecordConstructor(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _ty, modelica_metatype _args, modelica_boolean _evaluate);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFEvalFunction_evaluateRecordConstructor(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _ty, modelica_metatype _args, modelica_metatype _evaluate);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateRecordConstructor,2,0) {(void*) boxptr_NFEvalFunction_evaluateRecordConstructor,0}};
 #define boxvar_NFEvalFunction_evaluateRecordConstructor MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateRecordConstructor)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFEvalFunction_evaluateExternal(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _args, modelica_metatype _target);
 #define boxptr_NFEvalFunction_evaluateExternal omc_NFEvalFunction_evaluateExternal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateExternal,2,0) {(void*) boxptr_NFEvalFunction_evaluateExternal,0}};
 #define boxvar_NFEvalFunction_evaluateExternal MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateExternal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFEvalFunction_evaluateNormal(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _args, modelica_integer _context);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFEvalFunction_evaluateNormal(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _args, modelica_metatype _context);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateNormal,2,0) {(void*) boxptr_NFEvalFunction_evaluateNormal,0}};
 #define boxvar_NFEvalFunction_evaluateNormal MMC_REFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluateNormal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFEvalFunction_evaluate(threadData_t *threadData, modelica_metatype _fn, modelica_metatype _args, modelica_metatype _target);
 #define boxptr_NFEvalFunction_evaluate omc_NFEvalFunction_evaluate
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEvalFunction_evaluate,2,0) {(void*) boxptr_NFEvalFunction_evaluate,0}};

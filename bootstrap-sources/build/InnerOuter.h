@@ -60,7 +60,7 @@ extern struct record_description InnerOuter_ValueArray_VALUE__ARRAY__desc;
 #define boxptr_InnerOuter_hashTableList omc_InnerOuter_hashTableList
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_get(threadData_t *threadData, modelica_metatype _key, modelica_metatype _hashTable);
 #define boxptr_InnerOuter_get omc_InnerOuter_get
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_get,2,0) {(void*) boxptr_InnerOuter_get,0}};
@@ -85,7 +85,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_get,2,0) {(void*) boxptr_Inn
 #define boxptr_InnerOuter_getInnersFromInstHierarchyHashTable omc_InnerOuter_getInnersFromInstHierarchyHashTable
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_InnerOuter_getExistingInnerDeclarations(threadData_t *threadData, modelica_metatype _inIH, modelica_metatype _inEnv);
 #define boxptr_InnerOuter_getExistingInnerDeclarations omc_InnerOuter_getExistingInnerDeclarations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_getExistingInnerDeclarations,2,0) {(void*) boxptr_InnerOuter_getExistingInnerDeclarations,0}};
@@ -101,42 +101,42 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_getExistingInnerDeclarations
 #define boxptr_InnerOuter_changeOuterReferenceToInnerReference omc_InnerOuter_changeOuterReferenceToInnerReference
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_prefixOuterCrefWithTheInnerPrefix(threadData_t *threadData, modelica_metatype _inIH, modelica_metatype _inOuterComponentRef, modelica_metatype _inPrefix);
 #define boxptr_InnerOuter_prefixOuterCrefWithTheInnerPrefix omc_InnerOuter_prefixOuterCrefWithTheInnerPrefix
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_prefixOuterCrefWithTheInnerPrefix,2,0) {(void*) boxptr_InnerOuter_prefixOuterCrefWithTheInnerPrefix,0}};
 #define boxvar_InnerOuter_prefixOuterCrefWithTheInnerPrefix MMC_REFSTRUCTLIT(boxvar_lit_InnerOuter_prefixOuterCrefWithTheInnerPrefix)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_addOuterPrefixToIH(threadData_t *threadData, modelica_metatype _inIH, modelica_metatype _inOuterComponentRef, modelica_metatype _inInnerComponentRef);
 #define boxptr_InnerOuter_addOuterPrefixToIH omc_InnerOuter_addOuterPrefixToIH
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_addOuterPrefixToIH,2,0) {(void*) boxptr_InnerOuter_addOuterPrefixToIH,0}};
 #define boxvar_InnerOuter_addOuterPrefixToIH MMC_REFSTRUCTLIT(boxvar_lit_InnerOuter_addOuterPrefixToIH)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_addClassIfInner(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inPrefix, modelica_metatype _inScope, modelica_metatype _inIH);
 #define boxptr_InnerOuter_addClassIfInner omc_InnerOuter_addClassIfInner
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_addClassIfInner,2,0) {(void*) boxptr_InnerOuter_addClassIfInner,0}};
 #define boxvar_InnerOuter_addClassIfInner MMC_REFSTRUCTLIT(boxvar_lit_InnerOuter_addClassIfInner)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_updateSMHierarchy(threadData_t *threadData, modelica_metatype _smState, modelica_metatype _inIH);
 #define boxptr_InnerOuter_updateSMHierarchy omc_InnerOuter_updateSMHierarchy
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_updateSMHierarchy,2,0) {(void*) boxptr_InnerOuter_updateSMHierarchy,0}};
 #define boxvar_InnerOuter_updateSMHierarchy MMC_REFSTRUCTLIT(boxvar_lit_InnerOuter_updateSMHierarchy)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_updateInstHierarchy(threadData_t *threadData, modelica_metatype _inIH, modelica_metatype _inPrefix, modelica_metatype _inInnerOuter, modelica_metatype _inInstInner);
 #define boxptr_InnerOuter_updateInstHierarchy omc_InnerOuter_updateInstHierarchy
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_updateInstHierarchy,2,0) {(void*) boxptr_InnerOuter_updateInstHierarchy,0}};
 #define boxvar_InnerOuter_updateInstHierarchy MMC_REFSTRUCTLIT(boxvar_lit_InnerOuter_updateInstHierarchy)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_lookupInnerVar(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _inPrefix, modelica_string _inIdent, modelica_metatype _io);
 #define boxptr_InnerOuter_lookupInnerVar omc_InnerOuter_lookupInnerVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_lookupInnerVar,2,0) {(void*) boxptr_InnerOuter_lookupInnerVar,0}};
@@ -155,16 +155,16 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_lookupInnerVar,2,0) {(void*)
 #define boxptr_InnerOuter_switchInnerToOuterInNode omc_InnerOuter_switchInnerToOuterInNode
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_switchInnerToOuterInGraph(threadData_t *threadData, modelica_metatype _inEnv, modelica_metatype _inCr);
 #define boxptr_InnerOuter_switchInnerToOuterInGraph omc_InnerOuter_switchInnerToOuterInGraph
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_switchInnerToOuterInGraph,2,0) {(void*) boxptr_InnerOuter_switchInnerToOuterInGraph,0}};
 #define boxvar_InnerOuter_switchInnerToOuterInGraph MMC_REFSTRUCTLIT(boxvar_lit_InnerOuter_switchInnerToOuterInGraph)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_InnerOuter_modificationOnOuter(threadData_t *threadData, modelica_metatype _cache, modelica_metatype _env, modelica_metatype _ih, modelica_metatype _prefix, modelica_string _componentName, modelica_metatype _cr, modelica_metatype _inMod, modelica_metatype _io, modelica_boolean _impl, modelica_metatype _inInfo);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_InnerOuter_modificationOnOuter(threadData_t *threadData, modelica_metatype _cache, modelica_metatype _env, modelica_metatype _ih, modelica_metatype _prefix, modelica_metatype _componentName, modelica_metatype _cr, modelica_metatype _inMod, modelica_metatype _io, modelica_metatype _impl, modelica_metatype _inInfo);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_modificationOnOuter,2,0) {(void*) boxptr_InnerOuter_modificationOnOuter,0}};
 #define boxvar_InnerOuter_modificationOnOuter MMC_REFSTRUCTLIT(boxvar_lit_InnerOuter_modificationOnOuter)
@@ -173,9 +173,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_modificationOnOuter,2,0) {(v
 #define boxptr_InnerOuter_lookupInnerInIH omc_InnerOuter_lookupInnerInIH
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_InnerOuter_outerConnection(threadData_t *threadData, modelica_metatype _io1, modelica_metatype _io2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_InnerOuter_outerConnection(threadData_t *threadData, modelica_metatype _io1, modelica_metatype _io2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_outerConnection,2,0) {(void*) boxptr_InnerOuter_outerConnection,0}};
 #define boxvar_InnerOuter_outerConnection MMC_REFSTRUCTLIT(boxvar_lit_InnerOuter_outerConnection)
@@ -190,9 +190,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_outerConnection,2,0) {(void*
 #define boxptr_InnerOuter_removeInnerPrefixFromCref omc_InnerOuter_removeInnerPrefixFromCref
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_retrieveOuterConnections(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _inPrefix, modelica_metatype _inSets, modelica_boolean _inTopCall, modelica_metatype _inCGraph, modelica_metatype *out_outInnerOuterConnects, modelica_metatype *out_outCGraph);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_InnerOuter_retrieveOuterConnections(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _inPrefix, modelica_metatype _inSets, modelica_metatype _inTopCall, modelica_metatype _inCGraph, modelica_metatype *out_outInnerOuterConnects, modelica_metatype *out_outCGraph);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_retrieveOuterConnections,2,0) {(void*) boxptr_InnerOuter_retrieveOuterConnections,0}};
 #define boxvar_InnerOuter_retrieveOuterConnections MMC_REFSTRUCTLIT(boxvar_lit_InnerOuter_retrieveOuterConnections)
@@ -201,14 +201,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_retrieveOuterConnections,2,0
 #define boxptr_InnerOuter_changeInnerOuterInOuterConnect2 omc_InnerOuter_changeInnerOuterInOuterConnect2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_changeInnerOuterInOuterConnect(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsets);
 #define boxptr_InnerOuter_changeInnerOuterInOuterConnect omc_InnerOuter_changeInnerOuterInOuterConnect
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_changeInnerOuterInOuterConnect,2,0) {(void*) boxptr_InnerOuter_changeInnerOuterInOuterConnect,0}};
 #define boxvar_InnerOuter_changeInnerOuterInOuterConnect MMC_REFSTRUCTLIT(boxvar_lit_InnerOuter_changeInnerOuterInOuterConnect)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InnerOuter_handleInnerOuterEquations(threadData_t *threadData, modelica_metatype _io, modelica_metatype _inDae, modelica_metatype _inIH, modelica_metatype _inGraphNew, modelica_metatype _inGraph, modelica_metatype *out_outIH, modelica_metatype *out_outGraph);
 #define boxptr_InnerOuter_handleInnerOuterEquations omc_InnerOuter_handleInnerOuterEquations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InnerOuter_handleInnerOuterEquations,2,0) {(void*) boxptr_InnerOuter_handleInnerOuterEquations,0}};

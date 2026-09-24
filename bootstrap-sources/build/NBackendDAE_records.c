@@ -6,7 +6,7 @@ extern "C" {
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBackendDAE_MAIN__desc_added
 #define NBackendDAE_MAIN__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBackendDAE_MAIN__desc__fields[13] = {"ode","algebraic","ode_event","alg_event","clocked","init","init_0","dae","varData","eqData","eventInfo","clockedInfo","funcMap"};
+ADD_METARECORD_DEFINITIONS const char* NBackendDAE_MAIN__desc__fields[14] = {"ode","algebraic","ode_event","alg_event","clocked","init","init_0","dae","parameters","varData","eqData","eventInfo","clockedInfo","funcMap"};
 ADD_METARECORD_DEFINITIONS struct record_description NBackendDAE_MAIN__desc = {
   "NBackendDAE_MAIN",
   "NBackendDAE.MAIN",

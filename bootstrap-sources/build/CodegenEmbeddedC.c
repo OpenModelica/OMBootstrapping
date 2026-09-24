@@ -1623,12 +1623,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__51(thre
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenEmbeddedC_fun__51,2,0) {(void*) boxptr_CodegenEmbeddedC_fun__51,0}};
 #define boxvar_CodegenEmbeddedC_fun__51 MMC_REFSTRUCTLIT(boxvar_lit_CodegenEmbeddedC_fun__51)
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_callExternalObjectDestructors(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_extObjInfo)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -1647,7 +1648,7 @@ modelica_metatype omc_CodegenEmbeddedC_callExternalObjectDestructors(threadData_
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _txt = tmp4_1;
           _i_vars = tmpMeta6;
@@ -1671,14 +1672,15 @@ modelica_metatype omc_CodegenEmbeddedC_callExternalObjectDestructors(threadData_
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__149(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -1687,7 +1689,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__149(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta10;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -1712,10 +1715,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__149(threadD
               modelica_metatype tmpMeta7;
               modelica_metatype tmpMeta8;
               modelica_metatype tmpMeta9;
-              tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 2));
-              tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 3));
+              tmpMeta7 = OMC_BOX_FIELD(tmp5_1, 2);
+              tmpMeta8 = OMC_BOX_FIELD(tmp5_1, 3);
               if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,9,1) == 0) goto tmp4_end;
-              tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
+              tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 2);
               
               _i_var_name = tmpMeta7;
               _i_ext_fullClassName = tmpMeta9;
@@ -1744,7 +1747,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__149(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -1753,15 +1756,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__149(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_callExternalObjectConstructors(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_extObjInfo)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -1780,7 +1785,7 @@ modelica_metatype omc_CodegenEmbeddedC_callExternalObjectConstructors(threadData
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _txt = tmp4_1;
           _i_vars = tmpMeta6;
@@ -1804,14 +1809,15 @@ modelica_metatype omc_CodegenEmbeddedC_callExternalObjectConstructors(threadData
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__147(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -1820,7 +1826,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__147(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta10;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -1845,10 +1852,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__147(threadD
               modelica_metatype tmpMeta7;
               modelica_metatype tmpMeta8;
               modelica_metatype tmpMeta9;
-              tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 2));
-              tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 10));
+              tmpMeta7 = OMC_BOX_FIELD(tmp5_1, 2);
+              tmpMeta8 = OMC_BOX_FIELD(tmp5_1, 10);
               if (optionNone(tmpMeta8)) goto tmp4_end;
-              tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
+              tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 1);
               
               _i_var_name = tmpMeta7;
               _i_exp = tmpMeta9;
@@ -1875,7 +1882,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__147(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -1884,15 +1891,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__147(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_literalExpConst(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_e, modelica_integer _in_a_i0)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -1921,7 +1930,7 @@ modelica_metatype omc_CodegenEmbeddedC_literalExpConst(threadData_t *threadData,
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,1) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_string = tmpMeta6;
           _txt = tmp4_1;
@@ -1933,7 +1942,7 @@ modelica_metatype omc_CodegenEmbeddedC_literalExpConst(threadData_t *threadData,
 
           _txt = omc_Tpl_writeTok(threadData, _txt, _OMC_LIT16);
 
-          _ret_0 = omc_Util_escapeModelicaStringToCString(threadData, _i_string);
+          omc_string_store(&(_ret_0), omc_Util_escapeModelicaStringToCString(threadData, _i_string));
 
           _txt = omc_Tpl_writeStr(threadData, _txt, _ret_0);
           tmpMeta1 = omc_Tpl_writeTok(threadData, _txt, _OMC_LIT18);
@@ -1956,31 +1965,33 @@ modelica_metatype omc_CodegenEmbeddedC_literalExpConst(threadData_t *threadData,
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 modelica_metatype boxptr_CodegenEmbeddedC_literalExpConst(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_e, modelica_metatype _in_a_i0)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_i0);
+  tmp1 = omc_unbox_integer(_in_a_i0);
   _out_txt = omc_CodegenEmbeddedC_literalExpConst(threadData, _in_txt, _in_a_e, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_varType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -2000,7 +2011,7 @@ modelica_metatype omc_CodegenEmbeddedC_varType(threadData_t *threadData, modelic
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,7) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 3);
           
           _i_ty = tmpMeta6;
           _txt = tmp4_1;
@@ -2021,22 +2032,24 @@ modelica_metatype omc_CodegenEmbeddedC_varType(threadData_t *threadData, modelic
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_varName(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -2056,7 +2069,7 @@ modelica_metatype omc_CodegenEmbeddedC_varName(threadData_t *threadData, modelic
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,7) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_name = tmpMeta6;
           _txt = tmp4_1;
@@ -2077,17 +2090,18 @@ modelica_metatype omc_CodegenEmbeddedC_varName(threadData_t *threadData, modelic
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_functionPrototype(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_fname, modelica_metatype _a_fargs, modelica_metatype _a_outVars, modelica_metatype *out_out_a_fname)
 {
   modelica_metatype _out_txt = NULL;
@@ -2095,7 +2109,8 @@ modelica_metatype omc_CodegenEmbeddedC_functionPrototype(threadData_t *threadDat
   modelica_metatype _l_outargs = NULL;
   modelica_metatype _l_outarg = NULL;
   modelica_metatype _l_fargsStr = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   // _out_a_fname has no default value.
@@ -2125,14 +2140,16 @@ modelica_metatype omc_CodegenEmbeddedC_functionPrototype(threadData_t *threadDat
   _out_a_fname = _a_fname;
   _return: OMC_LABEL_UNUSED
   if (out_out_a_fname) { *out_out_a_fname = _out_a_fname; }
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__142(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_outVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -2174,14 +2191,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__142(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__141(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -2190,7 +2208,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__141(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -2227,7 +2246,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__141(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -2236,14 +2255,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__141(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__140(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_outVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -2286,21 +2307,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__140(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__139(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -2339,14 +2362,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__139(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__138(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -2355,7 +2379,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__138(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -2392,7 +2417,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__138(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -2401,15 +2426,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__138(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_extArg(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_extArg)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -2435,12 +2462,12 @@ modelica_metatype omc_CodegenEmbeddedC_extArg(threadData_t *threadData, modelica
           modelica_metatype tmpMeta9;
           modelica_integer tmp10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,6) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmp8 = omc_unbox_integer(tmpMeta7);
           if (1 /* true */ != tmp8) goto tmp3_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 5));
-          tmp10 = mmc_unbox_integer(tmpMeta9);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 5);
+          tmp10 = omc_unbox_integer(tmpMeta9);
           if (0 /* false */ != tmp10) goto tmp3_end;
           
           _i_cref = tmpMeta6;
@@ -2453,8 +2480,8 @@ modelica_metatype omc_CodegenEmbeddedC_extArg(threadData_t *threadData, modelica
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,2) == 0) goto tmp3_end;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 3);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta12,1,1) == 0) goto tmp3_end;
           
           _i_exp = tmpMeta11;
@@ -2467,8 +2494,8 @@ modelica_metatype omc_CodegenEmbeddedC_extArg(threadData_t *threadData, modelica
           modelica_metatype tmpMeta13;
           modelica_metatype tmpMeta14;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,2) == 0) goto tmp3_end;
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_2, 3);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta14,0,1) == 0) goto tmp3_end;
           
           _i_exp = tmpMeta13;
@@ -2481,8 +2508,8 @@ modelica_metatype omc_CodegenEmbeddedC_extArg(threadData_t *threadData, modelica
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,2) == 0) goto tmp3_end;
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_2, 3);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta16,2,1) == 0) goto tmp3_end;
           
           _i_exp = tmpMeta15;
@@ -2495,8 +2522,8 @@ modelica_metatype omc_CodegenEmbeddedC_extArg(threadData_t *threadData, modelica
           modelica_metatype tmpMeta17;
           modelica_metatype tmpMeta18;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,2) == 0) goto tmp3_end;
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta17 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_2, 3);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta18,3,1) == 0) goto tmp3_end;
           
           _i_exp = tmpMeta17;
@@ -2518,22 +2545,24 @@ modelica_metatype omc_CodegenEmbeddedC_extArg(threadData_t *threadData, modelica
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_functionBodyExternalFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -2583,14 +2612,14 @@ modelica_metatype omc_CodegenEmbeddedC_functionBodyExternalFunction(threadData_t
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,3,14) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 5));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 6));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 8));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 12));
-          if (1 != MMC_STRLEN(tmpMeta12) || strcmp(MMC_STRINGDATA(_OMC_LIT53), MMC_STRINGDATA(tmpMeta12)) != 0) goto tmp3_end;
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 5);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 6);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 8);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 12);
+          if (1 != omc_string_len(tmpMeta12) || strcmp(omc_string_data(_OMC_LIT53), omc_string_data(tmpMeta12)) != 0) goto tmp3_end;
           
           _i_name = tmpMeta6;
           _i_extName = tmpMeta7;
@@ -2671,21 +2700,23 @@ modelica_metatype omc_CodegenEmbeddedC_functionBodyExternalFunction(threadData_t
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__135(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_outVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -2727,14 +2758,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__135(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__134(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -2743,7 +2775,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__134(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -2782,7 +2815,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__134(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -2791,14 +2824,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__134(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__133(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_outVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -2831,7 +2866,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__133(thread
           tmpMeta6 = MMC_CAR(tmp4_2);
           tmpMeta7 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,0,7) == 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 2);
           
           _i_cref = tmpMeta8;
           _txt = tmp4_1;
@@ -2855,21 +2890,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__133(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__132(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_extReturn)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -2889,7 +2926,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__132(thread
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,6) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_c = tmpMeta6;
           _txt = tmp4_1;
@@ -2911,14 +2948,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__132(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__131(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -2927,7 +2965,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__131(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -2966,7 +3005,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__131(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -2975,7 +3014,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__131(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__130(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -2984,7 +3024,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__130(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -3017,7 +3058,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__130(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -3026,15 +3067,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__130(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_functionBodyRegularFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -3069,10 +3112,10 @@ modelica_metatype omc_CodegenEmbeddedC_functionBodyRegularFunction(threadData_t 
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,7) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 6));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 6);
           
           _i_name = tmpMeta6;
           _i_outVars = tmpMeta7;
@@ -3123,21 +3166,23 @@ modelica_metatype omc_CodegenEmbeddedC_functionBodyRegularFunction(threadData_t 
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__128(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_outVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -3183,14 +3228,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__128(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__127(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -3199,7 +3245,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__127(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -3232,7 +3279,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__127(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -3241,15 +3288,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__127(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_functionDeclaration(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -3279,9 +3328,9 @@ modelica_metatype omc_CodegenEmbeddedC_functionDeclaration(threadData_t *threadD
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,7) == 0) goto tmp3_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta5 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_name = tmpMeta5;
           _i_outVars = tmpMeta6;
@@ -3299,9 +3348,9 @@ modelica_metatype omc_CodegenEmbeddedC_functionDeclaration(threadData_t *threadD
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,3,14) == 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 8));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 8);
           
           _i_name = tmpMeta8;
           _i_funArgs = tmpMeta9;
@@ -3346,22 +3395,24 @@ modelica_metatype omc_CodegenEmbeddedC_functionDeclaration(threadData_t *threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_functionBody(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -3425,21 +3476,23 @@ modelica_metatype omc_CodegenEmbeddedC_functionBody(threadData_t *threadData, mo
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_functionsFile(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_functions, modelica_metatype _a_literals, modelica_metatype _a_externalFunctionIncludes)
 {
   modelica_metatype _out_txt = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   _out_txt = omc_Tpl_pushIter(threadData, _txt, _OMC_LIT64);
@@ -3476,7 +3529,8 @@ modelica_metatype omc_CodegenEmbeddedC_functionsFile(threadData_t *threadData, m
 
   _out_txt = omc_Tpl_popIter(threadData, _out_txt);
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__123(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -3485,7 +3539,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__123(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -3518,7 +3573,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__123(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -3527,7 +3582,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__123(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__122(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -3536,7 +3592,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__122(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -3569,7 +3626,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__122(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -3578,7 +3635,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__122(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__121(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -3587,7 +3645,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__121(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -3620,7 +3679,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__121(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -3629,7 +3688,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__121(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__120(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -3638,7 +3698,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__120(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -3675,7 +3736,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__120(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -3684,15 +3745,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__120(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_startValue(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -3720,11 +3783,11 @@ modelica_metatype omc_CodegenEmbeddedC_startValue(threadData_t *threadData, mode
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 10));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 10);
           if (optionNone(tmpMeta7)) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 13));
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 1);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 13);
           
           _i_name = tmpMeta6;
           _i_e = tmpMeta8;
@@ -3744,8 +3807,8 @@ modelica_metatype omc_CodegenEmbeddedC_startValue(threadData_t *threadData, mode
         case 1: {
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 13));
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 13);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,1,1) == 0) goto tmp3_end;
           
           _i_name = tmpMeta10;
@@ -3762,8 +3825,8 @@ modelica_metatype omc_CodegenEmbeddedC_startValue(threadData_t *threadData, mode
         case 2: {
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 13));
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_2, 13);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta13,0,1) == 0) goto tmp3_end;
           
           _i_name = tmpMeta12;
@@ -3780,8 +3843,8 @@ modelica_metatype omc_CodegenEmbeddedC_startValue(threadData_t *threadData, mode
         case 3: {
           modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 13));
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_2, 13);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta15,3,1) == 0) goto tmp3_end;
           
           _i_name = tmpMeta14;
@@ -3798,8 +3861,8 @@ modelica_metatype omc_CodegenEmbeddedC_startValue(threadData_t *threadData, mode
         case 4: {
           modelica_metatype tmpMeta16;
           modelica_metatype tmpMeta17;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 13));
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta17 = OMC_BOX_FIELD(tmp4_2, 13);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta17,2,1) == 0) goto tmp3_end;
           
           _i_name = tmpMeta16;
@@ -3815,7 +3878,7 @@ modelica_metatype omc_CodegenEmbeddedC_startValue(threadData_t *threadData, mode
         }
         case 5: {
           modelica_metatype tmpMeta18;
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _txt = tmp4_1;
           _i_name = tmpMeta18;
@@ -3841,22 +3904,24 @@ modelica_metatype omc_CodegenEmbeddedC_startValue(threadData_t *threadData, mode
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_constVal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_value, modelica_metatype _in_a_ty__)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -3890,8 +3955,8 @@ modelica_metatype omc_CodegenEmbeddedC_constVal(threadData_t *threadData, modeli
           modelica_metatype tmpMeta5;
           modelica_integer tmp6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,1) == 0) goto tmp3_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp6 = mmc_unbox_integer(tmpMeta5);
+          tmpMeta5 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp6 = omc_unbox_integer(tmpMeta5);
           
           _i_integer = tmp6  /* pattern as ty=Integer */;
           _txt = tmp4_1;
@@ -3903,8 +3968,8 @@ modelica_metatype omc_CodegenEmbeddedC_constVal(threadData_t *threadData, modeli
           modelica_metatype tmpMeta7;
           modelica_real tmp8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,1) == 0) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp8 = mmc_unbox_real(tmpMeta7);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp8 = omc_unbox_real(tmpMeta7);
           
           _i_real = tmp8  /* pattern as ty=Real */;
           _txt = tmp4_1;
@@ -3915,14 +3980,14 @@ modelica_metatype omc_CodegenEmbeddedC_constVal(threadData_t *threadData, modeli
         case 5: {
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,1) == 0) goto tmp3_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_string = tmpMeta9;
           _txt = tmp4_1;
           /* Pattern matching succeeded */
           _txt = omc_Tpl_writeTok(threadData, _txt, _OMC_LIT81);
 
-          _ret_0 = omc_Util_escapeModelicaStringToCString(threadData, _i_string);
+          omc_string_store(&(_ret_0), omc_Util_escapeModelicaStringToCString(threadData, _i_string));
 
           _txt = omc_Tpl_writeStr(threadData, _txt, _ret_0);
           tmpMeta1 = omc_Tpl_writeTok(threadData, _txt, _OMC_LIT81);
@@ -3932,8 +3997,8 @@ modelica_metatype omc_CodegenEmbeddedC_constVal(threadData_t *threadData, modeli
           modelica_metatype tmpMeta10;
           modelica_integer tmp11;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,3,1) == 0) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp11 = omc_unbox_integer(tmpMeta10);
           
           _i_bool = tmp11  /* pattern as ty=Boolean */;
           _txt = tmp4_1;
@@ -3945,8 +4010,8 @@ modelica_metatype omc_CodegenEmbeddedC_constVal(threadData_t *threadData, modeli
           modelica_metatype tmpMeta12;
           modelica_integer tmp13;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,5,2) == 0) goto tmp3_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmp13 = omc_unbox_integer(tmpMeta12);
           
           _i_index = tmp13  /* pattern as ty=Integer */;
           _txt = tmp4_1;
@@ -3970,21 +4035,23 @@ modelica_metatype omc_CodegenEmbeddedC_constVal(threadData_t *threadData, modeli
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__117(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty__, modelica_metatype _in_a_value)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -4029,21 +4096,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__117(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__116(threadData_t *threadData, modelica_metatype _in_txt, modelica_boolean _in_a_bool)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -4079,43 +4148,46 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__116(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__116(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_bool)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_bool);
+  tmp1 = omc_unbox_integer(_in_a_bool);
   _out_txt = omc_CodegenEmbeddedC_fun__116(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_varArrayNameValues(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_integer _a_ix, modelica_boolean _a_isPre)
 {
   modelica_metatype _out_txt = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   _out_txt = omc_CodegenEmbeddedC_fun__114(threadData, _txt, _a_ix, _a_var, _a_isPre);
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 modelica_metatype boxptr_CodegenEmbeddedC_varArrayNameValues(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_var, modelica_metatype _a_ix, modelica_metatype _a_isPre)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_a_ix);
-  tmp2 = mmc_unbox_integer(_a_isPre);
+  tmp1 = omc_unbox_integer(_a_ix);
+  tmp2 = omc_unbox_integer(_a_isPre);
   _out_txt = omc_CodegenEmbeddedC_varArrayNameValues(threadData, _txt, _a_var, tmp1, tmp2);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -4125,7 +4197,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__114(thread
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -4169,22 +4242,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__114(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__114(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ix, modelica_metatype _in_a_var, modelica_metatype _in_a_isPre)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_ix);
-  tmp2 = mmc_unbox_integer(_in_a_isPre);
+  tmp1 = omc_unbox_integer(_in_a_ix);
+  tmp2 = omc_unbox_integer(_in_a_isPre);
   _out_txt = omc_CodegenEmbeddedC_fun__114(threadData, _in_txt, tmp1, _in_a_var, tmp2);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -4194,7 +4268,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__113(thread
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -4217,8 +4292,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__113(thread
         case 0: {
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 3);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,7,0) == 0) goto tmp3_end;
           
           _i_name = tmpMeta6;
@@ -4233,8 +4308,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__113(thread
         case 1: {
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 3);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,17,0) == 0) goto tmp3_end;
           
           _i_name = tmpMeta8;
@@ -4248,7 +4323,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__113(thread
         }
         case 2: {
           modelica_metatype tmpMeta10;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 3);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta10,9,1) == 0) goto tmp3_end;
           
           _txt = tmp4_1;
@@ -4258,7 +4333,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__113(thread
         }
         case 3: {
           modelica_metatype tmpMeta11;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _txt = tmp4_1;
           _i_name = tmpMeta11;
@@ -4289,20 +4364,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__113(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__113(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var, modelica_metatype _in_a_isPre)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_isPre);
+  tmp1 = omc_unbox_integer(_in_a_isPre);
   _out_txt = omc_CodegenEmbeddedC_fun__113(threadData, _in_txt, _in_a_var, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -4312,7 +4388,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__112(thread
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -4348,20 +4425,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__112(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__112(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_isPre)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_isPre);
+  tmp1 = omc_unbox_integer(_in_a_isPre);
   _out_txt = omc_CodegenEmbeddedC_fun__112(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -4371,7 +4449,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__111(thread
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -4407,31 +4486,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__111(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__111(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_isPre)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_isPre);
+  tmp1 = omc_unbox_integer(_in_a_isPre);
   _out_txt = omc_CodegenEmbeddedC_fun__111(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_daeExpCall(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -4459,9 +4540,9 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCall(threadData_t *threadData, mode
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_path = tmpMeta6;
           _i_expLst = tmpMeta7;
@@ -4500,14 +4581,15 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCall(threadData_t *threadData, mode
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__109(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -4516,7 +4598,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__109(threadD
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -4549,7 +4632,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__109(threadD
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -4558,15 +4641,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__109(threadD
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -4600,11 +4685,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,1,1) == 0) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          if (8 != MMC_STRLEN(tmpMeta7) || strcmp(MMC_STRINGDATA(_OMC_LIT131), MMC_STRINGDATA(tmpMeta7)) != 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 2);
+          if (8 != omc_string_len(tmpMeta7) || strcmp(omc_string_data(_OMC_LIT131), omc_string_data(tmpMeta7)) != 0) goto tmp3_end;
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta8)) goto tmp3_end;
           tmpMeta9 = MMC_CAR(tmpMeta8);
           tmpMeta10 = MMC_CDR(tmpMeta8);
@@ -4635,11 +4720,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta18;
           modelica_metatype tmpMeta19;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta13,1,1) == 0) goto tmp3_end;
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 2));
-          if (6 != MMC_STRLEN(tmpMeta14) || strcmp(MMC_STRINGDATA(_OMC_LIT132), MMC_STRINGDATA(tmpMeta14)) != 0) goto tmp3_end;
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta14 = OMC_BOX_FIELD(tmpMeta13, 2);
+          if (6 != omc_string_len(tmpMeta14) || strcmp(omc_string_data(_OMC_LIT132), omc_string_data(tmpMeta14)) != 0) goto tmp3_end;
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta15)) goto tmp3_end;
           tmpMeta16 = MMC_CAR(tmpMeta15);
           tmpMeta17 = MMC_CDR(tmpMeta15);
@@ -4661,11 +4746,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta23;
           modelica_metatype tmpMeta24;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta20,1,1) == 0) goto tmp3_end;
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta20), 2));
-          if (7 != MMC_STRLEN(tmpMeta21) || strcmp(MMC_STRINGDATA(_OMC_LIT133), MMC_STRINGDATA(tmpMeta21)) != 0) goto tmp3_end;
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta21 = OMC_BOX_FIELD(tmpMeta20, 2);
+          if (7 != omc_string_len(tmpMeta21) || strcmp(omc_string_data(_OMC_LIT133), omc_string_data(tmpMeta21)) != 0) goto tmp3_end;
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta22)) goto tmp3_end;
           tmpMeta23 = MMC_CAR(tmpMeta22);
           tmpMeta24 = MMC_CDR(tmpMeta22);
@@ -4686,11 +4771,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta28;
           modelica_metatype tmpMeta29;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta25 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta25,1,1) == 0) goto tmp3_end;
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 2));
-          if (3 != MMC_STRLEN(tmpMeta26) || strcmp(MMC_STRINGDATA(_OMC_LIT134), MMC_STRINGDATA(tmpMeta26)) != 0) goto tmp3_end;
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta26 = OMC_BOX_FIELD(tmpMeta25, 2);
+          if (3 != omc_string_len(tmpMeta26) || strcmp(omc_string_data(_OMC_LIT134), omc_string_data(tmpMeta26)) != 0) goto tmp3_end;
+          tmpMeta27 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta27)) goto tmp3_end;
           tmpMeta28 = MMC_CAR(tmpMeta27);
           tmpMeta29 = MMC_CDR(tmpMeta27);
@@ -4716,11 +4801,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta37;
           modelica_metatype tmpMeta38;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta30 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta30,1,1) == 0) goto tmp3_end;
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 2));
-          if (3 != MMC_STRLEN(tmpMeta31) || strcmp(MMC_STRINGDATA(_OMC_LIT135), MMC_STRINGDATA(tmpMeta31)) != 0) goto tmp3_end;
-          tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta31 = OMC_BOX_FIELD(tmpMeta30, 2);
+          if (3 != omc_string_len(tmpMeta31) || strcmp(omc_string_data(_OMC_LIT135), omc_string_data(tmpMeta31)) != 0) goto tmp3_end;
+          tmpMeta32 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta32)) goto tmp3_end;
           tmpMeta33 = MMC_CAR(tmpMeta32);
           tmpMeta34 = MMC_CDR(tmpMeta32);
@@ -4728,8 +4813,8 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           tmpMeta35 = MMC_CAR(tmpMeta34);
           tmpMeta36 = MMC_CDR(tmpMeta34);
           if (!listEmpty(tmpMeta36)) goto tmp3_end;
-          tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta37), 2));
+          tmpMeta37 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmpMeta38 = OMC_BOX_FIELD(tmpMeta37, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta38,1,1) == 0) goto tmp3_end;
           
           _i_exp1 = tmpMeta33;
@@ -4757,11 +4842,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta46;
           modelica_metatype tmpMeta47;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta39 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta39,1,1) == 0) goto tmp3_end;
-          tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta39), 2));
-          if (3 != MMC_STRLEN(tmpMeta40) || strcmp(MMC_STRINGDATA(_OMC_LIT136), MMC_STRINGDATA(tmpMeta40)) != 0) goto tmp3_end;
-          tmpMeta41 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta40 = OMC_BOX_FIELD(tmpMeta39, 2);
+          if (3 != omc_string_len(tmpMeta40) || strcmp(omc_string_data(_OMC_LIT136), omc_string_data(tmpMeta40)) != 0) goto tmp3_end;
+          tmpMeta41 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta41)) goto tmp3_end;
           tmpMeta42 = MMC_CAR(tmpMeta41);
           tmpMeta43 = MMC_CDR(tmpMeta41);
@@ -4769,8 +4854,8 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           tmpMeta44 = MMC_CAR(tmpMeta43);
           tmpMeta45 = MMC_CDR(tmpMeta43);
           if (!listEmpty(tmpMeta45)) goto tmp3_end;
-          tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta46), 2));
+          tmpMeta46 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmpMeta47 = OMC_BOX_FIELD(tmpMeta46, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta47,1,1) == 0) goto tmp3_end;
           
           _i_exp1 = tmpMeta42;
@@ -4794,11 +4879,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta51;
           modelica_metatype tmpMeta52;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta48 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta48,1,1) == 0) goto tmp3_end;
-          tmpMeta49 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta48), 2));
-          if (3 != MMC_STRLEN(tmpMeta49) || strcmp(MMC_STRINGDATA(_OMC_LIT137), MMC_STRINGDATA(tmpMeta49)) != 0) goto tmp3_end;
-          tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta49 = OMC_BOX_FIELD(tmpMeta48, 2);
+          if (3 != omc_string_len(tmpMeta49) || strcmp(omc_string_data(_OMC_LIT137), omc_string_data(tmpMeta49)) != 0) goto tmp3_end;
+          tmpMeta50 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta50)) goto tmp3_end;
           tmpMeta51 = MMC_CAR(tmpMeta50);
           tmpMeta52 = MMC_CDR(tmpMeta50);
@@ -4823,11 +4908,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta56;
           modelica_metatype tmpMeta57;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta53 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta53 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta53,1,1) == 0) goto tmp3_end;
-          tmpMeta54 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta53), 2));
-          if (3 != MMC_STRLEN(tmpMeta54) || strcmp(MMC_STRINGDATA(_OMC_LIT138), MMC_STRINGDATA(tmpMeta54)) != 0) goto tmp3_end;
-          tmpMeta55 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta54 = OMC_BOX_FIELD(tmpMeta53, 2);
+          if (3 != omc_string_len(tmpMeta54) || strcmp(omc_string_data(_OMC_LIT138), omc_string_data(tmpMeta54)) != 0) goto tmp3_end;
+          tmpMeta55 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta55)) goto tmp3_end;
           tmpMeta56 = MMC_CAR(tmpMeta55);
           tmpMeta57 = MMC_CDR(tmpMeta55);
@@ -4852,11 +4937,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta61;
           modelica_metatype tmpMeta62;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta58 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta58 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta58,1,1) == 0) goto tmp3_end;
-          tmpMeta59 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta58), 2));
-          if (3 != MMC_STRLEN(tmpMeta59) || strcmp(MMC_STRINGDATA(_OMC_LIT139), MMC_STRINGDATA(tmpMeta59)) != 0) goto tmp3_end;
-          tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta59 = OMC_BOX_FIELD(tmpMeta58, 2);
+          if (3 != omc_string_len(tmpMeta59) || strcmp(omc_string_data(_OMC_LIT139), omc_string_data(tmpMeta59)) != 0) goto tmp3_end;
+          tmpMeta60 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta60)) goto tmp3_end;
           tmpMeta61 = MMC_CAR(tmpMeta60);
           tmpMeta62 = MMC_CDR(tmpMeta60);
@@ -4881,11 +4966,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta66;
           modelica_metatype tmpMeta67;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta63 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta63 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta63,1,1) == 0) goto tmp3_end;
-          tmpMeta64 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta63), 2));
-          if (4 != MMC_STRLEN(tmpMeta64) || strcmp(MMC_STRINGDATA(_OMC_LIT140), MMC_STRINGDATA(tmpMeta64)) != 0) goto tmp3_end;
-          tmpMeta65 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta64 = OMC_BOX_FIELD(tmpMeta63, 2);
+          if (4 != omc_string_len(tmpMeta64) || strcmp(omc_string_data(_OMC_LIT140), omc_string_data(tmpMeta64)) != 0) goto tmp3_end;
+          tmpMeta65 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta65)) goto tmp3_end;
           tmpMeta66 = MMC_CAR(tmpMeta65);
           tmpMeta67 = MMC_CDR(tmpMeta65);
@@ -4910,11 +4995,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta71;
           modelica_metatype tmpMeta72;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta68 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta68 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta68,1,1) == 0) goto tmp3_end;
-          tmpMeta69 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta68), 2));
-          if (4 != MMC_STRLEN(tmpMeta69) || strcmp(MMC_STRINGDATA(_OMC_LIT141), MMC_STRINGDATA(tmpMeta69)) != 0) goto tmp3_end;
-          tmpMeta70 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta69 = OMC_BOX_FIELD(tmpMeta68, 2);
+          if (4 != omc_string_len(tmpMeta69) || strcmp(omc_string_data(_OMC_LIT141), omc_string_data(tmpMeta69)) != 0) goto tmp3_end;
+          tmpMeta70 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta70)) goto tmp3_end;
           tmpMeta71 = MMC_CAR(tmpMeta70);
           tmpMeta72 = MMC_CDR(tmpMeta70);
@@ -4939,11 +5024,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta76;
           modelica_metatype tmpMeta77;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta73 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta73 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta73,1,1) == 0) goto tmp3_end;
-          tmpMeta74 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta73), 2));
-          if (4 != MMC_STRLEN(tmpMeta74) || strcmp(MMC_STRINGDATA(_OMC_LIT142), MMC_STRINGDATA(tmpMeta74)) != 0) goto tmp3_end;
-          tmpMeta75 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta74 = OMC_BOX_FIELD(tmpMeta73, 2);
+          if (4 != omc_string_len(tmpMeta74) || strcmp(omc_string_data(_OMC_LIT142), omc_string_data(tmpMeta74)) != 0) goto tmp3_end;
+          tmpMeta75 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta75)) goto tmp3_end;
           tmpMeta76 = MMC_CAR(tmpMeta75);
           tmpMeta77 = MMC_CDR(tmpMeta75);
@@ -4968,11 +5053,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta81;
           modelica_metatype tmpMeta82;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta78 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta78 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta78,1,1) == 0) goto tmp3_end;
-          tmpMeta79 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta78), 2));
-          if (4 != MMC_STRLEN(tmpMeta79) || strcmp(MMC_STRINGDATA(_OMC_LIT143), MMC_STRINGDATA(tmpMeta79)) != 0) goto tmp3_end;
-          tmpMeta80 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta79 = OMC_BOX_FIELD(tmpMeta78, 2);
+          if (4 != omc_string_len(tmpMeta79) || strcmp(omc_string_data(_OMC_LIT143), omc_string_data(tmpMeta79)) != 0) goto tmp3_end;
+          tmpMeta80 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta80)) goto tmp3_end;
           tmpMeta81 = MMC_CAR(tmpMeta80);
           tmpMeta82 = MMC_CDR(tmpMeta80);
@@ -4997,11 +5082,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta86;
           modelica_metatype tmpMeta87;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta83 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta83 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta83,1,1) == 0) goto tmp3_end;
-          tmpMeta84 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta83), 2));
-          if (4 != MMC_STRLEN(tmpMeta84) || strcmp(MMC_STRINGDATA(_OMC_LIT144), MMC_STRINGDATA(tmpMeta84)) != 0) goto tmp3_end;
-          tmpMeta85 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta84 = OMC_BOX_FIELD(tmpMeta83, 2);
+          if (4 != omc_string_len(tmpMeta84) || strcmp(omc_string_data(_OMC_LIT144), omc_string_data(tmpMeta84)) != 0) goto tmp3_end;
+          tmpMeta85 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta85)) goto tmp3_end;
           tmpMeta86 = MMC_CAR(tmpMeta85);
           tmpMeta87 = MMC_CDR(tmpMeta85);
@@ -5026,11 +5111,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta91;
           modelica_metatype tmpMeta92;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta88 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta88 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta88,1,1) == 0) goto tmp3_end;
-          tmpMeta89 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta88), 2));
-          if (4 != MMC_STRLEN(tmpMeta89) || strcmp(MMC_STRINGDATA(_OMC_LIT145), MMC_STRINGDATA(tmpMeta89)) != 0) goto tmp3_end;
-          tmpMeta90 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta89 = OMC_BOX_FIELD(tmpMeta88, 2);
+          if (4 != omc_string_len(tmpMeta89) || strcmp(omc_string_data(_OMC_LIT145), omc_string_data(tmpMeta89)) != 0) goto tmp3_end;
+          tmpMeta90 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta90)) goto tmp3_end;
           tmpMeta91 = MMC_CAR(tmpMeta90);
           tmpMeta92 = MMC_CDR(tmpMeta90);
@@ -5055,11 +5140,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta96;
           modelica_metatype tmpMeta97;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta93 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta93 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta93,1,1) == 0) goto tmp3_end;
-          tmpMeta94 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta93), 2));
-          if (3 != MMC_STRLEN(tmpMeta94) || strcmp(MMC_STRINGDATA(_OMC_LIT146), MMC_STRINGDATA(tmpMeta94)) != 0) goto tmp3_end;
-          tmpMeta95 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta94 = OMC_BOX_FIELD(tmpMeta93, 2);
+          if (3 != omc_string_len(tmpMeta94) || strcmp(omc_string_data(_OMC_LIT146), omc_string_data(tmpMeta94)) != 0) goto tmp3_end;
+          tmpMeta95 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta95)) goto tmp3_end;
           tmpMeta96 = MMC_CAR(tmpMeta95);
           tmpMeta97 = MMC_CDR(tmpMeta95);
@@ -5084,11 +5169,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta101;
           modelica_metatype tmpMeta102;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta98 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta98 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta98,1,1) == 0) goto tmp3_end;
-          tmpMeta99 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta98), 2));
-          if (3 != MMC_STRLEN(tmpMeta99) || strcmp(MMC_STRINGDATA(_OMC_LIT147), MMC_STRINGDATA(tmpMeta99)) != 0) goto tmp3_end;
-          tmpMeta100 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta99 = OMC_BOX_FIELD(tmpMeta98, 2);
+          if (3 != omc_string_len(tmpMeta99) || strcmp(omc_string_data(_OMC_LIT147), omc_string_data(tmpMeta99)) != 0) goto tmp3_end;
+          tmpMeta100 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta100)) goto tmp3_end;
           tmpMeta101 = MMC_CAR(tmpMeta100);
           tmpMeta102 = MMC_CDR(tmpMeta100);
@@ -5113,11 +5198,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta106;
           modelica_metatype tmpMeta107;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta103 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta103 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta103,1,1) == 0) goto tmp3_end;
-          tmpMeta104 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta103), 2));
-          if (5 != MMC_STRLEN(tmpMeta104) || strcmp(MMC_STRINGDATA(_OMC_LIT148), MMC_STRINGDATA(tmpMeta104)) != 0) goto tmp3_end;
-          tmpMeta105 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta104 = OMC_BOX_FIELD(tmpMeta103, 2);
+          if (5 != omc_string_len(tmpMeta104) || strcmp(omc_string_data(_OMC_LIT148), omc_string_data(tmpMeta104)) != 0) goto tmp3_end;
+          tmpMeta105 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta105)) goto tmp3_end;
           tmpMeta106 = MMC_CAR(tmpMeta105);
           tmpMeta107 = MMC_CDR(tmpMeta105);
@@ -5144,11 +5229,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta113;
           modelica_metatype tmpMeta114;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta108 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta108 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta108,1,1) == 0) goto tmp3_end;
-          tmpMeta109 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta108), 2));
-          if (5 != MMC_STRLEN(tmpMeta109) || strcmp(MMC_STRINGDATA(_OMC_LIT149), MMC_STRINGDATA(tmpMeta109)) != 0) goto tmp3_end;
-          tmpMeta110 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta109 = OMC_BOX_FIELD(tmpMeta108, 2);
+          if (5 != omc_string_len(tmpMeta109) || strcmp(omc_string_data(_OMC_LIT149), omc_string_data(tmpMeta109)) != 0) goto tmp3_end;
+          tmpMeta110 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta110)) goto tmp3_end;
           tmpMeta111 = MMC_CAR(tmpMeta110);
           tmpMeta112 = MMC_CDR(tmpMeta110);
@@ -5183,11 +5268,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta120;
           modelica_metatype tmpMeta121;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta115 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta115 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta115,1,1) == 0) goto tmp3_end;
-          tmpMeta116 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta115), 2));
-          if (3 != MMC_STRLEN(tmpMeta116) || strcmp(MMC_STRINGDATA(_OMC_LIT150), MMC_STRINGDATA(tmpMeta116)) != 0) goto tmp3_end;
-          tmpMeta117 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta116 = OMC_BOX_FIELD(tmpMeta115, 2);
+          if (3 != omc_string_len(tmpMeta116) || strcmp(omc_string_data(_OMC_LIT150), omc_string_data(tmpMeta116)) != 0) goto tmp3_end;
+          tmpMeta117 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta117)) goto tmp3_end;
           tmpMeta118 = MMC_CAR(tmpMeta117);
           tmpMeta119 = MMC_CDR(tmpMeta117);
@@ -5218,11 +5303,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta127;
           modelica_metatype tmpMeta128;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta122 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta122 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta122,1,1) == 0) goto tmp3_end;
-          tmpMeta123 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta122), 2));
-          if (5 != MMC_STRLEN(tmpMeta123) || strcmp(MMC_STRINGDATA(_OMC_LIT151), MMC_STRINGDATA(tmpMeta123)) != 0) goto tmp3_end;
-          tmpMeta124 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta123 = OMC_BOX_FIELD(tmpMeta122, 2);
+          if (5 != omc_string_len(tmpMeta123) || strcmp(omc_string_data(_OMC_LIT151), omc_string_data(tmpMeta123)) != 0) goto tmp3_end;
+          tmpMeta124 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta124)) goto tmp3_end;
           tmpMeta125 = MMC_CAR(tmpMeta124);
           tmpMeta126 = MMC_CDR(tmpMeta124);
@@ -5248,11 +5333,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta134;
           modelica_metatype tmpMeta135;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta129 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta129 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta129,1,1) == 0) goto tmp3_end;
-          tmpMeta130 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta129), 2));
-          if (4 != MMC_STRLEN(tmpMeta130) || strcmp(MMC_STRINGDATA(_OMC_LIT152), MMC_STRINGDATA(tmpMeta130)) != 0) goto tmp3_end;
-          tmpMeta131 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta130 = OMC_BOX_FIELD(tmpMeta129, 2);
+          if (4 != omc_string_len(tmpMeta130) || strcmp(omc_string_data(_OMC_LIT152), omc_string_data(tmpMeta130)) != 0) goto tmp3_end;
+          tmpMeta131 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta131)) goto tmp3_end;
           tmpMeta132 = MMC_CAR(tmpMeta131);
           tmpMeta133 = MMC_CDR(tmpMeta131);
@@ -5276,11 +5361,11 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
           modelica_metatype tmpMeta139;
           modelica_metatype tmpMeta140;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta136 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta136 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta136,1,1) == 0) goto tmp3_end;
-          tmpMeta137 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta136), 2));
-          if (3 != MMC_STRLEN(tmpMeta137) || strcmp(MMC_STRINGDATA(_OMC_LIT153), MMC_STRINGDATA(tmpMeta137)) != 0) goto tmp3_end;
-          tmpMeta138 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta137 = OMC_BOX_FIELD(tmpMeta136, 2);
+          if (3 != omc_string_len(tmpMeta137) || strcmp(omc_string_data(_OMC_LIT153), omc_string_data(tmpMeta137)) != 0) goto tmp3_end;
+          tmpMeta138 = OMC_BOX_FIELD(tmp4_2, 3);
           if (listEmpty(tmpMeta138)) goto tmp3_end;
           tmpMeta139 = MMC_CAR(tmpMeta138);
           tmpMeta140 = MMC_CDR(tmpMeta138);
@@ -5317,33 +5402,37 @@ modelica_metatype omc_CodegenEmbeddedC_daeExpCallBuiltin(threadData_t *threadDat
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_daeExpBinary(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp1, modelica_metatype _a_op, modelica_metatype _a_exp2, modelica_metatype _a_origExp)
 {
   modelica_metatype _out_txt = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   _out_txt = omc_CodegenEmbeddedC_fun__106(threadData, _txt, _a_op, _a_exp1, _a_exp2, _a_origExp);
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__106(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_op, modelica_metatype _in_a_exp1, modelica_metatype _in_a_exp2, modelica_metatype _in_a_origExp)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -5555,22 +5644,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__106(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -5623,8 +5714,8 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta6;
           modelica_integer tmp7;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,1) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           
           _i_integer = tmp7  /* pattern as ty=Integer */;
           _txt = tmp4_1;
@@ -5636,8 +5727,8 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta8;
           modelica_real tmp9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,1) == 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp9 = mmc_unbox_real(tmpMeta8);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp9 = omc_unbox_real(tmpMeta8);
           
           _i_real = tmp9  /* pattern as ty=Real */;
           _txt = tmp4_1;
@@ -5648,14 +5739,14 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
         case 2: {
           modelica_metatype tmpMeta10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,1) == 0) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_string = tmpMeta10;
           _txt = tmp4_1;
           /* Pattern matching succeeded */
           _txt = omc_Tpl_writeTok(threadData, _txt, _OMC_LIT81);
 
-          _ret_0 = omc_Util_escapeModelicaStringToCString(threadData, _i_string);
+          omc_string_store(&(_ret_0), omc_Util_escapeModelicaStringToCString(threadData, _i_string));
 
           _txt = omc_Tpl_writeStr(threadData, _txt, _ret_0);
           tmpMeta1 = omc_Tpl_writeTok(threadData, _txt, _OMC_LIT81);
@@ -5665,8 +5756,8 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta11;
           modelica_integer tmp12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,3,1) == 0) goto tmp3_end;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp12 = mmc_unbox_integer(tmpMeta11);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp12 = omc_unbox_integer(tmpMeta11);
           
           _i_bool = tmp12  /* pattern as ty=Boolean */;
           _txt = tmp4_1;
@@ -5678,8 +5769,8 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta13;
           modelica_integer tmp14;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,5,2) == 0) goto tmp3_end;
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmp14 = omc_unbox_integer(tmpMeta13);
           
           _i_index = tmp14  /* pattern as ty=Integer */;
           _txt = tmp4_1;
@@ -5691,9 +5782,9 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,10,2) == 0) goto tmp3_end;
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta15,24,1) == 0) goto tmp3_end;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_2, 3);
           
           _i_exp = tmpMeta16;
           _txt = tmp4_1;
@@ -5708,9 +5799,9 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta17;
           modelica_metatype tmpMeta18;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,8,2) == 0) goto tmp3_end;
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta17 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta17,5,1) == 0) goto tmp3_end;
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_2, 3);
           
           _i_exp = tmpMeta18;
           _txt = tmp4_1;
@@ -5726,9 +5817,9 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta20;
           modelica_metatype tmpMeta21;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,7,3) == 0) goto tmp3_end;
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta19 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta20 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta21 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_exp = tmp4_2;
           _i_exp1 = tmpMeta19;
@@ -5744,9 +5835,9 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta23;
           modelica_metatype tmpMeta24;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,11,5) == 0) goto tmp3_end;
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta23 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta24 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_exp = tmp4_2;
           _i_exp1 = tmpMeta22;
@@ -5762,9 +5853,9 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta26;
           modelica_metatype tmpMeta27;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,12,3) == 0) goto tmp3_end;
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta25 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta26 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta27 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_expCond = tmpMeta25;
           _i_expThen = tmpMeta26;
@@ -5790,9 +5881,9 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta29;
           modelica_integer tmp30;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,13,3) == 0) goto tmp3_end;
-          tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta28), 4));
-          tmp30 = mmc_unbox_integer(tmpMeta29);
+          tmpMeta28 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmpMeta29 = OMC_BOX_FIELD(tmpMeta28, 4);
+          tmp30 = omc_unbox_integer(tmpMeta29);
           if (1 /* true */ != tmp30) goto tmp3_end;
           
           _i_exp = tmp4_2;
@@ -5813,7 +5904,7 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
         case 12: {
           modelica_metatype tmpMeta31;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,6,2) == 0) goto tmp3_end;
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta31 = OMC_BOX_FIELD(tmp4_2, 3);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta31,6,2) == 0) goto tmp3_end;
           
           _i_exp = tmp4_2;
@@ -5828,7 +5919,7 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
         case 13: {
           modelica_metatype tmpMeta32;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,6,2) == 0) goto tmp3_end;
-          tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta32 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_componentRef = tmpMeta32;
           _txt = tmp4_1;
@@ -5840,9 +5931,9 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
           modelica_metatype tmpMeta33;
           modelica_metatype tmpMeta34;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,20,2) == 0) goto tmp3_end;
-          tmpMeta33 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta33 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta33,1,1) == 0) goto tmp3_end;
-          tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta34 = OMC_BOX_FIELD(tmp4_2, 3);
           
           _i_e = tmpMeta34;
           _txt = tmp4_1;
@@ -5871,21 +5962,23 @@ modelica_metatype omc_CodegenEmbeddedC_daeExp(threadData_t *threadData, modelica
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__104(threadData_t *threadData, modelica_metatype _in_txt, modelica_boolean _in_a_bool)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -5921,31 +6014,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__104(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__104(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_bool)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_bool);
+  tmp1 = omc_unbox_integer(_in_a_bool);
   _out_txt = omc_CodegenEmbeddedC_fun__104(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_expTypeShort(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -6013,7 +6108,7 @@ modelica_metatype omc_CodegenEmbeddedC_expTypeShort(threadData_t *threadData, mo
         case 5: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,10,4) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_complexType = tmpMeta6;
           _txt = tmp4_1;
@@ -6028,7 +6123,7 @@ modelica_metatype omc_CodegenEmbeddedC_expTypeShort(threadData_t *threadData, mo
         case 6: {
           modelica_metatype tmpMeta7;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,6,2) == 0) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_ty = tmpMeta7;
           _txt = tmp4_1;
@@ -6043,7 +6138,7 @@ modelica_metatype omc_CodegenEmbeddedC_expTypeShort(threadData_t *threadData, mo
         case 7: {
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,9,4) == 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,17,1) == 0) goto tmp3_end;
           
           _txt = tmp4_1;
@@ -6058,7 +6153,7 @@ modelica_metatype omc_CodegenEmbeddedC_expTypeShort(threadData_t *threadData, mo
           /* Pattern matching succeeded */
           _txt_0 = omc_Tpl_writeTok(threadData, _OMC_LIT19, _OMC_LIT201);
 
-          _ret_0 = omc_TypesDump_unparseType(threadData, _i_type);
+          omc_string_store(&(_ret_0), omc_TypesDump_unparseType(threadData, _i_type));
 
           _txt_0 = omc_Tpl_writeStr(threadData, _txt_0, _ret_0);
           tmpMeta1 = omc_CodegenUtil_error(threadData, _txt, omc_Tpl_sourceInfo(threadData, _OMC_LIT23, ((modelica_integer) 474), ((modelica_integer) 14)), omc_Tpl_textString(threadData, _txt_0));
@@ -6070,22 +6165,24 @@ modelica_metatype omc_CodegenEmbeddedC_expTypeShort(threadData_t *threadData, mo
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_crefShortType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -6105,7 +6202,7 @@ modelica_metatype omc_CodegenEmbeddedC_crefShortType(threadData_t *threadData, m
         case 4: {
           modelica_metatype tmpMeta5;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,3) == 0) goto tmp3_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta5 = OMC_BOX_FIELD(tmp4_2, 3);
           
           _i_identType = tmpMeta5;
           _txt = tmp4_1;
@@ -6116,7 +6213,7 @@ modelica_metatype omc_CodegenEmbeddedC_crefShortType(threadData_t *threadData, m
         case 3: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,4) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 5));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 5);
           
           _i_componentRef = tmpMeta6;
           _txt = tmp4_1;
@@ -6142,22 +6239,24 @@ modelica_metatype omc_CodegenEmbeddedC_crefShortType(threadData_t *threadData, m
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_crefToCStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_integer _in_a_ix, modelica_boolean _in_a_isPre)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -6191,11 +6290,11 @@ modelica_metatype omc_CodegenEmbeddedC_crefToCStr(threadData_t *threadData, mode
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,4) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          if (4 != MMC_STRLEN(tmpMeta6) || strcmp(MMC_STRINGDATA(_OMC_LIT204), MMC_STRINGDATA(tmpMeta6)) != 0) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          if (4 != omc_string_len(tmpMeta6) || strcmp(omc_string_data(_OMC_LIT204), omc_string_data(tmpMeta6)) != 0) goto tmp3_end;
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 4);
           if (!listEmpty(tmpMeta7)) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 5));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 5);
           
           _i_cr = tmp4_2;
           _i_componentRef = tmpMeta8;
@@ -6225,22 +6324,23 @@ modelica_metatype omc_CodegenEmbeddedC_crefToCStr(threadData_t *threadData, mode
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 modelica_metatype boxptr_CodegenEmbeddedC_crefToCStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_ix, modelica_metatype _in_a_isPre)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_ix);
-  tmp2 = mmc_unbox_integer(_in_a_isPre);
+  tmp1 = omc_unbox_integer(_in_a_ix);
+  tmp2 = omc_unbox_integer(_in_a_isPre);
   _out_txt = omc_CodegenEmbeddedC_crefToCStr(threadData, _in_txt, _in_a_cr, tmp1, tmp2);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -6250,7 +6350,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__100(thread
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -6290,10 +6391,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__100(thread
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           modelica_integer tmp9;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 7);
+          tmp9 = omc_unbox_integer(tmpMeta8);
           if (-1 != tmp9) goto tmp3_end;
           
           _i_name = tmpMeta6;
@@ -6315,10 +6416,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__100(thread
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
           modelica_integer tmp13;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 7));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 7);
+          tmp13 = omc_unbox_integer(tmpMeta12);
           
           _txt = tmp4_1;
           _i_var = tmp4_2;
@@ -6338,7 +6439,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__100(thread
 
           _txt_1 = omc_CodegenUtil_crefStr(threadData, _OMC_LIT19, _i_name);
 
-          _ret_2 = omc_Util_escapeModelicaStringToCString(threadData, omc_Tpl_textString(threadData, _txt_1));
+          omc_string_store(&(_ret_2), omc_Util_escapeModelicaStringToCString(threadData, omc_Tpl_textString(threadData, _txt_1)));
 
           _txt = omc_Tpl_writeStr(threadData, _txt, _ret_2);
 
@@ -6361,22 +6462,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__100(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__100(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_mArg, modelica_metatype _in_a_isPre, modelica_metatype _in_a_ix)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_isPre);
-  tmp2 = mmc_unbox_integer(_in_a_ix);
+  tmp1 = omc_unbox_integer(_in_a_isPre);
+  tmp2 = omc_unbox_integer(_in_a_ix);
   _out_txt = omc_CodegenEmbeddedC_fun__100(threadData, _in_txt, _in_mArg, tmp1, tmp2);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -6386,7 +6488,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__99(threadD
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -6439,33 +6542,35 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__99(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__99(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_isPre, modelica_metatype _in_a_cr, modelica_metatype _in_a_ix, modelica_metatype _in_a_componentRef)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_isPre);
-  tmp2 = mmc_unbox_integer(_in_a_ix);
+  tmp1 = omc_unbox_integer(_in_a_isPre);
+  tmp2 = omc_unbox_integer(_in_a_ix);
   _out_txt = omc_CodegenEmbeddedC_fun__99(threadData, _in_txt, tmp1, _in_a_cr, tmp2, _in_a_componentRef);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_crefLocal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -6485,7 +6590,7 @@ modelica_metatype omc_CodegenEmbeddedC_crefLocal(threadData_t *threadData, model
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,3) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_ident = tmpMeta6;
           _txt = tmp4_1;
@@ -6507,22 +6612,24 @@ modelica_metatype omc_CodegenEmbeddedC_crefLocal(threadData_t *threadData, model
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_cref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -6542,8 +6649,8 @@ modelica_metatype omc_CodegenEmbeddedC_cref(threadData_t *threadData, modelica_m
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,3) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          if (4 != MMC_STRLEN(tmpMeta6) || strcmp(MMC_STRINGDATA(_OMC_LIT222), MMC_STRINGDATA(tmpMeta6)) != 0) goto tmp3_end;
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          if (4 != omc_string_len(tmpMeta6) || strcmp(omc_string_data(_OMC_LIT222), omc_string_data(tmpMeta6)) != 0) goto tmp3_end;
           
           _txt = tmp4_1;
           /* Pattern matching succeeded */
@@ -6572,22 +6679,24 @@ modelica_metatype omc_CodegenEmbeddedC_cref(threadData_t *threadData, modelica_m
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_elseStatement(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_else__)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -6619,9 +6728,9 @@ modelica_metatype omc_CodegenEmbeddedC_elseStatement(threadData_t *threadData, m
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,3) == 0) goto tmp3_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta5 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_exp = tmpMeta5;
           _i_statementLst = tmpMeta6;
@@ -6657,7 +6766,7 @@ modelica_metatype omc_CodegenEmbeddedC_elseStatement(threadData_t *threadData, m
         case 5: {
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,1) == 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_statementLst = tmpMeta8;
           _txt = tmp4_1;
@@ -6692,14 +6801,15 @@ modelica_metatype omc_CodegenEmbeddedC_elseStatement(threadData_t *threadData, m
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__95(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -6708,7 +6818,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__95(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -6741,7 +6852,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__95(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -6750,7 +6861,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__95(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__94(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -6759,7 +6871,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__94(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -6792,7 +6905,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__94(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -6801,15 +6914,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__94(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_statement(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -6839,7 +6954,7 @@ modelica_metatype omc_CodegenEmbeddedC_statement(threadData_t *threadData, model
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,4) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,6,2) == 0) goto tmp3_end;
           
           _txt = tmp4_1;
@@ -6852,10 +6967,10 @@ modelica_metatype omc_CodegenEmbeddedC_statement(threadData_t *threadData, model
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,4) == 0) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 3);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,6,2) == 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 2);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_cr = tmpMeta8;
           _i_exp = tmpMeta9;
@@ -6872,7 +6987,7 @@ modelica_metatype omc_CodegenEmbeddedC_statement(threadData_t *threadData, model
         case 2: {
           modelica_metatype tmpMeta10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,11,2) == 0) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_exp = tmpMeta10;
           _txt = tmp4_1;
@@ -6886,9 +7001,9 @@ modelica_metatype omc_CodegenEmbeddedC_statement(threadData_t *threadData, model
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,3,4) == 0) goto tmp3_end;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_exp = tmpMeta11;
           _i_statementLst = tmpMeta12;
@@ -6934,14 +7049,15 @@ modelica_metatype omc_CodegenEmbeddedC_statement(threadData_t *threadData, model
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__92(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -6950,7 +7066,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__92(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -6983,7 +7100,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__92(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -6992,15 +7109,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__92(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_equation__(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -7027,10 +7146,10 @@ modelica_metatype omc_CodegenEmbeddedC_equation__(threadData_t *threadData, mode
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,3,5) == 0) goto tmp3_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp6 = mmc_unbox_integer(tmpMeta5);
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta5 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp6 = omc_unbox_integer(tmpMeta5);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_index = tmp6  /* pattern as ty=Integer */;
           _i_cref = tmpMeta7;
@@ -7052,7 +7171,7 @@ modelica_metatype omc_CodegenEmbeddedC_equation__(threadData_t *threadData, mode
         case 13: {
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,10,3) == 0) goto tmp3_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 3);
           
           _i_statements = tmpMeta9;
           _txt = tmp4_1;
@@ -7077,14 +7196,15 @@ modelica_metatype omc_CodegenEmbeddedC_equation__(threadData_t *threadData, mode
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__90(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -7093,7 +7213,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__90(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -7126,7 +7247,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__90(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -7135,15 +7256,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__90(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenEmbeddedC_mainFile(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype _l_modelNamePrefixStr = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   // _l_modelNamePrefixStr has no default value.
@@ -7151,14 +7274,16 @@ modelica_metatype omc_CodegenEmbeddedC_mainFile(threadData_t *threadData, modeli
 
   _out_txt = omc_CodegenEmbeddedC_fun__88(threadData, _txt, _a_simCode, _l_modelNamePrefixStr);
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__88(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode, modelica_metatype _in_a_modelNamePrefixStr)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -7248,7 +7373,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__88(threadD
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 36));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 36);
           if (!optionNone(tmpMeta6)) goto tmp3_end;
           
           _txt = tmp4_1;
@@ -7304,54 +7429,54 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__88(threadD
           modelica_real tmp51;
           modelica_metatype tmpMeta52;
           modelica_real tmp53;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 10));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 6));
-          tmp10 = mmc_unbox_integer(tmpMeta9);
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 9));
-          tmp12 = mmc_unbox_integer(tmpMeta11);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 10));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 14));
-          tmp16 = mmc_unbox_integer(tmpMeta15);
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 15));
-          tmp18 = mmc_unbox_integer(tmpMeta17);
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 16));
-          tmp20 = mmc_unbox_integer(tmpMeta19);
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 20));
-          tmp22 = mmc_unbox_integer(tmpMeta21);
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 21));
-          tmp24 = mmc_unbox_integer(tmpMeta23);
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 11));
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 2));
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 3));
-          tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 4));
-          tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 5));
-          tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 6));
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 7));
-          tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 13));
-          tmpMeta33 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 14));
-          tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 15));
-          tmpMeta35 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 16));
-          tmpMeta36 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 17));
-          tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 26));
-          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 27));
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 12));
-          tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta41 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 5));
-          tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 8));
-          tmpMeta43 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 9));
-          tmpMeta44 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 31));
-          tmpMeta45 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta44), 2));
-          tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 36));
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 10);
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 6);
+          tmp10 = omc_unbox_integer(tmpMeta9);
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta8, 9);
+          tmp12 = omc_unbox_integer(tmpMeta11);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta8, 10);
+          tmp14 = omc_unbox_integer(tmpMeta13);
+          tmpMeta15 = OMC_BOX_FIELD(tmpMeta8, 14);
+          tmp16 = omc_unbox_integer(tmpMeta15);
+          tmpMeta17 = OMC_BOX_FIELD(tmpMeta8, 15);
+          tmp18 = omc_unbox_integer(tmpMeta17);
+          tmpMeta19 = OMC_BOX_FIELD(tmpMeta8, 16);
+          tmp20 = omc_unbox_integer(tmpMeta19);
+          tmpMeta21 = OMC_BOX_FIELD(tmpMeta8, 20);
+          tmp22 = omc_unbox_integer(tmpMeta21);
+          tmpMeta23 = OMC_BOX_FIELD(tmpMeta8, 21);
+          tmp24 = omc_unbox_integer(tmpMeta23);
+          tmpMeta25 = OMC_BOX_FIELD(tmpMeta7, 11);
+          tmpMeta26 = OMC_BOX_FIELD(tmpMeta25, 2);
+          tmpMeta27 = OMC_BOX_FIELD(tmpMeta25, 3);
+          tmpMeta28 = OMC_BOX_FIELD(tmpMeta25, 4);
+          tmpMeta29 = OMC_BOX_FIELD(tmpMeta25, 5);
+          tmpMeta30 = OMC_BOX_FIELD(tmpMeta25, 6);
+          tmpMeta31 = OMC_BOX_FIELD(tmpMeta25, 7);
+          tmpMeta32 = OMC_BOX_FIELD(tmpMeta25, 13);
+          tmpMeta33 = OMC_BOX_FIELD(tmpMeta25, 14);
+          tmpMeta34 = OMC_BOX_FIELD(tmpMeta25, 15);
+          tmpMeta35 = OMC_BOX_FIELD(tmpMeta25, 16);
+          tmpMeta36 = OMC_BOX_FIELD(tmpMeta25, 17);
+          tmpMeta37 = OMC_BOX_FIELD(tmpMeta25, 26);
+          tmpMeta38 = OMC_BOX_FIELD(tmpMeta25, 27);
+          tmpMeta39 = OMC_BOX_FIELD(tmpMeta7, 12);
+          tmpMeta40 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta41 = OMC_BOX_FIELD(tmp4_2, 5);
+          tmpMeta42 = OMC_BOX_FIELD(tmp4_2, 8);
+          tmpMeta43 = OMC_BOX_FIELD(tmp4_2, 9);
+          tmpMeta44 = OMC_BOX_FIELD(tmp4_2, 31);
+          tmpMeta45 = OMC_BOX_FIELD(tmpMeta44, 2);
+          tmpMeta46 = OMC_BOX_FIELD(tmp4_2, 36);
           if (optionNone(tmpMeta46)) goto tmp3_end;
-          tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta46), 1));
-          tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta47), 2));
-          tmp49 = mmc_unbox_real(tmpMeta48);
-          tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta47), 3));
-          tmp51 = mmc_unbox_real(tmpMeta50);
-          tmpMeta52 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta47), 5));
-          tmp53 = mmc_unbox_real(tmpMeta52);
+          tmpMeta47 = OMC_BOX_FIELD(tmpMeta46, 1);
+          tmpMeta48 = OMC_BOX_FIELD(tmpMeta47, 2);
+          tmp49 = omc_unbox_real(tmpMeta48);
+          tmpMeta50 = OMC_BOX_FIELD(tmpMeta47, 3);
+          tmp51 = omc_unbox_real(tmpMeta50);
+          tmpMeta52 = OMC_BOX_FIELD(tmpMeta47, 5);
+          tmp53 = omc_unbox_real(tmpMeta52);
           
           _i_varInfo = tmpMeta8;
           _i_varInfo_numStateVars = tmp10  /* pattern as ty=Integer */;
@@ -7629,21 +7754,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__88(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__87(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_a_varInfo_numStateVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -7697,20 +7824,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__87(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__87(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numStateVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numStateVars);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numStateVars);
   _out_txt = omc_CodegenEmbeddedC_fun__87(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -7720,7 +7848,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__86(threadD
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -7778,14 +7907,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__86(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__85(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -7794,7 +7924,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__85(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -7827,7 +7958,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__85(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -7836,14 +7967,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__85(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_smf__84(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_it)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -7874,21 +8007,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_smf__84(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_smf__83(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_it)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -7919,21 +8054,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_smf__83(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__82(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_odeEquations)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -7988,14 +8125,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__82(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__81(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -8004,7 +8142,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__81(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -8037,7 +8176,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__81(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -8046,14 +8185,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__81(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__80(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_a_varInfo_numStringParamVars, modelica_metatype _in_a_vars_stringParamVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -8104,20 +8245,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__80(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__80(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numStringParamVars, modelica_metatype _in_a_vars_stringParamVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numStringParamVars);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numStringParamVars);
   _out_txt = omc_CodegenEmbeddedC_fun__80(threadData, _in_txt, tmp1, _in_a_vars_stringParamVars);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -8129,7 +8271,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__79(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -8161,7 +8304,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__79(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -8170,14 +8313,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__79(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__78(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_a_varInfo_numBoolParams, modelica_metatype _in_a_vars_boolParamVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -8228,20 +8373,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__78(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__78(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numBoolParams, modelica_metatype _in_a_vars_boolParamVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numBoolParams);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numBoolParams);
   _out_txt = omc_CodegenEmbeddedC_fun__78(threadData, _in_txt, tmp1, _in_a_vars_boolParamVars);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -8253,7 +8399,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__77(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -8285,7 +8432,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__77(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -8294,14 +8441,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__77(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__76(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_a_varInfo_numIntParams, modelica_metatype _in_a_vars_intParamVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -8352,20 +8501,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__76(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__76(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numIntParams, modelica_metatype _in_a_vars_intParamVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numIntParams);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numIntParams);
   _out_txt = omc_CodegenEmbeddedC_fun__76(threadData, _in_txt, tmp1, _in_a_vars_intParamVars);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -8377,7 +8527,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__75(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -8409,7 +8560,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__75(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -8418,14 +8569,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__75(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__74(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_a_varInfo_numParams, modelica_metatype _in_a_vars_paramVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -8476,20 +8629,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__74(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__74(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numParams, modelica_metatype _in_a_vars_paramVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numParams);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numParams);
   _out_txt = omc_CodegenEmbeddedC_fun__74(threadData, _in_txt, tmp1, _in_a_vars_paramVars);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -8501,7 +8655,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__73(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -8533,7 +8688,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__73(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -8542,14 +8697,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__73(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__72(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_a_varInfo_numStringAlgVars, modelica_metatype _in_a_vars_stringAlgVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -8600,20 +8757,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__72(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__72(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numStringAlgVars, modelica_metatype _in_a_vars_stringAlgVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numStringAlgVars);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numStringAlgVars);
   _out_txt = omc_CodegenEmbeddedC_fun__72(threadData, _in_txt, tmp1, _in_a_vars_stringAlgVars);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -8625,7 +8783,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__71(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -8657,7 +8816,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__71(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -8666,14 +8825,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__71(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__70(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_a_varInfo_numBoolAlgVars, modelica_metatype _in_a_vars_boolAlgVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -8724,20 +8885,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__70(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__70(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numBoolAlgVars, modelica_metatype _in_a_vars_boolAlgVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numBoolAlgVars);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numBoolAlgVars);
   _out_txt = omc_CodegenEmbeddedC_fun__70(threadData, _in_txt, tmp1, _in_a_vars_boolAlgVars);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -8749,7 +8911,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__69(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -8781,7 +8944,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__69(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -8790,14 +8953,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__69(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__68(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_a_varInfo_numIntAlgVars, modelica_metatype _in_a_vars_intAlgVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -8848,20 +9013,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__68(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__68(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numIntAlgVars, modelica_metatype _in_a_vars_intAlgVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numIntAlgVars);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numIntAlgVars);
   _out_txt = omc_CodegenEmbeddedC_fun__68(threadData, _in_txt, tmp1, _in_a_vars_intAlgVars);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -8873,7 +9039,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__67(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -8905,7 +9072,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__67(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -8914,14 +9081,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__67(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__66(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_mArg, modelica_metatype _in_a_vars_realOptimizeFinalConstraintsVars, modelica_metatype _in_a_vars_realOptimizeConstraintsVars, modelica_metatype _in_a_vars_discreteAlgVars, modelica_metatype _in_a_vars_algVars, modelica_metatype _in_a_vars_derivativeVars, modelica_metatype _in_a_vars_stateVars)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -9012,20 +9181,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__66(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__66(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_mArg, modelica_metatype _in_a_vars_realOptimizeFinalConstraintsVars, modelica_metatype _in_a_vars_realOptimizeConstraintsVars, modelica_metatype _in_a_vars_discreteAlgVars, modelica_metatype _in_a_vars_algVars, modelica_metatype _in_a_vars_derivativeVars, modelica_metatype _in_a_vars_stateVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_mArg);
+  tmp1 = omc_unbox_integer(_in_mArg);
   _out_txt = omc_CodegenEmbeddedC_fun__66(threadData, _in_txt, tmp1, _in_a_vars_realOptimizeFinalConstraintsVars, _in_a_vars_realOptimizeConstraintsVars, _in_a_vars_discreteAlgVars, _in_a_vars_algVars, _in_a_vars_derivativeVars, _in_a_vars_stateVars);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -9037,7 +9207,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__65(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -9069,7 +9240,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__65(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -9078,7 +9249,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__65(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__64(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -9087,7 +9259,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__64(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -9119,7 +9292,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__64(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -9128,7 +9301,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__64(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__63(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -9137,7 +9311,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__63(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -9169,7 +9344,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__63(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -9178,7 +9353,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__63(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__62(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -9187,7 +9363,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__62(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -9219,7 +9396,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__62(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -9228,7 +9405,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__62(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__61(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -9237,7 +9415,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__61(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -9269,7 +9448,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__61(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -9278,7 +9457,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__61(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__60(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftxt, modelica_metatype _items)
@@ -9287,7 +9467,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__60(threadDa
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _txt = __omcQ_24in_5Ftxt;
   {
@@ -9319,7 +9500,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__60(threadDa
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
@@ -9328,14 +9509,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_lm__60(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _txt;
+  omc_ret_ = _txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__59(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_mArg)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -9379,20 +9562,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__59(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__59(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_mArg)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_mArg);
+  tmp1 = omc_unbox_integer(_in_mArg);
   _out_txt = omc_CodegenEmbeddedC_fun__59(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -9402,7 +9586,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__58(threadD
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -9446,20 +9631,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__58(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__58(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numIntParams)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numIntParams);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numIntParams);
   _out_txt = omc_CodegenEmbeddedC_fun__58(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -9469,7 +9655,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__57(threadD
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -9513,20 +9700,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__57(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__57(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numBoolParams)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numBoolParams);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numBoolParams);
   _out_txt = omc_CodegenEmbeddedC_fun__57(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -9536,7 +9724,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__56(threadD
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -9580,20 +9769,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__56(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__56(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numIntParams)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numIntParams);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numIntParams);
   _out_txt = omc_CodegenEmbeddedC_fun__56(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -9603,7 +9793,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__55(threadD
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -9647,20 +9838,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__55(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__55(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numParams)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numParams);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numParams);
   _out_txt = omc_CodegenEmbeddedC_fun__55(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -9670,7 +9862,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__54(threadD
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -9706,20 +9899,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__54(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__54(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numStringAlgVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numStringAlgVars);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numStringAlgVars);
   _out_txt = omc_CodegenEmbeddedC_fun__54(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -9729,7 +9923,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__53(threadD
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -9773,20 +9968,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__53(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__53(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numBoolAlgVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numBoolAlgVars);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numBoolAlgVars);
   _out_txt = omc_CodegenEmbeddedC_fun__53(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -9796,7 +9992,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__52(threadD
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -9840,20 +10037,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__52(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__52(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varInfo_numIntAlgVars)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_a_varInfo_numIntAlgVars);
+  tmp1 = omc_unbox_integer(_in_a_varInfo_numIntAlgVars);
   _out_txt = omc_CodegenEmbeddedC_fun__52(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;
@@ -9863,7 +10061,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__51(threadD
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* match expression */
@@ -9907,20 +10106,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_CodegenEmbeddedC_fun__51(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_CodegenEmbeddedC_fun__51(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_mArg)
 {
   modelica_integer tmp1;
   modelica_metatype _out_txt = NULL;
-  tmp1 = mmc_unbox_integer(_in_mArg);
+  tmp1 = omc_unbox_integer(_in_mArg);
   _out_txt = omc_CodegenEmbeddedC_fun__51(threadData, _in_txt, tmp1);
   /* skip box _out_txt; Tpl.Text */
   return _out_txt;

@@ -31,7 +31,7 @@ extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_extFunctionName(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_name, modelica_string _a_language);
 #define boxptr_CodegenUtil_extFunctionName omc_CodegenUtil_extFunctionName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_extFunctionName,2,0) {(void*) boxptr_CodegenUtil_extFunctionName,0}};
@@ -41,49 +41,49 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_extFunctionName,2,0) {(void
 #define boxptr_CodegenUtil_fun__74 omc_CodegenUtil_fun__74
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_errorMsg(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_errMessage);
 #define boxptr_CodegenUtil_errorMsg omc_CodegenUtil_errorMsg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_errorMsg,2,0) {(void*) boxptr_CodegenUtil_errorMsg,0}};
 #define boxvar_CodegenUtil_errorMsg MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_errorMsg)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_error(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_srcInfo, modelica_string _a_errMessage);
 #define boxptr_CodegenUtil_error omc_CodegenUtil_error
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_error,2,0) {(void*) boxptr_CodegenUtil_error,0}};
 #define boxvar_CodegenUtil_error MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_error)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_dotPath(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
 #define boxptr_CodegenUtil_dotPath omc_CodegenUtil_dotPath
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_dotPath,2,0) {(void*) boxptr_CodegenUtil_dotPath,0}};
 #define boxvar_CodegenUtil_dotPath MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_dotPath)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_getAliasVar(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_aliasvar);
 #define boxptr_CodegenUtil_getAliasVar omc_CodegenUtil_getAliasVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_getAliasVar,2,0) {(void*) boxptr_CodegenUtil_getAliasVar,0}};
 #define boxvar_CodegenUtil_getAliasVar MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_getAliasVar)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_variabilityString(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varKind);
 #define boxptr_CodegenUtil_variabilityString omc_CodegenUtil_variabilityString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_variabilityString,2,0) {(void*) boxptr_CodegenUtil_variabilityString,0}};
 #define boxvar_CodegenUtil_variabilityString MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_variabilityString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_getVariablity(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varKind);
 #define boxptr_CodegenUtil_getVariablity omc_CodegenUtil_getVariablity
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_getVariablity,2,0) {(void*) boxptr_CodegenUtil_getVariablity,0}};
 #define boxvar_CodegenUtil_getVariablity MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_getVariablity)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_initValXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_string _in_a_stringQuotes);
 #define boxptr_CodegenUtil_initValXml omc_CodegenUtil_initValXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_initValXml,2,0) {(void*) boxptr_CodegenUtil_initValXml,0}};
@@ -93,49 +93,49 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_initValXml,2,0) {(void*) bo
 #define boxptr_CodegenUtil_lm__65 omc_CodegenUtil_lm__65
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_initDefaultValXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type__);
 #define boxptr_CodegenUtil_initDefaultValXml omc_CodegenUtil_initDefaultValXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_initDefaultValXml,2,0) {(void*) boxptr_CodegenUtil_initDefaultValXml,0}};
 #define boxvar_CodegenUtil_initDefaultValXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_initDefaultValXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_escapeSingleQuoteIdent(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ident);
 #define boxptr_CodegenUtil_escapeSingleQuoteIdent omc_CodegenUtil_escapeSingleQuoteIdent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_escapeSingleQuoteIdent,2,0) {(void*) boxptr_CodegenUtil_escapeSingleQuoteIdent,0}};
 #define boxvar_CodegenUtil_escapeSingleQuoteIdent MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_escapeSingleQuoteIdent)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_crefCCommentWithVariability(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_v);
 #define boxptr_CodegenUtil_crefCCommentWithVariability omc_CodegenUtil_crefCCommentWithVariability
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_crefCCommentWithVariability,2,0) {(void*) boxptr_CodegenUtil_crefCCommentWithVariability,0}};
 #define boxvar_CodegenUtil_crefCCommentWithVariability MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_crefCCommentWithVariability)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_crefCComment(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_v, modelica_string _in_a_vName);
 #define boxptr_CodegenUtil_crefCComment omc_CodegenUtil_crefCComment
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_crefCComment,2,0) {(void*) boxptr_CodegenUtil_crefCComment,0}};
 #define boxvar_CodegenUtil_crefCComment MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_crefCComment)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_escapeCComments(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_stringWithCComments);
 #define boxptr_CodegenUtil_escapeCComments omc_CodegenUtil_escapeCComments
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_escapeCComments,2,0) {(void*) boxptr_CodegenUtil_escapeCComments,0}};
 #define boxvar_CodegenUtil_escapeCComments MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_escapeCComments)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_subscriptStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscript);
 #define boxptr_CodegenUtil_subscriptStr omc_CodegenUtil_subscriptStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_subscriptStr,2,0) {(void*) boxptr_CodegenUtil_subscriptStr,0}};
 #define boxvar_CodegenUtil_subscriptStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_subscriptStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_subscriptsStrMatlabSafe(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts);
 #define boxptr_CodegenUtil_subscriptsStrMatlabSafe omc_CodegenUtil_subscriptsStrMatlabSafe
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_subscriptsStrMatlabSafe,2,0) {(void*) boxptr_CodegenUtil_subscriptsStrMatlabSafe,0}};
@@ -145,14 +145,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_subscriptsStrMatlabSafe,2,0
 #define boxptr_CodegenUtil_lm__53 omc_CodegenUtil_lm__53
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_crefStrMatlabSafe(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenUtil_crefStrMatlabSafe omc_CodegenUtil_crefStrMatlabSafe
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_crefStrMatlabSafe,2,0) {(void*) boxptr_CodegenUtil_crefStrMatlabSafe,0}};
 #define boxvar_CodegenUtil_crefStrMatlabSafe MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_crefStrMatlabSafe)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_subscriptsStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts);
 #define boxptr_CodegenUtil_subscriptsStr omc_CodegenUtil_subscriptsStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_subscriptsStr,2,0) {(void*) boxptr_CodegenUtil_subscriptsStr,0}};
@@ -162,42 +162,42 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_subscriptsStr,2,0) {(void*)
 #define boxptr_CodegenUtil_lm__50 omc_CodegenUtil_lm__50
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_crefStrNoUnderscore(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenUtil_crefStrNoUnderscore omc_CodegenUtil_crefStrNoUnderscore
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_crefStrNoUnderscore,2,0) {(void*) boxptr_CodegenUtil_crefStrNoUnderscore,0}};
 #define boxvar_CodegenUtil_crefStrNoUnderscore MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_crefStrNoUnderscore)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_crefStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenUtil_crefStr omc_CodegenUtil_crefStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_crefStr,2,0) {(void*) boxptr_CodegenUtil_crefStr,0}};
 #define boxvar_CodegenUtil_crefStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_crefStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_underscorePath(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
 #define boxptr_CodegenUtil_underscorePath omc_CodegenUtil_underscorePath
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_underscorePath,2,0) {(void*) boxptr_CodegenUtil_underscorePath,0}};
 #define boxvar_CodegenUtil_underscorePath MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_underscorePath)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_getGeneralTarget(threadData_t *threadData, modelica_metatype _in_txt, modelica_string _in_a_str);
 #define boxptr_CodegenUtil_getGeneralTarget omc_CodegenUtil_getGeneralTarget
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_getGeneralTarget,2,0) {(void*) boxptr_CodegenUtil_getGeneralTarget,0}};
 #define boxvar_CodegenUtil_getGeneralTarget MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_getGeneralTarget)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_replaceDotAndUnderscore(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_str);
 #define boxptr_CodegenUtil_replaceDotAndUnderscore omc_CodegenUtil_replaceDotAndUnderscore
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_replaceDotAndUnderscore,2,0) {(void*) boxptr_CodegenUtil_replaceDotAndUnderscore,0}};
 #define boxvar_CodegenUtil_replaceDotAndUnderscore MMC_REFSTRUCTLIT(boxvar_lit_CodegenUtil_replaceDotAndUnderscore)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenUtil_symbolName(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_modelNamePrefix, modelica_string _a_symbolName);
 #define boxptr_CodegenUtil_symbolName omc_CodegenUtil_symbolName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenUtil_symbolName,2,0) {(void*) boxptr_CodegenUtil_symbolName,0}};

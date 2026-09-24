@@ -93,21 +93,21 @@ extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DynamicOptimization_checkObjectIsSet(threadData_t *threadData, modelica_metatype _inVars, modelica_string _CrefName);
 #define boxptr_DynamicOptimization_checkObjectIsSet omc_DynamicOptimization_checkObjectIsSet
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_checkObjectIsSet,2,0) {(void*) boxptr_DynamicOptimization_checkObjectIsSet,0}};
 #define boxvar_DynamicOptimization_checkObjectIsSet MMC_REFSTRUCTLIT(boxvar_lit_DynamicOptimization_checkObjectIsSet)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DynamicOptimization_reduceDynamicOptimization(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_DynamicOptimization_reduceDynamicOptimization omc_DynamicOptimization_reduceDynamicOptimization
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_reduceDynamicOptimization,2,0) {(void*) boxptr_DynamicOptimization_reduceDynamicOptimization,0}};
 #define boxvar_DynamicOptimization_reduceDynamicOptimization MMC_REFSTRUCTLIT(boxvar_lit_DynamicOptimization_reduceDynamicOptimization)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DynamicOptimization_simplifyConstraints(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_DynamicOptimization_simplifyConstraints omc_DynamicOptimization_simplifyConstraints
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_simplifyConstraints,2,0) {(void*) boxptr_DynamicOptimization_simplifyConstraints,0}};
@@ -117,7 +117,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_simplifyConstraints
 #define boxptr_DynamicOptimization_res2Con omc_DynamicOptimization_res2Con
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DynamicOptimization_removeLoops(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_DynamicOptimization_removeLoops omc_DynamicOptimization_removeLoops
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_removeLoops,2,0) {(void*) boxptr_DynamicOptimization_removeLoops,0}};
@@ -127,7 +127,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_removeLoops,2,0) {(
 #define boxptr_DynamicOptimization_traverserinputDerivativesForDynOpt omc_DynamicOptimization_traverserinputDerivativesForDynOpt
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DynamicOptimization_inputDerivativesForDynOpt(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_DynamicOptimization_inputDerivativesForDynOpt omc_DynamicOptimization_inputDerivativesForDynOpt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_inputDerivativesForDynOpt,2,0) {(void*) boxptr_DynamicOptimization_inputDerivativesForDynOpt,0}};
@@ -176,7 +176,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_inputDerivativesFor
 #define boxptr_DynamicOptimization_addOptimizationVarsEqns omc_DynamicOptimization_addOptimizationVarsEqns
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DynamicOptimization_createDynamicOptimization(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fdae);
 #define boxptr_DynamicOptimization_createDynamicOptimization omc_DynamicOptimization_createDynamicOptimization
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DynamicOptimization_createDynamicOptimization,2,0) {(void*) boxptr_DynamicOptimization_createDynamicOptimization,0}};

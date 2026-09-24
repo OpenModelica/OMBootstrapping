@@ -20,65 +20,59 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFCardinalityTable_addConnect
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFCardinalityTable_addConnector_update,2,0) {(void*) boxptr_NFCardinalityTable_addConnector_update,0}};
 #define boxvar_NFCardinalityTable_addConnector_update MMC_REFSTRUCTLIT(boxvar_lit_NFCardinalityTable_addConnector_update)
 
-DLLDirection
+DLLModelDirection
 void omc_NFCardinalityTable_print(threadData_t *threadData, modelica_metatype _table)
 {
   modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
+  modelica_string tmp2;
   modelica_string tmp3;
-  modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
+  modelica_string tmp4;
+  modelica_string tmp5;
   modelica_metatype tmpMeta6;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   {
     modelica_metatype _e;
     for (tmpMeta1 = omc_UnorderedMap_toList(threadData, _table); !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
     {
       _e = MMC_CAR(tmpMeta1);
-      tmpMeta2 = stringAppend(omc_Util_tuple21(threadData, _e),_OMC_LIT0);
-      tmp3 = modelica_integer_to_modelica_string(mmc_unbox_integer(omc_Util_tuple22(threadData, _e)), ((modelica_integer) 0), 1 /* true */);
-      tmpMeta4 = stringAppend(tmpMeta2,tmp3);
-      tmpMeta5 = stringAppend(tmpMeta4,_OMC_LIT1);
-      fputs(MMC_STRINGDATA(tmpMeta5),stdout);
+      tmp2 = stringAppend(omc_Util_tuple21(threadData, _e),_OMC_LIT0);
+      tmp3 = modelica_integer_to_modelica_string(omc_unbox_integer(omc_Util_tuple22(threadData, _e)), ((modelica_integer) 0), 1 /* true */);
+      tmp4 = stringAppend(tmp2,tmp3);
+      tmp5 = stringAppend(tmp4,_OMC_LIT1);
+      fputs(omc_string_data(tmp5),stdout);
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFCardinalityTable_evaluateCardinality(threadData_t *threadData, modelica_metatype _arg, modelica_metatype _table)
 {
   modelica_metatype _res = NULL;
   modelica_integer _count;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   // _count has no default value.
-  _count = mmc_unbox_integer(omc_UnorderedMap_getOrDefault(threadData, omc_NFExpression_toString(threadData, _arg), _table, mmc_mk_integer(((modelica_integer) 0))));
+  _count = omc_unbox_integer(omc_UnorderedMap_getOrDefault(threadData, omc_NFExpression_toString(threadData, _arg), _table, omc_mk_integer(((modelica_integer) 0))));
 
-  tmpMeta1 = mmc_mk_box2(3, &NFExpression_INTEGER__desc, mmc_mk_integer(_count));
+  tmpMeta1 = omc_mk_box2(3, &NFExpression_INTEGER__desc, omc_mk_integer(_count));
   _res = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_NFCardinalityTable_addConnector_update(threadData_t *threadData, modelica_metatype _count)
 {
   modelica_integer _outCount;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCount has no default value.
   { /* match expression */
@@ -94,8 +88,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFCardinalityTable_addConnector_u
           modelica_metatype tmpMeta6;
           modelica_integer tmp7;
           if (optionNone(tmp4_1)) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           _outCount = tmp7  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1 = ((modelica_integer) 1) + _outCount;
@@ -113,68 +107,61 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFCardinalityTable_addConnector_u
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outCount = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _outCount;
+  omc_ret_ = _outCount;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFCardinalityTable_addConnector_update(threadData_t *threadData, modelica_metatype _count)
 {
   modelica_integer _outCount;
   modelica_metatype out_outCount;
   _outCount = omc_NFCardinalityTable_addConnector_update(threadData, _count);
-  out_outCount = mmc_mk_icon(_outCount);
+  out_outCount = omc_mk_icon(_outCount);
   return out_outCount;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFCardinalityTable_addConnector(threadData_t *threadData, modelica_metatype _conn, modelica_metatype _table)
 {
   modelica_string _conn_str = NULL;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _conn_str has no default value.
-  _conn_str = omc_NFConnector_toString(threadData, _conn);
+  omc_string_store(&(_conn_str), omc_NFConnector_toString(threadData, _conn));
 
   omc_UnorderedMap_addUpdate(threadData, _conn_str, boxvar_NFCardinalityTable_addConnector_update, _table);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFCardinalityTable_fromConnections(threadData_t *threadData, modelica_metatype _conns)
 {
   modelica_metatype _table = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _table has no default value.
   if(omc_System_getUsesCardinality(threadData))
   {
-    _table = omc_NFCardinalityTable_emptyCardinalityTable(threadData, modelica_integer_max((modelica_integer)(((modelica_integer) 1)),(modelica_integer)(omc_Util_nextPrime(threadData, listLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2))))))));
+    _table = omc_NFCardinalityTable_emptyCardinalityTable(threadData, modelica_integer_max((modelica_integer)(((modelica_integer) 1)),(modelica_integer)(omc_Util_nextPrime(threadData, listLength((OMC_BOX_FIELD(_conns, 2)))))));
 
     {
       modelica_metatype _conn;
-      for (tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2))); !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
+      for (tmpMeta1 = (OMC_BOX_FIELD(_conns, 2)); !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
       {
         _conn = MMC_CAR(tmpMeta1);
-        omc_NFCardinalityTable_addConnector(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conn), 2))), _table);
+        omc_NFCardinalityTable_addConnector(threadData, (OMC_BOX_FIELD(_conn, 2)), _table);
 
-        omc_NFCardinalityTable_addConnector(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conn), 3))), _table);
+        omc_NFCardinalityTable_addConnector(threadData, (OMC_BOX_FIELD(_conn, 3)), _table);
       }
     }
   }
@@ -183,25 +170,28 @@ modelica_metatype omc_NFCardinalityTable_fromConnections(threadData_t *threadDat
     _table = omc_NFCardinalityTable_emptyCardinalityTable(threadData, ((modelica_integer) 1));
   }
   _return: OMC_LABEL_UNUSED
-  return _table;
+  omc_ret_ = _table;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFCardinalityTable_emptyCardinalityTable(threadData_t *threadData, modelica_integer _size)
 {
   modelica_metatype _table = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _table has no default value.
   _table = omc_UnorderedMap_new(threadData, boxvar_stringHashDjb2, boxvar_stringEq, _size);
   _return: OMC_LABEL_UNUSED
-  return _table;
+  omc_ret_ = _table;
+  return omc_ret_;
 }
 modelica_metatype boxptr_NFCardinalityTable_emptyCardinalityTable(threadData_t *threadData, modelica_metatype _size)
 {
   modelica_integer tmp1;
   modelica_metatype _table = NULL;
-  tmp1 = mmc_unbox_integer(_size);
+  tmp1 = omc_unbox_integer(_size);
   _table = omc_NFCardinalityTable_emptyCardinalityTable(threadData, tmp1);
   /* skip box _table; UnorderedMap<String,#Integer> */
   return _table;

@@ -33,7 +33,7 @@ extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenOMSICpp_simulationOMSUCPPMainRunScript(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_string _in_a_preRunCommandLinux, modelica_string _in_a_preRunCommandWindows, modelica_string _in_a_execCommandLinux, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace);
 #define boxptr_CodegenOMSICpp_simulationOMSUCPPMainRunScript omc_CodegenOMSICpp_simulationOMSUCPPMainRunScript
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSICpp_simulationOMSUCPPMainRunScript,2,0) {(void*) boxptr_CodegenOMSICpp_simulationOMSUCPPMainRunScript,0}};
@@ -52,7 +52,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSICpp_simulationOMSUCPPMainRun
 #define boxptr_CodegenOMSICpp_fun__51 omc_CodegenOMSICpp_fun__51
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenOMSICpp_translateModel(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_simCode, modelica_string _a_FMUVersion, modelica_string _a_FMUType);
 #define boxptr_CodegenOMSICpp_translateModel omc_CodegenOMSICpp_translateModel
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenOMSICpp_translateModel,2,0) {(void*) boxptr_CodegenOMSICpp_translateModel,0}};

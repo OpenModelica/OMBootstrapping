@@ -18,6 +18,7 @@ extern "C" {
 #include "NFOperator.h"
 #include "NFSimplifyExp.h"
 #include "Pointer.h"
+#include "PointerWeak.h"
 #include "StringUtil.h"
 #include "UnorderedMap.h"
 #include "Util.h"

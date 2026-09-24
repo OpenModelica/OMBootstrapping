@@ -56,6 +56,58 @@ ADD_METARECORD_DEFINITIONS struct record_description NBAdjacency_Mode_MODE__desc
 extern struct record_description NBAdjacency_Mode_MODE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NBAdjacency_IntMatrix_INT__MATRIX__desc_added
+#define NBAdjacency_IntMatrix_INT__MATRIX__desc_added
+ADD_METARECORD_DEFINITIONS const char* NBAdjacency_IntMatrix_INT__MATRIX__desc__fields[4] = {"start","len","data","aux"};
+ADD_METARECORD_DEFINITIONS struct record_description NBAdjacency_IntMatrix_INT__MATRIX__desc = {
+  "NBAdjacency_IntMatrix_INT__MATRIX",
+  "NBAdjacency.IntMatrix.INT_MATRIX",
+  NBAdjacency_IntMatrix_INT__MATRIX__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NBAdjacency_IntMatrix_INT__MATRIX__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NBAdjacency_IntMatrix_Builder_BUILDER__desc_added
+#define NBAdjacency_IntMatrix_Builder_BUILDER__desc_added
+ADD_METARECORD_DEFINITIONS const char* NBAdjacency_IntMatrix_Builder_BUILDER__desc__fields[3] = {"pairs","aux","hasAux"};
+ADD_METARECORD_DEFINITIONS struct record_description NBAdjacency_IntMatrix_Builder_BUILDER__desc = {
+  "NBAdjacency_IntMatrix_Builder_BUILDER",
+  "NBAdjacency.IntMatrix.Builder.BUILDER",
+  NBAdjacency_IntMatrix_Builder_BUILDER__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NBAdjacency_IntMatrix_Builder_BUILDER__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NBAdjacency_IntMatrix_Builder_BUILDER__desc_added
+#define NBAdjacency_IntMatrix_Builder_BUILDER__desc_added
+ADD_METARECORD_DEFINITIONS const char* NBAdjacency_IntMatrix_Builder_BUILDER__desc__fields[3] = {"pairs","aux","hasAux"};
+ADD_METARECORD_DEFINITIONS struct record_description NBAdjacency_IntMatrix_Builder_BUILDER__desc = {
+  "NBAdjacency_IntMatrix_Builder_BUILDER",
+  "NBAdjacency.IntMatrix.Builder.BUILDER",
+  NBAdjacency_IntMatrix_Builder_BUILDER__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NBAdjacency_IntMatrix_Builder_BUILDER__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NBAdjacency_IntMatrix_INT__MATRIX__desc_added
+#define NBAdjacency_IntMatrix_INT__MATRIX__desc_added
+ADD_METARECORD_DEFINITIONS const char* NBAdjacency_IntMatrix_INT__MATRIX__desc__fields[4] = {"start","len","data","aux"};
+ADD_METARECORD_DEFINITIONS struct record_description NBAdjacency_IntMatrix_INT__MATRIX__desc = {
+  "NBAdjacency_IntMatrix_INT__MATRIX",
+  "NBAdjacency.IntMatrix.INT_MATRIX",
+  NBAdjacency_IntMatrix_INT__MATRIX__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NBAdjacency_IntMatrix_INT__MATRIX__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBAdjacency_Matrix_EMPTY__desc_added
 #define NBAdjacency_Matrix_EMPTY__desc_added
 ADD_METARECORD_DEFINITIONS const char* NBAdjacency_Matrix_EMPTY__desc__fields[1] = {"st"};

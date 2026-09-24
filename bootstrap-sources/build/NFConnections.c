@@ -47,13 +47,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnections_analyseArrayCon
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConnections_analyseArrayConnector_update,2,0) {(void*) boxptr_NFConnections_analyseArrayConnector_update,0}};
 #define boxvar_NFConnections_analyseArrayConnector_update MMC_REFSTRUCTLIT(boxvar_lit_NFConnections_analyseArrayConnector_update)
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_toStringList(threadData_t *threadData, modelica_metatype _conns)
 {
   modelica_metatype _strl = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _strl = tmpMeta1;
@@ -66,7 +67,7 @@ modelica_metatype omc_NFConnections_toStringList(threadData_t *threadData, model
     modelica_integer tmp6;
     modelica_metatype _c_loopVar = 0;
     modelica_metatype _c;
-    _c_loopVar = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2)));
+    _c_loopVar = (OMC_BOX_FIELD(_conns, 2));
     tmpMeta4 = MMC_REFSTRUCTLIT(mmc_nil);
     __omcQ_24tmpVar3 = tmpMeta4; /* defaultValue */
     tmp3 = &__omcQ_24tmpVar3;
@@ -78,14 +79,14 @@ modelica_metatype omc_NFConnections_toStringList(threadData_t *threadData, model
         tmp6--;
       }
       if (tmp6 == 0) {
-        tmpMeta5 = mmc_mk_cons(omc_NFConnector_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 2)))), mmc_mk_cons(omc_NFConnector_toString(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 3)))), MMC_REFSTRUCTLIT(mmc_nil)));
+        tmpMeta5 = mmc_mk_cons(omc_NFConnector_toString(threadData, (OMC_BOX_FIELD(_c, 2))), mmc_mk_cons(omc_NFConnector_toString(threadData, (OMC_BOX_FIELD(_c, 3))), MMC_REFSTRUCTLIT(mmc_nil)));
         __omcQ_24tmpVar2 = tmpMeta5;
         *tmp3 = mmc_mk_cons(__omcQ_24tmpVar2,0);
         tmp3 = &MMC_CDR(*tmp3);
       } else if (tmp6 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp3 = mmc_mk_nil();
@@ -93,10 +94,11 @@ modelica_metatype omc_NFConnections_toStringList(threadData_t *threadData, model
   }
   _strl = tmpMeta2;
   _return: OMC_LABEL_UNUSED
-  return _strl;
+  omc_ret_ = _strl;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFConnections_toString(threadData_t *threadData, modelica_metatype _conns)
 {
   modelica_string _str = NULL;
@@ -110,7 +112,8 @@ modelica_string omc_NFConnections_toString(threadData_t *threadData, modelica_me
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
@@ -120,7 +123,7 @@ modelica_string omc_NFConnections_toString(threadData_t *threadData, modelica_me
 
   {
     modelica_metatype _f;
-    for (tmpMeta3 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 3))); !listEmpty(tmpMeta3); tmpMeta3=MMC_CDR(tmpMeta3))
+    for (tmpMeta3 = (OMC_BOX_FIELD(_conns, 3)); !listEmpty(tmpMeta3); tmpMeta3=MMC_CDR(tmpMeta3))
     {
       _f = MMC_CAR(tmpMeta3);
       tmpMeta4 = mmc_mk_cons(omc_NFConnector_toString(threadData, _f), _strl);
@@ -133,7 +136,7 @@ modelica_string omc_NFConnections_toString(threadData_t *threadData, modelica_me
 
   {
     modelica_metatype _c;
-    for (tmpMeta7 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2))); !listEmpty(tmpMeta7); tmpMeta7=MMC_CDR(tmpMeta7))
+    for (tmpMeta7 = (OMC_BOX_FIELD(_conns, 2)); !listEmpty(tmpMeta7); tmpMeta7=MMC_CDR(tmpMeta7))
     {
       _c = MMC_CAR(tmpMeta7);
       tmpMeta8 = mmc_mk_cons(omc_NFConnection_toString(threadData, _c), _strl);
@@ -143,19 +146,18 @@ modelica_string omc_NFConnections_toString(threadData_t *threadData, modelica_me
 
   _strl = listReverseInPlace(_strl);
 
-  _str = stringDelimitList(_strl, _OMC_LIT2);
+  omc_string_store(&(_str), stringDelimitList(_strl, _OMC_LIT2));
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnections_analyseArrayConnector_update(threadData_t *threadData, modelica_metatype _count)
 {
   modelica_integer _outCount;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCount has no default value.
   { /* match expression */
@@ -171,8 +173,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnections_analyseArrayConnect
           modelica_metatype tmpMeta6;
           modelica_integer tmp7;
           if (optionNone(tmp4_1)) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           _outCount = tmp7  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           tmp1 = ((_outCount >= ((modelica_integer) 0))?((modelica_integer) 1) + _outCount:((modelica_integer) -1));
@@ -190,34 +192,29 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFConnections_analyseArrayConnect
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outCount = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _outCount;
+  omc_ret_ = _outCount;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFConnections_analyseArrayConnector_update(threadData_t *threadData, modelica_metatype _count)
 {
   modelica_integer _outCount;
   modelica_metatype out_outCount;
   _outCount = omc_NFConnections_analyseArrayConnector_update(threadData, _count);
-  out_outCount = mmc_mk_icon(_outCount);
+  out_outCount = omc_mk_icon(_outCount);
   return out_outCount;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFConnections_analyseArrayConnector(threadData_t *threadData, modelica_metatype _conn, modelica_metatype _connectCounts)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   if(omc_NFConnector_isArray(threadData, _conn))
   {
@@ -225,44 +222,43 @@ void omc_NFConnections_analyseArrayConnector(threadData_t *threadData, modelica_
   }
   else
   {
-    if(omc_NFComponentRef_hasSubscripts(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conn), 2)))))
+    if(omc_NFComponentRef_hasSubscripts(threadData, (OMC_BOX_FIELD(_conn, 2))))
     {
-      omc_UnorderedMap_add(threadData, _conn, mmc_mk_integer(((modelica_integer) -1)), _connectCounts);
+      omc_UnorderedMap_add(threadData, _conn, omc_mk_integer(((modelica_integer) -1)), _connectCounts);
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_analyseArrayConnections(threadData_t *threadData, modelica_metatype _conns)
 {
   modelica_metatype _connectCounts = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _connectCounts has no default value.
-  _connectCounts = omc_UnorderedMap_new(threadData, boxvar_NFConnector_hashNoSubs, boxvar_NFConnector_isEqualNoSubs, listLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2)))));
+  _connectCounts = omc_UnorderedMap_new(threadData, boxvar_NFConnector_hashNoSubs, boxvar_NFConnector_isEqualNoSubs, listLength((OMC_BOX_FIELD(_conns, 2))));
 
   {
     modelica_metatype _conn;
-    for (tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2))); !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
+    for (tmpMeta1 = (OMC_BOX_FIELD(_conns, 2)); !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
     {
       _conn = MMC_CAR(tmpMeta1);
-      omc_NFConnections_analyseArrayConnector(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conn), 2))), _connectCounts);
+      omc_NFConnections_analyseArrayConnector(threadData, (OMC_BOX_FIELD(_conn, 2)), _connectCounts);
 
-      omc_NFConnections_analyseArrayConnector(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conn), 3))), _connectCounts);
+      omc_NFConnections_analyseArrayConnector(threadData, (OMC_BOX_FIELD(_conn, 3)), _connectCounts);
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _connectCounts;
+  omc_ret_ = _connectCounts;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_scalarize(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fconns, modelica_boolean _keepSingleConnectedArrays)
 {
   modelica_metatype __omcQ_24mrfa_5F0 = NULL;
@@ -284,7 +280,8 @@ modelica_metatype omc_NFConnections_scalarize(threadData_t *threadData, modelica
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // __omcQ_24mrfa_5F0 has no default value.
   // __omcQ_24mrfa_5F1 has no default value.
@@ -303,7 +300,7 @@ modelica_metatype omc_NFConnections_scalarize(threadData_t *threadData, modelica
 
     {
       modelica_metatype _f;
-      for (tmpMeta3 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 3))); !listEmpty(tmpMeta3); tmpMeta3=MMC_CDR(tmpMeta3))
+      for (tmpMeta3 = (OMC_BOX_FIELD(_conns, 3)); !listEmpty(tmpMeta3); tmpMeta3=MMC_CDR(tmpMeta3))
       {
         _f = MMC_CAR(tmpMeta3);
         _count = omc_NFConnections_connectCount(threadData, _f, _connect_counts);
@@ -325,10 +322,10 @@ modelica_metatype omc_NFConnections_scalarize(threadData_t *threadData, modelica
 
     {
       modelica_metatype _c;
-      for (tmpMeta6 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2))); !listEmpty(tmpMeta6); tmpMeta6=MMC_CDR(tmpMeta6))
+      for (tmpMeta6 = (OMC_BOX_FIELD(_conns, 2)); !listEmpty(tmpMeta6); tmpMeta6=MMC_CDR(tmpMeta6))
       {
         _c = MMC_CAR(tmpMeta6);
-        if((((!omc_NFPrefixes_ConnectorType_isStream(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 2)))), 5)))))) && (omc_NFConnections_connectCount(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 2))), _connect_counts) == ((modelica_integer) 1))) && (omc_NFConnections_connectCount(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c), 3))), _connect_counts) == ((modelica_integer) 1))))
+        if((((!omc_NFPrefixes_ConnectorType_isStream(threadData, omc_unbox_integer((OMC_BOX_FIELD((OMC_BOX_FIELD(_c, 2)), 5))))) && (omc_NFConnections_connectCount(threadData, (OMC_BOX_FIELD(_c, 2)), _connect_counts) == ((modelica_integer) 1))) && (omc_NFConnections_connectCount(threadData, (OMC_BOX_FIELD(_c, 3)), _connect_counts) == ((modelica_integer) 1))))
         {
           tmpMeta7 = mmc_mk_cons(_c, _connections);
           _connections = tmpMeta7;
@@ -344,80 +341,79 @@ modelica_metatype omc_NFConnections_scalarize(threadData_t *threadData, modelica
 
     __omcQ_24mrfa_5F1 = listReverseInPlace(_connections);
 
-    tmpMeta9 = mmc_mk_box4(3, &NFConnections_CONNECTIONS__desc, __omcQ_24mrfa_5F1, __omcQ_24mrfa_5F0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 4))));
+    tmpMeta9 = omc_mk_box4(3, &NFConnections_CONNECTIONS__desc, __omcQ_24mrfa_5F1, __omcQ_24mrfa_5F0, (OMC_BOX_FIELD(_conns, 4)));
     _conns = tmpMeta9;
   }
   else
   {
-    __omcQ_24mrfa_5F2 = omc_List_mapFlat(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 3))), boxvar_NFConnector_scalarize);
+    __omcQ_24mrfa_5F2 = omc_List_mapFlat(threadData, (OMC_BOX_FIELD(_conns, 3)), boxvar_NFConnector_scalarize);
 
-    __omcQ_24mrfa_5F3 = omc_List_mapFlat(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2))), boxvar_NFConnection_scalarize);
+    __omcQ_24mrfa_5F3 = omc_List_mapFlat(threadData, (OMC_BOX_FIELD(_conns, 2)), boxvar_NFConnection_scalarize);
 
-    tmpMeta10 = mmc_mk_box4(3, &NFConnections_CONNECTIONS__desc, __omcQ_24mrfa_5F3, __omcQ_24mrfa_5F2, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 4))));
+    tmpMeta10 = omc_mk_box4(3, &NFConnections_CONNECTIONS__desc, __omcQ_24mrfa_5F3, __omcQ_24mrfa_5F2, (OMC_BOX_FIELD(_conns, 4)));
     _conns = tmpMeta10;
   }
   _return: OMC_LABEL_UNUSED
-  return _conns;
+  omc_ret_ = _conns;
+  return omc_ret_;
 }
 modelica_metatype boxptr_NFConnections_scalarize(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fconns, modelica_metatype _keepSingleConnectedArrays)
 {
   modelica_integer tmp1;
   modelica_metatype _conns = NULL;
-  tmp1 = mmc_unbox_integer(_keepSingleConnectedArrays);
+  tmp1 = omc_unbox_integer(_keepSingleConnectedArrays);
   _conns = omc_NFConnections_scalarize(threadData, __omcQ_24in_5Fconns, tmp1);
   /* skip box _conns; NFConnections */
   return _conns;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NFConnections_connectCount(threadData_t *threadData, modelica_metatype _conn, modelica_metatype _connectCounts)
 {
   modelica_integer _count;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _count has no default value.
-  _count = mmc_unbox_integer(omc_UnorderedMap_getOrDefault(threadData, _conn, _connectCounts, mmc_mk_integer(((modelica_integer) 0))));
+  _count = omc_unbox_integer(omc_UnorderedMap_getOrDefault(threadData, _conn, _connectCounts, omc_mk_integer(((modelica_integer) 0))));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _count;
+  omc_ret_ = _count;
+  return omc_ret_;
 }
 modelica_metatype boxptr_NFConnections_connectCount(threadData_t *threadData, modelica_metatype _conn, modelica_metatype _connectCounts)
 {
   modelica_integer _count;
   modelica_metatype out_count;
   _count = omc_NFConnections_connectCount(threadData, _conn, _connectCounts);
-  out_count = mmc_mk_icon(_count);
+  out_count = omc_mk_icon(_count);
   return out_count;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_split(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fconns)
 {
   modelica_metatype __omcQ_24mrfa_5F4 = NULL;
   modelica_metatype __omcQ_24mrfa_5F5 = NULL;
   modelica_metatype _conns = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // __omcQ_24mrfa_5F4 has no default value.
   // __omcQ_24mrfa_5F5 has no default value.
   _conns = __omcQ_24in_5Fconns;
-  __omcQ_24mrfa_5F4 = omc_List_mapFlat(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 3))), boxvar_NFConnector_split);
+  __omcQ_24mrfa_5F4 = omc_List_mapFlat(threadData, (OMC_BOX_FIELD(_conns, 3)), boxvar_NFConnector_split);
 
-  __omcQ_24mrfa_5F5 = omc_List_mapFlat(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2))), boxvar_NFConnection_split);
+  __omcQ_24mrfa_5F5 = omc_List_mapFlat(threadData, (OMC_BOX_FIELD(_conns, 2)), boxvar_NFConnection_split);
 
-  tmpMeta1 = mmc_mk_box4(3, &NFConnections_CONNECTIONS__desc, __omcQ_24mrfa_5F5, __omcQ_24mrfa_5F4, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 4))));
+  tmpMeta1 = omc_mk_box4(3, &NFConnections_CONNECTIONS__desc, __omcQ_24mrfa_5F5, __omcQ_24mrfa_5F4, (OMC_BOX_FIELD(_conns, 4)));
   _conns = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _conns;
+  omc_ret_ = _conns;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_makeConnectors(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _ty, modelica_metatype _source)
 {
   modelica_metatype _connectors = NULL;
@@ -426,9 +422,10 @@ modelica_metatype omc_NFConnections_makeConnectors(threadData_t *threadData, mod
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  MMC_SO();
+  modelica_string tmp4;
+  modelica_string tmp5;
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _connectors has no default value.
   // _cref_exp has no default value.
@@ -441,7 +438,7 @@ modelica_metatype omc_NFConnections_makeConnectors(threadData_t *threadData, mod
     goto _return;
   }
 
-  tmpMeta2 = mmc_mk_box3(9, &NFExpression_CREF__desc, omc_NFComponentRef_getSubscriptedType(threadData, _cref, 0 /* false */), _cref);
+  tmpMeta2 = omc_mk_box3(9, &NFExpression_CREF__desc, omc_NFComponentRef_getSubscriptedType(threadData, _cref, 0 /* false */), _cref);
   _cref_exp = tmpMeta2;
 
   _cref_exp = omc_NFExpandExp_expand(threadData, _cref_exp, 0 /* false */, 0 /* false */ ,&_expanded);
@@ -453,15 +450,16 @@ modelica_metatype omc_NFConnections_makeConnectors(threadData_t *threadData, mod
   }
   else
   {
-    tmpMeta4 = stringAppend(_OMC_LIT6,omc_NFComponentRef_toString(threadData, _cref));
-    tmpMeta5 = stringAppend(tmpMeta4,_OMC_LIT2);
-    omc_Error_terminate(threadData, tmpMeta5, omc_ElementSource_getInfo(threadData, _source));
+    tmp4 = stringAppend(_OMC_LIT6,omc_NFComponentRef_toString(threadData, _cref));
+    tmp5 = stringAppend(tmp4,_OMC_LIT2);
+    omc_Error_terminate(threadData, tmp5, omc_ElementSource_getInfo(threadData, _source));
   }
   _return: OMC_LABEL_UNUSED
-  return _connectors;
+  omc_ret_ = _connectors;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_makeConnections(threadData_t *threadData, modelica_metatype _lhsCref, modelica_metatype _lhsType, modelica_metatype _rhsCref, modelica_metatype _rhsType, modelica_metatype _source, modelica_fnptr _isDeleted, modelica_metatype __omcQ_24in_5Fconnections)
 {
   modelica_metatype _connections = NULL;
@@ -477,13 +475,14 @@ modelica_metatype omc_NFConnections_makeConnections(threadData_t *threadData, mo
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _connections = __omcQ_24in_5Fconnections;
   // _cl1 has no default value.
   // _cl2 has no default value.
   // _c2 has no default value.
-  if((mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 2))), _lhsCref) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 1)))) (threadData, _lhsCref)) || mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 2))), _rhsCref) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 1)))) (threadData, _rhsCref))))
+  if((omc_unbox_boolean((OMC_BOX_FIELD(_isDeleted, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_isDeleted, 1))) (threadData, (OMC_BOX_FIELD(_isDeleted, 2)), _lhsCref) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_isDeleted, 1))) (threadData, _lhsCref)) || omc_unbox_boolean((OMC_BOX_FIELD(_isDeleted, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_isDeleted, 1))) (threadData, (OMC_BOX_FIELD(_isDeleted, 2)), _rhsCref) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_isDeleted, 1))) (threadData, _rhsCref))))
   {
     goto _return;
   }
@@ -510,25 +509,26 @@ modelica_metatype omc_NFConnections_makeConnections(threadData_t *threadData, mo
       _c1 = MMC_CAR(tmpMeta3);
       /* Pattern-matching assignment */
       tmpMeta4 = _cl2;
-      if (listEmpty(tmpMeta4)) MMC_THROW_INTERNAL();
+      if (listEmpty(tmpMeta4)) OMC_THROW_INTERNAL();
       tmpMeta5 = MMC_CAR(tmpMeta4);
       tmpMeta6 = MMC_CDR(tmpMeta4);
       _c2 = tmpMeta5;
       _cl2 = tmpMeta6;
 
-      if((!(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c1), 2)))) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c1), 2))))) || mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c2), 2)))) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_isDeleted), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_c2), 2))))))))
+      if((!(omc_unbox_boolean((OMC_BOX_FIELD(_isDeleted, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_isDeleted, 1))) (threadData, (OMC_BOX_FIELD(_isDeleted, 2)), (OMC_BOX_FIELD(_c1, 2))) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_isDeleted, 1))) (threadData, (OMC_BOX_FIELD(_c1, 2)))) || omc_unbox_boolean((OMC_BOX_FIELD(_isDeleted, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_isDeleted, 1))) (threadData, (OMC_BOX_FIELD(_isDeleted, 2)), (OMC_BOX_FIELD(_c2, 2))) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_isDeleted, 1))) (threadData, (OMC_BOX_FIELD(_c2, 2)))))))
       {
-        tmpMeta8 = mmc_mk_box3(3, &NFConnection_CONNECTION__desc, _c1, _c2);
+        tmpMeta8 = omc_mk_box3(3, &NFConnection_CONNECTION__desc, _c1, _c2);
         tmpMeta7 = mmc_mk_cons(tmpMeta8, _connections);
         _connections = tmpMeta7;
       }
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _connections;
+  omc_ret_ = _connections;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_collectFlows(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype __omcQ_24in_5Fconns)
 {
   modelica_metatype _conns = NULL;
@@ -537,7 +537,8 @@ modelica_metatype omc_NFConnections_collectFlows(threadData_t *threadData, model
   modelica_metatype _src = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _conns = __omcQ_24in_5Fconns;
   // _comp has no default value.
@@ -545,22 +546,22 @@ modelica_metatype omc_NFConnections_collectFlows(threadData_t *threadData, model
   // _src has no default value.
   {
     modelica_metatype _var;
-    for (tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 3))); !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
+    for (tmpMeta1 = (OMC_BOX_FIELD(_flatModel, 3)); !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
     {
       _var = MMC_CAR(tmpMeta1);
-      _comp = omc_NFInstNode_InstNode_component(threadData, omc_NFComponentRef_node(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 2)))));
+      _comp = omc_NFInstNode_InstNode_component(threadData, omc_NFComponentRef_node(threadData, (OMC_BOX_FIELD(_var, 2))));
 
       if(omc_NFComponent_isFlow(threadData, _comp))
       {
         _src = omc_ElementSource_createElementSource(threadData, omc_NFComponent_info(threadData, _comp), mmc_mk_none(), _OMC_LIT7, _OMC_LIT11);
 
-        _c = omc_NFConnector_fromFacedCref(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 3))), 1, _src);
+        _c = omc_NFConnector_fromFacedCref(threadData, (OMC_BOX_FIELD(_var, 2)), (OMC_BOX_FIELD(_var, 3)), 1, _src);
 
         _conns = omc_NFConnections_addFlow(threadData, _c, _conns);
 
-        if(omc_NFPrefixes_ConnectorType_isAugmented(threadData, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 6)))), 2))))))
+        if(omc_NFPrefixes_ConnectorType_isAugmented(threadData, omc_unbox_integer((OMC_BOX_FIELD((OMC_BOX_FIELD(_var, 6)), 2)))))
         {
-          _c = omc_NFConnector_fromFacedCref(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 3))), 2, _src);
+          _c = omc_NFConnector_fromFacedCref(threadData, (OMC_BOX_FIELD(_var, 2)), (OMC_BOX_FIELD(_var, 3)), 2, _src);
 
           _conns = omc_NFConnections_addFlow(threadData, _c, _conns);
         }
@@ -568,10 +569,11 @@ modelica_metatype omc_NFConnections_collectFlows(threadData_t *threadData, model
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _conns;
+  omc_ret_ = _conns;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_collectConnections(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel, modelica_fnptr _isDeleted, modelica_metatype *out_conns)
 {
   modelica_metatype _flatModel = NULL;
@@ -587,7 +589,8 @@ modelica_metatype omc_NFConnections_collectConnections(threadData_t *threadData,
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta17;
   modelica_metatype tmpMeta18;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _flatModel = __omcQ_24in_5FflatModel;
   _conns = omc_NFConnections_new(threadData);
@@ -600,7 +603,7 @@ modelica_metatype omc_NFConnections_collectConnections(threadData_t *threadData,
   // _ty2 has no default value.
   {
     modelica_metatype _eq;
-    for (tmpMeta2 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_flatModel), 4))); !listEmpty(tmpMeta2); tmpMeta2=MMC_CDR(tmpMeta2))
+    for (tmpMeta2 = (OMC_BOX_FIELD(_flatModel, 4)); !listEmpty(tmpMeta2); tmpMeta2=MMC_CDR(tmpMeta2))
     {
       _eq = MMC_CAR(tmpMeta2);
       { /* match expression */
@@ -622,15 +625,15 @@ modelica_metatype omc_NFConnections_collectConnections(threadData_t *threadData,
               modelica_metatype tmpMeta14;
               modelica_metatype tmpMeta15;
               if (mmc__uniontype__metarecord__typedef__equal(tmp6_1,1,4) == 0) goto tmp5_end;
-              tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp6_1), 2));
+              tmpMeta8 = OMC_BOX_FIELD(tmp6_1, 2);
               if (mmc__uniontype__metarecord__typedef__equal(tmpMeta8,6,2) == 0) goto tmp5_end;
-              tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
-              tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 3));
-              tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp6_1), 3));
+              tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 2);
+              tmpMeta10 = OMC_BOX_FIELD(tmpMeta8, 3);
+              tmpMeta11 = OMC_BOX_FIELD(tmp6_1, 3);
               if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,6,2) == 0) goto tmp5_end;
-              tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 2));
-              tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 3));
-              tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp6_1), 5));
+              tmpMeta12 = OMC_BOX_FIELD(tmpMeta11, 2);
+              tmpMeta13 = OMC_BOX_FIELD(tmpMeta11, 3);
+              tmpMeta14 = OMC_BOX_FIELD(tmp6_1, 5);
               _ty1 = tmpMeta9;
               _lhs = tmpMeta10;
               _ty2 = tmpMeta12;
@@ -643,7 +646,7 @@ modelica_metatype omc_NFConnections_collectConnections(threadData_t *threadData,
 
               tmpMeta15 = MMC_TAGPTR(mmc_alloc_words(5));
               memcpy(MMC_UNTAGPTR(tmpMeta15), MMC_UNTAGPTR(_conns), 5*sizeof(modelica_metatype));
-              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta15))[2] = omc_NFConnections_makeConnections(threadData, _lhs, _ty1, _rhs, _ty2, _source, ((modelica_fnptr) _isDeleted), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2))));
+              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta15))[2] = omc_NFConnections_makeConnections(threadData, _lhs, _ty1, _rhs, _ty2, _source, ((modelica_fnptr) _isDeleted), (OMC_BOX_FIELD(_conns, 2)));
               _conns = tmpMeta15;
               tmpMeta3 = _eql;
               goto tmp5_done;
@@ -662,7 +665,7 @@ modelica_metatype omc_NFConnections_collectConnections(threadData_t *threadData,
           }
           goto goto_4;
           goto_4:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp5_done;
           tmp5_done:;
         }
@@ -677,15 +680,17 @@ modelica_metatype omc_NFConnections_collectConnections(threadData_t *threadData,
   _flatModel = tmpMeta18;
   _return: OMC_LABEL_UNUSED
   if (out_conns) { *out_conns = _conns; }
-  return _flatModel;
+  omc_ret_ = _flatModel;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_addBroken(threadData_t *threadData, modelica_metatype _broken, modelica_metatype __omcQ_24in_5Fconns)
 {
   modelica_metatype _conns = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _conns = __omcQ_24in_5Fconns;
   tmpMeta1 = MMC_TAGPTR(mmc_alloc_words(5));
@@ -693,71 +698,80 @@ modelica_metatype omc_NFConnections_addBroken(threadData_t *threadData, modelica
   ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta1))[4] = _broken;
   _conns = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _conns;
+  omc_ret_ = _conns;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_addFlow(threadData_t *threadData, modelica_metatype _conn, modelica_metatype __omcQ_24in_5Fconns)
 {
   modelica_metatype _conns = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _conns = __omcQ_24in_5Fconns;
-  tmpMeta2 = mmc_mk_cons(_conn, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 3))));
+  tmpMeta2 = mmc_mk_cons(_conn, (OMC_BOX_FIELD(_conns, 3)));
   tmpMeta1 = MMC_TAGPTR(mmc_alloc_words(5));
   memcpy(MMC_UNTAGPTR(tmpMeta1), MMC_UNTAGPTR(_conns), 5*sizeof(modelica_metatype));
   ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta1))[3] = tmpMeta2;
   _conns = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _conns;
+  omc_ret_ = _conns;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_addConnection(threadData_t *threadData, modelica_metatype _conn, modelica_metatype __omcQ_24in_5Fconns)
 {
   modelica_metatype _conns = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _conns = __omcQ_24in_5Fconns;
-  tmpMeta2 = mmc_mk_cons(_conn, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_conns), 2))));
+  tmpMeta2 = mmc_mk_cons(_conn, (OMC_BOX_FIELD(_conns, 2)));
   tmpMeta1 = MMC_TAGPTR(mmc_alloc_words(5));
   memcpy(MMC_UNTAGPTR(tmpMeta1), MMC_UNTAGPTR(_conns), 5*sizeof(modelica_metatype));
   ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta1))[2] = tmpMeta2;
   _conns = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _conns;
+  omc_ret_ = _conns;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_fromConnectionList(threadData_t *threadData, modelica_metatype _connl)
 {
   modelica_metatype _conns = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _conns has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   tmpMeta2 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta3 = mmc_mk_box4(3, &NFConnections_CONNECTIONS__desc, _connl, tmpMeta1, tmpMeta2);
+  tmpMeta3 = omc_mk_box4(3, &NFConnections_CONNECTIONS__desc, _connl, tmpMeta1, tmpMeta2);
   _conns = tmpMeta3;
   _return: OMC_LABEL_UNUSED
-  return _conns;
+  omc_ret_ = _conns;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnections_new(threadData_t *threadData)
 {
   modelica_metatype _conns = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _conns = _OMC_LIT12;
   _return: OMC_LABEL_UNUSED
-  return _conns;
+  omc_ret_ = _conns;
+  return omc_ret_;
 }
 

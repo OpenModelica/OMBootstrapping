@@ -47,13 +47,13 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeSparsityPattern_serializeColor(threa
   modelica_metatype _columns_ext;
   _size_ext = (int) _size;
   _columns_ext = (modelica_metatype) _columns;
-  serializeC(MMC_STRINGDATA(_name), _size_ext, _columns_ext);
+  serializeC(omc_string_data(_name), _size_ext, _columns_ext);
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_SerializeSparsityPattern_serializeColor(threadData_t *threadData, modelica_metatype _name, modelica_metatype _size, modelica_metatype _columns)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_size);
+  tmp1 = omc_unbox_integer(_size);
   omc_SerializeSparsityPattern_serializeColor(threadData, _name, tmp1, _columns);
   return;
 }
@@ -68,20 +68,20 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeSparsityPattern_serializeJacobian(th
   _nnz_ext = (int) _nnz;
   _colPtrs_ext = (modelica_metatype) _colPtrs;
   _rowInds_ext = (modelica_metatype) _rowInds;
-  serializeJ(MMC_STRINGDATA(_name), _numCols_ext, _nnz_ext, _colPtrs_ext, _rowInds_ext);
+  serializeJ(omc_string_data(_name), _numCols_ext, _nnz_ext, _colPtrs_ext, _rowInds_ext);
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_SerializeSparsityPattern_serializeJacobian(threadData_t *threadData, modelica_metatype _name, modelica_metatype _numCols, modelica_metatype _nnz, modelica_metatype _colPtrs, modelica_metatype _rowInds)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
-  tmp1 = mmc_unbox_integer(_numCols);
-  tmp2 = mmc_unbox_integer(_nnz);
+  tmp1 = omc_unbox_integer(_numCols);
+  tmp2 = omc_unbox_integer(_nnz);
   omc_SerializeSparsityPattern_serializeJacobian(threadData, _name, tmp1, tmp2, _colPtrs, _rowInds);
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SerializeSparsityPattern_serialize(threadData_t *threadData, modelica_metatype _code)
 {
   modelica_string _dummy = NULL;
@@ -93,16 +93,17 @@ modelica_string omc_SerializeSparsityPattern_serialize(threadData_t *threadData,
   modelica_metatype _colorList = NULL;
   modelica_metatype tmpMeta1;
   modelica_boolean tmp2 = 0;
-  modelica_metatype tmpMeta7;
-  modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
+  modelica_string tmp7;
+  modelica_string tmp8;
+  modelica_string tmp9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta19;
   modelica_metatype tmpMeta20;
   modelica_metatype tmpMeta21;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _dummy = _OMC_LIT0;
   // _columnPointers has no default value.
@@ -113,12 +114,12 @@ modelica_string omc_SerializeSparsityPattern_serialize(threadData_t *threadData,
   // _colorList has no default value.
   {
     modelica_metatype _jac;
-    for (tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_code), 35))); !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
+    for (tmpMeta1 = (OMC_BOX_FIELD(_code, 35)); !listEmpty(tmpMeta1); tmpMeta1=MMC_CDR(tmpMeta1))
     {
       _jac = MMC_CAR(tmpMeta1);
       { /* match expression */
         modelica_metatype tmp5_1;
-        tmp5_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_jac), 5)));
+        tmp5_1 = (OMC_BOX_FIELD(_jac, 5));
         {
           volatile mmc_switch_type tmp5;
           int tmp6;
@@ -143,41 +144,41 @@ modelica_string omc_SerializeSparsityPattern_serialize(threadData_t *threadData,
           }
           goto goto_3;
           goto_3:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp4_done;
           tmp4_done:;
         }
       }
       if(tmp2)
       {
-        if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_jac), 17)))))
+        if(omc_unbox_boolean((OMC_BOX_FIELD(_jac, 17))))
         {
-          _pattern = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_jac), 7)));
+          _pattern = (OMC_BOX_FIELD(_jac, 7));
 
-          if((!listEmpty((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_jac), 11))))))
+          if((!listEmpty((OMC_BOX_FIELD(_jac, 11)))))
           {
-            _colorList = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_jac), 11)));
+            _colorList = (OMC_BOX_FIELD(_jac, 11));
           }
           else
           {
             omc_Error_addMessage(threadData, _OMC_LIT4, _OMC_LIT6);
 
-            MMC_THROW_INTERNAL();
+            OMC_THROW_INTERNAL();
           }
         }
         else
         {
-          _pattern = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_jac), 6)));
+          _pattern = (OMC_BOX_FIELD(_jac, 6));
 
-          _colorList = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_jac), 10)));
+          _colorList = (OMC_BOX_FIELD(_jac, 10));
         }
 
         if((!listEmpty(_pattern)))
         {
-          tmpMeta7 = stringAppend((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_code), 37))),_OMC_LIT7);
-          tmpMeta8 = stringAppend(tmpMeta7,(MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_jac), 4))));
-          tmpMeta9 = stringAppend(tmpMeta8,_OMC_LIT8);
-          _fname = tmpMeta9;
+          tmp7 = stringAppend((OMC_BOX_FIELD(_code, 37)),_OMC_LIT7);
+          tmp8 = stringAppend(tmp7,(OMC_BOX_FIELD(_jac, 4)));
+          tmp9 = stringAppend(tmp8,_OMC_LIT8);
+          omc_string_store(&(_fname), tmp9);
 
           {
             modelica_metatype __omcQ_24tmpVar3;
@@ -199,19 +200,19 @@ modelica_string omc_SerializeSparsityPattern_serialize(threadData_t *threadData,
                 tmp14--;
               }
               if (tmp14 == 0) {
-                __omcQ_24tmpVar2 = mmc_mk_integer(listLength(omc_Util_tuple22(threadData, _column)));
+                __omcQ_24tmpVar2 = omc_mk_integer(listLength(omc_Util_tuple22(threadData, _column)));
                 *tmp12 = mmc_mk_cons(__omcQ_24tmpVar2,0);
                 tmp12 = &MMC_CDR(*tmp12);
               } else if (tmp14 == 1) {
                 break;
               } else {
-                MMC_THROW_INTERNAL();
+                OMC_THROW_INTERNAL();
               }
             }
             *tmp12 = mmc_mk_nil();
             tmpMeta11 = __omcQ_24tmpVar3;
           }
-          tmpMeta10 = mmc_mk_cons(mmc_mk_integer(((modelica_integer) 0)), tmpMeta11);
+          tmpMeta10 = mmc_mk_cons(omc_mk_integer(((modelica_integer) 0)), tmpMeta11);
           _columnPointers = listArray(tmpMeta10);
 
           {
@@ -240,7 +241,7 @@ modelica_string omc_SerializeSparsityPattern_serialize(threadData_t *threadData,
               } else if (tmp18 == 1) {
                 break;
               } else {
-                MMC_THROW_INTERNAL();
+                OMC_THROW_INTERNAL();
               }
             }
             *tmp16 = mmc_mk_nil();
@@ -265,6 +266,7 @@ modelica_string omc_SerializeSparsityPattern_serialize(threadData_t *threadData,
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _dummy;
+  omc_ret_ = _dummy;
+  return omc_ret_;
 }
 

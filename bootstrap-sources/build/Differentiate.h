@@ -228,7 +228,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_Differentiate_getFunctionMapper1 omc_Differentiate_getFunctionMapper1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Differentiate_getFunctionMapper(threadData_t *threadData, modelica_metatype _fname, modelica_metatype _functions, modelica_metatype *out_tp);
 #define boxptr_Differentiate_getFunctionMapper omc_Differentiate_getFunctionMapper
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_getFunctionMapper,2,0) {(void*) boxptr_Differentiate_getFunctionMapper,0}};
@@ -271,22 +271,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_getFunctionMapper,2,0) {(
 #define boxptr_Differentiate_createFromNCall2ArgsCall omc_Differentiate_createFromNCall2ArgsCall
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Differentiate_isSeedCref(threadData_t *threadData, modelica_metatype _cr);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Differentiate_isSeedCref(threadData_t *threadData, modelica_metatype _cr);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_isSeedCref,2,0) {(void*) boxptr_Differentiate_isSeedCref,0}};
 #define boxvar_Differentiate_isSeedCref MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_isSeedCref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Differentiate_createSeedCrefName(threadData_t *threadData, modelica_metatype _inCref, modelica_string _inMatrixName);
 #define boxptr_Differentiate_createSeedCrefName omc_Differentiate_createSeedCrefName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_createSeedCrefName,2,0) {(void*) boxptr_Differentiate_createSeedCrefName,0}};
 #define boxvar_Differentiate_createSeedCrefName MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_createSeedCrefName)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Differentiate_createDiffedCrefName(threadData_t *threadData, modelica_metatype _inCref, modelica_string _inMatrixName);
 #define boxptr_Differentiate_createDiffedCrefName omc_Differentiate_createDiffedCrefName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_createDiffedCrefName,2,0) {(void*) boxptr_Differentiate_createDiffedCrefName,0}};
@@ -305,42 +305,42 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_createDiffedCrefName,2,0)
 #define boxptr_Differentiate_differentiateEquations omc_Differentiate_differentiateEquations
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Differentiate_differentiateEquationFragile(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _inDiffwrtCref, modelica_metatype _inInputData, modelica_metatype _inDiffType, modelica_metatype _inFunctionTree, modelica_metatype *out_outFunctionTree);
 #define boxptr_Differentiate_differentiateEquationFragile omc_Differentiate_differentiateEquationFragile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquationFragile,2,0) {(void*) boxptr_Differentiate_differentiateEquationFragile,0}};
 #define boxvar_Differentiate_differentiateEquationFragile MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquationFragile)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Differentiate_differentiateEquation(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _inDiffwrtCref, modelica_metatype _inInputData, modelica_metatype _inDiffType, modelica_metatype _inFunctionTree, modelica_metatype *out_outFunctionTree);
 #define boxptr_Differentiate_differentiateEquation omc_Differentiate_differentiateEquation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquation,2,0) {(void*) boxptr_Differentiate_differentiateEquation,0}};
 #define boxvar_Differentiate_differentiateEquation MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Differentiate_differentiateExpCrefFullJacobian(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inCref, modelica_metatype _inVariables, modelica_metatype _inShared, modelica_metatype *out_outShared);
 #define boxptr_Differentiate_differentiateExpCrefFullJacobian omc_Differentiate_differentiateExpCrefFullJacobian
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpCrefFullJacobian,2,0) {(void*) boxptr_Differentiate_differentiateExpCrefFullJacobian,0}};
 #define boxvar_Differentiate_differentiateExpCrefFullJacobian MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpCrefFullJacobian)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Differentiate_differentiateExpSolve(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inCref, modelica_metatype _functions);
 #define boxptr_Differentiate_differentiateExpSolve omc_Differentiate_differentiateExpSolve
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpSolve,2,0) {(void*) boxptr_Differentiate_differentiateExpSolve,0}};
 #define boxvar_Differentiate_differentiateExpSolve MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpSolve)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Differentiate_differentiateExpTime(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inVariables, modelica_metatype _inShared, modelica_metatype *out_outShared);
 #define boxptr_Differentiate_differentiateExpTime omc_Differentiate_differentiateExpTime
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpTime,2,0) {(void*) boxptr_Differentiate_differentiateExpTime,0}};
 #define boxvar_Differentiate_differentiateExpTime MMC_REFSTRUCTLIT(boxvar_lit_Differentiate_differentiateExpTime)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Differentiate_differentiateEquationTime(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _inVariables, modelica_metatype _inShared, modelica_metatype *out_outShared);
 #define boxptr_Differentiate_differentiateEquationTime omc_Differentiate_differentiateEquationTime
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Differentiate_differentiateEquationTime,2,0) {(void*) boxptr_Differentiate_differentiateEquationTime,0}};

@@ -23,7 +23,7 @@ extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 void omc_InstMeta_checkArrayType(threadData_t *threadData, modelica_metatype _inType);
 #define boxptr_InstMeta_checkArrayType omc_InstMeta_checkArrayType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstMeta_checkArrayType,2,0) {(void*) boxptr_InstMeta_checkArrayType,0}};
@@ -33,7 +33,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstMeta_checkArrayType,2,0) {(void*) b
 #define boxptr_InstMeta_fixUniontype2 omc_InstMeta_fixUniontype2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstMeta_fixUniontype(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inState, modelica_metatype _inClassDef, modelica_metatype *out_outType);
 #define boxptr_InstMeta_fixUniontype omc_InstMeta_fixUniontype
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstMeta_fixUniontype,2,0) {(void*) boxptr_InstMeta_fixUniontype,0}};

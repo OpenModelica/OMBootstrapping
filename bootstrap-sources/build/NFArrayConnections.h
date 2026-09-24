@@ -48,6 +48,8 @@ extern struct record_description NFFunction_Function_FUNCTION__desc;
 
 extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
 
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
+
 extern struct record_description NFType_INTEGER__desc;
 
 extern struct record_description NFType_UNKNOWN__desc;
@@ -112,46 +114,46 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFArrayConnections_collect omc_NFArrayConnections_collect
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFArrayConnections_resolve(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel);
 #define boxptr_NFArrayConnections_resolve omc_NFArrayConnections_resolve
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFArrayConnections_resolve,2,0) {(void*) boxptr_NFArrayConnections_resolve,0}};
 #define boxvar_NFArrayConnections_resolve MMC_REFSTRUCTLIT(boxvar_lit_NFArrayConnections_resolve)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFArrayConnections_SetEdge_toString(threadData_t *threadData, modelica_metatype _e);
 #define boxptr_NFArrayConnections_SetEdge_toString omc_NFArrayConnections_SetEdge_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFArrayConnections_SetEdge_toString,2,0) {(void*) boxptr_NFArrayConnections_SetEdge_toString,0}};
 #define boxvar_NFArrayConnections_SetEdge_toString MMC_REFSTRUCTLIT(boxvar_lit_NFArrayConnections_SetEdge_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFArrayConnections_SetEdge_isEqual(threadData_t *threadData, modelica_metatype _e1, modelica_metatype _e2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFArrayConnections_SetEdge_isEqual(threadData_t *threadData, modelica_metatype _e1, modelica_metatype _e2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFArrayConnections_SetEdge_isEqual,2,0) {(void*) boxptr_NFArrayConnections_SetEdge_isEqual,0}};
 #define boxvar_NFArrayConnections_SetEdge_isEqual MMC_REFSTRUCTLIT(boxvar_lit_NFArrayConnections_SetEdge_isEqual)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFArrayConnections_SetVertex_toString(threadData_t *threadData, modelica_metatype _v);
 #define boxptr_NFArrayConnections_SetVertex_toString omc_NFArrayConnections_SetVertex_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFArrayConnections_SetVertex_toString,2,0) {(void*) boxptr_NFArrayConnections_SetVertex_toString,0}};
 #define boxvar_NFArrayConnections_SetVertex_toString MMC_REFSTRUCTLIT(boxvar_lit_NFArrayConnections_SetVertex_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFArrayConnections_SetVertex_isNamed(threadData_t *threadData, modelica_metatype _v, modelica_metatype _name);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFArrayConnections_SetVertex_isNamed(threadData_t *threadData, modelica_metatype _v, modelica_metatype _name);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFArrayConnections_SetVertex_isNamed,2,0) {(void*) boxptr_NFArrayConnections_SetVertex_isNamed,0}};
 #define boxvar_NFArrayConnections_SetVertex_isNamed MMC_REFSTRUCTLIT(boxvar_lit_NFArrayConnections_SetVertex_isNamed)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFArrayConnections_SetVertex_isEqual(threadData_t *threadData, modelica_metatype _v1, modelica_metatype _v2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFArrayConnections_SetVertex_isEqual(threadData_t *threadData, modelica_metatype _v1, modelica_metatype _v2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFArrayConnections_SetVertex_isEqual,2,0) {(void*) boxptr_NFArrayConnections_SetVertex_isEqual,0}};
 #define boxvar_NFArrayConnections_SetVertex_isEqual MMC_REFSTRUCTLIT(boxvar_lit_NFArrayConnections_SetVertex_isEqual)

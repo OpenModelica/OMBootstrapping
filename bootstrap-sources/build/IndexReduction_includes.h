@@ -6,7 +6,6 @@ extern "C" {
 
 #include "AdjacencyMatrix.h"
 #include "Array.h"
-#include "AvlSetInt.h"
 #include "BackendDAEEXT.h"
 #include "BackendDAEUtil.h"
 #include "BackendDump.h"

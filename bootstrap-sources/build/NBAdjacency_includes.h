@@ -11,7 +11,6 @@ extern "C" {
 #include "List.h"
 #include "Mutable.h"
 #include "NBAdjacency.h"
-#include "NBBackendUtil.h"
 #include "NBDifferentiate.h"
 #include "NBEquation.h"
 #include "NBPartition.h"
@@ -31,6 +30,7 @@ extern "C" {
 #include "UnorderedMap.h"
 #include "UnorderedSet.h"
 #include "Util.h"
+#include "Vector.h"
 #ifdef __cplusplus
 }
 #endif

@@ -75,14 +75,14 @@ extern struct record_description UnitAbsyn_UnitTerm_POW__desc;
 extern struct record_description UnitAbsyn_UnitTerm_SUB__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_buildTest1(threadData_t *threadData, modelica_metatype *out_sigma);
 #define boxptr_UnitAbsynBuilder_buildTest1 omc_UnitAbsynBuilder_buildTest1
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_buildTest1,2,0) {(void*) boxptr_UnitAbsynBuilder_buildTest1,0}};
 #define boxvar_UnitAbsynBuilder_buildTest1 MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_buildTest1)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_getDerivedUnits(threadData_t *threadData, modelica_metatype _baseUnit, modelica_string _baseUnitStr);
 #define boxptr_UnitAbsynBuilder_getDerivedUnits omc_UnitAbsynBuilder_getDerivedUnits
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_getDerivedUnits,2,0) {(void*) boxptr_UnitAbsynBuilder_getDerivedUnits,0}};
@@ -92,22 +92,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_getDerivedUnits,2,0) {
 #define boxptr_UnitAbsynBuilder_getDerivedUnitsHelper omc_UnitAbsynBuilder_getDerivedUnitsHelper
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_str2unitWithScaleFactor(threadData_t *threadData, modelica_string _res, modelica_metatype _funcInstIdOpt, modelica_real *out_scaleFactor, modelica_real *out_offset);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_UnitAbsynBuilder_str2unitWithScaleFactor(threadData_t *threadData, modelica_metatype _res, modelica_metatype _funcInstIdOpt, modelica_metatype *out_scaleFactor, modelica_metatype *out_offset);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_str2unitWithScaleFactor,2,0) {(void*) boxptr_UnitAbsynBuilder_str2unitWithScaleFactor,0}};
 #define boxvar_UnitAbsynBuilder_str2unitWithScaleFactor MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_str2unitWithScaleFactor)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_str2unit(threadData_t *threadData, modelica_string _res, modelica_metatype _funcInstIdOpt);
 #define boxptr_UnitAbsynBuilder_str2unit omc_UnitAbsynBuilder_str2unit
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_str2unit,2,0) {(void*) boxptr_UnitAbsynBuilder_str2unit,0}};
 #define boxvar_UnitAbsynBuilder_str2unit MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_str2unit)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_UnitAbsynBuilder_unit2str(threadData_t *threadData, modelica_metatype _unit);
 #define boxptr_UnitAbsynBuilder_unit2str omc_UnitAbsynBuilder_unit2str
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_unit2str,2,0) {(void*) boxptr_UnitAbsynBuilder_unit2str,0}};
@@ -117,7 +117,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_unit2str,2,0) {(void*)
 #define boxptr_UnitAbsynBuilder_selectConstantUnit omc_UnitAbsynBuilder_selectConstantUnit
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_unitMultiply(threadData_t *threadData, modelica_metatype _u1, modelica_metatype _u2);
 #define boxptr_UnitAbsynBuilder_unitMultiply omc_UnitAbsynBuilder_unitMultiply
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_unitMultiply,2,0) {(void*) boxptr_UnitAbsynBuilder_unitMultiply,0}};
@@ -160,57 +160,57 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_unitMultiply,2,0) {(vo
 #define boxptr_UnitAbsynBuilder_createTypeParameterLocations omc_UnitAbsynBuilder_createTypeParameterLocations
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_UnitAbsynBuilder_storeSize(threadData_t *threadData, modelica_metatype _store);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_UnitAbsynBuilder_storeSize(threadData_t *threadData, modelica_metatype _store);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_storeSize,2,0) {(void*) boxptr_UnitAbsynBuilder_storeSize,0}};
 #define boxvar_UnitAbsynBuilder_storeSize MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_storeSize)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_instAddStore(threadData_t *threadData, modelica_metatype _istore, modelica_metatype _itp, modelica_metatype _cr);
 #define boxptr_UnitAbsynBuilder_instAddStore omc_UnitAbsynBuilder_instAddStore
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_instAddStore,2,0) {(void*) boxptr_UnitAbsynBuilder_instAddStore,0}};
 #define boxvar_UnitAbsynBuilder_instAddStore MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_instAddStore)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_buildUnitTerms(threadData_t *threadData, modelica_metatype _env, modelica_metatype _dae, modelica_metatype *out_store, modelica_metatype *out_ht);
 #define boxptr_UnitAbsynBuilder_buildUnitTerms omc_UnitAbsynBuilder_buildUnitTerms
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_buildUnitTerms,2,0) {(void*) boxptr_UnitAbsynBuilder_buildUnitTerms,0}};
 #define boxvar_UnitAbsynBuilder_buildUnitTerms MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_buildUnitTerms)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_instBuildUnitTerms(threadData_t *threadData, modelica_metatype _env, modelica_metatype _dae, modelica_metatype _compDae, modelica_metatype _store, modelica_metatype *out_terms);
 #define boxptr_UnitAbsynBuilder_instBuildUnitTerms omc_UnitAbsynBuilder_instBuildUnitTerms
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_instBuildUnitTerms,2,0) {(void*) boxptr_UnitAbsynBuilder_instBuildUnitTerms,0}};
 #define boxvar_UnitAbsynBuilder_instBuildUnitTerms MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_instBuildUnitTerms)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_splitTypeParams(threadData_t *threadData, modelica_metatype _iTypeParams, modelica_metatype *out_denoms, modelica_metatype *out_tpstrs);
 #define boxptr_UnitAbsynBuilder_splitTypeParams omc_UnitAbsynBuilder_splitTypeParams
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_splitTypeParams,2,0) {(void*) boxptr_UnitAbsynBuilder_splitTypeParams,0}};
 #define boxvar_UnitAbsynBuilder_splitTypeParams MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_splitTypeParams)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_joinTypeParams(threadData_t *threadData, modelica_metatype _inums, modelica_metatype _idenoms, modelica_metatype _itpstrs, modelica_metatype _funcInstIdOpt);
 #define boxptr_UnitAbsynBuilder_joinTypeParams omc_UnitAbsynBuilder_joinTypeParams
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_joinTypeParams,2,0) {(void*) boxptr_UnitAbsynBuilder_joinTypeParams,0}};
 #define boxvar_UnitAbsynBuilder_joinTypeParams MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_joinTypeParams)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_joinRationals(threadData_t *threadData, modelica_metatype _inums, modelica_metatype _idenoms);
 #define boxptr_UnitAbsynBuilder_joinRationals omc_UnitAbsynBuilder_joinRationals
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_joinRationals,2,0) {(void*) boxptr_UnitAbsynBuilder_joinRationals,0}};
 #define boxvar_UnitAbsynBuilder_joinRationals MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_joinRationals)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_splitRationals(threadData_t *threadData, modelica_metatype _inRationals, modelica_metatype *out_denoms);
 #define boxptr_UnitAbsynBuilder_splitRationals omc_UnitAbsynBuilder_splitRationals
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_splitRationals,2,0) {(void*) boxptr_UnitAbsynBuilder_splitRationals,0}};
@@ -226,73 +226,73 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_splitRationals,2,0) {(
 #define boxptr_UnitAbsynBuilder_printUnit omc_UnitAbsynBuilder_printUnit
 
 
-DLLDirection
+DLLModelDirection
 void omc_UnitAbsynBuilder_printStore(threadData_t *threadData, modelica_metatype _st);
 #define boxptr_UnitAbsynBuilder_printStore omc_UnitAbsynBuilder_printStore
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_printStore,2,0) {(void*) boxptr_UnitAbsynBuilder_printStore,0}};
 #define boxvar_UnitAbsynBuilder_printStore MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_printStore)
 
 
-DLLDirection
+DLLModelDirection
 void omc_UnitAbsynBuilder_printInstStore(threadData_t *threadData, modelica_metatype _st);
 #define boxptr_UnitAbsynBuilder_printInstStore omc_UnitAbsynBuilder_printInstStore
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_printInstStore,2,0) {(void*) boxptr_UnitAbsynBuilder_printInstStore,0}};
 #define boxvar_UnitAbsynBuilder_printInstStore MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_printInstStore)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_UnitAbsynBuilder_printTermStr(threadData_t *threadData, modelica_metatype _term);
 #define boxptr_UnitAbsynBuilder_printTermStr omc_UnitAbsynBuilder_printTermStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_printTermStr,2,0) {(void*) boxptr_UnitAbsynBuilder_printTermStr,0}};
 #define boxvar_UnitAbsynBuilder_printTermStr MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_printTermStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_UnitAbsynBuilder_printTermsStr(threadData_t *threadData, modelica_metatype _terms);
 #define boxptr_UnitAbsynBuilder_printTermsStr omc_UnitAbsynBuilder_printTermsStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_printTermsStr,2,0) {(void*) boxptr_UnitAbsynBuilder_printTermsStr,0}};
 #define boxvar_UnitAbsynBuilder_printTermsStr MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_printTermsStr)
 
 
-DLLDirection
+DLLModelDirection
 void omc_UnitAbsynBuilder_printTerms(threadData_t *threadData, modelica_metatype _terms);
 #define boxptr_UnitAbsynBuilder_printTerms omc_UnitAbsynBuilder_printTerms
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_printTerms,2,0) {(void*) boxptr_UnitAbsynBuilder_printTerms,0}};
 #define boxvar_UnitAbsynBuilder_printTerms MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_printTerms)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_emptyStore(threadData_t *threadData);
 #define boxptr_UnitAbsynBuilder_emptyStore omc_UnitAbsynBuilder_emptyStore
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_emptyStore,2,0) {(void*) boxptr_UnitAbsynBuilder_emptyStore,0}};
 #define boxvar_UnitAbsynBuilder_emptyStore MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_emptyStore)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_emptyInstStore(threadData_t *threadData);
 #define boxptr_UnitAbsynBuilder_emptyInstStore omc_UnitAbsynBuilder_emptyInstStore
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_emptyInstStore,2,0) {(void*) boxptr_UnitAbsynBuilder_emptyInstStore,0}};
 #define boxvar_UnitAbsynBuilder_emptyInstStore MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_emptyInstStore)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_instGetStore(threadData_t *threadData, modelica_metatype _store);
 #define boxptr_UnitAbsynBuilder_instGetStore omc_UnitAbsynBuilder_instGetStore
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_instGetStore,2,0) {(void*) boxptr_UnitAbsynBuilder_instGetStore,0}};
 #define boxvar_UnitAbsynBuilder_instGetStore MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_instGetStore)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_find(threadData_t *threadData, modelica_integer _index, modelica_metatype _st);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_UnitAbsynBuilder_find(threadData_t *threadData, modelica_metatype _index, modelica_metatype _st);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_find,2,0) {(void*) boxptr_UnitAbsynBuilder_find,0}};
 #define boxvar_UnitAbsynBuilder_find MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_find)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_update(threadData_t *threadData, modelica_metatype _unit, modelica_integer _index, modelica_metatype _st);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_UnitAbsynBuilder_update(threadData_t *threadData, modelica_metatype _unit, modelica_metatype _index, modelica_metatype _st);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_update,2,0) {(void*) boxptr_UnitAbsynBuilder_update,0}};
 #define boxvar_UnitAbsynBuilder_update MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_update)
@@ -301,16 +301,16 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_update,2,0) {(void*) b
 #define boxptr_UnitAbsynBuilder_expandStore omc_UnitAbsynBuilder_expandStore
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_updateInstStore(threadData_t *threadData, modelica_metatype _store, modelica_metatype _st);
 #define boxptr_UnitAbsynBuilder_updateInstStore omc_UnitAbsynBuilder_updateInstStore
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_updateInstStore,2,0) {(void*) boxptr_UnitAbsynBuilder_updateInstStore,0}};
 #define boxvar_UnitAbsynBuilder_updateInstStore MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_updateInstStore)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_UnitAbsynBuilder_add(threadData_t *threadData, modelica_metatype _unit, modelica_metatype _ist, modelica_integer *out_index);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_UnitAbsynBuilder_add(threadData_t *threadData, modelica_metatype _unit, modelica_metatype _ist, modelica_metatype *out_index);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_add,2,0) {(void*) boxptr_UnitAbsynBuilder_add,0}};
 #define boxvar_UnitAbsynBuilder_add MMC_REFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_add)
@@ -325,7 +325,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_add,2,0) {(void*) boxp
 #define boxptr_UnitAbsynBuilder_registerUnitInClass omc_UnitAbsynBuilder_registerUnitInClass
 
 
-DLLDirection
+DLLModelDirection
 void omc_UnitAbsynBuilder_registerUnits(threadData_t *threadData, modelica_metatype _prg);
 #define boxptr_UnitAbsynBuilder_registerUnits omc_UnitAbsynBuilder_registerUnits
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_registerUnits,2,0) {(void*) boxptr_UnitAbsynBuilder_registerUnits,0}};
@@ -341,7 +341,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_registerUnits,2,0) {(v
 #define boxptr_UnitAbsynBuilder_retrieveUnitsFromEnv omc_UnitAbsynBuilder_retrieveUnitsFromEnv
 
 
-DLLDirection
+DLLModelDirection
 void omc_UnitAbsynBuilder_registerUnitWeights(threadData_t *threadData, modelica_metatype _cache, modelica_metatype _env, modelica_metatype _dae);
 #define boxptr_UnitAbsynBuilder_registerUnitWeights omc_UnitAbsynBuilder_registerUnitWeights
 static const MMC_DEFSTRUCTLIT(boxvar_lit_UnitAbsynBuilder_registerUnitWeights,2,0) {(void*) boxptr_UnitAbsynBuilder_registerUnitWeights,0}};

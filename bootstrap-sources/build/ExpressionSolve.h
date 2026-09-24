@@ -116,9 +116,9 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_ExpressionSolve_simplifyBinaryMulCoeff omc_ExpressionSolve_simplifyBinaryMulCoeff
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSolve_collectX(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp3, modelica_boolean _expand, modelica_metatype *out_outRhs);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSolve_collectX(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp3, modelica_metatype _expand, modelica_metatype *out_outRhs);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_collectX,2,0) {(void*) boxptr_ExpressionSolve_collectX,0}};
 #define boxvar_ExpressionSolve_collectX MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSolve_collectX)
@@ -130,9 +130,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_collectX,2,0) {(void*) 
 #define boxptr_ExpressionSolve_expAddX omc_ExpressionSolve_expAddX
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSolve_preprocessingSolve(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fx, modelica_metatype __omcQ_24in_5Fy, modelica_metatype _inExp3, modelica_metatype _optCond, modelica_metatype _functions, modelica_metatype _uniqueEqIndex, modelica_integer _idepth, modelica_boolean _doInline, modelica_metatype *out_y, modelica_metatype *out_eqnForNewVars, modelica_metatype *out_newVarsCrefs, modelica_integer *out_depth);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSolve_preprocessingSolve(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fx, modelica_metatype __omcQ_24in_5Fy, modelica_metatype _inExp3, modelica_metatype _optCond, modelica_metatype _functions, modelica_metatype _uniqueEqIndex, modelica_metatype _idepth, modelica_metatype _doInline, modelica_metatype *out_y, modelica_metatype *out_eqnForNewVars, modelica_metatype *out_newVarsCrefs, modelica_metatype *out_depth);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_preprocessingSolve,2,0) {(void*) boxptr_ExpressionSolve_preprocessingSolve,0}};
 #define boxvar_ExpressionSolve_preprocessingSolve MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSolve_preprocessingSolve)
@@ -141,15 +141,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_preprocessingSolve,2,0)
 #define boxptr_ExpressionSolve_generateAssertType omc_ExpressionSolve_generateAssertType
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSolve_solve2(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2, modelica_metatype _inExp3, modelica_metatype _functions, modelica_metatype _uniqueEqIndex, modelica_boolean _doInline, modelica_boolean _isContinuousIntegration, modelica_metatype *out_outAsserts, modelica_metatype *out_eqnForNewVars, modelica_metatype *out_newVarsCrefs);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSolve_solve2(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2, modelica_metatype _inExp3, modelica_metatype _functions, modelica_metatype _uniqueEqIndex, modelica_metatype _doInline, modelica_metatype _isContinuousIntegration, modelica_metatype *out_outAsserts, modelica_metatype *out_eqnForNewVars, modelica_metatype *out_newVarsCrefs);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_solve2,2,0) {(void*) boxptr_ExpressionSolve_solve2,0}};
 #define boxvar_ExpressionSolve_solve2 MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSolve_solve2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSolve_solve(threadData_t *threadData, modelica_metatype _inExp1, modelica_metatype _inExp2, modelica_metatype _inExp3, modelica_metatype _functions, modelica_metatype *out_outAsserts);
 #define boxptr_ExpressionSolve_solve omc_ExpressionSolve_solve
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_solve,2,0) {(void*) boxptr_ExpressionSolve_solve,0}};
@@ -159,7 +159,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_solve,2,0) {(void*) box
 #define boxptr_ExpressionSolve_printTryToSolve omc_ExpressionSolve_printTryToSolve
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSolve_solveSimpleEquations(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fdae);
 #define boxptr_ExpressionSolve_solveSimpleEquations omc_ExpressionSolve_solveSimpleEquations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSolve_solveSimpleEquations,2,0) {(void*) boxptr_ExpressionSolve_solveSimpleEquations,0}};

@@ -20,14 +20,14 @@ extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
 #define boxptr_FInst_doSCodeDep omc_FInst_doSCodeDep
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FInst_instPath(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram);
 #define boxptr_FInst_instPath omc_FInst_instPath
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FInst_instPath,2,0) {(void*) boxptr_FInst_instPath,0}};
 #define boxvar_FInst_instPath MMC_REFSTRUCTLIT(boxvar_lit_FInst_instPath)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FInst_inst(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram);
 #define boxptr_FInst_inst omc_FInst_inst
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FInst_inst,2,0) {(void*) boxptr_FInst_inst,0}};

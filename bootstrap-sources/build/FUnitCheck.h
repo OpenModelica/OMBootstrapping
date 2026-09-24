@@ -60,7 +60,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_FUnitCheck_parse omc_FUnitCheck_parse
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_FUnitCheck_getStringFromExp(threadData_t *threadData, modelica_metatype _binding);
 #define boxptr_FUnitCheck_getStringFromExp omc_FUnitCheck_getStringFromExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_getStringFromExp,2,0) {(void*) boxptr_FUnitCheck_getStringFromExp,0}};
@@ -88,14 +88,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_getStringFromExp,2,0) {(void
 #define boxptr_FUnitCheck_foldCallArg omc_FUnitCheck_foldCallArg
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FUnitCheck_GetElementList(threadData_t *threadData, modelica_metatype _eqlist);
 #define boxptr_FUnitCheck_GetElementList omc_FUnitCheck_GetElementList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_GetElementList,2,0) {(void*) boxptr_FUnitCheck_GetElementList,0}};
 #define boxvar_FUnitCheck_GetElementList MMC_REFSTRUCTLIT(boxvar_lit_FUnitCheck_GetElementList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FUnitCheck_GetVarList(threadData_t *threadData, modelica_metatype _indaelist);
 #define boxptr_FUnitCheck_GetVarList omc_FUnitCheck_GetVarList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_GetVarList,2,0) {(void*) boxptr_FUnitCheck_GetVarList,0}};
@@ -132,7 +132,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_GetVarList,2,0) {(void*) box
 #define boxptr_FUnitCheck_foldBindingExp omc_FUnitCheck_foldBindingExp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FUnitCheck_algo(threadData_t *threadData, modelica_metatype _invarlist, modelica_metatype _ineqList, modelica_metatype _inargs, modelica_metatype _inHtCr2U, modelica_metatype _inHtS2U, modelica_metatype _inHtU2S);
 #define boxptr_FUnitCheck_algo omc_FUnitCheck_algo
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_algo,2,0) {(void*) boxptr_FUnitCheck_algo,0}};
@@ -151,21 +151,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_algo,2,0) {(void*) boxptr_FU
 #define boxptr_FUnitCheck_updateDAElist omc_FUnitCheck_updateDAElist
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_FUnitCheck_getUnits(threadData_t *threadData, modelica_metatype _inElement);
 #define boxptr_FUnitCheck_getUnits omc_FUnitCheck_getUnits
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_getUnits,2,0) {(void*) boxptr_FUnitCheck_getUnits,0}};
 #define boxvar_FUnitCheck_getUnits MMC_REFSTRUCTLIT(boxvar_lit_FUnitCheck_getUnits)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_FUnitCheck_getVars(threadData_t *threadData, modelica_metatype _inElement);
 #define boxptr_FUnitCheck_getVars omc_FUnitCheck_getVars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_getVars,2,0) {(void*) boxptr_FUnitCheck_getVars,0}};
 #define boxvar_FUnitCheck_getVars MMC_REFSTRUCTLIT(boxvar_lit_FUnitCheck_getVars)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_FUnitCheck_getFunctionName(threadData_t *threadData, modelica_metatype _inFunction);
 #define boxptr_FUnitCheck_getFunctionName omc_FUnitCheck_getFunctionName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_getFunctionName,2,0) {(void*) boxptr_FUnitCheck_getFunctionName,0}};
@@ -175,7 +175,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_getFunctionName,2,0) {(void*
 #define boxptr_FUnitCheck_parseFunctionList omc_FUnitCheck_parseFunctionList
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FUnitCheck_checkUnits(threadData_t *threadData, modelica_metatype _inDAE, modelica_metatype _func);
 #define boxptr_FUnitCheck_checkUnits omc_FUnitCheck_checkUnits
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FUnitCheck_checkUnits,2,0) {(void*) boxptr_FUnitCheck_checkUnits,0}};

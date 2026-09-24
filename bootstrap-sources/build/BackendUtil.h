@@ -19,9 +19,9 @@ extern struct record_description BackendUtil_ReplacePattern_REPLACEPATTERN__desc
 #define boxptr_BackendUtil_modelicaStringToCStr1 omc_BackendUtil_modelicaStringToCStr1
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_BackendUtil_modelicaStringToCStr(threadData_t *threadData, modelica_string _str, modelica_boolean _changeDerCall);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendUtil_modelicaStringToCStr(threadData_t *threadData, modelica_metatype _str, modelica_metatype _changeDerCall);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendUtil_modelicaStringToCStr,2,0) {(void*) boxptr_BackendUtil_modelicaStringToCStr,0}};
 #define boxvar_BackendUtil_modelicaStringToCStr MMC_REFSTRUCTLIT(boxvar_lit_BackendUtil_modelicaStringToCStr)

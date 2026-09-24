@@ -102,6 +102,10 @@ extern struct record_description Flags_FlagVisibility_INTERNAL__desc;
 
 extern struct record_description Flags_ValidOptions_STRING__DESC__OPTION__desc;
 
+extern struct record_description RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc;
+
+extern struct record_description RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc;
+
 extern struct record_description RemoveSimpleEquations_SimpleContainer_ALIAS__desc;
 
 extern struct record_description RemoveSimpleEquations_SimpleContainer_PARAMETERALIAS__desc;
@@ -311,7 +315,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_RemoveSimpleEquations_causal1 omc_RemoveSimpleEquations_causal1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_RemoveSimpleEquations_causal(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_RemoveSimpleEquations_causal omc_RemoveSimpleEquations_causal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_causal,2,0) {(void*) boxptr_RemoveSimpleEquations_causal,0}};
@@ -321,7 +325,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_causal,2,0) {(voi
 #define boxptr_RemoveSimpleEquations_allAcausal1 omc_RemoveSimpleEquations_allAcausal1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_RemoveSimpleEquations_allAcausal(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_RemoveSimpleEquations_allAcausal omc_RemoveSimpleEquations_allAcausal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_allAcausal,2,0) {(void*) boxptr_RemoveSimpleEquations_allAcausal,0}};
@@ -334,7 +338,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_allAcausal,2,0) {
 #define boxptr_RemoveSimpleEquations_addUnreplaceable omc_RemoveSimpleEquations_addUnreplaceable
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_RemoveSimpleEquations_fastAcausal(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_RemoveSimpleEquations_fastAcausal omc_RemoveSimpleEquations_fastAcausal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_fastAcausal,2,0) {(void*) boxptr_RemoveSimpleEquations_fastAcausal,0}};
@@ -359,21 +363,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_fastAcausal,2,0) 
 #define boxptr_RemoveSimpleEquations_getVarsHelper omc_RemoveSimpleEquations_getVarsHelper
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_RemoveSimpleEquations_fixAliasVarsVariablity(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_RemoveSimpleEquations_fixAliasVarsVariablity omc_RemoveSimpleEquations_fixAliasVarsVariablity
 static const MMC_DEFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_fixAliasVarsVariablity,2,0) {(void*) boxptr_RemoveSimpleEquations_fixAliasVarsVariablity,0}};
 #define boxvar_RemoveSimpleEquations_fixAliasVarsVariablity MMC_REFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_fixAliasVarsVariablity)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_RemoveSimpleEquations_removeVerySimpleEquations(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_RemoveSimpleEquations_removeVerySimpleEquations omc_RemoveSimpleEquations_removeVerySimpleEquations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_removeVerySimpleEquations,2,0) {(void*) boxptr_RemoveSimpleEquations_removeVerySimpleEquations,0}};
 #define boxvar_RemoveSimpleEquations_removeVerySimpleEquations MMC_REFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_removeVerySimpleEquations)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_RemoveSimpleEquations_removeSimpleEquations(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_RemoveSimpleEquations_removeSimpleEquations omc_RemoveSimpleEquations_removeSimpleEquations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_RemoveSimpleEquations_removeSimpleEquations,2,0) {(void*) boxptr_RemoveSimpleEquations_removeSimpleEquations,0}};

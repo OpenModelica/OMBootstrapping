@@ -5,6 +5,7 @@ extern "C" {
 #include "ModelicaUtilities.h"  // Make Modelica C util functions available for external includes.
 
 #include "Error.h"
+#include "ErrorExt.h"
 #include "Flags.h"
 #include "List.h"
 #include "NBAdjacency.h"

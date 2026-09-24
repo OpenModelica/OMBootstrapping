@@ -108,9 +108,9 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_BackendInline_inlineCallsWork omc_BackendInline_inlineCallsWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendInline_inlineEqAppend__debug(threadData_t *threadData, modelica_metatype _inEquationOption, modelica_metatype _inElementList, modelica_metatype _iShared, modelica_metatype *out_outEqs, modelica_boolean *out_inlined, modelica_metatype *out_shared);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendInline_inlineEqAppend__debug(threadData_t *threadData, modelica_metatype _inEquationOption, modelica_metatype _inElementList, modelica_metatype _iShared, modelica_metatype *out_outEqs, modelica_metatype *out_inlined, modelica_metatype *out_shared);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_inlineEqAppend__debug,2,0) {(void*) boxptr_BackendInline_inlineEqAppend__debug,0}};
 #define boxvar_BackendInline_inlineEqAppend__debug MMC_REFSTRUCTLIT(boxvar_lit_BackendInline_inlineEqAppend__debug)
@@ -131,17 +131,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_inlineEqAppend__debug,2,0
 #define boxptr_BackendInline_inlineEventInfo omc_BackendInline_inlineEventInfo
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendInline_inlineEqs(threadData_t *threadData, modelica_metatype _inEqnsList, modelica_metatype _inFunctions, modelica_metatype _iAcc, modelica_boolean _iInlined, modelica_boolean *out_OInlined);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendInline_inlineEqs(threadData_t *threadData, modelica_metatype _inEqnsList, modelica_metatype _inFunctions, modelica_metatype _iAcc, modelica_metatype _iInlined, modelica_metatype *out_OInlined);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_inlineEqs,2,0) {(void*) boxptr_BackendInline_inlineEqs,0}};
 #define boxvar_BackendInline_inlineEqs MMC_REFSTRUCTLIT(boxvar_lit_BackendInline_inlineEqs)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendInline_inlineEq(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _fns, modelica_boolean *out_inlined);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendInline_inlineEq(threadData_t *threadData, modelica_metatype _inEquation, modelica_metatype _fns, modelica_metatype *out_inlined);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_inlineEq,2,0) {(void*) boxptr_BackendInline_inlineEq,0}};
 #define boxvar_BackendInline_inlineEq MMC_REFSTRUCTLIT(boxvar_lit_BackendInline_inlineEq)
@@ -186,14 +186,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_inlineEq,2,0) {(void*) bo
 #define boxptr_BackendInline_inlineCalls omc_BackendInline_inlineCalls
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendInline_normalInlineFunction(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendInline_normalInlineFunction omc_BackendInline_normalInlineFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_normalInlineFunction,2,0) {(void*) boxptr_BackendInline_normalInlineFunction,0}};
 #define boxvar_BackendInline_normalInlineFunction MMC_REFSTRUCTLIT(boxvar_lit_BackendInline_normalInlineFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendInline_lateInlineFunction(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendInline_lateInlineFunction omc_BackendInline_lateInlineFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInline_lateInlineFunction,2,0) {(void*) boxptr_BackendInline_lateInlineFunction,0}};

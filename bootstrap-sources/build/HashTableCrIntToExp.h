@@ -12,15 +12,15 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableCrIntToExp_emptyHashTableSized(threadData_t *threadData, modelica_integer _size);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HashTableCrIntToExp_emptyHashTableSized(threadData_t *threadData, modelica_metatype _size);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrIntToExp_emptyHashTableSized,2,0) {(void*) boxptr_HashTableCrIntToExp_emptyHashTableSized,0}};
 #define boxvar_HashTableCrIntToExp_emptyHashTableSized MMC_REFSTRUCTLIT(boxvar_lit_HashTableCrIntToExp_emptyHashTableSized)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableCrIntToExp_emptyHashTable(threadData_t *threadData);
 #define boxptr_HashTableCrIntToExp_emptyHashTable omc_HashTableCrIntToExp_emptyHashTable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrIntToExp_emptyHashTable,2,0) {(void*) boxptr_HashTableCrIntToExp_emptyHashTable,0}};

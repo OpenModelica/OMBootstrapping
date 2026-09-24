@@ -214,7 +214,8 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_hostToString(thread
 {
   modelica_string _hostPortStr = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _hostPortStr = _OMC_LIT0;
   { /* match expression */
@@ -235,22 +236,22 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_hostToString(thread
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
+          modelica_string tmp10;
+          modelica_string tmp11;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,6) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta6)) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 3);
           if (optionNone(tmpMeta8)) goto tmp3_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta8, 1);
           
           _hostStr = tmpMeta7;
           _portStr = tmpMeta9;
           /* Pattern matching succeeded */
-          tmpMeta10 = stringAppend(_hostStr,_OMC_LIT1);
-          tmpMeta11 = stringAppend(tmpMeta10,_portStr);
-          tmp1 = tmpMeta11;
+          tmp10 = stringAppend(_hostStr,_OMC_LIT1);
+          tmp11 = stringAppend(tmp10,_portStr);
+          tmp1 = tmp11;
           goto tmp3_done;
         }
         case 1: {
@@ -258,10 +259,10 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_hostToString(thread
           modelica_metatype tmpMeta13;
           modelica_metatype tmpMeta14;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,6) == 0) goto tmp3_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta12)) goto tmp3_end;
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 1);
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_1, 3);
           if (!optionNone(tmpMeta14)) goto tmp3_end;
           
           _hostStr = tmpMeta13;
@@ -274,11 +275,11 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_hostToString(thread
           modelica_metatype tmpMeta16;
           modelica_metatype tmpMeta17;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,6) == 0) goto tmp3_end;
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_1, 2);
           if (!optionNone(tmpMeta15)) goto tmp3_end;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 3);
           if (optionNone(tmpMeta16)) goto tmp3_end;
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta16), 1));
+          tmpMeta17 = OMC_BOX_FIELD(tmpMeta16, 1);
           
           /* Pattern matching succeeded */
           omc_Error_addCompilerError(threadData, _OMC_LIT2);
@@ -289,9 +290,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_hostToString(thread
           modelica_metatype tmpMeta18;
           modelica_metatype tmpMeta19;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,6) == 0) goto tmp3_end;
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_1, 2);
           if (!optionNone(tmpMeta18)) goto tmp3_end;
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta19 = OMC_BOX_FIELD(tmp4_1, 3);
           if (!optionNone(tmpMeta19)) goto tmp3_end;
           
           /* Pattern matching succeeded */
@@ -311,14 +312,15 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_hostToString(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _hostPortStr = tmp1;
+  omc_string_store(&(_hostPortStr), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _hostPortStr;
+  omc_ret_ = _hostPortStr;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_parseContainerRepository(threadData_t *threadData, modelica_string _repositoryString, modelica_metatype *out_tag)
@@ -326,8 +328,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_parseContainerRepos
   modelica_string _repository = NULL;
   modelica_metatype _tag = NULL;
   modelica_string tmp1_c0 __attribute__((unused)) = 0;
+  modelica_string omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _repository has no default value.
   // _tag has no default value.
@@ -379,13 +382,13 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_parseContainerRepos
           goto tmp3_done;
         }
         case 2: {
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
+          modelica_string tmp12;
+          modelica_string tmp13;
           
           /* Pattern matching succeeded */
-          tmpMeta12 = stringAppend(_OMC_LIT4,_repositoryString);
-          tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT5);
-          omc_Error_addCompilerError(threadData, tmpMeta13);
+          tmp12 = stringAppend(_OMC_LIT4,_repositoryString);
+          tmp13 = stringAppend(tmp12,_OMC_LIT5);
+          omc_Error_addCompilerError(threadData, tmp13);
           goto goto_2;
           goto tmp3_done;
         }
@@ -395,7 +398,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_parseContainerRepos
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -404,22 +407,25 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_parseContainerRepos
   _tag = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_tag) { *out_tag = _tag; }
-  return _repository;
+  omc_ret_ = _repository;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_quoteForShell(threadData_t *threadData, modelica_string _str)
 {
   modelica_string _quoted = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _quoted has no default value.
-  tmpMeta1 = stringAppend(_OMC_LIT6,omc_System_stringReplace(threadData, _str, _OMC_LIT6, _OMC_LIT7));
-  tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT6);
-  _quoted = tmpMeta2;
+  tmp1 = stringAppend(_OMC_LIT6,omc_System_stringReplace(threadData, _str, _OMC_LIT6, _OMC_LIT7));
+  tmp2 = stringAppend(tmp1,_OMC_LIT6);
+  omc_string_store(&(_quoted), tmp2);
   _return: OMC_LABEL_UNUSED
-  return _quoted;
+  omc_ret_ = _quoted;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_parseContainerHostPort(threadData_t *threadData, modelica_string _host_and_port, modelica_metatype *out_port)
@@ -427,7 +433,8 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_parseContainerHostP
   modelica_string _host = NULL;
   modelica_metatype _port = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _host has no default value.
   _port = mmc_mk_none();
@@ -476,13 +483,13 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_parseContainerHostP
           goto tmp3_done;
         }
         case 2: {
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
+          modelica_string tmp12;
+          modelica_string tmp13;
           
           /* Pattern matching succeeded */
-          tmpMeta12 = stringAppend(_OMC_LIT8,_host_and_port);
-          tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT5);
-          omc_Error_addCompilerError(threadData, tmpMeta13);
+          tmp12 = stringAppend(_OMC_LIT8,_host_and_port);
+          tmp13 = stringAppend(tmp12,_OMC_LIT5);
+          omc_Error_addCompilerError(threadData, tmp13);
           goto goto_2;
           goto tmp3_done;
         }
@@ -492,23 +499,25 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_ContainerImage_parseContainerHostP
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _host = tmp1;
+  omc_string_store(&(_host), tmp1);
   _return: OMC_LABEL_UNUSED
   if (out_port) { *out_port = _port; }
-  return _host;
+  omc_ret_ = _host;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ContainerImage_nameToString(threadData_t *threadData, modelica_metatype _image)
 {
   modelica_string _name = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _name = _OMC_LIT0;
   { /* match expression */
@@ -528,29 +537,29 @@ modelica_string omc_ContainerImage_nameToString(threadData_t *threadData, modeli
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
+          modelica_string tmp9;
+          modelica_string tmp10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,6) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 4);
           if (optionNone(tmpMeta6)) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 5);
           
           _namespace_str = tmpMeta7;
           _repository = tmpMeta8;
           /* Pattern matching succeeded */
-          tmpMeta9 = stringAppend(_namespace_str,_OMC_LIT9);
-          tmpMeta10 = stringAppend(tmpMeta9,_repository);
-          tmp1 = tmpMeta10;
+          tmp9 = stringAppend(_namespace_str,_OMC_LIT9);
+          tmp10 = stringAppend(tmp9,_repository);
+          tmp1 = tmp10;
           goto tmp3_done;
         }
         case 1: {
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,6) == 0) goto tmp3_end;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_1, 4);
           if (!optionNone(tmpMeta11)) goto tmp3_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_1, 5);
           
           _repository = tmpMeta12;
           /* Pattern matching succeeded */
@@ -570,96 +579,96 @@ modelica_string omc_ContainerImage_nameToString(threadData_t *threadData, modeli
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _name = tmp1;
+  omc_string_store(&(_name), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _name;
+  omc_ret_ = _name;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ContainerImage_toString(threadData_t *threadData, modelica_metatype _image, modelica_boolean _useDigest)
 {
   modelica_string _imageString = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
+  modelica_string tmp5;
+  modelica_string tmp6;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _imageString = _OMC_LIT0;
-  _imageString = omc_ContainerImage_hostToString(threadData, _image);
+  omc_string_store(&(_imageString), omc_ContainerImage_hostToString(threadData, _image));
 
   if((!(stringEqual(_imageString, _OMC_LIT0))))
   {
-    tmpMeta1 = stringAppend(_imageString,_OMC_LIT9);
-    _imageString = tmpMeta1;
+    tmp1 = stringAppend(_imageString,_OMC_LIT9);
+    omc_string_store(&(_imageString), tmp1);
   }
 
-  tmpMeta2 = stringAppend(_imageString,omc_ContainerImage_nameToString(threadData, _image));
-  _imageString = tmpMeta2;
+  tmp2 = stringAppend(_imageString,omc_ContainerImage_nameToString(threadData, _image));
+  omc_string_store(&(_imageString), tmp2);
 
-  if((_useDigest && isSome((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 7))))))
+  if((_useDigest && isSome((OMC_BOX_FIELD(_image, 7)))))
   {
-    tmpMeta3 = stringAppend(_imageString,_OMC_LIT11);
-    tmpMeta4 = stringAppend(tmpMeta3,omc_Util_getOption(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 7)))));
-    _imageString = tmpMeta4;
+    tmp3 = stringAppend(_imageString,_OMC_LIT11);
+    tmp4 = stringAppend(tmp3,omc_Util_getOption(threadData, (OMC_BOX_FIELD(_image, 7))));
+    omc_string_store(&(_imageString), tmp4);
   }
   else
   {
-    if(isSome((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 6)))))
+    if(isSome((OMC_BOX_FIELD(_image, 6))))
     {
-      tmpMeta5 = stringAppend(_imageString,_OMC_LIT1);
-      tmpMeta6 = stringAppend(tmpMeta5,omc_Util_getOption(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 6)))));
-      _imageString = tmpMeta6;
+      tmp5 = stringAppend(_imageString,_OMC_LIT1);
+      tmp6 = stringAppend(tmp5,omc_Util_getOption(threadData, (OMC_BOX_FIELD(_image, 6))));
+      omc_string_store(&(_imageString), tmp6);
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _imageString;
+  omc_ret_ = _imageString;
+  return omc_ret_;
 }
 modelica_metatype boxptr_ContainerImage_toString(threadData_t *threadData, modelica_metatype _image, modelica_metatype _useDigest)
 {
   modelica_integer tmp1;
   modelica_string _imageString = NULL;
-  tmp1 = mmc_unbox_integer(_useDigest);
+  tmp1 = omc_unbox_integer(_useDigest);
   _imageString = omc_ContainerImage_toString(threadData, _image, tmp1);
   /* skip box _imageString; String */
   return _imageString;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_ContainerImage_assertSignature(threadData_t *threadData, modelica_metatype _image)
 {
   modelica_string _cosignLogFile = NULL;
   modelica_string _cmd = NULL;
   modelica_string _imageName = NULL;
   modelica_string _imageReference = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
-  modelica_metatype tmpMeta7;
-  modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
-  modelica_metatype tmpMeta10;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
+  modelica_string tmp5;
+  modelica_string tmp6;
+  modelica_string tmp7;
+  modelica_string tmp8;
+  modelica_string tmp9;
+  modelica_string tmp10;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _cosignLogFile has no default value.
   // _cmd has no default value.
   _imageName = omc_ContainerImage_toString(threadData, _image, 0 /* false */);
   _imageReference = omc_ContainerImage_toString(threadData, _image, 1 /* true */);
-  tmpMeta1 = stringAppend((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 5))),_OMC_LIT12);
-  _cosignLogFile = tmpMeta1;
+  tmp1 = stringAppend((OMC_BOX_FIELD(_image, 5)),_OMC_LIT12);
+  omc_string_store(&(_cosignLogFile), tmp1);
 
   if(omc_System_regularFileExists(threadData, _cosignLogFile))
   {
@@ -668,52 +677,47 @@ void omc_ContainerImage_assertSignature(threadData_t *threadData, modelica_metat
 
   if((!omc_ContainerImage_isCosignAvailable(threadData)))
   {
-    tmpMeta2 = stringAppend(_OMC_LIT13,_imageName);
-    tmpMeta3 = stringAppend(tmpMeta2,_OMC_LIT14);
-    omc_Error_addCompilerError(threadData, tmpMeta3);
+    tmp2 = stringAppend(_OMC_LIT13,_imageName);
+    tmp3 = stringAppend(tmp2,_OMC_LIT14);
+    omc_Error_addCompilerError(threadData, tmp3);
 
-    MMC_THROW_INTERNAL();
+    OMC_THROW_INTERNAL();
   }
 
-  tmpMeta4 = stringAppend(_OMC_LIT15,omc_ContainerImage_quoteForShell(threadData, _imageReference));
-  tmpMeta5 = stringAppend(tmpMeta4,_OMC_LIT16);
-  tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT17);
-  _cmd = tmpMeta6;
+  tmp4 = stringAppend(_OMC_LIT15,omc_ContainerImage_quoteForShell(threadData, _imageReference));
+  tmp5 = stringAppend(tmp4,_OMC_LIT16);
+  tmp6 = stringAppend(tmp5,_OMC_LIT17);
+  omc_string_store(&(_cmd), tmp6);
 
-  tmpMeta7 = stringAppend(_cmd,_OMC_LIT18);
-  omc_System_appendFile(threadData, _cosignLogFile, tmpMeta7);
+  tmp7 = stringAppend(_cmd,_OMC_LIT18);
+  omc_System_appendFile(threadData, _cosignLogFile, tmp7);
 
   if((omc_System_systemCall(threadData, _cmd, _cosignLogFile) != ((modelica_integer) 0)))
   {
-    tmpMeta8 = stringAppend(_OMC_LIT19,_imageName);
-    tmpMeta9 = stringAppend(tmpMeta8,_OMC_LIT5);
-    omc_Error_addCompilerError(threadData, tmpMeta9);
+    tmp8 = stringAppend(_OMC_LIT19,_imageName);
+    tmp9 = stringAppend(tmp8,_OMC_LIT5);
+    omc_Error_addCompilerError(threadData, tmp9);
 
-    tmpMeta10 = stringAppend(omc_System_readFile(threadData, _cosignLogFile),_OMC_LIT18);
-    omc_Error_addCompilerNotification(threadData, tmpMeta10);
+    tmp10 = stringAppend(omc_System_readFile(threadData, _cosignLogFile),_OMC_LIT18);
+    omc_Error_addCompilerNotification(threadData, tmp10);
 
     omc_System_removeFile(threadData, _cosignLogFile);
 
-    MMC_THROW_INTERNAL();
+    OMC_THROW_INTERNAL();
   }
 
   omc_System_removeFile(threadData, _cosignLogFile);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ContainerImage_isCosignAvailable(threadData_t *threadData)
 {
   modelica_boolean _hasCosign;
   modelica_string _cosignLogFile = NULL;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hasCosign has no default value.
   _cosignLogFile = _OMC_LIT20;
@@ -736,48 +740,44 @@ modelica_boolean omc_ContainerImage_isCosignAvailable(threadData_t *threadData)
     omc_System_removeFile(threadData, _cosignLogFile);
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _hasCosign;
+  omc_ret_ = _hasCosign;
+  return omc_ret_;
 }
 modelica_metatype boxptr_ContainerImage_isCosignAvailable(threadData_t *threadData)
 {
   modelica_boolean _hasCosign;
   modelica_metatype out_hasCosign;
   _hasCosign = omc_ContainerImage_isCosignAvailable(threadData);
-  out_hasCosign = mmc_mk_icon(_hasCosign);
+  out_hasCosign = omc_mk_icon(_hasCosign);
   return out_hasCosign;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ContainerImage_isAvailableLocally(threadData_t *threadData, modelica_metatype _image)
 {
   modelica_boolean _isAvailable;
   modelica_string _inspectLogFile = NULL;
   modelica_string _imageName = NULL;
   modelica_string _cmd = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isAvailable has no default value.
   // _inspectLogFile has no default value.
   _imageName = omc_ContainerImage_toString(threadData, _image, 1 /* true */);
   // _cmd has no default value.
-  tmpMeta1 = stringAppend((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 5))),_OMC_LIT24);
-  _inspectLogFile = tmpMeta1;
+  tmp1 = stringAppend((OMC_BOX_FIELD(_image, 5)),_OMC_LIT24);
+  omc_string_store(&(_inspectLogFile), tmp1);
 
   if(omc_System_regularFileExists(threadData, _inspectLogFile))
   {
     omc_System_removeFile(threadData, _inspectLogFile);
   }
 
-  tmpMeta2 = stringAppend(_OMC_LIT25,omc_ContainerImage_quoteForShell(threadData, _imageName));
-  _cmd = tmpMeta2;
+  tmp2 = stringAppend(_OMC_LIT25,omc_ContainerImage_quoteForShell(threadData, _imageName));
+  omc_string_store(&(_cmd), tmp2);
 
   _isAvailable = (omc_System_systemCall(threadData, _cmd, _inspectLogFile) == ((modelica_integer) 0));
 
@@ -786,85 +786,79 @@ modelica_boolean omc_ContainerImage_isAvailableLocally(threadData_t *threadData,
     omc_System_removeFile(threadData, _inspectLogFile);
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _isAvailable;
+  omc_ret_ = _isAvailable;
+  return omc_ret_;
 }
 modelica_metatype boxptr_ContainerImage_isAvailableLocally(threadData_t *threadData, modelica_metatype _image)
 {
   modelica_boolean _isAvailable;
   modelica_metatype out_isAvailable;
   _isAvailable = omc_ContainerImage_isAvailableLocally(threadData, _image);
-  out_isAvailable = mmc_mk_icon(_isAvailable);
+  out_isAvailable = omc_mk_icon(_isAvailable);
   return out_isAvailable;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ContainerImage_pullCommand(threadData_t *threadData, modelica_metatype _image)
 {
   modelica_string _cmd = NULL;
-  modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  tmpMeta1 = stringAppend(_OMC_LIT26,omc_ContainerImage_quoteForShell(threadData, omc_ContainerImage_toString(threadData, _image, 0 /* false */)));
-  _cmd = tmpMeta1;
+  tmp1 = stringAppend(_OMC_LIT26,omc_ContainerImage_quoteForShell(threadData, omc_ContainerImage_toString(threadData, _image, 0 /* false */)));
+  _cmd = tmp1;
   _return: OMC_LABEL_UNUSED
-  return _cmd;
+  omc_ret_ = _cmd;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_ContainerImage_pull(threadData_t *threadData, modelica_metatype _image)
 {
   modelica_string _pullLogFile = NULL;
   modelica_string _imageName = NULL;
   modelica_string _cmd = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
+  modelica_string tmp5;
+  modelica_string tmp6;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _pullLogFile has no default value.
   _imageName = omc_ContainerImage_toString(threadData, _image, 0 /* false */);
   // _cmd has no default value.
-  tmpMeta1 = stringAppend((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 5))),_OMC_LIT27);
-  _pullLogFile = tmpMeta1;
+  tmp1 = stringAppend((OMC_BOX_FIELD(_image, 5)),_OMC_LIT27);
+  omc_string_store(&(_pullLogFile), tmp1);
 
-  tmpMeta2 = stringAppend(_OMC_LIT26,omc_ContainerImage_quoteForShell(threadData, _imageName));
-  _cmd = tmpMeta2;
+  tmp2 = stringAppend(_OMC_LIT26,omc_ContainerImage_quoteForShell(threadData, _imageName));
+  omc_string_store(&(_cmd), tmp2);
 
   if((omc_System_systemCall(threadData, _cmd, _pullLogFile) != ((modelica_integer) 0)))
   {
-    tmpMeta3 = stringAppend(_OMC_LIT28,_imageName);
-    tmpMeta4 = stringAppend(tmpMeta3,_OMC_LIT5);
-    omc_Error_addCompilerError(threadData, tmpMeta4);
+    tmp3 = stringAppend(_OMC_LIT28,_imageName);
+    tmp4 = stringAppend(tmp3,_OMC_LIT5);
+    omc_Error_addCompilerError(threadData, tmp4);
 
-    tmpMeta5 = stringAppend(omc_System_readFile(threadData, _pullLogFile),_OMC_LIT18);
-    omc_Error_addCompilerNotification(threadData, tmpMeta5);
+    tmp5 = stringAppend(omc_System_readFile(threadData, _pullLogFile),_OMC_LIT18);
+    omc_Error_addCompilerNotification(threadData, tmp5);
 
     omc_System_removeFile(threadData, _pullLogFile);
 
-    MMC_THROW_INTERNAL();
+    OMC_THROW_INTERNAL();
   }
 
-  tmpMeta6 = stringAppend(omc_System_readFile(threadData, _pullLogFile),_OMC_LIT18);
-  omc_Error_addCompilerNotification(threadData, tmpMeta6);
+  tmp6 = stringAppend(omc_System_readFile(threadData, _pullLogFile),_OMC_LIT18);
+  omc_Error_addCompilerNotification(threadData, tmp6);
 
   omc_System_removeFile(threadData, _pullLogFile);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *threadData, modelica_metatype _image, modelica_boolean *out_hasKnownDigest)
 {
   modelica_boolean _isOpenModelicaImage;
@@ -878,10 +872,8 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
   modelica_boolean tmp19 = 0;
   modelica_boolean tmp26 = 0;
   modelica_boolean tmp34 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _isOpenModelicaImage = 0 /* false */;
   _hasKnownDigest = 0 /* false */;
@@ -891,7 +883,7 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
   // _host has no default value.
   { /* match expression */
     modelica_metatype tmp4_1;
-    tmp4_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 2)));
+    tmp4_1 = (OMC_BOX_FIELD(_image, 2));
     {
       volatile mmc_switch_type tmp4;
       int tmp5;
@@ -907,8 +899,8 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
         case 1: {
           modelica_metatype tmpMeta6;
           if (optionNone(tmp4_1)) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          if (9 != MMC_STRLEN(tmpMeta6) || strcmp(MMC_STRINGDATA(_OMC_LIT31), MMC_STRINGDATA(tmpMeta6)) != 0) goto tmp3_end;
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          if (9 != omc_string_len(tmpMeta6) || strcmp(omc_string_data(_OMC_LIT31), omc_string_data(tmpMeta6)) != 0) goto tmp3_end;
           /* Pattern matching succeeded */
           tmp1 = 0 /* false */;
           goto tmp3_done;
@@ -916,23 +908,23 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
         case 2: {
           modelica_metatype tmpMeta7;
           if (optionNone(tmp4_1)) goto tmp3_end;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          if (7 != MMC_STRLEN(tmpMeta7) || strcmp(MMC_STRINGDATA(_OMC_LIT32), MMC_STRINGDATA(tmpMeta7)) != 0) goto tmp3_end;
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 1);
+          if (7 != omc_string_len(tmpMeta7) || strcmp(omc_string_data(_OMC_LIT32), omc_string_data(tmpMeta7)) != 0) goto tmp3_end;
           /* Pattern matching succeeded */
           tmp1 = 1 /* true */;
           goto tmp3_done;
         }
         case 3: {
           modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
+          modelica_string tmp9;
+          modelica_string tmp10;
           if (optionNone(tmp4_1)) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 1);
           _host = tmpMeta8;
           /* Pattern matching succeeded */
-          tmpMeta9 = stringAppend(_OMC_LIT29,_host);
-          tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT30);
-          omc_Error_addCompilerWarning(threadData, tmpMeta10);
+          tmp9 = stringAppend(_OMC_LIT29,_host);
+          tmp10 = stringAppend(tmp9,_OMC_LIT30);
+          omc_Error_addCompilerWarning(threadData, tmp10);
           tmp1 = 0 /* false */;
           goto tmp3_done;
         }
@@ -942,7 +934,7 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -951,7 +943,7 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
 
   { /* match expression */
     modelica_metatype tmp14_1;modelica_boolean tmp14_2;
-    tmp14_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 4)));
+    tmp14_1 = (OMC_BOX_FIELD(_image, 4));
     tmp14_2 = _isKnownHost;
     {
       volatile mmc_switch_type tmp14;
@@ -963,21 +955,21 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
           modelica_metatype tmpMeta16;
           if (1 /* true */ != tmp14_2) goto tmp13_end;
           if (optionNone(tmp14_1)) goto tmp13_end;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp14_1), 1));
-          if (12 != MMC_STRLEN(tmpMeta16) || strcmp(MMC_STRINGDATA(_OMC_LIT35), MMC_STRINGDATA(tmpMeta16)) != 0) goto tmp13_end;
+          tmpMeta16 = OMC_BOX_FIELD(tmp14_1, 1);
+          if (12 != omc_string_len(tmpMeta16) || strcmp(omc_string_data(_OMC_LIT35), omc_string_data(tmpMeta16)) != 0) goto tmp13_end;
           /* Pattern matching succeeded */
           tmp11 = 1 /* true */;
           goto tmp13_done;
         }
         case 1: {
-          modelica_metatype tmpMeta17;
-          modelica_metatype tmpMeta18;
+          modelica_string tmp17;
+          modelica_string tmp18;
           if (1 /* true */ != tmp14_2) goto tmp13_end;
           
           /* Pattern matching succeeded */
-          tmpMeta17 = stringAppend(_OMC_LIT33,omc_ContainerImage_toString(threadData, _image, 0 /* false */));
-          tmpMeta18 = stringAppend(tmpMeta17,_OMC_LIT34);
-          omc_Error_addCompilerWarning(threadData, tmpMeta18);
+          tmp17 = stringAppend(_OMC_LIT33,omc_ContainerImage_toString(threadData, _image, 0 /* false */));
+          tmp18 = stringAppend(tmp17,_OMC_LIT34);
+          omc_Error_addCompilerWarning(threadData, tmp18);
           tmp11 = 0 /* false */;
           goto tmp13_done;
         }
@@ -993,7 +985,7 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
       }
       goto goto_12;
       goto_12:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp13_done;
       tmp13_done:;
     }
@@ -1002,7 +994,7 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
 
   { /* match expression */
     modelica_metatype tmp22_1;modelica_boolean tmp22_2;
-    tmp22_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 5)));
+    tmp22_1 = (OMC_BOX_FIELD(_image, 5));
     tmp22_2 = _isKnownNamespace;
     {
       volatile mmc_switch_type tmp22;
@@ -1012,20 +1004,20 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
         switch (MMC_SWITCH_CAST(tmp22)) {
         case 0: {
           if (1 /* true */ != tmp22_2) goto tmp21_end;
-          if (10 != MMC_STRLEN(tmp22_1) || strcmp(MMC_STRINGDATA(_OMC_LIT37), MMC_STRINGDATA(tmp22_1)) != 0) goto tmp21_end;
+          if (10 != omc_string_len(tmp22_1) || strcmp(omc_string_data(_OMC_LIT37), omc_string_data(tmp22_1)) != 0) goto tmp21_end;
           /* Pattern matching succeeded */
           tmp19 = 1 /* true */;
           goto tmp21_done;
         }
         case 1: {
-          modelica_metatype tmpMeta24;
-          modelica_metatype tmpMeta25;
+          modelica_string tmp24;
+          modelica_string tmp25;
           if (1 /* true */ != tmp22_2) goto tmp21_end;
           
           /* Pattern matching succeeded */
-          tmpMeta24 = stringAppend(_OMC_LIT33,omc_ContainerImage_toString(threadData, _image, 0 /* false */));
-          tmpMeta25 = stringAppend(tmpMeta24,_OMC_LIT36);
-          omc_Error_addCompilerWarning(threadData, tmpMeta25);
+          tmp24 = stringAppend(_OMC_LIT33,omc_ContainerImage_toString(threadData, _image, 0 /* false */));
+          tmp25 = stringAppend(tmp24,_OMC_LIT36);
+          omc_Error_addCompilerWarning(threadData, tmp25);
           tmp19 = 0 /* false */;
           goto tmp21_done;
         }
@@ -1041,7 +1033,7 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
       }
       goto goto_20;
       goto_20:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp21_done;
       tmp21_done:;
     }
@@ -1050,7 +1042,7 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
 
   { /* match expression */
     modelica_metatype tmp29_1;modelica_boolean tmp29_2;
-    tmp29_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 6)));
+    tmp29_1 = (OMC_BOX_FIELD(_image, 6));
     tmp29_2 = _isOpenModelicaImage;
     {
       volatile mmc_switch_type tmp29;
@@ -1062,21 +1054,21 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
           modelica_metatype tmpMeta31;
           if (1 /* true */ != tmp29_2) goto tmp28_end;
           if (optionNone(tmp29_1)) goto tmp28_end;
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp29_1), 1));
-          if (7 != MMC_STRLEN(tmpMeta31) || strcmp(MMC_STRINGDATA(_OMC_LIT39), MMC_STRINGDATA(tmpMeta31)) != 0) goto tmp28_end;
+          tmpMeta31 = OMC_BOX_FIELD(tmp29_1, 1);
+          if (7 != omc_string_len(tmpMeta31) || strcmp(omc_string_data(_OMC_LIT39), omc_string_data(tmpMeta31)) != 0) goto tmp28_end;
           /* Pattern matching succeeded */
           tmp26 = 1 /* true */;
           goto tmp28_done;
         }
         case 1: {
-          modelica_metatype tmpMeta32;
-          modelica_metatype tmpMeta33;
+          modelica_string tmp32;
+          modelica_string tmp33;
           if (1 /* true */ != tmp29_2) goto tmp28_end;
           
           /* Pattern matching succeeded */
-          tmpMeta32 = stringAppend(_OMC_LIT33,omc_ContainerImage_toString(threadData, _image, 0 /* false */));
-          tmpMeta33 = stringAppend(tmpMeta32,_OMC_LIT38);
-          omc_Error_addCompilerWarning(threadData, tmpMeta33);
+          tmp32 = stringAppend(_OMC_LIT33,omc_ContainerImage_toString(threadData, _image, 0 /* false */));
+          tmp33 = stringAppend(tmp32,_OMC_LIT38);
+          omc_Error_addCompilerWarning(threadData, tmp33);
           tmp26 = 0 /* false */;
           goto tmp28_done;
         }
@@ -1092,7 +1084,7 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
       }
       goto goto_27;
       goto_27:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp28_done;
       tmp28_done:;
     }
@@ -1101,7 +1093,7 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
 
   { /* match expression */
     modelica_metatype tmp37_1;modelica_boolean tmp37_2;
-    tmp37_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 7)));
+    tmp37_1 = (OMC_BOX_FIELD(_image, 7));
     tmp37_2 = _isKnownTag;
     {
       modelica_string _digest = NULL;
@@ -1115,42 +1107,42 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
           modelica_metatype tmpMeta39;
           if (1 /* true */ != tmp37_2) goto tmp36_end;
           if (optionNone(tmp37_1)) goto tmp36_end;
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp37_1), 1));
-          if (71 != MMC_STRLEN(tmpMeta39) || strcmp(MMC_STRINGDATA(_OMC_LIT44), MMC_STRINGDATA(tmpMeta39)) != 0) goto tmp36_end;
+          tmpMeta39 = OMC_BOX_FIELD(tmp37_1, 1);
+          if (71 != omc_string_len(tmpMeta39) || strcmp(omc_string_data(_OMC_LIT44), omc_string_data(tmpMeta39)) != 0) goto tmp36_end;
           /* Pattern matching succeeded */
           tmp34 = 1 /* true */;
           goto tmp36_done;
         }
         case 1: {
           modelica_metatype tmpMeta40;
-          modelica_metatype tmpMeta41;
-          modelica_metatype tmpMeta42;
-          modelica_metatype tmpMeta43;
-          modelica_metatype tmpMeta44;
+          modelica_string tmp41;
+          modelica_string tmp42;
+          modelica_string tmp43;
+          modelica_string tmp44;
           if (1 /* true */ != tmp37_2) goto tmp36_end;
           if (optionNone(tmp37_1)) goto tmp36_end;
-          tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp37_1), 1));
+          tmpMeta40 = OMC_BOX_FIELD(tmp37_1, 1);
           _digest = tmpMeta40;
           /* Pattern matching succeeded */
-          tmpMeta41 = stringAppend(_OMC_LIT33,omc_ContainerImage_toString(threadData, _image, 0 /* false */));
-          tmpMeta42 = stringAppend(tmpMeta41,_OMC_LIT40);
-          tmpMeta43 = stringAppend(tmpMeta42,_digest);
-          tmpMeta44 = stringAppend(tmpMeta43,_OMC_LIT41);
-          omc_Error_addCompilerWarning(threadData, tmpMeta44);
+          tmp41 = stringAppend(_OMC_LIT33,omc_ContainerImage_toString(threadData, _image, 0 /* false */));
+          tmp42 = stringAppend(tmp41,_OMC_LIT40);
+          tmp43 = stringAppend(tmp42,_digest);
+          tmp44 = stringAppend(tmp43,_OMC_LIT41);
+          omc_Error_addCompilerWarning(threadData, tmp44);
 
           omc_Error_addCompilerNotification(threadData, _OMC_LIT42);
           tmp34 = 0 /* false */;
           goto tmp36_done;
         }
         case 2: {
-          modelica_metatype tmpMeta45;
-          modelica_metatype tmpMeta46;
+          modelica_string tmp45;
+          modelica_string tmp46;
           if (1 /* true */ != tmp37_2) goto tmp36_end;
           if (!optionNone(tmp37_1)) goto tmp36_end;
           /* Pattern matching succeeded */
-          tmpMeta45 = stringAppend(_OMC_LIT33,omc_ContainerImage_toString(threadData, _image, 0 /* false */));
-          tmpMeta46 = stringAppend(tmpMeta45,_OMC_LIT43);
-          omc_Error_addCompilerError(threadData, tmpMeta46);
+          tmp45 = stringAppend(_OMC_LIT33,omc_ContainerImage_toString(threadData, _image, 0 /* false */));
+          tmp46 = stringAppend(tmp45,_OMC_LIT43);
+          omc_Error_addCompilerError(threadData, tmp46);
           goto goto_35;
           goto tmp36_done;
         }
@@ -1166,7 +1158,7 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
       }
       goto goto_35;
       goto_35:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp36_done;
       tmp36_done:;
     }
@@ -1174,10 +1166,8 @@ modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *thr
   _hasKnownDigest = tmp34;
   _return: OMC_LABEL_UNUSED
   if (out_hasKnownDigest) { *out_hasKnownDigest = _hasKnownDigest; }
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _isOpenModelicaImage;
+  omc_ret_ = _isOpenModelicaImage;
+  return omc_ret_;
 }
 modelica_metatype boxptr_ContainerImage_isTrustedOpenModelicaImage(threadData_t *threadData, modelica_metatype _image, modelica_metatype *out_hasKnownDigest)
 {
@@ -1185,12 +1175,12 @@ modelica_metatype boxptr_ContainerImage_isTrustedOpenModelicaImage(threadData_t 
   modelica_boolean _isOpenModelicaImage;
   modelica_metatype out_isOpenModelicaImage;
   _isOpenModelicaImage = omc_ContainerImage_isTrustedOpenModelicaImage(threadData, _image, &_hasKnownDigest);
-  out_isOpenModelicaImage = mmc_mk_icon(_isOpenModelicaImage);
-  if (out_hasKnownDigest) { *out_hasKnownDigest = mmc_mk_icon(_hasKnownDigest); }
+  out_isOpenModelicaImage = omc_mk_icon(_isOpenModelicaImage);
+  if (out_hasKnownDigest) { *out_hasKnownDigest = omc_mk_icon(_hasKnownDigest); }
   return out_isOpenModelicaImage;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fimage)
 {
   modelica_metatype _image = NULL;
@@ -1201,19 +1191,20 @@ modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, mode
   modelica_metatype _descriptor = NULL;
   modelica_metatype _digest = NULL;
   modelica_string _digest_sha256_str = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string tmp4;
+  modelica_string tmp5;
+  modelica_string tmp6;
   modelica_metatype tmpMeta7;
   modelica_metatype tmpMeta17;
   modelica_string tmp21 = 0;
-  modelica_metatype tmpMeta28;
-  modelica_metatype tmpMeta29;
+  modelica_string tmp28;
+  modelica_string tmp29;
   modelica_metatype tmpMeta30;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _image = __omcQ_24in_5Fimage;
   _imageName = omc_ContainerImage_toString(threadData, _image, 0 /* false */);
@@ -1223,30 +1214,30 @@ modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, mode
   // _descriptor has no default value.
   // _digest has no default value.
   // _digest_sha256_str has no default value.
-  tmpMeta1 = stringAppend((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_image), 5))),_OMC_LIT45);
-  _manifestFile = tmpMeta1;
+  tmp1 = stringAppend((OMC_BOX_FIELD(_image, 5)),_OMC_LIT45);
+  omc_string_store(&(_manifestFile), tmp1);
 
   if(omc_System_regularFileExists(threadData, _manifestFile))
   {
     omc_System_removeFile(threadData, _manifestFile);
   }
 
-  tmpMeta2 = stringAppend(_OMC_LIT46,omc_ContainerImage_quoteForShell(threadData, _imageName));
-  tmpMeta3 = stringAppend(tmpMeta2,_OMC_LIT47);
-  _cmd = tmpMeta3;
+  tmp2 = stringAppend(_OMC_LIT46,omc_ContainerImage_quoteForShell(threadData, _imageName));
+  tmp3 = stringAppend(tmp2,_OMC_LIT47);
+  omc_string_store(&(_cmd), tmp3);
 
   if((omc_System_systemCall(threadData, _cmd, _manifestFile) != ((modelica_integer) 0)))
   {
-    tmpMeta4 = stringAppend(_OMC_LIT48,_imageName);
-    tmpMeta5 = stringAppend(tmpMeta4,_OMC_LIT5);
-    omc_Error_addCompilerError(threadData, tmpMeta5);
+    tmp4 = stringAppend(_OMC_LIT48,_imageName);
+    tmp5 = stringAppend(tmp4,_OMC_LIT5);
+    omc_Error_addCompilerError(threadData, tmp5);
 
-    tmpMeta6 = stringAppend(omc_System_readFile(threadData, _manifestFile),_OMC_LIT18);
-    omc_Error_addCompilerNotification(threadData, tmpMeta6);
+    tmp6 = stringAppend(omc_System_readFile(threadData, _manifestFile),_OMC_LIT18);
+    omc_Error_addCompilerNotification(threadData, tmp6);
 
     omc_System_removeFile(threadData, _manifestFile);
 
-    MMC_THROW_INTERNAL();
+    OMC_THROW_INTERNAL();
   }
 
   _manifest = omc_JSON_parseFile(threadData, _manifestFile);
@@ -1271,19 +1262,19 @@ modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, mode
           goto tmp9_done;
         }
         case 5: {
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
+          modelica_string tmp11;
+          modelica_string tmp12;
+          modelica_string tmp13;
+          modelica_string tmp14;
           
           /* Pattern matching succeeded */
-          tmpMeta11 = stringAppend(_OMC_LIT51,_imageName);
-          tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT52);
-          omc_Error_addCompilerError(threadData, tmpMeta12);
+          tmp11 = stringAppend(_OMC_LIT51,_imageName);
+          tmp12 = stringAppend(tmp11,_OMC_LIT52);
+          omc_Error_addCompilerError(threadData, tmp12);
 
-          tmpMeta13 = stringAppend(_OMC_LIT53,_imageName);
-          tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT54);
-          omc_Error_addCompilerNotification(threadData, tmpMeta14);
+          tmp13 = stringAppend(_OMC_LIT53,_imageName);
+          tmp14 = stringAppend(tmp13,_OMC_LIT54);
+          omc_Error_addCompilerNotification(threadData, tmp14);
 
           omc_System_removeFile(threadData, _manifestFile);
           goto goto_8;
@@ -1291,13 +1282,13 @@ modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, mode
         }
         default:
         tmp9_default: OMC_LABEL_UNUSED; {
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
+          modelica_string tmp15;
+          modelica_string tmp16;
           
           /* Pattern matching succeeded */
-          tmpMeta15 = stringAppend(_OMC_LIT55,_imageName);
-          tmpMeta16 = stringAppend(tmpMeta15,_OMC_LIT5);
-          omc_Error_addCompilerError(threadData, tmpMeta16);
+          tmp15 = stringAppend(_OMC_LIT55,_imageName);
+          tmp16 = stringAppend(tmp15,_OMC_LIT5);
+          omc_Error_addCompilerError(threadData, tmp16);
 
           omc_System_removeFile(threadData, _manifestFile);
           goto goto_8;
@@ -1309,7 +1300,7 @@ modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, mode
       }
       goto goto_8;
       goto_8:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp9_done;
       tmp9_done:;
     }
@@ -1348,7 +1339,7 @@ modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, mode
       }
       goto goto_18;
       goto_18:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp19_done;
       tmp19_done:;
     }
@@ -1368,17 +1359,17 @@ modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, mode
           if (mmc__uniontype__metarecord__typedef__equal(tmp24_1,4,1) == 0) goto tmp23_end;
           
           /* Pattern matching succeeded */
-          tmp21 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_digest), 2)));
+          tmp21 = (OMC_BOX_FIELD(_digest, 2));
           goto tmp23_done;
         }
         case 1: {
-          modelica_metatype tmpMeta26;
-          modelica_metatype tmpMeta27;
+          modelica_string tmp26;
+          modelica_string tmp27;
           
           /* Pattern matching succeeded */
-          tmpMeta26 = stringAppend(_OMC_LIT57,_imageName);
-          tmpMeta27 = stringAppend(tmpMeta26,_OMC_LIT5);
-          omc_Error_addCompilerError(threadData, tmpMeta27);
+          tmp26 = stringAppend(_OMC_LIT57,_imageName);
+          tmp27 = stringAppend(tmp26,_OMC_LIT5);
+          omc_Error_addCompilerError(threadData, tmp27);
 
           omc_System_removeFile(threadData, _manifestFile);
           goto goto_22;
@@ -1390,22 +1381,22 @@ modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, mode
       }
       goto goto_22;
       goto_22:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp23_done;
       tmp23_done:;
     }
   }
-  _digest_sha256_str = tmp21;
+  omc_string_store(&(_digest_sha256_str), tmp21);
 
   if((!omc_StringUtil_startsWith(threadData, _digest_sha256_str, _OMC_LIT59)))
   {
-    tmpMeta28 = stringAppend(_OMC_LIT58,_digest_sha256_str);
-    tmpMeta29 = stringAppend(tmpMeta28,_OMC_LIT5);
-    omc_Error_addCompilerError(threadData, tmpMeta29);
+    tmp28 = stringAppend(_OMC_LIT58,_digest_sha256_str);
+    tmp29 = stringAppend(tmp28,_OMC_LIT5);
+    omc_Error_addCompilerError(threadData, tmp29);
 
     omc_System_removeFile(threadData, _manifestFile);
 
-    MMC_THROW_INTERNAL();
+    OMC_THROW_INTERNAL();
   }
 
   tmpMeta30 = MMC_TAGPTR(mmc_alloc_words(8));
@@ -1415,15 +1406,17 @@ modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, mode
 
   omc_System_removeFile(threadData, _manifestFile);
   _return: OMC_LABEL_UNUSED
-  return _image;
+  omc_ret_ = _image;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ContainerImage_parseContainerReference(threadData_t *threadData, modelica_string _containerReference)
 {
   modelica_metatype _image = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _image has no default value.
   { /* match expression */
@@ -1474,7 +1467,7 @@ modelica_metatype omc_ContainerImage_parseContainerReference(threadData_t *threa
           _host = omc_ContainerImage_parseContainerHostPort(threadData, _host_and_port ,&_port);
 
           _repository = omc_ContainerImage_parseContainerRepository(threadData, _repository_and_tag ,&_tag);
-          tmpMeta12 = mmc_mk_box7(3, &ContainerImage_CONTAINER__IMAGE__desc, mmc_mk_some(_host), _port, mmc_mk_some(_namespace), _repository, _tag, mmc_mk_none());
+          tmpMeta12 = omc_mk_box7(3, &ContainerImage_CONTAINER__IMAGE__desc, mmc_mk_some(_host), _port, mmc_mk_some(_namespace), _repository, _tag, mmc_mk_none());
           tmpMeta1 = tmpMeta12;
           goto tmp3_done;
         }
@@ -1495,7 +1488,7 @@ modelica_metatype omc_ContainerImage_parseContainerReference(threadData_t *threa
           _repository_and_tag = tmpMeta15;
           /* Pattern matching succeeded */
           _repository = omc_ContainerImage_parseContainerRepository(threadData, _repository_and_tag ,&_tag);
-          tmpMeta17 = mmc_mk_box7(3, &ContainerImage_CONTAINER__IMAGE__desc, mmc_mk_none(), mmc_mk_none(), mmc_mk_some(_namespace), _repository, _tag, mmc_mk_none());
+          tmpMeta17 = omc_mk_box7(3, &ContainerImage_CONTAINER__IMAGE__desc, mmc_mk_none(), mmc_mk_none(), mmc_mk_some(_namespace), _repository, _tag, mmc_mk_none());
           tmpMeta1 = tmpMeta17;
           goto tmp3_done;
         }
@@ -1510,18 +1503,18 @@ modelica_metatype omc_ContainerImage_parseContainerReference(threadData_t *threa
           _repository_and_tag = tmpMeta18;
           /* Pattern matching succeeded */
           _repository = omc_ContainerImage_parseContainerRepository(threadData, _repository_and_tag ,&_tag);
-          tmpMeta20 = mmc_mk_box7(3, &ContainerImage_CONTAINER__IMAGE__desc, mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), _repository, _tag, mmc_mk_none());
+          tmpMeta20 = omc_mk_box7(3, &ContainerImage_CONTAINER__IMAGE__desc, mmc_mk_none(), mmc_mk_none(), mmc_mk_none(), _repository, _tag, mmc_mk_none());
           tmpMeta1 = tmpMeta20;
           goto tmp3_done;
         }
         case 3: {
-          modelica_metatype tmpMeta21;
-          modelica_metatype tmpMeta22;
+          modelica_string tmp21;
+          modelica_string tmp22;
           
           /* Pattern matching succeeded */
-          tmpMeta21 = stringAppend(_OMC_LIT60,_containerReference);
-          tmpMeta22 = stringAppend(tmpMeta21,_OMC_LIT5);
-          omc_Error_addCompilerError(threadData, tmpMeta22);
+          tmp21 = stringAppend(_OMC_LIT60,_containerReference);
+          tmp22 = stringAppend(tmp21,_OMC_LIT5);
+          omc_Error_addCompilerError(threadData, tmp22);
           goto goto_2;
           goto tmp3_done;
         }
@@ -1531,34 +1524,36 @@ modelica_metatype omc_ContainerImage_parseContainerReference(threadData_t *threa
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _image = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _image;
+  omc_ret_ = _image;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ContainerImage_parseWithArgs(threadData_t *threadData, modelica_metatype _containerReferenceWithArgs, modelica_metatype *out_arguments)
 {
   modelica_metatype _image = NULL;
   modelica_metatype _arguments = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _image has no default value.
   // _arguments has no default value.
   if(listEmpty(_containerReferenceWithArgs))
   {
-    tmpMeta1 = stringAppend(_OMC_LIT61,stringDelimitList(_containerReferenceWithArgs, _OMC_LIT62));
-    tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT41);
-    omc_Error_addCompilerError(threadData, tmpMeta2);
+    tmp1 = stringAppend(_OMC_LIT61,stringDelimitList(_containerReferenceWithArgs, _OMC_LIT62));
+    tmp2 = stringAppend(tmp1,_OMC_LIT41);
+    omc_Error_addCompilerError(threadData, tmp2);
 
-    MMC_THROW_INTERNAL();
+    OMC_THROW_INTERNAL();
   }
 
   _image = omc_ContainerImage_parseContainerReference(threadData, listHead(_containerReferenceWithArgs));
@@ -1566,6 +1561,7 @@ modelica_metatype omc_ContainerImage_parseWithArgs(threadData_t *threadData, mod
   _arguments = listRest(_containerReferenceWithArgs);
   _return: OMC_LABEL_UNUSED
   if (out_arguments) { *out_arguments = _arguments; }
-  return _image;
+  omc_ret_ = _image;
+  return omc_ret_;
 }
 

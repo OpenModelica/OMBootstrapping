@@ -33,46 +33,46 @@ extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_error(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_srcInfo, modelica_string _a_errMessage);
 #define boxptr_CodegenXML_error omc_CodegenXML_error
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_error,2,0) {(void*) boxptr_CodegenXML_error,0}};
 #define boxvar_CodegenXML_error MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_error)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_assertCommonXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_condition, modelica_metatype _a_message, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_info, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_assertCommonXml omc_CodegenXML_assertCommonXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_assertCommonXml,2,0) {(void*) boxptr_CodegenXML_assertCommonXml,0}};
 #define boxvar_CodegenXML_assertCommonXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_assertCommonXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_dimensionXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_d);
 #define boxptr_CodegenXML_dimensionXml omc_CodegenXML_dimensionXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_dimensionXml,2,0) {(void*) boxptr_CodegenXML_dimensionXml,0}};
 #define boxvar_CodegenXML_dimensionXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_dimensionXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeFromOpFlagXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_op, modelica_integer _in_a_flag);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_expTypeFromOpFlagXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_op, modelica_metatype _in_a_flag);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromOpFlagXml,2,0) {(void*) boxptr_CodegenXML_expTypeFromOpFlagXml,0}};
 #define boxvar_CodegenXML_expTypeFromOpFlagXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromOpFlagXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeFromExpFlagXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_integer _in_a_flag);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_expTypeFromExpFlagXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_flag);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromExpFlagXml,2,0) {(void*) boxptr_CodegenXML_expTypeFromExpFlagXml,0}};
 #define boxvar_CodegenXML_expTypeFromExpFlagXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromExpFlagXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeFlagXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_integer _a_flag);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_expTypeFlagXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_flag);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFlagXml,2,0) {(void*) boxptr_CodegenXML_expTypeFlagXml,0}};
 #define boxvar_CodegenXML_expTypeFlagXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFlagXml)
@@ -87,85 +87,85 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFlagXml,2,0) {(void*)
 #define boxptr_CodegenXML_fun__425 omc_CodegenXML_fun__425
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeFromExpArrayIfXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenXML_expTypeFromExpArrayIfXml omc_CodegenXML_expTypeFromExpArrayIfXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromExpArrayIfXml,2,0) {(void*) boxptr_CodegenXML_expTypeFromExpArrayIfXml,0}};
 #define boxvar_CodegenXML_expTypeFromExpArrayIfXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromExpArrayIfXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeFromExpArrayXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenXML_expTypeFromExpArrayXml omc_CodegenXML_expTypeFromExpArrayXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromExpArrayXml,2,0) {(void*) boxptr_CodegenXML_expTypeFromExpArrayXml,0}};
 #define boxvar_CodegenXML_expTypeFromExpArrayXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromExpArrayXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeFromExpModelicaXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenXML_expTypeFromExpModelicaXml omc_CodegenXML_expTypeFromExpModelicaXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromExpModelicaXml,2,0) {(void*) boxptr_CodegenXML_expTypeFromExpModelicaXml,0}};
 #define boxvar_CodegenXML_expTypeFromExpModelicaXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromExpModelicaXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeFromExpShortXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenXML_expTypeFromExpShortXml omc_CodegenXML_expTypeFromExpShortXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromExpShortXml,2,0) {(void*) boxptr_CodegenXML_expTypeFromExpShortXml,0}};
 #define boxvar_CodegenXML_expTypeFromExpShortXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeFromExpShortXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeArrayIfXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty);
 #define boxptr_CodegenXML_expTypeArrayIfXml omc_CodegenXML_expTypeArrayIfXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeArrayIfXml,2,0) {(void*) boxptr_CodegenXML_expTypeArrayIfXml,0}};
 #define boxvar_CodegenXML_expTypeArrayIfXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeArrayIfXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeArrayXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty);
 #define boxptr_CodegenXML_expTypeArrayXml omc_CodegenXML_expTypeArrayXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeArrayXml,2,0) {(void*) boxptr_CodegenXML_expTypeArrayXml,0}};
 #define boxvar_CodegenXML_expTypeArrayXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeArrayXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeModelicaXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty);
 #define boxptr_CodegenXML_expTypeModelicaXml omc_CodegenXML_expTypeModelicaXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeModelicaXml,2,0) {(void*) boxptr_CodegenXML_expTypeModelicaXml,0}};
 #define boxvar_CodegenXML_expTypeModelicaXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeModelicaXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_boolean _a_array);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_expTypeXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_array);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeXml,2,0) {(void*) boxptr_CodegenXML_expTypeXml,0}};
 #define boxvar_CodegenXML_expTypeXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeShortXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
 #define boxptr_CodegenXML_expTypeShortXml omc_CodegenXML_expTypeShortXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeShortXml,2,0) {(void*) boxptr_CodegenXML_expTypeShortXml,0}};
 #define boxvar_CodegenXML_expTypeShortXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeShortXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expTypeRWXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
 #define boxptr_CodegenXML_expTypeRWXml omc_CodegenXML_expTypeRWXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeRWXml,2,0) {(void*) boxptr_CodegenXML_expTypeRWXml,0}};
 #define boxvar_CodegenXML_expTypeRWXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expTypeRWXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_varTypeBoxedXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenXML_varTypeBoxedXml omc_CodegenXML_varTypeBoxedXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_varTypeBoxedXml,2,0) {(void*) boxptr_CodegenXML_varTypeBoxedXml,0}};
 #define boxvar_CodegenXML_varTypeBoxedXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_varTypeBoxedXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_varTypeXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenXML_varTypeXml omc_CodegenXML_varTypeXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_varTypeXml,2,0) {(void*) boxptr_CodegenXML_varTypeXml,0}};
@@ -175,14 +175,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_varTypeXml,2,0) {(void*) box
 #define boxptr_CodegenXML_fun__410 omc_CodegenXML_fun__410
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_tempDeclConstXml(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ty, modelica_string _a_val, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_tempDeclConstXml omc_CodegenXML_tempDeclConstXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_tempDeclConstXml,2,0) {(void*) boxptr_CodegenXML_tempDeclConstXml,0}};
 #define boxvar_CodegenXML_tempDeclConstXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_tempDeclConstXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_tempDeclXml(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ty, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_tempDeclXml omc_CodegenXML_tempDeclXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_tempDeclXml,2,0) {(void*) boxptr_CodegenXML_tempDeclXml,0}};
@@ -192,14 +192,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_tempDeclXml,2,0) {(void*) bo
 #define boxptr_CodegenXML_fun__407 omc_CodegenXML_fun__407
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_outDeclXml(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ty, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_outDeclXml omc_CodegenXML_outDeclXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_outDeclXml,2,0) {(void*) boxptr_CodegenXML_outDeclXml,0}};
 #define boxvar_CodegenXML_outDeclXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_outDeclXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_arrayScalarRhsXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_subs, modelica_string _a_arrName, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_arrayScalarRhsXml omc_CodegenXML_arrayScalarRhsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_arrayScalarRhsXml,2,0) {(void*) boxptr_CodegenXML_arrayScalarRhsXml,0}};
@@ -212,7 +212,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_arrayScalarRhsXml,2,0) {(voi
 #define boxptr_CodegenXML_lm__403 omc_CodegenXML_lm__403
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpSharedLiteralXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpSharedLiteralXml omc_CodegenXML_daeExpSharedLiteralXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpSharedLiteralXml,2,0) {(void*) boxptr_CodegenXML_daeExpSharedLiteralXml,0}};
@@ -222,28 +222,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpSharedLiteralXml,2,0) 
 #define boxptr_CodegenXML_fun__401 omc_CodegenXML_fun__401
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpUnboxXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpUnboxXml omc_CodegenXML_daeExpUnboxXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpUnboxXml,2,0) {(void*) boxptr_CodegenXML_daeExpUnboxXml,0}};
 #define boxvar_CodegenXML_daeExpUnboxXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpUnboxXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpBoxXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpBoxXml omc_CodegenXML_daeExpBoxXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpBoxXml,2,0) {(void*) boxptr_CodegenXML_daeExpBoxXml,0}};
 #define boxvar_CodegenXML_daeExpBoxXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpBoxXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpSizeXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpSizeXml omc_CodegenXML_daeExpSizeXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpSizeXml,2,0) {(void*) boxptr_CodegenXML_daeExpSizeXml,0}};
 #define boxvar_CodegenXML_daeExpSizeXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpSizeXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCallPreXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCallPreXml omc_CodegenXML_daeExpCallPreXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCallPreXml,2,0) {(void*) boxptr_CodegenXML_daeExpCallPreXml,0}};
@@ -253,14 +253,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCallPreXml,2,0) {(void
 #define boxptr_CodegenXML_fun__396 omc_CodegenXML_fun__396
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpASubIndexXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpASubIndexXml omc_CodegenXML_daeExpASubIndexXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpASubIndexXml,2,0) {(void*) boxptr_CodegenXML_daeExpASubIndexXml,0}};
 #define boxvar_CodegenXML_daeExpASubIndexXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpASubIndexXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpAsubXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_inExp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpAsubXml omc_CodegenXML_daeExpAsubXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpAsubXml,2,0) {(void*) boxptr_CodegenXML_daeExpAsubXml,0}};
@@ -282,14 +282,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpAsubXml,2,0) {(void*) 
 #define boxptr_CodegenXML_fun__389 omc_CodegenXML_fun__389
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeSubscriptXML(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_sub, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeSubscriptXML omc_CodegenXML_daeSubscriptXML
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeSubscriptXML,2,0) {(void*) boxptr_CodegenXML_daeSubscriptXML,0}};
 #define boxvar_CodegenXML_daeSubscriptXML MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_daeSubscriptXML)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCastXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCastXml omc_CodegenXML_daeExpCastXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCastXml,2,0) {(void*) boxptr_CodegenXML_daeExpCastXml,0}};
@@ -299,7 +299,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCastXml,2,0) {(void*) 
 #define boxptr_CodegenXML_fun__386 omc_CodegenXML_fun__386
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpRangeXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpRangeXml omc_CodegenXML_daeExpRangeXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpRangeXml,2,0) {(void*) boxptr_CodegenXML_daeExpRangeXml,0}};
@@ -309,7 +309,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpRangeXml,2,0) {(void*)
 #define boxptr_CodegenXML_fun__384 omc_CodegenXML_fun__384
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpMatrixRowXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_row, modelica_string _a_arrayTypeStr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpMatrixRowXml omc_CodegenXML_daeExpMatrixRowXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpMatrixRowXml,2,0) {(void*) boxptr_CodegenXML_daeExpMatrixRowXml,0}};
@@ -319,7 +319,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpMatrixRowXml,2,0) {(vo
 #define boxptr_CodegenXML_lm__382 omc_CodegenXML_lm__382
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpMatrixXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpMatrixXml omc_CodegenXML_daeExpMatrixXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpMatrixXml,2,0) {(void*) boxptr_CodegenXML_daeExpMatrixXml,0}};
@@ -329,7 +329,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpMatrixXml,2,0) {(void*
 #define boxptr_CodegenXML_lm__380 omc_CodegenXML_lm__380
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpArrayXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpArrayXml omc_CodegenXML_daeExpArrayXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpArrayXml,2,0) {(void*) boxptr_CodegenXML_daeExpArrayXml,0}};
@@ -339,15 +339,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpArrayXml,2,0) {(void*)
 #define boxptr_CodegenXML_lm__378 omc_CodegenXML_lm__378
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCallBuiltinPrefixXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_boolean _in_a_builtin);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_daeExpCallBuiltinPrefixXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_builtin);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCallBuiltinPrefixXml,2,0) {(void*) boxptr_CodegenXML_daeExpCallBuiltinPrefixXml,0}};
 #define boxvar_CodegenXML_daeExpCallBuiltinPrefixXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCallBuiltinPrefixXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpTailCallXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_es, modelica_metatype _in_a_vs, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpTailCallXml omc_CodegenXML_daeExpTailCallXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpTailCallXml,2,0) {(void*) boxptr_CodegenXML_daeExpTailCallXml,0}};
@@ -360,14 +360,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpTailCallXml,2,0) {(voi
 #define boxptr_CodegenXML_fun__374 omc_CodegenXML_fun__374
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_builtinFunctionNameXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
 #define boxptr_CodegenXML_builtinFunctionNameXml omc_CodegenXML_builtinFunctionNameXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_builtinFunctionNameXml,2,0) {(void*) boxptr_CodegenXML_builtinFunctionNameXml,0}};
 #define boxvar_CodegenXML_builtinFunctionNameXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_builtinFunctionNameXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCallXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_call, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCallXml omc_CodegenXML_daeExpCallXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCallXml,2,0) {(void*) boxptr_CodegenXML_daeExpCallXml,0}};
@@ -398,14 +398,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCallXml,2,0) {(void*) 
 #define boxptr_CodegenXML_fun__360 omc_CodegenXML_fun__360
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpIfXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpIfXml omc_CodegenXML_daeExpIfXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpIfXml,2,0) {(void*) boxptr_CodegenXML_daeExpIfXml,0}};
 #define boxvar_CodegenXML_daeExpIfXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpIfXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpConstraintXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpConstraintXml omc_CodegenXML_daeExpConstraintXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpConstraintXml,2,0) {(void*) boxptr_CodegenXML_daeExpConstraintXml,0}};
@@ -421,7 +421,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpConstraintXml,2,0) {(v
 #define boxptr_CodegenXML_fun__355 omc_CodegenXML_fun__355
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpRelationSimXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpRelationSimXml omc_CodegenXML_daeExpRelationSimXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpRelationSimXml,2,0) {(void*) boxptr_CodegenXML_daeExpRelationSimXml,0}};
@@ -449,7 +449,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpRelationSimXml,2,0) {(
 #define boxptr_CodegenXML_fun__347 omc_CodegenXML_fun__347
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpRelationXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpRelationXml omc_CodegenXML_daeExpRelationXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpRelationXml,2,0) {(void*) boxptr_CodegenXML_daeExpRelationXml,0}};
@@ -462,7 +462,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpRelationXml,2,0) {(voi
 #define boxptr_CodegenXML_fun__344 omc_CodegenXML_fun__344
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpLunaryXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpLunaryXml omc_CodegenXML_daeExpLunaryXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpLunaryXml,2,0) {(void*) boxptr_CodegenXML_daeExpLunaryXml,0}};
@@ -472,7 +472,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpLunaryXml,2,0) {(void*
 #define boxptr_CodegenXML_fun__342 omc_CodegenXML_fun__342
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpLbinaryXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpLbinaryXml omc_CodegenXML_daeExpLbinaryXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpLbinaryXml,2,0) {(void*) boxptr_CodegenXML_daeExpLbinaryXml,0}};
@@ -482,7 +482,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpLbinaryXml,2,0) {(void
 #define boxptr_CodegenXML_fun__340 omc_CodegenXML_fun__340
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpUnaryXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpUnaryXml omc_CodegenXML_daeExpUnaryXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpUnaryXml,2,0) {(void*) boxptr_CodegenXML_daeExpUnaryXml,0}};
@@ -492,7 +492,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpUnaryXml,2,0) {(void*)
 #define boxptr_CodegenXML_fun__338 omc_CodegenXML_fun__338
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpBinaryXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpBinaryXml omc_CodegenXML_daeExpBinaryXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpBinaryXml,2,0) {(void*) boxptr_CodegenXML_daeExpBinaryXml,0}};
@@ -520,7 +520,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpBinaryXml,2,0) {(void*
 #define boxptr_CodegenXML_fun__330 omc_CodegenXML_fun__330
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpRecordCrefLhsXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty, modelica_metatype _in_a_cr, modelica_metatype _in_a_context, modelica_metatype _in_a_afterExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_afterExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpRecordCrefLhsXml omc_CodegenXML_daeExpRecordCrefLhsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpRecordCrefLhsXml,2,0) {(void*) boxptr_CodegenXML_daeExpRecordCrefLhsXml,0}};
@@ -530,7 +530,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpRecordCrefLhsXml,2,0) 
 #define boxptr_CodegenXML_lm__328 omc_CodegenXML_lm__328
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCrefLhsArrayBoxXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr, modelica_metatype _in_a_context, modelica_metatype _in_a_afterExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_afterExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCrefLhsArrayBoxXml omc_CodegenXML_daeExpCrefLhsArrayBoxXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefLhsArrayBoxXml,2,0) {(void*) boxptr_CodegenXML_daeExpCrefLhsArrayBoxXml,0}};
@@ -543,7 +543,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefLhsArrayBoxXml,2,0
 #define boxptr_CodegenXML_lm__325 omc_CodegenXML_lm__325
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCrefLhsIndexSpecXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_subs, modelica_metatype _a_context, modelica_metatype _a_afterExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_afterExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCrefLhsIndexSpecXml omc_CodegenXML_daeExpCrefLhsIndexSpecXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefLhsIndexSpecXml,2,0) {(void*) boxptr_CodegenXML_daeExpCrefLhsIndexSpecXml,0}};
@@ -556,7 +556,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefLhsIndexSpecXml,2,
 #define boxptr_CodegenXML_fun__322 omc_CodegenXML_fun__322
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCrefLhs2Xml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr, modelica_metatype _in_a_context, modelica_metatype _in_a_afterExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_afterExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCrefLhs2Xml omc_CodegenXML_daeExpCrefLhs2Xml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefLhs2Xml,2,0) {(void*) boxptr_CodegenXML_daeExpCrefLhs2Xml,0}};
@@ -572,7 +572,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefLhs2Xml,2,0) {(voi
 #define boxptr_CodegenXML_lm__316 omc_CodegenXML_lm__316
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCrefLhsXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_afterExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_afterExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCrefLhsXml omc_CodegenXML_daeExpCrefLhsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefLhsXml,2,0) {(void*) boxptr_CodegenXML_daeExpCrefLhsXml,0}};
@@ -582,7 +582,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefLhsXml,2,0) {(void
 #define boxptr_CodegenXML_fun__314 omc_CodegenXML_fun__314
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpRecordCrefRhsXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty, modelica_metatype _in_a_cr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpRecordCrefRhsXml omc_CodegenXML_daeExpRecordCrefRhsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpRecordCrefRhsXml,2,0) {(void*) boxptr_CodegenXML_daeExpRecordCrefRhsXml,0}};
@@ -592,7 +592,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpRecordCrefRhsXml,2,0) 
 #define boxptr_CodegenXML_lm__312 omc_CodegenXML_lm__312
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCrefRhsArrayBoxXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCrefRhsArrayBoxXml omc_CodegenXML_daeExpCrefRhsArrayBoxXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefRhsArrayBoxXml,2,0) {(void*) boxptr_CodegenXML_daeExpCrefRhsArrayBoxXml,0}};
@@ -605,7 +605,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefRhsArrayBoxXml,2,0
 #define boxptr_CodegenXML_lm__309 omc_CodegenXML_lm__309
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCrefRhsIndexSpecXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_subs, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCrefRhsIndexSpecXml omc_CodegenXML_daeExpCrefRhsIndexSpecXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefRhsIndexSpecXml,2,0) {(void*) boxptr_CodegenXML_daeExpCrefRhsIndexSpecXml,0}};
@@ -618,7 +618,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefRhsIndexSpecXml,2,
 #define boxptr_CodegenXML_fun__306 omc_CodegenXML_fun__306
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_threadDimSubListXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_dims, modelica_metatype _a_subs, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_threadDimSubListXml omc_CodegenXML_threadDimSubListXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_threadDimSubListXml,2,0) {(void*) boxptr_CodegenXML_threadDimSubListXml,0}};
@@ -640,7 +640,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_threadDimSubListXml,2,0) {(v
 #define boxptr_CodegenXML_fun__300 omc_CodegenXML_fun__300
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCrefRhs2Xml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCrefRhs2Xml omc_CodegenXML_daeExpCrefRhs2Xml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefRhs2Xml,2,0) {(void*) boxptr_CodegenXML_daeExpCrefRhs2Xml,0}};
@@ -665,7 +665,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefRhs2Xml,2,0) {(voi
 #define boxptr_CodegenXML_lm__291 omc_CodegenXML_lm__291
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpCrefRhsXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpCrefRhsXml omc_CodegenXML_daeExpCrefRhsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefRhsXml,2,0) {(void*) boxptr_CodegenXML_daeExpCrefRhsXml,0}};
@@ -675,14 +675,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpCrefRhsXml,2,0) {(void
 #define boxptr_CodegenXML_fun__289 omc_CodegenXML_fun__289
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpSconstXml(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_string, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpSconstXml omc_CodegenXML_daeExpSconstXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpSconstXml,2,0) {(void*) boxptr_CodegenXML_daeExpSconstXml,0}};
 #define boxvar_CodegenXML_daeExpSconstXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpSconstXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExternalXmlExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExternalXmlExp omc_CodegenXML_daeExternalXmlExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExternalXmlExp,2,0) {(void*) boxptr_CodegenXML_daeExternalXmlExp,0}};
@@ -692,7 +692,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExternalXmlExp,2,0) {(voi
 #define boxptr_CodegenXML_fun__286 omc_CodegenXML_fun__286
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpValueXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpValueXml omc_CodegenXML_daeExpValueXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpValueXml,2,0) {(void*) boxptr_CodegenXML_daeExpValueXml,0}};
@@ -702,14 +702,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpValueXml,2,0) {(void*)
 #define boxptr_CodegenXML_fun__284 omc_CodegenXML_fun__284
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpXml__dispatch(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpXml__dispatch omc_CodegenXML_daeExpXml__dispatch
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpXml__dispatch,2,0) {(void*) boxptr_CodegenXML_daeExpXml__dispatch,0}};
 #define boxvar_CodegenXML_daeExpXml__dispatch MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpXml__dispatch)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_daeExpXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_daeExpXml omc_CodegenXML_daeExpXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpXml,2,0) {(void*) boxptr_CodegenXML_daeExpXml,0}};
@@ -719,14 +719,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_daeExpXml,2,0) {(void*) boxp
 #define boxptr_CodegenXML_fun__279 omc_CodegenXML_fun__279
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_scalarLhsCrefXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_scalarLhsCrefXml omc_CodegenXML_scalarLhsCrefXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_scalarLhsCrefXml,2,0) {(void*) boxptr_CodegenXML_scalarLhsCrefXml,0}};
 #define boxvar_CodegenXML_scalarLhsCrefXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_scalarLhsCrefXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_elseExprXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_else__, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_elseExprXml omc_CodegenXML_elseExprXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_elseExprXml,2,0) {(void*) boxptr_CodegenXML_elseExprXml,0}};
@@ -739,21 +739,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_elseExprXml,2,0) {(void*) bo
 #define boxptr_CodegenXML_lm__274 omc_CodegenXML_lm__274
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_indexSpecFromCrefXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_indexSpecFromCrefXml omc_CodegenXML_indexSpecFromCrefXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_indexSpecFromCrefXml,2,0) {(void*) boxptr_CodegenXML_indexSpecFromCrefXml,0}};
 #define boxvar_CodegenXML_indexSpecFromCrefXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_indexSpecFromCrefXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtReinitXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtReinitXml omc_CodegenXML_algStmtReinitXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtReinitXml,2,0) {(void*) boxptr_CodegenXML_algStmtReinitXml,0}};
 #define boxvar_CodegenXML_algStmtReinitXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtReinitXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStatementWhenElseXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStatementWhenElseXml omc_CodegenXML_algStatementWhenElseXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStatementWhenElseXml,2,0) {(void*) boxptr_CodegenXML_algStatementWhenElseXml,0}};
@@ -766,7 +766,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStatementWhenElseXml,2,0)
 #define boxptr_CodegenXML_lm__269 omc_CodegenXML_lm__269
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtWhenXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_when, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtWhenXml omc_CodegenXML_algStmtWhenXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtWhenXml,2,0) {(void*) boxptr_CodegenXML_algStmtWhenXml,0}};
@@ -779,28 +779,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtWhenXml,2,0) {(void*)
 #define boxptr_CodegenXML_lm__266 omc_CodegenXML_lm__266
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtNoretcallXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtNoretcallXml omc_CodegenXML_algStmtNoretcallXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtNoretcallXml,2,0) {(void*) boxptr_CodegenXML_algStmtNoretcallXml,0}};
 #define boxvar_CodegenXML_algStmtNoretcallXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtNoretcallXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtTerminateXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtTerminateXml omc_CodegenXML_algStmtTerminateXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtTerminateXml,2,0) {(void*) boxptr_CodegenXML_algStmtTerminateXml,0}};
 #define boxvar_CodegenXML_algStmtTerminateXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtTerminateXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtAssertXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtAssertXml omc_CodegenXML_algStmtAssertXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtAssertXml,2,0) {(void*) boxptr_CodegenXML_algStmtAssertXml,0}};
 #define boxvar_CodegenXML_algStmtAssertXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtAssertXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtWhileXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtWhileXml omc_CodegenXML_algStmtWhileXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtWhileXml,2,0) {(void*) boxptr_CodegenXML_algStmtWhileXml,0}};
@@ -810,15 +810,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtWhileXml,2,0) {(void*
 #define boxptr_CodegenXML_lm__261 omc_CodegenXML_lm__261
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtForGeneric__implXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_string _a_iterator, modelica_string _a_type, modelica_string _a_arrayType, modelica_boolean _a_iterIsArray, modelica_metatype _a_body, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_body, modelica_metatype *out_out_a_varDecls);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_algStmtForGeneric__implXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_iterator, modelica_metatype _a_type, modelica_metatype _a_arrayType, modelica_metatype _a_iterIsArray, modelica_metatype _a_body, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_body, modelica_metatype *out_out_a_varDecls);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtForGeneric__implXml,2,0) {(void*) boxptr_CodegenXML_algStmtForGeneric__implXml,0}};
 #define boxvar_CodegenXML_algStmtForGeneric__implXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtForGeneric__implXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtForGenericXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtForGenericXml omc_CodegenXML_algStmtForGenericXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtForGenericXml,2,0) {(void*) boxptr_CodegenXML_algStmtForGenericXml,0}};
@@ -828,7 +828,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtForGenericXml,2,0) {(
 #define boxptr_CodegenXML_lm__258 omc_CodegenXML_lm__258
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtForRange__implXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_range, modelica_string _a_iterator, modelica_string _a_type, modelica_string _a_shortType, modelica_metatype _a_body, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_body, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtForRange__implXml omc_CodegenXML_algStmtForRange__implXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtForRange__implXml,2,0) {(void*) boxptr_CodegenXML_algStmtForRange__implXml,0}};
@@ -841,7 +841,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtForRange__implXml,2,0
 #define boxptr_CodegenXML_fun__255 omc_CodegenXML_fun__255
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtForRangeXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtForRangeXml omc_CodegenXML_algStmtForRangeXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtForRangeXml,2,0) {(void*) boxptr_CodegenXML_algStmtForRangeXml,0}};
@@ -851,14 +851,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtForRangeXml,2,0) {(vo
 #define boxptr_CodegenXML_lm__253 omc_CodegenXML_lm__253
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtForXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtForXml omc_CodegenXML_algStmtForXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtForXml,2,0) {(void*) boxptr_CodegenXML_algStmtForXml,0}};
 #define boxvar_CodegenXML_algStmtForXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtForXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtIfXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtIfXml omc_CodegenXML_algStmtIfXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtIfXml,2,0) {(void*) boxptr_CodegenXML_algStmtIfXml,0}};
@@ -868,7 +868,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtIfXml,2,0) {(void*) b
 #define boxptr_CodegenXML_lm__250 omc_CodegenXML_lm__250
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_writeLhsCrefXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_string _in_a_rhsStr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_writeLhsCrefXml omc_CodegenXML_writeLhsCrefXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_writeLhsCrefXml,2,0) {(void*) boxptr_CodegenXML_writeLhsCrefXml,0}};
@@ -881,7 +881,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_writeLhsCrefXml,2,0) {(void*
 #define boxptr_CodegenXML_fun__247 omc_CodegenXML_fun__247
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtTupleAssignXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtTupleAssignXml omc_CodegenXML_algStmtTupleAssignXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtTupleAssignXml,2,0) {(void*) boxptr_CodegenXML_algStmtTupleAssignXml,0}};
@@ -906,7 +906,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtTupleAssignXml,2,0) {
 #define boxptr_CodegenXML_lm__240 omc_CodegenXML_lm__240
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_copyArrayDataXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_string _a_exp, modelica_metatype _a_cr, modelica_metatype _a_context);
 #define boxptr_CodegenXML_copyArrayDataXml omc_CodegenXML_copyArrayDataXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_copyArrayDataXml,2,0) {(void*) boxptr_CodegenXML_copyArrayDataXml,0}};
@@ -916,7 +916,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_copyArrayDataXml,2,0) {(void
 #define boxptr_CodegenXML_fun__238 omc_CodegenXML_fun__238
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_indexedAssignXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_string _a_exp, modelica_metatype _a_cr, modelica_string _a_ispec, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_indexedAssignXml omc_CodegenXML_indexedAssignXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_indexedAssignXml,2,0) {(void*) boxptr_CodegenXML_indexedAssignXml,0}};
@@ -926,7 +926,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_indexedAssignXml,2,0) {(void
 #define boxptr_CodegenXML_fun__236 omc_CodegenXML_fun__236
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtAssignArrXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtAssignArrXml omc_CodegenXML_algStmtAssignArrXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtAssignArrXml,2,0) {(void*) boxptr_CodegenXML_algStmtAssignArrXml,0}};
@@ -936,7 +936,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtAssignArrXml,2,0) {(v
 #define boxptr_CodegenXML_fun__234 omc_CodegenXML_fun__234
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStmtAssignXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStmtAssignXml omc_CodegenXML_algStmtAssignXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtAssignXml,2,0) {(void*) boxptr_CodegenXML_algStmtAssignXml,0}};
@@ -949,7 +949,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStmtAssignXml,2,0) {(void
 #define boxptr_CodegenXML_fun__231 omc_CodegenXML_fun__231
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algStatementXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_stmt, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_algStatementXml omc_CodegenXML_algStatementXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStatementXml,2,0) {(void*) boxptr_CodegenXML_algStatementXml,0}};
@@ -959,7 +959,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algStatementXml,2,0) {(void*
 #define boxptr_CodegenXML_fun__229 omc_CodegenXML_fun__229
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_funStatementXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_statementLst, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_funStatementXml omc_CodegenXML_funStatementXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_funStatementXml,2,0) {(void*) boxptr_CodegenXML_funStatementXml,0}};
@@ -969,7 +969,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_funStatementXml,2,0) {(void*
 #define boxptr_CodegenXML_lm__227 omc_CodegenXML_lm__227
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_constraintXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cons);
 #define boxptr_CodegenXML_constraintXml omc_CodegenXML_constraintXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_constraintXml,2,0) {(void*) boxptr_CodegenXML_constraintXml,0}};
@@ -979,7 +979,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_constraintXml,2,0) {(void*) 
 #define boxptr_CodegenXML_lm__225 omc_CodegenXML_lm__225
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_constraintsXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_constraints);
 #define boxptr_CodegenXML_constraintsXml omc_CodegenXML_constraintsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_constraintsXml,2,0) {(void*) boxptr_CodegenXML_constraintsXml,0}};
@@ -989,7 +989,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_constraintsXml,2,0) {(void*)
 #define boxptr_CodegenXML_lm__223 omc_CodegenXML_lm__223
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_classAttributesXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_classAttribute, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenXML_classAttributesXml omc_CodegenXML_classAttributesXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_classAttributesXml,2,0) {(void*) boxptr_CodegenXML_classAttributesXml,0}};
@@ -1017,7 +1017,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_classAttributesXml,2,0) {(vo
 #define boxptr_CodegenXML_fun__215 omc_CodegenXML_fun__215
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_objectiveFunctionXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_classAttributes, modelica_metatype _a_simCode);
 #define boxptr_CodegenXML_objectiveFunctionXml omc_CodegenXML_objectiveFunctionXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_objectiveFunctionXml,2,0) {(void*) boxptr_CodegenXML_objectiveFunctionXml,0}};
@@ -1027,21 +1027,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_objectiveFunctionXml,2,0) {(
 #define boxptr_CodegenXML_lm__213 omc_CodegenXML_lm__213
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_extArgF77Xml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_extArg, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_extArgF77Xml omc_CodegenXML_extArgF77Xml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extArgF77Xml,2,0) {(void*) boxptr_CodegenXML_extArgF77Xml,0}};
 #define boxvar_CodegenXML_extArgF77Xml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_extArgF77Xml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_extArgCXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_extArg, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_extArgCXml omc_CodegenXML_extArgCXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extArgCXml,2,0) {(void*) boxptr_CodegenXML_extArgCXml,0}};
 #define boxvar_CodegenXML_extArgCXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_extArgCXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_extFunCallF77Xml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fun, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_extFunCallF77Xml omc_CodegenXML_extFunCallF77Xml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extFunCallF77Xml,2,0) {(void*) boxptr_CodegenXML_extFunCallF77Xml,0}};
@@ -1054,7 +1054,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extFunCallF77Xml,2,0) {(void
 #define boxptr_CodegenXML_lm__208 omc_CodegenXML_lm__208
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_extFunCallCXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fun, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_extFunCallCXml omc_CodegenXML_extFunCallCXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extFunCallCXml,2,0) {(void*) boxptr_CodegenXML_extFunCallCXml,0}};
@@ -1067,7 +1067,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extFunCallCXml,2,0) {(void*)
 #define boxptr_CodegenXML_lm__205 omc_CodegenXML_lm__205
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_extFunCallXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fun, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_extFunCallXml omc_CodegenXML_extFunCallXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extFunCallXml,2,0) {(void*) boxptr_CodegenXML_extFunCallXml,0}};
@@ -1077,24 +1077,24 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extFunCallXml,2,0) {(void*) 
 #define boxptr_CodegenXML_fun__203 omc_CodegenXML_fun__203
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_extVarNameXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr);
 #define boxptr_CodegenXML_extVarNameXml omc_CodegenXML_extVarNameXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extVarNameXml,2,0) {(void*) boxptr_CodegenXML_extVarNameXml,0}};
 #define boxvar_CodegenXML_extVarNameXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_extVarNameXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_functionNameXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_boolean _in_a_dotPath);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_functionNameXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn, modelica_metatype _in_a_dotPath);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_functionNameXml,2,0) {(void*) boxptr_CodegenXML_functionNameXml,0}};
 #define boxvar_CodegenXML_functionNameXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_functionNameXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_extTypeF77Xml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_type, modelica_boolean _a_isReference);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_extTypeF77Xml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_type, modelica_metatype _a_isReference);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extTypeF77Xml,2,0) {(void*) boxptr_CodegenXML_extTypeF77Xml,0}};
 #define boxvar_CodegenXML_extTypeF77Xml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_extTypeF77Xml)
@@ -1103,9 +1103,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extTypeF77Xml,2,0) {(void*) 
 #define boxptr_CodegenXML_fun__194 omc_CodegenXML_fun__194
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_extTypeXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_type, modelica_boolean _a_isInput, modelica_boolean _a_isArray);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_extTypeXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_type, modelica_metatype _a_isInput, modelica_metatype _a_isArray);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extTypeXml,2,0) {(void*) boxptr_CodegenXML_extTypeXml,0}};
 #define boxvar_CodegenXML_extTypeXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_extTypeXml)
@@ -1114,7 +1114,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extTypeXml,2,0) {(void*) box
 #define boxptr_CodegenXML_fun__189 omc_CodegenXML_fun__189
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_extFunctionNameXml(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_name, modelica_string _a_language);
 #define boxptr_CodegenXML_extFunctionNameXml omc_CodegenXML_extFunctionNameXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extFunctionNameXml,2,0) {(void*) boxptr_CodegenXML_extFunctionNameXml,0}};
@@ -1124,35 +1124,35 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_extFunctionNameXml,2,0) {(vo
 #define boxptr_CodegenXML_fun__186 omc_CodegenXML_fun__186
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_funVarDeclarationsXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenXML_funVarDeclarationsXml omc_CodegenXML_funVarDeclarationsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_funVarDeclarationsXml,2,0) {(void*) boxptr_CodegenXML_funVarDeclarationsXml,0}};
 #define boxvar_CodegenXML_funVarDeclarationsXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_funVarDeclarationsXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_funArgDefinitionXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenXML_funArgDefinitionXml omc_CodegenXML_funArgDefinitionXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_funArgDefinitionXml,2,0) {(void*) boxptr_CodegenXML_funArgDefinitionXml,0}};
 #define boxvar_CodegenXML_funArgDefinitionXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_funArgDefinitionXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_funOutputVariableXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenXML_funOutputVariableXml omc_CodegenXML_funOutputVariableXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_funOutputVariableXml,2,0) {(void*) boxptr_CodegenXML_funOutputVariableXml,0}};
 #define boxvar_CodegenXML_funOutputVariableXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_funOutputVariableXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_funArgNameXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenXML_funArgNameXml omc_CodegenXML_funArgNameXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_funArgNameXml,2,0) {(void*) boxptr_CodegenXML_funArgNameXml,0}};
 #define boxvar_CodegenXML_funArgNameXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_funArgNameXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_externalFunctionXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn);
 #define boxptr_CodegenXML_externalFunctionXml omc_CodegenXML_externalFunctionXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_externalFunctionXml,2,0) {(void*) boxptr_CodegenXML_externalFunctionXml,0}};
@@ -1165,7 +1165,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_externalFunctionXml,2,0) {(v
 #define boxptr_CodegenXML_lm__179 omc_CodegenXML_lm__179
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_regularFunctionXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn);
 #define boxptr_CodegenXML_regularFunctionXml omc_CodegenXML_regularFunctionXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_regularFunctionXml,2,0) {(void*) boxptr_CodegenXML_regularFunctionXml,0}};
@@ -1178,14 +1178,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_regularFunctionXml,2,0) {(vo
 #define boxptr_CodegenXML_lm__176 omc_CodegenXML_lm__176
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_functionXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_fn);
 #define boxptr_CodegenXML_functionXml omc_CodegenXML_functionXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_functionXml,2,0) {(void*) boxptr_CodegenXML_functionXml,0}};
 #define boxvar_CodegenXML_functionXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_functionXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_functionsXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_functions);
 #define boxptr_CodegenXML_functionsXml omc_CodegenXML_functionsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_functionsXml,2,0) {(void*) boxptr_CodegenXML_functionsXml,0}};
@@ -1195,14 +1195,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_functionsXml,2,0) {(void*) b
 #define boxptr_CodegenXML_lm__173 omc_CodegenXML_lm__173
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_recordBodyXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenXML_recordBodyXml omc_CodegenXML_recordBodyXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_recordBodyXml,2,0) {(void*) boxptr_CodegenXML_recordBodyXml,0}};
 #define boxvar_CodegenXML_recordBodyXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_recordBodyXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_recordDeclarationXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_recDecl);
 #define boxptr_CodegenXML_recordDeclarationXml omc_CodegenXML_recordDeclarationXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_recordDeclarationXml,2,0) {(void*) boxptr_CodegenXML_recordDeclarationXml,0}};
@@ -1212,7 +1212,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_recordDeclarationXml,2,0) {(
 #define boxptr_CodegenXML_lm__170 omc_CodegenXML_lm__170
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_recordsXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_recordDecls);
 #define boxptr_CodegenXML_recordsXml omc_CodegenXML_recordsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_recordsXml,2,0) {(void*) boxptr_CodegenXML_recordsXml,0}};
@@ -1222,7 +1222,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_recordsXml,2,0) {(void*) box
 #define boxptr_CodegenXML_lm__168 omc_CodegenXML_lm__168
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_whenOps(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_whenOps, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_whenOps omc_CodegenXML_whenOps
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_whenOps,2,0) {(void*) boxptr_CodegenXML_whenOps,0}};
@@ -1235,7 +1235,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_whenOps,2,0) {(void*) boxptr
 #define boxptr_CodegenXML_fun__165 omc_CodegenXML_fun__165
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_equationElseWhenXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_helpInits, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_helpInits, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_equationElseWhenXml omc_CodegenXML_equationElseWhenXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationElseWhenXml,2,0) {(void*) boxptr_CodegenXML_equationElseWhenXml,0}};
@@ -1254,7 +1254,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationElseWhenXml,2,0) {(v
 #define boxptr_CodegenXML_lm__160 omc_CodegenXML_lm__160
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_equationWhenXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_equationWhenXml omc_CodegenXML_equationWhenXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationWhenXml,2,0) {(void*) boxptr_CodegenXML_equationWhenXml,0}};
@@ -1273,14 +1273,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationWhenXml,2,0) {(void*
 #define boxptr_CodegenXML_lm__155 omc_CodegenXML_lm__155
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_functionExtraResidualsPreBody(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_eqs, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_eqs);
 #define boxptr_CodegenXML_functionExtraResidualsPreBody omc_CodegenXML_functionExtraResidualsPreBody
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_functionExtraResidualsPreBody,2,0) {(void*) boxptr_CodegenXML_functionExtraResidualsPreBody,0}};
 #define boxvar_CodegenXML_functionExtraResidualsPreBody MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_functionExtraResidualsPreBody)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_equationNonlinearXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_eq, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_equationNonlinearXml omc_CodegenXML_equationNonlinearXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationNonlinearXml,2,0) {(void*) boxptr_CodegenXML_equationNonlinearXml,0}};
@@ -1296,7 +1296,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationNonlinearXml,2,0) {(
 #define boxptr_CodegenXML_lm__150 omc_CodegenXML_lm__150
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_equationLinearXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_equationLinearXml omc_CodegenXML_equationLinearXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationLinearXml,2,0) {(void*) boxptr_CodegenXML_equationLinearXml,0}};
@@ -1309,7 +1309,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationLinearXml,2,0) {(voi
 #define boxptr_CodegenXML_lm__147 omc_CodegenXML_lm__147
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_equationArrayCallAssignXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_equationArrayCallAssignXml omc_CodegenXML_equationArrayCallAssignXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationArrayCallAssignXml,2,0) {(void*) boxptr_CodegenXML_equationArrayCallAssignXml,0}};
@@ -1319,7 +1319,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationArrayCallAssignXml,2
 #define boxptr_CodegenXML_fun__145 omc_CodegenXML_fun__145
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_equationSimpleAssignXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_equationSimpleAssignXml omc_CodegenXML_equationSimpleAssignXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationSimpleAssignXml,2,0) {(void*) boxptr_CodegenXML_equationSimpleAssignXml,0}};
@@ -1332,14 +1332,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationSimpleAssignXml,2,0)
 #define boxptr_CodegenXML_fun__142 omc_CodegenXML_fun__142
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_old__equation__Xml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_old__equation__Xml omc_CodegenXML_old__equation__Xml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_old__equation__Xml,2,0) {(void*) boxptr_CodegenXML_old__equation__Xml,0}};
 #define boxvar_CodegenXML_old__equation__Xml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_old__equation__Xml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_equation__Xml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_eqs, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_eqs);
 #define boxptr_CodegenXML_equation__Xml omc_CodegenXML_equation__Xml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equation__Xml,2,0) {(void*) boxptr_CodegenXML_equation__Xml,0}};
@@ -1349,7 +1349,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equation__Xml,2,0) {(void*) 
 #define boxptr_CodegenXML_fun__139 omc_CodegenXML_fun__139
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_initialEquationXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenXML_initialEquationXml omc_CodegenXML_initialEquationXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_initialEquationXml,2,0) {(void*) boxptr_CodegenXML_initialEquationXml,0}};
@@ -1359,7 +1359,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_initialEquationXml,2,0) {(vo
 #define boxptr_CodegenXML_fun__137 omc_CodegenXML_fun__137
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_initialEquationsXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_modelInfo, modelica_metatype _in_a_initialEqs);
 #define boxptr_CodegenXML_initialEquationsXml omc_CodegenXML_initialEquationsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_initialEquationsXml,2,0) {(void*) boxptr_CodegenXML_initialEquationsXml,0}};
@@ -1390,7 +1390,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_initialEquationsXml,2,0) {(v
 #define boxptr_CodegenXML_lm__128 omc_CodegenXML_lm__128
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_equationAlgorithmXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_eq, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenXML_equationAlgorithmXml omc_CodegenXML_equationAlgorithmXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationAlgorithmXml,2,0) {(void*) boxptr_CodegenXML_equationAlgorithmXml,0}};
@@ -1403,7 +1403,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationAlgorithmXml,2,0) {(
 #define boxptr_CodegenXML_lm__125 omc_CodegenXML_lm__125
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_algorithmicEquationsXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_allEquations);
 #define boxptr_CodegenXML_algorithmicEquationsXml omc_CodegenXML_algorithmicEquationsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algorithmicEquationsXml,2,0) {(void*) boxptr_CodegenXML_algorithmicEquationsXml,0}};
@@ -1413,7 +1413,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_algorithmicEquationsXml,2,0)
 #define boxptr_CodegenXML_lm__123 omc_CodegenXML_lm__123
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_equationsXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_allEquationsPlusWhen);
 #define boxptr_CodegenXML_equationsXml omc_CodegenXML_equationsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationsXml,2,0) {(void*) boxptr_CodegenXML_equationsXml,0}};
@@ -1423,7 +1423,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_equationsXml,2,0) {(void*) b
 #define boxptr_CodegenXML_lm__121 omc_CodegenXML_lm__121
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_bindingEquationXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_CodegenXML_bindingEquationXml omc_CodegenXML_bindingEquationXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_bindingEquationXml,2,0) {(void*) boxptr_CodegenXML_bindingEquationXml,0}};
@@ -1433,7 +1433,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_bindingEquationXml,2,0) {(vo
 #define boxptr_CodegenXML_fun__119 omc_CodegenXML_fun__119
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_bindingEquationsXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_modelInfo);
 #define boxptr_CodegenXML_bindingEquationsXml omc_CodegenXML_bindingEquationsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_bindingEquationsXml,2,0) {(void*) boxptr_CodegenXML_bindingEquationsXml,0}};
@@ -1452,49 +1452,49 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_bindingEquationsXml,2,0) {(v
 #define boxptr_CodegenXML_lm__114 omc_CodegenXML_lm__114
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_underscorePathXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
 #define boxptr_CodegenXML_underscorePathXml omc_CodegenXML_underscorePathXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_underscorePathXml,2,0) {(void*) boxptr_CodegenXML_underscorePathXml,0}};
 #define boxvar_CodegenXML_underscorePathXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_underscorePathXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_replaceDotAndUnderscoreXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_string _in_a_str);
 #define boxptr_CodegenXML_replaceDotAndUnderscoreXml omc_CodegenXML_replaceDotAndUnderscoreXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_replaceDotAndUnderscoreXml,2,0) {(void*) boxptr_CodegenXML_replaceDotAndUnderscoreXml,0}};
 #define boxvar_CodegenXML_replaceDotAndUnderscoreXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_replaceDotAndUnderscoreXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_dotPathXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
 #define boxptr_CodegenXML_dotPathXml omc_CodegenXML_dotPathXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_dotPathXml,2,0) {(void*) boxptr_CodegenXML_dotPathXml,0}};
 #define boxvar_CodegenXML_dotPathXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_dotPathXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_crefFunctionNameXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenXML_crefFunctionNameXml omc_CodegenXML_crefFunctionNameXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_crefFunctionNameXml,2,0) {(void*) boxptr_CodegenXML_crefFunctionNameXml,0}};
 #define boxvar_CodegenXML_crefFunctionNameXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_crefFunctionNameXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_expCrefXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ecr);
 #define boxptr_CodegenXML_expCrefXml omc_CodegenXML_expCrefXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_expCrefXml,2,0) {(void*) boxptr_CodegenXML_expCrefXml,0}};
 #define boxvar_CodegenXML_expCrefXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_expCrefXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_subscriptStrXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscript);
 #define boxptr_CodegenXML_subscriptStrXml omc_CodegenXML_subscriptStrXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_subscriptStrXml,2,0) {(void*) boxptr_CodegenXML_subscriptStrXml,0}};
 #define boxvar_CodegenXML_subscriptStrXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_subscriptStrXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_subscriptsStrXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts);
 #define boxptr_CodegenXML_subscriptsStrXml omc_CodegenXML_subscriptsStrXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_subscriptsStrXml,2,0) {(void*) boxptr_CodegenXML_subscriptsStrXml,0}};
@@ -1504,28 +1504,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_subscriptsStrXml,2,0) {(void
 #define boxptr_CodegenXML_lm__106 omc_CodegenXML_lm__106
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_arrayCrefStrXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenXML_arrayCrefStrXml omc_CodegenXML_arrayCrefStrXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_arrayCrefStrXml,2,0) {(void*) boxptr_CodegenXML_arrayCrefStrXml,0}};
 #define boxvar_CodegenXML_arrayCrefStrXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_arrayCrefStrXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_arrayCrefXmlStr2(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenXML_arrayCrefXmlStr2 omc_CodegenXML_arrayCrefXmlStr2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_arrayCrefXmlStr2,2,0) {(void*) boxptr_CodegenXML_arrayCrefXmlStr2,0}};
 #define boxvar_CodegenXML_arrayCrefXmlStr2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_arrayCrefXmlStr2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_arrayCrefXmlStr(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr);
 #define boxptr_CodegenXML_arrayCrefXmlStr omc_CodegenXML_arrayCrefXmlStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_arrayCrefXmlStr,2,0) {(void*) boxptr_CodegenXML_arrayCrefXmlStr,0}};
 #define boxvar_CodegenXML_arrayCrefXmlStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_arrayCrefXmlStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_contextArrayCrefXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context);
 #define boxptr_CodegenXML_contextArrayCrefXml omc_CodegenXML_contextArrayCrefXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_contextArrayCrefXml,2,0) {(void*) boxptr_CodegenXML_contextArrayCrefXml,0}};
@@ -1535,28 +1535,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_contextArrayCrefXml,2,0) {(v
 #define boxptr_CodegenXML_fun__101 omc_CodegenXML_fun__101
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_crefStrXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenXML_crefStrXml omc_CodegenXML_crefStrXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_crefStrXml,2,0) {(void*) boxptr_CodegenXML_crefStrXml,0}};
 #define boxvar_CodegenXML_crefStrXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_crefStrXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_crefToXmlStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenXML_crefToXmlStr omc_CodegenXML_crefToXmlStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_crefToXmlStr,2,0) {(void*) boxptr_CodegenXML_crefToXmlStr,0}};
 #define boxvar_CodegenXML_crefToXmlStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_crefToXmlStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_arraysubscriptStrXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscript);
 #define boxptr_CodegenXML_arraysubscriptStrXml omc_CodegenXML_arraysubscriptStrXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_arraysubscriptStrXml,2,0) {(void*) boxptr_CodegenXML_arraysubscriptStrXml,0}};
 #define boxvar_CodegenXML_arraysubscriptStrXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_arraysubscriptStrXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_arraysubscriptsStrXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts);
 #define boxptr_CodegenXML_arraysubscriptsStrXml omc_CodegenXML_arraysubscriptsStrXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_arraysubscriptsStrXml,2,0) {(void*) boxptr_CodegenXML_arraysubscriptsStrXml,0}};
@@ -1566,7 +1566,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_arraysubscriptsStrXml,2,0) {
 #define boxptr_CodegenXML_lm__96 omc_CodegenXML_lm__96
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_qualifiedNamePartXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenXML_qualifiedNamePartXml omc_CodegenXML_qualifiedNamePartXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_qualifiedNamePartXml,2,0) {(void*) boxptr_CodegenXML_qualifiedNamePartXml,0}};
@@ -1579,14 +1579,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_qualifiedNamePartXml,2,0) {(
 #define boxptr_CodegenXML_fun__93 omc_CodegenXML_fun__93
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_crefXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenXML_crefXml omc_CodegenXML_crefXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_crefXml,2,0) {(void*) boxptr_CodegenXML_crefXml,0}};
 #define boxvar_CodegenXML_crefXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_crefXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_contextIteratorNameXml(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_name, modelica_metatype _a_context);
 #define boxptr_CodegenXML_contextIteratorNameXml omc_CodegenXML_contextIteratorNameXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_contextIteratorNameXml,2,0) {(void*) boxptr_CodegenXML_contextIteratorNameXml,0}};
@@ -1596,7 +1596,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_contextIteratorNameXml,2,0) 
 #define boxptr_CodegenXML_fun__90 omc_CodegenXML_fun__90
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_contextCrefXml(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context);
 #define boxptr_CodegenXML_contextCrefXml omc_CodegenXML_contextCrefXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_contextCrefXml,2,0) {(void*) boxptr_CodegenXML_contextCrefXml,0}};
@@ -1606,7 +1606,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_contextCrefXml,2,0) {(void*)
 #define boxptr_CodegenXML_fun__88 omc_CodegenXML_fun__88
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_ScalarVariableTypeRealAttributeXml(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_unit, modelica_string _a_displayUnit);
 #define boxptr_CodegenXML_ScalarVariableTypeRealAttributeXml omc_CodegenXML_ScalarVariableTypeRealAttributeXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableTypeRealAttributeXml,2,0) {(void*) boxptr_CodegenXML_ScalarVariableTypeRealAttributeXml,0}};
@@ -1619,72 +1619,72 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableTypeRealAttrib
 #define boxptr_CodegenXML_fun__85 omc_CodegenXML_fun__85
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_initValXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_initialValue);
 #define boxptr_CodegenXML_initValXml omc_CodegenXML_initValXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_initValXml,2,0) {(void*) boxptr_CodegenXML_initValXml,0}};
 #define boxvar_CodegenXML_initValXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_initValXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_ScalarVariableTypeMaxAttribute(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_maxValue);
 #define boxptr_CodegenXML_ScalarVariableTypeMaxAttribute omc_CodegenXML_ScalarVariableTypeMaxAttribute
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableTypeMaxAttribute,2,0) {(void*) boxptr_CodegenXML_ScalarVariableTypeMaxAttribute,0}};
 #define boxvar_CodegenXML_ScalarVariableTypeMaxAttribute MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableTypeMaxAttribute)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_ScalarVariableTypeMinAttribute(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_minValue);
 #define boxptr_CodegenXML_ScalarVariableTypeMinAttribute omc_CodegenXML_ScalarVariableTypeMinAttribute
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableTypeMinAttribute,2,0) {(void*) boxptr_CodegenXML_ScalarVariableTypeMinAttribute,0}};
 #define boxvar_CodegenXML_ScalarVariableTypeMinAttribute MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableTypeMinAttribute)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_ScalarVariableTypeCommonAttributeXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_initialValue, modelica_boolean _in_a_isFixed);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_ScalarVariableTypeCommonAttributeXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_initialValue, modelica_metatype _in_a_isFixed);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableTypeCommonAttributeXml,2,0) {(void*) boxptr_CodegenXML_ScalarVariableTypeCommonAttributeXml,0}};
 #define boxvar_CodegenXML_ScalarVariableTypeCommonAttributeXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableTypeCommonAttributeXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_ScalarVariableTypeXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type__, modelica_string _in_a_unit, modelica_string _in_a_displayUnit, modelica_metatype _in_a_minValue, modelica_metatype _in_a_maxValue, modelica_metatype _in_a_initialValue, modelica_boolean _in_a_isFixed);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenXML_ScalarVariableTypeXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type__, modelica_metatype _in_a_unit, modelica_metatype _in_a_displayUnit, modelica_metatype _in_a_minValue, modelica_metatype _in_a_maxValue, modelica_metatype _in_a_initialValue, modelica_metatype _in_a_isFixed);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableTypeXml,2,0) {(void*) boxptr_CodegenXML_ScalarVariableTypeXml,0}};
 #define boxvar_CodegenXML_ScalarVariableTypeXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableTypeXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_variableCategoryXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varKind);
 #define boxptr_CodegenXML_variableCategoryXml omc_CodegenXML_variableCategoryXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_variableCategoryXml,2,0) {(void*) boxptr_CodegenXML_variableCategoryXml,0}};
 #define boxvar_CodegenXML_variableCategoryXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_variableCategoryXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_getAliasVarXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_aliasvar);
 #define boxptr_CodegenXML_getAliasVarXml omc_CodegenXML_getAliasVarXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_getAliasVarXml,2,0) {(void*) boxptr_CodegenXML_getAliasVarXml,0}};
 #define boxvar_CodegenXML_getAliasVarXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_getAliasVarXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_getVariablityXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_varKind);
 #define boxptr_CodegenXML_getVariablityXml omc_CodegenXML_getVariablityXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_getVariablityXml,2,0) {(void*) boxptr_CodegenXML_getVariablityXml,0}};
 #define boxvar_CodegenXML_getVariablityXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_getVariablityXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_getCausalityXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_c);
 #define boxptr_CodegenXML_getCausalityXml omc_CodegenXML_getCausalityXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_getCausalityXml,2,0) {(void*) boxptr_CodegenXML_getCausalityXml,0}};
 #define boxvar_CodegenXML_getCausalityXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_getCausalityXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_ScalarVariableAttributesXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar);
 #define boxptr_CodegenXML_ScalarVariableAttributesXml omc_CodegenXML_ScalarVariableAttributesXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableAttributesXml,2,0) {(void*) boxptr_CodegenXML_ScalarVariableAttributesXml,0}};
@@ -1694,14 +1694,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableAttributesXml,
 #define boxptr_CodegenXML_fun__72 omc_CodegenXML_fun__72
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_ScalarVariableXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simVar);
 #define boxptr_CodegenXML_ScalarVariableXml omc_CodegenXML_ScalarVariableXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableXml,2,0) {(void*) boxptr_CodegenXML_ScalarVariableXml,0}};
 #define boxvar_CodegenXML_ScalarVariableXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_ScalarVariableXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_modelVariablesXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_modelInfo);
 #define boxptr_CodegenXML_modelVariablesXml omc_CodegenXML_modelVariablesXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_modelVariablesXml,2,0) {(void*) boxptr_CodegenXML_modelVariablesXml,0}};
@@ -1771,42 +1771,42 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_modelVariablesXml,2,0) {(voi
 #define boxptr_CodegenXML_lm__49 omc_CodegenXML_lm__49
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_defaultExperiment(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simulationSettingsOpt);
 #define boxptr_CodegenXML_defaultExperiment omc_CodegenXML_defaultExperiment
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_defaultExperiment,2,0) {(void*) boxptr_CodegenXML_defaultExperiment,0}};
 #define boxvar_CodegenXML_defaultExperiment MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_defaultExperiment)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_xsdateTimeXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_dt);
 #define boxptr_CodegenXML_xsdateTimeXml omc_CodegenXML_xsdateTimeXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_xsdateTimeXml,2,0) {(void*) boxptr_CodegenXML_xsdateTimeXml,0}};
 #define boxvar_CodegenXML_xsdateTimeXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_xsdateTimeXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_modelDescriptionXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode, modelica_string _in_a_guid);
 #define boxptr_CodegenXML_modelDescriptionXml omc_CodegenXML_modelDescriptionXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_modelDescriptionXml,2,0) {(void*) boxptr_CodegenXML_modelDescriptionXml,0}};
 #define boxvar_CodegenXML_modelDescriptionXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_modelDescriptionXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_vendorAnnotationsXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenXML_vendorAnnotationsXml omc_CodegenXML_vendorAnnotationsXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_vendorAnnotationsXml,2,0) {(void*) boxptr_CodegenXML_vendorAnnotationsXml,0}};
 #define boxvar_CodegenXML_vendorAnnotationsXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_vendorAnnotationsXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_generateXml(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenXML_generateXml omc_CodegenXML_generateXml
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_generateXml,2,0) {(void*) boxptr_CodegenXML_generateXml,0}};
 #define boxvar_CodegenXML_generateXml MMC_REFSTRUCTLIT(boxvar_lit_CodegenXML_generateXml)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenXML_translateModel(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenXML_translateModel omc_CodegenXML_translateModel
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenXML_translateModel,2,0) {(void*) boxptr_CodegenXML_translateModel,0}};

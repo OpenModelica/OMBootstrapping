@@ -109,7 +109,7 @@ extern struct record_description SimCodeVar_SimVars_SIMVARS__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ReduceDAE_createBackendLabelVars(threadData_t *threadData, modelica_metatype _modelInfo);
 #define boxptr_ReduceDAE_createBackendLabelVars omc_ReduceDAE_createBackendLabelVars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ReduceDAE_createBackendLabelVars,2,0) {(void*) boxptr_ReduceDAE_createBackendLabelVars,0}};
@@ -146,14 +146,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ReduceDAE_createBackendLabelVars,2,0) {
 #define boxptr_ReduceDAE_meanValueReplacements omc_ReduceDAE_meanValueReplacements
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ReduceDAE_reduceTerms(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inModelInfo, modelica_metatype _inArgs, modelica_metatype *out_outModelInfo);
 #define boxptr_ReduceDAE_reduceTerms omc_ReduceDAE_reduceTerms
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ReduceDAE_reduceTerms,2,0) {(void*) boxptr_ReduceDAE_reduceTerms,0}};
 #define boxvar_ReduceDAE_reduceTerms MMC_REFSTRUCTLIT(boxvar_lit_ReduceDAE_reduceTerms)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ReduceDAE_buildLabels(threadData_t *threadData, modelica_metatype _inEquationLst, modelica_metatype _inModelInfo, modelica_metatype _reduceList, modelica_metatype _inArgs, modelica_metatype *out_outModelInfo);
 #define boxptr_ReduceDAE_buildLabels omc_ReduceDAE_buildLabels
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ReduceDAE_buildLabels,2,0) {(void*) boxptr_ReduceDAE_buildLabels,0}};

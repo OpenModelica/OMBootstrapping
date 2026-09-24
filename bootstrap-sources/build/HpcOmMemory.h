@@ -85,21 +85,21 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_HpcOmMemory_getDimStringOfDimElement omc_HpcOmMemory_getDimStringOfDimElement
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmMemory_expandCrefWithDims(threadData_t *threadData, modelica_metatype _iCref, modelica_metatype _iDims);
 #define boxptr_HpcOmMemory_expandCrefWithDims omc_HpcOmMemory_expandCrefWithDims
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmMemory_expandCrefWithDims,2,0) {(void*) boxptr_HpcOmMemory_expandCrefWithDims,0}};
 #define boxvar_HpcOmMemory_expandCrefWithDims MMC_REFSTRUCTLIT(boxvar_lit_HpcOmMemory_expandCrefWithDims)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmMemory_expandCref(threadData_t *threadData, modelica_metatype _iCref, modelica_metatype _iNumArrayElems);
 #define boxptr_HpcOmMemory_expandCref omc_HpcOmMemory_expandCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmMemory_expandCref,2,0) {(void*) boxptr_HpcOmMemory_expandCref,0}};
 #define boxvar_HpcOmMemory_expandCref MMC_REFSTRUCTLIT(boxvar_lit_HpcOmMemory_expandCref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmMemory_getSubscriptListOfArrayCref(threadData_t *threadData, modelica_metatype _iCref, modelica_metatype _iNumArrayElems);
 #define boxptr_HpcOmMemory_getSubscriptListOfArrayCref omc_HpcOmMemory_getSubscriptListOfArrayCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmMemory_getSubscriptListOfArrayCref,2,0) {(void*) boxptr_HpcOmMemory_getSubscriptListOfArrayCref,0}};
@@ -211,9 +211,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmMemory_getSubscriptListOfArrayCref
 #define boxptr_HpcOmMemory_createCacheMapLevelOptimized0 omc_HpcOmMemory_createCacheMapLevelOptimized0
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmMemory_createMemoryMap(threadData_t *threadData, modelica_metatype _iModelInfo, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarToIndexMapping, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphT, modelica_metatype _iTaskGraphMeta, modelica_metatype _iEqSystems, modelica_string _iFileNamePrefix, modelica_metatype _iSchedulerInfo, modelica_metatype _iSchedule, modelica_metatype _iSccSimEqMapping, modelica_metatype _iCriticalPaths, modelica_metatype _iCriticalPathsWoC, modelica_string _iCriticalPathInfo, modelica_integer _iNumberOfThreads, modelica_metatype _iAllComponents, modelica_boolean _isInitial, modelica_metatype *out_oVarToArrayIndexMapping, modelica_metatype *out_oVarToIndexMapping);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HpcOmMemory_createMemoryMap(threadData_t *threadData, modelica_metatype _iModelInfo, modelica_metatype _iVarToArrayIndexMapping, modelica_metatype _iVarToIndexMapping, modelica_metatype _iTaskGraph, modelica_metatype _iTaskGraphT, modelica_metatype _iTaskGraphMeta, modelica_metatype _iEqSystems, modelica_metatype _iFileNamePrefix, modelica_metatype _iSchedulerInfo, modelica_metatype _iSchedule, modelica_metatype _iSccSimEqMapping, modelica_metatype _iCriticalPaths, modelica_metatype _iCriticalPathsWoC, modelica_metatype _iCriticalPathInfo, modelica_metatype _iNumberOfThreads, modelica_metatype _iAllComponents, modelica_metatype _isInitial, modelica_metatype *out_oVarToArrayIndexMapping, modelica_metatype *out_oVarToIndexMapping);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmMemory_createMemoryMap,2,0) {(void*) boxptr_HpcOmMemory_createMemoryMap,0}};
 #define boxvar_HpcOmMemory_createMemoryMap MMC_REFSTRUCTLIT(boxvar_lit_HpcOmMemory_createMemoryMap)

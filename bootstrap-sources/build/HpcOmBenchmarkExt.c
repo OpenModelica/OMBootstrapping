@@ -12,7 +12,7 @@ modelica_metatype omc_HpcOmBenchmarkExt_readCalcTimesFromJson(threadData_t *thre
   modelica_metatype _requiredTime = NULL;
   // _requiredTime has no default value.
 
-  _requiredTime_ext = HpcOmBenchmarkExt_readCalcTimesFromJson(MMC_STRINGDATA(_fileName));
+  _requiredTime_ext = HpcOmBenchmarkExt_readCalcTimesFromJson(omc_string_data(_fileName));
   _requiredTime = (modelica_metatype)_requiredTime_ext;
   return _requiredTime;
 }
@@ -23,7 +23,7 @@ modelica_metatype omc_HpcOmBenchmarkExt_readCalcTimesFromXml(threadData_t *threa
   modelica_metatype _requiredTime = NULL;
   // _requiredTime has no default value.
 
-  _requiredTime_ext = HpcOmBenchmarkExt_readCalcTimesFromXml(MMC_STRINGDATA(_fileName));
+  _requiredTime_ext = HpcOmBenchmarkExt_readCalcTimesFromXml(omc_string_data(_fileName));
   _requiredTime = (modelica_metatype)_requiredTime_ext;
   return _requiredTime;
 }

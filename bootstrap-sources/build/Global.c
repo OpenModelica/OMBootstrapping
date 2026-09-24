@@ -6,17 +6,17 @@
 
 
 
-DLLDirection
+DLLModelDirection
 void omc_Global_initialize(threadData_t *threadData)
 {
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_metatype tmpMeta5;
+  modelica_metatype tmpMeta6;
+  modelica_metatype tmpMeta7;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   setGlobalRoot(((modelica_integer) 0), mmc_mk_none());
 
@@ -47,10 +47,22 @@ void omc_Global_initialize(threadData_t *threadData)
   setGlobalRoot(((modelica_integer) 34), mmc_mk_none());
 
   setGlobalRoot(((modelica_integer) 35), mmc_mk_none());
+
+  tmpMeta5 = MMC_REFSTRUCTLIT(mmc_nil);
+  setGlobalRoot(((modelica_integer) 36), tmpMeta5);
+
+  setGlobalRoot(((modelica_integer) 37), mmc_mk_none());
+
+  tmpMeta6 = MMC_REFSTRUCTLIT(mmc_nil);
+  setGlobalRoot(((modelica_integer) 38), tmpMeta6);
+
+  tmpMeta7 = MMC_REFSTRUCTLIT(mmc_nil);
+  setGlobalRoot(((modelica_integer) 39), tmpMeta7);
+
+  setGlobalRoot(((modelica_integer) 40), mmc_mk_none());
+
+  setGlobalRoot(((modelica_integer) 41), mmc_mk_none());
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 

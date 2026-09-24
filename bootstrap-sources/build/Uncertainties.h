@@ -125,7 +125,7 @@ extern struct record_description Values_Value_STRING__desc;
 #define boxptr_Uncertainties_mergeBy1 omc_Uncertainties_mergeBy1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_sortBy1(threadData_t *threadData, modelica_metatype _inList, modelica_fnptr _inCompFunc, modelica_metatype _inArgument1);
 #define boxptr_Uncertainties_sortBy1 omc_Uncertainties_sortBy1
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_sortBy1,2,0) {(void*) boxptr_Uncertainties_sortBy1,0}};
@@ -135,51 +135,51 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_sortBy1,2,0) {(void*) box
 #define boxptr_Uncertainties_moveVariables2 omc_Uncertainties_moveVariables2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_moveVariables(threadData_t *threadData, modelica_metatype _inVariables1, modelica_metatype _inVariables2, modelica_metatype _hashTable, modelica_metatype *out_outVariables2);
 #define boxptr_Uncertainties_moveVariables omc_Uncertainties_moveVariables
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_moveVariables,2,0) {(void*) boxptr_Uncertainties_moveVariables,0}};
 #define boxvar_Uncertainties_moveVariables MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_moveVariables)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_setVarBindingOpt(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _bindExp);
 #define boxptr_Uncertainties_setVarBindingOpt omc_Uncertainties_setVarBindingOpt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_setVarBindingOpt,2,0) {(void*) boxptr_Uncertainties_setVarBindingOpt,0}};
 #define boxvar_Uncertainties_setVarBindingOpt MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_setVarBindingOpt)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_setVarCref(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _cr);
 #define boxptr_Uncertainties_setVarCref omc_Uncertainties_setVarCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_setVarCref,2,0) {(void*) boxptr_Uncertainties_setVarCref,0}};
 #define boxvar_Uncertainties_setVarCref MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_setVarCref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_applyOptionSimplify(threadData_t *threadData, modelica_metatype _bindExpIn);
 #define boxptr_Uncertainties_applyOptionSimplify omc_Uncertainties_applyOptionSimplify
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_applyOptionSimplify,2,0) {(void*) boxptr_Uncertainties_applyOptionSimplify,0}};
 #define boxvar_Uncertainties_applyOptionSimplify MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_applyOptionSimplify)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_replaceExpOpt(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _repl, modelica_metatype _funcOpt);
 #define boxptr_Uncertainties_replaceExpOpt omc_Uncertainties_replaceExpOpt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_replaceExpOpt,2,0) {(void*) boxptr_Uncertainties_replaceExpOpt,0}};
 #define boxvar_Uncertainties_replaceExpOpt MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_replaceExpOpt)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_varBindingOpt(threadData_t *threadData, modelica_metatype _v);
 #define boxptr_Uncertainties_varBindingOpt omc_Uncertainties_varBindingOpt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_varBindingOpt,2,0) {(void*) boxptr_Uncertainties_varBindingOpt,0}};
 #define boxvar_Uncertainties_varBindingOpt MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_varBindingOpt)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_replaceDAElow(threadData_t *threadData, modelica_metatype _idlow, modelica_metatype _repl, modelica_metatype _func, modelica_boolean _replaceVariables);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Uncertainties_replaceDAElow(threadData_t *threadData, modelica_metatype _idlow, modelica_metatype _repl, modelica_metatype _func, modelica_metatype _replaceVariables);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_replaceDAElow,2,0) {(void*) boxptr_Uncertainties_replaceDAElow,0}};
 #define boxvar_Uncertainties_replaceDAElow MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_replaceDAElow)
@@ -212,14 +212,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_replaceDAElow,2,0) {(void
 #define boxptr_Uncertainties_findArraysPartiallyIndexed omc_Uncertainties_findArraysPartiallyIndexed
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_eliminateVariablesDAE(threadData_t *threadData, modelica_metatype _elimVarIndexList, modelica_metatype _indae);
 #define boxptr_Uncertainties_eliminateVariablesDAE omc_Uncertainties_eliminateVariablesDAE
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_eliminateVariablesDAE,2,0) {(void*) boxptr_Uncertainties_eliminateVariablesDAE,0}};
 #define boxvar_Uncertainties_eliminateVariablesDAE MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_eliminateVariablesDAE)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_getUncertainRefineVariableIndexes(threadData_t *threadData, modelica_metatype _allVariables, modelica_metatype _variableIndexList, modelica_metatype *out_distributions);
 #define boxptr_Uncertainties_getUncertainRefineVariableIndexes omc_Uncertainties_getUncertainRefineVariableIndexes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getUncertainRefineVariableIndexes,2,0) {(void*) boxptr_Uncertainties_getUncertainRefineVariableIndexes,0}};
@@ -370,310 +370,310 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getUncertainRefineVariabl
 #define boxptr_Uncertainties_printSep omc_Uncertainties_printSep
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_dumpMatching(threadData_t *threadData, modelica_metatype _v);
 #define boxptr_Uncertainties_dumpMatching omc_Uncertainties_dumpMatching
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_dumpMatching,2,0) {(void*) boxptr_Uncertainties_dumpMatching,0}};
 #define boxvar_Uncertainties_dumpMatching MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_dumpMatching)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_Uncertainties_getSolvedEquationNumber(threadData_t *threadData, modelica_integer _varnumber, modelica_metatype _inlist);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Uncertainties_getSolvedEquationNumber(threadData_t *threadData, modelica_metatype _varnumber, modelica_metatype _inlist);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getSolvedEquationNumber,2,0) {(void*) boxptr_Uncertainties_getSolvedEquationNumber,0}};
 #define boxvar_Uncertainties_getSolvedEquationNumber MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getSolvedEquationNumber)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_Uncertainties_getSolvedVariableNumber(threadData_t *threadData, modelica_integer _eqnumber, modelica_metatype _inlist);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Uncertainties_getSolvedVariableNumber(threadData_t *threadData, modelica_metatype _eqnumber, modelica_metatype _inlist);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getSolvedVariableNumber,2,0) {(void*) boxptr_Uncertainties_getSolvedVariableNumber,0}};
 #define boxvar_Uncertainties_getSolvedVariableNumber MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getSolvedVariableNumber)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_checkBlueOrRedSquareBlocks(threadData_t *threadData, modelica_metatype _inlist, modelica_metatype _knowns, modelica_metatype _unknowns, modelica_metatype _outputs, modelica_metatype _solvedvar, modelica_metatype *out_outstring);
 #define boxptr_Uncertainties_checkBlueOrRedSquareBlocks omc_Uncertainties_checkBlueOrRedSquareBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_checkBlueOrRedSquareBlocks,2,0) {(void*) boxptr_Uncertainties_checkBlueOrRedSquareBlocks,0}};
 #define boxvar_Uncertainties_checkBlueOrRedSquareBlocks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_checkBlueOrRedSquareBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_getdirectOccurrencesinEquation(threadData_t *threadData, modelica_metatype _m, modelica_integer _eqnumber, modelica_integer _varnumber);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Uncertainties_getdirectOccurrencesinEquation(threadData_t *threadData, modelica_metatype _m, modelica_metatype _eqnumber, modelica_metatype _varnumber);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getdirectOccurrencesinEquation,2,0) {(void*) boxptr_Uncertainties_getdirectOccurrencesinEquation,0}};
 #define boxvar_Uncertainties_getdirectOccurrencesinEquation MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getdirectOccurrencesinEquation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_getDependencyequation(threadData_t *threadData, modelica_metatype _inlist, modelica_metatype _inlist1, modelica_metatype _solvedvariables, modelica_metatype _m);
 #define boxptr_Uncertainties_getDependencyequation omc_Uncertainties_getDependencyequation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getDependencyequation,2,0) {(void*) boxptr_Uncertainties_getDependencyequation,0}};
 #define boxvar_Uncertainties_getDependencyequation MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getDependencyequation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_extractMixedBlock(threadData_t *threadData, modelica_metatype _inlist, modelica_metatype _instringList, modelica_metatype *out_sets);
 #define boxptr_Uncertainties_extractMixedBlock omc_Uncertainties_extractMixedBlock
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_extractMixedBlock,2,0) {(void*) boxptr_Uncertainties_extractMixedBlock,0}};
 #define boxvar_Uncertainties_extractMixedBlock MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_extractMixedBlock)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_originalBlocks(threadData_t *threadData, modelica_metatype _inlist, modelica_metatype _knowns, modelica_metatype _unknowns, modelica_metatype _outputs, modelica_metatype _solvedvariables, modelica_metatype *out_outstringlist);
 #define boxptr_Uncertainties_originalBlocks omc_Uncertainties_originalBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_originalBlocks,2,0) {(void*) boxptr_Uncertainties_originalBlocks,0}};
 #define boxvar_Uncertainties_originalBlocks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_originalBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_checkBlockStatus(threadData_t *threadData, modelica_metatype _inlist1, modelica_metatype _inlist2);
 #define boxptr_Uncertainties_checkBlockStatus omc_Uncertainties_checkBlockStatus
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_checkBlockStatus,2,0) {(void*) boxptr_Uncertainties_checkBlockStatus,0}};
 #define boxvar_Uncertainties_checkBlockStatus MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_checkBlockStatus)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_Uncertainties_countKnownVariables(threadData_t *threadData, modelica_metatype _inlist1);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Uncertainties_countKnownVariables(threadData_t *threadData, modelica_metatype _inlist1);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_countKnownVariables,2,0) {(void*) boxptr_Uncertainties_countKnownVariables,0}};
 #define boxvar_Uncertainties_countKnownVariables MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_countKnownVariables)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_getRemovedEquationSolvedVariables(threadData_t *threadData, modelica_metatype _inlist, modelica_metatype _solvedvar);
 #define boxptr_Uncertainties_getRemovedEquationSolvedVariables omc_Uncertainties_getRemovedEquationSolvedVariables
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getRemovedEquationSolvedVariables,2,0) {(void*) boxptr_Uncertainties_getRemovedEquationSolvedVariables,0}};
 #define boxvar_Uncertainties_getRemovedEquationSolvedVariables MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getRemovedEquationSolvedVariables)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_ExtractEquationsfromBlocks(threadData_t *threadData, modelica_metatype _blockdata, modelica_metatype _approximatedEquation, modelica_metatype *out_sets, modelica_metatype *out_removedeq);
 #define boxptr_Uncertainties_ExtractEquationsfromBlocks omc_Uncertainties_ExtractEquationsfromBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_ExtractEquationsfromBlocks,2,0) {(void*) boxptr_Uncertainties_ExtractEquationsfromBlocks,0}};
 #define boxvar_Uncertainties_ExtractEquationsfromBlocks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_ExtractEquationsfromBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_ExtractEquationsfromPredecessorBlocks(threadData_t *threadData, modelica_metatype _predecessortargetinfo, modelica_metatype _allblockranks, modelica_metatype _approximatedEquations, modelica_metatype *out_sets);
 #define boxptr_Uncertainties_ExtractEquationsfromPredecessorBlocks omc_Uncertainties_ExtractEquationsfromPredecessorBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_ExtractEquationsfromPredecessorBlocks,2,0) {(void*) boxptr_Uncertainties_ExtractEquationsfromPredecessorBlocks,0}};
 #define boxvar_Uncertainties_ExtractEquationsfromPredecessorBlocks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_ExtractEquationsfromPredecessorBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_getActualBlocks(threadData_t *threadData, modelica_metatype _searchblock, modelica_metatype _inlist1, modelica_metatype _inlist2);
 #define boxptr_Uncertainties_getActualBlocks omc_Uncertainties_getActualBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getActualBlocks,2,0) {(void*) boxptr_Uncertainties_getActualBlocks,0}};
 #define boxvar_Uncertainties_getActualBlocks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getActualBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_getBlockVarList(threadData_t *threadData, modelica_metatype _blocktofind, modelica_metatype _inlist1, modelica_metatype _inlist2);
 #define boxptr_Uncertainties_getBlockVarList omc_Uncertainties_getBlockVarList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getBlockVarList,2,0) {(void*) boxptr_Uncertainties_getBlockVarList,0}};
 #define boxvar_Uncertainties_getBlockVarList MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getBlockVarList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Uncertainties_findSquareAndNonSquareBlocksHelper1(threadData_t *threadData, modelica_metatype _inlist1, modelica_metatype _inlist2, modelica_metatype *out_foundknownblocks, modelica_metatype *out_blockranks);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Uncertainties_findSquareAndNonSquareBlocksHelper1(threadData_t *threadData, modelica_metatype _inlist1, modelica_metatype _inlist2, modelica_metatype *out_foundknownblocks, modelica_metatype *out_blockranks);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_findSquareAndNonSquareBlocksHelper1,2,0) {(void*) boxptr_Uncertainties_findSquareAndNonSquareBlocksHelper1,0}};
 #define boxvar_Uncertainties_findSquareAndNonSquareBlocksHelper1 MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_findSquareAndNonSquareBlocksHelper1)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_findSquareAndNonSquareBlocksHelper(threadData_t *threadData, modelica_metatype _inlist1, modelica_metatype _inlist2, modelica_boolean *out_exists, modelica_integer *out_foundblock);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Uncertainties_findSquareAndNonSquareBlocksHelper(threadData_t *threadData, modelica_metatype _inlist1, modelica_metatype _inlist2, modelica_metatype *out_exists, modelica_metatype *out_foundblock);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_findSquareAndNonSquareBlocksHelper,2,0) {(void*) boxptr_Uncertainties_findSquareAndNonSquareBlocksHelper,0}};
 #define boxvar_Uncertainties_findSquareAndNonSquareBlocksHelper MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_findSquareAndNonSquareBlocksHelper)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_findSquareAndNonSquareBlocks(threadData_t *threadData, modelica_metatype _blockinfo, modelica_metatype _solvedvariables, modelica_metatype _mxt, modelica_metatype _map, modelica_metatype *out_outlist2);
 #define boxptr_Uncertainties_findSquareAndNonSquareBlocks omc_Uncertainties_findSquareAndNonSquareBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_findSquareAndNonSquareBlocks,2,0) {(void*) boxptr_Uncertainties_findSquareAndNonSquareBlocks,0}};
 #define boxvar_Uncertainties_findSquareAndNonSquareBlocks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_findSquareAndNonSquareBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_EliminatePredecessorBlockTarget(threadData_t *threadData, modelica_metatype _inlist1, modelica_metatype _inlist2, modelica_metatype *out_targetblocksvar);
 #define boxptr_Uncertainties_EliminatePredecessorBlockTarget omc_Uncertainties_EliminatePredecessorBlockTarget
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_EliminatePredecessorBlockTarget,2,0) {(void*) boxptr_Uncertainties_EliminatePredecessorBlockTarget,0}};
 #define boxvar_Uncertainties_EliminatePredecessorBlockTarget MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_EliminatePredecessorBlockTarget)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_findPredecessorBlocks(threadData_t *threadData, modelica_metatype _blockinfo);
 #define boxptr_Uncertainties_findPredecessorBlocks omc_Uncertainties_findPredecessorBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_findPredecessorBlocks,2,0) {(void*) boxptr_Uncertainties_findPredecessorBlocks,0}};
 #define boxvar_Uncertainties_findPredecessorBlocks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_findPredecessorBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_findBlockTargetsHelper1(threadData_t *threadData, modelica_metatype _inlist, modelica_metatype _solvedvariables, modelica_metatype _mxt);
 #define boxptr_Uncertainties_findBlockTargetsHelper1 omc_Uncertainties_findBlockTargetsHelper1
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_findBlockTargetsHelper1,2,0) {(void*) boxptr_Uncertainties_findBlockTargetsHelper1,0}};
 #define boxvar_Uncertainties_findBlockTargetsHelper1 MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_findBlockTargetsHelper1)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_findBlockTargetsHelper(threadData_t *threadData, modelica_metatype _inlist1, modelica_metatype _inlist2, modelica_metatype _solvedvariables, modelica_metatype _mxt, modelica_metatype _map, modelica_metatype _actualblocks);
 #define boxptr_Uncertainties_findBlockTargetsHelper omc_Uncertainties_findBlockTargetsHelper
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_findBlockTargetsHelper,2,0) {(void*) boxptr_Uncertainties_findBlockTargetsHelper,0}};
 #define boxvar_Uncertainties_findBlockTargetsHelper MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_findBlockTargetsHelper)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_findBlockTargets(threadData_t *threadData, modelica_metatype _inlist1, modelica_metatype _inlist2, modelica_metatype _solvedvariables, modelica_metatype _mxt, modelica_metatype _map, modelica_metatype _blockranks);
 #define boxptr_Uncertainties_findBlockTargets omc_Uncertainties_findBlockTargets
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_findBlockTargets,2,0) {(void*) boxptr_Uncertainties_findBlockTargets,0}};
 #define boxvar_Uncertainties_findBlockTargets MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_findBlockTargets)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_findBlocksRanks(threadData_t *threadData, modelica_metatype _inlist1, modelica_metatype _inlist2, modelica_metatype *out_ranklist);
 #define boxptr_Uncertainties_findBlocksRanks omc_Uncertainties_findBlocksRanks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_findBlocksRanks,2,0) {(void*) boxptr_Uncertainties_findBlocksRanks,0}};
 #define boxvar_Uncertainties_findBlocksRanks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_findBlocksRanks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_sortBlocks(threadData_t *threadData, modelica_metatype _sortedranklist, modelica_metatype _inlist2);
 #define boxptr_Uncertainties_sortBlocks omc_Uncertainties_sortBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_sortBlocks,2,0) {(void*) boxptr_Uncertainties_sortBlocks,0}};
 #define boxvar_Uncertainties_sortBlocks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_sortBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_updateBlocks(threadData_t *threadData, modelica_metatype _blocktoupdate, modelica_metatype _inlist, modelica_boolean _visited, modelica_boolean _square);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Uncertainties_updateBlocks(threadData_t *threadData, modelica_metatype _blocktoupdate, modelica_metatype _inlist, modelica_metatype _visited, modelica_metatype _square);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_updateBlocks,2,0) {(void*) boxptr_Uncertainties_updateBlocks,0}};
 #define boxvar_Uncertainties_updateBlocks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_updateBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_setInitialBlocks(threadData_t *threadData, modelica_metatype _inlist1);
 #define boxptr_Uncertainties_setInitialBlocks omc_Uncertainties_setInitialBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_setInitialBlocks,2,0) {(void*) boxptr_Uncertainties_setInitialBlocks,0}};
 #define boxvar_Uncertainties_setInitialBlocks MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_setInitialBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_getVariableOccurence(threadData_t *threadData, modelica_metatype _setc, modelica_metatype _mext, modelica_metatype _knowns, modelica_metatype *out_unknownvariables);
 #define boxptr_Uncertainties_getVariableOccurence omc_Uncertainties_getVariableOccurence
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getVariableOccurence,2,0) {(void*) boxptr_Uncertainties_getVariableOccurence,0}};
 #define boxvar_Uncertainties_getVariableOccurence MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getVariableOccurence)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Uncertainties_dumplistInteger(threadData_t *threadData, modelica_metatype _inlist);
 #define boxptr_Uncertainties_dumplistInteger omc_Uncertainties_dumplistInteger
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_dumplistInteger,2,0) {(void*) boxptr_Uncertainties_dumplistInteger,0}};
 #define boxvar_Uncertainties_dumplistInteger MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_dumplistInteger)
 
 
-DLLDirection
+DLLModelDirection
 void omc_Uncertainties_dumpListList(threadData_t *threadData, modelica_metatype _lstLst, modelica_string _heading);
 #define boxptr_Uncertainties_dumpListList omc_Uncertainties_dumpListList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_dumpListList,2,0) {(void*) boxptr_Uncertainties_dumpListList,0}};
 #define boxvar_Uncertainties_dumpListList MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_dumpListList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_BuildSquareSubSet(threadData_t *threadData, modelica_metatype _ineqs, modelica_metatype _invars, modelica_metatype _knowns, modelica_metatype _mExt, modelica_metatype _solvedeqvar, modelica_metatype _constantvars, modelica_metatype _approximatedEquations, modelica_metatype *out_solvedeqs, modelica_metatype *out_dependency_variables_tree, modelica_metatype *out_dependency_equation_tree);
 #define boxptr_Uncertainties_BuildSquareSubSet omc_Uncertainties_BuildSquareSubSet
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_BuildSquareSubSet,2,0) {(void*) boxptr_Uncertainties_BuildSquareSubSet,0}};
 #define boxvar_Uncertainties_BuildSquareSubSet MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_BuildSquareSubSet)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_BuildSquareSubSetHelper1(threadData_t *threadData, modelica_metatype _inlist1, modelica_metatype _solvedeqvar, modelica_metatype _solvedeqs, modelica_metatype *out_tempeqs);
 #define boxptr_Uncertainties_BuildSquareSubSetHelper1 omc_Uncertainties_BuildSquareSubSetHelper1
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_BuildSquareSubSetHelper1,2,0) {(void*) boxptr_Uncertainties_BuildSquareSubSetHelper1,0}};
 #define boxvar_Uncertainties_BuildSquareSubSetHelper1 MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_BuildSquareSubSetHelper1)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_BuildSquareSubSetHelper(threadData_t *threadData, modelica_metatype _invars, modelica_metatype _knowns, modelica_metatype _mExt, modelica_metatype _solvedeqvar, modelica_metatype _solvedvars, modelica_metatype _solvedeqs, modelica_metatype _constantvars, modelica_metatype *out_outlist2);
 #define boxptr_Uncertainties_BuildSquareSubSetHelper omc_Uncertainties_BuildSquareSubSetHelper
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_BuildSquareSubSetHelper,2,0) {(void*) boxptr_Uncertainties_BuildSquareSubSetHelper,0}};
 #define boxvar_Uncertainties_BuildSquareSubSetHelper MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_BuildSquareSubSetHelper)
 
 
-DLLDirection
+DLLModelDirection
 void omc_Uncertainties_VerifyDataReconciliation(threadData_t *threadData, modelica_metatype _setc, modelica_metatype _sets, modelica_metatype _knowns, modelica_metatype _unknowns, modelica_metatype _mExt, modelica_metatype _solvedvar, modelica_metatype _constantvars, modelica_metatype _approximatedEquations, modelica_metatype _allVars, modelica_metatype _allEqs, modelica_metatype _mapIncRowEqn, modelica_metatype _outsetS_vars, modelica_metatype _outsetS_eq);
 #define boxptr_Uncertainties_VerifyDataReconciliation omc_Uncertainties_VerifyDataReconciliation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_VerifyDataReconciliation,2,0) {(void*) boxptr_Uncertainties_VerifyDataReconciliation,0}};
 #define boxvar_Uncertainties_VerifyDataReconciliation MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_VerifyDataReconciliation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_getConstantVariables(threadData_t *threadData, modelica_metatype _mext);
 #define boxptr_Uncertainties_getConstantVariables omc_Uncertainties_getConstantVariables
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getConstantVariables,2,0) {(void*) boxptr_Uncertainties_getConstantVariables,0}};
 #define boxvar_Uncertainties_getConstantVariables MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getConstantVariables)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_getVariablesAfterExtraction(threadData_t *threadData, modelica_metatype _setc, modelica_metatype _sets, modelica_metatype _mext);
 #define boxptr_Uncertainties_getVariablesAfterExtraction omc_Uncertainties_getVariablesAfterExtraction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getVariablesAfterExtraction,2,0) {(void*) boxptr_Uncertainties_getVariablesAfterExtraction,0}};
 #define boxvar_Uncertainties_getVariablesAfterExtraction MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getVariablesAfterExtraction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_getSolvedDependentEquationAndVars(threadData_t *threadData, modelica_metatype _inlist, modelica_metatype _solvedvar, modelica_metatype *out_sets_vars);
 #define boxptr_Uncertainties_getSolvedDependentEquationAndVars omc_Uncertainties_getSolvedDependentEquationAndVars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_getSolvedDependentEquationAndVars,2,0) {(void*) boxptr_Uncertainties_getSolvedDependentEquationAndVars,0}};
 #define boxvar_Uncertainties_getSolvedDependentEquationAndVars MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_getSolvedDependentEquationAndVars)
 
 
-DLLDirection
+DLLModelDirection
 void omc_Uncertainties_dumpDependencyTree(threadData_t *threadData, modelica_metatype _invartree, modelica_metatype _ineqtree, modelica_metatype _knowns, modelica_metatype _constantvars, modelica_metatype _allVars, modelica_metatype _allEqs, modelica_metatype _mapIncRowEqn);
 #define boxptr_Uncertainties_dumpDependencyTree omc_Uncertainties_dumpDependencyTree
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_dumpDependencyTree,2,0) {(void*) boxptr_Uncertainties_dumpDependencyTree,0}};
 #define boxvar_Uncertainties_dumpDependencyTree MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_dumpDependencyTree)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_createInnerEquations(threadData_t *threadData, modelica_metatype _tempsets, modelica_metatype _solvedeqvar, modelica_metatype _sets, modelica_metatype _knowns, modelica_metatype _inputlist);
 #define boxptr_Uncertainties_createInnerEquations omc_Uncertainties_createInnerEquations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_createInnerEquations,2,0) {(void*) boxptr_Uncertainties_createInnerEquations,0}};
 #define boxvar_Uncertainties_createInnerEquations MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_createInnerEquations)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Uncertainties_dumpToCsv(threadData_t *threadData, modelica_string _instring, modelica_metatype _invar);
 #define boxptr_Uncertainties_dumpToCsv omc_Uncertainties_dumpToCsv
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_dumpToCsv,2,0) {(void*) boxptr_Uncertainties_dumpToCsv,0}};
 #define boxvar_Uncertainties_dumpToCsv MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_dumpToCsv)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_dumpCrefList(threadData_t *threadData, modelica_metatype _cr_lst, modelica_metatype _invar, modelica_metatype _paramvars);
 #define boxptr_Uncertainties_dumpCrefList omc_Uncertainties_dumpCrefList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_dumpCrefList,2,0) {(void*) boxptr_Uncertainties_dumpCrefList,0}};
 #define boxvar_Uncertainties_dumpCrefList MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_dumpCrefList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_dataReconciliation(threadData_t *threadData, modelica_metatype _inDae);
 #define boxptr_Uncertainties_dataReconciliation omc_Uncertainties_dataReconciliation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_dataReconciliation,2,0) {(void*) boxptr_Uncertainties_dataReconciliation,0}};
 #define boxvar_Uncertainties_dataReconciliation MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_dataReconciliation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Uncertainties_modelEquationsUC(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _className, modelica_string _outputFileIn, modelica_boolean _dumpSteps, modelica_metatype *out_outValue);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Uncertainties_modelEquationsUC(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _className, modelica_metatype _outputFileIn, modelica_metatype _dumpSteps, modelica_metatype *out_outValue);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Uncertainties_modelEquationsUC,2,0) {(void*) boxptr_Uncertainties_modelEquationsUC,0}};
 #define boxvar_Uncertainties_modelEquationsUC MMC_REFSTRUCTLIT(boxvar_lit_Uncertainties_modelEquationsUC)

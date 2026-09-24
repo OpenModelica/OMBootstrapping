@@ -15,13 +15,13 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT2,2,_OMC_LIT2_data);
 
 
 
-DLLDirection
+DLLModelDirection
 void omc_File_writeSpace(threadData_t *threadData, modelica_complex _file, modelica_integer _n)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmp1 = ((modelica_integer) 1); tmp2 = 1; tmp3 = _n;
   if(!(((tmp2 > 0) && (tmp1 > tmp3)) || ((tmp2 < 0) && (tmp1 < tmp3))))
@@ -39,7 +39,7 @@ void omc_File_writeSpace(threadData_t *threadData, modelica_complex _file, model
 void boxptr_File_writeSpace(threadData_t *threadData, modelica_metatype _file, modelica_metatype _n)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_n);
+  tmp1 = omc_unbox_integer(_n);
   omc_File_writeSpace(threadData, _file, tmp1);
   return;
 }
@@ -95,7 +95,7 @@ modelica_string omc_File_getFilename(threadData_t *threadData, modelica_metatype
   // _fileName2 has no default value.
   _file_ext = (modelica_metatype) _file;
   _fileName2_ext = om_file_get_filename(_file_ext);
-  _fileName2 = (modelica_string)mmc_mk_scon(_fileName2_ext);
+  _fileName2 = (modelica_string)omc_string_new(_fileName2_ext);
   return _fileName2;
 }
 
@@ -115,7 +115,7 @@ modelica_metatype boxptr_File_tell(threadData_t *threadData, modelica_metatype _
   modelica_integer _pos;
   modelica_metatype out_pos;
   _pos = omc_File_tell(threadData, _file);
-  out_pos = mmc_mk_icon(_pos);
+  out_pos = omc_mk_icon(_pos);
   return out_pos;
 }
 
@@ -140,10 +140,10 @@ modelica_metatype boxptr_File_seek(threadData_t *threadData, modelica_metatype _
   modelica_integer tmp2;
   modelica_boolean _success;
   modelica_metatype out_success;
-  tmp1 = mmc_unbox_integer(_offset);
-  tmp2 = mmc_unbox_integer(_whence);
+  tmp1 = omc_unbox_integer(_offset);
+  tmp2 = omc_unbox_integer(_whence);
   _success = omc_File_seek(threadData, _file, tmp1, tmp2);
-  out_success = mmc_mk_icon(_success);
+  out_success = omc_mk_icon(_success);
   return out_success;
 }
 
@@ -153,13 +153,13 @@ void omc_File_writeEscape(threadData_t *threadData, modelica_complex _file, mode
   int _escape_ext;
   _file_ext = (void *) _file;
   _escape_ext = (int) _escape;
-  om_file_write_escape(_file_ext, MMC_STRINGDATA(_data), _escape_ext);
+  om_file_write_escape(_file_ext, omc_string_data(_data), _escape_ext);
   return;
 }
 void boxptr_File_writeEscape(threadData_t *threadData, modelica_metatype _file, modelica_metatype _data, modelica_metatype _escape)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_escape);
+  tmp1 = omc_unbox_integer(_escape);
   omc_File_writeEscape(threadData, _file, _data, tmp1);
   return;
 }
@@ -170,13 +170,13 @@ void omc_File_writeReal(threadData_t *threadData, modelica_complex _file, modeli
   double _data_ext;
   _file_ext = (void *) _file;
   _data_ext = (double) _data;
-  om_file_write_real(_file_ext, _data_ext, MMC_STRINGDATA(_format));
+  om_file_write_real(_file_ext, _data_ext, omc_string_data(_format));
   return;
 }
 void boxptr_File_writeReal(threadData_t *threadData, modelica_metatype _file, modelica_metatype _data, modelica_metatype _format)
 {
   modelica_real tmp1;
-  tmp1 = mmc_unbox_real(_data);
+  tmp1 = omc_unbox_real(_data);
   omc_File_writeReal(threadData, _file, tmp1, _format);
   return;
 }
@@ -187,13 +187,13 @@ void omc_File_writeInt(threadData_t *threadData, modelica_complex _file, modelic
   int _data_ext;
   _file_ext = (void *) _file;
   _data_ext = (int) _data;
-  om_file_write_int(_file_ext, _data_ext, MMC_STRINGDATA(_format));
+  om_file_write_int(_file_ext, _data_ext, omc_string_data(_format));
   return;
 }
 void boxptr_File_writeInt(threadData_t *threadData, modelica_metatype _file, modelica_metatype _data, modelica_metatype _format)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_data);
+  tmp1 = omc_unbox_integer(_data);
   omc_File_writeInt(threadData, _file, tmp1, _format);
   return;
 }
@@ -202,7 +202,7 @@ void omc_File_write(threadData_t *threadData, modelica_complex _file, modelica_s
 {
   void * _file_ext;
   _file_ext = (void *) _file;
-  om_file_write(_file_ext, MMC_STRINGDATA(_data));
+  om_file_write(_file_ext, omc_string_data(_data));
   return;
 }
 void boxptr_File_write(threadData_t *threadData, modelica_metatype _file, modelica_metatype _data)
@@ -217,13 +217,13 @@ void omc_File_open(threadData_t *threadData, modelica_complex _file, modelica_st
   int _mode_ext;
   _file_ext = (void *) _file;
   _mode_ext = (int) _mode;
-  om_file_open(_file_ext, MMC_STRINGDATA(_filename), _mode_ext);
+  om_file_open(_file_ext, omc_string_data(_filename), _mode_ext);
   return;
 }
 void boxptr_File_open(threadData_t *threadData, modelica_metatype _file, modelica_metatype _filename, modelica_metatype _mode)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_mode);
+  tmp1 = omc_unbox_integer(_mode);
   omc_File_open(threadData, _file, _filename, tmp1);
   return;
 }

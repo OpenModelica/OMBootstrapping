@@ -25,28 +25,28 @@ extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 #define boxptr_InstHashTable_opaqVal omc_InstHashTable_opaqVal
 
 
-DLLDirection
+DLLModelDirection
 void omc_InstHashTable_addToInstCache(threadData_t *threadData, modelica_metatype _fullEnvPathPlusClass, modelica_metatype _fullInstOpt, modelica_metatype _partialInstOpt);
 #define boxptr_InstHashTable_addToInstCache omc_InstHashTable_addToInstCache
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstHashTable_addToInstCache,2,0) {(void*) boxptr_InstHashTable_addToInstCache,0}};
 #define boxvar_InstHashTable_addToInstCache MMC_REFSTRUCTLIT(boxvar_lit_InstHashTable_addToInstCache)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstHashTable_get(threadData_t *threadData, modelica_metatype _k);
 #define boxptr_InstHashTable_get omc_InstHashTable_get
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstHashTable_get,2,0) {(void*) boxptr_InstHashTable_get,0}};
 #define boxvar_InstHashTable_get MMC_REFSTRUCTLIT(boxvar_lit_InstHashTable_get)
 
 
-DLLDirection
+DLLModelDirection
 void omc_InstHashTable_release(threadData_t *threadData);
 #define boxptr_InstHashTable_release omc_InstHashTable_release
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstHashTable_release,2,0) {(void*) boxptr_InstHashTable_release,0}};
 #define boxvar_InstHashTable_release MMC_REFSTRUCTLIT(boxvar_lit_InstHashTable_release)
 
 
-DLLDirection
+DLLModelDirection
 void omc_InstHashTable_init(threadData_t *threadData);
 #define boxptr_InstHashTable_init omc_InstHashTable_init
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstHashTable_init,2,0) {(void*) boxptr_InstHashTable_init,0}};

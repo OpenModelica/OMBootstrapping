@@ -12,8 +12,6 @@ extern "C" {
 
 extern struct record_description Absyn_Path_IDENT__desc;
 
-extern struct record_description AvlSetInt_Tree_EMPTY__desc;
-
 extern struct record_description BackendDAE_BackendDAE_DAE__desc;
 
 extern struct record_description BackendDAE_BaseClockPartitionKind_UNKNOWN__PARTITION__desc;
@@ -146,7 +144,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_IndexReduction_findStateOrderWork omc_IndexReduction_findStateOrderWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_IndexReduction_findStateOrder(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_IndexReduction_findStateOrder omc_IndexReduction_findStateOrder
 static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_findStateOrder,2,0) {(void*) boxptr_IndexReduction_findStateOrder,0}};
@@ -162,7 +160,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_findStateOrder,2,0) {(vo
 #define boxptr_IndexReduction_changeDerVariablesToStatesFinder omc_IndexReduction_changeDerVariablesToStatesFinder
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_IndexReduction_splitEqnsinConstraintAndOther(threadData_t *threadData, modelica_metatype _inVarLst, modelica_metatype _inEqnsLst, modelica_metatype _shared, modelica_metatype *out_outOEqnsLst);
 #define boxptr_IndexReduction_splitEqnsinConstraintAndOther omc_IndexReduction_splitEqnsinConstraintAndOther
 static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_splitEqnsinConstraintAndOther,2,0) {(void*) boxptr_IndexReduction_splitEqnsinConstraintAndOther,0}};
@@ -217,7 +215,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_splitEqnsinConstraintAnd
 #define boxptr_IndexReduction_adjacencyMatrixfromEnhancedStrict omc_IndexReduction_adjacencyMatrixfromEnhancedStrict
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_IndexReduction_makeder(threadData_t *threadData, modelica_metatype _inExp);
 #define boxptr_IndexReduction_makeder omc_IndexReduction_makeder
 static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_makeder,2,0) {(void*) boxptr_IndexReduction_makeder,0}};
@@ -245,7 +243,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_makeder,2,0) {(void*) bo
 #define boxptr_IndexReduction_removeFirstOrderDerivatives omc_IndexReduction_removeFirstOrderDerivatives
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_IndexReduction_makeStartExp(threadData_t *threadData, modelica_metatype _inCref);
 #define boxptr_IndexReduction_makeStartExp omc_IndexReduction_makeStartExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_makeStartExp,2,0) {(void*) boxptr_IndexReduction_makeStartExp,0}};
@@ -273,21 +271,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_makeStartExp,2,0) {(void
 #define boxptr_IndexReduction_inlineOrgEqns omc_IndexReduction_inlineOrgEqns
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_IndexReduction_dynamicStateSelection(threadData_t *threadData, modelica_metatype _inDAE, modelica_metatype _inArgs);
 #define boxptr_IndexReduction_dynamicStateSelection omc_IndexReduction_dynamicStateSelection
 static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_dynamicStateSelection,2,0) {(void*) boxptr_IndexReduction_dynamicStateSelection,0}};
 #define boxvar_IndexReduction_dynamicStateSelection MMC_REFSTRUCTLIT(boxvar_lit_IndexReduction_dynamicStateSelection)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_IndexReduction_noStateDeselection(threadData_t *threadData, modelica_metatype _inDAE, modelica_metatype _inArgs);
 #define boxptr_IndexReduction_noStateDeselection omc_IndexReduction_noStateDeselection
 static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_noStateDeselection,2,0) {(void*) boxptr_IndexReduction_noStateDeselection,0}};
 #define boxvar_IndexReduction_noStateDeselection MMC_REFSTRUCTLIT(boxvar_lit_IndexReduction_noStateDeselection)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_IndexReduction_getStructurallySingularSystemHandlerArg(threadData_t *threadData, modelica_metatype _inSystem, modelica_metatype _inShared, modelica_metatype _mapEqnIncRow, modelica_metatype _mapIncRowEqn);
 #define boxptr_IndexReduction_getStructurallySingularSystemHandlerArg omc_IndexReduction_getStructurallySingularSystemHandlerArg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_getStructurallySingularSystemHandlerArg,2,0) {(void*) boxptr_IndexReduction_getStructurallySingularSystemHandlerArg,0}};
@@ -318,7 +316,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_getStructurallySingularS
 #define boxptr_IndexReduction_differentiateEqns omc_IndexReduction_differentiateEqns
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_IndexReduction_minimalStructurallySingularSystem(threadData_t *threadData, modelica_metatype _inEqnsLst, modelica_metatype _syst, modelica_metatype _shared, modelica_metatype _inAssignments1, modelica_metatype _inAssignments2, modelica_metatype _inArg, modelica_metatype *out_outStateIndxs, modelica_metatype *out_outunassignedEqns, modelica_metatype *out_discEqns);
 #define boxptr_IndexReduction_minimalStructurallySingularSystem omc_IndexReduction_minimalStructurallySingularSystem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_minimalStructurallySingularSystem,2,0) {(void*) boxptr_IndexReduction_minimalStructurallySingularSystem,0}};
@@ -328,17 +326,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_minimalStructurallySingu
 #define boxptr_IndexReduction_eqnstplDebugString omc_IndexReduction_eqnstplDebugString
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_IndexReduction_failIfIndexReduction(threadData_t *threadData, modelica_metatype _inEqns, modelica_integer __omcQ_24in_5FinActualEqn, modelica_metatype __omcQ_24in_5FinSystem, modelica_metatype __omcQ_24in_5FinShared, modelica_metatype __omcQ_24in_5FinAssignments1, modelica_metatype __omcQ_24in_5FinAssignments2, modelica_metatype __omcQ_24in_5FinArg, modelica_integer *out_inActualEqn, modelica_metatype *out_inSystem, modelica_metatype *out_inShared, modelica_metatype *out_inAssignments1, modelica_metatype *out_inAssignments2, modelica_metatype *out_inArg);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_IndexReduction_failIfIndexReduction(threadData_t *threadData, modelica_metatype _inEqns, modelica_metatype __omcQ_24in_5FinActualEqn, modelica_metatype __omcQ_24in_5FinSystem, modelica_metatype __omcQ_24in_5FinShared, modelica_metatype __omcQ_24in_5FinAssignments1, modelica_metatype __omcQ_24in_5FinAssignments2, modelica_metatype __omcQ_24in_5FinArg, modelica_metatype *out_inActualEqn, modelica_metatype *out_inSystem, modelica_metatype *out_inShared, modelica_metatype *out_inAssignments1, modelica_metatype *out_inAssignments2, modelica_metatype *out_inArg);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_failIfIndexReduction,2,0) {(void*) boxptr_IndexReduction_failIfIndexReduction,0}};
 #define boxvar_IndexReduction_failIfIndexReduction MMC_REFSTRUCTLIT(boxvar_lit_IndexReduction_failIfIndexReduction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_IndexReduction_pantelidesIndexReduction(threadData_t *threadData, modelica_metatype _inEqns, modelica_integer _inActualEqn, modelica_metatype _inSystem, modelica_metatype _inShared, modelica_metatype _inAssignments1, modelica_metatype _inAssignments2, modelica_metatype _inArg, modelica_integer *out_continueEqn, modelica_metatype *out_osyst, modelica_metatype *out_oshared, modelica_metatype *out_oass1, modelica_metatype *out_oass2, modelica_metatype *out_outArg);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_IndexReduction_pantelidesIndexReduction(threadData_t *threadData, modelica_metatype _inEqns, modelica_metatype _inActualEqn, modelica_metatype _inSystem, modelica_metatype _inShared, modelica_metatype _inAssignments1, modelica_metatype _inAssignments2, modelica_metatype _inArg, modelica_metatype *out_continueEqn, modelica_metatype *out_osyst, modelica_metatype *out_oshared, modelica_metatype *out_oass1, modelica_metatype *out_oass2, modelica_metatype *out_outArg);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_IndexReduction_pantelidesIndexReduction,2,0) {(void*) boxptr_IndexReduction_pantelidesIndexReduction,0}};
 #define boxvar_IndexReduction_pantelidesIndexReduction MMC_REFSTRUCTLIT(boxvar_lit_IndexReduction_pantelidesIndexReduction)

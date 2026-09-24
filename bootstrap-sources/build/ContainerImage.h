@@ -27,81 +27,81 @@ extern struct record_description JSON_NULL__desc;
 #define boxptr_ContainerImage_parseContainerHostPort omc_ContainerImage_parseContainerHostPort
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ContainerImage_nameToString(threadData_t *threadData, modelica_metatype _image);
 #define boxptr_ContainerImage_nameToString omc_ContainerImage_nameToString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_nameToString,2,0) {(void*) boxptr_ContainerImage_nameToString,0}};
 #define boxvar_ContainerImage_nameToString MMC_REFSTRUCTLIT(boxvar_lit_ContainerImage_nameToString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ContainerImage_toString(threadData_t *threadData, modelica_metatype _image, modelica_boolean _useDigest);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ContainerImage_toString(threadData_t *threadData, modelica_metatype _image, modelica_metatype _useDigest);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_toString,2,0) {(void*) boxptr_ContainerImage_toString,0}};
 #define boxvar_ContainerImage_toString MMC_REFSTRUCTLIT(boxvar_lit_ContainerImage_toString)
 
 
-DLLDirection
+DLLModelDirection
 void omc_ContainerImage_assertSignature(threadData_t *threadData, modelica_metatype _image);
 #define boxptr_ContainerImage_assertSignature omc_ContainerImage_assertSignature
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_assertSignature,2,0) {(void*) boxptr_ContainerImage_assertSignature,0}};
 #define boxvar_ContainerImage_assertSignature MMC_REFSTRUCTLIT(boxvar_lit_ContainerImage_assertSignature)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ContainerImage_isCosignAvailable(threadData_t *threadData);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ContainerImage_isCosignAvailable(threadData_t *threadData);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_isCosignAvailable,2,0) {(void*) boxptr_ContainerImage_isCosignAvailable,0}};
 #define boxvar_ContainerImage_isCosignAvailable MMC_REFSTRUCTLIT(boxvar_lit_ContainerImage_isCosignAvailable)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ContainerImage_isAvailableLocally(threadData_t *threadData, modelica_metatype _image);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ContainerImage_isAvailableLocally(threadData_t *threadData, modelica_metatype _image);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_isAvailableLocally,2,0) {(void*) boxptr_ContainerImage_isAvailableLocally,0}};
 #define boxvar_ContainerImage_isAvailableLocally MMC_REFSTRUCTLIT(boxvar_lit_ContainerImage_isAvailableLocally)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ContainerImage_pullCommand(threadData_t *threadData, modelica_metatype _image);
 #define boxptr_ContainerImage_pullCommand omc_ContainerImage_pullCommand
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_pullCommand,2,0) {(void*) boxptr_ContainerImage_pullCommand,0}};
 #define boxvar_ContainerImage_pullCommand MMC_REFSTRUCTLIT(boxvar_lit_ContainerImage_pullCommand)
 
 
-DLLDirection
+DLLModelDirection
 void omc_ContainerImage_pull(threadData_t *threadData, modelica_metatype _image);
 #define boxptr_ContainerImage_pull omc_ContainerImage_pull
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_pull,2,0) {(void*) boxptr_ContainerImage_pull,0}};
 #define boxvar_ContainerImage_pull MMC_REFSTRUCTLIT(boxvar_lit_ContainerImage_pull)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ContainerImage_isTrustedOpenModelicaImage(threadData_t *threadData, modelica_metatype _image, modelica_boolean *out_hasKnownDigest);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ContainerImage_isTrustedOpenModelicaImage(threadData_t *threadData, modelica_metatype _image, modelica_metatype *out_hasKnownDigest);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_isTrustedOpenModelicaImage,2,0) {(void*) boxptr_ContainerImage_isTrustedOpenModelicaImage,0}};
 #define boxvar_ContainerImage_isTrustedOpenModelicaImage MMC_REFSTRUCTLIT(boxvar_lit_ContainerImage_isTrustedOpenModelicaImage)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ContainerImage_getDigestSha(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fimage);
 #define boxptr_ContainerImage_getDigestSha omc_ContainerImage_getDigestSha
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_getDigestSha,2,0) {(void*) boxptr_ContainerImage_getDigestSha,0}};
 #define boxvar_ContainerImage_getDigestSha MMC_REFSTRUCTLIT(boxvar_lit_ContainerImage_getDigestSha)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ContainerImage_parseContainerReference(threadData_t *threadData, modelica_string _containerReference);
 #define boxptr_ContainerImage_parseContainerReference omc_ContainerImage_parseContainerReference
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_parseContainerReference,2,0) {(void*) boxptr_ContainerImage_parseContainerReference,0}};
 #define boxvar_ContainerImage_parseContainerReference MMC_REFSTRUCTLIT(boxvar_lit_ContainerImage_parseContainerReference)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ContainerImage_parseWithArgs(threadData_t *threadData, modelica_metatype _containerReferenceWithArgs, modelica_metatype *out_arguments);
 #define boxptr_ContainerImage_parseWithArgs omc_ContainerImage_parseWithArgs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ContainerImage_parseWithArgs,2,0) {(void*) boxptr_ContainerImage_parseWithArgs,0}};

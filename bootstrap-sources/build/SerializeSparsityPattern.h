@@ -33,7 +33,7 @@ extern struct record_description ErrorTypes_Severity_ERROR__desc;
  * extern void serializeJ(const char* (*_name*), int (*_numCols*), int (*_nnz*), modelica_metatype (*_colPtrs*), modelica_metatype (*_rowInds*));
  */
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SerializeSparsityPattern_serialize(threadData_t *threadData, modelica_metatype _code);
 #define boxptr_SerializeSparsityPattern_serialize omc_SerializeSparsityPattern_serialize
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SerializeSparsityPattern_serialize,2,0) {(void*) boxptr_SerializeSparsityPattern_serialize,0}};

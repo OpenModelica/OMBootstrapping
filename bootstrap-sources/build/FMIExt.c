@@ -14,7 +14,7 @@ void omc_FMIExt_releaseFMIImport(threadData_t *threadData, modelica_metatype _in
   _inFMIModelVariablesInstance_ext = (modelica_metatype) _inFMIModelVariablesInstance;
   _inFMIInstance_ext = (modelica_metatype) _inFMIInstance;
   _inFMIContext_ext = (modelica_metatype) _inFMIContext;
-  FMIImpl__releaseFMIImport(_inFMIModelVariablesInstance_ext, _inFMIInstance_ext, _inFMIContext_ext, MMC_STRINGDATA(_inFMIVersion));
+  FMIImpl__releaseFMIImport(_inFMIModelVariablesInstance_ext, _inFMIInstance_ext, _inFMIContext_ext, omc_string_data(_inFMIVersion));
   return;
 }
 
@@ -52,7 +52,7 @@ modelica_boolean omc_FMIExt_initializeFMIImport(threadData_t *threadData, modeli
   _inInputConnectors_ext = (int) _inInputConnectors;
   _inOutputConnectors_ext = (int) _inOutputConnectors;
   _inIsModelDescriptionImport_ext = (int) _inIsModelDescriptionImport;
-  _result_ext = FMIImpl__initializeFMIImport(MMC_STRINGDATA(_inFileName), MMC_STRINGDATA(_inWorkingDirectory), _inFMILogLevel_ext, _inInputConnectors_ext, _inOutputConnectors_ext, _inIsModelDescriptionImport_ext, &_outFMIContext_ext, &_outFMIInstance_ext, &_outFMIInfo_ext, &_outTypeDefinitionsList_ext, &_outExperimentAnnotation_ext, &_outModelVariablesInstance_ext, &_outModelVariablesList_ext);
+  _result_ext = FMIImpl__initializeFMIImport(omc_string_data(_inFileName), omc_string_data(_inWorkingDirectory), _inFMILogLevel_ext, _inInputConnectors_ext, _inOutputConnectors_ext, _inIsModelDescriptionImport_ext, &_outFMIContext_ext, &_outFMIInstance_ext, &_outFMIInfo_ext, &_outTypeDefinitionsList_ext, &_outExperimentAnnotation_ext, &_outModelVariablesInstance_ext, &_outModelVariablesList_ext);
   _outFMIContext = (modelica_metatype)_outFMIContext_ext;
   _outFMIInstance = (modelica_metatype)_outFMIInstance_ext;
   _outFMIInfo = (modelica_metatype)_outFMIInfo_ext;
@@ -78,12 +78,12 @@ modelica_metatype boxptr_FMIExt_initializeFMIImport(threadData_t *threadData, mo
   modelica_integer tmp4;
   modelica_boolean _result;
   modelica_metatype out_result;
-  tmp1 = mmc_unbox_integer(_inFMILogLevel);
-  tmp2 = mmc_unbox_integer(_inInputConnectors);
-  tmp3 = mmc_unbox_integer(_inOutputConnectors);
-  tmp4 = mmc_unbox_integer(_inIsModelDescriptionImport);
+  tmp1 = omc_unbox_integer(_inFMILogLevel);
+  tmp2 = omc_unbox_integer(_inInputConnectors);
+  tmp3 = omc_unbox_integer(_inOutputConnectors);
+  tmp4 = omc_unbox_integer(_inIsModelDescriptionImport);
   _result = omc_FMIExt_initializeFMIImport(threadData, _inFileName, _inWorkingDirectory, tmp1, tmp2, tmp3, tmp4, out_outFMIContext, out_outFMIInstance, out_outFMIInfo, out_outTypeDefinitionsList, out_outExperimentAnnotation, out_outModelVariablesInstance, out_outModelVariablesList);
-  out_result = mmc_mk_icon(_result);
+  out_result = omc_mk_icon(_result);
   /* skip box _outFMIContext; Option<#Integer> */
   /* skip box _outFMIInstance; Option<#Integer> */
   /* skip box _outFMIInfo; FMI.Info */

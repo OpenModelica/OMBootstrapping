@@ -13,7 +13,7 @@ extern "C" {
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableCrefSimVar_addSimVarToHashTable(threadData_t *threadData, modelica_metatype _simvarIn, modelica_metatype _inHT);
 #define boxptr_HashTableCrefSimVar_addSimVarToHashTable omc_HashTableCrefSimVar_addSimVarToHashTable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrefSimVar_addSimVarToHashTable,2,0) {(void*) boxptr_HashTableCrefSimVar_addSimVarToHashTable,0}};
@@ -23,15 +23,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrefSimVar_addSimVarToHashTabl
 #define boxptr_HashTableCrefSimVar_opaqueStr omc_HashTableCrefSimVar_opaqueStr
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableCrefSimVar_emptyHashTableSized(threadData_t *threadData, modelica_integer _size);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HashTableCrefSimVar_emptyHashTableSized(threadData_t *threadData, modelica_metatype _size);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrefSimVar_emptyHashTableSized,2,0) {(void*) boxptr_HashTableCrefSimVar_emptyHashTableSized,0}};
 #define boxvar_HashTableCrefSimVar_emptyHashTableSized MMC_REFSTRUCTLIT(boxvar_lit_HashTableCrefSimVar_emptyHashTableSized)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableCrefSimVar_emptyHashTable(threadData_t *threadData);
 #define boxptr_HashTableCrefSimVar_emptyHashTable omc_HashTableCrefSimVar_emptyHashTable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrefSimVar_emptyHashTable,2,0) {(void*) boxptr_HashTableCrefSimVar_emptyHashTable,0}};

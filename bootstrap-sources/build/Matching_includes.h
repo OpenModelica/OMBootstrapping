@@ -25,6 +25,7 @@ extern "C" {
 #include "Matching.h"
 #include "Sorting.h"
 #include "System.h"
+#include "UnorderedMap.h"
 #include "UnorderedSet.h"
 #include "Util.h"
 #ifdef __cplusplus

@@ -134,32 +134,28 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT51,8,3) {&Flags_ConfigFlag_CONFIG__
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_BaseModelica_inlineFunctions(threadData_t *threadData)
 {
   modelica_boolean _enabled;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _enabled = omc_Flags_isConfigFlagSet(threadData, _OMC_LIT18, _OMC_LIT9);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _enabled;
+  omc_ret_ = _enabled;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BaseModelica_inlineFunctions(threadData_t *threadData)
 {
   modelica_boolean _enabled;
   modelica_metatype out_enabled;
   _enabled = omc_BaseModelica_inlineFunctions(threadData);
-  out_enabled = mmc_mk_icon(_enabled);
+  out_enabled = omc_mk_icon(_enabled);
   return out_enabled;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseModelica_formatFromFlags(threadData_t *threadData)
 {
   modelica_metatype __omcQ_24mrfa_5F0 = NULL;
@@ -170,7 +166,8 @@ modelica_metatype omc_BaseModelica_formatFromFlags(threadData_t *threadData)
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta14;
   modelica_metatype tmpMeta15;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // __omcQ_24mrfa_5F0 has no default value.
   // __omcQ_24mrfa_5F1 has no default value.
@@ -179,18 +176,18 @@ modelica_metatype omc_BaseModelica_formatFromFlags(threadData_t *threadData)
   {
     tmpMeta1 = MMC_TAGPTR(mmc_alloc_words(6));
     memcpy(MMC_UNTAGPTR(tmpMeta1), MMC_UNTAGPTR(_format), 6*sizeof(modelica_metatype));
-    ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta1))[2] = mmc_mk_integer(3);
+    ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta1))[2] = omc_mk_integer(3);
     _format = tmpMeta1;
   }
   else
   {
     if(omc_Flags_isConfigFlagSet(threadData, _OMC_LIT18, _OMC_LIT6))
     {
-      __omcQ_24mrfa_5F0 = mmc_mk_integer(1);
+      __omcQ_24mrfa_5F0 = omc_mk_integer(1);
 
-      __omcQ_24mrfa_5F1 = mmc_mk_integer(2);
+      __omcQ_24mrfa_5F1 = omc_mk_integer(2);
 
-      tmpMeta2 = mmc_mk_box5(3, &BaseModelica_OutputFormat_OUTPUT__FORMAT__desc, __omcQ_24mrfa_5F0, __omcQ_24mrfa_5F1, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_format), 4))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_format), 5))));
+      tmpMeta2 = omc_mk_box5(3, &BaseModelica_OutputFormat_OUTPUT__FORMAT__desc, __omcQ_24mrfa_5F0, __omcQ_24mrfa_5F1, (OMC_BOX_FIELD(_format, 4)), (OMC_BOX_FIELD(_format, 5)));
       _format = tmpMeta2;
     }
   }
@@ -211,61 +208,61 @@ modelica_metatype omc_BaseModelica_formatFromFlags(threadData_t *threadData)
             switch (MMC_SWITCH_CAST(tmp6)) {
             case 0: {
               modelica_metatype tmpMeta8;
-              if (10 != MMC_STRLEN(tmp6_1) || strcmp(MMC_STRINGDATA(_OMC_LIT23), MMC_STRINGDATA(tmp6_1)) != 0) goto tmp5_end;
+              if (10 != omc_string_len(tmp6_1) || strcmp(omc_string_data(_OMC_LIT23), omc_string_data(tmp6_1)) != 0) goto tmp5_end;
               /* Pattern matching succeeded */
               tmpMeta8 = MMC_TAGPTR(mmc_alloc_words(6));
               memcpy(MMC_UNTAGPTR(tmpMeta8), MMC_UNTAGPTR(_format), 6*sizeof(modelica_metatype));
-              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta8))[2] = mmc_mk_integer(1);
+              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta8))[2] = omc_mk_integer(1);
               _format = tmpMeta8;
               goto tmp5_done;
             }
             case 1: {
               modelica_metatype tmpMeta9;
-              if (19 != MMC_STRLEN(tmp6_1) || strcmp(MMC_STRINGDATA(_OMC_LIT24), MMC_STRINGDATA(tmp6_1)) != 0) goto tmp5_end;
+              if (19 != omc_string_len(tmp6_1) || strcmp(omc_string_data(_OMC_LIT24), omc_string_data(tmp6_1)) != 0) goto tmp5_end;
               /* Pattern matching succeeded */
               tmpMeta9 = MMC_TAGPTR(mmc_alloc_words(6));
               memcpy(MMC_UNTAGPTR(tmpMeta9), MMC_UNTAGPTR(_format), 6*sizeof(modelica_metatype));
-              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta9))[2] = mmc_mk_integer(2);
+              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta9))[2] = omc_mk_integer(2);
               _format = tmpMeta9;
               goto tmp5_done;
             }
             case 2: {
               modelica_metatype tmpMeta10;
-              if (13 != MMC_STRLEN(tmp6_1) || strcmp(MMC_STRINGDATA(_OMC_LIT25), MMC_STRINGDATA(tmp6_1)) != 0) goto tmp5_end;
+              if (13 != omc_string_len(tmp6_1) || strcmp(omc_string_data(_OMC_LIT25), omc_string_data(tmp6_1)) != 0) goto tmp5_end;
               /* Pattern matching succeeded */
               tmpMeta10 = MMC_TAGPTR(mmc_alloc_words(6));
               memcpy(MMC_UNTAGPTR(tmpMeta10), MMC_UNTAGPTR(_format), 6*sizeof(modelica_metatype));
-              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta10))[2] = mmc_mk_integer(3);
+              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta10))[2] = omc_mk_integer(3);
               _format = tmpMeta10;
               goto tmp5_done;
             }
             case 3: {
               modelica_metatype tmpMeta11;
-              if (11 != MMC_STRLEN(tmp6_1) || strcmp(MMC_STRINGDATA(_OMC_LIT26), MMC_STRINGDATA(tmp6_1)) != 0) goto tmp5_end;
+              if (11 != omc_string_len(tmp6_1) || strcmp(omc_string_data(_OMC_LIT26), omc_string_data(tmp6_1)) != 0) goto tmp5_end;
               /* Pattern matching succeeded */
               tmpMeta11 = MMC_TAGPTR(mmc_alloc_words(6));
               memcpy(MMC_UNTAGPTR(tmpMeta11), MMC_UNTAGPTR(_format), 6*sizeof(modelica_metatype));
-              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta11))[3] = mmc_mk_integer(1);
+              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta11))[3] = omc_mk_integer(1);
               _format = tmpMeta11;
               goto tmp5_done;
             }
             case 4: {
               modelica_metatype tmpMeta12;
-              if (14 != MMC_STRLEN(tmp6_1) || strcmp(MMC_STRINGDATA(_OMC_LIT27), MMC_STRINGDATA(tmp6_1)) != 0) goto tmp5_end;
+              if (14 != omc_string_len(tmp6_1) || strcmp(omc_string_data(_OMC_LIT27), omc_string_data(tmp6_1)) != 0) goto tmp5_end;
               /* Pattern matching succeeded */
               tmpMeta12 = MMC_TAGPTR(mmc_alloc_words(6));
               memcpy(MMC_UNTAGPTR(tmpMeta12), MMC_UNTAGPTR(_format), 6*sizeof(modelica_metatype));
-              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta12))[3] = mmc_mk_integer(2);
+              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta12))[3] = omc_mk_integer(2);
               _format = tmpMeta12;
               goto tmp5_done;
             }
             case 5: {
               modelica_metatype tmpMeta13;
-              if (14 != MMC_STRLEN(tmp6_1) || strcmp(MMC_STRINGDATA(_OMC_LIT28), MMC_STRINGDATA(tmp6_1)) != 0) goto tmp5_end;
+              if (14 != omc_string_len(tmp6_1) || strcmp(omc_string_data(_OMC_LIT28), omc_string_data(tmp6_1)) != 0) goto tmp5_end;
               /* Pattern matching succeeded */
               tmpMeta13 = MMC_TAGPTR(mmc_alloc_words(6));
               memcpy(MMC_UNTAGPTR(tmpMeta13), MMC_UNTAGPTR(_format), 6*sizeof(modelica_metatype));
-              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta13))[5] = mmc_mk_boolean(1 /* true */);
+              ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta13))[5] = omc_mk_boolean(1 /* true */);
               _format = tmpMeta13;
               goto tmp5_done;
             }
@@ -280,7 +277,7 @@ modelica_metatype omc_BaseModelica_formatFromFlags(threadData_t *threadData)
           }
           goto goto_4;
           goto_4:;
-          MMC_THROW_INTERNAL();
+          OMC_THROW_INTERNAL();
           goto tmp5_done;
           tmp5_done:;
         }
@@ -291,9 +288,10 @@ modelica_metatype omc_BaseModelica_formatFromFlags(threadData_t *threadData)
 
   tmpMeta15 = MMC_TAGPTR(mmc_alloc_words(6));
   memcpy(MMC_UNTAGPTR(tmpMeta15), MMC_UNTAGPTR(_format), 6*sizeof(modelica_metatype));
-  ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta15))[4] = mmc_mk_boolean(omc_Flags_isConfigFlagSet(threadData, _OMC_LIT18, _OMC_LIT3));
+  ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta15))[4] = omc_mk_boolean(omc_Flags_isConfigFlagSet(threadData, _OMC_LIT18, _OMC_LIT3));
   _format = tmpMeta15;
   _return: OMC_LABEL_UNUSED
-  return _format;
+  omc_ret_ = _format;
+  return omc_ret_;
 }
 

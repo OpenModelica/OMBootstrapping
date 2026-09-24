@@ -42,21 +42,21 @@ extern struct record_description Values_Value_STRING__desc;
 #define boxptr_ValuesDump_unparseValueNumbers omc_ValuesDump_unparseValueNumbers
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ValuesDump_unparseValues(threadData_t *threadData, modelica_metatype _inValueLst);
 #define boxptr_ValuesDump_unparseValues omc_ValuesDump_unparseValues
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ValuesDump_unparseValues,2,0) {(void*) boxptr_ValuesDump_unparseValues,0}};
 #define boxvar_ValuesDump_unparseValues MMC_REFSTRUCTLIT(boxvar_lit_ValuesDump_unparseValues)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ValuesDump_printValStr(threadData_t *threadData, modelica_metatype _v);
 #define boxptr_ValuesDump_printValStr omc_ValuesDump_printValStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ValuesDump_printValStr,2,0) {(void*) boxptr_ValuesDump_printValStr,0}};
 #define boxvar_ValuesDump_printValStr MMC_REFSTRUCTLIT(boxvar_lit_ValuesDump_printValStr)
 
 
-DLLDirection
+DLLModelDirection
 void omc_ValuesDump_printVal(threadData_t *threadData, modelica_metatype _v);
 #define boxptr_ValuesDump_printVal omc_ValuesDump_printVal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ValuesDump_printVal,2,0) {(void*) boxptr_ValuesDump_printVal,0}};
@@ -69,7 +69,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ValuesDump_printVal,2,0) {(void*) boxpt
 #define boxptr_ValuesDump_valRecordString omc_ValuesDump_valRecordString
 
 
-DLLDirection
+DLLModelDirection
 void omc_ValuesDump_valString2(threadData_t *threadData, modelica_metatype _inValue);
 #define boxptr_ValuesDump_valString2 omc_ValuesDump_valString2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ValuesDump_valString2,2,0) {(void*) boxptr_ValuesDump_valString2,0}};
@@ -88,14 +88,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ValuesDump_valString2,2,0) {(void*) box
 #define boxptr_ValuesDump_valJSON omc_ValuesDump_valJSON
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ValuesDump_valStringJSON(threadData_t *threadData, modelica_metatype _inValue);
 #define boxptr_ValuesDump_valStringJSON omc_ValuesDump_valStringJSON
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ValuesDump_valStringJSON,2,0) {(void*) boxptr_ValuesDump_valStringJSON,0}};
 #define boxvar_ValuesDump_valStringJSON MMC_REFSTRUCTLIT(boxvar_lit_ValuesDump_valStringJSON)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ValuesDump_valString(threadData_t *threadData, modelica_metatype _inValue);
 #define boxptr_ValuesDump_valString omc_ValuesDump_valString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ValuesDump_valString,2,0) {(void*) boxptr_ValuesDump_valString,0}};

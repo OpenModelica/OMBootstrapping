@@ -8,7 +8,6 @@ extern "C" {
 #include "AdjacencyMatrix.h"
 #include "Algorithm.h"
 #include "Array.h"
-#include "AvlSetInt.h"
 #include "AvlTreePathFunction.h"
 #include "BackendDAEEXT.h"
 #include "BackendDAEOptimize.h"

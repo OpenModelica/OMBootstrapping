@@ -207,14 +207,14 @@ extern struct record_description Values_Value_META__FAIL__desc;
 extern struct record_description Values_Value_REAL__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyCross(threadData_t *threadData, modelica_metatype _v1, modelica_metatype _v2);
 #define boxptr_ExpressionSimplify_simplifyCross omc_ExpressionSimplify_simplifyCross
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyCross,2,0) {(void*) boxptr_ExpressionSimplify_simplifyCross,0}};
 #define boxvar_ExpressionSimplify_simplifyCross MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyCross)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifySkew(threadData_t *threadData, modelica_metatype _v1);
 #define boxptr_ExpressionSimplify_simplifySkew omc_ExpressionSimplify_simplifySkew
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifySkew,2,0) {(void*) boxptr_ExpressionSimplify_simplifySkew,0}};
@@ -236,15 +236,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifySkew,2,0) {(
 #define boxptr_ExpressionSimplify_simplifySize omc_ExpressionSimplify_simplifySize
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_condSimplifyAddSymbolicOperation(threadData_t *threadData, modelica_boolean _cond, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fsource, modelica_metatype *out_source);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_condSimplifyAddSymbolicOperation(threadData_t *threadData, modelica_metatype _cond, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype __omcQ_24in_5Fsource, modelica_metatype *out_source);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_condSimplifyAddSymbolicOperation,2,0) {(void*) boxptr_ExpressionSimplify_condSimplifyAddSymbolicOperation,0}};
 #define boxvar_ExpressionSimplify_condSimplifyAddSymbolicOperation MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_condSimplifyAddSymbolicOperation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyAddSymbolicOperation(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _source, modelica_metatype *out_outSource);
 #define boxptr_ExpressionSimplify_simplifyAddSymbolicOperation omc_ExpressionSimplify_simplifyAddSymbolicOperation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyAddSymbolicOperation,2,0) {(void*) boxptr_ExpressionSimplify_simplifyAddSymbolicOperation,0}};
@@ -254,21 +254,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyAddSymbolicO
 #define boxptr_ExpressionSimplify_checkZeroLengthArrayOp omc_ExpressionSimplify_checkZeroLengthArrayOp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_condsimplifyList1(threadData_t *threadData, modelica_metatype _blst, modelica_metatype _expl, modelica_metatype *out_outBool);
 #define boxptr_ExpressionSimplify_condsimplifyList1 omc_ExpressionSimplify_condsimplifyList1
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_condsimplifyList1,2,0) {(void*) boxptr_ExpressionSimplify_condsimplifyList1,0}};
 #define boxvar_ExpressionSimplify_condsimplifyList1 MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_condsimplifyList1)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyList1(threadData_t *threadData, modelica_metatype _expl, modelica_metatype *out_outBool);
 #define boxptr_ExpressionSimplify_simplifyList1 omc_ExpressionSimplify_simplifyList1
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyList1,2,0) {(void*) boxptr_ExpressionSimplify_simplifyList1,0}};
 #define boxvar_ExpressionSimplify_simplifyList1 MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyList1)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyList(threadData_t *threadData, modelica_metatype _expl);
 #define boxptr_ExpressionSimplify_simplifyList omc_ExpressionSimplify_simplifyList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyList,2,0) {(void*) boxptr_ExpressionSimplify_simplifyList,0}};
@@ -279,6 +279,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyList,2,0) {(
 
 
 #define boxptr_ExpressionSimplify_simplifyReductionFoldPhase omc_ExpressionSimplify_simplifyReductionFoldPhase
+
+
+#define boxptr_ExpressionSimplify_selectElement omc_ExpressionSimplify_selectElement
+
+
+#define boxptr_ExpressionSimplify_fillIteratorSubscript omc_ExpressionSimplify_fillIteratorSubscript
+
+
+#define boxptr_ExpressionSimplify_iteratorOrPlaceholderOccursTraverser omc_ExpressionSimplify_iteratorOrPlaceholderOccursTraverser
+
+
+#define boxptr_ExpressionSimplify_extractIteratorSubscript omc_ExpressionSimplify_extractIteratorSubscript
+
+
+#define boxptr_ExpressionSimplify_replaceIteratorWithValues omc_ExpressionSimplify_replaceIteratorWithValues
 
 
 #define boxptr_ExpressionSimplify_replaceIteratorWithExpTraverser omc_ExpressionSimplify_replaceIteratorWithExpTraverser
@@ -293,25 +308,25 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyList,2,0) {(
 #define boxptr_ExpressionSimplify_simplifyReduction omc_ExpressionSimplify_simplifyReduction
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyRangeReal(threadData_t *threadData, modelica_real _inStart, modelica_real _inStep, modelica_real _inStop);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_simplifyRangeReal(threadData_t *threadData, modelica_metatype _inStart, modelica_metatype _inStep, modelica_metatype _inStop);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyRangeReal,2,0) {(void*) boxptr_ExpressionSimplify_simplifyRangeReal,0}};
 #define boxvar_ExpressionSimplify_simplifyRangeReal MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyRangeReal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyRange(threadData_t *threadData, modelica_integer _inStart, modelica_integer _inStep, modelica_integer _inStop);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_simplifyRange(threadData_t *threadData, modelica_metatype _inStart, modelica_metatype _inStep, modelica_metatype _inStop);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyRange,2,0) {(void*) boxptr_ExpressionSimplify_simplifyRange,0}};
 #define boxvar_ExpressionSimplify_simplifyRange MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyRange)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyRangeBool(threadData_t *threadData, modelica_boolean _inStart, modelica_boolean _inStop);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_simplifyRangeBool(threadData_t *threadData, modelica_metatype _inStart, modelica_metatype _inStop);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyRangeBool,2,0) {(void*) boxptr_ExpressionSimplify_simplifyRangeBool,0}};
 #define boxvar_ExpressionSimplify_simplifyRangeBool MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyRangeBool)
@@ -332,6 +347,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyRangeBool,2,
 #define boxptr_ExpressionSimplify_simplifyBinaryDistributePow omc_ExpressionSimplify_simplifyBinaryDistributePow
 
 
+#define boxptr_ExpressionSimplify_simplifyRelation2 omc_ExpressionSimplify_simplifyRelation2
+
+
 #define boxptr_ExpressionSimplify_simplifyLBinary omc_ExpressionSimplify_simplifyLBinary
 
 
@@ -341,9 +359,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyRangeBool,2,
 #define boxptr_ExpressionSimplify_simplifyBinaryCommutativeWork omc_ExpressionSimplify_simplifyBinaryCommutativeWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_safeIntOp(threadData_t *threadData, modelica_integer _val1, modelica_integer _val2, modelica_metatype _op);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_safeIntOp(threadData_t *threadData, modelica_metatype _val1, modelica_metatype _val2, modelica_metatype _op);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_safeIntOp,2,0) {(void*) boxptr_ExpressionSimplify_safeIntOp,0}};
 #define boxvar_ExpressionSimplify_safeIntOp MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_safeIntOp)
@@ -370,7 +388,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_safeIntOp,2,0) {(voi
 #define boxptr_ExpressionSimplify_simplifyAsubCref omc_ExpressionSimplify_simplifyAsubCref
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifySumOperatorExpression(threadData_t *threadData, modelica_metatype _iSum, modelica_metatype _iop, modelica_metatype _iExp);
 #define boxptr_ExpressionSimplify_simplifySumOperatorExpression omc_ExpressionSimplify_simplifySumOperatorExpression
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifySumOperatorExpression,2,0) {(void*) boxptr_ExpressionSimplify_simplifySumOperatorExpression,0}};
@@ -455,7 +473,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifySumOperatorE
 #define boxptr_ExpressionSimplify_unliftOperator omc_ExpressionSimplify_unliftOperator
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyScalarProduct(threadData_t *threadData, modelica_metatype _inVector1, modelica_metatype _inVector2);
 #define boxptr_ExpressionSimplify_simplifyScalarProduct omc_ExpressionSimplify_simplifyScalarProduct
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyScalarProduct,2,0) {(void*) boxptr_ExpressionSimplify_simplifyScalarProduct,0}};
@@ -465,9 +483,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyScalarProduc
 #define boxptr_ExpressionSimplify_simplifyBinaryArray omc_ExpressionSimplify_simplifyBinaryArray
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplify2(threadData_t *threadData, modelica_metatype _inExp, modelica_boolean _simplifyAddOrSub, modelica_boolean _simplifyMulOrDiv);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_simplify2(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _simplifyAddOrSub, modelica_metatype _simplifyMulOrDiv);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify2,2,0) {(void*) boxptr_ExpressionSimplify_simplify2,0}};
 #define boxvar_ExpressionSimplify_simplify2 MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify2)
@@ -491,9 +509,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify2,2,0) {(voi
 #define boxptr_ExpressionSimplify_simplifyBuiltinConstantCalls omc_ExpressionSimplify_simplifyBuiltinConstantCalls
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ExpressionSimplify_cevalBuiltinStringFormat(threadData_t *threadData, modelica_string _inString, modelica_integer _stringLength, modelica_integer _minLength, modelica_boolean _leftJustified);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_cevalBuiltinStringFormat(threadData_t *threadData, modelica_metatype _inString, modelica_metatype _stringLength, modelica_metatype _minLength, modelica_metatype _leftJustified);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_cevalBuiltinStringFormat,2,0) {(void*) boxptr_ExpressionSimplify_cevalBuiltinStringFormat,0}};
 #define boxvar_ExpressionSimplify_cevalBuiltinStringFormat MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_cevalBuiltinStringFormat)
@@ -514,7 +532,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_cevalBuiltinStringFo
 #define boxptr_ExpressionSimplify_simplifyBuiltinCalls omc_ExpressionSimplify_simplifyBuiltinCalls
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_elabBuiltinFill2(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inExp, modelica_metatype _inType, modelica_metatype _inValuesValueLst, modelica_metatype _constVar, modelica_metatype _inDims, modelica_metatype _inInfo, modelica_metatype *out_outExp, modelica_metatype *out_outProperties);
 #define boxptr_ExpressionSimplify_elabBuiltinFill2 omc_ExpressionSimplify_elabBuiltinFill2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_elabBuiltinFill2,2,0) {(void*) boxptr_ExpressionSimplify_elabBuiltinFill2,0}};
@@ -548,24 +566,24 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_elabBuiltinFill2,2,0
 #define boxptr_ExpressionSimplify_simplifyIfExp omc_ExpressionSimplify_simplifyIfExp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplify1WithOptions(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _options, modelica_boolean *out_hasChanged);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_simplify1WithOptions(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _options, modelica_metatype *out_hasChanged);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1WithOptions,2,0) {(void*) boxptr_ExpressionSimplify_simplify1WithOptions,0}};
 #define boxvar_ExpressionSimplify_simplify1WithOptions MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1WithOptions)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplify1o(threadData_t *threadData, modelica_metatype _inExp);
 #define boxptr_ExpressionSimplify_simplify1o omc_ExpressionSimplify_simplify1o
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1o,2,0) {(void*) boxptr_ExpressionSimplify_simplify1o,0}};
 #define boxvar_ExpressionSimplify_simplify1o MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1o)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplify1(threadData_t *threadData, modelica_metatype _inExp, modelica_boolean *out_hasChanged);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_simplify1(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype *out_hasChanged);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1,2,0) {(void*) boxptr_ExpressionSimplify_simplify1,0}};
 #define boxvar_ExpressionSimplify_simplify1 MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1)
@@ -580,59 +598,59 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1,2,0) {(voi
 #define boxptr_ExpressionSimplify_simplifyRSub omc_ExpressionSimplify_simplifyRSub
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyWork(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _options, modelica_metatype *out_outOptions);
 #define boxptr_ExpressionSimplify_simplifyWork omc_ExpressionSimplify_simplifyWork
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyWork,2,0) {(void*) boxptr_ExpressionSimplify_simplifyWork,0}};
 #define boxvar_ExpressionSimplify_simplifyWork MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyWork)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplify1time(threadData_t *threadData, modelica_metatype _e);
 #define boxptr_ExpressionSimplify_simplify1time omc_ExpressionSimplify_simplify1time
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1time,2,0) {(void*) boxptr_ExpressionSimplify_simplify1time,0}};
 #define boxvar_ExpressionSimplify_simplify1time MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1time)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplify1TraverseHelper(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inA, modelica_metatype *out_a);
 #define boxptr_ExpressionSimplify_simplify1TraverseHelper omc_ExpressionSimplify_simplify1TraverseHelper
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1TraverseHelper,2,0) {(void*) boxptr_ExpressionSimplify_simplify1TraverseHelper,0}};
 #define boxvar_ExpressionSimplify_simplify1TraverseHelper MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify1TraverseHelper)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyTraverseHelper(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inA, modelica_metatype *out_a);
 #define boxptr_ExpressionSimplify_simplifyTraverseHelper omc_ExpressionSimplify_simplifyTraverseHelper
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyTraverseHelper,2,0) {(void*) boxptr_ExpressionSimplify_simplifyTraverseHelper,0}};
 #define boxvar_ExpressionSimplify_simplifyTraverseHelper MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyTraverseHelper)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyUnaryExp(threadData_t *threadData, modelica_metatype _inExp);
 #define boxptr_ExpressionSimplify_simplifyUnaryExp omc_ExpressionSimplify_simplifyUnaryExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyUnaryExp,2,0) {(void*) boxptr_ExpressionSimplify_simplifyUnaryExp,0}};
 #define boxvar_ExpressionSimplify_simplifyUnaryExp MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyUnaryExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplifyBinaryExp(threadData_t *threadData, modelica_metatype _inExp);
 #define boxptr_ExpressionSimplify_simplifyBinaryExp omc_ExpressionSimplify_simplifyBinaryExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyBinaryExp,2,0) {(void*) boxptr_ExpressionSimplify_simplifyBinaryExp,0}};
 #define boxvar_ExpressionSimplify_simplifyBinaryExp MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplifyBinaryExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_condsimplify(threadData_t *threadData, modelica_boolean _cond, modelica_metatype __omcQ_24in_5FioExp, modelica_boolean *out_hasChanged);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_condsimplify(threadData_t *threadData, modelica_metatype _cond, modelica_metatype __omcQ_24in_5FioExp, modelica_metatype *out_hasChanged);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_condsimplify,2,0) {(void*) boxptr_ExpressionSimplify_condsimplify,0}};
 #define boxvar_ExpressionSimplify_condsimplify MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_condsimplify)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ExpressionSimplify_simplify(threadData_t *threadData, modelica_metatype _inExp, modelica_boolean *out_hasChanged);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ExpressionSimplify_simplify(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype *out_hasChanged);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify,2,0) {(void*) boxptr_ExpressionSimplify_simplify,0}};
 #define boxvar_ExpressionSimplify_simplify MMC_REFSTRUCTLIT(boxvar_lit_ExpressionSimplify_simplify)

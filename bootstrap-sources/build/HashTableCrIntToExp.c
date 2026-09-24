@@ -24,64 +24,68 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HashTableCrIntToExp_hashFunc(
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableCrIntToExp_hashFunc,2,0) {(void*) boxptr_HashTableCrIntToExp_hashFunc,0}};
 #define boxvar_HashTableCrIntToExp_hashFunc MMC_REFSTRUCTLIT(boxvar_lit_HashTableCrIntToExp_hashFunc)
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableCrIntToExp_emptyHashTableSized(threadData_t *threadData, modelica_integer _size)
 {
   modelica_metatype _hashTable = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hashTable has no default value.
-  tmpMeta1 = mmc_mk_box4(0, boxvar_HashTableCrIntToExp_hashFunc, boxvar_HashTableCrIntToExp_keyEqual, boxvar_HashTableCrIntToExp_printKey, boxvar_ExpressionBasics_printExpStr);
+  tmpMeta1 = omc_mk_box4(0, boxvar_HashTableCrIntToExp_hashFunc, boxvar_HashTableCrIntToExp_keyEqual, boxvar_HashTableCrIntToExp_printKey, boxvar_ExpressionBasics_printExpStr);
   _hashTable = omc_BaseHashTable_emptyHashTableWork(threadData, _size, tmpMeta1);
   _return: OMC_LABEL_UNUSED
-  return _hashTable;
+  omc_ret_ = _hashTable;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HashTableCrIntToExp_emptyHashTableSized(threadData_t *threadData, modelica_metatype _size)
 {
   modelica_integer tmp1;
   modelica_metatype _hashTable = NULL;
-  tmp1 = mmc_unbox_integer(_size);
+  tmp1 = omc_unbox_integer(_size);
   _hashTable = omc_HashTableCrIntToExp_emptyHashTableSized(threadData, tmp1);
   /* skip box _hashTable; tuple<array<list<tuple<tuple<DAE.ComponentRef, #Integer>, #Integer>>>, tuple<#Integer, #Integer, array<Option<tuple<tuple<DAE.ComponentRef, #Integer>, DAE.Exp>>>>, #Integer, tuple<.HashTableCrIntToExp.FuncHashCref<function>(tuple<DAE.ComponentRef, #Integer> cr) => #Integer, .HashTableCrIntToExp.FuncCrefEqual<function>(tuple<DAE.ComponentRef, #Integer> cr1, tuple<DAE.ComponentRef, #Integer> cr2) => #Boolean, .HashTableCrIntToExp.FuncCrefStr<function>(tuple<DAE.ComponentRef, #Integer> cr) => String, .HashTableCrIntToExp.FuncExpStr<function>(DAE.Exp exp) => String>> */
   return _hashTable;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableCrIntToExp_emptyHashTable(threadData_t *threadData)
 {
   modelica_metatype _hashTable = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hashTable has no default value.
   _hashTable = omc_HashTableCrIntToExp_emptyHashTableSized(threadData, ((modelica_integer) 2053));
   _return: OMC_LABEL_UNUSED
-  return _hashTable;
+  omc_ret_ = _hashTable;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_HashTableCrIntToExp_printKey(threadData_t *threadData, modelica_metatype _tpl)
 {
   modelica_string _res = NULL;
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_string tmp2;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
-  tmpMeta1 = stringAppend(omc_ComponentReferenceBasics_printComponentRefStr(threadData, omc_Util_tuple21(threadData, _tpl)),_OMC_LIT0);
-  tmpMeta2 = stringAppend(tmpMeta1,intString(mmc_unbox_integer(omc_Util_tuple22(threadData, _tpl))));
-  _res = tmpMeta2;
+  tmp1 = stringAppend(omc_ComponentReferenceBasics_printComponentRefStr(threadData, omc_Util_tuple21(threadData, _tpl)),_OMC_LIT0);
+  tmp2 = stringAppend(tmp1,intString(omc_unbox_integer(omc_Util_tuple22(threadData, _tpl))));
+  omc_string_store(&(_res), tmp2);
   _return: OMC_LABEL_UNUSED
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_HashTableCrIntToExp_keyEqual(threadData_t *threadData, modelica_metatype _tpl1, modelica_metatype _tpl2)
 {
   modelica_boolean _res;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   { /* matchcontinue expression */
@@ -100,7 +104,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HashTableCrIntToExp_keyEqual(thre
       // _i1 has no default value.
       // _i2 has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -113,12 +117,12 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HashTableCrIntToExp_keyEqual(thre
           modelica_metatype tmpMeta10;
           modelica_integer tmp11;
           modelica_boolean tmp12;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmp8 = omc_unbox_integer(tmpMeta7);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp11 = omc_unbox_integer(tmpMeta10);
           _cr1 = tmpMeta6;
           _i1 = tmp8  /* pattern as ty=Integer */;
           _cr2 = tmpMeta9;
@@ -143,55 +147,49 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_HashTableCrIntToExp_keyEqual(thre
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _res = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HashTableCrIntToExp_keyEqual(threadData_t *threadData, modelica_metatype _tpl1, modelica_metatype _tpl2)
 {
   modelica_boolean _res;
   modelica_metatype out_res;
   _res = omc_HashTableCrIntToExp_keyEqual(threadData, _tpl1, _tpl2);
-  out_res = mmc_mk_icon(_res);
+  out_res = omc_mk_icon(_res);
   return out_res;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_HashTableCrIntToExp_hashFunc(threadData_t *threadData, modelica_metatype _tpl)
 {
   modelica_integer _res;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
-  _res = omc_ComponentReferenceBasics_hashComponentRef(threadData, omc_Util_tuple21(threadData, _tpl)) + (mmc_unbox_integer(omc_Util_tuple22(threadData, _tpl)));
+  _res = omc_ComponentReferenceBasics_hashComponentRef(threadData, omc_Util_tuple21(threadData, _tpl)) + (omc_unbox_integer(omc_Util_tuple22(threadData, _tpl)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_HashTableCrIntToExp_hashFunc(threadData_t *threadData, modelica_metatype _tpl)
 {
   modelica_integer _res;
   modelica_metatype out_res;
   _res = omc_HashTableCrIntToExp_hashFunc(threadData, _tpl);
-  out_res = mmc_mk_icon(_res);
+  out_res = omc_mk_icon(_res);
   return out_res;
 }
 

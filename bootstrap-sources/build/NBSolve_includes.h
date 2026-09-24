@@ -21,6 +21,7 @@ extern "C" {
 #include "NFCall.h"
 #include "NFComponentRef.h"
 #include "NFDimension.h"
+#include "NFExpandExp.h"
 #include "NFExpression.h"
 #include "NFFunction.h"
 #include "NFOperator.h"

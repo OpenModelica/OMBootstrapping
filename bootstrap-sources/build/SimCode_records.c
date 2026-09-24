@@ -1616,9 +1616,35 @@ ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiInitialUnknowns_
 extern struct record_description SimCode_FmiInitialUnknowns_FMIINITIALUNKNOWNS__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiArray_FMIARRAY__desc_added
+#define SimCode_FmiArray_FMIARRAY__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiArray_FMIARRAY__desc__fields[3] = {"first","fmiIndex","numElements"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiArray_FMIARRAY__desc = {
+  "SimCode_FmiArray_FMIARRAY",
+  "SimCode.FmiArray.FMIARRAY",
+  SimCode_FmiArray_FMIARRAY__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiArray_FMIARRAY__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef SimCode_FmiArray_FMIARRAY__desc_added
+#define SimCode_FmiArray_FMIARRAY__desc_added
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiArray_FMIARRAY__desc__fields[3] = {"first","fmiIndex","numElements"};
+ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiArray_FMIARRAY__desc = {
+  "SimCode_FmiArray_FMIARRAY",
+  "SimCode.FmiArray.FMIARRAY",
+  SimCode_FmiArray_FMIARRAY__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description SimCode_FmiArray_FMIARRAY__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc_added
 #define SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc_added
-ADD_METARECORD_DEFINITIONS const char* SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc__fields[6] = {"fmiOutputs","fmiDerivatives","continuousPartialDerivatives","initialPartialDerivatives","fmiDiscreteStates","fmiInitialUnknowns"};
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc__fields[7] = {"fmiOutputs","fmiDerivatives","continuousPartialDerivatives","initialPartialDerivatives","fmiDiscreteStates","fmiInitialUnknowns","fmiArrays"};
 ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc = {
   "SimCode_FmiModelStructure_FMIMODELSTRUCTURE",
   "SimCode.FmiModelStructure.FMIMODELSTRUCTURE",
@@ -1631,7 +1657,7 @@ extern struct record_description SimCode_FmiModelStructure_FMIMODELSTRUCTURE__de
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc_added
 #define SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc_added
-ADD_METARECORD_DEFINITIONS const char* SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc__fields[6] = {"fmiOutputs","fmiDerivatives","continuousPartialDerivatives","initialPartialDerivatives","fmiDiscreteStates","fmiInitialUnknowns"};
+ADD_METARECORD_DEFINITIONS const char* SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc__fields[7] = {"fmiOutputs","fmiDerivatives","continuousPartialDerivatives","initialPartialDerivatives","fmiDiscreteStates","fmiInitialUnknowns","fmiArrays"};
 ADD_METARECORD_DEFINITIONS struct record_description SimCode_FmiModelStructure_FMIMODELSTRUCTURE__desc = {
   "SimCode_FmiModelStructure_FMIMODELSTRUCTURE",
   "SimCode.FmiModelStructure.FMIMODELSTRUCTURE",

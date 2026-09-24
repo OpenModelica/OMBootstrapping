@@ -12,8 +12,6 @@ extern "C" {
 
 extern struct record_description Absyn_Msg_NO__MSG__desc;
 
-extern struct record_description AvlSetInt_Tree_EMPTY__desc;
-
 extern struct record_description BackendDAE_BackendDAE_DAE__desc;
 
 extern struct record_description BackendDAE_Shared_SHARED__desc;
@@ -57,7 +55,7 @@ extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 #define boxptr_EvaluateParameter_getParameterAdjacencyMatrix omc_EvaluateParameter_getParameterAdjacencyMatrix
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_EvaluateParameter_evaluateParameters(threadData_t *threadData, modelica_metatype __omcQ_24in_5FDAE);
 #define boxptr_EvaluateParameter_evaluateParameters omc_EvaluateParameter_evaluateParameters
 static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateParameter_evaluateParameters,2,0) {(void*) boxptr_EvaluateParameter_evaluateParameters,0}};

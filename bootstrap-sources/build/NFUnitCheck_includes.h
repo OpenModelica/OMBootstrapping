@@ -20,6 +20,7 @@ extern "C" {
 #include "NFFunction.h"
 #include "NFInstNode.h"
 #include "NFOperator.h"
+#include "NFSimplifyExp.h"
 #include "NFType.h"
 #include "NFUnit.h"
 #include "NFUnitCheck.h"

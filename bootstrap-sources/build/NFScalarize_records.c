@@ -6,7 +6,7 @@ extern "C" {
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR__desc_added
 #define NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR__desc__fields[3] = {"name","confidence","iterator"};
+ADD_METARECORD_DEFINITIONS const char* NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR__desc__fields[4] = {"name","source","confidence","iterator"};
 ADD_METARECORD_DEFINITIONS struct record_description NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR__desc = {
   "NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR",
   "NFScalarize.AttributeIterator.ATTRIBUTE_ITERATOR",
@@ -19,7 +19,7 @@ extern struct record_description NFScalarize_AttributeIterator_ATTRIBUTE__ITERAT
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR__desc_added
 #define NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR__desc__fields[3] = {"name","confidence","iterator"};
+ADD_METARECORD_DEFINITIONS const char* NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR__desc__fields[4] = {"name","source","confidence","iterator"};
 ADD_METARECORD_DEFINITIONS struct record_description NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR__desc = {
   "NFScalarize_AttributeIterator_ATTRIBUTE__ITERATOR",
   "NFScalarize.AttributeIterator.ATTRIBUTE_ITERATOR",

@@ -12,9 +12,9 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Curl_multiDownload(threadData_t *threadData, modelica_metatype _urlFileList, modelica_integer _maxParallel);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Curl_multiDownload(threadData_t *threadData, modelica_metatype _urlFileList, modelica_metatype _maxParallel);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Curl_multiDownload,2,0) {(void*) boxptr_Curl_multiDownload,0}};
 #define boxvar_Curl_multiDownload MMC_REFSTRUCTLIT(boxvar_lit_Curl_multiDownload)

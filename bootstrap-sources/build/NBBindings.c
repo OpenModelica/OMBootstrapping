@@ -84,27 +84,28 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT28,2,1) {_OMC_LIT27,MMC_REFSTRUCTLI
 
 static modelica_metatype closure0_NBEquation_Equation_pointerToString(threadData_t *thData, modelica_metatype closure, modelica_metatype eqn_ptr)
 {
-  modelica_string $in_str = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_string $in_str = OMC_BOX_FIELD(closure, 1);
   return boxptr_NBEquation_Equation_pointerToString(thData, eqn_ptr, $in_str);
 }static modelica_metatype closure1_NBEquation_Equation_pointerToString(threadData_t *thData, modelica_metatype closure, modelica_metatype eqn_ptr)
 {
-  modelica_string $in_str = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_string $in_str = OMC_BOX_FIELD(closure, 1);
   return boxptr_NBEquation_Equation_pointerToString(thData, eqn_ptr, $in_str);
 }static modelica_metatype closure2_NBEquation_Equation_pointerToString(threadData_t *thData, modelica_metatype closure, modelica_metatype eqn_ptr)
 {
-  modelica_string $in_str = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_string $in_str = OMC_BOX_FIELD(closure, 1);
   return boxptr_NBEquation_Equation_pointerToString(thData, eqn_ptr, $in_str);
 }static modelica_metatype closure3_NBEquation_Equation_pointerToString(threadData_t *thData, modelica_metatype closure, modelica_metatype eqn_ptr)
 {
-  modelica_string $in_str = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_string $in_str = OMC_BOX_FIELD(closure, 1);
   return boxptr_NBEquation_Equation_pointerToString(thData, eqn_ptr, $in_str);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae)
 {
   modelica_metatype _bdae = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _bdae = __omcQ_24in_5Fbdae;
   { /* match expression */
@@ -178,32 +179,32 @@ modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatyp
           modelica_metatype tmpMeta50;
           modelica_metatype tmpMeta51;
           modelica_metatype tmpMeta52;
-          modelica_metatype tmpMeta53;
-          modelica_metatype tmpMeta54;
-          modelica_metatype tmpMeta55;
-          modelica_metatype tmpMeta56;
-          modelica_metatype tmpMeta57;
-          modelica_metatype tmpMeta58;
+          modelica_string tmp53;
+          modelica_string tmp54;
+          modelica_string tmp55;
+          modelica_string tmp56;
+          modelica_string tmp57;
+          modelica_string tmp58;
           modelica_metatype tmpMeta59;
-          modelica_metatype tmpMeta60;
-          modelica_metatype tmpMeta61;
-          modelica_metatype tmpMeta62;
+          modelica_string tmp60;
+          modelica_string tmp61;
+          modelica_string tmp62;
           modelica_metatype tmpMeta63;
-          modelica_metatype tmpMeta64;
-          modelica_metatype tmpMeta65;
-          modelica_metatype tmpMeta66;
+          modelica_string tmp64;
+          modelica_string tmp65;
+          modelica_string tmp66;
           modelica_metatype tmpMeta67;
-          modelica_metatype tmpMeta68;
-          modelica_metatype tmpMeta69;
-          modelica_metatype tmpMeta70;
+          modelica_string tmp68;
+          modelica_string tmp69;
+          modelica_string tmp70;
           modelica_metatype tmpMeta71;
-          modelica_metatype tmpMeta72;
-          modelica_metatype tmpMeta73;
-          modelica_metatype tmpMeta74;
-          if (mmc__uniontype__metarecord__typedef__equal(tmp8_1,0,13) == 0) goto tmp7_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp8_1), 10));
+          modelica_string tmp72;
+          modelica_string tmp73;
+          modelica_string tmp74;
+          if (mmc__uniontype__metarecord__typedef__equal(tmp8_1,0,14) == 0) goto tmp7_end;
+          tmpMeta10 = OMC_BOX_FIELD(tmp8_1, 11);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta10,0,24) == 0) goto tmp7_end;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp8_1), 11));
+          tmpMeta11 = OMC_BOX_FIELD(tmp8_1, 12);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,0,9) == 0) goto tmp7_end;
           
           _varData = tmpMeta10;
@@ -217,7 +218,7 @@ modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatyp
             modelica_integer tmp15;
             modelica_metatype _var_loopVar = 0;
             modelica_metatype _var;
-            _var_loopVar = omc_NBVariable_VariablePointers_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_varData), 4))));
+            _var_loopVar = omc_NBVariable_VariablePointers_toList(threadData, (OMC_BOX_FIELD(_varData, 4)));
             tmpMeta14 = MMC_REFSTRUCTLIT(mmc_nil);
             __omcQ_24tmpVar9 = tmpMeta14; /* defaultValue */
             tmp13 = &__omcQ_24tmpVar9;
@@ -263,7 +264,7 @@ modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatyp
                     case 0: {
                       modelica_metatype tmpMeta22;
                       if (optionNone(tmp20_1)) goto tmp19_end;
-                      tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp20_1), 1));
+                      tmpMeta22 = OMC_BOX_FIELD(tmp20_1, 1);
                       _parent = tmpMeta22;
                       /* Pattern matching succeeded */
                       tmp17 = (omc_NBVariable_isBound(threadData, _parent) && omc_NBVariable_isUnknownRecord(threadData, _parent));
@@ -290,7 +291,7 @@ modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatyp
 
               if((!_skip_record_element))
               {
-                _bind_eqn = omc_NBEquation_Equation_generateBindingEquation(threadData, _var, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 2))), 0 /* false */, _new_iters);
+                _bind_eqn = omc_NBEquation_Equation_generateBindingEquation(threadData, _var, (OMC_BOX_FIELD(_eqData, 2)), 0 /* false */, _new_iters);
 
                 if(omc_NBVariable_isContinuous(threadData, _var, 0 /* false */))
                 {
@@ -314,7 +315,7 @@ modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatyp
             modelica_integer tmp29;
             modelica_metatype _var_loopVar = 0;
             modelica_metatype _var;
-            _var_loopVar = omc_NBVariable_VariablePointers_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_varData), 22))));
+            _var_loopVar = omc_NBVariable_VariablePointers_toList(threadData, (OMC_BOX_FIELD(_varData, 22)));
             tmpMeta28 = MMC_REFSTRUCTLIT(mmc_nil);
             __omcQ_24tmpVar11 = tmpMeta28; /* defaultValue */
             tmp27 = &__omcQ_24tmpVar11;
@@ -348,7 +349,7 @@ modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatyp
             for (tmpMeta30 = _bound_vars; !listEmpty(tmpMeta30); tmpMeta30=MMC_CDR(tmpMeta30))
             {
               _var = MMC_CAR(tmpMeta30);
-              tmpMeta31 = mmc_mk_cons(omc_NBEquation_Equation_generateBindingEquation(threadData, _var, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 2))), 0 /* false */, _new_iters), _binding_rec);
+              tmpMeta31 = mmc_mk_cons(omc_NBEquation_Equation_generateBindingEquation(threadData, _var, (OMC_BOX_FIELD(_eqData, 2)), 0 /* false */, _new_iters), _binding_rec);
               _binding_rec = tmpMeta31;
             }
           }
@@ -361,7 +362,7 @@ modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatyp
             modelica_integer tmp36;
             modelica_metatype _var_loopVar = 0;
             modelica_metatype _var;
-            _var_loopVar = omc_NBVariable_VariablePointers_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_varData), 16))));
+            _var_loopVar = omc_NBVariable_VariablePointers_toList(threadData, (OMC_BOX_FIELD(_varData, 16)));
             tmpMeta35 = MMC_REFSTRUCTLIT(mmc_nil);
             __omcQ_24tmpVar13 = tmpMeta35; /* defaultValue */
             tmp34 = &__omcQ_24tmpVar13;
@@ -395,108 +396,108 @@ modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatyp
             for (tmpMeta37 = _bound_clocks; !listEmpty(tmpMeta37); tmpMeta37=MMC_CDR(tmpMeta37))
             {
               _var = MMC_CAR(tmpMeta37);
-              tmpMeta38 = mmc_mk_cons(omc_NBEquation_Equation_generateBindingEquation(threadData, _var, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 2))), 0 /* false */, _new_iters), _binding_clck);
+              tmpMeta38 = mmc_mk_cons(omc_NBEquation_Equation_generateBindingEquation(threadData, _var, (OMC_BOX_FIELD(_eqData, 2)), 0 /* false */, _new_iters), _binding_clck);
               _binding_clck = tmpMeta38;
             }
           }
 
           tmpMeta40 = MMC_TAGPTR(mmc_alloc_words(11));
           memcpy(MMC_UNTAGPTR(tmpMeta40), MMC_UNTAGPTR(_eqData), 11*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta40))[3] = omc_NBEquation_EquationPointers_addList(threadData, _binding_cont, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 3))));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta40))[3] = omc_NBEquation_EquationPointers_addList(threadData, _binding_cont, (OMC_BOX_FIELD(_eqData, 3)));
           _eqData = tmpMeta40;
 
           tmpMeta41 = MMC_TAGPTR(mmc_alloc_words(11));
           memcpy(MMC_UNTAGPTR(tmpMeta41), MMC_UNTAGPTR(_eqData), 11*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta41))[4] = omc_NBEquation_EquationPointers_addList(threadData, _binding_cont, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 4))));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta41))[4] = omc_NBEquation_EquationPointers_addList(threadData, _binding_cont, (OMC_BOX_FIELD(_eqData, 4)));
           _eqData = tmpMeta41;
 
           tmpMeta42 = MMC_TAGPTR(mmc_alloc_words(11));
           memcpy(MMC_UNTAGPTR(tmpMeta42), MMC_UNTAGPTR(_eqData), 11*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta42))[5] = omc_NBEquation_EquationPointers_addList(threadData, _binding_cont, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 5))));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta42))[5] = omc_NBEquation_EquationPointers_addList(threadData, _binding_cont, (OMC_BOX_FIELD(_eqData, 5)));
           _eqData = tmpMeta42;
 
           tmpMeta43 = MMC_TAGPTR(mmc_alloc_words(11));
           memcpy(MMC_UNTAGPTR(tmpMeta43), MMC_UNTAGPTR(_eqData), 11*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta43))[3] = omc_NBEquation_EquationPointers_addList(threadData, _binding_disc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 3))));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta43))[3] = omc_NBEquation_EquationPointers_addList(threadData, _binding_disc, (OMC_BOX_FIELD(_eqData, 3)));
           _eqData = tmpMeta43;
 
           tmpMeta44 = MMC_TAGPTR(mmc_alloc_words(11));
           memcpy(MMC_UNTAGPTR(tmpMeta44), MMC_UNTAGPTR(_eqData), 11*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta44))[4] = omc_NBEquation_EquationPointers_addList(threadData, _binding_disc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 4))));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta44))[4] = omc_NBEquation_EquationPointers_addList(threadData, _binding_disc, (OMC_BOX_FIELD(_eqData, 4)));
           _eqData = tmpMeta44;
 
           tmpMeta45 = MMC_TAGPTR(mmc_alloc_words(11));
           memcpy(MMC_UNTAGPTR(tmpMeta45), MMC_UNTAGPTR(_eqData), 11*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta45))[7] = omc_NBEquation_EquationPointers_addList(threadData, _binding_disc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 7))));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta45))[7] = omc_NBEquation_EquationPointers_addList(threadData, _binding_disc, (OMC_BOX_FIELD(_eqData, 7)));
           _eqData = tmpMeta45;
 
           tmpMeta46 = MMC_TAGPTR(mmc_alloc_words(11));
           memcpy(MMC_UNTAGPTR(tmpMeta46), MMC_UNTAGPTR(_eqData), 11*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta46))[3] = omc_NBEquation_EquationPointers_addList(threadData, _binding_rec, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 3))));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta46))[3] = omc_NBEquation_EquationPointers_addList(threadData, _binding_rec, (OMC_BOX_FIELD(_eqData, 3)));
           _eqData = tmpMeta46;
 
           tmpMeta47 = MMC_TAGPTR(mmc_alloc_words(11));
           memcpy(MMC_UNTAGPTR(tmpMeta47), MMC_UNTAGPTR(_eqData), 11*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta47))[4] = omc_NBEquation_EquationPointers_addList(threadData, _binding_rec, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 4))));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta47))[4] = omc_NBEquation_EquationPointers_addList(threadData, _binding_rec, (OMC_BOX_FIELD(_eqData, 4)));
           _eqData = tmpMeta47;
 
           tmpMeta48 = MMC_TAGPTR(mmc_alloc_words(11));
           memcpy(MMC_UNTAGPTR(tmpMeta48), MMC_UNTAGPTR(_eqData), 11*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta48))[5] = omc_NBEquation_EquationPointers_addList(threadData, _binding_rec, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 5))));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta48))[5] = omc_NBEquation_EquationPointers_addList(threadData, _binding_rec, (OMC_BOX_FIELD(_eqData, 5)));
           _eqData = tmpMeta48;
 
           tmpMeta49 = MMC_TAGPTR(mmc_alloc_words(11));
           memcpy(MMC_UNTAGPTR(tmpMeta49), MMC_UNTAGPTR(_eqData), 11*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta49))[6] = omc_NBEquation_EquationPointers_addList(threadData, _binding_clck, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqData), 6))));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta49))[6] = omc_NBEquation_EquationPointers_addList(threadData, _binding_clck, (OMC_BOX_FIELD(_eqData, 6)));
           _eqData = tmpMeta49;
 
-          tmpMeta50 = MMC_TAGPTR(mmc_alloc_words(15));
-          memcpy(MMC_UNTAGPTR(tmpMeta50), MMC_UNTAGPTR(_bdae), 15*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta50))[11] = _eqData;
+          tmpMeta50 = MMC_TAGPTR(mmc_alloc_words(16));
+          memcpy(MMC_UNTAGPTR(tmpMeta50), MMC_UNTAGPTR(_bdae), 16*sizeof(modelica_metatype));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta50))[12] = _eqData;
           _bdae = tmpMeta50;
 
-          tmpMeta51 = MMC_TAGPTR(mmc_alloc_words(15));
-          memcpy(MMC_UNTAGPTR(tmpMeta51), MMC_UNTAGPTR(_bdae), 15*sizeof(modelica_metatype));
-          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta51))[10] = omc_NBVariable_VarData_addTypedList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_bdae), 10))), omc_UnorderedSet_toList(threadData, _new_iters), 9);
+          tmpMeta51 = MMC_TAGPTR(mmc_alloc_words(16));
+          memcpy(MMC_UNTAGPTR(tmpMeta51), MMC_UNTAGPTR(_bdae), 16*sizeof(modelica_metatype));
+          ((modelica_metatype*)MMC_UNTAGPTR(tmpMeta51))[11] = omc_NBVariable_VarData_addTypedList(threadData, (OMC_BOX_FIELD(_bdae, 11)), omc_UnorderedSet_toList(threadData, _new_iters), 9);
           _bdae = tmpMeta51;
 
           if(omc_Flags_isSet(threadData, _OMC_LIT11))
           {
-            tmpMeta53 = stringAppend(intString(omc_NBEquation_EqData_scalarSize(threadData, _eqData, 0 /* false */)),_OMC_LIT4);
-            tmpMeta54 = stringAppend(tmpMeta53,intString(omc_NBEquation_EqData_size(threadData, _eqData)));
-            tmpMeta55 = stringAppend(tmpMeta54,_OMC_LIT5);
-            tmpMeta56 = stringAppend(intString(omc_NBVariable_VarData_scalarSize(threadData, _varData, 0 /* false */)),_OMC_LIT4);
-            tmpMeta57 = stringAppend(tmpMeta56,intString(omc_NBVariable_VarData_size(threadData, _varData)));
-            tmpMeta58 = stringAppend(tmpMeta57,_OMC_LIT5);
-            tmpMeta52 = mmc_mk_cons(tmpMeta55, mmc_mk_cons(tmpMeta58, MMC_REFSTRUCTLIT(mmc_nil)));
+            tmp53 = stringAppend(intString(omc_NBEquation_EqData_scalarSize(threadData, _eqData, 0 /* false */)),_OMC_LIT4);
+            tmp54 = stringAppend(tmp53,intString(omc_NBEquation_EqData_size(threadData, _eqData)));
+            tmp55 = stringAppend(tmp54,_OMC_LIT5);
+            tmp56 = stringAppend(intString(omc_NBVariable_VarData_scalarSize(threadData, _varData, 0 /* false */)),_OMC_LIT4);
+            tmp57 = stringAppend(tmp56,intString(omc_NBVariable_VarData_size(threadData, _varData)));
+            tmp58 = stringAppend(tmp57,_OMC_LIT5);
+            tmpMeta52 = mmc_mk_cons(tmp55, mmc_mk_cons(tmp58, MMC_REFSTRUCTLIT(mmc_nil)));
             omc_Error_addSourceMessage(threadData, _OMC_LIT3, tmpMeta52, _OMC_LIT8);
           }
 
           if(omc_Flags_isSet(threadData, _OMC_LIT22))
           {
-            tmpMeta59 = mmc_mk_box1(0, _OMC_LIT12);
-            tmpMeta60 = stringAppend(_OMC_LIT13,intString(listLength(_binding_cont)));
-            tmpMeta61 = stringAppend(tmpMeta60,_OMC_LIT14);
-            tmpMeta62 = stringAppend(omc_List_toStringCustom(threadData, _binding_cont, (modelica_fnptr) mmc_mk_box2(0,closure0_NBEquation_Equation_pointerToString,tmpMeta59), omc_StringUtil_headline__4(threadData, tmpMeta61), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
-            fputs(MMC_STRINGDATA(tmpMeta62),stdout);
+            tmpMeta59 = omc_mk_box1(0, _OMC_LIT12);
+            tmp60 = stringAppend(_OMC_LIT13,intString(listLength(_binding_cont)));
+            tmp61 = stringAppend(tmp60,_OMC_LIT14);
+            tmp62 = stringAppend(omc_List_toStringCustom(threadData, _binding_cont, (modelica_fnptr) omc_mk_box2(0,closure0_NBEquation_Equation_pointerToString,tmpMeta59), omc_StringUtil_headline__4(threadData, tmp61), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
+            fputs(omc_string_data(tmp62),stdout);
 
-            tmpMeta63 = mmc_mk_box1(0, _OMC_LIT12);
-            tmpMeta64 = stringAppend(_OMC_LIT17,intString(listLength(_binding_clck)));
-            tmpMeta65 = stringAppend(tmpMeta64,_OMC_LIT14);
-            tmpMeta66 = stringAppend(omc_List_toStringCustom(threadData, _binding_clck, (modelica_fnptr) mmc_mk_box2(0,closure1_NBEquation_Equation_pointerToString,tmpMeta63), omc_StringUtil_headline__4(threadData, tmpMeta65), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
-            fputs(MMC_STRINGDATA(tmpMeta66),stdout);
+            tmpMeta63 = omc_mk_box1(0, _OMC_LIT12);
+            tmp64 = stringAppend(_OMC_LIT17,intString(listLength(_binding_clck)));
+            tmp65 = stringAppend(tmp64,_OMC_LIT14);
+            tmp66 = stringAppend(omc_List_toStringCustom(threadData, _binding_clck, (modelica_fnptr) omc_mk_box2(0,closure1_NBEquation_Equation_pointerToString,tmpMeta63), omc_StringUtil_headline__4(threadData, tmp65), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
+            fputs(omc_string_data(tmp66),stdout);
 
-            tmpMeta67 = mmc_mk_box1(0, _OMC_LIT12);
-            tmpMeta68 = stringAppend(_OMC_LIT18,intString(listLength(_binding_disc)));
-            tmpMeta69 = stringAppend(tmpMeta68,_OMC_LIT14);
-            tmpMeta70 = stringAppend(omc_List_toStringCustom(threadData, _binding_disc, (modelica_fnptr) mmc_mk_box2(0,closure2_NBEquation_Equation_pointerToString,tmpMeta67), omc_StringUtil_headline__4(threadData, tmpMeta69), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
-            fputs(MMC_STRINGDATA(tmpMeta70),stdout);
+            tmpMeta67 = omc_mk_box1(0, _OMC_LIT12);
+            tmp68 = stringAppend(_OMC_LIT18,intString(listLength(_binding_disc)));
+            tmp69 = stringAppend(tmp68,_OMC_LIT14);
+            tmp70 = stringAppend(omc_List_toStringCustom(threadData, _binding_disc, (modelica_fnptr) omc_mk_box2(0,closure2_NBEquation_Equation_pointerToString,tmpMeta67), omc_StringUtil_headline__4(threadData, tmp69), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
+            fputs(omc_string_data(tmp70),stdout);
 
-            tmpMeta71 = mmc_mk_box1(0, _OMC_LIT12);
-            tmpMeta72 = stringAppend(_OMC_LIT19,intString(listLength(_binding_rec)));
-            tmpMeta73 = stringAppend(tmpMeta72,_OMC_LIT14);
-            tmpMeta74 = stringAppend(omc_List_toStringCustom(threadData, _binding_rec, (modelica_fnptr) mmc_mk_box2(0,closure3_NBEquation_Equation_pointerToString,tmpMeta71), omc_StringUtil_headline__4(threadData, tmpMeta73), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
-            fputs(MMC_STRINGDATA(tmpMeta74),stdout);
+            tmpMeta71 = omc_mk_box1(0, _OMC_LIT12);
+            tmp72 = stringAppend(_OMC_LIT19,intString(listLength(_binding_rec)));
+            tmp73 = stringAppend(tmp72,_OMC_LIT14);
+            tmp74 = stringAppend(omc_List_toStringCustom(threadData, _binding_rec, (modelica_fnptr) omc_mk_box2(0,closure3_NBEquation_Equation_pointerToString,tmpMeta71), omc_StringUtil_headline__4(threadData, tmp73), _OMC_LIT6, _OMC_LIT15, _OMC_LIT6, 0 /* false */, ((modelica_integer) 0)),_OMC_LIT16);
+            fputs(omc_string_data(tmp74),stdout);
           }
           tmpMeta1 = _bdae;
           goto tmp7_done;
@@ -514,13 +515,14 @@ modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatyp
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp7_done;
       tmp7_done:;
     }
   }
   _bdae = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _bdae;
+  omc_ret_ = _bdae;
+  return omc_ret_;
 }
 

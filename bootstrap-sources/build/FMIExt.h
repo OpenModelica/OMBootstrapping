@@ -12,7 +12,7 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 void omc_FMIExt_releaseFMIImport(threadData_t *threadData, modelica_metatype _inFMIModelVariablesInstance, modelica_metatype _inFMIInstance, modelica_metatype _inFMIContext, modelica_string _inFMIVersion);
 #define boxptr_FMIExt_releaseFMIImport omc_FMIExt_releaseFMIImport
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FMIExt_releaseFMIImport,2,0) {(void*) boxptr_FMIExt_releaseFMIImport,0}};
@@ -20,9 +20,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FMIExt_releaseFMIImport,2,0) {(void*) b
 
 extern void FMIImpl__releaseFMIImport(modelica_metatype /*_inFMIModelVariablesInstance*/, modelica_metatype /*_inFMIInstance*/, modelica_metatype /*_inFMIContext*/, const char* /*_inFMIVersion*/);
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_FMIExt_initializeFMIImport(threadData_t *threadData, modelica_string _inFileName, modelica_string _inWorkingDirectory, modelica_integer _inFMILogLevel, modelica_boolean _inInputConnectors, modelica_boolean _inOutputConnectors, modelica_boolean _inIsModelDescriptionImport, modelica_metatype *out_outFMIContext, modelica_metatype *out_outFMIInstance, modelica_metatype *out_outFMIInfo, modelica_metatype *out_outTypeDefinitionsList, modelica_metatype *out_outExperimentAnnotation, modelica_metatype *out_outModelVariablesInstance, modelica_metatype *out_outModelVariablesList);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_FMIExt_initializeFMIImport(threadData_t *threadData, modelica_metatype _inFileName, modelica_metatype _inWorkingDirectory, modelica_metatype _inFMILogLevel, modelica_metatype _inInputConnectors, modelica_metatype _inOutputConnectors, modelica_metatype _inIsModelDescriptionImport, modelica_metatype *out_outFMIContext, modelica_metatype *out_outFMIInstance, modelica_metatype *out_outFMIInfo, modelica_metatype *out_outTypeDefinitionsList, modelica_metatype *out_outExperimentAnnotation, modelica_metatype *out_outModelVariablesInstance, modelica_metatype *out_outModelVariablesList);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FMIExt_initializeFMIImport,2,0) {(void*) boxptr_FMIExt_initializeFMIImport,0}};
 #define boxvar_FMIExt_initializeFMIImport MMC_REFSTRUCTLIT(boxvar_lit_FMIExt_initializeFMIImport)

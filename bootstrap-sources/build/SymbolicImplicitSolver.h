@@ -56,7 +56,7 @@ extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 #define boxptr_SymbolicImplicitSolver_symSolverWork omc_SymbolicImplicitSolver_symSolverWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SymbolicImplicitSolver_symSolver(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_SymbolicImplicitSolver_symSolver omc_SymbolicImplicitSolver_symSolver
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SymbolicImplicitSolver_symSolver,2,0) {(void*) boxptr_SymbolicImplicitSolver_symSolver,0}};

@@ -31,7 +31,7 @@ extern struct record_description DumpHTML_Tag_SCRIPT__desc;
 extern struct record_description DumpHTML_Tag_SCRIPT__BODY__desc;
 
 
-DLLDirection
+DLLModelDirection
 void omc_DumpHTML_dumpMatrixHTML(threadData_t *threadData, modelica_metatype _m, modelica_metatype _rowNames, modelica_metatype _columNames, modelica_string _fileName);
 #define boxptr_DumpHTML_dumpMatrixHTML omc_DumpHTML_dumpMatrixHTML
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DumpHTML_dumpMatrixHTML,2,0) {(void*) boxptr_DumpHTML_dumpMatrixHTML,0}};
@@ -59,7 +59,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_DumpHTML_dumpMatrixHTML,2,0) {(void*) b
 #define boxptr_DumpHTML_dumpEqSystem omc_DumpHTML_dumpEqSystem
 
 
-DLLDirection
+DLLModelDirection
 void omc_DumpHTML_dumpDAE(threadData_t *threadData, modelica_metatype _inDAE, modelica_string _inHeader, modelica_string _inFilename);
 #define boxptr_DumpHTML_dumpDAE omc_DumpHTML_dumpDAE
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DumpHTML_dumpDAE,2,0) {(void*) boxptr_DumpHTML_dumpDAE,0}};

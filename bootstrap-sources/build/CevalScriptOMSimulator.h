@@ -21,7 +21,7 @@ extern struct record_description Values_Value_STRING__desc;
 extern struct record_description Values_Value_TUPLE__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, modelica_string _inFunctionName, modelica_metatype _inVals);
 #define boxptr_CevalScriptOMSimulator_ceval omc_CevalScriptOMSimulator_ceval
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CevalScriptOMSimulator_ceval,2,0) {(void*) boxptr_CevalScriptOMSimulator_ceval,0}};

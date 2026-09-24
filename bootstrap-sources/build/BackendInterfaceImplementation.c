@@ -48,20 +48,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendInterfaceImplementation_a
   modelica_boolean _success;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _program has no default value.
   // _success has no default value.
   _program = omc_SymbolTable_getAbsyn(threadData);
 
-  tmpMeta2 = mmc_mk_box4(0, _modelName, _OMC_LIT0, _OMC_LIT2, mmc_mk_boolean(0 /* false */));
+  tmpMeta2 = omc_mk_box4(0, _modelName, _OMC_LIT0, _OMC_LIT2, omc_mk_boolean(0 /* false */));
   tmpMeta1 = mmc_mk_cons(tmpMeta2, MMC_REFSTRUCTLIT(mmc_nil));
   _program = omc_CevalScript_loadModel(threadData, tmpMeta1, _modelicaPath, _program, 1 /* true */, 1 /* true */, 1 /* true */, 0 /* false */, 0 /* false */, _OMC_LIT0 ,&_success);
 
   omc_SymbolTable_setAbsyn(threadData, _program);
   _return: OMC_LABEL_UNUSED
   if (out_success) { *out_success = _success; }
-  return _program;
+  omc_ret_ = _program;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendInterfaceImplementation_appendLibrary(threadData_t *threadData, modelica_metatype _modelName, modelica_metatype _modelicaPath, modelica_metatype *out_success)
 {
@@ -69,7 +71,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendInterfaceImplementatio
   modelica_metatype _program = NULL;
   _program = omc_BackendInterfaceImplementation_appendLibrary(threadData, _modelName, _modelicaPath, &_success);
   /* skip box _program; Absyn.Program */
-  if (out_success) { *out_success = mmc_mk_icon(_success); }
+  if (out_success) { *out_success = omc_mk_icon(_success); }
   return _program;
 }
 
@@ -77,14 +79,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendInterfaceImplementation_r
 {
   modelica_metatype _outExp = NULL;
   modelica_boolean _isChanged;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outExp has no default value.
   // _isChanged has no default value.
   _outExp = omc_RewriteRules_rewriteFrontEnd(threadData, _inExp ,&_isChanged);
   _return: OMC_LABEL_UNUSED
   if (out_isChanged) { *out_isChanged = _isChanged; }
-  return _outExp;
+  omc_ret_ = _outExp;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendInterfaceImplementation_rewriteFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype *out_isChanged)
 {
@@ -92,32 +96,28 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendInterfaceImplementatio
   modelica_metatype _outExp = NULL;
   _outExp = omc_BackendInterfaceImplementation_rewriteFrontEnd(threadData, _inExp, &_isChanged);
   /* skip box _outExp; Absyn.Exp */
-  if (out_isChanged) { *out_isChanged = mmc_mk_icon(_isChanged); }
+  if (out_isChanged) { *out_isChanged = omc_mk_icon(_isChanged); }
   return _outExp;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_BackendInterfaceImplementation_noRewriteRulesFrontEnd(threadData_t *threadData)
 {
   modelica_boolean _noRules;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _noRules has no default value.
   _noRules = omc_RewriteRules_noRewriteRulesFrontEnd(threadData);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _noRules;
+  omc_ret_ = _noRules;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendInterfaceImplementation_noRewriteRulesFrontEnd(threadData_t *threadData)
 {
   modelica_boolean _noRules;
   modelica_metatype out_noRules;
   _noRules = omc_BackendInterfaceImplementation_noRewriteRulesFrontEnd(threadData);
-  out_noRules = mmc_mk_icon(_noRules);
+  out_noRules = omc_mk_icon(_noRules);
   return out_noRules;
 }
 
@@ -126,7 +126,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendInterfaceImplementation_e
   modelica_metatype _outCache = NULL;
   modelica_metatype _outExp = NULL;
   modelica_metatype _outProperties = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCache has no default value.
   // _outExp has no default value.
@@ -135,13 +136,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendInterfaceImplementation_e
   _return: OMC_LABEL_UNUSED
   if (out_outExp) { *out_outExp = _outExp; }
   if (out_outProperties) { *out_outProperties = _outProperties; }
-  return _outCache;
+  omc_ret_ = _outCache;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendInterfaceImplementation_elabCallInteractive(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inCref, modelica_metatype _inExps, modelica_metatype _inNamedArgs, modelica_metatype _inImplInst, modelica_metatype _inPrefix, modelica_metatype _inInfo, modelica_metatype *out_outExp, modelica_metatype *out_outProperties)
 {
   modelica_integer tmp1;
   modelica_metatype _outCache = NULL;
-  tmp1 = mmc_unbox_integer(_inImplInst);
+  tmp1 = omc_unbox_integer(_inImplInst);
   _outCache = omc_BackendInterfaceImplementation_elabCallInteractive(threadData, _inCache, _inEnv, _inCref, _inExps, _inNamedArgs, tmp1, _inPrefix, _inInfo, out_outExp, out_outProperties);
   /* skip box _outCache; FCore.Cache */
   /* skip box _outExp; DAE.Exp */
@@ -153,22 +155,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendInterfaceImplementation_c
 {
   modelica_metatype _outCache = NULL;
   modelica_metatype _outValue = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCache has no default value.
   // _outValue has no default value.
   _outCache = omc_CevalScript_cevalCallFunction(threadData, _inCache, _inEnv, _inExp, _inValues, _inImplInst, _inMsg, _inNumIter ,&_outValue);
   _return: OMC_LABEL_UNUSED
   if (out_outValue) { *out_outValue = _outValue; }
-  return _outCache;
+  omc_ret_ = _outCache;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendInterfaceImplementation_cevalCallFunction(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_metatype _inValues, modelica_metatype _inImplInst, modelica_metatype _inMsg, modelica_metatype _inNumIter, modelica_metatype *out_outValue)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outCache = NULL;
-  tmp1 = mmc_unbox_integer(_inImplInst);
-  tmp2 = mmc_unbox_integer(_inNumIter);
+  tmp1 = omc_unbox_integer(_inImplInst);
+  tmp2 = omc_unbox_integer(_inNumIter);
   _outCache = omc_BackendInterfaceImplementation_cevalCallFunction(threadData, _inCache, _inEnv, _inExp, _inValues, tmp1, _inMsg, tmp2, out_outValue);
   /* skip box _outCache; FCore.Cache */
   /* skip box _outValue; Values.Value */
@@ -179,45 +183,41 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BackendInterfaceImplementation_c
 {
   modelica_metatype _outCache = NULL;
   modelica_metatype _outValue = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outCache has no default value.
   // _outValue has no default value.
   _outCache = omc_CevalScript_cevalInteractiveFunctions(threadData, _inCache, _inEnv, _inExp, _inMsg, _inNumIter ,&_outValue);
   _return: OMC_LABEL_UNUSED
   if (out_outValue) { *out_outValue = _outValue; }
-  return _outCache;
+  omc_ret_ = _outCache;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BackendInterfaceImplementation_cevalInteractiveFunctions(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_metatype _inMsg, modelica_metatype _inNumIter, modelica_metatype *out_outValue)
 {
   modelica_integer tmp1;
   modelica_metatype _outCache = NULL;
-  tmp1 = mmc_unbox_integer(_inNumIter);
+  tmp1 = omc_unbox_integer(_inNumIter);
   _outCache = omc_BackendInterfaceImplementation_cevalInteractiveFunctions(threadData, _inCache, _inEnv, _inExp, _inMsg, tmp1, out_outValue);
   /* skip box _outCache; FCore.Cache */
   /* skip box _outValue; Values.Value */
   return _outCache;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_BackendInterfaceImplementation_initializeBackendInterface(threadData_t *threadData)
 {
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  tmpMeta1 = mmc_mk_box5(3, &BackendInterface_BackendInterfaceFunctions_BACKEND__INTERFACE__FUNCTIONS__desc, boxvar_BackendInterfaceImplementation_noRewriteRulesFrontEnd, boxvar_BackendInterfaceImplementation_rewriteFrontEnd, boxvar_BackendInterfaceImplementation_appendLibrary, boxvar_InstHashTable_init);
+  tmpMeta1 = omc_mk_box5(3, &BackendInterface_BackendInterfaceFunctions_BACKEND__INTERFACE__FUNCTIONS__desc, boxvar_BackendInterfaceImplementation_noRewriteRulesFrontEnd, boxvar_BackendInterfaceImplementation_rewriteFrontEnd, boxvar_BackendInterfaceImplementation_appendLibrary, boxvar_InstHashTable_init);
   omc_BackendInterface_initializeBackendInterface(threadData, tmpMeta1);
 
-  tmpMeta2 = mmc_mk_box4(3, &BackendCevalInterface_BackendInterfaceFunctions_BACKEND__INTERFACE__FUNCTIONS__desc, boxvar_BackendInterfaceImplementation_cevalInteractiveFunctions, boxvar_BackendInterfaceImplementation_cevalCallFunction, boxvar_BackendInterfaceImplementation_elabCallInteractive);
+  tmpMeta2 = omc_mk_box4(3, &BackendCevalInterface_BackendInterfaceFunctions_BACKEND__INTERFACE__FUNCTIONS__desc, boxvar_BackendInterfaceImplementation_cevalInteractiveFunctions, boxvar_BackendInterfaceImplementation_cevalCallFunction, boxvar_BackendInterfaceImplementation_elabCallInteractive);
   omc_BackendCevalInterface_initializeBackendInterface(threadData, tmpMeta2);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 

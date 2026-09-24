@@ -6,13 +6,14 @@
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FTraverse_walk(threadData_t *threadData, modelica_metatype _inGraph, modelica_fnptr _inWalker, modelica_metatype _inExtra, modelica_metatype _inOptions, modelica_metatype *out_outExtra)
 {
   modelica_metatype _outGraph = NULL;
   modelica_metatype _outExtra = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outGraph has no default value.
   // _outExtra has no default value.
@@ -37,7 +38,7 @@ modelica_metatype omc_FTraverse_walk(threadData_t *threadData, modelica_metatype
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -46,6 +47,7 @@ modelica_metatype omc_FTraverse_walk(threadData_t *threadData, modelica_metatype
   _outExtra = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_outExtra) { *out_outExtra = _outExtra; }
-  return _outGraph;
+  omc_ret_ = _outGraph;
+  return omc_ret_;
 }
 

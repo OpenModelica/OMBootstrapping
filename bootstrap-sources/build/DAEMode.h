@@ -61,7 +61,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_DAEMode_createDAEmodeEqSystem omc_DAEMode_createDAEmodeEqSystem
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DAEMode_createDAEmodeBDAE(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_DAEMode_createDAEmodeBDAE omc_DAEMode_createDAEmodeBDAE
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEMode_createDAEmodeBDAE,2,0) {(void*) boxptr_DAEMode_createDAEmodeBDAE,0}};
@@ -71,7 +71,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEMode_createDAEmodeBDAE,2,0) {(void*)
 #define boxptr_DAEMode_getPostOptModulesDAEString omc_DAEMode_getPostOptModulesDAEString
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DAEMode_getEqSystemDAEmode(threadData_t *threadData, modelica_metatype _inDAE, modelica_string _fileNamePrefix, modelica_metatype _strPreOptModules, modelica_metatype _strmatchingAlgorithm, modelica_metatype _strdaeHandler, modelica_metatype _strPostOptModules, modelica_metatype *out_outInitDAE, modelica_metatype *out_outInitDAE_lambda0_option, modelica_metatype *out_outRemovedInitialEquationLst);
 #define boxptr_DAEMode_getEqSystemDAEmode omc_DAEMode_getEqSystemDAEmode
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEMode_getEqSystemDAEmode,2,0) {(void*) boxptr_DAEMode_getEqSystemDAEmode,0}};

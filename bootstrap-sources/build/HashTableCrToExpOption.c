@@ -26,7 +26,8 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HashTableCrToExpOption_printExpOti
 {
   modelica_string _outStr = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outStr has no default value.
   { /* match expression */
@@ -42,15 +43,15 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HashTableCrToExpOption_printExpOti
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
+          modelica_string tmp7;
+          modelica_string tmp8;
           if (optionNone(tmp4_1)) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
           _exp = tmpMeta6;
           /* Pattern matching succeeded */
-          tmpMeta7 = stringAppend(_OMC_LIT0,omc_ExpressionBasics_printExpStr(threadData, _exp));
-          tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT1);
-          tmp1 = tmpMeta8;
+          tmp7 = stringAppend(_OMC_LIT0,omc_ExpressionBasics_printExpStr(threadData, _exp));
+          tmp8 = stringAppend(tmp7,_OMC_LIT1);
+          tmp1 = tmp8;
           goto tmp3_done;
         }
         case 1: {
@@ -65,48 +66,53 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_HashTableCrToExpOption_printExpOti
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _outStr = tmp1;
+  omc_string_store(&(_outStr), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _outStr;
+  omc_ret_ = _outStr;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableCrToExpOption_emptyHashTableSized(threadData_t *threadData, modelica_integer _size)
 {
   modelica_metatype _hashTable = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hashTable has no default value.
-  tmpMeta1 = mmc_mk_box4(0, boxvar_ComponentReferenceBasics_hashComponentRef, boxvar_ComponentReferenceBasics_crefEqual, boxvar_ComponentReferenceBasics_printComponentRefStr, boxvar_HashTableCrToExpOption_printExpOtionStr);
+  tmpMeta1 = omc_mk_box4(0, boxvar_ComponentReferenceBasics_hashComponentRef, boxvar_ComponentReferenceBasics_crefEqual, boxvar_ComponentReferenceBasics_printComponentRefStr, boxvar_HashTableCrToExpOption_printExpOtionStr);
   _hashTable = omc_BaseHashTable_emptyHashTableWork(threadData, _size, tmpMeta1);
   _return: OMC_LABEL_UNUSED
-  return _hashTable;
+  omc_ret_ = _hashTable;
+  return omc_ret_;
 }
 modelica_metatype boxptr_HashTableCrToExpOption_emptyHashTableSized(threadData_t *threadData, modelica_metatype _size)
 {
   modelica_integer tmp1;
   modelica_metatype _hashTable = NULL;
-  tmp1 = mmc_unbox_integer(_size);
+  tmp1 = omc_unbox_integer(_size);
   _hashTable = omc_HashTableCrToExpOption_emptyHashTableSized(threadData, tmp1);
   /* skip box _hashTable; tuple<array<list<tuple<DAE.ComponentRef, #Integer>>>, tuple<#Integer, #Integer, array<Option<tuple<DAE.ComponentRef, Option<DAE.Exp>>>>>, #Integer, tuple<.HashTableCrToExpOption.FuncHashCref<function>(DAE.ComponentRef cr) => #Integer, .HashTableCrToExpOption.FuncCrefEqual<function>(DAE.ComponentRef cr1, DAE.ComponentRef cr2) => #Boolean, .HashTableCrToExpOption.FuncCrefStr<function>(DAE.ComponentRef cr) => String, .HashTableCrToExpOption.FuncExpStr<function>(Option<DAE.Exp> exp) => String>> */
   return _hashTable;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableCrToExpOption_emptyHashTable(threadData_t *threadData)
 {
   modelica_metatype _hashTable = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hashTable has no default value.
   _hashTable = omc_HashTableCrToExpOption_emptyHashTableSized(threadData, ((modelica_integer) 2053));
   _return: OMC_LABEL_UNUSED
-  return _hashTable;
+  omc_ret_ = _hashTable;
+  return omc_ret_;
 }
 

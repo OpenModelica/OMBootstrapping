@@ -40,43 +40,39 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_GlobalScriptDump_classString(threa
   modelica_string _id = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_string tmp3;
+  modelica_string tmp4;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _s has no default value.
   // _id has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _cl;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _id = tmpMeta2;
 
-  tmpMeta3 = stringAppend(_id,_OMC_LIT0);
-  tmpMeta4 = stringAppend(tmpMeta3,omc_AbsynUtil_classFilename(threadData, _cl));
-  _s = tmpMeta4;
+  tmp3 = stringAppend(_id,_OMC_LIT0);
+  tmp4 = stringAppend(tmp3,omc_AbsynUtil_classFilename(threadData, _cl));
+  omc_string_store(&(_s), tmp4);
   _return: OMC_LABEL_UNUSED
-  return _s;
+  omc_ret_ = _s;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_GlobalScriptDump_printGlobalScript(threadData_t *threadData, modelica_metatype _st)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  fputs(MMC_STRINGDATA(_OMC_LIT1),stdout);
+  fputs(omc_string_data(_OMC_LIT1),stdout);
 
-  omc_GlobalScriptDump_printAST(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_st), 2))));
+  omc_GlobalScriptDump_printAST(threadData, (OMC_BOX_FIELD(_st, 2)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_GlobalScriptDump_printAST(threadData_t *threadData, modelica_metatype _pr)
 {
   modelica_string _s = NULL;
@@ -87,13 +83,10 @@ void omc_GlobalScriptDump_printAST(threadData_t *threadData, modelica_metatype _
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
+  modelica_string tmp5;
+  modelica_string tmp6;
   modelica_metatype tmpMeta7;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _s = _OMC_LIT2;
   // _class_ has no default value.
@@ -101,8 +94,8 @@ void omc_GlobalScriptDump_printAST(threadData_t *threadData, modelica_metatype _
   // _within_ has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _pr;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
   _classes = tmpMeta2;
   _within_ = tmpMeta3;
 
@@ -111,26 +104,24 @@ void omc_GlobalScriptDump_printAST(threadData_t *threadData, modelica_metatype _
     for (tmpMeta4 = _classes; !listEmpty(tmpMeta4); tmpMeta4=MMC_CDR(tmpMeta4))
     {
       _class_ = MMC_CAR(tmpMeta4);
-      tmpMeta5 = stringAppend(_s,omc_GlobalScriptDump_classString(threadData, _class_));
-      tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT3);
-      _s = tmpMeta6;
+      tmp5 = stringAppend(_s,omc_GlobalScriptDump_classString(threadData, _class_));
+      tmp6 = stringAppend(tmp5,_OMC_LIT3);
+      omc_string_store(&(_s), tmp6);
     }
   }
 
-  fputs(MMC_STRINGDATA(_s),stdout);
+  fputs(omc_string_data(_s),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_GlobalScriptDump_printIstmtStr(threadData_t *threadData, modelica_metatype _inStatement)
 {
   modelica_string _outString = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
   { /* match expression */
@@ -147,7 +138,7 @@ modelica_string omc_GlobalScriptDump_printIstmtStr(threadData_t *threadData, mod
         case 3: {
           modelica_metatype tmpMeta5;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta5 = OMC_BOX_FIELD(tmp4_1, 2);
           _alg = tmpMeta5;
           /* Pattern matching succeeded */
           tmp1 = omc_Dump_unparseAlgorithmStr(threadData, _alg);
@@ -156,7 +147,7 @@ modelica_string omc_GlobalScriptDump_printIstmtStr(threadData_t *threadData, mod
         case 4: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _expr = tmpMeta6;
           /* Pattern matching succeeded */
@@ -176,22 +167,24 @@ modelica_string omc_GlobalScriptDump_printIstmtStr(threadData_t *threadData, mod
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _outString = tmp1;
+  omc_string_store(&(_outString), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_GlobalScriptDump_printIstmtsStr(threadData_t *threadData, modelica_metatype _inStatements)
 {
   modelica_string _outString = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
   { /* match expression */
@@ -207,7 +200,7 @@ modelica_string omc_GlobalScriptDump_printIstmtsStr(threadData_t *threadData, mo
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _stmts = tmpMeta6;
           /* Pattern matching succeeded */
@@ -226,13 +219,14 @@ modelica_string omc_GlobalScriptDump_printIstmtsStr(threadData_t *threadData, mo
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _outString = tmp1;
+  omc_string_store(&(_outString), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 

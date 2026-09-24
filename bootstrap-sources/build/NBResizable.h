@@ -54,6 +54,8 @@ extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
 
 extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
 
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
+
 extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
 
 extern struct record_description NFType_INTEGER__desc;
@@ -144,30 +146,30 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NBResizable_findOptimalResizableValues omc_NBResizable_findOptimalResizableValues
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBResizable_orderString(threadData_t *threadData, modelica_integer _eo);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBResizable_orderString(threadData_t *threadData, modelica_metatype _eo);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResizable_orderString,2,0) {(void*) boxptr_NBResizable_orderString,0}};
 #define boxvar_NBResizable_orderString MMC_REFSTRUCTLIT(boxvar_lit_NBResizable_orderString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBResizable_orderFailed(threadData_t *threadData, modelica_integer _eo);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBResizable_orderFailed(threadData_t *threadData, modelica_metatype _eo);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResizable_orderFailed,2,0) {(void*) boxptr_NBResizable_orderFailed,0}};
 #define boxvar_NBResizable_orderFailed MMC_REFSTRUCTLIT(boxvar_lit_NBResizable_orderFailed)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBResizable_detect(threadData_t *threadData, modelica_metatype _eqn, modelica_metatype _cref_to_solve);
 #define boxptr_NBResizable_detect omc_NBResizable_detect
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResizable_detect,2,0) {(void*) boxptr_NBResizable_detect,0}};
 #define boxvar_NBResizable_detect MMC_REFSTRUCTLIT(boxvar_lit_NBResizable_detect)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBResizable_resize(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fequations, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype *out_varData);
 #define boxptr_NBResizable_resize omc_NBResizable_resize
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBResizable_resize,2,0) {(void*) boxptr_NBResizable_resize,0}};

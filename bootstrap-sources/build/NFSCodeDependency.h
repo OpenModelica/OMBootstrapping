@@ -230,7 +230,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFSCodeDependency_analyseClass omc_NFSCodeDependency_analyseClass
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSCodeDependency_analyse(threadData_t *threadData, modelica_metatype _inClassName, modelica_metatype _inEnv, modelica_metatype _inProgram, modelica_metatype *out_outEnv);
 #define boxptr_NFSCodeDependency_analyse omc_NFSCodeDependency_analyse
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeDependency_analyse,2,0) {(void*) boxptr_NFSCodeDependency_analyse,0}};

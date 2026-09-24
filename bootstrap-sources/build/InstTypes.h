@@ -12,7 +12,7 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_InstTypes_callingScopeStr(threadData_t *threadData, modelica_metatype _inCallingScope);
 #define boxptr_InstTypes_callingScopeStr omc_InstTypes_callingScopeStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstTypes_callingScopeStr,2,0) {(void*) boxptr_InstTypes_callingScopeStr,0}};

@@ -308,7 +308,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SerializeTaskSystemInfo_serializeParMod
 
 PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeSource(threadData_t *threadData, modelica_complex _file, modelica_metatype _source, modelica_boolean _withOperations)
 {
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_File_write(threadData, _file, _OMC_LIT0);
   _return: OMC_LABEL_UNUSED
@@ -317,7 +317,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeSource(threa
 PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializeSource(threadData_t *threadData, modelica_metatype _file, modelica_metatype _source, modelica_metatype _withOperations)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_withOperations);
+  tmp1 = omc_unbox_integer(_withOperations);
   omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, _source, tmp1);
   return;
 }
@@ -329,14 +329,14 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeIfBranch(thr
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _exp has no default value.
   // _eqs has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _branch;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
   _exp = tmpMeta2;
   _eqs = tmpMeta3;
 
@@ -360,7 +360,7 @@ PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializeIfBranch(
 
 PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeEquationIndex(threadData_t *threadData, modelica_complex _file, modelica_metatype _eq)
 {
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_File_writeInt(threadData, _file, omc_SimCodeUtil_simEqSystemIndex(threadData, _eq), _OMC_LIT4);
   _return: OMC_LABEL_UNUSED
@@ -378,7 +378,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializePath(threadD
   modelica_boolean _b;
   modelica_boolean tmp1_c1 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _p = _path;
   _b = 1 /* true */;
@@ -399,7 +399,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializePath(threadD
           case 4: {
             
             /* Pattern matching succeeded */
-            omc_File_writeEscape(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_p), 2))), 3);
+            omc_File_writeEscape(threadData, _file, (OMC_BOX_FIELD(_p, 2)), 3);
             tmpMeta[0+0] = _p;
             tmp1_c1 = 0 /* false */;
             goto tmp3_done;
@@ -407,17 +407,17 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializePath(threadD
           case 3: {
             
             /* Pattern matching succeeded */
-            omc_File_writeEscape(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_p), 2))), 3);
+            omc_File_writeEscape(threadData, _file, (OMC_BOX_FIELD(_p, 2)), 3);
 
             omc_File_write(threadData, _file, _OMC_LIT6);
-            tmpMeta[0+0] = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_p), 3)));
+            tmpMeta[0+0] = (OMC_BOX_FIELD(_p, 3));
             tmp1_c1 = 1 /* true */;
             goto tmp3_done;
           }
           case 5: {
             
             /* Pattern matching succeeded */
-            tmpMeta[0+0] = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_p), 2)));
+            tmpMeta[0+0] = (OMC_BOX_FIELD(_p, 2));
             tmp1_c1 = 1 /* true */;
             goto tmp3_done;
           }
@@ -427,7 +427,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializePath(threadD
         }
         goto goto_2;
         goto_2:;
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
         goto tmp3_done;
         tmp3_done:;
       }
@@ -448,7 +448,7 @@ PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializePath(thre
 
 PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeString(threadData_t *threadData, modelica_complex _file, modelica_string _string)
 {
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_File_write(threadData, _file, _OMC_LIT5);
 
@@ -466,7 +466,7 @@ PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializeString(th
 
 PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeCref(threadData_t *threadData, modelica_complex _file, modelica_metatype _cr)
 {
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_File_write(threadData, _file, _OMC_LIT5);
 
@@ -484,7 +484,7 @@ PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializeCref(thre
 
 PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeExp(threadData_t *threadData, modelica_complex _file, modelica_metatype _exp)
 {
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_File_write(threadData, _file, _OMC_LIT5);
 
@@ -502,7 +502,7 @@ PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializeExp(threa
 
 PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeList1(threadData_t *threadData, modelica_complex _file, modelica_metatype _lst, modelica_metatype _extra, modelica_fnptr _func)
 {
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_metatype tmp3_1;
@@ -531,7 +531,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeList1(thread
           if (!listEmpty(tmpMeta6)) goto tmp2_end;
           _a = tmpMeta5;
           /* Pattern matching succeeded */
-          (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((void(*)(threadData_t*, modelica_metatype, modelica_complex, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))), _file, _a, _extra) : ((void(*)(threadData_t*, modelica_complex, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, _file, _a, _extra);
+          (OMC_BOX_FIELD(_func, 2)) ? ((void(*)(threadData_t*, modelica_metatype, modelica_complex, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, (OMC_BOX_FIELD(_func, 2)), _file, _a, _extra) : ((void(*)(threadData_t*, modelica_complex, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, _file, _a, _extra);
           goto tmp2_done;
         }
         case 2: {
@@ -543,7 +543,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeList1(thread
           _a = tmpMeta7;
           _rest = tmpMeta8;
           /* Pattern matching succeeded */
-          (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((void(*)(threadData_t*, modelica_metatype, modelica_complex, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))), _file, _a, _extra) : ((void(*)(threadData_t*, modelica_complex, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, _file, _a, _extra);
+          (OMC_BOX_FIELD(_func, 2)) ? ((void(*)(threadData_t*, modelica_metatype, modelica_complex, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, (OMC_BOX_FIELD(_func, 2)), _file, _a, _extra) : ((void(*)(threadData_t*, modelica_complex, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, _file, _a, _extra);
 
           omc_File_write(threadData, _file, _OMC_LIT2);
 
@@ -560,7 +560,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeList1(thread
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
@@ -577,7 +577,7 @@ PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializeList1(thr
 
 PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeList(threadData_t *threadData, modelica_complex _file, modelica_metatype _lst, modelica_fnptr _func)
 {
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_metatype tmp3_1;
@@ -606,7 +606,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeList(threadD
           if (!listEmpty(tmpMeta6)) goto tmp2_end;
           _a = tmpMeta5;
           /* Pattern matching succeeded */
-          (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((void(*)(threadData_t*, modelica_metatype, modelica_complex, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))), _file, _a) : ((void(*)(threadData_t*, modelica_complex, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, _file, _a);
+          (OMC_BOX_FIELD(_func, 2)) ? ((void(*)(threadData_t*, modelica_metatype, modelica_complex, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, (OMC_BOX_FIELD(_func, 2)), _file, _a) : ((void(*)(threadData_t*, modelica_complex, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, _file, _a);
           goto tmp2_done;
         }
         case 2: {
@@ -618,7 +618,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeList(threadD
           _a = tmpMeta7;
           _rest = tmpMeta8;
           /* Pattern matching succeeded */
-          (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((void(*)(threadData_t*, modelica_metatype, modelica_complex, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))), _file, _a) : ((void(*)(threadData_t*, modelica_complex, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, _file, _a);
+          (OMC_BOX_FIELD(_func, 2)) ? ((void(*)(threadData_t*, modelica_metatype, modelica_complex, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, (OMC_BOX_FIELD(_func, 2)), _file, _a) : ((void(*)(threadData_t*, modelica_complex, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, _file, _a);
 
           omc_File_write(threadData, _file, _OMC_LIT2);
 
@@ -635,7 +635,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeList(threadD
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
@@ -652,7 +652,7 @@ PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializeList(thre
 
 PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeStatement(threadData_t *threadData, modelica_complex _file, modelica_metatype _stmt)
 {
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   omc_File_write(threadData, _file, _OMC_LIT5);
 
@@ -670,7 +670,7 @@ PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializeStatement
 
 PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeUses(threadData_t *threadData, modelica_complex _file, modelica_metatype _crefs)
 {
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_metatype tmp3_1;
@@ -734,7 +734,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeUses(threadD
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
@@ -751,7 +751,7 @@ PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializeUses(thre
 
 PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeLinearCell(threadData_t *threadData, modelica_complex _file, modelica_metatype _cell, modelica_boolean _withOperations)
 {
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_metatype tmp3_1;
@@ -774,11 +774,11 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeLinearCell(t
           modelica_metatype tmpMeta7;
           modelica_integer tmp8;
           modelica_metatype tmpMeta9;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 1));
-          tmp6 = mmc_unbox_integer(tmpMeta5);
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 3));
+          tmpMeta5 = OMC_BOX_FIELD(tmp3_1, 1);
+          tmp6 = omc_unbox_integer(tmpMeta5);
+          tmpMeta7 = OMC_BOX_FIELD(tmp3_1, 2);
+          tmp8 = omc_unbox_integer(tmpMeta7);
+          tmpMeta9 = OMC_BOX_FIELD(tmp3_1, 3);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,0,5) == 0) goto tmp2_end;
           
           _i = tmp6  /* pattern as ty=Integer */;
@@ -795,11 +795,11 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeLinearCell(t
 
           omc_File_write(threadData, _file, _OMC_LIT11);
 
-          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4)))), 3);
+          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (OMC_BOX_FIELD(_eq, 4))), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT12);
 
-          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 5))), _withOperations);
+          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 5)), _withOperations);
 
           omc_File_write(threadData, _file, _OMC_LIT13);
           goto tmp2_done;
@@ -817,7 +817,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeLinearCell(t
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
@@ -829,7 +829,7 @@ PROTECTED_FUNCTION_STATIC void omc_SerializeTaskSystemInfo_serializeLinearCell(t
 PROTECTED_FUNCTION_STATIC void boxptr_SerializeTaskSystemInfo_serializeLinearCell(threadData_t *threadData, modelica_metatype _file, modelica_metatype _cell, modelica_metatype _withOperations)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_withOperations);
+  tmp1 = omc_unbox_integer(_withOperations);
   omc_SerializeTaskSystemInfo_serializeLinearCell(threadData, _file, _cell, tmp1);
   return;
 }
@@ -838,7 +838,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 {
   modelica_boolean _success;
   modelica_boolean tmp1 = 0;
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _success has no default value.
   if((!_first))
@@ -887,7 +888,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -902,15 +903,15 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT23);
 
-          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4))), 1 /* true */));
+          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_eq, 4)), 1 /* true */));
 
           omc_File_write(threadData, _file, _OMC_LIT24);
 
-          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4)))), 3);
+          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (OMC_BOX_FIELD(_eq, 4))), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT25);
 
-          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 5))), _withOperations);
+          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 5)), _withOperations);
 
           omc_File_write(threadData, _file, _OMC_LIT13);
           tmp1 = 1 /* true */;
@@ -922,7 +923,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -951,19 +952,19 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             }
           }
 
-          omc_ComponentReference_writeCref(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), 3);
+          omc_ComponentReference_writeCref(threadData, _file, (OMC_BOX_FIELD(_eq, 3)), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT29);
 
-          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4))), 1 /* true */));
+          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_eq, 4)), 1 /* true */));
 
           omc_File_write(threadData, _file, _OMC_LIT24);
 
-          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4)))), 3);
+          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (OMC_BOX_FIELD(_eq, 4))), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT25);
 
-          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 5))), _withOperations);
+          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 5)), _withOperations);
 
           omc_File_write(threadData, _file, _OMC_LIT13);
           tmp1 = 1 /* true */;
@@ -975,7 +976,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -1004,19 +1005,19 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             }
           }
 
-          omc_ComponentReference_writeCref(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), 3);
+          omc_ComponentReference_writeCref(threadData, _file, (OMC_BOX_FIELD(_eq, 3)), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT29);
 
-          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4))), 1 /* true */));
+          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_eq, 4)), 1 /* true */));
 
           omc_File_write(threadData, _file, _OMC_LIT24);
 
-          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4)))), 3);
+          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (OMC_BOX_FIELD(_eq, 4))), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT25);
 
-          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 5))), _withOperations);
+          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 5)), _withOperations);
 
           omc_File_write(threadData, _file, _OMC_LIT13);
           tmp1 = 1 /* true */;
@@ -1028,7 +1029,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -1057,19 +1058,19 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             }
           }
 
-          omc_ComponentReference_writeCref(threadData, _file, omc_Expression_expCref(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3)))), 3);
+          omc_ComponentReference_writeCref(threadData, _file, omc_Expression_expCref(threadData, (OMC_BOX_FIELD(_eq, 3))), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT29);
 
-          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4))), 1 /* true */));
+          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_eq, 4)), 1 /* true */));
 
           omc_File_write(threadData, _file, _OMC_LIT24);
 
-          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4)))), 3);
+          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (OMC_BOX_FIELD(_eq, 4))), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT25);
 
-          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 5))), _withOperations);
+          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 5)), _withOperations);
 
           omc_File_write(threadData, _file, _OMC_LIT13);
           tmp1 = 1 /* true */;
@@ -1079,8 +1080,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta20;
-          modelica_metatype tmpMeta21;
+          modelica_string tmp20;
+          modelica_string tmp21;
           modelica_metatype tmpMeta22;
           modelica_real tmp31;
           modelica_metatype tmpMeta32;
@@ -1088,21 +1089,21 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           modelica_metatype tmpMeta34;
           modelica_metatype tmpMeta35;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,12,3) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 3);
           if (!optionNone(tmpMeta7)) goto tmp3_end;
           
           _lSystem = tmpMeta6;
           /* Pattern matching succeeded */
-          _i = listLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 6))));
+          _i = listLength((OMC_BOX_FIELD(_lSystem, 6)));
 
-          _j = listLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 7))));
+          _j = listLength((OMC_BOX_FIELD(_lSystem, 7)));
 
-          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 8))));
+          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (OMC_BOX_FIELD(_lSystem, 8)));
 
           { /* match expression */
             modelica_metatype tmp11_1;
-            tmp11_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 9)));
+            tmp11_1 = (OMC_BOX_FIELD(_lSystem, 9));
             {
               volatile mmc_switch_type tmp11;
               int tmp12;
@@ -1117,13 +1118,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                   modelica_metatype tmpMeta17;
                   modelica_metatype tmpMeta18;
                   if (optionNone(tmp11_1)) goto tmp10_end;
-                  tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp11_1), 1));
-                  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 2));
+                  tmpMeta13 = OMC_BOX_FIELD(tmp11_1, 1);
+                  tmpMeta14 = OMC_BOX_FIELD(tmpMeta13, 2);
                   if (listEmpty(tmpMeta14)) goto tmp10_end;
                   tmpMeta15 = MMC_CAR(tmpMeta14);
                   tmpMeta16 = MMC_CDR(tmpMeta14);
-                  tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 2));
-                  tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta15), 5));
+                  tmpMeta17 = OMC_BOX_FIELD(tmpMeta15, 2);
+                  tmpMeta18 = OMC_BOX_FIELD(tmpMeta15, 5);
                   if (!listEmpty(tmpMeta16)) goto tmp10_end;
                   
                   _jeqs = tmpMeta17;
@@ -1155,7 +1156,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -1168,7 +1169,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _section);
 
-          if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 4)))))
+          if(omc_unbox_boolean((OMC_BOX_FIELD(_lSystem, 4))))
           {
             omc_File_write(threadData, _file, _OMC_LIT31);
           }
@@ -1177,9 +1178,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             omc_File_write(threadData, _file, _OMC_LIT30);
           }
 
-          tmpMeta20 = stringAppend(_OMC_LIT32,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 12))))));
-          tmpMeta21 = stringAppend(tmpMeta20,_OMC_LIT33);
-          omc_File_write(threadData, _file, tmpMeta21);
+          tmp20 = stringAppend(_OMC_LIT32,intString(omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 12)))));
+          tmp21 = stringAppend(tmp20,_OMC_LIT33);
+          omc_File_write(threadData, _file, tmp21);
 
           {
             modelica_metatype __omcQ_24tmpVar3;
@@ -1190,7 +1191,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             modelica_integer tmp30;
             modelica_metatype _v_loopVar = 0;
             modelica_metatype _v;
-            _v_loopVar = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 5)));
+            _v_loopVar = (OMC_BOX_FIELD(_lSystem, 5));
             tmpMeta24 = MMC_REFSTRUCTLIT(mmc_nil);
             __omcQ_24tmpVar3 = tmpMeta24; /* defaultValue */
             tmp23 = &__omcQ_24tmpVar3;
@@ -1214,7 +1215,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                       case 0: {
                         
                         /* Pattern matching succeeded */
-                        tmpMeta25 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 2)));
+                        tmpMeta25 = (OMC_BOX_FIELD(_v, 2));
                         goto tmp27_done;
                       }
                       }
@@ -1256,11 +1257,11 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT37);
 
-          omc_SerializeTaskSystemInfo_serializeList1(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 7))), mmc_mk_boolean(_withOperations), boxvar_SerializeTaskSystemInfo_serializeLinearCell);
+          omc_SerializeTaskSystemInfo_serializeList1(threadData, _file, (OMC_BOX_FIELD(_lSystem, 7)), omc_mk_boolean(_withOperations), boxvar_SerializeTaskSystemInfo_serializeLinearCell);
 
           omc_File_write(threadData, _file, _OMC_LIT38);
 
-          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 6))), boxvar_SerializeTaskSystemInfo_serializeExp);
+          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (OMC_BOX_FIELD(_lSystem, 6)), boxvar_SerializeTaskSystemInfo_serializeExp);
 
           omc_File_write(threadData, _file, _OMC_LIT39);
 
@@ -1268,14 +1269,14 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           if((!listEmpty(_eqs)))
           {
-            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 2)))), 1 /* true */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 4))))?((modelica_integer) 1):((modelica_integer) 0)));
+            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 2))), 1 /* true */, (omc_unbox_boolean((OMC_BOX_FIELD(_lSystem, 4)))?((modelica_integer) 1):((modelica_integer) 0)));
 
             {
               modelica_metatype _e;
               for (tmpMeta32 = listRest(_eqs); !listEmpty(tmpMeta32); tmpMeta32=MMC_CDR(tmpMeta32))
               {
                 _e = MMC_CAR(tmpMeta32);
-                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 2)))), 0 /* false */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 4))))?((modelica_integer) 1):((modelica_integer) 0)));
+                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 2))), 0 /* false */, (omc_unbox_boolean((OMC_BOX_FIELD(_lSystem, 4)))?((modelica_integer) 1):((modelica_integer) 0)));
               }
             }
           }
@@ -1286,14 +1287,14 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           if((!listEmpty(_jeqs)))
           {
-            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 2)))), 1 /* true */, ((modelica_integer) 2));
+            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 2))), 1 /* true */, ((modelica_integer) 2));
 
             {
               modelica_metatype _e;
               for (tmpMeta34 = listRest(_jeqs); !listEmpty(tmpMeta34); tmpMeta34=MMC_CDR(tmpMeta34))
               {
                 _e = MMC_CAR(tmpMeta34);
-                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 2)))), 0 /* false */, ((modelica_integer) 2));
+                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 2))), 0 /* false */, ((modelica_integer) 2));
               }
             }
           }
@@ -1311,8 +1312,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           modelica_metatype tmpMeta41;
           modelica_metatype tmpMeta53;
           modelica_metatype tmpMeta54;
-          modelica_metatype tmpMeta55;
-          modelica_metatype tmpMeta56;
+          modelica_string tmp55;
+          modelica_string tmp56;
           modelica_metatype tmpMeta57;
           modelica_real tmp66;
           modelica_metatype tmpMeta67;
@@ -1320,42 +1321,42 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           modelica_metatype tmpMeta69;
           modelica_metatype tmpMeta81;
           modelica_metatype tmpMeta82;
-          modelica_metatype tmpMeta83;
-          modelica_metatype tmpMeta84;
+          modelica_string tmp83;
+          modelica_string tmp84;
           modelica_metatype tmpMeta85;
           modelica_real tmp94;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,12,3) == 0) goto tmp3_end;
-          tmpMeta36 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta36 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta37 = OMC_BOX_FIELD(tmp4_1, 3);
           if (optionNone(tmpMeta37)) goto tmp3_end;
-          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta37), 1));
+          tmpMeta38 = OMC_BOX_FIELD(tmpMeta37, 1);
           
           _lSystem = tmpMeta36;
           _atL = tmpMeta38;
           /* Pattern matching succeeded */
-          _i = listLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 6))));
+          _i = listLength((OMC_BOX_FIELD(_lSystem, 6)));
 
-          _j = listLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 7))));
+          _j = listLength((OMC_BOX_FIELD(_lSystem, 7)));
 
-          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 8))));
+          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (OMC_BOX_FIELD(_lSystem, 8)));
 
           if((!listEmpty(_eqs)))
           {
-            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 2)))), 1 /* true */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 4))))?((modelica_integer) 1):((modelica_integer) 0)));
+            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 2))), 1 /* true */, (omc_unbox_boolean((OMC_BOX_FIELD(_lSystem, 4)))?((modelica_integer) 1):((modelica_integer) 0)));
 
             {
               modelica_metatype _e;
               for (tmpMeta39 = listRest(_eqs); !listEmpty(tmpMeta39); tmpMeta39=MMC_CDR(tmpMeta39))
               {
                 _e = MMC_CAR(tmpMeta39);
-                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 2)))), 0 /* false */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 4))))?((modelica_integer) 1):((modelica_integer) 0)));
+                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 2))), 0 /* false */, (omc_unbox_boolean((OMC_BOX_FIELD(_lSystem, 4)))?((modelica_integer) 1):((modelica_integer) 0)));
               }
             }
           }
 
           { /* match expression */
             modelica_metatype tmp44_1;
-            tmp44_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 9)));
+            tmp44_1 = (OMC_BOX_FIELD(_lSystem, 9));
             {
               volatile mmc_switch_type tmp44;
               int tmp45;
@@ -1370,13 +1371,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                   modelica_metatype tmpMeta50;
                   modelica_metatype tmpMeta51;
                   if (optionNone(tmp44_1)) goto tmp43_end;
-                  tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp44_1), 1));
-                  tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta46), 2));
+                  tmpMeta46 = OMC_BOX_FIELD(tmp44_1, 1);
+                  tmpMeta47 = OMC_BOX_FIELD(tmpMeta46, 2);
                   if (listEmpty(tmpMeta47)) goto tmp43_end;
                   tmpMeta48 = MMC_CAR(tmpMeta47);
                   tmpMeta49 = MMC_CDR(tmpMeta47);
-                  tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta48), 2));
-                  tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta48), 5));
+                  tmpMeta50 = OMC_BOX_FIELD(tmpMeta48, 2);
+                  tmpMeta51 = OMC_BOX_FIELD(tmpMeta48, 5);
                   if (!listEmpty(tmpMeta49)) goto tmp43_end;
                   
                   _jeqs = tmpMeta50;
@@ -1410,14 +1411,14 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           {
             omc_File_write(threadData, _file, _OMC_LIT2);
 
-            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 2)))), 1 /* true */, ((modelica_integer) 2));
+            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 2))), 1 /* true */, ((modelica_integer) 2));
 
             {
               modelica_metatype _e;
               for (tmpMeta53 = listRest(_jeqs); !listEmpty(tmpMeta53); tmpMeta53=MMC_CDR(tmpMeta53))
               {
                 _e = MMC_CAR(tmpMeta53);
-                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 2)))), 0 /* false */, ((modelica_integer) 2));
+                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 2))), 0 /* false */, ((modelica_integer) 2));
               }
             }
           }
@@ -1431,7 +1432,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             omc_File_write(threadData, _file, _OMC_LIT44);
           }
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -1444,7 +1445,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _section);
 
-          if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 4)))))
+          if(omc_unbox_boolean((OMC_BOX_FIELD(_lSystem, 4))))
           {
             omc_File_write(threadData, _file, _OMC_LIT46);
           }
@@ -1453,9 +1454,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             omc_File_write(threadData, _file, _OMC_LIT45);
           }
 
-          tmpMeta55 = stringAppend(_OMC_LIT32,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 12))))));
-          tmpMeta56 = stringAppend(tmpMeta55,_OMC_LIT33);
-          omc_File_write(threadData, _file, tmpMeta56);
+          tmp55 = stringAppend(_OMC_LIT32,intString(omc_unbox_integer((OMC_BOX_FIELD(_lSystem, 12)))));
+          tmp56 = stringAppend(tmp55,_OMC_LIT33);
+          omc_File_write(threadData, _file, tmp56);
 
           {
             modelica_metatype __omcQ_24tmpVar5;
@@ -1466,7 +1467,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             modelica_integer tmp65;
             modelica_metatype _v_loopVar = 0;
             modelica_metatype _v;
-            _v_loopVar = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 5)));
+            _v_loopVar = (OMC_BOX_FIELD(_lSystem, 5));
             tmpMeta59 = MMC_REFSTRUCTLIT(mmc_nil);
             __omcQ_24tmpVar5 = tmpMeta59; /* defaultValue */
             tmp58 = &__omcQ_24tmpVar5;
@@ -1490,7 +1491,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                       case 0: {
                         
                         /* Pattern matching succeeded */
-                        tmpMeta60 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 2)));
+                        tmpMeta60 = (OMC_BOX_FIELD(_v, 2));
                         goto tmp62_done;
                       }
                       }
@@ -1532,37 +1533,37 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT37);
 
-          omc_SerializeTaskSystemInfo_serializeList1(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 7))), mmc_mk_boolean(_withOperations), boxvar_SerializeTaskSystemInfo_serializeLinearCell);
+          omc_SerializeTaskSystemInfo_serializeList1(threadData, _file, (OMC_BOX_FIELD(_lSystem, 7)), omc_mk_boolean(_withOperations), boxvar_SerializeTaskSystemInfo_serializeLinearCell);
 
           omc_File_write(threadData, _file, _OMC_LIT38);
 
-          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_lSystem), 6))), boxvar_SerializeTaskSystemInfo_serializeExp);
+          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (OMC_BOX_FIELD(_lSystem, 6)), boxvar_SerializeTaskSystemInfo_serializeExp);
 
           omc_File_write(threadData, _file, _OMC_LIT47);
 
-          _i = listLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 6))));
+          _i = listLength((OMC_BOX_FIELD(_atL, 6)));
 
-          _j = listLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 7))));
+          _j = listLength((OMC_BOX_FIELD(_atL, 7)));
 
-          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 8))));
+          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (OMC_BOX_FIELD(_atL, 8)));
 
           if((!listEmpty(_eqs)))
           {
-            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 2)))), 1 /* true */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 4))))?((modelica_integer) 1):((modelica_integer) 0)));
+            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_atL, 2))), 1 /* true */, (omc_unbox_boolean((OMC_BOX_FIELD(_atL, 4)))?((modelica_integer) 1):((modelica_integer) 0)));
 
             {
               modelica_metatype _e;
               for (tmpMeta67 = listRest(_eqs); !listEmpty(tmpMeta67); tmpMeta67=MMC_CDR(tmpMeta67))
               {
                 _e = MMC_CAR(tmpMeta67);
-                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 2)))), 0 /* false */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 4))))?((modelica_integer) 1):((modelica_integer) 0)));
+                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_atL, 2))), 0 /* false */, (omc_unbox_boolean((OMC_BOX_FIELD(_atL, 4)))?((modelica_integer) 1):((modelica_integer) 0)));
               }
             }
           }
 
           { /* match expression */
             modelica_metatype tmp72_1;
-            tmp72_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 9)));
+            tmp72_1 = (OMC_BOX_FIELD(_atL, 9));
             {
               volatile mmc_switch_type tmp72;
               int tmp73;
@@ -1577,13 +1578,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                   modelica_metatype tmpMeta78;
                   modelica_metatype tmpMeta79;
                   if (optionNone(tmp72_1)) goto tmp71_end;
-                  tmpMeta74 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp72_1), 1));
-                  tmpMeta75 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta74), 2));
+                  tmpMeta74 = OMC_BOX_FIELD(tmp72_1, 1);
+                  tmpMeta75 = OMC_BOX_FIELD(tmpMeta74, 2);
                   if (listEmpty(tmpMeta75)) goto tmp71_end;
                   tmpMeta76 = MMC_CAR(tmpMeta75);
                   tmpMeta77 = MMC_CDR(tmpMeta75);
-                  tmpMeta78 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta76), 2));
-                  tmpMeta79 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta76), 5));
+                  tmpMeta78 = OMC_BOX_FIELD(tmpMeta76, 2);
+                  tmpMeta79 = OMC_BOX_FIELD(tmpMeta76, 5);
                   if (!listEmpty(tmpMeta77)) goto tmp71_end;
                   
                   _jeqs = tmpMeta78;
@@ -1617,14 +1618,14 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           {
             omc_File_write(threadData, _file, _OMC_LIT2);
 
-            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 2)))), 1 /* true */, ((modelica_integer) 2));
+            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_atL, 2))), 1 /* true */, ((modelica_integer) 2));
 
             {
               modelica_metatype _e;
               for (tmpMeta81 = listRest(_jeqs); !listEmpty(tmpMeta81); tmpMeta81=MMC_CDR(tmpMeta81))
               {
                 _e = MMC_CAR(tmpMeta81);
-                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 2)))), 0 /* false */, ((modelica_integer) 2));
+                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_atL, 2))), 0 /* false */, ((modelica_integer) 2));
               }
             }
           }
@@ -1638,7 +1639,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             omc_File_write(threadData, _file, _OMC_LIT44);
           }
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_atL, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -1651,7 +1652,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _section);
 
-          if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 4)))))
+          if(omc_unbox_boolean((OMC_BOX_FIELD(_atL, 4))))
           {
             omc_File_write(threadData, _file, _OMC_LIT31);
           }
@@ -1660,9 +1661,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             omc_File_write(threadData, _file, _OMC_LIT30);
           }
 
-          tmpMeta83 = stringAppend(_OMC_LIT32,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 12))))));
-          tmpMeta84 = stringAppend(tmpMeta83,_OMC_LIT33);
-          omc_File_write(threadData, _file, tmpMeta84);
+          tmp83 = stringAppend(_OMC_LIT32,intString(omc_unbox_integer((OMC_BOX_FIELD(_atL, 12)))));
+          tmp84 = stringAppend(tmp83,_OMC_LIT33);
+          omc_File_write(threadData, _file, tmp84);
 
           {
             modelica_metatype __omcQ_24tmpVar7;
@@ -1673,7 +1674,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             modelica_integer tmp93;
             modelica_metatype _v_loopVar = 0;
             modelica_metatype _v;
-            _v_loopVar = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 5)));
+            _v_loopVar = (OMC_BOX_FIELD(_atL, 5));
             tmpMeta87 = MMC_REFSTRUCTLIT(mmc_nil);
             __omcQ_24tmpVar7 = tmpMeta87; /* defaultValue */
             tmp86 = &__omcQ_24tmpVar7;
@@ -1697,7 +1698,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                       case 0: {
                         
                         /* Pattern matching succeeded */
-                        tmpMeta88 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 2)));
+                        tmpMeta88 = (OMC_BOX_FIELD(_v, 2));
                         goto tmp90_done;
                       }
                       }
@@ -1739,11 +1740,11 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT37);
 
-          omc_SerializeTaskSystemInfo_serializeList1(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 7))), mmc_mk_boolean(_withOperations), boxvar_SerializeTaskSystemInfo_serializeLinearCell);
+          omc_SerializeTaskSystemInfo_serializeList1(threadData, _file, (OMC_BOX_FIELD(_atL, 7)), omc_mk_boolean(_withOperations), boxvar_SerializeTaskSystemInfo_serializeLinearCell);
 
           omc_File_write(threadData, _file, _OMC_LIT38);
 
-          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atL), 6))), boxvar_SerializeTaskSystemInfo_serializeExp);
+          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (OMC_BOX_FIELD(_atL, 6)), boxvar_SerializeTaskSystemInfo_serializeExp);
 
           omc_File_write(threadData, _file, _OMC_LIT48);
           tmp1 = 1 /* true */;
@@ -1753,9 +1754,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           modelica_metatype tmpMeta95;
           modelica_metatype tmpMeta96;
           modelica_metatype tmpMeta97;
-          modelica_metatype tmpMeta98;
+          modelica_string tmp98;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,10,3) == 0) goto tmp3_end;
-          tmpMeta95 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta95 = OMC_BOX_FIELD(tmp4_1, 3);
           if (listEmpty(tmpMeta95)) goto tmp3_end;
           tmpMeta96 = MMC_CAR(tmpMeta95);
           tmpMeta97 = MMC_CDR(tmpMeta95);
@@ -1764,7 +1765,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -1775,10 +1776,10 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT22);
 
-          tmpMeta98 = stringAppend(_section,_OMC_LIT49);
-          omc_File_write(threadData, _file, tmpMeta98);
+          tmp98 = stringAppend(_section,_OMC_LIT49);
+          omc_File_write(threadData, _file, tmp98);
 
-          _crefs = omc_Expression_extractUniqueCrefsFromStatmentS(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))) ,&_crefs2);
+          _crefs = omc_Expression_extractUniqueCrefsFromStatmentS(threadData, (OMC_BOX_FIELD(_eq, 3)) ,&_crefs2);
 
           omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, _crefs);
 
@@ -1788,7 +1789,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT51);
 
-          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), boxvar_SerializeTaskSystemInfo_serializeStatement);
+          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (OMC_BOX_FIELD(_eq, 3)), boxvar_SerializeTaskSystemInfo_serializeStatement);
 
           omc_File_write(threadData, _file, _OMC_LIT52);
 
@@ -1802,9 +1803,9 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           modelica_metatype tmpMeta99;
           modelica_metatype tmpMeta100;
           modelica_metatype tmpMeta101;
-          modelica_metatype tmpMeta102;
+          modelica_string tmp102;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,11,5) == 0) goto tmp3_end;
-          tmpMeta99 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta99 = OMC_BOX_FIELD(tmp4_1, 3);
           if (listEmpty(tmpMeta99)) goto tmp3_end;
           tmpMeta100 = MMC_CAR(tmpMeta99);
           tmpMeta101 = MMC_CDR(tmpMeta99);
@@ -1813,7 +1814,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -1824,10 +1825,10 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT22);
 
-          tmpMeta102 = stringAppend(_section,_OMC_LIT49);
-          omc_File_write(threadData, _file, tmpMeta102);
+          tmp102 = stringAppend(_section,_OMC_LIT49);
+          omc_File_write(threadData, _file, tmp102);
 
-          _crefs = omc_Expression_extractUniqueCrefsFromStatmentS(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))) ,&_crefs2);
+          _crefs = omc_Expression_extractUniqueCrefsFromStatmentS(threadData, (OMC_BOX_FIELD(_eq, 3)) ,&_crefs2);
 
           omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, _crefs);
 
@@ -1837,7 +1838,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT51);
 
-          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), boxvar_SerializeTaskSystemInfo_serializeStatement);
+          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (OMC_BOX_FIELD(_eq, 3)), boxvar_SerializeTaskSystemInfo_serializeStatement);
 
           omc_File_write(threadData, _file, _OMC_LIT52);
 
@@ -1851,24 +1852,24 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           modelica_metatype tmpMeta103;
           modelica_metatype tmpMeta104;
           modelica_metatype tmpMeta105;
-          modelica_metatype tmpMeta117;
-          modelica_metatype tmpMeta118;
+          modelica_string tmp117;
+          modelica_string tmp118;
           modelica_metatype tmpMeta119;
           modelica_metatype tmpMeta120;
           modelica_metatype tmpMeta121;
           modelica_metatype tmpMeta122;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,13,3) == 0) goto tmp3_end;
-          tmpMeta103 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta104 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta103 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta104 = OMC_BOX_FIELD(tmp4_1, 3);
           if (!optionNone(tmpMeta104)) goto tmp3_end;
           
           _nlSystem = tmpMeta103;
           /* Pattern matching succeeded */
-          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 3))));
+          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (OMC_BOX_FIELD(_nlSystem, 3)));
 
           { /* match expression */
             modelica_metatype tmp108_1;
-            tmp108_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 7)));
+            tmp108_1 = (OMC_BOX_FIELD(_nlSystem, 7));
             {
               volatile mmc_switch_type tmp108;
               int tmp109;
@@ -1883,13 +1884,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                   modelica_metatype tmpMeta114;
                   modelica_metatype tmpMeta115;
                   if (optionNone(tmp108_1)) goto tmp107_end;
-                  tmpMeta110 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp108_1), 1));
-                  tmpMeta111 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta110), 2));
+                  tmpMeta110 = OMC_BOX_FIELD(tmp108_1, 1);
+                  tmpMeta111 = OMC_BOX_FIELD(tmpMeta110, 2);
                   if (listEmpty(tmpMeta111)) goto tmp107_end;
                   tmpMeta112 = MMC_CAR(tmpMeta111);
                   tmpMeta113 = MMC_CDR(tmpMeta111);
-                  tmpMeta114 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta112), 2));
-                  tmpMeta115 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta112), 5));
+                  tmpMeta114 = OMC_BOX_FIELD(tmpMeta112, 2);
+                  tmpMeta115 = OMC_BOX_FIELD(tmpMeta112, 5);
                   if (!listEmpty(tmpMeta113)) goto tmp107_end;
                   
                   _jeqs = tmpMeta114;
@@ -1921,7 +1922,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -1934,7 +1935,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _section);
 
-          if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 10)))))
+          if(omc_unbox_boolean((OMC_BOX_FIELD(_nlSystem, 10))))
           {
             omc_File_write(threadData, _file, _OMC_LIT31);
           }
@@ -1943,11 +1944,11 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             omc_File_write(threadData, _file, _OMC_LIT30);
           }
 
-          tmpMeta117 = stringAppend(_OMC_LIT53,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 6))))));
-          tmpMeta118 = stringAppend(tmpMeta117,_OMC_LIT33);
-          omc_File_write(threadData, _file, tmpMeta118);
+          tmp117 = stringAppend(_OMC_LIT53,intString(omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 6)))));
+          tmp118 = stringAppend(tmp117,_OMC_LIT33);
+          omc_File_write(threadData, _file, tmp118);
 
-          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 4))));
+          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, (OMC_BOX_FIELD(_nlSystem, 4)));
 
           omc_File_write(threadData, _file, _OMC_LIT54);
 
@@ -1963,14 +1964,14 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           if((!listEmpty(_eqs)))
           {
-            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 2)))), 1 /* true */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 10))))?((modelica_integer) 1):((modelica_integer) 0)));
+            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 2))), 1 /* true */, (omc_unbox_boolean((OMC_BOX_FIELD(_nlSystem, 10)))?((modelica_integer) 1):((modelica_integer) 0)));
 
             {
               modelica_metatype _e;
               for (tmpMeta119 = listRest(_eqs); !listEmpty(tmpMeta119); tmpMeta119=MMC_CDR(tmpMeta119))
               {
                 _e = MMC_CAR(tmpMeta119);
-                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 2)))), 0 /* false */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 10))))?((modelica_integer) 1):((modelica_integer) 0)));
+                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 2))), 0 /* false */, (omc_unbox_boolean((OMC_BOX_FIELD(_nlSystem, 10)))?((modelica_integer) 1):((modelica_integer) 0)));
               }
             }
           }
@@ -1981,14 +1982,14 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           if((!listEmpty(_jeqs)))
           {
-            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 2)))), 1 /* true */, ((modelica_integer) 2));
+            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 2))), 1 /* true */, ((modelica_integer) 2));
 
             {
               modelica_metatype _e;
               for (tmpMeta121 = listRest(_jeqs); !listEmpty(tmpMeta121); tmpMeta121=MMC_CDR(tmpMeta121))
               {
                 _e = MMC_CAR(tmpMeta121);
-                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 2)))), 0 /* false */, ((modelica_integer) 2));
+                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 2))), 0 /* false */, ((modelica_integer) 2));
               }
             }
           }
@@ -2006,40 +2007,40 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           modelica_metatype tmpMeta128;
           modelica_metatype tmpMeta140;
           modelica_metatype tmpMeta141;
-          modelica_metatype tmpMeta142;
-          modelica_metatype tmpMeta143;
+          modelica_string tmp142;
+          modelica_string tmp143;
           modelica_metatype tmpMeta144;
           modelica_metatype tmpMeta145;
           modelica_metatype tmpMeta146;
           modelica_metatype tmpMeta158;
           modelica_metatype tmpMeta159;
-          modelica_metatype tmpMeta160;
-          modelica_metatype tmpMeta161;
+          modelica_string tmp160;
+          modelica_string tmp161;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,13,3) == 0) goto tmp3_end;
-          tmpMeta123 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta124 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta123 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta124 = OMC_BOX_FIELD(tmp4_1, 3);
           if (optionNone(tmpMeta124)) goto tmp3_end;
-          tmpMeta125 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta124), 1));
+          tmpMeta125 = OMC_BOX_FIELD(tmpMeta124, 1);
           
           _nlSystem = tmpMeta123;
           _atNL = tmpMeta125;
           /* Pattern matching succeeded */
-          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 3))));
+          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (OMC_BOX_FIELD(_nlSystem, 3)));
 
-          omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 2)))), 1 /* true */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 10))))?((modelica_integer) 1):((modelica_integer) 0)));
+          omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 2))), 1 /* true */, (omc_unbox_boolean((OMC_BOX_FIELD(_nlSystem, 10)))?((modelica_integer) 1):((modelica_integer) 0)));
 
           {
             modelica_metatype _e;
             for (tmpMeta126 = listRest(_eqs); !listEmpty(tmpMeta126); tmpMeta126=MMC_CDR(tmpMeta126))
             {
               _e = MMC_CAR(tmpMeta126);
-              omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 2)))), 0 /* false */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 10))))?((modelica_integer) 1):((modelica_integer) 0)));
+              omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 2))), 0 /* false */, (omc_unbox_boolean((OMC_BOX_FIELD(_nlSystem, 10)))?((modelica_integer) 1):((modelica_integer) 0)));
             }
           }
 
           { /* match expression */
             modelica_metatype tmp131_1;
-            tmp131_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 7)));
+            tmp131_1 = (OMC_BOX_FIELD(_nlSystem, 7));
             {
               volatile mmc_switch_type tmp131;
               int tmp132;
@@ -2054,13 +2055,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                   modelica_metatype tmpMeta137;
                   modelica_metatype tmpMeta138;
                   if (optionNone(tmp131_1)) goto tmp130_end;
-                  tmpMeta133 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp131_1), 1));
-                  tmpMeta134 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta133), 2));
+                  tmpMeta133 = OMC_BOX_FIELD(tmp131_1, 1);
+                  tmpMeta134 = OMC_BOX_FIELD(tmpMeta133, 2);
                   if (listEmpty(tmpMeta134)) goto tmp130_end;
                   tmpMeta135 = MMC_CAR(tmpMeta134);
                   tmpMeta136 = MMC_CDR(tmpMeta134);
-                  tmpMeta137 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta135), 2));
-                  tmpMeta138 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta135), 5));
+                  tmpMeta137 = OMC_BOX_FIELD(tmpMeta135, 2);
+                  tmpMeta138 = OMC_BOX_FIELD(tmpMeta135, 5);
                   if (!listEmpty(tmpMeta136)) goto tmp130_end;
                   
                   _jeqs = tmpMeta137;
@@ -2094,21 +2095,21 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           {
             omc_File_write(threadData, _file, _OMC_LIT2);
 
-            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 2)))), 1 /* true */, ((modelica_integer) 2));
+            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 2))), 1 /* true */, ((modelica_integer) 2));
 
             {
               modelica_metatype _e;
               for (tmpMeta140 = listRest(_jeqs); !listEmpty(tmpMeta140); tmpMeta140=MMC_CDR(tmpMeta140))
               {
                 _e = MMC_CAR(tmpMeta140);
-                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 2)))), 0 /* false */, ((modelica_integer) 2));
+                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 2))), 0 /* false */, ((modelica_integer) 2));
               }
             }
           }
 
           omc_File_write(threadData, _file, _OMC_LIT44);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -2121,7 +2122,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _section);
 
-          if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 10)))))
+          if(omc_unbox_boolean((OMC_BOX_FIELD(_nlSystem, 10))))
           {
             omc_File_write(threadData, _file, _OMC_LIT31);
           }
@@ -2130,11 +2131,11 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             omc_File_write(threadData, _file, _OMC_LIT30);
           }
 
-          tmpMeta142 = stringAppend(_OMC_LIT53,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 6))))));
-          tmpMeta143 = stringAppend(tmpMeta142,_OMC_LIT33);
-          omc_File_write(threadData, _file, tmpMeta143);
+          tmp142 = stringAppend(_OMC_LIT53,intString(omc_unbox_integer((OMC_BOX_FIELD(_nlSystem, 6)))));
+          tmp143 = stringAppend(tmp142,_OMC_LIT33);
+          omc_File_write(threadData, _file, tmp143);
 
-          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_nlSystem), 4))));
+          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, (OMC_BOX_FIELD(_nlSystem, 4)));
 
           omc_File_write(threadData, _file, _OMC_LIT54);
 
@@ -2146,22 +2147,22 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT57);
 
-          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 3))));
+          _eqs = omc_SimCodeUtil_sortEqSystems(threadData, (OMC_BOX_FIELD(_atNL, 3)));
 
-          omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 2)))), 1 /* true */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 10))))?((modelica_integer) 1):((modelica_integer) 0)));
+          omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_atNL, 2))), 1 /* true */, (omc_unbox_boolean((OMC_BOX_FIELD(_atNL, 10)))?((modelica_integer) 1):((modelica_integer) 0)));
 
           {
             modelica_metatype _e;
             for (tmpMeta144 = listRest(_eqs); !listEmpty(tmpMeta144); tmpMeta144=MMC_CDR(tmpMeta144))
             {
               _e = MMC_CAR(tmpMeta144);
-              omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 2)))), 0 /* false */, (mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 10))))?((modelica_integer) 1):((modelica_integer) 0)));
+              omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_atNL, 2))), 0 /* false */, (omc_unbox_boolean((OMC_BOX_FIELD(_atNL, 10)))?((modelica_integer) 1):((modelica_integer) 0)));
             }
           }
 
           { /* match expression */
             modelica_metatype tmp149_1;
-            tmp149_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 7)));
+            tmp149_1 = (OMC_BOX_FIELD(_atNL, 7));
             {
               volatile mmc_switch_type tmp149;
               int tmp150;
@@ -2176,13 +2177,13 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                   modelica_metatype tmpMeta155;
                   modelica_metatype tmpMeta156;
                   if (optionNone(tmp149_1)) goto tmp148_end;
-                  tmpMeta151 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp149_1), 1));
-                  tmpMeta152 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta151), 2));
+                  tmpMeta151 = OMC_BOX_FIELD(tmp149_1, 1);
+                  tmpMeta152 = OMC_BOX_FIELD(tmpMeta151, 2);
                   if (listEmpty(tmpMeta152)) goto tmp148_end;
                   tmpMeta153 = MMC_CAR(tmpMeta152);
                   tmpMeta154 = MMC_CDR(tmpMeta152);
-                  tmpMeta155 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta153), 2));
-                  tmpMeta156 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta153), 5));
+                  tmpMeta155 = OMC_BOX_FIELD(tmpMeta153, 2);
+                  tmpMeta156 = OMC_BOX_FIELD(tmpMeta153, 5);
                   if (!listEmpty(tmpMeta154)) goto tmp148_end;
                   
                   _jeqs = tmpMeta155;
@@ -2216,21 +2217,21 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           {
             omc_File_write(threadData, _file, _OMC_LIT2);
 
-            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 2)))), 1 /* true */, ((modelica_integer) 2));
+            omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_jeqs), _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_atNL, 2))), 1 /* true */, ((modelica_integer) 2));
 
             {
               modelica_metatype _e;
               for (tmpMeta158 = listRest(_jeqs); !listEmpty(tmpMeta158); tmpMeta158=MMC_CDR(tmpMeta158))
               {
                 _e = MMC_CAR(tmpMeta158);
-                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 2)))), 0 /* false */, ((modelica_integer) 2));
+                omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, omc_unbox_integer((OMC_BOX_FIELD(_atNL, 2))), 0 /* false */, ((modelica_integer) 2));
               }
             }
           }
 
           omc_File_write(threadData, _file, _OMC_LIT44);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_atNL, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -2243,7 +2244,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _section);
 
-          if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 10)))))
+          if(omc_unbox_boolean((OMC_BOX_FIELD(_atNL, 10))))
           {
             omc_File_write(threadData, _file, _OMC_LIT31);
           }
@@ -2252,11 +2253,11 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             omc_File_write(threadData, _file, _OMC_LIT30);
           }
 
-          tmpMeta160 = stringAppend(_OMC_LIT53,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 6))))));
-          tmpMeta161 = stringAppend(tmpMeta160,_OMC_LIT33);
-          omc_File_write(threadData, _file, tmpMeta161);
+          tmp160 = stringAppend(_OMC_LIT53,intString(omc_unbox_integer((OMC_BOX_FIELD(_atNL, 6)))));
+          tmp161 = stringAppend(tmp160,_OMC_LIT33);
+          omc_File_write(threadData, _file, tmp161);
 
-          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_atNL), 4))));
+          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, (OMC_BOX_FIELD(_atNL, 4)));
 
           omc_File_write(threadData, _file, _OMC_LIT54);
 
@@ -2286,7 +2287,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             modelica_integer tmp165;
             modelica_metatype _e_loopVar = 0;
             modelica_metatype _e;
-            _e_loopVar = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3)));
+            _e_loopVar = (OMC_BOX_FIELD(_eq, 3));
             tmpMeta164 = MMC_REFSTRUCTLIT(mmc_nil);
             __omcQ_24tmpVar9 = tmpMeta164; /* defaultValue */
             tmp163 = &__omcQ_24tmpVar9;
@@ -2310,7 +2311,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             *tmp163 = mmc_mk_nil();
             tmpMeta162 = __omcQ_24tmpVar9;
           }
-          _eqs = listAppend(omc_List_flatten(threadData, tmpMeta162), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4))));
+          _eqs = listAppend(omc_List_flatten(threadData, tmpMeta162), (OMC_BOX_FIELD(_eq, 4)));
 
           omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, listHead(_eqs), _section, _withOperations, ((modelica_integer) 0), 1 /* true */, ((modelica_integer) 0));
 
@@ -2325,7 +2326,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT44);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -2340,11 +2341,11 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT59);
 
-          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), boxvar_SerializeTaskSystemInfo_serializeIfBranch);
+          omc_SerializeTaskSystemInfo_serializeList(threadData, _file, (OMC_BOX_FIELD(_eq, 3)), boxvar_SerializeTaskSystemInfo_serializeIfBranch);
 
           omc_File_write(threadData, _file, _OMC_LIT2);
 
-          tmpMeta168 = mmc_mk_box2(0, _OMC_LIT60, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4))));
+          tmpMeta168 = omc_mk_box2(0, _OMC_LIT60, (OMC_BOX_FIELD(_eq, 4)));
           omc_SerializeTaskSystemInfo_serializeIfBranch(threadData, _file, tmpMeta168);
 
           omc_File_write(threadData, _file, _OMC_LIT61);
@@ -2360,11 +2361,11 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,14,6) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), _section, _withOperations, ((modelica_integer) 0), 1 /* true */, ((modelica_integer) 0));
+          omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, (OMC_BOX_FIELD(_eq, 3)), _section, _withOperations, ((modelica_integer) 0), 1 /* true */, ((modelica_integer) 0));
 
           {
             modelica_metatype _e;
-            for (tmpMeta169 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 5))); !listEmpty(tmpMeta169); tmpMeta169=MMC_CDR(tmpMeta169))
+            for (tmpMeta169 = (OMC_BOX_FIELD(_eq, 5)); !listEmpty(tmpMeta169); tmpMeta169=MMC_CDR(tmpMeta169))
             {
               _e = MMC_CAR(tmpMeta169);
               omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _e, _section, _withOperations, ((modelica_integer) 0), 0 /* false */, ((modelica_integer) 0));
@@ -2373,7 +2374,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT44);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -2396,7 +2397,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             modelica_integer tmp174;
             modelica_metatype _v_loopVar = 0;
             modelica_metatype _v;
-            _v_loopVar = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 4)));
+            _v_loopVar = (OMC_BOX_FIELD(_eq, 4));
             tmpMeta173 = MMC_REFSTRUCTLIT(mmc_nil);
             __omcQ_24tmpVar11 = tmpMeta173; /* defaultValue */
             tmp172 = &__omcQ_24tmpVar11;
@@ -2408,7 +2409,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                 tmp174--;
               }
               if (tmp174 == 0) {
-                __omcQ_24tmpVar10 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 2)));
+                __omcQ_24tmpVar10 = (OMC_BOX_FIELD(_v, 2));
                 *tmp172 = mmc_mk_cons(__omcQ_24tmpVar10,0);
                 tmp172 = &MMC_CDR(*tmp172);
               } else if (tmp174 == 1) {
@@ -2424,11 +2425,11 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           omc_File_write(threadData, _file, _OMC_LIT51);
 
-          omc_SerializeTaskSystemInfo_serializeEquationIndex(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))));
+          omc_SerializeTaskSystemInfo_serializeEquationIndex(threadData, _file, (OMC_BOX_FIELD(_eq, 3)));
 
           {
             modelica_metatype _e1;
-            for (tmpMeta175 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 5))); !listEmpty(tmpMeta175); tmpMeta175=MMC_CDR(tmpMeta175))
+            for (tmpMeta175 = (OMC_BOX_FIELD(_eq, 5)); !listEmpty(tmpMeta175); tmpMeta175=MMC_CDR(tmpMeta175))
             {
               _e1 = MMC_CAR(tmpMeta175);
               omc_File_write(threadData, _file, _OMC_LIT2);
@@ -2449,7 +2450,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -2464,7 +2465,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           {
             modelica_metatype _whenOps;
-            for (tmpMeta177 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 5))); !listEmpty(tmpMeta177); tmpMeta177=MMC_CDR(tmpMeta177))
+            for (tmpMeta177 = (OMC_BOX_FIELD(_eq, 5)); !listEmpty(tmpMeta177); tmpMeta177=MMC_CDR(tmpMeta177))
             {
               _whenOps = MMC_CAR(tmpMeta177);
               { /* match expression */
@@ -2483,19 +2484,19 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                       /* Pattern matching succeeded */
                       omc_File_write(threadData, _file, _OMC_LIT63);
 
-                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 2))));
+                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (OMC_BOX_FIELD(_whenOp, 2)));
 
                       omc_File_write(threadData, _file, _OMC_LIT50);
 
-                      omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_List_union(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 3))), 1 /* true */)));
+                      omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_List_union(threadData, (OMC_BOX_FIELD(_eq, 3)), omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_whenOp, 3)), 1 /* true */)));
 
                       omc_File_write(threadData, _file, _OMC_LIT51);
 
-                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 3))));
+                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (OMC_BOX_FIELD(_whenOp, 3)));
 
                       omc_File_write(threadData, _file, _OMC_LIT52);
 
-                      omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 7))), _withOperations);
+                      omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 7)), _withOperations);
 
                       omc_File_write(threadData, _file, _OMC_LIT13);
                       goto tmp179_done;
@@ -2507,19 +2508,19 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                       /* Pattern matching succeeded */
                       omc_File_write(threadData, _file, _OMC_LIT63);
 
-                      omc_SerializeTaskSystemInfo_serializeCref(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 2))));
+                      omc_SerializeTaskSystemInfo_serializeCref(threadData, _file, (OMC_BOX_FIELD(_whenOp, 2)));
 
                       omc_File_write(threadData, _file, _OMC_LIT50);
 
-                      omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_List_union(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 3))), 1 /* true */)));
+                      omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_List_union(threadData, (OMC_BOX_FIELD(_eq, 3)), omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_whenOp, 3)), 1 /* true */)));
 
                       omc_File_write(threadData, _file, _OMC_LIT51);
 
-                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 3))));
+                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (OMC_BOX_FIELD(_whenOp, 3)));
 
                       omc_File_write(threadData, _file, _OMC_LIT52);
 
-                      omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 7))), _withOperations);
+                      omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 7)), _withOperations);
 
                       omc_File_write(threadData, _file, _OMC_LIT13);
                       goto tmp179_done;
@@ -2533,17 +2534,17 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
                       omc_File_write(threadData, _file, _OMC_LIT65);
 
-                      _crefs = listAppend(omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 2))), 1 /* true */), omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 3))), 1 /* true */));
+                      _crefs = listAppend(omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_whenOp, 2)), 1 /* true */), omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_whenOp, 3)), 1 /* true */));
 
-                      omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_List_union(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), _crefs));
+                      omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_List_union(threadData, (OMC_BOX_FIELD(_eq, 3)), _crefs));
 
                       omc_File_write(threadData, _file, _OMC_LIT51);
 
-                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 3))));
+                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (OMC_BOX_FIELD(_whenOp, 3)));
 
                       omc_File_write(threadData, _file, _OMC_LIT52);
 
-                      omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 7))), _withOperations);
+                      omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 7)), _withOperations);
 
                       omc_File_write(threadData, _file, _OMC_LIT13);
                       goto tmp179_done;
@@ -2557,15 +2558,15 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
                       omc_File_write(threadData, _file, _OMC_LIT65);
 
-                      omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_List_union(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 2))), 1 /* true */)));
+                      omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_List_union(threadData, (OMC_BOX_FIELD(_eq, 3)), omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_whenOp, 2)), 1 /* true */)));
 
                       omc_File_write(threadData, _file, _OMC_LIT51);
 
-                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 2))));
+                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (OMC_BOX_FIELD(_whenOp, 2)));
 
                       omc_File_write(threadData, _file, _OMC_LIT52);
 
-                      omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 7))), _withOperations);
+                      omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 7)), _withOperations);
 
                       omc_File_write(threadData, _file, _OMC_LIT13);
                       goto tmp179_done;
@@ -2579,15 +2580,15 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
                       omc_File_write(threadData, _file, _OMC_LIT65);
 
-                      omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_List_union(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3))), omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 2))), 1 /* true */)));
+                      omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_List_union(threadData, (OMC_BOX_FIELD(_eq, 3)), omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_whenOp, 2)), 1 /* true */)));
 
                       omc_File_write(threadData, _file, _OMC_LIT51);
 
-                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_whenOp), 2))));
+                      omc_SerializeTaskSystemInfo_serializeExp(threadData, _file, (OMC_BOX_FIELD(_whenOp, 2)));
 
                       omc_File_write(threadData, _file, _OMC_LIT52);
 
-                      omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 7))), _withOperations);
+                      omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 7)), _withOperations);
 
                       omc_File_write(threadData, _file, _OMC_LIT13);
                       goto tmp179_done;
@@ -2609,7 +2610,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           { /* match expression */
             modelica_metatype tmp185_1;
-            tmp185_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 6)));
+            tmp185_1 = (OMC_BOX_FIELD(_eq, 6));
             {
               modelica_metatype _e = NULL;
               volatile mmc_switch_type tmp185;
@@ -2621,7 +2622,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
                 case 0: {
                   modelica_metatype tmpMeta187;
                   if (optionNone(tmp185_1)) goto tmp184_end;
-                  tmpMeta187 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp185_1), 1));
+                  tmpMeta187 = OMC_BOX_FIELD(tmp185_1, 1);
                   _e = tmpMeta187;
                   /* Pattern matching succeeded */
                   if((omc_SimCodeUtil_simEqSystemIndex(threadData, _e) != ((modelica_integer) 0)))
@@ -2656,7 +2657,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           if((_parent != ((modelica_integer) 0)))
           {
@@ -2685,19 +2686,19 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
             }
           }
 
-          omc_ComponentReference_writeCref(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 6))), 3);
+          omc_ComponentReference_writeCref(threadData, _file, (OMC_BOX_FIELD(_eq, 6)), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT29);
 
-          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 7))), 1 /* true */));
+          omc_SerializeTaskSystemInfo_serializeUses(threadData, _file, omc_Expression_extractUniqueCrefsFromExpDerPreStart(threadData, (OMC_BOX_FIELD(_eq, 7)), 1 /* true */));
 
           omc_File_write(threadData, _file, _OMC_LIT24);
 
-          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 7)))), 3);
+          omc_File_writeEscape(threadData, _file, omc_ExpressionBasics_printExpStr(threadData, (OMC_BOX_FIELD(_eq, 7))), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT25);
 
-          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 8))), _withOperations);
+          omc_SerializeTaskSystemInfo_serializeSource(threadData, _file, (OMC_BOX_FIELD(_eq, 8)), _withOperations);
 
           omc_File_write(threadData, _file, _OMC_LIT13);
           tmp1 = 1 /* true */;
@@ -2709,11 +2710,11 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           /* Pattern matching succeeded */
           omc_File_write(threadData, _file, _OMC_LIT20);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 2)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 2))), _OMC_LIT4);
 
           omc_File_write(threadData, _file, _OMC_LIT66);
 
-          omc_File_writeInt(threadData, _file, mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eq), 3)))), _OMC_LIT4);
+          omc_File_writeInt(threadData, _file, omc_unbox_integer((OMC_BOX_FIELD(_eq, 3))), _OMC_LIT4);
 
           omc_File_write(threadData, _file, _OMC_LIT67);
 
@@ -2724,11 +2725,11 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           goto tmp3_done;
         }
         case 15: {
-          modelica_metatype tmpMeta188;
+          modelica_string tmp188;
           
           /* Pattern matching succeeded */
-          tmpMeta188 = stringAppend(_OMC_LIT69,mmc_anyString(_eq));
-          omc_Error_addInternalError(threadData, tmpMeta188, _OMC_LIT71);
+          tmp188 = stringAppend(_OMC_LIT69,mmc_anyString(_eq));
+          omc_Error_addInternalError(threadData, tmp188, _OMC_LIT71);
           goto goto_2;
           goto tmp3_done;
         }
@@ -2738,14 +2739,15 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _success = tmp1;
   _return: OMC_LABEL_UNUSED
-  return _success;
+  omc_ret_ = _success;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SerializeTaskSystemInfo_serializeEquation(threadData_t *threadData, modelica_metatype _file, modelica_metatype _eq, modelica_metatype _section, modelica_metatype _withOperations, modelica_metatype _parent, modelica_metatype _first, modelica_metatype _assign_type)
 {
@@ -2755,12 +2757,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SerializeTaskSystemInfo_seria
   modelica_integer tmp4;
   modelica_boolean _success;
   modelica_metatype out_success;
-  tmp1 = mmc_unbox_integer(_withOperations);
-  tmp2 = mmc_unbox_integer(_parent);
-  tmp3 = mmc_unbox_integer(_first);
-  tmp4 = mmc_unbox_integer(_assign_type);
+  tmp1 = omc_unbox_integer(_withOperations);
+  tmp2 = omc_unbox_integer(_parent);
+  tmp3 = omc_unbox_integer(_first);
+  tmp4 = omc_unbox_integer(_assign_type);
   _success = omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _eq, _section, tmp1, tmp2, tmp3, tmp4);
-  out_success = mmc_mk_icon(_success);
+  out_success = omc_mk_icon(_success);
   return out_success;
 }
 
@@ -2771,7 +2773,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
   modelica_complex _file;
   modelica_metatype _mi = NULL;
   modelica_metatype _vars = NULL;
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _success has no default value.
   // _fileName has no default value.
@@ -2783,7 +2786,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
       volatile mmc_switch_type tmp3;
       int tmp4;
       tmp3 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp2_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp3 < 2; tmp3++) {
@@ -2792,29 +2795,29 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
           modelica_metatype tmpMeta5;
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
+          modelica_string tmp8;
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmpMeta5 = _code;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 11));
+          tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 11);
           _mi = tmpMeta6;
           _vars = tmpMeta7;
 
-          tmpMeta8 = stringAppend((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_code), 37))),_OMC_LIT72);
-          _fileName = tmpMeta8;
+          tmp8 = stringAppend((OMC_BOX_FIELD(_code, 37)),_OMC_LIT72);
+          omc_string_store(&(_fileName), tmp8);
 
           omc_File_open(threadData, _file, _fileName, 2);
 
           omc_File_write(threadData, _file, _OMC_LIT73);
 
-          omc_SerializeTaskSystemInfo_serializePath(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_mi), 2))));
+          omc_SerializeTaskSystemInfo_serializePath(threadData, _file, (OMC_BOX_FIELD(_mi, 2)));
 
           omc_File_write(threadData, _file, _OMC_LIT74);
 
-          omc_File_writeEscape(threadData, _file, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_mi), 3))), 3);
+          omc_File_writeEscape(threadData, _file, (OMC_BOX_FIELD(_mi, 3)), 3);
 
           omc_File_write(threadData, _file, _OMC_LIT75);
 
@@ -2822,7 +2825,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
 
           {
             modelica_metatype _eq;
-            for (tmpMeta9 = omc_SimCodeUtil_sortEqSystems(threadData, omc_List_flatten(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_code), 9))))); !listEmpty(tmpMeta9); tmpMeta9=MMC_CDR(tmpMeta9))
+            for (tmpMeta9 = omc_SimCodeUtil_sortEqSystems(threadData, omc_List_flatten(threadData, (OMC_BOX_FIELD(_code, 9)))); !listEmpty(tmpMeta9); tmpMeta9=MMC_CDR(tmpMeta9))
             {
               _eq = MMC_CAR(tmpMeta9);
               omc_SerializeTaskSystemInfo_serializeEquation(threadData, _file, _eq, _OMC_LIT77, _withOperations, ((modelica_integer) 0), 0 /* false */, ((modelica_integer) 0));
@@ -2836,7 +2839,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
         }
         case 1: {
           /* Pattern matching succeeded */
-          _fileName = _OMC_LIT79;
+          omc_string_store(&(_fileName), _OMC_LIT79);
 
           omc_Error_addInternalError(threadData, _fileName, _OMC_LIT80);
 
@@ -2850,14 +2853,14 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
       goto goto_1;
       tmp2_done:
       (void)tmp3;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp2_done2;
       goto_1:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp3 < 2) {
         goto tmp2_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp2_done2:;
     }
   }
@@ -2865,41 +2868,44 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SerializeTaskSystemInfo_serialize
   _return: OMC_LABEL_UNUSED
   if (out_fileName) { *out_fileName = _fileName; }
   omc_File_File_destructor(threadData,_file);
-  return _success;
+  omc_ret_ = _success;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SerializeTaskSystemInfo_serializeParModWork(threadData_t *threadData, modelica_metatype _code, modelica_metatype _withOperations, modelica_metatype *out_fileName)
 {
   modelica_integer tmp1;
   modelica_boolean _success;
   modelica_metatype out_success;
-  tmp1 = mmc_unbox_integer(_withOperations);
+  tmp1 = omc_unbox_integer(_withOperations);
   _success = omc_SerializeTaskSystemInfo_serializeParModWork(threadData, _code, tmp1, out_fileName);
-  out_success = mmc_mk_icon(_success);
+  out_success = omc_mk_icon(_success);
   /* skip box _fileName; String */
   return out_success;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SerializeTaskSystemInfo_serializeParMod(threadData_t *threadData, modelica_metatype _code, modelica_boolean _withOperations)
 {
   modelica_string _fileName = NULL;
   modelica_string tmp1;
   modelica_boolean tmp2;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _fileName has no default value.
   /* Pattern-matching tuple assignment */
   tmp2 = omc_SerializeTaskSystemInfo_serializeParModWork(threadData, _code, _withOperations, &tmp1);
-  if (1 /* true */ != tmp2) MMC_THROW_INTERNAL();
+  if (1 /* true */ != tmp2) OMC_THROW_INTERNAL();
   _fileName = tmp1;
   _return: OMC_LABEL_UNUSED
-  return _fileName;
+  omc_ret_ = _fileName;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SerializeTaskSystemInfo_serializeParMod(threadData_t *threadData, modelica_metatype _code, modelica_metatype _withOperations)
 {
   modelica_integer tmp1;
   modelica_string _fileName = NULL;
-  tmp1 = mmc_unbox_integer(_withOperations);
+  tmp1 = omc_unbox_integer(_withOperations);
   _fileName = omc_SerializeTaskSystemInfo_serializeParMod(threadData, _code, tmp1);
   /* skip box _fileName; String */
   return _fileName;

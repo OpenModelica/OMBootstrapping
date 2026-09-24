@@ -6,7 +6,6 @@ extern "C" {
 
 #include "Array.h"
 #include "AvlSetCR.h"
-#include "AvlSetInt.h"
 #include "BackendDAEUtil.h"
 #include "BackendDump.h"
 #include "BackendEquation.h"

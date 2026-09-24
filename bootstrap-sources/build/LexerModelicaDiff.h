@@ -21,77 +21,77 @@ extern struct record_description LexerModelicaDiff_Token_TOKEN__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 void omc_LexerModelicaDiff_reportErrors(threadData_t *threadData, modelica_metatype _tokens);
 #define boxptr_LexerModelicaDiff_reportErrors omc_LexerModelicaDiff_reportErrors
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_reportErrors,2,0) {(void*) boxptr_LexerModelicaDiff_reportErrors,0}};
 #define boxvar_LexerModelicaDiff_reportErrors MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_reportErrors)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_LexerModelicaDiff_deleteWhitespaceFollowedByEqualNonWhitespace(threadData_t *threadData, modelica_metatype _inRest, modelica_metatype *out_result);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_LexerModelicaDiff_deleteWhitespaceFollowedByEqualNonWhitespace(threadData_t *threadData, modelica_metatype _inRest, modelica_metatype *out_result);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_deleteWhitespaceFollowedByEqualNonWhitespace,2,0) {(void*) boxptr_LexerModelicaDiff_deleteWhitespaceFollowedByEqualNonWhitespace,0}};
 #define boxvar_LexerModelicaDiff_deleteWhitespaceFollowedByEqualNonWhitespace MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_deleteWhitespaceFollowedByEqualNonWhitespace)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_LexerModelicaDiff_blockCommentCanonical(threadData_t *threadData, modelica_metatype _t);
 #define boxptr_LexerModelicaDiff_blockCommentCanonical omc_LexerModelicaDiff_blockCommentCanonical
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_blockCommentCanonical,2,0) {(void*) boxptr_LexerModelicaDiff_blockCommentCanonical,0}};
 #define boxvar_LexerModelicaDiff_blockCommentCanonical MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_blockCommentCanonical)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_LexerModelicaDiff_tuple22(threadData_t *threadData, modelica_metatype _t);
 #define boxptr_LexerModelicaDiff_tuple22 omc_LexerModelicaDiff_tuple22
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_tuple22,2,0) {(void*) boxptr_LexerModelicaDiff_tuple22,0}};
 #define boxvar_LexerModelicaDiff_tuple22 MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_tuple22)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_LexerModelicaDiff_tuple21(threadData_t *threadData, modelica_metatype _t);
 #define boxptr_LexerModelicaDiff_tuple21 omc_LexerModelicaDiff_tuple21
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_tuple21,2,0) {(void*) boxptr_LexerModelicaDiff_tuple21,0}};
 #define boxvar_LexerModelicaDiff_tuple21 MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_tuple21)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_LexerModelicaDiff_isLineComment(threadData_t *threadData, modelica_metatype _t);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_LexerModelicaDiff_isLineComment(threadData_t *threadData, modelica_metatype _t);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_isLineComment,2,0) {(void*) boxptr_LexerModelicaDiff_isLineComment,0}};
 #define boxvar_LexerModelicaDiff_isLineComment MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_isLineComment)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_LexerModelicaDiff_isBlockComment(threadData_t *threadData, modelica_metatype _t);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_LexerModelicaDiff_isBlockComment(threadData_t *threadData, modelica_metatype _t);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_isBlockComment,2,0) {(void*) boxptr_LexerModelicaDiff_isBlockComment,0}};
 #define boxvar_LexerModelicaDiff_isBlockComment MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_isBlockComment)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_LexerModelicaDiff_filterModelicaDiff(threadData_t *threadData, modelica_metatype _diffs, modelica_boolean _removeWhitespace);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_LexerModelicaDiff_filterModelicaDiff(threadData_t *threadData, modelica_metatype _diffs, modelica_metatype _removeWhitespace);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_filterModelicaDiff,2,0) {(void*) boxptr_LexerModelicaDiff_filterModelicaDiff,0}};
 #define boxvar_LexerModelicaDiff_filterModelicaDiff MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_filterModelicaDiff)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_LexerModelicaDiff_modelicaDiffTokenWhitespace(threadData_t *threadData, modelica_metatype _t);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_LexerModelicaDiff_modelicaDiffTokenWhitespace(threadData_t *threadData, modelica_metatype _t);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_modelicaDiffTokenWhitespace,2,0) {(void*) boxptr_LexerModelicaDiff_modelicaDiffTokenWhitespace,0}};
 #define boxvar_LexerModelicaDiff_modelicaDiffTokenWhitespace MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_modelicaDiffTokenWhitespace)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_LexerModelicaDiff_modelicaDiffTokenEq(threadData_t *threadData, modelica_metatype _ta, modelica_metatype _tb);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_LexerModelicaDiff_modelicaDiffTokenEq(threadData_t *threadData, modelica_metatype _ta, modelica_metatype _tb);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_modelicaDiffTokenEq,2,0) {(void*) boxptr_LexerModelicaDiff_modelicaDiffTokenEq,0}};
 #define boxvar_LexerModelicaDiff_modelicaDiffTokenEq MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_modelicaDiffTokenEq)
@@ -100,51 +100,51 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_modelicaDiffTokenEq,2
 #define boxptr_LexerModelicaDiff_lex omc_LexerModelicaDiff_lex
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_LexerModelicaDiff_tokenSourceInfo(threadData_t *threadData, modelica_metatype _token);
 #define boxptr_LexerModelicaDiff_tokenSourceInfo omc_LexerModelicaDiff_tokenSourceInfo
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_tokenSourceInfo,2,0) {(void*) boxptr_LexerModelicaDiff_tokenSourceInfo,0}};
 #define boxvar_LexerModelicaDiff_tokenSourceInfo MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_tokenSourceInfo)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_LexerModelicaDiff_tokenContentEq(threadData_t *threadData, modelica_metatype _token1, modelica_metatype _token2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_LexerModelicaDiff_tokenContentEq(threadData_t *threadData, modelica_metatype _token1, modelica_metatype _token2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_tokenContentEq,2,0) {(void*) boxptr_LexerModelicaDiff_tokenContentEq,0}};
 #define boxvar_LexerModelicaDiff_tokenContentEq MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_tokenContentEq)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_LexerModelicaDiff_tokenContent(threadData_t *threadData, modelica_metatype _token);
 #define boxptr_LexerModelicaDiff_tokenContent omc_LexerModelicaDiff_tokenContent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_tokenContent,2,0) {(void*) boxptr_LexerModelicaDiff_tokenContent,0}};
 #define boxvar_LexerModelicaDiff_tokenContent MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_tokenContent)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_LexerModelicaDiff_printToken(threadData_t *threadData, modelica_metatype _token);
 #define boxptr_LexerModelicaDiff_printToken omc_LexerModelicaDiff_printToken
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_printToken,2,0) {(void*) boxptr_LexerModelicaDiff_printToken,0}};
 #define boxvar_LexerModelicaDiff_printToken MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_printToken)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_LexerModelicaDiff_action(threadData_t *threadData, modelica_integer _act, modelica_integer _startSt, modelica_integer _mm_currSt, modelica_integer _mm_pos, modelica_integer _mm_sPos, modelica_integer _mm_ePos, modelica_integer _mm_linenr, modelica_integer _lineNrStart, modelica_integer _buffer, modelica_string _fileNm, modelica_string _fileContents, modelica_metatype _inErrorTokens, modelica_integer *out_mm_startSt, modelica_integer *out_bufferRet, modelica_metatype *out_errorTokens);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_LexerModelicaDiff_action(threadData_t *threadData, modelica_metatype _act, modelica_metatype _startSt, modelica_metatype _mm_currSt, modelica_metatype _mm_pos, modelica_metatype _mm_sPos, modelica_metatype _mm_ePos, modelica_metatype _mm_linenr, modelica_metatype _lineNrStart, modelica_metatype _buffer, modelica_metatype _fileNm, modelica_metatype _fileContents, modelica_metatype _inErrorTokens, modelica_metatype *out_mm_startSt, modelica_metatype *out_bufferRet, modelica_metatype *out_errorTokens);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_action,2,0) {(void*) boxptr_LexerModelicaDiff_action,0}};
 #define boxvar_LexerModelicaDiff_action MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_action)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_LexerModelicaDiff_scanString(threadData_t *threadData, modelica_string _fileSource, modelica_string _fileName, modelica_metatype *out_errorTokens);
 #define boxptr_LexerModelicaDiff_scanString omc_LexerModelicaDiff_scanString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_scanString,2,0) {(void*) boxptr_LexerModelicaDiff_scanString,0}};
 #define boxvar_LexerModelicaDiff_scanString MMC_REFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_scanString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_LexerModelicaDiff_scan(threadData_t *threadData, modelica_string _fileName, modelica_metatype *out_errorTokens);
 #define boxptr_LexerModelicaDiff_scan omc_LexerModelicaDiff_scan
 static const MMC_DEFSTRUCTLIT(boxvar_lit_LexerModelicaDiff_scan,2,0) {(void*) boxptr_LexerModelicaDiff_scan,0}};

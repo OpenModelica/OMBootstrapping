@@ -62,6 +62,8 @@ extern struct record_description DAE_CallAttributes_CALL__ATTR__desc;
 
 extern struct record_description DAE_ComponentPrefix_NOCOMPPRE__desc;
 
+extern struct record_description DAE_ComponentRef_CREF__IDENT__desc;
+
 extern struct record_description DAE_ConnectorType_NON__CONNECTOR__desc;
 
 extern struct record_description DAE_ElementSource_SOURCE__desc;
@@ -85,8 +87,6 @@ extern struct record_description DAE_Operator_SUB__desc;
 extern struct record_description DAE_Statement_STMT__NORETCALL__desc;
 
 extern struct record_description DAE_TailCall_NO__TAIL__desc;
-
-extern struct record_description DAE_Type_T__BOOL__desc;
 
 extern struct record_description DAE_Type_T__REAL__desc;
 
@@ -120,17 +120,19 @@ extern struct record_description Flags_FlagData_INT__FLAG__desc;
 
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
+extern struct record_description Initialization_EnhancedRows_ENHANCED__ROWS__desc;
+
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Initialization_replaceHomotopyWithSimplifiedEqs(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqs);
 #define boxptr_Initialization_replaceHomotopyWithSimplifiedEqs omc_Initialization_replaceHomotopyWithSimplifiedEqs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_replaceHomotopyWithSimplifiedEqs,2,0) {(void*) boxptr_Initialization_replaceHomotopyWithSimplifiedEqs,0}};
 #define boxvar_Initialization_replaceHomotopyWithSimplifiedEqs MMC_REFSTRUCTLIT(boxvar_lit_Initialization_replaceHomotopyWithSimplifiedEqs)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Initialization_replaceHomotopyWithSimplified(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_Initialization_replaceHomotopyWithSimplified omc_Initialization_replaceHomotopyWithSimplified
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_replaceHomotopyWithSimplified,2,0) {(void*) boxptr_Initialization_replaceHomotopyWithSimplified,0}};
@@ -140,7 +142,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_replaceHomotopyWithSimpl
 #define boxptr_Initialization_filterWhenEquation omc_Initialization_filterWhenEquation
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Initialization_removeInitializationStuff(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_Initialization_removeInitializationStuff omc_Initialization_removeInitializationStuff
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_removeInitializationStuff,2,0) {(void*) boxptr_Initialization_removeInitializationStuff,0}};
@@ -186,6 +188,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_removeInitializationStuf
 #define boxptr_Initialization_splitStrongComponents omc_Initialization_splitStrongComponents
 
 
+#define boxptr_Initialization_enhancedRows omc_Initialization_enhancedRows
+
+
 #define boxptr_Initialization_addStartValueEquations omc_Initialization_addStartValueEquations
 
 
@@ -210,9 +215,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_removeInitializationStuf
 #define boxptr_Initialization_selectInitializationVariables omc_Initialization_selectInitializationVariables
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_Initialization_flattenParamComp(threadData_t *threadData, modelica_metatype _paramIndices, modelica_metatype _inAllParameters);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Initialization_flattenParamComp(threadData_t *threadData, modelica_metatype _paramIndices, modelica_metatype _inAllParameters);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_flattenParamComp,2,0) {(void*) boxptr_Initialization_flattenParamComp,0}};
 #define boxvar_Initialization_flattenParamComp MMC_REFSTRUCTLIT(boxvar_lit_Initialization_flattenParamComp)
@@ -239,14 +244,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_flattenParamComp,2,0) {(
 #define boxptr_Initialization_collectPreVariablesTraverseExp2 omc_Initialization_collectPreVariablesTraverseExp2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Initialization_collectPreVariablesTraverseExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inHS, modelica_metatype *out_outHS);
 #define boxptr_Initialization_collectPreVariablesTraverseExp omc_Initialization_collectPreVariablesTraverseExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_collectPreVariablesTraverseExp,2,0) {(void*) boxptr_Initialization_collectPreVariablesTraverseExp,0}};
 #define boxvar_Initialization_collectPreVariablesTraverseExp MMC_REFSTRUCTLIT(boxvar_lit_Initialization_collectPreVariablesTraverseExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Initialization_collectPreVariablesEqSystem(threadData_t *threadData, modelica_metatype _inSyst, modelica_metatype _inHS);
 #define boxptr_Initialization_collectPreVariablesEqSystem omc_Initialization_collectPreVariablesEqSystem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_collectPreVariablesEqSystem,2,0) {(void*) boxptr_Initialization_collectPreVariablesEqSystem,0}};
@@ -280,15 +285,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_collectPreVariablesEqSys
 #define boxptr_Initialization_solveInitialSystemEqSystem omc_Initialization_solveInitialSystemEqSystem
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Initialization_createInitialDAEFromSystem(threadData_t *threadData, modelica_metatype _inInitsyst, modelica_metatype _inShared, modelica_metatype _initVars, modelica_metatype _enabledModules, modelica_metatype _disabledModules, modelica_metatype _globalKnownVars, modelica_boolean _isLambda0, modelica_metatype *out_dumpVars, modelica_metatype *out_removedEqns);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Initialization_createInitialDAEFromSystem(threadData_t *threadData, modelica_metatype _inInitsyst, modelica_metatype _inShared, modelica_metatype _initVars, modelica_metatype _enabledModules, modelica_metatype _disabledModules, modelica_metatype _globalKnownVars, modelica_metatype _isLambda0, modelica_metatype *out_dumpVars, modelica_metatype *out_removedEqns);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_createInitialDAEFromSystem,2,0) {(void*) boxptr_Initialization_createInitialDAEFromSystem,0}};
 #define boxvar_Initialization_createInitialDAEFromSystem MMC_REFSTRUCTLIT(boxvar_lit_Initialization_createInitialDAEFromSystem)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Initialization_solveInitialSystem(threadData_t *threadData, modelica_metatype _inDAE, modelica_metatype *out_outInitDAE_lambda0, modelica_metatype *out_outRemovedInitialEquations, modelica_metatype *out_outGlobalKnownVars, modelica_metatype *out_outSimDAE);
 #define boxptr_Initialization_solveInitialSystem omc_Initialization_solveInitialSystem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Initialization_solveInitialSystem,2,0) {(void*) boxptr_Initialization_solveInitialSystem,0}};

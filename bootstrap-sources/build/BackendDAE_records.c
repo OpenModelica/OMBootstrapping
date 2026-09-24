@@ -604,7 +604,7 @@ extern struct record_description BackendDAE_DataReconciliationData_DATA__RECON__
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef BackendDAE_Variables_VARIABLES__desc_added
 #define BackendDAE_Variables_VARIABLES__desc_added
-ADD_METARECORD_DEFINITIONS const char* BackendDAE_Variables_VARIABLES__desc__fields[4] = {"crefIndices","varArr","bucketSize","numberOfVars"};
+ADD_METARECORD_DEFINITIONS const char* BackendDAE_Variables_VARIABLES__desc__fields[5] = {"crefIndices","prefixIndices","varArr","bucketSize","numberOfVars"};
 ADD_METARECORD_DEFINITIONS struct record_description BackendDAE_Variables_VARIABLES__desc = {
   "BackendDAE_Variables_VARIABLES",
   "BackendDAE.Variables.VARIABLES",
@@ -617,7 +617,7 @@ extern struct record_description BackendDAE_Variables_VARIABLES__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef BackendDAE_Variables_VARIABLES__desc_added
 #define BackendDAE_Variables_VARIABLES__desc_added
-ADD_METARECORD_DEFINITIONS const char* BackendDAE_Variables_VARIABLES__desc__fields[4] = {"crefIndices","varArr","bucketSize","numberOfVars"};
+ADD_METARECORD_DEFINITIONS const char* BackendDAE_Variables_VARIABLES__desc__fields[5] = {"crefIndices","prefixIndices","varArr","bucketSize","numberOfVars"};
 ADD_METARECORD_DEFINITIONS struct record_description BackendDAE_Variables_VARIABLES__desc = {
   "BackendDAE_Variables_VARIABLES",
   "BackendDAE.Variables.VARIABLES",
@@ -652,6 +652,32 @@ ADD_METARECORD_DEFINITIONS struct record_description BackendDAE_CrefIndex_CREFIN
 #endif
 #else /* Only use the file as a header */
 extern struct record_description BackendDAE_CrefIndex_CREFINDEX__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef BackendDAE_PrefixIndex_PREFIXINDEX__desc_added
+#define BackendDAE_PrefixIndex_PREFIXINDEX__desc_added
+ADD_METARECORD_DEFINITIONS const char* BackendDAE_PrefixIndex_PREFIXINDEX__desc__fields[4] = {"cref","depth","numSubscripts","indices"};
+ADD_METARECORD_DEFINITIONS struct record_description BackendDAE_PrefixIndex_PREFIXINDEX__desc = {
+  "BackendDAE_PrefixIndex_PREFIXINDEX",
+  "BackendDAE.PrefixIndex.PREFIXINDEX",
+  BackendDAE_PrefixIndex_PREFIXINDEX__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description BackendDAE_PrefixIndex_PREFIXINDEX__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef BackendDAE_PrefixIndex_PREFIXINDEX__desc_added
+#define BackendDAE_PrefixIndex_PREFIXINDEX__desc_added
+ADD_METARECORD_DEFINITIONS const char* BackendDAE_PrefixIndex_PREFIXINDEX__desc__fields[4] = {"cref","depth","numSubscripts","indices"};
+ADD_METARECORD_DEFINITIONS struct record_description BackendDAE_PrefixIndex_PREFIXINDEX__desc = {
+  "BackendDAE_PrefixIndex_PREFIXINDEX",
+  "BackendDAE.PrefixIndex.PREFIXINDEX",
+  BackendDAE_PrefixIndex_PREFIXINDEX__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description BackendDAE_PrefixIndex_PREFIXINDEX__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef BackendDAE_VariableArray_VARIABLE__ARRAY__desc_added

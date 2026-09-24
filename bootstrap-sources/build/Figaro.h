@@ -168,14 +168,14 @@ extern struct record_description Figaro_Token_TEXT__desc;
 #define boxptr_Figaro_fcElement omc_Figaro_fcElement
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Figaro_makeFigaro(threadData_t *threadData, modelica_metatype _inProgram, modelica_metatype _inModel, modelica_metatype _env);
 #define boxptr_Figaro_makeFigaro omc_Figaro_makeFigaro
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Figaro_makeFigaro,2,0) {(void*) boxptr_Figaro_makeFigaro,0}};
 #define boxvar_Figaro_makeFigaro MMC_REFSTRUCTLIT(boxvar_lit_Figaro_makeFigaro)
 
 
-DLLDirection
+DLLModelDirection
 void omc_Figaro_run(threadData_t *threadData, modelica_metatype _inProgram, modelica_metatype _inPath, modelica_string _workingDir, modelica_string _inDatabaseFile, modelica_string _inMode, modelica_string _inOptions, modelica_string _inFigaroProcessorFile);
 #define boxptr_Figaro_run omc_Figaro_run
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Figaro_run,2,0) {(void*) boxptr_Figaro_run,0}};

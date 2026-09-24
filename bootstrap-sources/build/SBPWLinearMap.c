@@ -43,25 +43,27 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_SBPWLinearMap_toString_helper(thre
 {
   modelica_string _str = NULL;
   modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_string tmp2;
+  modelica_string tmp3;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
-  tmpMeta1 = mmc_mk_box3(3, &SBPWAtomicLinearMap_PW__ATOMIC__LINEAR__MAP__desc, _set, _lm);
-  tmpMeta2 = stringAppend(_OMC_LIT0,omc_SBPWAtomicLinearMap_toString(threadData, tmpMeta1));
-  tmpMeta3 = stringAppend(tmpMeta2,_OMC_LIT1);
-  _str = tmpMeta3;
+  tmpMeta1 = omc_mk_box3(3, &SBPWAtomicLinearMap_PW__ATOMIC__LINEAR__MAP__desc, _set, _lm);
+  tmp2 = stringAppend(_OMC_LIT0,omc_SBPWAtomicLinearMap_toString(threadData, tmpMeta1));
+  tmp3 = stringAppend(tmp2,_OMC_LIT1);
+  omc_string_store(&(_str), tmp3);
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 
 static modelica_metatype closure0_SBPWLinearMap_toString_helper(threadData_t *thData, modelica_metatype closure, modelica_metatype set)
 {
-  modelica_metatype lm = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype lm = OMC_BOX_FIELD(closure, 1);
   return boxptr_SBPWLinearMap_toString_helper(thData, set, lm);
 }
-DLLDirection
+DLLModelDirection
 modelica_string omc_SBPWLinearMap_toString(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_string _str = NULL;
@@ -74,13 +76,14 @@ modelica_string omc_SBPWLinearMap_toString(threadData_t *threadData, modelica_me
   modelica_integer tmp4;
   modelica_integer tmp5;
   modelica_integer tmp6;
-  modelica_metatype tmpMeta7;
-  modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_string tmp7;
+  modelica_string tmp8;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
-  _dom = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)));
-  _lmap = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3)));
+  _dom = (OMC_BOX_FIELD(_map, 2));
+  _lmap = (OMC_BOX_FIELD(_map, 3));
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _strl = tmpMeta1;
   tmp4 = arrayLength(_dom); tmp5 = ((modelica_integer) -1); tmp6 = ((modelica_integer) 1);
@@ -90,46 +93,43 @@ modelica_string omc_SBPWLinearMap_toString(threadData_t *threadData, modelica_me
     for(_i = arrayLength(_dom); in_range_integer(_i, tmp4, tmp6); _i += tmp5)
     {
 
-      tmpMeta3 = mmc_mk_box1(0, arrayGet(_lmap,_i) /* DAE.ASUB */);
-      tmpMeta2 = mmc_mk_cons(omc_UnorderedSet_toString(threadData, omc_SBSet_asets(threadData, arrayGet(_dom,_i) /* DAE.ASUB */), (modelica_fnptr) mmc_mk_box2(0,closure0_SBPWLinearMap_toString_helper,tmpMeta3), _OMC_LIT2), _strl);
+      tmpMeta3 = omc_mk_box1(0, arrayGet(_lmap,_i) /* DAE.ASUB */);
+      tmpMeta2 = mmc_mk_cons(omc_UnorderedSet_toString(threadData, omc_SBSet_asets(threadData, arrayGet(_dom,_i) /* DAE.ASUB */), (modelica_fnptr) omc_mk_box2(0,closure0_SBPWLinearMap_toString_helper,tmpMeta3), _OMC_LIT2), _strl);
       _strl = tmpMeta2;
     }
   }
 
-  tmpMeta7 = stringAppend(_OMC_LIT3,stringDelimitList(_strl, _OMC_LIT4));
-  tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT5);
-  _str = tmpMeta8;
+  tmp7 = stringAppend(_OMC_LIT3,stringDelimitList(_strl, _OMC_LIT4));
+  tmp8 = stringAppend(tmp7,_OMC_LIT5);
+  omc_string_store(&(_str), tmp8);
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SBPWLinearMap_isEqual(threadData_t *threadData, modelica_metatype _map1, modelica_metatype _map2)
 {
   modelica_boolean _equal;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _equal has no default value.
-  _equal = (omc_Array_isEqualOnTrue(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map1), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map2), 2))), boxvar_SBSet_isEqual) && omc_Array_isEqualOnTrue(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map1), 3))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map2), 3))), boxvar_SBLinearMap_isEqual));
+  _equal = (omc_Array_isEqualOnTrue(threadData, (OMC_BOX_FIELD(_map1, 2)), (OMC_BOX_FIELD(_map2, 2)), boxvar_SBSet_isEqual) && omc_Array_isEqualOnTrue(threadData, (OMC_BOX_FIELD(_map1, 3)), (OMC_BOX_FIELD(_map2, 3)), boxvar_SBLinearMap_isEqual));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _equal;
+  omc_ret_ = _equal;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBPWLinearMap_isEqual(threadData_t *threadData, modelica_metatype _map1, modelica_metatype _map2)
 {
   modelica_boolean _equal;
   modelica_metatype out_equal;
   _equal = omc_SBPWLinearMap_isEqual(threadData, _map1, _map2);
-  out_equal = mmc_mk_icon(_equal);
+  out_equal = omc_mk_icon(_equal);
   return out_equal;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_atomize(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_metatype _outMap = NULL;
@@ -152,15 +152,16 @@ modelica_metatype omc_SBPWLinearMap_atomize(threadData_t *threadData, modelica_m
   modelica_integer tmp9;
   modelica_integer tmp10;
   modelica_integer tmp11;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outMap has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _dres = tmpMeta1;
-  _dom = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)));
+  _dom = (OMC_BOX_FIELD(_map, 2));
   tmpMeta2 = MMC_REFSTRUCTLIT(mmc_nil);
   _lres = tmpMeta2;
-  _lm = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3)));
+  _lm = (OMC_BOX_FIELD(_map, 3));
   // _d has no default value.
   // _aux has no default value.
   // _l has no default value.
@@ -199,10 +200,11 @@ modelica_metatype omc_SBPWLinearMap_atomize(threadData_t *threadData, modelica_m
 
   _outMap = omc_SBPWLinearMap_new(threadData, listArray(listReverseInPlace(_dres)), listArray(listReverseInPlace(_lres)));
   _return: OMC_LABEL_UNUSED
-  return _outMap;
+  omc_ret_ = _outMap;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_combine(threadData_t *threadData, modelica_metatype _map1, modelica_metatype _map2)
 {
   modelica_metatype _outMap = NULL;
@@ -216,7 +218,8 @@ modelica_metatype omc_SBPWLinearMap_combine(threadData_t *threadData, modelica_m
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outMap has no default value.
   // _sres has no default value.
@@ -240,13 +243,13 @@ modelica_metatype omc_SBPWLinearMap_combine(threadData_t *threadData, modelica_m
     goto _return;
   }
 
-  _sres = omc_Vector_fromArray(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map1), 2))));
+  _sres = omc_Vector_fromArray(threadData, (OMC_BOX_FIELD(_map1, 2)));
 
-  _lres = omc_Vector_fromArray(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map1), 3))));
+  _lres = omc_Vector_fromArray(threadData, (OMC_BOX_FIELD(_map1, 3)));
 
-  _dom2 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map2), 2)));
+  _dom2 = (OMC_BOX_FIELD(_map2, 2));
 
-  _lm2 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map2), 3)));
+  _lm2 = (OMC_BOX_FIELD(_map2, 3));
 
   _aux1 = omc_SBPWLinearMap_wholeDom(threadData, _map1);
 
@@ -272,10 +275,11 @@ modelica_metatype omc_SBPWLinearMap_combine(threadData_t *threadData, modelica_m
 
   _outMap = omc_SBPWLinearMap_new(threadData, omc_Vector_toArray(threadData, _sres), omc_Vector_toArray(threadData, _lres));
   _return: OMC_LABEL_UNUSED
-  return _outMap;
+  omc_ret_ = _outMap;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_wholeDom(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_metatype _set = NULL;
@@ -283,24 +287,26 @@ modelica_metatype omc_SBPWLinearMap_wholeDom(threadData_t *threadData, modelica_
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_integer tmp4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _set has no default value.
   _set = omc_SBSet_newEmpty(threadData);
 
   {
     modelica_metatype _s;
-    for (tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2))), tmp4 = arrayLength(tmpMeta1), tmp3 = 1; tmp3 <= tmp4; tmp3++)
+    for (tmpMeta1 = (OMC_BOX_FIELD(_map, 2)), tmp4 = arrayLength(tmpMeta1), tmp3 = 1; tmp3 <= tmp4; tmp3++)
     {
       _s = arrayGet(tmpMeta1,tmp3);
       _set = omc_SBSet_union(threadData, _set, _s);
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _set;
+  omc_ret_ = _set;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_minInvCompact(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_metatype _outMap = NULL;
@@ -316,7 +322,8 @@ modelica_metatype omc_SBPWLinearMap_minInvCompact(threadData_t *threadData, mode
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outMap has no default value.
   // _aux_dom has no default value.
@@ -328,18 +335,18 @@ modelica_metatype omc_SBPWLinearMap_minInvCompact(threadData_t *threadData, mode
   // _reso has no default value.
   // _g has no default value.
   // _o has no default value.
-  if((arrayLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)))) != ((modelica_integer) 1)))
+  if((arrayLength((OMC_BOX_FIELD(_map, 2))) != ((modelica_integer) 1)))
   {
     _outMap = omc_SBPWLinearMap_newEmpty(threadData);
 
     goto _return;
   }
 
-  _aux_dom = arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2))), ((modelica_integer) 1));
+  _aux_dom = arrayGet((OMC_BOX_FIELD(_map, 2)), ((modelica_integer) 1));
 
   _dom_inv = omc_SBPWLinearMap_image(threadData, _map, _aux_dom);
 
-  _aux_map = arrayGet((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3))), ((modelica_integer) 1));
+  _aux_map = arrayGet((OMC_BOX_FIELD(_map, 3)), ((modelica_integer) 1));
 
   _map_inv = omc_SBLinearMap_inverse(threadData, _aux_map);
 
@@ -360,11 +367,11 @@ modelica_metatype omc_SBPWLinearMap_minInvCompact(threadData_t *threadData, mode
     for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp1, tmp3); _i += tmp2)
     {
 
-      if((mmc_unbox_real(arrayGet(_g,_i) /* DAE.ASUB */) == ((modelica_real)intMaxLit())))
+      if((omc_unbox_real(arrayGet(_g,_i) /* DAE.ASUB */) == ((modelica_real)intMaxLit())))
       {
         arrayUpdate(_resg,_i,_OMC_LIT6);
 
-        arrayUpdate(_reso,_i,mmc_mk_real(((modelica_real)mmc_unbox_integer(arrayGet(_min,_i) /* DAE.ASUB */))));
+        arrayUpdate(_reso,_i,omc_mk_real(((modelica_real)omc_unbox_integer(arrayGet(_min,_i) /* DAE.ASUB */))));
       }
       else
       {
@@ -377,10 +384,11 @@ modelica_metatype omc_SBPWLinearMap_minInvCompact(threadData_t *threadData, mode
 
   _outMap = omc_SBPWLinearMap_new(threadData, arrayCreate(((modelica_integer) 1), _dom_inv), arrayCreate(((modelica_integer) 1), omc_SBLinearMap_new(threadData, _resg, _reso)));
   _return: OMC_LABEL_UNUSED
-  return _outMap;
+  omc_ret_ = _outMap;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_compPW(threadData_t *threadData, modelica_metatype _map1, modelica_metatype _map2)
 {
   modelica_metatype _outMap = NULL;
@@ -403,14 +411,15 @@ modelica_metatype omc_SBPWLinearMap_compPW(threadData_t *threadData, modelica_me
   modelica_integer tmp4;
   modelica_integer tmp5;
   modelica_integer tmp6;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outMap has no default value.
-  _dom1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map1), 2)));
-  _dom2 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map2), 2)));
+  _dom1 = (OMC_BOX_FIELD(_map1, 2));
+  _dom2 = (OMC_BOX_FIELD(_map2, 2));
   // _ress has no default value.
-  _lmap1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map1), 3)));
-  _lmap2 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map2), 3)));
+  _lmap1 = (OMC_BOX_FIELD(_map1, 3));
+  _lmap2 = (OMC_BOX_FIELD(_map2, 3));
   // _reslm has no default value.
   // _aux_dom has no default value.
   // _new_dom has no default value.
@@ -475,7 +484,8 @@ modelica_metatype omc_SBPWLinearMap_compPW(threadData_t *threadData, modelica_me
 
   _outMap = omc_SBPWLinearMap_new(threadData, omc_Vector_toArray(threadData, _ress), omc_Vector_toArray(threadData, _reslm));
   _return: OMC_LABEL_UNUSED
-  return _outMap;
+  omc_ret_ = _outMap;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_SBPWLinearMap_preImage_add__set(threadData_t *threadData, modelica_metatype _aset, modelica_metatype _map, modelica_metatype _sets, modelica_metatype __omcQ_24in_5Fset)
@@ -486,7 +496,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SBPWLinearMap_preImage_add__set(
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_integer tmp4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _set = __omcQ_24in_5Fset;
   // _aux_map has no default value.
@@ -501,16 +512,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SBPWLinearMap_preImage_add__set(
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _set;
+  omc_ret_ = _set;
+  return omc_ret_;
 }
 
 static modelica_metatype closure1_SBPWLinearMap_preImage_add__set(threadData_t *thData, modelica_metatype closure, modelica_metatype aset, modelica_metatype $in_set)
 {
-  modelica_metatype map = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype sets = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
+  modelica_metatype map = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype sets = OMC_BOX_FIELD(closure, 2);
   return boxptr_SBPWLinearMap_preImage_add__set(thData, aset, map, sets, $in_set);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_preImage(threadData_t *threadData, modelica_metatype _map, modelica_metatype _set)
 {
   modelica_metatype _outSet = NULL;
@@ -523,11 +535,12 @@ modelica_metatype omc_SBPWLinearMap_preImage(threadData_t *threadData, modelica_
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_integer tmp4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outSet = omc_SBSet_newEmpty(threadData);
-  _dom = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)));
-  _lmap = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3)));
+  _dom = (OMC_BOX_FIELD(_map, 2));
+  _lmap = (OMC_BOX_FIELD(_map, 3));
   // _ss has no default value.
   // _partial_res has no default value.
   // _sets has no default value.
@@ -544,21 +557,23 @@ modelica_metatype omc_SBPWLinearMap_preImage(threadData_t *threadData, modelica_
 
       _partial_res = omc_SBSet_newEmpty(threadData);
 
-      tmpMeta1 = mmc_mk_box2(0, arrayGet(_lmap,_i) /* DAE.ASUB */, _sets);
-      _partial_res = omc_UnorderedSet_fold(threadData, omc_SBSet_asets(threadData, _ss), (modelica_fnptr) mmc_mk_box2(0,closure1_SBPWLinearMap_preImage_add__set,tmpMeta1), omc_SBSet_newEmpty(threadData));
+      tmpMeta1 = omc_mk_box2(0, arrayGet(_lmap,_i) /* DAE.ASUB */, _sets);
+      _partial_res = omc_UnorderedSet_fold(threadData, omc_SBSet_asets(threadData, _ss), (modelica_fnptr) omc_mk_box2(0,closure1_SBPWLinearMap_preImage_add__set,tmpMeta1), omc_SBSet_newEmpty(threadData));
 
       _outSet = omc_SBSet_union(threadData, _outSet, _partial_res);
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _outSet;
+  omc_ret_ = _outSet;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_SBPWLinearMap_image_add__set(threadData_t *threadData, modelica_metatype _aset, modelica_metatype _map, modelica_metatype __omcQ_24in_5Fset)
 {
   modelica_metatype _set = NULL;
   modelica_metatype _aux_map = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _set = __omcQ_24in_5Fset;
   // _aux_map has no default value.
@@ -566,15 +581,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SBPWLinearMap_image_add__set(thr
 
   _set = omc_SBSet_addAtomicSet(threadData, omc_SBPWAtomicLinearMap_image(threadData, _aux_map, _aset), _set);
   _return: OMC_LABEL_UNUSED
-  return _set;
+  omc_ret_ = _set;
+  return omc_ret_;
 }
 
 static modelica_metatype closure2_SBPWLinearMap_image_add__set(threadData_t *thData, modelica_metatype closure, modelica_metatype aset, modelica_metatype $in_set)
 {
-  modelica_metatype map = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype map = OMC_BOX_FIELD(closure, 1);
   return boxptr_SBPWLinearMap_image_add__set(thData, aset, map, $in_set);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_image(threadData_t *threadData, modelica_metatype _map, modelica_metatype _set)
 {
   modelica_metatype _outSet = NULL;
@@ -586,11 +602,12 @@ modelica_metatype omc_SBPWLinearMap_image(threadData_t *threadData, modelica_met
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_integer tmp4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outSet = omc_SBSet_newEmpty(threadData);
-  _dom = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)));
-  _lmap = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3)));
+  _dom = (OMC_BOX_FIELD(_map, 2));
+  _lmap = (OMC_BOX_FIELD(_map, 3));
   // _ss has no default value.
   // _partial_res has no default value.
   tmp2 = ((modelica_integer) 1); tmp3 = 1; tmp4 = arrayLength(_dom);
@@ -604,155 +621,159 @@ modelica_metatype omc_SBPWLinearMap_image(threadData_t *threadData, modelica_met
 
       _ss = omc_SBSet_intersection(threadData, _ss, _set);
 
-      tmpMeta1 = mmc_mk_box1(0, arrayGet(_lmap,_i) /* DAE.ASUB */);
-      _partial_res = omc_UnorderedSet_fold(threadData, omc_SBSet_asets(threadData, _ss), (modelica_fnptr) mmc_mk_box2(0,closure2_SBPWLinearMap_image_add__set,tmpMeta1), omc_SBSet_newEmpty(threadData));
+      tmpMeta1 = omc_mk_box1(0, arrayGet(_lmap,_i) /* DAE.ASUB */);
+      _partial_res = omc_UnorderedSet_fold(threadData, omc_SBSet_asets(threadData, _ss), (modelica_fnptr) omc_mk_box2(0,closure2_SBPWLinearMap_image_add__set,tmpMeta1), omc_SBSet_newEmpty(threadData));
 
       _outSet = omc_SBSet_union(threadData, _outSet, _partial_res);
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _outSet;
+  omc_ret_ = _outSet;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SBPWLinearMap_isEmpty(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_boolean _empty;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _empty = (arrayLength((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)))) == ((modelica_integer) 0));
+  _empty = (arrayLength((OMC_BOX_FIELD(_map, 2))) == ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _empty;
+  omc_ret_ = _empty;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBPWLinearMap_isEmpty(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_boolean _empty;
   modelica_metatype out_empty;
   _empty = omc_SBPWLinearMap_isEmpty(threadData, _map);
-  out_empty = mmc_mk_icon(_empty);
+  out_empty = omc_mk_icon(_empty);
   return out_empty;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SBPWLinearMap_ndim(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_integer _ndim;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _ndim = mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 4))));
+  _ndim = omc_unbox_integer((OMC_BOX_FIELD(_map, 4)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _ndim;
+  omc_ret_ = _ndim;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBPWLinearMap_ndim(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_integer _ndim;
   modelica_metatype out_ndim;
   _ndim = omc_SBPWLinearMap_ndim(threadData, _map);
-  out_ndim = mmc_mk_icon(_ndim);
+  out_ndim = omc_mk_icon(_ndim);
   return out_ndim;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_lmap(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_metatype _lmap = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _lmap = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3)));
+  _lmap = (OMC_BOX_FIELD(_map, 3));
   _return: OMC_LABEL_UNUSED
-  return _lmap;
+  omc_ret_ = _lmap;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_dom(threadData_t *threadData, modelica_metatype _map)
 {
   modelica_metatype _dom = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _dom = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2)));
+  _dom = (OMC_BOX_FIELD(_map, 2));
   _return: OMC_LABEL_UNUSED
-  return _dom;
+  omc_ret_ = _dom;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_copy(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmap)
 {
   modelica_metatype __omcQ_24mrfa_5F0 = NULL;
   modelica_metatype __omcQ_24mrfa_5F1 = NULL;
   modelica_metatype _map = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // __omcQ_24mrfa_5F0 has no default value.
   // __omcQ_24mrfa_5F1 has no default value.
   _map = __omcQ_24in_5Fmap;
-  __omcQ_24mrfa_5F0 = omc_Array_map(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 2))), boxvar_SBSet_copy);
+  __omcQ_24mrfa_5F0 = omc_Array_map(threadData, (OMC_BOX_FIELD(_map, 2)), boxvar_SBSet_copy);
 
-  __omcQ_24mrfa_5F1 = omc_Array_map(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 3))), boxvar_SBLinearMap_copy);
+  __omcQ_24mrfa_5F1 = omc_Array_map(threadData, (OMC_BOX_FIELD(_map, 3)), boxvar_SBLinearMap_copy);
 
-  tmpMeta1 = mmc_mk_box4(3, &SBPWLinearMap_PW__LINEAR__MAP__desc, __omcQ_24mrfa_5F0, __omcQ_24mrfa_5F1, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_map), 4))));
+  tmpMeta1 = omc_mk_box4(3, &SBPWLinearMap_PW__LINEAR__MAP__desc, __omcQ_24mrfa_5F0, __omcQ_24mrfa_5F1, (OMC_BOX_FIELD(_map, 4)));
   _map = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _map;
+  omc_ret_ = _map;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_newIdentity(threadData_t *threadData, modelica_metatype _set)
 {
   modelica_metatype _map = NULL;
   modelica_metatype _lmap = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _map has no default value.
   _lmap = omc_SBLinearMap_newIdentity(threadData, omc_SBSet_ndim(threadData, _set));
-  tmpMeta1 = mmc_mk_box4(3, &SBPWLinearMap_PW__LINEAR__MAP__desc, arrayCreate(((modelica_integer) 1), _set), arrayCreate(((modelica_integer) 1), _lmap), mmc_mk_integer(((modelica_integer) 1)));
+  tmpMeta1 = omc_mk_box4(3, &SBPWLinearMap_PW__LINEAR__MAP__desc, arrayCreate(((modelica_integer) 1), _set), arrayCreate(((modelica_integer) 1), _lmap), omc_mk_integer(((modelica_integer) 1)));
   _map = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _map;
+  omc_ret_ = _map;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_newEmpty(threadData_t *threadData)
 {
   modelica_metatype _map = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _map has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   tmpMeta2 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta3 = mmc_mk_box4(3, &SBPWLinearMap_PW__LINEAR__MAP__desc, listArray(tmpMeta1), listArray(tmpMeta2), mmc_mk_integer(((modelica_integer) 0)));
+  tmpMeta3 = omc_mk_box4(3, &SBPWLinearMap_PW__LINEAR__MAP__desc, listArray(tmpMeta1), listArray(tmpMeta2), omc_mk_integer(((modelica_integer) 0)));
   _map = tmpMeta3;
   _return: OMC_LABEL_UNUSED
-  return _map;
+  omc_ret_ = _map;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_newScalar(threadData_t *threadData, modelica_metatype _dom, modelica_metatype _lmap)
 {
   modelica_metatype _map = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _map has no default value.
   if((omc_SBSet_ndim(threadData, _dom) == omc_SBLinearMap_ndim(threadData, _lmap)))
   {
-    tmpMeta1 = mmc_mk_box4(3, &SBPWLinearMap_PW__LINEAR__MAP__desc, arrayCreate(((modelica_integer) 1), _dom), arrayCreate(((modelica_integer) 1), _lmap), mmc_mk_integer(((modelica_integer) 1)));
+    tmpMeta1 = omc_mk_box4(3, &SBPWLinearMap_PW__LINEAR__MAP__desc, arrayCreate(((modelica_integer) 1), _dom), arrayCreate(((modelica_integer) 1), _lmap), omc_mk_integer(((modelica_integer) 1)));
     _map = tmpMeta1;
   }
   else
@@ -760,19 +781,20 @@ modelica_metatype omc_SBPWLinearMap_newScalar(threadData_t *threadData, modelica
     _map = omc_SBPWLinearMap_newEmpty(threadData);
   }
   _return: OMC_LABEL_UNUSED
-  return _map;
+  omc_ret_ = _map;
+  return omc_ret_;
 }
 
 static modelica_metatype closure3_SBSet_isDim(threadData_t *thData, modelica_metatype closure, modelica_metatype set)
 {
-  modelica_metatype dim = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype dim = OMC_BOX_FIELD(closure, 1);
   return boxptr_SBSet_isDim(thData, set, dim);
 }static modelica_metatype closure4_SBLinearMap_isDim(threadData_t *thData, modelica_metatype closure, modelica_metatype map)
 {
-  modelica_metatype dim = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
+  modelica_metatype dim = OMC_BOX_FIELD(closure, 1);
   return boxptr_SBLinearMap_isDim(thData, map, dim);
 }
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBPWLinearMap_new(threadData_t *threadData, modelica_metatype _dom, modelica_metatype _lmap)
 {
   modelica_metatype _map = NULL;
@@ -781,7 +803,8 @@ modelica_metatype omc_SBPWLinearMap_new(threadData_t *threadData, modelica_metat
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _map has no default value.
   _dim = ((modelica_integer) 0);
@@ -797,9 +820,9 @@ modelica_metatype omc_SBPWLinearMap_new(threadData_t *threadData, modelica_metat
   {
     _dim = omc_SBSet_ndim(threadData, arrayGet(_dom,((modelica_integer) 1)) /* DAE.ASUB */);
 
-    tmpMeta1 = mmc_mk_box1(0, mmc_mk_integer(_dim));
-    tmpMeta2 = mmc_mk_box1(0, mmc_mk_integer(_dim));
-    _same_dims = (omc_Array_all(threadData, _dom, (modelica_fnptr) mmc_mk_box2(0,closure3_SBSet_isDim,tmpMeta1)) && omc_Array_all(threadData, _lmap, (modelica_fnptr) mmc_mk_box2(0,closure4_SBLinearMap_isDim,tmpMeta2)));
+    tmpMeta1 = omc_mk_box1(0, omc_mk_integer(_dim));
+    tmpMeta2 = omc_mk_box1(0, omc_mk_integer(_dim));
+    _same_dims = (omc_Array_all(threadData, _dom, (modelica_fnptr) omc_mk_box2(0,closure3_SBSet_isDim,tmpMeta1)) && omc_Array_all(threadData, _lmap, (modelica_fnptr) omc_mk_box2(0,closure4_SBLinearMap_isDim,tmpMeta2)));
   }
 
   if((!_same_dims))
@@ -808,10 +831,11 @@ modelica_metatype omc_SBPWLinearMap_new(threadData_t *threadData, modelica_metat
   }
   else
   {
-    tmpMeta3 = mmc_mk_box4(3, &SBPWLinearMap_PW__LINEAR__MAP__desc, arrayCopy(_dom), arrayCopy(_lmap), mmc_mk_integer(_dim));
+    tmpMeta3 = omc_mk_box4(3, &SBPWLinearMap_PW__LINEAR__MAP__desc, arrayCopy(_dom), arrayCopy(_lmap), omc_mk_integer(_dim));
     _map = tmpMeta3;
   }
   _return: OMC_LABEL_UNUSED
-  return _map;
+  omc_ret_ = _map;
+  return omc_ret_;
 }
 

@@ -57,10 +57,7 @@ PROTECTED_FUNCTION_STATIC void omc_NFEvalFunctionExt_assignVariableExt(threadDat
 {
   modelica_metatype _exp = NULL;
   modelica_metatype tmpMeta1;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _exp has no default value.
   { /* match expression */
@@ -85,15 +82,15 @@ PROTECTED_FUNCTION_STATIC void omc_NFEvalFunctionExt_assignVariableExt(threadDat
           modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,7,2) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 3);
           if (listEmpty(tmpMeta6)) goto tmp3_end;
           tmpMeta7 = MMC_CAR(tmpMeta6);
           tmpMeta8 = MMC_CDR(tmpMeta6);
           if (!listEmpty(tmpMeta8)) goto tmp3_end;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,8,3) == 0) goto tmp3_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,7,2) == 0) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 3));
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 3);
           if (listEmpty(tmpMeta10)) goto tmp3_end;
           tmpMeta11 = MMC_CAR(tmpMeta10);
           tmpMeta12 = MMC_CDR(tmpMeta10);
@@ -112,7 +109,7 @@ PROTECTED_FUNCTION_STATIC void omc_NFEvalFunctionExt_assignVariableExt(threadDat
             modelica_metatype _e_loopVar = 0;
             modelica_integer tmp19;
             modelica_metatype _e;
-            _e_loopVar = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_value), 3)));
+            _e_loopVar = (OMC_BOX_FIELD(_value, 3));
             tmp19 = 1;
             tmpMeta17 = MMC_REFSTRUCTLIT(mmc_nil);
             __omcQ_24tmpVar3 = tmpMeta17; /* defaultValue */
@@ -136,7 +133,7 @@ PROTECTED_FUNCTION_STATIC void omc_NFEvalFunctionExt_assignVariableExt(threadDat
             *tmp16 = mmc_mk_nil();
             tmpMeta15 = __omcQ_24tmpVar3;
           }
-          tmpMeta1 = omc_NFExpression_makeArray(threadData, omc_NFType_unliftArray(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_value), 2)))), listArray(tmpMeta15), 1 /* true */);
+          tmpMeta1 = omc_NFExpression_makeArray(threadData, omc_NFType_unliftArray(threadData, (OMC_BOX_FIELD(_value, 2))), listArray(tmpMeta15), 1 /* true */);
           goto tmp3_done;
         }
         case 1: {
@@ -151,7 +148,7 @@ PROTECTED_FUNCTION_STATIC void omc_NFEvalFunctionExt_assignVariableExt(threadDat
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -160,9 +157,6 @@ PROTECTED_FUNCTION_STATIC void omc_NFEvalFunctionExt_assignVariableExt(threadDat
 
   omc_NFEvalFunction_assignVariable(threadData, _variable, _exp);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -175,16 +169,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtRea
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _value has no default value.
   // _expl has no default value.
   // _ty has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = omc_NFCeval_evalExp(threadData, _arg, _OMC_LIT3);
-  if (mmc__uniontype__metarecord__typedef__equal(tmpMeta1,8,3) == 0) MMC_THROW_INTERNAL();
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
+  if (mmc__uniontype__metarecord__typedef__equal(tmpMeta1,8,3) == 0) OMC_THROW_INTERNAL();
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 3);
   _ty = tmpMeta2;
   _expl = tmpMeta3;
 
@@ -223,7 +218,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtRea
                 tmp13--;
               }
               if (tmp13 == 0) {
-                tmpMeta12 = mmc_mk_cons(mmc_mk_real(omc_NFEvalFunctionExt_getExtRealValue(threadData, _e)), MMC_REFSTRUCTLIT(mmc_nil));
+                tmpMeta12 = mmc_mk_cons(omc_mk_real(omc_NFEvalFunctionExt_getExtRealValue(threadData, _e)), MMC_REFSTRUCTLIT(mmc_nil));
                 __omcQ_24tmpVar4 = tmpMeta12;
                 *tmp10 = mmc_mk_cons(__omcQ_24tmpVar4,0);
                 tmp10 = &MMC_CDR(*tmp10);
@@ -286,7 +281,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtRea
                       tmp21--;
                     }
                     if (tmp21 == 0) {
-                      __omcQ_24tmpVar6 = mmc_mk_real(omc_NFEvalFunctionExt_getExtRealValue(threadData, _e));
+                      __omcQ_24tmpVar6 = omc_mk_real(omc_NFEvalFunctionExt_getExtRealValue(threadData, _e));
                       *tmp19 = mmc_mk_cons(__omcQ_24tmpVar6,0);
                       tmp19 = &MMC_CDR(*tmp19);
                     } else if (tmp21 == 1) {
@@ -319,14 +314,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtRea
       }
       goto goto_5;
       goto_5:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp6_done;
       tmp6_done:;
     }
   }
   _value = tmpMeta4;
   _return: OMC_LABEL_UNUSED
-  return _value;
+  omc_ret_ = _value;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtRealArrayArg(threadData_t *threadData, modelica_metatype _arg)
@@ -334,7 +330,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtRea
   modelica_metatype _value = NULL;
   modelica_metatype _expl = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _value has no default value.
   // _expl has no default value.
@@ -360,13 +357,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtRea
         tmp4--;
       }
       if (tmp4 == 0) {
-        __omcQ_24tmpVar10 = mmc_mk_real(omc_NFEvalFunctionExt_getExtRealValue(threadData, _e));
+        __omcQ_24tmpVar10 = omc_mk_real(omc_NFEvalFunctionExt_getExtRealValue(threadData, _e));
         *tmp2 = mmc_mk_cons(__omcQ_24tmpVar10,0);
         tmp2 = &MMC_CDR(*tmp2);
       } else if (tmp4 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp2 = mmc_mk_nil();
@@ -374,7 +371,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtRea
   }
   _value = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _value;
+  omc_ret_ = _value;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtIntArrayArg(threadData_t *threadData, modelica_metatype _arg)
@@ -382,7 +380,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtInt
   modelica_metatype _value = NULL;
   modelica_metatype _expl = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _value has no default value.
   // _expl has no default value.
@@ -408,13 +407,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtInt
         tmp4--;
       }
       if (tmp4 == 0) {
-        __omcQ_24tmpVar12 = mmc_mk_integer(omc_NFEvalFunctionExt_getExtIntValue(threadData, _e));
+        __omcQ_24tmpVar12 = omc_mk_integer(omc_NFEvalFunctionExt_getExtIntValue(threadData, _e));
         *tmp2 = mmc_mk_cons(__omcQ_24tmpVar12,0);
         tmp2 = &MMC_CDR(*tmp2);
       } else if (tmp4 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp2 = mmc_mk_nil();
@@ -422,14 +421,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFEvalFunctionExt_evaluateExtInt
   }
   _value = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _value;
+  omc_ret_ = _value;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_NFEvalFunctionExt_getExtStringValue(threadData_t *threadData, modelica_metatype _exp)
 {
   modelica_string _value = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _value has no default value.
   { /* match expression */
@@ -445,7 +446,7 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_NFEvalFunctionExt_getExtStringValu
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmp1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2)));
+          tmp1 = (OMC_BOX_FIELD(_exp, 2));
           goto tmp3_done;
         }
         case 1: {
@@ -461,34 +462,35 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_NFEvalFunctionExt_getExtStringValu
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _value = tmp1;
+  omc_string_store(&(_value), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _value;
+  omc_ret_ = _value;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_NFEvalFunctionExt_evaluateExtStringArg(threadData_t *threadData, modelica_metatype _arg)
 {
   modelica_string _value = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _value = omc_NFEvalFunctionExt_getExtStringValue(threadData, omc_NFCeval_evalExp(threadData, _arg, _OMC_LIT3));
   _return: OMC_LABEL_UNUSED
-  return _value;
+  omc_ret_ = _value;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_real omc_NFEvalFunctionExt_getExtRealValue(threadData_t *threadData, modelica_metatype _exp)
 {
   modelica_real _value;
   modelica_real tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_real omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _value has no default value.
   { /* match expression */
@@ -504,7 +506,7 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_NFEvalFunctionExt_getExtRealValue(th
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmp1 = mmc_unbox_real((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))));
+          tmp1 = omc_unbox_real((OMC_BOX_FIELD(_exp, 2)));
           goto tmp3_done;
         }
         case 1: {
@@ -520,48 +522,42 @@ PROTECTED_FUNCTION_STATIC modelica_real omc_NFEvalFunctionExt_getExtRealValue(th
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _value = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _value;
+  omc_ret_ = _value;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFEvalFunctionExt_getExtRealValue(threadData_t *threadData, modelica_metatype _exp)
 {
   modelica_real _value;
   modelica_metatype out_value;
   _value = omc_NFEvalFunctionExt_getExtRealValue(threadData, _exp);
-  out_value = mmc_mk_rcon(_value);
+  out_value = omc_mk_rcon(_value);
   return out_value;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_real omc_NFEvalFunctionExt_evaluateExtRealArg(threadData_t *threadData, modelica_metatype _arg)
 {
   modelica_real _value;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_real omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _value = omc_NFEvalFunctionExt_getExtRealValue(threadData, omc_NFCeval_evalExp(threadData, _arg, _OMC_LIT3));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _value;
+  omc_ret_ = _value;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFEvalFunctionExt_evaluateExtRealArg(threadData_t *threadData, modelica_metatype _arg)
 {
   modelica_real _value;
   modelica_metatype out_value;
   _value = omc_NFEvalFunctionExt_evaluateExtRealArg(threadData, _arg);
-  out_value = mmc_mk_rcon(_value);
+  out_value = omc_mk_rcon(_value);
   return out_value;
 }
 
@@ -569,10 +565,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFEvalFunctionExt_getExtIntValue(
 {
   modelica_integer _value;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _value has no default value.
   { /* match expression */
@@ -588,7 +582,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFEvalFunctionExt_getExtIntValue(
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmp1 = mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))));
+          tmp1 = omc_unbox_integer((OMC_BOX_FIELD(_exp, 2)));
           goto tmp3_done;
         }
         case 1: {
@@ -604,52 +598,46 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_NFEvalFunctionExt_getExtIntValue(
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _value = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _value;
+  omc_ret_ = _value;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFEvalFunctionExt_getExtIntValue(threadData_t *threadData, modelica_metatype _exp)
 {
   modelica_integer _value;
   modelica_metatype out_value;
   _value = omc_NFEvalFunctionExt_getExtIntValue(threadData, _exp);
-  out_value = mmc_mk_icon(_value);
+  out_value = omc_mk_icon(_value);
   return out_value;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_NFEvalFunctionExt_evaluateExtIntArg(threadData_t *threadData, modelica_metatype _arg)
 {
   modelica_integer _value;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _value = omc_NFEvalFunctionExt_getExtIntValue(threadData, omc_NFCeval_evalExp(threadData, _arg, _OMC_LIT3));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _value;
+  omc_ret_ = _value;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFEvalFunctionExt_evaluateExtIntArg(threadData_t *threadData, modelica_metatype _arg)
 {
   modelica_integer _value;
   modelica_metatype out_value;
   _value = omc_NFEvalFunctionExt_evaluateExtIntArg(threadData, _arg);
-  out_value = mmc_mk_icon(_value);
+  out_value = omc_mk_icon(_value);
   return out_value;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dhseqr(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _job = NULL;
@@ -709,10 +697,7 @@ void omc_NFEvalFunctionExt_Lapack__dhseqr(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta27;
   modelica_metatype tmpMeta28;
   modelica_metatype tmpMeta29;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _job has no default value.
   // _compz has no default value.
@@ -744,49 +729,49 @@ void omc_NFEvalFunctionExt_Lapack__dhseqr(threadData_t *threadData, modelica_met
   // _WORK has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   tmpMeta18 = MMC_CAR(tmpMeta17);
   tmpMeta19 = MMC_CDR(tmpMeta17);
-  if (listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
   tmpMeta20 = MMC_CAR(tmpMeta19);
   tmpMeta21 = MMC_CDR(tmpMeta19);
-  if (listEmpty(tmpMeta21)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta21)) OMC_THROW_INTERNAL();
   tmpMeta22 = MMC_CAR(tmpMeta21);
   tmpMeta23 = MMC_CDR(tmpMeta21);
-  if (listEmpty(tmpMeta23)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta23)) OMC_THROW_INTERNAL();
   tmpMeta24 = MMC_CAR(tmpMeta23);
   tmpMeta25 = MMC_CDR(tmpMeta23);
-  if (listEmpty(tmpMeta25)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta25)) OMC_THROW_INTERNAL();
   tmpMeta26 = MMC_CAR(tmpMeta25);
   tmpMeta27 = MMC_CDR(tmpMeta25);
-  if (listEmpty(tmpMeta27)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta27)) OMC_THROW_INTERNAL();
   tmpMeta28 = MMC_CAR(tmpMeta27);
   tmpMeta29 = MMC_CDR(tmpMeta27);
-  if (!listEmpty(tmpMeta29)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta29)) OMC_THROW_INTERNAL();
   _job = tmpMeta2;
   _compz = tmpMeta4;
   _n = tmpMeta6;
@@ -802,9 +787,9 @@ void omc_NFEvalFunctionExt_Lapack__dhseqr(threadData_t *threadData, modelica_met
   _lwork = tmpMeta26;
   _info = tmpMeta28;
 
-  _JOB = omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _job);
+  omc_string_store(&(_JOB), omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _job));
 
-  _COMPZ = omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _compz);
+  omc_string_store(&(_COMPZ), omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _compz));
 
   _N = omc_NFEvalFunctionExt_evaluateExtIntArg(threadData, _n);
 
@@ -838,13 +823,10 @@ void omc_NFEvalFunctionExt_Lapack__dhseqr(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dorgqr(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _m = NULL;
@@ -884,10 +866,7 @@ void omc_NFEvalFunctionExt_Lapack__dorgqr(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta17;
   modelica_metatype tmpMeta18;
   modelica_metatype tmpMeta19;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
   // _n has no default value.
@@ -909,34 +888,34 @@ void omc_NFEvalFunctionExt_Lapack__dorgqr(threadData_t *threadData, modelica_met
   // _WORK has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   tmpMeta18 = MMC_CAR(tmpMeta17);
   tmpMeta19 = MMC_CDR(tmpMeta17);
-  if (!listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
   _m = tmpMeta2;
   _n = tmpMeta4;
   _k = tmpMeta6;
@@ -971,13 +950,10 @@ void omc_NFEvalFunctionExt_Lapack__dorgqr(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgeqpf(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _m = NULL;
@@ -1013,10 +989,7 @@ void omc_NFEvalFunctionExt_Lapack__dgeqpf(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
   // _n has no default value.
@@ -1036,31 +1009,31 @@ void omc_NFEvalFunctionExt_Lapack__dgeqpf(threadData_t *threadData, modelica_met
   // _TAU has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (!listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   _m = tmpMeta2;
   _n = tmpMeta4;
   _a = tmpMeta6;
@@ -1092,13 +1065,10 @@ void omc_NFEvalFunctionExt_Lapack__dgeqpf(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgetri(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _n = NULL;
@@ -1130,10 +1100,7 @@ void omc_NFEvalFunctionExt_Lapack__dgetri(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta13;
   modelica_metatype tmpMeta14;
   modelica_metatype tmpMeta15;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _n has no default value.
   // _a has no default value.
@@ -1151,28 +1118,28 @@ void omc_NFEvalFunctionExt_Lapack__dgetri(threadData_t *threadData, modelica_met
   // _WORK has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (!listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   _n = tmpMeta2;
   _a = tmpMeta4;
   _lda = tmpMeta6;
@@ -1201,13 +1168,10 @@ void omc_NFEvalFunctionExt_Lapack__dgetri(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgetrs(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _trans = NULL;
@@ -1247,10 +1211,7 @@ void omc_NFEvalFunctionExt_Lapack__dgetrs(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta17;
   modelica_metatype tmpMeta18;
   modelica_metatype tmpMeta19;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _trans has no default value.
   // _n has no default value.
@@ -1272,34 +1233,34 @@ void omc_NFEvalFunctionExt_Lapack__dgetrs(threadData_t *threadData, modelica_met
   // _IPIV has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   tmpMeta18 = MMC_CAR(tmpMeta17);
   tmpMeta19 = MMC_CDR(tmpMeta17);
-  if (!listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
   _trans = tmpMeta2;
   _n = tmpMeta4;
   _nrhs = tmpMeta6;
@@ -1310,7 +1271,7 @@ void omc_NFEvalFunctionExt_Lapack__dgetrs(threadData_t *threadData, modelica_met
   _ldb = tmpMeta16;
   _info = tmpMeta18;
 
-  _TRANS = omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _trans);
+  omc_string_store(&(_TRANS), omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _trans));
 
   _N = omc_NFEvalFunctionExt_evaluateExtIntArg(threadData, _n);
 
@@ -1332,13 +1293,10 @@ void omc_NFEvalFunctionExt_Lapack__dgetrs(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgetrf(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _m = NULL;
@@ -1366,10 +1324,7 @@ void omc_NFEvalFunctionExt_Lapack__dgetrf(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
   // _n has no default value.
@@ -1385,25 +1340,25 @@ void omc_NFEvalFunctionExt_Lapack__dgetrf(threadData_t *threadData, modelica_met
   // _IPIV has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (!listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   _m = tmpMeta2;
   _n = tmpMeta4;
   _a = tmpMeta6;
@@ -1427,13 +1382,10 @@ void omc_NFEvalFunctionExt_Lapack__dgetrf(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgesvd(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _jobu = NULL;
@@ -1493,10 +1445,7 @@ void omc_NFEvalFunctionExt_Lapack__dgesvd(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta27;
   modelica_metatype tmpMeta28;
   modelica_metatype tmpMeta29;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _jobu has no default value.
   // _jobvt has no default value.
@@ -1528,49 +1477,49 @@ void omc_NFEvalFunctionExt_Lapack__dgesvd(threadData_t *threadData, modelica_met
   // _WORK has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   tmpMeta18 = MMC_CAR(tmpMeta17);
   tmpMeta19 = MMC_CDR(tmpMeta17);
-  if (listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
   tmpMeta20 = MMC_CAR(tmpMeta19);
   tmpMeta21 = MMC_CDR(tmpMeta19);
-  if (listEmpty(tmpMeta21)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta21)) OMC_THROW_INTERNAL();
   tmpMeta22 = MMC_CAR(tmpMeta21);
   tmpMeta23 = MMC_CDR(tmpMeta21);
-  if (listEmpty(tmpMeta23)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta23)) OMC_THROW_INTERNAL();
   tmpMeta24 = MMC_CAR(tmpMeta23);
   tmpMeta25 = MMC_CDR(tmpMeta23);
-  if (listEmpty(tmpMeta25)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta25)) OMC_THROW_INTERNAL();
   tmpMeta26 = MMC_CAR(tmpMeta25);
   tmpMeta27 = MMC_CDR(tmpMeta25);
-  if (listEmpty(tmpMeta27)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta27)) OMC_THROW_INTERNAL();
   tmpMeta28 = MMC_CAR(tmpMeta27);
   tmpMeta29 = MMC_CDR(tmpMeta27);
-  if (!listEmpty(tmpMeta29)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta29)) OMC_THROW_INTERNAL();
   _jobu = tmpMeta2;
   _jobvt = tmpMeta4;
   _m = tmpMeta6;
@@ -1586,9 +1535,9 @@ void omc_NFEvalFunctionExt_Lapack__dgesvd(threadData_t *threadData, modelica_met
   _lwork = tmpMeta26;
   _info = tmpMeta28;
 
-  _JOBU = omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobu);
+  omc_string_store(&(_JOBU), omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobu));
 
-  _JOBVT = omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobvt);
+  omc_string_store(&(_JOBVT), omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobvt));
 
   _M = omc_NFEvalFunctionExt_evaluateExtIntArg(threadData, _m);
 
@@ -1620,13 +1569,10 @@ void omc_NFEvalFunctionExt_Lapack__dgesvd(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgbsv(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _n = NULL;
@@ -1670,10 +1616,7 @@ void omc_NFEvalFunctionExt_Lapack__dgbsv(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta19;
   modelica_metatype tmpMeta20;
   modelica_metatype tmpMeta21;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _n has no default value.
   // _kl has no default value.
@@ -1697,37 +1640,37 @@ void omc_NFEvalFunctionExt_Lapack__dgbsv(threadData_t *threadData, modelica_meta
   // _IPIV has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   tmpMeta18 = MMC_CAR(tmpMeta17);
   tmpMeta19 = MMC_CDR(tmpMeta17);
-  if (listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
   tmpMeta20 = MMC_CAR(tmpMeta19);
   tmpMeta21 = MMC_CDR(tmpMeta19);
-  if (!listEmpty(tmpMeta21)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta21)) OMC_THROW_INTERNAL();
   _n = tmpMeta2;
   _kl = tmpMeta4;
   _ku = tmpMeta6;
@@ -1765,13 +1708,10 @@ void omc_NFEvalFunctionExt_Lapack__dgbsv(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgtsv(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _n = NULL;
@@ -1807,10 +1747,7 @@ void omc_NFEvalFunctionExt_Lapack__dgtsv(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _n has no default value.
   // _nrhs has no default value.
@@ -1830,31 +1767,31 @@ void omc_NFEvalFunctionExt_Lapack__dgtsv(threadData_t *threadData, modelica_meta
   // _B has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (!listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   _n = tmpMeta2;
   _nrhs = tmpMeta4;
   _dl = tmpMeta6;
@@ -1890,13 +1827,10 @@ void omc_NFEvalFunctionExt_Lapack__dgtsv(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgglse(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _m = NULL;
@@ -1952,10 +1886,7 @@ void omc_NFEvalFunctionExt_Lapack__dgglse(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta25;
   modelica_metatype tmpMeta26;
   modelica_metatype tmpMeta27;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
   // _n has no default value.
@@ -1985,46 +1916,46 @@ void omc_NFEvalFunctionExt_Lapack__dgglse(threadData_t *threadData, modelica_met
   // _X has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   tmpMeta18 = MMC_CAR(tmpMeta17);
   tmpMeta19 = MMC_CDR(tmpMeta17);
-  if (listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
   tmpMeta20 = MMC_CAR(tmpMeta19);
   tmpMeta21 = MMC_CDR(tmpMeta19);
-  if (listEmpty(tmpMeta21)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta21)) OMC_THROW_INTERNAL();
   tmpMeta22 = MMC_CAR(tmpMeta21);
   tmpMeta23 = MMC_CDR(tmpMeta21);
-  if (listEmpty(tmpMeta23)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta23)) OMC_THROW_INTERNAL();
   tmpMeta24 = MMC_CAR(tmpMeta23);
   tmpMeta25 = MMC_CDR(tmpMeta23);
-  if (listEmpty(tmpMeta25)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta25)) OMC_THROW_INTERNAL();
   tmpMeta26 = MMC_CAR(tmpMeta25);
   tmpMeta27 = MMC_CDR(tmpMeta25);
-  if (!listEmpty(tmpMeta27)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta27)) OMC_THROW_INTERNAL();
   _m = tmpMeta2;
   _n = tmpMeta4;
   _p = tmpMeta6;
@@ -2077,13 +2008,10 @@ void omc_NFEvalFunctionExt_Lapack__dgglse(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgesv(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _n = NULL;
@@ -2119,10 +2047,7 @@ void omc_NFEvalFunctionExt_Lapack__dgesv(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _n has no default value.
   // _nrhs has no default value.
@@ -2142,31 +2067,31 @@ void omc_NFEvalFunctionExt_Lapack__dgesv(threadData_t *threadData, modelica_meta
   // _IPIV has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (!listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   _n = tmpMeta2;
   _nrhs = tmpMeta4;
   _a = tmpMeta6;
@@ -2198,13 +2123,10 @@ void omc_NFEvalFunctionExt_Lapack__dgesv(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgelsy(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _m = NULL;
@@ -2260,10 +2182,7 @@ void omc_NFEvalFunctionExt_Lapack__dgelsy(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta25;
   modelica_metatype tmpMeta26;
   modelica_metatype tmpMeta27;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
   // _n has no default value.
@@ -2293,46 +2212,46 @@ void omc_NFEvalFunctionExt_Lapack__dgelsy(threadData_t *threadData, modelica_met
   // _WORK has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   tmpMeta18 = MMC_CAR(tmpMeta17);
   tmpMeta19 = MMC_CDR(tmpMeta17);
-  if (listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
   tmpMeta20 = MMC_CAR(tmpMeta19);
   tmpMeta21 = MMC_CDR(tmpMeta19);
-  if (listEmpty(tmpMeta21)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta21)) OMC_THROW_INTERNAL();
   tmpMeta22 = MMC_CAR(tmpMeta21);
   tmpMeta23 = MMC_CDR(tmpMeta21);
-  if (listEmpty(tmpMeta23)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta23)) OMC_THROW_INTERNAL();
   tmpMeta24 = MMC_CAR(tmpMeta23);
   tmpMeta25 = MMC_CDR(tmpMeta23);
-  if (listEmpty(tmpMeta25)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta25)) OMC_THROW_INTERNAL();
   tmpMeta26 = MMC_CAR(tmpMeta25);
   tmpMeta27 = MMC_CDR(tmpMeta25);
-  if (!listEmpty(tmpMeta27)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta27)) OMC_THROW_INTERNAL();
   _m = tmpMeta2;
   _n = tmpMeta4;
   _nrhs = tmpMeta6;
@@ -2383,13 +2302,10 @@ void omc_NFEvalFunctionExt_Lapack__dgelsy(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgelsx(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _m = NULL;
@@ -2468,10 +2384,7 @@ void omc_NFEvalFunctionExt_Lapack__dgelsx(threadData_t *threadData, modelica_met
   modelica_metatype tmpMeta50;
   modelica_metatype tmpMeta51;
   modelica_metatype tmpMeta52;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _m has no default value.
   // _n has no default value.
@@ -2501,43 +2414,43 @@ void omc_NFEvalFunctionExt_Lapack__dgelsx(threadData_t *threadData, modelica_met
   {
     /* Pattern-matching assignment */
     tmpMeta1 = _args;
-    if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
     tmpMeta2 = MMC_CAR(tmpMeta1);
     tmpMeta3 = MMC_CDR(tmpMeta1);
-    if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
     tmpMeta4 = MMC_CAR(tmpMeta3);
     tmpMeta5 = MMC_CDR(tmpMeta3);
-    if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
     tmpMeta6 = MMC_CAR(tmpMeta5);
     tmpMeta7 = MMC_CDR(tmpMeta5);
-    if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
     tmpMeta8 = MMC_CAR(tmpMeta7);
     tmpMeta9 = MMC_CDR(tmpMeta7);
-    if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
     tmpMeta10 = MMC_CAR(tmpMeta9);
     tmpMeta11 = MMC_CDR(tmpMeta9);
-    if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
     tmpMeta12 = MMC_CAR(tmpMeta11);
     tmpMeta13 = MMC_CDR(tmpMeta11);
-    if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
     tmpMeta14 = MMC_CAR(tmpMeta13);
     tmpMeta15 = MMC_CDR(tmpMeta13);
-    if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
     tmpMeta16 = MMC_CAR(tmpMeta15);
     tmpMeta17 = MMC_CDR(tmpMeta15);
-    if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
     tmpMeta18 = MMC_CAR(tmpMeta17);
     tmpMeta19 = MMC_CDR(tmpMeta17);
-    if (listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
     tmpMeta20 = MMC_CAR(tmpMeta19);
     tmpMeta21 = MMC_CDR(tmpMeta19);
-    if (listEmpty(tmpMeta21)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta21)) OMC_THROW_INTERNAL();
     tmpMeta22 = MMC_CAR(tmpMeta21);
     tmpMeta23 = MMC_CDR(tmpMeta21);
-    if (listEmpty(tmpMeta23)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta23)) OMC_THROW_INTERNAL();
     tmpMeta24 = MMC_CAR(tmpMeta23);
     tmpMeta25 = MMC_CDR(tmpMeta23);
-    if (!listEmpty(tmpMeta25)) MMC_THROW_INTERNAL();
+    if (!listEmpty(tmpMeta25)) OMC_THROW_INTERNAL();
     _m = tmpMeta2;
     _n = tmpMeta4;
     _nrhs = tmpMeta6;
@@ -2555,46 +2468,46 @@ void omc_NFEvalFunctionExt_Lapack__dgelsx(threadData_t *threadData, modelica_met
   {
     /* Pattern-matching assignment */
     tmpMeta26 = _args;
-    if (listEmpty(tmpMeta26)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta26)) OMC_THROW_INTERNAL();
     tmpMeta27 = MMC_CAR(tmpMeta26);
     tmpMeta28 = MMC_CDR(tmpMeta26);
-    if (listEmpty(tmpMeta28)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta28)) OMC_THROW_INTERNAL();
     tmpMeta29 = MMC_CAR(tmpMeta28);
     tmpMeta30 = MMC_CDR(tmpMeta28);
-    if (listEmpty(tmpMeta30)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta30)) OMC_THROW_INTERNAL();
     tmpMeta31 = MMC_CAR(tmpMeta30);
     tmpMeta32 = MMC_CDR(tmpMeta30);
-    if (listEmpty(tmpMeta32)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta32)) OMC_THROW_INTERNAL();
     tmpMeta33 = MMC_CAR(tmpMeta32);
     tmpMeta34 = MMC_CDR(tmpMeta32);
-    if (listEmpty(tmpMeta34)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta34)) OMC_THROW_INTERNAL();
     tmpMeta35 = MMC_CAR(tmpMeta34);
     tmpMeta36 = MMC_CDR(tmpMeta34);
-    if (listEmpty(tmpMeta36)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta36)) OMC_THROW_INTERNAL();
     tmpMeta37 = MMC_CAR(tmpMeta36);
     tmpMeta38 = MMC_CDR(tmpMeta36);
-    if (listEmpty(tmpMeta38)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta38)) OMC_THROW_INTERNAL();
     tmpMeta39 = MMC_CAR(tmpMeta38);
     tmpMeta40 = MMC_CDR(tmpMeta38);
-    if (listEmpty(tmpMeta40)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta40)) OMC_THROW_INTERNAL();
     tmpMeta41 = MMC_CAR(tmpMeta40);
     tmpMeta42 = MMC_CDR(tmpMeta40);
-    if (listEmpty(tmpMeta42)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta42)) OMC_THROW_INTERNAL();
     tmpMeta43 = MMC_CAR(tmpMeta42);
     tmpMeta44 = MMC_CDR(tmpMeta42);
-    if (listEmpty(tmpMeta44)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta44)) OMC_THROW_INTERNAL();
     tmpMeta45 = MMC_CAR(tmpMeta44);
     tmpMeta46 = MMC_CDR(tmpMeta44);
-    if (listEmpty(tmpMeta46)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta46)) OMC_THROW_INTERNAL();
     tmpMeta47 = MMC_CAR(tmpMeta46);
     tmpMeta48 = MMC_CDR(tmpMeta46);
-    if (listEmpty(tmpMeta48)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta48)) OMC_THROW_INTERNAL();
     tmpMeta49 = MMC_CAR(tmpMeta48);
     tmpMeta50 = MMC_CDR(tmpMeta48);
-    if (listEmpty(tmpMeta50)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta50)) OMC_THROW_INTERNAL();
     tmpMeta51 = MMC_CAR(tmpMeta50);
     tmpMeta52 = MMC_CDR(tmpMeta50);
-    if (!listEmpty(tmpMeta52)) MMC_THROW_INTERNAL();
+    if (!listEmpty(tmpMeta52)) OMC_THROW_INTERNAL();
     _m = tmpMeta27;
     _n = tmpMeta29;
     _nrhs = tmpMeta31;
@@ -2641,13 +2554,10 @@ void omc_NFEvalFunctionExt_Lapack__dgelsx(threadData_t *threadData, modelica_met
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgels(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _trans = NULL;
@@ -2695,10 +2605,7 @@ void omc_NFEvalFunctionExt_Lapack__dgels(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta21;
   modelica_metatype tmpMeta22;
   modelica_metatype tmpMeta23;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _trans has no default value.
   // _m has no default value.
@@ -2724,40 +2631,40 @@ void omc_NFEvalFunctionExt_Lapack__dgels(threadData_t *threadData, modelica_meta
   // _WORK has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   tmpMeta18 = MMC_CAR(tmpMeta17);
   tmpMeta19 = MMC_CDR(tmpMeta17);
-  if (listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
   tmpMeta20 = MMC_CAR(tmpMeta19);
   tmpMeta21 = MMC_CDR(tmpMeta19);
-  if (listEmpty(tmpMeta21)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta21)) OMC_THROW_INTERNAL();
   tmpMeta22 = MMC_CAR(tmpMeta21);
   tmpMeta23 = MMC_CDR(tmpMeta21);
-  if (!listEmpty(tmpMeta23)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta23)) OMC_THROW_INTERNAL();
   _trans = tmpMeta2;
   _m = tmpMeta4;
   _n = tmpMeta6;
@@ -2770,7 +2677,7 @@ void omc_NFEvalFunctionExt_Lapack__dgels(threadData_t *threadData, modelica_meta
   _lwork = tmpMeta20;
   _info = tmpMeta22;
 
-  _TRANS = omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _trans);
+  omc_string_store(&(_TRANS), omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _trans));
 
   _M = omc_NFEvalFunctionExt_evaluateExtIntArg(threadData, _m);
 
@@ -2800,13 +2707,10 @@ void omc_NFEvalFunctionExt_Lapack__dgels(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgegv(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _jobvl = NULL;
@@ -2878,10 +2782,7 @@ void omc_NFEvalFunctionExt_Lapack__dgegv(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta33;
   modelica_metatype tmpMeta34;
   modelica_metatype tmpMeta35;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _jobvl has no default value.
   // _jobvr has no default value.
@@ -2919,58 +2820,58 @@ void omc_NFEvalFunctionExt_Lapack__dgegv(threadData_t *threadData, modelica_meta
   // _BETA has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   tmpMeta18 = MMC_CAR(tmpMeta17);
   tmpMeta19 = MMC_CDR(tmpMeta17);
-  if (listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
   tmpMeta20 = MMC_CAR(tmpMeta19);
   tmpMeta21 = MMC_CDR(tmpMeta19);
-  if (listEmpty(tmpMeta21)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta21)) OMC_THROW_INTERNAL();
   tmpMeta22 = MMC_CAR(tmpMeta21);
   tmpMeta23 = MMC_CDR(tmpMeta21);
-  if (listEmpty(tmpMeta23)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta23)) OMC_THROW_INTERNAL();
   tmpMeta24 = MMC_CAR(tmpMeta23);
   tmpMeta25 = MMC_CDR(tmpMeta23);
-  if (listEmpty(tmpMeta25)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta25)) OMC_THROW_INTERNAL();
   tmpMeta26 = MMC_CAR(tmpMeta25);
   tmpMeta27 = MMC_CDR(tmpMeta25);
-  if (listEmpty(tmpMeta27)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta27)) OMC_THROW_INTERNAL();
   tmpMeta28 = MMC_CAR(tmpMeta27);
   tmpMeta29 = MMC_CDR(tmpMeta27);
-  if (listEmpty(tmpMeta29)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta29)) OMC_THROW_INTERNAL();
   tmpMeta30 = MMC_CAR(tmpMeta29);
   tmpMeta31 = MMC_CDR(tmpMeta29);
-  if (listEmpty(tmpMeta31)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta31)) OMC_THROW_INTERNAL();
   tmpMeta32 = MMC_CAR(tmpMeta31);
   tmpMeta33 = MMC_CDR(tmpMeta31);
-  if (listEmpty(tmpMeta33)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta33)) OMC_THROW_INTERNAL();
   tmpMeta34 = MMC_CAR(tmpMeta33);
   tmpMeta35 = MMC_CDR(tmpMeta33);
-  if (!listEmpty(tmpMeta35)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta35)) OMC_THROW_INTERNAL();
   _jobvl = tmpMeta2;
   _jobvr = tmpMeta4;
   _n = tmpMeta6;
@@ -2989,9 +2890,9 @@ void omc_NFEvalFunctionExt_Lapack__dgegv(threadData_t *threadData, modelica_meta
   _lwork = tmpMeta32;
   _info = tmpMeta34;
 
-  _JOBVL = omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobvl);
+  omc_string_store(&(_JOBVL), omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobvl));
 
-  _JOBVR = omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobvr);
+  omc_string_store(&(_JOBVR), omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobvr));
 
   _N = omc_NFEvalFunctionExt_evaluateExtIntArg(threadData, _n);
 
@@ -3027,13 +2928,10 @@ void omc_NFEvalFunctionExt_Lapack__dgegv(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_NFEvalFunctionExt_Lapack__dgeev(threadData_t *threadData, modelica_metatype _args)
 {
   modelica_metatype _jobvl = NULL;
@@ -3093,10 +2991,7 @@ void omc_NFEvalFunctionExt_Lapack__dgeev(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta27;
   modelica_metatype tmpMeta28;
   modelica_metatype tmpMeta29;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _jobvl has no default value.
   // _jobvr has no default value.
@@ -3128,49 +3023,49 @@ void omc_NFEvalFunctionExt_Lapack__dgeev(threadData_t *threadData, modelica_meta
   // _WI has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _args;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
-  if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
   tmpMeta4 = MMC_CAR(tmpMeta3);
   tmpMeta5 = MMC_CDR(tmpMeta3);
-  if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
   tmpMeta6 = MMC_CAR(tmpMeta5);
   tmpMeta7 = MMC_CDR(tmpMeta5);
-  if (listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
   tmpMeta8 = MMC_CAR(tmpMeta7);
   tmpMeta9 = MMC_CDR(tmpMeta7);
-  if (listEmpty(tmpMeta9)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta9)) OMC_THROW_INTERNAL();
   tmpMeta10 = MMC_CAR(tmpMeta9);
   tmpMeta11 = MMC_CDR(tmpMeta9);
-  if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
   tmpMeta12 = MMC_CAR(tmpMeta11);
   tmpMeta13 = MMC_CDR(tmpMeta11);
-  if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
   tmpMeta14 = MMC_CAR(tmpMeta13);
   tmpMeta15 = MMC_CDR(tmpMeta13);
-  if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
   tmpMeta16 = MMC_CAR(tmpMeta15);
   tmpMeta17 = MMC_CDR(tmpMeta15);
-  if (listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
   tmpMeta18 = MMC_CAR(tmpMeta17);
   tmpMeta19 = MMC_CDR(tmpMeta17);
-  if (listEmpty(tmpMeta19)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta19)) OMC_THROW_INTERNAL();
   tmpMeta20 = MMC_CAR(tmpMeta19);
   tmpMeta21 = MMC_CDR(tmpMeta19);
-  if (listEmpty(tmpMeta21)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta21)) OMC_THROW_INTERNAL();
   tmpMeta22 = MMC_CAR(tmpMeta21);
   tmpMeta23 = MMC_CDR(tmpMeta21);
-  if (listEmpty(tmpMeta23)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta23)) OMC_THROW_INTERNAL();
   tmpMeta24 = MMC_CAR(tmpMeta23);
   tmpMeta25 = MMC_CDR(tmpMeta23);
-  if (listEmpty(tmpMeta25)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta25)) OMC_THROW_INTERNAL();
   tmpMeta26 = MMC_CAR(tmpMeta25);
   tmpMeta27 = MMC_CDR(tmpMeta25);
-  if (listEmpty(tmpMeta27)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta27)) OMC_THROW_INTERNAL();
   tmpMeta28 = MMC_CAR(tmpMeta27);
   tmpMeta29 = MMC_CDR(tmpMeta27);
-  if (!listEmpty(tmpMeta29)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta29)) OMC_THROW_INTERNAL();
   _jobvl = tmpMeta2;
   _jobvr = tmpMeta4;
   _n = tmpMeta6;
@@ -3186,9 +3081,9 @@ void omc_NFEvalFunctionExt_Lapack__dgeev(threadData_t *threadData, modelica_meta
   _lwork = tmpMeta26;
   _info = tmpMeta28;
 
-  _JOBVL = omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobvl);
+  omc_string_store(&(_JOBVL), omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobvl));
 
-  _JOBVR = omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobvr);
+  omc_string_store(&(_JOBVR), omc_NFEvalFunctionExt_evaluateExtStringArg(threadData, _jobvr));
 
   _N = omc_NFEvalFunctionExt_evaluateExtIntArg(threadData, _n);
 
@@ -3220,9 +3115,6 @@ void omc_NFEvalFunctionExt_Lapack__dgeev(threadData_t *threadData, modelica_meta
 
   omc_NFEvalFunction_assignVariable(threadData, _info, omc_NFExpression_makeInteger(threadData, _INFO));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 

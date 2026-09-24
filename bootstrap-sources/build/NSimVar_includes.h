@@ -25,6 +25,7 @@ extern "C" {
 #include "NFVariable.h"
 #include "NSimVar.h"
 #include "Pointer.h"
+#include "PointerWeak.h"
 #include "StringUtil.h"
 #include "UnorderedMap.h"
 #include "UnorderedSet.h"

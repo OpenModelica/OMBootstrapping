@@ -21,21 +21,21 @@ extern struct record_description Tpl_StringToken_ST__STRING__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SimCodeDump_printExpStrEscaped(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_SimCodeDump_printExpStrEscaped omc_SimCodeDump_printExpStrEscaped
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeDump_printExpStrEscaped,2,0) {(void*) boxptr_SimCodeDump_printExpStrEscaped,0}};
 #define boxvar_SimCodeDump_printExpStrEscaped MMC_REFSTRUCTLIT(boxvar_lit_SimCodeDump_printExpStrEscaped)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SimCodeDump_dumpAlias(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_alias);
 #define boxptr_SimCodeDump_dumpAlias omc_SimCodeDump_dumpAlias
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeDump_dumpAlias,2,0) {(void*) boxptr_SimCodeDump_dumpAlias,0}};
 #define boxvar_SimCodeDump_dumpAlias MMC_REFSTRUCTLIT(boxvar_lit_SimCodeDump_dumpAlias)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SimCodeDump_dumpVarsShort(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_vars);
 #define boxptr_SimCodeDump_dumpVarsShort omc_SimCodeDump_dumpVarsShort
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeDump_dumpVarsShort,2,0) {(void*) boxptr_SimCodeDump_dumpVarsShort,0}};

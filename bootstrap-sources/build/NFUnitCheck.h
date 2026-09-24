@@ -126,7 +126,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFUnitCheck_updateModel omc_NFUnitCheck_updateModel
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFUnitCheck_checkUnits(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel);
 #define boxptr_NFUnitCheck_checkUnits omc_NFUnitCheck_checkUnits
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFUnitCheck_checkUnits,2,0) {(void*) boxptr_NFUnitCheck_checkUnits,0}};

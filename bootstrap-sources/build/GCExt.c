@@ -63,7 +63,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_GCExt_getProfStats_GC__get__prof
   return _stats;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_GCExt_getProfStats(threadData_t *threadData)
 {
   modelica_metatype _stats = NULL;
@@ -99,7 +99,8 @@ modelica_metatype omc_GCExt_getProfStats(threadData_t *threadData)
   modelica_metatype tmpMeta20;
   modelica_integer tmp21;
   modelica_metatype tmpMeta22;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _stats has no default value.
   // _heapsize_full has no default value.
@@ -114,26 +115,26 @@ modelica_metatype omc_GCExt_getProfStats(threadData_t *threadData)
   // _reclaimed_bytes_before_gc has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = omc_GCExt_getProfStats_GC__get__prof__stats__modelica(threadData);
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmp7 = mmc_unbox_integer(tmpMeta6);
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmp9 = mmc_unbox_integer(tmpMeta8);
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmp11 = mmc_unbox_integer(tmpMeta10);
-  tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 6));
-  tmp13 = mmc_unbox_integer(tmpMeta12);
-  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 7));
-  tmp15 = mmc_unbox_integer(tmpMeta14);
-  tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmp17 = mmc_unbox_integer(tmpMeta16);
-  tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
-  tmp19 = mmc_unbox_integer(tmpMeta18);
-  tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 10));
-  tmp21 = mmc_unbox_integer(tmpMeta20);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmp7 = omc_unbox_integer(tmpMeta6);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmp9 = omc_unbox_integer(tmpMeta8);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmp11 = omc_unbox_integer(tmpMeta10);
+  tmpMeta12 = OMC_BOX_FIELD(tmpMeta1, 6);
+  tmp13 = omc_unbox_integer(tmpMeta12);
+  tmpMeta14 = OMC_BOX_FIELD(tmpMeta1, 7);
+  tmp15 = omc_unbox_integer(tmpMeta14);
+  tmpMeta16 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmp17 = omc_unbox_integer(tmpMeta16);
+  tmpMeta18 = OMC_BOX_FIELD(tmpMeta1, 9);
+  tmp19 = omc_unbox_integer(tmpMeta18);
+  tmpMeta20 = OMC_BOX_FIELD(tmpMeta1, 10);
+  tmp21 = omc_unbox_integer(tmpMeta20);
   _heapsize_full = tmp3  /* pattern as ty=Integer */;
   _free_bytes_full = tmp5  /* pattern as ty=Integer */;
   _unmapped_bytes = tmp7  /* pattern as ty=Integer */;
@@ -145,18 +146,20 @@ modelica_metatype omc_GCExt_getProfStats(threadData_t *threadData)
   _bytes_reclaimed_since_gc = tmp19  /* pattern as ty=Integer */;
   _reclaimed_bytes_before_gc = tmp21  /* pattern as ty=Integer */;
 
-  tmpMeta22 = mmc_mk_box11(3, &GCExt_ProfStats_PROFSTATS__desc, mmc_mk_integer(_heapsize_full), mmc_mk_integer(_free_bytes_full), mmc_mk_integer(_unmapped_bytes), mmc_mk_integer(_bytes_allocd_since_gc), mmc_mk_integer(_allocd_bytes_before_gc), mmc_mk_integer(_non_gc_bytes), mmc_mk_integer(_gc_no), mmc_mk_integer(_markers_m1), mmc_mk_integer(_bytes_reclaimed_since_gc), mmc_mk_integer(_reclaimed_bytes_before_gc));
+  tmpMeta22 = omc_mk_box11(3, &GCExt_ProfStats_PROFSTATS__desc, omc_mk_integer(_heapsize_full), omc_mk_integer(_free_bytes_full), omc_mk_integer(_unmapped_bytes), omc_mk_integer(_bytes_allocd_since_gc), omc_mk_integer(_allocd_bytes_before_gc), omc_mk_integer(_non_gc_bytes), omc_mk_integer(_gc_no), omc_mk_integer(_markers_m1), omc_mk_integer(_bytes_reclaimed_since_gc), omc_mk_integer(_reclaimed_bytes_before_gc));
   _stats = tmpMeta22;
   _return: OMC_LABEL_UNUSED
-  return _stats;
+  omc_ret_ = _stats;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_GCExt_profStatsStr(threadData_t *threadData, modelica_metatype _stats, modelica_string _head, modelica_string _delimiter)
 {
   modelica_string _str = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
   { /* match expression */
@@ -169,75 +172,75 @@ modelica_string omc_GCExt_profStatsStr(threadData_t *threadData, modelica_metaty
       for (; tmp4 < 1; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
-          modelica_metatype tmpMeta6;
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
-          modelica_metatype tmpMeta18;
-          modelica_metatype tmpMeta19;
-          modelica_metatype tmpMeta20;
-          modelica_metatype tmpMeta21;
-          modelica_metatype tmpMeta22;
-          modelica_metatype tmpMeta23;
-          modelica_metatype tmpMeta24;
-          modelica_metatype tmpMeta25;
-          modelica_metatype tmpMeta26;
-          modelica_metatype tmpMeta27;
-          modelica_metatype tmpMeta28;
-          modelica_metatype tmpMeta29;
-          modelica_metatype tmpMeta30;
-          modelica_metatype tmpMeta31;
-          modelica_metatype tmpMeta32;
-          modelica_metatype tmpMeta33;
-          modelica_metatype tmpMeta34;
-          modelica_metatype tmpMeta35;
-          modelica_metatype tmpMeta36;
-          modelica_metatype tmpMeta37;
-          modelica_metatype tmpMeta38;
+          modelica_string tmp6;
+          modelica_string tmp7;
+          modelica_string tmp8;
+          modelica_string tmp9;
+          modelica_string tmp10;
+          modelica_string tmp11;
+          modelica_string tmp12;
+          modelica_string tmp13;
+          modelica_string tmp14;
+          modelica_string tmp15;
+          modelica_string tmp16;
+          modelica_string tmp17;
+          modelica_string tmp18;
+          modelica_string tmp19;
+          modelica_string tmp20;
+          modelica_string tmp21;
+          modelica_string tmp22;
+          modelica_string tmp23;
+          modelica_string tmp24;
+          modelica_string tmp25;
+          modelica_string tmp26;
+          modelica_string tmp27;
+          modelica_string tmp28;
+          modelica_string tmp29;
+          modelica_string tmp30;
+          modelica_string tmp31;
+          modelica_string tmp32;
+          modelica_string tmp33;
+          modelica_string tmp34;
+          modelica_string tmp35;
+          modelica_string tmp36;
+          modelica_string tmp37;
+          modelica_string tmp38;
           
           /* Pattern matching succeeded */
-          tmpMeta6 = stringAppend(_head,_delimiter);
-          tmpMeta7 = stringAppend(tmpMeta6,_OMC_LIT2);
-          tmpMeta8 = stringAppend(tmpMeta7,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 2))))));
-          tmpMeta9 = stringAppend(tmpMeta8,_delimiter);
-          tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT3);
-          tmpMeta11 = stringAppend(tmpMeta10,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 3))))));
-          tmpMeta12 = stringAppend(tmpMeta11,_delimiter);
-          tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT4);
-          tmpMeta14 = stringAppend(tmpMeta13,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 4))))));
-          tmpMeta15 = stringAppend(tmpMeta14,_delimiter);
-          tmpMeta16 = stringAppend(tmpMeta15,_OMC_LIT5);
-          tmpMeta17 = stringAppend(tmpMeta16,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 5))))));
-          tmpMeta18 = stringAppend(tmpMeta17,_delimiter);
-          tmpMeta19 = stringAppend(tmpMeta18,_OMC_LIT6);
-          tmpMeta20 = stringAppend(tmpMeta19,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 6))))));
-          tmpMeta21 = stringAppend(tmpMeta20,_delimiter);
-          tmpMeta22 = stringAppend(tmpMeta21,_OMC_LIT7);
-          tmpMeta23 = stringAppend(tmpMeta22,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 5)))) + (mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 6)))))));
-          tmpMeta24 = stringAppend(tmpMeta23,_delimiter);
-          tmpMeta25 = stringAppend(tmpMeta24,_OMC_LIT8);
-          tmpMeta26 = stringAppend(tmpMeta25,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 7))))));
-          tmpMeta27 = stringAppend(tmpMeta26,_delimiter);
-          tmpMeta28 = stringAppend(tmpMeta27,_OMC_LIT9);
-          tmpMeta29 = stringAppend(tmpMeta28,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 8))))));
-          tmpMeta30 = stringAppend(tmpMeta29,_delimiter);
-          tmpMeta31 = stringAppend(tmpMeta30,_OMC_LIT10);
-          tmpMeta32 = stringAppend(tmpMeta31,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 9))))));
-          tmpMeta33 = stringAppend(tmpMeta32,_delimiter);
-          tmpMeta34 = stringAppend(tmpMeta33,_OMC_LIT11);
-          tmpMeta35 = stringAppend(tmpMeta34,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 10))))));
-          tmpMeta36 = stringAppend(tmpMeta35,_delimiter);
-          tmpMeta37 = stringAppend(tmpMeta36,_OMC_LIT12);
-          tmpMeta38 = stringAppend(tmpMeta37,intString(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stats), 11))))));
-          tmp1 = tmpMeta38;
+          tmp6 = stringAppend(_head,_delimiter);
+          tmp7 = stringAppend(tmp6,_OMC_LIT2);
+          tmp8 = stringAppend(tmp7,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 2)))));
+          tmp9 = stringAppend(tmp8,_delimiter);
+          tmp10 = stringAppend(tmp9,_OMC_LIT3);
+          tmp11 = stringAppend(tmp10,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 3)))));
+          tmp12 = stringAppend(tmp11,_delimiter);
+          tmp13 = stringAppend(tmp12,_OMC_LIT4);
+          tmp14 = stringAppend(tmp13,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 4)))));
+          tmp15 = stringAppend(tmp14,_delimiter);
+          tmp16 = stringAppend(tmp15,_OMC_LIT5);
+          tmp17 = stringAppend(tmp16,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 5)))));
+          tmp18 = stringAppend(tmp17,_delimiter);
+          tmp19 = stringAppend(tmp18,_OMC_LIT6);
+          tmp20 = stringAppend(tmp19,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 6)))));
+          tmp21 = stringAppend(tmp20,_delimiter);
+          tmp22 = stringAppend(tmp21,_OMC_LIT7);
+          tmp23 = stringAppend(tmp22,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 5))) + (omc_unbox_integer((OMC_BOX_FIELD(_stats, 6))))));
+          tmp24 = stringAppend(tmp23,_delimiter);
+          tmp25 = stringAppend(tmp24,_OMC_LIT8);
+          tmp26 = stringAppend(tmp25,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 7)))));
+          tmp27 = stringAppend(tmp26,_delimiter);
+          tmp28 = stringAppend(tmp27,_OMC_LIT9);
+          tmp29 = stringAppend(tmp28,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 8)))));
+          tmp30 = stringAppend(tmp29,_delimiter);
+          tmp31 = stringAppend(tmp30,_OMC_LIT10);
+          tmp32 = stringAppend(tmp31,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 9)))));
+          tmp33 = stringAppend(tmp32,_delimiter);
+          tmp34 = stringAppend(tmp33,_OMC_LIT11);
+          tmp35 = stringAppend(tmp34,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 10)))));
+          tmp36 = stringAppend(tmp35,_delimiter);
+          tmp37 = stringAppend(tmp36,_OMC_LIT12);
+          tmp38 = stringAppend(tmp37,intString(omc_unbox_integer((OMC_BOX_FIELD(_stats, 11)))));
+          tmp1 = tmp38;
           goto tmp3_done;
         }
         }
@@ -246,14 +249,15 @@ modelica_string omc_GCExt_profStatsStr(threadData_t *threadData, modelica_metaty
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _str = tmp1;
+  omc_string_store(&(_str), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 
 void omc_GCExt_setMaxHeapSize(threadData_t *threadData, modelica_real _sz)
@@ -266,7 +270,7 @@ void omc_GCExt_setMaxHeapSize(threadData_t *threadData, modelica_real _sz)
 void boxptr_GCExt_setMaxHeapSize(threadData_t *threadData, modelica_metatype _sz)
 {
   modelica_real tmp1;
-  tmp1 = mmc_unbox_real(_sz);
+  tmp1 = omc_unbox_real(_sz);
   omc_GCExt_setMaxHeapSize(threadData, tmp1);
   return;
 }
@@ -281,7 +285,7 @@ void omc_GCExt_setForceUnmapOnGcollect(threadData_t *threadData, modelica_boolea
 void boxptr_GCExt_setForceUnmapOnGcollect(threadData_t *threadData, modelica_metatype _forceUnmap)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_forceUnmap);
+  tmp1 = omc_unbox_integer(_forceUnmap);
   omc_GCExt_setForceUnmapOnGcollect(threadData, tmp1);
   return;
 }
@@ -301,7 +305,7 @@ modelica_metatype boxptr_GCExt_getForceUnmapOnGcollect(threadData_t *threadData)
   modelica_boolean _res;
   modelica_metatype out_res;
   _res = omc_GCExt_getForceUnmapOnGcollect(threadData);
-  out_res = mmc_mk_icon(_res);
+  out_res = omc_mk_icon(_res);
   return out_res;
 }
 
@@ -315,7 +319,7 @@ void omc_GCExt_setFreeSpaceDivisor(threadData_t *threadData, modelica_integer _d
 void boxptr_GCExt_setFreeSpaceDivisor(threadData_t *threadData, modelica_metatype _divisor)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_divisor);
+  tmp1 = omc_unbox_integer(_divisor);
   omc_GCExt_setFreeSpaceDivisor(threadData, tmp1);
   return;
 }
@@ -336,9 +340,9 @@ modelica_metatype boxptr_GCExt_expandHeap(threadData_t *threadData, modelica_met
   modelica_real tmp1;
   modelica_boolean _success;
   modelica_metatype out_success;
-  tmp1 = mmc_unbox_real(_sz);
+  tmp1 = omc_unbox_real(_sz);
   _success = omc_GCExt_expandHeap(threadData, tmp1);
-  out_success = mmc_mk_icon(_success);
+  out_success = omc_mk_icon(_success);
   return out_success;
 }
 

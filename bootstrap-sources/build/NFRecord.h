@@ -59,111 +59,111 @@ extern struct record_description SCode_Comment_COMMENT__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_getDeclarationNode(threadData_t *threadData, modelica_metatype _recordNode, modelica_boolean _evaluate);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFRecord_getDeclarationNode(threadData_t *threadData, modelica_metatype _recordNode, modelica_metatype _evaluate);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_getDeclarationNode,2,0) {(void*) boxptr_NFRecord_getDeclarationNode,0}};
 #define boxvar_NFRecord_getDeclarationNode MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_getDeclarationNode)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_toFlatDeclarationStream(threadData_t *threadData, modelica_metatype _recordNode, modelica_metatype _format, modelica_string _indent, modelica_metatype __omcQ_24in_5Fs);
 #define boxptr_NFRecord_toFlatDeclarationStream omc_NFRecord_toFlatDeclarationStream
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_toFlatDeclarationStream,2,0) {(void*) boxptr_NFRecord_toFlatDeclarationStream,0}};
 #define boxvar_NFRecord_toFlatDeclarationStream MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_toFlatDeclarationStream)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_toDeclarationStream(threadData_t *threadData, modelica_metatype _recordNode, modelica_string _indent, modelica_metatype __omcQ_24in_5Fs);
 #define boxptr_NFRecord_toDeclarationStream omc_NFRecord_toDeclarationStream
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_toDeclarationStream,2,0) {(void*) boxptr_NFRecord_toDeclarationStream,0}};
 #define boxvar_NFRecord_toDeclarationStream MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_toDeclarationStream)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_foldInputFields(threadData_t *threadData, modelica_metatype _fields, modelica_metatype _args, modelica_fnptr _func, modelica_metatype __omcQ_24in_5FfoldArg);
 #define boxptr_NFRecord_foldInputFields omc_NFRecord_foldInputFields
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_foldInputFields,2,0) {(void*) boxptr_NFRecord_foldInputFields,0}};
 #define boxvar_NFRecord_foldInputFields MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_foldInputFields)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_fieldsToDAE(threadData_t *threadData, modelica_metatype _fields);
 #define boxptr_NFRecord_fieldsToDAE omc_NFRecord_fieldsToDAE
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_fieldsToDAE,2,0) {(void*) boxptr_NFRecord_fieldsToDAE,0}};
 #define boxvar_NFRecord_fieldsToDAE MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_fieldsToDAE)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_collectRecordField(threadData_t *threadData, modelica_metatype _component, modelica_metatype __omcQ_24in_5Ffields);
 #define boxptr_NFRecord_collectRecordField omc_NFRecord_collectRecordField
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_collectRecordField,2,0) {(void*) boxptr_NFRecord_collectRecordField,0}};
 #define boxvar_NFRecord_collectRecordField MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_collectRecordField)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_collectRecordFields(threadData_t *threadData, modelica_metatype _recNode, modelica_metatype *out_indexMap);
 #define boxptr_NFRecord_collectRecordFields omc_NFRecord_collectRecordFields
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_collectRecordFields,2,0) {(void*) boxptr_NFRecord_collectRecordFields,0}};
 #define boxvar_NFRecord_collectRecordFields MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_collectRecordFields)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFRecord_setFieldDirection(threadData_t *threadData, modelica_metatype _field, modelica_integer _direction);
-DLLDirection
+DLLModelDirection
 void boxptr_NFRecord_setFieldDirection(threadData_t *threadData, modelica_metatype _field, modelica_metatype _direction);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_setFieldDirection,2,0) {(void*) boxptr_NFRecord_setFieldDirection,0}};
 #define boxvar_NFRecord_setFieldDirection MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_setFieldDirection)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_collectRecordParam(threadData_t *threadData, modelica_metatype _component, modelica_metatype __omcQ_24in_5Finputs, modelica_metatype __omcQ_24in_5Flocals, modelica_metatype *out_locals);
 #define boxptr_NFRecord_collectRecordParam omc_NFRecord_collectRecordParam
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_collectRecordParam,2,0) {(void*) boxptr_NFRecord_collectRecordParam,0}};
 #define boxvar_NFRecord_collectRecordParam MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_collectRecordParam)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_collectRecordParams(threadData_t *threadData, modelica_metatype _recNode, modelica_metatype *out_locals, modelica_metatype *out_allParams);
 #define boxptr_NFRecord_collectRecordParams omc_NFRecord_collectRecordParams
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_collectRecordParams,2,0) {(void*) boxptr_NFRecord_collectRecordParams,0}};
 #define boxvar_NFRecord_collectRecordParams MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_collectRecordParams)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFRecord_checkLocalFieldOrder(threadData_t *threadData, modelica_metatype _locals, modelica_metatype _recNode, modelica_metatype _info);
 #define boxptr_NFRecord_checkLocalFieldOrder omc_NFRecord_checkLocalFieldOrder
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_checkLocalFieldOrder,2,0) {(void*) boxptr_NFRecord_checkLocalFieldOrder,0}};
 #define boxvar_NFRecord_checkLocalFieldOrder MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_checkLocalFieldOrder)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_instDefaultConstructor(threadData_t *threadData, modelica_metatype _path, modelica_metatype __omcQ_24in_5Fnode, modelica_integer _context, modelica_metatype _info);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFRecord_instDefaultConstructor(threadData_t *threadData, modelica_metatype _path, modelica_metatype __omcQ_24in_5Fnode, modelica_metatype _context, modelica_metatype _info);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_instDefaultConstructor,2,0) {(void*) boxptr_NFRecord_instDefaultConstructor,0}};
 #define boxvar_NFRecord_instDefaultConstructor MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_instDefaultConstructor)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFRecord_instRecord(threadData_t *threadData, modelica_metatype _node, modelica_integer _context);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFRecord_instRecord(threadData_t *threadData, modelica_metatype _node, modelica_metatype _context);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_instRecord,2,0) {(void*) boxptr_NFRecord_instRecord,0}};
 #define boxvar_NFRecord_instRecord MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_instRecord)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFRecord_Field_name(threadData_t *threadData, modelica_metatype _field);
 #define boxptr_NFRecord_Field_name omc_NFRecord_Field_name
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_Field_name,2,0) {(void*) boxptr_NFRecord_Field_name,0}};
 #define boxvar_NFRecord_Field_name MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_Field_name)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFRecord_Field_isInput(threadData_t *threadData, modelica_metatype _field);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFRecord_Field_isInput(threadData_t *threadData, modelica_metatype _field);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFRecord_Field_isInput,2,0) {(void*) boxptr_NFRecord_Field_isInput,0}};
 #define boxvar_NFRecord_Field_isInput MMC_REFSTRUCTLIT(boxvar_lit_NFRecord_Field_isInput)

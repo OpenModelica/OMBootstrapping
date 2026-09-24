@@ -16,8 +16,6 @@ extern struct record_description Absyn_InnerOuter_NOT__INNER__OUTER__desc;
 
 extern struct record_description Absyn_Path_IDENT__desc;
 
-extern struct record_description AvlSetInt_Tree_EMPTY__desc;
-
 extern struct record_description AvlTreePathFunction_Tree_EMPTY__desc;
 
 extern struct record_description BackendDAE_BackendDAE_DAE__desc;
@@ -225,14 +223,14 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_BackendDAEOptimize_traverseStrongComponentsForHomotopyLoop omc_BackendDAEOptimize_traverseStrongComponentsForHomotopyLoop
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_generateHomotopyComponents(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_generateHomotopyComponents omc_BackendDAEOptimize_generateHomotopyComponents
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_generateHomotopyComponents,2,0) {(void*) boxptr_BackendDAEOptimize_generateHomotopyComponents,0}};
 #define boxvar_BackendDAEOptimize_generateHomotopyComponents MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_generateHomotopyComponents)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_inlineHomotopy(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_inlineHomotopy omc_BackendDAEOptimize_inlineHomotopy
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_inlineHomotopy,2,0) {(void*) boxptr_BackendDAEOptimize_inlineHomotopy,0}};
@@ -242,14 +240,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_inlineHomotopy,2,0) 
 #define boxptr_BackendDAEOptimize_replaceDerCallOutputsOnly omc_BackendDAEOptimize_replaceDerCallOutputsOnly
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_evaluateOutputsOnly(threadData_t *threadData, modelica_metatype _daeIn);
 #define boxptr_BackendDAEOptimize_evaluateOutputsOnly omc_BackendDAEOptimize_evaluateOutputsOnly
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_evaluateOutputsOnly,2,0) {(void*) boxptr_BackendDAEOptimize_evaluateOutputsOnly,0}};
 #define boxvar_BackendDAEOptimize_evaluateOutputsOnly MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_evaluateOutputsOnly)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_addTimeAsState(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_addTimeAsState omc_BackendDAEOptimize_addTimeAsState
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_addTimeAsState,2,0) {(void*) boxptr_BackendDAEOptimize_addTimeAsState,0}};
@@ -268,14 +266,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_addTimeAsState,2,0) 
 #define boxptr_BackendDAEOptimize_listAllIterationVariables1 omc_BackendDAEOptimize_listAllIterationVariables1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_listAllIterationVariables0(threadData_t *threadData, modelica_metatype _inEqs, modelica_metatype *out_outComponentRef);
 #define boxptr_BackendDAEOptimize_listAllIterationVariables0 omc_BackendDAEOptimize_listAllIterationVariables0
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_listAllIterationVariables0,2,0) {(void*) boxptr_BackendDAEOptimize_listAllIterationVariables0,0}};
 #define boxvar_BackendDAEOptimize_listAllIterationVariables0 MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_listAllIterationVariables0)
 
 
-DLLDirection
+DLLModelDirection
 void omc_BackendDAEOptimize_listAllIterationVariables(threadData_t *threadData, modelica_metatype _inBackendDAE);
 #define boxptr_BackendDAEOptimize_listAllIterationVariables omc_BackendDAEOptimize_listAllIterationVariables
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_listAllIterationVariables,2,0) {(void*) boxptr_BackendDAEOptimize_listAllIterationVariables,0}};
@@ -285,7 +283,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_listAllIterationVari
 #define boxptr_BackendDAEOptimize_applyRewriteRulesBackendShared omc_BackendDAEOptimize_applyRewriteRulesBackendShared
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_applyRewriteRulesBackend(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_applyRewriteRulesBackend omc_BackendDAEOptimize_applyRewriteRulesBackend
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_applyRewriteRulesBackend,2,0) {(void*) boxptr_BackendDAEOptimize_applyRewriteRulesBackend,0}};
@@ -304,7 +302,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_applyRewriteRulesBac
 #define boxptr_BackendDAEOptimize_replaceDerCallWork omc_BackendDAEOptimize_replaceDerCallWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_replaceDerCalls(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_replaceDerCalls omc_BackendDAEOptimize_replaceDerCalls
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_replaceDerCalls,2,0) {(void*) boxptr_BackendDAEOptimize_replaceDerCalls,0}};
@@ -323,7 +321,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_replaceDerCalls,2,0)
 #define boxptr_BackendDAEOptimize_introduceDerAliasWork omc_BackendDAEOptimize_introduceDerAliasWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_introduceDerAlias(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_introduceDerAlias omc_BackendDAEOptimize_introduceDerAlias
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_introduceDerAlias,2,0) {(void*) boxptr_BackendDAEOptimize_introduceDerAlias,0}};
@@ -333,16 +331,16 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_introduceDerAlias,2,
 #define boxptr_BackendDAEOptimize_simplifyLoops__SplitFactors omc_BackendDAEOptimize_simplifyLoops__SplitFactors
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_simplifyLoops__SplitTerms(threadData_t *threadData, modelica_metatype _var_lst, modelica_metatype _inExp, modelica_metatype *out_noLoopTerms);
 #define boxptr_BackendDAEOptimize_simplifyLoops__SplitTerms omc_BackendDAEOptimize_simplifyLoops__SplitTerms
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyLoops__SplitTerms,2,0) {(void*) boxptr_BackendDAEOptimize_simplifyLoops__SplitTerms,0}};
 #define boxvar_BackendDAEOptimize_simplifyLoops__SplitTerms MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyLoops__SplitTerms)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_BackendDAEOptimize_simplifyLoopExp(threadData_t *threadData, modelica_integer _inIndx, modelica_metatype _inVars, modelica_metatype _inEqns, modelica_metatype _inShared, modelica_metatype _var_lst, modelica_metatype _inExp, modelica_metatype _ass1_, modelica_metatype _ass2_, modelica_boolean _simDAE, modelica_boolean _useTmpVars, modelica_integer _ii, modelica_metatype _inCompOrders, modelica_string _tmpVarName, modelica_boolean _noPara, modelica_metatype *out_outVars, modelica_metatype *out_outEqns, modelica_metatype *out_outShared, modelica_boolean *out_outUpdate, modelica_metatype *out_outExp, modelica_metatype *out_ass1, modelica_metatype *out_ass2, modelica_metatype *out_outCompOrder);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendDAEOptimize_simplifyLoopExp(threadData_t *threadData, modelica_metatype _inIndx, modelica_metatype _inVars, modelica_metatype _inEqns, modelica_metatype _inShared, modelica_metatype _var_lst, modelica_metatype _inExp, modelica_metatype _ass1_, modelica_metatype _ass2_, modelica_metatype _simDAE, modelica_metatype _useTmpVars, modelica_metatype _ii, modelica_metatype _inCompOrders, modelica_metatype _tmpVarName, modelica_metatype _noPara, modelica_metatype *out_outVars, modelica_metatype *out_outEqns, modelica_metatype *out_outShared, modelica_metatype *out_outUpdate, modelica_metatype *out_outExp, modelica_metatype *out_ass1, modelica_metatype *out_ass2, modelica_metatype *out_outCompOrder);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyLoopExp,2,0) {(void*) boxptr_BackendDAEOptimize_simplifyLoopExp,0}};
 #define boxvar_BackendDAEOptimize_simplifyLoopExp MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyLoopExp)
@@ -354,7 +352,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyLoopExp,2,0)
 #define boxptr_BackendDAEOptimize_simplifyLoopsMain omc_BackendDAEOptimize_simplifyLoopsMain
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_simplifyLoops(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_simplifyLoops omc_BackendDAEOptimize_simplifyLoops
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyLoops,2,0) {(void*) boxptr_BackendDAEOptimize_simplifyLoops,0}};
@@ -367,7 +365,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyLoops,2,0) {
 #define boxptr_BackendDAEOptimize_inlineFunctionInLoopsMain omc_BackendDAEOptimize_inlineFunctionInLoopsMain
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_inlineFunctionInLoops(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fdae);
 #define boxptr_BackendDAEOptimize_inlineFunctionInLoops omc_BackendDAEOptimize_inlineFunctionInLoops
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_inlineFunctionInLoops,2,0) {(void*) boxptr_BackendDAEOptimize_inlineFunctionInLoops,0}};
@@ -386,29 +384,29 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_inlineFunctionInLoop
 #define boxptr_BackendDAEOptimize_hetsWork omc_BackendDAEOptimize_hetsWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_hets(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_hets omc_BackendDAEOptimize_hets
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_hets,2,0) {(void*) boxptr_BackendDAEOptimize_hets,0}};
 #define boxvar_BackendDAEOptimize_hets MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_hets)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_simplifyComplexFunction2(threadData_t *threadData, modelica_metatype _e1);
 #define boxptr_BackendDAEOptimize_simplifyComplexFunction2 omc_BackendDAEOptimize_simplifyComplexFunction2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyComplexFunction2,2,0) {(void*) boxptr_BackendDAEOptimize_simplifyComplexFunction2,0}};
 #define boxvar_BackendDAEOptimize_simplifyComplexFunction2 MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyComplexFunction2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_simplifyComplexFunction1(threadData_t *threadData, modelica_metatype _inDAE, modelica_boolean _withTmpVars);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendDAEOptimize_simplifyComplexFunction1(threadData_t *threadData, modelica_metatype _inDAE, modelica_metatype _withTmpVars);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyComplexFunction1,2,0) {(void*) boxptr_BackendDAEOptimize_simplifyComplexFunction1,0}};
 #define boxvar_BackendDAEOptimize_simplifyComplexFunction1 MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyComplexFunction1)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_simplifyComplexFunction(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_simplifyComplexFunction omc_BackendDAEOptimize_simplifyComplexFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyComplexFunction,2,0) {(void*) boxptr_BackendDAEOptimize_simplifyComplexFunction,0}};
@@ -418,21 +416,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyComplexFunct
 #define boxptr_BackendDAEOptimize_sortEqnsVarsWorkTpl omc_BackendDAEOptimize_sortEqnsVarsWorkTpl
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_sortEqnsVars(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_sortEqnsVars omc_BackendDAEOptimize_sortEqnsVars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_sortEqnsVars,2,0) {(void*) boxptr_BackendDAEOptimize_sortEqnsVars,0}};
 #define boxvar_BackendDAEOptimize_sortEqnsVars MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_sortEqnsVars)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_addedScaledVars__inputs(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_addedScaledVars__inputs omc_BackendDAEOptimize_addedScaledVars__inputs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_addedScaledVars__inputs,2,0) {(void*) boxptr_BackendDAEOptimize_addedScaledVars__inputs,0}};
 #define boxvar_BackendDAEOptimize_addedScaledVars__inputs MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_addedScaledVars__inputs)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_addedScaledVars__states(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_addedScaledVars__states omc_BackendDAEOptimize_addedScaledVars__states
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_addedScaledVars__states,2,0) {(void*) boxptr_BackendDAEOptimize_addedScaledVars__states,0}};
@@ -457,16 +455,16 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_addedScaledVars__sta
 #define boxptr_BackendDAEOptimize_expandDerOperatorWork omc_BackendDAEOptimize_expandDerOperatorWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_expandDerOperator(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_expandDerOperator omc_BackendDAEOptimize_expandDerOperator
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_expandDerOperator,2,0) {(void*) boxptr_BackendDAEOptimize_expandDerOperator,0}};
 #define boxvar_BackendDAEOptimize_expandDerOperator MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_expandDerOperator)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_expandAlgorithmStmts(threadData_t *threadData, modelica_metatype _inAlg, modelica_metatype _inOutputs, modelica_metatype _inVars, modelica_boolean _isInitialEquation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendDAEOptimize_expandAlgorithmStmts(threadData_t *threadData, modelica_metatype _inAlg, modelica_metatype _inOutputs, modelica_metatype _inVars, modelica_metatype _isInitialEquation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_expandAlgorithmStmts,2,0) {(void*) boxptr_BackendDAEOptimize_expandAlgorithmStmts,0}};
 #define boxvar_BackendDAEOptimize_expandAlgorithmStmts MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_expandAlgorithmStmts)
@@ -475,22 +473,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_expandAlgorithmStmts
 #define boxptr_BackendDAEOptimize_eaddInitialStmtsToAlgorithms1Helper omc_BackendDAEOptimize_eaddInitialStmtsToAlgorithms1Helper
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_addInitialStmtsToAlgorithms(threadData_t *threadData, modelica_metatype _inDAE, modelica_boolean _isInitialSystem);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendDAEOptimize_addInitialStmtsToAlgorithms(threadData_t *threadData, modelica_metatype _inDAE, modelica_metatype _isInitialSystem);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_addInitialStmtsToAlgorithms,2,0) {(void*) boxptr_BackendDAEOptimize_addInitialStmtsToAlgorithms,0}};
 #define boxvar_BackendDAEOptimize_addInitialStmtsToAlgorithms MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_addInitialStmtsToAlgorithms)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_removeLocalKnownVars2(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsyst, modelica_metatype __omcQ_24in_5Fshared, modelica_metatype *out_shared);
 #define boxptr_BackendDAEOptimize_removeLocalKnownVars2 omc_BackendDAEOptimize_removeLocalKnownVars2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeLocalKnownVars2,2,0) {(void*) boxptr_BackendDAEOptimize_removeLocalKnownVars2,0}};
 #define boxvar_BackendDAEOptimize_removeLocalKnownVars2 MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeLocalKnownVars2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_removeLocalKnownVars(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_removeLocalKnownVars omc_BackendDAEOptimize_removeLocalKnownVars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeLocalKnownVars,2,0) {(void*) boxptr_BackendDAEOptimize_removeLocalKnownVars,0}};
@@ -500,7 +498,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeLocalKnownVars
 #define boxptr_BackendDAEOptimize_replaceEdgeChangeShared omc_BackendDAEOptimize_replaceEdgeChangeShared
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_replaceEdgeChange(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_replaceEdgeChange omc_BackendDAEOptimize_replaceEdgeChange
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_replaceEdgeChange,2,0) {(void*) boxptr_BackendDAEOptimize_replaceEdgeChange,0}};
@@ -513,7 +511,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_replaceEdgeChange,2,
 #define boxptr_BackendDAEOptimize_removeConstantsWork omc_BackendDAEOptimize_removeConstantsWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_removeConstants(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_removeConstants omc_BackendDAEOptimize_removeConstants
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeConstants,2,0) {(void*) boxptr_BackendDAEOptimize_removeConstants,0}};
@@ -541,7 +539,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeConstants,2,0)
 #define boxptr_BackendDAEOptimize_simplifysemiLinearWork omc_BackendDAEOptimize_simplifysemiLinearWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_simplifysemiLinear(threadData_t *threadData, modelica_metatype _dae);
 #define boxptr_BackendDAEOptimize_simplifysemiLinear omc_BackendDAEOptimize_simplifysemiLinear
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifysemiLinear,2,0) {(void*) boxptr_BackendDAEOptimize_simplifysemiLinear,0}};
@@ -551,7 +549,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifysemiLinear,2
 #define boxptr_BackendDAEOptimize_makeEquationsFromResiduals omc_BackendDAEOptimize_makeEquationsFromResiduals
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_makeEquationToResidualExp(threadData_t *threadData, modelica_metatype _eq);
 #define boxptr_BackendDAEOptimize_makeEquationToResidualExp omc_BackendDAEOptimize_makeEquationToResidualExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_makeEquationToResidualExp,2,0) {(void*) boxptr_BackendDAEOptimize_makeEquationToResidualExp,0}};
@@ -603,7 +601,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_makeEquationToResidu
 #define boxptr_BackendDAEOptimize_simplifyIfEquationsWork omc_BackendDAEOptimize_simplifyIfEquationsWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_simplifyIfEquations(threadData_t *threadData, modelica_metatype _dae);
 #define boxptr_BackendDAEOptimize_simplifyIfEquations omc_BackendDAEOptimize_simplifyIfEquations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyIfEquations,2,0) {(void*) boxptr_BackendDAEOptimize_simplifyIfEquations,0}};
@@ -619,7 +617,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyIfEquations,
 #define boxptr_BackendDAEOptimize_traversecountOperationsExp omc_BackendDAEOptimize_traversecountOperationsExp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_countOperationsExp(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _shared, modelica_metatype _inTpl, modelica_metatype *out_outTpl);
 #define boxptr_BackendDAEOptimize_countOperationsExp omc_BackendDAEOptimize_countOperationsExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_countOperationsExp,2,0) {(void*) boxptr_BackendDAEOptimize_countOperationsExp,0}};
@@ -632,36 +630,36 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_countOperationsExp,2
 #define boxptr_BackendDAEOptimize_countOperationsJac omc_BackendDAEOptimize_countOperationsJac
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_countOperationstraverseComps(threadData_t *threadData, modelica_metatype _inComps, modelica_metatype _isyst, modelica_metatype _ishared, modelica_metatype _compInfosIn);
 #define boxptr_BackendDAEOptimize_countOperationstraverseComps omc_BackendDAEOptimize_countOperationstraverseComps
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_countOperationstraverseComps,2,0) {(void*) boxptr_BackendDAEOptimize_countOperationstraverseComps,0}};
 #define boxvar_BackendDAEOptimize_countOperationstraverseComps MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_countOperationstraverseComps)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_countOperations(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_countOperations omc_BackendDAEOptimize_countOperations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_countOperations,2,0) {(void*) boxptr_BackendDAEOptimize_countOperations,0}};
 #define boxvar_BackendDAEOptimize_countOperations MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_countOperations)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_residualForm(threadData_t *threadData, modelica_metatype _dlow);
 #define boxptr_BackendDAEOptimize_residualForm omc_BackendDAEOptimize_residualForm
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_residualForm,2,0) {(void*) boxptr_BackendDAEOptimize_residualForm,0}};
 #define boxvar_BackendDAEOptimize_residualForm MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_residualForm)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_partitionIndependentBlocksHelper(threadData_t *threadData, modelica_metatype _isyst, modelica_metatype _ishared, modelica_integer _numErrorMessages, modelica_boolean _throwNoError, modelica_metatype *out_oshared);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendDAEOptimize_partitionIndependentBlocksHelper(threadData_t *threadData, modelica_metatype _isyst, modelica_metatype _ishared, modelica_metatype _numErrorMessages, modelica_metatype _throwNoError, modelica_metatype *out_oshared);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_partitionIndependentBlocksHelper,2,0) {(void*) boxptr_BackendDAEOptimize_partitionIndependentBlocksHelper,0}};
 #define boxvar_BackendDAEOptimize_partitionIndependentBlocksHelper MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_partitionIndependentBlocksHelper)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_partitionIndependentBlocks(threadData_t *threadData, modelica_metatype _dlow);
 #define boxptr_BackendDAEOptimize_partitionIndependentBlocks omc_BackendDAEOptimize_partitionIndependentBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_partitionIndependentBlocks,2,0) {(void*) boxptr_BackendDAEOptimize_partitionIndependentBlocks,0}};
@@ -671,7 +669,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_partitionIndependent
 #define boxptr_BackendDAEOptimize_mergeIndependentBlocks omc_BackendDAEOptimize_mergeIndependentBlocks
 
 
-DLLDirection
+DLLModelDirection
+modelica_metatype omc_BackendDAEOptimize_collapseIndependentContinuousBlocks(threadData_t *threadData, modelica_metatype _inDAE);
+#define boxptr_BackendDAEOptimize_collapseIndependentContinuousBlocks omc_BackendDAEOptimize_collapseIndependentContinuousBlocks
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_collapseIndependentContinuousBlocks,2,0) {(void*) boxptr_BackendDAEOptimize_collapseIndependentContinuousBlocks,0}};
+#define boxvar_BackendDAEOptimize_collapseIndependentContinuousBlocks MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_collapseIndependentContinuousBlocks)
+
+
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_collapseIndependentBlocks(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_collapseIndependentBlocks omc_BackendDAEOptimize_collapseIndependentBlocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_collapseIndependentBlocks,2,0) {(void*) boxptr_BackendDAEOptimize_collapseIndependentBlocks,0}};
@@ -693,14 +698,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_collapseIndependentB
 #define boxptr_BackendDAEOptimize_removeUnusedFunctionsSymJacs omc_BackendDAEOptimize_removeUnusedFunctionsSymJacs
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_copyRecordConstructorAndExternalObjConstructorDestructor(threadData_t *threadData, modelica_metatype _inAllFunctionTree);
 #define boxptr_BackendDAEOptimize_copyRecordConstructorAndExternalObjConstructorDestructor omc_BackendDAEOptimize_copyRecordConstructorAndExternalObjConstructorDestructor
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_copyRecordConstructorAndExternalObjConstructorDestructor,2,0) {(void*) boxptr_BackendDAEOptimize_copyRecordConstructorAndExternalObjConstructorDestructor,0}};
 #define boxvar_BackendDAEOptimize_copyRecordConstructorAndExternalObjConstructorDestructor MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_copyRecordConstructorAndExternalObjConstructorDestructor)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_removeUnusedFunctions(threadData_t *threadData, modelica_metatype _inEqs, modelica_metatype _inShared, modelica_metatype _inEquationLst, modelica_metatype _inFunctionTree, modelica_metatype _inusedFunctions);
 #define boxptr_BackendDAEOptimize_removeUnusedFunctions omc_BackendDAEOptimize_removeUnusedFunctions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeUnusedFunctions,2,0) {(void*) boxptr_BackendDAEOptimize_removeUnusedFunctions,0}};
@@ -713,7 +718,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeUnusedFunction
 #define boxptr_BackendDAEOptimize_checkUnusedVariables omc_BackendDAEOptimize_checkUnusedVariables
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_removeUnusedVariables(threadData_t *threadData, modelica_metatype _inDlow);
 #define boxptr_BackendDAEOptimize_removeUnusedVariables omc_BackendDAEOptimize_removeUnusedVariables
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeUnusedVariables,2,0) {(void*) boxptr_BackendDAEOptimize_removeUnusedVariables,0}};
@@ -729,7 +734,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeUnusedVariable
 #define boxptr_BackendDAEOptimize_copyNonParamVariables omc_BackendDAEOptimize_copyNonParamVariables
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_removeUnusedParameter(threadData_t *threadData, modelica_metatype _inDlow);
 #define boxptr_BackendDAEOptimize_removeUnusedParameter omc_BackendDAEOptimize_removeUnusedParameter
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeUnusedParameter,2,0) {(void*) boxptr_BackendDAEOptimize_removeUnusedParameter,0}};
@@ -742,16 +747,13 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeUnusedParamete
 #define boxptr_BackendDAEOptimize_removeEqualFunctionCall omc_BackendDAEOptimize_removeEqualFunctionCall
 
 
-#define boxptr_BackendDAEOptimize_getControlEqns omc_BackendDAEOptimize_getControlEqns
-
-
 #define boxptr_BackendDAEOptimize_functionCallEqn omc_BackendDAEOptimize_functionCallEqn
 
 
 #define boxptr_BackendDAEOptimize_removeEqualFunctionCallsWork omc_BackendDAEOptimize_removeEqualFunctionCallsWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_removeEqualRHS(threadData_t *threadData, modelica_metatype _dae);
 #define boxptr_BackendDAEOptimize_removeEqualRHS omc_BackendDAEOptimize_removeEqualRHS
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeEqualRHS,2,0) {(void*) boxptr_BackendDAEOptimize_removeEqualRHS,0}};
@@ -764,7 +766,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeEqualRHS,2,0) 
 #define boxptr_BackendDAEOptimize_removeProtectedParameterswork omc_BackendDAEOptimize_removeProtectedParameterswork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_removeProtectedParameters(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_removeProtectedParameters omc_BackendDAEOptimize_removeProtectedParameters
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeProtectedParameters,2,0) {(void*) boxptr_BackendDAEOptimize_removeProtectedParameters,0}};
@@ -786,16 +788,16 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeProtectedParam
 #define boxptr_BackendDAEOptimize_removeParameterswork omc_BackendDAEOptimize_removeParameterswork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_removeParameters(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_removeParameters omc_BackendDAEOptimize_removeParameters
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeParameters,2,0) {(void*) boxptr_BackendDAEOptimize_removeParameters,0}};
 #define boxvar_BackendDAEOptimize_removeParameters MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_removeParameters)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_BackendDAEOptimize_countSimpleEquations(threadData_t *threadData, modelica_metatype _inDlow, modelica_metatype _inM);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendDAEOptimize_countSimpleEquations(threadData_t *threadData, modelica_metatype _inDlow, modelica_metatype _inM);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_countSimpleEquations,2,0) {(void*) boxptr_BackendDAEOptimize_countSimpleEquations,0}};
 #define boxvar_BackendDAEOptimize_countSimpleEquations MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_countSimpleEquations)
@@ -813,7 +815,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_countSimpleEquations
 #define boxptr_BackendDAEOptimize_traverserExpsimplifyTimeIndepFuncCalls omc_BackendDAEOptimize_traverserExpsimplifyTimeIndepFuncCalls
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_simplifyTimeIndepFuncCalls(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_simplifyTimeIndepFuncCalls omc_BackendDAEOptimize_simplifyTimeIndepFuncCalls
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyTimeIndepFuncCalls,2,0) {(void*) boxptr_BackendDAEOptimize_simplifyTimeIndepFuncCalls,0}};
@@ -829,14 +831,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyTimeIndepFun
 #define boxptr_BackendDAEOptimize_simplifyInStreamWork omc_BackendDAEOptimize_simplifyInStreamWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_simplifyInStream(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fdae);
 #define boxptr_BackendDAEOptimize_simplifyInStream omc_BackendDAEOptimize_simplifyInStream
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyInStream,2,0) {(void*) boxptr_BackendDAEOptimize_simplifyInStream,0}};
 #define boxvar_BackendDAEOptimize_simplifyInStream MMC_REFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyInStream)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAEOptimize_simplifyAllExpressions(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_BackendDAEOptimize_simplifyAllExpressions omc_BackendDAEOptimize_simplifyAllExpressions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAEOptimize_simplifyAllExpressions,2,0) {(void*) boxptr_BackendDAEOptimize_simplifyAllExpressions,0}};

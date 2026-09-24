@@ -18,12 +18,13 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT3,1,_OMC_LIT3_data);
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFInstDump_dumpUntypedComponentDims(threadData_t *threadData, modelica_metatype _inComponent)
 {
   modelica_string _outString = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
   { /* match expression */
@@ -40,7 +41,7 @@ modelica_string omc_NFInstDump_dumpUntypedComponentDims(threadData_t *threadData
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,7) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 4);
           
           _dims = tmpMeta6;
           /* Pattern matching succeeded */
@@ -53,97 +54,112 @@ modelica_string omc_NFInstDump_dumpUntypedComponentDims(threadData_t *threadData
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _outString = tmp1;
+  omc_string_store(&(_outString), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFInstDump_dimensionStr(threadData_t *threadData, modelica_metatype _inDimension)
 {
   modelica_string _outString = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
-  _outString = omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpDimension, _inDimension);
+  omc_string_store(&(_outString), omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpDimension, _inDimension));
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFInstDump_equationStr(threadData_t *threadData, modelica_metatype _inEquation)
 {
   modelica_string _outString = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
-  _outString = omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpEquation, _inEquation);
+  omc_string_store(&(_outString), omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpEquation, _inEquation));
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFInstDump_prefixStr(threadData_t *threadData, modelica_metatype _inPrefix)
 {
   modelica_string _outString = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
-  _outString = omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpPrefix, _inPrefix);
+  omc_string_store(&(_outString), omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpPrefix, _inPrefix));
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFInstDump_bindingStr(threadData_t *threadData, modelica_metatype _inBinding)
 {
   modelica_string _outString = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
-  _outString = omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpBinding, _inBinding);
+  omc_string_store(&(_outString), omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpBinding, _inBinding));
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFInstDump_componentStr(threadData_t *threadData, modelica_metatype _inComponent)
 {
   modelica_string _outString = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
-  _outString = omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpComponent, _inComponent);
+  omc_string_store(&(_outString), omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpComponent, _inComponent));
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFInstDump_elementStr(threadData_t *threadData, modelica_metatype _inElement)
 {
   modelica_string _outString = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
-  _outString = omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpElement, _inElement);
+  omc_string_store(&(_outString), omc_Tpl_tplString(threadData, boxvar_NFInstDumpTpl_dumpElement, _inElement));
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFInstDump_modelStr(threadData_t *threadData, modelica_string _inName, modelica_metatype _inClass)
 {
   modelica_string _outString = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outString has no default value.
-  _outString = omc_Tpl_tplString2(threadData, boxvar_NFInstDumpTpl_dumpModel, _inName, _inClass);
+  omc_string_store(&(_outString), omc_Tpl_tplString2(threadData, boxvar_NFInstDumpTpl_dumpModel, _inName, _inClass));
   _return: OMC_LABEL_UNUSED
-  return _outString;
+  omc_ret_ = _outString;
+  return omc_ret_;
 }
 

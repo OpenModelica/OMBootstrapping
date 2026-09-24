@@ -105,7 +105,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_CommonSubExpression_commonSubExpression omc_CommonSubExpression_commonSubExpression
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CommonSubExpression_commonSubExpressionReplacement(threadData_t *threadData, modelica_metatype _daeIn);
 #define boxptr_CommonSubExpression_commonSubExpressionReplacement omc_CommonSubExpression_commonSubExpressionReplacement
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_commonSubExpressionReplacement,2,0) {(void*) boxptr_CommonSubExpression_commonSubExpressionReplacement,0}};
@@ -124,24 +124,24 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_commonSubExpression
 #define boxptr_CommonSubExpression_substituteCSE omc_CommonSubExpression_substituteCSE
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CommonSubExpression_cseBinary(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_CommonSubExpression_cseBinary omc_CommonSubExpression_cseBinary
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_cseBinary,2,0) {(void*) boxptr_CommonSubExpression_cseBinary,0}};
 #define boxvar_CommonSubExpression_cseBinary MMC_REFSTRUCTLIT(boxvar_lit_CommonSubExpression_cseBinary)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_CommonSubExpression_isCSEExp(threadData_t *threadData, modelica_metatype _inExp);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CommonSubExpression_isCSEExp(threadData_t *threadData, modelica_metatype _inExp);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_isCSEExp,2,0) {(void*) boxptr_CommonSubExpression_isCSEExp,0}};
 #define boxvar_CommonSubExpression_isCSEExp MMC_REFSTRUCTLIT(boxvar_lit_CommonSubExpression_isCSEExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_CommonSubExpression_isCSECref(threadData_t *threadData, modelica_metatype _cr);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CommonSubExpression_isCSECref(threadData_t *threadData, modelica_metatype _cr);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_isCSECref,2,0) {(void*) boxptr_CommonSubExpression_isCSECref,0}};
 #define boxvar_CommonSubExpression_isCSECref MMC_REFSTRUCTLIT(boxvar_lit_CommonSubExpression_isCSECref)
@@ -177,9 +177,6 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_isCSECref,2,0) {(vo
 #define boxptr_CommonSubExpression_determineDependencies omc_CommonSubExpression_determineDependencies
 
 
-#define boxptr_CommonSubExpression_createCseEquations omc_CommonSubExpression_createCseEquations
-
-
 #define boxptr_CommonSubExpression_substituteExp omc_CommonSubExpression_substituteExp
 
 
@@ -201,7 +198,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_isCSECref,2,0) {(vo
 #define boxptr_CommonSubExpression_VarToGlobalKnownVarHT omc_CommonSubExpression_VarToGlobalKnownVarHT
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CommonSubExpression_wrapFunctionCalls(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_CommonSubExpression_wrapFunctionCalls omc_CommonSubExpression_wrapFunctionCalls
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CommonSubExpression_wrapFunctionCalls,2,0) {(void*) boxptr_CommonSubExpression_wrapFunctionCalls,0}};

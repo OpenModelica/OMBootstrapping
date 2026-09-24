@@ -22,6 +22,7 @@ extern "C" {
 #include "NFType.h"
 #include "NFVariable.h"
 #include "Pointer.h"
+#include "PointerWeak.h"
 #include "UnorderedMap.h"
 #include "Util.h"
 #ifdef __cplusplus

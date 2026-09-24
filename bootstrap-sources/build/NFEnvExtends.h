@@ -56,7 +56,7 @@ extern struct record_description SCodeDump_SCodeDumpOptions_OPTIONS__desc;
 #define boxptr_NFEnvExtends_addClassExtendsInfoToEnv omc_NFEnvExtends_addClassExtendsInfoToEnv
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFEnvExtends_extendEnvWithClassExtends(threadData_t *threadData, modelica_metatype _inClassExtends, modelica_metatype _inEnv);
 #define boxptr_NFEnvExtends_extendEnvWithClassExtends omc_NFEnvExtends_extendEnvWithClassExtends
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_extendEnvWithClassExtends,2,0) {(void*) boxptr_NFEnvExtends_extendEnvWithClassExtends,0}};
@@ -102,14 +102,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_extendEnvWithClassExtends,
 #define boxptr_NFEnvExtends_printInheritedExtendsError omc_NFEnvExtends_printInheritedExtendsError
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFEnvExtends_printExtendsError2(threadData_t *threadData, modelica_string _inError, modelica_metatype _inBaseClass, modelica_metatype _inPartPath, modelica_metatype _inEnv, modelica_metatype _inInfo);
 #define boxptr_NFEnvExtends_printExtendsError2 omc_NFEnvExtends_printExtendsError2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_printExtendsError2,2,0) {(void*) boxptr_NFEnvExtends_printExtendsError2,0}};
 #define boxvar_NFEnvExtends_printExtendsError2 MMC_REFSTRUCTLIT(boxvar_lit_NFEnvExtends_printExtendsError2)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFEnvExtends_printExtendsError(threadData_t *threadData, modelica_metatype _inErrorPath, modelica_metatype _inEnv, modelica_metatype _inInfo);
 #define boxptr_NFEnvExtends_printExtendsError omc_NFEnvExtends_printExtendsError
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_printExtendsError,2,0) {(void*) boxptr_NFEnvExtends_printExtendsError,0}};
@@ -140,14 +140,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_printExtendsError,2,0) {(v
 #define boxptr_NFEnvExtends_qualify2 omc_NFEnvExtends_qualify2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFEnvExtends_qualify(threadData_t *threadData, modelica_metatype _inEnv);
 #define boxptr_NFEnvExtends_qualify omc_NFEnvExtends_qualify
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_qualify,2,0) {(void*) boxptr_NFEnvExtends_qualify,0}};
 #define boxvar_NFEnvExtends_qualify MMC_REFSTRUCTLIT(boxvar_lit_NFEnvExtends_qualify)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFEnvExtends_update(threadData_t *threadData, modelica_metatype _inEnv);
 #define boxptr_NFEnvExtends_update omc_NFEnvExtends_update
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFEnvExtends_update,2,0) {(void*) boxptr_NFEnvExtends_update,0}};

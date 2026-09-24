@@ -12,9 +12,9 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Unzip_unzipPath(threadData_t *threadData, modelica_string _fileName, modelica_string _pathToExtract, modelica_string _destinationPath);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Unzip_unzipPath(threadData_t *threadData, modelica_metatype _fileName, modelica_metatype _pathToExtract, modelica_metatype _destinationPath);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unzip_unzipPath,2,0) {(void*) boxptr_Unzip_unzipPath,0}};
 #define boxvar_Unzip_unzipPath MMC_REFSTRUCTLIT(boxvar_lit_Unzip_unzipPath)

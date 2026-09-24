@@ -25,7 +25,7 @@ extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Unparsing_elementExternalHeaderJulia(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_buf1, modelica_metatype _a_buf2, modelica_metatype _a_elt, modelica_string _a_pack, modelica_metatype *out_out_a_buf1, modelica_metatype *out_out_a_buf2);
 #define boxptr_Unparsing_elementExternalHeaderJulia omc_Unparsing_elementExternalHeaderJulia
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_elementExternalHeaderJulia,2,0) {(void*) boxptr_Unparsing_elementExternalHeaderJulia,0}};
@@ -44,7 +44,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_elementExternalHeaderJulia,2,
 #define boxptr_Unparsing_lm__65 omc_Unparsing_lm__65
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Unparsing_classExternalHeaderJuliaWork(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_buf1, modelica_metatype _a_buf2, modelica_metatype _a_cl, modelica_string _a_pack, modelica_metatype *out_out_a_buf1, modelica_metatype *out_out_a_buf2);
 #define boxptr_Unparsing_classExternalHeaderJuliaWork omc_Unparsing_classExternalHeaderJuliaWork
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_classExternalHeaderJuliaWork,2,0) {(void*) boxptr_Unparsing_classExternalHeaderJuliaWork,0}};
@@ -57,7 +57,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_classExternalHeaderJuliaWork,
 #define boxptr_Unparsing_lm__62 omc_Unparsing_lm__62
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Unparsing_classExternalHeaderJulia(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_buf1, modelica_metatype _a_buf2, modelica_metatype _a_cl, modelica_string _a_pack, modelica_metatype *out_out_a_buf1, modelica_metatype *out_out_a_buf2);
 #define boxptr_Unparsing_classExternalHeaderJulia omc_Unparsing_classExternalHeaderJulia
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_classExternalHeaderJulia,2,0) {(void*) boxptr_Unparsing_classExternalHeaderJulia,0}};
@@ -67,7 +67,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_classExternalHeaderJulia,2,0)
 #define boxptr_Unparsing_fun__60 omc_Unparsing_fun__60
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Unparsing_programExternalHeaderJulia(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_program);
 #define boxptr_Unparsing_programExternalHeaderJulia omc_Unparsing_programExternalHeaderJulia
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_programExternalHeaderJulia,2,0) {(void*) boxptr_Unparsing_programExternalHeaderJulia,0}};
@@ -77,7 +77,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_programExternalHeaderJulia,2,
 #define boxptr_Unparsing_lm__58 omc_Unparsing_lm__58
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Unparsing_elementExternalHeader(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_elt, modelica_string _in_a_pack);
 #define boxptr_Unparsing_elementExternalHeader omc_Unparsing_elementExternalHeader
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_elementExternalHeader,2,0) {(void*) boxptr_Unparsing_elementExternalHeader,0}};
@@ -96,22 +96,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_elementExternalHeader,2,0) {(
 #define boxptr_Unparsing_lm__53 omc_Unparsing_lm__53
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Unparsing_metaHelperBoxStart(threadData_t *threadData, modelica_metatype _in_txt, modelica_integer _in_a_numVariables);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Unparsing_metaHelperBoxStart(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_numVariables);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_metaHelperBoxStart,2,0) {(void*) boxptr_Unparsing_metaHelperBoxStart,0}};
 #define boxvar_Unparsing_metaHelperBoxStart MMC_REFSTRUCTLIT(boxvar_lit_Unparsing_metaHelperBoxStart)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Unparsing_pathString(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
 #define boxptr_Unparsing_pathString omc_Unparsing_pathString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_pathString,2,0) {(void*) boxptr_Unparsing_pathString,0}};
 #define boxvar_Unparsing_pathString MMC_REFSTRUCTLIT(boxvar_lit_Unparsing_pathString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Unparsing_classExternalHeader(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cl, modelica_string _a_pack);
 #define boxptr_Unparsing_classExternalHeader omc_Unparsing_classExternalHeader
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_classExternalHeader,2,0) {(void*) boxptr_Unparsing_classExternalHeader,0}};
@@ -124,7 +124,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_classExternalHeader,2,0) {(vo
 #define boxptr_Unparsing_lm__48 omc_Unparsing_lm__48
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Unparsing_programExternalHeaderFromTypes(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_tys);
 #define boxptr_Unparsing_programExternalHeaderFromTypes omc_Unparsing_programExternalHeaderFromTypes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_programExternalHeaderFromTypes,2,0) {(void*) boxptr_Unparsing_programExternalHeaderFromTypes,0}};
@@ -140,7 +140,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_programExternalHeaderFromType
 #define boxptr_Unparsing_lm__44 omc_Unparsing_lm__44
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Unparsing_programExternalHeader(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_program);
 #define boxptr_Unparsing_programExternalHeader omc_Unparsing_programExternalHeader
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Unparsing_programExternalHeader,2,0) {(void*) boxptr_Unparsing_programExternalHeader,0}};

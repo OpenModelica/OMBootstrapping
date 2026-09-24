@@ -1,0 +1,649 @@
+#ifndef NFInstanceAPI__H
+#define NFInstanceAPI__H
+#include "meta/meta_modelica.h"
+#include "util/modelica.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern struct record_description Flags_ConfigFlag_CONFIG__FLAG__desc;
+
+extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
+
+extern struct record_description Flags_FlagData_BOOL__FLAG__desc;
+
+extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
+
+extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
+
+extern struct record_description JSON_STRING__desc;
+
+extern struct record_description NFBinding_UNBOUND__desc;
+
+extern struct record_description NFInst_InstSettings_SETTINGS__desc;
+
+extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
+
+extern struct record_description NFInstNode_InstNodeType_ROOT__CLASS__desc;
+
+extern struct record_description NFInstanceAPI_InstanceTree_BUILTIN__BASE__CLASS__desc;
+
+extern struct record_description NFInstanceAPI_InstanceTree_CLASS__desc;
+
+extern struct record_description NFInstanceAPI_InstanceTree_COMPONENT__desc;
+
+extern struct record_description NFInstanceAPI_InstanceTree_EMPTY__desc;
+
+extern struct record_description NFModifier_Modifier_NOMOD__desc;
+
+extern struct record_description NFModifier_ModifierScope_COMPONENT__desc;
+
+extern struct record_description NFSections_EMPTY__desc;
+
+extern struct record_description SCode_Comment_COMMENT__desc;
+
+extern struct record_description SCode_Each_NOT__EACH__desc;
+
+extern struct record_description SCode_Final_NOT__FINAL__desc;
+
+extern struct record_description SCode_Mod_NOMOD__desc;
+
+extern struct record_description SourceInfo_SOURCEINFO__desc;
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_modifierJSON(threadData_t *threadData, modelica_string _modifier);
+#define boxptr_NFInstanceAPI_modifierJSON omc_NFInstanceAPI_modifierJSON
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_modifierJSON,2,0) {(void*) boxptr_NFInstanceAPI_modifierJSON,0}};
+#define boxvar_NFInstanceAPI_modifierJSON MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_modifierJSON)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONChoicesAnnotation(threadData_t *threadData, modelica_metatype _mods, modelica_metatype _scope, modelica_metatype _info, modelica_boolean _failOnError);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONChoicesAnnotation(threadData_t *threadData, modelica_metatype _mods, modelica_metatype _scope, modelica_metatype _info, modelica_metatype _failOnError);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONChoicesAnnotation,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONChoicesAnnotation,0}};
+#define boxvar_NFInstanceAPI_dumpJSONChoicesAnnotation MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONChoicesAnnotation)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONSCodeClassDef(threadData_t *threadData, modelica_metatype _classDef, modelica_metatype _scope, modelica_boolean _qualifyPath, modelica_metatype __omcQ_24in_5Fjson);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONSCodeClassDef(threadData_t *threadData, modelica_metatype _classDef, modelica_metatype _scope, modelica_metatype _qualifyPath, modelica_metatype __omcQ_24in_5Fjson);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeClassDef,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONSCodeClassDef,0}};
+#define boxvar_NFInstanceAPI_dumpJSONSCodeClassDef MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeClassDef)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONSCodeTypeExtends(threadData_t *threadData, modelica_metatype _node, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson);
+#define boxptr_NFInstanceAPI_dumpJSONSCodeTypeExtends omc_NFInstanceAPI_dumpJSONSCodeTypeExtends
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeTypeExtends,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONSCodeTypeExtends,0}};
+#define boxvar_NFInstanceAPI_dumpJSONSCodeTypeExtends MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeTypeExtends)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONSCodeClass(threadData_t *threadData, modelica_metatype _element, modelica_metatype _node, modelica_metatype _scope, modelica_boolean _isRedeclare, modelica_metatype __omcQ_24in_5Fjson);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONSCodeClass(threadData_t *threadData, modelica_metatype _element, modelica_metatype _node, modelica_metatype _scope, modelica_metatype _isRedeclare, modelica_metatype __omcQ_24in_5Fjson);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeClass,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONSCodeClass,0}};
+#define boxvar_NFInstanceAPI_dumpJSONSCodeClass MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeClass)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONSCodeType(threadData_t *threadData, modelica_metatype _path, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson);
+#define boxptr_NFInstanceAPI_dumpJSONSCodeType omc_NFInstanceAPI_dumpJSONSCodeType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeType,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONSCodeType,0}};
+#define boxvar_NFInstanceAPI_dumpJSONSCodeType MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeType)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONSCodeElement(threadData_t *threadData, modelica_metatype _element, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson);
+#define boxptr_NFInstanceAPI_dumpJSONSCodeElement omc_NFInstanceAPI_dumpJSONSCodeElement
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeElement,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONSCodeElement,0}};
+#define boxvar_NFInstanceAPI_dumpJSONSCodeElement MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeElement)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONRedeclareType(threadData_t *threadData, modelica_metatype _element, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson);
+#define boxptr_NFInstanceAPI_dumpJSONRedeclareType omc_NFInstanceAPI_dumpJSONRedeclareType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONRedeclareType,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONRedeclareType,0}};
+#define boxvar_NFInstanceAPI_dumpJSONRedeclareType MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONRedeclareType)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONSCodeMod__impl(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _scope, modelica_boolean _isChoices);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONSCodeMod__impl(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _scope, modelica_metatype _isChoices);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeMod__impl,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONSCodeMod__impl,0}};
+#define boxvar_NFInstanceAPI_dumpJSONSCodeMod__impl MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeMod__impl)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONSCodeMod(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson);
+#define boxptr_NFInstanceAPI_dumpJSONSCodeMod omc_NFInstanceAPI_dumpJSONSCodeMod
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeMod,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONSCodeMod,0}};
+#define boxvar_NFInstanceAPI_dumpJSONSCodeMod MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeMod)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONReplaceableElements(threadData_t *threadData, modelica_metatype _clsNode);
+#define boxptr_NFInstanceAPI_dumpJSONReplaceableElements omc_NFInstanceAPI_dumpJSONReplaceableElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONReplaceableElements,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONReplaceableElements,0}};
+#define boxvar_NFInstanceAPI_dumpJSONReplaceableElements MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONReplaceableElements)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONStateCall(threadData_t *threadData, modelica_metatype _callEq, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_dumpJSONStateCall omc_NFInstanceAPI_dumpJSONStateCall
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONStateCall,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONStateCall,0}};
+#define boxvar_NFInstanceAPI_dumpJSONStateCall MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONStateCall)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONStateCalls(threadData_t *threadData, modelica_metatype _callEqs, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_dumpJSONStateCalls omc_NFInstanceAPI_dumpJSONStateCalls
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONStateCalls,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONStateCalls,0}};
+#define boxvar_NFInstanceAPI_dumpJSONStateCalls MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONStateCalls)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONConnection(threadData_t *threadData, modelica_metatype _connEq, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_dumpJSONConnection omc_NFInstanceAPI_dumpJSONConnection
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONConnection,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONConnection,0}};
+#define boxvar_NFInstanceAPI_dumpJSONConnection MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONConnection)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONConnections(threadData_t *threadData, modelica_metatype _connections, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_dumpJSONConnections omc_NFInstanceAPI_dumpJSONConnections
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONConnections,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONConnections,0}};
+#define boxvar_NFInstanceAPI_dumpJSONConnections MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONConnections)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_sortEquations(threadData_t *threadData, modelica_metatype _equations, modelica_metatype __omcQ_24in_5Fconnections, modelica_metatype __omcQ_24in_5Ftransitions, modelica_metatype __omcQ_24in_5FinitialStates, modelica_metatype *out_transitions, modelica_metatype *out_initialStates);
+#define boxptr_NFInstanceAPI_sortEquations omc_NFInstanceAPI_sortEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_sortEquations,2,0) {(void*) boxptr_NFInstanceAPI_sortEquations,0}};
+#define boxvar_NFInstanceAPI_sortEquations MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_sortEquations)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONEquations(threadData_t *threadData, modelica_metatype _sections, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson);
+#define boxptr_NFInstanceAPI_dumpJSONEquations omc_NFInstanceAPI_dumpJSONEquations
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONEquations,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONEquations,0}};
+#define boxvar_NFInstanceAPI_dumpJSONEquations MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONEquations)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONImports(threadData_t *threadData, modelica_metatype _node, modelica_metatype __omcQ_24in_5Fjson);
+#define boxptr_NFInstanceAPI_dumpJSONImports omc_NFInstanceAPI_dumpJSONImports
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONImports,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONImports,0}};
+#define boxvar_NFInstanceAPI_dumpJSONImports MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONImports)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAbsynFunctionArgs(threadData_t *threadData, modelica_metatype _args, modelica_metatype __omcQ_24in_5Fjson);
+#define boxptr_NFInstanceAPI_dumpJSONAbsynFunctionArgs omc_NFInstanceAPI_dumpJSONAbsynFunctionArgs
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAbsynFunctionArgs,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAbsynFunctionArgs,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAbsynFunctionArgs MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAbsynFunctionArgs)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAbsynCref(threadData_t *threadData, modelica_metatype _cref);
+#define boxptr_NFInstanceAPI_dumpJSONAbsynCref omc_NFInstanceAPI_dumpJSONAbsynCref
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAbsynCref,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAbsynCref,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAbsynCref MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAbsynCref)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAbsynExpression(threadData_t *threadData, modelica_metatype _exp);
+#define boxptr_NFInstanceAPI_dumpJSONAbsynExpression omc_NFInstanceAPI_dumpJSONAbsynExpression
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAbsynExpression,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAbsynExpression,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAbsynExpression MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAbsynExpression)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAnnotationExp2(threadData_t *threadData, modelica_metatype _absynExp, modelica_metatype _scope, modelica_metatype _info, modelica_boolean _failOnError);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONAnnotationExp2(threadData_t *threadData, modelica_metatype _absynExp, modelica_metatype _scope, modelica_metatype _info, modelica_metatype _failOnError);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationExp2,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAnnotationExp2,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAnnotationExp2 MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationExp2)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAnnotationExp(threadData_t *threadData, modelica_metatype _absynExp, modelica_metatype _scope, modelica_metatype _info, modelica_boolean _failOnError);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONAnnotationExp(threadData_t *threadData, modelica_metatype _absynExp, modelica_metatype _scope, modelica_metatype _info, modelica_metatype _failOnError);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationExp,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAnnotationExp,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAnnotationExp MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationExp)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAnnotationSubMod(threadData_t *threadData, modelica_metatype _subMod, modelica_metatype _scope, modelica_boolean _failOnError, modelica_metatype __omcQ_24in_5Fjson);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONAnnotationSubMod(threadData_t *threadData, modelica_metatype _subMod, modelica_metatype _scope, modelica_metatype _failOnError, modelica_metatype __omcQ_24in_5Fjson);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationSubMod,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAnnotationSubMod,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAnnotationSubMod MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationSubMod)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAnnotationSubMods(threadData_t *threadData, modelica_metatype _subMods, modelica_metatype _scope, modelica_metatype _filter, modelica_boolean _failOnError);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONAnnotationSubMods(threadData_t *threadData, modelica_metatype _subMods, modelica_metatype _scope, modelica_metatype _filter, modelica_metatype _failOnError);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationSubMods,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAnnotationSubMods,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAnnotationSubMods MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationSubMods)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAnnotationMod(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _scope, modelica_metatype _filter, modelica_boolean _failOnError);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONAnnotationMod(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _scope, modelica_metatype _filter, modelica_metatype _failOnError);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationMod,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAnnotationMod,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAnnotationMod MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationMod)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAnnotationOpt(threadData_t *threadData, modelica_metatype _annOpt, modelica_metatype _scope, modelica_metatype _filter, modelica_boolean _failOnError, modelica_metatype __omcQ_24in_5Fjson);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONAnnotationOpt(threadData_t *threadData, modelica_metatype _annOpt, modelica_metatype _scope, modelica_metatype _filter, modelica_metatype _failOnError, modelica_metatype __omcQ_24in_5Fjson);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationOpt,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAnnotationOpt,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAnnotationOpt MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAnnotationOpt)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONCommentAnnotation(threadData_t *threadData, modelica_metatype _cmtOpt, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson, modelica_metatype _filter, modelica_boolean _failOnError);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONCommentAnnotation(threadData_t *threadData, modelica_metatype _cmtOpt, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson, modelica_metatype _filter, modelica_metatype _failOnError);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONCommentAnnotation,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONCommentAnnotation,0}};
+#define boxvar_NFInstanceAPI_dumpJSONCommentAnnotation MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONCommentAnnotation)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONComment(threadData_t *threadData, modelica_metatype _cmt, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson, modelica_boolean _dumpComment, modelica_boolean _dumpAnnotation, modelica_boolean _failOnError);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONComment(threadData_t *threadData, modelica_metatype _cmt, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson, modelica_metatype _dumpComment, modelica_metatype _dumpAnnotation, modelica_metatype _failOnError);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONComment,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONComment,0}};
+#define boxvar_NFInstanceAPI_dumpJSONComment MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONComment)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONCommentOpt(threadData_t *threadData, modelica_metatype _cmtOpt, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson, modelica_boolean _dumpComment, modelica_boolean _dumpAnnotation, modelica_boolean _failOnError);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONCommentOpt(threadData_t *threadData, modelica_metatype _cmtOpt, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson, modelica_metatype _dumpComment, modelica_metatype _dumpAnnotation, modelica_metatype _failOnError);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONCommentOpt,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONCommentOpt,0}};
+#define boxvar_NFInstanceAPI_dumpJSONCommentOpt MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONCommentOpt)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONReplaceable(threadData_t *threadData, modelica_metatype _repl, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_dumpJSONReplaceable omc_NFInstanceAPI_dumpJSONReplaceable
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONReplaceable,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONReplaceable,0}};
+#define boxvar_NFInstanceAPI_dumpJSONReplaceable MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONReplaceable)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONClassPrefixes(threadData_t *threadData, modelica_metatype _element, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_dumpJSONClassPrefixes omc_NFInstanceAPI_dumpJSONClassPrefixes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONClassPrefixes,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONClassPrefixes,0}};
+#define boxvar_NFInstanceAPI_dumpJSONClassPrefixes MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONClassPrefixes)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONSCodePrefixes(threadData_t *threadData, modelica_metatype _prefixes, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_dumpJSONSCodePrefixes omc_NFInstanceAPI_dumpJSONSCodePrefixes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodePrefixes,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONSCodePrefixes,0}};
+#define boxvar_NFInstanceAPI_dumpJSONSCodePrefixes MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodePrefixes)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAttributes(threadData_t *threadData, modelica_metatype _attrs, modelica_metatype _prefs, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_dumpJSONAttributes omc_NFInstanceAPI_dumpJSONAttributes
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAttributes,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAttributes,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAttributes MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAttributes)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONAbsynDims(threadData_t *threadData, modelica_metatype _dims);
+#define boxptr_NFInstanceAPI_dumpJSONAbsynDims omc_NFInstanceAPI_dumpJSONAbsynDims
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAbsynDims,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONAbsynDims,0}};
+#define boxvar_NFInstanceAPI_dumpJSONAbsynDims MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONAbsynDims)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONDims(threadData_t *threadData, modelica_metatype _absynDims, modelica_metatype _typedDims);
+#define boxptr_NFInstanceAPI_dumpJSONDims omc_NFInstanceAPI_dumpJSONDims
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONDims,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONDims,0}};
+#define boxvar_NFInstanceAPI_dumpJSONDims MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONDims)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONClassDims(threadData_t *threadData, modelica_metatype _node, modelica_metatype _element);
+#define boxptr_NFInstanceAPI_dumpJSONClassDims omc_NFInstanceAPI_dumpJSONClassDims
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONClassDims,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONClassDims,0}};
+#define boxvar_NFInstanceAPI_dumpJSONClassDims MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONClassDims)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONBinding(threadData_t *threadData, modelica_metatype _binding, modelica_metatype _originalBinding, modelica_boolean _evaluate);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONBinding(threadData_t *threadData, modelica_metatype _binding, modelica_metatype _originalBinding, modelica_metatype _evaluate);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONBinding,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONBinding,0}};
+#define boxvar_NFInstanceAPI_dumpJSONBinding MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONBinding)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONTypeName(threadData_t *threadData, modelica_metatype _ty);
+#define boxptr_NFInstanceAPI_dumpJSONTypeName omc_NFInstanceAPI_dumpJSONTypeName
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONTypeName,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONTypeName,0}};
+#define boxvar_NFInstanceAPI_dumpJSONTypeName MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONTypeName)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONEnumTypeLiteral(threadData_t *threadData, modelica_metatype _node, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_dumpJSONEnumTypeLiteral omc_NFInstanceAPI_dumpJSONEnumTypeLiteral
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONEnumTypeLiteral,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONEnumTypeLiteral,0}};
+#define boxvar_NFInstanceAPI_dumpJSONEnumTypeLiteral MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONEnumTypeLiteral)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONEnumTypeLiterals(threadData_t *threadData, modelica_metatype _literals, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fjson);
+#define boxptr_NFInstanceAPI_dumpJSONEnumTypeLiterals omc_NFInstanceAPI_dumpJSONEnumTypeLiterals
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONEnumTypeLiterals,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONEnumTypeLiterals,0}};
+#define boxvar_NFInstanceAPI_dumpJSONEnumTypeLiterals MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONEnumTypeLiterals)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONEnumType(threadData_t *threadData, modelica_metatype _tree, modelica_metatype _enumNode);
+#define boxptr_NFInstanceAPI_dumpJSONEnumType omc_NFInstanceAPI_dumpJSONEnumType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONEnumType,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONEnumType,0}};
+#define boxvar_NFInstanceAPI_dumpJSONEnumType MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONEnumType)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONSCodeElementType(threadData_t *threadData, modelica_metatype _elem);
+#define boxptr_NFInstanceAPI_dumpJSONSCodeElementType omc_NFInstanceAPI_dumpJSONSCodeElementType
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeElementType,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONSCodeElementType,0}};
+#define boxvar_NFInstanceAPI_dumpJSONSCodeElementType MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONSCodeElementType)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONComponentType(threadData_t *threadData, modelica_metatype _cls, modelica_metatype _node, modelica_metatype _ty, modelica_boolean _isDeleted);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONComponentType(threadData_t *threadData, modelica_metatype _cls, modelica_metatype _node, modelica_metatype _ty, modelica_metatype _isDeleted);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONComponentType,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONComponentType,0}};
+#define boxvar_NFInstanceAPI_dumpJSONComponentType MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONComponentType)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONComponent(threadData_t *threadData, modelica_metatype _component, modelica_metatype _originalBinding, modelica_metatype _cls);
+#define boxptr_NFInstanceAPI_dumpJSONComponent omc_NFInstanceAPI_dumpJSONComponent
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONComponent,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONComponent,0}};
+#define boxvar_NFInstanceAPI_dumpJSONComponent MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONComponent)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONReplaceableClass(threadData_t *threadData, modelica_metatype _cls, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_dumpJSONReplaceableClass omc_NFInstanceAPI_dumpJSONReplaceableClass
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONReplaceableClass,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONReplaceableClass,0}};
+#define boxvar_NFInstanceAPI_dumpJSONReplaceableClass MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONReplaceableClass)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_getExtendsModifier(threadData_t *threadData, modelica_metatype _definition, modelica_metatype _node);
+#define boxptr_NFInstanceAPI_getExtendsModifier omc_NFInstanceAPI_getExtendsModifier
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_getExtendsModifier,2,0) {(void*) boxptr_NFInstanceAPI_getExtendsModifier,0}};
+#define boxvar_NFInstanceAPI_getExtendsModifier MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_getExtendsModifier)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONBuiltinBaseClass(threadData_t *threadData, modelica_string _name);
+#define boxptr_NFInstanceAPI_dumpJSONBuiltinBaseClass omc_NFInstanceAPI_dumpJSONBuiltinBaseClass
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONBuiltinBaseClass,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONBuiltinBaseClass,0}};
+#define boxvar_NFInstanceAPI_dumpJSONBuiltinBaseClass MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONBuiltinBaseClass)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONExtends(threadData_t *threadData, modelica_metatype _ext, modelica_boolean _isDeleted);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONExtends(threadData_t *threadData, modelica_metatype _ext, modelica_metatype _isDeleted);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONExtends,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONExtends,0}};
+#define boxvar_NFInstanceAPI_dumpJSONExtends MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONExtends)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONElements(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _scope, modelica_boolean _isDeleted);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONElements(threadData_t *threadData, modelica_metatype _elements, modelica_metatype _scope, modelica_metatype _isDeleted);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONElements,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONElements,0}};
+#define boxvar_NFInstanceAPI_dumpJSONElements MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONElements)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONPath(threadData_t *threadData, modelica_metatype _path);
+#define boxptr_NFInstanceAPI_dumpJSONPath omc_NFInstanceAPI_dumpJSONPath
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONPath,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONPath,0}};
+#define boxvar_NFInstanceAPI_dumpJSONPath MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONPath)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONNodeEnclosingPath(threadData_t *threadData, modelica_metatype _node);
+#define boxptr_NFInstanceAPI_dumpJSONNodeEnclosingPath omc_NFInstanceAPI_dumpJSONNodeEnclosingPath
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONNodeEnclosingPath,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONNodeEnclosingPath,0}};
+#define boxvar_NFInstanceAPI_dumpJSONNodeEnclosingPath MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONNodeEnclosingPath)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONNodePath(threadData_t *threadData, modelica_metatype _node, modelica_boolean _ignoreBaseClass);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONNodePath(threadData_t *threadData, modelica_metatype _node, modelica_metatype _ignoreBaseClass);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONNodePath,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONNodePath,0}};
+#define boxvar_NFInstanceAPI_dumpJSONNodePath MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONNodePath)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONInstanceAnnotationExtends(threadData_t *threadData, modelica_metatype _ext, modelica_metatype _filter, modelica_boolean _dumpDerivedBase);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONInstanceAnnotationExtends(threadData_t *threadData, modelica_metatype _ext, modelica_metatype _filter, modelica_metatype _dumpDerivedBase);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONInstanceAnnotationExtends,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONInstanceAnnotationExtends,0}};
+#define boxvar_NFInstanceAPI_dumpJSONInstanceAnnotationExtends MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONInstanceAnnotationExtends)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONInstanceAnnotationConnectors(threadData_t *threadData, modelica_metatype _node, modelica_metatype __omcQ_24in_5Fjson, modelica_boolean __omcQ_24in_5Fany, modelica_boolean *out_any);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONInstanceAnnotationConnectors(threadData_t *threadData, modelica_metatype _node, modelica_metatype __omcQ_24in_5Fjson, modelica_metatype __omcQ_24in_5Fany, modelica_metatype *out_any);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONInstanceAnnotationConnectors,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONInstanceAnnotationConnectors,0}};
+#define boxvar_NFInstanceAPI_dumpJSONInstanceAnnotationConnectors MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONInstanceAnnotationConnectors)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONInstanceAnnotation(threadData_t *threadData, modelica_metatype _node, modelica_metatype _filter, modelica_boolean _dumpConnectors, modelica_boolean _dumpDerivedBase);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONInstanceAnnotation(threadData_t *threadData, modelica_metatype _node, modelica_metatype _filter, modelica_metatype _dumpConnectors, modelica_metatype _dumpDerivedBase);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONInstanceAnnotation,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONInstanceAnnotation,0}};
+#define boxvar_NFInstanceAPI_dumpJSONInstanceAnnotation MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONInstanceAnnotation)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONInstanceTree(threadData_t *threadData, modelica_metatype _tree, modelica_metatype _scope, modelica_boolean _root, modelica_boolean _isDeleted, modelica_boolean _isExtends);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONInstanceTree(threadData_t *threadData, modelica_metatype _tree, modelica_metatype _scope, modelica_metatype _root, modelica_metatype _isDeleted, modelica_metatype _isExtends);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONInstanceTree,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONInstanceTree,0}};
+#define boxvar_NFInstanceAPI_dumpJSONInstanceTree MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONInstanceTree)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_buildInstanceTreeComponent(threadData_t *threadData, modelica_metatype _node);
+#define boxptr_NFInstanceAPI_buildInstanceTreeComponent omc_NFInstanceAPI_buildInstanceTreeComponent
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildInstanceTreeComponent,2,0) {(void*) boxptr_NFInstanceAPI_buildInstanceTreeComponent,0}};
+#define boxvar_NFInstanceAPI_buildInstanceTreeComponent MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildInstanceTreeComponent)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_buildInstanceTreeGeneratedInners(threadData_t *threadData, modelica_metatype _classTree, modelica_metatype _elements);
+#define boxptr_NFInstanceAPI_buildInstanceTreeGeneratedInners omc_NFInstanceAPI_buildInstanceTreeGeneratedInners
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildInstanceTreeGeneratedInners,2,0) {(void*) boxptr_NFInstanceAPI_buildInstanceTreeGeneratedInners,0}};
+#define boxvar_NFInstanceAPI_buildInstanceTreeGeneratedInners MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildInstanceTreeGeneratedInners)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_buildInstanceTreeElements(threadData_t *threadData, modelica_metatype _classDefinition, modelica_metatype _classTree);
+#define boxptr_NFInstanceAPI_buildInstanceTreeElements omc_NFInstanceAPI_buildInstanceTreeElements
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildInstanceTreeElements,2,0) {(void*) boxptr_NFInstanceAPI_buildInstanceTreeElements,0}};
+#define boxvar_NFInstanceAPI_buildInstanceTreeElements MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildInstanceTreeElements)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_buildInstanceTree(threadData_t *threadData, modelica_metatype _node, modelica_boolean _isDerived);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_buildInstanceTree(threadData_t *threadData, modelica_metatype _node, modelica_metatype _isDerived);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildInstanceTree,2,0) {(void*) boxptr_NFInstanceAPI_buildInstanceTree,0}};
+#define boxvar_NFInstanceAPI_buildInstanceTree MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildInstanceTree)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_parseModifier(threadData_t *threadData, modelica_string _modifierValue, modelica_metatype _scope);
+#define boxptr_NFInstanceAPI_parseModifier omc_NFInstanceAPI_parseModifier
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_parseModifier,2,0) {(void*) boxptr_NFInstanceAPI_parseModifier,0}};
+#define boxvar_NFInstanceAPI_parseModifier MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_parseModifier)
+
+
+DLLModelDirection
+modelica_boolean omc_NFInstanceAPI_releaseModelInstanceReferenceImpl(threadData_t *threadData, modelica_integer _handle);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_releaseModelInstanceReferenceImpl(threadData_t *threadData, modelica_metatype _handle);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_releaseModelInstanceReferenceImpl,2,0) {(void*) boxptr_NFInstanceAPI_releaseModelInstanceReferenceImpl,0}};
+#define boxvar_NFInstanceAPI_releaseModelInstanceReferenceImpl MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_releaseModelInstanceReferenceImpl)
+
+extern int ModelInstanceReference_release(int /*_handle*/);
+
+DLLModelDirection
+modelica_integer omc_NFInstanceAPI_storeModelInstanceReference(threadData_t *threadData, modelica_metatype _json);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_storeModelInstanceReference(threadData_t *threadData, modelica_metatype _json);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_storeModelInstanceReference,2,0) {(void*) boxptr_NFInstanceAPI_storeModelInstanceReference,0}};
+#define boxvar_NFInstanceAPI_storeModelInstanceReference MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_storeModelInstanceReference)
+
+extern int ModelInstanceReference_store(modelica_metatype /*_json*/);
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_iconJSONFromTop(threadData_t *threadData, modelica_metatype _top, modelica_metatype _classPath);
+#define boxptr_NFInstanceAPI_iconJSONFromTop omc_NFInstanceAPI_iconJSONFromTop
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_iconJSONFromTop,2,0) {(void*) boxptr_NFInstanceAPI_iconJSONFromTop,0}};
+#define boxvar_NFInstanceAPI_iconJSONFromTop MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_iconJSONFromTop)
+
+
+DLLModelDirection
+void omc_NFInstanceAPI_clearTopScopeCache(threadData_t *threadData);
+#define boxptr_NFInstanceAPI_clearTopScopeCache omc_NFInstanceAPI_clearTopScopeCache
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_clearTopScopeCache,2,0) {(void*) boxptr_NFInstanceAPI_clearTopScopeCache,0}};
+#define boxvar_NFInstanceAPI_clearTopScopeCache MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_clearTopScopeCache)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_resolveOne(threadData_t *threadData, modelica_metatype _reference, modelica_metatype _scope, modelica_integer _context, modelica_metatype _info);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_resolveOne(threadData_t *threadData, modelica_metatype _reference, modelica_metatype _scope, modelica_metatype _context, modelica_metatype _info);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_resolveOne,2,0) {(void*) boxptr_NFInstanceAPI_resolveOne,0}};
+#define boxvar_NFInstanceAPI_resolveOne MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_resolveOne)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_resolveNamesFromTop(threadData_t *threadData, modelica_metatype _top, modelica_metatype _classPath, modelica_metatype *out_componentTypes);
+#define boxptr_NFInstanceAPI_resolveNamesFromTop omc_NFInstanceAPI_resolveNamesFromTop
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_resolveNamesFromTop,2,0) {(void*) boxptr_NFInstanceAPI_resolveNamesFromTop,0}};
+#define boxvar_NFInstanceAPI_resolveNamesFromTop MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_resolveNamesFromTop)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_diagramComponentIcon(threadData_t *threadData, modelica_metatype _ty_node);
+#define boxptr_NFInstanceAPI_diagramComponentIcon omc_NFInstanceAPI_diagramComponentIcon
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_diagramComponentIcon,2,0) {(void*) boxptr_NFInstanceAPI_diagramComponentIcon,0}};
+#define boxvar_NFInstanceAPI_diagramComponentIcon MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_diagramComponentIcon)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_topFromSCode(threadData_t *threadData, modelica_metatype _program);
+#define boxptr_NFInstanceAPI_topFromSCode omc_NFInstanceAPI_topFromSCode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_topFromSCode,2,0) {(void*) boxptr_NFInstanceAPI_topFromSCode,0}};
+#define boxvar_NFInstanceAPI_topFromSCode MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_topFromSCode)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_programSCode(threadData_t *threadData, modelica_metatype _absynProgram);
+#define boxptr_NFInstanceAPI_programSCode omc_NFInstanceAPI_programSCode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_programSCode,2,0) {(void*) boxptr_NFInstanceAPI_programSCode,0}};
+#define boxvar_NFInstanceAPI_programSCode MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_programSCode)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_builtinAbsyn(threadData_t *threadData);
+#define boxptr_NFInstanceAPI_builtinAbsyn omc_NFInstanceAPI_builtinAbsyn
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_builtinAbsyn,2,0) {(void*) boxptr_NFInstanceAPI_builtinAbsyn,0}};
+#define boxvar_NFInstanceAPI_builtinAbsyn MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_builtinAbsyn)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_builtinSCode(threadData_t *threadData);
+#define boxptr_NFInstanceAPI_builtinSCode omc_NFInstanceAPI_builtinSCode
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_builtinSCode,2,0) {(void*) boxptr_NFInstanceAPI_builtinSCode,0}};
+#define boxvar_NFInstanceAPI_builtinSCode MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_builtinSCode)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_dumpJSONDiagramParts(threadData_t *threadData, modelica_metatype _node, modelica_integer _context, modelica_metatype __omcQ_24in_5Fcomponents, modelica_metatype __omcQ_24in_5Fconnections, modelica_integer _depth, modelica_metatype *out_connections);
+DLLModelDirection
+modelica_metatype boxptr_NFInstanceAPI_dumpJSONDiagramParts(threadData_t *threadData, modelica_metatype _node, modelica_metatype _context, modelica_metatype __omcQ_24in_5Fcomponents, modelica_metatype __omcQ_24in_5Fconnections, modelica_metatype _depth, modelica_metatype *out_connections);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONDiagramParts,2,0) {(void*) boxptr_NFInstanceAPI_dumpJSONDiagramParts,0}};
+#define boxvar_NFInstanceAPI_dumpJSONDiagramParts MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_dumpJSONDiagramParts)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_diagramJSONFromTop(threadData_t *threadData, modelica_metatype _top, modelica_metatype _classPath);
+#define boxptr_NFInstanceAPI_diagramJSONFromTop omc_NFInstanceAPI_diagramJSONFromTop
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_diagramJSONFromTop,2,0) {(void*) boxptr_NFInstanceAPI_diagramJSONFromTop,0}};
+#define boxvar_NFInstanceAPI_diagramJSONFromTop MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_diagramJSONFromTop)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_buildModelInstanceIconJSON(threadData_t *threadData, modelica_metatype _absynProgram, modelica_metatype _scodeProgram, modelica_metatype _classPath);
+#define boxptr_NFInstanceAPI_buildModelInstanceIconJSON omc_NFInstanceAPI_buildModelInstanceIconJSON
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildModelInstanceIconJSON,2,0) {(void*) boxptr_NFInstanceAPI_buildModelInstanceIconJSON,0}};
+#define boxvar_NFInstanceAPI_buildModelInstanceIconJSON MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildModelInstanceIconJSON)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_buildModelInstanceAnnotationJSON(threadData_t *threadData, modelica_metatype _absynProgram, modelica_metatype _scodeProgram, modelica_metatype _classPath, modelica_metatype _filter);
+#define boxptr_NFInstanceAPI_buildModelInstanceAnnotationJSON omc_NFInstanceAPI_buildModelInstanceAnnotationJSON
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildModelInstanceAnnotationJSON,2,0) {(void*) boxptr_NFInstanceAPI_buildModelInstanceAnnotationJSON,0}};
+#define boxvar_NFInstanceAPI_buildModelInstanceAnnotationJSON MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildModelInstanceAnnotationJSON)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_buildModelInstanceJSON(threadData_t *threadData, modelica_metatype _absynProgram, modelica_metatype _scodeProgram, modelica_metatype _classPath, modelica_metatype _contextPath, modelica_string _modifier);
+#define boxptr_NFInstanceAPI_buildModelInstanceJSON omc_NFInstanceAPI_buildModelInstanceJSON
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildModelInstanceJSON,2,0) {(void*) boxptr_NFInstanceAPI_buildModelInstanceJSON,0}};
+#define boxvar_NFInstanceAPI_buildModelInstanceJSON MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_buildModelInstanceJSON)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_mkTop(threadData_t *threadData, modelica_metatype _absynProgram, modelica_metatype _scodeProgram, modelica_string _name, modelica_metatype *out_top);
+#define boxptr_NFInstanceAPI_mkTop omc_NFInstanceAPI_mkTop
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_mkTop,2,0) {(void*) boxptr_NFInstanceAPI_mkTop,0}};
+#define boxvar_NFInstanceAPI_mkTop MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_mkTop)
+
+
+DLLModelDirection
+modelica_metatype omc_NFInstanceAPI_annotationProgram(threadData_t *threadData, modelica_string _annotationVersion);
+#define boxptr_NFInstanceAPI_annotationProgram omc_NFInstanceAPI_annotationProgram
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInstanceAPI_annotationProgram,2,0) {(void*) boxptr_NFInstanceAPI_annotationProgram,0}};
+#define boxvar_NFInstanceAPI_annotationProgram MMC_REFSTRUCTLIT(boxvar_lit_NFInstanceAPI_annotationProgram)
+
+#ifdef __cplusplus
+}
+#endif
+#endif

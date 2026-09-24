@@ -6,7 +6,7 @@
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DoubleEnded_mapFoldNoCopy(threadData_t *threadData, modelica_metatype _delst, modelica_fnptr _inMapFunc, modelica_metatype __omcQ_24in_5Farg)
 {
   modelica_metatype _arg = NULL;
@@ -15,62 +15,58 @@ modelica_metatype omc_DoubleEnded_mapFoldNoCopy(threadData_t *threadData, modeli
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _arg = __omcQ_24in_5Farg;
   // _element has no default value.
-  _lst = omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))));
+  _lst = omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 3)));
   while(1)
   {
     if(!(!listEmpty(_lst))) break;
-    _element = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inMapFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inMapFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inMapFunc), 2))), listGet(_lst, ((modelica_integer) 1)), _arg ,&_arg) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inMapFunc), 1)))) (threadData, listGet(_lst, ((modelica_integer) 1)), _arg ,&_arg);
+    _element = (OMC_BOX_FIELD(_inMapFunc, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_inMapFunc, 1))) (threadData, (OMC_BOX_FIELD(_inMapFunc, 2)), listGet(_lst, ((modelica_integer) 1)), _arg ,&_arg) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_inMapFunc, 1))) (threadData, listGet(_lst, ((modelica_integer) 1)), _arg ,&_arg);
 
     listSetFirst(_lst, _element);
 
     /* Pattern-matching assignment */
     tmpMeta1 = _lst;
-    if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
     tmpMeta2 = MMC_CAR(tmpMeta1);
     tmpMeta3 = MMC_CDR(tmpMeta1);
     _lst = tmpMeta3;
   }
   _return: OMC_LABEL_UNUSED
-  return _arg;
+  omc_ret_ = _arg;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_DoubleEnded_mapNoCopy__1(threadData_t *threadData, modelica_metatype _delst, modelica_fnptr _inMapFunc, modelica_metatype _inArg1)
 {
   modelica_metatype _lst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _lst = omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))));
+  _lst = omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 3)));
   while(1)
   {
     if(!(!listEmpty(_lst))) break;
-    listSetFirst(_lst, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inMapFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inMapFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inMapFunc), 2))), listGet(_lst, ((modelica_integer) 1)), _inArg1) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_inMapFunc), 1)))) (threadData, listGet(_lst, ((modelica_integer) 1)), _inArg1));
+    listSetFirst(_lst, (OMC_BOX_FIELD(_inMapFunc, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_inMapFunc, 1))) (threadData, (OMC_BOX_FIELD(_inMapFunc, 2)), listGet(_lst, ((modelica_integer) 1)), _inArg1) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_inMapFunc, 1))) (threadData, listGet(_lst, ((modelica_integer) 1)), _inArg1));
 
     /* Pattern-matching assignment */
     tmpMeta1 = _lst;
-    if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
     tmpMeta2 = MMC_CAR(tmpMeta1);
     tmpMeta3 = MMC_CDR(tmpMeta1);
     _lst = tmpMeta3;
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_DoubleEnded_clear(threadData_t *threadData, modelica_metatype _delst)
 {
   modelica_metatype _lst = NULL;
@@ -78,21 +74,18 @@ void omc_DoubleEnded_clear(threadData_t *threadData, modelica_metatype _delst)
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _lst has no default value.
-  _lst = omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))));
+  _lst = omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 3)));
 
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4))), tmpMeta1);
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 4)), tmpMeta1);
 
   tmpMeta2 = MMC_REFSTRUCTLIT(mmc_nil);
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))), tmpMeta2);
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 3)), tmpMeta2);
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2))), mmc_mk_integer(((modelica_integer) 0)));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 2)), omc_mk_integer(((modelica_integer) 0)));
 
   {
     modelica_metatype _l;
@@ -103,59 +96,60 @@ void omc_DoubleEnded_clear(threadData_t *threadData, modelica_metatype _delst)
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DoubleEnded_toListNoCopyNoClear(threadData_t *threadData, modelica_metatype _delst)
 {
   modelica_metatype _res = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
-  _res = omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))));
+  _res = omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 3)));
   _return: OMC_LABEL_UNUSED
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DoubleEnded_toListAndClear(threadData_t *threadData, modelica_metatype _delst, modelica_metatype _prependToList)
 {
   modelica_metatype _res = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
-  if((mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2))))) == ((modelica_integer) 0)))
+  if((omc_unbox_integer(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 2)))) == ((modelica_integer) 0)))
   {
     _res = _prependToList;
 
     goto _return;
   }
 
-  _res = omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))));
+  _res = omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 3)));
 
   if((!listEmpty(_prependToList)))
   {
-    listSetRest(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4)))), _prependToList);
+    listSetRest(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 4))), _prependToList);
   }
 
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4))), tmpMeta1);
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 4)), tmpMeta1);
 
   tmpMeta2 = MMC_REFSTRUCTLIT(mmc_nil);
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))), tmpMeta2);
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 3)), tmpMeta2);
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2))), mmc_mk_integer(((modelica_integer) 0)));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 2)), omc_mk_integer(((modelica_integer) 0)));
   _return: OMC_LABEL_UNUSED
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_DoubleEnded_push__list__back(threadData_t *threadData, modelica_metatype _delst, modelica_metatype _lst)
 {
   modelica_integer _length;
@@ -167,12 +161,9 @@ void omc_DoubleEnded_push__list__back(threadData_t *threadData, modelica_metatyp
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _length = mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2)))));
+  _length = omc_unbox_integer(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 2))));
   // _lstLength has no default value.
   // _tail has no default value.
   // _tmp has no default value.
@@ -184,7 +175,7 @@ void omc_DoubleEnded_push__list__back(threadData_t *threadData, modelica_metatyp
     goto _return;
   }
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2))), mmc_mk_integer(_length + _lstLength));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 2)), omc_mk_integer(_length + _lstLength));
 
   _t = listGet(_lst, ((modelica_integer) 1));
 
@@ -193,11 +184,11 @@ void omc_DoubleEnded_push__list__back(threadData_t *threadData, modelica_metatyp
 
   if((_length == ((modelica_integer) 0)))
   {
-    omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))), _tmp);
+    omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 3)), _tmp);
   }
   else
   {
-    listSetRest(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4)))), _tmp);
+    listSetRest(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 4))), _tmp);
   }
 
   _tail = _tmp;
@@ -216,38 +207,32 @@ void omc_DoubleEnded_push__list__back(threadData_t *threadData, modelica_metatyp
     }
   }
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4))), _tail);
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 4)), _tail);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_DoubleEnded_push__back(threadData_t *threadData, modelica_metatype _delst, modelica_metatype _elt)
 {
   modelica_integer _length;
   modelica_metatype _lst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _length = mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2)))));
+  _length = omc_unbox_integer(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 2))));
   // _lst has no default value.
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2))), mmc_mk_integer(((modelica_integer) 1) + _length));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 2)), omc_mk_integer(((modelica_integer) 1) + _length));
 
   if((_length == ((modelica_integer) 0)))
   {
     tmpMeta1 = mmc_mk_cons(_elt, MMC_REFSTRUCTLIT(mmc_nil));
     _lst = tmpMeta1;
 
-    omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))), _lst);
+    omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 3)), _lst);
 
-    omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4))), _lst);
+    omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 4)), _lst);
 
     goto _return;
   }
@@ -255,17 +240,14 @@ void omc_DoubleEnded_push__back(threadData_t *threadData, modelica_metatype _del
   tmpMeta2 = mmc_mk_cons(_elt, MMC_REFSTRUCTLIT(mmc_nil));
   _lst = tmpMeta2;
 
-  listSetRest(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4)))), _lst);
+  listSetRest(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 4))), _lst);
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4))), _lst);
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 4)), _lst);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_DoubleEnded_push__list__front(threadData_t *threadData, modelica_metatype _delst, modelica_metatype _lst)
 {
   modelica_integer _length;
@@ -282,12 +264,9 @@ void omc_DoubleEnded_push__list__front(threadData_t *threadData, modelica_metaty
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _length = mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2)))));
+  _length = omc_unbox_integer(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 2))));
   // _lstLength has no default value.
   // _work has no default value.
   // _oldHead has no default value.
@@ -301,11 +280,11 @@ void omc_DoubleEnded_push__list__front(threadData_t *threadData, modelica_metaty
     goto _return;
   }
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2))), mmc_mk_integer(_length + _lstLength));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 2)), omc_mk_integer(_length + _lstLength));
 
   /* Pattern-matching assignment */
   tmpMeta1 = _lst;
-  if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
   tmpMeta2 = MMC_CAR(tmpMeta1);
   tmpMeta3 = MMC_CDR(tmpMeta1);
   _t = tmpMeta2;
@@ -314,9 +293,9 @@ void omc_DoubleEnded_push__list__front(threadData_t *threadData, modelica_metaty
   tmpMeta4 = mmc_mk_cons(_t, MMC_REFSTRUCTLIT(mmc_nil));
   _head = tmpMeta4;
 
-  _oldHead = omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))));
+  _oldHead = omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 3)));
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))), _head);
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 3)), _head);
 
   {
     modelica_metatype _l;
@@ -334,71 +313,64 @@ void omc_DoubleEnded_push__list__front(threadData_t *threadData, modelica_metaty
 
   if((_length == ((modelica_integer) 0)))
   {
-    omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4))), _head);
+    omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 4)), _head);
   }
   else
   {
     listSetRest(_head, _oldHead);
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_DoubleEnded_push__front(threadData_t *threadData, modelica_metatype _delst, modelica_metatype _elt)
 {
   modelica_integer _length;
   modelica_metatype _lst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _length = mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2)))));
+  _length = omc_unbox_integer(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 2))));
   // _lst has no default value.
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2))), mmc_mk_integer(((modelica_integer) 1) + _length));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 2)), omc_mk_integer(((modelica_integer) 1) + _length));
 
   if((_length == ((modelica_integer) 0)))
   {
     tmpMeta1 = mmc_mk_cons(_elt, MMC_REFSTRUCTLIT(mmc_nil));
     _lst = tmpMeta1;
 
-    omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))), _lst);
+    omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 3)), _lst);
 
-    omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4))), _lst);
+    omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 4)), _lst);
 
     goto _return;
   }
 
-  _lst = omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))));
+  _lst = omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 3)));
 
   tmpMeta2 = mmc_mk_cons(_elt, _lst);
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))), tmpMeta2);
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 3)), tmpMeta2);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DoubleEnded_currentBackCell(threadData_t *threadData, modelica_metatype _delst)
 {
   modelica_metatype _last = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _last has no default value.
-  _last = omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4))));
+  _last = omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 4)));
   _return: OMC_LABEL_UNUSED
-  return _last;
+  omc_ret_ = _last;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DoubleEnded_pop__front(threadData_t *threadData, modelica_metatype _delst)
 {
   modelica_metatype _elt = NULL;
@@ -410,20 +382,21 @@ modelica_metatype omc_DoubleEnded_pop__front(threadData_t *threadData, modelica_
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _elt has no default value.
-  _length = mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2)))));
+  _length = omc_unbox_integer(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 2))));
   // _lst has no default value.
   /* Pattern-matching assignment */
   tmp1 = (_length > ((modelica_integer) 0));
-  if (1 /* true */ != tmp1) MMC_THROW_INTERNAL();
+  if (1 /* true */ != tmp1) OMC_THROW_INTERNAL();
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2))), mmc_mk_integer(((modelica_integer) -1) + _length));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 2)), omc_mk_integer(((modelica_integer) -1) + _length));
 
   /* Pattern-matching assignment */
-  tmpMeta2 = omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))));
-  if (listEmpty(tmpMeta2)) MMC_THROW_INTERNAL();
+  tmpMeta2 = omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 3)));
+  if (listEmpty(tmpMeta2)) OMC_THROW_INTERNAL();
   tmpMeta3 = MMC_CAR(tmpMeta2);
   tmpMeta4 = MMC_CDR(tmpMeta2);
   _elt = tmpMeta3;
@@ -432,64 +405,63 @@ modelica_metatype omc_DoubleEnded_pop__front(threadData_t *threadData, modelica_
   if((_length == ((modelica_integer) 1)))
   {
     tmpMeta5 = MMC_REFSTRUCTLIT(mmc_nil);
-    omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))), tmpMeta5);
+    omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 3)), tmpMeta5);
 
     tmpMeta6 = MMC_REFSTRUCTLIT(mmc_nil);
-    omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 4))), tmpMeta6);
+    omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 4)), tmpMeta6);
 
     goto _return;
   }
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 3))), _lst);
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_delst, 3)), _lst);
   _return: OMC_LABEL_UNUSED
-  return _elt;
+  omc_ret_ = _elt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_DoubleEnded_length(threadData_t *threadData, modelica_metatype _delst)
 {
   modelica_integer _length;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _length has no default value.
-  _length = mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_delst), 2)))));
+  _length = omc_unbox_integer(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_delst, 2))));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _length;
+  omc_ret_ = _length;
+  return omc_ret_;
 }
 modelica_metatype boxptr_DoubleEnded_length(threadData_t *threadData, modelica_metatype _delst)
 {
   modelica_integer _length;
   modelica_metatype out_length;
   _length = omc_DoubleEnded_length(threadData, _delst);
-  out_length = mmc_mk_icon(_length);
+  out_length = omc_mk_icon(_length);
   return out_length;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DoubleEnded_empty(threadData_t *threadData, modelica_metatype _dummy)
 {
   modelica_metatype _delst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _delst has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   tmpMeta2 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta3 = mmc_mk_box4(3, &DoubleEnded_MutableList_LIST__desc, omc_Mutable_create(threadData, mmc_mk_integer(((modelica_integer) 0))), omc_Mutable_create(threadData, tmpMeta1), omc_Mutable_create(threadData, tmpMeta2));
+  tmpMeta3 = omc_mk_box4(3, &DoubleEnded_MutableList_LIST__desc, omc_Mutable_create(threadData, omc_mk_integer(((modelica_integer) 0))), omc_Mutable_create(threadData, tmpMeta1), omc_Mutable_create(threadData, tmpMeta2));
   _delst = tmpMeta3;
   _return: OMC_LABEL_UNUSED
-  return _delst;
+  omc_ret_ = _delst;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DoubleEnded_fromList(threadData_t *threadData, modelica_metatype _lst)
 {
   modelica_metatype _delst = NULL;
@@ -509,7 +481,8 @@ modelica_metatype omc_DoubleEnded_fromList(threadData_t *threadData, modelica_me
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _delst has no default value.
   // _head has no default value.
@@ -521,7 +494,7 @@ modelica_metatype omc_DoubleEnded_fromList(threadData_t *threadData, modelica_me
   {
     tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
     tmpMeta2 = MMC_REFSTRUCTLIT(mmc_nil);
-    tmpMeta3 = mmc_mk_box4(3, &DoubleEnded_MutableList_LIST__desc, omc_Mutable_create(threadData, mmc_mk_integer(((modelica_integer) 0))), omc_Mutable_create(threadData, tmpMeta1), omc_Mutable_create(threadData, tmpMeta2));
+    tmpMeta3 = omc_mk_box4(3, &DoubleEnded_MutableList_LIST__desc, omc_Mutable_create(threadData, omc_mk_integer(((modelica_integer) 0))), omc_Mutable_create(threadData, tmpMeta1), omc_Mutable_create(threadData, tmpMeta2));
     _delst = tmpMeta3;
 
     goto _return;
@@ -529,7 +502,7 @@ modelica_metatype omc_DoubleEnded_fromList(threadData_t *threadData, modelica_me
 
   /* Pattern-matching assignment */
   tmpMeta4 = _lst;
-  if (listEmpty(tmpMeta4)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta4)) OMC_THROW_INTERNAL();
   tmpMeta5 = MMC_CAR(tmpMeta4);
   tmpMeta6 = MMC_CDR(tmpMeta4);
   _t = tmpMeta5;
@@ -558,27 +531,30 @@ modelica_metatype omc_DoubleEnded_fromList(threadData_t *threadData, modelica_me
     }
   }
 
-  tmpMeta11 = mmc_mk_box4(3, &DoubleEnded_MutableList_LIST__desc, omc_Mutable_create(threadData, mmc_mk_integer(_length)), omc_Mutable_create(threadData, _head), omc_Mutable_create(threadData, _tail));
+  tmpMeta11 = omc_mk_box4(3, &DoubleEnded_MutableList_LIST__desc, omc_Mutable_create(threadData, omc_mk_integer(_length)), omc_Mutable_create(threadData, _head), omc_Mutable_create(threadData, _tail));
   _delst = tmpMeta11;
   _return: OMC_LABEL_UNUSED
-  return _delst;
+  omc_ret_ = _delst;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DoubleEnded_new(threadData_t *threadData, modelica_metatype _first)
 {
   modelica_metatype _delst = NULL;
   modelica_metatype _lst = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _delst has no default value.
   tmpMeta1 = mmc_mk_cons(_first, MMC_REFSTRUCTLIT(mmc_nil));
   _lst = tmpMeta1;
-  tmpMeta2 = mmc_mk_box4(3, &DoubleEnded_MutableList_LIST__desc, omc_Mutable_create(threadData, mmc_mk_integer(((modelica_integer) 1))), omc_Mutable_create(threadData, _lst), omc_Mutable_create(threadData, _lst));
+  tmpMeta2 = omc_mk_box4(3, &DoubleEnded_MutableList_LIST__desc, omc_Mutable_create(threadData, omc_mk_integer(((modelica_integer) 1))), omc_Mutable_create(threadData, _lst), omc_Mutable_create(threadData, _lst));
   _delst = tmpMeta2;
   _return: OMC_LABEL_UNUSED
-  return _delst;
+  omc_ret_ = _delst;
+  return omc_ret_;
 }
 

@@ -12,22 +12,22 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_HashTableSM1_modeStr(threadData_t *threadData, modelica_metatype _mode);
 #define boxptr_HashTableSM1_modeStr omc_HashTableSM1_modeStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableSM1_modeStr,2,0) {(void*) boxptr_HashTableSM1_modeStr,0}};
 #define boxvar_HashTableSM1_modeStr MMC_REFSTRUCTLIT(boxvar_lit_HashTableSM1_modeStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableSM1_emptyHashTableSized(threadData_t *threadData, modelica_integer _size);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HashTableSM1_emptyHashTableSized(threadData_t *threadData, modelica_metatype _size);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableSM1_emptyHashTableSized,2,0) {(void*) boxptr_HashTableSM1_emptyHashTableSized,0}};
 #define boxvar_HashTableSM1_emptyHashTableSized MMC_REFSTRUCTLIT(boxvar_lit_HashTableSM1_emptyHashTableSized)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableSM1_emptyHashTable(threadData_t *threadData);
 #define boxptr_HashTableSM1_emptyHashTable omc_HashTableSM1_emptyHashTable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableSM1_emptyHashTable,2,0) {(void*) boxptr_HashTableSM1_emptyHashTable,0}};

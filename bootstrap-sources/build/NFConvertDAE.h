@@ -82,8 +82,6 @@ extern struct record_description DAE_Else_ELSEIF__desc;
 
 extern struct record_description DAE_Else_NOELSE__desc;
 
-extern struct record_description DAE_Exp_SCONST__desc;
-
 extern struct record_description DAE_Exp_TSUB__desc;
 
 extern struct record_description DAE_ExtArg_EXTARG__desc;
@@ -105,6 +103,10 @@ extern struct record_description DAE_FunctionDefinition_FUNCTION__EXT__desc;
 extern struct record_description DAE_FunctionDefinition_FUNCTION__PARTIAL__DERIVATIVE__desc;
 
 extern struct record_description DAE_Prefix_NOPRE__desc;
+
+extern struct record_description DAE_StartOrigin_CONFIDENCE__desc;
+
+extern struct record_description DAE_StartOrigin_TYPE__CONFIDENCE__desc;
 
 extern struct record_description DAE_StateSelect_ALWAYS__desc;
 
@@ -201,21 +203,21 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFConvertDAE_stripScopePrefixFromDim omc_NFConvertDAE_stripScopePrefixFromDim
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConvertDAE_makeTypeRecordVar(threadData_t *threadData, modelica_metatype _component);
 #define boxptr_NFConvertDAE_makeTypeRecordVar omc_NFConvertDAE_makeTypeRecordVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeRecordVar,2,0) {(void*) boxptr_NFConvertDAE_makeTypeRecordVar,0}};
 #define boxvar_NFConvertDAE_makeTypeRecordVar MMC_REFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeRecordVar)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConvertDAE_makeTypeVar(threadData_t *threadData, modelica_metatype _component);
 #define boxptr_NFConvertDAE_makeTypeVar omc_NFConvertDAE_makeTypeVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeVar,2,0) {(void*) boxptr_NFConvertDAE_makeTypeVar,0}};
 #define boxvar_NFConvertDAE_makeTypeVar MMC_REFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeVar)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConvertDAE_makeTypeVars(threadData_t *threadData, modelica_metatype _complexCls);
 #define boxptr_NFConvertDAE_makeTypeVars omc_NFConvertDAE_makeTypeVars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeVars,2,0) {(void*) boxptr_NFConvertDAE_makeTypeVars,0}};
@@ -240,7 +242,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_makeTypeVars,2,0) {(void*)
 #define boxptr_NFConvertDAE_convertFunction omc_NFConvertDAE_convertFunction
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConvertDAE_convertFunctionTree(threadData_t *threadData, modelica_metatype _funcs);
 #define boxptr_NFConvertDAE_convertFunctionTree omc_NFConvertDAE_convertFunctionTree
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertFunctionTree,2,0) {(void*) boxptr_NFConvertDAE_convertFunctionTree,0}};
@@ -343,21 +345,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertFunctionTree,2,0) {
 #define boxptr_NFConvertDAE_convertVariables omc_NFConvertDAE_convertVariables
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConvertDAE_convertStatements(threadData_t *threadData, modelica_metatype _statements);
 #define boxptr_NFConvertDAE_convertStatements omc_NFConvertDAE_convertStatements
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertStatements,2,0) {(void*) boxptr_NFConvertDAE_convertStatements,0}};
 #define boxvar_NFConvertDAE_convertStatements MMC_REFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertStatements)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConvertDAE_convertModel(threadData_t *threadData, modelica_metatype _flatModel);
 #define boxptr_NFConvertDAE_convertModel omc_NFConvertDAE_convertModel
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertModel,2,0) {(void*) boxptr_NFConvertDAE_convertModel,0}};
 #define boxvar_NFConvertDAE_convertModel MMC_REFSTRUCTLIT(boxvar_lit_NFConvertDAE_convertModel)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConvertDAE_convert(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _functions, modelica_metatype *out_daeFunctions);
 #define boxptr_NFConvertDAE_convert omc_NFConvertDAE_convert
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConvertDAE_convert,2,0) {(void*) boxptr_NFConvertDAE_convert,0}};

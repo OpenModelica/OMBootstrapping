@@ -33,6 +33,7 @@ extern "C" {
 #include "NFSubscript.h"
 #include "NFType.h"
 #include "Pointer.h"
+#include "PointerWeak.h"
 #include "StringUtil.h"
 #include "UnorderedMap.h"
 #include "UnorderedSet.h"

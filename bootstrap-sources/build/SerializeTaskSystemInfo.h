@@ -21,9 +21,9 @@ extern struct record_description ErrorTypes_Severity_ERROR__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SerializeTaskSystemInfo_serializeParMod(threadData_t *threadData, modelica_metatype _code, modelica_boolean _withOperations);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_SerializeTaskSystemInfo_serializeParMod(threadData_t *threadData, modelica_metatype _code, modelica_metatype _withOperations);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SerializeTaskSystemInfo_serializeParMod,2,0) {(void*) boxptr_SerializeTaskSystemInfo_serializeParMod,0}};
 #define boxvar_SerializeTaskSystemInfo_serializeParMod MMC_REFSTRUCTLIT(boxvar_lit_SerializeTaskSystemInfo_serializeParMod)

@@ -18,9 +18,9 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_Coloring_dumpColoring omc_Coloring_dumpColoring
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Coloring_createColoring(threadData_t *threadData, modelica_metatype _sparseArray, modelica_metatype _sparseArrayT, modelica_integer _sizeVars, modelica_integer _sizeVarswithDep);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Coloring_createColoring(threadData_t *threadData, modelica_metatype _sparseArray, modelica_metatype _sparseArrayT, modelica_metatype _sizeVars, modelica_metatype _sizeVarswithDep);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Coloring_createColoring,2,0) {(void*) boxptr_Coloring_createColoring,0}};
 #define boxvar_Coloring_createColoring MMC_REFSTRUCTLIT(boxvar_lit_Coloring_createColoring)

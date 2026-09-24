@@ -29,10 +29,10 @@ modelica_metatype boxptr_BackendDAEEXT_setAssignment(threadData_t *threadData, m
   modelica_integer tmp2;
   modelica_boolean _outBoolean;
   modelica_metatype out_outBoolean;
-  tmp1 = mmc_unbox_integer(_lenass1);
-  tmp2 = mmc_unbox_integer(_lenass2);
+  tmp1 = omc_unbox_integer(_lenass1);
+  tmp2 = omc_unbox_integer(_lenass2);
   _outBoolean = omc_BackendDAEEXT_setAssignment(threadData, tmp1, tmp2, _ass1, _ass2);
-  out_outBoolean = mmc_mk_icon(_outBoolean);
+  out_outBoolean = omc_mk_icon(_outBoolean);
   return out_outBoolean;
 }
 
@@ -71,13 +71,42 @@ void boxptr_BackendDAEEXT_matching(threadData_t *threadData, modelica_metatype _
   modelica_integer tmp4;
   modelica_real tmp5;
   modelica_integer tmp6;
-  tmp1 = mmc_unbox_integer(_nv);
-  tmp2 = mmc_unbox_integer(_ne);
-  tmp3 = mmc_unbox_integer(_matchingID);
-  tmp4 = mmc_unbox_integer(_cheapID);
-  tmp5 = mmc_unbox_real(_relabel_period);
-  tmp6 = mmc_unbox_integer(_clear_match);
+  tmp1 = omc_unbox_integer(_nv);
+  tmp2 = omc_unbox_integer(_ne);
+  tmp3 = omc_unbox_integer(_matchingID);
+  tmp4 = omc_unbox_integer(_cheapID);
+  tmp5 = omc_unbox_real(_relabel_period);
+  tmp6 = omc_unbox_integer(_clear_match);
   omc_BackendDAEEXT_matching(threadData, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6);
+  return;
+}
+
+void omc_BackendDAEEXT_setAdjacencyMatrixFlat(threadData_t *threadData, modelica_integer _nv, modelica_integer _ne, modelica_integer _nz, modelica_metatype _start, modelica_metatype _len, modelica_metatype _data)
+{
+  int _nv_ext;
+  int _ne_ext;
+  int _nz_ext;
+  modelica_metatype _start_ext;
+  modelica_metatype _len_ext;
+  modelica_metatype _data_ext;
+  _nv_ext = (int) _nv;
+  _ne_ext = (int) _ne;
+  _nz_ext = (int) _nz;
+  _start_ext = (modelica_metatype) _start;
+  _len_ext = (modelica_metatype) _len;
+  _data_ext = (modelica_metatype) _data;
+  BackendDAEEXT_setAdjacencyMatrixFlat(_nv_ext, _ne_ext, _nz_ext, _start_ext, _len_ext, _data_ext);
+  return;
+}
+void boxptr_BackendDAEEXT_setAdjacencyMatrixFlat(threadData_t *threadData, modelica_metatype _nv, modelica_metatype _ne, modelica_metatype _nz, modelica_metatype _start, modelica_metatype _len, modelica_metatype _data)
+{
+  modelica_integer tmp1;
+  modelica_integer tmp2;
+  modelica_integer tmp3;
+  tmp1 = omc_unbox_integer(_nv);
+  tmp2 = omc_unbox_integer(_ne);
+  tmp3 = omc_unbox_integer(_nz);
+  omc_BackendDAEEXT_setAdjacencyMatrixFlat(threadData, tmp1, tmp2, tmp3, _start, _len, _data);
   return;
 }
 
@@ -99,9 +128,9 @@ void boxptr_BackendDAEEXT_setAdjacencyMatrix(threadData_t *threadData, modelica_
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
-  tmp1 = mmc_unbox_integer(_nv);
-  tmp2 = mmc_unbox_integer(_ne);
-  tmp3 = mmc_unbox_integer(_nz);
+  tmp1 = omc_unbox_integer(_nv);
+  tmp2 = omc_unbox_integer(_ne);
+  tmp3 = omc_unbox_integer(_nz);
   omc_BackendDAEEXT_setAdjacencyMatrix(threadData, tmp1, tmp2, tmp3, _m);
   return;
 }
@@ -122,9 +151,9 @@ modelica_metatype boxptr_BackendDAEEXT_getNumber(threadData_t *threadData, model
   modelica_integer tmp1;
   modelica_integer _outInteger;
   modelica_metatype out_outInteger;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   _outInteger = omc_BackendDAEEXT_getNumber(threadData, tmp1);
-  out_outInteger = mmc_mk_icon(_outInteger);
+  out_outInteger = omc_mk_icon(_outInteger);
   return out_outInteger;
 }
 
@@ -141,8 +170,8 @@ void boxptr_BackendDAEEXT_setNumber(threadData_t *threadData, modelica_metatype 
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
-  tmp1 = mmc_unbox_integer(_inInteger1);
-  tmp2 = mmc_unbox_integer(_inInteger2);
+  tmp1 = omc_unbox_integer(_inInteger1);
+  tmp2 = omc_unbox_integer(_inInteger2);
   omc_BackendDAEEXT_setNumber(threadData, tmp1, tmp2);
   return;
 }
@@ -163,9 +192,9 @@ modelica_metatype boxptr_BackendDAEEXT_getLowLink(threadData_t *threadData, mode
   modelica_integer tmp1;
   modelica_integer _outInteger;
   modelica_metatype out_outInteger;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   _outInteger = omc_BackendDAEEXT_getLowLink(threadData, tmp1);
-  out_outInteger = mmc_mk_icon(_outInteger);
+  out_outInteger = omc_mk_icon(_outInteger);
   return out_outInteger;
 }
 
@@ -182,8 +211,8 @@ void boxptr_BackendDAEEXT_setLowLink(threadData_t *threadData, modelica_metatype
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
-  tmp1 = mmc_unbox_integer(_inInteger1);
-  tmp2 = mmc_unbox_integer(_inInteger2);
+  tmp1 = omc_unbox_integer(_inInteger1);
+  tmp2 = omc_unbox_integer(_inInteger2);
   omc_BackendDAEEXT_setLowLink(threadData, tmp1, tmp2);
   return;
 }
@@ -198,7 +227,7 @@ void omc_BackendDAEEXT_initNumber(threadData_t *threadData, modelica_integer _in
 void boxptr_BackendDAEEXT_initNumber(threadData_t *threadData, modelica_metatype _inInteger)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   omc_BackendDAEEXT_initNumber(threadData, tmp1);
   return;
 }
@@ -213,7 +242,7 @@ void omc_BackendDAEEXT_initLowLink(threadData_t *threadData, modelica_integer _i
 void boxptr_BackendDAEEXT_initLowLink(threadData_t *threadData, modelica_metatype _inInteger)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   omc_BackendDAEEXT_initLowLink(threadData, tmp1);
   return;
 }
@@ -239,7 +268,7 @@ void omc_BackendDAEEXT_markDifferentiated(threadData_t *threadData, modelica_int
 void boxptr_BackendDAEEXT_markDifferentiated(threadData_t *threadData, modelica_metatype _inInteger)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   omc_BackendDAEEXT_markDifferentiated(threadData, tmp1);
   return;
 }
@@ -289,9 +318,9 @@ modelica_metatype boxptr_BackendDAEEXT_getVMark(threadData_t *threadData, modeli
   modelica_integer tmp1;
   modelica_boolean _outBoolean;
   modelica_metatype out_outBoolean;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   _outBoolean = omc_BackendDAEEXT_getVMark(threadData, tmp1);
-  out_outBoolean = mmc_mk_icon(_outBoolean);
+  out_outBoolean = omc_mk_icon(_outBoolean);
   return out_outBoolean;
 }
 
@@ -305,7 +334,7 @@ void omc_BackendDAEEXT_vMark(threadData_t *threadData, modelica_integer _inInteg
 void boxptr_BackendDAEEXT_vMark(threadData_t *threadData, modelica_metatype _inInteger)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   omc_BackendDAEEXT_vMark(threadData, tmp1);
   return;
 }
@@ -320,7 +349,7 @@ void omc_BackendDAEEXT_eMark(threadData_t *threadData, modelica_integer _inInteg
 void boxptr_BackendDAEEXT_eMark(threadData_t *threadData, modelica_metatype _inInteger)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   omc_BackendDAEEXT_eMark(threadData, tmp1);
   return;
 }
@@ -338,8 +367,8 @@ void boxptr_BackendDAEEXT_initMarks(threadData_t *threadData, modelica_metatype 
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
-  tmp1 = mmc_unbox_integer(_inInteger1);
-  tmp2 = mmc_unbox_integer(_inInteger2);
+  tmp1 = omc_unbox_integer(_inInteger1);
+  tmp2 = omc_unbox_integer(_inInteger2);
   omc_BackendDAEEXT_initMarks(threadData, tmp1, tmp2);
   return;
 }

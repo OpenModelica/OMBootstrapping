@@ -17,7 +17,6 @@ extern "C" {
 #include "DAEDump.h"
 #include "DAEDumpTypes.h"
 #include "Debug.h"
-#include "DoubleEnded.h"
 #include "DumpHTML.h"
 #include "ElementSource.h"
 #include "Error.h"

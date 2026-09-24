@@ -32,6 +32,10 @@ extern void BackendDAEEXT_setAdjacencyMatrix(int _nv, int _ne, int _nz, modelica
 
 }
 
+extern void BackendDAEEXT_setAdjacencyMatrixFlat(int _nv, int _ne, int _nz, modelica_metatype _start, modelica_metatype _len, modelica_metatype _data) {
+
+}
+
 extern int BackendDAEEXT_getNumber(int _inInteger) {
   return 0;
 }

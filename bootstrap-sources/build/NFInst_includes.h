@@ -15,6 +15,7 @@ extern "C" {
 #include "FlagsUtil.h"
 #include "List.h"
 #include "Mutable.h"
+#include "MutableWeak.h"
 #include "NFAttributes.h"
 #include "NFBinding.h"
 #include "NFCall.h"

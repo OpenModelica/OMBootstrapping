@@ -45,30 +45,30 @@ extern struct record_description NFType_REAL__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBASSC_Tuple__Id_isEqual(threadData_t *threadData, modelica_metatype _id1, modelica_metatype _id2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBASSC_Tuple__Id_isEqual(threadData_t *threadData, modelica_metatype _id1, modelica_metatype _id2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_Tuple__Id_isEqual,2,0) {(void*) boxptr_NBASSC_Tuple__Id_isEqual,0}};
 #define boxvar_NBASSC_Tuple__Id_isEqual MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_Tuple__Id_isEqual)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NBASSC_Tuple__Id_hash(threadData_t *threadData, modelica_metatype _id);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBASSC_Tuple__Id_hash(threadData_t *threadData, modelica_metatype _id);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_Tuple__Id_hash,2,0) {(void*) boxptr_NBASSC_Tuple__Id_hash,0}};
 #define boxvar_NBASSC_Tuple__Id_hash MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_Tuple__Id_hash)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBASSC_Tuple__Id_toString(threadData_t *threadData, modelica_metatype _id);
 #define boxptr_NBASSC_Tuple__Id_toString omc_NBASSC_Tuple__Id_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_Tuple__Id_toString,2,0) {(void*) boxptr_NBASSC_Tuple__Id_toString,0}};
 #define boxvar_NBASSC_Tuple__Id_toString MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_Tuple__Id_toString)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NBASSC_getOperations(threadData_t *threadData, modelica_metatype _op_modes, modelica_metatype _op_val1, modelica_metatype _op_val2, modelica_metatype _op_val3, modelica_metatype _op_val4);
 #define boxptr_NBASSC_getOperations omc_NBASSC_getOperations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_getOperations,2,0) {(void*) boxptr_NBASSC_getOperations,0}};
@@ -76,16 +76,16 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_getOperations,2,0) {(void*) boxp
 
 extern void ASSC_getOperations(modelica_metatype /*_op_modes*/, modelica_metatype /*_op_val1*/, modelica_metatype /*_op_val2*/, modelica_metatype /*_op_val3*/, modelica_metatype /*_op_val4*/);
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NBASSC_getNumberOfOperations(threadData_t *threadData, modelica_metatype _nop);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBASSC_getNumberOfOperations(threadData_t *threadData, modelica_metatype _nop);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_getNumberOfOperations,2,0) {(void*) boxptr_NBASSC_getNumberOfOperations,0}};
 #define boxvar_NBASSC_getNumberOfOperations MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_getNumberOfOperations)
 
 extern int ASSC_getNumberOfOperations(modelica_metatype /*_nop*/);
 
-DLLDirection
+DLLModelDirection
 void omc_NBASSC_bareiss(threadData_t *threadData);
 #define boxptr_NBASSC_bareiss omc_NBASSC_bareiss
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_bareiss,2,0) {(void*) boxptr_NBASSC_bareiss,0}};
@@ -93,7 +93,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_bareiss,2,0) {(void*) boxptr_NBA
 
 extern void ASSC_bareiss();
 
-DLLDirection
+DLLModelDirection
 void omc_NBASSC_printMatrix(threadData_t *threadData);
 #define boxptr_NBASSC_printMatrix omc_NBASSC_printMatrix
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_printMatrix,2,0) {(void*) boxptr_NBASSC_printMatrix,0}};
@@ -101,7 +101,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_printMatrix,2,0) {(void*) boxptr
 
 extern void ASSC_printMatrix();
 
-DLLDirection
+DLLModelDirection
 void omc_NBASSC_freeMatrix(threadData_t *threadData);
 #define boxptr_NBASSC_freeMatrix omc_NBASSC_freeMatrix
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_freeMatrix,2,0) {(void*) boxptr_NBASSC_freeMatrix,0}};
@@ -109,7 +109,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_freeMatrix,2,0) {(void*) boxptr_
 
 extern void ASSC_freeMatrix();
 
-DLLDirection
+DLLModelDirection
 void omc_NBASSC_getMatrix(threadData_t *threadData, modelica_metatype _adj, modelica_metatype _val);
 #define boxptr_NBASSC_getMatrix omc_NBASSC_getMatrix
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_getMatrix,2,0) {(void*) boxptr_NBASSC_getMatrix,0}};
@@ -117,87 +117,87 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_getMatrix,2,0) {(void*) boxptr_N
 
 extern void ASSC_getMatrix(modelica_metatype /*_adj*/, modelica_metatype /*_val*/);
 
-DLLDirection
+DLLModelDirection
 void omc_NBASSC_setMatrix(threadData_t *threadData, modelica_integer _nv, modelica_integer _ne, modelica_integer _nz, modelica_metatype _adj, modelica_metatype _val);
-DLLDirection
+DLLModelDirection
 void boxptr_NBASSC_setMatrix(threadData_t *threadData, modelica_metatype _nv, modelica_metatype _ne, modelica_metatype _nz, modelica_metatype _adj, modelica_metatype _val);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_setMatrix,2,0) {(void*) boxptr_NBASSC_setMatrix,0}};
 #define boxvar_NBASSC_setMatrix MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_setMatrix)
 
 extern void ASSC_setMatrix(int /*_nv*/, int /*_ne*/, int /*_nz*/, modelica_metatype /*_adj*/, modelica_metatype /*_val*/);
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBASSC_createEquations(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _index, modelica_metatype _indices, modelica_metatype _values, modelica_integer _num_eqns, modelica_metatype _lhs_array);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBASSC_createEquations(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _index, modelica_metatype _indices, modelica_metatype _values, modelica_metatype _num_eqns, modelica_metatype _lhs_array);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_createEquations,2,0) {(void*) boxptr_NBASSC_createEquations,0}};
 #define boxvar_NBASSC_createEquations MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_createEquations)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBASSC_buildExpression(threadData_t *threadData, modelica_integer _factor_pivot, modelica_integer _factor_update, modelica_metatype _pivot_exp, modelica_metatype _update_exp);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBASSC_buildExpression(threadData_t *threadData, modelica_metatype _factor_pivot, modelica_metatype _factor_update, modelica_metatype _pivot_exp, modelica_metatype _update_exp);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_buildExpression,2,0) {(void*) boxptr_NBASSC_buildExpression,0}};
 #define boxvar_NBASSC_buildExpression MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_buildExpression)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBASSC_findLastOperation(threadData_t *threadData, modelica_integer _current_row, modelica_integer _last_op, modelica_metatype _op_modes, modelica_metatype _op_val1, modelica_metatype _op_val2, modelica_metatype _op_val3, modelica_metatype _op_val4, modelica_integer *out_pre_op, modelica_integer *out_pre_mode, modelica_integer *out_row1, modelica_integer *out_row2, modelica_integer *out_factor1, modelica_integer *out_factor2, modelica_integer *out_gcd);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBASSC_findLastOperation(threadData_t *threadData, modelica_metatype _current_row, modelica_metatype _last_op, modelica_metatype _op_modes, modelica_metatype _op_val1, modelica_metatype _op_val2, modelica_metatype _op_val3, modelica_metatype _op_val4, modelica_metatype *out_pre_op, modelica_metatype *out_pre_mode, modelica_metatype *out_row1, modelica_metatype *out_row2, modelica_metatype *out_factor1, modelica_metatype *out_factor2, modelica_metatype *out_gcd);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_findLastOperation,2,0) {(void*) boxptr_NBASSC_findLastOperation,0}};
 #define boxvar_NBASSC_findLastOperation MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_findLastOperation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBASSC_traceEquation(threadData_t *threadData, modelica_integer _current_row, modelica_integer _last_op, modelica_metatype _op_modes, modelica_metatype _op_val1, modelica_metatype _op_val2, modelica_metatype _op_val3, modelica_metatype _op_val4);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBASSC_traceEquation(threadData_t *threadData, modelica_metatype _current_row, modelica_metatype _last_op, modelica_metatype _op_modes, modelica_metatype _op_val1, modelica_metatype _op_val2, modelica_metatype _op_val3, modelica_metatype _op_val4);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_traceEquation,2,0) {(void*) boxptr_NBASSC_traceEquation,0}};
 #define boxvar_NBASSC_traceEquation MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_traceEquation)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NBASSC_tracebackZeroRows(threadData_t *threadData, modelica_metatype _eqns, modelica_integer _num_eqns, modelica_integer _count_zero_row, modelica_integer _num_op, modelica_metatype _op_modes, modelica_metatype _op_val1, modelica_metatype _op_val2, modelica_metatype _op_val3, modelica_metatype _op_val4);
-DLLDirection
+DLLModelDirection
 void boxptr_NBASSC_tracebackZeroRows(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _num_eqns, modelica_metatype _count_zero_row, modelica_metatype _num_op, modelica_metatype _op_modes, modelica_metatype _op_val1, modelica_metatype _op_val2, modelica_metatype _op_val3, modelica_metatype _op_val4);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_tracebackZeroRows,2,0) {(void*) boxptr_NBASSC_tracebackZeroRows,0}};
 #define boxvar_NBASSC_tracebackZeroRows MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_tracebackZeroRows)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBASSC_checkSingularity(threadData_t *threadData, modelica_metatype _indices, modelica_integer _num_eqns, modelica_integer *out_count_zero_row);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBASSC_checkSingularity(threadData_t *threadData, modelica_metatype _indices, modelica_metatype _num_eqns, modelica_metatype *out_count_zero_row);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_checkSingularity,2,0) {(void*) boxptr_NBASSC_checkSingularity,0}};
 #define boxvar_NBASSC_checkSingularity MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_checkSingularity)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NBASSC_applyRecordedOperations(threadData_t *threadData, modelica_metatype _lhs_map, modelica_metatype *out_op_modes, modelica_metatype *out_op_val1, modelica_metatype *out_op_val2, modelica_metatype *out_op_val3, modelica_metatype *out_op_val4, modelica_metatype *out_lhs_array);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBASSC_applyRecordedOperations(threadData_t *threadData, modelica_metatype _lhs_map, modelica_metatype *out_op_modes, modelica_metatype *out_op_val1, modelica_metatype *out_op_val2, modelica_metatype *out_op_val3, modelica_metatype *out_op_val4, modelica_metatype *out_lhs_array);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_applyRecordedOperations,2,0) {(void*) boxptr_NBASSC_applyRecordedOperations,0}};
 #define boxvar_NBASSC_applyRecordedOperations MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_applyRecordedOperations)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBASSC_performBareissElimination(threadData_t *threadData, modelica_metatype __omcQ_24in_5Findices, modelica_metatype __omcQ_24in_5Fvalues, modelica_metatype *out_values);
 #define boxptr_NBASSC_performBareissElimination omc_NBASSC_performBareissElimination
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_performBareissElimination,2,0) {(void*) boxptr_NBASSC_performBareissElimination,0}};
 #define boxvar_NBASSC_performBareissElimination MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_performBareissElimination)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBASSC_buildSparseRepresentation(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _vars, modelica_metatype *out_values, modelica_integer *out_num_crefs, modelica_integer *out_num_eqns, modelica_integer *out_num_nonzero_val, modelica_metatype *out_lhs_map);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBASSC_buildSparseRepresentation(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _vars, modelica_metatype *out_values, modelica_metatype *out_num_crefs, modelica_metatype *out_num_eqns, modelica_metatype *out_num_nonzero_val, modelica_metatype *out_lhs_map);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_buildSparseRepresentation,2,0) {(void*) boxptr_NBASSC_buildSparseRepresentation,0}};
 #define boxvar_NBASSC_buildSparseRepresentation MMC_REFSTRUCTLIT(boxvar_lit_NBASSC_buildSparseRepresentation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBASSC_main(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _vars, modelica_metatype _index);
 #define boxptr_NBASSC_main omc_NBASSC_main
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBASSC_main,2,0) {(void*) boxptr_NBASSC_main,0}};

@@ -23,7 +23,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT6,11,_OMC_LIT6_data);
 #define _OMC_LIT6 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT6)
 static const MMC_DEFREALLIT(_OMC_LIT_STRUCT7_6,0.0);
 #define _OMC_LIT7_6 MMC_REFREALLIT(_OMC_LIT_STRUCT7_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT7,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT6,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(142)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(142)),MMC_IMMEDIATE(MMC_TAGFIXNUM(75)),_OMC_LIT7_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT7,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT6,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(133)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(133)),MMC_IMMEDIATE(MMC_TAGFIXNUM(75)),_OMC_LIT7_6}};
 #define _OMC_LIT7 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT7)
 #define _OMC_LIT8_data "analytical Jacobians[SPARSE] -> build sparse graph.\n"
 static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT8,52,_OMC_LIT8_data);
@@ -53,7 +53,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT16,30,_OMC_LIT16_data);
 #define _OMC_LIT16 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT16)
 static const MMC_DEFREALLIT(_OMC_LIT_STRUCT17_6,0.0);
 #define _OMC_LIT17_6 MMC_REFREALLIT(_OMC_LIT_STRUCT17_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT17,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT6,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(112)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(112)),MMC_IMMEDIATE(MMC_TAGFIXNUM(75)),_OMC_LIT17_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT17,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT6,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(103)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(103)),MMC_IMMEDIATE(MMC_TAGFIXNUM(75)),_OMC_LIT17_6}};
 #define _OMC_LIT17 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT17)
 #include "util/modelica.h"
 
@@ -78,47 +78,38 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Coloring_createBipartiteGraph,2,0) {(vo
 
 PROTECTED_FUNCTION_STATIC void omc_Coloring_dumpColoring(threadData_t *threadData, modelica_metatype _pattern)
 {
-  modelica_metatype tmpMeta1;
-  modelica_metatype tmpMeta2;
+  modelica_string tmp1;
+  modelica_string tmp2;
   modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
+  modelica_string tmp4;
+  modelica_string tmp5;
   modelica_metatype tmpMeta6;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  tmpMeta1 = stringAppend(_OMC_LIT0,intString(listLength(_pattern)));
-  tmpMeta2 = stringAppend(tmpMeta1,_OMC_LIT1);
-  fputs(MMC_STRINGDATA(tmpMeta2),stdout);
+  tmp1 = stringAppend(_OMC_LIT0,intString(listLength(_pattern)));
+  tmp2 = stringAppend(tmp1,_OMC_LIT1);
+  fputs(omc_string_data(tmp2),stdout);
 
   {
     modelica_metatype _row;
     for (tmpMeta3 = _pattern; !listEmpty(tmpMeta3); tmpMeta3=MMC_CDR(tmpMeta3))
     {
       _row = MMC_CAR(tmpMeta3);
-      tmpMeta4 = stringAppend(_OMC_LIT2,stringDelimitList(omc_List_map(threadData, _row, boxvar_intString), _OMC_LIT3));
-      tmpMeta5 = stringAppend(tmpMeta4,_OMC_LIT4);
-      fputs(MMC_STRINGDATA(tmpMeta5),stdout);
+      tmp4 = stringAppend(_OMC_LIT2,stringDelimitList(omc_List_map(threadData, _row, boxvar_intString), _OMC_LIT3));
+      tmp5 = stringAppend(tmp4,_OMC_LIT4);
+      fputs(omc_string_data(tmp5),stdout);
     }
   }
 
-  fputs(MMC_STRINGDATA(_OMC_LIT1),stdout);
+  fputs(omc_string_data(_OMC_LIT1),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_Coloring_mapIndexColors(threadData_t *threadData, modelica_metatype _inColors, modelica_integer _inMaxIndex, modelica_metatype _inArray)
 {
   modelica_integer _index;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _index has no default value.
   { /* matchcontinue expression */
@@ -126,7 +117,7 @@ PROTECTED_FUNCTION_STATIC void omc_Coloring_mapIndexColors(threadData_t *threadD
       volatile mmc_switch_type tmp3;
       int tmp4;
       tmp3 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp2_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp3 < 2; tmp3++) {
@@ -144,9 +135,9 @@ PROTECTED_FUNCTION_STATIC void omc_Coloring_mapIndexColors(threadData_t *threadD
             for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp6, tmp8); _i += tmp7)
             {
 
-              _index = mmc_unbox_integer(arrayGet(_inColors, _i));
+              _index = omc_unbox_integer(arrayGet(_inColors, _i));
 
-              tmpMeta5 = mmc_mk_cons(mmc_mk_integer(_i), arrayGet(_inArray, _index));
+              tmpMeta5 = mmc_mk_cons(omc_mk_integer(_i), arrayGet(_inArray, _index));
               arrayUpdate(_inArray, _index, tmpMeta5);
             }
           }
@@ -166,28 +157,25 @@ PROTECTED_FUNCTION_STATIC void omc_Coloring_mapIndexColors(threadData_t *threadD
       goto goto_1;
       tmp2_done:
       (void)tmp3;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp2_done2;
       goto_1:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp3 < 2) {
         goto tmp2_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp2_done2:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_Coloring_mapIndexColors(threadData_t *threadData, modelica_metatype _inColors, modelica_metatype _inMaxIndex, modelica_metatype _inArray)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_inMaxIndex);
+  tmp1 = omc_unbox_integer(_inMaxIndex);
   omc_Coloring_mapIndexColors(threadData, _inColors, tmp1, _inArray);
   return;
 }
@@ -197,7 +185,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_Coloring_createBipartiteGraph(th
   modelica_metatype _outEdges = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _outEdges = tmpMeta1;
@@ -211,48 +200,42 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_Coloring_createBipartiteGraph(th
     _outEdges = tmpMeta2;
   }
   _return: OMC_LABEL_UNUSED
-  return _outEdges;
+  omc_ret_ = _outEdges;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Coloring_createBipartiteGraph(threadData_t *threadData, modelica_metatype _inNode, modelica_metatype _inSparsePattern)
 {
   modelica_integer tmp1;
   modelica_metatype _outEdges = NULL;
   modelica_metatype tmpMeta2;
-  tmp1 = mmc_unbox_integer(_inNode);
+  tmp1 = omc_unbox_integer(_inNode);
   _outEdges = omc_Coloring_createBipartiteGraph(threadData, tmp1, _inSparsePattern);
   /* skip box _outEdges; list<#Integer> */
   return _outEdges;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Coloring_createColoring(threadData_t *threadData, modelica_metatype _sparseArray, modelica_metatype _sparseArrayT, modelica_integer _sizeVars, modelica_integer _sizeVarswithDep)
 {
   modelica_metatype _coloredArray = NULL;
   modelica_boolean _debug;
-  modelica_metatype _nodesList = NULL;
   modelica_metatype _colored = NULL;
-  modelica_metatype _forbiddenColor = NULL;
-  modelica_metatype _sparseGraph = NULL;
   modelica_metatype _sparseGraphT = NULL;
-  modelica_metatype _arraysparseGraph = NULL;
   modelica_integer _maxColor;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _coloredArray has no default value.
   _debug = 0 /* false */;
-  // _nodesList has no default value.
   // _colored has no default value.
-  // _forbiddenColor has no default value.
-  // _sparseGraph has no default value.
   // _sparseGraphT has no default value.
-  // _arraysparseGraph has no default value.
   // _maxColor has no default value.
   { /* matchcontinue expression */
     {
       volatile mmc_switch_type tmp3;
       int tmp4;
       tmp3 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp2_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp3 < 2; tmp3++) {
@@ -262,44 +245,32 @@ modelica_metatype omc_Coloring_createColoring(threadData_t *threadData, modelica
           /* Pattern matching succeeded */
           if(omc_Flags_isSet(threadData, _OMC_LIT11))
           {
-            fputs(MMC_STRINGDATA(_OMC_LIT8),stdout);
+            fputs(omc_string_data(_OMC_LIT8),stdout);
           }
-
-          _nodesList = omc_List_intRange2(threadData, ((modelica_integer) 1), _sizeVarswithDep);
-
-          _sparseGraph = omc_Graph_buildGraph(threadData, _nodesList, boxvar_Coloring_createBipartiteGraph, _sparseArray);
 
           _sparseGraphT = omc_Graph_buildGraph(threadData, omc_List_intRange2(threadData, ((modelica_integer) 1), _sizeVars), boxvar_Coloring_createBipartiteGraph, _sparseArrayT);
 
           if(omc_Flags_isSet(threadData, _OMC_LIT11))
           {
-            fputs(MMC_STRINGDATA(_OMC_LIT12),stdout);
+            fputs(omc_string_data(_OMC_LIT12),stdout);
 
-            omc_Graph_printGraphInt(threadData, _sparseGraph);
+            omc_Graph_printGraphInt(threadData, omc_Graph_buildGraph(threadData, omc_List_intRange2(threadData, ((modelica_integer) 1), _sizeVarswithDep), boxvar_Coloring_createBipartiteGraph, _sparseArray));
 
-            fputs(MMC_STRINGDATA(_OMC_LIT13),stdout);
+            fputs(omc_string_data(_OMC_LIT13),stdout);
 
             omc_Graph_printGraphInt(threadData, _sparseGraphT);
 
-            fputs(MMC_STRINGDATA(_OMC_LIT14),stdout);
+            fputs(omc_string_data(_OMC_LIT14),stdout);
           }
 
-          _forbiddenColor = arrayCreate(_sizeVars, mmc_mk_integer(((modelica_integer) 0)));
-
-          _colored = arrayCreate(_sizeVars, mmc_mk_integer(((modelica_integer) 0)));
-
-          _arraysparseGraph = listArray(_sparseGraph);
+          _colored = arrayCreate(_sizeVars, omc_mk_integer(((modelica_integer) 0)));
 
           if((_sizeVars > ((modelica_integer) 0)))
           {
-            omc_Graph_partialDistance2colorInt(threadData, _sparseGraphT, _forbiddenColor, _nodesList, _arraysparseGraph, _colored);
+            omc_Graph_partialDistance2colorInt(threadData, _sparseGraphT, _sizeVarswithDep, _colored);
           }
 
-          omc_GCExt_free(threadData, _forbiddenColor);
-
-          omc_GCExt_free(threadData, _arraysparseGraph);
-
-          _maxColor = mmc_unbox_integer(omc_Array_fold(threadData, _colored, boxvar_intMax, mmc_mk_integer(((modelica_integer) 0))));
+          _maxColor = omc_unbox_integer(omc_Array_fold(threadData, _colored, boxvar_intMax, omc_mk_integer(((modelica_integer) 0))));
 
           tmpMeta5 = MMC_REFSTRUCTLIT(mmc_nil);
           _coloredArray = arrayCreate(_maxColor, tmpMeta5);
@@ -310,7 +281,7 @@ modelica_metatype omc_Coloring_createColoring(threadData_t *threadData, modelica
 
           if(omc_Flags_isSet(threadData, _OMC_LIT11))
           {
-            fputs(MMC_STRINGDATA(_OMC_LIT15),stdout);
+            fputs(omc_string_data(_OMC_LIT15),stdout);
 
             omc_Coloring_dumpColoring(threadData, arrayList(_coloredArray));
           }
@@ -330,28 +301,29 @@ modelica_metatype omc_Coloring_createColoring(threadData_t *threadData, modelica
       goto goto_1;
       tmp2_done:
       (void)tmp3;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp2_done2;
       goto_1:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp3 < 2) {
         goto tmp2_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp2_done2:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  return _coloredArray;
+  omc_ret_ = _coloredArray;
+  return omc_ret_;
 }
 modelica_metatype boxptr_Coloring_createColoring(threadData_t *threadData, modelica_metatype _sparseArray, modelica_metatype _sparseArrayT, modelica_metatype _sizeVars, modelica_metatype _sizeVarswithDep)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _coloredArray = NULL;
-  tmp1 = mmc_unbox_integer(_sizeVars);
-  tmp2 = mmc_unbox_integer(_sizeVarswithDep);
+  tmp1 = omc_unbox_integer(_sizeVars);
+  tmp2 = omc_unbox_integer(_sizeVarswithDep);
   _coloredArray = omc_Coloring_createColoring(threadData, _sparseArray, _sparseArrayT, tmp1, tmp2);
   /* skip box _coloredArray; array<list<#Integer>> */
   return _coloredArray;

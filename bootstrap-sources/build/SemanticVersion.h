@@ -18,48 +18,48 @@ extern struct record_description SemanticVersion_Version_SEMVER__desc;
 #define boxptr_SemanticVersion_splitPrereleaseAndMeta omc_SemanticVersion_splitPrereleaseAndMeta
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SemanticVersion_isSemVer(threadData_t *threadData, modelica_metatype _v);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_SemanticVersion_isSemVer(threadData_t *threadData, modelica_metatype _v);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SemanticVersion_isSemVer,2,0) {(void*) boxptr_SemanticVersion_isSemVer,0}};
 #define boxvar_SemanticVersion_isSemVer MMC_REFSTRUCTLIT(boxvar_lit_SemanticVersion_isSemVer)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SemanticVersion_hasMetaInformation(threadData_t *threadData, modelica_metatype _v);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_SemanticVersion_hasMetaInformation(threadData_t *threadData, modelica_metatype _v);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SemanticVersion_hasMetaInformation,2,0) {(void*) boxptr_SemanticVersion_hasMetaInformation,0}};
 #define boxvar_SemanticVersion_hasMetaInformation MMC_REFSTRUCTLIT(boxvar_lit_SemanticVersion_hasMetaInformation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SemanticVersion_isPrerelease(threadData_t *threadData, modelica_metatype _v);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_SemanticVersion_isPrerelease(threadData_t *threadData, modelica_metatype _v);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SemanticVersion_isPrerelease,2,0) {(void*) boxptr_SemanticVersion_isPrerelease,0}};
 #define boxvar_SemanticVersion_isPrerelease MMC_REFSTRUCTLIT(boxvar_lit_SemanticVersion_isPrerelease)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SemanticVersion_toString(threadData_t *threadData, modelica_metatype _v);
 #define boxptr_SemanticVersion_toString omc_SemanticVersion_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SemanticVersion_toString,2,0) {(void*) boxptr_SemanticVersion_toString,0}};
 #define boxvar_SemanticVersion_toString MMC_REFSTRUCTLIT(boxvar_lit_SemanticVersion_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SemanticVersion_compare(threadData_t *threadData, modelica_metatype _v1, modelica_metatype _v2, modelica_boolean _comparePrerelease, modelica_boolean _compareBuildInformation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_SemanticVersion_compare(threadData_t *threadData, modelica_metatype _v1, modelica_metatype _v2, modelica_metatype _comparePrerelease, modelica_metatype _compareBuildInformation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SemanticVersion_compare,2,0) {(void*) boxptr_SemanticVersion_compare,0}};
 #define boxvar_SemanticVersion_compare MMC_REFSTRUCTLIT(boxvar_lit_SemanticVersion_compare)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SemanticVersion_parse(threadData_t *threadData, modelica_string _s, modelica_boolean _nonsemverAsZeroZeroZero);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_SemanticVersion_parse(threadData_t *threadData, modelica_metatype _s, modelica_metatype _nonsemverAsZeroZeroZero);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SemanticVersion_parse,2,0) {(void*) boxptr_SemanticVersion_parse,0}};
 #define boxvar_SemanticVersion_parse MMC_REFSTRUCTLIT(boxvar_lit_SemanticVersion_parse)

@@ -12,7 +12,7 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Mutable_access(threadData_t *threadData, modelica_metatype _mutable);
 #define boxptr_Mutable_access omc_Mutable_access
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Mutable_access,2,0) {(void*) boxptr_Mutable_access,0}};
@@ -25,7 +25,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Mutable_access,2,0) {(void*) boxptr_Mut
  * extern modelica_metatype mutableAccess(modelica_metatype (*_mutable*));
  */
 
-DLLDirection
+DLLModelDirection
 void omc_Mutable_update(threadData_t *threadData, modelica_metatype _mutable, modelica_metatype _data);
 #define boxptr_Mutable_update omc_Mutable_update
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Mutable_update,2,0) {(void*) boxptr_Mutable_update,0}};
@@ -38,7 +38,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Mutable_update,2,0) {(void*) boxptr_Mut
  * extern void mutableUpdate(modelica_metatype (*_mutable*), modelica_metatype (*_data*));
  */
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Mutable_create(threadData_t *threadData, modelica_metatype _data);
 #define boxptr_Mutable_create omc_Mutable_create
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Mutable_create,2,0) {(void*) boxptr_Mutable_create,0}};

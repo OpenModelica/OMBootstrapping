@@ -29,9 +29,9 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_SerializeModelInfo_varKindString omc_SerializeModelInfo_varKindString
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SerializeModelInfo_serialize(threadData_t *threadData, modelica_metatype _code, modelica_boolean _withOperations);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_SerializeModelInfo_serialize(threadData_t *threadData, modelica_metatype _code, modelica_metatype _withOperations);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SerializeModelInfo_serialize,2,0) {(void*) boxptr_SerializeModelInfo_serialize,0}};
 #define boxvar_SerializeModelInfo_serialize MMC_REFSTRUCTLIT(boxvar_lit_SerializeModelInfo_serialize)

@@ -18,7 +18,7 @@ void omc_ZeroMQ_sendReply(threadData_t *threadData, modelica_metatype _zmqSocket
 {
   modelica_metatype _zmqSocket_ext;
   _zmqSocket_ext = (modelica_metatype) _zmqSocket;
-  ZeroMQ_sendReply(_zmqSocket_ext, MMC_STRINGDATA(_reply));
+  ZeroMQ_sendReply(_zmqSocket_ext, omc_string_data(_reply));
   return;
 }
 
@@ -30,7 +30,7 @@ modelica_string omc_ZeroMQ_handleRequest(threadData_t *threadData, modelica_meta
   // _request has no default value.
   _zmqSocket_ext = (modelica_metatype) _zmqSocket;
   _request_ext = ZeroMQ_handleRequest(_zmqSocket_ext);
-  _request = (modelica_string)mmc_mk_scon(_request_ext);
+  _request = (modelica_string)omc_string_new(_request_ext);
   return _request;
 }
 
@@ -43,7 +43,7 @@ modelica_metatype omc_ZeroMQ_initialize(threadData_t *threadData, modelica_strin
   // _zmqSocket has no default value.
   _listenToAll_ext = (int) _listenToAll;
   _port_ext = (int) _port;
-  _zmqSocket_ext = ZeroMQ_initialize(MMC_STRINGDATA(_fileSuffix), _listenToAll_ext, _port_ext);
+  _zmqSocket_ext = ZeroMQ_initialize(omc_string_data(_fileSuffix), _listenToAll_ext, _port_ext);
   _zmqSocket = (modelica_metatype)_zmqSocket_ext;
   return _zmqSocket;
 }
@@ -52,8 +52,8 @@ modelica_metatype boxptr_ZeroMQ_initialize(threadData_t *threadData, modelica_me
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _zmqSocket = NULL;
-  tmp1 = mmc_unbox_integer(_listenToAll);
-  tmp2 = mmc_unbox_integer(_port);
+  tmp1 = omc_unbox_integer(_listenToAll);
+  tmp2 = omc_unbox_integer(_port);
   _zmqSocket = omc_ZeroMQ_initialize(threadData, _fileSuffix, tmp1, tmp2);
   /* skip box _zmqSocket; Option<#Integer> */
   return _zmqSocket;

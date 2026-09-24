@@ -175,7 +175,7 @@ extern struct record_description SimCodeFunction_RecordDeclaration_RECORD__DECL_
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR__desc_added
 #define SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR__desc_added
-ADD_METARECORD_DEFINITIONS const char* SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR__desc__fields[3] = {"ctor_name","name","variables"};
+ADD_METARECORD_DEFINITIONS const char* SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR__desc__fields[5] = {"ctor_name","name","variables","defPath","usedExternally"};
 ADD_METARECORD_DEFINITIONS struct record_description SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR__desc = {
   "SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR",
   "SimCodeFunction.RecordDeclaration.RECORD_DECL_ADD_CONSTRCTOR",
@@ -214,7 +214,7 @@ extern struct record_description SimCodeFunction_RecordDeclaration_RECORD__DECL_
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR__desc_added
 #define SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR__desc_added
-ADD_METARECORD_DEFINITIONS const char* SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR__desc__fields[3] = {"ctor_name","name","variables"};
+ADD_METARECORD_DEFINITIONS const char* SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR__desc__fields[5] = {"ctor_name","name","variables","defPath","usedExternally"};
 ADD_METARECORD_DEFINITIONS struct record_description SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR__desc = {
   "SimCodeFunction_RecordDeclaration_RECORD__DECL__ADD__CONSTRCTOR",
   "SimCodeFunction.RecordDeclaration.RECORD_DECL_ADD_CONSTRCTOR",

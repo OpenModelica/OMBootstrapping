@@ -58,7 +58,7 @@ extern struct record_description NFInstNode_InstNodeType_BUILTIN__CLASS__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFInstNode_InstNodeType_TOP__SCOPE__desc_added
 #define NFInstNode_InstNodeType_TOP__SCOPE__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFInstNode_InstNodeType_TOP__SCOPE__desc__fields[2] = {"annotationScope","generatedInners"};
+ADD_METARECORD_DEFINITIONS const char* NFInstNode_InstNodeType_TOP__SCOPE__desc__fields[3] = {"annotationScope","generatedInners","roots"};
 ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_InstNodeType_TOP__SCOPE__desc = {
   "NFInstNode_InstNodeType_TOP__SCOPE",
   "NFInstNode.InstNodeType.TOP_SCOPE",
@@ -110,7 +110,7 @@ extern struct record_description NFInstNode_InstNodeType_REDECLARED__COMP__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFInstNode_InstNodeType_REDECLARED__CLASS__desc_added
 #define NFInstNode_InstNodeType_REDECLARED__CLASS__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFInstNode_InstNodeType_REDECLARED__CLASS__desc__fields[3] = {"parent","originalType","originalNode"};
+ADD_METARECORD_DEFINITIONS const char* NFInstNode_InstNodeType_REDECLARED__CLASS__desc__fields[4] = {"parent","originalType","originalNode","confidence"};
 ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_InstNodeType_REDECLARED__CLASS__desc = {
   "NFInstNode_InstNodeType_REDECLARED__CLASS",
   "NFInstNode.InstNodeType.REDECLARED_CLASS",
@@ -175,7 +175,7 @@ extern struct record_description NFInstNode_InstNodeType_GENERATED__INNER__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFInstNode_InstNodeType_REDECLARED__CLASS__desc_added
 #define NFInstNode_InstNodeType_REDECLARED__CLASS__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFInstNode_InstNodeType_REDECLARED__CLASS__desc__fields[3] = {"parent","originalType","originalNode"};
+ADD_METARECORD_DEFINITIONS const char* NFInstNode_InstNodeType_REDECLARED__CLASS__desc__fields[4] = {"parent","originalType","originalNode","confidence"};
 ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_InstNodeType_REDECLARED__CLASS__desc = {
   "NFInstNode_InstNodeType_REDECLARED__CLASS",
   "NFInstNode.InstNodeType.REDECLARED_CLASS",
@@ -227,7 +227,7 @@ extern struct record_description NFInstNode_InstNodeType_ROOT__CLASS__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFInstNode_InstNodeType_TOP__SCOPE__desc_added
 #define NFInstNode_InstNodeType_TOP__SCOPE__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFInstNode_InstNodeType_TOP__SCOPE__desc__fields[2] = {"annotationScope","generatedInners"};
+ADD_METARECORD_DEFINITIONS const char* NFInstNode_InstNodeType_TOP__SCOPE__desc__fields[3] = {"annotationScope","generatedInners","roots"};
 ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_InstNodeType_TOP__SCOPE__desc = {
   "NFInstNode_InstNodeType_TOP__SCOPE",
   "NFInstNode.InstNodeType.TOP_SCOPE",
@@ -290,6 +290,58 @@ ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_InstNodeType_NOR
 extern struct record_description NFInstNode_InstNodeType_NORMAL__CLASS__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFInstNode_NodeHandle_CELL__desc_added
+#define NFInstNode_NodeHandle_CELL__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFInstNode_NodeHandle_CELL__desc__fields[1] = {"cell"};
+ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_NodeHandle_CELL__desc = {
+  "NFInstNode_NodeHandle_CELL",
+  "NFInstNode.NodeHandle.CELL",
+  NFInstNode_NodeHandle_CELL__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFInstNode_NodeHandle_CELL__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFInstNode_NodeHandle_VALUE__desc_added
+#define NFInstNode_NodeHandle_VALUE__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFInstNode_NodeHandle_VALUE__desc__fields[1] = {"node"};
+ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_NodeHandle_VALUE__desc = {
+  "NFInstNode_NodeHandle_VALUE",
+  "NFInstNode.NodeHandle.VALUE",
+  NFInstNode_NodeHandle_VALUE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFInstNode_NodeHandle_VALUE__desc_added
+#define NFInstNode_NodeHandle_VALUE__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFInstNode_NodeHandle_VALUE__desc__fields[1] = {"node"};
+ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_NodeHandle_VALUE__desc = {
+  "NFInstNode_NodeHandle_VALUE",
+  "NFInstNode.NodeHandle.VALUE",
+  NFInstNode_NodeHandle_VALUE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFInstNode_NodeHandle_CELL__desc_added
+#define NFInstNode_NodeHandle_CELL__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFInstNode_NodeHandle_CELL__desc__fields[1] = {"cell"};
+ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_NodeHandle_CELL__desc = {
+  "NFInstNode_NodeHandle_CELL",
+  "NFInstNode.NodeHandle.CELL",
+  NFInstNode_NodeHandle_CELL__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFInstNode_NodeHandle_CELL__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFInstNode_CachedData_NO__CACHE__desc_added
 #define NFInstNode_CachedData_NO__CACHE__desc_added
 ADD_METARECORD_DEFINITIONS const char* NFInstNode_CachedData_NO__CACHE__desc__fields[1] = {"no fields"};
@@ -327,6 +379,32 @@ ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_CachedData_FUNCT
 #endif
 #else /* Only use the file as a header */
 extern struct record_description NFInstNode_CachedData_FUNCTION__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc_added
+#define NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc__fields[1] = {"ty"};
+ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc = {
+  "NFInstNode_CachedData_PARTIAL__DAE__TYPE",
+  "NFInstNode.CachedData.PARTIAL_DAE_TYPE",
+  NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc_added
+#define NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc_added
+ADD_METARECORD_DEFINITIONS const char* NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc__fields[1] = {"ty"};
+ADD_METARECORD_DEFINITIONS struct record_description NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc = {
+  "NFInstNode_CachedData_PARTIAL__DAE__TYPE",
+  "NFInstNode.CachedData.PARTIAL_DAE_TYPE",
+  NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description NFInstNode_CachedData_PARTIAL__DAE__TYPE__desc;
 #endif
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFInstNode_CachedData_FUNCTION__desc_added

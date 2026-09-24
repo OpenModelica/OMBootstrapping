@@ -58,6 +58,8 @@ extern struct record_description NFExpression_BOOLEAN__desc;
 
 extern struct record_description NFExpression_CALL__desc;
 
+extern struct record_description NFExpression_INTEGER__desc;
+
 extern struct record_description NFExpression_REAL__desc;
 
 extern struct record_description NFFunction_Function_FUNCTION__desc;
@@ -67,6 +69,8 @@ extern struct record_description NFInstNode_InstNode_COMPONENT__NODE__desc;
 extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
 
 extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
+
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
 
 extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
 
@@ -81,14 +85,14 @@ extern struct record_description SCode_Comment_COMMENT__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBAlias_AttributeCollector_fixValues(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fattrcollector, modelica_metatype _var_cref, modelica_metatype _solved_eq);
 #define boxptr_NBAlias_AttributeCollector_fixValues omc_NBAlias_AttributeCollector_fixValues
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_AttributeCollector_fixValues,2,0) {(void*) boxptr_NBAlias_AttributeCollector_fixValues,0}};
 #define boxvar_NBAlias_AttributeCollector_fixValues MMC_REFSTRUCTLIT(boxvar_lit_NBAlias_AttributeCollector_fixValues)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBAlias_AttributeCollector_toString(threadData_t *threadData, modelica_metatype _attrcollector, modelica_string __omcQ_24in_5Fstr);
 #define boxptr_NBAlias_AttributeCollector_toString omc_NBAlias_AttributeCollector_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_AttributeCollector_toString,2,0) {(void*) boxptr_NBAlias_AttributeCollector_toString,0}};
@@ -114,6 +118,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_AttributeCollector_toString,2,0
 
 
 #define boxptr_NBAlias_checkNominalThreshold omc_NBAlias_checkNominalThreshold
+
+
+#define boxptr_NBAlias_selectStartByConfidence omc_NBAlias_selectStartByConfidence
 
 
 #define boxptr_NBAlias_setStartFixed omc_NBAlias_setStartFixed
@@ -146,23 +153,23 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_AttributeCollector_toString,2,0
 #define boxptr_NBAlias_checkReplacements omc_NBAlias_checkReplacements
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBAlias_AliasSet_toString(threadData_t *threadData, modelica_metatype _set);
 #define boxptr_NBAlias_AliasSet_toString omc_NBAlias_AliasSet_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_AliasSet_toString,2,0) {(void*) boxptr_NBAlias_AliasSet_toString,0}};
 #define boxvar_NBAlias_AliasSet_toString MMC_REFSTRUCTLIT(boxvar_lit_NBAlias_AliasSet_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_fnptr omc_NBAlias_getModule(threadData_t *threadData);
 #define boxptr_NBAlias_getModule omc_NBAlias_getModule
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_getModule,2,0) {(void*) boxptr_NBAlias_getModule,0}};
 #define boxvar_NBAlias_getModule MMC_REFSTRUCTLIT(boxvar_lit_NBAlias_getModule)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBAlias_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBAlias_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBAlias_main,2,0) {(void*) boxptr_NBAlias_main,0}};
 #define boxvar_NBAlias_main MMC_REFSTRUCTLIT(boxvar_lit_NBAlias_main)

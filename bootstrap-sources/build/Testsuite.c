@@ -38,12 +38,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Testsuite_friendly2(threadDat
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Testsuite_friendly2,2,0) {(void*) boxptr_Testsuite_friendly2,0}};
 #define boxvar_Testsuite_friendly2 MMC_REFSTRUCTLIT(boxvar_lit_Testsuite_friendly2)
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Testsuite_friendlyPath(threadData_t *threadData, modelica_string _inPath)
 {
   modelica_string _outPath = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outPath has no default value.
   { /* matchcontinue expression */
@@ -53,7 +54,7 @@ modelica_string omc_Testsuite_friendlyPath(threadData_t *threadData, modelica_st
       int tmp5;
       // _path has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -62,7 +63,7 @@ modelica_string omc_Testsuite_friendlyPath(threadData_t *threadData, modelica_st
           modelica_boolean tmp6;
           modelica_boolean tmp7;
           modelica_boolean tmp8;
-          modelica_metatype tmpMeta9;
+          modelica_string tmp9;
           modelica_boolean tmp10;
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
@@ -77,8 +78,8 @@ modelica_string omc_Testsuite_friendlyPath(threadData_t *threadData, modelica_st
           tmp8 = omc_System_regularFileExists(threadData, _inPath);
           if (0 /* false */ != tmp8) goto goto_2;
 
-          tmpMeta9 = stringAppend(_OMC_LIT0,_inPath);
-          _path = tmpMeta9;
+          tmp9 = stringAppend(_OMC_LIT0,_inPath);
+          omc_string_store(&(_path), tmp9);
 
           /* Pattern-matching assignment */
           tmp10 = (omc_System_directoryExists(threadData, _path) || omc_System_regularFileExists(threadData, _path));
@@ -98,27 +99,29 @@ modelica_string omc_Testsuite_friendlyPath(threadData_t *threadData, modelica_st
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
-  _outPath = tmp1;
+  omc_string_store(&(_outPath), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _outPath;
+  omc_ret_ = _outPath;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_Testsuite_friendly2(threadData_t *threadData, modelica_boolean _cond, modelica_string _name)
 {
   modelica_string _friendly = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _friendly has no default value.
   { /* match expression */
@@ -137,21 +140,21 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Testsuite_friendly2(threadData_t *
       for (; tmp4 < 2; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
-          modelica_metatype tmpMeta6;
+          modelica_string tmp6;
           if (1 /* true */ != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          _newName = _name;
+          omc_string_store(&(_newName), _name);
 
           _i = omc_System_regex(threadData, _newName, _OMC_LIT1, ((modelica_integer) 9), 1 /* true */, 0 /* false */ ,&_strs);
 
-          _friendly = listGet(_strs, _i);
+          omc_string_store(&(_friendly), listGet(_strs, _i));
 
           _i = omc_System_regex(threadData, _friendly, _OMC_LIT2, ((modelica_integer) 4), 1 /* true */, 0 /* false */ ,&_strs);
 
           if((_i == ((modelica_integer) 4)))
           {
-            tmpMeta6 = stringAppend(listGet(_strs, ((modelica_integer) 2)),listGet(_strs, ((modelica_integer) 4)));
-            _friendly = tmpMeta6;
+            tmp6 = stringAppend(listGet(_strs, ((modelica_integer) 2)),listGet(_strs, ((modelica_integer) 4)));
+            omc_string_store(&(_friendly), tmp6);
           }
           tmp1 = _friendly;
           goto tmp3_done;
@@ -168,72 +171,73 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_Testsuite_friendly2(threadData_t *
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _friendly = tmp1;
+  omc_string_store(&(_friendly), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _friendly;
+  omc_ret_ = _friendly;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_Testsuite_friendly2(threadData_t *threadData, modelica_metatype _cond, modelica_metatype _name)
 {
   modelica_integer tmp1;
   modelica_string _friendly = NULL;
-  tmp1 = mmc_unbox_integer(_cond);
+  tmp1 = omc_unbox_integer(_cond);
   _friendly = omc_Testsuite_friendly2(threadData, tmp1, _name);
   /* skip box _friendly; String */
   return _friendly;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Testsuite_friendly(threadData_t *threadData, modelica_string _name)
 {
   modelica_string _friendly = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _friendly has no default value.
-  _friendly = omc_Testsuite_friendly2(threadData, omc_Testsuite_isRunning(threadData), _name);
+  omc_string_store(&(_friendly), omc_Testsuite_friendly2(threadData, omc_Testsuite_isRunning(threadData), _name));
   _return: OMC_LABEL_UNUSED
-  return _friendly;
+  omc_ret_ = _friendly;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Testsuite_getTempFilesFile(threadData_t *threadData)
 {
   modelica_string _tempFile = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _tempFile has no default value.
-  _tempFile = omc_Flags_getConfigString(threadData, _OMC_LIT8);
+  omc_string_store(&(_tempFile), omc_Flags_getConfigString(threadData, _OMC_LIT8));
   _return: OMC_LABEL_UNUSED
-  return _tempFile;
+  omc_ret_ = _tempFile;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Testsuite_isRunning(threadData_t *threadData)
 {
   modelica_boolean _runningTestsuite;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _runningTestsuite has no default value.
   _runningTestsuite = (!(stringEqual(omc_Flags_getConfigString(threadData, _OMC_LIT8), _OMC_LIT5)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _runningTestsuite;
+  omc_ret_ = _runningTestsuite;
+  return omc_ret_;
 }
 modelica_metatype boxptr_Testsuite_isRunning(threadData_t *threadData)
 {
   modelica_boolean _runningTestsuite;
   modelica_metatype out_runningTestsuite;
   _runningTestsuite = omc_Testsuite_isRunning(threadData);
-  out_runningTestsuite = mmc_mk_icon(_runningTestsuite);
+  out_runningTestsuite = omc_mk_icon(_runningTestsuite);
   return out_runningTestsuite;
 }
 

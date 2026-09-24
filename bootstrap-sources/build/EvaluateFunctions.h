@@ -134,7 +134,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_EvaluateFunctions_getVarLstFromType omc_EvaluateFunctions_getVarLstFromType
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_EvaluateFunctions_getRecordScalars(threadData_t *threadData, modelica_metatype _crefIn);
 #define boxptr_EvaluateFunctions_getRecordScalars omc_EvaluateFunctions_getRecordScalars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_getRecordScalars,2,0) {(void*) boxptr_EvaluateFunctions_getRecordScalars,0}};
@@ -237,7 +237,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_getRecordScalars,2,0)
 #define boxptr_EvaluateFunctions_scalarRecExpForOneDimRec omc_EvaluateFunctions_scalarRecExpForOneDimRec
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_EvaluateFunctions_getCrefsForRecord(threadData_t *threadData, modelica_metatype _e);
 #define boxptr_EvaluateFunctions_getCrefsForRecord omc_EvaluateFunctions_getCrefsForRecord
 static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_getCrefsForRecord,2,0) {(void*) boxptr_EvaluateFunctions_getCrefsForRecord,0}};
@@ -253,17 +253,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_getCrefsForRecord,2,0
 #define boxptr_EvaluateFunctions_expandComplexExpressions omc_EvaluateFunctions_expandComplexExpressions
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_EvaluateFunctions_evaluateConstantFunction(threadData_t *threadData, modelica_metatype _rhsExpIn, modelica_metatype _lhsExpIn, modelica_metatype _funcsIn, modelica_integer _eqIdx, modelica_metatype _callSignLstIn, modelica_integer _recursionLimit, modelica_metatype *out_lhsExpOut, modelica_metatype *out_addedEquations, modelica_metatype *out_funcsOut, modelica_integer *out_eqIdxOut, modelica_boolean *out_changed, modelica_metatype *out_callSignLstOut);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_EvaluateFunctions_evaluateConstantFunction(threadData_t *threadData, modelica_metatype _rhsExpIn, modelica_metatype _lhsExpIn, modelica_metatype _funcsIn, modelica_metatype _eqIdx, modelica_metatype _callSignLstIn, modelica_metatype _recursionLimit, modelica_metatype *out_lhsExpOut, modelica_metatype *out_addedEquations, modelica_metatype *out_funcsOut, modelica_metatype *out_eqIdxOut, modelica_metatype *out_changed, modelica_metatype *out_callSignLstOut);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evaluateConstantFunction,2,0) {(void*) boxptr_EvaluateFunctions_evaluateConstantFunction,0}};
 #define boxvar_EvaluateFunctions_evaluateConstantFunction MMC_REFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evaluateConstantFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_EvaluateFunctions_evaluateConstantFunctionCallExp(threadData_t *threadData, modelica_metatype _expIn, modelica_metatype _funcsIn, modelica_boolean _evalConstArgsOnly, modelica_integer _recursionLimit);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_EvaluateFunctions_evaluateConstantFunctionCallExp(threadData_t *threadData, modelica_metatype _expIn, modelica_metatype _funcsIn, modelica_metatype _evalConstArgsOnly, modelica_metatype _recursionLimit);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evaluateConstantFunctionCallExp,2,0) {(void*) boxptr_EvaluateFunctions_evaluateConstantFunctionCallExp,0}};
 #define boxvar_EvaluateFunctions_evaluateConstantFunctionCallExp MMC_REFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evaluateConstantFunctionCallExp)
@@ -272,7 +272,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evaluateConstantFunct
 #define boxptr_EvaluateFunctions_evalFunctions__main omc_EvaluateFunctions_evalFunctions__main
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_EvaluateFunctions_evalFunctions(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_EvaluateFunctions_evalFunctions omc_EvaluateFunctions_evalFunctions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_EvaluateFunctions_evalFunctions,2,0) {(void*) boxptr_EvaluateFunctions_evalFunctions,0}};

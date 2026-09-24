@@ -41,7 +41,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AdjacencyMatrix_traverseAdjac
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_traverseAdjacencyMatrix1,2,0) {(void*) boxptr_AdjacencyMatrix_traverseAdjacencyMatrix1,0}};
 #define boxvar_AdjacencyMatrix_traverseAdjacencyMatrix1 MMC_REFSTRUCTLIT(boxvar_lit_AdjacencyMatrix_traverseAdjacencyMatrix1)
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_AdjacencyMatrix_isEmpty(threadData_t *threadData, modelica_metatype _m)
 {
   modelica_boolean _b;
@@ -49,10 +49,8 @@ modelica_boolean omc_AdjacencyMatrix_isEmpty(threadData_t *threadData, modelica_
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_integer tmp4;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _b = 1 /* true */;
   {
@@ -69,21 +67,19 @@ modelica_boolean omc_AdjacencyMatrix_isEmpty(threadData_t *threadData, modelica_
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _b;
+  omc_ret_ = _b;
+  return omc_ret_;
 }
 modelica_metatype boxptr_AdjacencyMatrix_isEmpty(threadData_t *threadData, modelica_metatype _m)
 {
   modelica_boolean _b;
   modelica_metatype out_b;
   _b = omc_AdjacencyMatrix_isEmpty(threadData, _m);
-  out_b = mmc_mk_icon(_b);
+  out_b = omc_mk_icon(_b);
   return out_b;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AdjacencyMatrix_absAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m)
 {
   modelica_metatype _res = NULL;
@@ -94,7 +90,8 @@ modelica_metatype omc_AdjacencyMatrix_absAdjacencyMatrix(threadData_t *threadDat
   modelica_metatype tmpMeta3;
   modelica_integer tmp4;
   modelica_integer tmp5;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _res has no default value.
   _i = ((modelica_integer) 1);
@@ -107,7 +104,7 @@ modelica_metatype omc_AdjacencyMatrix_absAdjacencyMatrix(threadData_t *threadDat
     for (tmpMeta2 = _m, tmp5 = arrayLength(tmpMeta2), tmp4 = 1; tmp4 <= tmp5; tmp4++)
     {
       _v = arrayGet(tmpMeta2,tmp4);
-      _minn = mmc_unbox_integer(omc_List_fold(threadData, _v, boxvar_intMin, mmc_mk_integer(((modelica_integer) 0))));
+      _minn = omc_unbox_integer(omc_List_fold(threadData, _v, boxvar_intMin, omc_mk_integer(((modelica_integer) 0))));
 
       if((_minn < ((modelica_integer) 0)))
       {
@@ -122,7 +119,8 @@ modelica_metatype omc_AdjacencyMatrix_absAdjacencyMatrix(threadData_t *threadDat
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _res;
+  omc_ret_ = _res;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_transposeRow(threadData_t *threadData, modelica_metatype _row, modelica_metatype __omcQ_24in_5Fmt, modelica_integer __omcQ_24in_5Findx, modelica_integer *out_indx)
@@ -130,8 +128,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_transposeRow(thr
   modelica_metatype _mt = NULL;
   modelica_integer _indx;
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _mt = __omcQ_24in_5Fmt;
   _indx = __omcQ_24in_5Findx;
@@ -172,7 +171,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_transposeRow(thr
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           _i = tmp8  /* pattern as ty=Integer */;
           _res = tmpMeta7;
           /* Pattern matching succeeded */
@@ -185,7 +184,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_transposeRow(thr
 
           _indx1 = ((_i < ((modelica_integer) 0))?(-_indx):_indx);
 
-          tmpMeta10 = mmc_mk_cons(mmc_mk_integer(_indx1), _col);
+          tmpMeta10 = mmc_mk_cons(omc_mk_integer(_indx1), _col);
           arrayUpdate(_mt, _iabs, tmpMeta10);
           /* Tail recursive call */
           _row = _res;
@@ -201,7 +200,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_transposeRow(thr
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -210,21 +209,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_transposeRow(thr
   _indx = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_indx) { *out_indx = _indx; }
-  return _mt;
+  omc_ret_ = _mt;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AdjacencyMatrix_transposeRow(threadData_t *threadData, modelica_metatype _row, modelica_metatype __omcQ_24in_5Fmt, modelica_metatype __omcQ_24in_5Findx, modelica_metatype *out_indx)
 {
   modelica_integer tmp1;
   modelica_integer _indx;
   modelica_metatype _mt = NULL;
-  tmp1 = mmc_unbox_integer(__omcQ_24in_5Findx);
+  tmp1 = omc_unbox_integer(__omcQ_24in_5Findx);
   _mt = omc_AdjacencyMatrix_transposeRow(threadData, _row, __omcQ_24in_5Fmt, tmp1, &_indx);
   /* skip box _mt; array<list<#Integer>> */
-  if (out_indx) { *out_indx = mmc_mk_icon(_indx); }
+  if (out_indx) { *out_indx = omc_mk_icon(_indx); }
   return _mt;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AdjacencyMatrix_transposeAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m, modelica_integer _nRowsMt)
 {
   modelica_metatype _mt = NULL;
@@ -234,7 +234,8 @@ modelica_metatype omc_AdjacencyMatrix_transposeAdjacencyMatrix(threadData_t *thr
   modelica_metatype tmpMeta3;
   modelica_integer tmp4;
   modelica_integer tmp5;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _mt has no default value.
   _i = ((modelica_integer) 1);
@@ -250,13 +251,14 @@ modelica_metatype omc_AdjacencyMatrix_transposeAdjacencyMatrix(threadData_t *thr
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _mt;
+  omc_ret_ = _mt;
+  return omc_ret_;
 }
 modelica_metatype boxptr_AdjacencyMatrix_transposeAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m, modelica_metatype _nRowsMt)
 {
   modelica_integer tmp1;
   modelica_metatype _mt = NULL;
-  tmp1 = mmc_unbox_integer(_nRowsMt);
+  tmp1 = omc_unbox_integer(_nRowsMt);
   _mt = omc_AdjacencyMatrix_transposeAdjacencyMatrix(threadData, _m, tmp1);
   /* skip box _mt; array<list<#Integer>> */
   return _mt;
@@ -265,36 +267,33 @@ modelica_metatype boxptr_AdjacencyMatrix_transposeAdjacencyMatrix(threadData_t *
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_AdjacencyMatrix_isAssigned(threadData_t *threadData, modelica_metatype _ass, modelica_integer _i)
 {
   modelica_boolean _b;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
-  _b = (mmc_unbox_integer(arrayGet(_ass,_i) /* DAE.ASUB */) > ((modelica_integer) 0));
+  _b = (omc_unbox_integer(arrayGet(_ass,_i) /* DAE.ASUB */) > ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _b;
+  omc_ret_ = _b;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AdjacencyMatrix_isAssigned(threadData_t *threadData, modelica_metatype _ass, modelica_metatype _i)
 {
   modelica_integer tmp1;
   modelica_boolean _b;
   modelica_metatype out_b;
-  tmp1 = mmc_unbox_integer(_i);
+  tmp1 = omc_unbox_integer(_i);
   _b = omc_AdjacencyMatrix_isAssigned(threadData, _ass, tmp1);
-  out_b = mmc_mk_icon(_b);
+  out_b = omc_mk_icon(_b);
   return out_b;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m, modelica_integer _size, modelica_integer _index, modelica_metatype _skip, modelica_metatype _rowskip, modelica_metatype _mnew)
 {
   modelica_metatype _outMNew = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outMNew has no default value.
   { /* match expression */
@@ -317,7 +316,7 @@ modelica_metatype omc_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix(threadData_t 
           modelica_metatype tmpMeta6;
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
-          if (!(mmc_unbox_integer(arrayGet(_skip,_index) /* DAE.ASUB */) > ((modelica_integer) 0))) goto tmp3_end;
+          if (!(omc_unbox_integer(arrayGet(_skip,_index) /* DAE.ASUB */) > ((modelica_integer) 0))) goto tmp3_end;
           {
             modelica_metatype __omcQ_24tmpVar3;
             modelica_metatype* tmp7;
@@ -335,7 +334,7 @@ modelica_metatype omc_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix(threadData_t 
               while (!listEmpty(_r_loopVar)) {
                 _r = MMC_CAR(_r_loopVar);
                 _r_loopVar = MMC_CDR(_r_loopVar);
-                if (((mmc_unbox_integer(_r) > ((modelica_integer) 0)) && (mmc_unbox_integer(arrayGet(_rowskip,mmc_unbox_integer(_r)) /* DAE.ASUB */) > ((modelica_integer) 0)))) {
+                if (((omc_unbox_integer(_r) > ((modelica_integer) 0)) && (omc_unbox_integer(arrayGet(_rowskip,omc_unbox_integer(_r)) /* DAE.ASUB */) > ((modelica_integer) 0)))) {
                   tmp9--;
                   break;
                 }
@@ -379,22 +378,23 @@ modelica_metatype omc_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix(threadData_t 
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outMNew = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outMNew;
+  omc_ret_ = _outMNew;
+  return omc_ret_;
 }
 modelica_metatype boxptr_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix(threadData_t *threadData, modelica_metatype _m, modelica_metatype _size, modelica_metatype _index, modelica_metatype _skip, modelica_metatype _rowskip, modelica_metatype _mnew)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outMNew = NULL;
-  tmp1 = mmc_unbox_integer(_size);
-  tmp2 = mmc_unbox_integer(_index);
+  tmp1 = omc_unbox_integer(_size);
+  tmp2 = omc_unbox_integer(_index);
   _outMNew = omc_AdjacencyMatrix_getOtherEqSysAdjacencyMatrix(threadData, _m, tmp1, tmp2, _skip, _rowskip, _mnew);
   /* skip box _outMNew; array<list<#Integer>> */
   return _outMNew;
@@ -404,8 +404,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
 {
   modelica_metatype _outM = NULL;
   modelica_metatype _outTypeA = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outM has no default value.
   // _outTypeA has no default value.
@@ -430,7 +431,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
       // _alleqns has no default value.
       // _pos has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 4; tmp4++) {
@@ -452,7 +453,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           _pos = tmp8  /* pattern as ty=Integer */;
           _rest = tmpMeta7;
           /* Pattern matching succeeded */
@@ -464,9 +465,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
           tmp10 = (_pos < _maxpos);
           if (1 /* true */ != tmp10) goto goto_2;
 
-          _eqns = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))), arrayGet(_inM,_pos) /* DAE.ASUB */, mmc_mk_integer(_pos), _inTypeA ,&_extArg) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, arrayGet(_inM,_pos) /* DAE.ASUB */, mmc_mk_integer(_pos), _inTypeA ,&_extArg);
+          _eqns = (OMC_BOX_FIELD(_func, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, (OMC_BOX_FIELD(_func, 2)), arrayGet(_inM,_pos) /* DAE.ASUB */, omc_mk_integer(_pos), _inTypeA ,&_extArg) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, arrayGet(_inM,_pos) /* DAE.ASUB */, omc_mk_integer(_pos), _inTypeA ,&_extArg);
 
-          _eqns1 = omc_List_removeOnTrue(threadData, mmc_mk_integer(_maxpos), boxvar_intLt, _eqns);
+          _eqns1 = omc_List_removeOnTrue(threadData, omc_mk_integer(_maxpos), boxvar_intLt, _eqns);
 
           tmpMeta11 = mmc_mk_cons(_rest, mmc_mk_cons(_eqns1, MMC_REFSTRUCTLIT(mmc_nil)));
           _alleqns = omc_List_unionOnTrueList(threadData, tmpMeta11, boxvar_intEq);
@@ -481,7 +482,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta12 = MMC_CAR(tmp4_1);
           tmpMeta13 = MMC_CDR(tmp4_1);
-          tmp14 = mmc_unbox_integer(tmpMeta12);
+          tmp14 = omc_unbox_integer(tmpMeta12);
           _pos = tmp14  /* pattern as ty=Integer */;
           _rest = tmpMeta13;
           /* Pattern matching succeeded */
@@ -510,14 +511,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 4) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -525,15 +526,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
   _outTypeA = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_outTypeA) { *out_outTypeA = _outTypeA; }
-  return _outM;
+  omc_ret_ = _outM;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AdjacencyMatrix_traverseAdjacencyMatrixList(threadData_t *threadData, modelica_metatype _inLst, modelica_metatype _inM, modelica_fnptr _func, modelica_metatype _len, modelica_metatype _maxpos, modelica_metatype _inTypeA, modelica_metatype *out_outTypeA)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outM = NULL;
-  tmp1 = mmc_unbox_integer(_len);
-  tmp2 = mmc_unbox_integer(_maxpos);
+  tmp1 = omc_unbox_integer(_len);
+  tmp2 = omc_unbox_integer(_maxpos);
   _outM = omc_AdjacencyMatrix_traverseAdjacencyMatrixList(threadData, _inLst, _inM, _func, tmp1, tmp2, _inTypeA, out_outTypeA);
   /* skip box _outM; array<list<#Integer>> */
   /* skip box _outTypeA; polymorphic<T> */
@@ -544,8 +546,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
 {
   modelica_metatype _outM = NULL;
   modelica_metatype _outTypeA = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outM has no default value.
   // _outTypeA has no default value.
@@ -582,9 +585,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
           modelica_integer tmp7;
           if (0 /* false */ != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          _eqns = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 2))), arrayGet(_inM,_pos) /* DAE.ASUB */, mmc_mk_integer(_pos), _inTypeA ,&_extArg) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_func), 1)))) (threadData, arrayGet(_inM,_pos) /* DAE.ASUB */, mmc_mk_integer(_pos), _inTypeA ,&_extArg);
+          _eqns = (OMC_BOX_FIELD(_func, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, (OMC_BOX_FIELD(_func, 2)), arrayGet(_inM,_pos) /* DAE.ASUB */, omc_mk_integer(_pos), _inTypeA ,&_extArg) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_func, 1))) (threadData, arrayGet(_inM,_pos) /* DAE.ASUB */, omc_mk_integer(_pos), _inTypeA ,&_extArg);
 
-          _eqns1 = omc_List_removeOnTrue(threadData, mmc_mk_integer(_pos), boxvar_intLt, _eqns);
+          _eqns1 = omc_List_removeOnTrue(threadData, omc_mk_integer(_pos), boxvar_intLt, _eqns);
 
           _m1 = omc_AdjacencyMatrix_traverseAdjacencyMatrixList(threadData, _eqns1, _inM, ((modelica_fnptr) _func), arrayLength(_inM), _pos, _extArg ,&_extArg1);
           /* Tail recursive call */
@@ -605,7 +608,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -614,7 +617,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
   _outTypeA = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_outTypeA) { *out_outTypeA = _outTypeA; }
-  return _outM;
+  omc_ret_ = _outM;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AdjacencyMatrix_traverseAdjacencyMatrix2(threadData_t *threadData, modelica_metatype _inM, modelica_fnptr _func, modelica_metatype _pos, modelica_metatype _len, modelica_metatype _stop, modelica_metatype _inTypeA, modelica_metatype *out_outTypeA)
 {
@@ -622,9 +626,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AdjacencyMatrix_traverseAdjac
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_metatype _outM = NULL;
-  tmp1 = mmc_unbox_integer(_pos);
-  tmp2 = mmc_unbox_integer(_len);
-  tmp3 = mmc_unbox_integer(_stop);
+  tmp1 = omc_unbox_integer(_pos);
+  tmp2 = omc_unbox_integer(_len);
+  tmp3 = omc_unbox_integer(_stop);
   _outM = omc_AdjacencyMatrix_traverseAdjacencyMatrix2(threadData, _inM, _func, tmp1, tmp2, tmp3, _inTypeA, out_outTypeA);
   /* skip box _outM; array<list<#Integer>> */
   /* skip box _outTypeA; polymorphic<T> */
@@ -635,49 +639,54 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_AdjacencyMatrix_traverseAdjacenc
 {
   modelica_metatype _outM = NULL;
   modelica_metatype _outTypeA = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outM has no default value.
   // _outTypeA has no default value.
   _outM = omc_AdjacencyMatrix_traverseAdjacencyMatrix2(threadData, _inM, ((modelica_fnptr) _func), _pos, _len, (_pos > _len), _inTypeA ,&_outTypeA);
   _return: OMC_LABEL_UNUSED
   if (out_outTypeA) { *out_outTypeA = _outTypeA; }
-  return _outM;
+  omc_ret_ = _outM;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_AdjacencyMatrix_traverseAdjacencyMatrix1(threadData_t *threadData, modelica_metatype _inM, modelica_fnptr _func, modelica_metatype _pos, modelica_metatype _len, modelica_metatype _inTypeA, modelica_metatype *out_outTypeA)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outM = NULL;
-  tmp1 = mmc_unbox_integer(_pos);
-  tmp2 = mmc_unbox_integer(_len);
+  tmp1 = omc_unbox_integer(_pos);
+  tmp2 = omc_unbox_integer(_len);
   _outM = omc_AdjacencyMatrix_traverseAdjacencyMatrix1(threadData, _inM, _func, tmp1, tmp2, _inTypeA, out_outTypeA);
   /* skip box _outM; array<list<#Integer>> */
   /* skip box _outTypeA; polymorphic<T> */
   return _outM;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AdjacencyMatrix_traverseAdjacencyMatrix(threadData_t *threadData, modelica_metatype _inM, modelica_fnptr _func, modelica_metatype _inTypeA, modelica_metatype *out_outTypeA)
 {
   modelica_metatype _outM = NULL;
   modelica_metatype _outTypeA = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outM has no default value.
   // _outTypeA has no default value.
   _outM = omc_AdjacencyMatrix_traverseAdjacencyMatrix2(threadData, _inM, ((modelica_fnptr) _func), ((modelica_integer) 1), arrayLength(_inM), (((modelica_integer) 1) > arrayLength(_inM)), _inTypeA ,&_outTypeA);
   _return: OMC_LABEL_UNUSED
   if (out_outTypeA) { *out_outTypeA = _outTypeA; }
-  return _outM;
+  omc_ret_ = _outM;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AdjacencyMatrix_copyAdjacencyMatrixT(threadData_t *threadData, modelica_metatype _inAdjacencyMatrix)
 {
   modelica_metatype _outAdjacencyMatrix = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outAdjacencyMatrix has no default value.
   { /* match expression */
@@ -694,7 +703,7 @@ modelica_metatype omc_AdjacencyMatrix_copyAdjacencyMatrixT(threadData_t *threadD
         case 0: {
           modelica_metatype tmpMeta6;
           if (optionNone(tmp4_1)) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
           _m = tmpMeta6;
           /* Pattern matching succeeded */
           _m = arrayCopy(_m);
@@ -713,22 +722,24 @@ modelica_metatype omc_AdjacencyMatrix_copyAdjacencyMatrixT(threadData_t *threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outAdjacencyMatrix = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outAdjacencyMatrix;
+  omc_ret_ = _outAdjacencyMatrix;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AdjacencyMatrix_copyAdjacencyMatrix(threadData_t *threadData, modelica_metatype _inAdjacencyMatrix)
 {
   modelica_metatype _outAdjacencyMatrix = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outAdjacencyMatrix has no default value.
   { /* match expression */
@@ -745,7 +756,7 @@ modelica_metatype omc_AdjacencyMatrix_copyAdjacencyMatrix(threadData_t *threadDa
         case 0: {
           modelica_metatype tmpMeta6;
           if (optionNone(tmp4_1)) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
           _m = tmpMeta6;
           /* Pattern matching succeeded */
           _m = arrayCopy(_m);
@@ -764,13 +775,14 @@ modelica_metatype omc_AdjacencyMatrix_copyAdjacencyMatrix(threadData_t *threadDa
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outAdjacencyMatrix = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outAdjacencyMatrix;
+  omc_ret_ = _outAdjacencyMatrix;
+  return omc_ret_;
 }
 

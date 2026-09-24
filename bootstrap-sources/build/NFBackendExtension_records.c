@@ -890,7 +890,7 @@ extern struct record_description NFBackendExtension_VariableKind_TIME__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc_added
 #define NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc__fields[16] = {"quantity","unit","displayUnit","min","max","start","fixed","nominal","stateSelect","tearingSelect","uncertainty","distribution","binding","isProtected","finalPrefix","startOrigin"};
+ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc__fields[15] = {"quantity","unit","displayUnit","min","max","start","fixed","nominal","stateSelect","tearingSelect","uncertainty","distribution","binding","isProtected","finalPrefix"};
 ADD_METARECORD_DEFINITIONS struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc = {
   "NFBackendExtension_VariableAttributes_VAR__ATTR__REAL",
   "NFBackendExtension.VariableAttributes.VAR_ATTR_REAL",
@@ -903,7 +903,7 @@ extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFBackendExtension_VariableAttributes_VAR__ATTR__INT__desc_added
 #define NFBackendExtension_VariableAttributes_VAR__ATTR__INT__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__INT__desc__fields[11] = {"quantity","min","max","start","fixed","uncertainty","distribution","binding","isProtected","finalPrefix","startOrigin"};
+ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__INT__desc__fields[10] = {"quantity","min","max","start","fixed","uncertainty","distribution","binding","isProtected","finalPrefix"};
 ADD_METARECORD_DEFINITIONS struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__INT__desc = {
   "NFBackendExtension_VariableAttributes_VAR__ATTR__INT",
   "NFBackendExtension.VariableAttributes.VAR_ATTR_INT",
@@ -916,7 +916,7 @@ extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL__desc_added
 #define NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL__desc__fields[7] = {"quantity","start","fixed","binding","isProtected","finalPrefix","startOrigin"};
+ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL__desc__fields[6] = {"quantity","start","fixed","binding","isProtected","finalPrefix"};
 ADD_METARECORD_DEFINITIONS struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL__desc = {
   "NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL",
   "NFBackendExtension.VariableAttributes.VAR_ATTR_BOOL",
@@ -942,7 +942,7 @@ extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFBackendExtension_VariableAttributes_VAR__ATTR__STRING__desc_added
 #define NFBackendExtension_VariableAttributes_VAR__ATTR__STRING__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__STRING__desc__fields[7] = {"quantity","start","fixed","binding","isProtected","finalPrefix","startOrigin"};
+ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__STRING__desc__fields[6] = {"quantity","start","fixed","binding","isProtected","finalPrefix"};
 ADD_METARECORD_DEFINITIONS struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__STRING__desc = {
   "NFBackendExtension_VariableAttributes_VAR__ATTR__STRING",
   "NFBackendExtension.VariableAttributes.VAR_ATTR_STRING",
@@ -955,7 +955,7 @@ extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION__desc_added
 #define NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION__desc__fields[9] = {"quantity","min","max","start","fixed","binding","isProtected","finalPrefix","startOrigin"};
+ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION__desc__fields[8] = {"quantity","min","max","start","fixed","binding","isProtected","finalPrefix"};
 ADD_METARECORD_DEFINITIONS struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION__desc = {
   "NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION",
   "NFBackendExtension.VariableAttributes.VAR_ATTR_ENUMERATION",
@@ -994,7 +994,7 @@ extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION__desc_added
 #define NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION__desc__fields[9] = {"quantity","min","max","start","fixed","binding","isProtected","finalPrefix","startOrigin"};
+ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION__desc__fields[8] = {"quantity","min","max","start","fixed","binding","isProtected","finalPrefix"};
 ADD_METARECORD_DEFINITIONS struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION__desc = {
   "NFBackendExtension_VariableAttributes_VAR__ATTR__ENUMERATION",
   "NFBackendExtension.VariableAttributes.VAR_ATTR_ENUMERATION",
@@ -1007,7 +1007,7 @@ extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFBackendExtension_VariableAttributes_VAR__ATTR__STRING__desc_added
 #define NFBackendExtension_VariableAttributes_VAR__ATTR__STRING__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__STRING__desc__fields[7] = {"quantity","start","fixed","binding","isProtected","finalPrefix","startOrigin"};
+ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__STRING__desc__fields[6] = {"quantity","start","fixed","binding","isProtected","finalPrefix"};
 ADD_METARECORD_DEFINITIONS struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__STRING__desc = {
   "NFBackendExtension_VariableAttributes_VAR__ATTR__STRING",
   "NFBackendExtension.VariableAttributes.VAR_ATTR_STRING",
@@ -1033,7 +1033,7 @@ extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL__desc_added
 #define NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL__desc__fields[7] = {"quantity","start","fixed","binding","isProtected","finalPrefix","startOrigin"};
+ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL__desc__fields[6] = {"quantity","start","fixed","binding","isProtected","finalPrefix"};
 ADD_METARECORD_DEFINITIONS struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL__desc = {
   "NFBackendExtension_VariableAttributes_VAR__ATTR__BOOL",
   "NFBackendExtension.VariableAttributes.VAR_ATTR_BOOL",
@@ -1046,7 +1046,7 @@ extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFBackendExtension_VariableAttributes_VAR__ATTR__INT__desc_added
 #define NFBackendExtension_VariableAttributes_VAR__ATTR__INT__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__INT__desc__fields[11] = {"quantity","min","max","start","fixed","uncertainty","distribution","binding","isProtected","finalPrefix","startOrigin"};
+ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__INT__desc__fields[10] = {"quantity","min","max","start","fixed","uncertainty","distribution","binding","isProtected","finalPrefix"};
 ADD_METARECORD_DEFINITIONS struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__INT__desc = {
   "NFBackendExtension_VariableAttributes_VAR__ATTR__INT",
   "NFBackendExtension.VariableAttributes.VAR_ATTR_INT",
@@ -1059,7 +1059,7 @@ extern struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc_added
 #define NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc_added
-ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc__fields[16] = {"quantity","unit","displayUnit","min","max","start","fixed","nominal","stateSelect","tearingSelect","uncertainty","distribution","binding","isProtected","finalPrefix","startOrigin"};
+ADD_METARECORD_DEFINITIONS const char* NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc__fields[15] = {"quantity","unit","displayUnit","min","max","start","fixed","nominal","stateSelect","tearingSelect","uncertainty","distribution","binding","isProtected","finalPrefix"};
 ADD_METARECORD_DEFINITIONS struct record_description NFBackendExtension_VariableAttributes_VAR__ATTR__REAL__desc = {
   "NFBackendExtension_VariableAttributes_VAR__ATTR__REAL",
   "NFBackendExtension.VariableAttributes.VAR_ATTR_REAL",

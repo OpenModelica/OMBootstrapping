@@ -24,7 +24,7 @@ modelica_boolean omc_ParserExt_checkLVEToolFeature(threadData_t *threadData, mod
   modelica_boolean _status;
   // _status has no default value.
   _lveInstance_ext = (modelica_metatype) _lveInstance;
-  _status_ext = ParserExt_checkLVEToolFeature(_lveInstance_ext, MMC_STRINGDATA(_feature));
+  _status_ext = ParserExt_checkLVEToolFeature(_lveInstance_ext, omc_string_data(_feature));
   _status = (modelica_boolean)_status_ext;
   return _status;
 }
@@ -33,7 +33,7 @@ modelica_metatype boxptr_ParserExt_checkLVEToolFeature(threadData_t *threadData,
   modelica_boolean _status;
   modelica_metatype out_status;
   _status = omc_ParserExt_checkLVEToolFeature(threadData, _lveInstance, _feature);
-  out_status = mmc_mk_icon(_status);
+  out_status = omc_mk_icon(_status);
   return out_status;
 }
 
@@ -44,7 +44,7 @@ modelica_boolean omc_ParserExt_checkLVEToolLicense(threadData_t *threadData, mod
   modelica_boolean _status;
   // _status has no default value.
   _lveInstance_ext = (modelica_metatype) _lveInstance;
-  _status_ext = ParserExt_checkLVEToolLicense(_lveInstance_ext, MMC_STRINGDATA(_packageName));
+  _status_ext = ParserExt_checkLVEToolLicense(_lveInstance_ext, omc_string_data(_packageName));
   _status = (modelica_boolean)_status_ext;
   return _status;
 }
@@ -53,7 +53,7 @@ modelica_metatype boxptr_ParserExt_checkLVEToolLicense(threadData_t *threadData,
   modelica_boolean _status;
   modelica_metatype out_status;
   _status = omc_ParserExt_checkLVEToolLicense(threadData, _lveInstance, _packageName);
-  out_status = mmc_mk_icon(_status);
+  out_status = omc_mk_icon(_status);
   return out_status;
 }
 
@@ -66,7 +66,7 @@ modelica_boolean omc_ParserExt_startLibraryVendorExecutable(threadData_t *thread
   // _success has no default value.
   // _lveInstance has no default value.
 
-  _success_ext = ParserExt_startLibraryVendorExecutable(MMC_STRINGDATA(_lvePath), &_lveInstance_ext);
+  _success_ext = ParserExt_startLibraryVendorExecutable(omc_string_data(_lvePath), &_lveInstance_ext);
   _lveInstance = (modelica_metatype)_lveInstance_ext;
   _success = (modelica_boolean)_success_ext;
   if (out_lveInstance) { *out_lveInstance = _lveInstance; }
@@ -77,7 +77,7 @@ modelica_metatype boxptr_ParserExt_startLibraryVendorExecutable(threadData_t *th
   modelica_boolean _success;
   modelica_metatype out_success;
   _success = omc_ParserExt_startLibraryVendorExecutable(threadData, _lvePath, out_lveInstance);
-  out_success = mmc_mk_icon(_success);
+  out_success = omc_mk_icon(_success);
   /* skip box _lveInstance; Option<#Integer> */
   return out_success;
 }
@@ -93,7 +93,7 @@ modelica_metatype omc_ParserExt_stringEq(threadData_t *threadData, modelica_stri
   _acceptedGram_ext = (int) _acceptedGram;
   _languageStandardInt_ext = (int) _languageStandardInt;
   _runningTestsuite_ext = (int) _runningTestsuite;
-  _eq_ext = ParserExt_stringEq(MMC_STRINGDATA(_str), MMC_STRINGDATA(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
+  _eq_ext = ParserExt_stringEq(omc_string_data(_str), omc_string_data(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
   _eq = (modelica_metatype)_eq_ext;
   return _eq;
 }
@@ -103,9 +103,9 @@ modelica_metatype boxptr_ParserExt_stringEq(threadData_t *threadData, modelica_m
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_metatype _eq = NULL;
-  tmp1 = mmc_unbox_integer(_acceptedGram);
-  tmp2 = mmc_unbox_integer(_languageStandardInt);
-  tmp3 = mmc_unbox_integer(_runningTestsuite);
+  tmp1 = omc_unbox_integer(_acceptedGram);
+  tmp2 = omc_unbox_integer(_languageStandardInt);
+  tmp3 = omc_unbox_integer(_runningTestsuite);
   _eq = omc_ParserExt_stringEq(threadData, _str, _infoFilename, tmp1, tmp2, tmp3);
   /* skip box _eq; Absyn.EquationItem */
   return _eq;
@@ -122,7 +122,7 @@ modelica_metatype omc_ParserExt_stringMod(threadData_t *threadData, modelica_str
   _acceptedGram_ext = (int) _acceptedGram;
   _languageStandardInt_ext = (int) _languageStandardInt;
   _runningTestsuite_ext = (int) _runningTestsuite;
-  _cref_ext = ParserExt_stringMod(MMC_STRINGDATA(_str), MMC_STRINGDATA(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
+  _cref_ext = ParserExt_stringMod(omc_string_data(_str), omc_string_data(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
   _cref = (modelica_metatype)_cref_ext;
   return _cref;
 }
@@ -132,9 +132,9 @@ modelica_metatype boxptr_ParserExt_stringMod(threadData_t *threadData, modelica_
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_metatype _cref = NULL;
-  tmp1 = mmc_unbox_integer(_acceptedGram);
-  tmp2 = mmc_unbox_integer(_languageStandardInt);
-  tmp3 = mmc_unbox_integer(_runningTestsuite);
+  tmp1 = omc_unbox_integer(_acceptedGram);
+  tmp2 = omc_unbox_integer(_languageStandardInt);
+  tmp3 = omc_unbox_integer(_runningTestsuite);
   _cref = omc_ParserExt_stringMod(threadData, _str, _infoFilename, tmp1, tmp2, tmp3);
   /* skip box _cref; Absyn.ElementArg */
   return _cref;
@@ -151,7 +151,7 @@ modelica_metatype omc_ParserExt_stringCref(threadData_t *threadData, modelica_st
   _acceptedGram_ext = (int) _acceptedGram;
   _languageStandardInt_ext = (int) _languageStandardInt;
   _runningTestsuite_ext = (int) _runningTestsuite;
-  _cref_ext = ParserExt_stringCref(MMC_STRINGDATA(_str), MMC_STRINGDATA(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
+  _cref_ext = ParserExt_stringCref(omc_string_data(_str), omc_string_data(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
   _cref = (modelica_metatype)_cref_ext;
   return _cref;
 }
@@ -161,9 +161,9 @@ modelica_metatype boxptr_ParserExt_stringCref(threadData_t *threadData, modelica
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_metatype _cref = NULL;
-  tmp1 = mmc_unbox_integer(_acceptedGram);
-  tmp2 = mmc_unbox_integer(_languageStandardInt);
-  tmp3 = mmc_unbox_integer(_runningTestsuite);
+  tmp1 = omc_unbox_integer(_acceptedGram);
+  tmp2 = omc_unbox_integer(_languageStandardInt);
+  tmp3 = omc_unbox_integer(_runningTestsuite);
   _cref = omc_ParserExt_stringCref(threadData, _str, _infoFilename, tmp1, tmp2, tmp3);
   /* skip box _cref; Absyn.ComponentRef */
   return _cref;
@@ -180,7 +180,7 @@ modelica_metatype omc_ParserExt_stringPath(threadData_t *threadData, modelica_st
   _acceptedGram_ext = (int) _acceptedGram;
   _languageStandardInt_ext = (int) _languageStandardInt;
   _runningTestsuite_ext = (int) _runningTestsuite;
-  _path_ext = ParserExt_stringPath(MMC_STRINGDATA(_str), MMC_STRINGDATA(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
+  _path_ext = ParserExt_stringPath(omc_string_data(_str), omc_string_data(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
   _path = (modelica_metatype)_path_ext;
   return _path;
 }
@@ -190,9 +190,9 @@ modelica_metatype boxptr_ParserExt_stringPath(threadData_t *threadData, modelica
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_metatype _path = NULL;
-  tmp1 = mmc_unbox_integer(_acceptedGram);
-  tmp2 = mmc_unbox_integer(_languageStandardInt);
-  tmp3 = mmc_unbox_integer(_runningTestsuite);
+  tmp1 = omc_unbox_integer(_acceptedGram);
+  tmp2 = omc_unbox_integer(_languageStandardInt);
+  tmp3 = omc_unbox_integer(_runningTestsuite);
   _path = omc_ParserExt_stringPath(threadData, _str, _infoFilename, tmp1, tmp2, tmp3);
   /* skip box _path; Absyn.Path */
   return _path;
@@ -209,7 +209,7 @@ modelica_metatype omc_ParserExt_parsestringexp(threadData_t *threadData, modelic
   _acceptedGram_ext = (int) _acceptedGram;
   _languageStandardInt_ext = (int) _languageStandardInt;
   _runningTestsuite_ext = (int) _runningTestsuite;
-  _outStatements_ext = ParserExt_parsestringexp(MMC_STRINGDATA(_str), MMC_STRINGDATA(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
+  _outStatements_ext = ParserExt_parsestringexp(omc_string_data(_str), omc_string_data(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
   _outStatements = (modelica_metatype)_outStatements_ext;
   return _outStatements;
 }
@@ -219,9 +219,9 @@ modelica_metatype boxptr_ParserExt_parsestringexp(threadData_t *threadData, mode
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_metatype _outStatements = NULL;
-  tmp1 = mmc_unbox_integer(_acceptedGram);
-  tmp2 = mmc_unbox_integer(_languageStandardInt);
-  tmp3 = mmc_unbox_integer(_runningTestsuite);
+  tmp1 = omc_unbox_integer(_acceptedGram);
+  tmp2 = omc_unbox_integer(_languageStandardInt);
+  tmp3 = omc_unbox_integer(_runningTestsuite);
   _outStatements = omc_ParserExt_parsestringexp(threadData, _str, _infoFilename, tmp1, tmp2, tmp3);
   /* skip box _outStatements; GlobalScript.Statements */
   return _outStatements;
@@ -240,7 +240,7 @@ modelica_metatype omc_ParserExt_parsestring(threadData_t *threadData, modelica_s
   _languageStandardInt_ext = (int) _languageStandardInt;
   _strict_ext = (int) _strict;
   _runningTestsuite_ext = (int) _runningTestsuite;
-  _outProgram_ext = ParserExt_parsestring(MMC_STRINGDATA(_str), MMC_STRINGDATA(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _strict_ext, _runningTestsuite_ext);
+  _outProgram_ext = ParserExt_parsestring(omc_string_data(_str), omc_string_data(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _strict_ext, _runningTestsuite_ext);
   _outProgram = (modelica_metatype)_outProgram_ext;
   return _outProgram;
 }
@@ -251,10 +251,10 @@ modelica_metatype boxptr_ParserExt_parsestring(threadData_t *threadData, modelic
   modelica_integer tmp3;
   modelica_integer tmp4;
   modelica_metatype _outProgram = NULL;
-  tmp1 = mmc_unbox_integer(_acceptedGram);
-  tmp2 = mmc_unbox_integer(_languageStandardInt);
-  tmp3 = mmc_unbox_integer(_strict);
-  tmp4 = mmc_unbox_integer(_runningTestsuite);
+  tmp1 = omc_unbox_integer(_acceptedGram);
+  tmp2 = omc_unbox_integer(_languageStandardInt);
+  tmp3 = omc_unbox_integer(_strict);
+  tmp4 = omc_unbox_integer(_runningTestsuite);
   _outProgram = omc_ParserExt_parsestring(threadData, _str, _infoFilename, tmp1, tmp2, tmp3, tmp4);
   /* skip box _outProgram; Absyn.Program */
   return _outProgram;
@@ -271,7 +271,7 @@ modelica_metatype omc_ParserExt_parseexp(threadData_t *threadData, modelica_stri
   _acceptedGram_ext = (int) _acceptedGram;
   _languageStandardInt_ext = (int) _languageStandardInt;
   _runningTestsuite_ext = (int) _runningTestsuite;
-  _outStatements_ext = ParserExt_parseexp(MMC_STRINGDATA(_filename), MMC_STRINGDATA(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
+  _outStatements_ext = ParserExt_parseexp(omc_string_data(_filename), omc_string_data(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _runningTestsuite_ext);
   _outStatements = (modelica_metatype)_outStatements_ext;
   return _outStatements;
 }
@@ -281,9 +281,9 @@ modelica_metatype boxptr_ParserExt_parseexp(threadData_t *threadData, modelica_m
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_metatype _outStatements = NULL;
-  tmp1 = mmc_unbox_integer(_acceptedGram);
-  tmp2 = mmc_unbox_integer(_languageStandardInt);
-  tmp3 = mmc_unbox_integer(_runningTestsuite);
+  tmp1 = omc_unbox_integer(_acceptedGram);
+  tmp2 = omc_unbox_integer(_languageStandardInt);
+  tmp3 = omc_unbox_integer(_runningTestsuite);
   _outStatements = omc_ParserExt_parseexp(threadData, _filename, _infoFilename, tmp1, tmp2, tmp3);
   /* skip box _outStatements; GlobalScript.Statements */
   return _outStatements;
@@ -304,7 +304,7 @@ modelica_metatype omc_ParserExt_parse(threadData_t *threadData, modelica_string 
   _strict_ext = (int) _strict;
   _runningTestsuite_ext = (int) _runningTestsuite;
   _lveInstance_ext = (modelica_metatype) _lveInstance;
-  _outProgram_ext = ParserExt_parse(MMC_STRINGDATA(_filename), MMC_STRINGDATA(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _strict_ext, MMC_STRINGDATA(_encoding), _runningTestsuite_ext, MMC_STRINGDATA(_libraryPath), _lveInstance_ext);
+  _outProgram_ext = ParserExt_parse(omc_string_data(_filename), omc_string_data(_infoFilename), _acceptedGram_ext, _languageStandardInt_ext, _strict_ext, omc_string_data(_encoding), _runningTestsuite_ext, omc_string_data(_libraryPath), _lveInstance_ext);
   _outProgram = (modelica_metatype)_outProgram_ext;
   return _outProgram;
 }
@@ -315,10 +315,10 @@ modelica_metatype boxptr_ParserExt_parse(threadData_t *threadData, modelica_meta
   modelica_integer tmp3;
   modelica_integer tmp4;
   modelica_metatype _outProgram = NULL;
-  tmp1 = mmc_unbox_integer(_acceptedGram);
-  tmp2 = mmc_unbox_integer(_languageStandardInt);
-  tmp3 = mmc_unbox_integer(_strict);
-  tmp4 = mmc_unbox_integer(_runningTestsuite);
+  tmp1 = omc_unbox_integer(_acceptedGram);
+  tmp2 = omc_unbox_integer(_languageStandardInt);
+  tmp3 = omc_unbox_integer(_strict);
+  tmp4 = omc_unbox_integer(_runningTestsuite);
   _outProgram = omc_ParserExt_parse(threadData, _filename, _infoFilename, tmp1, _encoding, tmp2, tmp3, tmp4, _libraryPath, _lveInstance);
   /* skip box _outProgram; Absyn.Program */
   return _outProgram;

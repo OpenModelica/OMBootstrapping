@@ -1295,11 +1295,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__1(threadData_t *thre
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TplMain_lm__1,2,0) {(void*) boxptr_TplMain_lm__1,0}};
 #define boxvar_TplMain_lm__1 MMC_REFSTRUCTLIT(boxvar_lit_TplMain_lm__1)
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_TplMain_intMatrix(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _i_lstOfLst)
 {
   modelica_metatype _out_txt = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   _out_txt = omc_Tpl_writeTok(threadData, _txt, _OMC_LIT1);
@@ -1316,14 +1317,16 @@ modelica_metatype omc_TplMain_intMatrix(threadData_t *threadData, modelica_metat
 
   _out_txt = omc_Tpl_writeTok(threadData, _out_txt, _OMC_LIT9);
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__55(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_items)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* matchcontinue expression */
@@ -1340,7 +1343,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__55(threadData_t *thr
       // _rest has no default value.
       // _i_intLst has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -1394,27 +1397,29 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__55(threadData_t *thr
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__54(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_items)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* matchcontinue expression */
@@ -1431,7 +1436,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__54(threadData_t *thr
       // _rest has no default value.
       // _i_it has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -1451,7 +1456,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__54(threadData_t *thr
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_2);
           tmpMeta7 = MMC_CDR(tmp4_2);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           
           _i_it = tmp8  /* pattern as ty=Integer */;
           _rest = tmpMeta7;
@@ -1483,28 +1488,30 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__54(threadData_t *thr
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_TplMain_oper(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_i_it)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* matchcontinue expression */
@@ -1517,7 +1524,7 @@ modelica_metatype omc_TplMain_oper(threadData_t *threadData, modelica_metatype _
       int tmp5;
       // _txt has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 4; tmp4++) {
@@ -1559,28 +1566,30 @@ modelica_metatype omc_TplMain_oper(threadData_t *threadData, modelica_metatype _
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 4) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_TplMain_exp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_i_it)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* matchcontinue expression */
@@ -1603,7 +1612,7 @@ modelica_metatype omc_TplMain_exp(threadData_t *threadData, modelica_metatype _i
       // _i_op has no default value.
       // _i_lhs has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 4; tmp4++) {
@@ -1612,8 +1621,8 @@ modelica_metatype omc_TplMain_exp(threadData_t *threadData, modelica_metatype _i
           modelica_metatype tmpMeta6;
           modelica_integer tmp7;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,1) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           
           _i_value = tmp7  /* pattern as ty=Integer */;
           _txt = tmp4_1;
@@ -1624,7 +1633,7 @@ modelica_metatype omc_TplMain_exp(threadData_t *threadData, modelica_metatype _i
         case 1: {
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,1) == 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
           
           _i_name = tmpMeta8;
           _txt = tmp4_1;
@@ -1637,9 +1646,9 @@ modelica_metatype omc_TplMain_exp(threadData_t *threadData, modelica_metatype _i
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,2,3) == 0) goto tmp3_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 4);
           
           _i_lhs = tmpMeta9;
           _i_op = tmpMeta10;
@@ -1673,28 +1682,30 @@ modelica_metatype omc_TplMain_exp(threadData_t *threadData, modelica_metatype _i
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 4) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_TplMain_statement(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_i_it)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* matchcontinue expression */
@@ -1715,7 +1726,7 @@ modelica_metatype omc_TplMain_statement(threadData_t *threadData, modelica_metat
       // _i_rhs has no default value.
       // _i_lhs has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -1724,8 +1735,8 @@ modelica_metatype omc_TplMain_statement(threadData_t *threadData, modelica_metat
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,0,2) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 3);
           
           _i_lhs = tmpMeta6;
           _i_rhs = tmpMeta7;
@@ -1743,8 +1754,8 @@ modelica_metatype omc_TplMain_statement(threadData_t *threadData, modelica_metat
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_2,1,2) == 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 3);
           
           _i_condition = tmpMeta8;
           _i_statements = tmpMeta9;
@@ -1784,27 +1795,29 @@ modelica_metatype omc_TplMain_statement(threadData_t *threadData, modelica_metat
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__1(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_items)
 {
   modelica_metatype _out_txt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _out_txt has no default value.
   { /* matchcontinue expression */
@@ -1821,7 +1834,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__1(threadData_t *thre
       // _rest has no default value.
       // _i_it has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -1871,32 +1884,30 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_TplMain_lm__1(threadData_t *thre
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _out_txt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _out_txt;
+  omc_ret_ = _out_txt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  { /* matchcontinue expression */
-    volatile modelica_string tmp3_1;
+  { /* match expression */
+    modelica_string tmp3_1;
     tmp3_1 = _inFile;
     {
       modelica_string _str = NULL;
@@ -1940,232 +1951,229 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
       // _llen has no default value.
       // _notPassedCnt has no default value.
       tmp3 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
-      tmp2_top:
-      threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp3 < 2; tmp3++) {
         switch (MMC_SWITCH_CAST(tmp3)) {
         case 0: {
-          modelica_metatype tmpMeta5;
-          modelica_metatype tmpMeta6;
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
-          modelica_metatype tmpMeta18;
-          modelica_metatype tmpMeta19;
-          modelica_metatype tmpMeta20;
-          modelica_metatype tmpMeta21;
-          modelica_metatype tmpMeta22;
-          modelica_metatype tmpMeta23;
-          modelica_metatype tmpMeta24;
-          modelica_metatype tmpMeta25;
-          modelica_metatype tmpMeta26;
-          modelica_metatype tmpMeta27;
-          modelica_metatype tmpMeta28;
-          modelica_metatype tmpMeta29;
-          modelica_metatype tmpMeta30;
-          modelica_metatype tmpMeta31;
-          modelica_metatype tmpMeta32;
-          modelica_metatype tmpMeta33;
-          modelica_metatype tmpMeta34;
-          modelica_metatype tmpMeta35;
+          modelica_string tmp5;
+          modelica_string tmp6;
+          modelica_string tmp7;
+          modelica_string tmp8;
+          modelica_string tmp9;
+          modelica_string tmp10;
+          modelica_string tmp11;
+          modelica_string tmp12;
+          modelica_string tmp13;
+          modelica_string tmp14;
+          modelica_string tmp15;
+          modelica_string tmp16;
+          modelica_string tmp17;
+          modelica_string tmp18;
+          modelica_string tmp19;
+          modelica_string tmp20;
+          modelica_string tmp21;
+          modelica_string tmp22;
+          modelica_string tmp23;
+          modelica_string tmp24;
+          modelica_string tmp25;
+          modelica_string tmp26;
+          modelica_string tmp27;
+          modelica_string tmp28;
+          modelica_string tmp29;
+          modelica_string tmp30;
+          modelica_string tmp31;
+          modelica_string tmp32;
+          modelica_string tmp33;
+          modelica_string tmp34;
+          modelica_string tmp35;
           modelica_metatype tmpMeta36;
-          modelica_metatype tmpMeta37;
-          modelica_metatype tmpMeta38;
-          modelica_metatype tmpMeta39;
-          modelica_metatype tmpMeta40;
+          modelica_string tmp37;
+          modelica_string tmp38;
+          modelica_string tmp39;
+          modelica_string tmp40;
           modelica_metatype tmpMeta41;
-          modelica_metatype tmpMeta42;
-          modelica_metatype tmpMeta43;
+          modelica_string tmp42;
+          modelica_string tmp43;
           modelica_metatype tmpMeta44;
-          modelica_metatype tmpMeta45;
+          modelica_string tmp45;
           modelica_metatype tmpMeta46;
           modelica_metatype tmpMeta47;
           modelica_metatype tmpMeta48;
           modelica_metatype tmpMeta49;
           modelica_metatype tmpMeta50;
-          modelica_metatype tmpMeta51;
-          modelica_metatype tmpMeta52;
-          modelica_metatype tmpMeta53;
-          modelica_metatype tmpMeta54;
-          modelica_metatype tmpMeta55;
-          modelica_metatype tmpMeta56;
+          modelica_string tmp51;
+          modelica_string tmp52;
+          modelica_string tmp53;
+          modelica_string tmp54;
+          modelica_string tmp55;
+          modelica_string tmp56;
           modelica_metatype tmpMeta57;
           modelica_metatype tmpMeta58;
           modelica_metatype tmpMeta59;
           modelica_metatype tmpMeta60;
           modelica_metatype tmpMeta61;
-          modelica_metatype tmpMeta62;
-          modelica_metatype tmpMeta63;
-          modelica_metatype tmpMeta64;
-          modelica_metatype tmpMeta65;
-          modelica_metatype tmpMeta66;
-          modelica_metatype tmpMeta67;
+          modelica_string tmp62;
+          modelica_string tmp63;
+          modelica_string tmp64;
+          modelica_string tmp65;
+          modelica_string tmp66;
+          modelica_string tmp67;
           modelica_metatype tmpMeta68;
           modelica_metatype tmpMeta69;
           modelica_metatype tmpMeta70;
           modelica_metatype tmpMeta71;
           modelica_metatype tmpMeta72;
-          modelica_metatype tmpMeta73;
-          modelica_metatype tmpMeta74;
-          modelica_metatype tmpMeta75;
-          modelica_metatype tmpMeta76;
-          modelica_metatype tmpMeta77;
-          modelica_metatype tmpMeta78;
+          modelica_string tmp73;
+          modelica_string tmp74;
+          modelica_string tmp75;
+          modelica_string tmp76;
+          modelica_string tmp77;
+          modelica_string tmp78;
           modelica_metatype tmpMeta79;
           modelica_metatype tmpMeta80;
           modelica_metatype tmpMeta81;
           modelica_metatype tmpMeta82;
           modelica_metatype tmpMeta83;
-          modelica_metatype tmpMeta84;
-          modelica_metatype tmpMeta85;
-          modelica_metatype tmpMeta86;
-          modelica_metatype tmpMeta87;
-          modelica_metatype tmpMeta88;
-          modelica_metatype tmpMeta89;
+          modelica_string tmp84;
+          modelica_string tmp85;
+          modelica_string tmp86;
+          modelica_string tmp87;
+          modelica_string tmp88;
+          modelica_string tmp89;
           modelica_metatype tmpMeta90;
           modelica_metatype tmpMeta91;
           modelica_metatype tmpMeta92;
           modelica_metatype tmpMeta93;
           modelica_metatype tmpMeta94;
-          modelica_metatype tmpMeta95;
-          modelica_metatype tmpMeta96;
-          modelica_metatype tmpMeta97;
-          modelica_metatype tmpMeta98;
-          modelica_metatype tmpMeta99;
-          modelica_metatype tmpMeta100;
+          modelica_string tmp95;
+          modelica_string tmp96;
+          modelica_string tmp97;
+          modelica_string tmp98;
+          modelica_string tmp99;
+          modelica_string tmp100;
           modelica_metatype tmpMeta101;
           modelica_metatype tmpMeta102;
           modelica_metatype tmpMeta103;
           modelica_metatype tmpMeta104;
           modelica_metatype tmpMeta105;
-          modelica_metatype tmpMeta106;
-          modelica_metatype tmpMeta107;
-          modelica_metatype tmpMeta108;
-          modelica_metatype tmpMeta109;
-          modelica_metatype tmpMeta110;
-          modelica_metatype tmpMeta111;
+          modelica_string tmp106;
+          modelica_string tmp107;
+          modelica_string tmp108;
+          modelica_string tmp109;
+          modelica_string tmp110;
+          modelica_string tmp111;
           modelica_metatype tmpMeta112;
           modelica_metatype tmpMeta113;
           modelica_metatype tmpMeta114;
           modelica_metatype tmpMeta115;
           modelica_metatype tmpMeta116;
-          modelica_metatype tmpMeta117;
-          modelica_metatype tmpMeta118;
-          modelica_metatype tmpMeta119;
-          modelica_metatype tmpMeta120;
-          modelica_metatype tmpMeta121;
-          modelica_metatype tmpMeta122;
+          modelica_string tmp117;
+          modelica_string tmp118;
+          modelica_string tmp119;
+          modelica_string tmp120;
+          modelica_string tmp121;
+          modelica_string tmp122;
           modelica_metatype tmpMeta123;
           modelica_metatype tmpMeta124;
           modelica_metatype tmpMeta125;
           modelica_metatype tmpMeta126;
           modelica_metatype tmpMeta127;
-          modelica_metatype tmpMeta128;
-          modelica_metatype tmpMeta129;
-          modelica_metatype tmpMeta130;
-          modelica_metatype tmpMeta131;
-          modelica_metatype tmpMeta132;
-          modelica_metatype tmpMeta133;
+          modelica_string tmp128;
+          modelica_string tmp129;
+          modelica_string tmp130;
+          modelica_string tmp131;
+          modelica_string tmp132;
+          modelica_string tmp133;
           modelica_metatype tmpMeta134;
           modelica_metatype tmpMeta135;
           modelica_metatype tmpMeta136;
           modelica_metatype tmpMeta137;
           modelica_metatype tmpMeta138;
-          modelica_metatype tmpMeta139;
-          modelica_metatype tmpMeta140;
-          modelica_metatype tmpMeta141;
-          modelica_metatype tmpMeta142;
-          modelica_metatype tmpMeta143;
-          modelica_metatype tmpMeta144;
+          modelica_string tmp139;
+          modelica_string tmp140;
+          modelica_string tmp141;
+          modelica_string tmp142;
+          modelica_string tmp143;
+          modelica_string tmp144;
           modelica_metatype tmpMeta145;
           modelica_metatype tmpMeta146;
           modelica_metatype tmpMeta147;
           modelica_metatype tmpMeta148;
           modelica_metatype tmpMeta149;
-          modelica_metatype tmpMeta150;
-          modelica_metatype tmpMeta151;
-          modelica_metatype tmpMeta152;
-          modelica_metatype tmpMeta153;
-          modelica_metatype tmpMeta154;
-          modelica_metatype tmpMeta155;
+          modelica_string tmp150;
+          modelica_string tmp151;
+          modelica_string tmp152;
+          modelica_string tmp153;
+          modelica_string tmp154;
+          modelica_string tmp155;
           modelica_metatype tmpMeta156;
           modelica_metatype tmpMeta157;
           modelica_metatype tmpMeta158;
           modelica_metatype tmpMeta159;
           modelica_metatype tmpMeta160;
-          modelica_metatype tmpMeta161;
-          modelica_metatype tmpMeta162;
-          modelica_metatype tmpMeta163;
-          modelica_metatype tmpMeta164;
-          modelica_metatype tmpMeta165;
-          modelica_metatype tmpMeta166;
+          modelica_string tmp161;
+          modelica_string tmp162;
+          modelica_string tmp163;
+          modelica_string tmp164;
+          modelica_string tmp165;
+          modelica_string tmp166;
           modelica_metatype tmpMeta167;
           modelica_metatype tmpMeta168;
           modelica_metatype tmpMeta169;
           modelica_metatype tmpMeta170;
           modelica_metatype tmpMeta171;
-          modelica_metatype tmpMeta172;
-          modelica_metatype tmpMeta173;
-          modelica_metatype tmpMeta174;
-          modelica_metatype tmpMeta175;
-          modelica_metatype tmpMeta176;
-          modelica_metatype tmpMeta177;
+          modelica_string tmp172;
+          modelica_string tmp173;
+          modelica_string tmp174;
+          modelica_string tmp175;
+          modelica_string tmp176;
+          modelica_string tmp177;
           modelica_metatype tmpMeta178;
           modelica_metatype tmpMeta179;
           modelica_metatype tmpMeta180;
           modelica_metatype tmpMeta181;
           modelica_metatype tmpMeta182;
-          modelica_metatype tmpMeta183;
-          modelica_metatype tmpMeta184;
-          modelica_metatype tmpMeta185;
-          modelica_metatype tmpMeta186;
-          modelica_metatype tmpMeta187;
-          modelica_metatype tmpMeta188;
+          modelica_string tmp183;
+          modelica_string tmp184;
+          modelica_string tmp185;
+          modelica_string tmp186;
+          modelica_string tmp187;
+          modelica_string tmp188;
           modelica_metatype tmpMeta189;
           modelica_metatype tmpMeta190;
           modelica_metatype tmpMeta191;
           modelica_metatype tmpMeta192;
           modelica_metatype tmpMeta193;
-          modelica_metatype tmpMeta194;
-          modelica_metatype tmpMeta195;
-          modelica_metatype tmpMeta196;
-          modelica_metatype tmpMeta197;
-          modelica_metatype tmpMeta198;
-          modelica_metatype tmpMeta199;
+          modelica_string tmp194;
+          modelica_string tmp195;
+          modelica_string tmp196;
+          modelica_string tmp197;
+          modelica_string tmp198;
+          modelica_string tmp199;
           modelica_metatype tmpMeta200;
           modelica_metatype tmpMeta201;
           modelica_metatype tmpMeta202;
           modelica_metatype tmpMeta203;
           modelica_metatype tmpMeta204;
           modelica_metatype tmpMeta205;
-          modelica_metatype tmpMeta206;
-          modelica_metatype tmpMeta207;
-          modelica_metatype tmpMeta208;
-          modelica_metatype tmpMeta209;
-          modelica_metatype tmpMeta210;
-          modelica_metatype tmpMeta211;
-          modelica_metatype tmpMeta212;
-          modelica_metatype tmpMeta213;
-          modelica_metatype tmpMeta214;
-          modelica_metatype tmpMeta215;
+          modelica_string tmp206;
+          modelica_string tmp207;
+          modelica_string tmp208;
+          modelica_string tmp209;
+          modelica_string tmp210;
+          modelica_string tmp211;
+          modelica_string tmp212;
+          modelica_string tmp213;
+          modelica_string tmp214;
+          modelica_string tmp215;
           modelica_boolean tmp216;
           modelica_string tmp217;
-          if (1 != MMC_STRLEN(tmp3_1) || strcmp(MMC_STRINGDATA(_OMC_LIT507), MMC_STRINGDATA(tmp3_1)) != 0) goto tmp2_end;
+          if (1 != omc_string_len(tmp3_1) || strcmp(omc_string_data(_OMC_LIT507), omc_string_data(tmp3_1)) != 0) goto tmp2_end;
           /* Pattern matching succeeded */
           _notPassedCnt = ((modelica_integer) 0);
 
           omc_Print_clearErrorBuf(threadData);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT39),stdout);
+          fputs(omc_string_data(_OMC_LIT39),stdout);
 
           _tstart = mmc_clock();
 
@@ -2181,7 +2189,7 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_Tpl_popBlock(threadData, _txt);
 
-          _str = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_str), omc_Tpl_textString(threadData, _txt));
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _str, _OMC_LIT42, 1 /* true */, 1 /* true */, _OMC_LIT43, _notPassedCnt);
 
@@ -2189,7 +2197,7 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplCodegen_pathIdent(threadData, _txt, _OMC_LIT45);
 
-          _str = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_str), omc_Tpl_textString(threadData, _txt));
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _str, _OMC_LIT44, 1 /* true */, 1 /* true */, _OMC_LIT46, _notPassedCnt);
 
@@ -2197,7 +2205,7 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplCodegen_pathIdent(threadData, _txt, _OMC_LIT48);
 
-          _str = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_str), omc_Tpl_textString(threadData, _txt));
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _str, _OMC_LIT49, 1 /* true */, 1 /* true */, _OMC_LIT50, _notPassedCnt);
 
@@ -2205,7 +2213,7 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplCodegen_typedIdents(threadData, _txt, _OMC_LIT61);
 
-          _str = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_str), omc_Tpl_textString(threadData, _txt));
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _str, _OMC_LIT62, 1 /* true */, 1 /* true */, _OMC_LIT63, _notPassedCnt);
 
@@ -2213,7 +2221,7 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplCodegen_typedIdentsEx(threadData, _txt, _OMC_LIT66, _OMC_LIT67, _OMC_LIT68);
 
-          _str = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_str), omc_Tpl_textString(threadData, _txt));
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _str, _OMC_LIT69, 1 /* true */, 1 /* true */, _OMC_LIT70, _notPassedCnt);
 
@@ -2221,7 +2229,7 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplCodegen_mmPackage(threadData, _txt, _OMC_LIT194);
 
-          _str = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_str), omc_Tpl_textString(threadData, _txt));
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _str, _OMC_LIT195, 0 /* false */, 0 /* false */, _OMC_LIT196, _notPassedCnt);
 
@@ -2233,71 +2241,50 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplCodegen_mmPackage(threadData, _txt, _mmPckg);
 
-          _str = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_str), omc_Tpl_textString(threadData, _txt));
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _str, _OMC_LIT325, 0 /* false */, 0 /* false */, _OMC_LIT326, _notPassedCnt);
 
-          _str = _OMC_LIT327;
+          omc_string_store(&(_str), _OMC_LIT327);
 
           _chars = stringListStringChar(_str);
 
           _chars = omc_TplParser_interleave(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), NULL);
 
-          _strOut = stringAppendList(_chars);
+          omc_string_store(&(_strOut), stringAppendList(_chars));
 
-          tmpMeta5 = stringAppend(_OMC_LIT330,_str);
-          tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT329, 1 /* true */, 1 /* true */, tmpMeta6, _notPassedCnt);
+          tmp5 = stringAppend(_OMC_LIT330,_str);
+          tmp6 = stringAppend(tmp5,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT329, 1 /* true */, 1 /* true */, tmp6, _notPassedCnt);
 
-          _str = _OMC_LIT332;
+          omc_string_store(&(_str), _OMC_LIT332);
 
           _chars = stringListStringChar(_str);
 
           omc_TplParser_afterKeyword(threadData, _chars);
 
-          _strOut = stringAppendList(_chars);
+          omc_string_store(&(_strOut), stringAppendList(_chars));
 
-          tmpMeta7 = stringAppend(_OMC_LIT333,_str);
-          tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT332, 1 /* true */, 1 /* true */, tmpMeta8, _notPassedCnt);
+          tmp7 = stringAppend(_OMC_LIT333,_str);
+          tmp8 = stringAppend(tmp7,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT332, 1 /* true */, 1 /* true */, tmp8, _notPassedCnt);
 
-          _str = _OMC_LIT334;
+          omc_string_store(&(_str), _OMC_LIT334);
 
           _chars = stringListStringChar(_str);
 
           _chars = omc_TplParser_identifier(threadData, _chars ,&_ident);
 
-          tmpMeta9 = stringAppend(_OMC_LIT16,_ident);
-          tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT16);
-          tmpMeta11 = stringAppend(tmpMeta10,stringAppendList(_chars));
-          _strOut = tmpMeta11;
+          tmp9 = stringAppend(_OMC_LIT16,_ident);
+          tmp10 = stringAppend(tmp9,_OMC_LIT16);
+          tmp11 = stringAppend(tmp10,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp11);
 
-          tmpMeta12 = stringAppend(_OMC_LIT336,_str);
-          tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT335, 1 /* true */, 1 /* true */, tmpMeta13, _notPassedCnt);
+          tmp12 = stringAppend(_OMC_LIT336,_str);
+          tmp13 = stringAppend(tmp12,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT335, 1 /* true */, 1 /* true */, tmp13, _notPassedCnt);
 
-          _str = _OMC_LIT337;
-
-          _chars = stringListStringChar(_str);
-
-          _chars = omc_TplParser_pathIdent(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328) ,NULL ,&_pid);
-
-          _txt = _OMC_LIT40;
-
-          _txt = omc_TplCodegen_pathIdent(threadData, _txt, _pid);
-
-          _ident = omc_Tpl_textString(threadData, _txt);
-
-          tmpMeta14 = stringAppend(_OMC_LIT16,_ident);
-          tmpMeta15 = stringAppend(tmpMeta14,_OMC_LIT16);
-          tmpMeta16 = stringAppend(tmpMeta15,stringAppendList(_chars));
-          _strOut = tmpMeta16;
-
-          tmpMeta17 = stringAppend(_OMC_LIT339,_str);
-          tmpMeta18 = stringAppend(tmpMeta17,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT338, 1 /* true */, 1 /* true */, tmpMeta18, _notPassedCnt);
-
-          _str = _OMC_LIT340;
+          omc_string_store(&(_str), _OMC_LIT337);
 
           _chars = stringListStringChar(_str);
 
@@ -2307,18 +2294,39 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplCodegen_pathIdent(threadData, _txt, _pid);
 
-          _ident = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_ident), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta19 = stringAppend(_OMC_LIT16,_ident);
-          tmpMeta20 = stringAppend(tmpMeta19,_OMC_LIT16);
-          tmpMeta21 = stringAppend(tmpMeta20,stringAppendList(_chars));
-          _strOut = tmpMeta21;
+          tmp14 = stringAppend(_OMC_LIT16,_ident);
+          tmp15 = stringAppend(tmp14,_OMC_LIT16);
+          tmp16 = stringAppend(tmp15,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp16);
 
-          tmpMeta22 = stringAppend(_OMC_LIT339,_str);
-          tmpMeta23 = stringAppend(tmpMeta22,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT341, 1 /* true */, 1 /* true */, tmpMeta23, _notPassedCnt);
+          tmp17 = stringAppend(_OMC_LIT339,_str);
+          tmp18 = stringAppend(tmp17,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT338, 1 /* true */, 1 /* true */, tmp18, _notPassedCnt);
 
-          _str = _OMC_LIT342;
+          omc_string_store(&(_str), _OMC_LIT340);
+
+          _chars = stringListStringChar(_str);
+
+          _chars = omc_TplParser_pathIdent(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328) ,NULL ,&_pid);
+
+          _txt = _OMC_LIT40;
+
+          _txt = omc_TplCodegen_pathIdent(threadData, _txt, _pid);
+
+          omc_string_store(&(_ident), omc_Tpl_textString(threadData, _txt));
+
+          tmp19 = stringAppend(_OMC_LIT16,_ident);
+          tmp20 = stringAppend(tmp19,_OMC_LIT16);
+          tmp21 = stringAppend(tmp20,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp21);
+
+          tmp22 = stringAppend(_OMC_LIT339,_str);
+          tmp23 = stringAppend(tmp22,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT341, 1 /* true */, 1 /* true */, tmp23, _notPassedCnt);
+
+          omc_string_store(&(_str), _OMC_LIT342);
 
           _chars = stringListStringChar(_str);
 
@@ -2330,19 +2338,19 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplCodegen_typeSig(threadData, _txt, _ts);
 
-          _ident = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_ident), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta24 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta25 = stringAppend(tmpMeta24,_ident);
-          tmpMeta26 = stringAppend(tmpMeta25,_OMC_LIT16);
-          tmpMeta27 = stringAppend(tmpMeta26,stringAppendList(_chars));
-          _strOut = tmpMeta27;
+          tmp24 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp25 = stringAppend(tmp24,_ident);
+          tmp26 = stringAppend(tmp25,_OMC_LIT16);
+          tmp27 = stringAppend(tmp26,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp27);
 
-          tmpMeta28 = stringAppend(_OMC_LIT346,_str);
-          tmpMeta29 = stringAppend(tmpMeta28,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT345, 1 /* true */, 1 /* true */, tmpMeta29, _notPassedCnt);
+          tmp28 = stringAppend(_OMC_LIT346,_str);
+          tmp29 = stringAppend(tmp28,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT345, 1 /* true */, 1 /* true */, tmp29, _notPassedCnt);
 
-          _str = _OMC_LIT347;
+          omc_string_store(&(_str), _OMC_LIT347);
 
           _chars = stringListStringChar(_str);
 
@@ -2354,19 +2362,19 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplCodegen_typeSig(threadData, _txt, _ts);
 
-          _ident = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_ident), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta30 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta31 = stringAppend(tmpMeta30,_ident);
-          tmpMeta32 = stringAppend(tmpMeta31,_OMC_LIT16);
-          tmpMeta33 = stringAppend(tmpMeta32,stringAppendList(_chars));
-          _strOut = tmpMeta33;
+          tmp30 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp31 = stringAppend(tmp30,_ident);
+          tmp32 = stringAppend(tmp31,_OMC_LIT16);
+          tmp33 = stringAppend(tmp32,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp33);
 
-          tmpMeta34 = stringAppend(_OMC_LIT346,_str);
-          tmpMeta35 = stringAppend(tmpMeta34,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT355, 1 /* true */, 1 /* true */, tmpMeta35, _notPassedCnt);
+          tmp34 = stringAppend(_OMC_LIT346,_str);
+          tmp35 = stringAppend(tmp34,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT355, 1 /* true */, 1 /* true */, tmp35, _notPassedCnt);
 
-          _str = _OMC_LIT356;
+          omc_string_store(&(_str), _OMC_LIT356);
 
           _chars = stringListStringChar(_str);
 
@@ -2379,17 +2387,17 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplCodegen_pathIdent(threadData, _txt, _pid);
 
-          _ident = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_ident), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta37 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta38 = stringAppend(tmpMeta37,_ident);
-          tmpMeta39 = stringAppend(tmpMeta38,_OMC_LIT16);
-          tmpMeta40 = stringAppend(tmpMeta39,stringAppendList(_chars));
-          _strOut = tmpMeta40;
+          tmp37 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp38 = stringAppend(tmp37,_ident);
+          tmp39 = stringAppend(tmp38,_OMC_LIT16);
+          tmp40 = stringAppend(tmp39,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp40);
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT357, 1 /* true */, 1 /* true */, _OMC_LIT358, _notPassedCnt);
 
-          _str = _OMC_LIT359;
+          omc_string_store(&(_str), _OMC_LIT359);
 
           _chars = stringListStringChar(_str);
 
@@ -2404,13 +2412,13 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           omc_Tpl_textString(threadData, _txt);
 
-          tmpMeta42 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta43 = stringAppend(tmpMeta42,stringAppendList(_chars));
-          _strOut = tmpMeta43;
+          tmp42 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp43 = stringAppend(tmp42,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp43);
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT374, 1 /* true */, 1 /* true */, _OMC_LIT375, _notPassedCnt);
 
-          _str = _OMC_LIT376;
+          omc_string_store(&(_str), _OMC_LIT376);
 
           _chars = stringListStringChar(_str);
 
@@ -2423,19 +2431,19 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           omc_Tpl_textString(threadData, _txt);
 
-          tmpMeta45 = stringAppend(_OMC_LIT377,stringAppendList(_chars));
-          _strOut = tmpMeta45;
+          tmp45 = stringAppend(_OMC_LIT377,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp45);
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT378, 1 /* true */, 1 /* true */, _OMC_LIT379, _notPassedCnt);
 
-          _str = _OMC_LIT380;
+          omc_string_store(&(_str), _OMC_LIT380);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta48 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta46);
           _chars = tmpMeta48;
-          tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta46), 1));
+          tmpMeta47 = OMC_BOX_FIELD(tmpMeta46, 1);
           _expB = tmpMeta47;
 
           _tequal = valueEq(_expB, _OMC_LIT383);
@@ -2443,33 +2451,33 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta49 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta49,1,1) == 0) goto goto_1;
-          tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta49), 2));
+          tmpMeta50 = OMC_BOX_FIELD(tmpMeta49, 2);
           _tok = tmpMeta50;
 
           _txt = _OMC_LIT40;
 
           _txt = omc_Tpl_writeTok(threadData, _txt, _tok);
 
-          _strOut = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_strOut), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta51 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta52 = stringAppend(tmpMeta51,_strOut);
-          tmpMeta53 = stringAppend(tmpMeta52,_OMC_LIT16);
-          tmpMeta54 = stringAppend(tmpMeta53,stringAppendList(_chars));
-          _strOut = tmpMeta54;
+          tmp51 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp52 = stringAppend(tmp51,_strOut);
+          tmp53 = stringAppend(tmp52,_OMC_LIT16);
+          tmp54 = stringAppend(tmp53,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp54);
 
-          tmpMeta55 = stringAppend(_OMC_LIT385,_str);
-          tmpMeta56 = stringAppend(tmpMeta55,_OMC_LIT386);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT384, 1 /* true */, 1 /* true */, tmpMeta56, _notPassedCnt);
+          tmp55 = stringAppend(_OMC_LIT385,_str);
+          tmp56 = stringAppend(tmp55,_OMC_LIT386);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT384, 1 /* true */, 1 /* true */, tmp56, _notPassedCnt);
 
-          _str = _OMC_LIT387;
+          omc_string_store(&(_str), _OMC_LIT387);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta59 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta57);
           _chars = tmpMeta59;
-          tmpMeta58 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta57), 1));
+          tmpMeta58 = OMC_BOX_FIELD(tmpMeta57, 1);
           _expB = tmpMeta58;
 
           _tequal = valueEq(_expB, _OMC_LIT313);
@@ -2477,33 +2485,33 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta60 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta60,1,1) == 0) goto goto_1;
-          tmpMeta61 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta60), 2));
+          tmpMeta61 = OMC_BOX_FIELD(tmpMeta60, 2);
           _tok = tmpMeta61;
 
           _txt = _OMC_LIT40;
 
           _txt = omc_Tpl_writeTok(threadData, _txt, _tok);
 
-          _strOut = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_strOut), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta62 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta63 = stringAppend(tmpMeta62,_strOut);
-          tmpMeta64 = stringAppend(tmpMeta63,_OMC_LIT16);
-          tmpMeta65 = stringAppend(tmpMeta64,stringAppendList(_chars));
-          _strOut = tmpMeta65;
+          tmp62 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp63 = stringAppend(tmp62,_strOut);
+          tmp64 = stringAppend(tmp63,_OMC_LIT16);
+          tmp65 = stringAppend(tmp64,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp65);
 
-          tmpMeta66 = stringAppend(_OMC_LIT385,_str);
-          tmpMeta67 = stringAppend(tmpMeta66,_OMC_LIT386);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT388, 1 /* true */, 1 /* true */, tmpMeta67, _notPassedCnt);
+          tmp66 = stringAppend(_OMC_LIT385,_str);
+          tmp67 = stringAppend(tmp66,_OMC_LIT386);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT388, 1 /* true */, 1 /* true */, tmp67, _notPassedCnt);
 
-          _str = _OMC_LIT389;
+          omc_string_store(&(_str), _OMC_LIT389);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta70 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta68);
           _chars = tmpMeta70;
-          tmpMeta69 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta68), 1));
+          tmpMeta69 = OMC_BOX_FIELD(tmpMeta68, 1);
           _expB = tmpMeta69;
 
           _tequal = valueEq(_expB, _OMC_LIT392);
@@ -2511,33 +2519,33 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta71 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta71,1,1) == 0) goto goto_1;
-          tmpMeta72 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta71), 2));
+          tmpMeta72 = OMC_BOX_FIELD(tmpMeta71, 2);
           _tok = tmpMeta72;
 
           _txt = _OMC_LIT40;
 
           _txt = omc_Tpl_writeTok(threadData, _txt, _tok);
 
-          _strOut = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_strOut), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta73 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta74 = stringAppend(tmpMeta73,_strOut);
-          tmpMeta75 = stringAppend(tmpMeta74,_OMC_LIT16);
-          tmpMeta76 = stringAppend(tmpMeta75,stringAppendList(_chars));
-          _strOut = tmpMeta76;
+          tmp73 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp74 = stringAppend(tmp73,_strOut);
+          tmp75 = stringAppend(tmp74,_OMC_LIT16);
+          tmp76 = stringAppend(tmp75,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp76);
 
-          tmpMeta77 = stringAppend(_OMC_LIT385,_str);
-          tmpMeta78 = stringAppend(tmpMeta77,_OMC_LIT386);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT393, 1 /* true */, 1 /* true */, tmpMeta78, _notPassedCnt);
+          tmp77 = stringAppend(_OMC_LIT385,_str);
+          tmp78 = stringAppend(tmp77,_OMC_LIT386);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT393, 1 /* true */, 1 /* true */, tmp78, _notPassedCnt);
 
-          _str = _OMC_LIT394;
+          omc_string_store(&(_str), _OMC_LIT394);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta81 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta79);
           _chars = tmpMeta81;
-          tmpMeta80 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta79), 1));
+          tmpMeta80 = OMC_BOX_FIELD(tmpMeta79, 1);
           _expB = tmpMeta80;
 
           _tequal = valueEq(_expB, _OMC_LIT402);
@@ -2545,33 +2553,33 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta82 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta82,1,1) == 0) goto goto_1;
-          tmpMeta83 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta82), 2));
+          tmpMeta83 = OMC_BOX_FIELD(tmpMeta82, 2);
           _tok = tmpMeta83;
 
           _txt = _OMC_LIT40;
 
           _txt = omc_Tpl_writeTok(threadData, _txt, _tok);
 
-          _strOut = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_strOut), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta84 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta85 = stringAppend(tmpMeta84,_strOut);
-          tmpMeta86 = stringAppend(tmpMeta85,_OMC_LIT16);
-          tmpMeta87 = stringAppend(tmpMeta86,stringAppendList(_chars));
-          _strOut = tmpMeta87;
+          tmp84 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp85 = stringAppend(tmp84,_strOut);
+          tmp86 = stringAppend(tmp85,_OMC_LIT16);
+          tmp87 = stringAppend(tmp86,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp87);
 
-          tmpMeta88 = stringAppend(_OMC_LIT385,_str);
-          tmpMeta89 = stringAppend(tmpMeta88,_OMC_LIT386);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT403, 1 /* true */, 1 /* true */, tmpMeta89, _notPassedCnt);
+          tmp88 = stringAppend(_OMC_LIT385,_str);
+          tmp89 = stringAppend(tmp88,_OMC_LIT386);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT403, 1 /* true */, 1 /* true */, tmp89, _notPassedCnt);
 
-          _str = _OMC_LIT404;
+          omc_string_store(&(_str), _OMC_LIT404);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta92 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta90);
           _chars = tmpMeta92;
-          tmpMeta91 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta90), 1));
+          tmpMeta91 = OMC_BOX_FIELD(tmpMeta90, 1);
           _expB = tmpMeta91;
 
           _tequal = valueEq(_expB, _OMC_LIT412);
@@ -2579,33 +2587,33 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta93 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta93,1,1) == 0) goto goto_1;
-          tmpMeta94 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta93), 2));
+          tmpMeta94 = OMC_BOX_FIELD(tmpMeta93, 2);
           _tok = tmpMeta94;
 
           _txt = _OMC_LIT40;
 
           _txt = omc_Tpl_writeTok(threadData, _txt, _tok);
 
-          _strOut = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_strOut), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta95 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta96 = stringAppend(tmpMeta95,_strOut);
-          tmpMeta97 = stringAppend(tmpMeta96,_OMC_LIT16);
-          tmpMeta98 = stringAppend(tmpMeta97,stringAppendList(_chars));
-          _strOut = tmpMeta98;
+          tmp95 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp96 = stringAppend(tmp95,_strOut);
+          tmp97 = stringAppend(tmp96,_OMC_LIT16);
+          tmp98 = stringAppend(tmp97,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp98);
 
-          tmpMeta99 = stringAppend(_OMC_LIT385,_str);
-          tmpMeta100 = stringAppend(tmpMeta99,_OMC_LIT386);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT413, 1 /* true */, 1 /* true */, tmpMeta100, _notPassedCnt);
+          tmp99 = stringAppend(_OMC_LIT385,_str);
+          tmp100 = stringAppend(tmp99,_OMC_LIT386);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT413, 1 /* true */, 1 /* true */, tmp100, _notPassedCnt);
 
-          _str = _OMC_LIT414;
+          omc_string_store(&(_str), _OMC_LIT414);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta103 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta101);
           _chars = tmpMeta103;
-          tmpMeta102 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta101), 1));
+          tmpMeta102 = OMC_BOX_FIELD(tmpMeta101, 1);
           _expB = tmpMeta102;
 
           _tequal = valueEq(_expB, _OMC_LIT416);
@@ -2613,27 +2621,27 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta104 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta104,2,2) == 0) goto goto_1;
-          tmpMeta105 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta104), 2));
+          tmpMeta105 = OMC_BOX_FIELD(tmpMeta104, 2);
           _cval = tmpMeta105;
 
-          tmpMeta106 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta107 = stringAppend(tmpMeta106,_cval);
-          tmpMeta108 = stringAppend(tmpMeta107,_OMC_LIT16);
-          tmpMeta109 = stringAppend(tmpMeta108,stringAppendList(_chars));
-          _strOut = tmpMeta109;
+          tmp106 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp107 = stringAppend(tmp106,_cval);
+          tmp108 = stringAppend(tmp107,_OMC_LIT16);
+          tmp109 = stringAppend(tmp108,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp109);
 
-          tmpMeta110 = stringAppend(_OMC_LIT418,_str);
-          tmpMeta111 = stringAppend(tmpMeta110,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT417, 1 /* true */, 1 /* true */, tmpMeta111, _notPassedCnt);
+          tmp110 = stringAppend(_OMC_LIT418,_str);
+          tmp111 = stringAppend(tmp110,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT417, 1 /* true */, 1 /* true */, tmp111, _notPassedCnt);
 
-          _str = _OMC_LIT419;
+          omc_string_store(&(_str), _OMC_LIT419);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta114 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta112);
           _chars = tmpMeta114;
-          tmpMeta113 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta112), 1));
+          tmpMeta113 = OMC_BOX_FIELD(tmpMeta112, 1);
           _expB = tmpMeta113;
 
           _tequal = valueEq(_expB, _OMC_LIT421);
@@ -2641,27 +2649,27 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta115 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta115,2,2) == 0) goto goto_1;
-          tmpMeta116 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta115), 2));
+          tmpMeta116 = OMC_BOX_FIELD(tmpMeta115, 2);
           _cval = tmpMeta116;
 
-          tmpMeta117 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta118 = stringAppend(tmpMeta117,_cval);
-          tmpMeta119 = stringAppend(tmpMeta118,_OMC_LIT16);
-          tmpMeta120 = stringAppend(tmpMeta119,stringAppendList(_chars));
-          _strOut = tmpMeta120;
+          tmp117 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp118 = stringAppend(tmp117,_cval);
+          tmp119 = stringAppend(tmp118,_OMC_LIT16);
+          tmp120 = stringAppend(tmp119,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp120);
 
-          tmpMeta121 = stringAppend(_OMC_LIT418,_str);
-          tmpMeta122 = stringAppend(tmpMeta121,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT422, 1 /* true */, 1 /* true */, tmpMeta122, _notPassedCnt);
+          tmp121 = stringAppend(_OMC_LIT418,_str);
+          tmp122 = stringAppend(tmp121,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT422, 1 /* true */, 1 /* true */, tmp122, _notPassedCnt);
 
-          _str = _OMC_LIT423;
+          omc_string_store(&(_str), _OMC_LIT423);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta125 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta123);
           _chars = tmpMeta125;
-          tmpMeta124 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta123), 1));
+          tmpMeta124 = OMC_BOX_FIELD(tmpMeta123, 1);
           _expB = tmpMeta124;
 
           _tequal = valueEq(_expB, _OMC_LIT426);
@@ -2669,27 +2677,27 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta126 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta126,2,2) == 0) goto goto_1;
-          tmpMeta127 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta126), 2));
+          tmpMeta127 = OMC_BOX_FIELD(tmpMeta126, 2);
           _cval = tmpMeta127;
 
-          tmpMeta128 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta129 = stringAppend(tmpMeta128,_cval);
-          tmpMeta130 = stringAppend(tmpMeta129,_OMC_LIT16);
-          tmpMeta131 = stringAppend(tmpMeta130,stringAppendList(_chars));
-          _strOut = tmpMeta131;
+          tmp128 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp129 = stringAppend(tmp128,_cval);
+          tmp130 = stringAppend(tmp129,_OMC_LIT16);
+          tmp131 = stringAppend(tmp130,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp131);
 
-          tmpMeta132 = stringAppend(_OMC_LIT418,_str);
-          tmpMeta133 = stringAppend(tmpMeta132,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT427, 1 /* true */, 1 /* true */, tmpMeta133, _notPassedCnt);
+          tmp132 = stringAppend(_OMC_LIT418,_str);
+          tmp133 = stringAppend(tmp132,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT427, 1 /* true */, 1 /* true */, tmp133, _notPassedCnt);
 
-          _str = _OMC_LIT428;
+          omc_string_store(&(_str), _OMC_LIT428);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta136 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta134);
           _chars = tmpMeta136;
-          tmpMeta135 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta134), 1));
+          tmpMeta135 = OMC_BOX_FIELD(tmpMeta134, 1);
           _expB = tmpMeta135;
 
           _tequal = valueEq(_expB, _OMC_LIT430);
@@ -2697,27 +2705,27 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta137 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta137,2,2) == 0) goto goto_1;
-          tmpMeta138 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta137), 2));
+          tmpMeta138 = OMC_BOX_FIELD(tmpMeta137, 2);
           _cval = tmpMeta138;
 
-          tmpMeta139 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta140 = stringAppend(tmpMeta139,_cval);
-          tmpMeta141 = stringAppend(tmpMeta140,_OMC_LIT16);
-          tmpMeta142 = stringAppend(tmpMeta141,stringAppendList(_chars));
-          _strOut = tmpMeta142;
+          tmp139 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp140 = stringAppend(tmp139,_cval);
+          tmp141 = stringAppend(tmp140,_OMC_LIT16);
+          tmp142 = stringAppend(tmp141,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp142);
 
-          tmpMeta143 = stringAppend(_OMC_LIT418,_str);
-          tmpMeta144 = stringAppend(tmpMeta143,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT431, 1 /* true */, 1 /* true */, tmpMeta144, _notPassedCnt);
+          tmp143 = stringAppend(_OMC_LIT418,_str);
+          tmp144 = stringAppend(tmp143,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT431, 1 /* true */, 1 /* true */, tmp144, _notPassedCnt);
 
-          _str = _OMC_LIT432;
+          omc_string_store(&(_str), _OMC_LIT432);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta147 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta145);
           _chars = tmpMeta147;
-          tmpMeta146 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta145), 1));
+          tmpMeta146 = OMC_BOX_FIELD(tmpMeta145, 1);
           _expB = tmpMeta146;
 
           _tequal = valueEq(_expB, _OMC_LIT435);
@@ -2725,27 +2733,27 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta148 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta148,2,2) == 0) goto goto_1;
-          tmpMeta149 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta148), 2));
+          tmpMeta149 = OMC_BOX_FIELD(tmpMeta148, 2);
           _cval = tmpMeta149;
 
-          tmpMeta150 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta151 = stringAppend(tmpMeta150,_cval);
-          tmpMeta152 = stringAppend(tmpMeta151,_OMC_LIT16);
-          tmpMeta153 = stringAppend(tmpMeta152,stringAppendList(_chars));
-          _strOut = tmpMeta153;
+          tmp150 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp151 = stringAppend(tmp150,_cval);
+          tmp152 = stringAppend(tmp151,_OMC_LIT16);
+          tmp153 = stringAppend(tmp152,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp153);
 
-          tmpMeta154 = stringAppend(_OMC_LIT418,_str);
-          tmpMeta155 = stringAppend(tmpMeta154,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT436, 1 /* true */, 1 /* true */, tmpMeta155, _notPassedCnt);
+          tmp154 = stringAppend(_OMC_LIT418,_str);
+          tmp155 = stringAppend(tmp154,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT436, 1 /* true */, 1 /* true */, tmp155, _notPassedCnt);
 
-          _str = _OMC_LIT437;
+          omc_string_store(&(_str), _OMC_LIT437);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta158 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta156);
           _chars = tmpMeta158;
-          tmpMeta157 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta156), 1));
+          tmpMeta157 = OMC_BOX_FIELD(tmpMeta156, 1);
           _expB = tmpMeta157;
 
           _tequal = valueEq(_expB, _OMC_LIT439);
@@ -2753,27 +2761,27 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta159 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta159,2,2) == 0) goto goto_1;
-          tmpMeta160 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta159), 2));
+          tmpMeta160 = OMC_BOX_FIELD(tmpMeta159, 2);
           _cval = tmpMeta160;
 
-          tmpMeta161 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta162 = stringAppend(tmpMeta161,_cval);
-          tmpMeta163 = stringAppend(tmpMeta162,_OMC_LIT16);
-          tmpMeta164 = stringAppend(tmpMeta163,stringAppendList(_chars));
-          _strOut = tmpMeta164;
+          tmp161 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp162 = stringAppend(tmp161,_cval);
+          tmp163 = stringAppend(tmp162,_OMC_LIT16);
+          tmp164 = stringAppend(tmp163,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp164);
 
-          tmpMeta165 = stringAppend(_OMC_LIT418,_str);
-          tmpMeta166 = stringAppend(tmpMeta165,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT440, 1 /* true */, 1 /* true */, tmpMeta166, _notPassedCnt);
+          tmp165 = stringAppend(_OMC_LIT418,_str);
+          tmp166 = stringAppend(tmp165,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT440, 1 /* true */, 1 /* true */, tmp166, _notPassedCnt);
 
-          _str = _OMC_LIT441;
+          omc_string_store(&(_str), _OMC_LIT441);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta169 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta167);
           _chars = tmpMeta169;
-          tmpMeta168 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta167), 1));
+          tmpMeta168 = OMC_BOX_FIELD(tmpMeta167, 1);
           _expB = tmpMeta168;
 
           _tequal = valueEq(_expB, _OMC_LIT313);
@@ -2781,33 +2789,33 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta170 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta170,1,1) == 0) goto goto_1;
-          tmpMeta171 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta170), 2));
+          tmpMeta171 = OMC_BOX_FIELD(tmpMeta170, 2);
           _tok = tmpMeta171;
 
           _txt = _OMC_LIT40;
 
           _txt = omc_Tpl_writeTok(threadData, _txt, _tok);
 
-          _strOut = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_strOut), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta172 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta173 = stringAppend(tmpMeta172,_strOut);
-          tmpMeta174 = stringAppend(tmpMeta173,_OMC_LIT16);
-          tmpMeta175 = stringAppend(tmpMeta174,stringAppendList(_chars));
-          _strOut = tmpMeta175;
+          tmp172 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp173 = stringAppend(tmp172,_strOut);
+          tmp174 = stringAppend(tmp173,_OMC_LIT16);
+          tmp175 = stringAppend(tmp174,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp175);
 
-          tmpMeta176 = stringAppend(_OMC_LIT418,_str);
-          tmpMeta177 = stringAppend(tmpMeta176,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT388, 1 /* true */, 1 /* true */, tmpMeta177, _notPassedCnt);
+          tmp176 = stringAppend(_OMC_LIT418,_str);
+          tmp177 = stringAppend(tmp176,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT388, 1 /* true */, 1 /* true */, tmp177, _notPassedCnt);
 
-          _str = _OMC_LIT442;
+          omc_string_store(&(_str), _OMC_LIT442);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta180 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta178);
           _chars = tmpMeta180;
-          tmpMeta179 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta178), 1));
+          tmpMeta179 = OMC_BOX_FIELD(tmpMeta178, 1);
           _expB = tmpMeta179;
 
           _tequal = valueEq(_expB, _OMC_LIT447);
@@ -2815,33 +2823,33 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta181 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta181,1,1) == 0) goto goto_1;
-          tmpMeta182 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta181), 2));
+          tmpMeta182 = OMC_BOX_FIELD(tmpMeta181, 2);
           _tok = tmpMeta182;
 
           _txt = _OMC_LIT40;
 
           _txt = omc_Tpl_writeTok(threadData, _txt, _tok);
 
-          _strOut = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_strOut), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta183 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta184 = stringAppend(tmpMeta183,_strOut);
-          tmpMeta185 = stringAppend(tmpMeta184,_OMC_LIT16);
-          tmpMeta186 = stringAppend(tmpMeta185,stringAppendList(_chars));
-          _strOut = tmpMeta186;
+          tmp183 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp184 = stringAppend(tmp183,_strOut);
+          tmp185 = stringAppend(tmp184,_OMC_LIT16);
+          tmp186 = stringAppend(tmp185,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp186);
 
-          tmpMeta187 = stringAppend(_OMC_LIT418,_str);
-          tmpMeta188 = stringAppend(tmpMeta187,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT448, 1 /* true */, 1 /* true */, tmpMeta188, _notPassedCnt);
+          tmp187 = stringAppend(_OMC_LIT418,_str);
+          tmp188 = stringAppend(tmp187,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT448, 1 /* true */, 1 /* true */, tmp188, _notPassedCnt);
 
-          _str = _OMC_LIT449;
+          omc_string_store(&(_str), _OMC_LIT449);
 
           _chars = stringListStringChar(_str);
 
           /* Pattern-matching tuple assignment */
           tmpMeta191 = omc_TplParser_expression(threadData, _chars, omc_TplParser_makeStartLineInfo(threadData, _chars, _OMC_LIT328), _OMC_LIT18, _OMC_LIT381, 0 /* false */, NULL, &tmpMeta189);
           _chars = tmpMeta191;
-          tmpMeta190 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta189), 1));
+          tmpMeta190 = OMC_BOX_FIELD(tmpMeta189, 1);
           _expB = tmpMeta190;
 
           _tequal = valueEq(_expB, _OMC_LIT383);
@@ -2849,26 +2857,26 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           /* Pattern-matching assignment */
           tmpMeta192 = _expB;
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta192,1,1) == 0) goto goto_1;
-          tmpMeta193 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta192), 2));
+          tmpMeta193 = OMC_BOX_FIELD(tmpMeta192, 2);
           _tok = tmpMeta193;
 
           _txt = _OMC_LIT40;
 
           _txt = omc_Tpl_writeTok(threadData, _txt, _tok);
 
-          _strOut = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_strOut), omc_Tpl_textString(threadData, _txt));
 
-          tmpMeta194 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
-          tmpMeta195 = stringAppend(tmpMeta194,_strOut);
-          tmpMeta196 = stringAppend(tmpMeta195,_OMC_LIT16);
-          tmpMeta197 = stringAppend(tmpMeta196,stringAppendList(_chars));
-          _strOut = tmpMeta197;
+          tmp194 = stringAppend(omc_Tpl_booleanString(threadData, _tequal),_OMC_LIT16);
+          tmp195 = stringAppend(tmp194,_strOut);
+          tmp196 = stringAppend(tmp195,_OMC_LIT16);
+          tmp197 = stringAppend(tmp196,stringAppendList(_chars));
+          omc_string_store(&(_strOut), tmp197);
 
-          tmpMeta198 = stringAppend(_OMC_LIT418,_str);
-          tmpMeta199 = stringAppend(tmpMeta198,_OMC_LIT331);
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT384, 1 /* true */, 1 /* true */, tmpMeta199, _notPassedCnt);
+          tmp198 = stringAppend(_OMC_LIT418,_str);
+          tmp199 = stringAppend(tmp198,_OMC_LIT331);
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, _strOut, _OMC_LIT384, 1 /* true */, 1 /* true */, tmp199, _notPassedCnt);
 
-          _str = _OMC_LIT337;
+          omc_string_store(&(_str), _OMC_LIT337);
 
           _chars = stringListStringChar(_str);
 
@@ -2884,20 +2892,20 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           tmpMeta204 = MMC_CDR(tmpMeta202);
           _chars = tmpMeta204;
 
-          tmpMeta205 = mmc_mk_box5(3, &TplParser_LineInfo_LINE__INFO__desc, _OMC_LIT451, mmc_mk_integer(((modelica_integer) 11)), mmc_mk_integer(_llen), _chars);
+          tmpMeta205 = omc_mk_box5(3, &TplParser_LineInfo_LINE__INFO__desc, _OMC_LIT451, omc_mk_integer(((modelica_integer) 11)), omc_mk_integer(_llen), _chars);
           _lnum = omc_TplParser_getPosition(threadData, _chars, tmpMeta205 ,&_colnum);
 
-          tmpMeta206 = stringAppend(intString(_lnum),_OMC_LIT452);
-          tmpMeta207 = stringAppend(tmpMeta206,intString(_colnum));
-          tmpMeta208 = stringAppend(tmpMeta207,_OMC_LIT453);
-          tmpMeta209 = stringAppend(tmpMeta208,intString(_llen));
-          _notPassedCnt = omc_TplMain_testStringEquality(threadData, tmpMeta209, _OMC_LIT454, 1 /* true */, 1 /* true */, _OMC_LIT455, _notPassedCnt);
+          tmp206 = stringAppend(intString(_lnum),_OMC_LIT452);
+          tmp207 = stringAppend(tmp206,intString(_colnum));
+          tmp208 = stringAppend(tmp207,_OMC_LIT453);
+          tmp209 = stringAppend(tmp208,intString(_llen));
+          _notPassedCnt = omc_TplMain_testStringEquality(threadData, tmp209, _OMC_LIT454, 1 /* true */, 1 /* true */, _OMC_LIT455, _notPassedCnt);
 
           _txt = _OMC_LIT40;
 
           _txt = omc_TplMain_statement(threadData, _txt, _OMC_LIT470);
 
-          _str = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_str), omc_Tpl_textString(threadData, _txt));
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _str, _OMC_LIT471, 1 /* true */, 1 /* true */, _OMC_LIT472, _notPassedCnt);
 
@@ -2905,7 +2913,7 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _txt = omc_TplMain_intMatrix(threadData, _txt, _OMC_LIT490);
 
-          _str = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_str), omc_Tpl_textString(threadData, _txt));
 
           _notPassedCnt = omc_TplMain_testStringEquality(threadData, _str, _OMC_LIT491, 1 /* true */, 1 /* true */, _OMC_LIT492, _notPassedCnt);
 
@@ -2915,9 +2923,9 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
 
           _notPassedCnt = omc_TplMain_testTranslateTplFile(threadData, _OMC_LIT495, 0 /* false */, 1 /* true */, _notPassedCnt);
 
-          tmpMeta210 = stringAppend(_OMC_LIT496,realString(mmc_clock() - _tstart));
-          tmpMeta211 = stringAppend(tmpMeta210,_OMC_LIT497);
-          fputs(MMC_STRINGDATA(tmpMeta211),stdout);
+          tmp210 = stringAppend(_OMC_LIT496,realString(mmc_clock() - _tstart));
+          tmp211 = stringAppend(tmp210,_OMC_LIT497);
+          fputs(omc_string_data(tmp211),stdout);
 
           tmp216 = (modelica_boolean)(_notPassedCnt == ((modelica_integer) 0));
           if(tmp216)
@@ -2926,32 +2934,32 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
           }
           else
           {
-            tmpMeta212 = stringAppend(_OMC_LIT499,intString(_notPassedCnt));
-            tmpMeta213 = stringAppend(tmpMeta212,_OMC_LIT500);
-            tmpMeta214 = stringAppend(tmpMeta213,((_notPassedCnt > ((modelica_integer) 1))?_OMC_LIT501:_OMC_LIT193));
-            tmpMeta215 = stringAppend(tmpMeta214,_OMC_LIT502);
-            tmp217 = tmpMeta215;
+            tmp212 = stringAppend(_OMC_LIT499,intString(_notPassedCnt));
+            tmp213 = stringAppend(tmp212,_OMC_LIT500);
+            tmp214 = stringAppend(tmp213,((_notPassedCnt > ((modelica_integer) 1))?_OMC_LIT501:_OMC_LIT193));
+            tmp215 = stringAppend(tmp214,_OMC_LIT502);
+            tmp217 = tmp215;
           }
-          _str = tmp217;
+          omc_string_store(&(_str), tmp217);
 
-          fputs(MMC_STRINGDATA(_str),stdout);
+          fputs(omc_string_data(_str),stdout);
           goto tmp2_done;
         }
         case 1: {
-          modelica_metatype tmpMeta218;
-          modelica_metatype tmpMeta219;
+          modelica_string tmp218;
+          modelica_string tmp219;
           
           _str = tmp3_1;
           /* Pattern matching succeeded */
-          tmpMeta218 = stringAppend(_OMC_LIT503,_str);
-          tmpMeta219 = stringAppend(tmpMeta218,_OMC_LIT504);
-          fputs(MMC_STRINGDATA(tmpMeta219),stdout);
+          tmp218 = stringAppend(_OMC_LIT503,_str);
+          tmp219 = stringAppend(tmp218,_OMC_LIT504);
+          fputs(omc_string_data(tmp219),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT505),stdout);
+          fputs(omc_string_data(_OMC_LIT505),stdout);
 
-          fputs(MMC_STRINGDATA(omc_Print_getErrorString(threadData)),stdout);
+          fputs(omc_string_data(omc_Print_getErrorString(threadData)),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT506),stdout);
+          fputs(omc_string_data(_OMC_LIT506),stdout);
 
           omc_Print_clearErrorBuf(threadData);
           goto tmp2_done;
@@ -2961,36 +2969,24 @@ void omc_TplMain_tplMainTest(threadData_t *threadData, modelica_string _inFile)
         tmp2_end: ;
       }
       goto goto_1;
-      tmp2_done:
-      (void)tmp3;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
-      goto tmp2_done2;
       goto_1:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
-      if (++tmp3 < 2) {
-        goto tmp2_top;
-      }
-      MMC_THROW_INTERNAL();
-      tmp2_done2:;
+      OMC_THROW_INTERNAL();
+      goto tmp2_done;
+      tmp2_done:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_TplMain_testTranslateTplFile(threadData_t *threadData, modelica_string _inFile, modelica_boolean _inPrintResult, modelica_boolean _inPrintErrorBuffer, modelica_integer _inNotPassedCnt)
 {
   modelica_integer _outNotPassedCnt;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outNotPassedCnt has no default value.
   { /* matchcontinue expression */
@@ -3015,63 +3011,63 @@ modelica_integer omc_TplMain_testTranslateTplFile(threadData_t *threadData, mode
       // _printErrBuf has no default value.
       // _notPassedCnt has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
-          modelica_metatype tmpMeta6;
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
+          modelica_string tmp6;
+          modelica_string tmp7;
+          modelica_string tmp8;
+          modelica_string tmp9;
+          modelica_string tmp10;
+          modelica_string tmp11;
           
           _file = tmp4_1;
           _printRes = tmp4_2;
           _printErrBuf = tmp4_3;
           _notPassedCnt = tmp4_4;
           /* Pattern matching succeeded */
-          tmpMeta6 = stringAppend(_file,_OMC_LIT508);
-          omc_System_writeFile(threadData, tmpMeta6, _OMC_LIT509);
+          tmp6 = stringAppend(_file,_OMC_LIT508);
+          omc_System_writeFile(threadData, tmp6, _OMC_LIT509);
 
-          tmpMeta7 = stringAppend(_file,_OMC_LIT510);
-          omc_TplMain_translateFile(threadData, tmpMeta7, _OMC_LIT193);
+          tmp7 = stringAppend(_file,_OMC_LIT510);
+          omc_TplMain_translateFile(threadData, tmp7, _OMC_LIT193);
 
-          tmpMeta8 = stringAppend(_file,_OMC_LIT508);
-          _res = omc_System_stringReplace(threadData, omc_System_readFile(threadData, tmpMeta8), _OMC_LIT511, _OMC_LIT193);
+          tmp8 = stringAppend(_file,_OMC_LIT508);
+          omc_string_store(&(_res), omc_System_stringReplace(threadData, omc_System_readFile(threadData, tmp8), _OMC_LIT511, _OMC_LIT193));
 
-          tmpMeta9 = stringAppend(_file,_OMC_LIT512);
-          _resToBe = omc_System_stringReplace(threadData, omc_System_readFile(threadData, tmpMeta9), _OMC_LIT511, _OMC_LIT193);
-          tmpMeta10 = stringAppend(_OMC_LIT513,_file);
-          tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT510);
-          tmp1 = omc_TplMain_testStringEquality(threadData, _res, _resToBe, _printRes, _printErrBuf, tmpMeta11, _notPassedCnt);
+          tmp9 = stringAppend(_file,_OMC_LIT512);
+          omc_string_store(&(_resToBe), omc_System_stringReplace(threadData, omc_System_readFile(threadData, tmp9), _OMC_LIT511, _OMC_LIT193));
+          tmp10 = stringAppend(_OMC_LIT513,_file);
+          tmp11 = stringAppend(tmp10,_OMC_LIT510);
+          tmp1 = omc_TplMain_testStringEquality(threadData, _res, _resToBe, _printRes, _printErrBuf, tmp11, _notPassedCnt);
           goto tmp3_done;
         }
         case 1: {
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
+          modelica_string tmp12;
+          modelica_string tmp13;
+          modelica_string tmp14;
+          modelica_string tmp15;
+          modelica_string tmp16;
           
           _file = tmp4_1;
           _printRes = tmp4_2;
           _printErrBuf = tmp4_3;
           _notPassedCnt = tmp4_4;
           /* Pattern matching succeeded */
-          tmpMeta12 = stringAppend(_file,_OMC_LIT508);
-          omc_System_writeFile(threadData, tmpMeta12, _OMC_LIT509);
+          tmp12 = stringAppend(_file,_OMC_LIT508);
+          omc_System_writeFile(threadData, tmp12, _OMC_LIT509);
 
-          tmpMeta13 = stringAppend(_file,_OMC_LIT508);
-          _res = omc_System_stringReplace(threadData, omc_System_readFile(threadData, tmpMeta13), _OMC_LIT511, _OMC_LIT193);
+          tmp13 = stringAppend(_file,_OMC_LIT508);
+          omc_string_store(&(_res), omc_System_stringReplace(threadData, omc_System_readFile(threadData, tmp13), _OMC_LIT511, _OMC_LIT193));
 
-          tmpMeta14 = stringAppend(_file,_OMC_LIT512);
-          _resToBe = omc_System_stringReplace(threadData, omc_System_readFile(threadData, tmpMeta14), _OMC_LIT511, _OMC_LIT193);
-          tmpMeta15 = stringAppend(_OMC_LIT513,_file);
-          tmpMeta16 = stringAppend(tmpMeta15,_OMC_LIT510);
-          tmp1 = omc_TplMain_testStringEquality(threadData, _res, _resToBe, _printRes, _printErrBuf, tmpMeta16, _notPassedCnt);
+          tmp14 = stringAppend(_file,_OMC_LIT512);
+          omc_string_store(&(_resToBe), omc_System_stringReplace(threadData, omc_System_readFile(threadData, tmp14), _OMC_LIT511, _OMC_LIT193));
+          tmp15 = stringAppend(_OMC_LIT513,_file);
+          tmp16 = stringAppend(tmp15,_OMC_LIT510);
+          tmp1 = omc_TplMain_testStringEquality(threadData, _res, _resToBe, _printRes, _printErrBuf, tmp16, _notPassedCnt);
           goto tmp3_done;
         }
         }
@@ -3081,23 +3077,21 @@ modelica_integer omc_TplMain_testTranslateTplFile(threadData_t *threadData, mode
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _outNotPassedCnt = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _outNotPassedCnt;
+  omc_ret_ = _outNotPassedCnt;
+  return omc_ret_;
 }
 modelica_metatype boxptr_TplMain_testTranslateTplFile(threadData_t *threadData, modelica_metatype _inFile, modelica_metatype _inPrintResult, modelica_metatype _inPrintErrorBuffer, modelica_metatype _inNotPassedCnt)
 {
@@ -3106,23 +3100,21 @@ modelica_metatype boxptr_TplMain_testTranslateTplFile(threadData_t *threadData, 
   modelica_integer tmp3;
   modelica_integer _outNotPassedCnt;
   modelica_metatype out_outNotPassedCnt;
-  tmp1 = mmc_unbox_integer(_inPrintResult);
-  tmp2 = mmc_unbox_integer(_inPrintErrorBuffer);
-  tmp3 = mmc_unbox_integer(_inNotPassedCnt);
+  tmp1 = omc_unbox_integer(_inPrintResult);
+  tmp2 = omc_unbox_integer(_inPrintErrorBuffer);
+  tmp3 = omc_unbox_integer(_inNotPassedCnt);
   _outNotPassedCnt = omc_TplMain_testTranslateTplFile(threadData, _inFile, tmp1, tmp2, tmp3);
-  out_outNotPassedCnt = mmc_mk_icon(_outNotPassedCnt);
+  out_outNotPassedCnt = omc_mk_icon(_outNotPassedCnt);
   return out_outNotPassedCnt;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modelica_string _inStringReturned, modelica_string _inStringShouldBe, modelica_boolean _inPrintResult, modelica_boolean _inPrintErrorBuffer, modelica_string _inTestLabel, modelica_integer _inNotPassedCnt)
 {
   modelica_integer _outNotPassedCnt;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outNotPassedCnt has no default value.
   { /* matchcontinue expression */
@@ -3153,20 +3145,20 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
       // _printErrBuf has no default value.
       // _notPassedCnt has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_boolean tmp6;
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
+          modelica_string tmp7;
+          modelica_string tmp8;
+          modelica_string tmp9;
           modelica_boolean tmp10;
           modelica_string tmp11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
+          modelica_string tmp12;
+          modelica_string tmp13;
           modelica_boolean tmp14;
           modelica_string tmp15;
           modelica_boolean tmp16;
@@ -3183,25 +3175,25 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
           tmp6 = (stringEqual(_strRet, _strShouldBe));
           if (1 /* true */ != tmp6) goto goto_2;
 
-          tmpMeta7 = stringAppend(_OMC_LIT514,_strLabel);
-          fputs(MMC_STRINGDATA(tmpMeta7),stdout);
+          tmp7 = stringAppend(_OMC_LIT514,_strLabel);
+          fputs(omc_string_data(tmp7),stdout);
 
           tmp10 = (modelica_boolean)_printResult;
           if(tmp10)
           {
-            tmpMeta8 = stringAppend(_OMC_LIT515,_strRet);
-            tmpMeta9 = stringAppend(tmpMeta8,_OMC_LIT516);
-            tmp11 = tmpMeta9;
+            tmp8 = stringAppend(_OMC_LIT515,_strRet);
+            tmp9 = stringAppend(tmp8,_OMC_LIT516);
+            tmp11 = tmp9;
           }
           else
           {
             tmp11 = _OMC_LIT517;
           }
-          _strRes = tmp11;
+          omc_string_store(&(_strRes), tmp11);
 
-          fputs(MMC_STRINGDATA(_strRes),stdout);
+          fputs(omc_string_data(_strRes),stdout);
 
-          _strErrBuf = omc_Print_getErrorString(threadData);
+          omc_string_store(&(_strErrBuf), omc_Print_getErrorString(threadData));
 
           tmp16 = (modelica_boolean)(stringEqual(_strErrBuf, _OMC_LIT193));
           if(tmp16)
@@ -3213,9 +3205,9 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
             tmp14 = (modelica_boolean)_printErrBuf;
             if(tmp14)
             {
-              tmpMeta12 = stringAppend(_OMC_LIT505,_strErrBuf);
-              tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT506);
-              tmp15 = tmpMeta13;
+              tmp12 = stringAppend(_OMC_LIT505,_strErrBuf);
+              tmp13 = stringAppend(tmp12,_OMC_LIT506);
+              tmp15 = tmp13;
             }
             else
             {
@@ -3223,11 +3215,11 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
             }
             tmp17 = tmp15;
           }
-          _strErrBuf = tmp17;
+          omc_string_store(&(_strErrBuf), tmp17);
 
-          fputs(MMC_STRINGDATA(_strErrBuf),stdout);
+          fputs(omc_string_data(_strErrBuf),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT519),stdout);
+          fputs(omc_string_data(_OMC_LIT519),stdout);
 
           omc_Print_clearErrorBuf(threadData);
           tmp1 = _notPassedCnt;
@@ -3235,15 +3227,15 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
         }
         case 1: {
           modelica_boolean tmp18;
-          modelica_metatype tmpMeta19;
-          modelica_metatype tmpMeta20;
-          modelica_metatype tmpMeta21;
-          modelica_metatype tmpMeta22;
-          modelica_metatype tmpMeta23;
+          modelica_string tmp19;
+          modelica_string tmp20;
+          modelica_string tmp21;
+          modelica_string tmp22;
+          modelica_string tmp23;
           modelica_boolean tmp24;
           modelica_string tmp25;
-          modelica_metatype tmpMeta26;
-          modelica_metatype tmpMeta27;
+          modelica_string tmp26;
+          modelica_string tmp27;
           modelica_boolean tmp28;
           modelica_string tmp29;
           modelica_boolean tmp30;
@@ -3260,27 +3252,27 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
           tmp18 = (stringEqual(_strRet, _strShouldBe));
           if (0 /* false */ != tmp18) goto goto_2;
 
-          tmpMeta19 = stringAppend(_OMC_LIT520,_strLabel);
-          fputs(MMC_STRINGDATA(tmpMeta19),stdout);
+          tmp19 = stringAppend(_OMC_LIT520,_strLabel);
+          fputs(omc_string_data(tmp19),stdout);
 
           tmp24 = (modelica_boolean)_printResult;
           if(tmp24)
           {
-            tmpMeta20 = stringAppend(_OMC_LIT515,_strRet);
-            tmpMeta21 = stringAppend(tmpMeta20,_OMC_LIT521);
-            tmpMeta22 = stringAppend(tmpMeta21,_strShouldBe);
-            tmpMeta23 = stringAppend(tmpMeta22,_OMC_LIT516);
-            tmp25 = tmpMeta23;
+            tmp20 = stringAppend(_OMC_LIT515,_strRet);
+            tmp21 = stringAppend(tmp20,_OMC_LIT521);
+            tmp22 = stringAppend(tmp21,_strShouldBe);
+            tmp23 = stringAppend(tmp22,_OMC_LIT516);
+            tmp25 = tmp23;
           }
           else
           {
             tmp25 = _OMC_LIT517;
           }
-          _strRes = tmp25;
+          omc_string_store(&(_strRes), tmp25);
 
-          fputs(MMC_STRINGDATA(_strRes),stdout);
+          fputs(omc_string_data(_strRes),stdout);
 
-          _strErrBuf = omc_Print_getErrorString(threadData);
+          omc_string_store(&(_strErrBuf), omc_Print_getErrorString(threadData));
 
           tmp30 = (modelica_boolean)(stringEqual(_strErrBuf, _OMC_LIT193));
           if(tmp30)
@@ -3292,9 +3284,9 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
             tmp28 = (modelica_boolean)_printErrBuf;
             if(tmp28)
             {
-              tmpMeta26 = stringAppend(_OMC_LIT505,_strErrBuf);
-              tmpMeta27 = stringAppend(tmpMeta26,_OMC_LIT506);
-              tmp29 = tmpMeta27;
+              tmp26 = stringAppend(_OMC_LIT505,_strErrBuf);
+              tmp27 = stringAppend(tmp26,_OMC_LIT506);
+              tmp29 = tmp27;
             }
             else
             {
@@ -3302,11 +3294,11 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
             }
             tmp31 = tmp29;
           }
-          _strErrBuf = tmp31;
+          omc_string_store(&(_strErrBuf), tmp31);
 
-          fputs(MMC_STRINGDATA(_strErrBuf),stdout);
+          fputs(omc_string_data(_strErrBuf),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT522),stdout);
+          fputs(omc_string_data(_OMC_LIT522),stdout);
 
           omc_Print_clearErrorBuf(threadData);
           tmp1 = ((modelica_integer) 1) + _notPassedCnt;
@@ -3331,23 +3323,21 @@ modelica_integer omc_TplMain_testStringEquality(threadData_t *threadData, modeli
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _outNotPassedCnt = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _outNotPassedCnt;
+  omc_ret_ = _outNotPassedCnt;
+  return omc_ret_;
 }
 modelica_metatype boxptr_TplMain_testStringEquality(threadData_t *threadData, modelica_metatype _inStringReturned, modelica_metatype _inStringShouldBe, modelica_metatype _inPrintResult, modelica_metatype _inPrintErrorBuffer, modelica_metatype _inTestLabel, modelica_metatype _inNotPassedCnt)
 {
@@ -3356,21 +3346,18 @@ modelica_metatype boxptr_TplMain_testStringEquality(threadData_t *threadData, mo
   modelica_integer tmp3;
   modelica_integer _outNotPassedCnt;
   modelica_metatype out_outNotPassedCnt;
-  tmp1 = mmc_unbox_integer(_inPrintResult);
-  tmp2 = mmc_unbox_integer(_inPrintErrorBuffer);
-  tmp3 = mmc_unbox_integer(_inNotPassedCnt);
+  tmp1 = omc_unbox_integer(_inPrintResult);
+  tmp2 = omc_unbox_integer(_inPrintErrorBuffer);
+  tmp3 = omc_unbox_integer(_inNotPassedCnt);
   _outNotPassedCnt = omc_TplMain_testStringEquality(threadData, _inStringReturned, _inStringShouldBe, tmp1, tmp2, _inTestLabel, tmp3);
-  out_outNotPassedCnt = mmc_mk_icon(_outNotPassedCnt);
+  out_outNotPassedCnt = omc_mk_icon(_outNotPassedCnt);
   return out_outNotPassedCnt;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile, modelica_string _inOutputDir)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* matchcontinue expression */
     volatile modelica_string tmp3_1;
@@ -3395,33 +3382,33 @@ void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile
       // _nErrors has no default value.
       // _wasError has no default value.
       tmp3 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp2_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp3 < 2; tmp3++) {
         switch (MMC_SWITCH_CAST(tmp3)) {
         case 0: {
-          modelica_metatype tmpMeta5;
-          modelica_metatype tmpMeta6;
-          modelica_metatype tmpMeta7;
+          modelica_string tmp5;
+          modelica_string tmp6;
+          modelica_string tmp7;
           modelica_boolean tmp8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
+          modelica_string tmp9;
+          modelica_string tmp10;
+          modelica_string tmp11;
+          modelica_string tmp12;
+          modelica_string tmp13;
           modelica_boolean tmp14;
           
           _file = tmp3_1;
           /* Pattern matching succeeded */
-          tmpMeta5 = stringAppend(_OMC_LIT527,_file);
-          tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT528);
-          fputs(MMC_STRINGDATA(tmpMeta6),stdout);
+          tmp5 = stringAppend(_OMC_LIT527,_file);
+          tmp6 = stringAppend(tmp5,_OMC_LIT528);
+          fputs(omc_string_data(tmp6),stdout);
 
           _nErrors = omc_Error_getNumErrorMessages(threadData);
 
-          tmpMeta7 = stringAppend(_file,_OMC_LIT16);
-          _destFile = omc_System_stringReplace(threadData, tmpMeta7, _OMC_LIT529, _OMC_LIT508);
+          tmp7 = stringAppend(_file,_OMC_LIT16);
+          omc_string_store(&(_destFile), omc_System_stringReplace(threadData, tmp7, _OMC_LIT529, _OMC_LIT508));
 
           /* Pattern-matching assignment */
           tmp8 = (stringEqual(_file, _destFile));
@@ -3429,9 +3416,9 @@ void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile
 
           if((!stringEqual(_inOutputDir, _OMC_LIT193)))
           {
-            tmpMeta9 = stringAppend(_inOutputDir,_OMC_LIT530);
-            tmpMeta10 = stringAppend(tmpMeta9,omc_System_basename(threadData, _destFile));
-            _destFile = tmpMeta10;
+            tmp9 = stringAppend(_inOutputDir,_OMC_LIT530);
+            tmp10 = stringAppend(tmp9,omc_System_basename(threadData, _destFile));
+            omc_string_store(&(_destFile), tmp10);
           }
 
           _tplPackage = omc_TplParser_templPackageFromFile(threadData, _file);
@@ -3442,16 +3429,16 @@ void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile
 
           _txt = omc_TplCodegen_mmPackage(threadData, _txt, _mmPckg);
 
-          _res = omc_Tpl_textString(threadData, _txt);
+          omc_string_store(&(_res), omc_Tpl_textString(threadData, _txt));
 
           _wasError = (_nErrors < omc_Error_getNumErrorMessages(threadData));
 
-          tmpMeta11 = stringAppend(_destFile,(_wasError?_OMC_LIT531:_OMC_LIT193));
-          _destFile = tmpMeta11;
+          tmp11 = stringAppend(_destFile,(_wasError?_OMC_LIT531:_OMC_LIT193));
+          omc_string_store(&(_destFile), tmp11);
 
-          tmpMeta12 = stringAppend(_OMC_LIT532,_destFile);
-          tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT528);
-          fputs(MMC_STRINGDATA(tmpMeta13),stdout);
+          tmp12 = stringAppend(_OMC_LIT532,_destFile);
+          tmp13 = stringAppend(tmp12,_OMC_LIT528);
+          fputs(omc_string_data(tmp13),stdout);
 
           omc_System_writeFile(threadData, _destFile, _res);
 
@@ -3461,20 +3448,20 @@ void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile
           goto tmp2_done;
         }
         case 1: {
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
+          modelica_string tmp15;
+          modelica_string tmp16;
           
           _file = tmp3_1;
           /* Pattern matching succeeded */
-          tmpMeta15 = stringAppend(_OMC_LIT533,_file);
-          tmpMeta16 = stringAppend(tmpMeta15,_OMC_LIT534);
-          fputs(MMC_STRINGDATA(tmpMeta16),stdout);
+          tmp15 = stringAppend(_OMC_LIT533,_file);
+          tmp16 = stringAppend(tmp15,_OMC_LIT534);
+          fputs(omc_string_data(tmp16),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT505),stdout);
+          fputs(omc_string_data(_OMC_LIT505),stdout);
 
-          fputs(MMC_STRINGDATA(omc_Print_getErrorString(threadData)),stdout);
+          fputs(omc_string_data(omc_Print_getErrorString(threadData)),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT506),stdout);
+          fputs(omc_string_data(_OMC_LIT506),stdout);
 
           omc_Print_clearErrorBuf(threadData);
           goto goto_1;
@@ -3487,32 +3474,26 @@ void omc_TplMain_translateFile(threadData_t *threadData, modelica_string _inFile
       goto goto_1;
       tmp2_done:
       (void)tmp3;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp2_done2;
       goto_1:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp3 < 2) {
         goto tmp2_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp2_done2:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile, modelica_string _inOutputDir)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_string tmp3_1;
@@ -3528,14 +3509,14 @@ void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile, modelic
       for (; tmp3 < 2; tmp3++) {
         switch (MMC_SWITCH_CAST(tmp3)) {
         case 0: {
-          if (13 != MMC_STRLEN(tmp3_1) || strcmp(MMC_STRINGDATA(_OMC_LIT535), MMC_STRINGDATA(tmp3_1)) != 0) goto tmp2_end;
+          if (13 != omc_string_len(tmp3_1) || strcmp(omc_string_data(_OMC_LIT535), omc_string_data(tmp3_1)) != 0) goto tmp2_end;
           /* Pattern matching succeeded */
           omc_TplMain_tplMainTest(threadData, _OMC_LIT507);
           goto tmp2_done;
         }
         case 1: {
-          modelica_metatype tmpMeta5;
-          modelica_metatype tmpMeta6;
+          modelica_string tmp5;
+          modelica_string tmp6;
           modelica_boolean tmp7;
           modelica_string tmp8;
           
@@ -3545,7 +3526,7 @@ void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile, modelic
 
           omc_TplMain_translateFile(threadData, _file, _inOutputDir);
 
-          _strErrBuf = omc_Print_getErrorString(threadData);
+          omc_string_store(&(_strErrBuf), omc_Print_getErrorString(threadData));
 
           tmp7 = (modelica_boolean)(stringEqual(_strErrBuf, _OMC_LIT193));
           if(tmp7)
@@ -3554,13 +3535,13 @@ void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile, modelic
           }
           else
           {
-            tmpMeta5 = stringAppend(_OMC_LIT505,_strErrBuf);
-            tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT506);
-            tmp8 = tmpMeta6;
+            tmp5 = stringAppend(_OMC_LIT505,_strErrBuf);
+            tmp6 = stringAppend(tmp5,_OMC_LIT506);
+            tmp8 = tmp6;
           }
-          _strErrBuf = tmp8;
+          omc_string_store(&(_strErrBuf), tmp8);
 
-          fputs(MMC_STRINGDATA(_strErrBuf),stdout);
+          fputs(omc_string_data(_strErrBuf),stdout);
           goto tmp2_done;
         }
         }
@@ -3569,16 +3550,13 @@ void omc_TplMain_main(threadData_t *threadData, modelica_string _inFile, modelic
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 

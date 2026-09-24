@@ -39,216 +39,224 @@ extern struct record_description NFExpression_REAL__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBPartition_kindIsInitial(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_kindIsInitial(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_kindIsInitial,2,0) {(void*) boxptr_NBPartition_kindIsInitial,0}};
 #define boxvar_NBPartition_kindIsInitial MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_kindIsInitial)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_merge(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpart1, modelica_metatype _part2, modelica_boolean _strict);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_merge(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpart1, modelica_metatype _part2, modelica_metatype _strict);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_merge,2,0) {(void*) boxptr_NBPartition_Partition_merge,0}};
 #define boxvar_NBPartition_Partition_merge MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_merge)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_updateHeldVars(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpar, modelica_metatype _held_crefs);
 #define boxptr_NBPartition_Partition_updateHeldVars omc_NBPartition_Partition_updateHeldVars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_updateHeldVars,2,0) {(void*) boxptr_NBPartition_Partition_updateHeldVars,0}};
 #define boxvar_NBPartition_Partition_updateHeldVars MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_updateHeldVars)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_removeAlias(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpar);
 #define boxptr_NBPartition_Partition_removeAlias omc_NBPartition_Partition_removeAlias
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_removeAlias,2,0) {(void*) boxptr_NBPartition_Partition_removeAlias,0}};
 #define boxvar_NBPartition_Partition_removeAlias MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_removeAlias)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_clone(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpar, modelica_boolean _shallow);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_clone(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpar, modelica_metatype _shallow);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_clone,2,0) {(void*) boxptr_NBPartition_Partition_clone,0}};
 #define boxvar_NBPartition_Partition_clone MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_clone)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NBPartition_Partition_kindToInteger(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_kindToInteger(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_kindToInteger,2,0) {(void*) boxptr_NBPartition_Partition_kindToInteger,0}};
 #define boxvar_NBPartition_Partition_kindToInteger MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_kindToInteger)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBPartition_Partition_kindToString(threadData_t *threadData, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_kindToString(threadData_t *threadData, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_kindToString,2,0) {(void*) boxptr_NBPartition_Partition_kindToString,0}};
 #define boxvar_NBPartition_Partition_kindToString MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_kindToString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_mapStrongComponents(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpartition, modelica_fnptr _func);
 #define boxptr_NBPartition_Partition_mapStrongComponents omc_NBPartition_Partition_mapStrongComponents
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_mapStrongComponents,2,0) {(void*) boxptr_NBPartition_Partition_mapStrongComponents,0}};
 #define boxvar_NBPartition_Partition_mapStrongComponents MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_mapStrongComponents)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_mapExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpartition, modelica_fnptr _func);
 #define boxptr_NBPartition_Partition_mapExp omc_NBPartition_Partition_mapExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_mapExp,2,0) {(void*) boxptr_NBPartition_Partition_mapExp,0}};
 #define boxvar_NBPartition_Partition_mapExp MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_mapExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_mapEqn(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpartition, modelica_fnptr _func);
 #define boxptr_NBPartition_Partition_mapEqn omc_NBPartition_Partition_mapEqn
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_mapEqn,2,0) {(void*) boxptr_NBPartition_Partition_mapEqn,0}};
 #define boxvar_NBPartition_Partition_mapEqn MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_mapEqn)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_getLoopResiduals(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NBPartition_Partition_getLoopResiduals omc_NBPartition_Partition_getLoopResiduals
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getLoopResiduals,2,0) {(void*) boxptr_NBPartition_Partition_getLoopResiduals,0}};
 #define boxvar_NBPartition_Partition_getLoopResiduals MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getLoopResiduals)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_getClockDependencies(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NBPartition_Partition_getClockDependencies omc_NBPartition_Partition_getClockDependencies
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getClockDependencies,2,0) {(void*) boxptr_NBPartition_Partition_getClockDependencies,0}};
 #define boxvar_NBPartition_Partition_getClockDependencies MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getClockDependencies)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_setClocks(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpart, modelica_metatype _clock, modelica_metatype _baseClock);
 #define boxptr_NBPartition_Partition_setClocks omc_NBPartition_Partition_setClocks
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_setClocks,2,0) {(void*) boxptr_NBPartition_Partition_setClocks,0}};
 #define boxvar_NBPartition_Partition_setClocks MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_setClocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_getClocks(threadData_t *threadData, modelica_metatype _part, modelica_metatype *out_baseClock, modelica_boolean *out_holdEvents);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_getClocks(threadData_t *threadData, modelica_metatype _part, modelica_metatype *out_baseClock, modelica_metatype *out_holdEvents);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getClocks,2,0) {(void*) boxptr_NBPartition_Partition_getClocks,0}};
 #define boxvar_NBPartition_Partition_getClocks MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getClocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NBPartition_Partition_getKind(threadData_t *threadData, modelica_metatype _part);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_getKind(threadData_t *threadData, modelica_metatype _part);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getKind,2,0) {(void*) boxptr_NBPartition_Partition_getKind,0}};
 #define boxvar_NBPartition_Partition_getKind MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getKind)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_getJacobianR0(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NBPartition_Partition_getJacobianR0 omc_NBPartition_Partition_getJacobianR0
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getJacobianR0,2,0) {(void*) boxptr_NBPartition_Partition_getJacobianR0,0}};
 #define boxvar_NBPartition_Partition_getJacobianR0 MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getJacobianR0)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_getJacobianMrf(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NBPartition_Partition_getJacobianMrf omc_NBPartition_Partition_getJacobianMrf
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getJacobianMrf,2,0) {(void*) boxptr_NBPartition_Partition_getJacobianMrf,0}};
 #define boxvar_NBPartition_Partition_getJacobianMrf MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getJacobianMrf)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_getJacobianLfg(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NBPartition_Partition_getJacobianLfg omc_NBPartition_Partition_getJacobianLfg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getJacobianLfg,2,0) {(void*) boxptr_NBPartition_Partition_getJacobianLfg,0}};
 #define boxvar_NBPartition_Partition_getJacobianLfg MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getJacobianLfg)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_getJacobianAdjoint(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NBPartition_Partition_getJacobianAdjoint omc_NBPartition_Partition_getJacobianAdjoint
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getJacobianAdjoint,2,0) {(void*) boxptr_NBPartition_Partition_getJacobianAdjoint,0}};
 #define boxvar_NBPartition_Partition_getJacobianAdjoint MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getJacobianAdjoint)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_getJacobian(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NBPartition_Partition_getJacobian omc_NBPartition_Partition_getJacobian
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getJacobian,2,0) {(void*) boxptr_NBPartition_Partition_getJacobian,0}};
 #define boxvar_NBPartition_Partition_getJacobian MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_getJacobian)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_setKind(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpart, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_setKind(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpart, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_setKind,2,0) {(void*) boxptr_NBPartition_Partition_setKind,0}};
 #define boxvar_NBPartition_Partition_setKind MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_setKind)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_setIndex(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpart, modelica_metatype _index);
 #define boxptr_NBPartition_Partition_setIndex omc_NBPartition_Partition_setIndex
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_setIndex,2,0) {(void*) boxptr_NBPartition_Partition_setIndex,0}};
 #define boxvar_NBPartition_Partition_setIndex MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_setIndex)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NBPartition_Partition_categorize(threadData_t *threadData, modelica_metatype _partition, modelica_metatype _ode, modelica_metatype _alg, modelica_metatype _ode_evt, modelica_metatype _alg_evt, modelica_metatype _clocked);
 #define boxptr_NBPartition_Partition_categorize omc_NBPartition_Partition_categorize
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_categorize,2,0) {(void*) boxptr_NBPartition_Partition_categorize,0}};
 #define boxvar_NBPartition_Partition_categorize MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_categorize)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBPartition_Partition_isClocked(threadData_t *threadData, modelica_metatype _part);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_isClocked(threadData_t *threadData, modelica_metatype _part);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_isClocked,2,0) {(void*) boxptr_NBPartition_Partition_isClocked,0}};
 #define boxvar_NBPartition_Partition_isClocked MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_isClocked)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBPartition_Partition_isODEorDAE(threadData_t *threadData, modelica_metatype _part);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_isODEorDAE(threadData_t *threadData, modelica_metatype _part);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_isODEorDAE,2,0) {(void*) boxptr_NBPartition_Partition_isODEorDAE,0}};
 #define boxvar_NBPartition_Partition_isODEorDAE MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_isODEorDAE)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBPartition_Partition_isEmpty(threadData_t *threadData, modelica_metatype _partition);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_isEmpty(threadData_t *threadData, modelica_metatype _partition);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_isEmpty,2,0) {(void*) boxptr_NBPartition_Partition_isEmpty,0}};
 #define boxvar_NBPartition_Partition_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_isEmpty)
 
 
-DLLDirection
+DLLModelDirection
+modelica_boolean omc_NBPartition_Partition_hasIndex(threadData_t *threadData, modelica_metatype _partition, modelica_integer _index);
+DLLModelDirection
+modelica_metatype boxptr_NBPartition_Partition_hasIndex(threadData_t *threadData, modelica_metatype _partition, modelica_metatype _index);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_hasIndex,2,0) {(void*) boxptr_NBPartition_Partition_hasIndex,0}};
+#define boxvar_NBPartition_Partition_hasIndex MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_hasIndex)
+
+
+DLLModelDirection
 modelica_metatype omc_NBPartition_Partition_sort(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpartition);
 #define boxptr_NBPartition_Partition_sort omc_NBPartition_Partition_sort
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_sort,2,0) {(void*) boxptr_NBPartition_Partition_sort,0}};
 #define boxvar_NBPartition_Partition_sort MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_sort)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBPartition_Partition_toStringList(threadData_t *threadData, modelica_metatype _partitions, modelica_string _header);
 #define boxptr_NBPartition_Partition_toStringList omc_NBPartition_Partition_toStringList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_toStringList,2,0) {(void*) boxptr_NBPartition_Partition_toStringList,0}};
 #define boxvar_NBPartition_Partition_toStringList MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_toStringList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBPartition_Partition_toString(threadData_t *threadData, modelica_metatype _partition, modelica_integer _level);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Partition_toString(threadData_t *threadData, modelica_metatype _partition, modelica_metatype _level);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_toString,2,0) {(void*) boxptr_NBPartition_Partition_toString,0}};
 #define boxvar_NBPartition_Partition_toString MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Partition_toString)
@@ -260,61 +268,61 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Partition_toString,2,0) {(v
 #define boxptr_NBPartition_Association_expClocked omc_NBPartition_Association_expClocked
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBPartition_Association_isEqualClockTpl(threadData_t *threadData, modelica_metatype _tpl1, modelica_metatype _tpl2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Association_isEqualClockTpl(threadData_t *threadData, modelica_metatype _tpl1, modelica_metatype _tpl2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Association_isEqualClockTpl,2,0) {(void*) boxptr_NBPartition_Association_isEqualClockTpl,0}};
 #define boxvar_NBPartition_Association_isEqualClockTpl MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Association_isEqualClockTpl)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NBPartition_Association_hashClockTpl(threadData_t *threadData, modelica_metatype _tpl);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Association_hashClockTpl(threadData_t *threadData, modelica_metatype _tpl);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Association_hashClockTpl,2,0) {(void*) boxptr_NBPartition_Association_hashClockTpl,0}};
 #define boxvar_NBPartition_Association_hashClockTpl MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Association_hashClockTpl)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBPartition_Association_clockTplString(threadData_t *threadData, modelica_metatype _tpl);
 #define boxptr_NBPartition_Association_clockTplString omc_NBPartition_Association_clockTplString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Association_clockTplString,2,0) {(void*) boxptr_NBPartition_Association_clockTplString,0}};
 #define boxvar_NBPartition_Association_clockTplString MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Association_clockTplString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBPartition_Association_isClocked(threadData_t *threadData, modelica_metatype _association);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Association_isClocked(threadData_t *threadData, modelica_metatype _association);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Association_isClocked,2,0) {(void*) boxptr_NBPartition_Association_isClocked,0}};
 #define boxvar_NBPartition_Association_isClocked MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Association_isClocked)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Association_merge(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fass1, modelica_metatype _ass2, modelica_boolean _strict);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Association_merge(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fass1, modelica_metatype _ass2, modelica_metatype _strict);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Association_merge,2,0) {(void*) boxptr_NBPartition_Association_merge,0}};
 #define boxvar_NBPartition_Association_merge MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Association_merge)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBPartition_Association_create(threadData_t *threadData, modelica_metatype _equations, modelica_integer _kind, modelica_metatype _info, modelica_metatype _infer_del);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBPartition_Association_create(threadData_t *threadData, modelica_metatype _equations, modelica_metatype _kind, modelica_metatype _info, modelica_metatype _infer_del);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Association_create,2,0) {(void*) boxptr_NBPartition_Association_create,0}};
 #define boxvar_NBPartition_Association_create MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Association_create)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBPartition_Association_toString(threadData_t *threadData, modelica_metatype _association);
 #define boxptr_NBPartition_Association_toString omc_NBPartition_Association_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Association_toString,2,0) {(void*) boxptr_NBPartition_Association_toString,0}};
 #define boxvar_NBPartition_Association_toString MMC_REFSTRUCTLIT(boxvar_lit_NBPartition_Association_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBPartition_Association_toStringShort(threadData_t *threadData, modelica_metatype _association);
 #define boxptr_NBPartition_Association_toStringShort omc_NBPartition_Association_toStringShort
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBPartition_Association_toStringShort,2,0) {(void*) boxptr_NBPartition_Association_toStringShort,0}};

@@ -38,13 +38,13 @@ void omc_UnitParserExt_addDerivedWeight(threadData_t *threadData, modelica_strin
 {
   double _weight_ext;
   _weight_ext = (double) _weight;
-  UnitParserExtImpl__addDerivedWeight(MMC_STRINGDATA(_name), MMC_STRINGDATA(_exp), _weight_ext);
+  UnitParserExtImpl__addDerivedWeight(omc_string_data(_name), omc_string_data(_exp), _weight_ext);
   return;
 }
 void boxptr_UnitParserExt_addDerivedWeight(threadData_t *threadData, modelica_metatype _name, modelica_metatype _exp, modelica_metatype _weight)
 {
   modelica_real tmp1;
-  tmp1 = mmc_unbox_real(_weight);
+  tmp1 = omc_unbox_real(_weight);
   omc_UnitParserExt_addDerivedWeight(threadData, _name, _exp, tmp1);
   return;
 }
@@ -52,7 +52,7 @@ void boxptr_UnitParserExt_addDerivedWeight(threadData_t *threadData, modelica_me
 void omc_UnitParserExt_addDerived(threadData_t *threadData, modelica_string _name, modelica_string _exp)
 {
 
-  UnitParserExtImpl__addDerived(MMC_STRINGDATA(_name), MMC_STRINGDATA(_exp));
+  UnitParserExtImpl__addDerived(omc_string_data(_name), omc_string_data(_exp));
   return;
 }
 
@@ -60,13 +60,13 @@ void omc_UnitParserExt_registerWeight(threadData_t *threadData, modelica_string 
 {
   double _weight_ext;
   _weight_ext = (double) _weight;
-  UnitParserExtImpl__registerWeight(MMC_STRINGDATA(_name), _weight_ext);
+  UnitParserExtImpl__registerWeight(omc_string_data(_name), _weight_ext);
   return;
 }
 void boxptr_UnitParserExt_registerWeight(threadData_t *threadData, modelica_metatype _name, modelica_metatype _weight)
 {
   modelica_real tmp1;
-  tmp1 = mmc_unbox_real(_weight);
+  tmp1 = omc_unbox_real(_weight);
   omc_UnitParserExt_registerWeight(threadData, _name, tmp1);
   return;
 }
@@ -74,7 +74,7 @@ void boxptr_UnitParserExt_registerWeight(threadData_t *threadData, modelica_meta
 void omc_UnitParserExt_addBase(threadData_t *threadData, modelica_string _name)
 {
 
-  UnitParserExtImpl__addBase(MMC_STRINGDATA(_name));
+  UnitParserExtImpl__addBase(omc_string_data(_name));
   return;
 }
 
@@ -113,7 +113,7 @@ modelica_metatype omc_UnitParserExt_str2unit(threadData_t *threadData, modelica_
   // _scaleFactor has no default value.
   // _offset has no default value.
 
-  UnitParserExt_str2unit(MMC_STRINGDATA(_res), &_noms_ext, &_denoms_ext, &_tpnoms_ext, &_tpdenoms_ext, &_tpstrs_ext, &_scaleFactor_ext, &_offset_ext);
+  UnitParserExt_str2unit(omc_string_data(_res), &_noms_ext, &_denoms_ext, &_tpnoms_ext, &_tpdenoms_ext, &_tpstrs_ext, &_scaleFactor_ext, &_offset_ext);
   _noms = (modelica_metatype)_noms_ext;
   _denoms = (modelica_metatype)_denoms_ext;
   _tpnoms = (modelica_metatype)_tpnoms_ext;
@@ -140,8 +140,8 @@ modelica_metatype boxptr_UnitParserExt_str2unit(threadData_t *threadData, modeli
   /* skip box _tpnoms; list<#Integer> */
   /* skip box _tpdenoms; list<#Integer> */
   /* skip box _tpstrs; list<String> */
-  if (out_scaleFactor) { *out_scaleFactor = mmc_mk_rcon(_scaleFactor); }
-  if (out_offset) { *out_offset = mmc_mk_rcon(_offset); }
+  if (out_scaleFactor) { *out_scaleFactor = omc_mk_rcon(_scaleFactor); }
+  if (out_offset) { *out_offset = omc_mk_rcon(_offset); }
   return _noms;
 }
 
@@ -165,7 +165,7 @@ modelica_string omc_UnitParserExt_unit2str(threadData_t *threadData, modelica_me
   _scaleFactor_ext = (double) _scaleFactor;
   _offset_ext = (double) _offset;
   _res_ext = UnitParserExt_unit2str(_noms_ext, _denoms_ext, _tpnoms_ext, _tpdenoms_ext, _tpstrs_ext, _scaleFactor_ext, _offset_ext);
-  _res = (modelica_string)mmc_mk_scon(_res_ext);
+  _res = (modelica_string)omc_string_new(_res_ext);
   return _res;
 }
 modelica_metatype boxptr_UnitParserExt_unit2str(threadData_t *threadData, modelica_metatype _noms, modelica_metatype _denoms, modelica_metatype _tpnoms, modelica_metatype _tpdenoms, modelica_metatype _tpstrs, modelica_metatype _scaleFactor, modelica_metatype _offset)
@@ -173,8 +173,8 @@ modelica_metatype boxptr_UnitParserExt_unit2str(threadData_t *threadData, modeli
   modelica_real tmp1;
   modelica_real tmp2;
   modelica_string _res = NULL;
-  tmp1 = mmc_unbox_real(_scaleFactor);
-  tmp2 = mmc_unbox_real(_offset);
+  tmp1 = omc_unbox_real(_scaleFactor);
+  tmp2 = omc_unbox_real(_offset);
   _res = omc_UnitParserExt_unit2str(threadData, _noms, _denoms, _tpnoms, _tpdenoms, _tpstrs, tmp1, tmp2);
   /* skip box _res; String */
   return _res;

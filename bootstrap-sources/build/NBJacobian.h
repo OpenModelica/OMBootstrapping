@@ -66,8 +66,6 @@ extern struct record_description NFBackendExtension_VariableKind_FRONTEND__DUMMY
 
 extern struct record_description NFBinding_UNBOUND__desc;
 
-extern struct record_description NFComponentRef_CREF__desc;
-
 extern struct record_description NFComponentRef_EMPTY__desc;
 
 extern struct record_description NFExpression_EMPTY__desc;
@@ -115,9 +113,6 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NBJacobian_partialSliceSeedCandidates omc_NBJacobian_partialSliceSeedCandidates
 
 
-#define boxptr_NBJacobian_partJacobian omc_NBJacobian_partJacobian
-
-
 #define boxptr_NBJacobian_partJacobianDynamicOptimization omc_NBJacobian_partJacobianDynamicOptimization
 
 
@@ -136,61 +131,62 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NBJacobian_getOptimizableVars omc_NBJacobian_getOptimizableVars
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBJacobian_jacobianTypeString(threadData_t *threadData, modelica_integer _jacType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBJacobian_jacobianTypeString(threadData_t *threadData, modelica_metatype _jacType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_jacobianTypeString,2,0) {(void*) boxptr_NBJacobian_jacobianTypeString,0}};
 #define boxvar_NBJacobian_jacobianTypeString MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_jacobianTypeString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBJacobian_toString(threadData_t *threadData, modelica_metatype _jacobian, modelica_string __omcQ_24in_5Fstr);
 #define boxptr_NBJacobian_toString omc_NBJacobian_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_toString,2,0) {(void*) boxptr_NBJacobian_toString,0}};
 #define boxvar_NBJacobian_toString MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_fnptr omc_NBJacobian_getModule(threadData_t *threadData);
 #define boxptr_NBJacobian_getModule omc_NBJacobian_getModule
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_getModule,2,0) {(void*) boxptr_NBJacobian_getModule,0}};
 #define boxvar_NBJacobian_getModule MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_getModule)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBJacobian_combine(threadData_t *threadData, modelica_metatype _jacobians, modelica_string _name);
 #define boxptr_NBJacobian_combine omc_NBJacobian_combine
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_combine,2,0) {(void*) boxptr_NBJacobian_combine,0}};
 #define boxvar_NBJacobian_combine MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_combine)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBJacobian_nonlinear(threadData_t *threadData, modelica_metatype _seedCandidates, modelica_metatype _partialCandidates, modelica_metatype _equations, modelica_metatype _comps, modelica_metatype _full, modelica_metatype _funcMap, modelica_string _name, modelica_boolean _staticAsContinuous);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBJacobian_nonlinear(threadData_t *threadData, modelica_metatype _seedCandidates, modelica_metatype _partialCandidates, modelica_metatype _equations, modelica_metatype _comps, modelica_metatype _full, modelica_metatype _funcMap, modelica_metatype _name, modelica_metatype _staticAsContinuous);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_nonlinear,2,0) {(void*) boxptr_NBJacobian_nonlinear,0}};
 #define boxvar_NBJacobian_nonlinear MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_nonlinear)
 
 
-DLLDirection
-modelica_metatype omc_NBJacobian_applyToPartitions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpartitions, modelica_metatype __omcQ_24in_5FfuncMap, modelica_metatype _knowns, modelica_string _name, modelica_fnptr _func, modelica_metatype *out_funcMap);
-#define boxptr_NBJacobian_applyToPartitions omc_NBJacobian_applyToPartitions
+DLLModelDirection
+modelica_metatype omc_NBJacobian_applyToPartitions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpartitions, modelica_metatype __omcQ_24in_5FfuncMap, modelica_metatype _knowns, modelica_string _name, modelica_fnptr _func, modelica_boolean _simJacobian, modelica_metatype *out_funcMap);
+DLLModelDirection
+modelica_metatype boxptr_NBJacobian_applyToPartitions(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fpartitions, modelica_metatype __omcQ_24in_5FfuncMap, modelica_metatype _knowns, modelica_metatype _name, modelica_fnptr _func, modelica_metatype _simJacobian, modelica_metatype *out_funcMap);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_applyToPartitions,2,0) {(void*) boxptr_NBJacobian_applyToPartitions,0}};
 #define boxvar_NBJacobian_applyToPartitions MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_applyToPartitions)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBJacobian_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_integer _kind);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBJacobian_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _kind);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_main,2,0) {(void*) boxptr_NBJacobian_main,0}};
 #define boxvar_NBJacobian_main MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_main)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBJacobian_isDynamic(threadData_t *threadData, modelica_integer _jacType);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBJacobian_isDynamic(threadData_t *threadData, modelica_metatype _jacType);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBJacobian_isDynamic,2,0) {(void*) boxptr_NBJacobian_isDynamic,0}};
 #define boxvar_NBJacobian_isDynamic MMC_REFSTRUCTLIT(boxvar_lit_NBJacobian_isDynamic)

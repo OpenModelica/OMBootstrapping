@@ -46,6 +46,7 @@ extern "C" {
 #include "NFType.h"
 #include "NFVariable.h"
 #include "Pointer.h"
+#include "PointerWeak.h"
 #include "StringUtil.h"
 #include "System.h"
 #include "UnorderedMap.h"

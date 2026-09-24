@@ -16,7 +16,7 @@ void omc_Settings_setEcho(threadData_t *threadData, modelica_integer _echo)
 void boxptr_Settings_setEcho(threadData_t *threadData, modelica_metatype _echo)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_echo);
+  tmp1 = omc_unbox_integer(_echo);
   omc_Settings_setEcho(threadData, tmp1);
   return;
 }
@@ -36,7 +36,7 @@ modelica_metatype boxptr_Settings_getEcho(threadData_t *threadData)
   modelica_integer _echo;
   modelica_metatype out_echo;
   _echo = omc_Settings_getEcho(threadData);
-  out_echo = mmc_mk_icon(_echo);
+  out_echo = omc_mk_icon(_echo);
   return out_echo;
 }
 
@@ -48,14 +48,14 @@ modelica_string omc_Settings_getHomeDir(threadData_t *threadData, modelica_boole
   // _outString has no default value.
   _runningTestsuite_ext = (int) _runningTestsuite;
   _outString_ext = Settings_getHomeDir(_runningTestsuite_ext);
-  _outString = (modelica_string)mmc_mk_scon(_outString_ext);
+  _outString = (modelica_string)omc_string_new(_outString_ext);
   return _outString;
 }
 modelica_metatype boxptr_Settings_getHomeDir(threadData_t *threadData, modelica_metatype _runningTestsuite)
 {
   modelica_integer tmp1;
   modelica_string _outString = NULL;
-  tmp1 = mmc_unbox_integer(_runningTestsuite);
+  tmp1 = omc_unbox_integer(_runningTestsuite);
   _outString = omc_Settings_getHomeDir(threadData, tmp1);
   /* skip box _outString; String */
   return _outString;
@@ -69,14 +69,14 @@ modelica_string omc_Settings_getModelicaPath(threadData_t *threadData, modelica_
   // _outString has no default value.
   _runningTestsuite_ext = (int) _runningTestsuite;
   _outString_ext = Settings_getModelicaPath(_runningTestsuite_ext);
-  _outString = (modelica_string)mmc_mk_scon(_outString_ext);
+  _outString = (modelica_string)omc_string_new(_outString_ext);
   return _outString;
 }
 modelica_metatype boxptr_Settings_getModelicaPath(threadData_t *threadData, modelica_metatype _runningTestsuite)
 {
   modelica_integer tmp1;
   modelica_string _outString = NULL;
-  tmp1 = mmc_unbox_integer(_runningTestsuite);
+  tmp1 = omc_unbox_integer(_runningTestsuite);
   _outString = omc_Settings_getModelicaPath(threadData, tmp1);
   /* skip box _outString; String */
   return _outString;
@@ -85,7 +85,7 @@ modelica_metatype boxptr_Settings_getModelicaPath(threadData_t *threadData, mode
 void omc_Settings_setModelicaPath(threadData_t *threadData, modelica_string _inString)
 {
 
-  SettingsImpl__setModelicaPath(MMC_STRINGDATA(_inString));
+  SettingsImpl__setModelicaPath(omc_string_data(_inString));
   return;
 }
 
@@ -96,14 +96,14 @@ modelica_string omc_Settings_getInstallationDirectoryPath(threadData_t *threadDa
   // _outString has no default value.
 
   _outString_ext = Settings_getInstallationDirectoryPath();
-  _outString = (modelica_string)mmc_mk_scon(_outString_ext);
+  _outString = (modelica_string)omc_string_new(_outString_ext);
   return _outString;
 }
 
 void omc_Settings_setInstallationDirectoryPath(threadData_t *threadData, modelica_string _inString)
 {
 
-  SettingsImpl__setInstallationDirectoryPath(MMC_STRINGDATA(_inString));
+  SettingsImpl__setInstallationDirectoryPath(omc_string_data(_inString));
   return;
 }
 
@@ -114,14 +114,14 @@ modelica_string omc_Settings_getTempDirectoryPath(threadData_t *threadData)
   // _outString has no default value.
 
   _outString_ext = Settings_getTempDirectoryPath();
-  _outString = (modelica_string)mmc_mk_scon(_outString_ext);
+  _outString = (modelica_string)omc_string_new(_outString_ext);
   return _outString;
 }
 
 void omc_Settings_setTempDirectoryPath(threadData_t *threadData, modelica_string _inString)
 {
 
-  SettingsImpl__setTempDirectoryPath(MMC_STRINGDATA(_inString));
+  SettingsImpl__setTempDirectoryPath(omc_string_data(_inString));
   return;
 }
 
@@ -132,7 +132,7 @@ modelica_string omc_Settings_getVersionNr(threadData_t *threadData)
   // _outString has no default value.
 
   _outString_ext = Settings_getVersionNr();
-  _outString = (modelica_string)mmc_mk_scon(_outString_ext);
+  _outString = (modelica_string)omc_string_new(_outString_ext);
   return _outString;
 }
 

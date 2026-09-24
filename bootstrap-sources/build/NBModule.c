@@ -15,7 +15,7 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT2,4,_OMC_LIT2_data);
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBModule_moduleClockString(threadData_t *threadData, modelica_metatype _name_clock)
 {
   modelica_string _str = NULL;
@@ -25,27 +25,29 @@ modelica_string omc_NBModule_moduleClockString(threadData_t *threadData, modelic
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_real tmp4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
-  modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_string tmp5;
+  modelica_string tmp6;
+  modelica_string tmp7;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
   // _name has no default value.
   // _clck has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _name_clock;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp4 = mmc_unbox_real(tmpMeta3);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp4 = omc_unbox_real(tmpMeta3);
   _name = tmpMeta2;
   _clck = tmp4  /* pattern as ty=Real */;
 
-  tmpMeta5 = stringAppend(_OMC_LIT0,_name);
-  tmpMeta6 = stringAppend(tmpMeta5,omc_StringUtil_repeat(threadData, _OMC_LIT1, ((modelica_integer) 50) - stringLength(_name)));
-  tmpMeta7 = stringAppend(tmpMeta6,omc_System_sprintff(threadData, _OMC_LIT2, _clck));
-  _str = tmpMeta7;
+  tmp5 = stringAppend(_OMC_LIT0,_name);
+  tmp6 = stringAppend(tmp5,omc_StringUtil_repeat(threadData, _OMC_LIT1, ((modelica_integer) 50) - stringLength(_name)));
+  tmp7 = stringAppend(tmp6,omc_System_sprintff(threadData, _OMC_LIT2, _clck));
+  omc_string_store(&(_str), tmp7);
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 

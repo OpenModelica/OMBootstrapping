@@ -195,7 +195,7 @@ extern struct record_description Values_Value_TUPLE__desc;
 #define boxptr_CevalFunction_assignWholeDim omc_CevalFunction_assignWholeDim
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CevalFunction_assignVector(threadData_t *threadData, modelica_metatype _inNewValue, modelica_metatype _inOldValue, modelica_metatype _inSubscripts, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype *out_outResult);
 #define boxptr_CevalFunction_assignVector omc_CevalFunction_assignVector
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CevalFunction_assignVector,2,0) {(void*) boxptr_CevalFunction_assignVector,0}};
@@ -334,7 +334,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CevalFunction_assignVector,2,0) {(void*
 #define boxptr_CevalFunction_evaluateFunctionDefinition omc_CevalFunction_evaluateFunctionDefinition
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CevalFunction_evaluate(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inFunction, modelica_metatype _inFunctionArguments, modelica_metatype *out_outResult);
 #define boxptr_CevalFunction_evaluate omc_CevalFunction_evaluate
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CevalFunction_evaluate,2,0) {(void*) boxptr_CevalFunction_evaluate,0}};

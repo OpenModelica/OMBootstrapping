@@ -85,7 +85,7 @@ modelica_metatype boxptr_StackOverflow_hasStacktraceMessages(threadData_t *threa
   modelica_boolean _b;
   modelica_metatype out_b;
   _b = omc_StackOverflow_hasStacktraceMessages(threadData);
-  out_b = mmc_mk_icon(_b);
+  out_b = omc_mk_icon(_b);
   return out_b;
 }
 
@@ -102,8 +102,8 @@ void boxptr_StackOverflow_setStacktraceMessages(threadData_t *threadData, modeli
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
-  tmp1 = mmc_unbox_integer(_numSkip);
-  tmp2 = mmc_unbox_integer(_numFrames);
+  tmp1 = omc_unbox_integer(_numSkip);
+  tmp2 = omc_unbox_integer(_numFrames);
   omc_StackOverflow_setStacktraceMessages(threadData, tmp1, tmp2);
   return;
 }
@@ -119,7 +119,7 @@ modelica_metatype omc_StackOverflow_getStacktraceMessages(threadData_t *threadDa
   return _symbols;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_StackOverflow_readableStacktraceMessages(threadData_t *threadData)
 {
   modelica_metatype _symbols = NULL;
@@ -130,27 +130,28 @@ modelica_metatype omc_StackOverflow_readableStacktraceMessages(threadData_t *thr
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_string tmp4;
-  modelica_metatype tmpMeta5;
+  modelica_string tmp5;
   modelica_string tmp6;
-  modelica_metatype tmpMeta7;
+  modelica_string tmp7;
   modelica_boolean tmp8;
   modelica_string tmp9;
-  modelica_metatype tmpMeta10;
-  modelica_metatype tmpMeta11;
-  modelica_metatype tmpMeta12;
+  modelica_string tmp10;
+  modelica_string tmp11;
+  modelica_string tmp12;
   modelica_metatype tmpMeta13;
   modelica_metatype tmpMeta14;
   modelica_metatype tmpMeta18;
   modelica_string tmp19;
-  modelica_metatype tmpMeta20;
+  modelica_string tmp20;
   modelica_string tmp21;
-  modelica_metatype tmpMeta22;
+  modelica_string tmp22;
   modelica_boolean tmp23;
   modelica_string tmp24;
-  modelica_metatype tmpMeta25;
-  modelica_metatype tmpMeta26;
-  modelica_metatype tmpMeta27;
-  MMC_SO();
+  modelica_string tmp25;
+  modelica_string tmp26;
+  modelica_string tmp27;
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _symbols = tmpMeta1;
@@ -190,7 +191,7 @@ modelica_metatype omc_StackOverflow_readableStacktraceMessages(threadData_t *thr
       } else if (tmp17 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp15 = mmc_mk_nil();
@@ -209,22 +210,22 @@ modelica_metatype omc_StackOverflow_readableStacktraceMessages(threadData_t *thr
         if((!stringEqual(_symbol, _prev)))
         {
           tmp4 = modelica_integer_to_modelica_string(_prevN, ((modelica_integer) 0), 1 /* true */);
-          tmpMeta5 = stringAppend(_OMC_LIT3,tmp4);
+          tmp5 = stringAppend(_OMC_LIT3,tmp4);
           tmp8 = (modelica_boolean)(_n != _prevN);
           if(tmp8)
           {
             tmp6 = modelica_integer_to_modelica_string(_n, ((modelica_integer) 0), 1 /* true */);
-            tmpMeta7 = stringAppend(_OMC_LIT4,tmp6);
-            tmp9 = tmpMeta7;
+            tmp7 = stringAppend(_OMC_LIT4,tmp6);
+            tmp9 = tmp7;
           }
           else
           {
             tmp9 = _OMC_LIT0;
           }
-          tmpMeta10 = stringAppend(tmpMeta5,tmp9);
-          tmpMeta11 = stringAppend(tmpMeta10,_OMC_LIT5);
-          tmpMeta12 = stringAppend(tmpMeta11,_prev);
-          tmpMeta3 = mmc_mk_cons(tmpMeta12, _symbols);
+          tmp10 = stringAppend(tmp5,tmp9);
+          tmp11 = stringAppend(tmp10,_OMC_LIT5);
+          tmp12 = stringAppend(tmp11,_prev);
+          tmpMeta3 = mmc_mk_cons(tmp12, _symbols);
           _symbols = tmpMeta3;
 
           _n = ((modelica_integer) 1) + _n;
@@ -237,66 +238,71 @@ modelica_metatype omc_StackOverflow_readableStacktraceMessages(threadData_t *thr
         }
       }
 
-      _prev = _symbol;
+      omc_string_store(&(_prev), _symbol);
     }
   }
 
   tmp19 = modelica_integer_to_modelica_string(_prevN, ((modelica_integer) 0), 1 /* true */);
-  tmpMeta20 = stringAppend(_OMC_LIT3,tmp19);
+  tmp20 = stringAppend(_OMC_LIT3,tmp19);
   tmp23 = (modelica_boolean)(_n != _prevN);
   if(tmp23)
   {
     tmp21 = modelica_integer_to_modelica_string(_n, ((modelica_integer) 0), 1 /* true */);
-    tmpMeta22 = stringAppend(_OMC_LIT4,tmp21);
-    tmp24 = tmpMeta22;
+    tmp22 = stringAppend(_OMC_LIT4,tmp21);
+    tmp24 = tmp22;
   }
   else
   {
     tmp24 = _OMC_LIT0;
   }
-  tmpMeta25 = stringAppend(tmpMeta20,tmp24);
-  tmpMeta26 = stringAppend(tmpMeta25,_OMC_LIT5);
-  tmpMeta27 = stringAppend(tmpMeta26,_prev);
-  tmpMeta18 = mmc_mk_cons(tmpMeta27, _symbols);
+  tmp25 = stringAppend(tmp20,tmp24);
+  tmp26 = stringAppend(tmp25,_OMC_LIT5);
+  tmp27 = stringAppend(tmp26,_prev);
+  tmpMeta18 = mmc_mk_cons(tmp27, _symbols);
   _symbols = tmpMeta18;
 
   _symbols = listReverse(_symbols);
   _return: OMC_LABEL_UNUSED
-  return _symbols;
+  omc_ret_ = _symbols;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_StackOverflow_getReadableMessage(threadData_t *threadData, modelica_string _delimiter)
 {
   modelica_string _str = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
-  _str = stringDelimitList(omc_StackOverflow_readableStacktraceMessages(threadData), _delimiter);
+  omc_string_store(&(_str), stringDelimitList(omc_StackOverflow_readableStacktraceMessages(threadData), _delimiter));
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_StackOverflow_generateReadableMessage(threadData_t *threadData, modelica_integer _numFrames, modelica_integer _numSkip, modelica_string _delimiter)
 {
   modelica_string _str = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
   omc_StackOverflow_setStacktraceMessages(threadData, _numSkip, _numFrames);
 
-  _str = omc_StackOverflow_getReadableMessage(threadData, _delimiter);
+  omc_string_store(&(_str), omc_StackOverflow_getReadableMessage(threadData, _delimiter));
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 modelica_metatype boxptr_StackOverflow_generateReadableMessage(threadData_t *threadData, modelica_metatype _numFrames, modelica_metatype _numSkip, modelica_metatype _delimiter)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_string _str = NULL;
-  tmp1 = mmc_unbox_integer(_numFrames);
-  tmp2 = mmc_unbox_integer(_numSkip);
+  tmp1 = omc_unbox_integer(_numFrames);
+  tmp2 = omc_unbox_integer(_numSkip);
   _str = omc_StackOverflow_generateReadableMessage(threadData, tmp1, tmp2, _delimiter);
   /* skip box _str; String */
   return _str;
@@ -323,9 +329,9 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_StackOverflow_stripAddresses(threa
   modelica_metatype tmpMeta5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
-  modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
-  modelica_metatype tmpMeta10;
+  modelica_string tmp8;
+  modelica_string tmp9;
+  modelica_string tmp10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
@@ -333,10 +339,11 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_StackOverflow_stripAddresses(threa
   modelica_metatype tmpMeta15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
-  modelica_metatype tmpMeta18;
-  modelica_metatype tmpMeta19;
-  modelica_metatype tmpMeta20;
-  MMC_SO();
+  modelica_string tmp18;
+  modelica_string tmp19;
+  modelica_string tmp20;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outSymbol has no default value.
   // _n has no default value.
@@ -349,23 +356,23 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_StackOverflow_stripAddresses(threa
   {
     /* Pattern-matching assignment */
     tmpMeta1 = _strs;
-    if (listEmpty(tmpMeta1)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta1)) OMC_THROW_INTERNAL();
     tmpMeta2 = MMC_CAR(tmpMeta1);
     tmpMeta3 = MMC_CDR(tmpMeta1);
-    if (listEmpty(tmpMeta3)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta3)) OMC_THROW_INTERNAL();
     tmpMeta4 = MMC_CAR(tmpMeta3);
     tmpMeta5 = MMC_CDR(tmpMeta3);
-    if (listEmpty(tmpMeta5)) MMC_THROW_INTERNAL();
+    if (listEmpty(tmpMeta5)) OMC_THROW_INTERNAL();
     tmpMeta6 = MMC_CAR(tmpMeta5);
     tmpMeta7 = MMC_CDR(tmpMeta5);
-    if (!listEmpty(tmpMeta7)) MMC_THROW_INTERNAL();
+    if (!listEmpty(tmpMeta7)) OMC_THROW_INTERNAL();
     _so = tmpMeta4;
     _fun = tmpMeta6;
 
-    tmpMeta8 = stringAppend(_so,_OMC_LIT9);
-    tmpMeta9 = stringAppend(tmpMeta8,omc_StackOverflow_unmangle(threadData, _fun));
-    tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT10);
-    _outSymbol = tmpMeta10;
+    tmp8 = stringAppend(_so,_OMC_LIT9);
+    tmp9 = stringAppend(tmp8,omc_StackOverflow_unmangle(threadData, _fun));
+    tmp10 = stringAppend(tmp9,_OMC_LIT10);
+    omc_string_store(&(_outSymbol), tmp10);
   }
   else
   {
@@ -375,52 +382,55 @@ PROTECTED_FUNCTION_STATIC modelica_string omc_StackOverflow_stripAddresses(threa
     {
       /* Pattern-matching assignment */
       tmpMeta11 = _strs;
-      if (listEmpty(tmpMeta11)) MMC_THROW_INTERNAL();
+      if (listEmpty(tmpMeta11)) OMC_THROW_INTERNAL();
       tmpMeta12 = MMC_CAR(tmpMeta11);
       tmpMeta13 = MMC_CDR(tmpMeta11);
-      if (listEmpty(tmpMeta13)) MMC_THROW_INTERNAL();
+      if (listEmpty(tmpMeta13)) OMC_THROW_INTERNAL();
       tmpMeta14 = MMC_CAR(tmpMeta13);
       tmpMeta15 = MMC_CDR(tmpMeta13);
-      if (listEmpty(tmpMeta15)) MMC_THROW_INTERNAL();
+      if (listEmpty(tmpMeta15)) OMC_THROW_INTERNAL();
       tmpMeta16 = MMC_CAR(tmpMeta15);
       tmpMeta17 = MMC_CDR(tmpMeta15);
-      if (!listEmpty(tmpMeta17)) MMC_THROW_INTERNAL();
+      if (!listEmpty(tmpMeta17)) OMC_THROW_INTERNAL();
       _so = tmpMeta14;
       _fun = tmpMeta16;
 
-      tmpMeta18 = stringAppend(_so,_OMC_LIT9);
-      tmpMeta19 = stringAppend(tmpMeta18,omc_StackOverflow_unmangle(threadData, _fun));
-      tmpMeta20 = stringAppend(tmpMeta19,_OMC_LIT10);
-      _outSymbol = tmpMeta20;
+      tmp18 = stringAppend(_so,_OMC_LIT9);
+      tmp19 = stringAppend(tmp18,omc_StackOverflow_unmangle(threadData, _fun));
+      tmp20 = stringAppend(tmp19,_OMC_LIT10);
+      omc_string_store(&(_outSymbol), tmp20);
     }
     else
     {
-      _outSymbol = _inSymbol;
+      omc_string_store(&(_outSymbol), _inSymbol);
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _outSymbol;
+  omc_ret_ = _outSymbol;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_string omc_StackOverflow_unmangle(threadData_t *threadData, modelica_string _inSymbol)
 {
   modelica_string _outSymbol = NULL;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outSymbol has no default value.
-  _outSymbol = _inSymbol;
+  omc_string_store(&(_outSymbol), _inSymbol);
 
   if(omc_StringUtil_startsWith(threadData, _inSymbol, _OMC_LIT15))
   {
-    _outSymbol = substring(_outSymbol, ((modelica_integer) 5), stringLength(_outSymbol));
+    omc_string_store(&(_outSymbol), substring(_outSymbol, ((modelica_integer) 5), stringLength(_outSymbol)));
 
-    _outSymbol = omc_System_stringReplace(threadData, _outSymbol, _OMC_LIT11, _OMC_LIT12);
+    omc_string_store(&(_outSymbol), omc_System_stringReplace(threadData, _outSymbol, _OMC_LIT11, _OMC_LIT12));
 
-    _outSymbol = omc_System_stringReplace(threadData, _outSymbol, _OMC_LIT13, _OMC_LIT14);
+    omc_string_store(&(_outSymbol), omc_System_stringReplace(threadData, _outSymbol, _OMC_LIT13, _OMC_LIT14));
 
-    _outSymbol = omc_System_stringReplace(threadData, _outSymbol, _OMC_LIT12, _OMC_LIT13);
+    omc_string_store(&(_outSymbol), omc_System_stringReplace(threadData, _outSymbol, _OMC_LIT12, _OMC_LIT13));
   }
   _return: OMC_LABEL_UNUSED
-  return _outSymbol;
+  omc_ret_ = _outSymbol;
+  return omc_ret_;
 }
 

@@ -164,7 +164,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_Binding_applyTemplate omc_Binding_applyTemplate
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Binding_getProviders(threadData_t *threadData, modelica_metatype _providers, modelica_metatype _vmodel, modelica_metatype _env, modelica_metatype _in_es);
 #define boxptr_Binding_getProviders omc_Binding_getProviders
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_getProviders,2,0) {(void*) boxptr_Binding_getProviders,0}};
@@ -195,15 +195,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_getProviders,2,0) {(void*) boxp
 #define boxptr_Binding_getPreferredBinding omc_Binding_getPreferredBinding
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Binding_updateClass(threadData_t *threadData, modelica_metatype _in_class, modelica_metatype _typeSpec, modelica_metatype _rootType, modelica_metatype _exp, modelica_metatype _instance_name, modelica_metatype _defs, modelica_boolean _hasPreferred, modelica_metatype _preferred, modelica_string _path);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Binding_updateClass(threadData_t *threadData, modelica_metatype _in_class, modelica_metatype _typeSpec, modelica_metatype _rootType, modelica_metatype _exp, modelica_metatype _instance_name, modelica_metatype _defs, modelica_metatype _hasPreferred, modelica_metatype _preferred, modelica_metatype _path);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_updateClass,2,0) {(void*) boxptr_Binding_updateClass,0}};
 #define boxvar_Binding_updateClass MMC_REFSTRUCTLIT(boxvar_lit_Binding_updateClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Binding_toExpList(threadData_t *threadData, modelica_metatype _e_list, modelica_metatype _in_es);
 #define boxptr_Binding_toExpList omc_Binding_toExpList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_toExpList,2,0) {(void*) boxptr_Binding_toExpList,0}};
@@ -222,21 +222,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_toExpList,2,0) {(void*) boxptr_
 #define boxptr_Binding_getAllElementsOfType omc_Binding_getAllElementsOfType
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Binding_updatePackage(threadData_t *threadData, modelica_metatype _in_class, modelica_metatype _ag_elems);
 #define boxptr_Binding_updatePackage omc_Binding_updatePackage
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_updatePackage,2,0) {(void*) boxptr_Binding_updatePackage,0}};
 #define boxvar_Binding_updatePackage MMC_REFSTRUCTLIT(boxvar_lit_Binding_updatePackage)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Binding_generateVerificationScenarios(threadData_t *threadData, modelica_metatype _package_path, modelica_metatype _in_env);
 #define boxptr_Binding_generateVerificationScenarios omc_Binding_generateVerificationScenarios
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_generateVerificationScenarios,2,0) {(void*) boxptr_Binding_generateVerificationScenarios,0}};
 #define boxvar_Binding_generateVerificationScenarios MMC_REFSTRUCTLIT(boxvar_lit_Binding_generateVerificationScenarios)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Binding_inferBindings(threadData_t *threadData, modelica_metatype _model_path, modelica_metatype _env);
 #define boxptr_Binding_inferBindings omc_Binding_inferBindings
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Binding_inferBindings,2,0) {(void*) boxptr_Binding_inferBindings,0}};

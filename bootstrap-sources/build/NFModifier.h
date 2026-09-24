@@ -57,271 +57,287 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFModifier_Modifier_checkFinalOverride omc_NFModifier_Modifier_checkFinalOverride
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFModifier_Modifier_toFlatString(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _format, modelica_boolean _printName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_toFlatString(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _format, modelica_metatype _printName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_toFlatString,2,0) {(void*) boxptr_NFModifier_Modifier_toFlatString,0}};
 #define boxvar_NFModifier_Modifier_toFlatString MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_toFlatString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_toFlatStream(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _format, modelica_metatype __omcQ_24in_5Fs, modelica_boolean _printName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_toFlatStream(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _format, modelica_metatype __omcQ_24in_5Fs, modelica_metatype _printName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_toFlatStream,2,0) {(void*) boxptr_NFModifier_Modifier_toFlatStream,0}};
 #define boxvar_NFModifier_Modifier_toFlatStream MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_toFlatStream)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_toFlatStreamList(threadData_t *threadData, modelica_metatype _modifiers, modelica_metatype _format, modelica_metatype __omcQ_24in_5Fs, modelica_string _delimiter);
 #define boxptr_NFModifier_Modifier_toFlatStreamList omc_NFModifier_Modifier_toFlatStreamList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_toFlatStreamList,2,0) {(void*) boxptr_NFModifier_Modifier_toFlatStreamList,0}};
 #define boxvar_NFModifier_Modifier_toFlatStreamList MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_toFlatStreamList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFModifier_Modifier_toString(threadData_t *threadData, modelica_metatype _mod, modelica_boolean _printName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_toString(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _printName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_toString,2,0) {(void*) boxptr_NFModifier_Modifier_toString,0}};
 #define boxvar_NFModifier_Modifier_toString MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_map(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_fnptr _func);
 #define boxptr_NFModifier_Modifier_map omc_NFModifier_Modifier_map
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_map,2,0) {(void*) boxptr_NFModifier_Modifier_map,0}};
 #define boxvar_NFModifier_Modifier_map MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_map)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFModifier_Modifier_isFinal(threadData_t *threadData, modelica_metatype _mod);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_isFinal(threadData_t *threadData, modelica_metatype _mod);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_isFinal,2,0) {(void*) boxptr_NFModifier_Modifier_isFinal,0}};
 #define boxvar_NFModifier_Modifier_isFinal MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_isFinal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFModifier_Modifier_isEach(threadData_t *threadData, modelica_metatype _mod);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_isEach(threadData_t *threadData, modelica_metatype _mod);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_isEach,2,0) {(void*) boxptr_NFModifier_Modifier_isEach,0}};
 #define boxvar_NFModifier_Modifier_isEach MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_isEach)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_toList(threadData_t *threadData, modelica_metatype _mod);
 #define boxptr_NFModifier_Modifier_toList omc_NFModifier_Modifier_toList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_toList,2,0) {(void*) boxptr_NFModifier_Modifier_toList,0}};
 #define boxvar_NFModifier_Modifier_toList MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_toList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFModifier_Modifier_isRedeclare(threadData_t *threadData, modelica_metatype _mod);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_isRedeclare(threadData_t *threadData, modelica_metatype _mod);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_isRedeclare,2,0) {(void*) boxptr_NFModifier_Modifier_isRedeclare,0}};
 #define boxvar_NFModifier_Modifier_isRedeclare MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_isRedeclare)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFModifier_Modifier_isEmpty(threadData_t *threadData, modelica_metatype _mod);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_isEmpty(threadData_t *threadData, modelica_metatype _mod);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_isEmpty,2,0) {(void*) boxptr_NFModifier_Modifier_isEmpty,0}};
 #define boxvar_NFModifier_Modifier_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_isEmpty)
 
 
-DLLDirection
+DLLModelDirection
+modelica_metatype omc_NFModifier_Modifier_setSourceSubMod(threadData_t *threadData, modelica_string _name, modelica_metatype __omcQ_24in_5Fsubmod, modelica_integer _source, modelica_integer _confidence);
+DLLModelDirection
+modelica_metatype boxptr_NFModifier_Modifier_setSourceSubMod(threadData_t *threadData, modelica_metatype _name, modelica_metatype __omcQ_24in_5Fsubmod, modelica_metatype _source, modelica_metatype _confidence);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_setSourceSubMod,2,0) {(void*) boxptr_NFModifier_Modifier_setSourceSubMod,0}};
+#define boxvar_NFModifier_Modifier_setSourceSubMod MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_setSourceSubMod)
+
+
+DLLModelDirection
+modelica_metatype omc_NFModifier_Modifier_setSource(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_integer _source, modelica_integer _confidence);
+DLLModelDirection
+modelica_metatype boxptr_NFModifier_Modifier_setSource(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _source, modelica_metatype _confidence);
+static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_setSource,2,0) {(void*) boxptr_NFModifier_Modifier_setSource,0}};
+#define boxvar_NFModifier_Modifier_setSource MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_setSource)
+
+
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_propagateSubMod(threadData_t *threadData, modelica_string _name, modelica_metatype __omcQ_24in_5Fsubmod, modelica_metatype _subs);
 #define boxptr_NFModifier_Modifier_propagateSubMod omc_NFModifier_Modifier_propagateSubMod
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_propagateSubMod,2,0) {(void*) boxptr_NFModifier_Modifier_propagateSubMod,0}};
 #define boxvar_NFModifier_Modifier_propagateSubMod MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_propagateSubMod)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_propagateBinding(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _origin, modelica_metatype _parent);
 #define boxptr_NFModifier_Modifier_propagateBinding omc_NFModifier_Modifier_propagateBinding
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_propagateBinding,2,0) {(void*) boxptr_NFModifier_Modifier_propagateBinding,0}};
 #define boxvar_NFModifier_Modifier_propagateBinding MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_propagateBinding)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_propagateSubs(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod, modelica_metatype _subs);
 #define boxptr_NFModifier_Modifier_propagateSubs omc_NFModifier_Modifier_propagateSubs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_propagateSubs,2,0) {(void*) boxptr_NFModifier_Modifier_propagateSubs,0}};
 #define boxvar_NFModifier_Modifier_propagateSubs MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_propagateSubs)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_propagate(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _origin, modelica_metatype _parent);
 #define boxptr_NFModifier_Modifier_propagate omc_NFModifier_Modifier_propagate
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_propagate,2,0) {(void*) boxptr_NFModifier_Modifier_propagate,0}};
 #define boxvar_NFModifier_Modifier_propagate MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_propagate)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_merge(threadData_t *threadData, modelica_metatype _outerMod, modelica_metatype _innerMod, modelica_string _name);
 #define boxptr_NFModifier_Modifier_merge omc_NFModifier_Modifier_merge
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_merge,2,0) {(void*) boxptr_NFModifier_Modifier_merge,0}};
 #define boxvar_NFModifier_Modifier_merge MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_merge)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_setBinding(threadData_t *threadData, modelica_metatype _binding, modelica_metatype __omcQ_24in_5Fmodifier);
 #define boxptr_NFModifier_Modifier_setBinding omc_NFModifier_Modifier_setBinding
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_setBinding,2,0) {(void*) boxptr_NFModifier_Modifier_setBinding,0}};
 #define boxvar_NFModifier_Modifier_setBinding MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_setBinding)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_binding(threadData_t *threadData, modelica_metatype _modifier);
 #define boxptr_NFModifier_Modifier_binding omc_NFModifier_Modifier_binding
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_binding,2,0) {(void*) boxptr_NFModifier_Modifier_binding,0}};
 #define boxvar_NFModifier_Modifier_binding MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_binding)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFModifier_Modifier_hasBinding(threadData_t *threadData, modelica_metatype _modifier);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_hasBinding(threadData_t *threadData, modelica_metatype _modifier);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_hasBinding,2,0) {(void*) boxptr_NFModifier_Modifier_hasBinding,0}};
 #define boxvar_NFModifier_Modifier_hasBinding MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_hasBinding)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_info(threadData_t *threadData, modelica_metatype _modifier);
 #define boxptr_NFModifier_Modifier_info omc_NFModifier_Modifier_info
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_info,2,0) {(void*) boxptr_NFModifier_Modifier_info,0}};
 #define boxvar_NFModifier_Modifier_info MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_info)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFModifier_Modifier_name(threadData_t *threadData, modelica_metatype _modifier);
 #define boxptr_NFModifier_Modifier_name omc_NFModifier_Modifier_name
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_name,2,0) {(void*) boxptr_NFModifier_Modifier_name,0}};
 #define boxvar_NFModifier_Modifier_name MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_name)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_lookupModifier(threadData_t *threadData, modelica_string _modName, modelica_metatype _modifier);
 #define boxptr_NFModifier_Modifier_lookupModifier omc_NFModifier_Modifier_lookupModifier
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_lookupModifier,2,0) {(void*) boxptr_NFModifier_Modifier_lookupModifier,0}};
 #define boxvar_NFModifier_Modifier_lookupModifier MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_lookupModifier)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_patchElementModFinal(threadData_t *threadData, modelica_metatype _prefixes, modelica_metatype _info, modelica_metatype __omcQ_24in_5Fmod);
 #define boxptr_NFModifier_Modifier_patchElementModFinal omc_NFModifier_Modifier_patchElementModFinal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_patchElementModFinal,2,0) {(void*) boxptr_NFModifier_Modifier_patchElementModFinal,0}};
 #define boxvar_NFModifier_Modifier_patchElementModFinal MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_patchElementModFinal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_fromElement(threadData_t *threadData, modelica_metatype _element, modelica_metatype _scope, modelica_integer _confidence);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_fromElement(threadData_t *threadData, modelica_metatype _element, modelica_metatype _scope, modelica_metatype _confidence);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_fromElement,2,0) {(void*) boxptr_NFModifier_Modifier_fromElement,0}};
 #define boxvar_NFModifier_Modifier_fromElement MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_fromElement)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_stripSCodeMod(threadData_t *threadData, modelica_metatype __omcQ_24in_5Felem, modelica_metatype *out_mod);
 #define boxptr_NFModifier_Modifier_stripSCodeMod omc_NFModifier_Modifier_stripSCodeMod
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_stripSCodeMod,2,0) {(void*) boxptr_NFModifier_Modifier_stripSCodeMod,0}};
 #define boxvar_NFModifier_Modifier_stripSCodeMod MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_stripSCodeMod)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_createConstrainingMod(threadData_t *threadData, modelica_metatype _element, modelica_metatype _scope, modelica_integer _confidence);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_createConstrainingMod(threadData_t *threadData, modelica_metatype _element, modelica_metatype _scope, modelica_metatype _confidence);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_createConstrainingMod,2,0) {(void*) boxptr_NFModifier_Modifier_createConstrainingMod,0}};
 #define boxvar_NFModifier_Modifier_createConstrainingMod MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_createConstrainingMod)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_Modifier_create(threadData_t *threadData, modelica_metatype _mod, modelica_string _name, modelica_metatype _modScope, modelica_metatype _scope, modelica_integer _confidence);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_Modifier_create(threadData_t *threadData, modelica_metatype _mod, modelica_metatype _name, modelica_metatype _modScope, modelica_metatype _scope, modelica_metatype _confidence);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_create,2,0) {(void*) boxptr_NFModifier_Modifier_create,0}};
 #define boxvar_NFModifier_Modifier_create MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_Modifier_create)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFModifier_ModifierScope_toString(threadData_t *threadData, modelica_metatype _scope);
 #define boxptr_NFModifier_ModifierScope_toString omc_NFModifier_ModifierScope_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModifierScope_toString,2,0) {(void*) boxptr_NFModifier_ModifierScope_toString,0}};
 #define boxvar_NFModifier_ModifierScope_toString MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModifierScope_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFModifier_ModifierScope_isClass(threadData_t *threadData, modelica_metatype _scope);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_ModifierScope_isClass(threadData_t *threadData, modelica_metatype _scope);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModifierScope_isClass,2,0) {(void*) boxptr_NFModifier_ModifierScope_isClass,0}};
 #define boxvar_NFModifier_ModifierScope_isClass MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModifierScope_isClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFModifier_ModifierScope_name(threadData_t *threadData, modelica_metatype _scope);
 #define boxptr_NFModifier_ModifierScope_name omc_NFModifier_ModifierScope_name
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModifierScope_name,2,0) {(void*) boxptr_NFModifier_ModifierScope_name,0}};
 #define boxvar_NFModifier_ModifierScope_name MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModifierScope_name)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModifierScope_fromElement(threadData_t *threadData, modelica_metatype _element);
 #define boxptr_NFModifier_ModifierScope_fromElement omc_NFModifier_ModifierScope_fromElement
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModifierScope_fromElement,2,0) {(void*) boxptr_NFModifier_ModifierScope_fromElement,0}};
 #define boxvar_NFModifier_ModifierScope_fromElement MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModifierScope_fromElement)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_add(threadData_t *threadData, modelica_metatype _inTree, modelica_string _inKey, modelica_metatype _inValue, modelica_fnptr _conflictFunc);
 #define boxptr_NFModifier_ModTable_add omc_NFModifier_ModTable_add
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_add,2,0) {(void*) boxptr_NFModifier_ModTable_add,0}};
 #define boxvar_NFModifier_ModTable_add MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_add)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_addConflictDefault(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
 #define boxptr_NFModifier_ModTable_addConflictDefault omc_NFModifier_ModTable_addConflictDefault
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addConflictDefault,2,0) {(void*) boxptr_NFModifier_ModTable_addConflictDefault,0}};
 #define boxvar_NFModifier_ModTable_addConflictDefault MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addConflictDefault)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_addConflictFail(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
 #define boxptr_NFModifier_ModTable_addConflictFail omc_NFModifier_ModTable_addConflictFail
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addConflictFail,2,0) {(void*) boxptr_NFModifier_ModTable_addConflictFail,0}};
 #define boxvar_NFModifier_ModTable_addConflictFail MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addConflictFail)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_addConflictKeep(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
 #define boxptr_NFModifier_ModTable_addConflictKeep omc_NFModifier_ModTable_addConflictKeep
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addConflictKeep,2,0) {(void*) boxptr_NFModifier_ModTable_addConflictKeep,0}};
 #define boxvar_NFModifier_ModTable_addConflictKeep MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addConflictKeep)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_addConflictReplace(threadData_t *threadData, modelica_metatype _newValue, modelica_metatype _oldValue, modelica_string _key);
 #define boxptr_NFModifier_ModTable_addConflictReplace omc_NFModifier_ModTable_addConflictReplace
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addConflictReplace,2,0) {(void*) boxptr_NFModifier_ModTable_addConflictReplace,0}};
 #define boxvar_NFModifier_ModTable_addConflictReplace MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addConflictReplace)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_addList(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _inValues, modelica_fnptr _conflictFunc);
 #define boxptr_NFModifier_ModTable_addList omc_NFModifier_ModTable_addList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addList,2,0) {(void*) boxptr_NFModifier_ModTable_addList,0}};
 #define boxvar_NFModifier_ModTable_addList MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_addUpdate(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_string _key, modelica_fnptr _fn);
 #define boxptr_NFModifier_ModTable_addUpdate omc_NFModifier_ModTable_addUpdate
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addUpdate,2,0) {(void*) boxptr_NFModifier_ModTable_addUpdate,0}};
@@ -331,150 +347,150 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_addUpdate,2,0) {(vo
 #define boxptr_NFModifier_ModTable_balance omc_NFModifier_ModTable_balance
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_fold(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc, modelica_metatype _inStartValue);
 #define boxptr_NFModifier_ModTable_fold omc_NFModifier_ModTable_fold
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_fold,2,0) {(void*) boxptr_NFModifier_ModTable_fold,0}};
 #define boxvar_NFModifier_ModTable_fold MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_fold)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_foldCond(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _foldFunc, modelica_metatype __omcQ_24in_5Fvalue);
 #define boxptr_NFModifier_ModTable_foldCond omc_NFModifier_ModTable_foldCond
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_foldCond,2,0) {(void*) boxptr_NFModifier_ModTable_foldCond,0}};
 #define boxvar_NFModifier_ModTable_foldCond MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_foldCond)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_fold__2(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _foldFunc, modelica_metatype __omcQ_24in_5FfoldArg1, modelica_metatype __omcQ_24in_5FfoldArg2, modelica_metatype *out_foldArg2);
 #define boxptr_NFModifier_ModTable_fold__2 omc_NFModifier_ModTable_fold__2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_fold__2,2,0) {(void*) boxptr_NFModifier_ModTable_fold__2,0}};
 #define boxvar_NFModifier_ModTable_fold__2 MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_fold__2)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFModifier_ModTable_forEach(threadData_t *threadData, modelica_metatype _tree, modelica_fnptr _func);
 #define boxptr_NFModifier_ModTable_forEach omc_NFModifier_ModTable_forEach
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_forEach,2,0) {(void*) boxptr_NFModifier_ModTable_forEach,0}};
 #define boxvar_NFModifier_ModTable_forEach MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_forEach)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_fromList(threadData_t *threadData, modelica_metatype _inValues, modelica_fnptr _conflictFunc);
 #define boxptr_NFModifier_ModTable_fromList omc_NFModifier_ModTable_fromList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_fromList,2,0) {(void*) boxptr_NFModifier_ModTable_fromList,0}};
 #define boxvar_NFModifier_ModTable_fromList MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_fromList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_get(threadData_t *threadData, modelica_metatype _tree, modelica_string _key);
 #define boxptr_NFModifier_ModTable_get omc_NFModifier_ModTable_get
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_get,2,0) {(void*) boxptr_NFModifier_ModTable_get,0}};
 #define boxvar_NFModifier_ModTable_get MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_get)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_getOpt(threadData_t *threadData, modelica_metatype _tree, modelica_string _key);
 #define boxptr_NFModifier_ModTable_getOpt omc_NFModifier_ModTable_getOpt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_getOpt,2,0) {(void*) boxptr_NFModifier_ModTable_getOpt,0}};
 #define boxvar_NFModifier_ModTable_getOpt MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_getOpt)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFModifier_ModTable_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_string _inKey);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_ModTable_hasKey(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype _inKey);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_hasKey,2,0) {(void*) boxptr_NFModifier_ModTable_hasKey,0}};
 #define boxvar_NFModifier_ModTable_hasKey MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_hasKey)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFModifier_ModTable_intersection(threadData_t *threadData);
 #define boxptr_NFModifier_ModTable_intersection omc_NFModifier_ModTable_intersection
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_intersection,2,0) {(void*) boxptr_NFModifier_ModTable_intersection,0}};
 #define boxvar_NFModifier_ModTable_intersection MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_intersection)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFModifier_ModTable_isEmpty(threadData_t *threadData, modelica_metatype _tree);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_ModTable_isEmpty(threadData_t *threadData, modelica_metatype _tree);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_isEmpty,2,0) {(void*) boxptr_NFModifier_ModTable_isEmpty,0}};
 #define boxvar_NFModifier_ModTable_isEmpty MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_isEmpty)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_join(threadData_t *threadData, modelica_metatype __omcQ_24in_5Ftree, modelica_metatype _treeToJoin, modelica_fnptr _conflictFunc);
 #define boxptr_NFModifier_ModTable_join omc_NFModifier_ModTable_join
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_join,2,0) {(void*) boxptr_NFModifier_ModTable_join,0}};
 #define boxvar_NFModifier_ModTable_join MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_join)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_NFModifier_ModTable_keyCompare(threadData_t *threadData, modelica_string _inKey1, modelica_string _inKey2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFModifier_ModTable_keyCompare(threadData_t *threadData, modelica_metatype _inKey1, modelica_metatype _inKey2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_keyCompare,2,0) {(void*) boxptr_NFModifier_ModTable_keyCompare,0}};
 #define boxvar_NFModifier_ModTable_keyCompare MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_keyCompare)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFModifier_ModTable_keyStr(threadData_t *threadData, modelica_string _inKey);
 #define boxptr_NFModifier_ModTable_keyStr omc_NFModifier_ModTable_keyStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_keyStr,2,0) {(void*) boxptr_NFModifier_ModTable_keyStr,0}};
 #define boxvar_NFModifier_ModTable_keyStr MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_keyStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_listKeys(threadData_t *threadData, modelica_metatype _tree, modelica_metatype __omcQ_24in_5Flst);
 #define boxptr_NFModifier_ModTable_listKeys omc_NFModifier_ModTable_listKeys
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_listKeys,2,0) {(void*) boxptr_NFModifier_ModTable_listKeys,0}};
 #define boxvar_NFModifier_ModTable_listKeys MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_listKeys)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_listKeysReverse(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
 #define boxptr_NFModifier_ModTable_listKeysReverse omc_NFModifier_ModTable_listKeysReverse
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_listKeysReverse,2,0) {(void*) boxptr_NFModifier_ModTable_listKeysReverse,0}};
 #define boxvar_NFModifier_ModTable_listKeysReverse MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_listKeysReverse)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_listValues(threadData_t *threadData, modelica_metatype _tree, modelica_metatype __omcQ_24in_5Flst);
 #define boxptr_NFModifier_ModTable_listValues omc_NFModifier_ModTable_listValues
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_listValues,2,0) {(void*) boxptr_NFModifier_ModTable_listValues,0}};
 #define boxvar_NFModifier_ModTable_listValues MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_listValues)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_map(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc);
 #define boxptr_NFModifier_ModTable_map omc_NFModifier_ModTable_map
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_map,2,0) {(void*) boxptr_NFModifier_ModTable_map,0}};
 #define boxvar_NFModifier_ModTable_map MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_map)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_mapFold(threadData_t *threadData, modelica_metatype _inTree, modelica_fnptr _inFunc, modelica_metatype _inStartValue, modelica_metatype *out_outResult);
 #define boxptr_NFModifier_ModTable_mapFold omc_NFModifier_ModTable_mapFold
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_mapFold,2,0) {(void*) boxptr_NFModifier_ModTable_mapFold,0}};
 #define boxvar_NFModifier_ModTable_mapFold MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_mapFold)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_new(threadData_t *threadData);
 #define boxptr_NFModifier_ModTable_new omc_NFModifier_ModTable_new
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_new,2,0) {(void*) boxptr_NFModifier_ModTable_new,0}};
 #define boxvar_NFModifier_ModTable_new MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_new)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFModifier_ModTable_printNodeStr(threadData_t *threadData, modelica_metatype _inNode);
 #define boxptr_NFModifier_ModTable_printNodeStr omc_NFModifier_ModTable_printNodeStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_printNodeStr,2,0) {(void*) boxptr_NFModifier_ModTable_printNodeStr,0}};
 #define boxvar_NFModifier_ModTable_printNodeStr MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_printNodeStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFModifier_ModTable_printTreeStr(threadData_t *threadData, modelica_metatype _inTree);
 #define boxptr_NFModifier_ModTable_printTreeStr omc_NFModifier_ModTable_printTreeStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_printTreeStr,2,0) {(void*) boxptr_NFModifier_ModTable_printTreeStr,0}};
@@ -487,35 +503,35 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_printTreeStr,2,0) {
 #define boxptr_NFModifier_ModTable_rotateRight omc_NFModifier_ModTable_rotateRight
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_setTreeLeftRight(threadData_t *threadData, modelica_metatype _orig, modelica_metatype _left, modelica_metatype _right);
 #define boxptr_NFModifier_ModTable_setTreeLeftRight omc_NFModifier_ModTable_setTreeLeftRight
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_setTreeLeftRight,2,0) {(void*) boxptr_NFModifier_ModTable_setTreeLeftRight,0}};
 #define boxvar_NFModifier_ModTable_setTreeLeftRight MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_setTreeLeftRight)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFModifier_ModTable_smallestKey(threadData_t *threadData, modelica_metatype _tree);
 #define boxptr_NFModifier_ModTable_smallestKey omc_NFModifier_ModTable_smallestKey
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_smallestKey,2,0) {(void*) boxptr_NFModifier_ModTable_smallestKey,0}};
 #define boxvar_NFModifier_ModTable_smallestKey MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_smallestKey)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_toList(threadData_t *threadData, modelica_metatype _inTree, modelica_metatype __omcQ_24in_5Flst);
 #define boxptr_NFModifier_ModTable_toList omc_NFModifier_ModTable_toList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_toList,2,0) {(void*) boxptr_NFModifier_ModTable_toList,0}};
 #define boxvar_NFModifier_ModTable_toList MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_toList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFModifier_ModTable_update(threadData_t *threadData, modelica_metatype _tree, modelica_string _key, modelica_metatype _value);
 #define boxptr_NFModifier_ModTable_update omc_NFModifier_ModTable_update
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_update,2,0) {(void*) boxptr_NFModifier_ModTable_update,0}};
 #define boxvar_NFModifier_ModTable_update MMC_REFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_update)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NFModifier_ModTable_valueStr(threadData_t *threadData, modelica_metatype _inValue);
 #define boxptr_NFModifier_ModTable_valueStr omc_NFModifier_ModTable_valueStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFModifier_ModTable_valueStr,2,0) {(void*) boxptr_NFModifier_ModTable_valueStr,0}};

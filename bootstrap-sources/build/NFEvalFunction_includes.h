@@ -26,6 +26,7 @@ extern "C" {
 #include "NFInstContext.h"
 #include "NFInstNode.h"
 #include "NFRangeIterator.h"
+#include "NFRecord.h"
 #include "NFStatement.h"
 #include "NFSubscript.h"
 #include "NFType.h"

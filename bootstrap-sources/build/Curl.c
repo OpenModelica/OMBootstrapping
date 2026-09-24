@@ -24,9 +24,9 @@ modelica_metatype boxptr_Curl_multiDownload(threadData_t *threadData, modelica_m
   modelica_integer tmp1;
   modelica_boolean _success;
   modelica_metatype out_success;
-  tmp1 = mmc_unbox_integer(_maxParallel);
+  tmp1 = omc_unbox_integer(_maxParallel);
   _success = omc_Curl_multiDownload(threadData, _urlFileList, tmp1);
-  out_success = mmc_mk_icon(_success);
+  out_success = omc_mk_icon(_success);
   return out_success;
 }
 

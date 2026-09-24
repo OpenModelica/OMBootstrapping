@@ -160,7 +160,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_FindZeroCrossings_createZeroCrossings omc_FindZeroCrossings_createZeroCrossings
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FindZeroCrossings_setOperatorZeroCrossingIndices(threadData_t *threadData, modelica_metatype _inZeroCrossings);
 #define boxptr_FindZeroCrossings_setOperatorZeroCrossingIndices omc_FindZeroCrossings_setOperatorZeroCrossingIndices
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FindZeroCrossings_setOperatorZeroCrossingIndices,2,0) {(void*) boxptr_FindZeroCrossings_setOperatorZeroCrossingIndices,0}};
@@ -203,7 +203,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FindZeroCrossings_setOperatorZeroCrossi
 #define boxptr_FindZeroCrossings_findZeroCrossings1 omc_FindZeroCrossings_findZeroCrossings1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FindZeroCrossings_findZeroCrossings(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_FindZeroCrossings_findZeroCrossings omc_FindZeroCrossings_findZeroCrossings
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FindZeroCrossings_findZeroCrossings,2,0) {(void*) boxptr_FindZeroCrossings_findZeroCrossings,0}};
@@ -213,7 +213,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FindZeroCrossings_findZeroCrossings,2,0
 #define boxptr_FindZeroCrossings_encapsulateWhenConditions__Equation omc_FindZeroCrossings_encapsulateWhenConditions__Equation
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FindZeroCrossings_encapsulateWhenConditions(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_FindZeroCrossings_encapsulateWhenConditions omc_FindZeroCrossings_encapsulateWhenConditions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FindZeroCrossings_encapsulateWhenConditions,2,0) {(void*) boxptr_FindZeroCrossings_encapsulateWhenConditions,0}};

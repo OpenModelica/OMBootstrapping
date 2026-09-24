@@ -10,40 +10,55 @@
 extern "C" {
 #endif
 
+extern struct record_description Absyn_Program_PROGRAM__desc;
+
+extern struct record_description Absyn_Within_TOP__desc;
+
+extern struct record_description BackendInterface_BackendInterfaceFunctions_BACKEND__INTERFACE__FUNCTIONS__desc;
 
 
-DLLDirection
+DLLModelDirection
 void omc_BackendInterface_initInstHashTable(threadData_t *threadData);
 #define boxptr_BackendInterface_initInstHashTable omc_BackendInterface_initInstHashTable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_initInstHashTable,2,0) {(void*) boxptr_BackendInterface_initInstHashTable,0}};
 #define boxvar_BackendInterface_initInstHashTable MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_initInstHashTable)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendInterface_appendLibrary(threadData_t *threadData, modelica_metatype _modelName, modelica_string _modelicaPath, modelica_boolean *out_success);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendInterface_appendLibrary(threadData_t *threadData, modelica_metatype _modelName, modelica_metatype _modelicaPath, modelica_metatype *out_success);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_appendLibrary,2,0) {(void*) boxptr_BackendInterface_appendLibrary,0}};
 #define boxvar_BackendInterface_appendLibrary MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_appendLibrary)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendInterface_rewriteFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_boolean *out_isChanged);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendInterface_rewriteFrontEnd(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype *out_isChanged);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_rewriteFrontEnd,2,0) {(void*) boxptr_BackendInterface_rewriteFrontEnd,0}};
 #define boxvar_BackendInterface_rewriteFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_rewriteFrontEnd)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_BackendInterface_noRewriteRulesFrontEnd(threadData_t *threadData);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_BackendInterface_noRewriteRulesFrontEnd(threadData_t *threadData);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_noRewriteRulesFrontEnd,2,0) {(void*) boxptr_BackendInterface_noRewriteRulesFrontEnd,0}};
 #define boxvar_BackendInterface_noRewriteRulesFrontEnd MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_noRewriteRulesFrontEnd)
 
 
-DLLDirection
+#define boxptr_BackendInterface_doNothing omc_BackendInterface_doNothing
+
+
+DLLModelDirection
+void omc_BackendInterface_initializeWithoutBackend(threadData_t *threadData);
+#define boxptr_BackendInterface_initializeWithoutBackend omc_BackendInterface_initializeWithoutBackend
+static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_initializeWithoutBackend,2,0) {(void*) boxptr_BackendInterface_initializeWithoutBackend,0}};
+#define boxvar_BackendInterface_initializeWithoutBackend MMC_REFSTRUCTLIT(boxvar_lit_BackendInterface_initializeWithoutBackend)
+
+
+DLLModelDirection
 void omc_BackendInterface_initializeBackendInterface(threadData_t *threadData, modelica_metatype _inFunctions);
 #define boxptr_BackendInterface_initializeBackendInterface omc_BackendInterface_initializeBackendInterface
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendInterface_initializeBackendInterface,2,0) {(void*) boxptr_BackendInterface_initializeBackendInterface,0}};

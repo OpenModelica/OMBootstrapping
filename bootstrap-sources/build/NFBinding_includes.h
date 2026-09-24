@@ -15,6 +15,9 @@ extern "C" {
 #include "NFInstNode.h"
 #include "NFPrefixes.h"
 #include "NFSubscript.h"
+#include "NFVariable.h"
+#include "Pointer.h"
+#include "PointerWeak.h"
 #ifdef __cplusplus
 }
 #endif

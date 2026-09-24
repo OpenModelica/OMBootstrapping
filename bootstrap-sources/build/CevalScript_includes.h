@@ -46,6 +46,7 @@ extern "C" {
 #include "List.h"
 #include "Lookup.h"
 #include "Mod.h"
+#include "NFApi.h"
 #include "PackageManagement.h"
 #include "Parser.h"
 #include "Print.h"

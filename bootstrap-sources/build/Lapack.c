@@ -44,7 +44,7 @@ modelica_metatype omc_Lapack_dhseqr(threadData_t *threadData, modelica_string _i
   _inLDZ_ext = (int) _inLDZ;
   _inWORK_ext = (modelica_metatype) _inWORK;
   _inLWORK_ext = (int) _inLWORK;
-  LapackImpl__dhseqr(MMC_STRINGDATA(_inJOB), MMC_STRINGDATA(_inCOMPZ), _inN_ext, _inILO_ext, _inIHI_ext, _inH_ext, _inLDH_ext, _inZ_ext, _inLDZ_ext, _inWORK_ext, _inLWORK_ext, &_outH_ext, &_outWR_ext, &_outWI_ext, &_outZ_ext, &_outWORK_ext, &_outINFO_ext);
+  LapackImpl__dhseqr(omc_string_data(_inJOB), omc_string_data(_inCOMPZ), _inN_ext, _inILO_ext, _inIHI_ext, _inH_ext, _inLDH_ext, _inZ_ext, _inLDZ_ext, _inWORK_ext, _inLWORK_ext, &_outH_ext, &_outWR_ext, &_outWI_ext, &_outZ_ext, &_outWORK_ext, &_outINFO_ext);
   _outH = (modelica_metatype)_outH_ext;
   _outWR = (modelica_metatype)_outWR_ext;
   _outWI = (modelica_metatype)_outWI_ext;
@@ -68,19 +68,19 @@ modelica_metatype boxptr_Lapack_dhseqr(threadData_t *threadData, modelica_metaty
   modelica_integer tmp6;
   modelica_integer _outINFO;
   modelica_metatype _outH = NULL;
-  tmp1 = mmc_unbox_integer(_inN);
-  tmp2 = mmc_unbox_integer(_inILO);
-  tmp3 = mmc_unbox_integer(_inIHI);
-  tmp4 = mmc_unbox_integer(_inLDH);
-  tmp5 = mmc_unbox_integer(_inLDZ);
-  tmp6 = mmc_unbox_integer(_inLWORK);
+  tmp1 = omc_unbox_integer(_inN);
+  tmp2 = omc_unbox_integer(_inILO);
+  tmp3 = omc_unbox_integer(_inIHI);
+  tmp4 = omc_unbox_integer(_inLDH);
+  tmp5 = omc_unbox_integer(_inLDZ);
+  tmp6 = omc_unbox_integer(_inLWORK);
   _outH = omc_Lapack_dhseqr(threadData, _inJOB, _inCOMPZ, tmp1, tmp2, tmp3, _inH, tmp4, _inZ, tmp5, _inWORK, tmp6, out_outWR, out_outWI, out_outZ, out_outWORK, &_outINFO);
   /* skip box _outH; list<list<#Real>> */
   /* skip box _outWR; list<#Real> */
   /* skip box _outWI; list<#Real> */
   /* skip box _outZ; list<list<#Real>> */
   /* skip box _outWORK; list<#Real> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outH;
 }
 
@@ -128,15 +128,15 @@ modelica_metatype boxptr_Lapack_dorgqr(threadData_t *threadData, modelica_metaty
   modelica_integer tmp5;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inM);
-  tmp2 = mmc_unbox_integer(_inN);
-  tmp3 = mmc_unbox_integer(_inK);
-  tmp4 = mmc_unbox_integer(_inLDA);
-  tmp5 = mmc_unbox_integer(_inLWORK);
+  tmp1 = omc_unbox_integer(_inM);
+  tmp2 = omc_unbox_integer(_inN);
+  tmp3 = omc_unbox_integer(_inK);
+  tmp4 = omc_unbox_integer(_inLDA);
+  tmp5 = omc_unbox_integer(_inLWORK);
   _outA = omc_Lapack_dorgqr(threadData, tmp1, tmp2, tmp3, _inA, tmp4, _inTAU, _inWORK, tmp5, out_outWORK, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outWORK; list<#Real> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 
@@ -183,14 +183,14 @@ modelica_metatype boxptr_Lapack_dgeqpf(threadData_t *threadData, modelica_metaty
   modelica_integer tmp3;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inM);
-  tmp2 = mmc_unbox_integer(_inN);
-  tmp3 = mmc_unbox_integer(_inLDA);
+  tmp1 = omc_unbox_integer(_inM);
+  tmp2 = omc_unbox_integer(_inN);
+  tmp3 = omc_unbox_integer(_inLDA);
   _outA = omc_Lapack_dgeqpf(threadData, tmp1, tmp2, _inA, tmp3, _inJPVT, _inWORK, out_outJPVT, out_outTAU, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outJPVT; list<#Integer> */
   /* skip box _outTAU; list<#Real> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 
@@ -232,13 +232,13 @@ modelica_metatype boxptr_Lapack_dgetri(threadData_t *threadData, modelica_metaty
   modelica_integer tmp3;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inN);
-  tmp2 = mmc_unbox_integer(_inLDA);
-  tmp3 = mmc_unbox_integer(_inLWORK);
+  tmp1 = omc_unbox_integer(_inN);
+  tmp2 = omc_unbox_integer(_inLDA);
+  tmp3 = omc_unbox_integer(_inLWORK);
   _outA = omc_Lapack_dgetri(threadData, tmp1, _inA, tmp2, _inIPIV, _inWORK, tmp3, out_outWORK, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outWORK; list<#Real> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 
@@ -264,7 +264,7 @@ modelica_metatype omc_Lapack_dgetrs(threadData_t *threadData, modelica_string _i
   _inIPIV_ext = (modelica_metatype) _inIPIV;
   _inB_ext = (modelica_metatype) _inB;
   _inLDB_ext = (int) _inLDB;
-  LapackImpl__dgetrs(MMC_STRINGDATA(_inTRANS), _inN_ext, _inNRHS_ext, _inA_ext, _inLDA_ext, _inIPIV_ext, _inB_ext, _inLDB_ext, &_outB_ext, &_outINFO_ext);
+  LapackImpl__dgetrs(omc_string_data(_inTRANS), _inN_ext, _inNRHS_ext, _inA_ext, _inLDA_ext, _inIPIV_ext, _inB_ext, _inLDB_ext, &_outB_ext, &_outINFO_ext);
   _outB = (modelica_metatype)_outB_ext;
   _outINFO = (modelica_integer)_outINFO_ext;
   if (out_outINFO) { *out_outINFO = _outINFO; }
@@ -278,13 +278,13 @@ modelica_metatype boxptr_Lapack_dgetrs(threadData_t *threadData, modelica_metaty
   modelica_integer tmp4;
   modelica_integer _outINFO;
   modelica_metatype _outB = NULL;
-  tmp1 = mmc_unbox_integer(_inN);
-  tmp2 = mmc_unbox_integer(_inNRHS);
-  tmp3 = mmc_unbox_integer(_inLDA);
-  tmp4 = mmc_unbox_integer(_inLDB);
+  tmp1 = omc_unbox_integer(_inN);
+  tmp2 = omc_unbox_integer(_inNRHS);
+  tmp3 = omc_unbox_integer(_inLDA);
+  tmp4 = omc_unbox_integer(_inLDB);
   _outB = omc_Lapack_dgetrs(threadData, _inTRANS, tmp1, tmp2, _inA, tmp3, _inIPIV, _inB, tmp4, &_outINFO);
   /* skip box _outB; list<list<#Real>> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outB;
 }
 
@@ -322,13 +322,13 @@ modelica_metatype boxptr_Lapack_dgetrf(threadData_t *threadData, modelica_metaty
   modelica_integer tmp3;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inM);
-  tmp2 = mmc_unbox_integer(_inN);
-  tmp3 = mmc_unbox_integer(_inLDA);
+  tmp1 = omc_unbox_integer(_inM);
+  tmp2 = omc_unbox_integer(_inN);
+  tmp3 = omc_unbox_integer(_inLDA);
   _outA = omc_Lapack_dgetrf(threadData, tmp1, tmp2, _inA, tmp3, out_outIPIV, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outIPIV; list<#Integer> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 
@@ -368,7 +368,7 @@ modelica_metatype omc_Lapack_dgesvd(threadData_t *threadData, modelica_string _i
   _inLDVT_ext = (int) _inLDVT;
   _inWORK_ext = (modelica_metatype) _inWORK;
   _inLWORK_ext = (int) _inLWORK;
-  LapackImpl__dgesvd(MMC_STRINGDATA(_inJOBU), MMC_STRINGDATA(_inJOBVT), _inM_ext, _inN_ext, _inA_ext, _inLDA_ext, _inLDU_ext, _inLDVT_ext, _inWORK_ext, _inLWORK_ext, &_outA_ext, &_outS_ext, &_outU_ext, &_outVT_ext, &_outWORK_ext, &_outINFO_ext);
+  LapackImpl__dgesvd(omc_string_data(_inJOBU), omc_string_data(_inJOBVT), _inM_ext, _inN_ext, _inA_ext, _inLDA_ext, _inLDU_ext, _inLDVT_ext, _inWORK_ext, _inLWORK_ext, &_outA_ext, &_outS_ext, &_outU_ext, &_outVT_ext, &_outWORK_ext, &_outINFO_ext);
   _outA = (modelica_metatype)_outA_ext;
   _outS = (modelica_metatype)_outS_ext;
   _outU = (modelica_metatype)_outU_ext;
@@ -392,19 +392,19 @@ modelica_metatype boxptr_Lapack_dgesvd(threadData_t *threadData, modelica_metaty
   modelica_integer tmp6;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inM);
-  tmp2 = mmc_unbox_integer(_inN);
-  tmp3 = mmc_unbox_integer(_inLDA);
-  tmp4 = mmc_unbox_integer(_inLDU);
-  tmp5 = mmc_unbox_integer(_inLDVT);
-  tmp6 = mmc_unbox_integer(_inLWORK);
+  tmp1 = omc_unbox_integer(_inM);
+  tmp2 = omc_unbox_integer(_inN);
+  tmp3 = omc_unbox_integer(_inLDA);
+  tmp4 = omc_unbox_integer(_inLDU);
+  tmp5 = omc_unbox_integer(_inLDVT);
+  tmp6 = omc_unbox_integer(_inLWORK);
   _outA = omc_Lapack_dgesvd(threadData, _inJOBU, _inJOBVT, tmp1, tmp2, _inA, tmp3, tmp4, tmp5, _inWORK, tmp6, out_outS, out_outU, out_outVT, out_outWORK, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outS; list<#Real> */
   /* skip box _outU; list<list<#Real>> */
   /* skip box _outVT; list<list<#Real>> */
   /* skip box _outWORK; list<#Real> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 
@@ -458,17 +458,17 @@ modelica_metatype boxptr_Lapack_dgbsv(threadData_t *threadData, modelica_metatyp
   modelica_integer tmp6;
   modelica_integer _outINFO;
   modelica_metatype _outAB = NULL;
-  tmp1 = mmc_unbox_integer(_inN);
-  tmp2 = mmc_unbox_integer(_inKL);
-  tmp3 = mmc_unbox_integer(_inKU);
-  tmp4 = mmc_unbox_integer(_inNRHS);
-  tmp5 = mmc_unbox_integer(_inLDAB);
-  tmp6 = mmc_unbox_integer(_inLDB);
+  tmp1 = omc_unbox_integer(_inN);
+  tmp2 = omc_unbox_integer(_inKL);
+  tmp3 = omc_unbox_integer(_inKU);
+  tmp4 = omc_unbox_integer(_inNRHS);
+  tmp5 = omc_unbox_integer(_inLDAB);
+  tmp6 = omc_unbox_integer(_inLDB);
   _outAB = omc_Lapack_dgbsv(threadData, tmp1, tmp2, tmp3, tmp4, _inAB, tmp5, _inB, tmp6, out_outIPIV, out_outB, &_outINFO);
   /* skip box _outAB; list<list<#Real>> */
   /* skip box _outIPIV; list<#Integer> */
   /* skip box _outB; list<list<#Real>> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outAB;
 }
 
@@ -522,15 +522,15 @@ modelica_metatype boxptr_Lapack_dgtsv(threadData_t *threadData, modelica_metatyp
   modelica_integer tmp3;
   modelica_integer _outINFO;
   modelica_metatype _outDL = NULL;
-  tmp1 = mmc_unbox_integer(_inN);
-  tmp2 = mmc_unbox_integer(_inNRHS);
-  tmp3 = mmc_unbox_integer(_inLDB);
+  tmp1 = omc_unbox_integer(_inN);
+  tmp2 = omc_unbox_integer(_inNRHS);
+  tmp3 = omc_unbox_integer(_inLDB);
   _outDL = omc_Lapack_dgtsv(threadData, tmp1, tmp2, _inDL, _inD, _inDU, _inB, tmp3, out_outD, out_outDU, out_outB, &_outINFO);
   /* skip box _outDL; list<#Real> */
   /* skip box _outD; list<#Real> */
   /* skip box _outDU; list<#Real> */
   /* skip box _outB; list<list<#Real>> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outDL;
 }
 
@@ -605,12 +605,12 @@ modelica_metatype boxptr_Lapack_dgglse(threadData_t *threadData, modelica_metaty
   modelica_integer tmp6;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inM);
-  tmp2 = mmc_unbox_integer(_inN);
-  tmp3 = mmc_unbox_integer(_inP);
-  tmp4 = mmc_unbox_integer(_inLDA);
-  tmp5 = mmc_unbox_integer(_inLDB);
-  tmp6 = mmc_unbox_integer(_inLWORK);
+  tmp1 = omc_unbox_integer(_inM);
+  tmp2 = omc_unbox_integer(_inN);
+  tmp3 = omc_unbox_integer(_inP);
+  tmp4 = omc_unbox_integer(_inLDA);
+  tmp5 = omc_unbox_integer(_inLDB);
+  tmp6 = omc_unbox_integer(_inLWORK);
   _outA = omc_Lapack_dgglse(threadData, tmp1, tmp2, tmp3, _inA, tmp4, _inB, tmp5, _inC, _inD, _inWORK, tmp6, out_outB, out_outC, out_outD, out_outX, out_outWORK, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outB; list<list<#Real>> */
@@ -618,7 +618,7 @@ modelica_metatype boxptr_Lapack_dgglse(threadData_t *threadData, modelica_metaty
   /* skip box _outD; list<#Real> */
   /* skip box _outX; list<#Real> */
   /* skip box _outWORK; list<#Real> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 
@@ -666,15 +666,15 @@ modelica_metatype boxptr_Lapack_dgesv(threadData_t *threadData, modelica_metatyp
   modelica_integer tmp4;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inN);
-  tmp2 = mmc_unbox_integer(_inNRHS);
-  tmp3 = mmc_unbox_integer(_inLDA);
-  tmp4 = mmc_unbox_integer(_inLDB);
+  tmp1 = omc_unbox_integer(_inN);
+  tmp2 = omc_unbox_integer(_inNRHS);
+  tmp3 = omc_unbox_integer(_inLDA);
+  tmp4 = omc_unbox_integer(_inLDB);
   _outA = omc_Lapack_dgesv(threadData, tmp1, tmp2, _inA, tmp3, _inB, tmp4, out_outIPIV, out_outB, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outIPIV; list<#Integer> */
   /* skip box _outB; list<list<#Real>> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 
@@ -746,20 +746,20 @@ modelica_metatype boxptr_Lapack_dgelsy(threadData_t *threadData, modelica_metaty
   modelica_integer _outRANK;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inM);
-  tmp2 = mmc_unbox_integer(_inN);
-  tmp3 = mmc_unbox_integer(_inNRHS);
-  tmp4 = mmc_unbox_integer(_inLDA);
-  tmp5 = mmc_unbox_integer(_inLDB);
-  tmp6 = mmc_unbox_real(_inRCOND);
-  tmp7 = mmc_unbox_integer(_inLWORK);
+  tmp1 = omc_unbox_integer(_inM);
+  tmp2 = omc_unbox_integer(_inN);
+  tmp3 = omc_unbox_integer(_inNRHS);
+  tmp4 = omc_unbox_integer(_inLDA);
+  tmp5 = omc_unbox_integer(_inLDB);
+  tmp6 = omc_unbox_real(_inRCOND);
+  tmp7 = omc_unbox_integer(_inLWORK);
   _outA = omc_Lapack_dgelsy(threadData, tmp1, tmp2, tmp3, _inA, tmp4, _inB, tmp5, _inJPVT, tmp6, _inWORK, tmp7, out_outB, out_outJPVT, &_outRANK, out_outWORK, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outB; list<list<#Real>> */
   /* skip box _outJPVT; list<#Integer> */
-  if (out_outRANK) { *out_outRANK = mmc_mk_icon(_outRANK); }
+  if (out_outRANK) { *out_outRANK = omc_mk_icon(_outRANK); }
   /* skip box _outWORK; list<#Real> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 
@@ -823,18 +823,18 @@ modelica_metatype boxptr_Lapack_dgelsx(threadData_t *threadData, modelica_metaty
   modelica_integer _outRANK;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inM);
-  tmp2 = mmc_unbox_integer(_inN);
-  tmp3 = mmc_unbox_integer(_inNRHS);
-  tmp4 = mmc_unbox_integer(_inLDA);
-  tmp5 = mmc_unbox_integer(_inLDB);
-  tmp6 = mmc_unbox_real(_inRCOND);
+  tmp1 = omc_unbox_integer(_inM);
+  tmp2 = omc_unbox_integer(_inN);
+  tmp3 = omc_unbox_integer(_inNRHS);
+  tmp4 = omc_unbox_integer(_inLDA);
+  tmp5 = omc_unbox_integer(_inLDB);
+  tmp6 = omc_unbox_real(_inRCOND);
   _outA = omc_Lapack_dgelsx(threadData, tmp1, tmp2, tmp3, _inA, tmp4, _inB, tmp5, _inJPVT, tmp6, _inWORK, out_outB, out_outJPVT, &_outRANK, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outB; list<list<#Real>> */
   /* skip box _outJPVT; list<#Integer> */
-  if (out_outRANK) { *out_outRANK = mmc_mk_icon(_outRANK); }
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outRANK) { *out_outRANK = omc_mk_icon(_outRANK); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 
@@ -870,7 +870,7 @@ modelica_metatype omc_Lapack_dgels(threadData_t *threadData, modelica_string _in
   _inLDB_ext = (int) _inLDB;
   _inWORK_ext = (modelica_metatype) _inWORK;
   _inLWORK_ext = (int) _inLWORK;
-  LapackImpl__dgels(MMC_STRINGDATA(_inTRANS), _inM_ext, _inN_ext, _inNRHS_ext, _inA_ext, _inLDA_ext, _inB_ext, _inLDB_ext, _inWORK_ext, _inLWORK_ext, &_outA_ext, &_outB_ext, &_outWORK_ext, &_outINFO_ext);
+  LapackImpl__dgels(omc_string_data(_inTRANS), _inM_ext, _inN_ext, _inNRHS_ext, _inA_ext, _inLDA_ext, _inB_ext, _inLDB_ext, _inWORK_ext, _inLWORK_ext, &_outA_ext, &_outB_ext, &_outWORK_ext, &_outINFO_ext);
   _outA = (modelica_metatype)_outA_ext;
   _outB = (modelica_metatype)_outB_ext;
   _outWORK = (modelica_metatype)_outWORK_ext;
@@ -890,17 +890,17 @@ modelica_metatype boxptr_Lapack_dgels(threadData_t *threadData, modelica_metatyp
   modelica_integer tmp6;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inM);
-  tmp2 = mmc_unbox_integer(_inN);
-  tmp3 = mmc_unbox_integer(_inNRHS);
-  tmp4 = mmc_unbox_integer(_inLDA);
-  tmp5 = mmc_unbox_integer(_inLDB);
-  tmp6 = mmc_unbox_integer(_inLWORK);
+  tmp1 = omc_unbox_integer(_inM);
+  tmp2 = omc_unbox_integer(_inN);
+  tmp3 = omc_unbox_integer(_inNRHS);
+  tmp4 = omc_unbox_integer(_inLDA);
+  tmp5 = omc_unbox_integer(_inLDB);
+  tmp6 = omc_unbox_integer(_inLWORK);
   _outA = omc_Lapack_dgels(threadData, _inTRANS, tmp1, tmp2, tmp3, _inA, tmp4, _inB, tmp5, _inWORK, tmp6, out_outB, out_outWORK, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outB; list<list<#Real>> */
   /* skip box _outWORK; list<#Real> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 
@@ -945,7 +945,7 @@ modelica_metatype omc_Lapack_dgegv(threadData_t *threadData, modelica_string _in
   _inLDVR_ext = (int) _inLDVR;
   _inWORK_ext = (modelica_metatype) _inWORK;
   _inLWORK_ext = (int) _inLWORK;
-  LapackImpl__dgegv(MMC_STRINGDATA(_inJOBVL), MMC_STRINGDATA(_inJOBVR), _inN_ext, _inA_ext, _inLDA_ext, _inB_ext, _inLDB_ext, _inLDVL_ext, _inLDVR_ext, _inWORK_ext, _inLWORK_ext, &_outALPHAR_ext, &_outALPHAI_ext, &_outBETA_ext, &_outVL_ext, &_outVR_ext, &_outWORK_ext, &_outINFO_ext);
+  LapackImpl__dgegv(omc_string_data(_inJOBVL), omc_string_data(_inJOBVR), _inN_ext, _inA_ext, _inLDA_ext, _inB_ext, _inLDB_ext, _inLDVL_ext, _inLDVR_ext, _inWORK_ext, _inLWORK_ext, &_outALPHAR_ext, &_outALPHAI_ext, &_outBETA_ext, &_outVL_ext, &_outVR_ext, &_outWORK_ext, &_outINFO_ext);
   _outALPHAR = (modelica_metatype)_outALPHAR_ext;
   _outALPHAI = (modelica_metatype)_outALPHAI_ext;
   _outBETA = (modelica_metatype)_outBETA_ext;
@@ -971,12 +971,12 @@ modelica_metatype boxptr_Lapack_dgegv(threadData_t *threadData, modelica_metatyp
   modelica_integer tmp6;
   modelica_integer _outINFO;
   modelica_metatype _outALPHAR = NULL;
-  tmp1 = mmc_unbox_integer(_inN);
-  tmp2 = mmc_unbox_integer(_inLDA);
-  tmp3 = mmc_unbox_integer(_inLDB);
-  tmp4 = mmc_unbox_integer(_inLDVL);
-  tmp5 = mmc_unbox_integer(_inLDVR);
-  tmp6 = mmc_unbox_integer(_inLWORK);
+  tmp1 = omc_unbox_integer(_inN);
+  tmp2 = omc_unbox_integer(_inLDA);
+  tmp3 = omc_unbox_integer(_inLDB);
+  tmp4 = omc_unbox_integer(_inLDVL);
+  tmp5 = omc_unbox_integer(_inLDVR);
+  tmp6 = omc_unbox_integer(_inLWORK);
   _outALPHAR = omc_Lapack_dgegv(threadData, _inJOBVL, _inJOBVR, tmp1, _inA, tmp2, _inB, tmp3, tmp4, tmp5, _inWORK, tmp6, out_outALPHAI, out_outBETA, out_outVL, out_outVR, out_outWORK, &_outINFO);
   /* skip box _outALPHAR; list<#Real> */
   /* skip box _outALPHAI; list<#Real> */
@@ -984,7 +984,7 @@ modelica_metatype boxptr_Lapack_dgegv(threadData_t *threadData, modelica_metatyp
   /* skip box _outVL; list<list<#Real>> */
   /* skip box _outVR; list<list<#Real>> */
   /* skip box _outWORK; list<#Real> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outALPHAR;
 }
 
@@ -1025,7 +1025,7 @@ modelica_metatype omc_Lapack_dgeev(threadData_t *threadData, modelica_string _in
   _inLDVR_ext = (int) _inLDVR;
   _inWORK_ext = (modelica_metatype) _inWORK;
   _inLWORK_ext = (int) _inLWORK;
-  LapackImpl__dgeev(MMC_STRINGDATA(_inJOBVL), MMC_STRINGDATA(_inJOBVR), _inN_ext, _inA_ext, _inLDA_ext, _inLDVL_ext, _inLDVR_ext, _inWORK_ext, _inLWORK_ext, &_outA_ext, &_outWR_ext, &_outWI_ext, &_outVL_ext, &_outVR_ext, &_outWORK_ext, &_outINFO_ext);
+  LapackImpl__dgeev(omc_string_data(_inJOBVL), omc_string_data(_inJOBVR), _inN_ext, _inA_ext, _inLDA_ext, _inLDVL_ext, _inLDVR_ext, _inWORK_ext, _inLWORK_ext, &_outA_ext, &_outWR_ext, &_outWI_ext, &_outVL_ext, &_outVR_ext, &_outWORK_ext, &_outINFO_ext);
   _outA = (modelica_metatype)_outA_ext;
   _outWR = (modelica_metatype)_outWR_ext;
   _outWI = (modelica_metatype)_outWI_ext;
@@ -1050,11 +1050,11 @@ modelica_metatype boxptr_Lapack_dgeev(threadData_t *threadData, modelica_metatyp
   modelica_integer tmp5;
   modelica_integer _outINFO;
   modelica_metatype _outA = NULL;
-  tmp1 = mmc_unbox_integer(_inN);
-  tmp2 = mmc_unbox_integer(_inLDA);
-  tmp3 = mmc_unbox_integer(_inLDVL);
-  tmp4 = mmc_unbox_integer(_inLDVR);
-  tmp5 = mmc_unbox_integer(_inLWORK);
+  tmp1 = omc_unbox_integer(_inN);
+  tmp2 = omc_unbox_integer(_inLDA);
+  tmp3 = omc_unbox_integer(_inLDVL);
+  tmp4 = omc_unbox_integer(_inLDVR);
+  tmp5 = omc_unbox_integer(_inLWORK);
   _outA = omc_Lapack_dgeev(threadData, _inJOBVL, _inJOBVR, tmp1, _inA, tmp2, tmp3, tmp4, _inWORK, tmp5, out_outWR, out_outWI, out_outVL, out_outVR, out_outWORK, &_outINFO);
   /* skip box _outA; list<list<#Real>> */
   /* skip box _outWR; list<#Real> */
@@ -1062,7 +1062,7 @@ modelica_metatype boxptr_Lapack_dgeev(threadData_t *threadData, modelica_metatyp
   /* skip box _outVL; list<list<#Real>> */
   /* skip box _outVR; list<list<#Real>> */
   /* skip box _outWORK; list<#Real> */
-  if (out_outINFO) { *out_outINFO = mmc_mk_icon(_outINFO); }
+  if (out_outINFO) { *out_outINFO = omc_mk_icon(_outINFO); }
   return _outA;
 }
 

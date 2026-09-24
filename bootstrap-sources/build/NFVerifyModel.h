@@ -46,9 +46,9 @@ extern struct record_description ErrorTypes_Severity_ERROR__desc;
 #define boxptr_NFVerifyModel_verifyWhenEquation omc_NFVerifyModel_verifyWhenEquation
 
 
-DLLDirection
+DLLModelDirection
 void omc_NFVerifyModel_verify(threadData_t *threadData, modelica_metatype _flatModel, modelica_boolean _isPartial);
-DLLDirection
+DLLModelDirection
 void boxptr_NFVerifyModel_verify(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _isPartial);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFVerifyModel_verify,2,0) {(void*) boxptr_NFVerifyModel_verify,0}};
 #define boxvar_NFVerifyModel_verify MMC_REFSTRUCTLIT(boxvar_lit_NFVerifyModel_verify)

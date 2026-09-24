@@ -136,6 +136,8 @@ extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
 
 extern struct record_description NFInstNode_InstNode_VAR__NODE__desc;
 
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
+
 extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
 
 extern struct record_description NFStatement_ASSERT__desc;
@@ -155,98 +157,98 @@ extern struct record_description SCode_Comment_COMMENT__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_checkLoweredCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _set);
 #define boxptr_NBackendDAE_checkLoweredCref omc_NBackendDAE_checkLoweredCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCref,2,0) {(void*) boxptr_NBackendDAE_checkLoweredCref,0}};
 #define boxvar_NBackendDAE_checkLoweredCref MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_checkLoweredCrefExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _set);
 #define boxptr_NBackendDAE_checkLoweredCrefExp omc_NBackendDAE_checkLoweredCrefExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefExp,2,0) {(void*) boxptr_NBackendDAE_checkLoweredCrefExp,0}};
 #define boxvar_NBackendDAE_checkLoweredCrefExp MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_checkLoweredCrefEqn(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn);
 #define boxptr_NBackendDAE_checkLoweredCrefEqn omc_NBackendDAE_checkLoweredCrefEqn
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefEqn,2,0) {(void*) boxptr_NBackendDAE_checkLoweredCrefEqn,0}};
 #define boxvar_NBackendDAE_checkLoweredCrefEqn MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefEqn)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NBackendDAE_checkLoweredCrefVar(threadData_t *threadData, modelica_metatype _var);
 #define boxptr_NBackendDAE_checkLoweredCrefVar omc_NBackendDAE_checkLoweredCrefVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefVar,2,0) {(void*) boxptr_NBackendDAE_checkLoweredCrefVar,0}};
 #define boxvar_NBackendDAE_checkLoweredCrefVar MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_checkLoweredCrefVar)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NBackendDAE_debugLowering(threadData_t *threadData, modelica_metatype _bdae);
 #define boxptr_NBackendDAE_debugLowering omc_NBackendDAE_debugLowering
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_debugLowering,2,0) {(void*) boxptr_NBackendDAE_debugLowering,0}};
 #define boxvar_NBackendDAE_debugLowering MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_debugLowering)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NBackendDAE_debugFollowEquations(threadData_t *threadData, modelica_metatype _bdae, modelica_metatype _eq_filter_opt, modelica_string _str);
 #define boxptr_NBackendDAE_debugFollowEquations omc_NBackendDAE_debugFollowEquations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_debugFollowEquations,2,0) {(void*) boxptr_NBackendDAE_debugFollowEquations,0}};
 #define boxvar_NBackendDAE_debugFollowEquations MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_debugFollowEquations)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NBackendDAE_strongcomponentinfo(threadData_t *threadData, modelica_string _phase, modelica_metatype _systems);
 #define boxptr_NBackendDAE_strongcomponentinfo omc_NBackendDAE_strongcomponentinfo
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_strongcomponentinfo,2,0) {(void*) boxptr_NBackendDAE_strongcomponentinfo,0}};
 #define boxvar_NBackendDAE_strongcomponentinfo MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_strongcomponentinfo)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NBackendDAE_backenddaeinfo(threadData_t *threadData, modelica_metatype _bdae);
 #define boxptr_NBackendDAE_backenddaeinfo omc_NBackendDAE_backenddaeinfo
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_backenddaeinfo,2,0) {(void*) boxptr_NBackendDAE_backenddaeinfo,0}};
 #define boxvar_NBackendDAE_backenddaeinfo MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_backenddaeinfo)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lowerFunctions(threadData_t *threadData, modelica_metatype __omcQ_24in_5FfuncMap);
 #define boxptr_NBackendDAE_lowerFunctions omc_NBackendDAE_lowerFunctions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerFunctions,2,0) {(void*) boxptr_NBackendDAE_lowerFunctions,0}};
 #define boxvar_NBackendDAE_lowerFunctions MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerFunctions)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lowerIteratorExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp);
 #define boxptr_NBackendDAE_lowerIteratorExp omc_NBackendDAE_lowerIteratorExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIteratorExp,2,0) {(void*) boxptr_NBackendDAE_lowerIteratorExp,0}};
 #define boxvar_NBackendDAE_lowerIteratorExp MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIteratorExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lowerIteratorCref(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fiterator);
 #define boxptr_NBackendDAE_lowerIteratorCref omc_NBackendDAE_lowerIteratorCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIteratorCref,2,0) {(void*) boxptr_NBackendDAE_lowerIteratorCref,0}};
 #define boxvar_NBackendDAE_lowerIteratorCref MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIteratorCref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lowerIterator(threadData_t *threadData, modelica_metatype _iterator);
 #define boxptr_NBackendDAE_lowerIterator omc_NBackendDAE_lowerIterator
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIterator,2,0) {(void*) boxptr_NBackendDAE_lowerIterator,0}};
 #define boxvar_NBackendDAE_lowerIterator MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerIterator)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lowerEquationIterators(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feqn, modelica_metatype _variables, modelica_metatype _set);
 #define boxptr_NBackendDAE_lowerEquationIterators omc_NBackendDAE_lowerEquationIterators
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerEquationIterators,2,0) {(void*) boxptr_NBackendDAE_lowerEquationIterators,0}};
 #define boxvar_NBackendDAE_lowerEquationIterators MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerEquationIterators)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lowerComponentReferenceInstNode(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _var);
 #define boxptr_NBackendDAE_lowerComponentReferenceInstNode omc_NBackendDAE_lowerComponentReferenceInstNode
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceInstNode,2,0) {(void*) boxptr_NBackendDAE_lowerComponentReferenceInstNode,0}};
@@ -259,17 +261,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceInst
 #define boxptr_NBackendDAE_collectIterators omc_NBackendDAE_collectIterators
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lowerComponentReference(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _variables, modelica_boolean _complete);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBackendDAE_lowerComponentReference(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcref, modelica_metatype _variables, modelica_metatype _complete);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReference,2,0) {(void*) boxptr_NBackendDAE_lowerComponentReference,0}};
 #define boxvar_NBackendDAE_lowerComponentReference MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReference)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lowerComponentReferenceExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _variables, modelica_boolean _complete);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBackendDAE_lowerComponentReferenceExp(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fexp, modelica_metatype _variables, modelica_metatype _complete);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceExp,2,0) {(void*) boxptr_NBackendDAE_lowerComponentReferenceExp,0}};
 #define boxvar_NBackendDAE_lowerComponentReferenceExp MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceExp)
@@ -278,17 +280,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerComponentReferenceExp,
 #define boxptr_NBackendDAE_lowerComponentReferences omc_NBackendDAE_lowerComponentReferences
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lowerEquationAttributes(threadData_t *threadData, modelica_metatype _ty, modelica_boolean _init);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBackendDAE_lowerEquationAttributes(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _init);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerEquationAttributes,2,0) {(void*) boxptr_NBackendDAE_lowerEquationAttributes,0}};
 #define boxvar_NBackendDAE_lowerEquationAttributes MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerEquationAttributes)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lowerAlgorithm(threadData_t *threadData, modelica_metatype _alg, modelica_boolean _init);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBackendDAE_lowerAlgorithm(threadData_t *threadData, modelica_metatype _alg, modelica_metatype _init);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerAlgorithm,2,0) {(void*) boxptr_NBackendDAE_lowerAlgorithm,0}};
 #define boxvar_NBackendDAE_lowerAlgorithm MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerAlgorithm)
@@ -312,14 +314,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerAlgorithm,2,0) {(void*
 #define boxptr_NBackendDAE_lowerEquationData omc_NBackendDAE_lowerEquationData
 
 
-DLLDirection
+DLLModelDirection
 void omc_NBackendDAE_lowerUnkownRecordChildren(threadData_t *threadData, modelica_metatype _var_ptr, modelica_metatype _variables);
 #define boxptr_NBackendDAE_lowerUnkownRecordChildren omc_NBackendDAE_lowerUnkownRecordChildren
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerUnkownRecordChildren,2,0) {(void*) boxptr_NBackendDAE_lowerUnkownRecordChildren,0}};
 #define boxvar_NBackendDAE_lowerUnkownRecordChildren MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerUnkownRecordChildren)
 
 
-DLLDirection
+DLLModelDirection
 void omc_NBackendDAE_lowerRecordChildren(threadData_t *threadData, modelica_metatype _var_ptr, modelica_metatype _variables);
 #define boxptr_NBackendDAE_lowerRecordChildren omc_NBackendDAE_lowerRecordChildren
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerRecordChildren,2,0) {(void*) boxptr_NBackendDAE_lowerRecordChildren,0}};
@@ -338,94 +340,94 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lowerRecordChildren,2,0) {(
 #define boxptr_NBackendDAE_lowerVariableData omc_NBackendDAE_lowerVariableData
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_getLoopResiduals(threadData_t *threadData, modelica_metatype _bdae);
 #define boxptr_NBackendDAE_getLoopResiduals omc_NBackendDAE_getLoopResiduals
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_getLoopResiduals,2,0) {(void*) boxptr_NBackendDAE_getLoopResiduals,0}};
 #define boxvar_NBackendDAE_getLoopResiduals MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_getLoopResiduals)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_updateDiscreteStates(threadData_t *threadData, modelica_metatype __omcQ_24in_5FvarData, modelica_metatype _acc_discrete_states, modelica_metatype _acc_previous);
 #define boxptr_NBackendDAE_updateDiscreteStates omc_NBackendDAE_updateDiscreteStates
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_updateDiscreteStates,2,0) {(void*) boxptr_NBackendDAE_updateDiscreteStates,0}};
 #define boxvar_NBackendDAE_updateDiscreteStates MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_updateDiscreteStates)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_removeStream(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
 #define boxptr_NBackendDAE_removeStream omc_NBackendDAE_removeStream
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_removeStream,2,0) {(void*) boxptr_NBackendDAE_removeStream,0}};
 #define boxvar_NBackendDAE_removeStream MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_removeStream)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_simplify(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_boolean _init);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBackendDAE_simplify(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _init);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_simplify,2,0) {(void*) boxptr_NBackendDAE_simplify,0}};
 #define boxvar_NBackendDAE_simplify MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_simplify)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_applyModules(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _modules, modelica_metatype _eq_filter_opt, modelica_integer _clock_idx, modelica_metatype *out_module_clocks);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBackendDAE_applyModules(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _modules, modelica_metatype _eq_filter_opt, modelica_metatype _clock_idx, modelica_metatype *out_module_clocks);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_applyModules,2,0) {(void*) boxptr_NBackendDAE_applyModules,0}};
 #define boxvar_NBackendDAE_applyModules MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_applyModules)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
 #define boxptr_NBackendDAE_main omc_NBackendDAE_main
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_main,2,0) {(void*) boxptr_NBackendDAE_main,0}};
 #define boxvar_NBackendDAE_main MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_main)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_lower(threadData_t *threadData, modelica_metatype _flatModel, modelica_metatype _funcMap);
 #define boxptr_NBackendDAE_lower omc_NBackendDAE_lower
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_lower,2,0) {(void*) boxptr_NBackendDAE_lower,0}};
 #define boxvar_NBackendDAE_lower MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_lower)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_sizes(threadData_t *threadData, modelica_metatype _bdae, modelica_metatype *out_eqnSizes);
 #define boxptr_NBackendDAE_sizes omc_NBackendDAE_sizes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_sizes,2,0) {(void*) boxptr_NBackendDAE_sizes,0}};
 #define boxvar_NBackendDAE_sizes MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_sizes)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_getFunctionMap(threadData_t *threadData, modelica_metatype _bdae);
 #define boxptr_NBackendDAE_getFunctionMap omc_NBackendDAE_getFunctionMap
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_getFunctionMap,2,0) {(void*) boxptr_NBackendDAE_getFunctionMap,0}};
 #define boxvar_NBackendDAE_getFunctionMap MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_getFunctionMap)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NBackendDAE_getIsAdjoint(threadData_t *threadData, modelica_metatype _bdae);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NBackendDAE_getIsAdjoint(threadData_t *threadData, modelica_metatype _bdae);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_getIsAdjoint,2,0) {(void*) boxptr_NBackendDAE_getIsAdjoint,0}};
 #define boxvar_NBackendDAE_getIsAdjoint MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_getIsAdjoint)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_setVarData(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae, modelica_metatype _varData);
 #define boxptr_NBackendDAE_setVarData omc_NBackendDAE_setVarData
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_setVarData,2,0) {(void*) boxptr_NBackendDAE_setVarData,0}};
 #define boxvar_NBackendDAE_setVarData MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_setVarData)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBackendDAE_getVarData(threadData_t *threadData, modelica_metatype _bdae);
 #define boxptr_NBackendDAE_getVarData omc_NBackendDAE_getVarData
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_getVarData,2,0) {(void*) boxptr_NBackendDAE_getVarData,0}};
 #define boxvar_NBackendDAE_getVarData MMC_REFSTRUCTLIT(boxvar_lit_NBackendDAE_getVarData)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NBackendDAE_toString(threadData_t *threadData, modelica_metatype _bdae, modelica_string __omcQ_24in_5Fstr);
 #define boxptr_NBackendDAE_toString omc_NBackendDAE_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBackendDAE_toString,2,0) {(void*) boxptr_NBackendDAE_toString,0}};

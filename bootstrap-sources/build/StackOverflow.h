@@ -12,7 +12,7 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 void omc_StackOverflow_clearStacktraceMessages(threadData_t *threadData);
 #define boxptr_StackOverflow_clearStacktraceMessages omc_StackOverflow_clearStacktraceMessages
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StackOverflow_clearStacktraceMessages,2,0) {(void*) boxptr_StackOverflow_clearStacktraceMessages,0}};
@@ -20,25 +20,25 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_StackOverflow_clearStacktraceMessages,2
 
 extern void mmc_clearStacktraceMessages(OpenModelica_threadData_ThreadData*);
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_StackOverflow_hasStacktraceMessages(threadData_t *threadData);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_StackOverflow_hasStacktraceMessages(threadData_t *threadData);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StackOverflow_hasStacktraceMessages,2,0) {(void*) boxptr_StackOverflow_hasStacktraceMessages,0}};
 #define boxvar_StackOverflow_hasStacktraceMessages MMC_REFSTRUCTLIT(boxvar_lit_StackOverflow_hasStacktraceMessages)
 
 extern int mmc_hasStacktraceMessages(OpenModelica_threadData_ThreadData*);
 
-DLLDirection
+DLLModelDirection
 void omc_StackOverflow_setStacktraceMessages(threadData_t *threadData, modelica_integer _numSkip, modelica_integer _numFrames);
-DLLDirection
+DLLModelDirection
 void boxptr_StackOverflow_setStacktraceMessages(threadData_t *threadData, modelica_metatype _numSkip, modelica_metatype _numFrames);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StackOverflow_setStacktraceMessages,2,0) {(void*) boxptr_StackOverflow_setStacktraceMessages,0}};
 #define boxvar_StackOverflow_setStacktraceMessages MMC_REFSTRUCTLIT(boxvar_lit_StackOverflow_setStacktraceMessages)
 
 extern void mmc_setStacktraceMessages_threadData(OpenModelica_threadData_ThreadData*, int /*_numSkip*/, int /*_numFrames*/);
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_StackOverflow_getStacktraceMessages(threadData_t *threadData);
 #define boxptr_StackOverflow_getStacktraceMessages omc_StackOverflow_getStacktraceMessages
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StackOverflow_getStacktraceMessages,2,0) {(void*) boxptr_StackOverflow_getStacktraceMessages,0}};
@@ -46,29 +46,29 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_StackOverflow_getStacktraceMessages,2,0
 
 extern modelica_metatype mmc_getStacktraceMessages_threadData(OpenModelica_threadData_ThreadData*);
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_StackOverflow_readableStacktraceMessages(threadData_t *threadData);
 #define boxptr_StackOverflow_readableStacktraceMessages omc_StackOverflow_readableStacktraceMessages
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StackOverflow_readableStacktraceMessages,2,0) {(void*) boxptr_StackOverflow_readableStacktraceMessages,0}};
 #define boxvar_StackOverflow_readableStacktraceMessages MMC_REFSTRUCTLIT(boxvar_lit_StackOverflow_readableStacktraceMessages)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_StackOverflow_getReadableMessage(threadData_t *threadData, modelica_string _delimiter);
 #define boxptr_StackOverflow_getReadableMessage omc_StackOverflow_getReadableMessage
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StackOverflow_getReadableMessage,2,0) {(void*) boxptr_StackOverflow_getReadableMessage,0}};
 #define boxvar_StackOverflow_getReadableMessage MMC_REFSTRUCTLIT(boxvar_lit_StackOverflow_getReadableMessage)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_StackOverflow_generateReadableMessage(threadData_t *threadData, modelica_integer _numFrames, modelica_integer _numSkip, modelica_string _delimiter);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_StackOverflow_generateReadableMessage(threadData_t *threadData, modelica_metatype _numFrames, modelica_metatype _numSkip, modelica_metatype _delimiter);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StackOverflow_generateReadableMessage,2,0) {(void*) boxptr_StackOverflow_generateReadableMessage,0}};
 #define boxvar_StackOverflow_generateReadableMessage MMC_REFSTRUCTLIT(boxvar_lit_StackOverflow_generateReadableMessage)
 
 
-DLLDirection
+DLLModelDirection
 void omc_StackOverflow_triggerStackOverflow(threadData_t *threadData);
 #define boxptr_StackOverflow_triggerStackOverflow omc_StackOverflow_triggerStackOverflow
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StackOverflow_triggerStackOverflow,2,0) {(void*) boxptr_StackOverflow_triggerStackOverflow,0}};

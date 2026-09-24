@@ -25,7 +25,7 @@ extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NBBindings_main(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fbdae);
 #define boxptr_NBBindings_main omc_NBBindings_main
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NBBindings_main,2,0) {(void*) boxptr_NBBindings_main,0}};

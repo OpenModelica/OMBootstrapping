@@ -111,7 +111,7 @@ extern struct record_description HpcOmTaskGraph_TaskGraphMeta_TASKGRAPHMETA__des
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmEqSystems_createSingleBlockSchedule(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _metaIn, modelica_metatype _scheduledTasks, modelica_metatype _sccSimEqMapping);
 #define boxptr_HpcOmEqSystems_createSingleBlockSchedule omc_HpcOmEqSystems_createSingleBlockSchedule
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_createSingleBlockSchedule,2,0) {(void*) boxptr_HpcOmEqSystems_createSingleBlockSchedule,0}};
@@ -124,7 +124,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_createSingleBlockSchedul
 #define boxptr_HpcOmEqSystems_buildTaskgraphMetaForTornSystem omc_HpcOmEqSystems_buildTaskgraphMetaForTornSystem
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmEqSystems_parallelizeTornSystems(threadData_t *threadData, modelica_metatype _graphIn, modelica_metatype _metaIn, modelica_metatype _sccSimEqMapping, modelica_metatype _simVarMapping, modelica_metatype _inDAE, modelica_metatype *out_daeNodeIdcs);
 #define boxptr_HpcOmEqSystems_parallelizeTornSystems omc_HpcOmEqSystems_parallelizeTornSystems
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_parallelizeTornSystems,2,0) {(void*) boxptr_HpcOmEqSystems_parallelizeTornSystems,0}};
@@ -227,7 +227,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_parallelizeTornSystems,2
 #define boxptr_HpcOmEqSystems_updateAssignmentsByComp omc_HpcOmEqSystems_updateAssignmentsByComp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HpcOmEqSystems_partitionLinearTornSystem(threadData_t *threadData, modelica_metatype _daeIn);
 #define boxptr_HpcOmEqSystems_partitionLinearTornSystem omc_HpcOmEqSystems_partitionLinearTornSystem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HpcOmEqSystems_partitionLinearTornSystem,2,0) {(void*) boxptr_HpcOmEqSystems_partitionLinearTornSystem,0}};

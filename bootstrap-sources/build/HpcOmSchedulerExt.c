@@ -29,7 +29,7 @@ modelica_metatype boxptr_HpcOmSchedulerExt_schedulehMetis(threadData_t *threadDa
 {
   modelica_integer tmp1;
   modelica_metatype _res = NULL;
-  tmp1 = mmc_unbox_integer(_nparts);
+  tmp1 = omc_unbox_integer(_nparts);
   _res = omc_HpcOmSchedulerExt_schedulehMetis(threadData, _vwgts, _eptr, _eint, _hewgts, tmp1);
   /* skip box _res; list<#Integer> */
   return _res;
@@ -58,7 +58,7 @@ modelica_metatype boxptr_HpcOmSchedulerExt_scheduleMetis(threadData_t *threadDat
 {
   modelica_integer tmp1;
   modelica_metatype _res = NULL;
-  tmp1 = mmc_unbox_integer(_nparts);
+  tmp1 = omc_unbox_integer(_nparts);
   _res = omc_HpcOmSchedulerExt_scheduleMetis(threadData, _xadj, _adjncy, _vwgt, _adjwgt, tmp1);
   /* skip box _res; list<#Integer> */
   return _res;
@@ -70,7 +70,7 @@ modelica_metatype omc_HpcOmSchedulerExt_readScheduleFromGraphMl(threadData_t *th
   modelica_metatype _res = NULL;
   // _res has no default value.
 
-  _res_ext = HpcOmSchedulerExt_readScheduleFromGraphMl(MMC_STRINGDATA(_filename));
+  _res_ext = HpcOmSchedulerExt_readScheduleFromGraphMl(omc_string_data(_filename));
   _res = (modelica_metatype)_res_ext;
   return _res;
 }

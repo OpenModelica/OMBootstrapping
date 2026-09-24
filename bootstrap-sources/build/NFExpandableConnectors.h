@@ -98,7 +98,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFExpandableConnectors_sortConnections omc_NFExpandableConnectors_sortConnections
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFExpandableConnectors_elaborate(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel, modelica_metatype __omcQ_24in_5Fconnections, modelica_metatype *out_connections);
 #define boxptr_NFExpandableConnectors_elaborate omc_NFExpandableConnectors_elaborate
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFExpandableConnectors_elaborate,2,0) {(void*) boxptr_NFExpandableConnectors_elaborate,0}};

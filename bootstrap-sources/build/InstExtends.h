@@ -207,9 +207,9 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_InstExtends_noImportElements omc_InstExtends_noImportElements
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstExtends_instDerivedClasses(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _inMod, modelica_metatype _inPrefix, modelica_metatype _inClass, modelica_boolean _inBoolean, modelica_metatype _inInfo, modelica_metatype *out_outEnv1, modelica_metatype *out_outIH, modelica_metatype *out_outSCodeElementLst2, modelica_metatype *out_outSCodeEquationLst3, modelica_metatype *out_outSCodeEquationLst4, modelica_metatype *out_outSCodeAlgorithmLst5, modelica_metatype *out_outSCodeAlgorithmLst6, modelica_metatype *out_outMod, modelica_metatype *out_outComments);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_InstExtends_instDerivedClasses(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _inMod, modelica_metatype _inPrefix, modelica_metatype _inClass, modelica_metatype _inBoolean, modelica_metatype _inInfo, modelica_metatype *out_outEnv1, modelica_metatype *out_outIH, modelica_metatype *out_outSCodeElementLst2, modelica_metatype *out_outSCodeEquationLst3, modelica_metatype *out_outSCodeEquationLst4, modelica_metatype *out_outSCodeAlgorithmLst5, modelica_metatype *out_outSCodeAlgorithmLst6, modelica_metatype *out_outMod, modelica_metatype *out_outComments);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstExtends_instDerivedClasses,2,0) {(void*) boxptr_InstExtends_instDerivedClasses,0}};
 #define boxvar_InstExtends_instDerivedClasses MMC_REFSTRUCTLIT(boxvar_lit_InstExtends_instDerivedClasses)
@@ -224,9 +224,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstExtends_instDerivedClasses,2,0) {(v
 #define boxptr_InstExtends_instClassExtendsList omc_InstExtends_instClassExtendsList
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstExtends_instExtendsAndClassExtendsList(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _inMod, modelica_metatype _inPrefix, modelica_metatype _inExtendsElementLst, modelica_metatype _inClassExtendsElementLst, modelica_metatype _inElementsFromExtendsScope, modelica_metatype _inState, modelica_string _inClassName, modelica_boolean _inImpl, modelica_boolean _isPartialInst, modelica_metatype *out_outEnv, modelica_metatype *out_outIH, modelica_metatype *out_outMod, modelica_metatype *out_outElements, modelica_metatype *out_outNormalEqs, modelica_metatype *out_outInitialEqs, modelica_metatype *out_outNormalAlgs, modelica_metatype *out_outInitialAlgs, modelica_metatype *out_outComments);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_InstExtends_instExtendsAndClassExtendsList(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _inMod, modelica_metatype _inPrefix, modelica_metatype _inExtendsElementLst, modelica_metatype _inClassExtendsElementLst, modelica_metatype _inElementsFromExtendsScope, modelica_metatype _inState, modelica_metatype _inClassName, modelica_metatype _inImpl, modelica_metatype _isPartialInst, modelica_metatype *out_outEnv, modelica_metatype *out_outIH, modelica_metatype *out_outMod, modelica_metatype *out_outElements, modelica_metatype *out_outNormalEqs, modelica_metatype *out_outInitialEqs, modelica_metatype *out_outNormalAlgs, modelica_metatype *out_outInitialAlgs, modelica_metatype *out_outComments);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstExtends_instExtendsAndClassExtendsList,2,0) {(void*) boxptr_InstExtends_instExtendsAndClassExtendsList,0}};
 #define boxvar_InstExtends_instExtendsAndClassExtendsList MMC_REFSTRUCTLIT(boxvar_lit_InstExtends_instExtendsAndClassExtendsList)

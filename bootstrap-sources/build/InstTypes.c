@@ -15,12 +15,13 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT2,8,_OMC_LIT2_data);
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_InstTypes_callingScopeStr(threadData_t *threadData, modelica_metatype _inCallingScope)
 {
   modelica_string _str = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
   { /* match expression */
@@ -54,13 +55,14 @@ modelica_string omc_InstTypes_callingScopeStr(threadData_t *threadData, modelica
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _str = tmp1;
+  omc_string_store(&(_str), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 

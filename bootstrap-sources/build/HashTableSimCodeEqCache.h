@@ -12,15 +12,15 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableSimCodeEqCache_emptyHashTableSized(threadData_t *threadData, modelica_integer _size);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_HashTableSimCodeEqCache_emptyHashTableSized(threadData_t *threadData, modelica_metatype _size);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableSimCodeEqCache_emptyHashTableSized,2,0) {(void*) boxptr_HashTableSimCodeEqCache_emptyHashTableSized,0}};
 #define boxvar_HashTableSimCodeEqCache_emptyHashTableSized MMC_REFSTRUCTLIT(boxvar_lit_HashTableSimCodeEqCache_emptyHashTableSized)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_HashTableSimCodeEqCache_emptyHashTable(threadData_t *threadData);
 #define boxptr_HashTableSimCodeEqCache_emptyHashTable omc_HashTableSimCodeEqCache_emptyHashTable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_HashTableSimCodeEqCache_emptyHashTable,2,0) {(void*) boxptr_HashTableSimCodeEqCache_emptyHashTable,0}};

@@ -99,7 +99,7 @@ extern struct record_description Tearing_TearingMethod_USER__DEFINED__TEARING__d
 #define boxptr_Tearing_recursiveTearingCollect omc_Tearing_recursiveTearingCollect
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Tearing_recursiveTearing(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_Tearing_recursiveTearing omc_Tearing_recursiveTearing
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_recursiveTearing,2,0) {(void*) boxptr_Tearing_recursiveTearing,0}};
@@ -196,7 +196,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_recursiveTearing,2,0) {(void*) 
 #define boxptr_Tearing_findDiscrete omc_Tearing_findDiscrete
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Tearing_deleteNegativeEntries(threadData_t *threadData, modelica_metatype _rowIn);
 #define boxptr_Tearing_deleteNegativeEntries omc_Tearing_deleteNegativeEntries
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_deleteNegativeEntries,2,0) {(void*) boxptr_Tearing_deleteNegativeEntries,0}};
@@ -224,9 +224,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_deleteNegativeEntries,2,0) {(vo
 #define boxptr_Tearing_findVareqns omc_Tearing_findVareqns
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Tearing_unsolvable(threadData_t *threadData, modelica_metatype _elem);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Tearing_unsolvable(threadData_t *threadData, modelica_metatype _elem);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_unsolvable,2,0) {(void*) boxptr_Tearing_unsolvable,0}};
 #define boxvar_Tearing_unsolvable MMC_REFSTRUCTLIT(boxvar_lit_Tearing_unsolvable)
@@ -238,7 +238,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_unsolvable,2,0) {(void*) boxptr
 #define boxptr_Tearing_getTearingMethod omc_Tearing_getTearingMethod
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Tearing_tearingSystem(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_Tearing_tearingSystem omc_Tearing_tearingSystem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Tearing_tearingSystem,2,0) {(void*) boxptr_Tearing_tearingSystem,0}};

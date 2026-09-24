@@ -13,7 +13,7 @@ extern "C" {
 extern struct record_description SCodeDump_SCodeDumpOptions_OPTIONS__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DAEDumpTypes_filterStructuralMods(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmod);
 #define boxptr_DAEDumpTypes_filterStructuralMods omc_DAEDumpTypes_filterStructuralMods
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEDumpTypes_filterStructuralMods,2,0) {(void*) boxptr_DAEDumpTypes_filterStructuralMods,0}};
@@ -23,28 +23,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEDumpTypes_filterStructuralMods,2,0) 
 #define boxptr_DAEDumpTypes_dumpAnnotationStr omc_DAEDumpTypes_dumpAnnotationStr
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_DAEDumpTypes_dumpCompAnnotationStr(threadData_t *threadData, modelica_metatype _inComment);
 #define boxptr_DAEDumpTypes_dumpCompAnnotationStr omc_DAEDumpTypes_dumpCompAnnotationStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEDumpTypes_dumpCompAnnotationStr,2,0) {(void*) boxptr_DAEDumpTypes_dumpCompAnnotationStr,0}};
 #define boxvar_DAEDumpTypes_dumpCompAnnotationStr MMC_REFSTRUCTLIT(boxvar_lit_DAEDumpTypes_dumpCompAnnotationStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_DAEDumpTypes_dumpCommentAnnotationStr(threadData_t *threadData, modelica_metatype _inComment);
 #define boxptr_DAEDumpTypes_dumpCommentAnnotationStr omc_DAEDumpTypes_dumpCommentAnnotationStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEDumpTypes_dumpCommentAnnotationStr,2,0) {(void*) boxptr_DAEDumpTypes_dumpCommentAnnotationStr,0}};
 #define boxvar_DAEDumpTypes_dumpCommentAnnotationStr MMC_REFSTRUCTLIT(boxvar_lit_DAEDumpTypes_dumpCommentAnnotationStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_DAEDumpTypes_dumpClassAnnotationStr(threadData_t *threadData, modelica_metatype _inComment);
 #define boxptr_DAEDumpTypes_dumpClassAnnotationStr omc_DAEDumpTypes_dumpClassAnnotationStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEDumpTypes_dumpClassAnnotationStr,2,0) {(void*) boxptr_DAEDumpTypes_dumpClassAnnotationStr,0}};
 #define boxvar_DAEDumpTypes_dumpClassAnnotationStr MMC_REFSTRUCTLIT(boxvar_lit_DAEDumpTypes_dumpClassAnnotationStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_DAEDumpTypes_dumpCommentStr(threadData_t *threadData, modelica_metatype _inComment);
 #define boxptr_DAEDumpTypes_dumpCommentStr omc_DAEDumpTypes_dumpCommentStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_DAEDumpTypes_dumpCommentStr,2,0) {(void*) boxptr_DAEDumpTypes_dumpCommentStr,0}};

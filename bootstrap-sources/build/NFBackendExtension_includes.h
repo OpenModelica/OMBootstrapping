@@ -17,6 +17,7 @@ extern "C" {
 #include "NFFunction.h"
 #include "NFInstNode.h"
 #include "NFType.h"
+#include "PointerWeak.h"
 #include "SCodeUtil.h"
 #include "UnorderedMap.h"
 #include "Util.h"

@@ -129,14 +129,14 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_BlockCallRewrite_parseClassDef omc_BlockCallRewrite_parseClassDef
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BlockCallRewrite_parseClass(threadData_t *threadData, modelica_metatype _in_class, modelica_metatype _defs);
 #define boxptr_BlockCallRewrite_parseClass omc_BlockCallRewrite_parseClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BlockCallRewrite_parseClass,2,0) {(void*) boxptr_BlockCallRewrite_parseClass,0}};
 #define boxvar_BlockCallRewrite_parseClass MMC_REFSTRUCTLIT(boxvar_lit_BlockCallRewrite_parseClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BlockCallRewrite_parseClasses(threadData_t *threadData, modelica_metatype _classes, modelica_metatype _defs);
 #define boxptr_BlockCallRewrite_parseClasses omc_BlockCallRewrite_parseClasses
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BlockCallRewrite_parseClasses,2,0) {(void*) boxptr_BlockCallRewrite_parseClasses,0}};
@@ -146,7 +146,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BlockCallRewrite_parseClasses,2,0) {(vo
 #define boxptr_BlockCallRewrite_parseProgram omc_BlockCallRewrite_parseProgram
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BlockCallRewrite_rewriteBlockCall(threadData_t *threadData, modelica_metatype _inPg, modelica_metatype _inDefs);
 #define boxptr_BlockCallRewrite_rewriteBlockCall omc_BlockCallRewrite_rewriteBlockCall
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BlockCallRewrite_rewriteBlockCall,2,0) {(void*) boxptr_BlockCallRewrite_rewriteBlockCall,0}};

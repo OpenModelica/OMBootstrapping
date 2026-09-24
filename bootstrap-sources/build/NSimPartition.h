@@ -50,6 +50,8 @@ extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
 
 extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
 
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
+
 extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
 
 extern struct record_description NFType_INTEGER__desc;
@@ -71,58 +73,58 @@ extern struct record_description SimCode_SubPartition_SUBPARTITION__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NSimPartition_convertSub(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NSimPartition_convertSub omc_NSimPartition_convertSub
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_convertSub,2,0) {(void*) boxptr_NSimPartition_convertSub,0}};
 #define boxvar_NSimPartition_convertSub MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_convertSub)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NSimPartition_convertBase(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NSimPartition_convertBase omc_NSimPartition_convertBase
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_convertBase,2,0) {(void*) boxptr_NSimPartition_convertBase,0}};
 #define boxvar_NSimPartition_convertBase MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_convertBase)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NSimPartition_toStringShort(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NSimPartition_toStringShort omc_NSimPartition_toStringShort
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_toStringShort,2,0) {(void*) boxptr_NSimPartition_toStringShort,0}};
 #define boxvar_NSimPartition_toStringShort MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_toStringShort)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NSimPartition_toString(threadData_t *threadData, modelica_metatype _part, modelica_string __omcQ_24in_5Fstr);
 #define boxptr_NSimPartition_toString omc_NSimPartition_toString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_toString,2,0) {(void*) boxptr_NSimPartition_toString,0}};
 #define boxvar_NSimPartition_toString MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_toString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_NSimPartition_listToString(threadData_t *threadData, modelica_metatype _parts, modelica_string __omcQ_24in_5Fstr, modelica_string _header);
 #define boxptr_NSimPartition_listToString omc_NSimPartition_listToString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_listToString,2,0) {(void*) boxptr_NSimPartition_listToString,0}};
 #define boxvar_NSimPartition_listToString MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_listToString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NSimPartition_getClock(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_NSimPartition_getClock omc_NSimPartition_getClock
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_getClock,2,0) {(void*) boxptr_NSimPartition_getClock,0}};
 #define boxvar_NSimPartition_getClock MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_getClock)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NSimPartition_createBasePartitions(threadData_t *threadData, modelica_metatype _clock_collector, modelica_metatype __omcQ_24in_5FsimCodeIndices, modelica_metatype *out_eventClocks, modelica_metatype *out_simCodeIndices);
 #define boxptr_NSimPartition_createBasePartitions omc_NSimPartition_createBasePartitions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_createBasePartitions,2,0) {(void*) boxptr_NSimPartition_createBasePartitions,0}};
 #define boxvar_NSimPartition_createBasePartitions MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_createBasePartitions)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NSimPartition_createSubPartition(threadData_t *threadData, modelica_metatype _subClock, modelica_metatype _equations, modelica_metatype _variables, modelica_boolean _holdEvents);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NSimPartition_createSubPartition(threadData_t *threadData, modelica_metatype _subClock, modelica_metatype _equations, modelica_metatype _variables, modelica_metatype _holdEvents);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NSimPartition_createSubPartition,2,0) {(void*) boxptr_NSimPartition_createSubPartition,0}};
 #define boxvar_NSimPartition_createSubPartition MMC_REFSTRUCTLIT(boxvar_lit_NSimPartition_createSubPartition)

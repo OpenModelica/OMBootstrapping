@@ -12,7 +12,7 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_MidCode_varString(threadData_t *threadData, modelica_metatype _var);
 #define boxptr_MidCode_varString omc_MidCode_varString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MidCode_varString,2,0) {(void*) boxptr_MidCode_varString,0}};

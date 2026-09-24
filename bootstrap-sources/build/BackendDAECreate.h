@@ -350,7 +350,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_BackendDAECreate_replaceFillWithExpInAttributes omc_BackendDAECreate_replaceFillWithExpInAttributes
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAECreate_lowerKnownVarSingle(threadData_t *threadData, modelica_metatype _element);
 #define boxptr_BackendDAECreate_lowerKnownVarSingle omc_BackendDAECreate_lowerKnownVarSingle
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_lowerKnownVarSingle,2,0) {(void*) boxptr_BackendDAECreate_lowerKnownVarSingle,0}};
@@ -366,7 +366,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_lowerKnownVarSingle,2,
 #define boxptr_BackendDAECreate_lowerVar omc_BackendDAECreate_lowerVar
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAECreate_lowerVars(threadData_t *threadData, modelica_metatype _inElements, modelica_metatype _functionTree, modelica_metatype _inVars, modelica_metatype _inGlobalKnownVars, modelica_metatype _inExVars, modelica_metatype _inEqns, modelica_metatype _inREqns, modelica_metatype *out_outGlobalKnownVars, modelica_metatype *out_outExVars, modelica_metatype *out_outEqns, modelica_metatype *out_outREqns);
 #define boxptr_BackendDAECreate_lowerVars omc_BackendDAECreate_lowerVars
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_lowerVars,2,0) {(void*) boxptr_BackendDAECreate_lowerVars,0}};
@@ -424,7 +424,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_lowerVars,2,0) {(void*
 #define boxptr_BackendDAECreate_collectRecordElementBindings omc_BackendDAECreate_collectRecordElementBindings
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAECreate_patchRecordBindings(threadData_t *threadData, modelica_metatype _varlst, modelica_metatype _extvarlst, modelica_metatype __omcQ_24in_5FglobalKnownVarLst, modelica_metatype __omcQ_24in_5Feqns, modelica_metatype __omcQ_24in_5Freqns, modelica_metatype __omcQ_24in_5Fieqns, modelica_metatype *out_eqns, modelica_metatype *out_reqns, modelica_metatype *out_ieqns);
 #define boxptr_BackendDAECreate_patchRecordBindings omc_BackendDAECreate_patchRecordBindings
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_patchRecordBindings,2,0) {(void*) boxptr_BackendDAECreate_patchRecordBindings,0}};
@@ -434,7 +434,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_patchRecordBindings,2,
 #define boxptr_BackendDAECreate_printArrayBindingList omc_BackendDAECreate_printArrayBindingList
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BackendDAECreate_lower(threadData_t *threadData, modelica_metatype _lst, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExtraInfo);
 #define boxptr_BackendDAECreate_lower omc_BackendDAECreate_lower
 static const MMC_DEFSTRUCTLIT(boxvar_lit_BackendDAECreate_lower,2,0) {(void*) boxptr_BackendDAECreate_lower,0}};

@@ -27,6 +27,7 @@ extern "C" {
 #include "StringUtil.h"
 #include "System.h"
 #include "Types.h"
+#include "TypesDump.h"
 #include "Util.h"
 #ifdef __cplusplus
 }

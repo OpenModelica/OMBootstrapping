@@ -23,7 +23,7 @@ extern struct record_description ErrorTypes_MessageType_TRANSLATION__desc;
 extern struct record_description ErrorTypes_Severity_ERROR__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_MetaUtil_transformArrayNodesToListNodes(threadData_t *threadData, modelica_metatype _inList);
 #define boxptr_MetaUtil_transformArrayNodesToListNodes omc_MetaUtil_transformArrayNodesToListNodes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MetaUtil_transformArrayNodesToListNodes,2,0) {(void*) boxptr_MetaUtil_transformArrayNodesToListNodes,0}};
@@ -51,7 +51,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_MetaUtil_transformArrayNodesToListNodes
 #define boxptr_MetaUtil_createMetaClasses omc_MetaUtil_createMetaClasses
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_MetaUtil_createMetaClassesInProgram(threadData_t *threadData, modelica_metatype _inProgram);
 #define boxptr_MetaUtil_createMetaClassesInProgram omc_MetaUtil_createMetaClassesInProgram
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MetaUtil_createMetaClassesInProgram,2,0) {(void*) boxptr_MetaUtil_createMetaClassesInProgram,0}};

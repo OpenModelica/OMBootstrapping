@@ -234,12 +234,13 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT75,14,_OMC_LIT75_data);
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, modelica_string _inFunctionName, modelica_metatype _inVals)
 {
   modelica_metatype _outValue = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outValue has no default value.
   { /* match expression */
@@ -404,21 +405,21 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
         switch (MMC_SWITCH_CAST(stringHashDjb2Mod(tmp4_1,4096))) {
         case 3361 /* loadOMSimulator */: {
           modelica_metatype tmpMeta5;
-          if (15 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT0), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (15 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT0), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (!listEmpty(tmp4_2)) goto tmp3_end;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_loadOMSimulator(threadData);
-          tmpMeta5 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta5 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta5;
           goto tmp3_done;
         }
         case 2948 /* unloadOMSimulator */: {
           modelica_metatype tmpMeta6;
-          if (17 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT1), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (17 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT1), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (!listEmpty(tmp4_2)) goto tmp3_end;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_unloadOMSimulator(threadData);
-          tmpMeta6 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta6 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta6;
           goto tmp3_done;
         }
@@ -427,17 +428,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
-          if (10 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT2), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (10 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT2), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta7 = MMC_CAR(tmp4_2);
           tmpMeta8 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,2,1) == 0) goto tmp3_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
+          tmpMeta9 = OMC_BOX_FIELD(tmpMeta7, 2);
           if (!listEmpty(tmpMeta8)) goto tmp3_end;
           _cref = tmpMeta9;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addBus(threadData, _cref);
-          tmpMeta10 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta10 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta10;
           goto tmp3_done;
         }
@@ -449,23 +450,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
           modelica_metatype tmpMeta17;
-          if (17 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT3), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (17 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT3), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta11 = MMC_CAR(tmp4_2);
           tmpMeta12 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,2,1) == 0) goto tmp3_end;
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 2));
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta11, 2);
           if (listEmpty(tmpMeta12)) goto tmp3_end;
           tmpMeta14 = MMC_CAR(tmpMeta12);
           tmpMeta15 = MMC_CDR(tmpMeta12);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta14,2,1) == 0) goto tmp3_end;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta14), 2));
+          tmpMeta16 = OMC_BOX_FIELD(tmpMeta14, 2);
           if (!listEmpty(tmpMeta15)) goto tmp3_end;
           _crefA = tmpMeta13;
           _crefB = tmpMeta16;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addConnection(threadData, _crefA, _crefB);
-          tmpMeta17 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta17 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta17;
           goto tmp3_done;
         }
@@ -482,31 +483,31 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta27;
           modelica_integer tmp28;
           modelica_metatype tmpMeta29;
-          if (16 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT4), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (16 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT4), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta18 = MMC_CAR(tmp4_2);
           tmpMeta19 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta18,2,1) == 0) goto tmp3_end;
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta18), 2));
+          tmpMeta20 = OMC_BOX_FIELD(tmpMeta18, 2);
           if (listEmpty(tmpMeta19)) goto tmp3_end;
           tmpMeta21 = MMC_CAR(tmpMeta19);
           tmpMeta22 = MMC_CDR(tmpMeta19);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta21,4,2) == 0) goto tmp3_end;
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta21), 3));
-          tmp24 = mmc_unbox_integer(tmpMeta23);
+          tmpMeta23 = OMC_BOX_FIELD(tmpMeta21, 3);
+          tmp24 = omc_unbox_integer(tmpMeta23);
           if (listEmpty(tmpMeta22)) goto tmp3_end;
           tmpMeta25 = MMC_CAR(tmpMeta22);
           tmpMeta26 = MMC_CDR(tmpMeta22);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta25,4,2) == 0) goto tmp3_end;
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 3));
-          tmp28 = mmc_unbox_integer(tmpMeta27);
+          tmpMeta27 = OMC_BOX_FIELD(tmpMeta25, 3);
+          tmp28 = omc_unbox_integer(tmpMeta27);
           if (!listEmpty(tmpMeta26)) goto tmp3_end;
           _cref = tmpMeta20;
           _causality = tmp24  /* pattern as ty=Integer */;
           _type_ = tmp28  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addConnector(threadData, _cref, ((modelica_integer) -1) + _causality, ((modelica_integer) -1) + _type_);
-          tmpMeta29 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta29 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta29;
           goto tmp3_done;
         }
@@ -518,23 +519,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta34;
           modelica_metatype tmpMeta35;
           modelica_metatype tmpMeta36;
-          if (21 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT5), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (21 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT5), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta30 = MMC_CAR(tmp4_2);
           tmpMeta31 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta30,2,1) == 0) goto tmp3_end;
-          tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 2));
+          tmpMeta32 = OMC_BOX_FIELD(tmpMeta30, 2);
           if (listEmpty(tmpMeta31)) goto tmp3_end;
           tmpMeta33 = MMC_CAR(tmpMeta31);
           tmpMeta34 = MMC_CDR(tmpMeta31);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta33,2,1) == 0) goto tmp3_end;
-          tmpMeta35 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta33), 2));
+          tmpMeta35 = OMC_BOX_FIELD(tmpMeta33, 2);
           if (!listEmpty(tmpMeta34)) goto tmp3_end;
           _busCref = tmpMeta32;
           _connectorCref = tmpMeta35;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addConnectorToBus(threadData, _busCref, _connectorCref);
-          tmpMeta36 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta36 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta36;
           goto tmp3_done;
         }
@@ -549,29 +550,29 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta44;
           modelica_metatype tmpMeta45;
           modelica_metatype tmpMeta46;
-          if (24 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT6), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (24 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT6), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta37 = MMC_CAR(tmp4_2);
           tmpMeta38 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta37,2,1) == 0) goto tmp3_end;
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta37), 2));
+          tmpMeta39 = OMC_BOX_FIELD(tmpMeta37, 2);
           if (listEmpty(tmpMeta38)) goto tmp3_end;
           tmpMeta40 = MMC_CAR(tmpMeta38);
           tmpMeta41 = MMC_CDR(tmpMeta38);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta40,2,1) == 0) goto tmp3_end;
-          tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta40), 2));
+          tmpMeta42 = OMC_BOX_FIELD(tmpMeta40, 2);
           if (listEmpty(tmpMeta41)) goto tmp3_end;
           tmpMeta43 = MMC_CAR(tmpMeta41);
           tmpMeta44 = MMC_CDR(tmpMeta41);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta43,2,1) == 0) goto tmp3_end;
-          tmpMeta45 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta43), 2));
+          tmpMeta45 = OMC_BOX_FIELD(tmpMeta43, 2);
           if (!listEmpty(tmpMeta44)) goto tmp3_end;
           _busCref = tmpMeta39;
           _connectorCref = tmpMeta42;
           _stype_ = tmpMeta45;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addConnectorToTLMBus(threadData, _busCref, _connectorCref, _stype_);
-          tmpMeta46 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta46 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta46;
           goto tmp3_done;
         }
@@ -590,28 +591,28 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta58;
           modelica_real tmp59;
           modelica_metatype tmpMeta60;
-          if (28 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT7), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (28 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT7), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta47 = MMC_CAR(tmp4_2);
           tmpMeta48 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta47,2,1) == 0) goto tmp3_end;
-          tmpMeta49 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta47), 2));
+          tmpMeta49 = OMC_BOX_FIELD(tmpMeta47, 2);
           if (listEmpty(tmpMeta48)) goto tmp3_end;
           tmpMeta50 = MMC_CAR(tmpMeta48);
           tmpMeta51 = MMC_CDR(tmpMeta48);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta50,2,1) == 0) goto tmp3_end;
-          tmpMeta52 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta50), 2));
+          tmpMeta52 = OMC_BOX_FIELD(tmpMeta50, 2);
           if (listEmpty(tmpMeta51)) goto tmp3_end;
           tmpMeta53 = MMC_CAR(tmpMeta51);
           tmpMeta54 = MMC_CDR(tmpMeta51);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta53,2,1) == 0) goto tmp3_end;
-          tmpMeta55 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta53), 2));
+          tmpMeta55 = OMC_BOX_FIELD(tmpMeta53, 2);
           if (listEmpty(tmpMeta54)) goto tmp3_end;
           tmpMeta56 = MMC_CAR(tmpMeta54);
           tmpMeta57 = MMC_CDR(tmpMeta54);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta56,1,1) == 0) goto tmp3_end;
-          tmpMeta58 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta56), 2));
-          tmp59 = mmc_unbox_real(tmpMeta58);
+          tmpMeta58 = OMC_BOX_FIELD(tmpMeta56, 2);
+          tmp59 = omc_unbox_real(tmpMeta58);
           if (!listEmpty(tmpMeta57)) goto tmp3_end;
           _signal = tmpMeta49;
           _s_lower = tmpMeta52;
@@ -619,7 +620,7 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           _stepSize = tmp59  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addDynamicValueIndicator(threadData, _signal, _s_lower, _s_upper, _stepSize);
-          tmpMeta60 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta60 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta60;
           goto tmp3_done;
         }
@@ -628,17 +629,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta62;
           modelica_metatype tmpMeta63;
           modelica_metatype tmpMeta64;
-          if (21 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT8), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (21 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT8), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta61 = MMC_CAR(tmp4_2);
           tmpMeta62 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta61,2,1) == 0) goto tmp3_end;
-          tmpMeta63 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta61), 2));
+          tmpMeta63 = OMC_BOX_FIELD(tmpMeta61, 2);
           if (!listEmpty(tmpMeta62)) goto tmp3_end;
           _signal = tmpMeta63;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addEventIndicator(threadData, _signal);
-          tmpMeta64 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta64 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta64;
           goto tmp3_done;
         }
@@ -653,29 +654,29 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta72;
           modelica_metatype tmpMeta73;
           modelica_metatype tmpMeta74;
-          if (20 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT9), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (20 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT9), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta65 = MMC_CAR(tmp4_2);
           tmpMeta66 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta65,2,1) == 0) goto tmp3_end;
-          tmpMeta67 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta65), 2));
+          tmpMeta67 = OMC_BOX_FIELD(tmpMeta65, 2);
           if (listEmpty(tmpMeta66)) goto tmp3_end;
           tmpMeta68 = MMC_CAR(tmpMeta66);
           tmpMeta69 = MMC_CDR(tmpMeta66);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta68,2,1) == 0) goto tmp3_end;
-          tmpMeta70 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta68), 2));
+          tmpMeta70 = OMC_BOX_FIELD(tmpMeta68, 2);
           if (listEmpty(tmpMeta69)) goto tmp3_end;
           tmpMeta71 = MMC_CAR(tmpMeta69);
           tmpMeta72 = MMC_CDR(tmpMeta69);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta71,2,1) == 0) goto tmp3_end;
-          tmpMeta73 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta71), 2));
+          tmpMeta73 = OMC_BOX_FIELD(tmpMeta71, 2);
           if (!listEmpty(tmpMeta72)) goto tmp3_end;
           _cref = tmpMeta67;
           _path = tmpMeta70;
           _startscript = tmpMeta73;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addExternalModel(threadData, _cref, _path, _startscript);
-          tmpMeta74 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta74 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta74;
           goto tmp3_done;
         }
@@ -687,23 +688,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta79;
           modelica_metatype tmpMeta80;
           modelica_metatype tmpMeta81;
-          if (23 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT10), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (23 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT10), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta75 = MMC_CAR(tmp4_2);
           tmpMeta76 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta75,2,1) == 0) goto tmp3_end;
-          tmpMeta77 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta75), 2));
+          tmpMeta77 = OMC_BOX_FIELD(tmpMeta75, 2);
           if (listEmpty(tmpMeta76)) goto tmp3_end;
           tmpMeta78 = MMC_CAR(tmpMeta76);
           tmpMeta79 = MMC_CDR(tmpMeta76);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta78,2,1) == 0) goto tmp3_end;
-          tmpMeta80 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta78), 2));
+          tmpMeta80 = OMC_BOX_FIELD(tmpMeta78, 2);
           if (!listEmpty(tmpMeta79)) goto tmp3_end;
           _cref = tmpMeta77;
           _regex = tmpMeta80;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addSignalsToResults(threadData, _cref, _regex);
-          tmpMeta81 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta81 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta81;
           goto tmp3_done;
         }
@@ -724,30 +725,30 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta95;
           modelica_real tmp96;
           modelica_metatype tmpMeta97;
-          if (27 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT11), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (27 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT11), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta82 = MMC_CAR(tmp4_2);
           tmpMeta83 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta82,2,1) == 0) goto tmp3_end;
-          tmpMeta84 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta82), 2));
+          tmpMeta84 = OMC_BOX_FIELD(tmpMeta82, 2);
           if (listEmpty(tmpMeta83)) goto tmp3_end;
           tmpMeta85 = MMC_CAR(tmpMeta83);
           tmpMeta86 = MMC_CDR(tmpMeta83);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta85,1,1) == 0) goto tmp3_end;
-          tmpMeta87 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta85), 2));
-          tmp88 = mmc_unbox_real(tmpMeta87);
+          tmpMeta87 = OMC_BOX_FIELD(tmpMeta85, 2);
+          tmp88 = omc_unbox_real(tmpMeta87);
           if (listEmpty(tmpMeta86)) goto tmp3_end;
           tmpMeta89 = MMC_CAR(tmpMeta86);
           tmpMeta90 = MMC_CDR(tmpMeta86);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta89,1,1) == 0) goto tmp3_end;
-          tmpMeta91 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta89), 2));
-          tmp92 = mmc_unbox_real(tmpMeta91);
+          tmpMeta91 = OMC_BOX_FIELD(tmpMeta89, 2);
+          tmp92 = omc_unbox_real(tmpMeta91);
           if (listEmpty(tmpMeta90)) goto tmp3_end;
           tmpMeta93 = MMC_CAR(tmpMeta90);
           tmpMeta94 = MMC_CDR(tmpMeta90);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta93,1,1) == 0) goto tmp3_end;
-          tmpMeta95 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta93), 2));
-          tmp96 = mmc_unbox_real(tmpMeta95);
+          tmpMeta95 = OMC_BOX_FIELD(tmpMeta93, 2);
+          tmp96 = omc_unbox_real(tmpMeta95);
           if (!listEmpty(tmpMeta94)) goto tmp3_end;
           _signal = tmpMeta84;
           _lower = tmp88  /* pattern as ty=Real */;
@@ -755,7 +756,7 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           _stepSize = tmp96  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addStaticValueIndicator(threadData, _signal, _lower, _upper, _stepSize);
-          tmpMeta97 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta97 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta97;
           goto tmp3_done;
         }
@@ -767,23 +768,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta102;
           modelica_metatype tmpMeta103;
           modelica_metatype tmpMeta104;
-          if (15 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT12), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (15 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT12), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta98 = MMC_CAR(tmp4_2);
           tmpMeta99 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta98,2,1) == 0) goto tmp3_end;
-          tmpMeta100 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta98), 2));
+          tmpMeta100 = OMC_BOX_FIELD(tmpMeta98, 2);
           if (listEmpty(tmpMeta99)) goto tmp3_end;
           tmpMeta101 = MMC_CAR(tmpMeta99);
           tmpMeta102 = MMC_CDR(tmpMeta99);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta101,2,1) == 0) goto tmp3_end;
-          tmpMeta103 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta101), 2));
+          tmpMeta103 = OMC_BOX_FIELD(tmpMeta101, 2);
           if (!listEmpty(tmpMeta102)) goto tmp3_end;
           _cref = tmpMeta100;
           _fmuPath = tmpMeta103;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addSubModel(threadData, _cref, _fmuPath);
-          tmpMeta104 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta104 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta104;
           goto tmp3_done;
         }
@@ -796,24 +797,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta110;
           modelica_integer tmp111;
           modelica_metatype tmpMeta112;
-          if (13 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT13), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (13 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT13), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta105 = MMC_CAR(tmp4_2);
           tmpMeta106 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta105,2,1) == 0) goto tmp3_end;
-          tmpMeta107 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta105), 2));
+          tmpMeta107 = OMC_BOX_FIELD(tmpMeta105, 2);
           if (listEmpty(tmpMeta106)) goto tmp3_end;
           tmpMeta108 = MMC_CAR(tmpMeta106);
           tmpMeta109 = MMC_CDR(tmpMeta106);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta108,4,2) == 0) goto tmp3_end;
-          tmpMeta110 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta108), 3));
-          tmp111 = mmc_unbox_integer(tmpMeta110);
+          tmpMeta110 = OMC_BOX_FIELD(tmpMeta108, 3);
+          tmp111 = omc_unbox_integer(tmpMeta110);
           if (!listEmpty(tmpMeta109)) goto tmp3_end;
           _cref = tmpMeta107;
           _type_ = tmp111  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addSystem(threadData, _cref, ((modelica_integer) -1) + _type_);
-          tmpMeta112 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta112 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta112;
           goto tmp3_done;
         }
@@ -822,17 +823,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta114;
           modelica_metatype tmpMeta115;
           modelica_metatype tmpMeta116;
-          if (20 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT14), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (20 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT14), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta113 = MMC_CAR(tmp4_2);
           tmpMeta114 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta113,2,1) == 0) goto tmp3_end;
-          tmpMeta115 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta113), 2));
+          tmpMeta115 = OMC_BOX_FIELD(tmpMeta113, 2);
           if (!listEmpty(tmpMeta114)) goto tmp3_end;
           _signal = tmpMeta115;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addTimeIndicator(threadData, _signal);
-          tmpMeta116 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta116 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta116;
           goto tmp3_done;
         }
@@ -853,30 +854,30 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta130;
           modelica_integer tmp131;
           modelica_metatype tmpMeta132;
-          if (13 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT15), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (13 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT15), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta117 = MMC_CAR(tmp4_2);
           tmpMeta118 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta117,2,1) == 0) goto tmp3_end;
-          tmpMeta119 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta117), 2));
+          tmpMeta119 = OMC_BOX_FIELD(tmpMeta117, 2);
           if (listEmpty(tmpMeta118)) goto tmp3_end;
           tmpMeta120 = MMC_CAR(tmpMeta118);
           tmpMeta121 = MMC_CDR(tmpMeta118);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta120,4,2) == 0) goto tmp3_end;
-          tmpMeta122 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta120), 3));
-          tmp123 = mmc_unbox_integer(tmpMeta122);
+          tmpMeta122 = OMC_BOX_FIELD(tmpMeta120, 3);
+          tmp123 = omc_unbox_integer(tmpMeta122);
           if (listEmpty(tmpMeta121)) goto tmp3_end;
           tmpMeta124 = MMC_CAR(tmpMeta121);
           tmpMeta125 = MMC_CDR(tmpMeta121);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta124,0,1) == 0) goto tmp3_end;
-          tmpMeta126 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta124), 2));
-          tmp127 = mmc_unbox_integer(tmpMeta126);
+          tmpMeta126 = OMC_BOX_FIELD(tmpMeta124, 2);
+          tmp127 = omc_unbox_integer(tmpMeta126);
           if (listEmpty(tmpMeta125)) goto tmp3_end;
           tmpMeta128 = MMC_CAR(tmpMeta125);
           tmpMeta129 = MMC_CDR(tmpMeta125);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta128,4,2) == 0) goto tmp3_end;
-          tmpMeta130 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta128), 3));
-          tmp131 = mmc_unbox_integer(tmpMeta130);
+          tmpMeta130 = OMC_BOX_FIELD(tmpMeta128, 3);
+          tmp131 = omc_unbox_integer(tmpMeta130);
           if (!listEmpty(tmpMeta129)) goto tmp3_end;
           _cref = tmpMeta119;
           _domain = tmp123  /* pattern as ty=Integer */;
@@ -884,7 +885,7 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           _interpolation = tmp131  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addTLMBus(threadData, _cref, ((modelica_integer) -1) + _domain, _dimensions, ((modelica_integer) -1) + _interpolation);
-          tmpMeta132 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta132 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta132;
           goto tmp3_done;
         }
@@ -912,41 +913,41 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta153;
           modelica_real tmp154;
           modelica_metatype tmpMeta155;
-          if (20 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT16), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (20 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT16), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta133 = MMC_CAR(tmp4_2);
           tmpMeta134 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta133,2,1) == 0) goto tmp3_end;
-          tmpMeta135 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta133), 2));
+          tmpMeta135 = OMC_BOX_FIELD(tmpMeta133, 2);
           if (listEmpty(tmpMeta134)) goto tmp3_end;
           tmpMeta136 = MMC_CAR(tmpMeta134);
           tmpMeta137 = MMC_CDR(tmpMeta134);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta136,2,1) == 0) goto tmp3_end;
-          tmpMeta138 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta136), 2));
+          tmpMeta138 = OMC_BOX_FIELD(tmpMeta136, 2);
           if (listEmpty(tmpMeta137)) goto tmp3_end;
           tmpMeta139 = MMC_CAR(tmpMeta137);
           tmpMeta140 = MMC_CDR(tmpMeta137);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta139,1,1) == 0) goto tmp3_end;
-          tmpMeta141 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta139), 2));
-          tmp142 = mmc_unbox_real(tmpMeta141);
+          tmpMeta141 = OMC_BOX_FIELD(tmpMeta139, 2);
+          tmp142 = omc_unbox_real(tmpMeta141);
           if (listEmpty(tmpMeta140)) goto tmp3_end;
           tmpMeta143 = MMC_CAR(tmpMeta140);
           tmpMeta144 = MMC_CDR(tmpMeta140);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta143,1,1) == 0) goto tmp3_end;
-          tmpMeta145 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta143), 2));
-          tmp146 = mmc_unbox_real(tmpMeta145);
+          tmpMeta145 = OMC_BOX_FIELD(tmpMeta143, 2);
+          tmp146 = omc_unbox_real(tmpMeta145);
           if (listEmpty(tmpMeta144)) goto tmp3_end;
           tmpMeta147 = MMC_CAR(tmpMeta144);
           tmpMeta148 = MMC_CDR(tmpMeta144);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta147,1,1) == 0) goto tmp3_end;
-          tmpMeta149 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta147), 2));
-          tmp150 = mmc_unbox_real(tmpMeta149);
+          tmpMeta149 = OMC_BOX_FIELD(tmpMeta147, 2);
+          tmp150 = omc_unbox_real(tmpMeta149);
           if (listEmpty(tmpMeta148)) goto tmp3_end;
           tmpMeta151 = MMC_CAR(tmpMeta148);
           tmpMeta152 = MMC_CDR(tmpMeta148);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta151,1,1) == 0) goto tmp3_end;
-          tmpMeta153 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta151), 2));
-          tmp154 = mmc_unbox_real(tmpMeta153);
+          tmpMeta153 = OMC_BOX_FIELD(tmpMeta151, 2);
+          tmp154 = omc_unbox_real(tmpMeta153);
           if (!listEmpty(tmpMeta152)) goto tmp3_end;
           _crefA = tmpMeta135;
           _crefB = tmpMeta138;
@@ -956,7 +957,7 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           _angularimpedance = tmp154  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__addTLMConnection(threadData, _crefA, _crefB, _delay, _alpha, _linearimpedance, _angularimpedance);
-          tmpMeta155 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta155 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta155;
           goto tmp3_done;
         }
@@ -979,34 +980,34 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta171;
           modelica_real tmp172;
           modelica_metatype tmpMeta173;
-          if (28 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT17), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (28 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT17), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta156 = MMC_CAR(tmp4_2);
           tmpMeta157 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta156,2,1) == 0) goto tmp3_end;
-          tmpMeta158 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta156), 2));
+          tmpMeta158 = OMC_BOX_FIELD(tmpMeta156, 2);
           if (listEmpty(tmpMeta157)) goto tmp3_end;
           tmpMeta159 = MMC_CAR(tmpMeta157);
           tmpMeta160 = MMC_CDR(tmpMeta157);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta159,2,1) == 0) goto tmp3_end;
-          tmpMeta161 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta159), 2));
+          tmpMeta161 = OMC_BOX_FIELD(tmpMeta159, 2);
           if (listEmpty(tmpMeta160)) goto tmp3_end;
           tmpMeta162 = MMC_CAR(tmpMeta160);
           tmpMeta163 = MMC_CDR(tmpMeta160);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta162,2,1) == 0) goto tmp3_end;
-          tmpMeta164 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta162), 2));
+          tmpMeta164 = OMC_BOX_FIELD(tmpMeta162, 2);
           if (listEmpty(tmpMeta163)) goto tmp3_end;
           tmpMeta165 = MMC_CAR(tmpMeta163);
           tmpMeta166 = MMC_CDR(tmpMeta163);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta165,1,1) == 0) goto tmp3_end;
-          tmpMeta167 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta165), 2));
-          tmp168 = mmc_unbox_real(tmpMeta167);
+          tmpMeta167 = OMC_BOX_FIELD(tmpMeta165, 2);
+          tmp168 = omc_unbox_real(tmpMeta167);
           if (listEmpty(tmpMeta166)) goto tmp3_end;
           tmpMeta169 = MMC_CAR(tmpMeta166);
           tmpMeta170 = MMC_CDR(tmpMeta166);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta169,1,1) == 0) goto tmp3_end;
-          tmpMeta171 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta169), 2));
-          tmp172 = mmc_unbox_real(tmpMeta171);
+          tmpMeta171 = OMC_BOX_FIELD(tmpMeta169, 2);
+          tmp172 = omc_unbox_real(tmpMeta171);
           if (!listEmpty(tmpMeta170)) goto tmp3_end;
           _filenameA = tmpMeta158;
           _filenameB = tmpMeta161;
@@ -1015,7 +1016,7 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           _absTol = tmp172  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__compareSimulationResults(threadData, _filenameA, _filenameB, _var, _relTol, _absTol);
-          tmpMeta173 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta173 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta173;
           goto tmp3_done;
         }
@@ -1027,23 +1028,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta178;
           modelica_metatype tmpMeta179;
           modelica_metatype tmpMeta180;
-          if (14 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT18), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (14 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT18), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta174 = MMC_CAR(tmp4_2);
           tmpMeta175 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta174,2,1) == 0) goto tmp3_end;
-          tmpMeta176 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta174), 2));
+          tmpMeta176 = OMC_BOX_FIELD(tmpMeta174, 2);
           if (listEmpty(tmpMeta175)) goto tmp3_end;
           tmpMeta177 = MMC_CAR(tmpMeta175);
           tmpMeta178 = MMC_CDR(tmpMeta175);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta177,2,1) == 0) goto tmp3_end;
-          tmpMeta179 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta177), 2));
+          tmpMeta179 = OMC_BOX_FIELD(tmpMeta177, 2);
           if (!listEmpty(tmpMeta178)) goto tmp3_end;
           _source = tmpMeta176;
           _target = tmpMeta179;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__copySystem(threadData, _source, _target);
-          tmpMeta180 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta180 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta180;
           goto tmp3_done;
         }
@@ -1052,17 +1053,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta182;
           modelica_metatype tmpMeta183;
           modelica_metatype tmpMeta184;
-          if (10 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT19), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (10 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT19), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta181 = MMC_CAR(tmp4_2);
           tmpMeta182 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta181,2,1) == 0) goto tmp3_end;
-          tmpMeta183 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta181), 2));
+          tmpMeta183 = OMC_BOX_FIELD(tmpMeta181, 2);
           if (!listEmpty(tmpMeta182)) goto tmp3_end;
           _cref = tmpMeta183;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__delete(threadData, _cref);
-          tmpMeta184 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta184 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta184;
           goto tmp3_done;
         }
@@ -1074,23 +1075,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta189;
           modelica_metatype tmpMeta190;
           modelica_metatype tmpMeta191;
-          if (20 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT20), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (20 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT20), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta185 = MMC_CAR(tmp4_2);
           tmpMeta186 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta185,2,1) == 0) goto tmp3_end;
-          tmpMeta187 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta185), 2));
+          tmpMeta187 = OMC_BOX_FIELD(tmpMeta185, 2);
           if (listEmpty(tmpMeta186)) goto tmp3_end;
           tmpMeta188 = MMC_CAR(tmpMeta186);
           tmpMeta189 = MMC_CDR(tmpMeta186);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta188,2,1) == 0) goto tmp3_end;
-          tmpMeta190 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta188), 2));
+          tmpMeta190 = OMC_BOX_FIELD(tmpMeta188, 2);
           if (!listEmpty(tmpMeta189)) goto tmp3_end;
           _crefA = tmpMeta187;
           _crefB = tmpMeta190;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__deleteConnection(threadData, _crefA, _crefB);
-          tmpMeta191 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta191 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta191;
           goto tmp3_done;
         }
@@ -1102,23 +1103,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta196;
           modelica_metatype tmpMeta197;
           modelica_metatype tmpMeta198;
-          if (26 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT21), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (26 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT21), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta192 = MMC_CAR(tmp4_2);
           tmpMeta193 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta192,2,1) == 0) goto tmp3_end;
-          tmpMeta194 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta192), 2));
+          tmpMeta194 = OMC_BOX_FIELD(tmpMeta192, 2);
           if (listEmpty(tmpMeta193)) goto tmp3_end;
           tmpMeta195 = MMC_CAR(tmpMeta193);
           tmpMeta196 = MMC_CDR(tmpMeta193);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta195,2,1) == 0) goto tmp3_end;
-          tmpMeta197 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta195), 2));
+          tmpMeta197 = OMC_BOX_FIELD(tmpMeta195, 2);
           if (!listEmpty(tmpMeta196)) goto tmp3_end;
           _busCref = tmpMeta194;
           _connectorCref = tmpMeta197;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__deleteConnectorFromBus(threadData, _busCref, _connectorCref);
-          tmpMeta198 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta198 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta198;
           goto tmp3_done;
         }
@@ -1130,23 +1131,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta203;
           modelica_metatype tmpMeta204;
           modelica_metatype tmpMeta205;
-          if (29 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT22), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (29 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT22), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta199 = MMC_CAR(tmp4_2);
           tmpMeta200 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta199,2,1) == 0) goto tmp3_end;
-          tmpMeta201 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta199), 2));
+          tmpMeta201 = OMC_BOX_FIELD(tmpMeta199, 2);
           if (listEmpty(tmpMeta200)) goto tmp3_end;
           tmpMeta202 = MMC_CAR(tmpMeta200);
           tmpMeta203 = MMC_CDR(tmpMeta200);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta202,2,1) == 0) goto tmp3_end;
-          tmpMeta204 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta202), 2));
+          tmpMeta204 = OMC_BOX_FIELD(tmpMeta202, 2);
           if (!listEmpty(tmpMeta203)) goto tmp3_end;
           _busCref = tmpMeta201;
           _connectorCref = tmpMeta204;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__deleteConnectorFromTLMBus(threadData, _busCref, _connectorCref);
-          tmpMeta205 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta205 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta205;
           goto tmp3_done;
         }
@@ -1158,23 +1159,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta210;
           modelica_metatype tmpMeta211;
           modelica_metatype tmpMeta212;
-          if (10 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT23), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (10 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT23), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta206 = MMC_CAR(tmp4_2);
           tmpMeta207 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta206,2,1) == 0) goto tmp3_end;
-          tmpMeta208 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta206), 2));
+          tmpMeta208 = OMC_BOX_FIELD(tmpMeta206, 2);
           if (listEmpty(tmpMeta207)) goto tmp3_end;
           tmpMeta209 = MMC_CAR(tmpMeta207);
           tmpMeta210 = MMC_CDR(tmpMeta207);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta209,2,1) == 0) goto tmp3_end;
-          tmpMeta211 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta209), 2));
+          tmpMeta211 = OMC_BOX_FIELD(tmpMeta209, 2);
           if (!listEmpty(tmpMeta210)) goto tmp3_end;
           _cref = tmpMeta208;
           _filename = tmpMeta211;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__export(threadData, _cref, _filename);
-          tmpMeta212 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta212 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta212;
           goto tmp3_done;
         }
@@ -1192,27 +1193,27 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta223;
           modelica_metatype tmpMeta224;
           modelica_metatype tmpMeta225;
-          if (26 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT24), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (26 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT24), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta213 = MMC_CAR(tmp4_2);
           tmpMeta214 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta213,2,1) == 0) goto tmp3_end;
-          tmpMeta215 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta213), 2));
+          tmpMeta215 = OMC_BOX_FIELD(tmpMeta213, 2);
           if (listEmpty(tmpMeta214)) goto tmp3_end;
           tmpMeta216 = MMC_CAR(tmpMeta214);
           tmpMeta217 = MMC_CDR(tmpMeta214);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta216,2,1) == 0) goto tmp3_end;
-          tmpMeta218 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta216), 2));
+          tmpMeta218 = OMC_BOX_FIELD(tmpMeta216, 2);
           if (listEmpty(tmpMeta217)) goto tmp3_end;
           tmpMeta219 = MMC_CAR(tmpMeta217);
           tmpMeta220 = MMC_CDR(tmpMeta217);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta219,2,1) == 0) goto tmp3_end;
-          tmpMeta221 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta219), 2));
+          tmpMeta221 = OMC_BOX_FIELD(tmpMeta219, 2);
           if (listEmpty(tmpMeta220)) goto tmp3_end;
           tmpMeta222 = MMC_CAR(tmpMeta220);
           tmpMeta223 = MMC_CDR(tmpMeta220);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta222,2,1) == 0) goto tmp3_end;
-          tmpMeta224 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta222), 2));
+          tmpMeta224 = OMC_BOX_FIELD(tmpMeta222, 2);
           if (!listEmpty(tmpMeta223)) goto tmp3_end;
           _cref = tmpMeta215;
           _initialization = tmpMeta218;
@@ -1220,7 +1221,7 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           _simulation = tmpMeta224;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__exportDependencyGraphs(threadData, _cref, _initialization, _event, _simulation);
-          tmpMeta225 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta225 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta225;
           goto tmp3_done;
         }
@@ -1232,20 +1233,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta230;
           modelica_metatype tmpMeta231;
           modelica_metatype tmpMeta232;
-          if (18 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT25), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (18 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT25), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta226 = MMC_CAR(tmp4_2);
           tmpMeta227 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta226,2,1) == 0) goto tmp3_end;
-          tmpMeta228 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta226), 2));
+          tmpMeta228 = OMC_BOX_FIELD(tmpMeta226, 2);
           if (!listEmpty(tmpMeta227)) goto tmp3_end;
           _cref = tmpMeta228;
           /* Pattern matching succeeded */
           _contents = omc_OMSimulatorExt_oms__exportSnapshot(threadData, _cref ,&_status);
-          tmpMeta230 = mmc_mk_box2(5, &Values_Value_STRING__desc, _contents);
-          tmpMeta231 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta230 = omc_mk_box2(5, &Values_Value_STRING__desc, _contents);
+          tmpMeta231 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta229 = mmc_mk_cons(tmpMeta230, mmc_mk_cons(tmpMeta231, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta232 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta229);
+          tmpMeta232 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta229);
           tmpMeta1 = tmpMeta232;
           goto tmp3_done;
         }
@@ -1257,20 +1258,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta237;
           modelica_metatype tmpMeta238;
           modelica_metatype tmpMeta239;
-          if (18 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT26), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (18 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT26), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta233 = MMC_CAR(tmp4_2);
           tmpMeta234 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta233,2,1) == 0) goto tmp3_end;
-          tmpMeta235 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta233), 2));
+          tmpMeta235 = OMC_BOX_FIELD(tmpMeta233, 2);
           if (!listEmpty(tmpMeta234)) goto tmp3_end;
           _filename = tmpMeta235;
           /* Pattern matching succeeded */
           _kind = omc_OMSimulatorExt_oms__extractFMIKind(threadData, _filename ,&_status);
-          tmpMeta237 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_kind));
-          tmpMeta238 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta237 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_kind));
+          tmpMeta238 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta236 = mmc_mk_cons(tmpMeta237, mmc_mk_cons(tmpMeta238, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta239 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta236);
+          tmpMeta239 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta236);
           tmpMeta1 = tmpMeta239;
           goto tmp3_done;
         }
@@ -1282,20 +1283,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta244;
           modelica_metatype tmpMeta245;
           modelica_metatype tmpMeta246;
-          if (14 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT27), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (14 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT27), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta240 = MMC_CAR(tmp4_2);
           tmpMeta241 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta240,2,1) == 0) goto tmp3_end;
-          tmpMeta242 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta240), 2));
+          tmpMeta242 = OMC_BOX_FIELD(tmpMeta240, 2);
           if (!listEmpty(tmpMeta241)) goto tmp3_end;
           _cref = tmpMeta242;
           /* Pattern matching succeeded */
           _b = omc_OMSimulatorExt_oms__getBoolean(threadData, _cref ,&_status);
-          tmpMeta244 = mmc_mk_box2(6, &Values_Value_BOOL__desc, mmc_mk_boolean(_b));
-          tmpMeta245 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta244 = omc_mk_box2(6, &Values_Value_BOOL__desc, omc_mk_boolean(_b));
+          tmpMeta245 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta243 = mmc_mk_cons(tmpMeta244, mmc_mk_cons(tmpMeta245, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta246 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta243);
+          tmpMeta246 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta243);
           tmpMeta1 = tmpMeta246;
           goto tmp3_done;
         }
@@ -1307,20 +1308,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta251;
           modelica_metatype tmpMeta252;
           modelica_metatype tmpMeta253;
-          if (20 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT28), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (20 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT28), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta247 = MMC_CAR(tmp4_2);
           tmpMeta248 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta247,2,1) == 0) goto tmp3_end;
-          tmpMeta249 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta247), 2));
+          tmpMeta249 = OMC_BOX_FIELD(tmpMeta247, 2);
           if (!listEmpty(tmpMeta248)) goto tmp3_end;
           _cref = tmpMeta249;
           /* Pattern matching succeeded */
           _rvalue = omc_OMSimulatorExt_oms__getFixedStepSize(threadData, _cref ,&_status);
-          tmpMeta251 = mmc_mk_box2(4, &Values_Value_REAL__desc, mmc_mk_real(_rvalue));
-          tmpMeta252 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta251 = omc_mk_box2(4, &Values_Value_REAL__desc, omc_mk_real(_rvalue));
+          tmpMeta252 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta250 = mmc_mk_cons(tmpMeta251, mmc_mk_cons(tmpMeta252, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta253 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta250);
+          tmpMeta253 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta250);
           tmpMeta1 = tmpMeta253;
           goto tmp3_done;
         }
@@ -1332,20 +1333,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta258;
           modelica_metatype tmpMeta259;
           modelica_metatype tmpMeta260;
-          if (14 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT29), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (14 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT29), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta254 = MMC_CAR(tmp4_2);
           tmpMeta255 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta254,2,1) == 0) goto tmp3_end;
-          tmpMeta256 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta254), 2));
+          tmpMeta256 = OMC_BOX_FIELD(tmpMeta254, 2);
           if (!listEmpty(tmpMeta255)) goto tmp3_end;
           _cref = tmpMeta256;
           /* Pattern matching succeeded */
           _ivalue = omc_OMSimulatorExt_oms__getInteger(threadData, _cref ,&_status);
-          tmpMeta258 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_ivalue));
-          tmpMeta259 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta258 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_ivalue));
+          tmpMeta259 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta257 = mmc_mk_cons(tmpMeta258, mmc_mk_cons(tmpMeta259, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta260 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta257);
+          tmpMeta260 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta257);
           tmpMeta1 = tmpMeta260;
           goto tmp3_done;
         }
@@ -1357,20 +1358,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta265;
           modelica_metatype tmpMeta266;
           modelica_metatype tmpMeta267;
-          if (17 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT30), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (17 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT30), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta261 = MMC_CAR(tmp4_2);
           tmpMeta262 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta261,2,1) == 0) goto tmp3_end;
-          tmpMeta263 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta261), 2));
+          tmpMeta263 = OMC_BOX_FIELD(tmpMeta261, 2);
           if (!listEmpty(tmpMeta262)) goto tmp3_end;
           _cref = tmpMeta263;
           /* Pattern matching succeeded */
           _ivalue = omc_OMSimulatorExt_oms__getModelState(threadData, _cref ,&_status);
-          tmpMeta265 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_ivalue));
-          tmpMeta266 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta265 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_ivalue));
+          tmpMeta266 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta264 = mmc_mk_cons(tmpMeta265, mmc_mk_cons(tmpMeta266, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta267 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta264);
+          tmpMeta267 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta264);
           tmpMeta1 = tmpMeta267;
           goto tmp3_done;
         }
@@ -1382,20 +1383,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta272;
           modelica_metatype tmpMeta273;
           modelica_metatype tmpMeta274;
-          if (11 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT31), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (11 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT31), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta268 = MMC_CAR(tmp4_2);
           tmpMeta269 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta268,2,1) == 0) goto tmp3_end;
-          tmpMeta270 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta268), 2));
+          tmpMeta270 = OMC_BOX_FIELD(tmpMeta268, 2);
           if (!listEmpty(tmpMeta269)) goto tmp3_end;
           _cref = tmpMeta270;
           /* Pattern matching succeeded */
           _rvalue = omc_OMSimulatorExt_oms__getReal(threadData, _cref ,&_status);
-          tmpMeta272 = mmc_mk_box2(4, &Values_Value_REAL__desc, mmc_mk_real(_rvalue));
-          tmpMeta273 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta272 = omc_mk_box2(4, &Values_Value_REAL__desc, omc_mk_real(_rvalue));
+          tmpMeta273 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta271 = mmc_mk_cons(tmpMeta272, mmc_mk_cons(tmpMeta273, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta274 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta271);
+          tmpMeta274 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta271);
           tmpMeta1 = tmpMeta274;
           goto tmp3_done;
         }
@@ -1407,20 +1408,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta279;
           modelica_metatype tmpMeta280;
           modelica_metatype tmpMeta281;
-          if (13 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT32), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (13 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT32), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta275 = MMC_CAR(tmp4_2);
           tmpMeta276 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta275,2,1) == 0) goto tmp3_end;
-          tmpMeta277 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta275), 2));
+          tmpMeta277 = OMC_BOX_FIELD(tmpMeta275, 2);
           if (!listEmpty(tmpMeta276)) goto tmp3_end;
           _cref = tmpMeta277;
           /* Pattern matching succeeded */
           _ivalue = omc_OMSimulatorExt_oms__getSolver(threadData, _cref ,&_status);
-          tmpMeta279 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_ivalue));
-          tmpMeta280 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta279 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_ivalue));
+          tmpMeta280 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta278 = mmc_mk_cons(tmpMeta279, mmc_mk_cons(tmpMeta280, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta281 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta278);
+          tmpMeta281 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta278);
           tmpMeta1 = tmpMeta281;
           goto tmp3_done;
         }
@@ -1432,20 +1433,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta286;
           modelica_metatype tmpMeta287;
           modelica_metatype tmpMeta288;
-          if (16 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT33), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (16 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT33), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta282 = MMC_CAR(tmp4_2);
           tmpMeta283 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta282,2,1) == 0) goto tmp3_end;
-          tmpMeta284 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta282), 2));
+          tmpMeta284 = OMC_BOX_FIELD(tmpMeta282, 2);
           if (!listEmpty(tmpMeta283)) goto tmp3_end;
           _cref = tmpMeta284;
           /* Pattern matching succeeded */
           _rvalue = omc_OMSimulatorExt_oms__getStartTime(threadData, _cref ,&_status);
-          tmpMeta286 = mmc_mk_box2(4, &Values_Value_REAL__desc, mmc_mk_real(_rvalue));
-          tmpMeta287 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta286 = omc_mk_box2(4, &Values_Value_REAL__desc, omc_mk_real(_rvalue));
+          tmpMeta287 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta285 = mmc_mk_cons(tmpMeta286, mmc_mk_cons(tmpMeta287, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta288 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta285);
+          tmpMeta288 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta285);
           tmpMeta1 = tmpMeta288;
           goto tmp3_done;
         }
@@ -1457,20 +1458,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta293;
           modelica_metatype tmpMeta294;
           modelica_metatype tmpMeta295;
-          if (15 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT34), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (15 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT34), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta289 = MMC_CAR(tmp4_2);
           tmpMeta290 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta289,2,1) == 0) goto tmp3_end;
-          tmpMeta291 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta289), 2));
+          tmpMeta291 = OMC_BOX_FIELD(tmpMeta289, 2);
           if (!listEmpty(tmpMeta290)) goto tmp3_end;
           _cref = tmpMeta291;
           /* Pattern matching succeeded */
           _rvalue = omc_OMSimulatorExt_oms__getStopTime(threadData, _cref ,&_status);
-          tmpMeta293 = mmc_mk_box2(4, &Values_Value_REAL__desc, mmc_mk_real(_rvalue));
-          tmpMeta294 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta293 = omc_mk_box2(4, &Values_Value_REAL__desc, omc_mk_real(_rvalue));
+          tmpMeta294 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta292 = mmc_mk_cons(tmpMeta293, mmc_mk_cons(tmpMeta294, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta295 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta292);
+          tmpMeta295 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta292);
           tmpMeta1 = tmpMeta295;
           goto tmp3_done;
         }
@@ -1482,20 +1483,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta300;
           modelica_metatype tmpMeta301;
           modelica_metatype tmpMeta302;
-          if (19 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT35), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (19 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT35), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta296 = MMC_CAR(tmp4_2);
           tmpMeta297 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta296,2,1) == 0) goto tmp3_end;
-          tmpMeta298 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta296), 2));
+          tmpMeta298 = OMC_BOX_FIELD(tmpMeta296, 2);
           if (!listEmpty(tmpMeta297)) goto tmp3_end;
           _cref = tmpMeta298;
           /* Pattern matching succeeded */
           _path = omc_OMSimulatorExt_oms__getSubModelPath(threadData, _cref ,&_status);
-          tmpMeta300 = mmc_mk_box2(5, &Values_Value_STRING__desc, _path);
-          tmpMeta301 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta300 = omc_mk_box2(5, &Values_Value_STRING__desc, _path);
+          tmpMeta301 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta299 = mmc_mk_cons(tmpMeta300, mmc_mk_cons(tmpMeta301, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta302 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta299);
+          tmpMeta302 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta299);
           tmpMeta1 = tmpMeta302;
           goto tmp3_done;
         }
@@ -1507,20 +1508,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta307;
           modelica_metatype tmpMeta308;
           modelica_metatype tmpMeta309;
-          if (17 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT36), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (17 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT36), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta303 = MMC_CAR(tmp4_2);
           tmpMeta304 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta303,2,1) == 0) goto tmp3_end;
-          tmpMeta305 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta303), 2));
+          tmpMeta305 = OMC_BOX_FIELD(tmpMeta303, 2);
           if (!listEmpty(tmpMeta304)) goto tmp3_end;
           _cref = tmpMeta305;
           /* Pattern matching succeeded */
           _ivalue = omc_OMSimulatorExt_oms__getSystemType(threadData, _cref ,&_status);
-          tmpMeta307 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_ivalue));
-          tmpMeta308 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta307 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_ivalue));
+          tmpMeta308 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta306 = mmc_mk_cons(tmpMeta307, mmc_mk_cons(tmpMeta308, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta309 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta306);
+          tmpMeta309 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta306);
           tmpMeta1 = tmpMeta309;
           goto tmp3_done;
         }
@@ -1533,21 +1534,21 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta315;
           modelica_metatype tmpMeta316;
           modelica_metatype tmpMeta317;
-          if (16 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT37), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (16 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT37), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta310 = MMC_CAR(tmp4_2);
           tmpMeta311 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta310,2,1) == 0) goto tmp3_end;
-          tmpMeta312 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta310), 2));
+          tmpMeta312 = OMC_BOX_FIELD(tmpMeta310, 2);
           if (!listEmpty(tmpMeta311)) goto tmp3_end;
           _cref = tmpMeta312;
           /* Pattern matching succeeded */
           _absoluteTolerance = omc_OMSimulatorExt_oms__getTolerance(threadData, _cref ,&_relativeTolerance ,&_status);
-          tmpMeta314 = mmc_mk_box2(4, &Values_Value_REAL__desc, mmc_mk_real(_absoluteTolerance));
-          tmpMeta315 = mmc_mk_box2(4, &Values_Value_REAL__desc, mmc_mk_real(_relativeTolerance));
-          tmpMeta316 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta314 = omc_mk_box2(4, &Values_Value_REAL__desc, omc_mk_real(_absoluteTolerance));
+          tmpMeta315 = omc_mk_box2(4, &Values_Value_REAL__desc, omc_mk_real(_relativeTolerance));
+          tmpMeta316 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta313 = mmc_mk_cons(tmpMeta314, mmc_mk_cons(tmpMeta315, mmc_mk_cons(tmpMeta316, MMC_REFSTRUCTLIT(mmc_nil))));
-          tmpMeta317 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta313);
+          tmpMeta317 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta313);
           tmpMeta1 = tmpMeta317;
           goto tmp3_done;
         }
@@ -1561,22 +1562,22 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta324;
           modelica_metatype tmpMeta325;
           modelica_metatype tmpMeta326;
-          if (23 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT38), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (23 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT38), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta318 = MMC_CAR(tmp4_2);
           tmpMeta319 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta318,2,1) == 0) goto tmp3_end;
-          tmpMeta320 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta318), 2));
+          tmpMeta320 = OMC_BOX_FIELD(tmpMeta318, 2);
           if (!listEmpty(tmpMeta319)) goto tmp3_end;
           _cref = tmpMeta320;
           /* Pattern matching succeeded */
           _initialStepSize = omc_OMSimulatorExt_oms__getVariableStepSize(threadData, _cref ,&_minimumStepSize ,&_maximumStepSize ,&_status);
-          tmpMeta322 = mmc_mk_box2(4, &Values_Value_REAL__desc, mmc_mk_real(_initialStepSize));
-          tmpMeta323 = mmc_mk_box2(4, &Values_Value_REAL__desc, mmc_mk_real(_minimumStepSize));
-          tmpMeta324 = mmc_mk_box2(4, &Values_Value_REAL__desc, mmc_mk_real(_maximumStepSize));
-          tmpMeta325 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta322 = omc_mk_box2(4, &Values_Value_REAL__desc, omc_mk_real(_initialStepSize));
+          tmpMeta323 = omc_mk_box2(4, &Values_Value_REAL__desc, omc_mk_real(_minimumStepSize));
+          tmpMeta324 = omc_mk_box2(4, &Values_Value_REAL__desc, omc_mk_real(_maximumStepSize));
+          tmpMeta325 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta321 = mmc_mk_cons(tmpMeta322, mmc_mk_cons(tmpMeta323, mmc_mk_cons(tmpMeta324, mmc_mk_cons(tmpMeta325, MMC_REFSTRUCTLIT(mmc_nil)))));
-          tmpMeta326 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta321);
+          tmpMeta326 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta321);
           tmpMeta1 = tmpMeta326;
           goto tmp3_done;
         }
@@ -1593,31 +1594,31 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta336;
           modelica_real tmp337;
           modelica_metatype tmpMeta338;
-          if (18 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT39), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (18 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT39), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta327 = MMC_CAR(tmp4_2);
           tmpMeta328 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta327,2,1) == 0) goto tmp3_end;
-          tmpMeta329 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta327), 2));
+          tmpMeta329 = OMC_BOX_FIELD(tmpMeta327, 2);
           if (listEmpty(tmpMeta328)) goto tmp3_end;
           tmpMeta330 = MMC_CAR(tmpMeta328);
           tmpMeta331 = MMC_CDR(tmpMeta328);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta330,4,2) == 0) goto tmp3_end;
-          tmpMeta332 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta330), 3));
-          tmp333 = mmc_unbox_integer(tmpMeta332);
+          tmpMeta332 = OMC_BOX_FIELD(tmpMeta330, 3);
+          tmp333 = omc_unbox_integer(tmpMeta332);
           if (listEmpty(tmpMeta331)) goto tmp3_end;
           tmpMeta334 = MMC_CAR(tmpMeta331);
           tmpMeta335 = MMC_CDR(tmpMeta331);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta334,1,1) == 0) goto tmp3_end;
-          tmpMeta336 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta334), 2));
-          tmp337 = mmc_unbox_real(tmpMeta336);
+          tmpMeta336 = OMC_BOX_FIELD(tmpMeta334, 2);
+          tmp337 = omc_unbox_real(tmpMeta336);
           if (!listEmpty(tmpMeta335)) goto tmp3_end;
           _signal = tmpMeta329;
           _faultType = tmp333  /* pattern as ty=Integer */;
           _faultValue = tmp337  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__faultInjection(threadData, _signal, ((modelica_integer) -1) + _faultType, _faultValue);
-          tmpMeta338 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta338 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta338;
           goto tmp3_done;
         }
@@ -1629,20 +1630,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta343;
           modelica_metatype tmpMeta344;
           modelica_metatype tmpMeta345;
-          if (14 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT40), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (14 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT40), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta339 = MMC_CAR(tmp4_2);
           tmpMeta340 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta339,2,1) == 0) goto tmp3_end;
-          tmpMeta341 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta339), 2));
+          tmpMeta341 = OMC_BOX_FIELD(tmpMeta339, 2);
           if (!listEmpty(tmpMeta340)) goto tmp3_end;
           _filename = tmpMeta341;
           /* Pattern matching succeeded */
           _cref = omc_OMSimulatorExt_oms__importFile(threadData, _filename ,&_status);
-          tmpMeta343 = mmc_mk_box2(5, &Values_Value_STRING__desc, _cref);
-          tmpMeta344 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta343 = omc_mk_box2(5, &Values_Value_STRING__desc, _cref);
+          tmpMeta344 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta342 = mmc_mk_cons(tmpMeta343, mmc_mk_cons(tmpMeta344, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta345 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta342);
+          tmpMeta345 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta342);
           tmpMeta1 = tmpMeta345;
           goto tmp3_done;
         }
@@ -1654,23 +1655,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta350;
           modelica_metatype tmpMeta351;
           modelica_metatype tmpMeta352;
-          if (18 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT41), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (18 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT41), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta346 = MMC_CAR(tmp4_2);
           tmpMeta347 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta346,2,1) == 0) goto tmp3_end;
-          tmpMeta348 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta346), 2));
+          tmpMeta348 = OMC_BOX_FIELD(tmpMeta346, 2);
           if (listEmpty(tmpMeta347)) goto tmp3_end;
           tmpMeta349 = MMC_CAR(tmpMeta347);
           tmpMeta350 = MMC_CDR(tmpMeta347);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta349,2,1) == 0) goto tmp3_end;
-          tmpMeta351 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta349), 2));
+          tmpMeta351 = OMC_BOX_FIELD(tmpMeta349, 2);
           if (!listEmpty(tmpMeta350)) goto tmp3_end;
           _cref = tmpMeta348;
           _snapshot = tmpMeta351;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__importSnapshot(threadData, _cref, _snapshot);
-          tmpMeta352 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta352 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta352;
           goto tmp3_done;
         }
@@ -1679,17 +1680,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta354;
           modelica_metatype tmpMeta355;
           modelica_metatype tmpMeta356;
-          if (14 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT42), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (14 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT42), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta353 = MMC_CAR(tmp4_2);
           tmpMeta354 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta353,2,1) == 0) goto tmp3_end;
-          tmpMeta355 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta353), 2));
+          tmpMeta355 = OMC_BOX_FIELD(tmpMeta353, 2);
           if (!listEmpty(tmpMeta354)) goto tmp3_end;
           _cref = tmpMeta355;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__initialize(threadData, _cref);
-          tmpMeta356 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta356 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta356;
           goto tmp3_done;
         }
@@ -1698,17 +1699,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta358;
           modelica_metatype tmpMeta359;
           modelica_metatype tmpMeta360;
-          if (15 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT43), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (15 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT43), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta357 = MMC_CAR(tmp4_2);
           tmpMeta358 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta357,2,1) == 0) goto tmp3_end;
-          tmpMeta359 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta357), 2));
+          tmpMeta359 = OMC_BOX_FIELD(tmpMeta357, 2);
           if (!listEmpty(tmpMeta358)) goto tmp3_end;
           _cref = tmpMeta359;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__instantiate(threadData, _cref);
-          tmpMeta360 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta360 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta360;
           goto tmp3_done;
         }
@@ -1720,20 +1721,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta365;
           modelica_metatype tmpMeta366;
           modelica_metatype tmpMeta367;
-          if (8 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT44), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (8 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT44), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta361 = MMC_CAR(tmp4_2);
           tmpMeta362 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta361,2,1) == 0) goto tmp3_end;
-          tmpMeta363 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta361), 2));
+          tmpMeta363 = OMC_BOX_FIELD(tmpMeta361, 2);
           if (!listEmpty(tmpMeta362)) goto tmp3_end;
           _cref = tmpMeta363;
           /* Pattern matching succeeded */
           _contents = omc_OMSimulatorExt_oms__list(threadData, _cref ,&_status);
-          tmpMeta365 = mmc_mk_box2(5, &Values_Value_STRING__desc, _contents);
-          tmpMeta366 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta365 = omc_mk_box2(5, &Values_Value_STRING__desc, _contents);
+          tmpMeta366 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta364 = mmc_mk_cons(tmpMeta365, mmc_mk_cons(tmpMeta366, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta367 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta364);
+          tmpMeta367 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta364);
           tmpMeta1 = tmpMeta367;
           goto tmp3_done;
         }
@@ -1745,20 +1746,20 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta372;
           modelica_metatype tmpMeta373;
           modelica_metatype tmpMeta374;
-          if (29 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT45), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (29 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT45), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta368 = MMC_CAR(tmp4_2);
           tmpMeta369 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta368,2,1) == 0) goto tmp3_end;
-          tmpMeta370 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta368), 2));
+          tmpMeta370 = OMC_BOX_FIELD(tmpMeta368, 2);
           if (!listEmpty(tmpMeta369)) goto tmp3_end;
           _cref = tmpMeta370;
           /* Pattern matching succeeded */
           _contents = omc_OMSimulatorExt_oms__listUnconnectedConnectors(threadData, _cref ,&_status);
-          tmpMeta372 = mmc_mk_box2(5, &Values_Value_STRING__desc, _contents);
-          tmpMeta373 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta372 = omc_mk_box2(5, &Values_Value_STRING__desc, _contents);
+          tmpMeta373 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta371 = mmc_mk_cons(tmpMeta372, mmc_mk_cons(tmpMeta373, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta374 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta371);
+          tmpMeta374 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta371);
           tmpMeta1 = tmpMeta374;
           goto tmp3_done;
         }
@@ -1773,26 +1774,26 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta382;
           modelica_metatype tmpMeta383;
           modelica_metatype tmpMeta384;
-          if (16 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT46), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (16 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT46), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta375 = MMC_CAR(tmp4_2);
           tmpMeta376 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta375,2,1) == 0) goto tmp3_end;
-          tmpMeta377 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta375), 2));
+          tmpMeta377 = OMC_BOX_FIELD(tmpMeta375, 2);
           if (listEmpty(tmpMeta376)) goto tmp3_end;
           tmpMeta378 = MMC_CAR(tmpMeta376);
           tmpMeta379 = MMC_CDR(tmpMeta376);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta378,2,1) == 0) goto tmp3_end;
-          tmpMeta380 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta378), 2));
+          tmpMeta380 = OMC_BOX_FIELD(tmpMeta378, 2);
           if (!listEmpty(tmpMeta379)) goto tmp3_end;
           _cref = tmpMeta377;
           _snapshot = tmpMeta380;
           /* Pattern matching succeeded */
           _newCref = omc_OMSimulatorExt_oms__loadSnapshot(threadData, _cref, _snapshot ,&_status);
-          tmpMeta382 = mmc_mk_box2(5, &Values_Value_STRING__desc, _newCref);
-          tmpMeta383 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta382 = omc_mk_box2(5, &Values_Value_STRING__desc, _newCref);
+          tmpMeta383 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta381 = mmc_mk_cons(tmpMeta382, mmc_mk_cons(tmpMeta383, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta384 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta381);
+          tmpMeta384 = omc_mk_box2(11, &Values_Value_TUPLE__desc, tmpMeta381);
           tmpMeta1 = tmpMeta384;
           goto tmp3_done;
         }
@@ -1801,17 +1802,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta386;
           modelica_metatype tmpMeta387;
           modelica_metatype tmpMeta388;
-          if (12 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT47), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (12 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT47), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta385 = MMC_CAR(tmp4_2);
           tmpMeta386 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta385,2,1) == 0) goto tmp3_end;
-          tmpMeta387 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta385), 2));
+          tmpMeta387 = OMC_BOX_FIELD(tmpMeta385, 2);
           if (!listEmpty(tmpMeta386)) goto tmp3_end;
           _cref = tmpMeta387;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__newModel(threadData, _cref);
-          tmpMeta388 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta388 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta388;
           goto tmp3_done;
         }
@@ -1823,23 +1824,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta393;
           modelica_metatype tmpMeta394;
           modelica_metatype tmpMeta395;
-          if (28 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT48), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (28 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT48), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta389 = MMC_CAR(tmp4_2);
           tmpMeta390 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta389,2,1) == 0) goto tmp3_end;
-          tmpMeta391 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta389), 2));
+          tmpMeta391 = OMC_BOX_FIELD(tmpMeta389, 2);
           if (listEmpty(tmpMeta390)) goto tmp3_end;
           tmpMeta392 = MMC_CAR(tmpMeta390);
           tmpMeta393 = MMC_CDR(tmpMeta390);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta392,2,1) == 0) goto tmp3_end;
-          tmpMeta394 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta392), 2));
+          tmpMeta394 = OMC_BOX_FIELD(tmpMeta392, 2);
           if (!listEmpty(tmpMeta393)) goto tmp3_end;
           _cref = tmpMeta391;
           _regex = tmpMeta394;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__removeSignalsFromResults(threadData, _cref, _regex);
-          tmpMeta395 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta395 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta395;
           goto tmp3_done;
         }
@@ -1851,23 +1852,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta400;
           modelica_metatype tmpMeta401;
           modelica_metatype tmpMeta402;
-          if (10 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT49), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (10 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT49), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta396 = MMC_CAR(tmp4_2);
           tmpMeta397 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta396,2,1) == 0) goto tmp3_end;
-          tmpMeta398 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta396), 2));
+          tmpMeta398 = OMC_BOX_FIELD(tmpMeta396, 2);
           if (listEmpty(tmpMeta397)) goto tmp3_end;
           tmpMeta399 = MMC_CAR(tmpMeta397);
           tmpMeta400 = MMC_CDR(tmpMeta397);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta399,2,1) == 0) goto tmp3_end;
-          tmpMeta401 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta399), 2));
+          tmpMeta401 = OMC_BOX_FIELD(tmpMeta399, 2);
           if (!listEmpty(tmpMeta400)) goto tmp3_end;
           _cref = tmpMeta398;
           _newCref = tmpMeta401;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__rename(threadData, _cref, _newCref);
-          tmpMeta402 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta402 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta402;
           goto tmp3_done;
         }
@@ -1876,17 +1877,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta404;
           modelica_metatype tmpMeta405;
           modelica_metatype tmpMeta406;
-          if (9 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT50), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (9 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT50), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta403 = MMC_CAR(tmp4_2);
           tmpMeta404 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta403,2,1) == 0) goto tmp3_end;
-          tmpMeta405 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta403), 2));
+          tmpMeta405 = OMC_BOX_FIELD(tmpMeta403, 2);
           if (!listEmpty(tmpMeta404)) goto tmp3_end;
           _cref = tmpMeta405;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__reset(threadData, _cref);
-          tmpMeta406 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta406 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta406;
           goto tmp3_done;
         }
@@ -1895,17 +1896,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta408;
           modelica_metatype tmpMeta409;
           modelica_metatype tmpMeta410;
-          if (11 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT51), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (11 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT51), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta407 = MMC_CAR(tmp4_2);
           tmpMeta408 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta407,2,1) == 0) goto tmp3_end;
-          tmpMeta409 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta407), 2));
+          tmpMeta409 = OMC_BOX_FIELD(tmpMeta407, 2);
           if (!listEmpty(tmpMeta408)) goto tmp3_end;
           _filename = tmpMeta409;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__RunFile(threadData, _filename);
-          tmpMeta410 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta410 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta410;
           goto tmp3_done;
         }
@@ -1918,24 +1919,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta416;
           modelica_integer tmp417;
           modelica_metatype tmpMeta418;
-          if (14 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT52), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (14 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT52), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta411 = MMC_CAR(tmp4_2);
           tmpMeta412 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta411,2,1) == 0) goto tmp3_end;
-          tmpMeta413 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta411), 2));
+          tmpMeta413 = OMC_BOX_FIELD(tmpMeta411, 2);
           if (listEmpty(tmpMeta412)) goto tmp3_end;
           tmpMeta414 = MMC_CAR(tmpMeta412);
           tmpMeta415 = MMC_CDR(tmpMeta412);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta414,3,1) == 0) goto tmp3_end;
-          tmpMeta416 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta414), 2));
-          tmp417 = mmc_unbox_integer(tmpMeta416);
+          tmpMeta416 = OMC_BOX_FIELD(tmpMeta414, 2);
+          tmp417 = omc_unbox_integer(tmpMeta416);
           if (!listEmpty(tmpMeta415)) goto tmp3_end;
           _cref = tmpMeta413;
           _b = tmp417  /* pattern as ty=Boolean */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setBoolean(threadData, _cref, _b);
-          tmpMeta418 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta418 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta418;
           goto tmp3_done;
         }
@@ -1944,17 +1945,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta420;
           modelica_metatype tmpMeta421;
           modelica_metatype tmpMeta422;
-          if (24 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT53), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (24 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT53), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta419 = MMC_CAR(tmp4_2);
           tmpMeta420 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta419,2,1) == 0) goto tmp3_end;
-          tmpMeta421 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta419), 2));
+          tmpMeta421 = OMC_BOX_FIELD(tmpMeta419, 2);
           if (!listEmpty(tmpMeta420)) goto tmp3_end;
           _cmd = tmpMeta421;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setCommandLineOption(threadData, _cmd);
-          tmpMeta422 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta422 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta422;
           goto tmp3_done;
         }
@@ -1967,24 +1968,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta428;
           modelica_real tmp429;
           modelica_metatype tmpMeta430;
-          if (20 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT54), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (20 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT54), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta423 = MMC_CAR(tmp4_2);
           tmpMeta424 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta423,2,1) == 0) goto tmp3_end;
-          tmpMeta425 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta423), 2));
+          tmpMeta425 = OMC_BOX_FIELD(tmpMeta423, 2);
           if (listEmpty(tmpMeta424)) goto tmp3_end;
           tmpMeta426 = MMC_CAR(tmpMeta424);
           tmpMeta427 = MMC_CDR(tmpMeta424);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta426,1,1) == 0) goto tmp3_end;
-          tmpMeta428 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta426), 2));
-          tmp429 = mmc_unbox_real(tmpMeta428);
+          tmpMeta428 = OMC_BOX_FIELD(tmpMeta426, 2);
+          tmp429 = omc_unbox_real(tmpMeta428);
           if (!listEmpty(tmpMeta427)) goto tmp3_end;
           _cref = tmpMeta425;
           _stepSize = tmp429  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setFixedStepSize(threadData, _cref, _stepSize);
-          tmpMeta430 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta430 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta430;
           goto tmp3_done;
         }
@@ -1997,24 +1998,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta436;
           modelica_integer tmp437;
           modelica_metatype tmpMeta438;
-          if (14 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT55), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (14 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT55), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta431 = MMC_CAR(tmp4_2);
           tmpMeta432 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta431,2,1) == 0) goto tmp3_end;
-          tmpMeta433 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta431), 2));
+          tmpMeta433 = OMC_BOX_FIELD(tmpMeta431, 2);
           if (listEmpty(tmpMeta432)) goto tmp3_end;
           tmpMeta434 = MMC_CAR(tmpMeta432);
           tmpMeta435 = MMC_CDR(tmpMeta432);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta434,0,1) == 0) goto tmp3_end;
-          tmpMeta436 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta434), 2));
-          tmp437 = mmc_unbox_integer(tmpMeta436);
+          tmpMeta436 = OMC_BOX_FIELD(tmpMeta434, 2);
+          tmp437 = omc_unbox_integer(tmpMeta436);
           if (!listEmpty(tmpMeta435)) goto tmp3_end;
           _cref = tmpMeta433;
           _ivalue = tmp437  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setInteger(threadData, _cref, _ivalue);
-          tmpMeta438 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta438 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta438;
           goto tmp3_done;
         }
@@ -2023,17 +2024,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta440;
           modelica_metatype tmpMeta441;
           modelica_metatype tmpMeta442;
-          if (14 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT56), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (14 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT56), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta439 = MMC_CAR(tmp4_2);
           tmpMeta440 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta439,2,1) == 0) goto tmp3_end;
-          tmpMeta441 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta439), 2));
+          tmpMeta441 = OMC_BOX_FIELD(tmpMeta439, 2);
           if (!listEmpty(tmpMeta440)) goto tmp3_end;
           _filename = tmpMeta441;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setLogFile(threadData, _filename);
-          tmpMeta442 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta442 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta442;
           goto tmp3_done;
         }
@@ -2046,24 +2047,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta448;
           modelica_real tmp449;
           modelica_metatype tmpMeta450;
-          if (22 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT57), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (22 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT57), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta443 = MMC_CAR(tmp4_2);
           tmpMeta444 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta443,2,1) == 0) goto tmp3_end;
-          tmpMeta445 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta443), 2));
+          tmpMeta445 = OMC_BOX_FIELD(tmpMeta443, 2);
           if (listEmpty(tmpMeta444)) goto tmp3_end;
           tmpMeta446 = MMC_CAR(tmpMeta444);
           tmpMeta447 = MMC_CDR(tmpMeta444);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta446,1,1) == 0) goto tmp3_end;
-          tmpMeta448 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta446), 2));
-          tmp449 = mmc_unbox_real(tmpMeta448);
+          tmpMeta448 = OMC_BOX_FIELD(tmpMeta446, 2);
+          tmp449 = omc_unbox_real(tmpMeta448);
           if (!listEmpty(tmpMeta447)) goto tmp3_end;
           _cref = tmpMeta445;
           _loggingInterval = tmp449  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setLoggingInterval(threadData, _cref, _loggingInterval);
-          tmpMeta450 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta450 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta450;
           goto tmp3_done;
         }
@@ -2073,18 +2074,18 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta453;
           modelica_integer tmp454;
           modelica_metatype tmpMeta455;
-          if (19 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT58), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (19 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT58), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta451 = MMC_CAR(tmp4_2);
           tmpMeta452 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta451,0,1) == 0) goto tmp3_end;
-          tmpMeta453 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta451), 2));
-          tmp454 = mmc_unbox_integer(tmpMeta453);
+          tmpMeta453 = OMC_BOX_FIELD(tmpMeta451, 2);
+          tmp454 = omc_unbox_integer(tmpMeta453);
           if (!listEmpty(tmpMeta452)) goto tmp3_end;
           _logLevel = tmp454  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setLoggingLevel(threadData, _logLevel);
-          tmpMeta455 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta455 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta455;
           goto tmp3_done;
         }
@@ -2097,24 +2098,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta461;
           modelica_real tmp462;
           modelica_metatype tmpMeta463;
-          if (11 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT59), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (11 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT59), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta456 = MMC_CAR(tmp4_2);
           tmpMeta457 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta456,2,1) == 0) goto tmp3_end;
-          tmpMeta458 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta456), 2));
+          tmpMeta458 = OMC_BOX_FIELD(tmpMeta456, 2);
           if (listEmpty(tmpMeta457)) goto tmp3_end;
           tmpMeta459 = MMC_CAR(tmpMeta457);
           tmpMeta460 = MMC_CDR(tmpMeta457);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta459,1,1) == 0) goto tmp3_end;
-          tmpMeta461 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta459), 2));
-          tmp462 = mmc_unbox_real(tmpMeta461);
+          tmpMeta461 = OMC_BOX_FIELD(tmpMeta459, 2);
+          tmp462 = omc_unbox_real(tmpMeta461);
           if (!listEmpty(tmpMeta460)) goto tmp3_end;
           _cref = tmpMeta458;
           _rvalue = tmp462  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setReal(threadData, _cref, _rvalue);
-          tmpMeta463 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta463 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta463;
           goto tmp3_done;
         }
@@ -2127,24 +2128,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta469;
           modelica_real tmp470;
           modelica_metatype tmpMeta471;
-          if (26 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT60), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (26 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT60), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta464 = MMC_CAR(tmp4_2);
           tmpMeta465 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta464,2,1) == 0) goto tmp3_end;
-          tmpMeta466 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta464), 2));
+          tmpMeta466 = OMC_BOX_FIELD(tmpMeta464, 2);
           if (listEmpty(tmpMeta465)) goto tmp3_end;
           tmpMeta467 = MMC_CAR(tmpMeta465);
           tmpMeta468 = MMC_CDR(tmpMeta465);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta467,1,1) == 0) goto tmp3_end;
-          tmpMeta469 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta467), 2));
-          tmp470 = mmc_unbox_real(tmpMeta469);
+          tmpMeta469 = OMC_BOX_FIELD(tmpMeta467, 2);
+          tmp470 = omc_unbox_real(tmpMeta469);
           if (!listEmpty(tmpMeta468)) goto tmp3_end;
           _cref = tmpMeta466;
           _rvalue = tmp470  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setRealInputDerivative(threadData, _cref, _rvalue);
-          tmpMeta471 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta471 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta471;
           goto tmp3_done;
         }
@@ -2160,30 +2161,30 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta480;
           modelica_integer tmp481;
           modelica_metatype tmpMeta482;
-          if (17 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT61), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (17 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT61), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta472 = MMC_CAR(tmp4_2);
           tmpMeta473 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta472,2,1) == 0) goto tmp3_end;
-          tmpMeta474 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta472), 2));
+          tmpMeta474 = OMC_BOX_FIELD(tmpMeta472, 2);
           if (listEmpty(tmpMeta473)) goto tmp3_end;
           tmpMeta475 = MMC_CAR(tmpMeta473);
           tmpMeta476 = MMC_CDR(tmpMeta473);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta475,2,1) == 0) goto tmp3_end;
-          tmpMeta477 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta475), 2));
+          tmpMeta477 = OMC_BOX_FIELD(tmpMeta475, 2);
           if (listEmpty(tmpMeta476)) goto tmp3_end;
           tmpMeta478 = MMC_CAR(tmpMeta476);
           tmpMeta479 = MMC_CDR(tmpMeta476);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta478,0,1) == 0) goto tmp3_end;
-          tmpMeta480 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta478), 2));
-          tmp481 = mmc_unbox_integer(tmpMeta480);
+          tmpMeta480 = OMC_BOX_FIELD(tmpMeta478, 2);
+          tmp481 = omc_unbox_integer(tmpMeta480);
           if (!listEmpty(tmpMeta479)) goto tmp3_end;
           _cref = tmpMeta474;
           _filename = tmpMeta477;
           _bufferSize = tmp481  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setResultFile(threadData, _cref, _filename, _bufferSize);
-          tmpMeta482 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta482 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta482;
           goto tmp3_done;
         }
@@ -2195,23 +2196,23 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta487;
           modelica_metatype tmpMeta488;
           modelica_metatype tmpMeta489;
-          if (19 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT62), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (19 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT62), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta483 = MMC_CAR(tmp4_2);
           tmpMeta484 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta483,2,1) == 0) goto tmp3_end;
-          tmpMeta485 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta483), 2));
+          tmpMeta485 = OMC_BOX_FIELD(tmpMeta483, 2);
           if (listEmpty(tmpMeta484)) goto tmp3_end;
           tmpMeta486 = MMC_CAR(tmpMeta484);
           tmpMeta487 = MMC_CDR(tmpMeta484);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta486,2,1) == 0) goto tmp3_end;
-          tmpMeta488 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta486), 2));
+          tmpMeta488 = OMC_BOX_FIELD(tmpMeta486, 2);
           if (!listEmpty(tmpMeta487)) goto tmp3_end;
           _cref = tmpMeta485;
           _regex = tmpMeta488;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setSignalFilter(threadData, _cref, _regex);
-          tmpMeta489 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta489 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta489;
           goto tmp3_done;
         }
@@ -2224,24 +2225,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta495;
           modelica_integer tmp496;
           modelica_metatype tmpMeta497;
-          if (13 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT63), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (13 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT63), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta490 = MMC_CAR(tmp4_2);
           tmpMeta491 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta490,2,1) == 0) goto tmp3_end;
-          tmpMeta492 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta490), 2));
+          tmpMeta492 = OMC_BOX_FIELD(tmpMeta490, 2);
           if (listEmpty(tmpMeta491)) goto tmp3_end;
           tmpMeta493 = MMC_CAR(tmpMeta491);
           tmpMeta494 = MMC_CDR(tmpMeta491);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta493,4,2) == 0) goto tmp3_end;
-          tmpMeta495 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta493), 3));
-          tmp496 = mmc_unbox_integer(tmpMeta495);
+          tmpMeta495 = OMC_BOX_FIELD(tmpMeta493, 3);
+          tmp496 = omc_unbox_integer(tmpMeta495);
           if (!listEmpty(tmpMeta494)) goto tmp3_end;
           _cref = tmpMeta492;
           _solver = tmp496  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setSolver(threadData, _cref, ((modelica_integer) -1) + _solver);
-          tmpMeta497 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta497 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta497;
           goto tmp3_done;
         }
@@ -2254,24 +2255,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta503;
           modelica_real tmp504;
           modelica_metatype tmpMeta505;
-          if (16 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT64), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (16 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT64), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta498 = MMC_CAR(tmp4_2);
           tmpMeta499 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta498,2,1) == 0) goto tmp3_end;
-          tmpMeta500 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta498), 2));
+          tmpMeta500 = OMC_BOX_FIELD(tmpMeta498, 2);
           if (listEmpty(tmpMeta499)) goto tmp3_end;
           tmpMeta501 = MMC_CAR(tmpMeta499);
           tmpMeta502 = MMC_CDR(tmpMeta499);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta501,1,1) == 0) goto tmp3_end;
-          tmpMeta503 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta501), 2));
-          tmp504 = mmc_unbox_real(tmpMeta503);
+          tmpMeta503 = OMC_BOX_FIELD(tmpMeta501, 2);
+          tmp504 = omc_unbox_real(tmpMeta503);
           if (!listEmpty(tmpMeta502)) goto tmp3_end;
           _cref = tmpMeta500;
           _startTime = tmp504  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setStartTime(threadData, _cref, _startTime);
-          tmpMeta505 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta505 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta505;
           goto tmp3_done;
         }
@@ -2284,24 +2285,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta511;
           modelica_real tmp512;
           modelica_metatype tmpMeta513;
-          if (15 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT65), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (15 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT65), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta506 = MMC_CAR(tmp4_2);
           tmpMeta507 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta506,2,1) == 0) goto tmp3_end;
-          tmpMeta508 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta506), 2));
+          tmpMeta508 = OMC_BOX_FIELD(tmpMeta506, 2);
           if (listEmpty(tmpMeta507)) goto tmp3_end;
           tmpMeta509 = MMC_CAR(tmpMeta507);
           tmpMeta510 = MMC_CDR(tmpMeta507);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta509,1,1) == 0) goto tmp3_end;
-          tmpMeta511 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta509), 2));
-          tmp512 = mmc_unbox_real(tmpMeta511);
+          tmpMeta511 = OMC_BOX_FIELD(tmpMeta509, 2);
+          tmp512 = omc_unbox_real(tmpMeta511);
           if (!listEmpty(tmpMeta510)) goto tmp3_end;
           _cref = tmpMeta508;
           _stopTime = tmp512  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setStopTime(threadData, _cref, _stopTime);
-          tmpMeta513 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta513 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta513;
           goto tmp3_done;
         }
@@ -2310,17 +2311,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta515;
           modelica_metatype tmpMeta516;
           modelica_metatype tmpMeta517;
-          if (20 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT66), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (20 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT66), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta514 = MMC_CAR(tmp4_2);
           tmpMeta515 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta514,2,1) == 0) goto tmp3_end;
-          tmpMeta516 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta514), 2));
+          tmpMeta516 = OMC_BOX_FIELD(tmpMeta514, 2);
           if (!listEmpty(tmpMeta515)) goto tmp3_end;
           _newTempDir = tmpMeta516;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setTempDirectory(threadData, _newTempDir);
-          tmpMeta517 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta517 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta517;
           goto tmp3_done;
         }
@@ -2377,84 +2378,84 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta567;
           modelica_real tmp568;
           modelica_metatype tmpMeta569;
-          if (32 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT67), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (32 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT67), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta518 = MMC_CAR(tmp4_2);
           tmpMeta519 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta518,2,1) == 0) goto tmp3_end;
-          tmpMeta520 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta518), 2));
+          tmpMeta520 = OMC_BOX_FIELD(tmpMeta518, 2);
           if (listEmpty(tmpMeta519)) goto tmp3_end;
           tmpMeta521 = MMC_CAR(tmpMeta519);
           tmpMeta522 = MMC_CDR(tmpMeta519);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta521,1,1) == 0) goto tmp3_end;
-          tmpMeta523 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta521), 2));
-          tmp524 = mmc_unbox_real(tmpMeta523);
+          tmpMeta523 = OMC_BOX_FIELD(tmpMeta521, 2);
+          tmp524 = omc_unbox_real(tmpMeta523);
           if (listEmpty(tmpMeta522)) goto tmp3_end;
           tmpMeta525 = MMC_CAR(tmpMeta522);
           tmpMeta526 = MMC_CDR(tmpMeta522);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta525,1,1) == 0) goto tmp3_end;
-          tmpMeta527 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta525), 2));
-          tmp528 = mmc_unbox_real(tmpMeta527);
+          tmpMeta527 = OMC_BOX_FIELD(tmpMeta525, 2);
+          tmp528 = omc_unbox_real(tmpMeta527);
           if (listEmpty(tmpMeta526)) goto tmp3_end;
           tmpMeta529 = MMC_CAR(tmpMeta526);
           tmpMeta530 = MMC_CDR(tmpMeta526);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta529,1,1) == 0) goto tmp3_end;
-          tmpMeta531 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta529), 2));
-          tmp532 = mmc_unbox_real(tmpMeta531);
+          tmpMeta531 = OMC_BOX_FIELD(tmpMeta529, 2);
+          tmp532 = omc_unbox_real(tmpMeta531);
           if (listEmpty(tmpMeta530)) goto tmp3_end;
           tmpMeta533 = MMC_CAR(tmpMeta530);
           tmpMeta534 = MMC_CDR(tmpMeta530);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta533,1,1) == 0) goto tmp3_end;
-          tmpMeta535 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta533), 2));
-          tmp536 = mmc_unbox_real(tmpMeta535);
+          tmpMeta535 = OMC_BOX_FIELD(tmpMeta533, 2);
+          tmp536 = omc_unbox_real(tmpMeta535);
           if (listEmpty(tmpMeta534)) goto tmp3_end;
           tmpMeta537 = MMC_CAR(tmpMeta534);
           tmpMeta538 = MMC_CDR(tmpMeta534);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta537,1,1) == 0) goto tmp3_end;
-          tmpMeta539 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta537), 2));
-          tmp540 = mmc_unbox_real(tmpMeta539);
+          tmpMeta539 = OMC_BOX_FIELD(tmpMeta537, 2);
+          tmp540 = omc_unbox_real(tmpMeta539);
           if (listEmpty(tmpMeta538)) goto tmp3_end;
           tmpMeta541 = MMC_CAR(tmpMeta538);
           tmpMeta542 = MMC_CDR(tmpMeta538);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta541,1,1) == 0) goto tmp3_end;
-          tmpMeta543 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta541), 2));
-          tmp544 = mmc_unbox_real(tmpMeta543);
+          tmpMeta543 = OMC_BOX_FIELD(tmpMeta541, 2);
+          tmp544 = omc_unbox_real(tmpMeta543);
           if (listEmpty(tmpMeta542)) goto tmp3_end;
           tmpMeta545 = MMC_CAR(tmpMeta542);
           tmpMeta546 = MMC_CDR(tmpMeta542);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta545,1,1) == 0) goto tmp3_end;
-          tmpMeta547 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta545), 2));
-          tmp548 = mmc_unbox_real(tmpMeta547);
+          tmpMeta547 = OMC_BOX_FIELD(tmpMeta545, 2);
+          tmp548 = omc_unbox_real(tmpMeta547);
           if (listEmpty(tmpMeta546)) goto tmp3_end;
           tmpMeta549 = MMC_CAR(tmpMeta546);
           tmpMeta550 = MMC_CDR(tmpMeta546);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta549,1,1) == 0) goto tmp3_end;
-          tmpMeta551 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta549), 2));
-          tmp552 = mmc_unbox_real(tmpMeta551);
+          tmpMeta551 = OMC_BOX_FIELD(tmpMeta549, 2);
+          tmp552 = omc_unbox_real(tmpMeta551);
           if (listEmpty(tmpMeta550)) goto tmp3_end;
           tmpMeta553 = MMC_CAR(tmpMeta550);
           tmpMeta554 = MMC_CDR(tmpMeta550);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta553,1,1) == 0) goto tmp3_end;
-          tmpMeta555 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta553), 2));
-          tmp556 = mmc_unbox_real(tmpMeta555);
+          tmpMeta555 = OMC_BOX_FIELD(tmpMeta553, 2);
+          tmp556 = omc_unbox_real(tmpMeta555);
           if (listEmpty(tmpMeta554)) goto tmp3_end;
           tmpMeta557 = MMC_CAR(tmpMeta554);
           tmpMeta558 = MMC_CDR(tmpMeta554);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta557,1,1) == 0) goto tmp3_end;
-          tmpMeta559 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta557), 2));
-          tmp560 = mmc_unbox_real(tmpMeta559);
+          tmpMeta559 = OMC_BOX_FIELD(tmpMeta557, 2);
+          tmp560 = omc_unbox_real(tmpMeta559);
           if (listEmpty(tmpMeta558)) goto tmp3_end;
           tmpMeta561 = MMC_CAR(tmpMeta558);
           tmpMeta562 = MMC_CDR(tmpMeta558);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta561,1,1) == 0) goto tmp3_end;
-          tmpMeta563 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta561), 2));
-          tmp564 = mmc_unbox_real(tmpMeta563);
+          tmpMeta563 = OMC_BOX_FIELD(tmpMeta561, 2);
+          tmp564 = omc_unbox_real(tmpMeta563);
           if (listEmpty(tmpMeta562)) goto tmp3_end;
           tmpMeta565 = MMC_CAR(tmpMeta562);
           tmpMeta566 = MMC_CDR(tmpMeta562);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta565,1,1) == 0) goto tmp3_end;
-          tmpMeta567 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta565), 2));
-          tmp568 = mmc_unbox_real(tmpMeta567);
+          tmpMeta567 = OMC_BOX_FIELD(tmpMeta565, 2);
+          tmp568 = omc_unbox_real(tmpMeta567);
           if (!listEmpty(tmpMeta566)) goto tmp3_end;
           _cref = tmpMeta520;
           _x1 = tmp524  /* pattern as ty=Real */;
@@ -2471,7 +2472,7 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           _A33 = tmp568  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setTLMPositionAndOrientation(threadData, _cref, _x1, _x2, _x3, _A11, _A12, _A13, _A21, _A22, _A23, _A31, _A32, _A33);
-          tmpMeta569 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta569 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta569;
           goto tmp3_done;
         }
@@ -2491,29 +2492,29 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta582;
           modelica_integer tmp583;
           modelica_metatype tmpMeta584;
-          if (20 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT68), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (20 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT68), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta570 = MMC_CAR(tmp4_2);
           tmpMeta571 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta570,2,1) == 0) goto tmp3_end;
-          tmpMeta572 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta570), 2));
+          tmpMeta572 = OMC_BOX_FIELD(tmpMeta570, 2);
           if (listEmpty(tmpMeta571)) goto tmp3_end;
           tmpMeta573 = MMC_CAR(tmpMeta571);
           tmpMeta574 = MMC_CDR(tmpMeta571);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta573,2,1) == 0) goto tmp3_end;
-          tmpMeta575 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta573), 2));
+          tmpMeta575 = OMC_BOX_FIELD(tmpMeta573, 2);
           if (listEmpty(tmpMeta574)) goto tmp3_end;
           tmpMeta576 = MMC_CAR(tmpMeta574);
           tmpMeta577 = MMC_CDR(tmpMeta574);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta576,0,1) == 0) goto tmp3_end;
-          tmpMeta578 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta576), 2));
-          tmp579 = mmc_unbox_integer(tmpMeta578);
+          tmpMeta578 = OMC_BOX_FIELD(tmpMeta576, 2);
+          tmp579 = omc_unbox_integer(tmpMeta578);
           if (listEmpty(tmpMeta577)) goto tmp3_end;
           tmpMeta580 = MMC_CAR(tmpMeta577);
           tmpMeta581 = MMC_CDR(tmpMeta577);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta580,0,1) == 0) goto tmp3_end;
-          tmpMeta582 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta580), 2));
-          tmp583 = mmc_unbox_integer(tmpMeta582);
+          tmpMeta582 = OMC_BOX_FIELD(tmpMeta580, 2);
+          tmp583 = omc_unbox_integer(tmpMeta582);
           if (!listEmpty(tmpMeta581)) goto tmp3_end;
           _cref = tmpMeta572;
           _address = tmpMeta575;
@@ -2521,7 +2522,7 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           _monitorPort = tmp583  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setTLMSocketData(threadData, _cref, _address, _managerPort, _monitorPort);
-          tmpMeta584 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta584 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta584;
           goto tmp3_done;
         }
@@ -2538,31 +2539,31 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta594;
           modelica_real tmp595;
           modelica_metatype tmpMeta596;
-          if (16 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT69), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (16 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT69), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta585 = MMC_CAR(tmp4_2);
           tmpMeta586 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta585,2,1) == 0) goto tmp3_end;
-          tmpMeta587 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta585), 2));
+          tmpMeta587 = OMC_BOX_FIELD(tmpMeta585, 2);
           if (listEmpty(tmpMeta586)) goto tmp3_end;
           tmpMeta588 = MMC_CAR(tmpMeta586);
           tmpMeta589 = MMC_CDR(tmpMeta586);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta588,1,1) == 0) goto tmp3_end;
-          tmpMeta590 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta588), 2));
-          tmp591 = mmc_unbox_real(tmpMeta590);
+          tmpMeta590 = OMC_BOX_FIELD(tmpMeta588, 2);
+          tmp591 = omc_unbox_real(tmpMeta590);
           if (listEmpty(tmpMeta589)) goto tmp3_end;
           tmpMeta592 = MMC_CAR(tmpMeta589);
           tmpMeta593 = MMC_CDR(tmpMeta589);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta592,1,1) == 0) goto tmp3_end;
-          tmpMeta594 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta592), 2));
-          tmp595 = mmc_unbox_real(tmpMeta594);
+          tmpMeta594 = OMC_BOX_FIELD(tmpMeta592, 2);
+          tmp595 = omc_unbox_real(tmpMeta594);
           if (!listEmpty(tmpMeta593)) goto tmp3_end;
           _cref = tmpMeta587;
           _absoluteTolerance = tmp591  /* pattern as ty=Real */;
           _relativeTolerance = tmp595  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setTolerance(threadData, _cref, _absoluteTolerance, _relativeTolerance);
-          tmpMeta596 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta596 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta596;
           goto tmp3_done;
         }
@@ -2583,30 +2584,30 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta610;
           modelica_real tmp611;
           modelica_metatype tmpMeta612;
-          if (23 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT70), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (23 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT70), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta597 = MMC_CAR(tmp4_2);
           tmpMeta598 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta597,2,1) == 0) goto tmp3_end;
-          tmpMeta599 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta597), 2));
+          tmpMeta599 = OMC_BOX_FIELD(tmpMeta597, 2);
           if (listEmpty(tmpMeta598)) goto tmp3_end;
           tmpMeta600 = MMC_CAR(tmpMeta598);
           tmpMeta601 = MMC_CDR(tmpMeta598);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta600,1,1) == 0) goto tmp3_end;
-          tmpMeta602 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta600), 2));
-          tmp603 = mmc_unbox_real(tmpMeta602);
+          tmpMeta602 = OMC_BOX_FIELD(tmpMeta600, 2);
+          tmp603 = omc_unbox_real(tmpMeta602);
           if (listEmpty(tmpMeta601)) goto tmp3_end;
           tmpMeta604 = MMC_CAR(tmpMeta601);
           tmpMeta605 = MMC_CDR(tmpMeta601);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta604,1,1) == 0) goto tmp3_end;
-          tmpMeta606 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta604), 2));
-          tmp607 = mmc_unbox_real(tmpMeta606);
+          tmpMeta606 = OMC_BOX_FIELD(tmpMeta604, 2);
+          tmp607 = omc_unbox_real(tmpMeta606);
           if (listEmpty(tmpMeta605)) goto tmp3_end;
           tmpMeta608 = MMC_CAR(tmpMeta605);
           tmpMeta609 = MMC_CDR(tmpMeta605);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta608,1,1) == 0) goto tmp3_end;
-          tmpMeta610 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta608), 2));
-          tmp611 = mmc_unbox_real(tmpMeta610);
+          tmpMeta610 = OMC_BOX_FIELD(tmpMeta608, 2);
+          tmp611 = omc_unbox_real(tmpMeta610);
           if (!listEmpty(tmpMeta609)) goto tmp3_end;
           _cref = tmpMeta599;
           _initialStepSize = tmp603  /* pattern as ty=Real */;
@@ -2614,7 +2615,7 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           _maximumStepSize = tmp611  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setVariableStepSize(threadData, _cref, _initialStepSize, _minimumStepSize, _maximumStepSize);
-          tmpMeta612 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta612 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta612;
           goto tmp3_done;
         }
@@ -2623,17 +2624,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta614;
           modelica_metatype tmpMeta615;
           modelica_metatype tmpMeta616;
-          if (23 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT71), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (23 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT71), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta613 = MMC_CAR(tmp4_2);
           tmpMeta614 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta613,2,1) == 0) goto tmp3_end;
-          tmpMeta615 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta613), 2));
+          tmpMeta615 = OMC_BOX_FIELD(tmpMeta613, 2);
           if (!listEmpty(tmpMeta614)) goto tmp3_end;
           _newWorkingDir = tmpMeta615;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__setWorkingDirectory(threadData, _newWorkingDir);
-          tmpMeta616 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta616 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta616;
           goto tmp3_done;
         }
@@ -2642,17 +2643,17 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta618;
           modelica_metatype tmpMeta619;
           modelica_metatype tmpMeta620;
-          if (12 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT72), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (12 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT72), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta617 = MMC_CAR(tmp4_2);
           tmpMeta618 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta617,2,1) == 0) goto tmp3_end;
-          tmpMeta619 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta617), 2));
+          tmpMeta619 = OMC_BOX_FIELD(tmpMeta617, 2);
           if (!listEmpty(tmpMeta618)) goto tmp3_end;
           _cref = tmpMeta619;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__simulate(threadData, _cref);
-          tmpMeta620 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta620 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta620;
           goto tmp3_done;
         }
@@ -2665,24 +2666,24 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta626;
           modelica_real tmp627;
           modelica_metatype tmpMeta628;
-          if (13 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT73), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (13 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT73), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta621 = MMC_CAR(tmp4_2);
           tmpMeta622 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta621,2,1) == 0) goto tmp3_end;
-          tmpMeta623 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta621), 2));
+          tmpMeta623 = OMC_BOX_FIELD(tmpMeta621, 2);
           if (listEmpty(tmpMeta622)) goto tmp3_end;
           tmpMeta624 = MMC_CAR(tmpMeta622);
           tmpMeta625 = MMC_CDR(tmpMeta622);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta624,1,1) == 0) goto tmp3_end;
-          tmpMeta626 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta624), 2));
-          tmp627 = mmc_unbox_real(tmpMeta626);
+          tmpMeta626 = OMC_BOX_FIELD(tmpMeta624, 2);
+          tmp627 = omc_unbox_real(tmpMeta626);
           if (!listEmpty(tmpMeta625)) goto tmp3_end;
           _cref = tmpMeta623;
           _stopTime = tmp627  /* pattern as ty=Real */;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__stepUntil(threadData, _cref, _stopTime);
-          tmpMeta628 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta628 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta628;
           goto tmp3_done;
         }
@@ -2691,27 +2692,27 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
           modelica_metatype tmpMeta630;
           modelica_metatype tmpMeta631;
           modelica_metatype tmpMeta632;
-          if (13 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT74), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (13 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT74), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (listEmpty(tmp4_2)) goto tmp3_end;
           tmpMeta629 = MMC_CAR(tmp4_2);
           tmpMeta630 = MMC_CDR(tmp4_2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta629,2,1) == 0) goto tmp3_end;
-          tmpMeta631 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta629), 2));
+          tmpMeta631 = OMC_BOX_FIELD(tmpMeta629, 2);
           if (!listEmpty(tmpMeta630)) goto tmp3_end;
           _cref = tmpMeta631;
           /* Pattern matching succeeded */
           _status = omc_OMSimulatorExt_oms__terminate(threadData, _cref);
-          tmpMeta632 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_status));
+          tmpMeta632 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_status));
           tmpMeta1 = tmpMeta632;
           goto tmp3_done;
         }
         case 3737 /* oms_getVersion */: {
           modelica_metatype tmpMeta633;
-          if (14 != MMC_STRLEN(tmp4_1) || strcmp(MMC_STRINGDATA(_OMC_LIT75), MMC_STRINGDATA(tmp4_1)) != 0) goto tmp3_end;
+          if (14 != omc_string_len(tmp4_1) || strcmp(omc_string_data(_OMC_LIT75), omc_string_data(tmp4_1)) != 0) goto tmp3_end;
           if (!listEmpty(tmp4_2)) goto tmp3_end;
           /* Pattern matching succeeded */
-          _version = omc_OMSimulatorExt_oms__getVersion(threadData);
-          tmpMeta633 = mmc_mk_box2(5, &Values_Value_STRING__desc, _version);
+          omc_string_store(&(_version), omc_OMSimulatorExt_oms__getVersion(threadData));
+          tmpMeta633 = omc_mk_box2(5, &Values_Value_STRING__desc, _version);
           tmpMeta1 = tmpMeta633;
           goto tmp3_done;
         }
@@ -2721,13 +2722,14 @@ modelica_metatype omc_CevalScriptOMSimulator_ceval(threadData_t *threadData, mod
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outValue = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outValue;
+  omc_ret_ = _outValue;
+  return omc_ret_;
 }
 

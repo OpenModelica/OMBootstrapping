@@ -115,14 +115,14 @@ extern struct record_description UnitAbsyn_InstStore_NOSTORE__desc;
 #define boxptr_InstFunction_checkExtObjOutput omc_InstFunction_checkExtObjOutput
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstFunction_addRecordConstructorFunction(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inType, modelica_metatype _inInfo);
 #define boxptr_InstFunction_addRecordConstructorFunction omc_InstFunction_addRecordConstructorFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstFunction_addRecordConstructorFunction,2,0) {(void*) boxptr_InstFunction_addRecordConstructorFunction,0}};
 #define boxvar_InstFunction_addRecordConstructorFunction MMC_REFSTRUCTLIT(boxvar_lit_InstFunction_addRecordConstructorFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstFunction_getRecordConstructorFunction(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inPath, modelica_metatype *out_outFunc);
 #define boxptr_InstFunction_getRecordConstructorFunction omc_InstFunction_getRecordConstructorFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstFunction_getRecordConstructorFunction,2,0) {(void*) boxptr_InstFunction_getRecordConstructorFunction,0}};
@@ -138,7 +138,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstFunction_getRecordConstructorFuncti
 #define boxptr_InstFunction_instOverloadedFunctions omc_InstFunction_instOverloadedFunctions
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstFunction_implicitFunctionTypeInstantiation(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _inClass, modelica_metatype *out_outEnv, modelica_metatype *out_outIH);
 #define boxptr_InstFunction_implicitFunctionTypeInstantiation omc_InstFunction_implicitFunctionTypeInstantiation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstFunction_implicitFunctionTypeInstantiation,2,0) {(void*) boxptr_InstFunction_implicitFunctionTypeInstantiation,0}};
@@ -151,7 +151,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstFunction_implicitFunctionTypeInstan
 #define boxptr_InstFunction_instantiateDerivativeFuncs omc_InstFunction_instantiateDerivativeFuncs
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstFunction_implicitFunctionInstantiation(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _inMod, modelica_metatype _inPrefix, modelica_metatype _inClass, modelica_metatype _inInstDims, modelica_metatype *out_outEnv, modelica_metatype *out_outIH);
 #define boxptr_InstFunction_implicitFunctionInstantiation omc_InstFunction_implicitFunctionInstantiation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstFunction_implicitFunctionInstantiation,2,0) {(void*) boxptr_InstFunction_implicitFunctionInstantiation,0}};
@@ -167,9 +167,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstFunction_implicitFunctionInstantiat
 #define boxptr_InstFunction_checkExternalObjectMod omc_InstFunction_checkExternalObjectMod
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstFunction_instantiateExternalObject(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _els, modelica_metatype _inMod, modelica_boolean _impl, modelica_metatype _comment, modelica_metatype _info, modelica_metatype *out_outEnv, modelica_metatype *out_outIH, modelica_metatype *out_dae, modelica_metatype *out_ciState);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_InstFunction_instantiateExternalObject(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIH, modelica_metatype _els, modelica_metatype _inMod, modelica_metatype _impl, modelica_metatype _comment, modelica_metatype _info, modelica_metatype *out_outEnv, modelica_metatype *out_outIH, modelica_metatype *out_dae, modelica_metatype *out_ciState);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstFunction_instantiateExternalObject,2,0) {(void*) boxptr_InstFunction_instantiateExternalObject,0}};
 #define boxvar_InstFunction_instantiateExternalObject MMC_REFSTRUCTLIT(boxvar_lit_InstFunction_instantiateExternalObject)

@@ -94,6 +94,8 @@ extern struct record_description NFInstNode_InstNode_NAME__NODE__desc;
 
 extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
 
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
+
 extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
 
 extern struct record_description NFStateMachineFlatten_FlatSmSemantics_FLAT__SM__SEMANTICS__desc;
@@ -235,7 +237,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFStateMachineFlatten_groupStateMachines omc_NFStateMachineFlatten_groupStateMachines
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFStateMachineFlatten_flatten(threadData_t *threadData, modelica_metatype __omcQ_24in_5FflatModel);
 #define boxptr_NFStateMachineFlatten_flatten omc_NFStateMachineFlatten_flatten
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFStateMachineFlatten_flatten,2,0) {(void*) boxptr_NFStateMachineFlatten_flatten,0}};

@@ -114,16 +114,16 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_ConnectUtil_collectAllExpandableCrefsInExp omc_ConnectUtil_collectAllExpandableCrefsInExp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_getAllExpandableCrefsFromDAE(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_ConnectUtil_getAllExpandableCrefsFromDAE omc_ConnectUtil_getAllExpandableCrefsFromDAE
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_getAllExpandableCrefsFromDAE,2,0) {(void*) boxptr_ConnectUtil_getAllExpandableCrefsFromDAE,0}};
 #define boxvar_ConnectUtil_getAllExpandableCrefsFromDAE MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_getAllExpandableCrefsFromDAE)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ConnectUtil_topLevelInput(threadData_t *threadData, modelica_metatype _componentRef, modelica_metatype _varDirection, modelica_metatype _connectorType, modelica_metatype _visibility);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ConnectUtil_topLevelInput(threadData_t *threadData, modelica_metatype _componentRef, modelica_metatype _varDirection, modelica_metatype _connectorType, modelica_metatype _visibility);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_topLevelInput,2,0) {(void*) boxptr_ConnectUtil_topLevelInput,0}};
 #define boxvar_ConnectUtil_topLevelInput MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_topLevelInput)
@@ -150,14 +150,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_topLevelInput,2,0) {(void*)
 #define boxptr_ConnectUtil_printConnectorTypeStr omc_ConnectUtil_printConnectorTypeStr
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ConnectUtil_printFaceStr(threadData_t *threadData, modelica_metatype _face);
 #define boxptr_ConnectUtil_printFaceStr omc_ConnectUtil_printFaceStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_printFaceStr,2,0) {(void*) boxptr_ConnectUtil_printFaceStr,0}};
 #define boxvar_ConnectUtil_printFaceStr MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_printFaceStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ConnectUtil_printElementStr(threadData_t *threadData, modelica_metatype _element);
 #define boxptr_ConnectUtil_printElementStr omc_ConnectUtil_printElementStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_printElementStr,2,0) {(void*) boxptr_ConnectUtil_printElementStr,0}};
@@ -170,52 +170,52 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_printElementStr,2,0) {(void
 #define boxptr_ConnectUtil_printSetTrieStr omc_ConnectUtil_printSetTrieStr
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_ConnectUtil_printSetsStr(threadData_t *threadData, modelica_metatype _sets);
 #define boxptr_ConnectUtil_printSetsStr omc_ConnectUtil_printSetsStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_printSetsStr,2,0) {(void*) boxptr_ConnectUtil_printSetsStr,0}};
 #define boxvar_ConnectUtil_printSetsStr MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_printSetsStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_removeReferenceFromConnects(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fconnects, modelica_metatype _cref, modelica_boolean *out_wasRemoved);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ConnectUtil_removeReferenceFromConnects(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fconnects, modelica_metatype _cref, modelica_metatype *out_wasRemoved);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_removeReferenceFromConnects,2,0) {(void*) boxptr_ConnectUtil_removeReferenceFromConnects,0}};
 #define boxvar_ConnectUtil_removeReferenceFromConnects MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_removeReferenceFromConnects)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ConnectUtil_isReferenceInConnects(threadData_t *threadData, modelica_metatype _connects, modelica_metatype _cref);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ConnectUtil_isReferenceInConnects(threadData_t *threadData, modelica_metatype _connects, modelica_metatype _cref);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_isReferenceInConnects,2,0) {(void*) boxptr_ConnectUtil_isReferenceInConnects,0}};
 #define boxvar_ConnectUtil_isReferenceInConnects MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_isReferenceInConnects)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ConnectUtil_checkShortConnectorDef(threadData_t *threadData, modelica_metatype _state, modelica_metatype _attributes, modelica_metatype _info);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ConnectUtil_checkShortConnectorDef(threadData_t *threadData, modelica_metatype _state, modelica_metatype _attributes, modelica_metatype _info);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_checkShortConnectorDef,2,0) {(void*) boxptr_ConnectUtil_checkShortConnectorDef,0}};
 #define boxvar_ConnectUtil_checkShortConnectorDef MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_checkShortConnectorDef)
 
 
-DLLDirection
+DLLModelDirection
 void omc_ConnectUtil_checkConnectorBalance(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _path, modelica_metatype _info);
 #define boxptr_ConnectUtil_checkConnectorBalance omc_ConnectUtil_checkConnectorBalance
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_checkConnectorBalance,2,0) {(void*) boxptr_ConnectUtil_checkConnectorBalance,0}};
 #define boxvar_ConnectUtil_checkConnectorBalance MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_checkConnectorBalance)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_componentFaceType(threadData_t *threadData, modelica_metatype _inComponentRef);
 #define boxptr_ConnectUtil_componentFaceType omc_ConnectUtil_componentFaceType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_componentFaceType,2,0) {(void*) boxptr_ConnectUtil_componentFaceType,0}};
 #define boxvar_ConnectUtil_componentFaceType MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_componentFaceType)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_componentFace(threadData_t *threadData, modelica_metatype _env, modelica_metatype _componentRef);
 #define boxptr_ConnectUtil_componentFace omc_ConnectUtil_componentFace
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_componentFace,2,0) {(void*) boxptr_ConnectUtil_componentFace,0}};
@@ -246,9 +246,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_componentFace,2,0) {(void*)
 #define boxptr_ConnectUtil_makeInStreamCall omc_ConnectUtil_makeInStreamCall
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ConnectUtil_faceEqual(threadData_t *threadData, modelica_metatype _face1, modelica_metatype _face2);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ConnectUtil_faceEqual(threadData_t *threadData, modelica_metatype _face1, modelica_metatype _face2);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_faceEqual,2,0) {(void*) boxptr_ConnectUtil_faceEqual,0}};
 #define boxvar_ConnectUtil_faceEqual MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_faceEqual)
@@ -260,14 +260,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_faceEqual,2,0) {(void*) box
 #define boxptr_ConnectUtil_streamFlowExp omc_ConnectUtil_streamFlowExp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_increaseConnectRefCount2(threadData_t *threadData, modelica_metatype _crefs, modelica_metatype __omcQ_24in_5Fsets);
 #define boxptr_ConnectUtil_increaseConnectRefCount2 omc_ConnectUtil_increaseConnectRefCount2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_increaseConnectRefCount2,2,0) {(void*) boxptr_ConnectUtil_increaseConnectRefCount2,0}};
 #define boxvar_ConnectUtil_increaseConnectRefCount2 MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_increaseConnectRefCount2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_increaseConnectRefCount(threadData_t *threadData, modelica_metatype _lhsCref, modelica_metatype _rhsCref, modelica_metatype __omcQ_24in_5Fsets);
 #define boxptr_ConnectUtil_increaseConnectRefCount omc_ConnectUtil_increaseConnectRefCount
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_increaseConnectRefCount,2,0) {(void*) boxptr_ConnectUtil_increaseConnectRefCount,0}};
@@ -304,9 +304,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_increaseConnectRefCount,2,0
 #define boxptr_ConnectUtil_generateSetArray omc_ConnectUtil_generateSetArray
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ConnectUtil_allCrefsAreExpandable(threadData_t *threadData, modelica_metatype _connects);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ConnectUtil_allCrefsAreExpandable(threadData_t *threadData, modelica_metatype _connects);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_allCrefsAreExpandable,2,0) {(void*) boxptr_ConnectUtil_allCrefsAreExpandable,0}};
 #define boxvar_ConnectUtil_allCrefsAreExpandable MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_allCrefsAreExpandable)
@@ -327,9 +327,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_allCrefsAreExpandable,2,0) 
 #define boxptr_ConnectUtil_getExpandableEquSetsAsCrefs omc_ConnectUtil_getExpandableEquSetsAsCrefs
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_equations(threadData_t *threadData, modelica_boolean _topScope, modelica_metatype _sets, modelica_metatype __omcQ_24in_5FDAE, modelica_metatype _connectionGraph, modelica_string _modelNameQualified);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ConnectUtil_equations(threadData_t *threadData, modelica_metatype _topScope, modelica_metatype _sets, modelica_metatype __omcQ_24in_5FDAE, modelica_metatype _connectionGraph, modelica_metatype _modelNameQualified);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_equations,2,0) {(void*) boxptr_ConnectUtil_equations,0}};
 #define boxvar_ConnectUtil_equations MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_equations)
@@ -344,7 +344,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_equations,2,0) {(void*) box
 #define boxptr_ConnectUtil_setTrieTraverseLeaves omc_ConnectUtil_setTrieTraverseLeaves
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_traverseSets(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsets, modelica_metatype __omcQ_24in_5Farg, modelica_fnptr _updateFunc, modelica_metatype *out_arg);
 #define boxptr_ConnectUtil_traverseSets omc_ConnectUtil_traverseSets
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_traverseSets,2,0) {(void*) boxptr_ConnectUtil_traverseSets,0}};
@@ -423,15 +423,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_traverseSets,2,0) {(void*) 
 #define boxptr_ConnectUtil_collectOuterElements omc_ConnectUtil_collectOuterElements
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_addOuterConnectToSets(threadData_t *threadData, modelica_metatype _cref1, modelica_metatype _cref2, modelica_metatype _io1, modelica_metatype _io2, modelica_metatype _face1, modelica_metatype _face2, modelica_metatype __omcQ_24in_5Fsets, modelica_metatype _inInfo, modelica_boolean *out_added);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ConnectUtil_addOuterConnectToSets(threadData_t *threadData, modelica_metatype _cref1, modelica_metatype _cref2, modelica_metatype _io1, modelica_metatype _io2, modelica_metatype _face1, modelica_metatype _face2, modelica_metatype __omcQ_24in_5Fsets, modelica_metatype _inInfo, modelica_metatype *out_added);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_addOuterConnectToSets,2,0) {(void*) boxptr_ConnectUtil_addOuterConnectToSets,0}};
 #define boxvar_ConnectUtil_addOuterConnectToSets MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_addOuterConnectToSets)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_addOuterConnection(threadData_t *threadData, modelica_metatype _scope, modelica_metatype __omcQ_24in_5Fsets, modelica_metatype _cr1, modelica_metatype _cr2, modelica_metatype _io1, modelica_metatype _io2, modelica_metatype _f1, modelica_metatype _f2, modelica_metatype _source);
 #define boxptr_ConnectUtil_addOuterConnection omc_ConnectUtil_addOuterConnection
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_addOuterConnection,2,0) {(void*) boxptr_ConnectUtil_addOuterConnection,0}};
@@ -471,9 +471,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_addOuterConnection,2,0) {(v
 #define boxptr_ConnectUtil_getExpandableVariablesWithNoBinding omc_ConnectUtil_getExpandableVariablesWithNoBinding
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_ConnectUtil_isExpandable(threadData_t *threadData, modelica_metatype _name);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ConnectUtil_isExpandable(threadData_t *threadData, modelica_metatype _name);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_isExpandable,2,0) {(void*) boxptr_ConnectUtil_isExpandable,0}};
 #define boxvar_ConnectUtil_isExpandable MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_isExpandable)
@@ -482,9 +482,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_isExpandable,2,0) {(void*) 
 #define boxptr_ConnectUtil_addFlowVariableFromDAE omc_ConnectUtil_addFlowVariableFromDAE
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_addConnectorVariablesFromDAE(threadData_t *threadData, modelica_boolean _ignore, modelica_metatype _classState, modelica_metatype _prefix, modelica_metatype _vars, modelica_metatype _info, modelica_metatype _elementSource, modelica_metatype __omcQ_24in_5Fsets);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ConnectUtil_addConnectorVariablesFromDAE(threadData_t *threadData, modelica_metatype _ignore, modelica_metatype _classState, modelica_metatype _prefix, modelica_metatype _vars, modelica_metatype _info, modelica_metatype _elementSource, modelica_metatype __omcQ_24in_5Fsets);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_addConnectorVariablesFromDAE,2,0) {(void*) boxptr_ConnectUtil_addConnectorVariablesFromDAE,0}};
 #define boxvar_ConnectUtil_addConnectorVariablesFromDAE MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_addConnectorVariablesFromDAE)
@@ -493,28 +493,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_addConnectorVariablesFromDA
 #define boxptr_ConnectUtil_makeConnectorType omc_ConnectUtil_makeConnectorType
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_addArrayConnection(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsets, modelica_metatype _cref1, modelica_metatype _face1, modelica_metatype _cref2, modelica_metatype _face2, modelica_metatype _source, modelica_metatype _connectorType);
 #define boxptr_ConnectUtil_addArrayConnection omc_ConnectUtil_addArrayConnection
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_addArrayConnection,2,0) {(void*) boxptr_ConnectUtil_addArrayConnection,0}};
 #define boxvar_ConnectUtil_addArrayConnection MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_addArrayConnection)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_addConnection(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fsets, modelica_metatype _cref1, modelica_metatype _face1, modelica_metatype _cref2, modelica_metatype _face2, modelica_metatype _connectorType, modelica_metatype _source);
 #define boxptr_ConnectUtil_addConnection omc_ConnectUtil_addConnection
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_addConnection,2,0) {(void*) boxptr_ConnectUtil_addConnection,0}};
 #define boxvar_ConnectUtil_addConnection MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_addConnection)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_addSet(threadData_t *threadData, modelica_metatype _parentSets, modelica_metatype _childSets);
 #define boxptr_ConnectUtil_addSet omc_ConnectUtil_addSet
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_addSet,2,0) {(void*) boxptr_ConnectUtil_addSet,0}};
 #define boxvar_ConnectUtil_addSet MMC_REFSTRUCTLIT(boxvar_lit_ConnectUtil_addSet)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ConnectUtil_newSet(threadData_t *threadData, modelica_metatype _prefix, modelica_metatype __omcQ_24in_5Fsets);
 #define boxptr_ConnectUtil_newSet omc_ConnectUtil_newSet
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ConnectUtil_newSet,2,0) {(void*) boxptr_ConnectUtil_newSet,0}};

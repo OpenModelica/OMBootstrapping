@@ -35,14 +35,14 @@ extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_errorMsg(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_errMessage);
 #define boxptr_AbsynDumpTpl_errorMsg omc_AbsynDumpTpl_errorMsg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_errorMsg,2,0) {(void*) boxptr_AbsynDumpTpl_errorMsg,0}};
 #define boxvar_AbsynDumpTpl_errorMsg MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_errorMsg)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpForIterator(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_iterator);
 #define boxptr_AbsynDumpTpl_dumpForIterator omc_AbsynDumpTpl_dumpForIterator
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpForIterator,2,0) {(void*) boxptr_AbsynDumpTpl_dumpForIterator,0}};
@@ -55,7 +55,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpForIterator,2,0) {(voi
 #define boxptr_AbsynDumpTpl_fun__198 omc_AbsynDumpTpl_fun__198
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpForIterators(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_iters);
 #define boxptr_AbsynDumpTpl_dumpForIterators omc_AbsynDumpTpl_dumpForIterators
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpForIterators,2,0) {(void*) boxptr_AbsynDumpTpl_dumpForIterators,0}};
@@ -65,14 +65,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpForIterators,2,0) {(vo
 #define boxptr_AbsynDumpTpl_lm__196 omc_AbsynDumpTpl_lm__196
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpNamedArg(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_narg);
 #define boxptr_AbsynDumpTpl_dumpNamedArg omc_AbsynDumpTpl_dumpNamedArg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpNamedArg,2,0) {(void*) boxptr_AbsynDumpTpl_dumpNamedArg,0}};
 #define boxvar_AbsynDumpTpl_dumpNamedArg MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpNamedArg)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpFunctionArgs(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_args);
 #define boxptr_AbsynDumpTpl_dumpFunctionArgs omc_AbsynDumpTpl_dumpFunctionArgs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpFunctionArgs,2,0) {(void*) boxptr_AbsynDumpTpl_dumpFunctionArgs,0}};
@@ -97,21 +97,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpFunctionArgs,2,0) {(vo
 #define boxptr_AbsynDumpTpl_lm__188 omc_AbsynDumpTpl_lm__188
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpCref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cref);
 #define boxptr_AbsynDumpTpl_dumpCref omc_AbsynDumpTpl_dumpCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpCref,2,0) {(void*) boxptr_AbsynDumpTpl_dumpCref,0}};
 #define boxvar_AbsynDumpTpl_dumpCref MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpCref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpOperator(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_op);
 #define boxptr_AbsynDumpTpl_dumpOperator omc_AbsynDumpTpl_dumpOperator
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpOperator,2,0) {(void*) boxptr_AbsynDumpTpl_dumpOperator,0}};
 #define boxvar_AbsynDumpTpl_dumpOperator MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpOperator)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpMatchCase(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_c);
 #define boxptr_AbsynDumpTpl_dumpMatchCase omc_AbsynDumpTpl_dumpMatchCase
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpMatchCase,2,0) {(void*) boxptr_AbsynDumpTpl_dumpMatchCase,0}};
@@ -127,7 +127,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpMatchCase,2,0) {(void*
 #define boxptr_AbsynDumpTpl_fun__181 omc_AbsynDumpTpl_fun__181
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpMatchEquations(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cp);
 #define boxptr_AbsynDumpTpl_dumpMatchEquations omc_AbsynDumpTpl_dumpMatchEquations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpMatchEquations,2,0) {(void*) boxptr_AbsynDumpTpl_dumpMatchEquations,0}};
@@ -140,7 +140,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpMatchEquations,2,0) {(
 #define boxptr_AbsynDumpTpl_lm__178 omc_AbsynDumpTpl_lm__178
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpMatchLocals(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_locals);
 #define boxptr_AbsynDumpTpl_dumpMatchLocals omc_AbsynDumpTpl_dumpMatchLocals
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpMatchLocals,2,0) {(void*) boxptr_AbsynDumpTpl_dumpMatchLocals,0}};
@@ -150,14 +150,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpMatchLocals,2,0) {(voi
 #define boxptr_AbsynDumpTpl_lm__176 omc_AbsynDumpTpl_lm__176
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpMatchType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_match__type);
 #define boxptr_AbsynDumpTpl_dumpMatchType omc_AbsynDumpTpl_dumpMatchType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpMatchType,2,0) {(void*) boxptr_AbsynDumpTpl_dumpMatchType,0}};
 #define boxvar_AbsynDumpTpl_dumpMatchType MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpMatchType)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpMatchExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_match__exp);
 #define boxptr_AbsynDumpTpl_dumpMatchExp omc_AbsynDumpTpl_dumpMatchExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpMatchExp,2,0) {(void*) boxptr_AbsynDumpTpl_dumpMatchExp,0}};
@@ -167,14 +167,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpMatchExp,2,0) {(void*)
 #define boxptr_AbsynDumpTpl_lm__173 omc_AbsynDumpTpl_lm__173
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpCodeNode(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_code);
 #define boxptr_AbsynDumpTpl_dumpCodeNode omc_AbsynDumpTpl_dumpCodeNode
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpCodeNode,2,0) {(void*) boxptr_AbsynDumpTpl_dumpCodeNode,0}};
 #define boxvar_AbsynDumpTpl_dumpCodeNode MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpCodeNode)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElseIfExp(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_else__if);
 #define boxptr_AbsynDumpTpl_dumpElseIfExp omc_AbsynDumpTpl_dumpElseIfExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElseIfExp,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElseIfExp,0}};
@@ -184,29 +184,29 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElseIfExp,2,0) {(void*
 #define boxptr_AbsynDumpTpl_lm__167 omc_AbsynDumpTpl_lm__167
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpIfExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_if__exp);
 #define boxptr_AbsynDumpTpl_dumpIfExp omc_AbsynDumpTpl_dumpIfExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpIfExp,2,0) {(void*) boxptr_AbsynDumpTpl_dumpIfExp,0}};
 #define boxvar_AbsynDumpTpl_dumpIfExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpIfExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpOperand(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_operand, modelica_metatype _a_operation, modelica_boolean _a_lhs);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_AbsynDumpTpl_dumpOperand(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_operand, modelica_metatype _a_operation, modelica_metatype _a_lhs);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpOperand,2,0) {(void*) boxptr_AbsynDumpTpl_dumpOperand,0}};
 #define boxvar_AbsynDumpTpl_dumpOperand MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpOperand)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpLhsExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_lhs);
 #define boxptr_AbsynDumpTpl_dumpLhsExp omc_AbsynDumpTpl_dumpLhsExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpLhsExp,2,0) {(void*) boxptr_AbsynDumpTpl_dumpLhsExp,0}};
 #define boxvar_AbsynDumpTpl_dumpLhsExp MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpLhsExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp);
 #define boxptr_AbsynDumpTpl_dumpExp omc_AbsynDumpTpl_dumpExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpExp,2,0) {(void*) boxptr_AbsynDumpTpl_dumpExp,0}};
@@ -240,14 +240,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpExp,2,0) {(void*) boxp
 #define boxptr_AbsynDumpTpl_lm__154 omc_AbsynDumpTpl_lm__154
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpSubscript(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscript);
 #define boxptr_AbsynDumpTpl_dumpSubscript omc_AbsynDumpTpl_dumpSubscript
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpSubscript,2,0) {(void*) boxptr_AbsynDumpTpl_dumpSubscript,0}};
 #define boxvar_AbsynDumpTpl_dumpSubscript MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpSubscript)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpSubscripts(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts);
 #define boxptr_AbsynDumpTpl_dumpSubscripts omc_AbsynDumpTpl_dumpSubscripts
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpSubscripts,2,0) {(void*) boxptr_AbsynDumpTpl_dumpSubscripts,0}};
@@ -257,14 +257,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpSubscripts,2,0) {(void
 #define boxptr_AbsynDumpTpl_lm__151 omc_AbsynDumpTpl_lm__151
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpArrayDimOpt(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_arraydim);
 #define boxptr_AbsynDumpTpl_dumpArrayDimOpt omc_AbsynDumpTpl_dumpArrayDimOpt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpArrayDimOpt,2,0) {(void*) boxptr_AbsynDumpTpl_dumpArrayDimOpt,0}};
 #define boxvar_AbsynDumpTpl_dumpArrayDimOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpArrayDimOpt)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpTypeSpec(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_typeSpec);
 #define boxptr_AbsynDumpTpl_dumpTypeSpec omc_AbsynDumpTpl_dumpTypeSpec
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpTypeSpec,2,0) {(void*) boxptr_AbsynDumpTpl_dumpTypeSpec,0}};
@@ -274,28 +274,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpTypeSpec,2,0) {(void*)
 #define boxptr_AbsynDumpTpl_lm__148 omc_AbsynDumpTpl_lm__148
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpStringCommentOption(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cmt);
 #define boxptr_AbsynDumpTpl_dumpStringCommentOption omc_AbsynDumpTpl_dumpStringCommentOption
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpStringCommentOption,2,0) {(void*) boxptr_AbsynDumpTpl_dumpStringCommentOption,0}};
 #define boxvar_AbsynDumpTpl_dumpStringCommentOption MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpStringCommentOption)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpPathNoQual(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
 #define boxptr_AbsynDumpTpl_dumpPathNoQual omc_AbsynDumpTpl_dumpPathNoQual
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpPathNoQual,2,0) {(void*) boxptr_AbsynDumpTpl_dumpPathNoQual,0}};
 #define boxvar_AbsynDumpTpl_dumpPathNoQual MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpPathNoQual)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpPath(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_path);
 #define boxptr_AbsynDumpTpl_dumpPath omc_AbsynDumpTpl_dumpPath
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpPath,2,0) {(void*) boxptr_AbsynDumpTpl_dumpPath,0}};
 #define boxvar_AbsynDumpTpl_dumpPath MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpPath)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpAlgorithmBranch(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cond, modelica_metatype _a_body, modelica_string _a_header, modelica_string _a_exec__str);
 #define boxptr_AbsynDumpTpl_dumpAlgorithmBranch omc_AbsynDumpTpl_dumpAlgorithmBranch
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAlgorithmBranch,2,0) {(void*) boxptr_AbsynDumpTpl_dumpAlgorithmBranch,0}};
@@ -305,7 +305,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAlgorithmBranch,2,0) {
 #define boxptr_AbsynDumpTpl_lm__142 omc_AbsynDumpTpl_lm__142
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpAlgorithm(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_alg);
 #define boxptr_AbsynDumpTpl_dumpAlgorithm omc_AbsynDumpTpl_dumpAlgorithm
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAlgorithm,2,0) {(void*) boxptr_AbsynDumpTpl_dumpAlgorithm,0}};
@@ -324,14 +324,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAlgorithm,2,0) {(void*
 #define boxptr_AbsynDumpTpl_lm__137 omc_AbsynDumpTpl_lm__137
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpAlgorithmItem(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_alg);
 #define boxptr_AbsynDumpTpl_dumpAlgorithmItem omc_AbsynDumpTpl_dumpAlgorithmItem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAlgorithmItem,2,0) {(void*) boxptr_AbsynDumpTpl_dumpAlgorithmItem,0}};
 #define boxvar_AbsynDumpTpl_dumpAlgorithmItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAlgorithmItem)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpAlgorithmItems(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_algs);
 #define boxptr_AbsynDumpTpl_dumpAlgorithmItems omc_AbsynDumpTpl_dumpAlgorithmItems
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAlgorithmItems,2,0) {(void*) boxptr_AbsynDumpTpl_dumpAlgorithmItems,0}};
@@ -341,7 +341,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAlgorithmItems,2,0) {(
 #define boxptr_AbsynDumpTpl_lm__134 omc_AbsynDumpTpl_lm__134
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpEquationBranch(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cond, modelica_metatype _a_body, modelica_string _a_header);
 #define boxptr_AbsynDumpTpl_dumpEquationBranch omc_AbsynDumpTpl_dumpEquationBranch
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEquationBranch,2,0) {(void*) boxptr_AbsynDumpTpl_dumpEquationBranch,0}};
@@ -351,7 +351,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEquationBranch,2,0) {(
 #define boxptr_AbsynDumpTpl_lm__132 omc_AbsynDumpTpl_lm__132
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpEquation(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq);
 #define boxptr_AbsynDumpTpl_dumpEquation omc_AbsynDumpTpl_dumpEquation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEquation,2,0) {(void*) boxptr_AbsynDumpTpl_dumpEquation,0}};
@@ -367,7 +367,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEquation,2,0) {(void*)
 #define boxptr_AbsynDumpTpl_lm__128 omc_AbsynDumpTpl_lm__128
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpEquationItems(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_eql);
 #define boxptr_AbsynDumpTpl_dumpEquationItems omc_AbsynDumpTpl_dumpEquationItems
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEquationItems,2,0) {(void*) boxptr_AbsynDumpTpl_dumpEquationItems,0}};
@@ -377,21 +377,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEquationItems,2,0) {(v
 #define boxptr_AbsynDumpTpl_lm__126 omc_AbsynDumpTpl_lm__126
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpEquationItem(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eq);
 #define boxptr_AbsynDumpTpl_dumpEquationItem omc_AbsynDumpTpl_dumpEquationItem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEquationItem,2,0) {(void*) boxptr_AbsynDumpTpl_dumpEquationItem,0}};
 #define boxvar_AbsynDumpTpl_dumpEquationItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEquationItem)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpGroupImport(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_gimp);
 #define boxptr_AbsynDumpTpl_dumpGroupImport omc_AbsynDumpTpl_dumpGroupImport
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpGroupImport,2,0) {(void*) boxptr_AbsynDumpTpl_dumpGroupImport,0}};
 #define boxvar_AbsynDumpTpl_dumpGroupImport MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpGroupImport)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpImport(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_imp);
 #define boxptr_AbsynDumpTpl_dumpImport omc_AbsynDumpTpl_dumpImport
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpImport,2,0) {(void*) boxptr_AbsynDumpTpl_dumpImport,0}};
@@ -401,14 +401,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpImport,2,0) {(void*) b
 #define boxptr_AbsynDumpTpl_lm__122 omc_AbsynDumpTpl_lm__122
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpComponentCondition(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cond);
 #define boxptr_AbsynDumpTpl_dumpComponentCondition omc_AbsynDumpTpl_dumpComponentCondition
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpComponentCondition,2,0) {(void*) boxptr_AbsynDumpTpl_dumpComponentCondition,0}};
 #define boxvar_AbsynDumpTpl_dumpComponentCondition MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpComponentCondition)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpComponent(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_comp);
 #define boxptr_AbsynDumpTpl_dumpComponent omc_AbsynDumpTpl_dumpComponent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpComponent,2,0) {(void*) boxptr_AbsynDumpTpl_dumpComponent,0}};
@@ -418,14 +418,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpComponent,2,0) {(void*
 #define boxptr_AbsynDumpTpl_fun__119 omc_AbsynDumpTpl_fun__119
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpComponentItem(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_comp);
 #define boxptr_AbsynDumpTpl_dumpComponentItem omc_AbsynDumpTpl_dumpComponentItem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpComponentItem,2,0) {(void*) boxptr_AbsynDumpTpl_dumpComponentItem,0}};
 #define boxvar_AbsynDumpTpl_dumpComponentItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpComponentItem)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpConstrainClass(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cc);
 #define boxptr_AbsynDumpTpl_dumpConstrainClass omc_AbsynDumpTpl_dumpConstrainClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpConstrainClass,2,0) {(void*) boxptr_AbsynDumpTpl_dumpConstrainClass,0}};
@@ -435,49 +435,49 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpConstrainClass,2,0) {(
 #define boxptr_AbsynDumpTpl_fun__116 omc_AbsynDumpTpl_fun__116
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElementAttrDim(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_attr);
 #define boxptr_AbsynDumpTpl_dumpElementAttrDim omc_AbsynDumpTpl_dumpElementAttrDim
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementAttrDim,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElementAttrDim,0}};
 #define boxvar_AbsynDumpTpl_dumpElementAttrDim MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementAttrDim)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpDirection(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_dir);
 #define boxptr_AbsynDumpTpl_dumpDirection omc_AbsynDumpTpl_dumpDirection
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpDirection,2,0) {(void*) boxptr_AbsynDumpTpl_dumpDirection,0}};
 #define boxvar_AbsynDumpTpl_dumpDirection MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpDirection)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpVariability(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_var);
 #define boxptr_AbsynDumpTpl_dumpVariability omc_AbsynDumpTpl_dumpVariability
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpVariability,2,0) {(void*) boxptr_AbsynDumpTpl_dumpVariability,0}};
 #define boxvar_AbsynDumpTpl_dumpVariability MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpVariability)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpIsField(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_isField);
 #define boxptr_AbsynDumpTpl_dumpIsField omc_AbsynDumpTpl_dumpIsField
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpIsField,2,0) {(void*) boxptr_AbsynDumpTpl_dumpIsField,0}};
 #define boxvar_AbsynDumpTpl_dumpIsField MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpIsField)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpParallelism(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_par);
 #define boxptr_AbsynDumpTpl_dumpParallelism omc_AbsynDumpTpl_dumpParallelism
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpParallelism,2,0) {(void*) boxptr_AbsynDumpTpl_dumpParallelism,0}};
 #define boxvar_AbsynDumpTpl_dumpParallelism MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpParallelism)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElementAttr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_attr);
 #define boxptr_AbsynDumpTpl_dumpElementAttr omc_AbsynDumpTpl_dumpElementAttr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementAttr,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElementAttr,0}};
 #define boxvar_AbsynDumpTpl_dumpElementAttr MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementAttr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElementSpec(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_elem, modelica_string _in_a_final, modelica_string _in_a_redecl, modelica_string _in_a_repl, modelica_string _in_a_io, modelica_metatype _in_a_options);
 #define boxptr_AbsynDumpTpl_dumpElementSpec omc_AbsynDumpTpl_dumpElementSpec
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementSpec,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElementSpec,0}};
@@ -490,14 +490,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementSpec,2,0) {(voi
 #define boxptr_AbsynDumpTpl_fun__105 omc_AbsynDumpTpl_fun__105
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpEqMod(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eqmod);
 #define boxptr_AbsynDumpTpl_dumpEqMod omc_AbsynDumpTpl_dumpEqMod
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEqMod,2,0) {(void*) boxptr_AbsynDumpTpl_dumpEqMod,0}};
 #define boxvar_AbsynDumpTpl_dumpEqMod MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEqMod)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpModification(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_mod);
 #define boxptr_AbsynDumpTpl_dumpModification omc_AbsynDumpTpl_dumpModification
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpModification,2,0) {(void*) boxptr_AbsynDumpTpl_dumpModification,0}};
@@ -507,43 +507,43 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpModification,2,0) {(vo
 #define boxptr_AbsynDumpTpl_fun__102 omc_AbsynDumpTpl_fun__102
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpInnerOuter(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_io);
 #define boxptr_AbsynDumpTpl_dumpInnerOuter omc_AbsynDumpTpl_dumpInnerOuter
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpInnerOuter,2,0) {(void*) boxptr_AbsynDumpTpl_dumpInnerOuter,0}};
 #define boxvar_AbsynDumpTpl_dumpInnerOuter MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpInnerOuter)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpReplaceable(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_repl);
 #define boxptr_AbsynDumpTpl_dumpReplaceable omc_AbsynDumpTpl_dumpReplaceable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpReplaceable,2,0) {(void*) boxptr_AbsynDumpTpl_dumpReplaceable,0}};
 #define boxvar_AbsynDumpTpl_dumpReplaceable MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpReplaceable)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpRedeclare(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_redecl);
 #define boxptr_AbsynDumpTpl_dumpRedeclare omc_AbsynDumpTpl_dumpRedeclare
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpRedeclare,2,0) {(void*) boxptr_AbsynDumpTpl_dumpRedeclare,0}};
 #define boxvar_AbsynDumpTpl_dumpRedeclare MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpRedeclare)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpFinal(threadData_t *threadData, modelica_metatype _in_txt, modelica_boolean _in_a_final);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_AbsynDumpTpl_dumpFinal(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_final);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpFinal,2,0) {(void*) boxptr_AbsynDumpTpl_dumpFinal,0}};
 #define boxvar_AbsynDumpTpl_dumpFinal MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpFinal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpEach(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_each);
 #define boxptr_AbsynDumpTpl_dumpEach omc_AbsynDumpTpl_dumpEach
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEach,2,0) {(void*) boxptr_AbsynDumpTpl_dumpEach,0}};
 #define boxvar_AbsynDumpTpl_dumpEach MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEach)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElementArg(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_earg);
 #define boxptr_AbsynDumpTpl_dumpElementArg omc_AbsynDumpTpl_dumpElementArg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementArg,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElementArg,0}};
@@ -556,7 +556,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementArg,2,0) {(void
 #define boxptr_AbsynDumpTpl_fun__94 omc_AbsynDumpTpl_fun__94
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElementArgList(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_elementArgs, modelica_metatype _a_separator, modelica_metatype *out_out_a_separator);
 #define boxptr_AbsynDumpTpl_dumpElementArgList omc_AbsynDumpTpl_dumpElementArgList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementArgList,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElementArgList,0}};
@@ -566,49 +566,49 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementArgList,2,0) {(
 #define boxptr_AbsynDumpTpl_lm__92 omc_AbsynDumpTpl_lm__92
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpCommentOpt(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ocmt);
 #define boxptr_AbsynDumpTpl_dumpCommentOpt omc_AbsynDumpTpl_dumpCommentOpt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpCommentOpt,2,0) {(void*) boxptr_AbsynDumpTpl_dumpCommentOpt,0}};
 #define boxvar_AbsynDumpTpl_dumpCommentOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpCommentOpt)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpComment(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cmt);
 #define boxptr_AbsynDumpTpl_dumpComment omc_AbsynDumpTpl_dumpComment
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpComment,2,0) {(void*) boxptr_AbsynDumpTpl_dumpComment,0}};
 #define boxvar_AbsynDumpTpl_dumpComment MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpComment)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpAnnotationOptSpace(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_oann);
 #define boxptr_AbsynDumpTpl_dumpAnnotationOptSpace omc_AbsynDumpTpl_dumpAnnotationOptSpace
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAnnotationOptSpace,2,0) {(void*) boxptr_AbsynDumpTpl_dumpAnnotationOptSpace,0}};
 #define boxvar_AbsynDumpTpl_dumpAnnotationOptSpace MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAnnotationOptSpace)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpAnnotationOpt(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_oann);
 #define boxptr_AbsynDumpTpl_dumpAnnotationOpt omc_AbsynDumpTpl_dumpAnnotationOpt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAnnotationOpt,2,0) {(void*) boxptr_AbsynDumpTpl_dumpAnnotationOpt,0}};
 #define boxvar_AbsynDumpTpl_dumpAnnotationOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAnnotationOpt)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpAnnotation(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ann);
 #define boxptr_AbsynDumpTpl_dumpAnnotation omc_AbsynDumpTpl_dumpAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAnnotation,2,0) {(void*) boxptr_AbsynDumpTpl_dumpAnnotation,0}};
 #define boxvar_AbsynDumpTpl_dumpAnnotation MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpInfo(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_info);
 #define boxptr_AbsynDumpTpl_dumpInfo omc_AbsynDumpTpl_dumpInfo
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpInfo,2,0) {(void*) boxptr_AbsynDumpTpl_dumpInfo,0}};
 #define boxvar_AbsynDumpTpl_dumpInfo MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpInfo)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElement(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_elem, modelica_metatype _in_a_options);
 #define boxptr_AbsynDumpTpl_dumpElement omc_AbsynDumpTpl_dumpElement
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElement,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElement,0}};
@@ -633,28 +633,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElement,2,0) {(void*) 
 #define boxptr_AbsynDumpTpl_fun__75 omc_AbsynDumpTpl_fun__75
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElementItem(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_eitem, modelica_metatype _in_a_options);
 #define boxptr_AbsynDumpTpl_dumpElementItem omc_AbsynDumpTpl_dumpElementItem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementItem,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElementItem,0}};
 #define boxvar_AbsynDumpTpl_dumpElementItem MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementItem)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpClassDefSpacing(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cdef);
 #define boxptr_AbsynDumpTpl_dumpClassDefSpacing omc_AbsynDumpTpl_dumpClassDefSpacing
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassDefSpacing,2,0) {(void*) boxptr_AbsynDumpTpl_dumpClassDefSpacing,0}};
 #define boxvar_AbsynDumpTpl_dumpClassDefSpacing MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassDefSpacing)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElementItemSpacing(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_item);
 #define boxptr_AbsynDumpTpl_dumpElementItemSpacing omc_AbsynDumpTpl_dumpElementItemSpacing
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementItemSpacing,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElementItemSpacing,0}};
 #define boxvar_AbsynDumpTpl_dumpElementItemSpacing MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementItemSpacing)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElementItemPreSpacing(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_curSpacing, modelica_string _a_prevSpacing);
 #define boxptr_AbsynDumpTpl_dumpElementItemPreSpacing omc_AbsynDumpTpl_dumpElementItemPreSpacing
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementItemPreSpacing,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElementItemPreSpacing,0}};
@@ -664,9 +664,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementItemPreSpacing,
 #define boxptr_AbsynDumpTpl_fun__70 omc_AbsynDumpTpl_fun__70
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpElementItems(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_items, modelica_string _in_a_prevSpacing, modelica_boolean _in_a_first, modelica_metatype _in_a_options);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_AbsynDumpTpl_dumpElementItems(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_items, modelica_metatype _in_a_prevSpacing, modelica_metatype _in_a_first, modelica_metatype _in_a_options);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementItems,2,0) {(void*) boxptr_AbsynDumpTpl_dumpElementItems,0}};
 #define boxvar_AbsynDumpTpl_dumpElementItems MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementItems)
@@ -678,9 +678,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpElementItems,2,0) {(vo
 #define boxptr_AbsynDumpTpl_fun__67 omc_AbsynDumpTpl_fun__67
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpClassPart(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_class__part, modelica_integer _in_a_idx, modelica_metatype _in_a_options);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_AbsynDumpTpl_dumpClassPart(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_class__part, modelica_metatype _in_a_idx, modelica_metatype _in_a_options);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassPart,2,0) {(void*) boxptr_AbsynDumpTpl_dumpClassPart,0}};
 #define boxvar_AbsynDumpTpl_dumpClassPart MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassPart)
@@ -725,7 +725,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassPart,2,0) {(void*
 #define boxptr_AbsynDumpTpl_lm__52 omc_AbsynDumpTpl_lm__52
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpRestriction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_restriction);
 #define boxptr_AbsynDumpTpl_dumpRestriction omc_AbsynDumpTpl_dumpRestriction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpRestriction,2,0) {(void*) boxptr_AbsynDumpTpl_dumpRestriction,0}};
@@ -741,14 +741,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpRestriction,2,0) {(voi
 #define boxptr_AbsynDumpTpl_fun__47 omc_AbsynDumpTpl_fun__47
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpPurity(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_purity);
 #define boxptr_AbsynDumpTpl_dumpPurity omc_AbsynDumpTpl_dumpPurity
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpPurity,2,0) {(void*) boxptr_AbsynDumpTpl_dumpPurity,0}};
 #define boxvar_AbsynDumpTpl_dumpPurity MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpPurity)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpClassPrefixes(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cls, modelica_string _a_final__str, modelica_string _a_redecl__str, modelica_string _a_repl__str, modelica_string _a_io__str);
 #define boxptr_AbsynDumpTpl_dumpClassPrefixes omc_AbsynDumpTpl_dumpClassPrefixes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassPrefixes,2,0) {(void*) boxptr_AbsynDumpTpl_dumpClassPrefixes,0}};
@@ -758,14 +758,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassPrefixes,2,0) {(v
 #define boxptr_AbsynDumpTpl_fun__44 omc_AbsynDumpTpl_fun__44
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpEnumLiteral(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_lit);
 #define boxptr_AbsynDumpTpl_dumpEnumLiteral omc_AbsynDumpTpl_dumpEnumLiteral
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEnumLiteral,2,0) {(void*) boxptr_AbsynDumpTpl_dumpEnumLiteral,0}};
 #define boxvar_AbsynDumpTpl_dumpEnumLiteral MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEnumLiteral)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpEnumDef(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_enum__def);
 #define boxptr_AbsynDumpTpl_dumpEnumDef omc_AbsynDumpTpl_dumpEnumDef
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEnumDef,2,0) {(void*) boxptr_AbsynDumpTpl_dumpEnumDef,0}};
@@ -775,7 +775,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpEnumDef,2,0) {(void*) 
 #define boxptr_AbsynDumpTpl_lm__39 omc_AbsynDumpTpl_lm__39
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpClassDef(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cdef, modelica_string _in_a_cls__name, modelica_metatype _in_a_commentsBeforeEnd, modelica_metatype _in_a_options);
 #define boxptr_AbsynDumpTpl_dumpClassDef omc_AbsynDumpTpl_dumpClassDef
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassDef,2,0) {(void*) boxptr_AbsynDumpTpl_dumpClassDef,0}};
@@ -836,7 +836,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassDef,2,0) {(void*)
 #define boxptr_AbsynDumpTpl_lm__20 omc_AbsynDumpTpl_lm__20
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpClassElement(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cls, modelica_string _in_a_final__str, modelica_string _in_a_redecl__str, modelica_string _in_a_repl__str, modelica_string _in_a_io__str, modelica_string _in_a_sc, modelica_metatype _in_a_options);
 #define boxptr_AbsynDumpTpl_dumpClassElement omc_AbsynDumpTpl_dumpClassElement
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassElement,2,0) {(void*) boxptr_AbsynDumpTpl_dumpClassElement,0}};
@@ -858,28 +858,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassElement,2,0) {(vo
 #define boxptr_AbsynDumpTpl_lm__14 omc_AbsynDumpTpl_lm__14
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpClassHeader(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cls, modelica_string _in_a_final__str, modelica_string _in_a_redecl__str, modelica_string _in_a_repl__str, modelica_string _in_a_io__str);
 #define boxptr_AbsynDumpTpl_dumpClassHeader omc_AbsynDumpTpl_dumpClassHeader
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassHeader,2,0) {(void*) boxptr_AbsynDumpTpl_dumpClassHeader,0}};
 #define boxvar_AbsynDumpTpl_dumpClassHeader MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClassHeader)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpWithin(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_within);
 #define boxptr_AbsynDumpTpl_dumpWithin omc_AbsynDumpTpl_dumpWithin
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpWithin,2,0) {(void*) boxptr_AbsynDumpTpl_dumpWithin,0}};
 #define boxvar_AbsynDumpTpl_dumpWithin MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpWithin)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dumpClass(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cls, modelica_string _a_sc, modelica_metatype _a_options);
 #define boxptr_AbsynDumpTpl_dumpClass omc_AbsynDumpTpl_dumpClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClass,2,0) {(void*) boxptr_AbsynDumpTpl_dumpClass,0}};
 #define boxvar_AbsynDumpTpl_dumpClass MMC_REFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dumpClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynDumpTpl_dump(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_program, modelica_metatype _in_a_options);
 #define boxptr_AbsynDumpTpl_dump omc_AbsynDumpTpl_dump
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynDumpTpl_dump,2,0) {(void*) boxptr_AbsynDumpTpl_dump,0}};

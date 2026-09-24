@@ -362,10 +362,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
   modelica_metatype _fields = NULL;
   modelica_boolean _knownSingleton;
   modelica_integer _fieldNr;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _index has no default value.
   // _morePatterns has no default value.
@@ -436,7 +433,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta5 = MMC_CAR(tmp3_1);
           tmpMeta6 = MMC_CDR(tmp3_1);
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 2));
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta5, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,0,0) == 0) goto tmp2_end;
           _restMatches = tmpMeta6;
           /* Pattern matching succeeded */
@@ -465,30 +462,30 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta8 = MMC_CAR(tmp3_1);
           tmpMeta9 = MMC_CDR(tmp3_1);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 1));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta8), 2));
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta8, 1);
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta8, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,2,4) == 0) goto tmp2_end;
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 2));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 3));
+          tmpMeta12 = OMC_BOX_FIELD(tmpMeta11, 2);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta11, 3);
           if (!optionNone(tmpMeta13)) goto tmp2_end;
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 5));
+          tmpMeta14 = OMC_BOX_FIELD(tmpMeta11, 5);
           _scrutinee = tmpMeta10;
           _id = tmpMeta12;
           _pattern = tmpMeta14;
           _restMatches = tmpMeta9;
           /* Pattern matching succeeded */
-          tmpMeta15 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _scrutinee);
+          tmpMeta15 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _scrutinee);
           _ty = omc_DAEToMid_RValueType(threadData, tmpMeta15);
 
-          tmpMeta16 = mmc_mk_box4(3, &MidCode_Var_VAR__desc, _id, _ty, mmc_mk_boolean(0 /* false */));
+          tmpMeta16 = omc_mk_box4(3, &MidCode_Var_VAR__desc, _id, _ty, omc_mk_boolean(0 /* false */));
           _midvar = tmpMeta16;
 
-          tmpMeta18 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _scrutinee);
-          tmpMeta19 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _midvar, tmpMeta18);
+          tmpMeta18 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _scrutinee);
+          tmpMeta19 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _midvar, tmpMeta18);
           tmpMeta17 = mmc_mk_cons(tmpMeta19, arrayGet(_assignBlock, ((modelica_integer) 1)));
           arrayUpdate(_assignBlock, ((modelica_integer) 1), tmpMeta17);
 
-          tmpMeta21 = mmc_mk_box2(0, _scrutinee, _pattern);
+          tmpMeta21 = omc_mk_box2(0, _scrutinee, _pattern);
           tmpMeta20 = mmc_mk_cons(tmpMeta21, _restMatches);
           /* Tail recursive call */
           _matches = tmpMeta20;
@@ -515,29 +512,29 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta22 = MMC_CAR(tmp3_1);
           tmpMeta23 = MMC_CDR(tmp3_1);
-          tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta22), 1));
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta22), 2));
+          tmpMeta24 = OMC_BOX_FIELD(tmpMeta22, 1);
+          tmpMeta25 = OMC_BOX_FIELD(tmpMeta22, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta25,2,4) == 0) goto tmp2_end;
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 2));
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 3));
+          tmpMeta26 = OMC_BOX_FIELD(tmpMeta25, 2);
+          tmpMeta27 = OMC_BOX_FIELD(tmpMeta25, 3);
           if (optionNone(tmpMeta27)) goto tmp2_end;
-          tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 1));
-          tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 5));
+          tmpMeta28 = OMC_BOX_FIELD(tmpMeta27, 1);
+          tmpMeta29 = OMC_BOX_FIELD(tmpMeta25, 5);
           _scrutinee = tmpMeta24;
           _id = tmpMeta26;
           _ty = tmpMeta28;
           _pattern = tmpMeta29;
           _restMatches = tmpMeta23;
           /* Pattern matching succeeded */
-          tmpMeta30 = mmc_mk_box4(3, &MidCode_Var_VAR__desc, _id, _ty, mmc_mk_boolean(0 /* false */));
+          tmpMeta30 = omc_mk_box4(3, &MidCode_Var_VAR__desc, _id, _ty, omc_mk_boolean(0 /* false */));
           _midvar = tmpMeta30;
 
-          tmpMeta32 = mmc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT0, _scrutinee);
-          tmpMeta33 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _midvar, tmpMeta32);
+          tmpMeta32 = omc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT0, _scrutinee);
+          tmpMeta33 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _midvar, tmpMeta32);
           tmpMeta31 = mmc_mk_cons(tmpMeta33, arrayGet(_assignBlock, ((modelica_integer) 1)));
           arrayUpdate(_assignBlock, ((modelica_integer) 1), tmpMeta31);
 
-          tmpMeta35 = mmc_mk_box2(0, _scrutinee, _pattern);
+          tmpMeta35 = omc_mk_box2(0, _scrutinee, _pattern);
           tmpMeta34 = mmc_mk_cons(tmpMeta35, _restMatches);
           /* Tail recursive call */
           _matches = tmpMeta34;
@@ -560,11 +557,11 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta36 = MMC_CAR(tmp3_1);
           tmpMeta37 = MMC_CDR(tmp3_1);
-          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta36), 1));
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta36), 2));
+          tmpMeta38 = OMC_BOX_FIELD(tmpMeta36, 1);
+          tmpMeta39 = OMC_BOX_FIELD(tmpMeta36, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta39,1,2) == 0) goto tmp2_end;
-          tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta39), 2));
-          tmpMeta41 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta39), 3));
+          tmpMeta40 = OMC_BOX_FIELD(tmpMeta39, 2);
+          tmpMeta41 = OMC_BOX_FIELD(tmpMeta39, 3);
           _scrutinee = tmpMeta38;
           _optType = tmpMeta40;
           _exp = tmpMeta41;
@@ -582,7 +579,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                 case 0: {
                   modelica_metatype tmpMeta47;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp45_1,36,2) == 0) goto tmp44_end;
-                  tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp45_1), 3));
+                  tmpMeta47 = OMC_BOX_FIELD(tmp45_1, 3);
                   _exp = tmpMeta47;
                   /* Pattern matching succeeded */
                   tmpMeta42 = _exp;
@@ -626,9 +623,9 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                   modelica_metatype tmpMeta53;
                   modelica_metatype tmpMeta54;
                   if (optionNone(tmp51_1)) goto tmp50_end;
-                  tmpMeta53 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp51_1), 1));
+                  tmpMeta53 = OMC_BOX_FIELD(tmp51_1, 1);
                   /* Pattern matching succeeded */
-                  tmpMeta54 = mmc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT0, _scrutinee);
+                  tmpMeta54 = omc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT0, _scrutinee);
                   tmpMeta48 = omc_DAEToMid_RValueToVar(threadData, tmpMeta54, _state);
                   goto tmp50_done;
                 }
@@ -659,13 +656,13 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                   modelica_integer tmp60;
                   modelica_metatype tmpMeta61;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp57_1,3,1) == 0) goto tmp56_end;
-                  tmpMeta59 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp57_1), 2));
-                  tmp60 = mmc_unbox_integer(tmpMeta59);
+                  tmpMeta59 = OMC_BOX_FIELD(tmp57_1, 2);
+                  tmp60 = omc_unbox_integer(tmpMeta59);
                   _bool = tmp60  /* pattern as ty=Boolean */;
                   /* Pattern matching succeeded */
                   _scrutineeCompareVar = _scrutinee;
 
-                  tmpMeta61 = mmc_mk_box2(8, &MidCode_RValue_LITERALBOOLEAN__desc, mmc_mk_boolean(_bool));
+                  tmpMeta61 = omc_mk_box2(8, &MidCode_RValue_LITERALBOOLEAN__desc, omc_mk_boolean(_bool));
                   _patCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta61, _state);
                   goto tmp56_done;
                 }
@@ -674,13 +671,13 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                   modelica_integer tmp63;
                   modelica_metatype tmpMeta64;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp57_1,0,1) == 0) goto tmp56_end;
-                  tmpMeta62 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp57_1), 2));
-                  tmp63 = mmc_unbox_integer(tmpMeta62);
+                  tmpMeta62 = OMC_BOX_FIELD(tmp57_1, 2);
+                  tmp63 = omc_unbox_integer(tmpMeta62);
                   _integer = tmp63  /* pattern as ty=Integer */;
                   /* Pattern matching succeeded */
                   _scrutineeCompareVar = _scrutinee;
 
-                  tmpMeta64 = mmc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, mmc_mk_integer(_integer));
+                  tmpMeta64 = omc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, omc_mk_integer(_integer));
                   _patCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta64, _state);
                   goto tmp56_done;
                 }
@@ -689,13 +686,13 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                   modelica_real tmp66;
                   modelica_metatype tmpMeta67;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp57_1,1,1) == 0) goto tmp56_end;
-                  tmpMeta65 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp57_1), 2));
-                  tmp66 = mmc_unbox_real(tmpMeta65);
+                  tmpMeta65 = OMC_BOX_FIELD(tmp57_1, 2);
+                  tmp66 = omc_unbox_real(tmpMeta65);
                   _real = tmp66  /* pattern as ty=Real */;
                   /* Pattern matching succeeded */
                   _scrutineeCompareVar = _scrutinee;
 
-                  tmpMeta67 = mmc_mk_box2(7, &MidCode_RValue_LITERALREAL__desc, mmc_mk_real(_real));
+                  tmpMeta67 = omc_mk_box2(7, &MidCode_RValue_LITERALREAL__desc, omc_mk_real(_real));
                   _patCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta67, _state);
                   goto tmp56_done;
                 }
@@ -704,13 +701,13 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                   modelica_integer tmp69;
                   modelica_metatype tmpMeta70;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp57_1,5,2) == 0) goto tmp56_end;
-                  tmpMeta68 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp57_1), 3));
-                  tmp69 = mmc_unbox_integer(tmpMeta68);
+                  tmpMeta68 = OMC_BOX_FIELD(tmp57_1, 3);
+                  tmp69 = omc_unbox_integer(tmpMeta68);
                   _integer = tmp69  /* pattern as ty=Integer */;
                   /* Pattern matching succeeded */
                   _scrutineeCompareVar = _scrutinee;
 
-                  tmpMeta70 = mmc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, mmc_mk_integer(_integer));
+                  tmpMeta70 = omc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, omc_mk_integer(_integer));
                   _patCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta70, _state);
                   goto tmp56_done;
                 }
@@ -718,10 +715,10 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                   modelica_metatype tmpMeta71;
                   modelica_metatype tmpMeta72;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp57_1,28,1) == 0) goto tmp56_end;
-                  tmpMeta71 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp57_1), 2));
+                  tmpMeta71 = OMC_BOX_FIELD(tmp57_1, 2);
                   if (!listEmpty(tmpMeta71)) goto tmp56_end;
                   /* Pattern matching succeeded */
-                  tmpMeta72 = mmc_mk_box2(13, &MidCode_RValue_ISCONS__desc, _scrutinee);
+                  tmpMeta72 = omc_mk_box2(13, &MidCode_RValue_ISCONS__desc, _scrutinee);
                   _scrutineeCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta72, _state);
 
                   _patCompareVar = omc_DAEToMid_RValueToVar(threadData, _OMC_LIT1, _state);
@@ -731,10 +728,10 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                   modelica_metatype tmpMeta73;
                   modelica_metatype tmpMeta74;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp57_1,31,1) == 0) goto tmp56_end;
-                  tmpMeta73 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp57_1), 2));
+                  tmpMeta73 = OMC_BOX_FIELD(tmp57_1, 2);
                   if (!optionNone(tmpMeta73)) goto tmp56_end;
                   /* Pattern matching succeeded */
-                  tmpMeta74 = mmc_mk_box2(12, &MidCode_RValue_ISSOME__desc, _scrutinee);
+                  tmpMeta74 = omc_mk_box2(12, &MidCode_RValue_ISSOME__desc, _scrutinee);
                   _scrutineeCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta74, _state);
 
                   _patCompareVar = omc_DAEToMid_RValueToVar(threadData, _OMC_LIT1, _state);
@@ -744,23 +741,23 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                   modelica_metatype tmpMeta75;
                   modelica_metatype tmpMeta76;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp57_1,2,1) == 0) goto tmp56_end;
-                  tmpMeta75 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp57_1), 2));
+                  tmpMeta75 = OMC_BOX_FIELD(tmp57_1, 2);
                   _string = tmpMeta75;
                   /* Pattern matching succeeded */
                   _scrutineeCompareVar = _scrutinee;
 
-                  tmpMeta76 = mmc_mk_box2(9, &MidCode_RValue_LITERALSTRING__desc, _string);
+                  tmpMeta76 = omc_mk_box2(9, &MidCode_RValue_LITERALSTRING__desc, _string);
                   _patCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta76, _state);
                   goto tmp56_done;
                 }
                 case 7: {
-                  modelica_metatype tmpMeta77;
-                  modelica_metatype tmpMeta78;
+                  modelica_string tmp77;
+                  modelica_string tmp78;
                   
                   /* Pattern matching succeeded */
-                  tmpMeta77 = stringAppend(_OMC_LIT2,omc_ExpressionDump_dumpExpStr(threadData, _exp, ((modelica_integer) 0)));
-                  tmpMeta78 = stringAppend(tmpMeta77,_OMC_LIT3);
-                  omc_Error_addInternalError(threadData, tmpMeta78, _OMC_LIT5);
+                  tmp77 = stringAppend(_OMC_LIT2,omc_ExpressionDump_dumpExpStr(threadData, _exp, ((modelica_integer) 0)));
+                  tmp78 = stringAppend(tmp77,_OMC_LIT3);
+                  omc_Error_addInternalError(threadData, tmp78, _OMC_LIT5);
                   goto goto_55;
                   goto tmp56_done;
                 }
@@ -779,8 +776,8 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
 
           _ok = omc_DAEToMid_GenTmpVar(threadData, _OMC_LIT6, _state);
 
-          tmpMeta79 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT7, _scrutineeCompareVar, _patCompareVar);
-          tmpMeta80 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _ok, tmpMeta79);
+          tmpMeta79 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT7, _scrutineeCompareVar, _patCompareVar);
+          tmpMeta80 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _ok, tmpMeta79);
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta80, _state);
 
           omc_DAEToMid_stateAddBailOnFalse(threadData, _ok, _labelNoMatch, _state);
@@ -806,17 +803,17 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta81 = MMC_CAR(tmp3_1);
           tmpMeta82 = MMC_CDR(tmp3_1);
-          tmpMeta83 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta81), 1));
-          tmpMeta84 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta81), 2));
+          tmpMeta83 = OMC_BOX_FIELD(tmpMeta81, 1);
+          tmpMeta84 = OMC_BOX_FIELD(tmpMeta81, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta84,4,1) == 0) goto tmp2_end;
-          tmpMeta85 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta84), 2));
+          tmpMeta85 = OMC_BOX_FIELD(tmpMeta84, 2);
           _scrutinee = tmpMeta83;
           _morePatterns = tmpMeta85;
           _restMatches = tmpMeta82;
           /* Pattern matching succeeded */
           { /* match expression */
             modelica_metatype tmp89_1;
-            tmp89_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_scrutinee), 3)));
+            tmp89_1 = (OMC_BOX_FIELD(_scrutinee, 3));
             {
               volatile mmc_switch_type tmp89;
               int tmp90;
@@ -826,20 +823,20 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                 case 0: {
                   modelica_metatype tmpMeta91;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp89_1,18,1) == 0) goto tmp88_end;
-                  tmpMeta91 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp89_1), 2));
+                  tmpMeta91 = OMC_BOX_FIELD(tmp89_1, 2);
                   _listTypes = tmpMeta91;
                   /* Pattern matching succeeded */
                   tmpMeta86 = _listTypes;
                   goto tmp88_done;
                 }
                 case 1: {
-                  modelica_metatype tmpMeta92;
-                  modelica_metatype tmpMeta93;
+                  modelica_string tmp92;
+                  modelica_string tmp93;
                   
                   /* Pattern matching succeeded */
-                  tmpMeta92 = stringAppend(_OMC_LIT8,omc_DAEDump_daeTypeStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_scrutinee), 3)))));
-                  tmpMeta93 = stringAppend(tmpMeta92,_OMC_LIT3);
-                  omc_Error_addInternalError(threadData, tmpMeta93, _OMC_LIT9);
+                  tmp92 = stringAppend(_OMC_LIT8,omc_DAEDump_daeTypeStr(threadData, (OMC_BOX_FIELD(_scrutinee, 3))));
+                  tmp93 = stringAppend(tmp92,_OMC_LIT3);
+                  omc_Error_addInternalError(threadData, tmp93, _OMC_LIT9);
                   goto goto_87;
                   goto tmp88_done;
                 }
@@ -866,10 +863,10 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           while(1)
           {
             if(!(!listEmpty(_iterator))) break;
-            tmpMeta95 = mmc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _scrutinee, mmc_mk_integer(_fieldNr), listHead(_listTypes));
+            tmpMeta95 = omc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _scrutinee, omc_mk_integer(_fieldNr), listHead(_listTypes));
             _midvar = omc_DAEToMid_RValueToVar(threadData, tmpMeta95, _state);
 
-            tmpMeta97 = mmc_mk_box2(0, _midvar, listHead(_iterator));
+            tmpMeta97 = omc_mk_box2(0, _midvar, listHead(_iterator));
             tmpMeta96 = mmc_mk_cons(tmpMeta97, _moreMatches);
             _moreMatches = tmpMeta96;
 
@@ -905,30 +902,30 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta98 = MMC_CAR(tmp3_1);
           tmpMeta99 = MMC_CDR(tmp3_1);
-          tmpMeta100 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta98), 1));
-          tmpMeta101 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta98), 2));
+          tmpMeta100 = OMC_BOX_FIELD(tmpMeta98, 1);
+          tmpMeta101 = OMC_BOX_FIELD(tmpMeta98, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta101,9,1) == 0) goto tmp2_end;
-          tmpMeta102 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta101), 2));
+          tmpMeta102 = OMC_BOX_FIELD(tmpMeta101, 2);
           _scrutinee = tmpMeta100;
           _pattern = tmpMeta102;
           _restMatches = tmpMeta99;
           /* Pattern matching succeeded */
           _ok = omc_DAEToMid_GenTmpVar(threadData, _OMC_LIT6, _state);
 
-          tmpMeta103 = mmc_mk_box2(12, &MidCode_RValue_ISSOME__desc, _scrutinee);
+          tmpMeta103 = omc_mk_box2(12, &MidCode_RValue_ISSOME__desc, _scrutinee);
           _scrutineeCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta103, _state);
 
           _patCompareVar = omc_DAEToMid_RValueToVar(threadData, _OMC_LIT10, _state);
 
-          tmpMeta104 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT7, _scrutineeCompareVar, _patCompareVar);
-          tmpMeta105 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _ok, tmpMeta104);
+          tmpMeta104 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT7, _scrutineeCompareVar, _patCompareVar);
+          tmpMeta105 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _ok, tmpMeta104);
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta105, _state);
 
           omc_DAEToMid_stateAddBailOnFalse(threadData, _ok, _labelNoMatch, _state);
 
           { /* match expression */
             modelica_metatype tmp109_1;
-            tmp109_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_scrutinee), 3)));
+            tmp109_1 = (OMC_BOX_FIELD(_scrutinee, 3));
             {
               volatile mmc_switch_type tmp109;
               int tmp110;
@@ -938,7 +935,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                 case 0: {
                   modelica_metatype tmpMeta111;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp109_1,19,1) == 0) goto tmp108_end;
-                  tmpMeta111 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp109_1), 2));
+                  tmpMeta111 = OMC_BOX_FIELD(tmp109_1, 2);
                   _ty = tmpMeta111;
                   /* Pattern matching succeeded */
                   tmpMeta106 = _ty;
@@ -964,10 +961,10 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           }
           _ty = tmpMeta106;
 
-          tmpMeta112 = mmc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _scrutinee, mmc_mk_integer(((modelica_integer) 0)), _ty);
+          tmpMeta112 = omc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _scrutinee, omc_mk_integer(((modelica_integer) 0)), _ty);
           _midvar = omc_DAEToMid_RValueToVar(threadData, tmpMeta112, _state);
 
-          tmpMeta114 = mmc_mk_box2(0, _midvar, _pattern);
+          tmpMeta114 = omc_mk_box2(0, _midvar, _pattern);
           tmpMeta113 = mmc_mk_cons(tmpMeta114, _restMatches);
           /* Tail recursive call */
           _matches = tmpMeta113;
@@ -996,32 +993,32 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta115 = MMC_CAR(tmp3_1);
           tmpMeta116 = MMC_CDR(tmp3_1);
-          tmpMeta117 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta115), 1));
-          tmpMeta118 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta115), 2));
+          tmpMeta117 = OMC_BOX_FIELD(tmpMeta115, 1);
+          tmpMeta118 = OMC_BOX_FIELD(tmpMeta115, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta118,6,2) == 0) goto tmp2_end;
-          tmpMeta119 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta118), 2));
-          tmpMeta120 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta118), 3));
+          tmpMeta119 = OMC_BOX_FIELD(tmpMeta118, 2);
+          tmpMeta120 = OMC_BOX_FIELD(tmpMeta118, 3);
           _scrutinee = tmpMeta117;
           _headPattern = tmpMeta119;
           _restPattern = tmpMeta120;
           _restMatches = tmpMeta116;
           /* Pattern matching succeeded */
-          tmpMeta121 = mmc_mk_box2(13, &MidCode_RValue_ISCONS__desc, _scrutinee);
+          tmpMeta121 = omc_mk_box2(13, &MidCode_RValue_ISCONS__desc, _scrutinee);
           _scrutineeCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta121, _state);
 
           _patCompareVar = omc_DAEToMid_RValueToVar(threadData, _OMC_LIT10, _state);
 
           _ok = omc_DAEToMid_GenTmpVar(threadData, _OMC_LIT6, _state);
 
-          tmpMeta122 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT7, _scrutineeCompareVar, _patCompareVar);
-          tmpMeta123 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _ok, tmpMeta122);
+          tmpMeta122 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT7, _scrutineeCompareVar, _patCompareVar);
+          tmpMeta123 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _ok, tmpMeta122);
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta123, _state);
 
           omc_DAEToMid_stateAddBailOnFalse(threadData, _ok, _labelNoMatch, _state);
 
           { /* match expression */
             modelica_metatype tmp127_1;
-            tmp127_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_scrutinee), 3)));
+            tmp127_1 = (OMC_BOX_FIELD(_scrutinee, 3));
             {
               volatile mmc_switch_type tmp127;
               int tmp128;
@@ -1030,22 +1027,22 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                 switch (MMC_SWITCH_CAST(tmp127)) {
                 case 0: {
                   modelica_metatype tmpMeta129;
-                  modelica_metatype tmpMeta130;
-                  modelica_metatype tmpMeta131;
+                  modelica_string tmp130;
+                  modelica_string tmp131;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp127_1,17,1) == 0) goto tmp126_end;
-                  tmpMeta129 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp127_1), 2));
+                  tmpMeta129 = OMC_BOX_FIELD(tmp127_1, 2);
                   if (mmc__uniontype__metarecord__typedef__equal(tmpMeta129,8,0) == 0) goto tmp126_end;
                   /* Pattern matching succeeded */
-                  tmpMeta130 = stringAppend(_OMC_LIT13,omc_DAEDump_daeTypeStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_scrutinee), 3)))));
-                  tmpMeta131 = stringAppend(tmpMeta130,_OMC_LIT3);
-                  omc_Error_addInternalError(threadData, tmpMeta131, _OMC_LIT14);
+                  tmp130 = stringAppend(_OMC_LIT13,omc_DAEDump_daeTypeStr(threadData, (OMC_BOX_FIELD(_scrutinee, 3))));
+                  tmp131 = stringAppend(tmp130,_OMC_LIT3);
+                  omc_Error_addInternalError(threadData, tmp131, _OMC_LIT14);
                   goto goto_125;
                   goto tmp126_done;
                 }
                 case 1: {
                   modelica_metatype tmpMeta132;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp127_1,17,1) == 0) goto tmp126_end;
-                  tmpMeta132 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp127_1), 2));
+                  tmpMeta132 = OMC_BOX_FIELD(tmp127_1, 2);
                   _ty = tmpMeta132;
                   /* Pattern matching succeeded */
                   tmpMeta124 = _ty;
@@ -1071,14 +1068,14 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           }
           _ty = tmpMeta124;
 
-          tmpMeta133 = mmc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _scrutinee, mmc_mk_integer(((modelica_integer) 0)), _ty);
+          tmpMeta133 = omc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _scrutinee, omc_mk_integer(((modelica_integer) 0)), _ty);
           _headVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta133, _state);
 
-          tmpMeta134 = mmc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _scrutinee, mmc_mk_integer(((modelica_integer) 1)), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_scrutinee), 3))));
+          tmpMeta134 = omc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _scrutinee, omc_mk_integer(((modelica_integer) 1)), (OMC_BOX_FIELD(_scrutinee, 3)));
           _restVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta134, _state);
 
-          tmpMeta136 = mmc_mk_box2(0, _headVar, _headPattern);
-          tmpMeta138 = mmc_mk_box2(0, _restVar, _restPattern);
+          tmpMeta136 = omc_mk_box2(0, _headVar, _headPattern);
+          tmpMeta138 = omc_mk_box2(0, _restVar, _restPattern);
           tmpMeta137 = mmc_mk_cons(tmpMeta138, _restMatches);
           tmpMeta135 = mmc_mk_cons(tmpMeta136, tmpMeta137);
           /* Tail recursive call */
@@ -1111,15 +1108,15 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta139 = MMC_CAR(tmp3_1);
           tmpMeta140 = MMC_CDR(tmp3_1);
-          tmpMeta141 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta139), 1));
-          tmpMeta142 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta139), 2));
+          tmpMeta141 = OMC_BOX_FIELD(tmpMeta139, 1);
+          tmpMeta142 = OMC_BOX_FIELD(tmpMeta139, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta142,7,6) == 0) goto tmp2_end;
-          tmpMeta143 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta142), 3));
-          tmp144 = mmc_unbox_integer(tmpMeta143);
-          tmpMeta145 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta142), 4));
-          tmpMeta146 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta142), 5));
-          tmpMeta147 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta142), 7));
-          tmp148 = mmc_unbox_integer(tmpMeta147);
+          tmpMeta143 = OMC_BOX_FIELD(tmpMeta142, 3);
+          tmp144 = omc_unbox_integer(tmpMeta143);
+          tmpMeta145 = OMC_BOX_FIELD(tmpMeta142, 4);
+          tmpMeta146 = OMC_BOX_FIELD(tmpMeta142, 5);
+          tmpMeta147 = OMC_BOX_FIELD(tmpMeta142, 7);
+          tmp148 = omc_unbox_integer(tmpMeta147);
           _scrutinee = tmpMeta141;
           _index = tmp144  /* pattern as ty=Integer */;
           _morePatterns = tmpMeta145;
@@ -1131,14 +1128,14 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           {
             _ok = omc_DAEToMid_GenTmpVar(threadData, _OMC_LIT6, _state);
 
-            tmpMeta149 = mmc_mk_box2(11, &MidCode_RValue_UNIONTYPEVARIANT__desc, _scrutinee);
+            tmpMeta149 = omc_mk_box2(11, &MidCode_RValue_UNIONTYPEVARIANT__desc, _scrutinee);
             _scrutineeCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta149, _state);
 
-            tmpMeta150 = mmc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, mmc_mk_integer(_index));
+            tmpMeta150 = omc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, omc_mk_integer(_index));
             _patCompareVar = omc_DAEToMid_RValueToVar(threadData, tmpMeta150, _state);
 
-            tmpMeta151 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT7, _scrutineeCompareVar, _patCompareVar);
-            tmpMeta152 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _ok, tmpMeta151);
+            tmpMeta151 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT7, _scrutineeCompareVar, _patCompareVar);
+            tmpMeta152 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _ok, tmpMeta151);
             omc_DAEToMid_stateAddStmt(threadData, tmpMeta152, _state);
 
             omc_DAEToMid_stateAddBailOnFalse(threadData, _ok, _labelNoMatch, _state);
@@ -1164,7 +1161,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
                 tmp156--;
               }
               if (tmp156 == 0) {
-                __omcQ_24tmpVar2 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_v), 4)));
+                __omcQ_24tmpVar2 = (OMC_BOX_FIELD(_v, 4));
                 *tmp154 = mmc_mk_cons(__omcQ_24tmpVar2,0);
                 tmp154 = &MMC_CDR(*tmp154);
               } else if (tmp156 == 1) {
@@ -1188,10 +1185,10 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           while(1)
           {
             if(!(!listEmpty(_iterator))) break;
-            tmpMeta158 = mmc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _scrutinee, mmc_mk_integer(_fieldNr), listHead(_listTypes));
+            tmpMeta158 = omc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _scrutinee, omc_mk_integer(_fieldNr), listHead(_listTypes));
             _midvar = omc_DAEToMid_RValueToVar(threadData, tmpMeta158, _state);
 
-            tmpMeta160 = mmc_mk_box2(0, _midvar, listHead(_iterator));
+            tmpMeta160 = omc_mk_box2(0, _midvar, listHead(_iterator));
             tmpMeta159 = mmc_mk_cons(tmpMeta160, _moreMatches);
             _moreMatches = tmpMeta159;
 
@@ -1218,7 +1215,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta161 = MMC_CAR(tmp3_1);
           tmpMeta162 = MMC_CDR(tmp3_1);
-          tmpMeta163 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta161), 2));
+          tmpMeta163 = OMC_BOX_FIELD(tmpMeta161, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta163,3,2) == 0) goto tmp2_end;
           
           /* Pattern matching succeeded */
@@ -1233,7 +1230,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta164 = MMC_CAR(tmp3_1);
           tmpMeta165 = MMC_CDR(tmp3_1);
-          tmpMeta166 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta164), 2));
+          tmpMeta166 = OMC_BOX_FIELD(tmpMeta164, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta166,5,1) == 0) goto tmp2_end;
           
           /* Pattern matching succeeded */
@@ -1248,7 +1245,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
           if (listEmpty(tmp3_1)) goto tmp2_end;
           tmpMeta167 = MMC_CAR(tmp3_1);
           tmpMeta168 = MMC_CDR(tmp3_1);
-          tmpMeta169 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta167), 2));
+          tmpMeta169 = OMC_BOX_FIELD(tmpMeta167, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta169,8,2) == 0) goto tmp2_end;
           
           /* Pattern matching succeeded */
@@ -1269,22 +1266,19 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_patternToMidCode2(threadData_t *thre
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_DAEToMid_patternToMidCode2(threadData_t *threadData, modelica_metatype _state, modelica_metatype _matches, modelica_metatype _labelNoMatch, modelica_metatype _assignBlock)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_labelNoMatch);
+  tmp1 = omc_unbox_integer(_labelNoMatch);
   omc_DAEToMid_patternToMidCode2(threadData, _state, _matches, tmp1, _assignBlock);
   return;
 }
@@ -1295,7 +1289,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_patternToMidCode(thread
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _assignBlock has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
@@ -1312,13 +1307,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_patternToMidCode(thread
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _assignBlock;
+  omc_ret_ = _assignBlock;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DAEToMid_patternToMidCode(threadData_t *threadData, modelica_metatype _matches, modelica_metatype _labelNoMatch, modelica_metatype _state)
 {
   modelica_integer tmp1;
   modelica_metatype _assignBlock = NULL;
-  tmp1 = mmc_unbox_integer(_labelNoMatch);
+  tmp1 = omc_unbox_integer(_labelNoMatch);
   _assignBlock = omc_DAEToMid_patternToMidCode(threadData, _matches, tmp1, _state);
   /* skip box _assignBlock; array<list<MidCode.Stmt>> */
   return _assignBlock;
@@ -1353,10 +1349,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
   modelica_metatype _inputsMidVar = NULL;
   modelica_metatype _daeExp = NULL;
   modelica_metatype _caseLabelIterator = NULL;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _labelFin has no default value.
   // _labelMux has no default value.
@@ -1434,10 +1427,10 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
           modelica_metatype tmpMeta45;
           modelica_metatype tmpMeta46;
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,33,6) == 0) goto tmp2_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 3));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 4));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 6));
+          tmpMeta5 = OMC_BOX_FIELD(tmp3_1, 2);
+          tmpMeta6 = OMC_BOX_FIELD(tmp3_1, 3);
+          tmpMeta7 = OMC_BOX_FIELD(tmp3_1, 4);
+          tmpMeta8 = OMC_BOX_FIELD(tmp3_1, 6);
           
           _matchType = tmpMeta5;
           _inputsCref = tmpMeta6;
@@ -1495,7 +1488,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
             for(_i = ((modelica_integer) 1); in_range_integer(_i, tmp16, tmp18); _i += tmp17)
             {
 
-              tmpMeta15 = mmc_mk_cons(mmc_mk_integer(omc_DAEToMid_GenBlockId(threadData)), _caseLabels);
+              tmpMeta15 = mmc_mk_cons(omc_mk_integer(omc_DAEToMid_GenBlockId(threadData)), _caseLabels);
               _caseLabels = tmpMeta15;
             }
           }
@@ -1505,7 +1498,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
             {
               {
                 FILE_INFO info = {"DAEToMid.mo",1124,5,1124,144,0};
-                omc_assert(threadData, info, MMC_STRINGDATA(_OMC_LIT26));
+                omc_assert(threadData, info, omc_string_data(_OMC_LIT26));
               }
             }
           }
@@ -1520,14 +1513,14 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
               _daeExp_aliasList = MMC_CAR(tmpMeta21);
               /* Pattern-matching assignment */
               tmpMeta22 = _daeExp_aliasList;
-              tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta22), 1));
-              tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta22), 2));
+              tmpMeta23 = OMC_BOX_FIELD(tmpMeta22, 1);
+              tmpMeta24 = OMC_BOX_FIELD(tmpMeta22, 2);
               _daeExp = tmpMeta23;
               _aliasList = tmpMeta24;
 
               _srcVar = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _daeExp, _state), _state);
 
-              tmpMeta25 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _srcVar);
+              tmpMeta25 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _srcVar);
               _ty = omc_DAEToMid_RValueType(threadData, tmpMeta25);
 
               tmpMeta26 = mmc_mk_cons(_srcVar, _inputsMidVar);
@@ -1538,13 +1531,13 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                 for (tmpMeta27 = _aliasList; !listEmpty(tmpMeta27); tmpMeta27=MMC_CDR(tmpMeta27))
                 {
                   _alias = MMC_CAR(tmpMeta27);
-                  tmpMeta28 = mmc_mk_box4(3, &MidCode_Var_VAR__desc, _alias, _ty, mmc_mk_boolean(0 /* false */));
+                  tmpMeta28 = omc_mk_box4(3, &MidCode_Var_VAR__desc, _alias, _ty, omc_mk_boolean(0 /* false */));
                   _aliasVar = tmpMeta28;
 
-                  omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 2))), _aliasVar);
+                  omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 2)), _aliasVar);
 
-                  tmpMeta29 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _srcVar);
-                  tmpMeta30 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _aliasVar, tmpMeta29);
+                  tmpMeta29 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _srcVar);
+                  tmpMeta30 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _aliasVar, tmpMeta29);
                   omc_DAEToMid_stateAddStmt(threadData, tmpMeta30, _state);
                 }
               }
@@ -1553,7 +1546,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
 
           _muxState = omc_DAEToMid_GenTmpVarVolatile(threadData, _OMC_LIT27, _state);
 
-          tmpMeta33 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _muxState, _OMC_LIT28);
+          tmpMeta33 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _muxState, _OMC_LIT28);
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta33, _state);
 
           if(_matchContinue)
@@ -1562,12 +1555,12 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
 
             _muxNewBuf = omc_DAEToMid_GenTmpVarBuf(threadData, _state);
 
-            tmpMeta34 = mmc_mk_box4(9, &MidCode_Terminator_PUSHJMP__desc, _muxOldBuf, _muxNewBuf, mmc_mk_integer(_labelMux));
+            tmpMeta34 = omc_mk_box4(9, &MidCode_Terminator_PUSHJMP__desc, _muxOldBuf, _muxNewBuf, omc_mk_integer(_labelMux));
             omc_DAEToMid_stateTerminate(threadData, _labelMux, tmpMeta34, _state);
           }
           else
           {
-            tmpMeta35 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelMux));
+            tmpMeta35 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelMux));
             omc_DAEToMid_stateTerminate(threadData, _labelMux, tmpMeta35, _state);
           }
 
@@ -1575,20 +1568,20 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
           {
             _one = omc_DAEToMid_GenTmpVar(threadData, _OMC_LIT27, _state);
 
-            tmpMeta36 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _one, _OMC_LIT29);
+            tmpMeta36 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _one, _OMC_LIT29);
             omc_DAEToMid_stateAddStmt(threadData, tmpMeta36, _state);
 
-            tmpMeta37 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT30, _muxState, _one);
-            tmpMeta38 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _muxState, tmpMeta37);
+            tmpMeta37 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT30, _muxState, _one);
+            tmpMeta38 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _muxState, tmpMeta37);
             omc_DAEToMid_stateAddStmt(threadData, tmpMeta38, _state);
 
-            tmpMeta39 = mmc_mk_cons(mmc_mk_integer(_labelFin), MMC_REFSTRUCTLIT(mmc_nil));
-            tmpMeta40 = mmc_mk_box3(7, &MidCode_Terminator_SWITCH__desc, _muxState, omc_List_zip(threadData, omc_List_intRange(threadData, ((modelica_integer) 1) + listLength(_cases)), listAppend(_caseLabels, tmpMeta39)));
+            tmpMeta39 = mmc_mk_cons(omc_mk_integer(_labelFin), MMC_REFSTRUCTLIT(mmc_nil));
+            tmpMeta40 = omc_mk_box3(7, &MidCode_Terminator_SWITCH__desc, _muxState, omc_List_zip(threadData, omc_List_intRange(threadData, ((modelica_integer) 1) + listLength(_cases)), listAppend(_caseLabels, tmpMeta39)));
             omc_DAEToMid_stateTerminate(threadData, _labelFin, tmpMeta40, _state);
           }
           else
           {
-            tmpMeta41 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(((!listEmpty(_caseLabels))?mmc_unbox_integer(listHead(_caseLabels)):_labelFin)));
+            tmpMeta41 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(((!listEmpty(_caseLabels))?omc_unbox_integer(listHead(_caseLabels)):_labelFin)));
             omc_DAEToMid_stateTerminate(threadData, _labelFin, tmpMeta41, _state);
           }
 
@@ -1600,22 +1593,22 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
 
           if(_matchContinue)
           {
-            tmpMeta42 = mmc_mk_box3(10, &MidCode_Terminator_POPJMP__desc, _muxOldBuf, mmc_mk_integer(_labelFin2));
+            tmpMeta42 = omc_mk_box3(10, &MidCode_Terminator_POPJMP__desc, _muxOldBuf, omc_mk_integer(_labelFin2));
             omc_DAEToMid_stateTerminate(threadData, _labelFin2, tmpMeta42, _state);
           }
           else
           {
-            tmpMeta43 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelFin2));
+            tmpMeta43 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelFin2));
             omc_DAEToMid_stateTerminate(threadData, _labelFin2, tmpMeta43, _state);
           }
 
-          tmpMeta44 = mmc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, mmc_mk_integer(((modelica_integer) 1) + listLength(_cases)));
+          tmpMeta44 = omc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, omc_mk_integer(((modelica_integer) 1) + listLength(_cases)));
           _midvar = omc_DAEToMid_RValueToVar(threadData, tmpMeta44, _state);
 
-          tmpMeta45 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT7, _muxState, _midvar);
+          tmpMeta45 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT7, _muxState, _midvar);
           _midvar2 = omc_DAEToMid_RValueToVar(threadData, tmpMeta45, _state);
 
-          tmpMeta46 = mmc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _midvar2, mmc_mk_integer(_labelFail), mmc_mk_integer(_labelOut));
+          tmpMeta46 = omc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _midvar2, omc_mk_integer(_labelFail), omc_mk_integer(_labelOut));
           omc_DAEToMid_stateTerminate(threadData, _labelFail, tmpMeta46, _state);
 
           omc_DAEToMid_stateTerminate(threadData, _labelOut, _OMC_LIT31, _state);
@@ -1625,7 +1618,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
           while(1)
           {
             if(!(!listEmpty(_caseLabelIterator))) break;
-            _caseLabel = mmc_unbox_integer(listHead(_caseLabelIterator));
+            _caseLabel = omc_unbox_integer(listHead(_caseLabelIterator));
 
             _caseLabelIterator = listRest(_caseLabelIterator);
 
@@ -1664,10 +1657,10 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                     if (listEmpty(tmp49_1)) goto tmp48_end;
                     tmpMeta51 = MMC_CAR(tmp49_1);
                     tmpMeta52 = MMC_CDR(tmp49_1);
-                    tmpMeta53 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta51), 2));
-                    tmpMeta54 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta51), 3));
-                    tmpMeta55 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta51), 5));
-                    tmpMeta56 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta51), 6));
+                    tmpMeta53 = OMC_BOX_FIELD(tmpMeta51, 2);
+                    tmpMeta54 = OMC_BOX_FIELD(tmpMeta51, 3);
+                    tmpMeta55 = OMC_BOX_FIELD(tmpMeta51, 5);
+                    tmpMeta56 = OMC_BOX_FIELD(tmpMeta51, 6);
                     
                     _patterns = tmpMeta53;
                     _patternGuard = tmpMeta54;
@@ -1681,7 +1674,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                     }
                     else
                     {
-                      omc_DAEToMid_patternToMidCode(threadData, omc_List_zip(threadData, _inputsMidVar, _patterns), ((!listEmpty(_caseLabelIterator))?mmc_unbox_integer(listHead(_caseLabelIterator)):_labelFail), _state);
+                      omc_DAEToMid_patternToMidCode(threadData, omc_List_zip(threadData, _inputsMidVar, _patterns), ((!listEmpty(_caseLabelIterator))?omc_unbox_integer(listHead(_caseLabelIterator)):_labelFail), _state);
                     }
 
                     { /* match expression */
@@ -1701,7 +1694,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                           case 1: {
                             modelica_metatype tmpMeta61;
                             if (optionNone(tmp59_1)) goto tmp58_end;
-                            tmpMeta61 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp59_1), 1));
+                            tmpMeta61 = OMC_BOX_FIELD(tmp59_1, 1);
                             _daeExp = tmpMeta61;
                             /* Pattern matching succeeded */
                             _midvar = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _daeExp, _state), _state);
@@ -1712,7 +1705,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                             }
                             else
                             {
-                              omc_DAEToMid_stateAddBailOnFalse(threadData, _midvar, ((!listEmpty(_caseLabelIterator))?mmc_unbox_integer(listHead(_caseLabelIterator)):_labelFail), _state);
+                              omc_DAEToMid_stateAddBailOnFalse(threadData, _midvar, ((!listEmpty(_caseLabelIterator))?omc_unbox_integer(listHead(_caseLabelIterator)):_labelFail), _state);
                             }
                             goto tmp58_done;
                           }
@@ -1752,9 +1745,9 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                             modelica_metatype tmpMeta71;
                             modelica_metatype tmpMeta78;
                             if (optionNone(tmp64_1)) goto tmp63_end;
-                            tmpMeta66 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp64_1), 1));
+                            tmpMeta66 = OMC_BOX_FIELD(tmp64_1, 1);
                             if (mmc__uniontype__metarecord__typedef__equal(tmpMeta66,19,1) == 0) goto tmp63_end;
-                            tmpMeta67 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta66), 2));
+                            tmpMeta67 = OMC_BOX_FIELD(tmpMeta66, 2);
                             
                             _expList = tmpMeta67;
                             /* Pattern matching succeeded */
@@ -1765,8 +1758,8 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                                 _outvarDaeExp = MMC_CAR(tmpMeta68);
                                 /* Pattern-matching assignment */
                                 tmpMeta69 = _outvarDaeExp;
-                                tmpMeta70 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta69), 1));
-                                tmpMeta71 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta69), 2));
+                                tmpMeta70 = OMC_BOX_FIELD(tmpMeta69, 1);
+                                tmpMeta71 = OMC_BOX_FIELD(tmpMeta69, 2);
                                 _outvar = tmpMeta70;
                                 _daeExp = tmpMeta71;
 
@@ -1785,10 +1778,10 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                                         modelica_metatype tmpMeta76;
                                         modelica_metatype tmpMeta77;
                                         if (mmc__uniontype__metarecord__typedef__equal(tmp74_1,0,1) == 0) goto tmp73_end;
-                                        tmpMeta76 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp74_1), 2));
+                                        tmpMeta76 = OMC_BOX_FIELD(tmp74_1, 2);
                                         _var = tmpMeta76;
                                         /* Pattern matching succeeded */
-                                        tmpMeta77 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _var, omc_DAEToMid_ExpToMid(threadData, _daeExp, _state));
+                                        tmpMeta77 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _var, omc_DAEToMid_ExpToMid(threadData, _daeExp, _state));
                                         omc_DAEToMid_stateAddStmt(threadData, tmpMeta77, _state);
                                         goto tmp73_done;
                                       }
@@ -1816,7 +1809,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                           case 1: {
                             modelica_metatype tmpMeta79;
                             if (optionNone(tmp64_1)) goto tmp63_end;
-                            tmpMeta79 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp64_1), 1));
+                            tmpMeta79 = OMC_BOX_FIELD(tmp64_1, 1);
                             if (mmc__uniontype__metarecord__typedef__equal(tmpMeta79,13,3) == 0) goto tmp63_end;
                             
                             _daeExp = tmpMeta79;
@@ -1827,7 +1820,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                           case 2: {
                             modelica_metatype tmpMeta80;
                             if (optionNone(tmp64_1)) goto tmp63_end;
-                            tmpMeta80 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp64_1), 1));
+                            tmpMeta80 = OMC_BOX_FIELD(tmp64_1, 1);
                             if (mmc__uniontype__metarecord__typedef__equal(tmpMeta80,33,6) == 0) goto tmp63_end;
                             
                             _daeExp = tmpMeta80;
@@ -1842,32 +1835,32 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                             modelica_metatype tmpMeta84;
                             modelica_metatype tmpMeta85;
                             if (optionNone(tmp64_1)) goto tmp63_end;
-                            tmpMeta81 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp64_1), 1));
+                            tmpMeta81 = OMC_BOX_FIELD(tmp64_1, 1);
                             if (listEmpty(tmp64_2)) goto tmp63_end;
                             tmpMeta82 = MMC_CAR(tmp64_2);
                             tmpMeta83 = MMC_CDR(tmp64_2);
                             if (mmc__uniontype__metarecord__typedef__equal(tmpMeta82,0,1) == 0) goto tmp63_end;
-                            tmpMeta84 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta82), 2));
+                            tmpMeta84 = OMC_BOX_FIELD(tmpMeta82, 2);
                             if (!listEmpty(tmpMeta83)) goto tmp63_end;
                             _daeExp = tmpMeta81;
                             _midvar = tmpMeta84;
                             /* Pattern matching succeeded */
-                            tmpMeta85 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _midvar, omc_DAEToMid_ExpToMid(threadData, _daeExp, _state));
+                            tmpMeta85 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _midvar, omc_DAEToMid_ExpToMid(threadData, _daeExp, _state));
                             omc_DAEToMid_stateAddStmt(threadData, tmpMeta85, _state);
                             goto tmp63_done;
                           }
                           case 4: {
                             modelica_metatype tmpMeta86;
-                            modelica_metatype tmpMeta87;
-                            modelica_metatype tmpMeta88;
+                            modelica_string tmp87;
+                            modelica_string tmp88;
                             if (optionNone(tmp64_1)) goto tmp63_end;
-                            tmpMeta86 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp64_1), 1));
+                            tmpMeta86 = OMC_BOX_FIELD(tmp64_1, 1);
                             
                             _daeExp = tmpMeta86;
                             /* Pattern matching succeeded */
-                            tmpMeta87 = stringAppend(_OMC_LIT32,omc_ExpressionDump_dumpExpStr(threadData, _daeExp, ((modelica_integer) 0)));
-                            tmpMeta88 = stringAppend(tmpMeta87,_OMC_LIT33);
-                            omc_Error_addInternalError(threadData, tmpMeta88, _OMC_LIT34);
+                            tmp87 = stringAppend(_OMC_LIT32,omc_ExpressionDump_dumpExpStr(threadData, _daeExp, ((modelica_integer) 0)));
+                            tmp88 = stringAppend(tmp87,_OMC_LIT33);
+                            omc_Error_addInternalError(threadData, tmp88, _OMC_LIT34);
                             goto tmp63_done;
                           }
                           case 5: {
@@ -1897,7 +1890,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
                     }
                     ;
 
-                    tmpMeta89 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelFin));
+                    tmpMeta89 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelFin));
                     omc_DAEToMid_stateTerminate(threadData, _labelOut, tmpMeta89, _state);
                     goto tmp48_done;
                   }
@@ -1922,16 +1915,13 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_MatchExpressionToMid(threadData_t *t
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -1939,7 +1929,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_unpackCrefFromExp(threa
 {
   modelica_metatype _cref = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _cref has no default value.
   { /* match expression */
@@ -1954,7 +1945,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_unpackCrefFromExp(threa
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _cref = tmpMeta6;
           /* Pattern matching succeeded */
@@ -1967,40 +1958,35 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_unpackCrefFromExp(threa
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _cref = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _cref;
+  omc_ret_ = _cref;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_DAEToMid_stateAddBailOnFalse(threadData_t *threadData, modelica_metatype _var, modelica_integer _labelBail, modelica_metatype _state)
 {
   modelica_integer _labelTmp;
   modelica_metatype tmpMeta1;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _labelTmp has no default value.
   _labelTmp = omc_DAEToMid_GenBlockId(threadData);
 
-  tmpMeta1 = mmc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _var, mmc_mk_integer(_labelTmp), mmc_mk_integer(_labelBail));
+  tmpMeta1 = omc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _var, omc_mk_integer(_labelTmp), omc_mk_integer(_labelBail));
   omc_DAEToMid_stateTerminate(threadData, _labelTmp, tmpMeta1, _state);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_DAEToMid_stateAddBailOnFalse(threadData_t *threadData, modelica_metatype _var, modelica_metatype _labelBail, modelica_metatype _state)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_labelBail);
+  tmp1 = omc_unbox_integer(_labelBail);
   omc_DAEToMid_stateAddBailOnFalse(threadData, _var, tmp1, _state);
   return;
 }
@@ -2010,66 +1996,48 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_stateTerminate(threadData_t *threadD
   modelica_metatype _block_ = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _block_ has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta2 = mmc_mk_box4(3, &MidCode_Block_BLOCK__desc, mmc_mk_integer(omc_DAEToMid_stateGetCurrentLabel(threadData, _state)), omc_DoubleEnded_toListAndClear(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 6))), tmpMeta1), _terminator);
+  tmpMeta2 = omc_mk_box4(3, &MidCode_Block_BLOCK__desc, omc_mk_integer(omc_DAEToMid_stateGetCurrentLabel(threadData, _state)), omc_DoubleEnded_toListAndClear(threadData, (OMC_BOX_FIELD(_state, 6)), tmpMeta1), _terminator);
   _block_ = tmpMeta2;
 
-  omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 5))), _block_);
+  omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 5)), _block_);
 
   omc_DAEToMid_stateSetCurrentLabel(threadData, _newLabel, _state);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_DAEToMid_stateTerminate(threadData_t *threadData, modelica_metatype _newLabel, modelica_metatype _terminator, modelica_metatype _state)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_newLabel);
+  tmp1 = omc_unbox_integer(_newLabel);
   omc_DAEToMid_stateTerminate(threadData, tmp1, _terminator, _state);
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_DAEToMid_stateAddStmt(threadData_t *threadData, modelica_metatype _stmt, modelica_metatype _state)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 6))), _stmt);
+  omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 6)), _stmt);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_DAEToMid_stateSetCurrentLabel(threadData_t *threadData, modelica_integer _label, modelica_metatype _state)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 7))), mmc_mk_integer(_label));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_state, 7)), omc_mk_integer(_label));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 PROTECTED_FUNCTION_STATIC void boxptr_DAEToMid_stateSetCurrentLabel(threadData_t *threadData, modelica_metatype _label, modelica_metatype _state)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_label);
+  tmp1 = omc_unbox_integer(_label);
   omc_DAEToMid_stateSetCurrentLabel(threadData, tmp1, _state);
   return;
 }
@@ -2077,25 +2045,21 @@ PROTECTED_FUNCTION_STATIC void boxptr_DAEToMid_stateSetCurrentLabel(threadData_t
 PROTECTED_FUNCTION_STATIC modelica_integer omc_DAEToMid_stateGetCurrentLabel(threadData_t *threadData, modelica_metatype _state)
 {
   modelica_integer _label;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _label has no default value.
-  _label = mmc_unbox_integer(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 7)))));
+  _label = omc_unbox_integer(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 7))));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _label;
+  omc_ret_ = _label;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DAEToMid_stateGetCurrentLabel(threadData_t *threadData, modelica_metatype _state)
 {
   modelica_integer _label;
   modelica_metatype out_label;
   _label = omc_DAEToMid_stateGetCurrentLabel(threadData, _state);
-  out_label = mmc_mk_icon(_label);
+  out_label = omc_mk_icon(_label);
   return out_label;
 }
 
@@ -2108,10 +2072,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_IfToMid(threadData_t *threadData, mo
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta10;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _labelBody has no default value.
   // _labelElse has no default value.
@@ -2125,12 +2086,12 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_IfToMid(threadData_t *threadData, mo
 
   _var1 = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp, _state), _state);
 
-  tmpMeta1 = mmc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _var1, mmc_mk_integer(_labelBody), mmc_mk_integer(_labelElse));
+  tmpMeta1 = omc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _var1, omc_mk_integer(_labelBody), omc_mk_integer(_labelElse));
   omc_DAEToMid_stateTerminate(threadData, _labelBody, tmpMeta1, _state);
 
   omc_DAEToMid_StmtsToMid(threadData, _daestmtLst, _state);
 
-  tmpMeta2 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelNext));
+  tmpMeta2 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelNext));
   omc_DAEToMid_stateTerminate(threadData, _labelElse, tmpMeta2, _state);
 
   { /* match expression */
@@ -2156,9 +2117,9 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_IfToMid(threadData_t *threadData, mo
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
           if (mmc__uniontype__metarecord__typedef__equal(tmp5_1,1,3) == 0) goto tmp4_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 3));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 4));
+          tmpMeta6 = OMC_BOX_FIELD(tmp5_1, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp5_1, 3);
+          tmpMeta8 = OMC_BOX_FIELD(tmp5_1, 4);
           _subexp = tmpMeta6;
           _subdaestmtLst = tmpMeta7;
           _subelse = tmpMeta8;
@@ -2169,7 +2130,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_IfToMid(threadData_t *threadData, mo
         case 5: {
           modelica_metatype tmpMeta9;
           if (mmc__uniontype__metarecord__typedef__equal(tmp5_1,2,1) == 0) goto tmp4_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp5_1), 2));
+          tmpMeta9 = OMC_BOX_FIELD(tmp5_1, 2);
           _subdaestmtLst = tmpMeta9;
           /* Pattern matching succeeded */
           omc_DAEToMid_StmtsToMid(threadData, _subdaestmtLst, _state);
@@ -2181,19 +2142,16 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_IfToMid(threadData_t *threadData, mo
       }
       goto goto_3;
       goto_3:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp4_done;
       tmp4_done:;
     }
   }
   ;
 
-  tmpMeta10 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelNext));
+  tmpMeta10 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelNext));
   omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta10, _state);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -2209,10 +2167,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _varCref has no default value.
   // _varCondition has no default value.
@@ -2221,10 +2176,10 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
   // _labelBody has no default value.
   // _labelNext has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta2 = mmc_mk_box4(4, &DAE_ComponentRef_CREF__IDENT__desc, _iter, _type_, tmpMeta1);
+  tmpMeta2 = omc_mk_box4(4, &DAE_ComponentRef_CREF__IDENT__desc, _iter, _type_, tmpMeta1);
   _varCref = omc_DAEToMid_CrefToMidVar(threadData, tmpMeta2, _state);
 
-  omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 2))), _varCref);
+  omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 2)), _varCref);
 
   _labelCondition = omc_DAEToMid_GenBlockId(threadData);
 
@@ -2234,11 +2189,11 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
 
   _labelNext = omc_DAEToMid_GenBlockId(threadData);
 
-  tmpMeta3 = mmc_mk_cons(mmc_mk_integer(_labelStep), omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 8)))));
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 8))), tmpMeta3);
+  tmpMeta3 = mmc_mk_cons(omc_mk_integer(_labelStep), omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 8))));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_state, 8)), tmpMeta3);
 
-  tmpMeta4 = mmc_mk_cons(mmc_mk_integer(_labelNext), omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 9)))));
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 9))), tmpMeta4);
+  tmpMeta4 = mmc_mk_cons(omc_mk_integer(_labelNext), omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 9))));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_state, 9)), tmpMeta4);
 
   _varCondition = omc_DAEToMid_GenTmpVar(threadData, _OMC_LIT6, _state);
 
@@ -2295,9 +2250,9 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
           modelica_metatype tmpMeta32;
           modelica_metatype tmpMeta33;
           if (mmc__uniontype__metarecord__typedef__equal(tmp7_1,18,4) == 0) goto tmp6_end;
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp7_1), 3));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp7_1), 4));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp7_1), 5));
+          tmpMeta9 = OMC_BOX_FIELD(tmp7_1, 3);
+          tmpMeta10 = OMC_BOX_FIELD(tmp7_1, 4);
+          tmpMeta11 = OMC_BOX_FIELD(tmp7_1, 5);
           _start = tmpMeta9;
           _step = tmpMeta10;
           _stop = tmpMeta11;
@@ -2312,13 +2267,13 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
 
           _varStep = omc_DAEToMid_GenTmpVar(threadData, _OMC_LIT27, _state);
 
-          tmpMeta12 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varFirst, omc_DAEToMid_ExpToMid(threadData, _start, _state));
+          tmpMeta12 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varFirst, omc_DAEToMid_ExpToMid(threadData, _start, _state));
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta12, _state);
 
-          tmpMeta13 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varIter, omc_DAEToMid_ExpToMid(threadData, _start, _state));
+          tmpMeta13 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varIter, omc_DAEToMid_ExpToMid(threadData, _start, _state));
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta13, _state);
 
-          tmpMeta14 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varLast, omc_DAEToMid_ExpToMid(threadData, _stop, _state));
+          tmpMeta14 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varLast, omc_DAEToMid_ExpToMid(threadData, _stop, _state));
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta14, _state);
 
           { /* match expression */
@@ -2341,7 +2296,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
                 case 1: {
                   modelica_metatype tmpMeta20;
                   if (optionNone(tmp18_1)) goto tmp17_end;
-                  tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp18_1), 1));
+                  tmpMeta20 = OMC_BOX_FIELD(tmp18_1, 1);
                   _stepexp = tmpMeta20;
                   /* Pattern matching succeeded */
                   tmpMeta15 = omc_DAEToMid_ExpToMid(threadData, _stepexp, _state);
@@ -2360,35 +2315,35 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
           }
           _rvalueStep = tmpMeta15;
 
-          tmpMeta21 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varStep, _rvalueStep);
+          tmpMeta21 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varStep, _rvalueStep);
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta21, _state);
 
-          tmpMeta22 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelCondition));
+          tmpMeta22 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelCondition));
           omc_DAEToMid_stateTerminate(threadData, _labelCondition, tmpMeta22, _state);
 
           tmpMeta23 = mmc_mk_cons(_varIter, mmc_mk_cons(_varFirst, mmc_mk_cons(_varLast, MMC_REFSTRUCTLIT(mmc_nil))));
-          tmpMeta25 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varCondition);
+          tmpMeta25 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varCondition);
           tmpMeta24 = mmc_mk_cons(tmpMeta25, MMC_REFSTRUCTLIT(mmc_nil));
-          tmpMeta26 = mmc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT38, mmc_mk_boolean(1 /* true */), tmpMeta23, tmpMeta24, mmc_mk_integer(_labelCondition2));
+          tmpMeta26 = omc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT38, omc_mk_boolean(1 /* true */), tmpMeta23, tmpMeta24, omc_mk_integer(_labelCondition2));
           omc_DAEToMid_stateTerminate(threadData, _labelCondition2, tmpMeta26, _state);
 
-          tmpMeta27 = mmc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varCondition, mmc_mk_integer(_labelBody), mmc_mk_integer(_labelNext));
+          tmpMeta27 = omc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varCondition, omc_mk_integer(_labelBody), omc_mk_integer(_labelNext));
           omc_DAEToMid_stateTerminate(threadData, _labelBody, tmpMeta27, _state);
 
-          tmpMeta28 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varIter);
-          tmpMeta29 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varCref, tmpMeta28);
+          tmpMeta28 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varIter);
+          tmpMeta29 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varCref, tmpMeta28);
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta29, _state);
 
           omc_DAEToMid_StmtsToMid(threadData, _daestmtLst, _state);
 
-          tmpMeta30 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelStep));
+          tmpMeta30 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelStep));
           omc_DAEToMid_stateTerminate(threadData, _labelStep, tmpMeta30, _state);
 
-          tmpMeta31 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT30, _varIter, _varStep);
-          tmpMeta32 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varIter, tmpMeta31);
+          tmpMeta31 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT30, _varIter, _varStep);
+          tmpMeta32 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varIter, tmpMeta31);
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta32, _state);
 
-          tmpMeta33 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelCondition));
+          tmpMeta33 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelCondition));
           omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta33, _state);
           goto tmp6_done;
         }
@@ -2399,7 +2354,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
 
           { /* match expression */
             modelica_metatype tmp36_1;
-            tmp36_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_varRange), 3)));
+            tmp36_1 = (OMC_BOX_FIELD(_varRange, 3));
             {
               int tmp36;
               {
@@ -2439,41 +2394,41 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
 
                   _varStep = omc_DAEToMid_GenTmpVar(threadData, _OMC_LIT27, _state);
 
-                  tmpMeta37 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varIter, _OMC_LIT29);
+                  tmpMeta37 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varIter, _OMC_LIT29);
                   omc_DAEToMid_stateAddStmt(threadData, tmpMeta37, _state);
 
-                  tmpMeta38 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varStep, _OMC_LIT29);
+                  tmpMeta38 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varStep, _OMC_LIT29);
                   omc_DAEToMid_stateAddStmt(threadData, tmpMeta38, _state);
 
                   tmpMeta39 = mmc_mk_cons(_varRange, MMC_REFSTRUCTLIT(mmc_nil));
-                  tmpMeta41 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varLast);
+                  tmpMeta41 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varLast);
                   tmpMeta40 = mmc_mk_cons(tmpMeta41, MMC_REFSTRUCTLIT(mmc_nil));
-                  tmpMeta42 = mmc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT42, mmc_mk_boolean(1 /* true */), tmpMeta39, tmpMeta40, mmc_mk_integer(_labelCondition));
+                  tmpMeta42 = omc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT42, omc_mk_boolean(1 /* true */), tmpMeta39, tmpMeta40, omc_mk_integer(_labelCondition));
                   omc_DAEToMid_stateTerminate(threadData, _labelCondition, tmpMeta42, _state);
 
-                  tmpMeta43 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT43, _varIter, _varLast);
-                  tmpMeta44 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varCondition, tmpMeta43);
+                  tmpMeta43 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT43, _varIter, _varLast);
+                  tmpMeta44 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varCondition, tmpMeta43);
                   omc_DAEToMid_stateAddStmt(threadData, tmpMeta44, _state);
 
-                  tmpMeta45 = mmc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varCondition, mmc_mk_integer(_labelBody), mmc_mk_integer(_labelNext));
+                  tmpMeta45 = omc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varCondition, omc_mk_integer(_labelBody), omc_mk_integer(_labelNext));
                   omc_DAEToMid_stateTerminate(threadData, _labelBody, tmpMeta45, _state);
 
                   tmpMeta46 = mmc_mk_cons(_varRange, mmc_mk_cons(_varIter, MMC_REFSTRUCTLIT(mmc_nil)));
-                  tmpMeta48 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varCref);
+                  tmpMeta48 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varCref);
                   tmpMeta47 = mmc_mk_cons(tmpMeta48, MMC_REFSTRUCTLIT(mmc_nil));
-                  tmpMeta49 = mmc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT45, mmc_mk_boolean(1 /* true */), tmpMeta46, tmpMeta47, mmc_mk_integer(_labelBody2));
+                  tmpMeta49 = omc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT45, omc_mk_boolean(1 /* true */), tmpMeta46, tmpMeta47, omc_mk_integer(_labelBody2));
                   omc_DAEToMid_stateTerminate(threadData, _labelBody2, tmpMeta49, _state);
 
                   omc_DAEToMid_StmtsToMid(threadData, _daestmtLst, _state);
 
-                  tmpMeta50 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelStep));
+                  tmpMeta50 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelStep));
                   omc_DAEToMid_stateTerminate(threadData, _labelStep, tmpMeta50, _state);
 
-                  tmpMeta51 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT30, _varIter, _varStep);
-                  tmpMeta52 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varIter, tmpMeta51);
+                  tmpMeta51 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _OMC_LIT30, _varIter, _varStep);
+                  tmpMeta52 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varIter, tmpMeta51);
                   omc_DAEToMid_stateAddStmt(threadData, tmpMeta52, _state);
 
-                  tmpMeta53 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelCondition));
+                  tmpMeta53 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelCondition));
                   omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta53, _state);
                   goto tmp35_done;
                 }
@@ -2497,43 +2452,43 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
 
                   _varIter = _varRange;
 
-                  tmpMeta54 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelCondition));
+                  tmpMeta54 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelCondition));
                   omc_DAEToMid_stateTerminate(threadData, _labelCondition, tmpMeta54, _state);
 
-                  tmpMeta55 = mmc_mk_box2(13, &MidCode_RValue_ISCONS__desc, _varIter);
-                  tmpMeta56 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varCondition, tmpMeta55);
+                  tmpMeta55 = omc_mk_box2(13, &MidCode_RValue_ISCONS__desc, _varIter);
+                  tmpMeta56 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varCondition, tmpMeta55);
                   omc_DAEToMid_stateAddStmt(threadData, tmpMeta56, _state);
 
-                  tmpMeta57 = mmc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varCondition, mmc_mk_integer(_labelBody), mmc_mk_integer(_labelNext));
+                  tmpMeta57 = omc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varCondition, omc_mk_integer(_labelBody), omc_mk_integer(_labelNext));
                   omc_DAEToMid_stateTerminate(threadData, _labelBody, tmpMeta57, _state);
 
                   tmpMeta58 = mmc_mk_cons(_varIter, MMC_REFSTRUCTLIT(mmc_nil));
-                  tmpMeta60 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varCref);
+                  tmpMeta60 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varCref);
                   tmpMeta59 = mmc_mk_cons(tmpMeta60, MMC_REFSTRUCTLIT(mmc_nil));
-                  tmpMeta61 = mmc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT47, mmc_mk_boolean(1 /* true */), tmpMeta58, tmpMeta59, mmc_mk_integer(_labelBody2));
+                  tmpMeta61 = omc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT47, omc_mk_boolean(1 /* true */), tmpMeta58, tmpMeta59, omc_mk_integer(_labelBody2));
                   omc_DAEToMid_stateTerminate(threadData, _labelBody2, tmpMeta61, _state);
 
                   omc_DAEToMid_StmtsToMid(threadData, _daestmtLst, _state);
 
-                  tmpMeta62 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelStep));
+                  tmpMeta62 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelStep));
                   omc_DAEToMid_stateTerminate(threadData, _labelStep, tmpMeta62, _state);
 
                   tmpMeta63 = mmc_mk_cons(_varIter, MMC_REFSTRUCTLIT(mmc_nil));
-                  tmpMeta65 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varIter);
+                  tmpMeta65 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varIter);
                   tmpMeta64 = mmc_mk_cons(tmpMeta65, MMC_REFSTRUCTLIT(mmc_nil));
-                  tmpMeta66 = mmc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT49, mmc_mk_boolean(1 /* true */), tmpMeta63, tmpMeta64, mmc_mk_integer(_labelCondition));
+                  tmpMeta66 = omc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT49, omc_mk_boolean(1 /* true */), tmpMeta63, tmpMeta64, omc_mk_integer(_labelCondition));
                   omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta66, _state);
                   goto tmp35_done;
                 }
                 default:
                 tmp35_default: OMC_LABEL_UNUSED; {
-                  modelica_metatype tmpMeta67;
-                  modelica_metatype tmpMeta68;
+                  modelica_string tmp67;
+                  modelica_string tmp68;
                   
                   /* Pattern matching succeeded */
-                  tmpMeta67 = stringAppend(_OMC_LIT50,omc_DAEDump_daeTypeStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_varRange), 3)))));
-                  tmpMeta68 = stringAppend(tmpMeta67,_OMC_LIT33);
-                  omc_Error_addInternalError(threadData, tmpMeta68, _OMC_LIT51);
+                  tmp67 = stringAppend(_OMC_LIT50,omc_DAEDump_daeTypeStr(threadData, (OMC_BOX_FIELD(_varRange, 3))));
+                  tmp68 = stringAppend(tmp67,_OMC_LIT33);
+                  omc_Error_addInternalError(threadData, tmp68, _OMC_LIT51);
                   goto goto_34;
                   goto tmp35_done;
                 }
@@ -2557,29 +2512,23 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_ForToMid(threadData_t *threadData, m
       }
       goto goto_5;
       goto_5:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp6_done;
       tmp6_done:;
     }
   }
   ;
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 8))), listRest(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 8))))));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_state, 8)), listRest(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 8)))));
 
-  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 9))), listRest(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 9))))));
+  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_state, 9)), listRest(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 9)))));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_DAEToMid_CallToMid(threadData_t *threadData, modelica_metatype _call, modelica_metatype _outvars, modelica_metatype _state)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_metatype tmp3_1;
@@ -2612,9 +2561,9 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_CallToMid(threadData_t *threadData, 
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,13,3) == 0) goto tmp2_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 3));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 4));
+          tmpMeta5 = OMC_BOX_FIELD(tmp3_1, 2);
+          tmpMeta6 = OMC_BOX_FIELD(tmp3_1, 3);
+          tmpMeta7 = OMC_BOX_FIELD(tmp3_1, 4);
           _path = tmpMeta5;
           _expLst = tmpMeta6;
           _callattr = tmpMeta7;
@@ -2636,7 +2585,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_CallToMid(threadData_t *threadData, 
           }
 
           tmpMeta11 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta12 = mmc_mk_box6(5, &MidCode_Terminator_CALL__desc, _path, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_callattr), 4))), omc_DoubleEnded_toListAndClear(threadData, _inputs, tmpMeta11), _outvars, mmc_mk_integer(_labelNext));
+          tmpMeta12 = omc_mk_box6(5, &MidCode_Terminator_CALL__desc, _path, (OMC_BOX_FIELD(_callattr, 4)), omc_DoubleEnded_toListAndClear(threadData, _inputs, tmpMeta11), _outvars, omc_mk_integer(_labelNext));
           omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta12, _state);
           goto tmp2_done;
         }
@@ -2646,16 +2595,13 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_CallToMid(threadData_t *threadData, 
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -2663,8 +2609,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
 {
   modelica_metatype _rval = NULL;
   modelica_metatype tmpMeta1;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _rval has no default value.
   { /* match expression */
@@ -2729,7 +2676,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta6 = mmc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))));
+          tmpMeta6 = omc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, (OMC_BOX_FIELD(_exp, 2)));
           tmpMeta1 = tmpMeta6;
           goto tmp3_done;
         }
@@ -2738,7 +2685,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,5,2) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta7 = mmc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 3))));
+          tmpMeta7 = omc_mk_box2(6, &MidCode_RValue_LITERALINTEGER__desc, (OMC_BOX_FIELD(_exp, 3)));
           tmpMeta1 = tmpMeta7;
           goto tmp3_done;
         }
@@ -2747,7 +2694,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta8 = mmc_mk_box2(7, &MidCode_RValue_LITERALREAL__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))));
+          tmpMeta8 = omc_mk_box2(7, &MidCode_RValue_LITERALREAL__desc, (OMC_BOX_FIELD(_exp, 2)));
           tmpMeta1 = tmpMeta8;
           goto tmp3_done;
         }
@@ -2756,7 +2703,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta9 = mmc_mk_box2(9, &MidCode_RValue_LITERALSTRING__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))));
+          tmpMeta9 = omc_mk_box2(9, &MidCode_RValue_LITERALSTRING__desc, (OMC_BOX_FIELD(_exp, 2)));
           tmpMeta1 = tmpMeta9;
           goto tmp3_done;
         }
@@ -2765,7 +2712,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           
           /* Pattern matching succeeded */
           /* Tail recursive call */
-          _exp = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 3)));
+          _exp = (OMC_BOX_FIELD(_exp, 3));
           goto _tailrecursive;
           /* TODO: Make sure any eventual dead code below is never generated */
           goto tmp3_done;
@@ -2775,8 +2722,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,34,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))), _state), _state);
-          tmpMeta10 = mmc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT52, _varExp);
+          _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_exp, 2)), _state), _state);
+          tmpMeta10 = omc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT52, _varExp);
           tmpMeta1 = tmpMeta10;
           goto tmp3_done;
         }
@@ -2785,8 +2732,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,35,2) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))), _state), _state);
-          tmpMeta11 = mmc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT0, _varExp);
+          _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_exp, 2)), _state), _state);
+          tmpMeta11 = omc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT0, _varExp);
           tmpMeta1 = tmpMeta11;
           goto tmp3_done;
         }
@@ -2795,7 +2742,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,3,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta12 = mmc_mk_box2(8, &MidCode_RValue_LITERALBOOLEAN__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))));
+          tmpMeta12 = omc_mk_box2(8, &MidCode_RValue_LITERALBOOLEAN__desc, (OMC_BOX_FIELD(_exp, 2)));
           tmpMeta1 = tmpMeta12;
           goto tmp3_done;
         }
@@ -2806,15 +2753,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta16;
           modelica_metatype tmpMeta17;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,31,1) == 0) goto tmp3_end;
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_1, 2);
           if (optionNone(tmpMeta13)) goto tmp3_end;
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 1));
+          tmpMeta14 = OMC_BOX_FIELD(tmpMeta13, 1);
           _exp1 = tmpMeta14;
           /* Pattern matching succeeded */
           _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp1, _state), _state);
           tmpMeta15 = mmc_mk_cons(_varExp, MMC_REFSTRUCTLIT(mmc_nil));
-          tmpMeta16 = mmc_mk_box2(22, &DAE_Type_T__METAOPTION__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_varExp), 3))));
-          tmpMeta17 = mmc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, tmpMeta15, omc_Types_complicateType(threadData, tmpMeta16));
+          tmpMeta16 = omc_mk_box2(22, &DAE_Type_T__METAOPTION__desc, (OMC_BOX_FIELD(_varExp, 3)));
+          tmpMeta17 = omc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, tmpMeta15, omc_Types_complicateType(threadData, tmpMeta16));
           tmpMeta1 = tmpMeta17;
           goto tmp3_done;
         }
@@ -2823,11 +2770,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta19;
           modelica_metatype tmpMeta20;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,31,1) == 0) goto tmp3_end;
-          tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta18 = OMC_BOX_FIELD(tmp4_1, 2);
           if (!optionNone(tmpMeta18)) goto tmp3_end;
           /* Pattern matching succeeded */
           tmpMeta19 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta20 = mmc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, tmpMeta19, omc_Types_complicateType(threadData, _OMC_LIT54));
+          tmpMeta20 = omc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, tmpMeta19, omc_Types_complicateType(threadData, _OMC_LIT54));
           tmpMeta1 = tmpMeta20;
           goto tmp3_done;
         }
@@ -2839,7 +2786,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta25;
           modelica_metatype tmpMeta26;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,30,1) == 0) goto tmp3_end;
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta21 = OMC_BOX_FIELD(tmp4_1, 2);
           _expLst = tmpMeta21;
           /* Pattern matching succeeded */
           tmpMeta22 = MMC_REFSTRUCTLIT(mmc_nil);
@@ -2856,7 +2803,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
             }
           }
           tmpMeta25 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta26 = mmc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, omc_DoubleEnded_toListAndClear(threadData, _values, tmpMeta25), omc_Types_complicateType(threadData, omc_Expression_typeof(threadData, _exp)));
+          tmpMeta26 = omc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, omc_DoubleEnded_toListAndClear(threadData, _values, tmpMeta25), omc_Types_complicateType(threadData, omc_Expression_typeof(threadData, _exp)));
           tmpMeta1 = tmpMeta26;
           goto tmp3_done;
         }
@@ -2868,7 +2815,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta31;
           modelica_metatype tmpMeta32;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,32,5) == 0) goto tmp3_end;
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta27 = OMC_BOX_FIELD(tmp4_1, 3);
           
           _expLst = tmpMeta27;
           /* Pattern matching succeeded */
@@ -2886,7 +2833,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
             }
           }
           tmpMeta31 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta32 = mmc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, omc_DoubleEnded_toListAndClear(threadData, _values, tmpMeta31), omc_Types_complicateType(threadData, omc_Expression_typeof(threadData, _exp)));
+          tmpMeta32 = omc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, omc_DoubleEnded_toListAndClear(threadData, _values, tmpMeta31), omc_Types_complicateType(threadData, omc_Expression_typeof(threadData, _exp)));
           tmpMeta1 = tmpMeta32;
           goto tmp3_done;
         }
@@ -2897,12 +2844,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,29,2) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          _varCar = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))), _state), _state);
+          _varCar = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_exp, 2)), _state), _state);
 
-          _varCdr = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 3))), _state), _state);
+          _varCdr = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_exp, 3)), _state), _state);
           tmpMeta33 = mmc_mk_cons(_varCar, mmc_mk_cons(_varCdr, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta34 = mmc_mk_box2(20, &DAE_Type_T__METALIST__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_varCar), 3))));
-          tmpMeta35 = mmc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, tmpMeta33, omc_Types_complicateType(threadData, tmpMeta34));
+          tmpMeta34 = omc_mk_box2(20, &DAE_Type_T__METALIST__desc, (OMC_BOX_FIELD(_varCar, 3)));
+          tmpMeta35 = omc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, tmpMeta33, omc_Types_complicateType(threadData, tmpMeta34));
           tmpMeta1 = tmpMeta35;
           goto tmp3_done;
         }
@@ -2918,15 +2865,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta44;
           modelica_metatype tmpMeta45;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,28,1) == 0) goto tmp3_end;
-          tmpMeta36 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta36 = OMC_BOX_FIELD(tmp4_1, 2);
           _expLst = tmpMeta36;
           /* Pattern matching succeeded */
           _expLst = listReverse(_expLst);
 
           _varCdr = omc_DAEToMid_GenTmpVar(threadData, _OMC_LIT55, _state);
 
-          tmpMeta37 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varCdr, _OMC_LIT56);
-          omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 6))), tmpMeta37);
+          tmpMeta37 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varCdr, _OMC_LIT56);
+          omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 6)), tmpMeta37);
 
           {
             modelica_metatype _exp;
@@ -2935,19 +2882,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
               _exp = MMC_CAR(tmpMeta38);
               _varCar = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp, _state), _state);
 
-              tmpMeta39 = mmc_mk_box2(20, &DAE_Type_T__METALIST__desc, omc_Types_complicateType(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_varCar), 3)))));
+              tmpMeta39 = omc_mk_box2(20, &DAE_Type_T__METALIST__desc, omc_Types_complicateType(threadData, (OMC_BOX_FIELD(_varCar, 3))));
               _varTmp = omc_DAEToMid_GenTmpVar(threadData, tmpMeta39, _state);
 
               tmpMeta40 = mmc_mk_cons(_varCar, mmc_mk_cons(_varCdr, MMC_REFSTRUCTLIT(mmc_nil)));
-              tmpMeta41 = mmc_mk_box2(20, &DAE_Type_T__METALIST__desc, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_varCar), 3))));
-              tmpMeta42 = mmc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, tmpMeta40, omc_Types_complicateType(threadData, tmpMeta41));
-              tmpMeta43 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varTmp, tmpMeta42);
-              omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 6))), tmpMeta43);
+              tmpMeta41 = omc_mk_box2(20, &DAE_Type_T__METALIST__desc, (OMC_BOX_FIELD(_varCar, 3)));
+              tmpMeta42 = omc_mk_box3(10, &MidCode_RValue_LITERALMETATYPE__desc, tmpMeta40, omc_Types_complicateType(threadData, tmpMeta41));
+              tmpMeta43 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varTmp, tmpMeta42);
+              omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 6)), tmpMeta43);
 
               _varCdr = _varTmp;
             }
           }
-          tmpMeta45 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varCdr);
+          tmpMeta45 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varCdr);
           tmpMeta1 = tmpMeta45;
           goto tmp3_done;
         }
@@ -2955,7 +2902,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta46;
           modelica_metatype tmpMeta47;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,6,2) == 0) goto tmp3_end;
-          tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta46 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _cref = tmpMeta46;
           /* Pattern matching succeeded */
@@ -2975,7 +2922,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
                   modelica_metatype tmpMeta52;
                   if (!optionNone(tmp50_1)) goto tmp49_end;
                   /* Pattern matching succeeded */
-                  tmpMeta52 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varCref);
+                  tmpMeta52 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varCref);
                   tmpMeta47 = tmpMeta52;
                   goto tmp49_done;
                 }
@@ -2987,7 +2934,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
                   modelica_metatype tmpMeta57;
                   modelica_metatype tmpMeta58;
                   if (optionNone(tmp50_1)) goto tmp49_end;
-                  tmpMeta53 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp50_1), 1));
+                  tmpMeta53 = OMC_BOX_FIELD(tmp50_1, 1);
                   _indexvar = tmpMeta53;
                   /* Pattern matching succeeded */
                   _labelNext = omc_DAEToMid_GenBlockId(threadData);
@@ -2995,11 +2942,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
                   _varTmp = omc_DAEToMid_GenTmpVar(threadData, omc_Types_complicateType(threadData, omc_Expression_typeof(threadData, _exp)), _state);
 
                   tmpMeta54 = mmc_mk_cons(_varCref, mmc_mk_cons(_indexvar, MMC_REFSTRUCTLIT(mmc_nil)));
-                  tmpMeta56 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varTmp);
+                  tmpMeta56 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varTmp);
                   tmpMeta55 = mmc_mk_cons(tmpMeta56, MMC_REFSTRUCTLIT(mmc_nil));
-                  tmpMeta57 = mmc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT45, mmc_mk_boolean(1 /* true */), tmpMeta54, tmpMeta55, mmc_mk_integer(_labelNext));
+                  tmpMeta57 = omc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT45, omc_mk_boolean(1 /* true */), tmpMeta54, tmpMeta55, omc_mk_integer(_labelNext));
                   omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta57, _state);
-                  tmpMeta58 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
+                  tmpMeta58 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
                   tmpMeta47 = tmpMeta58;
                   goto tmp49_done;
                 }
@@ -3027,8 +2974,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta75;
           modelica_metatype tmpMeta76;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,21,2) == 0) goto tmp3_end;
-          tmpMeta59 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta59 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta60 = OMC_BOX_FIELD(tmp4_1, 3);
           _exp1 = tmpMeta59;
           _subscripts = tmpMeta60;
           /* Pattern matching succeeded */
@@ -3109,11 +3056,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           _labelNext = omc_DAEToMid_GenBlockId(threadData);
 
           tmpMeta72 = mmc_mk_cons(_varExp, mmc_mk_cons(_varExp2, MMC_REFSTRUCTLIT(mmc_nil)));
-          tmpMeta74 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varTmp);
+          tmpMeta74 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varTmp);
           tmpMeta73 = mmc_mk_cons(tmpMeta74, MMC_REFSTRUCTLIT(mmc_nil));
-          tmpMeta75 = mmc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT45, mmc_mk_boolean(1 /* true */), tmpMeta72, tmpMeta73, mmc_mk_integer(_labelNext));
+          tmpMeta75 = omc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT45, omc_mk_boolean(1 /* true */), tmpMeta72, tmpMeta73, omc_mk_integer(_labelNext));
           omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta75, _state);
-          tmpMeta76 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
+          tmpMeta76 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
           tmpMeta1 = tmpMeta76;
           goto tmp3_done;
         }
@@ -3132,11 +3079,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta95;
           modelica_metatype tmpMeta96;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,22,3) == 0) goto tmp3_end;
-          tmpMeta77 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta77 = OMC_BOX_FIELD(tmp4_1, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta77,13,3) == 0) goto tmp3_end;
-          tmpMeta78 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta77), 4));
-          tmpMeta79 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp80 = mmc_unbox_integer(tmpMeta79);
+          tmpMeta78 = OMC_BOX_FIELD(tmpMeta77, 4);
+          tmpMeta79 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp80 = omc_unbox_integer(tmpMeta79);
           if (1 != tmp80) goto tmp3_end;
           
           _exp1 = tmpMeta77;
@@ -3146,7 +3093,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           
           { /* match expression */
             modelica_metatype tmp84_1;
-            tmp84_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_callattrs), 2)));
+            tmp84_1 = (OMC_BOX_FIELD(_callattrs, 2));
             {
               modelica_metatype _actualType = NULL;
               modelica_metatype _tailTypes = NULL;
@@ -3162,7 +3109,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
                   modelica_metatype tmpMeta87;
                   modelica_metatype tmpMeta88;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp84_1,14,2) == 0) goto tmp83_end;
-                  tmpMeta86 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp84_1), 2));
+                  tmpMeta86 = OMC_BOX_FIELD(tmp84_1, 2);
                   if (listEmpty(tmpMeta86)) goto tmp83_end;
                   tmpMeta87 = MMC_CAR(tmpMeta86);
                   tmpMeta88 = MMC_CDR(tmpMeta86);
@@ -3205,12 +3152,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
             }
           }
 
-          tmpMeta95 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varTmp);
+          tmpMeta95 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varTmp);
           tmpMeta94 = mmc_mk_cons(tmpMeta95, _outvars);
           _outvars = tmpMeta94;
 
           omc_DAEToMid_CallToMid(threadData, _exp1, _outvars, _state);
-          tmpMeta96 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
+          tmpMeta96 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
           tmpMeta1 = tmpMeta96;
           goto tmp3_done;
         }
@@ -3219,8 +3166,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,22,3) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))), _state), _state);
-          tmpMeta97 = mmc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _varExp, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 3))), omc_Types_complicateType(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 4)))));
+          _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_exp, 2)), _state), _state);
+          tmpMeta97 = omc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _varExp, (OMC_BOX_FIELD(_exp, 3)), omc_Types_complicateType(threadData, (OMC_BOX_FIELD(_exp, 4))));
           tmpMeta1 = tmpMeta97;
           goto tmp3_done;
         }
@@ -3229,8 +3176,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,23,4) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 2))), _state), _state);
-          tmpMeta98 = mmc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _varExp, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 3))), omc_Types_complicateType(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp), 5)))));
+          _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_exp, 2)), _state), _state);
+          tmpMeta98 = omc_mk_box4(14, &MidCode_RValue_METAFIELD__desc, _varExp, (OMC_BOX_FIELD(_exp, 3)), omc_Types_complicateType(threadData, (OMC_BOX_FIELD(_exp, 5))));
           tmpMeta1 = tmpMeta98;
           goto tmp3_done;
         }
@@ -3238,11 +3185,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta99;
           modelica_metatype tmpMeta100;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,20,2) == 0) goto tmp3_end;
-          tmpMeta99 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta99 = OMC_BOX_FIELD(tmp4_1, 3);
           _exp1 = tmpMeta99;
           /* Pattern matching succeeded */
           _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp1, _state), _state);
-          tmpMeta100 = mmc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT58, _varExp);
+          tmpMeta100 = omc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT58, _varExp);
           tmpMeta1 = tmpMeta100;
           goto tmp3_done;
         }
@@ -3250,11 +3197,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta101;
           modelica_metatype tmpMeta102;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,10,2) == 0) goto tmp3_end;
-          tmpMeta101 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta101 = OMC_BOX_FIELD(tmp4_1, 3);
           _exp1 = tmpMeta101;
           /* Pattern matching succeeded */
           _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp1, _state), _state);
-          tmpMeta102 = mmc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT59, _varExp);
+          tmpMeta102 = omc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _OMC_LIT59, _varExp);
           tmpMeta1 = tmpMeta102;
           goto tmp3_done;
         }
@@ -3269,9 +3216,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta120;
           modelica_metatype tmpMeta121;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,9,3) == 0) goto tmp3_end;
-          tmpMeta103 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta104 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta105 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta103 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta104 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta105 = OMC_BOX_FIELD(tmp4_1, 4);
           _exp1 = tmpMeta103;
           _operator = tmpMeta104;
           _exp2 = tmpMeta105;
@@ -3293,14 +3240,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
                   if (mmc__uniontype__metarecord__typedef__equal(tmp109_1,22,1) == 0) goto tmp108_end;
                   
                   /* Pattern matching succeeded */
-                  tmpMeta106 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_operator), 2)));
+                  tmpMeta106 = (OMC_BOX_FIELD(_operator, 2));
                   goto tmp108_done;
                 }
                 case 1: {
                   if (mmc__uniontype__metarecord__typedef__equal(tmp109_1,23,1) == 0) goto tmp108_end;
                   
                   /* Pattern matching succeeded */
-                  tmpMeta106 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_operator), 2)));
+                  tmpMeta106 = (OMC_BOX_FIELD(_operator, 2));
                   goto tmp108_done;
                 }
                 }
@@ -3332,7 +3279,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
                   if (mmc__uniontype__metarecord__typedef__equal(tmp114_1,22,1) == 0) goto tmp113_end;
                   
                   /* Pattern matching succeeded */
-                  tmpMeta116 = mmc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varTmp, mmc_mk_integer(_labelElse), mmc_mk_integer(_labelNext));
+                  tmpMeta116 = omc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varTmp, omc_mk_integer(_labelElse), omc_mk_integer(_labelNext));
                   tmpMeta111 = tmpMeta116;
                   goto tmp113_done;
                 }
@@ -3341,7 +3288,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
                   if (mmc__uniontype__metarecord__typedef__equal(tmp114_1,23,1) == 0) goto tmp113_end;
                   
                   /* Pattern matching succeeded */
-                  tmpMeta117 = mmc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varTmp, mmc_mk_integer(_labelNext), mmc_mk_integer(_labelElse));
+                  tmpMeta117 = omc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varTmp, omc_mk_integer(_labelNext), omc_mk_integer(_labelElse));
                   tmpMeta111 = tmpMeta117;
                   goto tmp113_done;
                 }
@@ -3358,17 +3305,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           }
           _terminator = tmpMeta111;
 
-          tmpMeta118 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varTmp, omc_DAEToMid_ExpToMid(threadData, _exp1, _state));
+          tmpMeta118 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varTmp, omc_DAEToMid_ExpToMid(threadData, _exp1, _state));
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta118, _state);
 
           omc_DAEToMid_stateTerminate(threadData, _labelElse, _terminator, _state);
 
-          tmpMeta119 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varTmp, omc_DAEToMid_ExpToMid(threadData, _exp2, _state));
+          tmpMeta119 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varTmp, omc_DAEToMid_ExpToMid(threadData, _exp2, _state));
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta119, _state);
 
-          tmpMeta120 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelNext));
+          tmpMeta120 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelNext));
           omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta120, _state);
-          tmpMeta121 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
+          tmpMeta121 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
           tmpMeta1 = tmpMeta121;
           goto tmp3_done;
         }
@@ -3378,8 +3325,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta124;
           modelica_metatype tmpMeta129;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,8,2) == 0) goto tmp3_end;
-          tmpMeta122 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta123 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta122 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta123 = OMC_BOX_FIELD(tmp4_1, 3);
           _operator = tmpMeta122;
           _exp1 = tmpMeta123;
           /* Pattern matching succeeded */
@@ -3413,7 +3360,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           _unop = tmpMeta124;
 
           _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp1, _state), _state);
-          tmpMeta129 = mmc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _unop, _varExp);
+          tmpMeta129 = omc_mk_box3(4, &MidCode_RValue_UNARYOP__desc, _unop, _varExp);
           tmpMeta1 = tmpMeta129;
           goto tmp3_done;
         }
@@ -3424,9 +3371,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta133;
           modelica_metatype tmpMeta137;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,7,3) == 0) goto tmp3_end;
-          tmpMeta130 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta131 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta132 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta130 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta131 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta132 = OMC_BOX_FIELD(tmp4_1, 4);
           _exp1 = tmpMeta130;
           _operator = tmpMeta131;
           _exp2 = tmpMeta132;
@@ -3484,7 +3431,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp1, _state), _state);
 
           _varExp2 = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp2, _state), _state);
-          tmpMeta137 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _binop, _varExp, _varExp2);
+          tmpMeta137 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _binop, _varExp, _varExp2);
           tmpMeta1 = tmpMeta137;
           goto tmp3_done;
         }
@@ -3495,9 +3442,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta141;
           modelica_metatype tmpMeta145;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,11,5) == 0) goto tmp3_end;
-          tmpMeta138 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta139 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta140 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta138 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta139 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta140 = OMC_BOX_FIELD(tmp4_1, 4);
           
           _exp1 = tmpMeta138;
           _operator = tmpMeta139;
@@ -3562,7 +3509,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           _varExp = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp1, _state), _state);
 
           _varExp2 = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp2, _state), _state);
-          tmpMeta145 = mmc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _binop, _varExp, _varExp2);
+          tmpMeta145 = omc_mk_box4(5, &MidCode_RValue_BINARYOP__desc, _binop, _varExp, _varExp2);
           tmpMeta1 = tmpMeta145;
           goto tmp3_done;
         }
@@ -3577,9 +3524,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta153;
           modelica_metatype tmpMeta154;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,12,3) == 0) goto tmp3_end;
-          tmpMeta146 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta147 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta148 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta146 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta147 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta148 = OMC_BOX_FIELD(tmp4_1, 4);
           _exp1 = tmpMeta146;
           _exp2 = tmpMeta147;
           _exp3 = tmpMeta148;
@@ -3594,21 +3541,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
 
           _varTmp = omc_DAEToMid_GenTmpVar(threadData, omc_Types_complicateType(threadData, omc_Expression_typeof(threadData, _exp2)), _state);
 
-          tmpMeta149 = mmc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varExp, mmc_mk_integer(_labelBody), mmc_mk_integer(_labelElse));
+          tmpMeta149 = omc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varExp, omc_mk_integer(_labelBody), omc_mk_integer(_labelElse));
           omc_DAEToMid_stateTerminate(threadData, _labelBody, tmpMeta149, _state);
 
-          tmpMeta150 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varTmp, omc_DAEToMid_ExpToMid(threadData, _exp2, _state));
+          tmpMeta150 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varTmp, omc_DAEToMid_ExpToMid(threadData, _exp2, _state));
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta150, _state);
 
-          tmpMeta151 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelNext));
+          tmpMeta151 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelNext));
           omc_DAEToMid_stateTerminate(threadData, _labelElse, tmpMeta151, _state);
 
-          tmpMeta152 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varTmp, omc_DAEToMid_ExpToMid(threadData, _exp3, _state));
+          tmpMeta152 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varTmp, omc_DAEToMid_ExpToMid(threadData, _exp3, _state));
           omc_DAEToMid_stateAddStmt(threadData, tmpMeta152, _state);
 
-          tmpMeta153 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelNext));
+          tmpMeta153 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelNext));
           omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta153, _state);
-          tmpMeta154 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
+          tmpMeta154 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
           tmpMeta1 = tmpMeta154;
           goto tmp3_done;
         }
@@ -3618,15 +3565,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta157;
           modelica_metatype tmpMeta158;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,13,3) == 0) goto tmp3_end;
-          tmpMeta155 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
+          tmpMeta155 = OMC_BOX_FIELD(tmp4_1, 4);
           _callattrs = tmpMeta155;
           /* Pattern matching succeeded */
-          _varTmp = omc_DAEToMid_GenTmpVar(threadData, omc_Types_complicateType(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_callattrs), 2)))), _state);
+          _varTmp = omc_DAEToMid_GenTmpVar(threadData, omc_Types_complicateType(threadData, (OMC_BOX_FIELD(_callattrs, 2))), _state);
 
-          tmpMeta157 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varTmp);
+          tmpMeta157 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varTmp);
           tmpMeta156 = mmc_mk_cons(tmpMeta157, MMC_REFSTRUCTLIT(mmc_nil));
           omc_DAEToMid_CallToMid(threadData, _exp, tmpMeta156, _state);
-          tmpMeta158 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
+          tmpMeta158 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
           tmpMeta1 = tmpMeta158;
           goto tmp3_done;
         }
@@ -3636,7 +3583,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           modelica_metatype tmpMeta165;
           modelica_metatype tmpMeta166;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,33,6) == 0) goto tmp3_end;
-          tmpMeta159 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 7));
+          tmpMeta159 = OMC_BOX_FIELD(tmp4_1, 7);
           _ty = tmpMeta159;
           /* Pattern matching succeeded */
           _varTmp = omc_DAEToMid_GenTmpVar(threadData, omc_Types_complicateType(threadData, _ty), _state);
@@ -3676,21 +3623,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
           }
           ;
 
-          tmpMeta165 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varTmp);
+          tmpMeta165 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varTmp);
           tmpMeta164 = mmc_mk_cons(tmpMeta165, MMC_REFSTRUCTLIT(mmc_nil));
           omc_DAEToMid_MatchExpressionToMid(threadData, _exp, tmpMeta164, _state);
-          tmpMeta166 = mmc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
+          tmpMeta166 = omc_mk_box2(3, &MidCode_RValue_VARIABLE__desc, _varTmp);
           tmpMeta1 = tmpMeta166;
           goto tmp3_done;
         }
         case 28: {
-          modelica_metatype tmpMeta167;
-          modelica_metatype tmpMeta168;
+          modelica_string tmp167;
+          modelica_string tmp168;
           
           /* Pattern matching succeeded */
-          tmpMeta167 = stringAppend(_OMC_LIT71,omc_ExpressionDump_dumpExpStr(threadData, _exp, ((modelica_integer) 0)));
-          tmpMeta168 = stringAppend(tmpMeta167,_OMC_LIT33);
-          omc_Error_addInternalError(threadData, tmpMeta168, _OMC_LIT72);
+          tmp167 = stringAppend(_OMC_LIT71,omc_ExpressionDump_dumpExpStr(threadData, _exp, ((modelica_integer) 0)));
+          tmp168 = stringAppend(tmp167,_OMC_LIT33);
+          omc_Error_addInternalError(threadData, tmp168, _OMC_LIT72);
           goto goto_2;
           goto tmp3_done;
         }
@@ -3700,22 +3647,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ExpToMid(threadData_t *
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _rval = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _rval;
+  omc_ret_ = _rval;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData, modelica_metatype _daestmts, modelica_metatype _state)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_metatype tmp3_1;
@@ -3792,18 +3737,18 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                   modelica_metatype tmpMeta12;
                   modelica_metatype tmpMeta13;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp9_1,0,4) == 0) goto tmp8_end;
-                  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp9_1), 3));
+                  tmpMeta11 = OMC_BOX_FIELD(tmp9_1, 3);
                   if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,6,2) == 0) goto tmp8_end;
-                  tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp9_1), 4));
+                  tmpMeta12 = OMC_BOX_FIELD(tmp9_1, 4);
                   
                   _exp1 = tmpMeta11;
                   _exp = tmpMeta12;
                   /* Pattern matching succeeded */
-                  _cref = omc_ComponentReferenceBasics_crefLastCref(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp1), 2))));
+                  _cref = omc_ComponentReferenceBasics_crefLastCref(threadData, (OMC_BOX_FIELD(_exp1, 2)));
 
                   _varCref = omc_DAEToMid_CrefToMidVar(threadData, _cref, _state);
 
-                  tmpMeta13 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varCref, omc_DAEToMid_ExpToMid(threadData, _exp, _state));
+                  tmpMeta13 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _varCref, omc_DAEToMid_ExpToMid(threadData, _exp, _state));
                   omc_DAEToMid_stateAddStmt(threadData, tmpMeta13, _state);
                   goto tmp8_done;
                 }
@@ -3815,18 +3760,18 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                   modelica_metatype tmpMeta25;
                   modelica_metatype tmpMeta26;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp9_1,0,4) == 0) goto tmp8_end;
-                  tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp9_1), 3));
+                  tmpMeta14 = OMC_BOX_FIELD(tmp9_1, 3);
                   if (mmc__uniontype__metarecord__typedef__equal(tmpMeta14,21,2) == 0) goto tmp8_end;
-                  tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp9_1), 4));
+                  tmpMeta15 = OMC_BOX_FIELD(tmp9_1, 4);
                   
                   _exp1 = tmpMeta14;
                   _exp = tmpMeta15;
                   /* Pattern matching succeeded */
-                  _varArray = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp1), 2))), _state), _state);
+                  _varArray = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_exp1, 2)), _state), _state);
 
                   { /* match expression */
                     modelica_metatype tmp19_1;
-                    tmp19_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp1), 3)));
+                    tmp19_1 = (OMC_BOX_FIELD(_exp1, 3));
                     {
                       modelica_metatype _indexexp = NULL;
                       volatile mmc_switch_type tmp19;
@@ -3843,7 +3788,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                           tmpMeta21 = MMC_CAR(tmp19_1);
                           tmpMeta22 = MMC_CDR(tmp19_1);
                           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta21,2,1) == 0) goto tmp18_end;
-                          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta21), 2));
+                          tmpMeta23 = OMC_BOX_FIELD(tmpMeta21, 2);
                           if (!listEmpty(tmpMeta22)) goto tmp18_end;
                           _indexexp = tmpMeta23;
                           /* Pattern matching succeeded */
@@ -3869,7 +3814,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
 
                   tmpMeta24 = mmc_mk_cons(_varArray, mmc_mk_cons(_varIndex, mmc_mk_cons(_varValue, MMC_REFSTRUCTLIT(mmc_nil))));
                   tmpMeta25 = MMC_REFSTRUCTLIT(mmc_nil);
-                  tmpMeta26 = mmc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT74, mmc_mk_boolean(1 /* true */), tmpMeta24, tmpMeta25, mmc_mk_integer(_labelNext));
+                  tmpMeta26 = omc_mk_box6(5, &MidCode_Terminator_CALL__desc, _OMC_LIT74, omc_mk_boolean(1 /* true */), tmpMeta24, tmpMeta25, omc_mk_integer(_labelNext));
                   omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta26, _state);
                   goto tmp8_done;
                 }
@@ -3880,30 +3825,30 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                   modelica_metatype tmpMeta30;
                   modelica_metatype tmpMeta31;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp9_1,0,4) == 0) goto tmp8_end;
-                  tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp9_1), 3));
+                  tmpMeta27 = OMC_BOX_FIELD(tmp9_1, 3);
                   if (mmc__uniontype__metarecord__typedef__equal(tmpMeta27,37,1) == 0) goto tmp8_end;
-                  tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 2));
-                  tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp9_1), 4));
+                  tmpMeta28 = OMC_BOX_FIELD(tmpMeta27, 2);
+                  tmpMeta29 = OMC_BOX_FIELD(tmp9_1, 4);
                   
                   _pattern = tmpMeta28;
                   _exp = tmpMeta29;
                   /* Pattern matching succeeded */
                   _varRHS = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, _exp, _state), _state);
 
-                  tmpMeta31 = mmc_mk_box2(0, _varRHS, _pattern);
+                  tmpMeta31 = omc_mk_box2(0, _varRHS, _pattern);
                   tmpMeta30 = mmc_mk_cons(tmpMeta31, MMC_REFSTRUCTLIT(mmc_nil));
                   omc_DAEToMid_patternToMidCode(threadData, tmpMeta30, ((modelica_integer) 1), _state);
                   goto tmp8_done;
                 }
                 case 3: {
-                  modelica_metatype tmpMeta32;
-                  modelica_metatype tmpMeta33;
+                  modelica_string tmp32;
+                  modelica_string tmp33;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp9_1,0,4) == 0) goto tmp8_end;
                   
                   /* Pattern matching succeeded */
-                  tmpMeta32 = stringAppend(_OMC_LIT75,omc_ExpressionDump_dumpExpStr(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 3))), ((modelica_integer) 0)));
-                  tmpMeta33 = stringAppend(tmpMeta32,_OMC_LIT33);
-                  omc_Error_addInternalError(threadData, tmpMeta33, _OMC_LIT76);
+                  tmp32 = stringAppend(_OMC_LIT75,omc_ExpressionDump_dumpExpStr(threadData, (OMC_BOX_FIELD(_stmt, 3)), ((modelica_integer) 0)));
+                  tmp33 = stringAppend(tmp32,_OMC_LIT33);
+                  omc_Error_addInternalError(threadData, tmp33, _OMC_LIT76);
                   goto goto_7;
                   goto tmp8_done;
                 }
@@ -3914,8 +3859,8 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                   modelica_metatype tmpMeta37;
                   modelica_metatype tmpMeta46;
                   if (mmc__uniontype__metarecord__typedef__equal(tmp9_1,1,4) == 0) goto tmp8_end;
-                  tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp9_1), 3));
-                  tmpMeta35 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp9_1), 4));
+                  tmpMeta34 = OMC_BOX_FIELD(tmp9_1, 3);
+                  tmpMeta35 = OMC_BOX_FIELD(tmp9_1, 4);
                   
                   _expLst = tmpMeta34;
                   _exp = tmpMeta35;
@@ -3940,7 +3885,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                             case 0: {
                               modelica_metatype tmpMeta42;
                               if (mmc__uniontype__metarecord__typedef__equal(tmp40_1,6,2) == 0) goto tmp39_end;
-                              tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp40_1), 2));
+                              tmpMeta42 = OMC_BOX_FIELD(tmp40_1, 2);
                               if (mmc__uniontype__metarecord__typedef__equal(tmpMeta42,3,0) == 0) goto tmp39_end;
                               
                               /* Pattern matching succeeded */
@@ -3952,20 +3897,20 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                               if (mmc__uniontype__metarecord__typedef__equal(tmp40_1,6,2) == 0) goto tmp39_end;
                               
                               /* Pattern matching succeeded */
-                              _varCref = omc_DAEToMid_CrefToMidVar(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_exp1), 2))), _state);
+                              _varCref = omc_DAEToMid_CrefToMidVar(threadData, (OMC_BOX_FIELD(_exp1, 2)), _state);
 
-                              tmpMeta43 = mmc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varCref);
+                              tmpMeta43 = omc_mk_box2(3, &MidCode_OutVar_OUT__VAR__desc, _varCref);
                               omc_DoubleEnded_push__back(threadData, _outvars, tmpMeta43);
                               goto tmp39_done;
                             }
                             case 2: {
-                              modelica_metatype tmpMeta44;
-                              modelica_metatype tmpMeta45;
+                              modelica_string tmp44;
+                              modelica_string tmp45;
                               
                               /* Pattern matching succeeded */
-                              tmpMeta44 = stringAppend(_OMC_LIT77,omc_ExpressionDump_dumpExpStr(threadData, _exp1, ((modelica_integer) 0)));
-                              tmpMeta45 = stringAppend(tmpMeta44,_OMC_LIT33);
-                              omc_Error_addInternalError(threadData, tmpMeta45, _OMC_LIT78);
+                              tmp44 = stringAppend(_OMC_LIT77,omc_ExpressionDump_dumpExpStr(threadData, _exp1, ((modelica_integer) 0)));
+                              tmp45 = stringAppend(tmp44,_OMC_LIT33);
+                              omc_Error_addInternalError(threadData, tmp45, _OMC_LIT78);
                               goto goto_38;
                               goto tmp39_done;
                             }
@@ -4029,7 +3974,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                   if (mmc__uniontype__metarecord__typedef__equal(tmp9_1,3,4) == 0) goto tmp8_end;
                   
                   /* Pattern matching succeeded */
-                  omc_DAEToMid_IfToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 3))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 4))), _state);
+                  omc_DAEToMid_IfToMid(threadData, (OMC_BOX_FIELD(_stmt, 2)), (OMC_BOX_FIELD(_stmt, 3)), (OMC_BOX_FIELD(_stmt, 4)), _state);
                   goto tmp8_done;
                 }
                 case 6: {
@@ -4047,35 +3992,35 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
 
                   _labelNext = omc_DAEToMid_GenBlockId(threadData);
 
-                  tmpMeta53 = mmc_mk_cons(mmc_mk_integer(_labelCondition), omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 8)))));
-                  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 8))), tmpMeta53);
+                  tmpMeta53 = mmc_mk_cons(omc_mk_integer(_labelCondition), omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 8))));
+                  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_state, 8)), tmpMeta53);
 
-                  tmpMeta54 = mmc_mk_cons(mmc_mk_integer(_labelNext), omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 9)))));
-                  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 9))), tmpMeta54);
+                  tmpMeta54 = mmc_mk_cons(omc_mk_integer(_labelNext), omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 9))));
+                  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_state, 9)), tmpMeta54);
 
-                  tmpMeta55 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelCondition));
+                  tmpMeta55 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelCondition));
                   omc_DAEToMid_stateTerminate(threadData, _labelCondition, tmpMeta55, _state);
 
-                  _varCondition = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 2))), _state), _state);
+                  _varCondition = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_stmt, 2)), _state), _state);
 
-                  tmpMeta56 = mmc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varCondition, mmc_mk_integer(_labelBody), mmc_mk_integer(_labelNext));
+                  tmpMeta56 = omc_mk_box4(4, &MidCode_Terminator_BRANCH__desc, _varCondition, omc_mk_integer(_labelBody), omc_mk_integer(_labelNext));
                   omc_DAEToMid_stateTerminate(threadData, _labelBody, tmpMeta56, _state);
 
-                  omc_DAEToMid_StmtsToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 3))), _state);
+                  omc_DAEToMid_StmtsToMid(threadData, (OMC_BOX_FIELD(_stmt, 3)), _state);
 
-                  tmpMeta57 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, mmc_mk_integer(_labelCondition));
+                  tmpMeta57 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, omc_mk_integer(_labelCondition));
                   omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta57, _state);
 
-                  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 8))), listRest(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 8))))));
+                  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_state, 8)), listRest(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 8)))));
 
-                  omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 9))), listRest(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 9))))));
+                  omc_Mutable_update(threadData, (OMC_BOX_FIELD(_state, 9)), listRest(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 9)))));
                   goto tmp8_done;
                 }
                 case 7: {
                   if (mmc__uniontype__metarecord__typedef__equal(tmp9_1,4,7) == 0) goto tmp8_end;
                   
                   /* Pattern matching succeeded */
-                  omc_DAEToMid_ForToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 2))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 4))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 5))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 6))), _state);
+                  omc_DAEToMid_ForToMid(threadData, (OMC_BOX_FIELD(_stmt, 2)), (OMC_BOX_FIELD(_stmt, 4)), (OMC_BOX_FIELD(_stmt, 5)), (OMC_BOX_FIELD(_stmt, 6)), _state);
                   goto tmp8_done;
                 }
                 case 8: {
@@ -4085,7 +4030,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                   /* Pattern matching succeeded */
                   _labelNext = omc_DAEToMid_GenBlockId(threadData);
 
-                  tmpMeta58 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, listHead(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 9))))));
+                  tmpMeta58 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, listHead(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 9)))));
                   omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta58, _state);
                   goto tmp8_done;
                 }
@@ -4096,7 +4041,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                   /* Pattern matching succeeded */
                   _labelNext = omc_DAEToMid_GenBlockId(threadData);
 
-                  tmpMeta59 = mmc_mk_box2(3, &MidCode_Terminator_GOTO__desc, listHead(omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 8))))));
+                  tmpMeta59 = omc_mk_box2(3, &MidCode_Terminator_GOTO__desc, listHead(omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 8)))));
                   omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta59, _state);
                   goto tmp8_done;
                 }
@@ -4115,7 +4060,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                   /* Pattern matching succeeded */
                   { /* match expression */
                     modelica_metatype tmp62_1;
-                    tmp62_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 2)));
+                    tmp62_1 = (OMC_BOX_FIELD(_stmt, 2));
                     {
                       volatile mmc_switch_type tmp62;
                       int tmp63;
@@ -4128,7 +4073,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                           
                           /* Pattern matching succeeded */
                           tmpMeta64 = MMC_REFSTRUCTLIT(mmc_nil);
-                          omc_DAEToMid_CallToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 2))), tmpMeta64, _state);
+                          omc_DAEToMid_CallToMid(threadData, (OMC_BOX_FIELD(_stmt, 2)), tmpMeta64, _state);
                           goto tmp61_done;
                         }
                         case 1: {
@@ -4137,7 +4082,7 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                           
                           /* Pattern matching succeeded */
                           tmpMeta65 = MMC_REFSTRUCTLIT(mmc_nil);
-                          omc_DAEToMid_MatchExpressionToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 2))), tmpMeta65, _state);
+                          omc_DAEToMid_MatchExpressionToMid(threadData, (OMC_BOX_FIELD(_stmt, 2)), tmpMeta65, _state);
                           goto tmp61_done;
                         }
                         }
@@ -4159,15 +4104,15 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                   if (mmc__uniontype__metarecord__typedef__equal(tmp9_1,8,4) == 0) goto tmp8_end;
                   
                   /* Pattern matching succeeded */
-                  _varCondition = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 2))), _state), _state);
+                  _varCondition = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_stmt, 2)), _state), _state);
 
-                  _varMessage = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 3))), _state), _state);
+                  _varMessage = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_stmt, 3)), _state), _state);
 
-                  _varLevel = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 4))), _state), _state);
+                  _varLevel = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_stmt, 4)), _state), _state);
 
                   _labelNext = omc_DAEToMid_GenBlockId(threadData);
 
-                  tmpMeta66 = mmc_mk_box5(11, &MidCode_Terminator_ASSERT__desc, _varCondition, _varMessage, _varLevel, mmc_mk_integer(_labelNext));
+                  tmpMeta66 = omc_mk_box5(11, &MidCode_Terminator_ASSERT__desc, _varCondition, _varMessage, _varLevel, omc_mk_integer(_labelNext));
                   omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta66, _state);
                   goto tmp8_done;
                 }
@@ -4176,20 +4121,20 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
                   if (mmc__uniontype__metarecord__typedef__equal(tmp9_1,9,2) == 0) goto tmp8_end;
                   
                   /* Pattern matching succeeded */
-                  _varMessage = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_stmt), 2))), _state), _state);
+                  _varMessage = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_stmt, 2)), _state), _state);
 
                   _labelNext = omc_DAEToMid_GenBlockId(threadData);
 
-                  tmpMeta67 = mmc_mk_box2(12, &MidCode_Terminator_TERMINATE__desc, _varMessage);
+                  tmpMeta67 = omc_mk_box2(12, &MidCode_Terminator_TERMINATE__desc, _varMessage);
                   omc_DAEToMid_stateTerminate(threadData, _labelNext, tmpMeta67, _state);
                   goto tmp8_done;
                 }
                 case 14: {
-                  modelica_metatype tmpMeta68;
+                  modelica_string tmp68;
                   
                   /* Pattern matching succeeded */
-                  tmpMeta68 = stringAppend(_OMC_LIT80,omc_DAEDump_ppStatementStr(threadData, _stmt));
-                  omc_Error_addInternalError(threadData, tmpMeta68, _OMC_LIT81);
+                  tmp68 = stringAppend(_OMC_LIT80,omc_DAEDump_ppStatementStr(threadData, _stmt));
+                  omc_Error_addInternalError(threadData, tmp68, _OMC_LIT81);
                   goto goto_7;
                   goto tmp8_done;
                 }
@@ -4219,16 +4164,13 @@ PROTECTED_FUNCTION_STATIC void omc_DAEToMid_StmtsToMid(threadData_t *threadData,
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -4247,7 +4189,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_DAEFunctionToMid(thread
   modelica_metatype tmpMeta30;
   modelica_metatype tmpMeta31;
   modelica_metatype tmpMeta32;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _midfunc has no default value.
   // _state has no default value.
@@ -4303,11 +4246,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_DAEFunctionToMid(thread
           modelica_metatype tmpMeta24;
           modelica_metatype tmpMeta25;
           if (mmc__uniontype__metarecord__typedef__equal(tmp3_1,0,7) == 0) goto tmp2_end;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 3));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 4));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 5));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 6));
+          tmpMeta5 = OMC_BOX_FIELD(tmp3_1, 2);
+          tmpMeta6 = OMC_BOX_FIELD(tmp3_1, 3);
+          tmpMeta7 = OMC_BOX_FIELD(tmp3_1, 4);
+          tmpMeta8 = OMC_BOX_FIELD(tmp3_1, 5);
+          tmpMeta9 = OMC_BOX_FIELD(tmp3_1, 6);
           
           _name = tmpMeta5;
           _outVars = tmpMeta6;
@@ -4332,7 +4275,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_DAEFunctionToMid(thread
           tmpMeta16 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta17 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta18 = MMC_REFSTRUCTLIT(mmc_nil);
-          tmpMeta19 = mmc_mk_box10(3, &DAEToMid_State_STATE__desc, omc_DoubleEnded_fromList(threadData, tmpMeta12), omc_DoubleEnded_fromList(threadData, tmpMeta13), omc_DoubleEnded_fromList(threadData, tmpMeta14), omc_DoubleEnded_fromList(threadData, tmpMeta15), omc_DoubleEnded_fromList(threadData, tmpMeta16), omc_Mutable_create(threadData, mmc_mk_integer(_labelFirst)), omc_Mutable_create(threadData, tmpMeta17), omc_Mutable_create(threadData, tmpMeta18), omc_Mutable_create(threadData, omc_HashTableMidVar_emptyHashTable(threadData)));
+          tmpMeta19 = omc_mk_box10(3, &DAEToMid_State_STATE__desc, omc_DoubleEnded_fromList(threadData, tmpMeta12), omc_DoubleEnded_fromList(threadData, tmpMeta13), omc_DoubleEnded_fromList(threadData, tmpMeta14), omc_DoubleEnded_fromList(threadData, tmpMeta15), omc_DoubleEnded_fromList(threadData, tmpMeta16), omc_Mutable_create(threadData, omc_mk_integer(_labelFirst)), omc_Mutable_create(threadData, tmpMeta17), omc_Mutable_create(threadData, tmpMeta18), omc_Mutable_create(threadData, omc_HashTableMidVar_emptyHashTable(threadData)));
           _state = tmpMeta19;
 
           {
@@ -4340,7 +4283,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_DAEFunctionToMid(thread
             for (tmpMeta20 = _variableDeclarations; !listEmpty(tmpMeta20); tmpMeta20=MMC_CDR(tmpMeta20))
             {
               _simcodeVar = MMC_CAR(tmpMeta20);
-              omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 2))), omc_DAEToMid_ConvertSimCodeVars(threadData, _simcodeVar, _state));
+              omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 2)), omc_DAEToMid_ConvertSimCodeVars(threadData, _simcodeVar, _state));
             }
           }
 
@@ -4379,7 +4322,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_DAEFunctionToMid(thread
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
@@ -4394,19 +4337,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_DAEFunctionToMid(thread
   tmpMeta29 = MMC_REFSTRUCTLIT(mmc_nil);
   tmpMeta30 = MMC_REFSTRUCTLIT(mmc_nil);
   tmpMeta31 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta32 = mmc_mk_box10(3, &MidCode_Function_FUNCTION__desc, _path, omc_DoubleEnded_toListAndClear(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 2))), tmpMeta26), omc_DoubleEnded_toListAndClear(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 3))), tmpMeta27), omc_DoubleEnded_toListAndClear(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 4))), tmpMeta28), omc_DoubleEnded_toListAndClear(threadData, _inputs, tmpMeta29), omc_DoubleEnded_toListAndClear(threadData, _outputs, tmpMeta30), omc_DoubleEnded_toListAndClear(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 5))), tmpMeta31), mmc_mk_integer(_labelFirst), mmc_mk_integer(omc_DAEToMid_GenBlockId(threadData)));
+  tmpMeta32 = omc_mk_box10(3, &MidCode_Function_FUNCTION__desc, _path, omc_DoubleEnded_toListAndClear(threadData, (OMC_BOX_FIELD(_state, 2)), tmpMeta26), omc_DoubleEnded_toListAndClear(threadData, (OMC_BOX_FIELD(_state, 3)), tmpMeta27), omc_DoubleEnded_toListAndClear(threadData, (OMC_BOX_FIELD(_state, 4)), tmpMeta28), omc_DoubleEnded_toListAndClear(threadData, _inputs, tmpMeta29), omc_DoubleEnded_toListAndClear(threadData, _outputs, tmpMeta30), omc_DoubleEnded_toListAndClear(threadData, (OMC_BOX_FIELD(_state, 5)), tmpMeta31), omc_mk_integer(_labelFirst), omc_mk_integer(omc_DAEToMid_GenBlockId(threadData)));
   _midfunc = tmpMeta32;
 
   _midfunc = omc_MidToMid_longJmpGoto(threadData, _midfunc);
   _return: OMC_LABEL_UNUSED
-  return _midfunc;
+  omc_ret_ = _midfunc;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueToVar(threadData_t *threadData, modelica_metatype _rvalue, modelica_metatype _state)
 {
   modelica_metatype _var = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var has no default value.
   { /* match expression */
@@ -4424,7 +4369,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueToVar(threadData_
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_rvalue), 2)));
+          tmpMeta1 = (OMC_BOX_FIELD(_rvalue, 2));
           goto tmp3_done;
         }
         case 1: {
@@ -4433,8 +4378,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueToVar(threadData_
           /* Pattern matching succeeded */
           _tmpvar = omc_DAEToMid_GenTmpVar(threadData, omc_Types_complicateType(threadData, omc_DAEToMid_RValueType(threadData, _rvalue)), _state);
 
-          tmpMeta6 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _tmpvar, _rvalue);
-          omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 6))), tmpMeta6);
+          tmpMeta6 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _tmpvar, _rvalue);
+          omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 6)), tmpMeta6);
           tmpMeta1 = _tmpvar;
           goto tmp3_done;
         }
@@ -4444,21 +4389,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueToVar(threadData_
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _var = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _var;
+  omc_ret_ = _var;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueType(threadData_t *threadData, modelica_metatype _rvalue)
 {
   modelica_metatype _ty = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ty has no default value.
   { /* match expression */
@@ -4474,7 +4421,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueType(threadData_t
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_rvalue), 2)))), 3)));
+          tmpMeta1 = (OMC_BOX_FIELD((OMC_BOX_FIELD(_rvalue, 2)), 3));
           goto tmp3_done;
         }
         case 1: {
@@ -4484,7 +4431,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueType(threadData_t
           /* Pattern matching succeeded */
           { /* match expression */
             modelica_metatype tmp9_1;
-            tmp9_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_rvalue), 2)));
+            tmp9_1 = (OMC_BOX_FIELD(_rvalue, 2));
             {
               int tmp9;
               {
@@ -4529,7 +4476,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueType(threadData_t
                 tmp8_default: OMC_LABEL_UNUSED; {
                   
                   /* Pattern matching succeeded */
-                  tmpMeta6 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_rvalue), 3)))), 3)));
+                  tmpMeta6 = (OMC_BOX_FIELD((OMC_BOX_FIELD(_rvalue, 3)), 3));
                   goto tmp8_done;
                 }
                 }
@@ -4548,28 +4495,28 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueType(threadData_t
         case 2: {
           modelica_metatype tmpMeta10;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta10,4,0) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta1 = omc_Types_boxIfUnboxedType(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_rvalue), 3)))), 3))));
+          tmpMeta1 = omc_Types_boxIfUnboxedType(threadData, (OMC_BOX_FIELD((OMC_BOX_FIELD(_rvalue, 3)), 3)));
           goto tmp3_done;
         }
         case 3: {
           modelica_metatype tmpMeta11;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_1, 2);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta11,3,0) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta1 = omc_Types_unboxedType(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_rvalue), 3)))), 3))));
+          tmpMeta1 = omc_Types_unboxedType(threadData, (OMC_BOX_FIELD((OMC_BOX_FIELD(_rvalue, 3)), 3)));
           goto tmp3_done;
         }
         case 4: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,2) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_rvalue), 3)))), 3)));
+          tmpMeta1 = (OMC_BOX_FIELD((OMC_BOX_FIELD(_rvalue, 3)), 3));
           goto tmp3_done;
         }
         case 5: {
@@ -4604,14 +4551,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueType(threadData_t
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,7,2) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_rvalue), 3)));
+          tmpMeta1 = (OMC_BOX_FIELD(_rvalue, 3));
           goto tmp3_done;
         }
         case 10: {
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,11,3) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          tmpMeta1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_rvalue), 4)));
+          tmpMeta1 = (OMC_BOX_FIELD(_rvalue, 4));
           goto tmp3_done;
         }
         case 11: {
@@ -4648,14 +4595,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_RValueType(threadData_t
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _ty = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _ty;
+  omc_ret_ = _ty;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_CrefToMidVar(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _state)
@@ -4666,13 +4614,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_CrefToMidVar(threadData
   modelica_string tmp1_c0 __attribute__((unused)) = 0;
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var has no default value.
   // _ident has no default value.
   // _ty has no default value.
-  if((!omc_BaseHashTable_hasKey(threadData, _cref, omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 10)))))))
+  if((!omc_BaseHashTable_hasKey(threadData, _cref, omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 10))))))
   {
     
     
@@ -4693,8 +4642,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_CrefToMidVar(threadData
             modelica_metatype tmpMeta6;
             modelica_metatype tmpMeta7;
             if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,1,3) == 0) goto tmp3_end;
-            tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-            tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+            tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+            tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 3);
             
             _ident_ = tmpMeta6;
             _ty_ = tmpMeta7;
@@ -4716,7 +4665,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_CrefToMidVar(threadData
         }
         goto goto_2;
         goto_2:;
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
         goto tmp3_done;
         tmp3_done:;
       }
@@ -4724,14 +4673,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_CrefToMidVar(threadData
     _ident = tmp1_c0;
     _ty = tmpMeta[0+1];
 
-    tmpMeta8 = mmc_mk_box4(3, &MidCode_Var_VAR__desc, _ident, omc_Types_complicateType(threadData, _ty), mmc_mk_boolean(0 /* false */));
-    tmpMeta9 = mmc_mk_box2(0, _cref, tmpMeta8);
-    omc_Mutable_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 10))), omc_BaseHashTable_add(threadData, tmpMeta9, omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 10))))));
+    tmpMeta8 = omc_mk_box4(3, &MidCode_Var_VAR__desc, _ident, omc_Types_complicateType(threadData, _ty), omc_mk_boolean(0 /* false */));
+    tmpMeta9 = omc_mk_box2(0, _cref, tmpMeta8);
+    omc_Mutable_update(threadData, (OMC_BOX_FIELD(_state, 10)), omc_BaseHashTable_add(threadData, tmpMeta9, omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 10)))));
   }
 
-  _var = omc_BaseHashTable_get(threadData, _cref, omc_Mutable_access(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 10)))));
+  _var = omc_BaseHashTable_get(threadData, _cref, omc_Mutable_access(threadData, (OMC_BOX_FIELD(_state, 10))));
   _return: OMC_LABEL_UNUSED
-  return _var;
+  omc_ret_ = _var;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_GetCrefIndexVar(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _state)
@@ -4739,7 +4689,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_GetCrefIndexVar(threadD
   modelica_metatype _var = NULL;
   modelica_metatype _subscripts = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var has no default value.
   // _subscripts has no default value.
@@ -4774,7 +4725,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_GetCrefIndexVar(threadD
           if (!listEmpty(tmpMeta7)) goto tmp3_end;
           _subscript = tmpMeta6;
           /* Pattern matching succeeded */
-          _indexvar = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_subscript), 2))), _state), _state);
+          _indexvar = omc_DAEToMid_RValueToVar(threadData, omc_DAEToMid_ExpToMid(threadData, (OMC_BOX_FIELD(_subscript, 2)), _state), _state);
           tmpMeta1 = mmc_mk_some(_indexvar);
           goto tmp3_done;
         }
@@ -4784,21 +4735,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_GetCrefIndexVar(threadD
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _var = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _var;
+  omc_ret_ = _var;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ConvertSimCodeVars(threadData_t *threadData, modelica_metatype _simcodevar, modelica_metatype _state)
 {
   modelica_metatype _var = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var has no default value.
   { /* match expression */
@@ -4816,11 +4769,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ConvertSimCodeVars(thre
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,0,7) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
-          _midcodevar = omc_DAEToMid_CrefToMidVar(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_simcodevar), 2))), _state);
+          _midcodevar = omc_DAEToMid_CrefToMidVar(threadData, (OMC_BOX_FIELD(_simcodevar, 2)), _state);
 
           { /* match expression */
             modelica_metatype tmp8_1;
-            tmp8_1 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_simcodevar), 4)));
+            tmp8_1 = (OMC_BOX_FIELD(_simcodevar, 4));
             {
               modelica_metatype _exp = NULL;
               volatile mmc_switch_type tmp8;
@@ -4838,10 +4791,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ConvertSimCodeVars(thre
                   modelica_metatype tmpMeta10;
                   modelica_metatype tmpMeta11;
                   if (optionNone(tmp8_1)) goto tmp7_end;
-                  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp8_1), 1));
+                  tmpMeta10 = OMC_BOX_FIELD(tmp8_1, 1);
                   _exp = tmpMeta10;
                   /* Pattern matching succeeded */
-                  tmpMeta11 = mmc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _midcodevar, omc_DAEToMid_ExpToMid(threadData, _exp, _state));
+                  tmpMeta11 = omc_mk_box3(4, &MidCode_Stmt_ASSIGN__desc, _midcodevar, omc_DAEToMid_ExpToMid(threadData, _exp, _state));
                   omc_DAEToMid_stateAddStmt(threadData, tmpMeta11, _state);
                   goto tmp7_done;
                 }
@@ -4866,107 +4819,112 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_ConvertSimCodeVars(thre
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _var = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _var;
+  omc_ret_ = _var;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_DAEToMid_GenBlockId(threadData_t *threadData)
 {
   modelica_integer _id;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _id has no default value.
   _id = omc_System_tmpTickIndex(threadData, ((modelica_integer) 45));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _id;
+  omc_ret_ = _id;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DAEToMid_GenBlockId(threadData_t *threadData)
 {
   modelica_integer _id;
   modelica_metatype out_id;
   _id = omc_DAEToMid_GenBlockId(threadData);
-  out_id = mmc_mk_icon(_id);
+  out_id = omc_mk_icon(_id);
   return out_id;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_GenTmpVarBufPtr(threadData_t *threadData, modelica_metatype _state)
 {
   modelica_metatype _var = NULL;
-  modelica_metatype tmpMeta1;
+  modelica_string tmp1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var has no default value.
-  tmpMeta1 = stringAppend(_OMC_LIT90,intString(omc_System_tmpTickIndex(threadData, ((modelica_integer) 46))));
-  tmpMeta2 = mmc_mk_box2(3, &MidCode_VarBufPtr_VARBUFPTR__desc, tmpMeta1);
+  tmp1 = stringAppend(_OMC_LIT90,intString(omc_System_tmpTickIndex(threadData, ((modelica_integer) 46))));
+  tmpMeta2 = omc_mk_box2(3, &MidCode_VarBufPtr_VARBUFPTR__desc, tmp1);
   _var = tmpMeta2;
 
-  omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 4))), _var);
+  omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 4)), _var);
   _return: OMC_LABEL_UNUSED
-  return _var;
+  omc_ret_ = _var;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_GenTmpVarBuf(threadData_t *threadData, modelica_metatype _state)
 {
   modelica_metatype _var = NULL;
-  modelica_metatype tmpMeta1;
+  modelica_string tmp1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var has no default value.
-  tmpMeta1 = stringAppend(_OMC_LIT91,intString(omc_System_tmpTickIndex(threadData, ((modelica_integer) 47))));
-  tmpMeta2 = mmc_mk_box2(3, &MidCode_VarBuf_VARBUF__desc, tmpMeta1);
+  tmp1 = stringAppend(_OMC_LIT91,intString(omc_System_tmpTickIndex(threadData, ((modelica_integer) 47))));
+  tmpMeta2 = omc_mk_box2(3, &MidCode_VarBuf_VARBUF__desc, tmp1);
   _var = tmpMeta2;
 
-  omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 3))), _var);
+  omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 3)), _var);
   _return: OMC_LABEL_UNUSED
-  return _var;
+  omc_ret_ = _var;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_GenTmpVarVolatile(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _state)
 {
   modelica_metatype _var = NULL;
-  modelica_metatype tmpMeta1;
+  modelica_string tmp1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var has no default value.
-  tmpMeta1 = stringAppend(_OMC_LIT90,intString(omc_System_tmpTickIndex(threadData, ((modelica_integer) 46))));
-  tmpMeta2 = mmc_mk_box4(3, &MidCode_Var_VAR__desc, tmpMeta1, _ty, mmc_mk_boolean(1 /* true */));
+  tmp1 = stringAppend(_OMC_LIT90,intString(omc_System_tmpTickIndex(threadData, ((modelica_integer) 46))));
+  tmpMeta2 = omc_mk_box4(3, &MidCode_Var_VAR__desc, tmp1, _ty, omc_mk_boolean(1 /* true */));
   _var = tmpMeta2;
 
-  omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 2))), _var);
+  omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 2)), _var);
   _return: OMC_LABEL_UNUSED
-  return _var;
+  omc_ret_ = _var;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_GenTmpVar(threadData_t *threadData, modelica_metatype _ty, modelica_metatype _state)
 {
   modelica_metatype _var = NULL;
-  modelica_metatype tmpMeta1;
+  modelica_string tmp1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _var has no default value.
-  tmpMeta1 = stringAppend(_OMC_LIT90,intString(omc_System_tmpTickIndex(threadData, ((modelica_integer) 46))));
-  tmpMeta2 = mmc_mk_box4(3, &MidCode_Var_VAR__desc, tmpMeta1, _ty, mmc_mk_boolean(0 /* false */));
+  tmp1 = stringAppend(_OMC_LIT90,intString(omc_System_tmpTickIndex(threadData, ((modelica_integer) 46))));
+  tmpMeta2 = omc_mk_box4(3, &MidCode_Var_VAR__desc, tmp1, _ty, omc_mk_boolean(0 /* false */));
   _var = tmpMeta2;
 
-  omc_DoubleEnded_push__back(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_state), 2))), _var);
+  omc_DoubleEnded_push__back(threadData, (OMC_BOX_FIELD(_state, 2)), _var);
   _return: OMC_LABEL_UNUSED
-  return _var;
+  omc_ret_ = _var;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_listZip(threadData_t *threadData, modelica_metatype _xs, modelica_metatype _ys)
@@ -4977,7 +4935,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_listZip(threadData_t *t
   modelica_metatype _x = NULL;
   modelica_metatype _y = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _zs has no default value.
   // _xs_ has no default value.
@@ -5030,7 +4989,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_listZip(threadData_t *t
           _y = tmpMeta10;
           _ys_ = tmpMeta11;
           /* Pattern matching succeeded */
-          tmpMeta13 = mmc_mk_box2(0, _x, _y);
+          tmpMeta13 = omc_mk_box2(0, _x, _y);
           tmpMeta12 = mmc_mk_cons(tmpMeta13, omc_DAEToMid_listZip(threadData, _xs_, _ys_));
           tmpMeta1 = tmpMeta12;
           goto tmp3_done;
@@ -5041,22 +5000,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DAEToMid_listZip(threadData_t *t
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _zs = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _zs;
+  omc_ret_ = _zs;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DAEToMid_DAEFunctionsToMid(threadData_t *threadData, modelica_metatype _simfuncs)
 {
   modelica_metatype _midfuncs = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _midfuncs has no default value.
   {
@@ -5085,7 +5046,7 @@ modelica_metatype omc_DAEToMid_DAEFunctionsToMid(threadData_t *threadData, model
       } else if (tmp4 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp2 = mmc_mk_nil();
@@ -5093,6 +5054,7 @@ modelica_metatype omc_DAEToMid_DAEFunctionsToMid(threadData_t *threadData, model
   }
   _midfuncs = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _midfuncs;
+  omc_ret_ = _midfuncs;
+  return omc_ret_;
 }
 

@@ -21,6 +21,7 @@ extern "C" {
 #include "StringUtil.h"
 #include "UnorderedMap.h"
 #include "Util.h"
+#include "Vector.h"
 #ifdef __cplusplus
 }
 #endif

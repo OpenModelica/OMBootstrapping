@@ -23,7 +23,7 @@ extern struct record_description Flags_FlagData_ENUM__FLAG__desc;
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
 
-DLLDirection
+DLLModelDirection
 void omc_Builtin_clearInitialGraph(threadData_t *threadData);
 #define boxptr_Builtin_clearInitialGraph omc_Builtin_clearInitialGraph
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Builtin_clearInitialGraph,2,0) {(void*) boxptr_Builtin_clearInitialGraph,0}};
@@ -33,31 +33,31 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Builtin_clearInitialGraph,2,0) {(void*)
 #define boxptr_Builtin_getSetInitialGraph omc_Builtin_getSetInitialGraph
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Builtin_initialGraph(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype *out_graph);
 #define boxptr_Builtin_initialGraph omc_Builtin_initialGraph
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Builtin_initialGraph,2,0) {(void*) boxptr_Builtin_initialGraph,0}};
 #define boxvar_Builtin_initialGraph MMC_REFSTRUCTLIT(boxvar_lit_Builtin_initialGraph)
 
 
-DLLDirection
+DLLModelDirection
 void omc_Builtin_isDer(threadData_t *threadData, modelica_metatype _inPath);
 #define boxptr_Builtin_isDer omc_Builtin_isDer
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Builtin_isDer,2,0) {(void*) boxptr_Builtin_isDer,0}};
 #define boxvar_Builtin_isDer MMC_REFSTRUCTLIT(boxvar_lit_Builtin_isDer)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Builtin_variableNameIsBuiltin(threadData_t *threadData, modelica_string _name);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Builtin_variableNameIsBuiltin(threadData_t *threadData, modelica_metatype _name);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Builtin_variableNameIsBuiltin,2,0) {(void*) boxptr_Builtin_variableNameIsBuiltin,0}};
 #define boxvar_Builtin_variableNameIsBuiltin MMC_REFSTRUCTLIT(boxvar_lit_Builtin_variableNameIsBuiltin)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Builtin_variableIsBuiltin(threadData_t *threadData, modelica_metatype _cref);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Builtin_variableIsBuiltin(threadData_t *threadData, modelica_metatype _cref);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Builtin_variableIsBuiltin,2,0) {(void*) boxptr_Builtin_variableIsBuiltin,0}};
 #define boxvar_Builtin_variableIsBuiltin MMC_REFSTRUCTLIT(boxvar_lit_Builtin_variableIsBuiltin)

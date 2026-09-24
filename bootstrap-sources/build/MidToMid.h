@@ -20,15 +20,15 @@ extern struct record_description MidCode_Terminator_GOTO__desc;
 #define boxptr_MidToMid_getSuccessors omc_MidToMid_getSuccessors
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_MidToMid_lookupId(threadData_t *threadData, modelica_metatype _blocks, modelica_integer _id);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_MidToMid_lookupId(threadData_t *threadData, modelica_metatype _blocks, modelica_metatype _id);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MidToMid_lookupId,2,0) {(void*) boxptr_MidToMid_lookupId,0}};
 #define boxvar_MidToMid_lookupId MMC_REFSTRUCTLIT(boxvar_lit_MidToMid_lookupId)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_MidToMid_longJmpGoto(threadData_t *threadData, modelica_metatype _oldFunction);
 #define boxptr_MidToMid_longJmpGoto omc_MidToMid_longJmpGoto
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MidToMid_longJmpGoto,2,0) {(void*) boxptr_MidToMid_longJmpGoto,0}};

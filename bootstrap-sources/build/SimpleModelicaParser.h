@@ -305,29 +305,29 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_SimpleModelicaParser_class__definition omc_SimpleModelicaParser_class__definition
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SimpleModelicaParser_stored__definition(threadData_t *threadData, modelica_metatype _inTokens, modelica_metatype _inTree, modelica_metatype *out_outTree);
 #define boxptr_SimpleModelicaParser_stored__definition omc_SimpleModelicaParser_stored__definition
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimpleModelicaParser_stored__definition,2,0) {(void*) boxptr_SimpleModelicaParser_stored__definition,0}};
 #define boxvar_SimpleModelicaParser_stored__definition MMC_REFSTRUCTLIT(boxvar_lit_SimpleModelicaParser_stored__definition)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SimpleModelicaParser_parseTreeNodeStr(threadData_t *threadData, modelica_metatype _tree);
 #define boxptr_SimpleModelicaParser_parseTreeNodeStr omc_SimpleModelicaParser_parseTreeNodeStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimpleModelicaParser_parseTreeNodeStr,2,0) {(void*) boxptr_SimpleModelicaParser_parseTreeNodeStr,0}};
 #define boxvar_SimpleModelicaParser_parseTreeNodeStr MMC_REFSTRUCTLIT(boxvar_lit_SimpleModelicaParser_parseTreeNodeStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SimpleModelicaParser_treeDiff(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2, modelica_integer _nTokens);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_SimpleModelicaParser_treeDiff(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2, modelica_metatype _nTokens);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimpleModelicaParser_treeDiff,2,0) {(void*) boxptr_SimpleModelicaParser_treeDiff,0}};
 #define boxvar_SimpleModelicaParser_treeDiff MMC_REFSTRUCTLIT(boxvar_lit_SimpleModelicaParser_treeDiff)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SimpleModelicaParser_parseTreeStr(threadData_t *threadData, modelica_metatype _trees);
 #define boxptr_SimpleModelicaParser_parseTreeStr omc_SimpleModelicaParser_parseTreeStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimpleModelicaParser_parseTreeStr,2,0) {(void*) boxptr_SimpleModelicaParser_parseTreeStr,0}};

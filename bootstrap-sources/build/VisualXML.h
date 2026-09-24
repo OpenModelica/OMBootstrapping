@@ -82,7 +82,7 @@ extern struct record_description VisualXML_Visualization_VECTOR__desc;
 #define boxptr_VisualXML_replaceVisualBinding omc_VisualXML_replaceVisualBinding
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_VisualXML_visualizationInfoXML(threadData_t *threadData, modelica_metatype _daeIn, modelica_string _fileName, modelica_metatype _program);
 #define boxptr_VisualXML_visualizationInfoXML omc_VisualXML_visualizationInfoXML
 static const MMC_DEFSTRUCTLIT(boxvar_lit_VisualXML_visualizationInfoXML,2,0) {(void*) boxptr_VisualXML_visualizationInfoXML,0}};

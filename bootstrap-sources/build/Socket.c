@@ -23,7 +23,7 @@ void omc_Socket_close(threadData_t *threadData, modelica_integer _inInteger)
 void boxptr_Socket_close(threadData_t *threadData, modelica_metatype _inInteger)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   omc_Socket_close(threadData, tmp1);
   return;
 }
@@ -32,13 +32,13 @@ void omc_Socket_sendreply(threadData_t *threadData, modelica_integer _inInteger,
 {
   int _inInteger_ext;
   _inInteger_ext = (int) _inInteger;
-  Socket_sendreply(_inInteger_ext, MMC_STRINGDATA(_inString));
+  Socket_sendreply(_inInteger_ext, omc_string_data(_inString));
   return;
 }
 void boxptr_Socket_sendreply(threadData_t *threadData, modelica_metatype _inInteger, modelica_metatype _inString)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   omc_Socket_sendreply(threadData, tmp1, _inString);
   return;
 }
@@ -51,14 +51,14 @@ modelica_string omc_Socket_handlerequest(threadData_t *threadData, modelica_inte
   // _outString has no default value.
   _inInteger_ext = (int) _inInteger;
   _outString_ext = Socket_handlerequest(_inInteger_ext);
-  _outString = (modelica_string)mmc_mk_scon(_outString_ext);
+  _outString = (modelica_string)omc_string_new(_outString_ext);
   return _outString;
 }
 modelica_metatype boxptr_Socket_handlerequest(threadData_t *threadData, modelica_metatype _inInteger)
 {
   modelica_integer tmp1;
   modelica_string _outString = NULL;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   _outString = omc_Socket_handlerequest(threadData, tmp1);
   /* skip box _outString; String */
   return _outString;
@@ -80,9 +80,9 @@ modelica_metatype boxptr_Socket_waitforconnect(threadData_t *threadData, modelic
   modelica_integer tmp1;
   modelica_integer _outInteger;
   modelica_metatype out_outInteger;
-  tmp1 = mmc_unbox_integer(_inInteger);
+  tmp1 = omc_unbox_integer(_inInteger);
   _outInteger = omc_Socket_waitforconnect(threadData, tmp1);
-  out_outInteger = mmc_mk_icon(_outInteger);
+  out_outInteger = omc_mk_icon(_outInteger);
   return out_outInteger;
 }
 

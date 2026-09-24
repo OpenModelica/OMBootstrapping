@@ -304,33 +304,33 @@ extern struct record_description Values_Value_STRING__desc;
 #define boxptr_Interactive_updateEquation__impl_merge__desc omc_Interactive_updateEquation__impl_merge__desc
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_updateEquation(threadData_t *threadData, modelica_metatype _clsPath, modelica_string _oldEq, modelica_string _newEq, modelica_boolean _matchAll, modelica_boolean _matchShallow, modelica_boolean _matchDescription, modelica_boolean _mergeDescription);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_updateEquation(threadData_t *threadData, modelica_metatype _clsPath, modelica_metatype _oldEq, modelica_metatype _newEq, modelica_metatype _matchAll, modelica_metatype _matchShallow, modelica_metatype _matchDescription, modelica_metatype _mergeDescription);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_updateEquation,2,0) {(void*) boxptr_Interactive_updateEquation,0}};
 #define boxvar_Interactive_updateEquation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_updateEquation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_addEquation(threadData_t *threadData, modelica_metatype _clsPath, modelica_string _eqStr, modelica_boolean _isInitial);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_addEquation(threadData_t *threadData, modelica_metatype _clsPath, modelica_metatype _eqStr, modelica_metatype _isInitial);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addEquation,2,0) {(void*) boxptr_Interactive_addEquation,0}};
 #define boxvar_Interactive_addEquation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_addEquation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_astContainsEncryptedClass(threadData_t *threadData, modelica_metatype _inProgram);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_astContainsEncryptedClass(threadData_t *threadData, modelica_metatype _inProgram);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_astContainsEncryptedClass,2,0) {(void*) boxptr_Interactive_astContainsEncryptedClass,0}};
 #define boxvar_Interactive_astContainsEncryptedClass MMC_REFSTRUCTLIT(boxvar_lit_Interactive_astContainsEncryptedClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_Interactive_checkAccessAnnotationAndEncryption(threadData_t *threadData, modelica_metatype _path, modelica_metatype _p);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_checkAccessAnnotationAndEncryption(threadData_t *threadData, modelica_metatype _path, modelica_metatype _p);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_checkAccessAnnotationAndEncryption,2,0) {(void*) boxptr_Interactive_checkAccessAnnotationAndEncryption,0}};
 #define boxvar_Interactive_checkAccessAnnotationAndEncryption MMC_REFSTRUCTLIT(boxvar_lit_Interactive_checkAccessAnnotationAndEncryption)
@@ -342,14 +342,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_checkAccessAnnotationAndEnc
 #define boxptr_Interactive_getAccessAnnotationString omc_Interactive_getAccessAnnotationString
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getAccessAnnotation(threadData_t *threadData, modelica_metatype _className, modelica_metatype _p);
 #define boxptr_Interactive_getAccessAnnotation omc_Interactive_getAccessAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getAccessAnnotation,2,0) {(void*) boxptr_Interactive_getAccessAnnotation,0}};
 #define boxvar_Interactive_getAccessAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getAccessAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getInstantiatedParametersAndValues(threadData_t *threadData, modelica_metatype _odae);
 #define boxptr_Interactive_getInstantiatedParametersAndValues omc_Interactive_getInstantiatedParametersAndValues
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getInstantiatedParametersAndValues,2,0) {(void*) boxptr_Interactive_getInstantiatedParametersAndValues,0}};
@@ -359,9 +359,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getInstantiatedParametersAn
 #define boxptr_Interactive_setComponentDimensionsInClass omc_Interactive_setComponentDimensionsInClass
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_setComponentDimensions(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inComponentName, modelica_metatype _inDimensions, modelica_metatype _inProgram, modelica_boolean *out_outResult);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_setComponentDimensions(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inComponentName, modelica_metatype _inDimensions, modelica_metatype _inProgram, modelica_metatype *out_outResult);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_setComponentDimensions,2,0) {(void*) boxptr_Interactive_setComponentDimensions,0}};
 #define boxvar_Interactive_setComponentDimensions MMC_REFSTRUCTLIT(boxvar_lit_Interactive_setComponentDimensions)
@@ -370,14 +370,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_setComponentDimensions,2,0)
 #define boxptr_Interactive_getClassEnvNoElaboration omc_Interactive_getClassEnvNoElaboration
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_printIstmtStr(threadData_t *threadData, modelica_metatype _inStatements);
 #define boxptr_Interactive_printIstmtStr omc_Interactive_printIstmtStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_printIstmtStr,2,0) {(void*) boxptr_Interactive_printIstmtStr,0}};
 #define boxvar_Interactive_printIstmtStr MMC_REFSTRUCTLIT(boxvar_lit_Interactive_printIstmtStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getAllInheritedClasses(threadData_t *threadData, modelica_metatype _inClassName, modelica_metatype _inProgram);
 #define boxptr_Interactive_getAllInheritedClasses omc_Interactive_getAllInheritedClasses
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getAllInheritedClasses,2,0) {(void*) boxptr_Interactive_getAllInheritedClasses,0}};
@@ -387,16 +387,16 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getAllInheritedClasses,2,0)
 #define boxptr_Interactive_getSCodeClassNamesRecursiveWork omc_Interactive_getSCodeClassNamesRecursiveWork
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getSCodeClassNamesRecursive(threadData_t *threadData, modelica_metatype _inProgram);
 #define boxptr_Interactive_getSCodeClassNamesRecursive omc_Interactive_getSCodeClassNamesRecursive
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getSCodeClassNamesRecursive,2,0) {(void*) boxptr_Interactive_getSCodeClassNamesRecursive,0}};
 #define boxvar_Interactive_getSCodeClassNamesRecursive MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getSCodeClassNamesRecursive)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_parseFile(threadData_t *threadData, modelica_string _fileName, modelica_string _encoding, modelica_boolean _updateProgram);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_parseFile(threadData_t *threadData, modelica_metatype _fileName, modelica_metatype _encoding, modelica_metatype _updateProgram);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_parseFile,2,0) {(void*) boxptr_Interactive_parseFile,0}};
 #define boxvar_Interactive_parseFile MMC_REFSTRUCTLIT(boxvar_lit_Interactive_parseFile)
@@ -405,7 +405,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_parseFile,2,0) {(void*) box
 #define boxptr_Interactive_getDefinitionTypeVars omc_Interactive_getDefinitionTypeVars
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getDefinitionTypeSpecPathString(threadData_t *threadData, modelica_metatype _tp);
 #define boxptr_Interactive_getDefinitionTypeSpecPathString omc_Interactive_getDefinitionTypeSpecPathString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDefinitionTypeSpecPathString,2,0) {(void*) boxptr_Interactive_getDefinitionTypeSpecPathString,0}};
@@ -418,9 +418,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDefinitionTypeSpecPathSt
 #define boxptr_Interactive_getDefinitionsReplaceableClass omc_Interactive_getDefinitionsReplaceableClass
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getDefinitions(threadData_t *threadData, modelica_metatype _ast, modelica_boolean _addFunctions);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getDefinitions(threadData_t *threadData, modelica_metatype _ast, modelica_metatype _addFunctions);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDefinitions,2,0) {(void*) boxptr_Interactive_getDefinitions,0}};
 #define boxvar_Interactive_getDefinitions MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getDefinitions)
@@ -480,7 +480,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDefinitions,2,0) {(void*
 #define boxptr_Interactive_transformFlatElementItem omc_Interactive_transformFlatElementItem
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_transformFlatPart(threadData_t *threadData, modelica_metatype _part);
 #define boxptr_Interactive_transformFlatPart omc_Interactive_transformFlatPart
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_transformFlatPart,2,0) {(void*) boxptr_Interactive_transformFlatPart,0}};
@@ -493,7 +493,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_transformFlatPart,2,0) {(vo
 #define boxptr_Interactive_transformFlatClass omc_Interactive_transformFlatClass
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_transformFlatProgram(threadData_t *threadData, modelica_metatype _p);
 #define boxptr_Interactive_transformFlatProgram omc_Interactive_transformFlatProgram
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_transformFlatProgram,2,0) {(void*) boxptr_Interactive_transformFlatProgram,0}};
@@ -512,7 +512,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_transformFlatProgram,2,0) {
 #define boxptr_Interactive_removeInnerDiffFiledClasses omc_Interactive_removeInnerDiffFiledClasses
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getContainedClassAndFile(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram, modelica_string *out_outString);
 #define boxptr_Interactive_getContainedClassAndFile omc_Interactive_getContainedClassAndFile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getContainedClassAndFile,2,0) {(void*) boxptr_Interactive_getContainedClassAndFile,0}};
@@ -525,14 +525,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getContainedClassAndFile,2,
 #define boxptr_Interactive_transformPathedClassInClass omc_Interactive_transformPathedClassInClass
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_transformClassInProgram(threadData_t *threadData, modelica_string _inName, modelica_metatype _inProgram, modelica_fnptr _inFunc);
 #define boxptr_Interactive_transformClassInProgram omc_Interactive_transformClassInProgram
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_transformClassInProgram,2,0) {(void*) boxptr_Interactive_transformClassInProgram,0}};
 #define boxvar_Interactive_transformClassInProgram MMC_REFSTRUCTLIT(boxvar_lit_Interactive_transformClassInProgram)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_transformPathedClassInProgram(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram, modelica_fnptr _inFunc);
 #define boxptr_Interactive_transformPathedClassInProgram omc_Interactive_transformPathedClassInProgram
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_transformPathedClassInProgram,2,0) {(void*) boxptr_Interactive_transformPathedClassInProgram,0}};
@@ -542,9 +542,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_transformPathedClassInProgr
 #define boxptr_Interactive_getComponentInfoOld omc_Interactive_getComponentInfoOld
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_keywordReplaceable(threadData_t *threadData, modelica_metatype _inAbsynRedeclareKeywordsOption);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_keywordReplaceable(threadData_t *threadData, modelica_metatype _inAbsynRedeclareKeywordsOption);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_keywordReplaceable,2,0) {(void*) boxptr_Interactive_keywordReplaceable,0}};
 #define boxvar_Interactive_keywordReplaceable MMC_REFSTRUCTLIT(boxvar_lit_Interactive_keywordReplaceable)
@@ -556,21 +556,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_keywordReplaceable,2,0) {(v
 #define boxptr_Interactive_cacheFromGraphicEnvCache omc_Interactive_cacheFromGraphicEnvCache
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_envFromGraphicEnvCache(threadData_t *threadData, modelica_metatype _inEnvCache);
 #define boxptr_Interactive_envFromGraphicEnvCache omc_Interactive_envFromGraphicEnvCache
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_envFromGraphicEnvCache,2,0) {(void*) boxptr_Interactive_envFromGraphicEnvCache,0}};
 #define boxvar_Interactive_envFromGraphicEnvCache MMC_REFSTRUCTLIT(boxvar_lit_Interactive_envFromGraphicEnvCache)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_cacheProgramAndPath(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype *out_outPath);
 #define boxptr_Interactive_cacheProgramAndPath omc_Interactive_cacheProgramAndPath
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_cacheProgramAndPath,2,0) {(void*) boxptr_Interactive_cacheProgramAndPath,0}};
 #define boxvar_Interactive_cacheProgramAndPath MMC_REFSTRUCTLIT(boxvar_lit_Interactive_cacheProgramAndPath)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getComponentModification(threadData_t *threadData, modelica_metatype _element);
 #define boxptr_Interactive_getComponentModification omc_Interactive_getComponentModification
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentModification,2,0) {(void*) boxptr_Interactive_getComponentModification,0}};
@@ -583,7 +583,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentModification,2,
 #define boxptr_Interactive_getConnectionsInClassparts omc_Interactive_getConnectionsInClassparts
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getConnections(threadData_t *threadData, modelica_metatype _inClass);
 #define boxptr_Interactive_getConnections omc_Interactive_getConnections
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getConnections,2,0) {(void*) boxptr_Interactive_getConnections,0}};
@@ -593,7 +593,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getConnections,2,0) {(void*
 #define boxptr_Interactive_getConnectionStr omc_Interactive_getConnectionStr
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_createFuncargsFromElementargs(threadData_t *threadData, modelica_metatype _inAbsynElementArgLst);
 #define boxptr_Interactive_createFuncargsFromElementargs omc_Interactive_createFuncargsFromElementargs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_createFuncargsFromElementargs,2,0) {(void*) boxptr_Interactive_createFuncargsFromElementargs,0}};
@@ -615,7 +615,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_createFuncargsFromElementar
 #define boxptr_Interactive_getDocumentationAnnotationInfo omc_Interactive_getDocumentationAnnotationInfo
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getDocumentationAnnotationString(threadData_t *threadData, modelica_metatype _mod);
 #define boxptr_Interactive_getDocumentationAnnotationString omc_Interactive_getDocumentationAnnotationString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDocumentationAnnotationString,2,0) {(void*) boxptr_Interactive_getDocumentationAnnotationString,0}};
@@ -625,21 +625,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDocumentationAnnotationS
 #define boxptr_Interactive_getExperimentAnnotationString2 omc_Interactive_getExperimentAnnotationString2
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getExperimentAnnotationString(threadData_t *threadData, modelica_metatype _mod);
 #define boxptr_Interactive_getExperimentAnnotationString omc_Interactive_getExperimentAnnotationString
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getExperimentAnnotationString,2,0) {(void*) boxptr_Interactive_getExperimentAnnotationString,0}};
 #define boxvar_Interactive_getExperimentAnnotationString MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getExperimentAnnotationString)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getAnnotationStringValueOrFail(threadData_t *threadData, modelica_metatype _mod);
 #define boxptr_Interactive_getAnnotationStringValueOrFail omc_Interactive_getAnnotationStringValueOrFail
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getAnnotationStringValueOrFail,2,0) {(void*) boxptr_Interactive_getAnnotationStringValueOrFail,0}};
 #define boxvar_Interactive_getAnnotationStringValueOrFail MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getAnnotationStringValueOrFail)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getAnnotationExp(threadData_t *threadData, modelica_metatype _mod);
 #define boxptr_Interactive_getAnnotationExp omc_Interactive_getAnnotationExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getAnnotationExp,2,0) {(void*) boxptr_Interactive_getAnnotationExp,0}};
@@ -649,14 +649,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getAnnotationExp,2,0) {(voi
 #define boxptr_Interactive_getAnnotationValue omc_Interactive_getAnnotationValue
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getDefaultComponentPrefixes(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getDefaultComponentPrefixes omc_Interactive_getDefaultComponentPrefixes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDefaultComponentPrefixes,2,0) {(void*) boxptr_Interactive_getDefaultComponentPrefixes,0}};
 #define boxvar_Interactive_getDefaultComponentPrefixes MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getDefaultComponentPrefixes)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getDefaultComponentName(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getDefaultComponentName omc_Interactive_getDefaultComponentName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDefaultComponentName,2,0) {(void*) boxptr_Interactive_getDefaultComponentName,0}};
@@ -666,9 +666,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDefaultComponentName,2,0
 #define boxptr_Interactive_getDocumentationClassAnnotationModStr omc_Interactive_getDocumentationClassAnnotationModStr
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_getDocumentationClassAnnotation(threadData_t *threadData, modelica_metatype _className, modelica_metatype _p);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getDocumentationClassAnnotation(threadData_t *threadData, modelica_metatype _className, modelica_metatype _p);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDocumentationClassAnnotation,2,0) {(void*) boxptr_Interactive_getDocumentationClassAnnotation,0}};
 #define boxvar_Interactive_getDocumentationClassAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getDocumentationClassAnnotation)
@@ -686,23 +686,23 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDocumentationClassAnnota
 #define boxptr_Interactive_getTopQualifiedClassnames omc_Interactive_getTopQualifiedClassnames
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getTopClassnamesInProgram(threadData_t *threadData, modelica_metatype _inProgram);
 #define boxptr_Interactive_getTopClassnamesInProgram omc_Interactive_getTopClassnamesInProgram
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getTopClassnamesInProgram,2,0) {(void*) boxptr_Interactive_getTopClassnamesInProgram,0}};
 #define boxvar_Interactive_getTopClassnamesInProgram MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getTopClassnamesInProgram)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getTopClassnames(threadData_t *threadData, modelica_metatype _p);
 #define boxptr_Interactive_getTopClassnames omc_Interactive_getTopClassnames
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getTopClassnames,2,0) {(void*) boxptr_Interactive_getTopClassnames,0}};
 #define boxvar_Interactive_getTopClassnames MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getTopClassnames)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getClassnamesInPath(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram, modelica_boolean _inShowProtected, modelica_boolean _includeConstants);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getClassnamesInPath(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram, modelica_metatype _inShowProtected, modelica_metatype _includeConstants);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getClassnamesInPath,2,0) {(void*) boxptr_Interactive_getClassnamesInPath,0}};
 #define boxvar_Interactive_getClassnamesInPath MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getClassnamesInPath)
@@ -720,14 +720,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getClassnamesInPath,2,0) {(
 #define boxptr_Interactive_getTopPackagesInProgram omc_Interactive_getTopPackagesInProgram
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getTopPackages(threadData_t *threadData, modelica_metatype _p);
 #define boxptr_Interactive_getTopPackages omc_Interactive_getTopPackages
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getTopPackages,2,0) {(void*) boxptr_Interactive_getTopPackages,0}};
 #define boxvar_Interactive_getTopPackages MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getTopPackages)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getPackagesInPath(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram);
 #define boxptr_Interactive_getPackagesInPath omc_Interactive_getPackagesInPath
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getPackagesInPath,2,0) {(void*) boxptr_Interactive_getPackagesInPath,0}};
@@ -740,7 +740,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getPackagesInPath,2,0) {(vo
 #define boxptr_Interactive_getConversionsInClassMod omc_Interactive_getConversionsInClassMod
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getConversionsInClass(threadData_t *threadData, modelica_metatype _cls);
 #define boxptr_Interactive_getConversionsInClass omc_Interactive_getConversionsInClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getConversionsInClass,2,0) {(void*) boxptr_Interactive_getConversionsInClass,0}};
@@ -750,7 +750,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getConversionsInClass,2,0) 
 #define boxptr_Interactive_getConversionAnnotationString omc_Interactive_getConversionAnnotationString
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getConversionAnnotation(threadData_t *threadData, modelica_metatype _cls, modelica_metatype *out_withConversion);
 #define boxptr_Interactive_getConversionAnnotation omc_Interactive_getConversionAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getConversionAnnotation,2,0) {(void*) boxptr_Interactive_getConversionAnnotation,0}};
@@ -760,14 +760,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getConversionAnnotation,2,0
 #define boxptr_Interactive_updateUsedVersion_make__version__exp omc_Interactive_updateUsedVersion_make__version__exp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_updateUsedVersion(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcls, modelica_metatype _library, modelica_string _newVersion);
 #define boxptr_Interactive_updateUsedVersion omc_Interactive_updateUsedVersion
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_updateUsedVersion,2,0) {(void*) boxptr_Interactive_updateUsedVersion,0}};
 #define boxvar_Interactive_updateUsedVersion MMC_REFSTRUCTLIT(boxvar_lit_Interactive_updateUsedVersion)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getUsedVersion(threadData_t *threadData, modelica_metatype _cls, modelica_metatype _library);
 #define boxptr_Interactive_getUsedVersion omc_Interactive_getUsedVersion
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getUsedVersion,2,0) {(void*) boxptr_Interactive_getUsedVersion,0}};
@@ -780,110 +780,110 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getUsedVersion,2,0) {(void*
 #define boxptr_Interactive_getUsesAnnotationString omc_Interactive_getUsesAnnotationString
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getUsesAnnotationOrDefault(threadData_t *threadData, modelica_metatype _p, modelica_boolean _requireExactVersion);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getUsesAnnotationOrDefault(threadData_t *threadData, modelica_metatype _p, modelica_metatype _requireExactVersion);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getUsesAnnotationOrDefault,2,0) {(void*) boxptr_Interactive_getUsesAnnotationOrDefault,0}};
 #define boxvar_Interactive_getUsesAnnotationOrDefault MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getUsesAnnotationOrDefault)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getUsesAnnotation(threadData_t *threadData, modelica_metatype _program);
 #define boxptr_Interactive_getUsesAnnotation omc_Interactive_getUsesAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getUsesAnnotation,2,0) {(void*) boxptr_Interactive_getUsesAnnotation,0}};
 #define boxvar_Interactive_getUsesAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getUsesAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNamedAnnotationValueInClass(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _cls, modelica_metatype _program, modelica_string _name);
 #define boxptr_Interactive_getNamedAnnotationValueInClass omc_Interactive_getNamedAnnotationValueInClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNamedAnnotationValueInClass,2,0) {(void*) boxptr_Interactive_getNamedAnnotationValueInClass,0}};
 #define boxvar_Interactive_getNamedAnnotationValueInClass MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNamedAnnotationValueInClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNamedAnnotationValue(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program, modelica_string _name);
 #define boxptr_Interactive_getNamedAnnotationValue omc_Interactive_getNamedAnnotationValue
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNamedAnnotationValue,2,0) {(void*) boxptr_Interactive_getNamedAnnotationValue,0}};
 #define boxvar_Interactive_getNamedAnnotationValue MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNamedAnnotationValue)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getIntegerNamedAnnotation(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram, modelica_metatype _id);
 #define boxptr_Interactive_getIntegerNamedAnnotation omc_Interactive_getIntegerNamedAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getIntegerNamedAnnotation,2,0) {(void*) boxptr_Interactive_getIntegerNamedAnnotation,0}};
 #define boxvar_Interactive_getIntegerNamedAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getIntegerNamedAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getStringNamedAnnotation(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram, modelica_metatype _id);
 #define boxptr_Interactive_getStringNamedAnnotation omc_Interactive_getStringNamedAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getStringNamedAnnotation,2,0) {(void*) boxptr_Interactive_getStringNamedAnnotation,0}};
 #define boxvar_Interactive_getStringNamedAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getStringNamedAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNamedAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _annotationPath, modelica_metatype _program);
 #define boxptr_Interactive_getNamedAnnotation omc_Interactive_getNamedAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNamedAnnotation,2,0) {(void*) boxptr_Interactive_getNamedAnnotation,0}};
 #define boxvar_Interactive_getNamedAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNamedAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_refactorDiagramAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_refactorDiagramAnnotation omc_Interactive_refactorDiagramAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_refactorDiagramAnnotation,2,0) {(void*) boxptr_Interactive_refactorDiagramAnnotation,0}};
 #define boxvar_Interactive_refactorDiagramAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_refactorDiagramAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getDiagramAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getDiagramAnnotation omc_Interactive_getDiagramAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDiagramAnnotation,2,0) {(void*) boxptr_Interactive_getDiagramAnnotation,0}};
 #define boxvar_Interactive_getDiagramAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getDiagramAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_refactorIconAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_refactorIconAnnotation omc_Interactive_refactorIconAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_refactorIconAnnotation,2,0) {(void*) boxptr_Interactive_refactorIconAnnotation,0}};
 #define boxvar_Interactive_refactorIconAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_refactorIconAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getIconAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getIconAnnotation omc_Interactive_getIconAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getIconAnnotation,2,0) {(void*) boxptr_Interactive_getIconAnnotation,0}};
 #define boxvar_Interactive_getIconAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getIconAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNthConnectorIconAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_integer _n, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getNthConnectorIconAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _n, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthConnectorIconAnnotation,2,0) {(void*) boxptr_Interactive_getNthConnectorIconAnnotation,0}};
 #define boxvar_Interactive_getNthConnectorIconAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNthConnectorIconAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNthConnector(threadData_t *threadData, modelica_metatype _classPath, modelica_integer _n, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getNthConnector(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _n, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthConnector,2,0) {(void*) boxptr_Interactive_getNthConnector,0}};
 #define boxvar_Interactive_getNthConnector MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNthConnector)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getConnectorCount(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getConnectorCount omc_Interactive_getConnectorCount
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getConnectorCount,2,0) {(void*) boxptr_Interactive_getConnectorCount,0}};
 #define boxvar_Interactive_getConnectorCount MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getConnectorCount)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNthConnectionAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_integer _n, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getNthConnectionAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _n, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthConnectionAnnotation,2,0) {(void*) boxptr_Interactive_getNthConnectionAnnotation,0}};
 #define boxvar_Interactive_getNthConnectionAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNthConnectionAnnotation)
@@ -898,9 +898,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthConnectionAnnotation,
 #define boxptr_Interactive_setConnectionCommentInElement omc_Interactive_setConnectionCommentInElement
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_setConnectionComment(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _connector1, modelica_metatype _connector2, modelica_string _comment, modelica_metatype __omcQ_24in_5Fprogram, modelica_boolean *out_success);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_setConnectionComment(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _connector1, modelica_metatype _connector2, modelica_metatype _comment, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_success);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_setConnectionComment,2,0) {(void*) boxptr_Interactive_setConnectionComment,0}};
 #define boxvar_Interactive_setConnectionComment MMC_REFSTRUCTLIT(boxvar_lit_Interactive_setConnectionComment)
@@ -912,48 +912,48 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_setConnectionComment,2,0) {
 #define boxptr_Interactive_setComponentCommentInElement omc_Interactive_setComponentCommentInElement
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_setComponentComment(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _componentName, modelica_string _comment, modelica_metatype __omcQ_24in_5Fprogram, modelica_boolean *out_success);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_setComponentComment(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _componentName, modelica_metatype _comment, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_success);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_setComponentComment,2,0) {(void*) boxptr_Interactive_setComponentComment,0}};
 #define boxvar_Interactive_setComponentComment MMC_REFSTRUCTLIT(boxvar_lit_Interactive_setComponentComment)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getComponentComment(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _componentName, modelica_metatype _program);
 #define boxptr_Interactive_getComponentComment omc_Interactive_getComponentComment
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentComment,2,0) {(void*) boxptr_Interactive_getComponentComment,0}};
 #define boxvar_Interactive_getComponentComment MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getComponentComment)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_addOrUpdateNamedArg(threadData_t *threadData, modelica_metatype _inNamedArgLst, modelica_string _namedArg, modelica_string _defaultValue, modelica_metatype _inTransition, modelica_integer _position);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_addOrUpdateNamedArg(threadData_t *threadData, modelica_metatype _inNamedArgLst, modelica_metatype _namedArg, modelica_metatype _defaultValue, modelica_metatype _inTransition, modelica_metatype _position);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addOrUpdateNamedArg,2,0) {(void*) boxptr_Interactive_addOrUpdateNamedArg,0}};
 #define boxvar_Interactive_addOrUpdateNamedArg MMC_REFSTRUCTLIT(boxvar_lit_Interactive_addOrUpdateNamedArg)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_deleteTransition(threadData_t *threadData, modelica_metatype _inComponentRef1, modelica_string _from, modelica_string _to, modelica_string _condition, modelica_boolean _immediate, modelica_boolean _reset, modelica_boolean _synchronize, modelica_integer _priority, modelica_metatype _inProgram, modelica_metatype *out_outProgram);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_deleteTransition(threadData_t *threadData, modelica_metatype _inComponentRef1, modelica_metatype _from, modelica_metatype _to, modelica_metatype _condition, modelica_metatype _immediate, modelica_metatype _reset, modelica_metatype _synchronize, modelica_metatype _priority, modelica_metatype _inProgram, modelica_metatype *out_outProgram);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_deleteTransition,2,0) {(void*) boxptr_Interactive_deleteTransition,0}};
 #define boxvar_Interactive_deleteTransition MMC_REFSTRUCTLIT(boxvar_lit_Interactive_deleteTransition)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_addTransitionWithAnnotation(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_string _from, modelica_string _to, modelica_string _condition, modelica_boolean _immediate, modelica_boolean _reset, modelica_boolean _synchronize, modelica_integer _priority, modelica_metatype _inAnnotation, modelica_metatype _inProgram, modelica_metatype *out_outProgram);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_addTransitionWithAnnotation(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _from, modelica_metatype _to, modelica_metatype _condition, modelica_metatype _immediate, modelica_metatype _reset, modelica_metatype _synchronize, modelica_metatype _priority, modelica_metatype _inAnnotation, modelica_metatype _inProgram, modelica_metatype *out_outProgram);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addTransitionWithAnnotation,2,0) {(void*) boxptr_Interactive_addTransitionWithAnnotation,0}};
 #define boxvar_Interactive_addTransitionWithAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_addTransitionWithAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_addTransition(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_string _from, modelica_string _to, modelica_string _condition, modelica_boolean _immediate, modelica_boolean _reset, modelica_boolean _synchronize, modelica_integer _priority, modelica_metatype _inAbsynNamedArgLst, modelica_metatype _inProgram, modelica_metatype *out_outProgram);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_addTransition(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _from, modelica_metatype _to, modelica_metatype _condition, modelica_metatype _immediate, modelica_metatype _reset, modelica_metatype _synchronize, modelica_metatype _priority, modelica_metatype _inAbsynNamedArgLst, modelica_metatype _inProgram, modelica_metatype *out_outProgram);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addTransition,2,0) {(void*) boxptr_Interactive_addTransition,0}};
 #define boxvar_Interactive_addTransition MMC_REFSTRUCTLIT(boxvar_lit_Interactive_addTransition)
@@ -965,32 +965,32 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addTransition,2,0) {(void*)
 #define boxptr_Interactive_deleteConnectionInClass omc_Interactive_deleteConnectionInClass
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_deleteConnection(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _connector1, modelica_metatype _connector2, modelica_metatype __omcQ_24in_5Fprogram, modelica_boolean *out_success);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_deleteConnection(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _connector1, modelica_metatype _connector2, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_success);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_deleteConnection,2,0) {(void*) boxptr_Interactive_deleteConnection,0}};
 #define boxvar_Interactive_deleteConnection MMC_REFSTRUCTLIT(boxvar_lit_Interactive_deleteConnection)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_addConnection(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _connector1, modelica_metatype _connector2, modelica_metatype _commentExp, modelica_metatype _annotationExp, modelica_metatype __omcQ_24in_5Fprogram, modelica_boolean *out_success);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_addConnection(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _connector1, modelica_metatype _connector2, modelica_metatype _commentExp, modelica_metatype _annotationExp, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_success);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addConnection,2,0) {(void*) boxptr_Interactive_addConnection,0}};
 #define boxvar_Interactive_addConnection MMC_REFSTRUCTLIT(boxvar_lit_Interactive_addConnection)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getStringComment(threadData_t *threadData, modelica_metatype _inAbsynCommentOption);
 #define boxptr_Interactive_getStringComment omc_Interactive_getStringComment
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getStringComment,2,0) {(void*) boxptr_Interactive_getStringComment,0}};
 #define boxvar_Interactive_getStringComment MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getStringComment)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNthConnection(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _inProgram, modelica_integer _inInteger);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getNthConnection(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _inProgram, modelica_metatype _inInteger);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthConnection,2,0) {(void*) boxptr_Interactive_getNthConnection,0}};
 #define boxvar_Interactive_getNthConnection MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNthConnection)
@@ -1002,78 +1002,78 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthConnection,2,0) {(voi
 #define boxptr_Interactive_getComponentCondition omc_Interactive_getComponentCondition
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNthComponentCondition(threadData_t *threadData, modelica_metatype _classPath, modelica_integer _n, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getNthComponentCondition(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _n, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthComponentCondition,2,0) {(void*) boxptr_Interactive_getNthComponentCondition,0}};
 #define boxvar_Interactive_getNthComponentCondition MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNthComponentCondition)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNthComponentModification(threadData_t *threadData, modelica_metatype _classPath, modelica_integer _n, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getNthComponentModification(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _n, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthComponentModification,2,0) {(void*) boxptr_Interactive_getNthComponentModification,0}};
 #define boxvar_Interactive_getNthComponentModification MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNthComponentModification)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNthComponentAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_integer _n, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getNthComponentAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _n, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthComponentAnnotation,2,0) {(void*) boxptr_Interactive_getNthComponentAnnotation,0}};
 #define boxvar_Interactive_getNthComponentAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNthComponentAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getElementAnnotations(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getElementAnnotations omc_Interactive_getElementAnnotations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getElementAnnotations,2,0) {(void*) boxptr_Interactive_getElementAnnotations,0}};
 #define boxvar_Interactive_getElementAnnotations MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getElementAnnotations)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getComponentAnnotations(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getComponentAnnotations omc_Interactive_getComponentAnnotations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentAnnotations,2,0) {(void*) boxptr_Interactive_getComponentAnnotations,0}};
 #define boxvar_Interactive_getComponentAnnotations MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getComponentAnnotations)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getElements(threadData_t *threadData, modelica_metatype _classPath, modelica_boolean _useQuotes, modelica_metatype _program, modelica_boolean _onlyComponents);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getElements(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _useQuotes, modelica_metatype _program, modelica_metatype _onlyComponents);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getElements,2,0) {(void*) boxptr_Interactive_getElements,0}};
 #define boxvar_Interactive_getElements MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getElements)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getComponents(threadData_t *threadData, modelica_metatype _classPath, modelica_boolean _useQuotes, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getComponents(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _useQuotes, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponents,2,0) {(void*) boxptr_Interactive_getComponents,0}};
 #define boxvar_Interactive_getComponents MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getComponents)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_insertQuotesToList(threadData_t *threadData, modelica_metatype _inStringList);
 #define boxptr_Interactive_insertQuotesToList omc_Interactive_insertQuotesToList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_insertQuotesToList,2,0) {(void*) boxptr_Interactive_insertQuotesToList,0}};
 #define boxvar_Interactive_insertQuotesToList MMC_REFSTRUCTLIT(boxvar_lit_Interactive_insertQuotesToList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNthComponent(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program, modelica_integer _n);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getNthComponent(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program, modelica_metatype _n);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthComponent,2,0) {(void*) boxptr_Interactive_getNthComponent,0}};
 #define boxvar_Interactive_getNthComponent MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNthComponent)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_Interactive_getComponentCount(threadData_t *threadData, modelica_metatype _model_, modelica_metatype _p);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getComponentCount(threadData_t *threadData, modelica_metatype _model_, modelica_metatype _p);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentCount,2,0) {(void*) boxptr_Interactive_getComponentCount,0}};
 #define boxvar_Interactive_getComponentCount MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getComponentCount)
@@ -1085,17 +1085,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentCount,2,0) {(vo
 #define boxptr_Interactive_getExtendsInClass omc_Interactive_getExtendsInClass
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNthInheritedClassDiagramMapAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_integer _n, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getNthInheritedClassDiagramMapAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _n, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthInheritedClassDiagramMapAnnotation,2,0) {(void*) boxptr_Interactive_getNthInheritedClassDiagramMapAnnotation,0}};
 #define boxvar_Interactive_getNthInheritedClassDiagramMapAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNthInheritedClassDiagramMapAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getNthInheritedClassIconMapAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_integer _n, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_getNthInheritedClassIconMapAnnotation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _n, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthInheritedClassIconMapAnnotation,2,0) {(void*) boxptr_Interactive_getNthInheritedClassIconMapAnnotation,0}};
 #define boxvar_Interactive_getNthInheritedClassIconMapAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getNthInheritedClassIconMapAnnotation)
@@ -1104,14 +1104,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getNthInheritedClassIconMap
 #define boxptr_Interactive_getMapAnnotationStr omc_Interactive_getMapAnnotationStr
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getInheritanceCount(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getInheritanceCount omc_Interactive_getInheritanceCount
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getInheritanceCount,2,0) {(void*) boxptr_Interactive_getInheritanceCount,0}};
 #define boxvar_Interactive_getInheritanceCount MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getInheritanceCount)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getInheritedClasses(threadData_t *threadData, modelica_metatype _inPath);
 #define boxptr_Interactive_getInheritedClasses omc_Interactive_getInheritedClasses
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getInheritedClasses,2,0) {(void*) boxptr_Interactive_getInheritedClasses,0}};
@@ -1121,31 +1121,31 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getInheritedClasses,2,0) {(
 #define boxptr_Interactive_getInheritedClassesHelper omc_Interactive_getInheritedClassesHelper
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_addClassAnnotationToClass(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inAnnotation);
 #define boxptr_Interactive_addClassAnnotationToClass omc_Interactive_addClassAnnotationToClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addClassAnnotationToClass,2,0) {(void*) boxptr_Interactive_addClassAnnotationToClass,0}};
 #define boxvar_Interactive_addClassAnnotationToClass MMC_REFSTRUCTLIT(boxvar_lit_Interactive_addClassAnnotationToClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_addClassAnnotation(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inAnnotation, modelica_metatype _inProgram);
 #define boxptr_Interactive_addClassAnnotation omc_Interactive_addClassAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addClassAnnotation,2,0) {(void*) boxptr_Interactive_addClassAnnotation,0}};
 #define boxvar_Interactive_addClassAnnotation MMC_REFSTRUCTLIT(boxvar_lit_Interactive_addClassAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_deleteComponent(threadData_t *threadData, modelica_string _componentName, modelica_metatype _classPath, modelica_metatype __omcQ_24in_5Fprogram, modelica_boolean *out_success);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_deleteComponent(threadData_t *threadData, modelica_metatype _componentName, modelica_metatype _classPath, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_success);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_deleteComponent,2,0) {(void*) boxptr_Interactive_deleteComponent,0}};
 #define boxvar_Interactive_deleteComponent MMC_REFSTRUCTLIT(boxvar_lit_Interactive_deleteComponent)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_updateComponent(threadData_t *threadData, modelica_string _componentName, modelica_metatype _typeName, modelica_metatype _classPath, modelica_metatype _bindingExp, modelica_metatype _modifier, modelica_metatype _commentExp, modelica_metatype _annotationExp, modelica_metatype __omcQ_24in_5Fprogram, modelica_boolean *out_success);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_updateComponent(threadData_t *threadData, modelica_metatype _componentName, modelica_metatype _typeName, modelica_metatype _classPath, modelica_metatype _bindingExp, modelica_metatype _modifier, modelica_metatype _commentExp, modelica_metatype _annotationExp, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_success);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_updateComponent,2,0) {(void*) boxptr_Interactive_updateComponent,0}};
 #define boxvar_Interactive_updateComponent MMC_REFSTRUCTLIT(boxvar_lit_Interactive_updateComponent)
@@ -1166,9 +1166,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_updateComponent,2,0) {(void
 #define boxptr_Interactive_getDefaultPrefixes omc_Interactive_getDefaultPrefixes
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_addComponent(threadData_t *threadData, modelica_string _componentName, modelica_metatype _typeName, modelica_metatype _classPath, modelica_metatype _bindingExp, modelica_metatype _modifier, modelica_metatype _commentExp, modelica_metatype _annotationExp, modelica_metatype __omcQ_24in_5Fprogram, modelica_boolean *out_success);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_addComponent(threadData_t *threadData, modelica_metatype _componentName, modelica_metatype _typeName, modelica_metatype _classPath, modelica_metatype _bindingExp, modelica_metatype _modifier, modelica_metatype _commentExp, modelica_metatype _annotationExp, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_success);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addComponent,2,0) {(void*) boxptr_Interactive_addComponent,0}};
 #define boxvar_Interactive_addComponent MMC_REFSTRUCTLIT(boxvar_lit_Interactive_addComponent)
@@ -1189,24 +1189,24 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addComponent,2,0) {(void*) 
 #define boxptr_Interactive_getVariableValue omc_Interactive_getVariableValue
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_addScope(threadData_t *threadData, modelica_metatype _inProgram, modelica_metatype _inVariableLst);
 #define boxptr_Interactive_addScope omc_Interactive_addScope
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_addScope,2,0) {(void*) boxptr_Interactive_addScope,0}};
 #define boxvar_Interactive_addScope MMC_REFSTRUCTLIT(boxvar_lit_Interactive_addScope)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isPrimitiveClass(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inProgram);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isPrimitiveClass(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inProgram);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isPrimitiveClass,2,0) {(void*) boxptr_Interactive_isPrimitiveClass,0}};
 #define boxvar_Interactive_isPrimitiveClass MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isPrimitiveClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_existClass(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_existClass(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_existClass,2,0) {(void*) boxptr_Interactive_existClass,0}};
 #define boxvar_Interactive_existClass MMC_REFSTRUCTLIT(boxvar_lit_Interactive_existClass)
@@ -1224,188 +1224,188 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_existClass,2,0) {(void*) bo
 #define boxptr_Interactive_getElementitemContainsName omc_Interactive_getElementitemContainsName
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getDerivedClassModifierValue(threadData_t *threadData, modelica_metatype _cls, modelica_metatype _path);
 #define boxptr_Interactive_getDerivedClassModifierValue omc_Interactive_getDerivedClassModifierValue
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDerivedClassModifierValue,2,0) {(void*) boxptr_Interactive_getDerivedClassModifierValue,0}};
 #define boxvar_Interactive_getDerivedClassModifierValue MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getDerivedClassModifierValue)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getDerivedClassModifierNames(threadData_t *threadData, modelica_metatype _inClass);
 #define boxptr_Interactive_getDerivedClassModifierNames omc_Interactive_getDerivedClassModifierNames
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getDerivedClassModifierNames,2,0) {(void*) boxptr_Interactive_getDerivedClassModifierNames,0}};
 #define boxvar_Interactive_getDerivedClassModifierNames MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getDerivedClassModifierNames)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getEnumerationLiterals(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getEnumerationLiterals omc_Interactive_getEnumerationLiterals
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getEnumerationLiterals,2,0) {(void*) boxptr_Interactive_getEnumerationLiterals,0}};
 #define boxvar_Interactive_getEnumerationLiterals MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getEnumerationLiterals)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isProtectedClass(threadData_t *threadData, modelica_metatype _path, modelica_string _className, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isProtectedClass(threadData_t *threadData, modelica_metatype _path, modelica_metatype _className, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isProtectedClass,2,0) {(void*) boxptr_Interactive_isProtectedClass,0}};
 #define boxvar_Interactive_isProtectedClass MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isProtectedClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isEnumeration(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isEnumeration(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isEnumeration,2,0) {(void*) boxptr_Interactive_isEnumeration,0}};
 #define boxvar_Interactive_isEnumeration MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isEnumeration)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isProtected(threadData_t *threadData, modelica_metatype _componentName, modelica_metatype _className, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isProtected(threadData_t *threadData, modelica_metatype _componentName, modelica_metatype _className, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isProtected,2,0) {(void*) boxptr_Interactive_isProtected,0}};
 #define boxvar_Interactive_isProtected MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isProtected)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isConstant(threadData_t *threadData, modelica_metatype _componentName, modelica_metatype _className, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isConstant(threadData_t *threadData, modelica_metatype _componentName, modelica_metatype _className, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isConstant,2,0) {(void*) boxptr_Interactive_isConstant,0}};
 #define boxvar_Interactive_isConstant MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isConstant)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isParameter(threadData_t *threadData, modelica_metatype _componentName, modelica_metatype _className, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isParameter(threadData_t *threadData, modelica_metatype _componentName, modelica_metatype _className, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isParameter,2,0) {(void*) boxptr_Interactive_isParameter,0}};
 #define boxvar_Interactive_isParameter MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isParameter)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isRedeclare(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isRedeclare(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isRedeclare,2,0) {(void*) boxptr_Interactive_isRedeclare,0}};
 #define boxvar_Interactive_isRedeclare MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isRedeclare)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isReplaceable(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isReplaceable(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isReplaceable,2,0) {(void*) boxptr_Interactive_isReplaceable,0}};
 #define boxvar_Interactive_isReplaceable MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isReplaceable)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isPartial(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isPartial(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isPartial,2,0) {(void*) boxptr_Interactive_isPartial,0}};
 #define boxvar_Interactive_isPartial MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isPartial)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isClass(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isClass(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isClass,2,0) {(void*) boxptr_Interactive_isClass,0}};
 #define boxvar_Interactive_isClass MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isPackage(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isPackage(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isPackage,2,0) {(void*) boxptr_Interactive_isPackage,0}};
 #define boxvar_Interactive_isPackage MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isPackage)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isFunction(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isFunction(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isFunction,2,0) {(void*) boxptr_Interactive_isFunction,0}};
 #define boxvar_Interactive_isFunction MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isOptimization(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isOptimization(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isOptimization,2,0) {(void*) boxptr_Interactive_isOptimization,0}};
 #define boxvar_Interactive_isOptimization MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isOptimization)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isBlock(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isBlock(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isBlock,2,0) {(void*) boxptr_Interactive_isBlock,0}};
 #define boxvar_Interactive_isBlock MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isBlock)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isRecord(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isRecord(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isRecord,2,0) {(void*) boxptr_Interactive_isRecord,0}};
 #define boxvar_Interactive_isRecord MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isRecord)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isOperatorFunction(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isOperatorFunction(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isOperatorFunction,2,0) {(void*) boxptr_Interactive_isOperatorFunction,0}};
 #define boxvar_Interactive_isOperatorFunction MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isOperatorFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isOperatorRecord(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isOperatorRecord(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isOperatorRecord,2,0) {(void*) boxptr_Interactive_isOperatorRecord,0}};
 #define boxvar_Interactive_isOperatorRecord MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isOperatorRecord)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isOperator(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isOperator(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isOperator,2,0) {(void*) boxptr_Interactive_isOperator,0}};
 #define boxvar_Interactive_isOperator MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isOperator)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isModel(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isModel(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isModel,2,0) {(void*) boxptr_Interactive_isModel,0}};
 #define boxvar_Interactive_isModel MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isModel)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isConnector(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isConnector(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isConnector,2,0) {(void*) boxptr_Interactive_isConnector,0}};
 #define boxvar_Interactive_isConnector MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isConnector)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isType(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isType(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isType,2,0) {(void*) boxptr_Interactive_isType,0}};
 #define boxvar_Interactive_isType MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isType)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getClassRestriction(threadData_t *threadData, modelica_metatype _path, modelica_metatype _program);
 #define boxptr_Interactive_getClassRestriction omc_Interactive_getClassRestriction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getClassRestriction,2,0) {(void*) boxptr_Interactive_getClassRestriction,0}};
@@ -1415,14 +1415,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getClassRestriction,2,0) {(
 #define boxptr_Interactive_getClassDimensions omc_Interactive_getClassDimensions
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getExternalFunctionSpecification(threadData_t *threadData, modelica_metatype _functionName, modelica_metatype _program);
 #define boxptr_Interactive_getExternalFunctionSpecification omc_Interactive_getExternalFunctionSpecification
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getExternalFunctionSpecification,2,0) {(void*) boxptr_Interactive_getExternalFunctionSpecification,0}};
 #define boxvar_Interactive_getExternalFunctionSpecification MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getExternalFunctionSpecification)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getShortDefinitionBaseClassInformation(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getShortDefinitionBaseClassInformation omc_Interactive_getShortDefinitionBaseClassInformation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getShortDefinitionBaseClassInformation,2,0) {(void*) boxptr_Interactive_getShortDefinitionBaseClassInformation,0}};
@@ -1435,39 +1435,39 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getShortDefinitionBaseClass
 #define boxptr_Interactive_setClassCommentInClass omc_Interactive_setClassCommentInClass
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_setClassComment(threadData_t *threadData, modelica_metatype _path, modelica_string _inString, modelica_metatype _inProgram, modelica_boolean *out_success);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_setClassComment(threadData_t *threadData, modelica_metatype _path, modelica_metatype _inString, modelica_metatype _inProgram, modelica_metatype *out_success);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_setClassComment,2,0) {(void*) boxptr_Interactive_setClassComment,0}};
 #define boxvar_Interactive_setClassComment MMC_REFSTRUCTLIT(boxvar_lit_Interactive_setClassComment)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_deleteClass(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _inProgram, modelica_metatype *out_outProgram);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_deleteClass(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _inProgram, modelica_metatype *out_outProgram);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_deleteClass,2,0) {(void*) boxptr_Interactive_deleteClass,0}};
 #define boxvar_Interactive_deleteClass MMC_REFSTRUCTLIT(boxvar_lit_Interactive_deleteClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_newModel(threadData_t *threadData, modelica_metatype _className, modelica_metatype _withinPath, modelica_metatype __omcQ_24in_5Fprogram);
 #define boxptr_Interactive_newModel omc_Interactive_newModel
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_newModel,2,0) {(void*) boxptr_Interactive_newModel,0}};
 #define boxvar_Interactive_newModel MMC_REFSTRUCTLIT(boxvar_lit_Interactive_newModel)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_createModel(threadData_t *threadData, modelica_metatype _className, modelica_metatype _inProgram);
 #define boxptr_Interactive_createModel omc_Interactive_createModel
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_createModel,2,0) {(void*) boxptr_Interactive_createModel,0}};
 #define boxvar_Interactive_createModel MMC_REFSTRUCTLIT(boxvar_lit_Interactive_createModel)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isPrimitive(threadData_t *threadData, modelica_metatype _className, modelica_metatype _inProgram);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isPrimitive(threadData_t *threadData, modelica_metatype _className, modelica_metatype _inProgram);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isPrimitive,2,0) {(void*) boxptr_Interactive_isPrimitive,0}};
 #define boxvar_Interactive_isPrimitive MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isPrimitive)
@@ -1476,7 +1476,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isPrimitive,2,0) {(void*) b
 #define boxptr_Interactive_changeLastIdent omc_Interactive_changeLastIdent
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_refactorClass(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_refactorClass omc_Interactive_refactorClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_refactorClass,2,0) {(void*) boxptr_Interactive_refactorClass,0}};
@@ -1486,7 +1486,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_refactorClass,2,0) {(void*)
 #define boxptr_Interactive_renameClassVisitor omc_Interactive_renameClassVisitor
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_renameClass(threadData_t *threadData, modelica_metatype _oldName, modelica_metatype _newName, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_result);
 #define boxptr_Interactive_renameClass omc_Interactive_renameClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_renameClass,2,0) {(void*) boxptr_Interactive_renameClass,0}};
@@ -1496,7 +1496,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_renameClass,2,0) {(void*) b
 #define boxptr_Interactive_getComponentitemName omc_Interactive_getComponentitemName
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getComponentBinding(threadData_t *threadData, modelica_metatype _path, modelica_string _parameterName, modelica_metatype _program);
 #define boxptr_Interactive_getComponentBinding omc_Interactive_getComponentBinding
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentBinding,2,0) {(void*) boxptr_Interactive_getComponentBinding,0}};
@@ -1506,7 +1506,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentBinding,2,0) {(
 #define boxptr_Interactive_getModificationNames omc_Interactive_getModificationNames
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getComponentModifierNames(threadData_t *threadData, modelica_metatype _path, modelica_string _inComponentName, modelica_metatype _inProgram3);
 #define boxptr_Interactive_getComponentModifierNames omc_Interactive_getComponentModifierNames
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentModifierNames,2,0) {(void*) boxptr_Interactive_getComponentModifierNames,0}};
@@ -1516,96 +1516,96 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentModifierNames,2
 #define boxptr_Interactive_getModificationValues omc_Interactive_getModificationValues
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getComponentModifierValues(threadData_t *threadData, modelica_metatype _inComponentRef1, modelica_metatype _inComponentRef2, modelica_metatype _inComponentRef3, modelica_metatype _inProgram4);
 #define boxptr_Interactive_getComponentModifierValues omc_Interactive_getComponentModifierValues
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentModifierValues,2,0) {(void*) boxptr_Interactive_getComponentModifierValues,0}};
 #define boxvar_Interactive_getComponentModifierValues MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getComponentModifierValues)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getModificationValue(threadData_t *threadData, modelica_metatype _args, modelica_metatype _path);
 #define boxptr_Interactive_getModificationValue omc_Interactive_getModificationValue
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getModificationValue,2,0) {(void*) boxptr_Interactive_getModificationValue,0}};
 #define boxvar_Interactive_getModificationValue MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getModificationValue)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getComponentModifierValue(threadData_t *threadData, modelica_metatype _classRef, modelica_metatype _varRef, modelica_metatype _subModRef, modelica_metatype _program);
 #define boxptr_Interactive_getComponentModifierValue omc_Interactive_getComponentModifierValue
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getComponentModifierValue,2,0) {(void*) boxptr_Interactive_getComponentModifierValue,0}};
 #define boxvar_Interactive_getComponentModifierValue MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getComponentModifierValue)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_removeComponentModifiers(threadData_t *threadData, modelica_metatype _path, modelica_string _inComponentName, modelica_metatype _inProgram, modelica_boolean _keepRedeclares, modelica_boolean *out_outResult);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_removeComponentModifiers(threadData_t *threadData, modelica_metatype _path, modelica_metatype _inComponentName, modelica_metatype _inProgram, modelica_metatype _keepRedeclares, modelica_metatype *out_outResult);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_removeComponentModifiers,2,0) {(void*) boxptr_Interactive_removeComponentModifiers,0}};
 #define boxvar_Interactive_removeComponentModifiers MMC_REFSTRUCTLIT(boxvar_lit_Interactive_removeComponentModifiers)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_makeExtendsFullyQualified(threadData_t *threadData, modelica_metatype _inElementSpec, modelica_metatype _inEnv);
 #define boxptr_Interactive_makeExtendsFullyQualified omc_Interactive_makeExtendsFullyQualified
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_makeExtendsFullyQualified,2,0) {(void*) boxptr_Interactive_makeExtendsFullyQualified,0}};
 #define boxvar_Interactive_makeExtendsFullyQualified MMC_REFSTRUCTLIT(boxvar_lit_Interactive_makeExtendsFullyQualified)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_isModifierfinal(threadData_t *threadData, modelica_metatype _inAbsynElementArgLst, modelica_metatype _inPath);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_isModifierfinal(threadData_t *threadData, modelica_metatype _inAbsynElementArgLst, modelica_metatype _inPath);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isModifierfinal,2,0) {(void*) boxptr_Interactive_isModifierfinal,0}};
 #define boxvar_Interactive_isModifierfinal MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isModifierfinal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_isExtendsModifierFinal(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _extendsPath, modelica_metatype _modifierPath, modelica_metatype _program);
 #define boxptr_Interactive_isExtendsModifierFinal omc_Interactive_isExtendsModifierFinal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_isExtendsModifierFinal,2,0) {(void*) boxptr_Interactive_isExtendsModifierFinal,0}};
 #define boxvar_Interactive_isExtendsModifierFinal MMC_REFSTRUCTLIT(boxvar_lit_Interactive_isExtendsModifierFinal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getExtendsModifierValue(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _extendsPath, modelica_metatype _modifierPath, modelica_metatype _program);
 #define boxptr_Interactive_getExtendsModifierValue omc_Interactive_getExtendsModifierValue
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getExtendsModifierValue,2,0) {(void*) boxptr_Interactive_getExtendsModifierValue,0}};
 #define boxvar_Interactive_getExtendsModifierValue MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getExtendsModifierValue)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_mkFullyQual(threadData_t *threadData, modelica_metatype _env, modelica_metatype _ipath, modelica_boolean _failOnError, modelica_metatype *out_opath);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_mkFullyQual(threadData_t *threadData, modelica_metatype _env, modelica_metatype _ipath, modelica_metatype _failOnError, modelica_metatype *out_opath);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_mkFullyQual,2,0) {(void*) boxptr_Interactive_mkFullyQual,0}};
 #define boxvar_Interactive_mkFullyQual MMC_REFSTRUCTLIT(boxvar_lit_Interactive_mkFullyQual)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_removeExtendsModifiers(threadData_t *threadData, modelica_metatype _inClassPath, modelica_metatype _inBaseClassPath, modelica_metatype _inProgram, modelica_boolean _keepRedeclares, modelica_boolean *out_outResult);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_removeExtendsModifiers(threadData_t *threadData, modelica_metatype _inClassPath, modelica_metatype _inBaseClassPath, modelica_metatype _inProgram, modelica_metatype _keepRedeclares, modelica_metatype *out_outResult);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_removeExtendsModifiers,2,0) {(void*) boxptr_Interactive_removeExtendsModifiers,0}};
 #define boxvar_Interactive_removeExtendsModifiers MMC_REFSTRUCTLIT(boxvar_lit_Interactive_removeExtendsModifiers)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_setSourceFile(threadData_t *threadData, modelica_metatype _path, modelica_string _inString, modelica_metatype _inProgram, modelica_metatype *out_outProgram);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_setSourceFile(threadData_t *threadData, modelica_metatype _path, modelica_metatype _inString, modelica_metatype _inProgram, modelica_metatype *out_outProgram);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_setSourceFile,2,0) {(void*) boxptr_Interactive_setSourceFile,0}};
 #define boxvar_Interactive_setSourceFile MMC_REFSTRUCTLIT(boxvar_lit_Interactive_setSourceFile)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_getSourceFile(threadData_t *threadData, modelica_metatype _p_class, modelica_metatype _inProgram);
 #define boxptr_Interactive_getSourceFile omc_Interactive_getSourceFile
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getSourceFile,2,0) {(void*) boxptr_Interactive_getSourceFile,0}};
 #define boxvar_Interactive_getSourceFile MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getSourceFile)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getElementsInfo(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getElementsInfo omc_Interactive_getElementsInfo
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getElementsInfo,2,0) {(void*) boxptr_Interactive_getElementsInfo,0}};
@@ -1627,7 +1627,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getElementsInfo,2,0) {(void
 #define boxptr_Interactive_getImportString omc_Interactive_getImportString
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getCrefInfo(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _program);
 #define boxptr_Interactive_getCrefInfo omc_Interactive_getCrefInfo
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getCrefInfo,2,0) {(void*) boxptr_Interactive_getCrefInfo,0}};
@@ -1658,9 +1658,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getCrefInfo,2,0) {(void*) b
 #define boxptr_Interactive_setComponentPropertiesInClass omc_Interactive_setComponentPropertiesInClass
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_setComponentProperties(threadData_t *threadData, modelica_metatype _classPath, modelica_string _component, modelica_metatype _prefixes, modelica_string _variability, modelica_boolean _innerPrefix, modelica_boolean _outerPrefix, modelica_string _direction, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_result);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_setComponentProperties(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _component, modelica_metatype _prefixes, modelica_metatype _variability, modelica_metatype _innerPrefix, modelica_metatype _outerPrefix, modelica_metatype _direction, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_result);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_setComponentProperties,2,0) {(void*) boxptr_Interactive_setComponentProperties,0}};
 #define boxvar_Interactive_setComponentProperties MMC_REFSTRUCTLIT(boxvar_lit_Interactive_setComponentProperties)
@@ -1669,26 +1669,29 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_setComponentProperties,2,0)
 #define boxptr_Interactive_getClassEnv__dispatch omc_Interactive_getClassEnv__dispatch
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_matchPath(threadData_t *threadData, modelica_metatype _p, modelica_metatype _entry);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_matchPath(threadData_t *threadData, modelica_metatype _p, modelica_metatype _entry);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_matchPath,2,0) {(void*) boxptr_Interactive_matchPath,0}};
 #define boxvar_Interactive_matchPath MMC_REFSTRUCTLIT(boxvar_lit_Interactive_matchPath)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getClassEnv(threadData_t *threadData, modelica_metatype _p, modelica_metatype _p_class);
 #define boxptr_Interactive_getClassEnv omc_Interactive_getClassEnv
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getClassEnv,2,0) {(void*) boxptr_Interactive_getClassEnv,0}};
 #define boxvar_Interactive_getClassEnv MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getClassEnv)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getParameterNames(threadData_t *threadData, modelica_metatype _path, modelica_metatype _inProgram);
 #define boxptr_Interactive_getParameterNames omc_Interactive_getParameterNames
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getParameterNames,2,0) {(void*) boxptr_Interactive_getParameterNames,0}};
 #define boxvar_Interactive_getParameterNames MMC_REFSTRUCTLIT(boxvar_lit_Interactive_getParameterNames)
+
+
+#define boxptr_Interactive_componentTypePath omc_Interactive_componentTypePath
 
 
 #define boxptr_Interactive_addComponentToComponents omc_Interactive_addComponentToComponents
@@ -1829,14 +1832,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getParameterNames,2,0) {(vo
 #define boxptr_Interactive_extractRenamedClassesAsStringList omc_Interactive_extractRenamedClassesAsStringList
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_renameComponentOnlyInClass(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _oldName, modelica_metatype _newName, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_result);
 #define boxptr_Interactive_renameComponentOnlyInClass omc_Interactive_renameComponentOnlyInClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_renameComponentOnlyInClass,2,0) {(void*) boxptr_Interactive_renameComponentOnlyInClass,0}};
 #define boxvar_Interactive_renameComponentOnlyInClass MMC_REFSTRUCTLIT(boxvar_lit_Interactive_renameComponentOnlyInClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_renameComponent(threadData_t *threadData, modelica_metatype _classPath, modelica_metatype _oldName, modelica_metatype _newName, modelica_metatype __omcQ_24in_5Fprogram, modelica_metatype *out_result);
 #define boxptr_Interactive_renameComponent omc_Interactive_renameComponent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_renameComponent,2,0) {(void*) boxptr_Interactive_renameComponent,0}};
@@ -1846,7 +1849,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_renameComponent,2,0) {(void
 #define boxptr_Interactive_extractAllComponentreplacements omc_Interactive_extractAllComponentreplacements
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Interactive_getTypeOfVariable(threadData_t *threadData, modelica_string _inIdent, modelica_metatype _inVariableLst);
 #define boxptr_Interactive_getTypeOfVariable omc_Interactive_getTypeOfVariable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getTypeOfVariable,2,0) {(void*) boxptr_Interactive_getTypeOfVariable,0}};
@@ -1859,9 +1862,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_getTypeOfVariable,2,0) {(vo
 #define boxptr_Interactive_makeTupleCrefs omc_Interactive_makeTupleCrefs
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_simulateModel(threadData_t *threadData, modelica_string _className, modelica_real _stopTime, modelica_integer _numberOfIntervals, modelica_real _tolerance, modelica_string _method, modelica_string _simflags);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_simulateModel(threadData_t *threadData, modelica_metatype _className, modelica_metatype _stopTime, modelica_metatype _numberOfIntervals, modelica_metatype _tolerance, modelica_metatype _method, modelica_metatype _simflags);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_simulateModel,2,0) {(void*) boxptr_Interactive_simulateModel,0}};
 #define boxvar_Interactive_simulateModel MMC_REFSTRUCTLIT(boxvar_lit_Interactive_simulateModel)
@@ -1903,25 +1906,25 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_simulateModel,2,0) {(void*)
 #define boxptr_Interactive_evaluate2 omc_Interactive_evaluate2
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Interactive_evaluateFork(threadData_t *threadData, modelica_metatype _inTpl);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_evaluateFork(threadData_t *threadData, modelica_metatype _inTpl);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_evaluateFork,2,0) {(void*) boxptr_Interactive_evaluateFork,0}};
 #define boxvar_Interactive_evaluateFork MMC_REFSTRUCTLIT(boxvar_lit_Interactive_evaluateFork)
 
 
-DLLDirection
+DLLModelDirection
 void omc_Interactive_evaluateToStdOut(threadData_t *threadData, modelica_metatype _statements, modelica_boolean _verbose);
-DLLDirection
+DLLModelDirection
 void boxptr_Interactive_evaluateToStdOut(threadData_t *threadData, modelica_metatype _statements, modelica_metatype _verbose);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_evaluateToStdOut,2,0) {(void*) boxptr_Interactive_evaluateToStdOut,0}};
 #define boxvar_Interactive_evaluateToStdOut MMC_REFSTRUCTLIT(boxvar_lit_Interactive_evaluateToStdOut)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_Interactive_evaluate(threadData_t *threadData, modelica_metatype _inStatements, modelica_boolean _verbose);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Interactive_evaluate(threadData_t *threadData, modelica_metatype _inStatements, modelica_metatype _verbose);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Interactive_evaluate,2,0) {(void*) boxptr_Interactive_evaluate,0}};
 #define boxvar_Interactive_evaluate MMC_REFSTRUCTLIT(boxvar_lit_Interactive_evaluate)

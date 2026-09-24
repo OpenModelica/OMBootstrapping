@@ -11,6 +11,7 @@ extern "C" {
 #include "FNode.h"
 #include "Flags.h"
 #include "GraphML.h"
+#include "MutableWeak.h"
 #include "SCodeUtil.h"
 #include "Util.h"
 #ifdef __cplusplus

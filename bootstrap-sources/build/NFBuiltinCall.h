@@ -64,6 +64,8 @@ extern struct record_description NFFunction_Function_FUNCTION__desc;
 
 extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
 
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
+
 extern struct record_description NFType_ARRAY__desc;
 
 extern struct record_description NFType_BOOLEAN__desc;
@@ -89,39 +91,39 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFBuiltinCall_assertNoNamedParams omc_NFBuiltinCall_assertNoNamedParams
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFBuiltinCall_makeCatExp(threadData_t *threadData, modelica_integer _n, modelica_metatype _args, modelica_metatype _tys, modelica_integer _variability, modelica_integer _purity, modelica_metatype _info, modelica_metatype *out_ty);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFBuiltinCall_makeCatExp(threadData_t *threadData, modelica_metatype _n, modelica_metatype _args, modelica_metatype _tys, modelica_metatype _variability, modelica_metatype _purity, modelica_metatype _info, modelica_metatype *out_ty);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFBuiltinCall_makeCatExp,2,0) {(void*) boxptr_NFBuiltinCall_makeCatExp,0}};
 #define boxvar_NFBuiltinCall_makeCatExp MMC_REFSTRUCTLIT(boxvar_lit_NFBuiltinCall_makeCatExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFBuiltinCall_makeArrayExp(threadData_t *threadData, modelica_metatype _posArgs, modelica_metatype _namedArgs, modelica_metatype _info);
 #define boxptr_NFBuiltinCall_makeArrayExp omc_NFBuiltinCall_makeArrayExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFBuiltinCall_makeArrayExp,2,0) {(void*) boxptr_NFBuiltinCall_makeArrayExp,0}};
 #define boxvar_NFBuiltinCall_makeArrayExp MMC_REFSTRUCTLIT(boxvar_lit_NFBuiltinCall_makeArrayExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFBuiltinCall_makeSizeExp(threadData_t *threadData, modelica_metatype _posArgs, modelica_metatype _namedArgs, modelica_metatype _info);
 #define boxptr_NFBuiltinCall_makeSizeExp omc_NFBuiltinCall_makeSizeExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFBuiltinCall_makeSizeExp,2,0) {(void*) boxptr_NFBuiltinCall_makeSizeExp,0}};
 #define boxvar_NFBuiltinCall_makeSizeExp MMC_REFSTRUCTLIT(boxvar_lit_NFBuiltinCall_makeSizeExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFBuiltinCall_typeSpecial(threadData_t *threadData, modelica_metatype _call, modelica_integer _context, modelica_metatype _info, modelica_metatype *out_ty, modelica_integer *out_variability, modelica_integer *out_purity);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFBuiltinCall_typeSpecial(threadData_t *threadData, modelica_metatype _call, modelica_metatype _context, modelica_metatype _info, modelica_metatype *out_ty, modelica_metatype *out_variability, modelica_metatype *out_purity);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFBuiltinCall_typeSpecial,2,0) {(void*) boxptr_NFBuiltinCall_typeSpecial,0}};
 #define boxvar_NFBuiltinCall_typeSpecial MMC_REFSTRUCTLIT(boxvar_lit_NFBuiltinCall_typeSpecial)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_NFBuiltinCall_needSpecialHandling(threadData_t *threadData, modelica_metatype _call);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFBuiltinCall_needSpecialHandling(threadData_t *threadData, modelica_metatype _call);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFBuiltinCall_needSpecialHandling,2,0) {(void*) boxptr_NFBuiltinCall_needSpecialHandling,0}};
 #define boxvar_NFBuiltinCall_needSpecialHandling MMC_REFSTRUCTLIT(boxvar_lit_NFBuiltinCall_needSpecialHandling)

@@ -120,7 +120,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_OnRelaxation_replaceFinalParameter omc_OnRelaxation_replaceFinalParameter
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_OnRelaxation_relaxSystem(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_OnRelaxation_relaxSystem omc_OnRelaxation_relaxSystem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_OnRelaxation_relaxSystem,2,0) {(void*) boxptr_OnRelaxation_relaxSystem,0}};

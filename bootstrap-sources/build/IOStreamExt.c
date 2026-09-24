@@ -18,7 +18,7 @@ void omc_IOStreamExt_printReversedList(threadData_t *threadData, modelica_metaty
 void boxptr_IOStreamExt_printReversedList(threadData_t *threadData, modelica_metatype _inStringLst, modelica_metatype _whereToPrint)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_whereToPrint);
+  tmp1 = omc_unbox_integer(_whereToPrint);
   omc_IOStreamExt_printReversedList(threadData, _inStringLst, tmp1);
   return;
 }
@@ -31,7 +31,7 @@ modelica_string omc_IOStreamExt_appendReversedList(threadData_t *threadData, mod
   // _outString has no default value.
   _inStringLst_ext = (modelica_metatype) _inStringLst;
   _outString_ext = IOStreamExt_appendReversedList(_inStringLst_ext);
-  _outString = (modelica_string)mmc_mk_scon(_outString_ext);
+  _outString = (modelica_string)omc_string_new(_outString_ext);
   return _outString;
 }
 
@@ -48,8 +48,8 @@ void boxptr_IOStreamExt_printBuffer(threadData_t *threadData, modelica_metatype 
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
-  tmp1 = mmc_unbox_integer(_bufferID);
-  tmp2 = mmc_unbox_integer(_whereToPrint);
+  tmp1 = omc_unbox_integer(_bufferID);
+  tmp2 = omc_unbox_integer(_whereToPrint);
   omc_IOStreamExt_printBuffer(threadData, tmp1, tmp2);
   return;
 }
@@ -62,14 +62,14 @@ modelica_string omc_IOStreamExt_readBuffer(threadData_t *threadData, modelica_in
   // _outString has no default value.
   _bufferID_ext = (int) _bufferID;
   _outString_ext = IOStreamExt_readBuffer(_bufferID_ext);
-  _outString = (modelica_string)mmc_mk_scon(_outString_ext);
+  _outString = (modelica_string)omc_string_new(_outString_ext);
   return _outString;
 }
 modelica_metatype boxptr_IOStreamExt_readBuffer(threadData_t *threadData, modelica_metatype _bufferID)
 {
   modelica_integer tmp1;
   modelica_string _outString = NULL;
-  tmp1 = mmc_unbox_integer(_bufferID);
+  tmp1 = omc_unbox_integer(_bufferID);
   _outString = omc_IOStreamExt_readBuffer(threadData, tmp1);
   /* skip box _outString; String */
   return _outString;
@@ -85,7 +85,7 @@ void omc_IOStreamExt_clearBuffer(threadData_t *threadData, modelica_integer _buf
 void boxptr_IOStreamExt_clearBuffer(threadData_t *threadData, modelica_metatype _bufferID)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_bufferID);
+  tmp1 = omc_unbox_integer(_bufferID);
   omc_IOStreamExt_clearBuffer(threadData, tmp1);
   return;
 }
@@ -100,7 +100,7 @@ void omc_IOStreamExt_deleteBuffer(threadData_t *threadData, modelica_integer _bu
 void boxptr_IOStreamExt_deleteBuffer(threadData_t *threadData, modelica_metatype _bufferID)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_bufferID);
+  tmp1 = omc_unbox_integer(_bufferID);
   omc_IOStreamExt_deleteBuffer(threadData, tmp1);
   return;
 }
@@ -109,13 +109,13 @@ void omc_IOStreamExt_appendBuffer(threadData_t *threadData, modelica_integer _bu
 {
   int _bufferID_ext;
   _bufferID_ext = (int) _bufferID;
-  IOStreamExt_appendBuffer(_bufferID_ext, MMC_STRINGDATA(_inString));
+  IOStreamExt_appendBuffer(_bufferID_ext, omc_string_data(_inString));
   return;
 }
 void boxptr_IOStreamExt_appendBuffer(threadData_t *threadData, modelica_metatype _bufferID, modelica_metatype _inString)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_bufferID);
+  tmp1 = omc_unbox_integer(_bufferID);
   omc_IOStreamExt_appendBuffer(threadData, tmp1, _inString);
   return;
 }
@@ -135,7 +135,7 @@ modelica_metatype boxptr_IOStreamExt_createBuffer(threadData_t *threadData)
   modelica_integer _bufferID;
   modelica_metatype out_bufferID;
   _bufferID = omc_IOStreamExt_createBuffer(threadData);
-  out_bufferID = mmc_mk_icon(_bufferID);
+  out_bufferID = omc_mk_icon(_bufferID);
   return out_bufferID;
 }
 
@@ -152,8 +152,8 @@ void boxptr_IOStreamExt_printFile(threadData_t *threadData, modelica_metatype _f
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
-  tmp1 = mmc_unbox_integer(_fileID);
-  tmp2 = mmc_unbox_integer(_whereToPrint);
+  tmp1 = omc_unbox_integer(_fileID);
+  tmp2 = omc_unbox_integer(_whereToPrint);
   omc_IOStreamExt_printFile(threadData, tmp1, tmp2);
   return;
 }
@@ -166,14 +166,14 @@ modelica_string omc_IOStreamExt_readFile(threadData_t *threadData, modelica_inte
   // _outString has no default value.
   _fileID_ext = (int) _fileID;
   _outString_ext = IOStreamExt_readFile(_fileID_ext);
-  _outString = (modelica_string)mmc_mk_scon(_outString_ext);
+  _outString = (modelica_string)omc_string_new(_outString_ext);
   return _outString;
 }
 modelica_metatype boxptr_IOStreamExt_readFile(threadData_t *threadData, modelica_metatype _fileID)
 {
   modelica_integer tmp1;
   modelica_string _outString = NULL;
-  tmp1 = mmc_unbox_integer(_fileID);
+  tmp1 = omc_unbox_integer(_fileID);
   _outString = omc_IOStreamExt_readFile(threadData, tmp1);
   /* skip box _outString; String */
   return _outString;
@@ -183,13 +183,13 @@ void omc_IOStreamExt_appendFile(threadData_t *threadData, modelica_integer _file
 {
   int _fileID_ext;
   _fileID_ext = (int) _fileID;
-  IOStreamExt_appendFile(_fileID_ext, MMC_STRINGDATA(_inString));
+  IOStreamExt_appendFile(_fileID_ext, omc_string_data(_inString));
   return;
 }
 void boxptr_IOStreamExt_appendFile(threadData_t *threadData, modelica_metatype _fileID, modelica_metatype _inString)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_fileID);
+  tmp1 = omc_unbox_integer(_fileID);
   omc_IOStreamExt_appendFile(threadData, tmp1, _inString);
   return;
 }
@@ -204,7 +204,7 @@ void omc_IOStreamExt_clearFile(threadData_t *threadData, modelica_integer _fileI
 void boxptr_IOStreamExt_clearFile(threadData_t *threadData, modelica_metatype _fileID)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_fileID);
+  tmp1 = omc_unbox_integer(_fileID);
   omc_IOStreamExt_clearFile(threadData, tmp1);
   return;
 }
@@ -219,7 +219,7 @@ void omc_IOStreamExt_deleteFile(threadData_t *threadData, modelica_integer _file
 void boxptr_IOStreamExt_deleteFile(threadData_t *threadData, modelica_metatype _fileID)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_fileID);
+  tmp1 = omc_unbox_integer(_fileID);
   omc_IOStreamExt_deleteFile(threadData, tmp1);
   return;
 }
@@ -234,7 +234,7 @@ void omc_IOStreamExt_closeFile(threadData_t *threadData, modelica_integer _fileI
 void boxptr_IOStreamExt_closeFile(threadData_t *threadData, modelica_metatype _fileID)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_fileID);
+  tmp1 = omc_unbox_integer(_fileID);
   omc_IOStreamExt_closeFile(threadData, tmp1);
   return;
 }
@@ -245,7 +245,7 @@ modelica_integer omc_IOStreamExt_createFile(threadData_t *threadData, modelica_s
   modelica_integer _fileID;
   // _fileID has no default value.
 
-  _fileID_ext = IOStreamExt_createFile(MMC_STRINGDATA(_fileName));
+  _fileID_ext = IOStreamExt_createFile(omc_string_data(_fileName));
   _fileID = (modelica_integer)_fileID_ext;
   return _fileID;
 }
@@ -254,7 +254,7 @@ modelica_metatype boxptr_IOStreamExt_createFile(threadData_t *threadData, modeli
   modelica_integer _fileID;
   modelica_metatype out_fileID;
   _fileID = omc_IOStreamExt_createFile(threadData, _fileName);
-  out_fileID = mmc_mk_icon(_fileID);
+  out_fileID = omc_mk_icon(_fileID);
   return out_fileID;
 }
 

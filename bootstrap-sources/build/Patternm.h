@@ -258,16 +258,16 @@ extern struct record_description Util_Status_SUCCESS__desc;
 #define boxptr_Patternm_addEnvKnownAsBindings omc_Patternm_addEnvKnownAsBindings
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Patternm_sortPatternsByComplexity(threadData_t *threadData, modelica_metatype _inPatterns);
 #define boxptr_Patternm_sortPatternsByComplexity omc_Patternm_sortPatternsByComplexity
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_sortPatternsByComplexity,2,0) {(void*) boxptr_Patternm_sortPatternsByComplexity,0}};
 #define boxvar_Patternm_sortPatternsByComplexity MMC_REFSTRUCTLIT(boxvar_lit_Patternm_sortPatternsByComplexity)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_Patternm_getValueCtor(threadData_t *threadData, modelica_integer _ix);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Patternm_getValueCtor(threadData_t *threadData, modelica_metatype _ix);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_getValueCtor,2,0) {(void*) boxptr_Patternm_getValueCtor,0}};
 #define boxvar_Patternm_getValueCtor MMC_REFSTRUCTLIT(boxvar_lit_Patternm_getValueCtor)
@@ -291,14 +291,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_getValueCtor,2,0) {(void*) box
 #define boxptr_Patternm_checkLocalShadowing omc_Patternm_checkLocalShadowing
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Patternm_traverseConstantPatternsHelper2(threadData_t *threadData, modelica_metatype _inPattern, modelica_metatype _inExtra, modelica_fnptr _func, modelica_metatype *out_extra);
 #define boxptr_Patternm_traverseConstantPatternsHelper2 omc_Patternm_traverseConstantPatternsHelper2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_traverseConstantPatternsHelper2,2,0) {(void*) boxptr_Patternm_traverseConstantPatternsHelper2,0}};
 #define boxvar_Patternm_traverseConstantPatternsHelper2 MMC_REFSTRUCTLIT(boxvar_lit_Patternm_traverseConstantPatternsHelper2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Patternm_traverseConstantPatternsHelper(threadData_t *threadData, modelica_metatype _inExp, modelica_metatype _inT, modelica_fnptr _func, modelica_metatype *out_outT);
 #define boxptr_Patternm_traverseConstantPatternsHelper omc_Patternm_traverseConstantPatternsHelper
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_traverseConstantPatternsHelper,2,0) {(void*) boxptr_Patternm_traverseConstantPatternsHelper,0}};
@@ -329,14 +329,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_traverseConstantPatternsHelper
 #define boxptr_Patternm_filterUnusedDecls omc_Patternm_filterUnusedDecls
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Patternm_traversePattern(threadData_t *threadData, modelica_metatype _inPattern, modelica_fnptr _func, modelica_metatype _inExtra, modelica_metatype *out_extra);
 #define boxptr_Patternm_traversePattern omc_Patternm_traversePattern
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_traversePattern,2,0) {(void*) boxptr_Patternm_traversePattern,0}};
 #define boxvar_Patternm_traversePattern MMC_REFSTRUCTLIT(boxvar_lit_Patternm_traversePattern)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Patternm_traversePatternList(threadData_t *threadData, modelica_metatype _inPatterns, modelica_fnptr _func, modelica_metatype _inExtra, modelica_metatype *out_extra);
 #define boxptr_Patternm_traversePatternList omc_Patternm_traversePatternList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_traversePatternList,2,0) {(void*) boxptr_Patternm_traversePatternList,0}};
@@ -400,9 +400,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_traversePatternList,2,0) {(voi
 #define boxptr_Patternm_checkConstantMatchInputs omc_Patternm_checkConstantMatchInputs
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Patternm_elabMatchExpression(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _matchExp, modelica_boolean _impl, modelica_boolean _performVectorization, modelica_metatype _inPrefix, modelica_metatype _info, modelica_metatype *out_outExp, modelica_metatype *out_outProperties);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Patternm_elabMatchExpression(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _matchExp, modelica_metatype _impl, modelica_metatype _performVectorization, modelica_metatype _inPrefix, modelica_metatype _info, modelica_metatype *out_outExp, modelica_metatype *out_outProperties);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_elabMatchExpression,2,0) {(void*) boxptr_Patternm_elabMatchExpression,0}};
 #define boxvar_Patternm_elabMatchExpression MMC_REFSTRUCTLIT(boxvar_lit_Patternm_elabMatchExpression)
@@ -429,7 +429,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_elabMatchExpression,2,0) {(voi
 #define boxptr_Patternm_elabPattern omc_Patternm_elabPattern
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Patternm_elabPatternCheckDuplicateBindings(threadData_t *threadData, modelica_metatype _cache, modelica_metatype _env, modelica_metatype _lhs, modelica_metatype _ty, modelica_metatype _info, modelica_metatype *out_pattern);
 #define boxptr_Patternm_elabPatternCheckDuplicateBindings omc_Patternm_elabPatternCheckDuplicateBindings
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Patternm_elabPatternCheckDuplicateBindings,2,0) {(void*) boxptr_Patternm_elabPatternCheckDuplicateBindings,0}};

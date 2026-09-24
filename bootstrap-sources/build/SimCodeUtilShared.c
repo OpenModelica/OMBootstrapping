@@ -31,26 +31,49 @@ static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT11,44,_OMC_LIT11_data);
 #define _OMC_LIT11 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT11)
 static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT12,2,1) {_OMC_LIT11,MMC_REFSTRUCTLIT(mmc_nil)}};
 #define _OMC_LIT12 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT12)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT13,1,3) {&DAE_InlineType_NORM__INLINE__desc,}};
-#define _OMC_LIT13 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT13)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT14,1,8) {&DAE_InlineType_AFTER__INDEX__RED__INLINE__desc,}};
-#define _OMC_LIT14 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT14)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT15,2,1) {_OMC_LIT14,MMC_REFSTRUCTLIT(mmc_nil)}};
+#define _OMC_LIT13_data "hpcom"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT13,5,_OMC_LIT13_data);
+#define _OMC_LIT13 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT13)
+#define _OMC_LIT14_data "Enables parallel calculation based on task-graphs."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT14,50,_OMC_LIT14_data);
+#define _OMC_LIT14 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT14)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT15,5,3) {&Flags_DebugFlag_DEBUG__FLAG__desc,MMC_IMMEDIATE(MMC_TAGFIXNUM(84)),_OMC_LIT13,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),_OMC_LIT14}};
 #define _OMC_LIT15 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT15)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT16,2,1) {_OMC_LIT13,_OMC_LIT15}};
-#define _OMC_LIT16 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT16)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT17,2,0) {MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT16}};
-#define _OMC_LIT17 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT17)
-#define _OMC_LIT18_data "Creation of Modelica functions failed."
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT18,38,_OMC_LIT18_data);
+#define _OMC_LIT16_data "Cpp"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT16,3,_OMC_LIT16_data);
+#define _OMC_LIT16 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT16)
+#define _OMC_LIT17_data "omsic"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT17,5,_OMC_LIT17_data);
+#define _OMC_LIT17 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT17)
+#define _OMC_LIT18_data "omsicpp"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT18,7,_OMC_LIT18_data);
 #define _OMC_LIT18 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT18)
-#define _OMC_LIT19_data "SimCodeUtilShared.mo"
-static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT19,20,_OMC_LIT19_data);
-#define _OMC_LIT19 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT19)
-static const MMC_DEFREALLIT(_OMC_LIT_STRUCT20_6,0.0);
-#define _OMC_LIT20_6 MMC_REFREALLIT(_OMC_LIT_STRUCT20_6)
-static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT20,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT19,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(106)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(106)),MMC_IMMEDIATE(MMC_TAGFIXNUM(83)),_OMC_LIT20_6}};
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT19,2,1) {_OMC_LIT18,MMC_REFSTRUCTLIT(mmc_nil)}};
+#define _OMC_LIT19 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT19)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT20,2,1) {_OMC_LIT17,_OMC_LIT19}};
 #define _OMC_LIT20 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT20)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT21,2,1) {_OMC_LIT16,_OMC_LIT20}};
+#define _OMC_LIT21 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT21)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT22,1,3) {&DAE_InlineType_NORM__INLINE__desc,}};
+#define _OMC_LIT22 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT22)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT23,1,8) {&DAE_InlineType_AFTER__INDEX__RED__INLINE__desc,}};
+#define _OMC_LIT23 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT23)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT24,2,1) {_OMC_LIT23,MMC_REFSTRUCTLIT(mmc_nil)}};
+#define _OMC_LIT24 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT24)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT25,2,1) {_OMC_LIT22,_OMC_LIT24}};
+#define _OMC_LIT25 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT25)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT26,2,0) {MMC_REFSTRUCTLIT(mmc_none),_OMC_LIT25}};
+#define _OMC_LIT26 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT26)
+#define _OMC_LIT27_data "Creation of Modelica functions failed."
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT27,38,_OMC_LIT27_data);
+#define _OMC_LIT27 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT27)
+#define _OMC_LIT28_data "SimCodeUtilShared.mo"
+static const MMC_DEFSTRINGLIT(_OMC_LIT_STRUCT28,20,_OMC_LIT28_data);
+#define _OMC_LIT28 MMC_REFSTRINGLIT(_OMC_LIT_STRUCT28)
+static const MMC_DEFREALLIT(_OMC_LIT_STRUCT29_6,0.0);
+#define _OMC_LIT29_6 MMC_REFREALLIT(_OMC_LIT_STRUCT29_6)
+static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT29,8,3) {&SourceInfo_SOURCEINFO__desc,_OMC_LIT28,MMC_IMMEDIATE(MMC_TAGFIXNUM(0 /* false */)),MMC_IMMEDIATE(MMC_TAGFIXNUM(108)),MMC_IMMEDIATE(MMC_TAGFIXNUM(5)),MMC_IMMEDIATE(MMC_TAGFIXNUM(108)),MMC_IMMEDIATE(MMC_TAGFIXNUM(83)),_OMC_LIT29_6}};
+#define _OMC_LIT29 MMC_REFSTRUCTLIT(_OMC_LIT_STRUCT29)
 #include "util/modelica.h"
 
 #include "SimCodeUtilShared_includes.h"
@@ -76,15 +99,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_simulationFind
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SimCodeUtilShared_simulationFindLiterals,2,0) {(void*) boxptr_SimCodeUtilShared_simulationFindLiterals,0}};
 #define boxvar_SimCodeUtilShared_simulationFindLiterals MMC_REFSTRUCTLIT(boxvar_lit_SimCodeUtilShared_simulationFindLiterals)
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SimCodeUtilShared_isArrayVar(threadData_t *threadData, modelica_metatype _var)
 {
   modelica_boolean _isArray;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isArray has no default value.
   { /* match expression */
@@ -98,7 +119,7 @@ modelica_boolean omc_SimCodeUtilShared_isArrayVar(threadData_t *threadData, mode
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 13));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 13);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,6,2) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
@@ -117,36 +138,32 @@ modelica_boolean omc_SimCodeUtilShared_isArrayVar(threadData_t *threadData, mode
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _isArray = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _isArray;
+  omc_ret_ = _isArray;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SimCodeUtilShared_isArrayVar(threadData_t *threadData, modelica_metatype _var)
 {
   modelica_boolean _isArray;
   modelica_metatype out_isArray;
   _isArray = omc_SimCodeUtilShared_isArrayVar(threadData, _var);
-  out_isArray = mmc_mk_icon(_isArray);
+  out_isArray = omc_mk_icon(_isArray);
   return out_isArray;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SimCodeUtilShared_getNumElems(threadData_t *threadData, modelica_metatype _var)
 {
   modelica_integer _numElems;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _numElems has no default value.
   { /* match expression */
@@ -162,7 +179,7 @@ modelica_integer omc_SimCodeUtilShared_getNumElems(threadData_t *threadData, mod
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_metatype tmpMeta8;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 13));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 13);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,6,2) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
@@ -170,7 +187,7 @@ modelica_integer omc_SimCodeUtilShared_getNumElems(threadData_t *threadData, mod
 
           {
             modelica_metatype _d;
-            for (tmpMeta7 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_var), 21))); !listEmpty(tmpMeta7); tmpMeta7=MMC_CDR(tmpMeta7))
+            for (tmpMeta7 = (OMC_BOX_FIELD(_var, 21)); !listEmpty(tmpMeta7); tmpMeta7=MMC_CDR(tmpMeta7))
             {
               _d = MMC_CAR(tmpMeta7);
               _numElems = (_numElems) * (stringInt(_d));
@@ -191,28 +208,26 @@ modelica_integer omc_SimCodeUtilShared_getNumElems(threadData_t *threadData, mod
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _numElems = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _numElems;
+  omc_ret_ = _numElems;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SimCodeUtilShared_getNumElems(threadData_t *threadData, modelica_metatype _var)
 {
   modelica_integer _numElems;
   modelica_metatype out_numElems;
   _numElems = omc_SimCodeUtilShared_getNumElems(threadData, _var);
-  out_numElems = mmc_mk_icon(_numElems);
+  out_numElems = omc_mk_icon(_numElems);
   return out_numElems;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SimCodeUtilShared_getScalarElementIndex(threadData_t *threadData, modelica_metatype _arraySubscripts, modelica_metatype _arrayDimensions)
 {
   modelica_integer _arrayIndex;
@@ -221,10 +236,8 @@ modelica_integer omc_SimCodeUtilShared_getScalarElementIndex(threadData_t *threa
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_integer tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _arrayIndex has no default value.
   // _idx has no default value.
@@ -244,21 +257,19 @@ modelica_integer omc_SimCodeUtilShared_getScalarElementIndex(threadData_t *threa
 
       _arrayIndex = _arrayIndex + ((((modelica_integer) -1) + _idx) * (_fac));
 
-      _fac = (_fac) * (mmc_unbox_integer(listGet(_arrayDimensions, _i)));
+      _fac = (_fac) * (omc_unbox_integer(listGet(_arrayDimensions, _i)));
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _arrayIndex;
+  omc_ret_ = _arrayIndex;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SimCodeUtilShared_getScalarElementIndex(threadData_t *threadData, modelica_metatype _arraySubscripts, modelica_metatype _arrayDimensions)
 {
   modelica_integer _arrayIndex;
   modelica_metatype out_arrayIndex;
   _arrayIndex = omc_SimCodeUtilShared_getScalarElementIndex(threadData, _arraySubscripts, _arrayDimensions);
-  out_arrayIndex = mmc_mk_icon(_arrayIndex);
+  out_arrayIndex = omc_mk_icon(_arrayIndex);
   return out_arrayIndex;
 }
 
@@ -266,7 +277,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SimCodeUtilShared_getVarToArrayIn
 {
   modelica_integer _oVarIdx;
   modelica_metatype _iCurrentVarIndices = NULL;
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oVarIdx has no default value.
   _iCurrentVarIndices = __omcQ_24in_5FiCurrentVarIndices;
@@ -275,16 +287,16 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SimCodeUtilShared_getVarToArrayIn
       volatile mmc_switch_type tmp3;
       int tmp4;
       tmp3 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp2_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp3 < 2; tmp3++) {
         switch (MMC_SWITCH_CAST(tmp3)) {
         case 0: {
           /* Pattern matching succeeded */
-          _oVarIdx = mmc_unbox_integer(arrayGet(_iCurrentVarIndices, _iVarType));
+          _oVarIdx = omc_unbox_integer(arrayGet(_iCurrentVarIndices, _iVarType));
 
-          arrayUpdate(_iCurrentVarIndices, _iVarType, mmc_mk_integer(_oVarIdx + omc_SimCodeUtilShared_getNumElems(threadData, _iVar)));
+          arrayUpdate(_iCurrentVarIndices, _iVarType, omc_mk_integer(_oVarIdx + omc_SimCodeUtilShared_getNumElems(threadData, _iVar)));
           goto tmp2_done;
         }
         case 1: {
@@ -301,30 +313,31 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_SimCodeUtilShared_getVarToArrayIn
       goto goto_1;
       tmp2_done:
       (void)tmp3;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp2_done2;
       goto_1:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp3 < 2) {
         goto tmp2_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp2_done2:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
   if (out_iCurrentVarIndices) { *out_iCurrentVarIndices = _iCurrentVarIndices; }
-  return _oVarIdx;
+  omc_ret_ = _oVarIdx;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SimCodeUtilShared_getVarToArrayIndexByType(threadData_t *threadData, modelica_metatype _iVar, modelica_metatype _iVarType, modelica_metatype __omcQ_24in_5FiCurrentVarIndices, modelica_metatype *out_iCurrentVarIndices)
 {
   modelica_integer tmp1;
   modelica_integer _oVarIdx;
   modelica_metatype out_oVarIdx;
-  tmp1 = mmc_unbox_integer(_iVarType);
+  tmp1 = omc_unbox_integer(_iVarType);
   _oVarIdx = omc_SimCodeUtilShared_getVarToArrayIndexByType(threadData, _iVar, tmp1, __omcQ_24in_5FiCurrentVarIndices, out_iCurrentVarIndices);
-  out_oVarIdx = mmc_mk_icon(_oVarIdx);
+  out_oVarIdx = omc_mk_icon(_oVarIdx);
   /* skip box _iCurrentVarIndices; array<#Integer> */
   return out_oVarIdx;
 }
@@ -338,7 +351,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_getArrayIdxByV
   modelica_integer _varIdx;
   modelica_metatype _tmpCurrentVarIndices = NULL;
   modelica_integer tmp1 = 0;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _iCurrentVarIndices = __omcQ_24in_5FiCurrentVarIndices;
   // _oVarIndex has no default value.
@@ -359,8 +373,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_getArrayIdxByV
         case 0: {
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 16));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 16);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta7,0,0) == 0) goto tmp3_end;
           
           _name = tmpMeta6;
@@ -378,10 +392,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_getArrayIdxByV
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
           modelica_integer tmp14;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 16));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_1, 16);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta9,2,1) == 0) goto tmp3_end;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 2));
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 2);
           
           _name = tmpMeta8;
           _varName = tmpMeta10;
@@ -393,7 +407,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_getArrayIdxByV
             if (listEmpty(tmpMeta11)) goto goto_2;
             tmpMeta12 = MMC_CAR(tmpMeta11);
             tmpMeta13 = MMC_CDR(tmpMeta11);
-            tmp14 = mmc_unbox_integer(tmpMeta12);
+            tmp14 = omc_unbox_integer(tmpMeta12);
             _varIdx = tmp14  /* pattern as ty=Integer */;
 
             _varIdx = (-_varIdx);
@@ -422,10 +436,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_getArrayIdxByV
           modelica_metatype tmpMeta19;
           modelica_metatype tmpMeta20;
           modelica_integer tmp21;
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 16));
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_1, 16);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta16,1,1) == 0) goto tmp3_end;
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta16), 2));
+          tmpMeta17 = OMC_BOX_FIELD(tmpMeta16, 2);
           
           _name = tmpMeta15;
           _varName = tmpMeta17;
@@ -437,7 +451,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_getArrayIdxByV
             if (listEmpty(tmpMeta18)) goto goto_2;
             tmpMeta19 = MMC_CAR(tmpMeta18);
             tmpMeta20 = MMC_CDR(tmpMeta18);
-            tmp21 = mmc_unbox_integer(tmpMeta19);
+            tmp21 = omc_unbox_integer(tmpMeta19);
             _varIdx = tmp21  /* pattern as ty=Integer */;
           }
           else
@@ -462,7 +476,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_getArrayIdxByV
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -470,17 +484,18 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_getArrayIdxByV
   _oVarIndex = tmp1;
   _return: OMC_LABEL_UNUSED
   if (out_oVarIndex) { *out_oVarIndex = _oVarIndex; }
-  return _iCurrentVarIndices;
+  omc_ret_ = _iCurrentVarIndices;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SimCodeUtilShared_getArrayIdxByVar(threadData_t *threadData, modelica_metatype _iVar, modelica_metatype _iVarType, modelica_metatype _iVarToIndexMapping, modelica_metatype __omcQ_24in_5FiCurrentVarIndices, modelica_metatype *out_oVarIndex)
 {
   modelica_integer tmp1;
   modelica_integer _oVarIndex;
   modelica_metatype _iCurrentVarIndices = NULL;
-  tmp1 = mmc_unbox_integer(_iVarType);
+  tmp1 = omc_unbox_integer(_iVarType);
   _iCurrentVarIndices = omc_SimCodeUtilShared_getArrayIdxByVar(threadData, _iVar, tmp1, _iVarToIndexMapping, __omcQ_24in_5FiCurrentVarIndices, &_oVarIndex);
   /* skip box _iCurrentVarIndices; array<#Integer> */
-  if (out_oVarIndex) { *out_oVarIndex = mmc_mk_icon(_oVarIndex); }
+  if (out_oVarIndex) { *out_oVarIndex = omc_mk_icon(_oVarIndex); }
   return _iCurrentVarIndices;
 }
 
@@ -490,10 +505,8 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SimCodeUtilShared_checkIfSubscrip
   modelica_metatype _subscript = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _oContainsUnhandledSubscripts = 0 /* false */;
   // _subscript has no default value.
@@ -511,21 +524,19 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_SimCodeUtilShared_checkIfSubscrip
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _oContainsUnhandledSubscripts;
+  omc_ret_ = _oContainsUnhandledSubscripts;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_SimCodeUtilShared_checkIfSubscriptsContainsUnhandlableIndices(threadData_t *threadData, modelica_metatype _iSubscripts)
 {
   modelica_boolean _oContainsUnhandledSubscripts;
   modelica_metatype out_oContainsUnhandledSubscripts;
   _oContainsUnhandledSubscripts = omc_SimCodeUtilShared_checkIfSubscriptsContainsUnhandlableIndices(threadData, _iSubscripts);
-  out_oContainsUnhandledSubscripts = mmc_mk_icon(_oContainsUnhandledSubscripts);
+  out_oContainsUnhandledSubscripts = omc_mk_icon(_oContainsUnhandledSubscripts);
   return out_oContainsUnhandledSubscripts;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *threadData, modelica_metatype _iVar, modelica_integer _iVarType, modelica_metatype __omcQ_24in_5FcurrentVarIndices, modelica_metatype __omcQ_24in_5FvarToArrayIndexMapping, modelica_metatype __omcQ_24in_5FvarToIndexMapping, modelica_metatype *out_varToArrayIndexMapping, modelica_metatype *out_varToIndexMapping)
 {
   modelica_metatype _currentVarIndices = NULL;
@@ -539,7 +550,8 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *
   modelica_metatype _arrayDimensions = NULL;
   modelica_metatype _numArrayElement = NULL;
   modelica_metatype _arraySubscripts = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _currentVarIndices = __omcQ_24in_5FcurrentVarIndices;
   _varToArrayIndexMapping = __omcQ_24in_5FvarToArrayIndexMapping;
@@ -577,16 +589,16 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *
           modelica_metatype tmpMeta20;
           modelica_metatype tmpMeta24;
           modelica_metatype tmpMeta25;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 2));
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 21));
+          tmpMeta5 = OMC_BOX_FIELD(tmp3_1, 2);
+          tmpMeta6 = OMC_BOX_FIELD(tmp3_1, 21);
           
           _name = tmpMeta5;
           _numArrayElement = tmpMeta6;
           /* Pattern matching succeeded */
           _currentVarIndices = omc_SimCodeUtilShared_getArrayIdxByVar(threadData, _iVar, _iVarType, _varToIndexMapping, _currentVarIndices ,&_varIdx);
 
-          tmpMeta7 = mmc_mk_cons(mmc_mk_integer(_varIdx), MMC_REFSTRUCTLIT(mmc_nil));
-          tmpMeta8 = mmc_mk_box2(0, _name, tmpMeta7);
+          tmpMeta7 = mmc_mk_cons(omc_mk_integer(_varIdx), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta8 = omc_mk_box2(0, _name, tmpMeta7);
           _varToIndexMapping = omc_BaseHashTable_add(threadData, tmpMeta8, _varToIndexMapping);
 
           _arraySubscripts = omc_ComponentReference_crefLastSubs(threadData, _name);
@@ -622,7 +634,7 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *
                   tmp12--;
                 }
                 if (tmp12 == 0) {
-                  __omcQ_24tmpVar2 = mmc_mk_integer(stringInt(_e));
+                  __omcQ_24tmpVar2 = omc_mk_integer(stringInt(_e));
                   *tmp10 = mmc_mk_cons(__omcQ_24tmpVar2,0);
                   tmp10 = &MMC_CDR(*tmp10);
                 } else if (tmp12 == 1) {
@@ -636,20 +648,20 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *
             }
             _arrayDimensions = tmpMeta9;
 
-            _varIndices = arrayCreate(((modelica_integer) 1), mmc_mk_integer(_varIdx));
+            _varIndices = arrayCreate(((modelica_integer) 1), omc_mk_integer(_varIdx));
 
-            tmpMeta13 = mmc_mk_box2(0, _arrayDimensions, _varIndices);
-            tmpMeta14 = mmc_mk_box2(0, _arrayName, tmpMeta13);
+            tmpMeta13 = omc_mk_box2(0, _arrayDimensions, _varIndices);
+            tmpMeta14 = omc_mk_box2(0, _arrayName, tmpMeta13);
             _varToArrayIndexMapping = omc_BaseHashTable_add(threadData, tmpMeta14, _varToArrayIndexMapping);
           }
           else
           {
             if(omc_ComponentReferenceBasics_crefEqual(threadData, _arrayName, _name))
             {
-              _varIndices = arrayCreate(((modelica_integer) 1), mmc_mk_integer(_varIdx));
+              _varIndices = arrayCreate(((modelica_integer) 1), omc_mk_integer(_varIdx));
 
-              tmpMeta15 = mmc_mk_box2(0, _OMC_LIT10, _varIndices);
-              tmpMeta16 = mmc_mk_box2(0, _arrayName, tmpMeta15);
+              tmpMeta15 = omc_mk_box2(0, _OMC_LIT10, _varIndices);
+              tmpMeta16 = omc_mk_box2(0, _arrayName, tmpMeta15);
               _varToArrayIndexMapping = omc_BaseHashTable_add(threadData, tmpMeta16, _varToArrayIndexMapping);
             }
             else
@@ -658,8 +670,8 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *
               {
                 /* Pattern-matching assignment */
                 tmpMeta17 = omc_BaseHashTable_get(threadData, _arrayName, _varToArrayIndexMapping);
-                tmpMeta18 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 1));
-                tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta17), 2));
+                tmpMeta18 = OMC_BOX_FIELD(tmpMeta17, 1);
+                tmpMeta19 = OMC_BOX_FIELD(tmpMeta17, 2);
                 _arrayDimensions = tmpMeta18;
                 _varIndices = tmpMeta19;
               }
@@ -685,7 +697,7 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *
                       tmp23--;
                     }
                     if (tmp23 == 0) {
-                      __omcQ_24tmpVar4 = mmc_mk_integer(stringInt(_e));
+                      __omcQ_24tmpVar4 = omc_mk_integer(stringInt(_e));
                       *tmp21 = mmc_mk_cons(__omcQ_24tmpVar4,0);
                       tmp21 = &MMC_CDR(*tmp21);
                     } else if (tmp23 == 1) {
@@ -699,15 +711,15 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *
                 }
                 _arrayDimensions = tmpMeta20;
 
-                _varIndices = arrayCreate(mmc_unbox_integer(omc_List_fold(threadData, _arrayDimensions, boxvar_intMul, mmc_mk_integer(((modelica_integer) 1)))), mmc_mk_integer(((modelica_integer) 0)));
+                _varIndices = arrayCreate(omc_unbox_integer(omc_List_fold(threadData, _arrayDimensions, boxvar_intMul, omc_mk_integer(((modelica_integer) 1)))), omc_mk_integer(((modelica_integer) 0)));
               }
 
               _arrayIndex = omc_SimCodeUtilShared_getScalarElementIndex(threadData, _arraySubscripts, _arrayDimensions);
 
-              _varIndices = arrayUpdate(_varIndices, _arrayIndex, mmc_mk_integer(_varIdx));
+              _varIndices = arrayUpdate(_varIndices, _arrayIndex, omc_mk_integer(_varIdx));
 
-              tmpMeta24 = mmc_mk_box2(0, _arrayDimensions, _varIndices);
-              tmpMeta25 = mmc_mk_box2(0, _arrayName, tmpMeta24);
+              tmpMeta24 = omc_mk_box2(0, _arrayDimensions, _varIndices);
+              tmpMeta25 = omc_mk_box2(0, _arrayName, tmpMeta24);
               _varToArrayIndexMapping = omc_BaseHashTable_add(threadData, tmpMeta25, _varToArrayIndexMapping);
             }
           }
@@ -725,7 +737,7 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
@@ -734,13 +746,14 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *
   _return: OMC_LABEL_UNUSED
   if (out_varToArrayIndexMapping) { *out_varToArrayIndexMapping = _varToArrayIndexMapping; }
   if (out_varToIndexMapping) { *out_varToIndexMapping = _varToIndexMapping; }
-  return _currentVarIndices;
+  omc_ret_ = _currentVarIndices;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_t *threadData, modelica_metatype _iVar, modelica_metatype _iVarType, modelica_metatype __omcQ_24in_5FcurrentVarIndices, modelica_metatype __omcQ_24in_5FvarToArrayIndexMapping, modelica_metatype __omcQ_24in_5FvarToIndexMapping, modelica_metatype *out_varToArrayIndexMapping, modelica_metatype *out_varToIndexMapping)
 {
   modelica_integer tmp1;
   modelica_metatype _currentVarIndices = NULL;
-  tmp1 = mmc_unbox_integer(_iVarType);
+  tmp1 = omc_unbox_integer(_iVarType);
   _currentVarIndices = omc_SimCodeUtilShared_addVarToArrayIndexMapping(threadData, _iVar, tmp1, __omcQ_24in_5FcurrentVarIndices, __omcQ_24in_5FvarToArrayIndexMapping, __omcQ_24in_5FvarToIndexMapping, out_varToArrayIndexMapping, out_varToIndexMapping);
   /* skip box _currentVarIndices; array<#Integer> */
   /* skip box _varToArrayIndexMapping; tuple<array<list<tuple<DAE.ComponentRef, #Integer>>>, tuple<#Integer, #Integer, array<Option<tuple<DAE.ComponentRef, tuple<list<#Integer>, array<#Integer>>>>>>, #Integer, tuple<.HashTableCrIListArray.FuncHashCref<function>(DAE.ComponentRef cr) => #Integer, .HashTableCrIListArray.FuncCrefEqual<function>(DAE.ComponentRef cr1, DAE.ComponentRef cr2) => #Boolean, .HashTableCrIListArray.FuncCrefStr<function>(DAE.ComponentRef cr) => String, .HashTableCrIListArray.FuncExpStr<function>(tuple<list<#Integer>, array<#Integer>> exp) => String>> */
@@ -748,7 +761,7 @@ modelica_metatype boxptr_SimCodeUtilShared_addVarToArrayIndexMapping(threadData_
   return _currentVarIndices;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMappings(threadData_t *threadData, modelica_metatype _vars, modelica_integer _iVarType, modelica_metatype __omcQ_24in_5FcurrentVarIndices, modelica_metatype __omcQ_24in_5FvarToArrayIndexMapping, modelica_metatype __omcQ_24in_5FvarToIndexMapping, modelica_metatype *out_varToArrayIndexMapping, modelica_metatype *out_varToIndexMapping)
 {
   modelica_metatype _currentVarIndices = NULL;
@@ -756,7 +769,8 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMappings(threadData_t 
   modelica_metatype _varToIndexMapping = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _currentVarIndices = __omcQ_24in_5FcurrentVarIndices;
   _varToArrayIndexMapping = __omcQ_24in_5FvarToArrayIndexMapping;
@@ -772,13 +786,14 @@ modelica_metatype omc_SimCodeUtilShared_addVarToArrayIndexMappings(threadData_t 
   _return: OMC_LABEL_UNUSED
   if (out_varToArrayIndexMapping) { *out_varToArrayIndexMapping = _varToArrayIndexMapping; }
   if (out_varToIndexMapping) { *out_varToIndexMapping = _varToIndexMapping; }
-  return _currentVarIndices;
+  omc_ret_ = _currentVarIndices;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SimCodeUtilShared_addVarToArrayIndexMappings(threadData_t *threadData, modelica_metatype _vars, modelica_metatype _iVarType, modelica_metatype __omcQ_24in_5FcurrentVarIndices, modelica_metatype __omcQ_24in_5FvarToArrayIndexMapping, modelica_metatype __omcQ_24in_5FvarToIndexMapping, modelica_metatype *out_varToArrayIndexMapping, modelica_metatype *out_varToIndexMapping)
 {
   modelica_integer tmp1;
   modelica_metatype _currentVarIndices = NULL;
-  tmp1 = mmc_unbox_integer(_iVarType);
+  tmp1 = omc_unbox_integer(_iVarType);
   _currentVarIndices = omc_SimCodeUtilShared_addVarToArrayIndexMappings(threadData, _vars, tmp1, __omcQ_24in_5FcurrentVarIndices, __omcQ_24in_5FvarToArrayIndexMapping, __omcQ_24in_5FvarToIndexMapping, out_varToArrayIndexMapping, out_varToIndexMapping);
   /* skip box _currentVarIndices; array<#Integer> */
   /* skip box _varToArrayIndexMapping; tuple<array<list<tuple<DAE.ComponentRef, #Integer>>>, tuple<#Integer, #Integer, array<Option<tuple<DAE.ComponentRef, tuple<list<#Integer>, array<#Integer>>>>>>, #Integer, tuple<.HashTableCrIListArray.FuncHashCref<function>(DAE.ComponentRef cr) => #Integer, .HashTableCrIListArray.FuncCrefEqual<function>(DAE.ComponentRef cr1, DAE.ComponentRef cr2) => #Boolean, .HashTableCrIListArray.FuncCrefStr<function>(DAE.ComponentRef cr) => String, .HashTableCrIListArray.FuncExpStr<function>(tuple<list<#Integer>, array<#Integer>> exp) => String>> */
@@ -786,7 +801,7 @@ modelica_metatype boxptr_SimCodeUtilShared_addVarToArrayIndexMappings(threadData
   return _currentVarIndices;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SimCodeUtilShared_createVarToArrayIndexMapping(threadData_t *threadData, modelica_metatype _iModelInfo, modelica_metatype *out_oVarToIndexMapping)
 {
   modelica_metatype _oVarToArrayIndexMapping = NULL;
@@ -829,7 +844,8 @@ modelica_metatype omc_SimCodeUtilShared_createVarToArrayIndexMapping(threadData_
   modelica_metatype tmpMeta30;
   modelica_integer tmp31;
   modelica_metatype tmpMeta32;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oVarToArrayIndexMapping has no default value.
   // _oVarToIndexMapping has no default value.
@@ -839,29 +855,38 @@ modelica_metatype omc_SimCodeUtilShared_createVarToArrayIndexMapping(threadData_
   // _var_lst has no default value.
   // _var_type has no default value.
   // _currentVarIndices has no default value.
-  _sim_vars = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_iModelInfo), 11)));
+  if((!(omc_Flags_isSet(threadData, _OMC_LIT15) || listMember(omc_Config_simCodeTarget(threadData), _OMC_LIT21))))
+  {
+    _oVarToArrayIndexMapping = omc_HashTableCrIListArray_emptyHashTableSized(threadData, ((modelica_integer) 1));
 
-  tmpMeta2 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 2))), mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta3 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 3))), mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta4 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 4))), mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta5 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 5))), mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta6 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 6))), mmc_mk_integer(((modelica_integer) 2)));
-  tmpMeta7 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 7))), mmc_mk_integer(((modelica_integer) 3)));
-  tmpMeta8 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 16))), mmc_mk_integer(((modelica_integer) 4)));
-  tmpMeta9 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 13))), mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta10 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 14))), mmc_mk_integer(((modelica_integer) 2)));
-  tmpMeta11 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 15))), mmc_mk_integer(((modelica_integer) 3)));
-  tmpMeta12 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 17))), mmc_mk_integer(((modelica_integer) 4)));
-  tmpMeta13 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 20))), mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta14 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 21))), mmc_mk_integer(((modelica_integer) 2)));
-  tmpMeta15 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 22))), mmc_mk_integer(((modelica_integer) 3)));
-  tmpMeta16 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 23))), mmc_mk_integer(((modelica_integer) 4)));
-  tmpMeta17 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 26))), mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta18 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 27))), mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta19 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 10))), mmc_mk_integer(((modelica_integer) 1)));
-  tmpMeta20 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 11))), mmc_mk_integer(((modelica_integer) 2)));
-  tmpMeta21 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 12))), mmc_mk_integer(((modelica_integer) 3)));
-  tmpMeta22 = mmc_mk_box2(0, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_sim_vars), 18))), mmc_mk_integer(((modelica_integer) 4)));
+    _oVarToIndexMapping = omc_HashTableCrILst_emptyHashTableSized(threadData, ((modelica_integer) 1));
+
+    goto _return;
+  }
+
+  _sim_vars = (OMC_BOX_FIELD(_iModelInfo, 11));
+
+  tmpMeta2 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 2)), omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta3 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 3)), omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta4 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 4)), omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta5 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 5)), omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta6 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 6)), omc_mk_integer(((modelica_integer) 2)));
+  tmpMeta7 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 7)), omc_mk_integer(((modelica_integer) 3)));
+  tmpMeta8 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 16)), omc_mk_integer(((modelica_integer) 4)));
+  tmpMeta9 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 13)), omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta10 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 14)), omc_mk_integer(((modelica_integer) 2)));
+  tmpMeta11 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 15)), omc_mk_integer(((modelica_integer) 3)));
+  tmpMeta12 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 17)), omc_mk_integer(((modelica_integer) 4)));
+  tmpMeta13 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 20)), omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta14 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 21)), omc_mk_integer(((modelica_integer) 2)));
+  tmpMeta15 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 22)), omc_mk_integer(((modelica_integer) 3)));
+  tmpMeta16 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 23)), omc_mk_integer(((modelica_integer) 4)));
+  tmpMeta17 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 26)), omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta18 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 27)), omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta19 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 10)), omc_mk_integer(((modelica_integer) 1)));
+  tmpMeta20 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 11)), omc_mk_integer(((modelica_integer) 2)));
+  tmpMeta21 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 12)), omc_mk_integer(((modelica_integer) 3)));
+  tmpMeta22 = omc_mk_box2(0, (OMC_BOX_FIELD(_sim_vars, 18)), omc_mk_integer(((modelica_integer) 4)));
   tmpMeta1 = mmc_mk_cons(tmpMeta2, mmc_mk_cons(tmpMeta3, mmc_mk_cons(tmpMeta4, mmc_mk_cons(tmpMeta5, mmc_mk_cons(tmpMeta6, mmc_mk_cons(tmpMeta7, mmc_mk_cons(tmpMeta8, mmc_mk_cons(tmpMeta9, mmc_mk_cons(tmpMeta10, mmc_mk_cons(tmpMeta11, mmc_mk_cons(tmpMeta12, mmc_mk_cons(tmpMeta13, mmc_mk_cons(tmpMeta14, mmc_mk_cons(tmpMeta15, mmc_mk_cons(tmpMeta16, mmc_mk_cons(tmpMeta17, mmc_mk_cons(tmpMeta18, mmc_mk_cons(tmpMeta19, mmc_mk_cons(tmpMeta20, mmc_mk_cons(tmpMeta21, mmc_mk_cons(tmpMeta22, MMC_REFSTRUCTLIT(mmc_nil))))))))))))))))))))));
   _vars = tmpMeta1;
 
@@ -872,7 +897,7 @@ modelica_metatype omc_SimCodeUtilShared_createVarToArrayIndexMapping(threadData_
       _vl = MMC_CAR(tmpMeta23);
       /* Pattern-matching assignment */
       tmpMeta24 = _vl;
-      tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta24), 1));
+      tmpMeta25 = OMC_BOX_FIELD(tmpMeta24, 1);
       _var_lst = tmpMeta25;
 
       _table_size = _table_size + listLength(_var_lst);
@@ -885,7 +910,7 @@ modelica_metatype omc_SimCodeUtilShared_createVarToArrayIndexMapping(threadData_
 
   _oVarToIndexMapping = omc_HashTableCrILst_emptyHashTableSized(threadData, _table_size);
 
-  _currentVarIndices = arrayCreate(((modelica_integer) 4), mmc_mk_integer(((modelica_integer) 1)));
+  _currentVarIndices = arrayCreate(((modelica_integer) 4), omc_mk_integer(((modelica_integer) 1)));
 
   {
     modelica_metatype _vl;
@@ -894,9 +919,9 @@ modelica_metatype omc_SimCodeUtilShared_createVarToArrayIndexMapping(threadData_
       _vl = MMC_CAR(tmpMeta27);
       /* Pattern-matching assignment */
       tmpMeta28 = _vl;
-      tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta28), 1));
-      tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta28), 2));
-      tmp31 = mmc_unbox_integer(tmpMeta30);
+      tmpMeta29 = OMC_BOX_FIELD(tmpMeta28, 1);
+      tmpMeta30 = OMC_BOX_FIELD(tmpMeta28, 2);
+      tmp31 = omc_unbox_integer(tmpMeta30);
       _var_lst = tmpMeta29;
       _var_type = tmp31  /* pattern as ty=Integer */;
 
@@ -905,10 +930,11 @@ modelica_metatype omc_SimCodeUtilShared_createVarToArrayIndexMapping(threadData_
   }
   _return: OMC_LABEL_UNUSED
   if (out_oVarToIndexMapping) { *out_oVarToIndexMapping = _oVarToIndexMapping; }
-  return _oVarToArrayIndexMapping;
+  omc_ret_ = _oVarToArrayIndexMapping;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SimCodeUtilShared_createFunctions(threadData_t *threadData, modelica_metatype _inProgram, modelica_metatype _functionTree, modelica_metatype *out_outLibPaths, modelica_metatype *out_outIncludes, modelica_metatype *out_outIncludeDirs, modelica_metatype *out_outRecordDecls, modelica_metatype *out_outFunctions, modelica_metatype *out_outLiterals)
 {
   modelica_metatype _outLibs = NULL;
@@ -920,7 +946,8 @@ modelica_metatype omc_SimCodeUtilShared_createFunctions(threadData_t *threadData
   modelica_metatype _outLiterals = NULL;
   modelica_metatype _funcelems = NULL;
   modelica_metatype _lits = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outLibs has no default value.
   // _outLibPaths has no default value.
@@ -936,7 +963,7 @@ modelica_metatype omc_SimCodeUtilShared_createFunctions(threadData_t *threadData
       volatile mmc_switch_type tmp3;
       int tmp4;
       tmp3 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp2_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp3 < 2; tmp3++) {
@@ -950,12 +977,12 @@ modelica_metatype omc_SimCodeUtilShared_createFunctions(threadData_t *threadData
           /* Pattern matching succeeded */
           _funcelems = omc_DAEUtil_getFunctionList(threadData, _functionTree, 0 /* false */);
 
-          _funcelems = omc_Inline_inlineCallsInFunctions(threadData, _funcelems, _OMC_LIT17);
+          _funcelems = omc_Inline_inlineCallsInFunctions(threadData, _funcelems, _OMC_LIT26);
 
           /* Pattern-matching tuple assignment */
           tmpMeta7 = omc_SimCodeUtilShared_simulationFindLiterals(threadData, _funcelems, &tmpMeta5);
           _funcelems = tmpMeta7;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta5), 3));
+          tmpMeta6 = OMC_BOX_FIELD(tmpMeta5, 3);
           _outLiterals = tmpMeta5;
           _lits = tmpMeta6;
 
@@ -966,7 +993,7 @@ modelica_metatype omc_SimCodeUtilShared_createFunctions(threadData_t *threadData
         }
         case 1: {
           /* Pattern matching succeeded */
-          omc_Error_addInternalError(threadData, _OMC_LIT18, _OMC_LIT20);
+          omc_Error_addInternalError(threadData, _OMC_LIT27, _OMC_LIT29);
 
           goto goto_1;
           goto tmp2_done;
@@ -978,14 +1005,14 @@ modelica_metatype omc_SimCodeUtilShared_createFunctions(threadData_t *threadData
       goto goto_1;
       tmp2_done:
       (void)tmp3;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp2_done2;
       goto_1:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp3 < 2) {
         goto tmp2_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp2_done2:;
     }
   }
@@ -997,7 +1024,8 @@ modelica_metatype omc_SimCodeUtilShared_createFunctions(threadData_t *threadData
   if (out_outRecordDecls) { *out_outRecordDecls = _outRecordDecls; }
   if (out_outFunctions) { *out_outFunctions = _outFunctions; }
   if (out_outLiterals) { *out_outLiterals = _outLiterals; }
-  return _outLibs;
+  omc_ret_ = _outLibs;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_simulationFindLiterals(threadData_t *threadData, modelica_metatype _fns, modelica_metatype *out_literals)
@@ -1006,15 +1034,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_SimCodeUtilShared_simulationFind
   modelica_metatype _literals = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ofns has no default value.
   // _literals has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta2 = mmc_mk_box3(0, mmc_mk_integer(((modelica_integer) 0)), omc_HashTableExpToIndex_emptyHashTableSized(threadData, ((modelica_integer) 4013)), tmpMeta1);
+  tmpMeta2 = omc_mk_box3(0, omc_mk_integer(((modelica_integer) 0)), omc_HashTableExpToIndex_emptyHashTableSized(threadData, ((modelica_integer) 4013)), tmpMeta1);
   _ofns = omc_DAEUtil_traverseDAEFunctions(threadData, _fns, boxvar_SimCodeFunctionUtil_findLiteralsHelper, tmpMeta2 ,&_literals);
   _return: OMC_LABEL_UNUSED
   if (out_literals) { *out_literals = _literals; }
-  return _ofns;
+  omc_ret_ = _ofns;
+  return omc_ret_;
 }
 

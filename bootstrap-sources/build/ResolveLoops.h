@@ -54,6 +54,8 @@ extern struct record_description Flags_FlagData_INT__FLAG__desc;
 
 extern struct record_description Flags_FlagVisibility_EXTERNAL__desc;
 
+extern struct record_description ResolveLoops_TripleLoopInfo_TRIPLE__LOOP__INFO__desc;
+
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
@@ -63,14 +65,14 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_ResolveLoops_solveLinearSystem0 omc_ResolveLoops_solveLinearSystem0
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ResolveLoops_solveLinearSystem(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_ResolveLoops_solveLinearSystem omc_ResolveLoops_solveLinearSystem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_solveLinearSystem,2,0) {(void*) boxptr_ResolveLoops_solveLinearSystem,0}};
 #define boxvar_ResolveLoops_solveLinearSystem MMC_REFSTRUCTLIT(boxvar_lit_ResolveLoops_solveLinearSystem)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ResolveLoops_resolveEquations(threadData_t *threadData, modelica_metatype _eq, modelica_metatype _loopIn, modelica_metatype _me, modelica_metatype _meT, modelica_metatype _eqsIn, modelica_metatype _varsIn);
 #define boxptr_ResolveLoops_resolveEquations omc_ResolveLoops_resolveEquations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveEquations,2,0) {(void*) boxptr_ResolveLoops_resolveEquations,0}};
@@ -92,7 +94,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveEquations,2,0) {(vo
 #define boxptr_ResolveLoops_reshuffling__post0 omc_ResolveLoops_reshuffling__post0
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ResolveLoops_reshuffling__post(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_ResolveLoops_reshuffling__post omc_ResolveLoops_reshuffling__post
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_reshuffling__post,2,0) {(void*) boxptr_ResolveLoops_reshuffling__post,0}};
@@ -111,7 +113,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_reshuffling__post,2,0) {(v
 #define boxptr_ResolveLoops_isAddOrSubExp omc_ResolveLoops_isAddOrSubExp
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ResolveLoops_partitionBipartiteGraph(threadData_t *threadData, modelica_metatype _m, modelica_metatype _mT);
 #define boxptr_ResolveLoops_partitionBipartiteGraph omc_ResolveLoops_partitionBipartiteGraph
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_partitionBipartiteGraph,2,0) {(void*) boxptr_ResolveLoops_partitionBipartiteGraph,0}};
@@ -136,7 +138,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_partitionBipartiteGraph,2,
 #define boxptr_ResolveLoops_closePathDirectly omc_ResolveLoops_closePathDirectly
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ResolveLoops_sortLoop(threadData_t *threadData, modelica_metatype _loopIn, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _sortLoopIn);
 #define boxptr_ResolveLoops_sortLoop omc_ResolveLoops_sortLoop
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_sortLoop,2,0) {(void*) boxptr_ResolveLoops_sortLoop,0}};
@@ -176,9 +178,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_sortLoop,2,0) {(void*) box
 #define boxptr_ResolveLoops_findEqualPathStructure omc_ResolveLoops_findEqualPathStructure
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ResolveLoops_resolveLoops__findLoops(threadData_t *threadData, modelica_metatype _partitionsIn, modelica_metatype _mIn, modelica_metatype _mTIn, modelica_boolean _findExactlyOneLoop, modelica_metatype *out_crossEqsOut, modelica_metatype *out_crossVarsOut, modelica_metatype *out_optStructureMapping);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_ResolveLoops_resolveLoops__findLoops(threadData_t *threadData, modelica_metatype _partitionsIn, modelica_metatype _mIn, modelica_metatype _mTIn, modelica_metatype _findExactlyOneLoop, modelica_metatype *out_crossEqsOut, modelica_metatype *out_crossVarsOut, modelica_metatype *out_optStructureMapping);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveLoops__findLoops,2,0) {(void*) boxptr_ResolveLoops_resolveLoops__findLoops,0}};
 #define boxvar_ResolveLoops_resolveLoops__findLoops MMC_REFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveLoops__findLoops)
@@ -196,7 +198,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveLoops__findLoops,2,
 #define boxptr_ResolveLoops_resolveLoops__resolvePartitions omc_ResolveLoops_resolveLoops__resolvePartitions
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ResolveLoops_resolveLoops(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_ResolveLoops_resolveLoops omc_ResolveLoops_resolveLoops
 static const MMC_DEFSTRUCTLIT(boxvar_lit_ResolveLoops_resolveLoops,2,0) {(void*) boxptr_ResolveLoops_resolveLoops,0}};

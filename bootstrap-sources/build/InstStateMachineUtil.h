@@ -70,7 +70,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_InstStateMachineUtil_prefixCrefNoContext2 omc_InstStateMachineUtil_prefixCrefNoContext2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstStateMachineUtil_getSMStatesInContext(threadData_t *threadData, modelica_metatype _eqns, modelica_metatype _inPrefix, modelica_metatype *out_initialStates);
 #define boxptr_InstStateMachineUtil_getSMStatesInContext omc_InstStateMachineUtil_getSMStatesInContext
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstStateMachineUtil_getSMStatesInContext,2,0) {(void*) boxptr_InstStateMachineUtil_getSMStatesInContext,0}};
@@ -80,7 +80,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstStateMachineUtil_getSMStatesInConte
 #define boxptr_InstStateMachineUtil_extractSMStates2 omc_InstStateMachineUtil_extractSMStates2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstStateMachineUtil_getSMNodeTable(threadData_t *threadData, modelica_metatype _elementLst);
 #define boxptr_InstStateMachineUtil_getSMNodeTable omc_InstStateMachineUtil_getSMNodeTable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstStateMachineUtil_getSMNodeTable,2,0) {(void*) boxptr_InstStateMachineUtil_getSMNodeTable,0}};
@@ -90,7 +90,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstStateMachineUtil_getSMNodeTable,2,0
 #define boxptr_InstStateMachineUtil_extractInitialStates omc_InstStateMachineUtil_extractInitialStates
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_InstStateMachineUtil_dumpFlatSMGroupStr(threadData_t *threadData, modelica_metatype _flatA);
 #define boxptr_InstStateMachineUtil_dumpFlatSMGroupStr omc_InstStateMachineUtil_dumpFlatSMGroupStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstStateMachineUtil_dumpFlatSMGroupStr,2,0) {(void*) boxptr_InstStateMachineUtil_dumpFlatSMGroupStr,0}};
@@ -145,14 +145,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstStateMachineUtil_dumpFlatSMGroupStr
 #define boxptr_InstStateMachineUtil_mergeVariableDefinitions omc_InstStateMachineUtil_mergeVariableDefinitions
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstStateMachineUtil_wrapSMCompsInFlatSMs(threadData_t *threadData, modelica_metatype _inIH, modelica_metatype _inDae1, modelica_metatype _inDae2, modelica_metatype _smNodeToFlatSMGroup, modelica_metatype _smInitialCrefs, modelica_metatype *out_outDae2);
 #define boxptr_InstStateMachineUtil_wrapSMCompsInFlatSMs omc_InstStateMachineUtil_wrapSMCompsInFlatSMs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstStateMachineUtil_wrapSMCompsInFlatSMs,2,0) {(void*) boxptr_InstStateMachineUtil_wrapSMCompsInFlatSMs,0}};
 #define boxvar_InstStateMachineUtil_wrapSMCompsInFlatSMs MMC_REFSTRUCTLIT(boxvar_lit_InstStateMachineUtil_wrapSMCompsInFlatSMs)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstStateMachineUtil_createSMNodeToFlatSMGroupTable(threadData_t *threadData, modelica_metatype _inDae);
 #define boxptr_InstStateMachineUtil_createSMNodeToFlatSMGroupTable omc_InstStateMachineUtil_createSMNodeToFlatSMGroupTable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstStateMachineUtil_createSMNodeToFlatSMGroupTable,2,0) {(void*) boxptr_InstStateMachineUtil_createSMNodeToFlatSMGroupTable,0}};

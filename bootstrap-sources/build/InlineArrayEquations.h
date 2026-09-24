@@ -26,15 +26,15 @@ extern struct record_description Flags_DebugFlag_DEBUG__FLAG__desc;
 #define boxptr_InlineArrayEquations_generateScalarArrayEqns2 omc_InlineArrayEquations_generateScalarArrayEqns2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InlineArrayEquations_getScalarArrayEqns(threadData_t *threadData, modelica_metatype _inEqnLst, modelica_boolean *out_outFound);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_InlineArrayEquations_getScalarArrayEqns(threadData_t *threadData, modelica_metatype _inEqnLst, modelica_metatype *out_outFound);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InlineArrayEquations_getScalarArrayEqns,2,0) {(void*) boxptr_InlineArrayEquations_getScalarArrayEqns,0}};
 #define boxvar_InlineArrayEquations_getScalarArrayEqns MMC_REFSTRUCTLIT(boxvar_lit_InlineArrayEquations_getScalarArrayEqns)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InlineArrayEquations_inlineArrayEqn(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_InlineArrayEquations_inlineArrayEqn omc_InlineArrayEquations_inlineArrayEqn
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InlineArrayEquations_inlineArrayEqn,2,0) {(void*) boxptr_InlineArrayEquations_inlineArrayEqn,0}};

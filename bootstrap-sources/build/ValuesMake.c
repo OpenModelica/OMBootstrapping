@@ -16,12 +16,13 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT4,2,3) {&Values_Value_INTEGER__desc
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeCodeTypeNameArray(threadData_t *threadData, modelica_metatype _paths)
 {
   modelica_metatype _val = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _val has no default value.
   {
@@ -50,7 +51,7 @@ modelica_metatype omc_ValuesMake_makeCodeTypeNameArray(threadData_t *threadData,
       } else if (tmp4 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp2 = mmc_mk_nil();
@@ -58,108 +59,124 @@ modelica_metatype omc_ValuesMake_makeCodeTypeNameArray(threadData_t *threadData,
   }
   _val = omc_ValuesMake_makeArray(threadData, tmpMeta1);
   _return: OMC_LABEL_UNUSED
-  return _val;
+  omc_ret_ = _val;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeCodeTypeNameStr(threadData_t *threadData, modelica_string _str)
 {
   modelica_metatype _val = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _val has no default value.
-  tmpMeta1 = mmc_mk_box2(4, &Absyn_Path_IDENT__desc, _str);
-  tmpMeta2 = mmc_mk_box2(3, &Absyn_CodeNode_C__TYPENAME__desc, tmpMeta1);
-  tmpMeta3 = mmc_mk_box2(15, &Values_Value_CODE__desc, tmpMeta2);
+  tmpMeta1 = omc_mk_box2(4, &Absyn_Path_IDENT__desc, _str);
+  tmpMeta2 = omc_mk_box2(3, &Absyn_CodeNode_C__TYPENAME__desc, tmpMeta1);
+  tmpMeta3 = omc_mk_box2(15, &Values_Value_CODE__desc, tmpMeta2);
   _val = tmpMeta3;
   _return: OMC_LABEL_UNUSED
-  return _val;
+  omc_ret_ = _val;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeCodeTypeName(threadData_t *threadData, modelica_metatype _path)
 {
   modelica_metatype _val = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _val has no default value.
-  tmpMeta1 = mmc_mk_box2(3, &Absyn_CodeNode_C__TYPENAME__desc, _path);
-  tmpMeta2 = mmc_mk_box2(15, &Values_Value_CODE__desc, tmpMeta1);
+  tmpMeta1 = omc_mk_box2(3, &Absyn_CodeNode_C__TYPENAME__desc, _path);
+  tmpMeta2 = omc_mk_box2(15, &Values_Value_CODE__desc, tmpMeta1);
   _val = tmpMeta2;
   _return: OMC_LABEL_UNUSED
-  return _val;
+  omc_ret_ = _val;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeRealMatrix(threadData_t *threadData, modelica_metatype _inReals)
 {
   modelica_metatype _outArray = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outArray has no default value.
   _outArray = omc_ValuesMake_makeArray(threadData, omc_List_map(threadData, _inReals, boxvar_ValuesMake_makeRealArray));
   _return: OMC_LABEL_UNUSED
-  return _outArray;
+  omc_ret_ = _outArray;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeRealArray(threadData_t *threadData, modelica_metatype _inReals)
 {
   modelica_metatype _outArray = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outArray has no default value.
   _outArray = omc_ValuesMake_makeArray(threadData, omc_List_map(threadData, _inReals, boxvar_ValuesMake_makeReal));
   _return: OMC_LABEL_UNUSED
-  return _outArray;
+  omc_ret_ = _outArray;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeIntArray(threadData_t *threadData, modelica_metatype _inInts)
 {
   modelica_metatype _outArray = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outArray has no default value.
   _outArray = omc_ValuesMake_makeArray(threadData, omc_List_map(threadData, _inInts, boxvar_ValuesMake_makeInteger));
   _return: OMC_LABEL_UNUSED
-  return _outArray;
+  omc_ret_ = _outArray;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeStringArray(threadData_t *threadData, modelica_metatype _inReals)
 {
   modelica_metatype _outArray = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outArray has no default value.
   _outArray = omc_ValuesMake_makeArray(threadData, omc_List_map(threadData, _inReals, boxvar_ValuesMake_makeString));
   _return: OMC_LABEL_UNUSED
-  return _outArray;
+  omc_ret_ = _outArray;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeEmptyArray(threadData_t *threadData)
 {
   modelica_metatype _outValue = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _outValue = _OMC_LIT1;
   _return: OMC_LABEL_UNUSED
-  return _outValue;
+  omc_ret_ = _outValue;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeArray(threadData_t *threadData, modelica_metatype _inValueLst)
 {
   modelica_metatype _outValue = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outValue has no default value.
   { /* match expression */
@@ -187,13 +204,13 @@ modelica_metatype omc_ValuesMake_makeArray(threadData_t *threadData, modelica_me
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,5,2) == 0) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 3));
+          tmpMeta8 = OMC_BOX_FIELD(tmpMeta6, 3);
           _vlst = tmp4_1;
           _il = tmpMeta8;
           /* Pattern matching succeeded */
           _i1 = listLength(_vlst);
-          tmpMeta9 = mmc_mk_cons(mmc_mk_integer(_i1), _il);
-          tmpMeta10 = mmc_mk_box3(8, &Values_Value_ARRAY__desc, _vlst, tmpMeta9);
+          tmpMeta9 = mmc_mk_cons(omc_mk_integer(_i1), _il);
+          tmpMeta10 = omc_mk_box3(8, &Values_Value_ARRAY__desc, _vlst, tmpMeta9);
           tmpMeta1 = tmpMeta10;
           goto tmp3_done;
         }
@@ -204,8 +221,8 @@ modelica_metatype omc_ValuesMake_makeArray(threadData_t *threadData, modelica_me
           _vlst = tmp4_1;
           /* Pattern matching succeeded */
           _i1 = listLength(_vlst);
-          tmpMeta11 = mmc_mk_cons(mmc_mk_integer(_i1), MMC_REFSTRUCTLIT(mmc_nil));
-          tmpMeta12 = mmc_mk_box3(8, &Values_Value_ARRAY__desc, _vlst, tmpMeta11);
+          tmpMeta11 = mmc_mk_cons(omc_mk_integer(_i1), MMC_REFSTRUCTLIT(mmc_nil));
+          tmpMeta12 = omc_mk_box3(8, &Values_Value_ARRAY__desc, _vlst, tmpMeta11);
           tmpMeta1 = tmpMeta12;
           goto tmp3_done;
         }
@@ -215,133 +232,147 @@ modelica_metatype omc_ValuesMake_makeArray(threadData_t *threadData, modelica_me
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outValue = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outValue;
+  omc_ret_ = _outValue;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeList(threadData_t *threadData, modelica_metatype _inValueLst)
 {
   modelica_metatype _outValue = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outValue has no default value.
-  tmpMeta1 = mmc_mk_box2(9, &Values_Value_LIST__desc, _inValueLst);
+  tmpMeta1 = omc_mk_box2(9, &Values_Value_LIST__desc, _inValueLst);
   _outValue = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outValue;
+  omc_ret_ = _outValue;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeTuple(threadData_t *threadData, modelica_metatype _inValueLst)
 {
   modelica_metatype _outValue = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outValue has no default value.
-  tmpMeta1 = mmc_mk_box2(11, &Values_Value_TUPLE__desc, _inValueLst);
+  tmpMeta1 = omc_mk_box2(11, &Values_Value_TUPLE__desc, _inValueLst);
   _outValue = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outValue;
+  omc_ret_ = _outValue;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeString(threadData_t *threadData, modelica_string _s)
 {
   modelica_metatype _v = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
-  tmpMeta1 = mmc_mk_box2(5, &Values_Value_STRING__desc, _s);
+  tmpMeta1 = omc_mk_box2(5, &Values_Value_STRING__desc, _s);
   _v = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _v;
+  omc_ret_ = _v;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeInteger(threadData_t *threadData, modelica_integer _i)
 {
   modelica_metatype _v = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
-  tmpMeta1 = mmc_mk_box2(3, &Values_Value_INTEGER__desc, mmc_mk_integer(_i));
+  tmpMeta1 = omc_mk_box2(3, &Values_Value_INTEGER__desc, omc_mk_integer(_i));
   _v = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _v;
+  omc_ret_ = _v;
+  return omc_ret_;
 }
 modelica_metatype boxptr_ValuesMake_makeInteger(threadData_t *threadData, modelica_metatype _i)
 {
   modelica_integer tmp1;
   modelica_metatype _v = NULL;
-  tmp1 = mmc_unbox_integer(_i);
+  tmp1 = omc_unbox_integer(_i);
   _v = omc_ValuesMake_makeInteger(threadData, tmp1);
   /* skip box _v; Values.Value */
   return _v;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeReal(threadData_t *threadData, modelica_real _r)
 {
   modelica_metatype _v = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
-  tmpMeta1 = mmc_mk_box2(4, &Values_Value_REAL__desc, mmc_mk_real(_r));
+  tmpMeta1 = omc_mk_box2(4, &Values_Value_REAL__desc, omc_mk_real(_r));
   _v = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _v;
+  omc_ret_ = _v;
+  return omc_ret_;
 }
 modelica_metatype boxptr_ValuesMake_makeReal(threadData_t *threadData, modelica_metatype _r)
 {
   modelica_real tmp1;
   modelica_metatype _v = NULL;
-  tmp1 = mmc_unbox_real(_r);
+  tmp1 = omc_unbox_real(_r);
   _v = omc_ValuesMake_makeReal(threadData, tmp1);
   /* skip box _v; Values.Value */
   return _v;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeBoolean(threadData_t *threadData, modelica_boolean _b)
 {
   modelica_metatype _v = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
-  tmpMeta1 = mmc_mk_box2(6, &Values_Value_BOOL__desc, mmc_mk_boolean(_b));
+  tmpMeta1 = omc_mk_box2(6, &Values_Value_BOOL__desc, omc_mk_boolean(_b));
   _v = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _v;
+  omc_ret_ = _v;
+  return omc_ret_;
 }
 modelica_metatype boxptr_ValuesMake_makeBoolean(threadData_t *threadData, modelica_metatype _b)
 {
   modelica_integer tmp1;
   modelica_metatype _v = NULL;
-  tmp1 = mmc_unbox_integer(_b);
+  tmp1 = omc_unbox_integer(_b);
   _v = omc_ValuesMake_makeBoolean(threadData, tmp1);
   /* skip box _v; Values.Value */
   return _v;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_ValuesMake_makeZero(threadData_t *threadData, modelica_metatype _ty)
 {
   modelica_metatype _zero = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _zero has no default value.
   { /* match expression */
@@ -373,13 +404,14 @@ modelica_metatype omc_ValuesMake_makeZero(threadData_t *threadData, modelica_met
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _zero = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _zero;
+  omc_ret_ = _zero;
+  return omc_ret_;
 }
 

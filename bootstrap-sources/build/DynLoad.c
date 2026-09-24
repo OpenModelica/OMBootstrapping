@@ -47,19 +47,20 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DynLoad_executeFunction_execu
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outVal = NULL;
-  tmp1 = mmc_unbox_integer(_handle);
-  tmp2 = mmc_unbox_integer(_debug);
+  tmp1 = omc_unbox_integer(_handle);
+  tmp2 = omc_unbox_integer(_debug);
   _outVal = omc_DynLoad_executeFunction_executeFunction__internal(threadData, tmp1, _values, tmp2);
   /* skip box _outVal; Values.Value */
   return _outVal;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_DynLoad_executeFunction(threadData_t *threadData, modelica_integer _handle, modelica_metatype _values, modelica_boolean _debug)
 {
   modelica_metatype _outVal = NULL;
-  modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_string tmp1;
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outVal has no default value.
   omc_StackOverflow_clearStacktraceMessages(threadData);
@@ -68,19 +69,20 @@ modelica_metatype omc_DynLoad_executeFunction(threadData_t *threadData, modelica
 
   if(omc_StackOverflow_hasStacktraceMessages(threadData))
   {
-    tmpMeta1 = stringAppend(_OMC_LIT0,stringDelimitList(omc_StackOverflow_readableStacktraceMessages(threadData), _OMC_LIT1));
-    omc_Error_addInternalError(threadData, tmpMeta1, _OMC_LIT3);
+    tmp1 = stringAppend(_OMC_LIT0,stringDelimitList(omc_StackOverflow_readableStacktraceMessages(threadData), _OMC_LIT1));
+    omc_Error_addInternalError(threadData, tmp1, _OMC_LIT3);
   }
   _return: OMC_LABEL_UNUSED
-  return _outVal;
+  omc_ret_ = _outVal;
+  return omc_ret_;
 }
 modelica_metatype boxptr_DynLoad_executeFunction(threadData_t *threadData, modelica_metatype _handle, modelica_metatype _values, modelica_metatype _debug)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outVal = NULL;
-  tmp1 = mmc_unbox_integer(_handle);
-  tmp2 = mmc_unbox_integer(_debug);
+  tmp1 = omc_unbox_integer(_handle);
+  tmp2 = omc_unbox_integer(_debug);
   _outVal = omc_DynLoad_executeFunction(threadData, tmp1, _values, tmp2);
   /* skip box _outVal; Values.Value */
   return _outVal;

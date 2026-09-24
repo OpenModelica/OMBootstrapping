@@ -30,8 +30,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PriorityQueue_getMin(threadData_
 {
   modelica_metatype _min = NULL;
   modelica_metatype _ots = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _min has no default value.
   // _ots has no default value.
@@ -108,7 +109,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PriorityQueue_getMin(threadData_
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -117,14 +118,16 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PriorityQueue_getMin(threadData_
   _ots = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_ots) { *out_ots = _ots; }
-  return _min;
+  omc_ret_ = _min;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_PriorityQueue_ins(threadData_t *threadData, modelica_metatype _t, modelica_metatype _its)
 {
   modelica_metatype _ots = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ots has no default value.
   { /* match expression */
@@ -191,21 +194,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PriorityQueue_ins(threadData_t *
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _ots = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _ots;
+  omc_ret_ = _ots;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_PriorityQueue_link(threadData_t *threadData, modelica_metatype _t1, modelica_metatype _t2)
 {
   modelica_metatype _t = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _t has no default value.
   { /* match expression */
@@ -245,14 +250,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PriorityQueue_link(threadData_t 
           modelica_metatype tmpMeta17;
           modelica_boolean tmp18;
           modelica_metatype tmpMeta19;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 4));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmp12 = mmc_unbox_integer(tmpMeta11);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp8 = omc_unbox_integer(tmpMeta7);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_1, 4);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmp12 = omc_unbox_integer(tmpMeta11);
+          tmpMeta13 = OMC_BOX_FIELD(tmp4_2, 4);
           _e1 = tmpMeta6;
           _r1 = tmp8  /* pattern as ty=Integer */;
           _ts1 = tmpMeta9;
@@ -272,12 +277,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PriorityQueue_link(threadData_t 
           tmp18 = (modelica_boolean)omc_PriorityQueue_compareElement(threadData, omc_PriorityQueue_root(threadData, _t1), omc_PriorityQueue_root(threadData, _t2));
           if(tmp18)
           {
-            tmpMeta16 = mmc_mk_box4(3, &PriorityQueue_Tree_NODE__desc, _e1, mmc_mk_integer(_r1), _ts1);
+            tmpMeta16 = omc_mk_box4(3, &PriorityQueue_Tree_NODE__desc, _e1, omc_mk_integer(_r1), _ts1);
             tmpMeta19 = tmpMeta16;
           }
           else
           {
-            tmpMeta17 = mmc_mk_box4(3, &PriorityQueue_Tree_NODE__desc, _e2, mmc_mk_integer(_r2), _ts2);
+            tmpMeta17 = omc_mk_box4(3, &PriorityQueue_Tree_NODE__desc, _e2, omc_mk_integer(_r2), _ts2);
             tmpMeta19 = tmpMeta17;
           }
           tmpMeta1 = tmpMeta19;
@@ -289,14 +294,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PriorityQueue_link(threadData_t 
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _t = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _t;
+  omc_ret_ = _t;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_integer omc_PriorityQueue_rank(threadData_t *threadData, modelica_metatype _tree)
@@ -305,29 +311,25 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_PriorityQueue_rank(threadData_t *
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _rank has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _tree;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmp3 = omc_unbox_integer(tmpMeta2);
   _rank = tmp3  /* pattern as ty=Integer */;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _rank;
+  omc_ret_ = _rank;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_PriorityQueue_rank(threadData_t *threadData, modelica_metatype _tree)
 {
   modelica_integer _rank;
   modelica_metatype out_rank;
   _rank = omc_PriorityQueue_rank(threadData, _tree);
-  out_rank = mmc_mk_icon(_rank);
+  out_rank = omc_mk_icon(_rank);
   return out_rank;
 }
 
@@ -336,23 +338,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_PriorityQueue_root(threadData_t 
   modelica_metatype _elt = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _elt has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _tree;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _elt = tmpMeta2;
   _return: OMC_LABEL_UNUSED
-  return _elt;
+  omc_ret_ = _elt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_PriorityQueue_elements2(threadData_t *threadData, modelica_metatype _its, modelica_metatype _acc)
 {
   modelica_metatype _elts = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _elts has no default value.
   { /* match expression */
@@ -394,31 +399,34 @@ modelica_metatype omc_PriorityQueue_elements2(threadData_t *threadData, modelica
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _elts = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _elts;
+  omc_ret_ = _elts;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_PriorityQueue_elements(threadData_t *threadData, modelica_metatype _ts)
 {
   modelica_metatype _elts = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _elts has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _elts = omc_PriorityQueue_elements2(threadData, _ts, tmpMeta1);
   _return: OMC_LABEL_UNUSED
-  return _elts;
+  omc_ret_ = _elts;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_PriorityQueue_deleteAndReturnMin(threadData_t *threadData, modelica_metatype _ts, modelica_metatype *out_elt)
 {
   modelica_metatype _ots = NULL;
@@ -429,7 +437,8 @@ modelica_metatype omc_PriorityQueue_deleteAndReturnMin(threadData_t *threadData,
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ots has no default value.
   // _elt has no default value.
@@ -437,8 +446,8 @@ modelica_metatype omc_PriorityQueue_deleteAndReturnMin(threadData_t *threadData,
   // _ts2 has no default value.
   /* Pattern-matching tuple assignment */
   tmpMeta2 = omc_PriorityQueue_getMin(threadData, _ts, &tmpMeta1);
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 2));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 4));
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta2, 2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta2, 4);
   _elt = tmpMeta3;
   _ts1 = tmpMeta4;
   _ts2 = tmpMeta1;
@@ -446,10 +455,11 @@ modelica_metatype omc_PriorityQueue_deleteAndReturnMin(threadData_t *threadData,
   _ots = omc_PriorityQueue_meld(threadData, listReverse(_ts1), _ts2);
   _return: OMC_LABEL_UNUSED
   if (out_elt) { *out_elt = _elt; }
-  return _ots;
+  omc_ret_ = _ots;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_PriorityQueue_deleteMin(threadData_t *threadData, modelica_metatype _ts)
 {
   modelica_metatype _ots = NULL;
@@ -458,28 +468,31 @@ modelica_metatype omc_PriorityQueue_deleteMin(threadData_t *threadData, modelica
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ots has no default value.
   // _ts1 has no default value.
   // _ts2 has no default value.
   /* Pattern-matching tuple assignment */
   tmpMeta2 = omc_PriorityQueue_getMin(threadData, _ts, &tmpMeta1);
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 4));
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta2, 4);
   _ts1 = tmpMeta3;
   _ts2 = tmpMeta1;
 
   _ots = omc_PriorityQueue_meld(threadData, listReverse(_ts1), _ts2);
   _return: OMC_LABEL_UNUSED
-  return _ots;
+  omc_ret_ = _ots;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_PriorityQueue_findMin(threadData_t *threadData, modelica_metatype _inTs)
 {
   modelica_metatype _elt = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _elt has no default value.
   { /* match expression */
@@ -532,22 +545,24 @@ modelica_metatype omc_PriorityQueue_findMin(threadData_t *threadData, modelica_m
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _elt = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _elt;
+  omc_ret_ = _elt;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_PriorityQueue_meld2(threadData_t *threadData, modelica_boolean _b1, modelica_boolean _b2, modelica_metatype _t1, modelica_metatype _inTs1, modelica_metatype _t2, modelica_metatype _inTs2)
 {
   modelica_metatype _ts = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ts has no default value.
   { /* match expression */
@@ -606,33 +621,35 @@ modelica_metatype omc_PriorityQueue_meld2(threadData_t *threadData, modelica_boo
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _ts = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _ts;
+  omc_ret_ = _ts;
+  return omc_ret_;
 }
 modelica_metatype boxptr_PriorityQueue_meld2(threadData_t *threadData, modelica_metatype _b1, modelica_metatype _b2, modelica_metatype _t1, modelica_metatype _inTs1, modelica_metatype _t2, modelica_metatype _inTs2)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _ts = NULL;
-  tmp1 = mmc_unbox_integer(_b1);
-  tmp2 = mmc_unbox_integer(_b2);
+  tmp1 = omc_unbox_integer(_b1);
+  tmp2 = omc_unbox_integer(_b2);
   _ts = omc_PriorityQueue_meld2(threadData, tmp1, tmp2, _t1, _inTs1, _t2, _inTs2);
   /* skip box _ts; list<PriorityQueue.Tree> */
   return _ts;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_PriorityQueue_meld(threadData_t *threadData, modelica_metatype _its1, modelica_metatype _its2)
 {
   modelica_metatype _ts = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ts has no default value.
   { /* match expression */
@@ -694,59 +711,58 @@ modelica_metatype omc_PriorityQueue_meld(threadData_t *threadData, modelica_meta
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _ts = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _ts;
+  omc_ret_ = _ts;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_PriorityQueue_insert(threadData_t *threadData, modelica_metatype _elt, modelica_metatype _ts)
 {
   modelica_metatype _ots = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ots has no default value.
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
-  tmpMeta2 = mmc_mk_box4(3, &PriorityQueue_Tree_NODE__desc, _elt, mmc_mk_integer(((modelica_integer) 0)), tmpMeta1);
+  tmpMeta2 = omc_mk_box4(3, &PriorityQueue_Tree_NODE__desc, _elt, omc_mk_integer(((modelica_integer) 0)), tmpMeta1);
   _ots = omc_PriorityQueue_ins(threadData, tmpMeta2, _ts);
   _return: OMC_LABEL_UNUSED
-  return _ots;
+  omc_ret_ = _ots;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_PriorityQueue_isEmpty(threadData_t *threadData, modelica_metatype _ts)
 {
   modelica_boolean _isEmpty;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _isEmpty has no default value.
   _isEmpty = listEmpty(_ts);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _isEmpty;
+  omc_ret_ = _isEmpty;
+  return omc_ret_;
 }
 modelica_metatype boxptr_PriorityQueue_isEmpty(threadData_t *threadData, modelica_metatype _ts)
 {
   modelica_boolean _isEmpty;
   modelica_metatype out_isEmpty;
   _isEmpty = omc_PriorityQueue_isEmpty(threadData, _ts);
-  out_isEmpty = mmc_mk_icon(_isEmpty);
+  out_isEmpty = omc_mk_icon(_isEmpty);
   return out_isEmpty;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_PriorityQueue_compareElement(threadData_t *threadData, modelica_metatype _el1, modelica_metatype _el2)
 {
   modelica_boolean _b;
@@ -758,39 +774,35 @@ modelica_boolean omc_PriorityQueue_compareElement(threadData_t *threadData, mode
   modelica_metatype tmpMeta4;
   modelica_metatype tmpMeta5;
   modelica_integer tmp6;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   // _p1 has no default value.
   // _p2 has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _el1;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
   _p1 = tmp3  /* pattern as ty=Integer */;
 
   /* Pattern-matching assignment */
   tmpMeta4 = _el2;
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta4), 1));
-  tmp6 = mmc_unbox_integer(tmpMeta5);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta4, 1);
+  tmp6 = omc_unbox_integer(tmpMeta5);
   _p2 = tmp6  /* pattern as ty=Integer */;
 
   _b = (_p1 <= _p2);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _b;
+  omc_ret_ = _b;
+  return omc_ret_;
 }
 modelica_metatype boxptr_PriorityQueue_compareElement(threadData_t *threadData, modelica_metatype _el1, modelica_metatype _el2)
 {
   modelica_boolean _b;
   modelica_metatype out_b;
   _b = omc_PriorityQueue_compareElement(threadData, _el1, _el2);
-  out_b = mmc_mk_icon(_b);
+  out_b = omc_mk_icon(_b);
   return out_b;
 }
 

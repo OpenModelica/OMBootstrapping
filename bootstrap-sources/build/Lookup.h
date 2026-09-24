@@ -179,9 +179,9 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 extern struct record_description UnitAbsyn_InstStore_NOSTORE__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_isArrayType(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inPath, modelica_boolean *out_outIsArray);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Lookup_isArrayType(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inPath, modelica_metatype *out_outIsArray);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_isArrayType,2,0) {(void*) boxptr_Lookup_isArrayType,0}};
 #define boxvar_Lookup_isArrayType MMC_REFSTRUCTLIT(boxvar_lit_Lookup_isArrayType)
@@ -190,22 +190,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_isArrayType,2,0) {(void*) boxptr
 #define boxptr_Lookup_prefixSplicedExp omc_Lookup_prefixSplicedExp
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Lookup_isFunctionCallViaComponent(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inPath);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Lookup_isFunctionCallViaComponent(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inPath);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_isFunctionCallViaComponent,2,0) {(void*) boxptr_Lookup_isFunctionCallViaComponent,0}};
 #define boxvar_Lookup_isFunctionCallViaComponent MMC_REFSTRUCTLIT(boxvar_lit_Lookup_isFunctionCallViaComponent)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_isIterator(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inCref, modelica_metatype *out_outCache);
 #define boxptr_Lookup_isIterator omc_Lookup_isIterator
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_isIterator,2,0) {(void*) boxptr_Lookup_isIterator,0}};
 #define boxvar_Lookup_isIterator MMC_REFSTRUCTLIT(boxvar_lit_Lookup_isIterator)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_buildMetaRecordType(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _cdef, modelica_metatype *out_outEnv, modelica_metatype *out_ftype);
 #define boxptr_Lookup_buildMetaRecordType omc_Lookup_buildMetaRecordType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_buildMetaRecordType,2,0) {(void*) boxptr_Lookup_buildMetaRecordType,0}};
@@ -269,7 +269,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_buildMetaRecordType,2,0) {(void*
 #define boxptr_Lookup_buildRecordType omc_Lookup_buildRecordType
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_selectUpdatedEnv(threadData_t *threadData, modelica_metatype _inNewEnv, modelica_metatype _inOldEnv);
 #define boxptr_Lookup_selectUpdatedEnv omc_Lookup_selectUpdatedEnv
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_selectUpdatedEnv,2,0) {(void*) boxptr_Lookup_selectUpdatedEnv,0}};
@@ -294,70 +294,70 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_selectUpdatedEnv,2,0) {(void*) b
 #define boxptr_Lookup_createGenericBuiltinFunctions omc_Lookup_createGenericBuiltinFunctions
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupFunctionsListInEnv(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inIds, modelica_metatype _info, modelica_metatype _inAcc, modelica_metatype *out_outTypesTypeLst);
 #define boxptr_Lookup_lookupFunctionsListInEnv omc_Lookup_lookupFunctionsListInEnv
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupFunctionsListInEnv,2,0) {(void*) boxptr_Lookup_lookupFunctionsListInEnv,0}};
 #define boxvar_Lookup_lookupFunctionsListInEnv MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupFunctionsListInEnv)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupFunctionsInEnv(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inId, modelica_metatype _inInfo, modelica_metatype *out_outTypesTypeLst);
 #define boxptr_Lookup_lookupFunctionsInEnv omc_Lookup_lookupFunctionsInEnv
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupFunctionsInEnv,2,0) {(void*) boxptr_Lookup_lookupFunctionsInEnv,0}};
 #define boxvar_Lookup_lookupFunctionsInEnv MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupFunctionsInEnv)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupIdent(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_string _inIdent, modelica_metatype *out_outVar, modelica_metatype *out_outElement, modelica_metatype *out_outMod, modelica_metatype *out_instStatus, modelica_metatype *out_outEnv);
 #define boxptr_Lookup_lookupIdent omc_Lookup_lookupIdent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupIdent,2,0) {(void*) boxptr_Lookup_lookupIdent,0}};
 #define boxvar_Lookup_lookupIdent MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupIdent)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupClassLocal(threadData_t *threadData, modelica_metatype _inEnv, modelica_string _inIdent, modelica_metatype *out_outEnv);
 #define boxptr_Lookup_lookupClassLocal omc_Lookup_lookupClassLocal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupClassLocal,2,0) {(void*) boxptr_Lookup_lookupClassLocal,0}};
 #define boxvar_Lookup_lookupClassLocal MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupClassLocal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupIdentLocal(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_string _inIdent, modelica_metatype *out_outVar, modelica_metatype *out_outElement, modelica_metatype *out_outMod, modelica_metatype *out_instStatus, modelica_metatype *out_outComponentEnv);
 #define boxptr_Lookup_lookupIdentLocal omc_Lookup_lookupIdentLocal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupIdentLocal,2,0) {(void*) boxptr_Lookup_lookupIdentLocal,0}};
 #define boxvar_Lookup_lookupIdentLocal MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupIdentLocal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupVarLocal(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inComponentRef, modelica_metatype *out_outAttributes, modelica_metatype *out_outType, modelica_metatype *out_outBinding, modelica_metatype *out_constOfForIteratorRange, modelica_metatype *out_splicedExpData, modelica_metatype *out_outClassEnv, modelica_metatype *out_outComponentEnv, modelica_string *out_name);
 #define boxptr_Lookup_lookupVarLocal omc_Lookup_lookupVarLocal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupVarLocal,2,0) {(void*) boxptr_Lookup_lookupVarLocal,0}};
 #define boxvar_Lookup_lookupVarLocal MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupVarLocal)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupVarInPackagesIdent(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_string _id, modelica_metatype _ss, modelica_metatype _inPrevFrames, modelica_metatype _inState, modelica_metatype *out_outClassEnv, modelica_metatype *out_outAttributes, modelica_metatype *out_outType, modelica_metatype *out_outBinding, modelica_metatype *out_constOfForIteratorRange, modelica_metatype *out_splicedExpData, modelica_metatype *out_outComponentEnv, modelica_string *out_name);
 #define boxptr_Lookup_lookupVarInPackagesIdent omc_Lookup_lookupVarInPackagesIdent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupVarInPackagesIdent,2,0) {(void*) boxptr_Lookup_lookupVarInPackagesIdent,0}};
 #define boxvar_Lookup_lookupVarInPackagesIdent MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupVarInPackagesIdent)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupVarInPackages(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inComponentRef, modelica_metatype _inPrevFrames, modelica_metatype _inState, modelica_metatype *out_outClassEnv, modelica_metatype *out_outAttributes, modelica_metatype *out_outType, modelica_metatype *out_outBinding, modelica_metatype *out_constOfForIteratorRange, modelica_metatype *out_splicedExpData, modelica_metatype *out_outComponentEnv, modelica_string *out_name);
 #define boxptr_Lookup_lookupVarInPackages omc_Lookup_lookupVarInPackages
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupVarInPackages,2,0) {(void*) boxptr_Lookup_lookupVarInPackages,0}};
 #define boxvar_Lookup_lookupVarInPackages MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupVarInPackages)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupVarInternalIdent(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_string _ident, modelica_metatype _ss, modelica_metatype _searchStrategy, modelica_metatype *out_outAttributes, modelica_metatype *out_outType, modelica_metatype *out_outBinding, modelica_metatype *out_constOfForIteratorRange, modelica_metatype *out_splicedExpData, modelica_metatype *out_outClassEnv, modelica_metatype *out_outComponentEnv, modelica_string *out_name);
 #define boxptr_Lookup_lookupVarInternalIdent omc_Lookup_lookupVarInternalIdent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupVarInternalIdent,2,0) {(void*) boxptr_Lookup_lookupVarInternalIdent,0}};
 #define boxvar_Lookup_lookupVarInternalIdent MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupVarInternalIdent)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupVarInternal(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inComponentRef, modelica_metatype _searchStrategy, modelica_metatype *out_outAttributes, modelica_metatype *out_outType, modelica_metatype *out_outBinding, modelica_metatype *out_constOfForIteratorRange, modelica_metatype *out_splicedExpData, modelica_metatype *out_outClassEnv, modelica_metatype *out_outComponentEnv, modelica_string *out_name);
 #define boxptr_Lookup_lookupVarInternal omc_Lookup_lookupVarInternal
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupVarInternal,2,0) {(void*) boxptr_Lookup_lookupVarInternal,0}};
@@ -367,14 +367,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupVarInternal,2,0) {(void*) 
 #define boxptr_Lookup_checkPackageVariableConstant omc_Lookup_checkPackageVariableConstant
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupVarIdent(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_string _ident, modelica_metatype _ss, modelica_metatype *out_outAttributes, modelica_metatype *out_outType, modelica_metatype *out_outBinding, modelica_metatype *out_constOfForIteratorRange, modelica_metatype *out_outSplicedExpData, modelica_metatype *out_outClassEnv, modelica_metatype *out_outComponentEnv, modelica_string *out_name);
 #define boxptr_Lookup_lookupVarIdent omc_Lookup_lookupVarIdent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupVarIdent,2,0) {(void*) boxptr_Lookup_lookupVarIdent,0}};
 #define boxvar_Lookup_lookupVarIdent MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupVarIdent)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupVar(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inComponentRef, modelica_metatype *out_outAttributes, modelica_metatype *out_outType, modelica_metatype *out_outBinding, modelica_metatype *out_constOfForIteratorRange, modelica_metatype *out_outSplicedExpData, modelica_metatype *out_outClassEnv, modelica_metatype *out_outComponentEnv, modelica_string *out_name);
 #define boxptr_Lookup_lookupVar omc_Lookup_lookupVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupVar,2,0) {(void*) boxptr_Lookup_lookupVar,0}};
@@ -384,15 +384,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupVar,2,0) {(void*) boxptr_L
 #define boxptr_Lookup_lookupConnectorVar2 omc_Lookup_lookupConnectorVar2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupConnectorVar(threadData_t *threadData, modelica_metatype _env, modelica_metatype _cr, modelica_boolean _firstId, modelica_metatype *out_ty, modelica_metatype *out_status, modelica_boolean *out_isExpandable);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Lookup_lookupConnectorVar(threadData_t *threadData, modelica_metatype _env, modelica_metatype _cr, modelica_metatype _firstId, modelica_metatype *out_ty, modelica_metatype *out_status, modelica_metatype *out_isExpandable);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupConnectorVar,2,0) {(void*) boxptr_Lookup_lookupConnectorVar,0}};
 #define boxvar_Lookup_lookupConnectorVar MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupConnectorVar)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupRecordConstructorClass(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inPath, modelica_metatype *out_outClass, modelica_metatype *out_outEnv);
 #define boxptr_Lookup_lookupRecordConstructorClass omc_Lookup_lookupRecordConstructorClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupRecordConstructorClass,2,0) {(void*) boxptr_Lookup_lookupRecordConstructorClass,0}};
@@ -426,14 +426,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupRecordConstructorClass,2,0
 #define boxptr_Lookup_lookupClass1 omc_Lookup_lookupClass1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupClassIdent(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_string _ident, modelica_metatype _inInfo, modelica_metatype *out_outClass, modelica_metatype *out_outEnv);
 #define boxptr_Lookup_lookupClassIdent omc_Lookup_lookupClassIdent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupClassIdent,2,0) {(void*) boxptr_Lookup_lookupClassIdent,0}};
 #define boxvar_Lookup_lookupClassIdent MMC_REFSTRUCTLIT(boxvar_lit_Lookup_lookupClassIdent)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupClass(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inPath, modelica_metatype _inInfo, modelica_metatype *out_outClass, modelica_metatype *out_outEnv);
 #define boxptr_Lookup_lookupClass omc_Lookup_lookupClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupClass,2,0) {(void*) boxptr_Lookup_lookupClass,0}};
@@ -446,7 +446,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupClass,2,0) {(void*) boxptr
 #define boxptr_Lookup_lookupMetarecordsRecursive2 omc_Lookup_lookupMetarecordsRecursive2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupMetarecordsRecursive(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inUniontypePaths, modelica_metatype *out_outMetarecordTypes);
 #define boxptr_Lookup_lookupMetarecordsRecursive omc_Lookup_lookupMetarecordsRecursive
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupMetarecordsRecursive,2,0) {(void*) boxptr_Lookup_lookupMetarecordsRecursive,0}};
@@ -456,7 +456,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupMetarecordsRecursive,2,0) 
 #define boxptr_Lookup_lookupType2 omc_Lookup_lookupType2
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupTypeIdent(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_string _ident, modelica_metatype _msg, modelica_metatype *out_outType, modelica_metatype *out_outEnv);
 #define boxptr_Lookup_lookupTypeIdent omc_Lookup_lookupTypeIdent
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupTypeIdent,2,0) {(void*) boxptr_Lookup_lookupTypeIdent,0}};
@@ -466,7 +466,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupTypeIdent,2,0) {(void*) bo
 #define boxptr_Lookup_lookupTypeQual omc_Lookup_lookupTypeQual
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Lookup_lookupType(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inPath, modelica_metatype _msg, modelica_metatype *out_t, modelica_metatype *out_env);
 #define boxptr_Lookup_lookupType omc_Lookup_lookupType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Lookup_lookupType,2,0) {(void*) boxptr_Lookup_lookupType,0}};

@@ -30,6 +30,7 @@ extern "C" {
 #include "NSimStrongComponent.h"
 #include "NSimVar.h"
 #include "Pointer.h"
+#include "PointerWeak.h"
 #include "ProgramUtil.h"
 #include "SimCodeFunctionUtil.h"
 #include "SimCodeUtilShared.h"

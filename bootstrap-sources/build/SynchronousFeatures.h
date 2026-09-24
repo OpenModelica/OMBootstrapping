@@ -152,17 +152,17 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_SynchronousFeatures_createEqSystem omc_SynchronousFeatures_createEqSystem
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SynchronousFeatures_partitionIndependentBlocksSplitBlocks(threadData_t *threadData, modelica_integer _n, modelica_metatype _inSyst, modelica_metatype _ixs, modelica_metatype _rixs, modelica_metatype _mT, modelica_metatype _rmT, modelica_boolean _throwNoError, modelica_metatype _funcs, modelica_boolean _isInitial, modelica_metatype *out_unpartRemovedEqs, modelica_metatype *out_varPartMap);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_SynchronousFeatures_partitionIndependentBlocksSplitBlocks(threadData_t *threadData, modelica_metatype _n, modelica_metatype _inSyst, modelica_metatype _ixs, modelica_metatype _rixs, modelica_metatype _mT, modelica_metatype _rmT, modelica_metatype _throwNoError, modelica_metatype _funcs, modelica_metatype _isInitial, modelica_metatype *out_unpartRemovedEqs, modelica_metatype *out_varPartMap);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_partitionIndependentBlocksSplitBlocks,2,0) {(void*) boxptr_SynchronousFeatures_partitionIndependentBlocksSplitBlocks,0}};
 #define boxvar_SynchronousFeatures_partitionIndependentBlocksSplitBlocks MMC_REFSTRUCTLIT(boxvar_lit_SynchronousFeatures_partitionIndependentBlocksSplitBlocks)
 
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SynchronousFeatures_partitionIndependentBlocks0(threadData_t *threadData, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _rm, modelica_metatype _rmT, modelica_metatype _eqPartMap, modelica_metatype _varPartMap, modelica_metatype _rixs, modelica_metatype _vars, modelica_metatype _rvars);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_SynchronousFeatures_partitionIndependentBlocks0(threadData_t *threadData, modelica_metatype _m, modelica_metatype _mT, modelica_metatype _rm, modelica_metatype _rmT, modelica_metatype _eqPartMap, modelica_metatype _varPartMap, modelica_metatype _rixs, modelica_metatype _vars, modelica_metatype _rvars);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_partitionIndependentBlocks0,2,0) {(void*) boxptr_SynchronousFeatures_partitionIndependentBlocks0,0}};
 #define boxvar_SynchronousFeatures_partitionIndependentBlocks0 MMC_REFSTRUCTLIT(boxvar_lit_SynchronousFeatures_partitionIndependentBlocks0)
@@ -312,7 +312,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_partitionIndependen
 #define boxptr_SynchronousFeatures_treatClockedStates omc_SynchronousFeatures_treatClockedStates
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SynchronousFeatures_getBoolClockWhenClauses(threadData_t *threadData, modelica_metatype __omcQ_24in_5Feq, modelica_metatype __omcQ_24in_5FeqLst, modelica_metatype *out_eqLst);
 #define boxptr_SynchronousFeatures_getBoolClockWhenClauses omc_SynchronousFeatures_getBoolClockWhenClauses
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_getBoolClockWhenClauses,2,0) {(void*) boxptr_SynchronousFeatures_getBoolClockWhenClauses,0}};
@@ -325,21 +325,21 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_getBoolClockWhenCla
 #define boxptr_SynchronousFeatures_clockPartitioning1 omc_SynchronousFeatures_clockPartitioning1
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SynchronousFeatures_contPartitioning(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_SynchronousFeatures_contPartitioning omc_SynchronousFeatures_contPartitioning
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_contPartitioning,2,0) {(void*) boxptr_SynchronousFeatures_contPartitioning,0}};
 #define boxvar_SynchronousFeatures_contPartitioning MMC_REFSTRUCTLIT(boxvar_lit_SynchronousFeatures_contPartitioning)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SynchronousFeatures_synchronousFeatures(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_SynchronousFeatures_synchronousFeatures omc_SynchronousFeatures_synchronousFeatures
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_synchronousFeatures,2,0) {(void*) boxptr_SynchronousFeatures_synchronousFeatures,0}};
 #define boxvar_SynchronousFeatures_synchronousFeatures MMC_REFSTRUCTLIT(boxvar_lit_SynchronousFeatures_synchronousFeatures)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SynchronousFeatures_clockPartitioning(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_SynchronousFeatures_clockPartitioning omc_SynchronousFeatures_clockPartitioning
 static const MMC_DEFSTRUCTLIT(boxvar_lit_SynchronousFeatures_clockPartitioning,2,0) {(void*) boxptr_SynchronousFeatures_clockPartitioning,0}};

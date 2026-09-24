@@ -91,40 +91,40 @@ extern struct record_description SCode_Variability_VAR__desc;
 extern struct record_description SCode_Visibility_PUBLIC__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_StaticScript_elabGraphicsExp(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_boolean _inImplInst, modelica_metatype _inPrefix, modelica_metatype _info, modelica_metatype *out_outExp, modelica_metatype *out_outProperties);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_StaticScript_elabGraphicsExp(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_metatype _inImplInst, modelica_metatype _inPrefix, modelica_metatype _info, modelica_metatype *out_outExp, modelica_metatype *out_outProperties);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StaticScript_elabGraphicsExp,2,0) {(void*) boxptr_StaticScript_elabGraphicsExp,0}};
 #define boxvar_StaticScript_elabGraphicsExp MMC_REFSTRUCTLIT(boxvar_lit_StaticScript_elabGraphicsExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_StaticScript_elabExp(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_boolean _inImplicit, modelica_boolean _performVectorization, modelica_metatype _inPrefix, modelica_metatype _info, modelica_metatype *out_outExp, modelica_metatype *out_outProperties);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_StaticScript_elabExp(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inExp, modelica_metatype _inImplicit, modelica_metatype _performVectorization, modelica_metatype _inPrefix, modelica_metatype _info, modelica_metatype *out_outExp, modelica_metatype *out_outProperties);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StaticScript_elabExp,2,0) {(void*) boxptr_StaticScript_elabExp,0}};
 #define boxvar_StaticScript_elabExp MMC_REFSTRUCTLIT(boxvar_lit_StaticScript_elabExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_StaticScript_elabCallInteractive(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcache, modelica_metatype _env, modelica_metatype _fn, modelica_metatype _args, modelica_metatype _nargs, modelica_boolean _impl, modelica_metatype _pre, modelica_metatype _info, modelica_metatype *out_e, modelica_metatype *out_prop);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_StaticScript_elabCallInteractive(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fcache, modelica_metatype _env, modelica_metatype _fn, modelica_metatype _args, modelica_metatype _nargs, modelica_metatype _impl, modelica_metatype _pre, modelica_metatype _info, modelica_metatype *out_e, modelica_metatype *out_prop);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StaticScript_elabCallInteractive,2,0) {(void*) boxptr_StaticScript_elabCallInteractive,0}};
 #define boxvar_StaticScript_elabCallInteractive MMC_REFSTRUCTLIT(boxvar_lit_StaticScript_elabCallInteractive)
 
 
-DLLDirection
+DLLModelDirection
 void omc_StaticScript_checkSimulationArguments(threadData_t *threadData, modelica_metatype _args, modelica_string _callName, modelica_metatype _info);
 #define boxptr_StaticScript_checkSimulationArguments omc_StaticScript_checkSimulationArguments
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StaticScript_checkSimulationArguments,2,0) {(void*) boxptr_StaticScript_checkSimulationArguments,0}};
 #define boxvar_StaticScript_checkSimulationArguments MMC_REFSTRUCTLIT(boxvar_lit_StaticScript_checkSimulationArguments)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_StaticScript_getSimulationArguments(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inAbsynExpLst, modelica_metatype _inAbsynNamedArgLst, modelica_boolean _inImplInst, modelica_metatype _inPrefix, modelica_string _callName, modelica_metatype _inInfo, modelica_metatype _defaultOption, modelica_metatype *out_outSimulationArguments);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_StaticScript_getSimulationArguments(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inAbsynExpLst, modelica_metatype _inAbsynNamedArgLst, modelica_metatype _inImplInst, modelica_metatype _inPrefix, modelica_metatype _callName, modelica_metatype _inInfo, modelica_metatype _defaultOption, modelica_metatype *out_outSimulationArguments);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StaticScript_getSimulationArguments,2,0) {(void*) boxptr_StaticScript_getSimulationArguments,0}};
 #define boxvar_StaticScript_getSimulationArguments MMC_REFSTRUCTLIT(boxvar_lit_StaticScript_getSimulationArguments)

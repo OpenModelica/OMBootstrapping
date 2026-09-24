@@ -127,7 +127,7 @@ extern struct record_description StateMachineFlatten_Transition_TRANSITION__desc
 #define boxptr_StateMachineFlatten_wrapHack omc_StateMachineFlatten_wrapHack
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_StateMachineFlatten_dumpTransitionStr(threadData_t *threadData, modelica_metatype _transition);
 #define boxptr_StateMachineFlatten_dumpTransitionStr omc_StateMachineFlatten_dumpTransitionStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StateMachineFlatten_dumpTransitionStr,2,0) {(void*) boxptr_StateMachineFlatten_dumpTransitionStr,0}};
@@ -203,7 +203,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_StateMachineFlatten_dumpTransitionStr,2
 #define boxptr_StateMachineFlatten_flatSmToDataFlow omc_StateMachineFlatten_flatSmToDataFlow
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_StateMachineFlatten_stateMachineToDataFlow(threadData_t *threadData, modelica_metatype _cache, modelica_metatype _env, modelica_metatype _inDAElist);
 #define boxptr_StateMachineFlatten_stateMachineToDataFlow omc_StateMachineFlatten_stateMachineToDataFlow
 static const MMC_DEFSTRUCTLIT(boxvar_lit_StateMachineFlatten_stateMachineToDataFlow,2,0) {(void*) boxptr_StateMachineFlatten_stateMachineToDataFlow,0}};

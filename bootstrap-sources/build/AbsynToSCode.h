@@ -265,9 +265,9 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_AbsynToSCode_translateSub omc_AbsynToSCode_translateSub
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateMod(threadData_t *threadData, modelica_metatype _inMod, modelica_metatype _finalPrefix, modelica_metatype _eachPrefix, modelica_metatype _comment, modelica_metatype _info, modelica_boolean _keepEmpty);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_AbsynToSCode_translateMod(threadData_t *threadData, modelica_metatype _inMod, modelica_metatype _finalPrefix, modelica_metatype _eachPrefix, modelica_metatype _comment, modelica_metatype _info, modelica_metatype _keepEmpty);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateMod,2,0) {(void*) boxptr_AbsynToSCode_translateMod,0}};
 #define boxvar_AbsynToSCode_translateMod MMC_REFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateMod)
@@ -321,28 +321,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateMod,2,0) {(void*)
 #define boxptr_AbsynToSCode_translateDefineunitParam omc_AbsynToSCode_translateDefineunitParam
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateElement(threadData_t *threadData, modelica_metatype _inElement, modelica_metatype _inVisibility);
 #define boxptr_AbsynToSCode_translateElement omc_AbsynToSCode_translateElement
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateElement,2,0) {(void*) boxptr_AbsynToSCode_translateElement,0}};
 #define boxvar_AbsynToSCode_translateElement MMC_REFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateElement)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateAnnotationOpt(threadData_t *threadData, modelica_metatype _absynAnnotation);
 #define boxptr_AbsynToSCode_translateAnnotationOpt omc_AbsynToSCode_translateAnnotationOpt
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateAnnotationOpt,2,0) {(void*) boxptr_AbsynToSCode_translateAnnotationOpt,0}};
 #define boxvar_AbsynToSCode_translateAnnotationOpt MMC_REFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateAnnotationOpt)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateAnnotation(threadData_t *threadData, modelica_metatype _inAnnotation);
 #define boxptr_AbsynToSCode_translateAnnotation omc_AbsynToSCode_translateAnnotation
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateAnnotation,2,0) {(void*) boxptr_AbsynToSCode_translateAnnotation,0}};
 #define boxvar_AbsynToSCode_translateAnnotation MMC_REFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateAnnotation)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateEitemlist(threadData_t *threadData, modelica_metatype _inAbsynElementItemLst, modelica_metatype _inVisibility);
 #define boxptr_AbsynToSCode_translateEitemlist omc_AbsynToSCode_translateEitemlist
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateEitemlist,2,0) {(void*) boxptr_AbsynToSCode_translateEitemlist,0}};
@@ -358,7 +358,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateEitemlist,2,0) {(
 #define boxptr_AbsynToSCode_translateClassdefAlgorithmItem omc_AbsynToSCode_translateClassdefAlgorithmItem
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateClassdefAlgorithmitems(threadData_t *threadData, modelica_metatype _inStatements);
 #define boxptr_AbsynToSCode_translateClassdefAlgorithmitems omc_AbsynToSCode_translateClassdefAlgorithmitems
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateClassdefAlgorithmitems,2,0) {(void*) boxptr_AbsynToSCode_translateClassdefAlgorithmitems,0}};
@@ -380,7 +380,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateClassdefAlgorithm
 #define boxptr_AbsynToSCode_translateClassdefEquations omc_AbsynToSCode_translateClassdefEquations
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateClassdefElements(threadData_t *threadData, modelica_metatype _inAbsynClassPartLst);
 #define boxptr_AbsynToSCode_translateClassdefElements omc_AbsynToSCode_translateClassdefElements
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateClassdefElements,2,0) {(void*) boxptr_AbsynToSCode_translateClassdefElements,0}};
@@ -399,49 +399,49 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateClassdefElements,
 #define boxptr_AbsynToSCode_translateAttributes omc_AbsynToSCode_translateAttributes
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateRestriction(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inRestriction);
 #define boxptr_AbsynToSCode_translateRestriction omc_AbsynToSCode_translateRestriction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateRestriction,2,0) {(void*) boxptr_AbsynToSCode_translateRestriction,0}};
 #define boxvar_AbsynToSCode_translateRestriction MMC_REFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateRestriction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_getListofQualOperatorFuncsfromOperator(threadData_t *threadData, modelica_metatype _inOperator);
 #define boxptr_AbsynToSCode_getListofQualOperatorFuncsfromOperator omc_AbsynToSCode_getListofQualOperatorFuncsfromOperator
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_getListofQualOperatorFuncsfromOperator,2,0) {(void*) boxptr_AbsynToSCode_getListofQualOperatorFuncsfromOperator,0}};
 #define boxvar_AbsynToSCode_getListofQualOperatorFuncsfromOperator MMC_REFSTRUCTLIT(boxvar_lit_AbsynToSCode_getListofQualOperatorFuncsfromOperator)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_getOperatorQualName(threadData_t *threadData, modelica_metatype _inOperatorFunction, modelica_string _operName);
 #define boxptr_AbsynToSCode_getOperatorQualName omc_AbsynToSCode_getOperatorQualName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_getOperatorQualName,2,0) {(void*) boxptr_AbsynToSCode_getOperatorQualName,0}};
 #define boxvar_AbsynToSCode_getOperatorQualName MMC_REFSTRUCTLIT(boxvar_lit_AbsynToSCode_getOperatorQualName)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_getOperatorGivenName(threadData_t *threadData, modelica_metatype _inOperatorFunction);
 #define boxptr_AbsynToSCode_getOperatorGivenName omc_AbsynToSCode_getOperatorGivenName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_getOperatorGivenName,2,0) {(void*) boxptr_AbsynToSCode_getOperatorGivenName,0}};
 #define boxvar_AbsynToSCode_getOperatorGivenName MMC_REFSTRUCTLIT(boxvar_lit_AbsynToSCode_getOperatorGivenName)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateOperatorDef(threadData_t *threadData, modelica_metatype _inClassDef, modelica_string _operatorName, modelica_metatype _info, modelica_metatype *out_cmt);
 #define boxptr_AbsynToSCode_translateOperatorDef omc_AbsynToSCode_translateOperatorDef
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateOperatorDef,2,0) {(void*) boxptr_AbsynToSCode_translateOperatorDef,0}};
 #define boxvar_AbsynToSCode_translateOperatorDef MMC_REFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateOperatorDef)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateClass(threadData_t *threadData, modelica_metatype _inClass);
 #define boxptr_AbsynToSCode_translateClass omc_AbsynToSCode_translateClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateClass,2,0) {(void*) boxptr_AbsynToSCode_translateClass,0}};
 #define boxvar_AbsynToSCode_translateClass MMC_REFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_AbsynToSCode_translateAbsyn2SCode(threadData_t *threadData, modelica_metatype _inProgram);
 #define boxptr_AbsynToSCode_translateAbsyn2SCode omc_AbsynToSCode_translateAbsyn2SCode
 static const MMC_DEFSTRUCTLIT(boxvar_lit_AbsynToSCode_translateAbsyn2SCode,2,0) {(void*) boxptr_AbsynToSCode_translateAbsyn2SCode,0}};

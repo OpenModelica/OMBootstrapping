@@ -187,15 +187,15 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_XMLDump_getOrderedVars omc_XMLDump_getOrderedVars
 
 
-DLLDirection
+DLLModelDirection
 void omc_XMLDump_dumpBackendDAE(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_boolean _addOriginalAdjacencyMatrix, modelica_boolean _addSolvingInfo, modelica_boolean _addMathMLCode, modelica_boolean _dumpResiduals, modelica_boolean _dumpSolvedEquations);
-DLLDirection
+DLLModelDirection
 void boxptr_XMLDump_dumpBackendDAE(threadData_t *threadData, modelica_metatype _inBackendDAE, modelica_metatype _addOriginalAdjacencyMatrix, modelica_metatype _addSolvingInfo, modelica_metatype _addMathMLCode, modelica_metatype _dumpResiduals, modelica_metatype _dumpSolvedEquations);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_XMLDump_dumpBackendDAE,2,0) {(void*) boxptr_XMLDump_dumpBackendDAE,0}};
 #define boxvar_XMLDump_dumpBackendDAE MMC_REFSTRUCTLIT(boxvar_lit_XMLDump_dumpBackendDAE)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_XMLDump_dumpDAEXML(threadData_t *threadData, modelica_metatype _inDAE);
 #define boxptr_XMLDump_dumpDAEXML omc_XMLDump_dumpDAEXML
 static const MMC_DEFSTRUCTLIT(boxvar_lit_XMLDump_dumpDAEXML,2,0) {(void*) boxptr_XMLDump_dumpDAEXML,0}};

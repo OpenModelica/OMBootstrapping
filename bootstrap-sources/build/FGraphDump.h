@@ -39,9 +39,9 @@ extern struct record_description GraphML_ShapeType_TRAPEZOID__desc;
 extern struct record_description GraphML_ShapeType_TRIANGLE__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_FGraphDump_graphml(threadData_t *threadData, modelica_metatype _node, modelica_boolean _escape, modelica_metatype *out_shape, modelica_string *out_nname);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_FGraphDump_graphml(threadData_t *threadData, modelica_metatype _node, modelica_metatype _escape, modelica_metatype *out_shape, modelica_metatype *out_nname);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FGraphDump_graphml,2,0) {(void*) boxptr_FGraphDump_graphml,0}};
 #define boxvar_FGraphDump_graphml MMC_REFSTRUCTLIT(boxvar_lit_FGraphDump_graphml)
@@ -53,7 +53,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FGraphDump_graphml,2,0) {(void*) boxptr
 #define boxptr_FGraphDump_addNodes omc_FGraphDump_addNodes
 
 
-DLLDirection
+DLLModelDirection
 void omc_FGraphDump_dumpGraph(threadData_t *threadData, modelica_metatype _inGraph, modelica_string _fileName);
 #define boxptr_FGraphDump_dumpGraph omc_FGraphDump_dumpGraph
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FGraphDump_dumpGraph,2,0) {(void*) boxptr_FGraphDump_dumpGraph,0}};

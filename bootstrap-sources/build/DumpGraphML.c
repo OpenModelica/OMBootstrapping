@@ -143,37 +143,33 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_DumpGraphML_isUnMarked(threadData
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_integer tmp4;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   // _arr has no default value.
   // _mark has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _ass;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp4 = mmc_unbox_integer(tmpMeta3);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp4 = omc_unbox_integer(tmpMeta3);
   _arr = tmpMeta2;
   _mark = tmp4  /* pattern as ty=Integer */;
 
-  _b = (!(mmc_unbox_integer(arrayGet(_arr,labs(_indx)) /* DAE.ASUB */) == _mark));
+  _b = (!(omc_unbox_integer(arrayGet(_arr,labs(_indx)) /* DAE.ASUB */) == _mark));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _b;
+  omc_ret_ = _b;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_isUnMarked(threadData_t *threadData, modelica_metatype _ass, modelica_metatype _indx)
 {
   modelica_integer tmp1;
   modelica_boolean _b;
   modelica_metatype out_b;
-  tmp1 = mmc_unbox_integer(_indx);
+  tmp1 = omc_unbox_integer(_indx);
   _b = omc_DumpGraphML_isUnMarked(threadData, _ass, tmp1);
-  out_b = mmc_mk_icon(_b);
+  out_b = omc_mk_icon(_b);
   return out_b;
 }
 
@@ -182,8 +178,9 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_DumpGraphML_addCompEdgesGraph(thr
   modelica_integer _oN;
   modelica_metatype _oGraph = NULL;
   modelica_integer tmp1_c0 __attribute__((unused)) = 0;
+  modelica_integer omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oN has no default value.
   // _oGraph has no default value.
@@ -204,7 +201,7 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_DumpGraphML_addCompEdgesGraph(thr
       // _c has no default value.
       // _graph has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -221,32 +218,32 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_DumpGraphML_addCompEdgesGraph(thr
           modelica_metatype tmpMeta7;
           modelica_integer tmp8;
           modelica_boolean tmp9;
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
+          modelica_string tmp10;
+          modelica_string tmp11;
+          modelica_string tmp12;
           modelica_metatype tmpMeta13;
           modelica_metatype tmpMeta14;
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmp8 = mmc_unbox_integer(tmpMeta6);
+          tmp8 = omc_unbox_integer(tmpMeta6);
           _v = tmp8  /* pattern as ty=Integer */;
           _rest = tmpMeta7;
           /* Pattern matching succeeded */
-          _c = mmc_unbox_integer(arrayGet(_varcomp,_v) /* DAE.ASUB */);
+          _c = omc_unbox_integer(arrayGet(_varcomp,_v) /* DAE.ASUB */);
 
           /* Pattern-matching assignment */
-          tmp9 = (mmc_unbox_integer(arrayGet(_markarray,_c) /* DAE.ASUB */) == _mark);
+          tmp9 = (omc_unbox_integer(arrayGet(_markarray,_c) /* DAE.ASUB */) == _mark);
           if (0 /* false */ != tmp9) goto goto_2;
 
-          arrayUpdate(_markarray, _c, mmc_mk_integer(_mark));
+          arrayUpdate(_markarray, _c, omc_mk_integer(_mark));
 
-          tmpMeta10 = stringAppend(_OMC_LIT0,intString(_id));
-          tmpMeta11 = stringAppend(_OMC_LIT1,intString(_c));
-          tmpMeta12 = stringAppend(_OMC_LIT1,intString(_iN));
+          tmp10 = stringAppend(_OMC_LIT0,intString(_id));
+          tmp11 = stringAppend(_OMC_LIT1,intString(_c));
+          tmp12 = stringAppend(_OMC_LIT1,intString(_iN));
           tmpMeta13 = MMC_REFSTRUCTLIT(mmc_nil);
           tmpMeta14 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graph = omc_GraphML_addEdge(threadData, tmpMeta10, tmpMeta11, tmpMeta12, _OMC_LIT2, _OMC_LIT3, 2.0, 0 /* false */, tmpMeta13, _OMC_LIT6, tmpMeta14, _iGraph, NULL);
+          _graph = omc_GraphML_addEdge(threadData, tmp10, tmp11, tmp12, _OMC_LIT2, _OMC_LIT3, 2.0, 0 /* false */, tmpMeta13, _OMC_LIT6, tmpMeta14, _iGraph, NULL);
           tmp1_c0 = omc_DumpGraphML_addCompEdgesGraph(threadData, _rest, _varcomp, _markarray, _mark, _iN, ((modelica_integer) 1) + _id, _graph, &tmpMeta[0+1]);
           goto tmp3_done;
         }
@@ -268,14 +265,14 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_DumpGraphML_addCompEdgesGraph(thr
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -283,7 +280,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_DumpGraphML_addCompEdgesGraph(thr
   _oGraph = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_oGraph) { *out_oGraph = _oGraph; }
-  return _oN;
+  omc_ret_ = _oN;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addCompEdgesGraph(threadData_t *threadData, modelica_metatype _iVars, modelica_metatype _varcomp, modelica_metatype _markarray, modelica_metatype _mark, modelica_metatype _iN, modelica_metatype _id, modelica_metatype _iGraph, modelica_metatype *out_oGraph)
 {
@@ -292,11 +290,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addCompEdgesGraph
   modelica_integer tmp3;
   modelica_integer _oN;
   modelica_metatype out_oN;
-  tmp1 = mmc_unbox_integer(_mark);
-  tmp2 = mmc_unbox_integer(_iN);
-  tmp3 = mmc_unbox_integer(_id);
+  tmp1 = omc_unbox_integer(_mark);
+  tmp2 = omc_unbox_integer(_iN);
+  tmp3 = omc_unbox_integer(_id);
   _oN = omc_DumpGraphML_addCompEdgesGraph(threadData, _iVars, _varcomp, _markarray, tmp1, tmp2, tmp3, _iGraph, out_oGraph);
-  out_oN = mmc_mk_icon(_oN);
+  out_oN = omc_mk_icon(_oN);
   /* skip box _oGraph; GraphML.GraphInfo */
   return out_oN;
 }
@@ -309,7 +307,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_getUsedVarsComp(thre
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _oVars = tmpMeta1;
@@ -319,25 +318,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_getUsedVarsComp(thre
     for (tmpMeta2 = _iEqns; !listEmpty(tmpMeta2); tmpMeta2=MMC_CDR(tmpMeta2))
     {
       _eq = MMC_CAR(tmpMeta2);
-      _vlst = omc_List_select1(threadData, arrayGet(_m,mmc_unbox_integer(_eq)) /* DAE.ASUB */, boxvar_intGt, mmc_mk_integer(((modelica_integer) 0)));
+      _vlst = omc_List_select1(threadData, arrayGet(_m,omc_unbox_integer(_eq)) /* DAE.ASUB */, boxvar_intGt, omc_mk_integer(((modelica_integer) 0)));
 
-      tmpMeta3 = mmc_mk_box2(0, _markarray, mmc_mk_integer(_mark));
+      tmpMeta3 = omc_mk_box2(0, _markarray, omc_mk_integer(_mark));
       _vlst = omc_List_select1r(threadData, _vlst, boxvar_DumpGraphML_isUnMarked, tmpMeta3);
 
-      omc_List_fold1r(threadData, _vlst, boxvar_arrayUpdate, mmc_mk_integer(_mark), _markarray);
+      omc_List_fold1r(threadData, _vlst, boxvar_arrayUpdate, omc_mk_integer(_mark), _markarray);
 
       _oVars = listAppend(_vlst, _oVars);
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _oVars;
+  omc_ret_ = _oVars;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_getUsedVarsComp(threadData_t *threadData, modelica_metatype _iEqns, modelica_metatype _m, modelica_metatype _markarray, modelica_metatype _mark)
 {
   modelica_integer tmp1;
   modelica_metatype _oVars = NULL;
   modelica_metatype tmpMeta2;
-  tmp1 = mmc_unbox_integer(_mark);
+  tmp1 = omc_unbox_integer(_mark);
   _oVars = omc_DumpGraphML_getUsedVarsComp(threadData, _iEqns, _m, _markarray, tmp1);
   /* skip box _oVars; list<#Integer> */
   return _oVars;
@@ -347,7 +347,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addCompsEdgesGraph(t
 {
   modelica_metatype _oGraph = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oGraph has no default value.
   { /* match expression */
@@ -388,7 +389,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addCompsEdgesGraph(t
           /* Pattern matching succeeded */
           _elst = omc_BackendDAETransform_getEquationAndSolvedVarIndxes(threadData, _comp ,&_vlst);
 
-          omc_List_fold1r(threadData, _vlst, boxvar_arrayUpdate, mmc_mk_integer(_mark), _markarray);
+          omc_List_fold1r(threadData, _vlst, boxvar_arrayUpdate, omc_mk_integer(_mark), _markarray);
 
           _vlst = omc_DumpGraphML_getUsedVarsComp(threadData, _elst, _m, _markarray, _mark);
 
@@ -409,14 +410,15 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addCompsEdgesGraph(t
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oGraph = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oGraph;
+  omc_ret_ = _oGraph;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addCompsEdgesGraph(threadData_t *threadData, modelica_metatype _iComps, modelica_metatype _m, modelica_metatype _varcomp, modelica_metatype _iN, modelica_metatype _id, modelica_metatype _markarray, modelica_metatype _mark, modelica_metatype _iGraph)
 {
@@ -424,9 +426,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addCompsEdgesGrap
   modelica_integer tmp2;
   modelica_integer tmp3;
   modelica_metatype _oGraph = NULL;
-  tmp1 = mmc_unbox_integer(_iN);
-  tmp2 = mmc_unbox_integer(_id);
-  tmp3 = mmc_unbox_integer(_mark);
+  tmp1 = omc_unbox_integer(_iN);
+  tmp2 = omc_unbox_integer(_id);
+  tmp3 = omc_unbox_integer(_mark);
   _oGraph = omc_DumpGraphML_addCompsEdgesGraph(threadData, _iComps, _m, _varcomp, tmp1, tmp2, _markarray, tmp3, _iGraph);
   /* skip box _oGraph; GraphML.GraphInfo */
   return _oGraph;
@@ -436,7 +438,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addCompsGraph(thread
 {
   modelica_metatype _oGraph = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _oGraph has no default value.
   { /* match expression */
@@ -480,19 +483,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addCompsGraph(thread
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           modelica_integer tmp10;
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
+          modelica_string tmp11;
+          modelica_string tmp12;
           modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
+          modelica_string tmp14;
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
           modelica_metatype tmpMeta17;
           if (listEmpty(tmp4_1)) goto tmp3_end;
           tmpMeta6 = MMC_CAR(tmp4_1);
           tmpMeta7 = MMC_CDR(tmp4_1);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp10 = mmc_unbox_integer(tmpMeta9);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp10 = omc_unbox_integer(tmpMeta9);
           _comp = tmpMeta6;
           _rest = tmpMeta7;
           _graphInfo = tmpMeta8;
@@ -500,22 +503,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addCompsGraph(thread
           /* Pattern matching succeeded */
           omc_BackendDAETransform_getEquationAndSolvedVarIndxes(threadData, _comp ,&_vlst);
 
-          _varcomp1 = omc_List_fold1r(threadData, _vlst, boxvar_arrayUpdate, mmc_mk_integer(_iN), _varcomp);
+          _varcomp1 = omc_List_fold1r(threadData, _vlst, boxvar_arrayUpdate, omc_mk_integer(_iN), _varcomp);
 
           _varlst = omc_List_map1r(threadData, _vlst, boxvar_BackendVariable_getVarAt, _vars);
 
-          tmpMeta11 = stringAppend(intString(_iN),_OMC_LIT7);
-          tmpMeta12 = stringAppend(tmpMeta11,stringDelimitList(omc_List_mapMap(threadData, _varlst, boxvar_BackendVariable_varCref, boxvar_ComponentReferenceBasics_printComponentRefStr), _OMC_LIT8));
-          _text = tmpMeta12;
+          tmp11 = stringAppend(intString(_iN),_OMC_LIT7);
+          tmp12 = stringAppend(tmp11,stringDelimitList(omc_List_mapMap(threadData, _varlst, boxvar_BackendVariable_varCref, boxvar_ComponentReferenceBasics_printComponentRefStr), _OMC_LIT8));
+          omc_string_store(&(_text), tmp12);
 
-          tmpMeta13 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _text, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta13 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _text, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta13;
 
-          tmpMeta14 = stringAppend(_OMC_LIT1,intString(_iN));
+          tmp14 = stringAppend(_OMC_LIT1,intString(_iN));
           tmpMeta15 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta16 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta14, _OMC_LIT10, 1.0, tmpMeta15, _OMC_LIT11, mmc_mk_none(), tmpMeta16, _graph, _graphInfo, NULL);
-          tmpMeta17 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
+          _graphInfo = omc_GraphML_addNode(threadData, tmp14, _OMC_LIT10, 1.0, tmpMeta15, _OMC_LIT11, mmc_mk_none(), tmpMeta16, _graph, _graphInfo, NULL);
+          tmpMeta17 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
           /* Tail recursive call */
           _iComps = _rest;
           _varcomp = _varcomp1;
@@ -531,20 +534,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addCompsGraph(thread
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _oGraph = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _oGraph;
+  omc_ret_ = _oGraph;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addCompsGraph(threadData_t *threadData, modelica_metatype _iComps, modelica_metatype _vars, modelica_metatype _varcomp, modelica_metatype _iN, modelica_metatype _iGraph)
 {
   modelica_integer tmp1;
   modelica_metatype _oGraph = NULL;
-  tmp1 = mmc_unbox_integer(_iN);
+  tmp1 = omc_unbox_integer(_iN);
   _oGraph = omc_DumpGraphML_addCompsGraph(threadData, _iComps, _vars, _varcomp, tmp1, _iGraph);
   /* skip box _oGraph; tuple<GraphML.GraphInfo, #Integer> */
   return _oGraph;
@@ -571,12 +575,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedNumEdgeGr
   modelica_metatype tmpMeta10;
   modelica_boolean tmp11;
   modelica_metatype tmpMeta12;
-  modelica_metatype tmpMeta13;
-  modelica_metatype tmpMeta14;
-  modelica_metatype tmpMeta15;
+  modelica_string tmp13;
+  modelica_string tmp14;
+  modelica_string tmp15;
   modelica_metatype tmpMeta16;
   modelica_metatype tmpMeta17;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outTpl has no default value.
   // _id has no default value.
@@ -587,12 +592,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedNumEdgeGr
   // _labels has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _inTpl;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 4);
   _id = tmp3  /* pattern as ty=Integer */;
   _r = tmp5  /* pattern as ty=Integer */;
   _text = tmpMeta6;
@@ -603,7 +608,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedNumEdgeGr
   tmp11 = (modelica_boolean)(_r == _v);
   if(tmp11)
   {
-    tmpMeta9 = mmc_mk_box4(3, &GraphML_EdgeLabel_EDGELABEL__desc, _text, _OMC_LIT14, mmc_mk_integer(((modelica_integer) 12)));
+    tmpMeta9 = omc_mk_box4(3, &GraphML_EdgeLabel_EDGELABEL__desc, _text, _OMC_LIT14, omc_mk_integer(((modelica_integer) 12)));
     tmpMeta8 = mmc_mk_cons(tmpMeta9, MMC_REFSTRUCTLIT(mmc_nil));
     tmpMeta12 = tmpMeta8;
   }
@@ -614,24 +619,25 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedNumEdgeGr
   }
   _labels = tmpMeta12;
 
-  tmpMeta13 = stringAppend(_OMC_LIT0,intString(_id));
-  tmpMeta14 = stringAppend(_OMC_LIT1,intString(_e));
-  tmpMeta15 = stringAppend(_OMC_LIT15,intString(_v));
+  tmp13 = stringAppend(_OMC_LIT0,intString(_id));
+  tmp14 = stringAppend(_OMC_LIT1,intString(_e));
+  tmp15 = stringAppend(_OMC_LIT15,intString(_v));
   tmpMeta16 = MMC_REFSTRUCTLIT(mmc_nil);
-  _graph = omc_GraphML_addEdge(threadData, tmpMeta13, tmpMeta14, tmpMeta15, _OMC_LIT2, _OMC_LIT3, 2.0, 0 /* false */, _labels, _arrow, tmpMeta16, _graph, NULL);
+  _graph = omc_GraphML_addEdge(threadData, tmp13, tmp14, tmp15, _OMC_LIT2, _OMC_LIT3, 2.0, 0 /* false */, _labels, _arrow, tmpMeta16, _graph, NULL);
 
-  tmpMeta17 = mmc_mk_box4(0, mmc_mk_integer(((modelica_integer) 1) + _id), mmc_mk_integer(_r), _text, _graph);
+  tmpMeta17 = omc_mk_box4(0, omc_mk_integer(((modelica_integer) 1) + _id), omc_mk_integer(_r), _text, _graph);
   _outTpl = tmpMeta17;
   _return: OMC_LABEL_UNUSED
-  return _outTpl;
+  omc_ret_ = _outTpl;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addDirectedNumEdgeGraph(threadData_t *threadData, modelica_metatype _v, modelica_metatype _e, modelica_metatype _inTpl)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outTpl = NULL;
-  tmp1 = mmc_unbox_integer(_v);
-  tmp2 = mmc_unbox_integer(_e);
+  tmp1 = omc_unbox_integer(_v);
+  tmp2 = omc_unbox_integer(_e);
   _outTpl = omc_DumpGraphML_addDirectedNumEdgeGraph(threadData, tmp1, tmp2, _inTpl);
   /* skip box _outTpl; tuple<#Integer, #Integer, String, GraphML.GraphInfo> */
   return _outTpl;
@@ -661,7 +667,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedNumEdgesG
   modelica_integer tmp11;
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outTpl has no default value.
   // _id has no default value.
@@ -674,12 +681,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedNumEdgesG
   // _text has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _inTpl;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 5);
   _id = tmp3  /* pattern as ty=Integer */;
   _m = tmpMeta4;
   _vec2 = tmpMeta5;
@@ -688,29 +695,30 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedNumEdgesG
 
   _vars = omc_List_select(threadData, arrayGet(_m,_e) /* DAE.ASUB */, boxvar_Util_intPositive);
 
-  _v = mmc_unbox_integer(arrayGet(_vec2,_e) /* DAE.ASUB */);
+  _v = omc_unbox_integer(arrayGet(_vec2,_e) /* DAE.ASUB */);
 
-  _text = intString(mmc_unbox_integer(arrayGet(_vec3,_e) /* DAE.ASUB */));
+  omc_string_store(&(_text), intString(omc_unbox_integer(arrayGet(_vec3,_e) /* DAE.ASUB */)));
 
   /* Pattern-matching assignment */
-  tmpMeta8 = mmc_mk_box4(0, mmc_mk_integer(_id), mmc_mk_integer(_v), _text, _graph);
-  tmpMeta9 = omc_List_fold1(threadData, _vars, boxvar_DumpGraphML_addDirectedNumEdgeGraph, mmc_mk_integer(_e), tmpMeta8);
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 1));
-  tmp11 = mmc_unbox_integer(tmpMeta10);
-  tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 4));
+  tmpMeta8 = omc_mk_box4(0, omc_mk_integer(_id), omc_mk_integer(_v), _text, _graph);
+  tmpMeta9 = omc_List_fold1(threadData, _vars, boxvar_DumpGraphML_addDirectedNumEdgeGraph, omc_mk_integer(_e), tmpMeta8);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 1);
+  tmp11 = omc_unbox_integer(tmpMeta10);
+  tmpMeta12 = OMC_BOX_FIELD(tmpMeta9, 4);
   _id = tmp11  /* pattern as ty=Integer */;
   _graph = tmpMeta12;
 
-  tmpMeta13 = mmc_mk_box5(0, mmc_mk_integer(_id), _m, _vec2, _vec3, _graph);
+  tmpMeta13 = omc_mk_box5(0, omc_mk_integer(_id), _m, _vec2, _vec3, _graph);
   _outTpl = tmpMeta13;
   _return: OMC_LABEL_UNUSED
-  return _outTpl;
+  omc_ret_ = _outTpl;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addDirectedNumEdgesGraph(threadData_t *threadData, modelica_metatype _e, modelica_metatype _inTpl)
 {
   modelica_integer tmp1;
   modelica_metatype _outTpl = NULL;
-  tmp1 = mmc_unbox_integer(_e);
+  tmp1 = omc_unbox_integer(_e);
   _outTpl = omc_DumpGraphML_addDirectedNumEdgesGraph(threadData, tmp1, _inTpl);
   /* skip box _outTpl; tuple<#Integer, array<list<#Integer>>, array<#Integer>, array<#Integer>, GraphML.GraphInfo> */
   return _outTpl;
@@ -731,13 +739,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedEdgeGraph
   modelica_metatype tmpMeta4;
   modelica_integer tmp5;
   modelica_metatype tmpMeta6;
-  modelica_metatype tmpMeta7;
-  modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta9;
+  modelica_string tmp7;
+  modelica_string tmp8;
+  modelica_string tmp9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outTpl has no default value.
   // _id has no default value.
@@ -748,11 +757,11 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedEdgeGraph
   // _lt has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _inTpl;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
   _id = tmp3  /* pattern as ty=Integer */;
   _r = tmp5  /* pattern as ty=Integer */;
   _graph = tmpMeta6;
@@ -763,25 +772,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedEdgeGraph
 
   _lt = ((_v > ((modelica_integer) 0))?_OMC_LIT3:_OMC_LIT16);
 
-  tmpMeta7 = stringAppend(_OMC_LIT0,intString(_id));
-  tmpMeta8 = stringAppend(_OMC_LIT1,intString(_e));
-  tmpMeta9 = stringAppend(_OMC_LIT15,intString(_absv));
+  tmp7 = stringAppend(_OMC_LIT0,intString(_id));
+  tmp8 = stringAppend(_OMC_LIT1,intString(_e));
+  tmp9 = stringAppend(_OMC_LIT15,intString(_absv));
   tmpMeta10 = MMC_REFSTRUCTLIT(mmc_nil);
   tmpMeta11 = MMC_REFSTRUCTLIT(mmc_nil);
-  _graph = omc_GraphML_addEdge(threadData, tmpMeta7, tmpMeta8, tmpMeta9, _OMC_LIT2, _lt, 2.0, 0 /* false */, tmpMeta10, _arrow, tmpMeta11, _graph, NULL);
+  _graph = omc_GraphML_addEdge(threadData, tmp7, tmp8, tmp9, _OMC_LIT2, _lt, 2.0, 0 /* false */, tmpMeta10, _arrow, tmpMeta11, _graph, NULL);
 
-  tmpMeta12 = mmc_mk_box3(0, mmc_mk_integer(((modelica_integer) 1) + _id), mmc_mk_integer(_r), _graph);
+  tmpMeta12 = omc_mk_box3(0, omc_mk_integer(((modelica_integer) 1) + _id), omc_mk_integer(_r), _graph);
   _outTpl = tmpMeta12;
   _return: OMC_LABEL_UNUSED
-  return _outTpl;
+  omc_ret_ = _outTpl;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addDirectedEdgeGraph(threadData_t *threadData, modelica_metatype _v, modelica_metatype _e, modelica_metatype _inTpl)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outTpl = NULL;
-  tmp1 = mmc_unbox_integer(_v);
-  tmp2 = mmc_unbox_integer(_e);
+  tmp1 = omc_unbox_integer(_v);
+  tmp2 = omc_unbox_integer(_e);
   _outTpl = omc_DumpGraphML_addDirectedEdgeGraph(threadData, tmp1, tmp2, _inTpl);
   /* skip box _outTpl; tuple<#Integer, #Integer, GraphML.GraphInfo> */
   return _outTpl;
@@ -810,7 +820,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedEdgesGrap
   modelica_integer tmp11;
   modelica_metatype tmpMeta12;
   modelica_metatype tmpMeta13;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outTpl has no default value.
   // _id has no default value.
@@ -822,12 +833,12 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedEdgesGrap
   // _mapIncRowEqn has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _inTpl;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmpMeta7 = OMC_BOX_FIELD(tmpMeta1, 5);
   _id = tmp3  /* pattern as ty=Integer */;
   _m = tmpMeta4;
   _vec2 = tmpMeta5;
@@ -836,27 +847,28 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addDirectedEdgesGrap
 
   _vars = arrayGet(_m,_e) /* DAE.ASUB */;
 
-  _v = mmc_unbox_integer(arrayGet(_vec2,_e) /* DAE.ASUB */);
+  _v = omc_unbox_integer(arrayGet(_vec2,_e) /* DAE.ASUB */);
 
   /* Pattern-matching assignment */
-  tmpMeta8 = mmc_mk_box3(0, mmc_mk_integer(_id), mmc_mk_integer(_v), _graph);
+  tmpMeta8 = omc_mk_box3(0, omc_mk_integer(_id), omc_mk_integer(_v), _graph);
   tmpMeta9 = omc_List_fold1(threadData, _vars, boxvar_DumpGraphML_addDirectedEdgeGraph, arrayGet(_mapIncRowEqn,_e) /* DAE.ASUB */, tmpMeta8);
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 1));
-  tmp11 = mmc_unbox_integer(tmpMeta10);
-  tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 3));
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 1);
+  tmp11 = omc_unbox_integer(tmpMeta10);
+  tmpMeta12 = OMC_BOX_FIELD(tmpMeta9, 3);
   _id = tmp11  /* pattern as ty=Integer */;
   _graph = tmpMeta12;
 
-  tmpMeta13 = mmc_mk_box5(0, mmc_mk_integer(_id), _m, _vec2, _mapIncRowEqn, _graph);
+  tmpMeta13 = omc_mk_box5(0, omc_mk_integer(_id), _m, _vec2, _mapIncRowEqn, _graph);
   _outTpl = tmpMeta13;
   _return: OMC_LABEL_UNUSED
-  return _outTpl;
+  omc_ret_ = _outTpl;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addDirectedEdgesGraph(threadData_t *threadData, modelica_metatype _e, modelica_metatype _inTpl)
 {
   modelica_integer tmp1;
   modelica_metatype _outTpl = NULL;
-  tmp1 = mmc_unbox_integer(_e);
+  tmp1 = omc_unbox_integer(_e);
   _outTpl = omc_DumpGraphML_addDirectedEdgesGraph(threadData, tmp1, _inTpl);
   /* skip box _outTpl; tuple<#Integer, array<list<#Integer>>, array<#Integer>, array<#Integer>, GraphML.GraphInfo> */
   return _outTpl;
@@ -873,13 +885,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEdgeGraph(threadD
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
   modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
-  modelica_metatype tmpMeta7;
+  modelica_string tmp5;
+  modelica_string tmp6;
+  modelica_string tmp7;
   modelica_metatype tmpMeta8;
   modelica_metatype tmpMeta9;
   modelica_metatype tmpMeta10;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outTpl has no default value.
   // _id has no default value.
@@ -888,9 +901,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEdgeGraph(threadD
   // _ln has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _inTpl;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
   _id = tmp3  /* pattern as ty=Integer */;
   _graph = tmpMeta4;
 
@@ -898,25 +911,26 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEdgeGraph(threadD
 
   _ln = ((_V > ((modelica_integer) 0))?_OMC_LIT3:_OMC_LIT16);
 
-  tmpMeta5 = stringAppend(_OMC_LIT0,intString(_id));
-  tmpMeta6 = stringAppend(_OMC_LIT1,intString(_e));
-  tmpMeta7 = stringAppend(_OMC_LIT15,intString(_v));
+  tmp5 = stringAppend(_OMC_LIT0,intString(_id));
+  tmp6 = stringAppend(_OMC_LIT1,intString(_e));
+  tmp7 = stringAppend(_OMC_LIT15,intString(_v));
   tmpMeta8 = MMC_REFSTRUCTLIT(mmc_nil);
   tmpMeta9 = MMC_REFSTRUCTLIT(mmc_nil);
-  _graph = omc_GraphML_addEdge(threadData, tmpMeta5, tmpMeta6, tmpMeta7, _OMC_LIT2, _ln, 2.0, 0 /* false */, tmpMeta8, _OMC_LIT17, tmpMeta9, _graph, NULL);
+  _graph = omc_GraphML_addEdge(threadData, tmp5, tmp6, tmp7, _OMC_LIT2, _ln, 2.0, 0 /* false */, tmpMeta8, _OMC_LIT17, tmpMeta9, _graph, NULL);
 
-  tmpMeta10 = mmc_mk_box2(0, mmc_mk_integer(((modelica_integer) 1) + _id), _graph);
+  tmpMeta10 = omc_mk_box2(0, omc_mk_integer(((modelica_integer) 1) + _id), _graph);
   _outTpl = tmpMeta10;
   _return: OMC_LABEL_UNUSED
-  return _outTpl;
+  omc_ret_ = _outTpl;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addEdgeGraph(threadData_t *threadData, modelica_metatype _V, modelica_metatype _e, modelica_metatype _inTpl)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outTpl = NULL;
-  tmp1 = mmc_unbox_integer(_V);
-  tmp2 = mmc_unbox_integer(_e);
+  tmp1 = omc_unbox_integer(_V);
+  tmp2 = omc_unbox_integer(_e);
   _outTpl = omc_DumpGraphML_addEdgeGraph(threadData, tmp1, tmp2, _inTpl);
   /* skip box _outTpl; tuple<#Integer, GraphML.GraphInfo> */
   return _outTpl;
@@ -926,7 +940,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEqnGraphMatch(thr
 {
   modelica_metatype _outGraph = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outGraph has no default value.
   { /* matchcontinue expression */
@@ -960,7 +975,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEqnGraphMatch(thr
       // _eqnsflag has no default value.
       // _labelText has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -974,53 +989,53 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEqnGraphMatch(thr
           modelica_integer tmp11;
           modelica_metatype tmpMeta12;
           modelica_integer tmp13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
+          modelica_string tmp14;
+          modelica_string tmp15;
           modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
+          modelica_string tmp17;
           modelica_metatype tmpMeta18;
           modelica_metatype tmpMeta19;
           modelica_metatype tmpMeta20;
           if (0 /* false */ != tmp4_2) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta9 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 1));
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 2));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta9 = OMC_BOX_FIELD(tmp4_3, 1);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_3, 2);
+          tmp11 = omc_unbox_integer(tmpMeta10);
           _vec2 = tmpMeta6;
           _mapIncRowEqn = tmpMeta7;
           _eqnsflag = tmpMeta8;
           _graphInfo = tmpMeta9;
           _graph = tmp11  /* pattern as ty=Integer */;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _e = mmc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */);
+          _e = omc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */);
 
           /* Pattern-matching assignment */
           tmpMeta12 = arrayGet(_eqnsflag,_e) /* DAE.ASUB */;
-          tmp13 = mmc_unbox_integer(tmpMeta12);
+          tmp13 = omc_unbox_integer(tmpMeta12);
           if (0 /* false */ != tmp13) goto goto_2;
 
-          _eqn = omc_BackendEquation_get(threadData, _eqns, mmc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */));
+          _eqn = omc_BackendEquation_get(threadData, _eqns, omc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */));
 
-          _str = omc_BackendDump_equationString(threadData, _eqn);
+          omc_string_store(&(_str), omc_BackendDump_equationString(threadData, _eqn));
 
-          tmpMeta14 = stringAppend(intString(_e),_OMC_LIT18);
-          tmpMeta15 = stringAppend(tmpMeta14,_str);
-          _str = tmpMeta15;
+          tmp14 = stringAppend(intString(_e),_OMC_LIT18);
+          tmp15 = stringAppend(tmp14,_str);
+          omc_string_store(&(_str), tmp15);
 
-          _str = omc_Util_xmlEscape(threadData, _str);
+          omc_string_store(&(_str), omc_Util_xmlEscape(threadData, _str));
 
-          _color = ((mmc_unbox_integer(arrayGet(_vec2,_inNode) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT10:_OMC_LIT19);
+          omc_string_store(&(_color), ((omc_unbox_integer(arrayGet(_vec2,_inNode) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT10:_OMC_LIT19));
 
-          tmpMeta16 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _str, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta16 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _str, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta16;
 
-          tmpMeta17 = stringAppend(_OMC_LIT1,intString(_e));
+          tmp17 = stringAppend(_OMC_LIT1,intString(_e));
           tmpMeta18 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta19 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta17, _color, 1.0, tmpMeta18, _OMC_LIT11, mmc_mk_none(), tmpMeta19, _graph, _graphInfo, NULL);
-          tmpMeta20 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
+          _graphInfo = omc_GraphML_addNode(threadData, tmp17, _color, 1.0, tmpMeta18, _OMC_LIT11, mmc_mk_none(), tmpMeta19, _graph, _graphInfo, NULL);
+          tmpMeta20 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
           tmpMeta1 = tmpMeta20;
           goto tmp3_done;
         }
@@ -1034,48 +1049,48 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEqnGraphMatch(thr
           modelica_metatype tmpMeta27;
           modelica_integer tmp28;
           modelica_metatype tmpMeta29;
-          modelica_metatype tmpMeta30;
+          modelica_string tmp30;
           modelica_metatype tmpMeta31;
           modelica_metatype tmpMeta32;
           modelica_metatype tmpMeta33;
           if (1 /* true */ != tmp4_2) goto tmp3_end;
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta23 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 1));
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_3), 2));
-          tmp26 = mmc_unbox_integer(tmpMeta25);
+          tmpMeta21 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta23 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmpMeta24 = OMC_BOX_FIELD(tmp4_3, 1);
+          tmpMeta25 = OMC_BOX_FIELD(tmp4_3, 2);
+          tmp26 = omc_unbox_integer(tmpMeta25);
           _vec2 = tmpMeta21;
           _mapIncRowEqn = tmpMeta22;
           _eqnsflag = tmpMeta23;
           _graphInfo = tmpMeta24;
           _graph = tmp26  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          _e = mmc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */);
+          _e = omc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */);
 
           /* Pattern-matching assignment */
           tmpMeta27 = arrayGet(_eqnsflag,_e) /* DAE.ASUB */;
-          tmp28 = mmc_unbox_integer(tmpMeta27);
+          tmp28 = omc_unbox_integer(tmpMeta27);
           if (0 /* false */ != tmp28) goto goto_2;
 
-          _eqn = omc_BackendEquation_get(threadData, _eqns, mmc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */));
+          _eqn = omc_BackendEquation_get(threadData, _eqns, omc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */));
 
-          _str = omc_BackendDump_equationString(threadData, _eqn);
+          omc_string_store(&(_str), omc_BackendDump_equationString(threadData, _eqn));
 
-          _str = omc_Util_xmlEscape(threadData, _str);
+          omc_string_store(&(_str), omc_Util_xmlEscape(threadData, _str));
 
-          _color = ((mmc_unbox_integer(arrayGet(_vec2,_inNode) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT10:_OMC_LIT19);
+          omc_string_store(&(_color), ((omc_unbox_integer(arrayGet(_vec2,_inNode) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT10:_OMC_LIT19));
 
-          _labelText = intString(_e);
+          omc_string_store(&(_labelText), intString(_e));
 
-          tmpMeta29 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta29 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta29;
 
-          tmpMeta30 = stringAppend(_OMC_LIT1,intString(_e));
+          tmp30 = stringAppend(_OMC_LIT1,intString(_e));
           tmpMeta31 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta32 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta30, _color, 1.0, tmpMeta31, _OMC_LIT11, mmc_mk_some(_str), tmpMeta32, _graph, _graphInfo, NULL);
-          tmpMeta33 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
+          _graphInfo = omc_GraphML_addNode(threadData, tmp30, _color, 1.0, tmpMeta31, _OMC_LIT11, mmc_mk_some(_str), tmpMeta32, _graph, _graphInfo, NULL);
+          tmpMeta33 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
           tmpMeta1 = tmpMeta33;
           goto tmp3_done;
         }
@@ -1084,17 +1099,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEqnGraphMatch(thr
           modelica_metatype tmpMeta35;
           modelica_metatype tmpMeta36;
           modelica_integer tmp37;
-          tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta35 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta34 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta35 = OMC_BOX_FIELD(tmp4_1, 3);
           
           _mapIncRowEqn = tmpMeta34;
           _eqnsflag = tmpMeta35;
           /* Pattern matching succeeded */
-          _e = mmc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */);
+          _e = omc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */);
 
           /* Pattern-matching assignment */
           tmpMeta36 = arrayGet(_eqnsflag,_e) /* DAE.ASUB */;
-          tmp37 = mmc_unbox_integer(tmpMeta36);
+          tmp37 = omc_unbox_integer(tmpMeta36);
           if (1 /* true */ != tmp37) goto goto_2;
           tmpMeta1 = _inGraph;
           goto tmp3_done;
@@ -1106,28 +1121,29 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEqnGraphMatch(thr
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _outGraph = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outGraph;
+  omc_ret_ = _outGraph;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addEqnGraphMatch(threadData_t *threadData, modelica_metatype _inNode, modelica_metatype _eqns, modelica_metatype _atpl, modelica_metatype _numberMode, modelica_metatype _inGraph)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outGraph = NULL;
-  tmp1 = mmc_unbox_integer(_inNode);
-  tmp2 = mmc_unbox_integer(_numberMode);
+  tmp1 = omc_unbox_integer(_inNode);
+  tmp2 = omc_unbox_integer(_numberMode);
   _outGraph = omc_DumpGraphML_addEqnGraphMatch(threadData, tmp1, _eqns, _atpl, tmp2, _inGraph);
   /* skip box _outGraph; tuple<GraphML.GraphInfo, #Integer> */
   return _outGraph;
@@ -1151,7 +1167,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEdgesGraph(thread
   modelica_integer tmp9;
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outTpl has no default value.
   // _id has no default value.
@@ -1160,10 +1177,10 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEdgesGraph(thread
   // _vars has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _inTpl;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta1, 3);
   _id = tmp3  /* pattern as ty=Integer */;
   _m = tmpMeta4;
   _graph = tmpMeta5;
@@ -1173,24 +1190,25 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEdgesGraph(thread
   _vars = arrayGet(_m,_e) /* DAE.ASUB */;
 
   /* Pattern-matching assignment */
-  tmpMeta6 = mmc_mk_box2(0, mmc_mk_integer(_id), _graph);
-  tmpMeta7 = omc_List_fold1(threadData, _vars, boxvar_DumpGraphML_addEdgeGraph, mmc_mk_integer(_e), tmpMeta6);
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 1));
-  tmp9 = mmc_unbox_integer(tmpMeta8);
-  tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta7), 2));
+  tmpMeta6 = omc_mk_box2(0, omc_mk_integer(_id), _graph);
+  tmpMeta7 = omc_List_fold1(threadData, _vars, boxvar_DumpGraphML_addEdgeGraph, omc_mk_integer(_e), tmpMeta6);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta7, 1);
+  tmp9 = omc_unbox_integer(tmpMeta8);
+  tmpMeta10 = OMC_BOX_FIELD(tmpMeta7, 2);
   _id = tmp9  /* pattern as ty=Integer */;
   _graph = tmpMeta10;
 
-  tmpMeta11 = mmc_mk_box3(0, mmc_mk_integer(_id), _m, _graph);
+  tmpMeta11 = omc_mk_box3(0, omc_mk_integer(_id), _m, _graph);
   _outTpl = tmpMeta11;
   _return: OMC_LABEL_UNUSED
-  return _outTpl;
+  omc_ret_ = _outTpl;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addEdgesGraph(threadData_t *threadData, modelica_metatype _e, modelica_metatype _inTpl)
 {
   modelica_integer tmp1;
   modelica_metatype _outTpl = NULL;
-  tmp1 = mmc_unbox_integer(_e);
+  tmp1 = omc_unbox_integer(_e);
   _outTpl = omc_DumpGraphML_addEdgesGraph(threadData, tmp1, _inTpl);
   /* skip box _outTpl; tuple<#Integer, array<list<#Integer>>, GraphML.GraphInfo> */
   return _outTpl;
@@ -1206,7 +1224,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEqnGraph(threadDa
   modelica_metatype _label = NULL;
   modelica_string _labelText = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outGraph has no default value.
   // _eqn has no default value.
@@ -1229,38 +1248,38 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEqnGraph(threadDa
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_integer tmp8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
+          modelica_string tmp9;
+          modelica_string tmp10;
           modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
+          modelica_string tmp12;
           modelica_metatype tmpMeta13;
           modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
           if (0 /* false */ != tmp4_1) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp8 = omc_unbox_integer(tmpMeta7);
           _graphInfo = tmpMeta6;
           _graph = tmp8  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          _eqn = omc_BackendEquation_get(threadData, _eqns, mmc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */));
+          _eqn = omc_BackendEquation_get(threadData, _eqns, omc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */));
 
-          _str = omc_BackendDump_equationString(threadData, _eqn);
+          omc_string_store(&(_str), omc_BackendDump_equationString(threadData, _eqn));
 
-          tmpMeta9 = stringAppend(intString(_inNode),_OMC_LIT18);
-          tmpMeta10 = stringAppend(tmpMeta9,omc_BackendDump_equationString(threadData, _eqn));
-          _str = tmpMeta10;
+          tmp9 = stringAppend(intString(_inNode),_OMC_LIT18);
+          tmp10 = stringAppend(tmp9,omc_BackendDump_equationString(threadData, _eqn));
+          omc_string_store(&(_str), tmp10);
 
-          _str = omc_Util_xmlEscape(threadData, _str);
+          omc_string_store(&(_str), omc_Util_xmlEscape(threadData, _str));
 
-          tmpMeta11 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _str, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta11 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _str, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta11;
 
-          tmpMeta12 = stringAppend(_OMC_LIT1,intString(_inNode));
+          tmp12 = stringAppend(_OMC_LIT1,intString(_inNode));
           tmpMeta13 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta14 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta12, _OMC_LIT10, 1.0, tmpMeta13, _OMC_LIT11, mmc_mk_none(), tmpMeta14, _graph, _graphInfo, NULL);
-          tmpMeta15 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
+          _graphInfo = omc_GraphML_addNode(threadData, tmp12, _OMC_LIT10, 1.0, tmpMeta13, _OMC_LIT11, mmc_mk_none(), tmpMeta14, _graph, _graphInfo, NULL);
+          tmpMeta15 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
           tmpMeta1 = tmpMeta15;
           goto tmp3_done;
         }
@@ -1269,33 +1288,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEqnGraph(threadDa
           modelica_metatype tmpMeta17;
           modelica_integer tmp18;
           modelica_metatype tmpMeta19;
-          modelica_metatype tmpMeta20;
+          modelica_string tmp20;
           modelica_metatype tmpMeta21;
           modelica_metatype tmpMeta22;
           modelica_metatype tmpMeta23;
           if (1 /* true */ != tmp4_1) goto tmp3_end;
-          tmpMeta16 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp18 = mmc_unbox_integer(tmpMeta17);
+          tmpMeta16 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta17 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp18 = omc_unbox_integer(tmpMeta17);
           _graphInfo = tmpMeta16;
           _graph = tmp18  /* pattern as ty=Integer */;
           /* Pattern matching succeeded */
-          _eqn = omc_BackendEquation_get(threadData, _eqns, mmc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */));
+          _eqn = omc_BackendEquation_get(threadData, _eqns, omc_unbox_integer(arrayGet(_mapIncRowEqn,_inNode) /* DAE.ASUB */));
 
-          _str = omc_BackendDump_equationString(threadData, _eqn);
+          omc_string_store(&(_str), omc_BackendDump_equationString(threadData, _eqn));
 
-          _str = omc_Util_xmlEscape(threadData, _str);
+          omc_string_store(&(_str), omc_Util_xmlEscape(threadData, _str));
 
-          _labelText = intString(_inNode);
+          omc_string_store(&(_labelText), intString(_inNode));
 
-          tmpMeta19 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta19 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta19;
 
-          tmpMeta20 = stringAppend(_OMC_LIT1,intString(_inNode));
+          tmp20 = stringAppend(_OMC_LIT1,intString(_inNode));
           tmpMeta21 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta22 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta20, _OMC_LIT10, 1.0, tmpMeta21, _OMC_LIT11, mmc_mk_some(_str), tmpMeta22, _graph, _graphInfo, NULL);
-          tmpMeta23 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
+          _graphInfo = omc_GraphML_addNode(threadData, tmp20, _OMC_LIT10, 1.0, tmpMeta21, _OMC_LIT11, mmc_mk_some(_str), tmpMeta22, _graph, _graphInfo, NULL);
+          tmpMeta23 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
           tmpMeta1 = tmpMeta23;
           goto tmp3_done;
         }
@@ -1305,22 +1324,23 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addEqnGraph(threadDa
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outGraph = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outGraph;
+  omc_ret_ = _outGraph;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_DumpGraphML_addEqnGraph(threadData_t *threadData, modelica_metatype _inNode, modelica_metatype _eqns, modelica_metatype _mapIncRowEqn, modelica_metatype _numberMode, modelica_metatype _inGraph)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _outGraph = NULL;
-  tmp1 = mmc_unbox_integer(_inNode);
-  tmp2 = mmc_unbox_integer(_numberMode);
+  tmp1 = omc_unbox_integer(_inNode);
+  tmp2 = omc_unbox_integer(_numberMode);
   _outGraph = omc_DumpGraphML_addEqnGraph(threadData, tmp1, _eqns, _mapIncRowEqn, tmp2, _inGraph);
   /* skip box _outGraph; tuple<GraphML.GraphInfo, #Integer> */
   return _outGraph;
@@ -1330,8 +1350,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
 {
   modelica_metatype _outVar = NULL;
   modelica_metatype _outTpl = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outVar has no default value.
   // _outTpl has no default value.
@@ -1365,7 +1386,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
       // _desc has no default value.
       // _labelText has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 5; tmp4++) {
@@ -1382,25 +1403,25 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
           modelica_integer tmp14;
           modelica_metatype tmpMeta15;
           modelica_boolean tmp16;
-          modelica_metatype tmpMeta17;
-          modelica_metatype tmpMeta18;
+          modelica_string tmp17;
+          modelica_string tmp18;
           modelica_metatype tmpMeta19;
-          modelica_metatype tmpMeta20;
+          modelica_string tmp20;
           modelica_metatype tmpMeta21;
           modelica_metatype tmpMeta22;
           modelica_metatype tmpMeta23;
           modelica_metatype tmpMeta24;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           if (0 /* false */ != tmp7) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 1));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta11), 2));
-          tmp14 = mmc_unbox_integer(tmpMeta13);
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta11 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmpMeta12 = OMC_BOX_FIELD(tmpMeta11, 1);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta11, 2);
+          tmp14 = omc_unbox_integer(tmpMeta13);
+          tmpMeta15 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _id = tmp9  /* pattern as ty=Integer */;
           _vec1 = tmpMeta10;
@@ -1413,21 +1434,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
           tmp16 = omc_BackendVariable_isStateVar(threadData, _v);
           if (1 /* true */ != tmp16) goto goto_2;
 
-          _color = ((mmc_unbox_integer(arrayGet(_vec1,_id) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT20:_OMC_LIT21);
+          omc_string_store(&(_color), ((omc_unbox_integer(arrayGet(_vec1,_id) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT20:_OMC_LIT21));
 
-          tmpMeta17 = stringAppend(intString(_id),_OMC_LIT18);
-          tmpMeta18 = stringAppend(tmpMeta17,omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
-          _labelText = tmpMeta18;
+          tmp17 = stringAppend(intString(_id),_OMC_LIT18);
+          tmp18 = stringAppend(tmp17,omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
+          omc_string_store(&(_labelText), tmp18);
 
-          tmpMeta19 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta19 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta19;
 
-          tmpMeta20 = stringAppend(_OMC_LIT15,intString(_id));
+          tmp20 = stringAppend(_OMC_LIT15,intString(_id));
           tmpMeta21 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta22 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta20, _color, 1.0, tmpMeta21, _OMC_LIT22, mmc_mk_none(), tmpMeta22, _graph, _graphInfo, NULL);
-          tmpMeta23 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta24 = mmc_mk_box4(0, mmc_mk_boolean(0 /* false */), mmc_mk_integer(((modelica_integer) 1) + _id), _vec1, tmpMeta23);
+          _graphInfo = omc_GraphML_addNode(threadData, tmp20, _color, 1.0, tmpMeta21, _OMC_LIT22, mmc_mk_none(), tmpMeta22, _graph, _graphInfo, NULL);
+          tmpMeta23 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta24 = omc_mk_box4(0, omc_mk_boolean(0 /* false */), omc_mk_integer(((modelica_integer) 1) + _id), _vec1, tmpMeta23);
           tmpMeta[0+0] = _v;
           tmpMeta[0+1] = tmpMeta24;
           goto tmp3_done;
@@ -1445,22 +1466,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
           modelica_metatype tmpMeta34;
           modelica_boolean tmp35;
           modelica_metatype tmpMeta36;
-          modelica_metatype tmpMeta37;
+          modelica_string tmp37;
           modelica_metatype tmpMeta38;
           modelica_metatype tmpMeta39;
           modelica_metatype tmpMeta40;
           modelica_metatype tmpMeta41;
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp26 = mmc_unbox_integer(tmpMeta25);
+          tmpMeta25 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp26 = omc_unbox_integer(tmpMeta25);
           if (1 /* true */ != tmp26) goto tmp3_end;
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp28 = mmc_unbox_integer(tmpMeta27);
-          tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 1));
-          tmpMeta32 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 2));
-          tmp33 = mmc_unbox_integer(tmpMeta32);
-          tmpMeta34 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta27 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp28 = omc_unbox_integer(tmpMeta27);
+          tmpMeta29 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta30 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmpMeta31 = OMC_BOX_FIELD(tmpMeta30, 1);
+          tmpMeta32 = OMC_BOX_FIELD(tmpMeta30, 2);
+          tmp33 = omc_unbox_integer(tmpMeta32);
+          tmpMeta34 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _id = tmp28  /* pattern as ty=Integer */;
           _vec1 = tmpMeta29;
@@ -1473,21 +1494,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
           tmp35 = omc_BackendVariable_isStateVar(threadData, _v);
           if (1 /* true */ != tmp35) goto goto_2;
 
-          _color = ((mmc_unbox_integer(arrayGet(_vec1,_id) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT20:_OMC_LIT21);
+          omc_string_store(&(_color), ((omc_unbox_integer(arrayGet(_vec1,_id) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT20:_OMC_LIT21));
 
-          _desc = omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr);
+          omc_string_store(&(_desc), omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
 
-          _labelText = intString(_id);
+          omc_string_store(&(_labelText), intString(_id));
 
-          tmpMeta36 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta36 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta36;
 
-          tmpMeta37 = stringAppend(_OMC_LIT15,intString(_id));
+          tmp37 = stringAppend(_OMC_LIT15,intString(_id));
           tmpMeta38 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta39 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta37, _color, 1.0, tmpMeta38, _OMC_LIT22, mmc_mk_some(_desc), tmpMeta39, _graph, _graphInfo, NULL);
-          tmpMeta40 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta41 = mmc_mk_box4(0, mmc_mk_boolean(1 /* true */), mmc_mk_integer(((modelica_integer) 1) + _id), _vec1, tmpMeta40);
+          _graphInfo = omc_GraphML_addNode(threadData, tmp37, _color, 1.0, tmpMeta38, _OMC_LIT22, mmc_mk_some(_desc), tmpMeta39, _graph, _graphInfo, NULL);
+          tmpMeta40 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta41 = omc_mk_box4(0, omc_mk_boolean(1 /* true */), omc_mk_integer(((modelica_integer) 1) + _id), _vec1, tmpMeta40);
           tmpMeta[0+0] = _v;
           tmpMeta[0+1] = tmpMeta41;
           goto tmp3_done;
@@ -1503,25 +1524,25 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
           modelica_metatype tmpMeta49;
           modelica_integer tmp50;
           modelica_metatype tmpMeta51;
-          modelica_metatype tmpMeta52;
-          modelica_metatype tmpMeta53;
+          modelica_string tmp52;
+          modelica_string tmp53;
           modelica_metatype tmpMeta54;
-          modelica_metatype tmpMeta55;
+          modelica_string tmp55;
           modelica_metatype tmpMeta56;
           modelica_metatype tmpMeta57;
           modelica_metatype tmpMeta58;
           modelica_metatype tmpMeta59;
-          tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp43 = mmc_unbox_integer(tmpMeta42);
+          tmpMeta42 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp43 = omc_unbox_integer(tmpMeta42);
           if (0 /* false */ != tmp43) goto tmp3_end;
-          tmpMeta44 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp45 = mmc_unbox_integer(tmpMeta44);
-          tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta47 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta47), 1));
-          tmpMeta49 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta47), 2));
-          tmp50 = mmc_unbox_integer(tmpMeta49);
-          tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta44 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp45 = omc_unbox_integer(tmpMeta44);
+          tmpMeta46 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta47 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmpMeta48 = OMC_BOX_FIELD(tmpMeta47, 1);
+          tmpMeta49 = OMC_BOX_FIELD(tmpMeta47, 2);
+          tmp50 = omc_unbox_integer(tmpMeta49);
+          tmpMeta51 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _id = tmp45  /* pattern as ty=Integer */;
           _vec1 = tmpMeta46;
@@ -1530,21 +1551,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
           _v = tmp4_1;
           _cr = tmpMeta51;
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
-          _color = ((mmc_unbox_integer(arrayGet(_vec1,_id) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT23:_OMC_LIT21);
+          omc_string_store(&(_color), ((omc_unbox_integer(arrayGet(_vec1,_id) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT23:_OMC_LIT21));
 
-          tmpMeta52 = stringAppend(intString(_id),_OMC_LIT18);
-          tmpMeta53 = stringAppend(tmpMeta52,omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
-          _labelText = tmpMeta53;
+          tmp52 = stringAppend(intString(_id),_OMC_LIT18);
+          tmp53 = stringAppend(tmp52,omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
+          omc_string_store(&(_labelText), tmp53);
 
-          tmpMeta54 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta54 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta54;
 
-          tmpMeta55 = stringAppend(_OMC_LIT15,intString(_id));
+          tmp55 = stringAppend(_OMC_LIT15,intString(_id));
           tmpMeta56 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta57 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta55, _color, 1.0, tmpMeta56, _OMC_LIT22, mmc_mk_none(), tmpMeta57, _graph, _graphInfo, NULL);
-          tmpMeta58 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta59 = mmc_mk_box4(0, mmc_mk_boolean(0 /* false */), mmc_mk_integer(((modelica_integer) 1) + _id), _vec1, tmpMeta58);
+          _graphInfo = omc_GraphML_addNode(threadData, tmp55, _color, 1.0, tmpMeta56, _OMC_LIT22, mmc_mk_none(), tmpMeta57, _graph, _graphInfo, NULL);
+          tmpMeta58 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta59 = omc_mk_box4(0, omc_mk_boolean(0 /* false */), omc_mk_integer(((modelica_integer) 1) + _id), _vec1, tmpMeta58);
           tmpMeta[0+0] = _v;
           tmpMeta[0+1] = tmpMeta59;
           goto tmp3_done;
@@ -1561,22 +1582,22 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
           modelica_integer tmp68;
           modelica_metatype tmpMeta69;
           modelica_metatype tmpMeta70;
-          modelica_metatype tmpMeta71;
+          modelica_string tmp71;
           modelica_metatype tmpMeta72;
           modelica_metatype tmpMeta73;
           modelica_metatype tmpMeta74;
           modelica_metatype tmpMeta75;
-          tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp61 = mmc_unbox_integer(tmpMeta60);
+          tmpMeta60 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp61 = omc_unbox_integer(tmpMeta60);
           if (1 /* true */ != tmp61) goto tmp3_end;
-          tmpMeta62 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp63 = mmc_unbox_integer(tmpMeta62);
-          tmpMeta64 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta65 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmpMeta66 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta65), 1));
-          tmpMeta67 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta65), 2));
-          tmp68 = mmc_unbox_integer(tmpMeta67);
-          tmpMeta69 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta62 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp63 = omc_unbox_integer(tmpMeta62);
+          tmpMeta64 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta65 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmpMeta66 = OMC_BOX_FIELD(tmpMeta65, 1);
+          tmpMeta67 = OMC_BOX_FIELD(tmpMeta65, 2);
+          tmp68 = omc_unbox_integer(tmpMeta67);
+          tmpMeta69 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _id = tmp63  /* pattern as ty=Integer */;
           _vec1 = tmpMeta64;
@@ -1585,21 +1606,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
           _v = tmp4_1;
           _cr = tmpMeta69;
           /* Pattern matching succeeded */
-          _color = ((mmc_unbox_integer(arrayGet(_vec1,_id) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT23:_OMC_LIT21);
+          omc_string_store(&(_color), ((omc_unbox_integer(arrayGet(_vec1,_id) /* DAE.ASUB */) > ((modelica_integer) 0))?_OMC_LIT23:_OMC_LIT21));
 
-          _desc = omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr);
+          omc_string_store(&(_desc), omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
 
-          _labelText = intString(_id);
+          omc_string_store(&(_labelText), intString(_id));
 
-          tmpMeta70 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta70 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta70;
 
-          tmpMeta71 = stringAppend(_OMC_LIT15,intString(_id));
+          tmp71 = stringAppend(_OMC_LIT15,intString(_id));
           tmpMeta72 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta73 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta71, _color, 1.0, tmpMeta72, _OMC_LIT22, mmc_mk_some(_desc), tmpMeta73, _graph, _graphInfo, NULL);
-          tmpMeta74 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta75 = mmc_mk_box4(0, mmc_mk_boolean(1 /* true */), mmc_mk_integer(((modelica_integer) 1) + _id), _vec1, tmpMeta74);
+          _graphInfo = omc_GraphML_addNode(threadData, tmp71, _color, 1.0, tmpMeta72, _OMC_LIT22, mmc_mk_some(_desc), tmpMeta73, _graph, _graphInfo, NULL);
+          tmpMeta74 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta75 = omc_mk_box4(0, omc_mk_boolean(1 /* true */), omc_mk_integer(((modelica_integer) 1) + _id), _vec1, tmpMeta74);
           tmpMeta[0+0] = _v;
           tmpMeta[0+1] = tmpMeta75;
           goto tmp3_done;
@@ -1618,14 +1639,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 5) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -1633,15 +1654,17 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraphMatch(thr
   _outTpl = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_outTpl) { *out_outTpl = _outTpl; }
-  return _outVar;
+  omc_ret_ = _outVar;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadData_t *threadData, modelica_metatype _inVar, modelica_metatype _inTpl, modelica_metatype *out_outTpl)
 {
   modelica_metatype _outVar = NULL;
   modelica_metatype _outTpl = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outVar has no default value.
   // _outTpl has no default value.
@@ -1675,7 +1698,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
       // _desc has no default value.
       // _labelText has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 5; tmp4++) {
@@ -1692,21 +1715,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
           modelica_metatype tmpMeta14;
           modelica_boolean tmp15;
           modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
+          modelica_string tmp17;
           modelica_metatype tmpMeta18;
           modelica_metatype tmpMeta19;
           modelica_metatype tmpMeta20;
           modelica_metatype tmpMeta21;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
           if (1 /* true */ != tmp7) goto tmp3_end;
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 1));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 2));
-          tmp13 = mmc_unbox_integer(tmpMeta12);
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta10, 1);
+          tmpMeta12 = OMC_BOX_FIELD(tmpMeta10, 2);
+          tmp13 = omc_unbox_integer(tmpMeta12);
+          tmpMeta14 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _id = tmp9  /* pattern as ty=Integer */;
           _graphInfo = tmpMeta11;
@@ -1718,19 +1741,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
           tmp15 = omc_BackendVariable_isStateVar(threadData, _v);
           if (1 /* true */ != tmp15) goto goto_2;
 
-          _labelText = intString(_id);
+          omc_string_store(&(_labelText), intString(_id));
 
-          tmpMeta16 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta16 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta16;
 
-          _desc = omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr);
+          omc_string_store(&(_desc), omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
 
-          tmpMeta17 = stringAppend(_OMC_LIT15,intString(_id));
+          tmp17 = stringAppend(_OMC_LIT15,intString(_id));
           tmpMeta18 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta19 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta17, _OMC_LIT20, 1.0, tmpMeta18, _OMC_LIT22, mmc_mk_some(_desc), tmpMeta19, _graph, _graphInfo, NULL);
-          tmpMeta20 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta21 = mmc_mk_box3(0, mmc_mk_boolean(1 /* true */), mmc_mk_integer(((modelica_integer) 1) + _id), tmpMeta20);
+          _graphInfo = omc_GraphML_addNode(threadData, tmp17, _OMC_LIT20, 1.0, tmpMeta18, _OMC_LIT22, mmc_mk_some(_desc), tmpMeta19, _graph, _graphInfo, NULL);
+          tmpMeta20 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta21 = omc_mk_box3(0, omc_mk_boolean(1 /* true */), omc_mk_integer(((modelica_integer) 1) + _id), tmpMeta20);
           tmpMeta[0+0] = _v;
           tmpMeta[0+1] = tmpMeta21;
           goto tmp3_done;
@@ -1746,24 +1769,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
           modelica_integer tmp29;
           modelica_metatype tmpMeta30;
           modelica_boolean tmp31;
-          modelica_metatype tmpMeta32;
-          modelica_metatype tmpMeta33;
+          modelica_string tmp32;
+          modelica_string tmp33;
           modelica_metatype tmpMeta34;
-          modelica_metatype tmpMeta35;
+          modelica_string tmp35;
           modelica_metatype tmpMeta36;
           modelica_metatype tmpMeta37;
           modelica_metatype tmpMeta38;
           modelica_metatype tmpMeta39;
-          tmpMeta22 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp23 = mmc_unbox_integer(tmpMeta22);
+          tmpMeta22 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp23 = omc_unbox_integer(tmpMeta22);
           if (0 /* false */ != tmp23) goto tmp3_end;
-          tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp25 = mmc_unbox_integer(tmpMeta24);
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta26), 1));
-          tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta26), 2));
-          tmp29 = mmc_unbox_integer(tmpMeta28);
-          tmpMeta30 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta24 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp25 = omc_unbox_integer(tmpMeta24);
+          tmpMeta26 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta27 = OMC_BOX_FIELD(tmpMeta26, 1);
+          tmpMeta28 = OMC_BOX_FIELD(tmpMeta26, 2);
+          tmp29 = omc_unbox_integer(tmpMeta28);
+          tmpMeta30 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _id = tmp25  /* pattern as ty=Integer */;
           _graphInfo = tmpMeta27;
@@ -1775,19 +1798,19 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
           tmp31 = omc_BackendVariable_isStateVar(threadData, _v);
           if (1 /* true */ != tmp31) goto goto_2;
 
-          tmpMeta32 = stringAppend(intString(_id),_OMC_LIT18);
-          tmpMeta33 = stringAppend(tmpMeta32,omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
-          _labelText = tmpMeta33;
+          tmp32 = stringAppend(intString(_id),_OMC_LIT18);
+          tmp33 = stringAppend(tmp32,omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
+          omc_string_store(&(_labelText), tmp33);
 
-          tmpMeta34 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta34 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta34;
 
-          tmpMeta35 = stringAppend(_OMC_LIT15,intString(_id));
+          tmp35 = stringAppend(_OMC_LIT15,intString(_id));
           tmpMeta36 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta37 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta35, _OMC_LIT20, 1.0, tmpMeta36, _OMC_LIT22, mmc_mk_none(), tmpMeta37, _graph, _graphInfo, NULL);
-          tmpMeta38 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta39 = mmc_mk_box3(0, mmc_mk_boolean(0 /* false */), mmc_mk_integer(((modelica_integer) 1) + _id), tmpMeta38);
+          _graphInfo = omc_GraphML_addNode(threadData, tmp35, _OMC_LIT20, 1.0, tmpMeta36, _OMC_LIT22, mmc_mk_none(), tmpMeta37, _graph, _graphInfo, NULL);
+          tmpMeta38 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta39 = omc_mk_box3(0, omc_mk_boolean(0 /* false */), omc_mk_integer(((modelica_integer) 1) + _id), tmpMeta38);
           tmpMeta[0+0] = _v;
           tmpMeta[0+1] = tmpMeta39;
           goto tmp3_done;
@@ -1803,21 +1826,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
           modelica_integer tmp47;
           modelica_metatype tmpMeta48;
           modelica_metatype tmpMeta49;
-          modelica_metatype tmpMeta50;
+          modelica_string tmp50;
           modelica_metatype tmpMeta51;
           modelica_metatype tmpMeta52;
           modelica_metatype tmpMeta53;
           modelica_metatype tmpMeta54;
-          tmpMeta40 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp41 = mmc_unbox_integer(tmpMeta40);
+          tmpMeta40 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp41 = omc_unbox_integer(tmpMeta40);
           if (1 /* true */ != tmp41) goto tmp3_end;
-          tmpMeta42 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp43 = mmc_unbox_integer(tmpMeta42);
-          tmpMeta44 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta45 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta44), 1));
-          tmpMeta46 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta44), 2));
-          tmp47 = mmc_unbox_integer(tmpMeta46);
-          tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta42 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp43 = omc_unbox_integer(tmpMeta42);
+          tmpMeta44 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta45 = OMC_BOX_FIELD(tmpMeta44, 1);
+          tmpMeta46 = OMC_BOX_FIELD(tmpMeta44, 2);
+          tmp47 = omc_unbox_integer(tmpMeta46);
+          tmpMeta48 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _id = tmp43  /* pattern as ty=Integer */;
           _graphInfo = tmpMeta45;
@@ -1827,21 +1850,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
           tmp4 += 1; /* Pattern matching succeeded; we may skip some cases if we fail */
           _b = omc_BackendVariable_isVarDiscrete(threadData, _v);
 
-          _color = (_b?_OMC_LIT19:_OMC_LIT23);
+          omc_string_store(&(_color), (_b?_OMC_LIT19:_OMC_LIT23));
 
-          _labelText = intString(_id);
+          omc_string_store(&(_labelText), intString(_id));
 
-          tmpMeta49 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta49 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta49;
 
-          _desc = omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr);
+          omc_string_store(&(_desc), omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
 
-          tmpMeta50 = stringAppend(_OMC_LIT15,intString(_id));
+          tmp50 = stringAppend(_OMC_LIT15,intString(_id));
           tmpMeta51 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta52 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta50, _color, 1.0, tmpMeta51, _OMC_LIT22, mmc_mk_some(_desc), tmpMeta52, _graph, _graphInfo, NULL);
-          tmpMeta53 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta54 = mmc_mk_box3(0, mmc_mk_boolean(1 /* true */), mmc_mk_integer(((modelica_integer) 1) + _id), tmpMeta53);
+          _graphInfo = omc_GraphML_addNode(threadData, tmp50, _color, 1.0, tmpMeta51, _OMC_LIT22, mmc_mk_some(_desc), tmpMeta52, _graph, _graphInfo, NULL);
+          tmpMeta53 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta54 = omc_mk_box3(0, omc_mk_boolean(1 /* true */), omc_mk_integer(((modelica_integer) 1) + _id), tmpMeta53);
           tmpMeta[0+0] = _v;
           tmpMeta[0+1] = tmpMeta54;
           goto tmp3_done;
@@ -1856,24 +1879,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
           modelica_metatype tmpMeta61;
           modelica_integer tmp62;
           modelica_metatype tmpMeta63;
-          modelica_metatype tmpMeta64;
-          modelica_metatype tmpMeta65;
+          modelica_string tmp64;
+          modelica_string tmp65;
           modelica_metatype tmpMeta66;
-          modelica_metatype tmpMeta67;
+          modelica_string tmp67;
           modelica_metatype tmpMeta68;
           modelica_metatype tmpMeta69;
           modelica_metatype tmpMeta70;
           modelica_metatype tmpMeta71;
-          tmpMeta55 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmp56 = mmc_unbox_integer(tmpMeta55);
+          tmpMeta55 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmp56 = omc_unbox_integer(tmpMeta55);
           if (0 /* false */ != tmp56) goto tmp3_end;
-          tmpMeta57 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmp58 = mmc_unbox_integer(tmpMeta57);
-          tmpMeta59 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta59), 1));
-          tmpMeta61 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta59), 2));
-          tmp62 = mmc_unbox_integer(tmpMeta61);
-          tmpMeta63 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta57 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmp58 = omc_unbox_integer(tmpMeta57);
+          tmpMeta59 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmpMeta60 = OMC_BOX_FIELD(tmpMeta59, 1);
+          tmpMeta61 = OMC_BOX_FIELD(tmpMeta59, 2);
+          tmp62 = omc_unbox_integer(tmpMeta61);
+          tmpMeta63 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _id = tmp58  /* pattern as ty=Integer */;
           _graphInfo = tmpMeta60;
@@ -1883,21 +1906,21 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
           /* Pattern matching succeeded */
           _b = omc_BackendVariable_isVarDiscrete(threadData, _v);
 
-          _color = (_b?_OMC_LIT19:_OMC_LIT23);
+          omc_string_store(&(_color), (_b?_OMC_LIT19:_OMC_LIT23));
 
-          tmpMeta64 = stringAppend(intString(_id),_OMC_LIT18);
-          tmpMeta65 = stringAppend(tmpMeta64,omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
-          _labelText = tmpMeta65;
+          tmp64 = stringAppend(intString(_id),_OMC_LIT18);
+          tmp65 = stringAppend(tmp64,omc_ComponentReferenceBasics_printComponentRefStr(threadData, _cr));
+          omc_string_store(&(_labelText), tmp65);
 
-          tmpMeta66 = mmc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
+          tmpMeta66 = omc_mk_box4(3, &GraphML_NodeLabel_NODELABEL__INTERNAL__desc, _labelText, mmc_mk_none(), _OMC_LIT9);
           _label = tmpMeta66;
 
-          tmpMeta67 = stringAppend(_OMC_LIT15,intString(_id));
+          tmp67 = stringAppend(_OMC_LIT15,intString(_id));
           tmpMeta68 = mmc_mk_cons(_label, MMC_REFSTRUCTLIT(mmc_nil));
           tmpMeta69 = MMC_REFSTRUCTLIT(mmc_nil);
-          _graphInfo = omc_GraphML_addNode(threadData, tmpMeta67, _color, 1.0, tmpMeta68, _OMC_LIT22, mmc_mk_none(), tmpMeta69, _graph, _graphInfo, NULL);
-          tmpMeta70 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta71 = mmc_mk_box3(0, mmc_mk_boolean(0 /* false */), mmc_mk_integer(((modelica_integer) 1) + _id), tmpMeta70);
+          _graphInfo = omc_GraphML_addNode(threadData, tmp67, _color, 1.0, tmpMeta68, _OMC_LIT22, mmc_mk_none(), tmpMeta69, _graph, _graphInfo, NULL);
+          tmpMeta70 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta71 = omc_mk_box3(0, omc_mk_boolean(0 /* false */), omc_mk_integer(((modelica_integer) 1) + _id), tmpMeta70);
           tmpMeta[0+0] = _v;
           tmpMeta[0+1] = tmpMeta71;
           goto tmp3_done;
@@ -1916,14 +1939,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 5) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -1931,16 +1954,14 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_DumpGraphML_addVarGraph(threadDa
   _outTpl = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_outTpl) { *out_outTpl = _outTpl; }
-  return _outVar;
+  omc_ret_ = _outVar;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inSystem, modelica_metatype _inShared, modelica_metatype _inids, modelica_string _filename, modelica_boolean _numberMode)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   { /* match expression */
     modelica_metatype tmp3_1;modelica_metatype tmp3_2;
@@ -2003,7 +2024,7 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           modelica_metatype tmpMeta22;
           modelica_metatype tmpMeta23;
           modelica_metatype tmpMeta24;
-          tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 7));
+          tmpMeta5 = OMC_BOX_FIELD(tmp3_1, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta5,0,0) == 0) goto tmp2_end;
           if (!optionNone(tmp3_2)) goto tmp2_end;
           /* Pattern matching succeeded */
@@ -2022,18 +2043,18 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           /* Pattern-matching tuple assignment */
           tmpMeta9 = omc_GraphML_addGraph(threadData, _OMC_LIT25, 0 /* false */, _graphInfo, &tmpMeta6);
           _graphInfo = tmpMeta9;
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 2));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 2);
+          tmp8 = omc_unbox_integer(tmpMeta7);
           _graph = tmp8  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmpMeta10 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta11 = mmc_mk_box3(0, mmc_mk_boolean(_numberMode), mmc_mk_integer(((modelica_integer) 1)), tmpMeta10);
+          tmpMeta10 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta11 = omc_mk_box3(0, omc_mk_boolean(_numberMode), omc_mk_integer(((modelica_integer) 1)), tmpMeta10);
           tmpMeta12 = omc_BackendVariable_traverseBackendDAEVars(threadData, _vars, boxvar_DumpGraphML_addVarGraph, tmpMeta11);
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 3));
-          tmpMeta14 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 1));
-          tmpMeta15 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta13), 2));
-          tmp16 = mmc_unbox_integer(tmpMeta15);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 3);
+          tmpMeta14 = OMC_BOX_FIELD(tmpMeta13, 1);
+          tmpMeta15 = OMC_BOX_FIELD(tmpMeta13, 2);
+          tmp16 = omc_unbox_integer(tmpMeta15);
           _graphInfo = tmpMeta14;
           _graph = tmp16  /* pattern as ty=Integer */;
 
@@ -2042,18 +2063,18 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           _eqnsids = omc_List_intRange(threadData, _neqns);
 
           /* Pattern-matching assignment */
-          tmpMeta17 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta18 = omc_List_fold3(threadData, _eqnsids, boxvar_DumpGraphML_addEqnGraph, _eqns, _mapIncRowEqn, mmc_mk_boolean(_numberMode), tmpMeta17);
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta18), 1));
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta18), 2));
-          tmp21 = mmc_unbox_integer(tmpMeta20);
+          tmpMeta17 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta18 = omc_List_fold3(threadData, _eqnsids, boxvar_DumpGraphML_addEqnGraph, _eqns, _mapIncRowEqn, omc_mk_boolean(_numberMode), tmpMeta17);
+          tmpMeta19 = OMC_BOX_FIELD(tmpMeta18, 1);
+          tmpMeta20 = OMC_BOX_FIELD(tmpMeta18, 2);
+          tmp21 = omc_unbox_integer(tmpMeta20);
           _graphInfo = tmpMeta19;
           _graph = tmp21  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmpMeta22 = mmc_mk_box3(0, mmc_mk_integer(((modelica_integer) 1)), _m, _graphInfo);
+          tmpMeta22 = omc_mk_box3(0, omc_mk_integer(((modelica_integer) 1)), _m, _graphInfo);
           tmpMeta23 = omc_List_fold(threadData, _eqnsids, boxvar_DumpGraphML_addEdgesGraph, tmpMeta22);
-          tmpMeta24 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta23), 3));
+          tmpMeta24 = OMC_BOX_FIELD(tmpMeta23, 3);
           _graphInfo = tmpMeta24;
 
           omc_GraphML_dumpGraph(threadData, _graphInfo, _filename);
@@ -2085,13 +2106,13 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           modelica_metatype tmpMeta47;
           modelica_metatype tmpMeta48;
           if (!optionNone(tmp3_2)) goto tmp2_end;
-          tmpMeta25 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 4));
+          tmpMeta25 = OMC_BOX_FIELD(tmp3_1, 4);
           if (optionNone(tmpMeta25)) goto tmp2_end;
-          tmpMeta26 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta25), 1));
-          tmpMeta27 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 5));
+          tmpMeta26 = OMC_BOX_FIELD(tmpMeta25, 1);
+          tmpMeta27 = OMC_BOX_FIELD(tmp3_1, 5);
           if (optionNone(tmpMeta27)) goto tmp2_end;
-          tmpMeta28 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta27), 1));
-          tmpMeta29 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 7));
+          tmpMeta28 = OMC_BOX_FIELD(tmpMeta27, 1);
+          tmpMeta29 = OMC_BOX_FIELD(tmp3_1, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta29,0,0) == 0) goto tmp2_end;
           
           _m = tmpMeta26;
@@ -2105,18 +2126,18 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           /* Pattern-matching tuple assignment */
           tmpMeta33 = omc_GraphML_addGraph(threadData, _OMC_LIT25, 0 /* false */, _graphInfo, &tmpMeta30);
           _graphInfo = tmpMeta33;
-          tmpMeta31 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta30), 2));
-          tmp32 = mmc_unbox_integer(tmpMeta31);
+          tmpMeta31 = OMC_BOX_FIELD(tmpMeta30, 2);
+          tmp32 = omc_unbox_integer(tmpMeta31);
           _graph = tmp32  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmpMeta34 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta35 = mmc_mk_box3(0, mmc_mk_boolean(_numberMode), mmc_mk_integer(((modelica_integer) 1)), tmpMeta34);
+          tmpMeta34 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta35 = omc_mk_box3(0, omc_mk_boolean(_numberMode), omc_mk_integer(((modelica_integer) 1)), tmpMeta34);
           tmpMeta36 = omc_BackendVariable_traverseBackendDAEVars(threadData, _vars, boxvar_DumpGraphML_addVarGraph, tmpMeta35);
-          tmpMeta37 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta36), 3));
-          tmpMeta38 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta37), 1));
-          tmpMeta39 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta37), 2));
-          tmp40 = mmc_unbox_integer(tmpMeta39);
+          tmpMeta37 = OMC_BOX_FIELD(tmpMeta36, 3);
+          tmpMeta38 = OMC_BOX_FIELD(tmpMeta37, 1);
+          tmpMeta39 = OMC_BOX_FIELD(tmpMeta37, 2);
+          tmp40 = omc_unbox_integer(tmpMeta39);
           _graphInfo = tmpMeta38;
           _graph = tmp40  /* pattern as ty=Integer */;
 
@@ -2127,18 +2148,18 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           _mapIncRowEqn = omc_Array_createIntRange(threadData, arrayLength(_m));
 
           /* Pattern-matching assignment */
-          tmpMeta41 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta42 = omc_List_fold3(threadData, _eqnsids, boxvar_DumpGraphML_addEqnGraph, _eqns, _mapIncRowEqn, mmc_mk_boolean(_numberMode), tmpMeta41);
-          tmpMeta43 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta42), 1));
-          tmpMeta44 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta42), 2));
-          tmp45 = mmc_unbox_integer(tmpMeta44);
+          tmpMeta41 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta42 = omc_List_fold3(threadData, _eqnsids, boxvar_DumpGraphML_addEqnGraph, _eqns, _mapIncRowEqn, omc_mk_boolean(_numberMode), tmpMeta41);
+          tmpMeta43 = OMC_BOX_FIELD(tmpMeta42, 1);
+          tmpMeta44 = OMC_BOX_FIELD(tmpMeta42, 2);
+          tmp45 = omc_unbox_integer(tmpMeta44);
           _graphInfo = tmpMeta43;
           _graph = tmp45  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmpMeta46 = mmc_mk_box3(0, mmc_mk_integer(((modelica_integer) 1)), _m, _graphInfo);
+          tmpMeta46 = omc_mk_box3(0, omc_mk_integer(((modelica_integer) 1)), _m, _graphInfo);
           tmpMeta47 = omc_List_fold(threadData, _eqnsids, boxvar_DumpGraphML_addEdgesGraph, tmpMeta46);
-          tmpMeta48 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta47), 3));
+          tmpMeta48 = OMC_BOX_FIELD(tmpMeta47, 3);
           _graphInfo = tmpMeta48;
 
           omc_GraphML_dumpGraph(threadData, _graphInfo, _filename);
@@ -2170,11 +2191,11 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           modelica_metatype tmpMeta71;
           modelica_metatype tmpMeta72;
           if (!optionNone(tmp3_2)) goto tmp2_end;
-          tmpMeta49 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 7));
+          tmpMeta49 = OMC_BOX_FIELD(tmp3_1, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta49,1,3) == 0) goto tmp2_end;
-          tmpMeta50 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta49), 2));
-          tmpMeta51 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta49), 3));
-          tmpMeta52 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta49), 4));
+          tmpMeta50 = OMC_BOX_FIELD(tmpMeta49, 2);
+          tmpMeta51 = OMC_BOX_FIELD(tmpMeta49, 3);
+          tmpMeta52 = OMC_BOX_FIELD(tmpMeta49, 4);
           if (!listEmpty(tmpMeta52)) goto tmp2_end;
           
           _vec1 = tmpMeta50;
@@ -2193,18 +2214,18 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           /* Pattern-matching tuple assignment */
           tmpMeta56 = omc_GraphML_addGraph(threadData, _OMC_LIT25, 0 /* false */, _graphInfo, &tmpMeta53);
           _graphInfo = tmpMeta56;
-          tmpMeta54 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta53), 2));
-          tmp55 = mmc_unbox_integer(tmpMeta54);
+          tmpMeta54 = OMC_BOX_FIELD(tmpMeta53, 2);
+          tmp55 = omc_unbox_integer(tmpMeta54);
           _graph = tmp55  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmpMeta57 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta58 = mmc_mk_box4(0, mmc_mk_boolean(_numberMode), mmc_mk_integer(((modelica_integer) 1)), _vec1, tmpMeta57);
+          tmpMeta57 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta58 = omc_mk_box4(0, omc_mk_boolean(_numberMode), omc_mk_integer(((modelica_integer) 1)), _vec1, tmpMeta57);
           tmpMeta59 = omc_BackendVariable_traverseBackendDAEVars(threadData, _vars, boxvar_DumpGraphML_addVarGraphMatch, tmpMeta58);
-          tmpMeta60 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta59), 4));
-          tmpMeta61 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta60), 1));
-          tmpMeta62 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta60), 2));
-          tmp63 = mmc_unbox_integer(tmpMeta62);
+          tmpMeta60 = OMC_BOX_FIELD(tmpMeta59, 4);
+          tmpMeta61 = OMC_BOX_FIELD(tmpMeta60, 1);
+          tmpMeta62 = OMC_BOX_FIELD(tmpMeta60, 2);
+          tmp63 = omc_unbox_integer(tmpMeta62);
           _graphInfo = tmpMeta61;
           _graph = tmp63  /* pattern as ty=Integer */;
 
@@ -2212,22 +2233,22 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
 
           _eqnsids = omc_List_intRange(threadData, _neqns);
 
-          _eqnsflag = arrayCreate(_neqns, mmc_mk_boolean(0 /* false */));
+          _eqnsflag = arrayCreate(_neqns, omc_mk_boolean(0 /* false */));
 
           /* Pattern-matching assignment */
-          tmpMeta64 = mmc_mk_box3(0, _vec2, _mapIncRowEqn, _eqnsflag);
-          tmpMeta65 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta66 = omc_List_fold3(threadData, _eqnsids, boxvar_DumpGraphML_addEqnGraphMatch, _eqns, tmpMeta64, mmc_mk_boolean(_numberMode), tmpMeta65);
-          tmpMeta67 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta66), 1));
-          tmpMeta68 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta66), 2));
-          tmp69 = mmc_unbox_integer(tmpMeta68);
+          tmpMeta64 = omc_mk_box3(0, _vec2, _mapIncRowEqn, _eqnsflag);
+          tmpMeta65 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta66 = omc_List_fold3(threadData, _eqnsids, boxvar_DumpGraphML_addEqnGraphMatch, _eqns, tmpMeta64, omc_mk_boolean(_numberMode), tmpMeta65);
+          tmpMeta67 = OMC_BOX_FIELD(tmpMeta66, 1);
+          tmpMeta68 = OMC_BOX_FIELD(tmpMeta66, 2);
+          tmp69 = omc_unbox_integer(tmpMeta68);
           _graphInfo = tmpMeta67;
           _graph = tmp69  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmpMeta70 = mmc_mk_box5(0, mmc_mk_integer(((modelica_integer) 1)), _m, _vec2, _mapIncRowEqn, _graphInfo);
+          tmpMeta70 = omc_mk_box5(0, omc_mk_integer(((modelica_integer) 1)), _m, _vec2, _mapIncRowEqn, _graphInfo);
           tmpMeta71 = omc_List_fold(threadData, _eqnsids, boxvar_DumpGraphML_addDirectedEdgesGraph, tmpMeta70);
-          tmpMeta72 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta71), 5));
+          tmpMeta72 = OMC_BOX_FIELD(tmpMeta71, 5);
           _graphInfo = tmpMeta72;
 
           omc_GraphML_dumpGraph(threadData, _graphInfo, _filename);
@@ -2258,11 +2279,11 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           modelica_metatype tmpMeta94;
           modelica_metatype tmpMeta95;
           if (optionNone(tmp3_2)) goto tmp2_end;
-          tmpMeta73 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_2), 1));
-          tmpMeta74 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 7));
+          tmpMeta73 = OMC_BOX_FIELD(tmp3_2, 1);
+          tmpMeta74 = OMC_BOX_FIELD(tmp3_1, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta74,1,3) == 0) goto tmp2_end;
-          tmpMeta75 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta74), 3));
-          tmpMeta76 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta74), 4));
+          tmpMeta75 = OMC_BOX_FIELD(tmpMeta74, 3);
+          tmpMeta76 = OMC_BOX_FIELD(tmpMeta74, 4);
           if (!listEmpty(tmpMeta76)) goto tmp2_end;
           
           _vec3 = tmpMeta73;
@@ -2281,18 +2302,18 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           /* Pattern-matching tuple assignment */
           tmpMeta80 = omc_GraphML_addGraph(threadData, _OMC_LIT25, 0 /* false */, _graphInfo, &tmpMeta77);
           _graphInfo = tmpMeta80;
-          tmpMeta78 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta77), 2));
-          tmp79 = mmc_unbox_integer(tmpMeta78);
+          tmpMeta78 = OMC_BOX_FIELD(tmpMeta77, 2);
+          tmp79 = omc_unbox_integer(tmpMeta78);
           _graph = tmp79  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmpMeta81 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta82 = mmc_mk_box3(0, mmc_mk_boolean(_numberMode), mmc_mk_integer(((modelica_integer) 1)), tmpMeta81);
+          tmpMeta81 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta82 = omc_mk_box3(0, omc_mk_boolean(_numberMode), omc_mk_integer(((modelica_integer) 1)), tmpMeta81);
           tmpMeta83 = omc_BackendVariable_traverseBackendDAEVars(threadData, _vars, boxvar_DumpGraphML_addVarGraph, tmpMeta82);
-          tmpMeta84 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta83), 3));
-          tmpMeta85 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta84), 1));
-          tmpMeta86 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta84), 2));
-          tmp87 = mmc_unbox_integer(tmpMeta86);
+          tmpMeta84 = OMC_BOX_FIELD(tmpMeta83, 3);
+          tmpMeta85 = OMC_BOX_FIELD(tmpMeta84, 1);
+          tmpMeta86 = OMC_BOX_FIELD(tmpMeta84, 2);
+          tmp87 = omc_unbox_integer(tmpMeta86);
           _graphInfo = tmpMeta85;
           _graph = tmp87  /* pattern as ty=Integer */;
 
@@ -2301,18 +2322,18 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           _eqnsids = omc_List_intRange(threadData, _neqns);
 
           /* Pattern-matching assignment */
-          tmpMeta88 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
-          tmpMeta89 = omc_List_fold3(threadData, _eqnsids, boxvar_DumpGraphML_addEqnGraph, _eqns, _mapIncRowEqn, mmc_mk_boolean(_numberMode), tmpMeta88);
-          tmpMeta90 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta89), 1));
-          tmpMeta91 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta89), 2));
-          tmp92 = mmc_unbox_integer(tmpMeta91);
+          tmpMeta88 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
+          tmpMeta89 = omc_List_fold3(threadData, _eqnsids, boxvar_DumpGraphML_addEqnGraph, _eqns, _mapIncRowEqn, omc_mk_boolean(_numberMode), tmpMeta88);
+          tmpMeta90 = OMC_BOX_FIELD(tmpMeta89, 1);
+          tmpMeta91 = OMC_BOX_FIELD(tmpMeta89, 2);
+          tmp92 = omc_unbox_integer(tmpMeta91);
           _graphInfo = tmpMeta90;
           _graph = tmp92  /* pattern as ty=Integer */;
 
           /* Pattern-matching assignment */
-          tmpMeta93 = mmc_mk_box5(0, mmc_mk_integer(((modelica_integer) 1)), _m, _vec2, _vec3, _graphInfo);
+          tmpMeta93 = omc_mk_box5(0, omc_mk_integer(((modelica_integer) 1)), _m, _vec2, _vec3, _graphInfo);
           tmpMeta94 = omc_List_fold(threadData, _eqnsids, boxvar_DumpGraphML_addDirectedNumEdgesGraph, tmpMeta93);
-          tmpMeta95 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta94), 5));
+          tmpMeta95 = OMC_BOX_FIELD(tmpMeta94, 5);
           _graphInfo = tmpMeta95;
 
           omc_GraphML_dumpGraph(threadData, _graphInfo, _filename);
@@ -2330,9 +2351,9 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           modelica_metatype tmpMeta104;
           modelica_metatype tmpMeta105;
           modelica_integer tmp106;
-          tmpMeta96 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp3_1), 7));
+          tmpMeta96 = OMC_BOX_FIELD(tmp3_1, 7);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta96,1,3) == 0) goto tmp2_end;
-          tmpMeta97 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta96), 4));
+          tmpMeta97 = OMC_BOX_FIELD(tmpMeta96, 4);
           if (!optionNone(tmp3_2)) goto tmp2_end;
           _comps = tmpMeta97;
           /* Pattern matching succeeded */
@@ -2347,22 +2368,22 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
           /* Pattern-matching tuple assignment */
           tmpMeta101 = omc_GraphML_addGraph(threadData, _OMC_LIT25, 0 /* false */, _graphInfo, &tmpMeta98);
           _graphInfo = tmpMeta101;
-          tmpMeta99 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta98), 2));
-          tmp100 = mmc_unbox_integer(tmpMeta99);
+          tmpMeta99 = OMC_BOX_FIELD(tmpMeta98, 2);
+          tmp100 = omc_unbox_integer(tmpMeta99);
           _graph = tmp100  /* pattern as ty=Integer */;
 
-          _vec3 = arrayCreate(arrayLength(_mt), mmc_mk_integer(((modelica_integer) -1)));
+          _vec3 = arrayCreate(arrayLength(_mt), omc_mk_integer(((modelica_integer) -1)));
 
           /* Pattern-matching assignment */
-          tmpMeta102 = mmc_mk_box2(0, _graphInfo, mmc_mk_integer(_graph));
+          tmpMeta102 = omc_mk_box2(0, _graphInfo, omc_mk_integer(_graph));
           tmpMeta103 = omc_DumpGraphML_addCompsGraph(threadData, _comps, _vars, _vec3, ((modelica_integer) 1), tmpMeta102);
-          tmpMeta104 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta103), 1));
-          tmpMeta105 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta103), 2));
-          tmp106 = mmc_unbox_integer(tmpMeta105);
+          tmpMeta104 = OMC_BOX_FIELD(tmpMeta103, 1);
+          tmpMeta105 = OMC_BOX_FIELD(tmpMeta103, 2);
+          tmp106 = omc_unbox_integer(tmpMeta105);
           _graphInfo = tmpMeta104;
           _graph = tmp106  /* pattern as ty=Integer */;
 
-          _mapIncRowEqn = arrayCreate(arrayLength(_mt), mmc_mk_integer(((modelica_integer) -1)));
+          _mapIncRowEqn = arrayCreate(arrayLength(_mt), omc_mk_integer(((modelica_integer) -1)));
 
           _graphInfo = omc_DumpGraphML_addCompsEdgesGraph(threadData, _comps, _m, _vec3, ((modelica_integer) 1), ((modelica_integer) 1), _mapIncRowEqn, ((modelica_integer) 1), _graphInfo);
 
@@ -2375,22 +2396,19 @@ void omc_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inS
       }
       goto goto_1;
       goto_1:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp2_done;
       tmp2_done:;
     }
   }
   ;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 void boxptr_DumpGraphML_dumpSystem(threadData_t *threadData, modelica_metatype _inSystem, modelica_metatype _inShared, modelica_metatype _inids, modelica_metatype _filename, modelica_metatype _numberMode)
 {
   modelica_integer tmp1;
-  tmp1 = mmc_unbox_integer(_numberMode);
+  tmp1 = omc_unbox_integer(_numberMode);
   omc_DumpGraphML_dumpSystem(threadData, _inSystem, _inShared, _inids, _filename, tmp1);
   return;
 }

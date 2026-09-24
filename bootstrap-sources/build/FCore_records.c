@@ -1384,7 +1384,7 @@ extern struct record_description FCore_Graph_G__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef FCore_Top_GTOP__desc_added
 #define FCore_Top_GTOP__desc_added
-ADD_METARECORD_DEFINITIONS const char* FCore_Top_GTOP__desc__fields[4] = {"graph","name","node","extra"};
+ADD_METARECORD_DEFINITIONS const char* FCore_Top_GTOP__desc__fields[3] = {"name","node","extra"};
 ADD_METARECORD_DEFINITIONS struct record_description FCore_Top_GTOP__desc = {
   "FCore_Top_GTOP",
   "FCore.Top.GTOP",
@@ -1397,7 +1397,7 @@ extern struct record_description FCore_Top_GTOP__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef FCore_Top_GTOP__desc_added
 #define FCore_Top_GTOP__desc_added
-ADD_METARECORD_DEFINITIONS const char* FCore_Top_GTOP__desc__fields[4] = {"graph","name","node","extra"};
+ADD_METARECORD_DEFINITIONS const char* FCore_Top_GTOP__desc__fields[3] = {"name","node","extra"};
 ADD_METARECORD_DEFINITIONS struct record_description FCore_Top_GTOP__desc = {
   "FCore_Top_GTOP",
   "FCore.Top.GTOP",

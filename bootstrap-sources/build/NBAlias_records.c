@@ -58,7 +58,7 @@ extern struct record_description NBAlias_CrefTpl_CREF__TPL__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc_added
 #define NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc__fields[7] = {"min_val_map","max_val_map","start_map","fixed_map","nominal_map","stateSelect_map","tearingSelect_map"};
+ADD_METARECORD_DEFINITIONS const char* NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc__fields[8] = {"min_val_map","max_val_map","start_map","start_binding_map","fixed_map","nominal_map","stateSelect_map","tearingSelect_map"};
 ADD_METARECORD_DEFINITIONS struct record_description NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc = {
   "NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR",
   "NBAlias.AttributeCollector.ATTRIBUTE_COLLECTOR",
@@ -71,7 +71,7 @@ extern struct record_description NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc_added
 #define NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc__fields[7] = {"min_val_map","max_val_map","start_map","fixed_map","nominal_map","stateSelect_map","tearingSelect_map"};
+ADD_METARECORD_DEFINITIONS const char* NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc__fields[8] = {"min_val_map","max_val_map","start_map","start_binding_map","fixed_map","nominal_map","stateSelect_map","tearingSelect_map"};
 ADD_METARECORD_DEFINITIONS struct record_description NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR__desc = {
   "NBAlias_AttributeCollector_ATTRIBUTE__COLLECTOR",
   "NBAlias.AttributeCollector.ATTRIBUTE_COLLECTOR",

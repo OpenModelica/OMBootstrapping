@@ -33,7 +33,7 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_MathematicaDump_printMmaParamStr omc_MathematicaDump_printMmaParamStr
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_MathematicaDump_printMmaParamsStr(threadData_t *threadData, modelica_metatype _knvars, modelica_metatype *out_inputs);
 #define boxptr_MathematicaDump_printMmaParamsStr omc_MathematicaDump_printMmaParamsStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MathematicaDump_printMmaParamsStr,2,0) {(void*) boxptr_MathematicaDump_printMmaParamsStr,0}};
@@ -46,15 +46,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_MathematicaDump_printMmaParamsStr,2,0) 
 #define boxptr_MathematicaDump_printMmaOutputStr omc_MathematicaDump_printMmaOutputStr
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_MathematicaDump_printMmaVarStr(threadData_t *threadData, modelica_metatype _v, modelica_boolean _selectKind, modelica_metatype _allVars);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_MathematicaDump_printMmaVarStr(threadData_t *threadData, modelica_metatype _v, modelica_metatype _selectKind, modelica_metatype _allVars);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MathematicaDump_printMmaVarStr,2,0) {(void*) boxptr_MathematicaDump_printMmaVarStr,0}};
 #define boxvar_MathematicaDump_printMmaVarStr MMC_REFSTRUCTLIT(boxvar_lit_MathematicaDump_printMmaVarStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_MathematicaDump_printMmaVarsStr(threadData_t *threadData, modelica_metatype _vars, modelica_metatype *out_algs, modelica_metatype *out_outputs, modelica_metatype *out_inputs);
 #define boxptr_MathematicaDump_printMmaVarsStr omc_MathematicaDump_printMmaVarsStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MathematicaDump_printMmaVarsStr,2,0) {(void*) boxptr_MathematicaDump_printMmaVarsStr,0}};
@@ -97,28 +97,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_MathematicaDump_printMmaVarsStr,2,0) {(
 #define boxptr_MathematicaDump_printExp2MmaStr omc_MathematicaDump_printExp2MmaStr
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_MathematicaDump_printExpMmaStr(threadData_t *threadData, modelica_metatype _e, modelica_metatype _vars, modelica_metatype _knvars);
 #define boxptr_MathematicaDump_printExpMmaStr omc_MathematicaDump_printExpMmaStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MathematicaDump_printExpMmaStr,2,0) {(void*) boxptr_MathematicaDump_printExpMmaStr,0}};
 #define boxvar_MathematicaDump_printExpMmaStr MMC_REFSTRUCTLIT(boxvar_lit_MathematicaDump_printExpMmaStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_MathematicaDump_printMmaEqnStr(threadData_t *threadData, modelica_metatype _eqn, modelica_metatype _inTuple);
 #define boxptr_MathematicaDump_printMmaEqnStr omc_MathematicaDump_printMmaEqnStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MathematicaDump_printMmaEqnStr,2,0) {(void*) boxptr_MathematicaDump_printMmaEqnStr,0}};
 #define boxvar_MathematicaDump_printMmaEqnStr MMC_REFSTRUCTLIT(boxvar_lit_MathematicaDump_printMmaEqnStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_MathematicaDump_printMmaEqnsStr(threadData_t *threadData, modelica_metatype _inEqns, modelica_metatype _inTuple);
 #define boxptr_MathematicaDump_printMmaEqnsStr omc_MathematicaDump_printMmaEqnsStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MathematicaDump_printMmaEqnsStr,2,0) {(void*) boxptr_MathematicaDump_printMmaEqnsStr,0}};
 #define boxvar_MathematicaDump_printMmaEqnsStr MMC_REFSTRUCTLIT(boxvar_lit_MathematicaDump_printMmaEqnsStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_MathematicaDump_dumpMmaDAEStr(threadData_t *threadData, modelica_metatype _inTuple);
 #define boxptr_MathematicaDump_dumpMmaDAEStr omc_MathematicaDump_dumpMmaDAEStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_MathematicaDump_dumpMmaDAEStr,2,0) {(void*) boxptr_MathematicaDump_dumpMmaDAEStr,0}};

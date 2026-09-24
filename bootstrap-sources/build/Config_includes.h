@@ -8,6 +8,7 @@ extern "C" {
 #include "Error.h"
 #include "Flags.h"
 #include "FlagsUtil.h"
+#include "StringUtil.h"
 #include "System.h"
 #ifdef __cplusplus
 }

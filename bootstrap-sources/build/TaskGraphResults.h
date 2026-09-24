@@ -12,7 +12,7 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_TaskGraphResults_checkCodeGraph(threadData_t *threadData, modelica_string _graphfile, modelica_string _codefile);
 #define boxptr_TaskGraphResults_checkCodeGraph omc_TaskGraphResults_checkCodeGraph
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TaskGraphResults_checkCodeGraph,2,0) {(void*) boxptr_TaskGraphResults_checkCodeGraph,0}};
@@ -20,7 +20,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_TaskGraphResults_checkCodeGraph,2,0) {(
 
 extern modelica_metatype TaskGraphResults_checkCodeGraph(const char* /*_graphfile*/, const char* /*_codefile*/);
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_TaskGraphResults_checkTaskGraph(threadData_t *threadData, modelica_string _filename, modelica_string _reffilename);
 #define boxptr_TaskGraphResults_checkTaskGraph omc_TaskGraphResults_checkTaskGraph
 static const MMC_DEFSTRUCTLIT(boxvar_lit_TaskGraphResults_checkTaskGraph,2,0) {(void*) boxptr_TaskGraphResults_checkTaskGraph,0}};

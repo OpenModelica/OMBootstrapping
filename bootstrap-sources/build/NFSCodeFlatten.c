@@ -42,12 +42,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFSCodeFlatten_getLastClassNameI
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeFlatten_getLastClassNameInProgram,2,0) {(void*) boxptr_NFSCodeFlatten_getLastClassNameInProgram,0}};
 #define boxvar_NFSCodeFlatten_getLastClassNameInProgram MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeFlatten_getLastClassNameInProgram)
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSCodeFlatten_flattenCompleteProgram(threadData_t *threadData, modelica_metatype _inProgram)
 {
   modelica_metatype _outProgram = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outProgram has no default value.
   { /* matchcontinue expression */
@@ -61,7 +62,7 @@ modelica_metatype omc_NFSCodeFlatten_flattenCompleteProgram(threadData_t *thread
       // _env has no default value.
       // _prog has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -99,29 +100,31 @@ modelica_metatype omc_NFSCodeFlatten_flattenCompleteProgram(threadData_t *thread
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _outProgram = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outProgram;
+  omc_ret_ = _outProgram;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSCodeFlatten_flattenClassInProgram(threadData_t *threadData, modelica_metatype _inClassName, modelica_metatype _inProgram, modelica_metatype *out_outEnv)
 {
   modelica_metatype _outProgram = NULL;
   modelica_metatype _outEnv = NULL;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outProgram has no default value.
   // _outEnv has no default value.
@@ -138,7 +141,7 @@ modelica_metatype omc_NFSCodeFlatten_flattenClassInProgram(threadData_t *threadD
       // _env has no default value.
       // _prog has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -171,15 +174,15 @@ modelica_metatype omc_NFSCodeFlatten_flattenClassInProgram(threadData_t *threadD
         }
         case 1: {
           modelica_boolean tmp6;
-          modelica_metatype tmpMeta7;
+          modelica_string tmp7;
           
           /* Pattern matching succeeded */
           /* Pattern-matching assignment */
           tmp6 = omc_Flags_isSet(threadData, _OMC_LIT2);
           if (1 /* true */ != tmp6) goto goto_2;
 
-          tmpMeta7 = stringAppend(_OMC_LIT7,omc_AbsynUtil_pathString(threadData, _inClassName, _OMC_LIT8, 1 /* true */, 0 /* false */));
-          omc_Debug_traceln(threadData, tmpMeta7);
+          tmp7 = stringAppend(_OMC_LIT7,omc_AbsynUtil_pathString(threadData, _inClassName, _OMC_LIT8, 1 /* true */, 0 /* false */));
+          omc_Debug_traceln(threadData, tmp7);
           goto goto_2;
           goto tmp3_done;
         }
@@ -190,14 +193,14 @@ modelica_metatype omc_NFSCodeFlatten_flattenClassInProgram(threadData_t *threadD
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
@@ -205,10 +208,11 @@ modelica_metatype omc_NFSCodeFlatten_flattenClassInProgram(threadData_t *threadD
   _outEnv = tmpMeta[0+1];
   _return: OMC_LABEL_UNUSED
   if (out_outEnv) { *out_outEnv = _outEnv; }
-  return _outProgram;
+  omc_ret_ = _outProgram;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSCodeFlatten_flattenClass(threadData_t *threadData, modelica_metatype _inClass)
 {
   modelica_metatype _outClass = NULL;
@@ -216,29 +220,29 @@ modelica_metatype omc_NFSCodeFlatten_flattenClass(threadData_t *threadData, mode
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outClass has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = mmc_mk_cons(_inClass, MMC_REFSTRUCTLIT(mmc_nil));
   tmpMeta2 = omc_NFSCodeFlatten_flattenProgram(threadData, tmpMeta1);
-  if (listEmpty(tmpMeta2)) MMC_THROW_INTERNAL();
+  if (listEmpty(tmpMeta2)) OMC_THROW_INTERNAL();
   tmpMeta3 = MMC_CAR(tmpMeta2);
   tmpMeta4 = MMC_CDR(tmpMeta2);
-  if (!listEmpty(tmpMeta4)) MMC_THROW_INTERNAL();
+  if (!listEmpty(tmpMeta4)) OMC_THROW_INTERNAL();
   _outClass = tmpMeta3;
   _return: OMC_LABEL_UNUSED
-  return _outClass;
+  omc_ret_ = _outClass;
+  return omc_ret_;
 }
 
 PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeFlatten_isClass(threadData_t *threadData, modelica_metatype _inClass)
 {
   modelica_boolean _outIsClass;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outIsClass has no default value.
   { /* match expression */
@@ -253,7 +257,7 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeFlatten_isClass(threadData
         case 0: {
           modelica_metatype tmpMeta6;
           if (mmc__uniontype__metarecord__typedef__equal(tmp4_1,2,8) == 0) goto tmp3_end;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 6));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 6);
           if (mmc__uniontype__metarecord__typedef__equal(tmpMeta6,9,1) == 0) goto tmp3_end;
           
           /* Pattern matching succeeded */
@@ -272,24 +276,22 @@ PROTECTED_FUNCTION_STATIC modelica_boolean omc_NFSCodeFlatten_isClass(threadData
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outIsClass = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _outIsClass;
+  omc_ret_ = _outIsClass;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_NFSCodeFlatten_isClass(threadData_t *threadData, modelica_metatype _inClass)
 {
   modelica_boolean _outIsClass;
   modelica_metatype out_outIsClass;
   _outIsClass = omc_NFSCodeFlatten_isClass(threadData, _inClass);
-  out_outIsClass = mmc_mk_icon(_outIsClass);
+  out_outIsClass = omc_mk_icon(_outIsClass);
   return out_outIsClass;
 }
 
@@ -301,7 +303,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFSCodeFlatten_getLastClassNameI
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outClassName has no default value.
   // _prog has no default value.
@@ -310,22 +313,24 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_NFSCodeFlatten_getLastClassNameI
 
   /* Pattern-matching assignment */
   tmpMeta1 = omc_List_find(threadData, _prog, boxvar_NFSCodeFlatten_isClass);
-  if (mmc__uniontype__metarecord__typedef__equal(tmpMeta1,2,8) == 0) MMC_THROW_INTERNAL();
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  if (mmc__uniontype__metarecord__typedef__equal(tmpMeta1,2,8) == 0) OMC_THROW_INTERNAL();
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _name = tmpMeta2;
 
-  tmpMeta3 = mmc_mk_box2(4, &Absyn_Path_IDENT__desc, _name);
+  tmpMeta3 = omc_mk_box2(4, &Absyn_Path_IDENT__desc, _name);
   _outClassName = tmpMeta3;
   _return: OMC_LABEL_UNUSED
-  return _outClassName;
+  omc_ret_ = _outClassName;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSCodeFlatten_flattenProgram(threadData_t *threadData, modelica_metatype _inProgram)
 {
   modelica_metatype _outProgram = NULL;
   modelica_metatype _cls_path = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outProgram has no default value.
   // _cls_path has no default value.
@@ -333,6 +338,7 @@ modelica_metatype omc_NFSCodeFlatten_flattenProgram(threadData_t *threadData, mo
 
   _outProgram = omc_NFSCodeFlatten_flattenClassInProgram(threadData, _cls_path, _inProgram, NULL);
   _return: OMC_LABEL_UNUSED
-  return _outProgram;
+  omc_ret_ = _outProgram;
+  return omc_ret_;
 }
 

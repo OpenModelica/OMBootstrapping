@@ -157,28 +157,28 @@ extern struct record_description SCode_Visibility_PUBLIC__desc;
 extern struct record_description SourceInfo_SOURCEINFO__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FBuiltin_getElementWithPathCheckBuiltin(threadData_t *threadData, modelica_metatype _inProgram, modelica_metatype _inPath);
 #define boxptr_FBuiltin_getElementWithPathCheckBuiltin omc_FBuiltin_getElementWithPathCheckBuiltin
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_getElementWithPathCheckBuiltin,2,0) {(void*) boxptr_FBuiltin_getElementWithPathCheckBuiltin,0}};
 #define boxvar_FBuiltin_getElementWithPathCheckBuiltin MMC_REFSTRUCTLIT(boxvar_lit_FBuiltin_getElementWithPathCheckBuiltin)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FBuiltin_initialGraphOptimica(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fgraph, modelica_fnptr _mkCompNode);
 #define boxptr_FBuiltin_initialGraphOptimica omc_FBuiltin_initialGraphOptimica
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_initialGraphOptimica,2,0) {(void*) boxptr_FBuiltin_initialGraphOptimica,0}};
 #define boxvar_FBuiltin_initialGraphOptimica MMC_REFSTRUCTLIT(boxvar_lit_FBuiltin_initialGraphOptimica)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FBuiltin_initialGraphMetaModelica(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fgraph, modelica_fnptr _mkTypeNode);
 #define boxptr_FBuiltin_initialGraphMetaModelica omc_FBuiltin_initialGraphMetaModelica
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_initialGraphMetaModelica,2,0) {(void*) boxptr_FBuiltin_initialGraphMetaModelica,0}};
 #define boxvar_FBuiltin_initialGraphMetaModelica MMC_REFSTRUCTLIT(boxvar_lit_FBuiltin_initialGraphMetaModelica)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FBuiltin_initialGraphModelica(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fgraph, modelica_fnptr _mkTypeNode, modelica_fnptr _mkCompNode);
 #define boxptr_FBuiltin_initialGraphModelica omc_FBuiltin_initialGraphModelica
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_initialGraphModelica,2,0) {(void*) boxptr_FBuiltin_initialGraphModelica,0}};
@@ -188,14 +188,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_initialGraphModelica,2,0) {(vo
 #define boxptr_FBuiltin_getSetInitialGraph omc_FBuiltin_getSetInitialGraph
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FBuiltin_initialGraph(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype *out_graph);
 #define boxptr_FBuiltin_initialGraph omc_FBuiltin_initialGraph
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_initialGraph,2,0) {(void*) boxptr_FBuiltin_initialGraph,0}};
 #define boxvar_FBuiltin_initialGraph MMC_REFSTRUCTLIT(boxvar_lit_FBuiltin_initialGraph)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FBuiltin_getInitialFunctions(threadData_t *threadData, modelica_metatype *out_initialSCodeProgram);
 #define boxptr_FBuiltin_getInitialFunctions omc_FBuiltin_getInitialFunctions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_getInitialFunctions,2,0) {(void*) boxptr_FBuiltin_getInitialFunctions,0}};
@@ -205,22 +205,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_getInitialFunctions,2,0) {(voi
 #define boxptr_FBuiltin_mergePrograms omc_FBuiltin_mergePrograms
 
 
-DLLDirection
+DLLModelDirection
 void omc_FBuiltin_isDer(threadData_t *threadData, modelica_metatype _inPath);
 #define boxptr_FBuiltin_isDer omc_FBuiltin_isDer
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_isDer,2,0) {(void*) boxptr_FBuiltin_isDer,0}};
 #define boxvar_FBuiltin_isDer MMC_REFSTRUCTLIT(boxvar_lit_FBuiltin_isDer)
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_FBuiltin_variableIsBuiltin(threadData_t *threadData, modelica_metatype _cref, modelica_boolean _useOptimica);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_FBuiltin_variableIsBuiltin(threadData_t *threadData, modelica_metatype _cref, modelica_metatype _useOptimica);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_variableIsBuiltin,2,0) {(void*) boxptr_FBuiltin_variableIsBuiltin,0}};
 #define boxvar_FBuiltin_variableIsBuiltin MMC_REFSTRUCTLIT(boxvar_lit_FBuiltin_variableIsBuiltin)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FBuiltin_getBasicTypes(threadData_t *threadData);
 #define boxptr_FBuiltin_getBasicTypes omc_FBuiltin_getBasicTypes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_FBuiltin_getBasicTypes,2,0) {(void*) boxptr_FBuiltin_getBasicTypes,0}};

@@ -46,35 +46,35 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFFunctionInverse_getInverseAnnotations omc_NFFunctionInverse_getInverseAnnotations
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFFunctionInverse_getFunction(threadData_t *threadData, modelica_metatype _fnInv);
 #define boxptr_NFFunctionInverse_getFunction omc_NFFunctionInverse_getFunction
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionInverse_getFunction,2,0) {(void*) boxptr_NFFunctionInverse_getFunction,0}};
 #define boxvar_NFFunctionInverse_getFunction MMC_REFSTRUCTLIT(boxvar_lit_NFFunctionInverse_getFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFFunctionInverse_toSubMod(threadData_t *threadData, modelica_metatype _fnInv);
 #define boxptr_NFFunctionInverse_toSubMod omc_NFFunctionInverse_toSubMod
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionInverse_toSubMod,2,0) {(void*) boxptr_NFFunctionInverse_toSubMod,0}};
 #define boxvar_NFFunctionInverse_toSubMod MMC_REFSTRUCTLIT(boxvar_lit_NFFunctionInverse_toSubMod)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFFunctionInverse_toDAE(threadData_t *threadData, modelica_metatype _fnInv);
 #define boxptr_NFFunctionInverse_toDAE omc_NFFunctionInverse_toDAE
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionInverse_toDAE,2,0) {(void*) boxptr_NFFunctionInverse_toDAE,0}};
 #define boxvar_NFFunctionInverse_toDAE MMC_REFSTRUCTLIT(boxvar_lit_NFFunctionInverse_toDAE)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFFunctionInverse_typeInverse(threadData_t *threadData, modelica_metatype __omcQ_24in_5FfnInv);
 #define boxptr_NFFunctionInverse_typeInverse omc_NFFunctionInverse_typeInverse
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionInverse_typeInverse,2,0) {(void*) boxptr_NFFunctionInverse_typeInverse,0}};
 #define boxvar_NFFunctionInverse_typeInverse MMC_REFSTRUCTLIT(boxvar_lit_NFFunctionInverse_typeInverse)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFFunctionInverse_instInverses(threadData_t *threadData, modelica_metatype _fnNode, modelica_metatype _fn);
 #define boxptr_NFFunctionInverse_instInverses omc_NFFunctionInverse_instInverses
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFFunctionInverse_instInverses,2,0) {(void*) boxptr_NFFunctionInverse_instInverses,0}};

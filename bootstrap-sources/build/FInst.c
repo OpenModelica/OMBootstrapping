@@ -64,7 +64,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_FInst_doSCodeDep(threadData_t *t
 {
   modelica_metatype _outProgram = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outProgram has no default value.
   { /* matchcontinue expression */
@@ -72,7 +73,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_FInst_doSCodeDep(threadData_t *t
       volatile mmc_switch_type tmp4;
       int tmp5;
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
@@ -98,28 +99,30 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_FInst_doSCodeDep(threadData_t *t
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _outProgram = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outProgram;
+  omc_ret_ = _outProgram;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FInst_instPath(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram)
 {
   modelica_metatype _dae = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _dae has no default value.
   { /* matchcontinue expression */
@@ -133,7 +136,7 @@ modelica_metatype omc_FInst_instPath(threadData_t *threadData, modelica_metatype
       // _p has no default value.
       // _lst has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 3; tmp4++) {
@@ -145,18 +148,18 @@ modelica_metatype omc_FInst_instPath(threadData_t *threadData, modelica_metatype
         }
         case 1: {
           modelica_metatype tmpMeta6;
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
-          modelica_metatype tmpMeta15;
-          modelica_metatype tmpMeta16;
-          modelica_metatype tmpMeta17;
-          modelica_metatype tmpMeta18;
+          modelica_string tmp7;
+          modelica_string tmp8;
+          modelica_string tmp9;
+          modelica_string tmp10;
+          modelica_string tmp11;
+          modelica_string tmp12;
+          modelica_string tmp13;
+          modelica_string tmp14;
+          modelica_string tmp15;
+          modelica_string tmp16;
+          modelica_string tmp17;
+          modelica_string tmp18;
           /* Pattern matching succeeded */
           tmpMeta6 = MMC_REFSTRUCTLIT(mmc_nil);
           _lst = tmpMeta6;
@@ -165,55 +168,55 @@ modelica_metatype omc_FInst_instPath(threadData_t *threadData, modelica_metatype
 
           _p = omc_FInst_doSCodeDep(threadData, _inProgram, _inPath);
 
-          _lst = omc_List_consr(threadData, _lst, mmc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
+          _lst = omc_List_consr(threadData, _lst, omc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
 
-          tmpMeta7 = stringAppend(_OMC_LIT3,realString(mmc_unbox_real(listHead(_lst))));
-          tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT4);
-          fputs(MMC_STRINGDATA(tmpMeta8),stdout);
+          tmp7 = stringAppend(_OMC_LIT3,realString(omc_unbox_real(listHead(_lst))));
+          tmp8 = stringAppend(tmp7,_OMC_LIT4);
+          fputs(omc_string_data(tmp8),stdout);
 
           omc_System_realtimeTick(threadData, ((modelica_integer) 26));
 
           omc_FBuiltin_initialGraph(threadData, omc_FCore_emptyCache(threadData) ,&_g);
 
-          _lst = omc_List_consr(threadData, _lst, mmc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
+          _lst = omc_List_consr(threadData, _lst, omc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
 
-          tmpMeta9 = stringAppend(_OMC_LIT5,realString(mmc_unbox_real(listHead(_lst))));
-          tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT4);
-          fputs(MMC_STRINGDATA(tmpMeta10),stdout);
+          tmp9 = stringAppend(_OMC_LIT5,realString(omc_unbox_real(listHead(_lst))));
+          tmp10 = stringAppend(tmp9,_OMC_LIT4);
+          fputs(omc_string_data(tmp10),stdout);
 
           omc_System_realtimeTick(threadData, ((modelica_integer) 26));
 
           _g = omc_FGraphBuild_mkProgramGraph(threadData, _p, _OMC_LIT6, _g);
 
-          _lst = omc_List_consr(threadData, _lst, mmc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
+          _lst = omc_List_consr(threadData, _lst, omc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
 
-          tmpMeta11 = stringAppend(_OMC_LIT7,realString(mmc_unbox_real(listHead(_lst))));
-          tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT4);
-          fputs(MMC_STRINGDATA(tmpMeta12),stdout);
+          tmp11 = stringAppend(_OMC_LIT7,realString(omc_unbox_real(listHead(_lst))));
+          tmp12 = stringAppend(tmp11,_OMC_LIT4);
+          fputs(omc_string_data(tmp12),stdout);
 
           omc_System_realtimeTick(threadData, ((modelica_integer) 26));
 
           _g = omc_FExpand_path(threadData, _g, _inPath, NULL);
 
-          _lst = omc_List_consr(threadData, _lst, mmc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
+          _lst = omc_List_consr(threadData, _lst, omc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
 
-          tmpMeta13 = stringAppend(_OMC_LIT8,realString(mmc_unbox_real(listHead(_lst))));
-          tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT4);
-          fputs(MMC_STRINGDATA(tmpMeta14),stdout);
+          tmp13 = stringAppend(_OMC_LIT8,realString(omc_unbox_real(listHead(_lst))));
+          tmp14 = stringAppend(tmp13,_OMC_LIT4);
+          fputs(omc_string_data(tmp14),stdout);
 
-          tmpMeta15 = stringAppend(_OMC_LIT9,realString(mmc_unbox_real(omc_List_fold(threadData, _lst, boxvar_realAdd, _OMC_LIT10))));
-          tmpMeta16 = stringAppend(tmpMeta15,_OMC_LIT4);
-          fputs(MMC_STRINGDATA(tmpMeta16),stdout);
+          tmp15 = stringAppend(_OMC_LIT9,realString(omc_unbox_real(omc_List_fold(threadData, _lst, boxvar_realAdd, _OMC_LIT10))));
+          tmp16 = stringAppend(tmp15,_OMC_LIT4);
+          fputs(omc_string_data(tmp16),stdout);
 
-          tmpMeta17 = stringAppend(_OMC_LIT11,omc_AbsynUtil_pathString(threadData, _inPath, _OMC_LIT12, 1 /* true */, 0 /* false */));
-          tmpMeta18 = stringAppend(tmpMeta17,_OMC_LIT13);
-          omc_FGraphDump_dumpGraph(threadData, _g, tmpMeta18);
+          tmp17 = stringAppend(_OMC_LIT11,omc_AbsynUtil_pathString(threadData, _inPath, _OMC_LIT12, 1 /* true */, 0 /* false */));
+          tmp18 = stringAppend(tmp17,_OMC_LIT13);
+          omc_FGraphDump_dumpGraph(threadData, _g, tmp18);
           tmpMeta1 = _OMC_LIT14;
           goto tmp3_done;
         }
         case 2: {
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT15),stdout);
+          fputs(omc_string_data(_OMC_LIT15),stdout);
           tmpMeta1 = _OMC_LIT14;
           goto tmp3_done;
         }
@@ -224,28 +227,30 @@ modelica_metatype omc_FInst_instPath(threadData_t *threadData, modelica_metatype
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 3) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _dae = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _dae;
+  omc_ret_ = _dae;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_FInst_inst(threadData_t *threadData, modelica_metatype _inPath, modelica_metatype _inProgram)
 {
   modelica_metatype _dae = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _dae has no default value.
   { /* matchcontinue expression */
@@ -259,21 +264,21 @@ modelica_metatype omc_FInst_inst(threadData_t *threadData, modelica_metatype _in
       // _p has no default value.
       // _lst has no default value.
       tmp4 = 0;
-      MMC_TRY_INTERNAL(mmc_jumper)
+      OMC_TRY_INTERNAL(mmc_jumper)
       tmp3_top:
       threadData->mmc_jumper = &new_mmc_jumper;
       for (; tmp4 < 2; tmp4++) {
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
-          modelica_metatype tmpMeta9;
-          modelica_metatype tmpMeta10;
-          modelica_metatype tmpMeta11;
-          modelica_metatype tmpMeta12;
-          modelica_metatype tmpMeta13;
-          modelica_metatype tmpMeta14;
+          modelica_string tmp7;
+          modelica_string tmp8;
+          modelica_string tmp9;
+          modelica_string tmp10;
+          modelica_string tmp11;
+          modelica_string tmp12;
+          modelica_string tmp13;
+          modelica_string tmp14;
           /* Pattern matching succeeded */
           _p = omc_FInst_doSCodeDep(threadData, _inProgram, _inPath);
 
@@ -286,41 +291,41 @@ modelica_metatype omc_FInst_inst(threadData_t *threadData, modelica_metatype _in
 
           _g = omc_FGraphBuild_mkProgramGraph(threadData, _p, _OMC_LIT6, _g);
 
-          _lst = omc_List_consr(threadData, _lst, mmc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
+          _lst = omc_List_consr(threadData, _lst, omc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
 
-          tmpMeta7 = stringAppend(_OMC_LIT7,realString(mmc_unbox_real(listHead(_lst))));
-          tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT4);
-          fputs(MMC_STRINGDATA(tmpMeta8),stdout);
+          tmp7 = stringAppend(_OMC_LIT7,realString(omc_unbox_real(listHead(_lst))));
+          tmp8 = stringAppend(tmp7,_OMC_LIT4);
+          fputs(omc_string_data(tmp8),stdout);
 
           omc_System_realtimeTick(threadData, ((modelica_integer) 26));
 
           _g = omc_FExpand_all(threadData, _g);
 
-          _lst = omc_List_consr(threadData, _lst, mmc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
+          _lst = omc_List_consr(threadData, _lst, omc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
 
-          tmpMeta9 = stringAppend(_OMC_LIT9,realString(mmc_unbox_real(omc_List_fold(threadData, _lst, boxvar_realAdd, _OMC_LIT10))));
-          tmpMeta10 = stringAppend(tmpMeta9,_OMC_LIT4);
-          fputs(MMC_STRINGDATA(tmpMeta10),stdout);
+          tmp9 = stringAppend(_OMC_LIT9,realString(omc_unbox_real(omc_List_fold(threadData, _lst, boxvar_realAdd, _OMC_LIT10))));
+          tmp10 = stringAppend(tmp9,_OMC_LIT4);
+          fputs(omc_string_data(tmp10),stdout);
 
-          tmpMeta11 = stringAppend(_OMC_LIT11,omc_AbsynUtil_pathString(threadData, _inPath, _OMC_LIT12, 1 /* true */, 0 /* false */));
-          tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT13);
-          omc_FGraphDump_dumpGraph(threadData, _g, tmpMeta12);
+          tmp11 = stringAppend(_OMC_LIT11,omc_AbsynUtil_pathString(threadData, _inPath, _OMC_LIT12, 1 /* true */, 0 /* false */));
+          tmp12 = stringAppend(tmp11,_OMC_LIT13);
+          omc_FGraphDump_dumpGraph(threadData, _g, tmp12);
 
           omc_System_realtimeTick(threadData, ((modelica_integer) 26));
 
           omc_FGraph_clone(threadData, _g);
 
-          _lst = omc_List_consr(threadData, _lst, mmc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
+          _lst = omc_List_consr(threadData, _lst, omc_mk_real(omc_System_realtimeTock(threadData, ((modelica_integer) 26))));
 
-          tmpMeta13 = stringAppend(_OMC_LIT16,realString(mmc_unbox_real(listHead(_lst))));
-          tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT4);
-          fputs(MMC_STRINGDATA(tmpMeta14),stdout);
+          tmp13 = stringAppend(_OMC_LIT16,realString(omc_unbox_real(listHead(_lst))));
+          tmp14 = stringAppend(tmp13,_OMC_LIT4);
+          fputs(omc_string_data(tmp14),stdout);
           tmpMeta1 = _OMC_LIT14;
           goto tmp3_done;
         }
         case 1: {
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT15),stdout);
+          fputs(omc_string_data(_OMC_LIT15),stdout);
           tmpMeta1 = _OMC_LIT14;
           goto tmp3_done;
         }
@@ -331,19 +336,20 @@ modelica_metatype omc_FInst_inst(threadData_t *threadData, modelica_metatype _in
       goto goto_2;
       tmp3_done:
       (void)tmp4;
-      MMC_RESTORE_INTERNAL(mmc_jumper);
+      OMC_RESTORE_INTERNAL(mmc_jumper);
       goto tmp3_done2;
       goto_2:;
-      MMC_CATCH_INTERNAL(mmc_jumper);
+      OMC_CATCH_INTERNAL(mmc_jumper);
       if (++tmp4 < 2) {
         goto tmp3_top;
       }
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       tmp3_done2:;
     }
   }
   _dae = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _dae;
+  omc_ret_ = _dae;
+  return omc_ret_;
 }
 

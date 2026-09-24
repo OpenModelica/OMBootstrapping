@@ -60,6 +60,8 @@ extern struct record_description NFExpression_IF__desc;
 
 extern struct record_description NFExpression_INTEGER__desc;
 
+extern struct record_description NFExpression_MULTARY__desc;
+
 extern struct record_description NFExpression_REAL__desc;
 
 extern struct record_description NFExpression_RELATION__desc;
@@ -75,6 +77,8 @@ extern struct record_description NFInstNode_InstNode_COMPONENT__NODE__desc;
 extern struct record_description NFInstNode_InstNode_EMPTY__NODE__desc;
 
 extern struct record_description NFInstNode_InstNodeType_NORMAL__COMP__desc;
+
+extern struct record_description NFInstNode_NodeHandle_VALUE__desc;
 
 extern struct record_description NFPrefixes_Replaceable_NOT__REPLACEABLE__desc;
 
@@ -170,21 +174,21 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFConnectEquations_evaluateOperatorsShallow omc_NFConnectEquations_evaluateOperatorsShallow
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnectEquations_evaluateOperators(threadData_t *threadData, modelica_metatype _exp, modelica_metatype _sets, modelica_metatype _setsArray, modelica_metatype _variables, modelica_metatype _ctable, modelica_metatype _replacements);
 #define boxptr_NFConnectEquations_evaluateOperators omc_NFConnectEquations_evaluateOperators
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConnectEquations_evaluateOperators,2,0) {(void*) boxptr_NFConnectEquations_evaluateOperators,0}};
 #define boxvar_NFConnectEquations_evaluateOperators MMC_REFSTRUCTLIT(boxvar_lit_NFConnectEquations_evaluateOperators)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnectEquations_generateStreamEquationsList(threadData_t *threadData, modelica_metatype _sets, modelica_metatype _variables, modelica_metatype _replacements);
 #define boxptr_NFConnectEquations_generateStreamEquationsList omc_NFConnectEquations_generateStreamEquationsList
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConnectEquations_generateStreamEquationsList,2,0) {(void*) boxptr_NFConnectEquations_generateStreamEquationsList,0}};
 #define boxvar_NFConnectEquations_generateStreamEquationsList MMC_REFSTRUCTLIT(boxvar_lit_NFConnectEquations_generateStreamEquationsList)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFConnectEquations_generateEquations(threadData_t *threadData, modelica_metatype _sets, modelica_metatype _variables, modelica_metatype *out_connectedLocalIOs, modelica_metatype *out_unhandledStreamSets);
 #define boxptr_NFConnectEquations_generateEquations omc_NFConnectEquations_generateEquations
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFConnectEquations_generateEquations,2,0) {(void*) boxptr_NFConnectEquations_generateEquations,0}};

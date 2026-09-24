@@ -46,14 +46,14 @@ extern struct record_description Flags_ValidOptions_STRING__OPTION__desc;
 #define boxptr_Main_main2 omc_Main_main2
 
 
-DLLDirection
+DLLModelDirection
 void omc_Main_main(threadData_t *threadData, modelica_metatype _args);
 #define boxptr_Main_main omc_Main_main
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Main_main,2,0) {(void*) boxptr_Main_main,0}};
 #define boxvar_Main_main MMC_REFSTRUCTLIT(boxvar_lit_Main_main)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Main_init(threadData_t *threadData, modelica_metatype _args);
 #define boxptr_Main_init omc_Main_init
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Main_init,2,0) {(void*) boxptr_Main_init,0}};
@@ -63,7 +63,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Main_init,2,0) {(void*) boxptr_Main_ini
 #define boxptr_Main_setDefaultCC omc_Main_setDefaultCC
 
 
-DLLDirection
+DLLModelDirection
 void omc_Main_setWindowsPaths(threadData_t *threadData, modelica_string _inOMHome);
 #define boxptr_Main_setWindowsPaths omc_Main_setWindowsPaths
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Main_setWindowsPaths,2,0) {(void*) boxptr_Main_setWindowsPaths,0}};
@@ -73,7 +73,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Main_setWindowsPaths,2,0) {(void*) boxp
 #define boxptr_Main_readSettingsFile omc_Main_readSettingsFile
 
 
-DLLDirection
+DLLModelDirection
 void omc_Main_readSettings(threadData_t *threadData, modelica_metatype _inArguments);
 #define boxptr_Main_readSettings omc_Main_readSettings
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Main_readSettings,2,0) {(void*) boxptr_Main_readSettings,0}};
@@ -113,9 +113,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Main_readSettings,2,0) {(void*) boxptr_
 #define boxptr_Main_handleCommand2 omc_Main_handleCommand2
 
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_Main_handleCommand(threadData_t *threadData, modelica_string _inCommand, modelica_string *out_outResult);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_Main_handleCommand(threadData_t *threadData, modelica_metatype _inCommand, modelica_metatype *out_outResult);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Main_handleCommand,2,0) {(void*) boxptr_Main_handleCommand,0}};
 #define boxvar_Main_handleCommand MMC_REFSTRUCTLIT(boxvar_lit_Main_handleCommand)

@@ -31,44 +31,44 @@ extern struct record_description Tpl_StringToken_ST__STRING__LIST__desc;
 extern struct record_description Tpl_Text_MEM__TEXT__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_timeEventLength(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenCppCommon_timeEventLength omc_CodegenCppCommon_timeEventLength
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_timeEventLength,2,0) {(void*) boxptr_CodegenCppCommon_timeEventLength,0}};
 #define boxvar_CodegenCppCommon_timeEventLength MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_timeEventLength)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_zeroCrossLength(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_simCode);
 #define boxptr_CodegenCppCommon_zeroCrossLength omc_CodegenCppCommon_zeroCrossLength
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_zeroCrossLength,2,0) {(void*) boxptr_CodegenCppCommon_zeroCrossLength,0}};
 #define boxvar_CodegenCppCommon_zeroCrossLength MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_zeroCrossLength)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpUnbox(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpUnbox(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpUnbox,2,0) {(void*) boxptr_CodegenCppCommon_daeExpUnbox,0}};
 #define boxvar_CodegenCppCommon_daeExpUnbox MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpUnbox)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpBox(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpBox(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpBox,2,0) {(void*) boxptr_CodegenCppCommon_daeExpBox,0}};
 #define boxvar_CodegenCppCommon_daeExpBox MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpBox)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeUnboxed(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_t);
 #define boxptr_CodegenCppCommon_expTypeUnboxed omc_CodegenCppCommon_expTypeUnboxed
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeUnboxed,2,0) {(void*) boxptr_CodegenCppCommon_expTypeUnboxed,0}};
 #define boxvar_CodegenCppCommon_expTypeUnboxed MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeUnboxed)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_assertCommonVar(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_condVar, modelica_metatype _a_msgVar, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_info, modelica_metatype *out_out_a_condVar, modelica_metatype *out_out_a_msgVar, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCppCommon_assertCommonVar omc_CodegenCppCommon_assertCommonVar
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_assertCommonVar,2,0) {(void*) boxptr_CodegenCppCommon_assertCommonVar,0}};
@@ -78,7 +78,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_assertCommonVar,2,0) {
 #define boxptr_CodegenCppCommon_fun__417 omc_CodegenCppCommon_fun__417
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_functionClosure(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_funcName, modelica_string _a_closureArgs, modelica_metatype _a_t, modelica_metatype _a_t__orig, modelica_metatype _a_context, modelica_metatype _a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsDecl);
 #define boxptr_CodegenCppCommon_functionClosure omc_CodegenCppCommon_functionClosure
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_functionClosure,2,0) {(void*) boxptr_CodegenCppCommon_functionClosure,0}};
@@ -109,17 +109,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_functionClosure,2,0) {
 #define boxptr_CodegenCppCommon_fun__408 omc_CodegenCppCommon_fun__408
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpPartEvalFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpPartEvalFunction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpPartEvalFunction,2,0) {(void*) boxptr_CodegenCppCommon_daeExpPartEvalFunction,0}};
 #define boxvar_CodegenCppCommon_daeExpPartEvalFunction MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpPartEvalFunction)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpSharedLiteral(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpSharedLiteral(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpSharedLiteral,2,0) {(void*) boxptr_CodegenCppCommon_daeExpSharedLiteral,0}};
 #define boxvar_CodegenCppCommon_daeExpSharedLiteral MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpSharedLiteral)
@@ -128,9 +128,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpSharedLiteral,2,
 #define boxptr_CodegenCppCommon_fun__404 omc_CodegenCppCommon_fun__404
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_generateTypeCast(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_es, modelica_boolean _a_isClosure, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_context, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_generateTypeCast(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_es, modelica_metatype _a_isClosure, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_context, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_generateTypeCast,2,0) {(void*) boxptr_CodegenCppCommon_generateTypeCast,0}};
 #define boxvar_CodegenCppCommon_generateTypeCast MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_generateTypeCast)
@@ -145,25 +145,25 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_generateTypeCast,2,0) 
 #define boxptr_CodegenCppCommon_fun__398 omc_CodegenCppCommon_fun__398
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpCallTuple(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_call, modelica_metatype _a_additionalOutputs, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_additionalOutputs, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpCallTuple(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_call, modelica_metatype _a_additionalOutputs, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_additionalOutputs, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCallTuple,2,0) {(void*) boxptr_CodegenCppCommon_daeExpCallTuple,0}};
 #define boxvar_CodegenCppCommon_daeExpCallTuple MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCallTuple)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpTsub(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_inExp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpTsub(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_inExp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpTsub,2,0) {(void*) boxptr_CodegenCppCommon_daeExpTsub,0}};
 #define boxvar_CodegenCppCommon_daeExpTsub MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpTsub)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_writeLhsCref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_string _in_a_rhsStr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_writeLhsCref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_rhsStr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_writeLhsCref,2,0) {(void*) boxptr_CodegenCppCommon_writeLhsCref,0}};
 #define boxvar_CodegenCppCommon_writeLhsCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_writeLhsCref)
@@ -184,7 +184,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_writeLhsCref,2,0) {(vo
 #define boxptr_CodegenCppCommon_fun__381 omc_CodegenCppCommon_fun__381
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_assignJacArray(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_lhsStr, modelica_string _a_rhsStr, modelica_metatype _a_ty);
 #define boxptr_CodegenCppCommon_assignJacArray omc_CodegenCppCommon_assignJacArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_assignJacArray,2,0) {(void*) boxptr_CodegenCppCommon_assignJacArray,0}};
@@ -194,30 +194,30 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_assignJacArray,2,0) {(
 #define boxptr_CodegenCppCommon_fun__379 omc_CodegenCppCommon_fun__379
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_encloseInParantheses(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_expStr);
 #define boxptr_CodegenCppCommon_encloseInParantheses omc_CodegenCppCommon_encloseInParantheses
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_encloseInParantheses,2,0) {(void*) boxptr_CodegenCppCommon_encloseInParantheses,0}};
 #define boxvar_CodegenCppCommon_encloseInParantheses MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_encloseInParantheses)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_errorMsg(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_errMessage);
 #define boxptr_CodegenCppCommon_errorMsg omc_CodegenCppCommon_errorMsg
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_errorMsg,2,0) {(void*) boxptr_CodegenCppCommon_errorMsg,0}};
 #define boxvar_CodegenCppCommon_errorMsg MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_errorMsg)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_error(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_srcInfo, modelica_string _a_errMessage);
 #define boxptr_CodegenCppCommon_error omc_CodegenCppCommon_error
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_error,2,0) {(void*) boxptr_CodegenCppCommon_error,0}};
 #define boxvar_CodegenCppCommon_error MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_error)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_algStmtTupleAssign(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_algStmtTupleAssign(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_stmt, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_algStmtTupleAssign,2,0) {(void*) boxptr_CodegenCppCommon_algStmtTupleAssign,0}};
 #define boxvar_CodegenCppCommon_algStmtTupleAssign MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_algStmtTupleAssign)
@@ -226,23 +226,23 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_algStmtTupleAssign,2,0
 #define boxptr_CodegenCppCommon_lm__372 omc_CodegenCppCommon_lm__372
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeFromOp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it);
 #define boxptr_CodegenCppCommon_expTypeFromOp omc_CodegenCppCommon_expTypeFromOp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromOp,2,0) {(void*) boxptr_CodegenCppCommon_expTypeFromOp,0}};
 #define boxvar_CodegenCppCommon_expTypeFromOp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromOp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeFromExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_it);
 #define boxptr_CodegenCppCommon_expTypeFromExp omc_CodegenCppCommon_expTypeFromExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExp,2,0) {(void*) boxptr_CodegenCppCommon_expTypeFromExp,0}};
 #define boxvar_CodegenCppCommon_expTypeFromExp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeFromExpArrayIf(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_expTypeFromExpArrayIf(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpArrayIf,2,0) {(void*) boxptr_CodegenCppCommon_expTypeFromExpArrayIf,0}};
 #define boxvar_CodegenCppCommon_expTypeFromExpArrayIf MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpArrayIf)
@@ -251,9 +251,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpArrayIf,
 #define boxptr_CodegenCppCommon_fun__368 omc_CodegenCppCommon_fun__368
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpIf(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cond, modelica_metatype _a_then__, modelica_metatype _a_else__, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpIf(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cond, modelica_metatype _a_then__, modelica_metatype _a_else__, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpIf,2,0) {(void*) boxptr_CodegenCppCommon_daeExpIf,0}};
 #define boxvar_CodegenCppCommon_daeExpIf MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpIf)
@@ -265,9 +265,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpIf,2,0) {(void*)
 #define boxptr_CodegenCppCommon_fun__364 omc_CodegenCppCommon_fun__364
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpRelation2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_op, modelica_integer _a_index, modelica_metatype _a_exp1, modelica_metatype _a_exp2, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpRelation2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_op, modelica_metatype _a_index, modelica_metatype _a_exp1, modelica_metatype _a_exp2, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRelation2,2,0) {(void*) boxptr_CodegenCppCommon_daeExpRelation2,0}};
 #define boxvar_CodegenCppCommon_daeExpRelation2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRelation2)
@@ -276,17 +276,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRelation2,2,0) {
 #define boxptr_CodegenCppCommon_fun__360 omc_CodegenCppCommon_fun__360
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpRelation3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_context, modelica_integer _in_a_index);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpRelation3(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_context, modelica_metatype _in_a_index);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRelation3,2,0) {(void*) boxptr_CodegenCppCommon_daeExpRelation3,0}};
 #define boxvar_CodegenCppCommon_daeExpRelation3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRelation3)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpRelation(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpRelation(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRelation,2,0) {(void*) boxptr_CodegenCppCommon_daeExpRelation,0}};
 #define boxvar_CodegenCppCommon_daeExpRelation MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRelation)
@@ -295,9 +295,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRelation,2,0) {(
 #define boxptr_CodegenCppCommon_fun__355 omc_CodegenCppCommon_fun__355
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpUnary(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpUnary(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpUnary,2,0) {(void*) boxptr_CodegenCppCommon_daeExpUnary,0}};
 #define boxvar_CodegenCppCommon_daeExpUnary MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpUnary)
@@ -312,17 +312,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpUnary,2,0) {(voi
 #define boxptr_CodegenCppCommon_lm__350 omc_CodegenCppCommon_lm__350
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpSconst(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_string, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpSconst(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_string, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpSconst,2,0) {(void*) boxptr_CodegenCppCommon_daeExpSconst,0}};
 #define boxvar_CodegenCppCommon_daeExpSconst MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpSconst)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpBinary(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_it, modelica_metatype _a_exp1, modelica_metatype _a_exp2, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpBinary(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_it, modelica_metatype _a_exp1, modelica_metatype _a_exp2, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpBinary,2,0) {(void*) boxptr_CodegenCppCommon_daeExpBinary,0}};
 #define boxvar_CodegenCppCommon_daeExpBinary MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpBinary)
@@ -334,25 +334,25 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpBinary,2,0) {(vo
 #define boxptr_CodegenCppCommon_fun__345 omc_CodegenCppCommon_fun__345
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeFromOpFlag(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_op, modelica_integer _in_a_flag);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_expTypeFromOpFlag(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_op, modelica_metatype _in_a_flag);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromOpFlag,2,0) {(void*) boxptr_CodegenCppCommon_expTypeFromOpFlag,0}};
 #define boxvar_CodegenCppCommon_expTypeFromOpFlag MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromOpFlag)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeFromExpFlag(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_integer _in_a_flag);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_expTypeFromExpFlag(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_flag);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpFlag,2,0) {(void*) boxptr_CodegenCppCommon_expTypeFromExpFlag,0}};
 #define boxvar_CodegenCppCommon_expTypeFromExpFlag MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpFlag)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpLbinary(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpLbinary(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpLbinary,2,0) {(void*) boxptr_CodegenCppCommon_daeExpLbinary,0}};
 #define boxvar_CodegenCppCommon_daeExpLbinary MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpLbinary)
@@ -361,9 +361,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpLbinary,2,0) {(v
 #define boxptr_CodegenCppCommon_fun__327 omc_CodegenCppCommon_fun__327
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpLunary(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpLunary(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpLunary,2,0) {(void*) boxptr_CodegenCppCommon_daeExpLunary,0}};
 #define boxvar_CodegenCppCommon_daeExpLunary MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpLunary)
@@ -372,9 +372,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpLunary,2,0) {(vo
 #define boxptr_CodegenCppCommon_fun__325 omc_CodegenCppCommon_fun__325
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpCall(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_call, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpCall(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_call, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCall,2,0) {(void*) boxptr_CodegenCppCommon_daeExpCall,0}};
 #define boxvar_CodegenCppCommon_daeExpCall MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCall)
@@ -434,23 +434,23 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCall,2,0) {(void
 #define boxptr_CodegenCppCommon_fun__283 omc_CodegenCppCommon_fun__283
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpRecordCall(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_rec, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpRecordCall(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_rec, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRecordCall,2,0) {(void*) boxptr_CodegenCppCommon_daeExpRecordCall,0}};
 #define boxvar_CodegenCppCommon_daeExpRecordCall MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRecordCall)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpRecord(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_rec, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpRecord(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_rec, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRecord,2,0) {(void*) boxptr_CodegenCppCommon_daeExpRecord,0}};
 #define boxvar_CodegenCppCommon_daeExpRecord MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRecord)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_structParams(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_structName, modelica_string _a_varName, modelica_metatype _a_exps);
 #define boxptr_CodegenCppCommon_structParams omc_CodegenCppCommon_structParams
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_structParams,2,0) {(void*) boxptr_CodegenCppCommon_structParams,0}};
@@ -463,9 +463,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_structParams,2,0) {(vo
 #define boxptr_CodegenCppCommon_fun__276 omc_CodegenCppCommon_fun__276
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpCast(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpCast(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCast,2,0) {(void*) boxptr_CodegenCppCommon_daeExpCast,0}};
 #define boxvar_CodegenCppCommon_daeExpCast MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCast)
@@ -474,9 +474,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCast,2,0) {(void
 #define boxptr_CodegenCppCommon_fun__274 omc_CodegenCppCommon_fun__274
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_arrayScalarRhs(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_subs, modelica_string _a_arrName, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_arrayScalarRhs(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_subs, modelica_metatype _a_arrName, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arrayScalarRhs,2,0) {(void*) boxptr_CodegenCppCommon_arrayScalarRhs,0}};
 #define boxvar_CodegenCppCommon_arrayScalarRhs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arrayScalarRhs)
@@ -485,70 +485,70 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arrayScalarRhs,2,0) {(
 #define boxptr_CodegenCppCommon_fun__272 omc_CodegenCppCommon_fun__272
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpASubIndex(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpASubIndex(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpASubIndex,2,0) {(void*) boxptr_CodegenCppCommon_daeExpASubIndex,0}};
 #define boxvar_CodegenCppCommon_daeExpASubIndex MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpASubIndex)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeSubscriptASubIndex(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_sub, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeSubscriptASubIndex(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_sub, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeSubscriptASubIndex,2,0) {(void*) boxptr_CodegenCppCommon_daeSubscriptASubIndex,0}};
 #define boxvar_CodegenCppCommon_daeSubscriptASubIndex MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeSubscriptASubIndex)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpAsub(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_inExp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpAsub(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_inExp, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpAsub,2,0) {(void*) boxptr_CodegenCppCommon_daeExpAsub,0}};
 #define boxvar_CodegenCppCommon_daeExpAsub MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpAsub)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeSubscript(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_sub, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeSubscript(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_sub, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeSubscript,2,0) {(void*) boxptr_CodegenCppCommon_daeSubscript,0}};
 #define boxvar_CodegenCppCommon_daeSubscript MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeSubscript)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpArray2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_array, modelica_string _a_arrayVar, modelica_string _a_ArrayType, modelica_string _a_arrayTypeStr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpArray2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_array, modelica_metatype _a_arrayVar, modelica_metatype _a_ArrayType, modelica_metatype _a_arrayTypeStr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpArray2,2,0) {(void*) boxptr_CodegenCppCommon_daeExpArray2,0}};
 #define boxvar_CodegenCppCommon_daeExpArray2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpArray2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpArray3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_array, modelica_string _a_arrayVar, modelica_string _a_ArrayType, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpArray3(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_array, modelica_metatype _a_arrayVar, modelica_metatype _a_ArrayType, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpArray3,2,0) {(void*) boxptr_CodegenCppCommon_daeExpArray3,0}};
 #define boxvar_CodegenCppCommon_daeExpArray3 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpArray3)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpArray(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpArray(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpArray,2,0) {(void*) boxptr_CodegenCppCommon_daeExpArray,0}};
 #define boxvar_CodegenCppCommon_daeExpArray MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpArray)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpMatrixName2(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCppCommon_daeExpMatrixName2 omc_CodegenCppCommon_daeExpMatrixName2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpMatrixName2,2,0) {(void*) boxptr_CodegenCppCommon_daeExpMatrixName2,0}};
 #define boxvar_CodegenCppCommon_daeExpMatrixName2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpMatrixName2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpMatrixName(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_row, modelica_metatype _a_context, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_extraFuncsNamespace, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_stateDerVectorName, modelica_metatype *out_out_a_extraFuncsNamespace);
 #define boxptr_CodegenCppCommon_daeExpMatrixName omc_CodegenCppCommon_daeExpMatrixName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpMatrixName,2,0) {(void*) boxptr_CodegenCppCommon_daeExpMatrixName,0}};
@@ -558,7 +558,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpMatrixName,2,0) 
 #define boxptr_CodegenCppCommon_fun__252 omc_CodegenCppCommon_fun__252
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpMatrixRow(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_matrix, modelica_metatype _a_context, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 #define boxptr_CodegenCppCommon_daeExpMatrixRow omc_CodegenCppCommon_daeExpMatrixRow
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpMatrixRow,2,0) {(void*) boxptr_CodegenCppCommon_daeExpMatrixRow,0}};
@@ -568,33 +568,33 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpMatrixRow,2,0) {
 #define boxptr_CodegenCppCommon_fun__249 omc_CodegenCppCommon_fun__249
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpMatrixRow2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_row, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_preExp, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpMatrixRow2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_row, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_preExp, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpMatrixRow2,2,0) {(void*) boxptr_CodegenCppCommon_daeExpMatrixRow2,0}};
 #define boxvar_CodegenCppCommon_daeExpMatrixRow2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpMatrixRow2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpMatrix(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpMatrix(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpMatrix,2,0) {(void*) boxptr_CodegenCppCommon_daeExpMatrix,0}};
 #define boxvar_CodegenCppCommon_daeExpMatrix MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpMatrix)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpSize(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpSize(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpSize,2,0) {(void*) boxptr_CodegenCppCommon_daeExpSize,0}};
 #define boxvar_CodegenCppCommon_daeExpSize MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpSize)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpReduction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpReduction(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpReduction,2,0) {(void*) boxptr_CodegenCppCommon_daeExpReduction,0}};
 #define boxvar_CodegenCppCommon_daeExpReduction MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpReduction)
@@ -684,67 +684,67 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpReduction,2,0) {
 #define boxptr_CodegenCppCommon_fun__193 omc_CodegenCppCommon_fun__193
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpRange(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpRange(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRange,2,0) {(void*) boxptr_CodegenCppCommon_daeExpRange,0}};
 #define boxvar_CodegenCppCommon_daeExpRange MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRange)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpRSub(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpRSub(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRSub,2,0) {(void*) boxptr_CodegenCppCommon_daeExpRSub,0}};
 #define boxvar_CodegenCppCommon_daeExpRSub MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRSub)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExp,2,0) {(void*) boxptr_CodegenCppCommon_daeExp,0}};
 #define boxvar_CodegenCppCommon_daeExp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeDimensionExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp);
 #define boxptr_CodegenCppCommon_daeDimensionExp omc_CodegenCppCommon_daeDimensionExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeDimensionExp,2,0) {(void*) boxptr_CodegenCppCommon_daeDimensionExp,0}};
 #define boxvar_CodegenCppCommon_daeDimensionExp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeDimensionExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_dimensionExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_dimExp, modelica_metatype _in_a_context, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_dimensionExp(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_dimExp, modelica_metatype _in_a_context, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_dimensionExp,2,0) {(void*) boxptr_CodegenCppCommon_dimensionExp,0}};
 #define boxvar_CodegenCppCommon_dimensionExp MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_dimensionExp)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_tempDecl1(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ty, modelica_string _a_exp, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCppCommon_tempDecl1 omc_CodegenCppCommon_tempDecl1
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_tempDecl1,2,0) {(void*) boxptr_CodegenCppCommon_tempDecl1,0}};
 #define boxvar_CodegenCppCommon_tempDecl1 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_tempDecl1)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_tempDeclAssign(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ty, modelica_metatype _a_varDecls, modelica_string _a_assign, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCppCommon_tempDeclAssign omc_CodegenCppCommon_tempDeclAssign
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_tempDeclAssign,2,0) {(void*) boxptr_CodegenCppCommon_tempDeclAssign,0}};
 #define boxvar_CodegenCppCommon_tempDeclAssign MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_tempDeclAssign)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_tempDecl(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_ty, modelica_metatype _a_varDecls, modelica_metatype *out_out_a_varDecls);
 #define boxptr_CodegenCppCommon_tempDecl omc_CodegenCppCommon_tempDecl
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_tempDecl,2,0) {(void*) boxptr_CodegenCppCommon_tempDecl,0}};
 #define boxvar_CodegenCppCommon_tempDecl MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_tempDecl)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_allocateDimensions(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty, modelica_metatype _in_a_context);
 #define boxptr_CodegenCppCommon_allocateDimensions omc_CodegenCppCommon_allocateDimensions
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_allocateDimensions,2,0) {(void*) boxptr_CodegenCppCommon_allocateDimensions,0}};
@@ -754,7 +754,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_allocateDimensions,2,0
 #define boxptr_CodegenCppCommon_lm__180 omc_CodegenCppCommon_lm__180
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeArrayDims(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_elty, modelica_metatype _a_dims);
 #define boxptr_CodegenCppCommon_expTypeArrayDims omc_CodegenCppCommon_expTypeArrayDims
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeArrayDims,2,0) {(void*) boxptr_CodegenCppCommon_expTypeArrayDims,0}};
@@ -764,88 +764,88 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeArrayDims,2,0) 
 #define boxptr_CodegenCppCommon_fun__178 omc_CodegenCppCommon_fun__178
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeArray1(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_integer _a_dims);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_expTypeArray1(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_dims);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeArray1,2,0) {(void*) boxptr_CodegenCppCommon_expTypeArray1,0}};
 #define boxvar_CodegenCppCommon_expTypeArray1 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeArray1)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeArrayIf(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty);
 #define boxptr_CodegenCppCommon_expTypeArrayIf omc_CodegenCppCommon_expTypeArrayIf
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeArrayIf,2,0) {(void*) boxptr_CodegenCppCommon_expTypeArrayIf,0}};
 #define boxvar_CodegenCppCommon_expTypeArrayIf MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeArrayIf)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeArray(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty);
 #define boxptr_CodegenCppCommon_expTypeArray omc_CodegenCppCommon_expTypeArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeArray,2,0) {(void*) boxptr_CodegenCppCommon_expTypeArray,0}};
 #define boxvar_CodegenCppCommon_expTypeArray MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeArray)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeModelica(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty);
 #define boxptr_CodegenCppCommon_expTypeModelica omc_CodegenCppCommon_expTypeModelica
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeModelica,2,0) {(void*) boxptr_CodegenCppCommon_expTypeModelica,0}};
 #define boxvar_CodegenCppCommon_expTypeModelica MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeModelica)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expType(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_boolean _a_isArray);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_expType(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_isArray);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expType,2,0) {(void*) boxptr_CodegenCppCommon_expType,0}};
 #define boxvar_CodegenCppCommon_expType MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expType)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeShortMLPI(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
 #define boxptr_CodegenCppCommon_expTypeShortMLPI omc_CodegenCppCommon_expTypeShortMLPI
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeShortMLPI,2,0) {(void*) boxptr_CodegenCppCommon_expTypeShortMLPI,0}};
 #define boxvar_CodegenCppCommon_expTypeShortMLPI MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeShortMLPI)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeShortSPS(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
 #define boxptr_CodegenCppCommon_expTypeShortSPS omc_CodegenCppCommon_expTypeShortSPS
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeShortSPS,2,0) {(void*) boxptr_CodegenCppCommon_expTypeShortSPS,0}};
 #define boxvar_CodegenCppCommon_expTypeShortSPS MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeShortSPS)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeFromExpArray(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenCppCommon_expTypeFromExpArray omc_CodegenCppCommon_expTypeFromExpArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpArray,2,0) {(void*) boxptr_CodegenCppCommon_expTypeFromExpArray,0}};
 #define boxvar_CodegenCppCommon_expTypeFromExpArray MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpArray)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeFromExpModelica(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenCppCommon_expTypeFromExpModelica omc_CodegenCppCommon_expTypeFromExpModelica
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpModelica,2,0) {(void*) boxptr_CodegenCppCommon_expTypeFromExpModelica,0}};
 #define boxvar_CodegenCppCommon_expTypeFromExpModelica MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpModelica)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeFromExpShort(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_exp);
 #define boxptr_CodegenCppCommon_expTypeFromExpShort omc_CodegenCppCommon_expTypeFromExpShort
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpShort,2,0) {(void*) boxptr_CodegenCppCommon_expTypeFromExpShort,0}};
 #define boxvar_CodegenCppCommon_expTypeFromExpShort MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFromExpShort)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCppCommon_crefType omc_CodegenCppCommon_crefType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefType,2,0) {(void*) boxptr_CodegenCppCommon_crefType,0}};
 #define boxvar_CodegenCppCommon_crefType MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefType)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeFlag(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_integer _a_flag);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_expTypeFlag(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_ty, modelica_metatype _a_flag);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFlag,2,0) {(void*) boxptr_CodegenCppCommon_expTypeFlag,0}};
 #define boxvar_CodegenCppCommon_expTypeFlag MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFlag)
@@ -887,22 +887,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeFlag,2,0) {(voi
 #define boxptr_CodegenCppCommon_fun__150 omc_CodegenCppCommon_fun__150
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_expTypeShort(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_type);
 #define boxptr_CodegenCppCommon_expTypeShort omc_CodegenCppCommon_expTypeShort
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeShort,2,0) {(void*) boxptr_CodegenCppCommon_expTypeShort,0}};
 #define boxvar_CodegenCppCommon_expTypeShort MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_expTypeShort)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_nDimsFlat(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_dims, modelica_metatype _a_elty, modelica_integer _a_offset);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_nDimsFlat(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_dims, modelica_metatype _a_elty, modelica_metatype _a_offset);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_nDimsFlat,2,0) {(void*) boxptr_CodegenCppCommon_nDimsFlat,0}};
 #define boxvar_CodegenCppCommon_nDimsFlat MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_nDimsFlat)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_listDimsFlat(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_dims, modelica_metatype _a_elty);
 #define boxptr_CodegenCppCommon_listDimsFlat omc_CodegenCppCommon_listDimsFlat
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_listDimsFlat,2,0) {(void*) boxptr_CodegenCppCommon_listDimsFlat,0}};
@@ -918,7 +918,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_listDimsFlat,2,0) {(vo
 #define boxptr_CodegenCppCommon_fun__142 omc_CodegenCppCommon_fun__142
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_checkExpDimension(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_dims);
 #define boxptr_CodegenCppCommon_checkExpDimension omc_CodegenCppCommon_checkExpDimension
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_checkExpDimension,2,0) {(void*) boxptr_CodegenCppCommon_checkExpDimension,0}};
@@ -928,7 +928,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_checkExpDimension,2,0)
 #define boxptr_CodegenCppCommon_lm__140 omc_CodegenCppCommon_lm__140
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_checkDimension(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_dims);
 #define boxptr_CodegenCppCommon_checkDimension omc_CodegenCppCommon_checkDimension
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_checkDimension,2,0) {(void*) boxptr_CodegenCppCommon_checkDimension,0}};
@@ -938,14 +938,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_checkDimension,2,0) {(
 #define boxptr_CodegenCppCommon_lm__137 omc_CodegenCppCommon_lm__137
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_dimension(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_d, modelica_metatype _in_a_context);
 #define boxptr_CodegenCppCommon_dimension omc_CodegenCppCommon_dimension
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_dimension,2,0) {(void*) boxptr_CodegenCppCommon_dimension,0}};
 #define boxvar_CodegenCppCommon_dimension MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_dimension)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefStartValueType(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCppCommon_crefStartValueType omc_CodegenCppCommon_crefStartValueType
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefStartValueType,2,0) {(void*) boxptr_CodegenCppCommon_crefStartValueType,0}};
@@ -955,28 +955,28 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefStartValueType,2,0
 #define boxptr_CodegenCppCommon_fun__131 omc_CodegenCppCommon_fun__131
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefTypeMLPI(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCppCommon_crefTypeMLPI omc_CodegenCppCommon_crefTypeMLPI
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefTypeMLPI,2,0) {(void*) boxptr_CodegenCppCommon_crefTypeMLPI,0}};
 #define boxvar_CodegenCppCommon_crefTypeMLPI MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefTypeMLPI)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefTypeST(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCppCommon_crefTypeST omc_CodegenCppCommon_crefTypeST
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefTypeST,2,0) {(void*) boxptr_CodegenCppCommon_crefTypeST,0}};
 #define boxvar_CodegenCppCommon_crefTypeST MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefTypeST)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_arrayCrefCStr2(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCppCommon_arrayCrefCStr2 omc_CodegenCppCommon_arrayCrefCStr2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arrayCrefCStr2,2,0) {(void*) boxptr_CodegenCppCommon_arrayCrefCStr2,0}};
 #define boxvar_CodegenCppCommon_arrayCrefCStr2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arrayCrefCStr2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_arrayCrefCStr(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context);
 #define boxptr_CodegenCppCommon_arrayCrefCStr omc_CodegenCppCommon_arrayCrefCStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arrayCrefCStr,2,0) {(void*) boxptr_CodegenCppCommon_arrayCrefCStr,0}};
@@ -986,15 +986,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arrayCrefCStr,2,0) {(v
 #define boxptr_CodegenCppCommon_fun__124 omc_CodegenCppCommon_fun__124
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_arrayCrefStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCppCommon_arrayCrefStr omc_CodegenCppCommon_arrayCrefStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arrayCrefStr,2,0) {(void*) boxptr_CodegenCppCommon_arrayCrefStr,0}};
 #define boxvar_CodegenCppCommon_arrayCrefStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arrayCrefStr)
 
 
-DLLDirection
-modelica_metatype omc_CodegenCppCommon_contextArrayCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context);
+DLLModelDirection
+modelica_metatype omc_CodegenCppCommon_contextArrayCref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_context);
 #define boxptr_CodegenCppCommon_contextArrayCref omc_CodegenCppCommon_contextArrayCref
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextArrayCref,2,0) {(void*) boxptr_CodegenCppCommon_contextArrayCref,0}};
 #define boxvar_CodegenCppCommon_contextArrayCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextArrayCref)
@@ -1003,25 +1003,25 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextArrayCref,2,0) 
 #define boxptr_CodegenCppCommon_fun__121 omc_CodegenCppCommon_fun__121
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefST(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_crefST(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefST,2,0) {(void*) boxptr_CodegenCppCommon_crefST,0}};
 #define boxvar_CodegenCppCommon_crefST MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefST)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpRecordCrefRhs(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty, modelica_metatype _in_a_cr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpRecordCrefRhs(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_ty, modelica_metatype _in_a_cr, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRecordCrefRhs,2,0) {(void*) boxptr_CodegenCppCommon_daeExpRecordCrefRhs,0}};
 #define boxvar_CodegenCppCommon_daeExpRecordCrefRhs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpRecordCrefRhs)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpCrefRhsArrayBox2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_arrayData, modelica_metatype _a_ty, modelica_boolean _a_isRowMajorData, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype *out_out_a_arrayData, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpCrefRhsArrayBox2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_arrayData, modelica_metatype _a_ty, modelica_metatype _a_isRowMajorData, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype *out_out_a_arrayData, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCrefRhsArrayBox2,2,0) {(void*) boxptr_CodegenCppCommon_daeExpCrefRhsArrayBox2,0}};
 #define boxvar_CodegenCppCommon_daeExpCrefRhsArrayBox2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCrefRhsArrayBox2)
@@ -1030,9 +1030,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCrefRhsArrayBox2
 #define boxptr_CodegenCppCommon_fun__114 omc_CodegenCppCommon_fun__114
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpCrefRhsArrayBox(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_ty, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpCrefRhsArrayBox(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_ty, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCrefRhsArrayBox,2,0) {(void*) boxptr_CodegenCppCommon_daeExpCrefRhsArrayBox,0}};
 #define boxvar_CodegenCppCommon_daeExpCrefRhsArrayBox MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCrefRhsArrayBox)
@@ -1044,17 +1044,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCrefRhsArrayBox,
 #define boxptr_CodegenCppCommon_fun__108 omc_CodegenCppCommon_fun__108
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpCrefIndexSpec(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_subs, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpCrefIndexSpec(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_subs, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCrefIndexSpec,2,0) {(void*) boxptr_CodegenCppCommon_daeExpCrefIndexSpec,0}};
 #define boxvar_CodegenCppCommon_daeExpCrefIndexSpec MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCrefIndexSpec)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpCref(threadData_t *threadData, modelica_metatype _txt, modelica_boolean _a_isLhs, modelica_metatype _a_ecr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_isLhs, modelica_metatype _a_ecr, modelica_metatype _a_context, modelica_metatype _a_preExp, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCref,2,0) {(void*) boxptr_CodegenCppCommon_daeExpCref,0}};
 #define boxvar_CodegenCppCommon_daeExpCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCref)
@@ -1063,63 +1063,63 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCref,2,0) {(void
 #define boxptr_CodegenCppCommon_fun__97 omc_CodegenCppCommon_fun__97
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_daeExpCrefRhs(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_daeExpCrefRhs(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_exp, modelica_metatype _in_a_context, modelica_metatype _in_a_preExp, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_preExp, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCrefRhs,2,0) {(void*) boxptr_CodegenCppCommon_daeExpCrefRhs,0}};
 #define boxvar_CodegenCppCommon_daeExpCrefRhs MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_daeExpCrefRhs)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_contextSystem(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_context);
 #define boxptr_CodegenCppCommon_contextSystem omc_CodegenCppCommon_contextSystem
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextSystem,2,0) {(void*) boxptr_CodegenCppCommon_contextSystem,0}};
 #define boxvar_CodegenCppCommon_contextSystem MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextSystem)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefToCStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_crefToCStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefToCStr,2,0) {(void*) boxptr_CodegenCppCommon_crefToCStr,0}};
 #define boxvar_CodegenCppCommon_crefToCStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefToCStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_cref2(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_cref2(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_cref2,2,0) {(void*) boxptr_CodegenCppCommon_cref2,0}};
 #define boxvar_CodegenCppCommon_cref2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_cref2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_arraycref2(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_dims, modelica_metatype *out_out_a_dims);
 #define boxptr_CodegenCppCommon_arraycref2 omc_CodegenCppCommon_arraycref2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arraycref2,2,0) {(void*) boxptr_CodegenCppCommon_arraycref2,0}};
 #define boxvar_CodegenCppCommon_arraycref2 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arraycref2)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_arraycref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_arraycref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arraycref,2,0) {(void*) boxptr_CodegenCppCommon_arraycref,0}};
 #define boxvar_CodegenCppCommon_arraycref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_arraycref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_representationCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_inCref, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_representationCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_inCref, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_representationCref,2,0) {(void*) boxptr_CodegenCppCommon_representationCref,0}};
 #define boxvar_CodegenCppCommon_representationCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_representationCref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_cref1(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_cref1(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_cref1,2,0) {(void*) boxptr_CodegenCppCommon_cref1,0}};
 #define boxvar_CodegenCppCommon_cref1 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_cref1)
@@ -1128,30 +1128,30 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_cref1,2,0) {(void*) bo
 #define boxptr_CodegenCppCommon_fun__78 omc_CodegenCppCommon_fun__78
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefToCStrWithIndex(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_crefToCStrWithIndex(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_varDecls, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefToCStrWithIndex,2,0) {(void*) boxptr_CodegenCppCommon_crefToCStrWithIndex,0}};
 #define boxvar_CodegenCppCommon_crefToCStrWithIndex MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefToCStrWithIndex)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefWithIndex(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_boolean _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_crefWithIndex(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_context, modelica_metatype _in_a_varDecls, modelica_metatype _in_a_simCode, modelica_metatype _in_a_extraFuncs, modelica_metatype _in_a_extraFuncsDecl, modelica_metatype _in_a_extraFuncsNamespace, modelica_metatype _in_a_stateDerVectorName, modelica_metatype _in_a_useFlatArrayNotation, modelica_metatype *out_out_a_varDecls, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefWithIndex,2,0) {(void*) boxptr_CodegenCppCommon_crefWithIndex,0}};
 #define boxvar_CodegenCppCommon_crefWithIndex MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefWithIndex)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_contextIteratorName(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_name, modelica_metatype _a_context);
 #define boxptr_CodegenCppCommon_contextIteratorName omc_CodegenCppCommon_contextIteratorName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextIteratorName,2,0) {(void*) boxptr_CodegenCppCommon_contextIteratorName,0}};
 #define boxvar_CodegenCppCommon_contextIteratorName MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextIteratorName)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_contextFunName(threadData_t *threadData, modelica_metatype _txt, modelica_string _a_funName, modelica_metatype _a_context);
 #define boxptr_CodegenCppCommon_contextFunName omc_CodegenCppCommon_contextFunName
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextFunName,2,0) {(void*) boxptr_CodegenCppCommon_contextFunName,0}};
@@ -1161,7 +1161,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextFunName,2,0) {(
 #define boxptr_CodegenCppCommon_fun__70 omc_CodegenCppCommon_fun__70
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_contextCref2(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context);
 #define boxptr_CodegenCppCommon_contextCref2 omc_CodegenCppCommon_contextCref2
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextCref2,2,0) {(void*) boxptr_CodegenCppCommon_contextCref2,0}};
@@ -1171,15 +1171,15 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextCref2,2,0) {(vo
 #define boxptr_CodegenCppCommon_fun__68 omc_CodegenCppCommon_fun__68
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_contextCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_boolean _a_useFlatArrayNotation, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_contextCref(threadData_t *threadData, modelica_metatype _txt, modelica_metatype _a_cr, modelica_metatype _a_context, modelica_metatype _a_simCode, modelica_metatype _a_extraFuncs, modelica_metatype _a_extraFuncsDecl, modelica_metatype _a_extraFuncsNamespace, modelica_metatype _a_stateDerVectorName, modelica_metatype _a_useFlatArrayNotation, modelica_metatype *out_out_a_extraFuncs, modelica_metatype *out_out_a_extraFuncsDecl, modelica_metatype *out_out_a_extraFuncsNamespace, modelica_metatype *out_out_a_stateDerVectorName);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextCref,2,0) {(void*) boxptr_CodegenCppCommon_contextCref,0}};
 #define boxvar_CodegenCppCommon_contextCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_contextCref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_subscriptStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscript);
 #define boxptr_CodegenCppCommon_subscriptStr omc_CodegenCppCommon_subscriptStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptStr,2,0) {(void*) boxptr_CodegenCppCommon_subscriptStr,0}};
@@ -1189,7 +1189,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptStr,2,0) {(vo
 #define boxptr_CodegenCppCommon_fun__64 omc_CodegenCppCommon_fun__64
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_subscriptsStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts);
 #define boxptr_CodegenCppCommon_subscriptsStr omc_CodegenCppCommon_subscriptsStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptsStr,2,0) {(void*) boxptr_CodegenCppCommon_subscriptsStr,0}};
@@ -1199,14 +1199,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptsStr,2,0) {(v
 #define boxptr_CodegenCppCommon_lm__62 omc_CodegenCppCommon_lm__62
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCppCommon_crefStr omc_CodegenCppCommon_crefStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefStr,2,0) {(void*) boxptr_CodegenCppCommon_crefStr,0}};
 #define boxvar_CodegenCppCommon_crefStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefStr)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_subscriptsStrForWriteOutput(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts);
 #define boxptr_CodegenCppCommon_subscriptsStrForWriteOutput omc_CodegenCppCommon_subscriptsStrForWriteOutput
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptsStrForWriteOutput,2,0) {(void*) boxptr_CodegenCppCommon_subscriptsStrForWriteOutput,0}};
@@ -1216,22 +1216,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptsStrForWriteO
 #define boxptr_CodegenCppCommon_lm__59 omc_CodegenCppCommon_lm__59
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefStrForSetVariables(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_crefStrForSetVariables(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefStrForSetVariables,2,0) {(void*) boxptr_CodegenCppCommon_crefStrForSetVariables,0}};
 #define boxvar_CodegenCppCommon_crefStrForSetVariables MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefStrForSetVariables)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefStrForWriteOutput(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr);
 #define boxptr_CodegenCppCommon_crefStrForWriteOutput omc_CodegenCppCommon_crefStrForWriteOutput
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefStrForWriteOutput,2,0) {(void*) boxptr_CodegenCppCommon_crefStrForWriteOutput,0}};
 #define boxvar_CodegenCppCommon_crefStrForWriteOutput MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefStrForWriteOutput)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_subscriptsToCStrForArray(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts);
 #define boxptr_CodegenCppCommon_subscriptsToCStrForArray omc_CodegenCppCommon_subscriptsToCStrForArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptsToCStrForArray,2,0) {(void*) boxptr_CodegenCppCommon_subscriptsToCStrForArray,0}};
@@ -1241,22 +1241,22 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptsToCStrForArr
 #define boxptr_CodegenCppCommon_lm__55 omc_CodegenCppCommon_lm__55
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefToCStr1(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_crefToCStr1(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefToCStr1,2,0) {(void*) boxptr_CodegenCppCommon_crefToCStr1,0}};
 #define boxvar_CodegenCppCommon_crefToCStr1 MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefToCStr1)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_crefToCStrForArray(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_dims, modelica_metatype *out_out_a_dims);
 #define boxptr_CodegenCppCommon_crefToCStrForArray omc_CodegenCppCommon_crefToCStrForArray
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefToCStrForArray,2,0) {(void*) boxptr_CodegenCppCommon_crefToCStrForArray,0}};
 #define boxvar_CodegenCppCommon_crefToCStrForArray MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_crefToCStrForArray)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_subscriptToCStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscript);
 #define boxptr_CodegenCppCommon_subscriptToCStr omc_CodegenCppCommon_subscriptToCStr
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptToCStr,2,0) {(void*) boxptr_CodegenCppCommon_subscriptToCStr,0}};
@@ -1266,9 +1266,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptToCStr,2,0) {
 #define boxptr_CodegenCppCommon_fun__50 omc_CodegenCppCommon_fun__50
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_subscriptsToCStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_subscriptsToCStr(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_subscripts, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptsToCStr,2,0) {(void*) boxptr_CodegenCppCommon_subscriptsToCStr,0}};
 #define boxvar_CodegenCppCommon_subscriptsToCStr MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptsToCStr)
@@ -1280,17 +1280,17 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_subscriptsToCStr,2,0) 
 #define boxptr_CodegenCppCommon_lm__46 omc_CodegenCppCommon_lm__46
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_localCref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_localCref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_localCref,2,0) {(void*) boxptr_CodegenCppCommon_localCref,0}};
 #define boxvar_CodegenCppCommon_localCref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_localCref)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_CodegenCppCommon_cref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_boolean _in_a_useFlatArrayNotation);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_CodegenCppCommon_cref(threadData_t *threadData, modelica_metatype _in_txt, modelica_metatype _in_a_cr, modelica_metatype _in_a_useFlatArrayNotation);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_CodegenCppCommon_cref,2,0) {(void*) boxptr_CodegenCppCommon_cref,0}};
 #define boxvar_CodegenCppCommon_cref MMC_REFSTRUCTLIT(boxvar_lit_CodegenCppCommon_cref)

@@ -6,7 +6,6 @@ extern "C" {
 
 #include "AbsynUtil.h"
 #include "Array.h"
-#include "Config.h"
 #include "Error.h"
 #include "Flags.h"
 #include "List.h"

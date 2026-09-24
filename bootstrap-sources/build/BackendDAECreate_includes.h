@@ -21,7 +21,6 @@ extern "C" {
 #include "DAEDump.h"
 #include "DAEUtil.h"
 #include "Debug.h"
-#include "DoubleEnded.h"
 #include "ElementSource.h"
 #include "Error.h"
 #include "ErrorExt.h"

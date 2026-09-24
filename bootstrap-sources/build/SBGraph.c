@@ -80,12 +80,13 @@ static const MMC_DEFSTRUCTLIT(_OMC_LIT_STRUCT22,8,3) {&SourceInfo_SOURCEINFO__de
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData_t *threadData, modelica_integer _ST)
 {
   modelica_string _str = NULL;
   modelica_string tmp1 = 0;
-  MMC_SO();
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
   { /* match expression */
@@ -132,26 +133,27 @@ modelica_string omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData_t *t
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
-  _str = tmp1;
+  omc_string_store(&(_str), tmp1);
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_setTypeString(threadData_t *threadData, modelica_metatype _ST)
 {
   modelica_integer tmp1;
   modelica_string _str = NULL;
-  tmp1 = mmc_unbox_integer(_ST);
+  tmp1 = omc_unbox_integer(_ST);
   _str = omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, tmp1);
   /* skip box _str; String */
   return _str;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SBGraph_BipartiteIncidenceList_toString(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_string _str = NULL;
@@ -160,36 +162,37 @@ modelica_string omc_SBGraph_BipartiteIncidenceList_toString(threadData_t *thread
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  modelica_metatype tmpMeta4;
-  modelica_metatype tmpMeta5;
-  modelica_metatype tmpMeta6;
+  modelica_string tmp4;
+  modelica_string tmp5;
+  modelica_string tmp6;
   modelica_metatype tmpMeta7;
-  modelica_metatype tmpMeta11;
-  modelica_metatype tmpMeta12;
-  modelica_metatype tmpMeta13;
-  modelica_metatype tmpMeta14;
+  modelica_string tmp11;
+  modelica_string tmp12;
+  modelica_string tmp13;
+  modelica_string tmp14;
   modelica_metatype tmpMeta15;
-  modelica_metatype tmpMeta19;
-  modelica_metatype tmpMeta20;
-  modelica_metatype tmpMeta21;
-  modelica_metatype tmpMeta22;
+  modelica_string tmp19;
+  modelica_string tmp20;
+  modelica_string tmp21;
+  modelica_string tmp22;
   modelica_metatype tmpMeta23;
-  modelica_metatype tmpMeta27;
-  modelica_metatype tmpMeta28;
-  MMC_SO();
+  modelica_string tmp27;
+  modelica_string tmp28;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _il;
-  if (mmc__uniontype__metarecord__typedef__equal(tmpMeta1,0,8) == 0) MMC_THROW_INTERNAL();
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 8));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 9));
+  if (mmc__uniontype__metarecord__typedef__equal(tmpMeta1,0,8) == 0) OMC_THROW_INTERNAL();
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 8);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 9);
   _vertToString = tmpMeta2;
   _edgeToString = tmpMeta3;
 
-  tmpMeta4 = stringAppend(omc_StringUtil_headline__2(threadData, _OMC_LIT5),_OMC_LIT6);
-  tmpMeta5 = stringAppend(tmpMeta4,omc_StringUtil_headline__3(threadData, _OMC_LIT7));
-  tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT6);
+  tmp4 = stringAppend(omc_StringUtil_headline__2(threadData, _OMC_LIT5),_OMC_LIT6);
+  tmp5 = stringAppend(tmp4,omc_StringUtil_headline__3(threadData, _OMC_LIT7));
+  tmp6 = stringAppend(tmp5,_OMC_LIT6);
   {
     modelica_metatype __omcQ_24tmpVar3;
     modelica_metatype* tmp8;
@@ -198,7 +201,7 @@ modelica_string omc_SBGraph_BipartiteIncidenceList_toString(threadData_t *thread
     modelica_integer tmp10;
     modelica_metatype _v_loopVar = 0;
     modelica_metatype _v;
-    _v_loopVar = omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))));
+    _v_loopVar = omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 2)));
     tmpMeta9 = MMC_REFSTRUCTLIT(mmc_nil);
     __omcQ_24tmpVar3 = tmpMeta9; /* defaultValue */
     tmp8 = &__omcQ_24tmpVar3;
@@ -210,22 +213,22 @@ modelica_string omc_SBGraph_BipartiteIncidenceList_toString(threadData_t *thread
         tmp10--;
       }
       if (tmp10 == 0) {
-        __omcQ_24tmpVar2 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 2))), _v) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 1)))) (threadData, _v);
+        __omcQ_24tmpVar2 = (OMC_BOX_FIELD(_vertToString, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_vertToString, 1))) (threadData, (OMC_BOX_FIELD(_vertToString, 2)), _v) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_vertToString, 1))) (threadData, _v);
         *tmp8 = mmc_mk_cons(__omcQ_24tmpVar2,0);
         tmp8 = &MMC_CDR(*tmp8);
       } else if (tmp10 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp8 = mmc_mk_nil();
     tmpMeta7 = __omcQ_24tmpVar3;
   }
-  tmpMeta11 = stringAppend(tmpMeta6,stringDelimitList(tmpMeta7, _OMC_LIT6));
-  tmpMeta12 = stringAppend(tmpMeta11,_OMC_LIT6);
-  tmpMeta13 = stringAppend(tmpMeta12,omc_StringUtil_headline__3(threadData, _OMC_LIT8));
-  tmpMeta14 = stringAppend(tmpMeta13,_OMC_LIT6);
+  tmp11 = stringAppend(tmp6,stringDelimitList(tmpMeta7, _OMC_LIT6));
+  tmp12 = stringAppend(tmp11,_OMC_LIT6);
+  tmp13 = stringAppend(tmp12,omc_StringUtil_headline__3(threadData, _OMC_LIT8));
+  tmp14 = stringAppend(tmp13,_OMC_LIT6);
   {
     modelica_metatype __omcQ_24tmpVar5;
     modelica_metatype* tmp16;
@@ -234,7 +237,7 @@ modelica_string omc_SBGraph_BipartiteIncidenceList_toString(threadData_t *thread
     modelica_integer tmp18;
     modelica_metatype _v_loopVar = 0;
     modelica_metatype _v;
-    _v_loopVar = omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))));
+    _v_loopVar = omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 3)));
     tmpMeta17 = MMC_REFSTRUCTLIT(mmc_nil);
     __omcQ_24tmpVar5 = tmpMeta17; /* defaultValue */
     tmp16 = &__omcQ_24tmpVar5;
@@ -246,22 +249,22 @@ modelica_string omc_SBGraph_BipartiteIncidenceList_toString(threadData_t *thread
         tmp18--;
       }
       if (tmp18 == 0) {
-        __omcQ_24tmpVar4 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 2))), _v) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 1)))) (threadData, _v);
+        __omcQ_24tmpVar4 = (OMC_BOX_FIELD(_vertToString, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_vertToString, 1))) (threadData, (OMC_BOX_FIELD(_vertToString, 2)), _v) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_vertToString, 1))) (threadData, _v);
         *tmp16 = mmc_mk_cons(__omcQ_24tmpVar4,0);
         tmp16 = &MMC_CDR(*tmp16);
       } else if (tmp18 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp16 = mmc_mk_nil();
     tmpMeta15 = __omcQ_24tmpVar5;
   }
-  tmpMeta19 = stringAppend(tmpMeta14,stringDelimitList(tmpMeta15, _OMC_LIT6));
-  tmpMeta20 = stringAppend(tmpMeta19,_OMC_LIT6);
-  tmpMeta21 = stringAppend(tmpMeta20,omc_StringUtil_headline__3(threadData, _OMC_LIT9));
-  tmpMeta22 = stringAppend(tmpMeta21,_OMC_LIT6);
+  tmp19 = stringAppend(tmp14,stringDelimitList(tmpMeta15, _OMC_LIT6));
+  tmp20 = stringAppend(tmp19,_OMC_LIT6);
+  tmp21 = stringAppend(tmp20,omc_StringUtil_headline__3(threadData, _OMC_LIT9));
+  tmp22 = stringAppend(tmp21,_OMC_LIT6);
   {
     modelica_metatype __omcQ_24tmpVar7;
     modelica_metatype* tmp24;
@@ -270,7 +273,7 @@ modelica_string omc_SBGraph_BipartiteIncidenceList_toString(threadData_t *thread
     modelica_integer tmp26;
     modelica_metatype _e_loopVar = 0;
     modelica_metatype _e;
-    _e_loopVar = omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))));
+    _e_loopVar = omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 4)));
     tmpMeta25 = MMC_REFSTRUCTLIT(mmc_nil);
     __omcQ_24tmpVar7 = tmpMeta25; /* defaultValue */
     tmp24 = &__omcQ_24tmpVar7;
@@ -282,42 +285,46 @@ modelica_string omc_SBGraph_BipartiteIncidenceList_toString(threadData_t *thread
         tmp26--;
       }
       if (tmp26 == 0) {
-        __omcQ_24tmpVar6 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_edgeToString), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_edgeToString), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_edgeToString), 2))), _e) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_edgeToString), 1)))) (threadData, _e);
+        __omcQ_24tmpVar6 = (OMC_BOX_FIELD(_edgeToString, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_edgeToString, 1))) (threadData, (OMC_BOX_FIELD(_edgeToString, 2)), _e) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_edgeToString, 1))) (threadData, _e);
         *tmp24 = mmc_mk_cons(__omcQ_24tmpVar6,0);
         tmp24 = &MMC_CDR(*tmp24);
       } else if (tmp26 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp24 = mmc_mk_nil();
     tmpMeta23 = __omcQ_24tmpVar7;
   }
-  tmpMeta27 = stringAppend(tmpMeta22,stringDelimitList(tmpMeta23, _OMC_LIT6));
-  tmpMeta28 = stringAppend(tmpMeta27,_OMC_LIT6);
-  _str = tmpMeta28;
+  tmp27 = stringAppend(tmp22,stringDelimitList(tmpMeta23, _OMC_LIT6));
+  tmp28 = stringAppend(tmp27,_OMC_LIT6);
+  omc_string_store(&(_str), tmp28);
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_BipartiteIncidenceList_edges(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_metatype _el = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _el = omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))));
+  _el = omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 4)));
   _return: OMC_LABEL_UNUSED
-  return _el;
+  omc_ret_ = _el;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_BipartiteIncidenceList_vertices(threadData_t *threadData, modelica_metatype _il, modelica_integer _ST)
 {
   modelica_metatype _vl = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _vl has no default value.
   { /* match expression */
@@ -330,30 +337,30 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_vertices(threadData_t *thre
         case 1: {
           if (1 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmpMeta1 = listAppend(omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2)))), omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3)))));
+          tmpMeta1 = listAppend(omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 2))), omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 3))));
           goto tmp3_done;
         }
         case 2: {
           if (2 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmpMeta1 = omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))));
+          tmpMeta1 = omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 2)));
           goto tmp3_done;
         }
         case 3: {
           if (3 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmpMeta1 = omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))));
+          tmpMeta1 = omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 3)));
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          modelica_metatype tmpMeta5;
-          modelica_metatype tmpMeta6;
+          modelica_string tmp5;
+          modelica_string tmp6;
           
           /* Pattern matching succeeded */
-          tmpMeta5 = stringAppend(_OMC_LIT10,omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, (modelica_integer)_ST));
-          tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT11);
-          omc_Error_terminate(threadData, tmpMeta6, _OMC_LIT13);
+          tmp5 = stringAppend(_OMC_LIT10,omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, (modelica_integer)_ST));
+          tmp6 = stringAppend(tmp5,_OMC_LIT11);
+          omc_Error_terminate(threadData, tmp6, _OMC_LIT13);
           goto goto_2;
           goto tmp3_done;
         }
@@ -363,59 +370,54 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_vertices(threadData_t *thre
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _vl = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _vl;
+  omc_ret_ = _vl;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_vertices(threadData_t *threadData, modelica_metatype _il, modelica_metatype _ST)
 {
   modelica_integer tmp1;
   modelica_metatype _vl = NULL;
-  tmp1 = mmc_unbox_integer(_ST);
+  tmp1 = omc_unbox_integer(_ST);
   _vl = omc_SBGraph_BipartiteIncidenceList_vertices(threadData, _il, tmp1);
   /* skip box _vl; list<polymorphic<VertexT>> */
   return _vl;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SBGraph_BipartiteIncidenceList_edgeCount(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_integer _count;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _count = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))));
+  _count = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 4)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _count;
+  omc_ret_ = _count;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_edgeCount(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_integer _count;
   modelica_metatype out_count;
   _count = omc_SBGraph_BipartiteIncidenceList_edgeCount(threadData, _il);
-  out_count = mmc_mk_icon(_count);
+  out_count = omc_mk_icon(_count);
   return out_count;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SBGraph_BipartiteIncidenceList_vertexCount(threadData_t *threadData, modelica_metatype _il, modelica_integer _ST)
 {
   modelica_integer _count;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _count has no default value.
   { /* match expression */
@@ -428,30 +430,30 @@ modelica_integer omc_SBGraph_BipartiteIncidenceList_vertexCount(threadData_t *th
         case 1: {
           if (1 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmp1 = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2)))) + omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))));
+          tmp1 = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 2))) + omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 3)));
           goto tmp3_done;
         }
         case 2: {
           if (2 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmp1 = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))));
+          tmp1 = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 2)));
           goto tmp3_done;
         }
         case 3: {
           if (3 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmp1 = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))));
+          tmp1 = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 3)));
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          modelica_metatype tmpMeta5;
-          modelica_metatype tmpMeta6;
+          modelica_string tmp5;
+          modelica_string tmp6;
           
           /* Pattern matching succeeded */
-          tmpMeta5 = stringAppend(_OMC_LIT14,omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, (modelica_integer)_ST));
-          tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT11);
-          omc_Error_terminate(threadData, tmpMeta6, _OMC_LIT15);
+          tmp5 = stringAppend(_OMC_LIT14,omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, (modelica_integer)_ST));
+          tmp6 = stringAppend(tmp5,_OMC_LIT11);
+          omc_Error_terminate(threadData, tmp6, _OMC_LIT15);
           goto goto_2;
           goto tmp3_done;
         }
@@ -461,75 +463,71 @@ modelica_integer omc_SBGraph_BipartiteIncidenceList_vertexCount(threadData_t *th
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _count = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _count;
+  omc_ret_ = _count;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_vertexCount(threadData_t *threadData, modelica_metatype _il, modelica_metatype _ST)
 {
   modelica_integer tmp1;
   modelica_integer _count;
   modelica_metatype out_count;
-  tmp1 = mmc_unbox_integer(_ST);
+  tmp1 = omc_unbox_integer(_ST);
   _count = omc_SBGraph_BipartiteIncidenceList_vertexCount(threadData, _il, tmp1);
-  out_count = mmc_mk_icon(_count);
+  out_count = omc_mk_icon(_count);
   return out_count;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SBGraph_BipartiteIncidenceList_isEmpty(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_boolean _empty;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _empty = ((omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2)))) == ((modelica_integer) 0)) && (omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3)))) == ((modelica_integer) 0)));
+  _empty = ((omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 2))) == ((modelica_integer) 0)) && (omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 3))) == ((modelica_integer) 0)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _empty;
+  omc_ret_ = _empty;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_isEmpty(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_boolean _empty;
   modelica_metatype out_empty;
   _empty = omc_SBGraph_BipartiteIncidenceList_isEmpty(threadData, _il);
-  out_empty = mmc_mk_icon(_empty);
+  out_empty = omc_mk_icon(_empty);
   return out_empty;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_BipartiteIncidenceList_getEdge(threadData_t *threadData, modelica_metatype _il, modelica_integer _d)
 {
   modelica_metatype _e = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _e = omc_Vector_get(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))), _d);
+  _e = omc_Vector_get(threadData, (OMC_BOX_FIELD(_il, 4)), _d);
   _return: OMC_LABEL_UNUSED
-  return _e;
+  omc_ret_ = _e;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_getEdge(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d)
 {
   modelica_integer tmp1;
   modelica_metatype _e = NULL;
-  tmp1 = mmc_unbox_integer(_d);
+  tmp1 = omc_unbox_integer(_d);
   _e = omc_SBGraph_BipartiteIncidenceList_getEdge(threadData, _il, tmp1);
   /* skip box _e; polymorphic<EdgeT> */
   return _e;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_BipartiteIncidenceList_getEdgesFromSet(threadData_t *threadData, modelica_metatype _il, modelica_metatype _set, modelica_fnptr _getSet)
 {
   modelica_metatype _set_edges = NULL;
@@ -537,7 +535,8 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_getEdgesFromSet(threadData_
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _set_edges = tmpMeta1;
@@ -546,7 +545,7 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_getEdgesFromSet(threadData_
     for (tmpMeta2 = omc_SBGraph_BipartiteIncidenceList_edges(threadData, _il); !listEmpty(tmpMeta2); tmpMeta2=MMC_CDR(tmpMeta2))
     {
       _e = MMC_CAR(tmpMeta2);
-      if((!omc_SBSet_isEmpty(threadData, omc_SBSet_intersection(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 2))), _e) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 1)))) (threadData, _e), _set))))
+      if((!omc_SBSet_isEmpty(threadData, omc_SBSet_intersection(threadData, (OMC_BOX_FIELD(_getSet, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_getSet, 1))) (threadData, (OMC_BOX_FIELD(_getSet, 2)), _e) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_getSet, 1))) (threadData, _e), _set))))
       {
         tmpMeta3 = mmc_mk_cons(_e, _set_edges);
         _set_edges = tmpMeta3;
@@ -554,17 +553,18 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_getEdgesFromSet(threadData_
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _set_edges;
+  omc_ret_ = _set_edges;
+  return omc_ret_;
 }
 
 static modelica_metatype closure0_SBGraph_edge__finder(threadData_t *thData, modelica_metatype closure, modelica_metatype index)
 {
-  modelica_metatype e = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype edges = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
-  modelica_fnptr eqFn = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),3));
+  modelica_metatype e = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype edges = OMC_BOX_FIELD(closure, 2);
+  modelica_fnptr eqFn = OMC_BOX_FIELD(closure, 3);
   return boxptr_SBGraph_edge__finder(thData, index, e, edges, eqFn);
 }
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SBGraph_BipartiteIncidenceList_addEdge(threadData_t *threadData, modelica_metatype _il, modelica_integer _d1, modelica_integer _d2, modelica_metatype _e)
 {
   modelica_integer _ei;
@@ -572,39 +572,35 @@ modelica_integer omc_SBGraph_BipartiteIncidenceList_addEdge(threadData_t *thread
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ei has no default value.
   // _eil has no default value.
   _eil = omc_SBGraph_BipartiteIncidenceList_getRow(threadData, _il, _d1);
 
-  tmpMeta1 = mmc_mk_box3(0, _e, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 7))));
-  _ei = omc_List_positionOnTrue(threadData, _eil, (modelica_fnptr) mmc_mk_box2(0,closure0_SBGraph_edge__finder,tmpMeta1));
+  tmpMeta1 = omc_mk_box3(0, _e, (OMC_BOX_FIELD(_il, 4)), (OMC_BOX_FIELD(_il, 7)));
+  _ei = omc_List_positionOnTrue(threadData, _eil, (modelica_fnptr) omc_mk_box2(0,closure0_SBGraph_edge__finder,tmpMeta1));
 
   if((_ei == ((modelica_integer) -1)))
   {
-    omc_Vector_push(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))), _e);
+    omc_Vector_push(threadData, (OMC_BOX_FIELD(_il, 4)), _e);
 
-    _ei = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))));
+    _ei = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 4)));
 
-    tmpMeta2 = mmc_mk_cons(mmc_mk_integer(_ei), _eil);
-    omc_Vector_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 5))), _d1, tmpMeta2);
+    tmpMeta2 = mmc_mk_cons(omc_mk_integer(_ei), _eil);
+    omc_Vector_update(threadData, (OMC_BOX_FIELD(_il, 5)), _d1, tmpMeta2);
 
-    tmpMeta3 = mmc_mk_cons(mmc_mk_integer(_ei), omc_Vector_get(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 5))), _d2));
-    omc_Vector_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 5))), _d2, tmpMeta3);
+    tmpMeta3 = mmc_mk_cons(omc_mk_integer(_ei), omc_Vector_get(threadData, (OMC_BOX_FIELD(_il, 5)), _d2));
+    omc_Vector_update(threadData, (OMC_BOX_FIELD(_il, 5)), _d2, tmpMeta3);
   }
   else
   {
-    omc_Vector_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))), _ei, _e);
+    omc_Vector_update(threadData, (OMC_BOX_FIELD(_il, 4)), _ei, _e);
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _ei;
+  omc_ret_ = _ei;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_addEdge(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d1, modelica_metatype _d2, modelica_metatype _e)
 {
@@ -612,14 +608,14 @@ modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_addEdge(threadData_t *th
   modelica_integer tmp2;
   modelica_integer _ei;
   modelica_metatype out_ei;
-  tmp1 = mmc_unbox_integer(_d1);
-  tmp2 = mmc_unbox_integer(_d2);
+  tmp1 = omc_unbox_integer(_d1);
+  tmp2 = omc_unbox_integer(_d2);
   _ei = omc_SBGraph_BipartiteIncidenceList_addEdge(threadData, _il, tmp1, tmp2, _e);
-  out_ei = mmc_mk_icon(_ei);
+  out_ei = omc_mk_icon(_ei);
   return out_ei;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_BipartiteIncidenceList_getVerticesFromSet(threadData_t *threadData, modelica_metatype _il, modelica_metatype _set, modelica_integer _ST, modelica_fnptr _getSet)
 {
   modelica_metatype _set_vertices = NULL;
@@ -627,7 +623,8 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_getVerticesFromSet(threadDa
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _set_vertices = tmpMeta1;
@@ -636,7 +633,7 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_getVerticesFromSet(threadDa
     for (tmpMeta2 = omc_SBGraph_BipartiteIncidenceList_vertices(threadData, _il, (modelica_integer)_ST); !listEmpty(tmpMeta2); tmpMeta2=MMC_CDR(tmpMeta2))
     {
       _v = MMC_CAR(tmpMeta2);
-      if((!omc_SBSet_isEmpty(threadData, omc_SBSet_intersection(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 2))), _v) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 1)))) (threadData, _v), _set))))
+      if((!omc_SBSet_isEmpty(threadData, omc_SBSet_intersection(threadData, (OMC_BOX_FIELD(_getSet, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_getSet, 1))) (threadData, (OMC_BOX_FIELD(_getSet, 2)), _v) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_getSet, 1))) (threadData, _v), _set))))
       {
         tmpMeta3 = mmc_mk_cons(_v, _set_vertices);
         _set_vertices = tmpMeta3;
@@ -644,25 +641,27 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_getVerticesFromSet(threadDa
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _set_vertices;
+  omc_ret_ = _set_vertices;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_getVerticesFromSet(threadData_t *threadData, modelica_metatype _il, modelica_metatype _set, modelica_metatype _ST, modelica_fnptr _getSet)
 {
   modelica_integer tmp1;
   modelica_metatype _set_vertices = NULL;
   modelica_metatype tmpMeta2;
-  tmp1 = mmc_unbox_integer(_ST);
+  tmp1 = omc_unbox_integer(_ST);
   _set_vertices = omc_SBGraph_BipartiteIncidenceList_getVerticesFromSet(threadData, _il, _set, tmp1, _getSet);
   /* skip box _set_vertices; list<polymorphic<VertexT>> */
   return _set_vertices;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_BipartiteIncidenceList_getVertex(threadData_t *threadData, modelica_metatype _il, modelica_integer _d, modelica_integer _ST)
 {
   modelica_metatype _v = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
   { /* match expression */
@@ -675,24 +674,24 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_getVertex(threadData_t *thr
         case 2: {
           if (2 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmpMeta1 = omc_Vector_get(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))), _d);
+          tmpMeta1 = omc_Vector_get(threadData, (OMC_BOX_FIELD(_il, 2)), _d);
           goto tmp3_done;
         }
         case 3: {
           if (3 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          tmpMeta1 = omc_Vector_get(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))), _d);
+          tmpMeta1 = omc_Vector_get(threadData, (OMC_BOX_FIELD(_il, 3)), _d);
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          modelica_metatype tmpMeta5;
-          modelica_metatype tmpMeta6;
+          modelica_string tmp5;
+          modelica_string tmp6;
           
           /* Pattern matching succeeded */
-          tmpMeta5 = stringAppend(_OMC_LIT16,omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, (modelica_integer)_ST));
-          tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT17);
-          omc_Error_terminate(threadData, tmpMeta6, _OMC_LIT18);
+          tmp5 = stringAppend(_OMC_LIT16,omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, (modelica_integer)_ST));
+          tmp6 = stringAppend(tmp5,_OMC_LIT17);
+          omc_Error_terminate(threadData, tmp6, _OMC_LIT18);
           goto goto_2;
           goto tmp3_done;
         }
@@ -702,34 +701,36 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_getVertex(threadData_t *thr
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _v = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _v;
+  omc_ret_ = _v;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_getVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d, modelica_metatype _ST)
 {
   modelica_integer tmp1;
   modelica_integer tmp2;
   modelica_metatype _v = NULL;
-  tmp1 = mmc_unbox_integer(_d);
-  tmp2 = mmc_unbox_integer(_ST);
+  tmp1 = omc_unbox_integer(_d);
+  tmp2 = omc_unbox_integer(_ST);
   _v = omc_SBGraph_BipartiteIncidenceList_getVertex(threadData, _il, tmp1, tmp2);
   /* skip box _v; polymorphic<VertexT> */
   return _v;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_BipartiteIncidenceList_findVertex(threadData_t *threadData, modelica_metatype _il, modelica_integer _ST, modelica_fnptr _predFn)
 {
   modelica_metatype _od = NULL;
   modelica_integer _index;
   modelica_integer tmp1 = 0;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _od has no default value.
   // _index has no default value.
@@ -743,26 +744,26 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_findVertex(threadData_t *th
         case 2: {
           if (2 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          omc_Vector_find(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))), ((modelica_fnptr) _predFn) ,&_index);
+          omc_Vector_find(threadData, (OMC_BOX_FIELD(_il, 2)), ((modelica_fnptr) _predFn) ,&_index);
           tmp1 = _index;
           goto tmp3_done;
         }
         case 3: {
           if (3 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          omc_Vector_find(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))), ((modelica_fnptr) _predFn) ,&_index);
+          omc_Vector_find(threadData, (OMC_BOX_FIELD(_il, 3)), ((modelica_fnptr) _predFn) ,&_index);
           tmp1 = _index;
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          modelica_metatype tmpMeta5;
-          modelica_metatype tmpMeta6;
+          modelica_string tmp5;
+          modelica_string tmp6;
           
           /* Pattern matching succeeded */
-          tmpMeta5 = stringAppend(_OMC_LIT19,omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, (modelica_integer)_ST));
-          tmpMeta6 = stringAppend(tmpMeta5,_OMC_LIT17);
-          omc_Error_terminate(threadData, tmpMeta6, _OMC_LIT20);
+          tmp5 = stringAppend(_OMC_LIT19,omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, (modelica_integer)_ST));
+          tmp6 = stringAppend(tmp5,_OMC_LIT17);
+          omc_Error_terminate(threadData, tmp6, _OMC_LIT20);
           goto goto_2;
           goto tmp3_done;
         }
@@ -772,36 +773,35 @@ modelica_metatype omc_SBGraph_BipartiteIncidenceList_findVertex(threadData_t *th
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _index = tmp1;
 
-  _od = ((_index > ((modelica_integer) 0))?mmc_mk_some(mmc_mk_integer(_index)):mmc_mk_none());
+  _od = ((_index > ((modelica_integer) 0))?mmc_mk_some(omc_mk_integer(_index)):mmc_mk_none());
   _return: OMC_LABEL_UNUSED
-  return _od;
+  omc_ret_ = _od;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_findVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _ST, modelica_fnptr _predFn)
 {
   modelica_integer tmp1;
   modelica_metatype _od = NULL;
-  tmp1 = mmc_unbox_integer(_ST);
+  tmp1 = omc_unbox_integer(_ST);
   _od = omc_SBGraph_BipartiteIncidenceList_findVertex(threadData, _il, tmp1, _predFn);
   /* skip box _od; Option<#Integer> */
   return _od;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SBGraph_BipartiteIncidenceList_addVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _v, modelica_integer _ST)
 {
   modelica_integer _d;
   modelica_integer tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _d has no default value.
   { /* match expression */
@@ -815,33 +815,33 @@ modelica_integer omc_SBGraph_BipartiteIncidenceList_addVertex(threadData_t *thre
           modelica_metatype tmpMeta5;
           if (2 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          omc_Vector_push(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))), _v);
+          omc_Vector_push(threadData, (OMC_BOX_FIELD(_il, 2)), _v);
 
           tmpMeta5 = MMC_REFSTRUCTLIT(mmc_nil);
-          omc_Vector_push(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 5))), tmpMeta5);
-          tmp1 = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))));
+          omc_Vector_push(threadData, (OMC_BOX_FIELD(_il, 5)), tmpMeta5);
+          tmp1 = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 2)));
           goto tmp3_done;
         }
         case 3: {
           modelica_metatype tmpMeta6;
           if (3 != tmp4_1) goto tmp3_end;
           /* Pattern matching succeeded */
-          omc_Vector_push(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))), _v);
+          omc_Vector_push(threadData, (OMC_BOX_FIELD(_il, 3)), _v);
 
           tmpMeta6 = MMC_REFSTRUCTLIT(mmc_nil);
-          omc_Vector_push(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 5))), tmpMeta6);
-          tmp1 = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))));
+          omc_Vector_push(threadData, (OMC_BOX_FIELD(_il, 5)), tmpMeta6);
+          tmp1 = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 3)));
           goto tmp3_done;
         }
         default:
         tmp3_default: OMC_LABEL_UNUSED; {
-          modelica_metatype tmpMeta7;
-          modelica_metatype tmpMeta8;
+          modelica_string tmp7;
+          modelica_string tmp8;
           
           /* Pattern matching succeeded */
-          tmpMeta7 = stringAppend(_OMC_LIT21,omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, (modelica_integer)_ST));
-          tmpMeta8 = stringAppend(tmpMeta7,_OMC_LIT17);
-          omc_Error_terminate(threadData, tmpMeta8, _OMC_LIT22);
+          tmp7 = stringAppend(_OMC_LIT21,omc_SBGraph_BipartiteIncidenceList_setTypeString(threadData, (modelica_integer)_ST));
+          tmp8 = stringAppend(tmp7,_OMC_LIT17);
+          omc_Error_terminate(threadData, tmp8, _OMC_LIT22);
           goto goto_2;
           goto tmp3_done;
         }
@@ -851,83 +851,86 @@ modelica_integer omc_SBGraph_BipartiteIncidenceList_addVertex(threadData_t *thre
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _d = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _d;
+  omc_ret_ = _d;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_addVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _v, modelica_metatype _ST)
 {
   modelica_integer tmp1;
   modelica_integer _d;
   modelica_metatype out_d;
-  tmp1 = mmc_unbox_integer(_ST);
+  tmp1 = omc_unbox_integer(_ST);
   _d = omc_SBGraph_BipartiteIncidenceList_addVertex(threadData, _il, _v, tmp1);
-  out_d = mmc_mk_icon(_d);
+  out_d = omc_mk_icon(_d);
   return out_d;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_BipartiteIncidenceList_getRow(threadData_t *threadData, modelica_metatype _il, modelica_integer _d)
 {
   modelica_metatype _row = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _row = omc_Vector_get(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 5))), _d);
+  _row = omc_Vector_get(threadData, (OMC_BOX_FIELD(_il, 5)), _d);
   _return: OMC_LABEL_UNUSED
-  return _row;
+  omc_ret_ = _row;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_BipartiteIncidenceList_getRow(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d)
 {
   modelica_integer tmp1;
   modelica_metatype _row = NULL;
-  tmp1 = mmc_unbox_integer(_d);
+  tmp1 = omc_unbox_integer(_d);
   _row = omc_SBGraph_BipartiteIncidenceList_getRow(threadData, _il, tmp1);
   /* skip box _row; list<#Integer> */
   return _row;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_BipartiteIncidenceList_new(threadData_t *threadData, modelica_fnptr _vertexEq, modelica_fnptr _edgeEq, modelica_fnptr _vertexStr, modelica_fnptr _edgeStr)
 {
   modelica_metatype _il = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _il has no default value.
-  tmpMeta1 = mmc_mk_box9(3, &SBGraph_BipartiteIncidenceList_BIPARTITE__INCIDENCE__LIST__desc, omc_Vector_new(threadData, ((modelica_integer) 0)), omc_Vector_new(threadData, ((modelica_integer) 0)), omc_Vector_new(threadData, ((modelica_integer) 0)), omc_Vector_new(threadData, ((modelica_integer) 0)), ((modelica_fnptr) _vertexEq), ((modelica_fnptr) _edgeEq), ((modelica_fnptr) _vertexStr), ((modelica_fnptr) _edgeStr));
+  tmpMeta1 = omc_mk_box9(3, &SBGraph_BipartiteIncidenceList_BIPARTITE__INCIDENCE__LIST__desc, omc_Vector_new(threadData, ((modelica_integer) 0)), omc_Vector_new(threadData, ((modelica_integer) 0)), omc_Vector_new(threadData, ((modelica_integer) 0)), omc_Vector_new(threadData, ((modelica_integer) 0)), ((modelica_fnptr) _vertexEq), ((modelica_fnptr) _edgeEq), ((modelica_fnptr) _vertexStr), ((modelica_fnptr) _edgeStr));
   _il = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _il;
+  omc_ret_ = _il;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_string omc_SBGraph_IncidenceList_toString(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_string _str = NULL;
   modelica_fnptr _vertToString;
   modelica_fnptr _edgeToString;
-  modelica_metatype tmpMeta1;
+  modelica_string tmp1;
   modelica_metatype tmpMeta2;
-  modelica_metatype tmpMeta6;
-  modelica_metatype tmpMeta7;
+  modelica_string tmp6;
+  modelica_string tmp7;
   modelica_metatype tmpMeta8;
-  modelica_metatype tmpMeta12;
-  modelica_metatype tmpMeta13;
-  MMC_SO();
+  modelica_string tmp12;
+  modelica_string tmp13;
+  modelica_string omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _str has no default value.
-  _vertToString = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 7)));
-  _edgeToString = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 8)));
-  tmpMeta1 = stringAppend(omc_StringUtil_headline__2(threadData, _OMC_LIT5),_OMC_LIT6);
-  _str = tmpMeta1;
+  _vertToString = (OMC_BOX_FIELD(_il, 7));
+  _edgeToString = (OMC_BOX_FIELD(_il, 8));
+  tmp1 = stringAppend(omc_StringUtil_headline__2(threadData, _OMC_LIT5),_OMC_LIT6);
+  omc_string_store(&(_str), tmp1);
 
   {
     modelica_metatype __omcQ_24tmpVar9;
@@ -937,7 +940,7 @@ modelica_string omc_SBGraph_IncidenceList_toString(threadData_t *threadData, mod
     modelica_integer tmp5;
     modelica_metatype _v_loopVar = 0;
     modelica_metatype _v;
-    _v_loopVar = omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))));
+    _v_loopVar = omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 2)));
     tmpMeta4 = MMC_REFSTRUCTLIT(mmc_nil);
     __omcQ_24tmpVar9 = tmpMeta4; /* defaultValue */
     tmp3 = &__omcQ_24tmpVar9;
@@ -949,21 +952,21 @@ modelica_string omc_SBGraph_IncidenceList_toString(threadData_t *threadData, mod
         tmp5--;
       }
       if (tmp5 == 0) {
-        __omcQ_24tmpVar8 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 2))), _v) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_vertToString), 1)))) (threadData, _v);
+        __omcQ_24tmpVar8 = (OMC_BOX_FIELD(_vertToString, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_vertToString, 1))) (threadData, (OMC_BOX_FIELD(_vertToString, 2)), _v) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_vertToString, 1))) (threadData, _v);
         *tmp3 = mmc_mk_cons(__omcQ_24tmpVar8,0);
         tmp3 = &MMC_CDR(*tmp3);
       } else if (tmp5 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp3 = mmc_mk_nil();
     tmpMeta2 = __omcQ_24tmpVar9;
   }
-  tmpMeta6 = stringAppend(_str,stringDelimitList(tmpMeta2, _OMC_LIT6));
-  tmpMeta7 = stringAppend(tmpMeta6,_OMC_LIT6);
-  _str = tmpMeta7;
+  tmp6 = stringAppend(_str,stringDelimitList(tmpMeta2, _OMC_LIT6));
+  tmp7 = stringAppend(tmp6,_OMC_LIT6);
+  omc_string_store(&(_str), tmp7);
 
   {
     modelica_metatype __omcQ_24tmpVar11;
@@ -973,7 +976,7 @@ modelica_string omc_SBGraph_IncidenceList_toString(threadData_t *threadData, mod
     modelica_integer tmp11;
     modelica_metatype _e_loopVar = 0;
     modelica_metatype _e;
-    _e_loopVar = omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))));
+    _e_loopVar = omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 3)));
     tmpMeta10 = MMC_REFSTRUCTLIT(mmc_nil);
     __omcQ_24tmpVar11 = tmpMeta10; /* defaultValue */
     tmp9 = &__omcQ_24tmpVar11;
@@ -985,138 +988,133 @@ modelica_string omc_SBGraph_IncidenceList_toString(threadData_t *threadData, mod
         tmp11--;
       }
       if (tmp11 == 0) {
-        __omcQ_24tmpVar10 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_edgeToString), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_edgeToString), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_edgeToString), 2))), _e) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_edgeToString), 1)))) (threadData, _e);
+        __omcQ_24tmpVar10 = (OMC_BOX_FIELD(_edgeToString, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_edgeToString, 1))) (threadData, (OMC_BOX_FIELD(_edgeToString, 2)), _e) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_edgeToString, 1))) (threadData, _e);
         *tmp9 = mmc_mk_cons(__omcQ_24tmpVar10,0);
         tmp9 = &MMC_CDR(*tmp9);
       } else if (tmp11 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp9 = mmc_mk_nil();
     tmpMeta8 = __omcQ_24tmpVar11;
   }
-  tmpMeta12 = stringAppend(_str,stringDelimitList(tmpMeta8, _OMC_LIT6));
-  tmpMeta13 = stringAppend(tmpMeta12,_OMC_LIT6);
-  _str = tmpMeta13;
+  tmp12 = stringAppend(_str,stringDelimitList(tmpMeta8, _OMC_LIT6));
+  tmp13 = stringAppend(tmp12,_OMC_LIT6);
+  omc_string_store(&(_str), tmp13);
   _return: OMC_LABEL_UNUSED
-  return _str;
+  omc_ret_ = _str;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_IncidenceList_edges(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_metatype _el = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _el = omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))));
+  _el = omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 3)));
   _return: OMC_LABEL_UNUSED
-  return _el;
+  omc_ret_ = _el;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_IncidenceList_vertices(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_metatype _vl = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _vl = omc_Vector_toList(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))));
+  _vl = omc_Vector_toList(threadData, (OMC_BOX_FIELD(_il, 2)));
   _return: OMC_LABEL_UNUSED
-  return _vl;
+  omc_ret_ = _vl;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SBGraph_IncidenceList_edgeCount(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_integer _count;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _count = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))));
+  _count = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 3)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _count;
+  omc_ret_ = _count;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_IncidenceList_edgeCount(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_integer _count;
   modelica_metatype out_count;
   _count = omc_SBGraph_IncidenceList_edgeCount(threadData, _il);
-  out_count = mmc_mk_icon(_count);
+  out_count = omc_mk_icon(_count);
   return out_count;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SBGraph_IncidenceList_vertexCount(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_integer _count;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _count = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))));
+  _count = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 2)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _count;
+  omc_ret_ = _count;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_IncidenceList_vertexCount(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_integer _count;
   modelica_metatype out_count;
   _count = omc_SBGraph_IncidenceList_vertexCount(threadData, _il);
-  out_count = mmc_mk_icon(_count);
+  out_count = omc_mk_icon(_count);
   return out_count;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SBGraph_IncidenceList_isEmpty(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_boolean _empty;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _empty = (omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2)))) == ((modelica_integer) 0));
+  _empty = (omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 2))) == ((modelica_integer) 0));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _empty;
+  omc_ret_ = _empty;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_IncidenceList_isEmpty(threadData_t *threadData, modelica_metatype _il)
 {
   modelica_boolean _empty;
   modelica_metatype out_empty;
   _empty = omc_SBGraph_IncidenceList_isEmpty(threadData, _il);
-  out_empty = mmc_mk_icon(_empty);
+  out_empty = omc_mk_icon(_empty);
   return out_empty;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_IncidenceList_getEdge(threadData_t *threadData, modelica_metatype _il, modelica_integer _d)
 {
   modelica_metatype _e = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _e has no default value.
-  _e = omc_Vector_get(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))), _d);
+  _e = omc_Vector_get(threadData, (OMC_BOX_FIELD(_il, 3)), _d);
   _return: OMC_LABEL_UNUSED
-  return _e;
+  omc_ret_ = _e;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_IncidenceList_getEdge(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d)
 {
   modelica_integer tmp1;
   modelica_metatype _e = NULL;
-  tmp1 = mmc_unbox_integer(_d);
+  tmp1 = omc_unbox_integer(_d);
   _e = omc_SBGraph_IncidenceList_getEdge(threadData, _il, tmp1);
   /* skip box _e; polymorphic<EdgeT> */
   return _e;
@@ -1124,12 +1122,12 @@ modelica_metatype boxptr_SBGraph_IncidenceList_getEdge(threadData_t *threadData,
 
 static modelica_metatype closure1_SBGraph_edge__finder(threadData_t *thData, modelica_metatype closure, modelica_metatype index)
 {
-  modelica_metatype e = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),1));
-  modelica_metatype edges = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),2));
-  modelica_fnptr eqFn = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(closure),3));
+  modelica_metatype e = OMC_BOX_FIELD(closure, 1);
+  modelica_metatype edges = OMC_BOX_FIELD(closure, 2);
+  modelica_fnptr eqFn = OMC_BOX_FIELD(closure, 3);
   return boxptr_SBGraph_edge__finder(thData, index, e, edges, eqFn);
 }
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SBGraph_IncidenceList_addEdge(threadData_t *threadData, modelica_metatype _il, modelica_integer _d1, modelica_integer _d2, modelica_metatype _e)
 {
   modelica_integer _ei;
@@ -1137,39 +1135,35 @@ modelica_integer omc_SBGraph_IncidenceList_addEdge(threadData_t *threadData, mod
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _ei has no default value.
   // _eil has no default value.
-  _eil = omc_Vector_get(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))), _d1);
+  _eil = omc_Vector_get(threadData, (OMC_BOX_FIELD(_il, 4)), _d1);
 
-  tmpMeta1 = mmc_mk_box3(0, _e, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))), (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 6))));
-  _ei = omc_List_positionOnTrue(threadData, _eil, (modelica_fnptr) mmc_mk_box2(0,closure1_SBGraph_edge__finder,tmpMeta1));
+  tmpMeta1 = omc_mk_box3(0, _e, (OMC_BOX_FIELD(_il, 3)), (OMC_BOX_FIELD(_il, 6)));
+  _ei = omc_List_positionOnTrue(threadData, _eil, (modelica_fnptr) omc_mk_box2(0,closure1_SBGraph_edge__finder,tmpMeta1));
 
   if((_ei == ((modelica_integer) -1)))
   {
-    omc_Vector_push(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))), _e);
+    omc_Vector_push(threadData, (OMC_BOX_FIELD(_il, 3)), _e);
 
-    _ei = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))));
+    _ei = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 3)));
 
-    tmpMeta2 = mmc_mk_cons(mmc_mk_integer(_ei), _eil);
-    omc_Vector_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))), _d1, tmpMeta2);
+    tmpMeta2 = mmc_mk_cons(omc_mk_integer(_ei), _eil);
+    omc_Vector_update(threadData, (OMC_BOX_FIELD(_il, 4)), _d1, tmpMeta2);
 
-    tmpMeta3 = mmc_mk_cons(mmc_mk_integer(_ei), omc_Vector_get(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))), _d2));
-    omc_Vector_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))), _d2, tmpMeta3);
+    tmpMeta3 = mmc_mk_cons(omc_mk_integer(_ei), omc_Vector_get(threadData, (OMC_BOX_FIELD(_il, 4)), _d2));
+    omc_Vector_update(threadData, (OMC_BOX_FIELD(_il, 4)), _d2, tmpMeta3);
   }
   else
   {
-    omc_Vector_update(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 3))), _ei, _e);
+    omc_Vector_update(threadData, (OMC_BOX_FIELD(_il, 3)), _ei, _e);
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _ei;
+  omc_ret_ = _ei;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_IncidenceList_addEdge(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d1, modelica_metatype _d2, modelica_metatype _e)
 {
@@ -1177,14 +1171,14 @@ modelica_metatype boxptr_SBGraph_IncidenceList_addEdge(threadData_t *threadData,
   modelica_integer tmp2;
   modelica_integer _ei;
   modelica_metatype out_ei;
-  tmp1 = mmc_unbox_integer(_d1);
-  tmp2 = mmc_unbox_integer(_d2);
+  tmp1 = omc_unbox_integer(_d1);
+  tmp2 = omc_unbox_integer(_d2);
   _ei = omc_SBGraph_IncidenceList_addEdge(threadData, _il, tmp1, tmp2, _e);
-  out_ei = mmc_mk_icon(_ei);
+  out_ei = omc_mk_icon(_ei);
   return out_ei;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_IncidenceList_getVerticesFromSet(threadData_t *threadData, modelica_metatype _il, modelica_metatype _set, modelica_fnptr _getSet)
 {
   modelica_metatype _set_vertices = NULL;
@@ -1192,7 +1186,8 @@ modelica_metatype omc_SBGraph_IncidenceList_getVerticesFromSet(threadData_t *thr
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _set_vertices = tmpMeta1;
@@ -1201,7 +1196,7 @@ modelica_metatype omc_SBGraph_IncidenceList_getVerticesFromSet(threadData_t *thr
     for (tmpMeta2 = omc_SBGraph_IncidenceList_vertices(threadData, _il); !listEmpty(tmpMeta2); tmpMeta2=MMC_CDR(tmpMeta2))
     {
       _v = MMC_CAR(tmpMeta2);
-      if((!omc_SBSet_isEmpty(threadData, omc_SBSet_intersection(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 2))), _v) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_getSet), 1)))) (threadData, _v), _set))))
+      if((!omc_SBSet_isEmpty(threadData, omc_SBSet_intersection(threadData, (OMC_BOX_FIELD(_getSet, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_getSet, 1))) (threadData, (OMC_BOX_FIELD(_getSet, 2)), _v) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_getSet, 1))) (threadData, _v), _set))))
       {
         tmpMeta3 = mmc_mk_cons(_v, _set_vertices);
         _set_vertices = tmpMeta3;
@@ -1209,137 +1204,138 @@ modelica_metatype omc_SBGraph_IncidenceList_getVerticesFromSet(threadData_t *thr
     }
   }
   _return: OMC_LABEL_UNUSED
-  return _set_vertices;
+  omc_ret_ = _set_vertices;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_IncidenceList_getVertex(threadData_t *threadData, modelica_metatype _il, modelica_integer _d)
 {
   modelica_metatype _v = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _v has no default value.
-  _v = omc_Vector_get(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))), _d);
+  _v = omc_Vector_get(threadData, (OMC_BOX_FIELD(_il, 2)), _d);
   _return: OMC_LABEL_UNUSED
-  return _v;
+  omc_ret_ = _v;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_IncidenceList_getVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d)
 {
   modelica_integer tmp1;
   modelica_metatype _v = NULL;
-  tmp1 = mmc_unbox_integer(_d);
+  tmp1 = omc_unbox_integer(_d);
   _v = omc_SBGraph_IncidenceList_getVertex(threadData, _il, tmp1);
   /* skip box _v; polymorphic<VertexT> */
   return _v;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_IncidenceList_findVertex(threadData_t *threadData, modelica_metatype _il, modelica_fnptr _predFn)
 {
   modelica_metatype _od = NULL;
   modelica_integer _index;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _od has no default value.
   // _index has no default value.
-  omc_Vector_find(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))), ((modelica_fnptr) _predFn) ,&_index);
+  omc_Vector_find(threadData, (OMC_BOX_FIELD(_il, 2)), ((modelica_fnptr) _predFn) ,&_index);
 
-  _od = ((_index > ((modelica_integer) 0))?mmc_mk_some(mmc_mk_integer(_index)):mmc_mk_none());
+  _od = ((_index > ((modelica_integer) 0))?mmc_mk_some(omc_mk_integer(_index)):mmc_mk_none());
   _return: OMC_LABEL_UNUSED
-  return _od;
+  omc_ret_ = _od;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_SBGraph_IncidenceList_addVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _v)
 {
   modelica_integer _d;
   modelica_metatype tmpMeta1;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _d has no default value.
-  omc_Vector_push(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))), _v);
+  omc_Vector_push(threadData, (OMC_BOX_FIELD(_il, 2)), _v);
 
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
-  omc_Vector_push(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))), tmpMeta1);
+  omc_Vector_push(threadData, (OMC_BOX_FIELD(_il, 4)), tmpMeta1);
 
-  _d = omc_Vector_size(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 2))));
+  _d = omc_Vector_size(threadData, (OMC_BOX_FIELD(_il, 2)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _d;
+  omc_ret_ = _d;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_IncidenceList_addVertex(threadData_t *threadData, modelica_metatype _il, modelica_metatype _v)
 {
   modelica_integer _d;
   modelica_metatype out_d;
   _d = omc_SBGraph_IncidenceList_addVertex(threadData, _il, _v);
-  out_d = mmc_mk_icon(_d);
+  out_d = omc_mk_icon(_d);
   return out_d;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_IncidenceList_getRow(threadData_t *threadData, modelica_metatype _il, modelica_integer _d)
 {
   modelica_metatype _row = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _row has no default value.
-  _row = omc_Vector_get(threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_il), 4))), _d);
+  _row = omc_Vector_get(threadData, (OMC_BOX_FIELD(_il, 4)), _d);
   _return: OMC_LABEL_UNUSED
-  return _row;
+  omc_ret_ = _row;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_IncidenceList_getRow(threadData_t *threadData, modelica_metatype _il, modelica_metatype _d)
 {
   modelica_integer tmp1;
   modelica_metatype _row = NULL;
-  tmp1 = mmc_unbox_integer(_d);
+  tmp1 = omc_unbox_integer(_d);
   _row = omc_SBGraph_IncidenceList_getRow(threadData, _il, tmp1);
   /* skip box _row; list<#Integer> */
   return _row;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_SBGraph_IncidenceList_new(threadData_t *threadData, modelica_fnptr _vertexEq, modelica_fnptr _edgeEq, modelica_fnptr _vertexStr, modelica_fnptr _edgeStr)
 {
   modelica_metatype _il = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _il has no default value.
-  tmpMeta1 = mmc_mk_box8(3, &SBGraph_IncidenceList_INCIDENCE__LIST__desc, omc_Vector_new(threadData, ((modelica_integer) 0)), omc_Vector_new(threadData, ((modelica_integer) 0)), omc_Vector_new(threadData, ((modelica_integer) 0)), ((modelica_fnptr) _vertexEq), ((modelica_fnptr) _edgeEq), ((modelica_fnptr) _vertexStr), ((modelica_fnptr) _edgeStr));
+  tmpMeta1 = omc_mk_box8(3, &SBGraph_IncidenceList_INCIDENCE__LIST__desc, omc_Vector_new(threadData, ((modelica_integer) 0)), omc_Vector_new(threadData, ((modelica_integer) 0)), omc_Vector_new(threadData, ((modelica_integer) 0)), ((modelica_fnptr) _vertexEq), ((modelica_fnptr) _edgeEq), ((modelica_fnptr) _vertexStr), ((modelica_fnptr) _edgeStr));
   _il = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _il;
+  omc_ret_ = _il;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_SBGraph_edge__finder(threadData_t *threadData, modelica_integer _index, modelica_metatype _e, modelica_metatype _edges, modelica_fnptr _eqFn)
 {
   modelica_boolean _matching;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  _matching = mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqFn), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqFn), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqFn), 2))), _e, omc_Vector_get(threadData, _edges, _index)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_eqFn), 1)))) (threadData, _e, omc_Vector_get(threadData, _edges, _index)));
+  _matching = omc_unbox_boolean((OMC_BOX_FIELD(_eqFn, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_eqFn, 1))) (threadData, (OMC_BOX_FIELD(_eqFn, 2)), _e, omc_Vector_get(threadData, _edges, _index)) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_eqFn, 1))) (threadData, _e, omc_Vector_get(threadData, _edges, _index)));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _matching;
+  omc_ret_ = _matching;
+  return omc_ret_;
 }
 modelica_metatype boxptr_SBGraph_edge__finder(threadData_t *threadData, modelica_metatype _index, modelica_metatype _e, modelica_metatype _edges, modelica_fnptr _eqFn)
 {
   modelica_integer tmp1;
   modelica_boolean _matching;
   modelica_metatype out_matching;
-  tmp1 = mmc_unbox_integer(_index);
+  tmp1 = omc_unbox_integer(_index);
   _matching = omc_SBGraph_edge__finder(threadData, tmp1, _e, _edges, _eqFn);
-  out_matching = mmc_mk_icon(_matching);
+  out_matching = omc_mk_icon(_matching);
   return out_matching;
 }
 

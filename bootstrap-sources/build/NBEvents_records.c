@@ -188,7 +188,7 @@ extern struct record_description NBEvents_SpatialDistribution_SPATIAL__DISTRIBUT
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBEvents_Bucket_BUCKET__desc_added
 #define NBEvents_Bucket_BUCKET__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBEvents_Bucket_BUCKET__desc__fields[5] = {"time_set","time_map","state_map","aux_stmts","stmt_index"};
+ADD_METARECORD_DEFINITIONS const char* NBEvents_Bucket_BUCKET__desc__fields[6] = {"time_set","time_map","state_map","aux_stmts","stmt_index","relation_index"};
 ADD_METARECORD_DEFINITIONS struct record_description NBEvents_Bucket_BUCKET__desc = {
   "NBEvents_Bucket_BUCKET",
   "NBEvents.Bucket.BUCKET",
@@ -201,7 +201,7 @@ extern struct record_description NBEvents_Bucket_BUCKET__desc;
 #ifdef ADD_METARECORD_DEFINITIONS
 #ifndef NBEvents_Bucket_BUCKET__desc_added
 #define NBEvents_Bucket_BUCKET__desc_added
-ADD_METARECORD_DEFINITIONS const char* NBEvents_Bucket_BUCKET__desc__fields[5] = {"time_set","time_map","state_map","aux_stmts","stmt_index"};
+ADD_METARECORD_DEFINITIONS const char* NBEvents_Bucket_BUCKET__desc__fields[6] = {"time_set","time_map","state_map","aux_stmts","stmt_index","relation_index"};
 ADD_METARECORD_DEFINITIONS struct record_description NBEvents_Bucket_BUCKET__desc = {
   "NBEvents_Bucket_BUCKET",
   "NBEvents.Bucket.BUCKET",

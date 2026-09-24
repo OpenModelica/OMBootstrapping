@@ -56,11 +56,13 @@ extern struct record_description DAE_Exp_EMPTY__desc;
 
 extern struct record_description DAE_Exp_ICONST__desc;
 
-extern struct record_description DAE_Exp_SCONST__desc;
-
 extern struct record_description DAE_InlineType_NORM__INLINE__desc;
 
 extern struct record_description DAE_Properties_PROP__desc;
+
+extern struct record_description DAE_StartOrigin_BINDING__ORIGIN__desc;
+
+extern struct record_description DAE_StartOrigin_TYPE__ORIGIN__desc;
 
 extern struct record_description DAE_SymbolicOperation_FLATTEN__desc;
 
@@ -129,7 +131,7 @@ extern struct record_description Values_Value_OPTION__desc;
 extern struct record_description Values_Value_RECORD__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstBinding_makeVariableBinding(threadData_t *threadData, modelica_metatype _inType, modelica_metatype _inMod, modelica_metatype _inConst, modelica_metatype _inPrefix, modelica_string _inName);
 #define boxptr_InstBinding_makeVariableBinding omc_InstBinding_makeVariableBinding
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstBinding_makeVariableBinding,2,0) {(void*) boxptr_InstBinding_makeVariableBinding,0}};
@@ -139,23 +141,23 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstBinding_makeVariableBinding,2,0) {(
 #define boxptr_InstBinding_makeRecordBinding3 omc_InstBinding_makeRecordBinding3
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstBinding_makeRecordBinding(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inRecordName, modelica_metatype _inRecordType, modelica_metatype _inRecordVars, modelica_metatype _inMods, modelica_metatype _inInfo);
 #define boxptr_InstBinding_makeRecordBinding omc_InstBinding_makeRecordBinding
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstBinding_makeRecordBinding,2,0) {(void*) boxptr_InstBinding_makeRecordBinding,0}};
 #define boxvar_InstBinding_makeRecordBinding MMC_REFSTRUCTLIT(boxvar_lit_InstBinding_makeRecordBinding)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstBinding_makeBinding(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inAttributes, modelica_metatype _inMod, modelica_metatype _inType, modelica_metatype _inPrefix, modelica_string _componentName, modelica_metatype _inInfo, modelica_metatype *out_outBinding);
 #define boxptr_InstBinding_makeBinding omc_InstBinding_makeBinding
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstBinding_makeBinding,2,0) {(void*) boxptr_InstBinding_makeBinding,0}};
 #define boxvar_InstBinding_makeBinding MMC_REFSTRUCTLIT(boxvar_lit_InstBinding_makeBinding)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstBinding_instModEquation(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _inType, modelica_metatype _inMod, modelica_metatype _inSource, modelica_boolean _inImpl);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_InstBinding_instModEquation(threadData_t *threadData, modelica_metatype _inComponentRef, modelica_metatype _inType, modelica_metatype _inMod, modelica_metatype _inSource, modelica_metatype _inImpl);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstBinding_instModEquation,2,0) {(void*) boxptr_InstBinding_instModEquation,0}};
 #define boxvar_InstBinding_instModEquation MMC_REFSTRUCTLIT(boxvar_lit_InstBinding_instModEquation)
@@ -164,7 +166,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstBinding_instModEquation,2,0) {(void
 #define boxptr_InstBinding_getUncertainFromExpOption omc_InstBinding_getUncertainFromExpOption
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstBinding_instDaeVariableAttributes(threadData_t *threadData, modelica_metatype _inCache, modelica_metatype _inEnv, modelica_metatype _inMod, modelica_metatype _inType, modelica_metatype _inIntegerLst, modelica_metatype *out_outDAEVariableAttributesOption);
 #define boxptr_InstBinding_instDaeVariableAttributes omc_InstBinding_instDaeVariableAttributes
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstBinding_instDaeVariableAttributes,2,0) {(void*) boxptr_InstBinding_instDaeVariableAttributes,0}};
@@ -174,7 +176,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_InstBinding_instDaeVariableAttributes,2
 #define boxptr_InstBinding_instStartOrigin omc_InstBinding_instStartOrigin
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_InstBinding_instStartBindingExp(threadData_t *threadData, modelica_metatype _inMod, modelica_metatype _inExpectedType, modelica_metatype _inVariability);
 #define boxptr_InstBinding_instStartBindingExp omc_InstBinding_instStartBindingExp
 static const MMC_DEFSTRUCTLIT(boxvar_lit_InstBinding_instStartBindingExp,2,0) {(void*) boxptr_InstBinding_instStartBindingExp,0}};

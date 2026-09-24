@@ -41,6 +41,7 @@ extern "C" {
 #include "SymbolicJacobian.h"
 #include "System.h"
 #include "UnorderedMap.h"
+#include "UnorderedSet.h"
 #include "Util.h"
 #include "ValuesUtil.h"
 #include "Vector.h"

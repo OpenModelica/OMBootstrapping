@@ -7,6 +7,7 @@ extern "C" {
 #include "AbsynUtil.h"
 #include "Array.h"
 #include "Error.h"
+#include "List.h"
 #include "Mutable.h"
 #include "NFCeval.h"
 #include "NFComponentRef.h"
@@ -21,6 +22,7 @@ extern "C" {
 #include "NFSimplifyExp.h"
 #include "NFSubscript.h"
 #include "NFType.h"
+#include "Util.h"
 #ifdef __cplusplus
 }
 #endif

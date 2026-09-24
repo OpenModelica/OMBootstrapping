@@ -12,7 +12,7 @@ modelica_boolean omc_Unzip_unzipPath(threadData_t *threadData, modelica_string _
   modelica_boolean _success;
   // _success has no default value.
 
-  _success_ext = om_unzip(MMC_STRINGDATA(_fileName), MMC_STRINGDATA(_pathToExtract), MMC_STRINGDATA(_destinationPath));
+  _success_ext = om_unzip(omc_string_data(_fileName), omc_string_data(_pathToExtract), omc_string_data(_destinationPath));
   _success = (modelica_boolean)_success_ext;
   return _success;
 }
@@ -21,7 +21,7 @@ modelica_metatype boxptr_Unzip_unzipPath(threadData_t *threadData, modelica_meta
   modelica_boolean _success;
   modelica_metatype out_success;
   _success = omc_Unzip_unzipPath(threadData, _fileName, _pathToExtract, _destinationPath);
-  out_success = mmc_mk_icon(_success);
+  out_success = omc_mk_icon(_success);
   return out_success;
 }
 

@@ -65,7 +65,7 @@ extern struct record_description SCode_Mod_REDECL__desc;
 extern struct record_description SCode_SubMod_NAMEMOD__desc;
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSCodeFlattenImports_flattenComponentRefSubs(threadData_t *threadData, modelica_metatype _inCref, modelica_metatype _inEnv, modelica_metatype _inInfo);
 #define boxptr_NFSCodeFlattenImports_flattenComponentRefSubs omc_NFSCodeFlattenImports_flattenComponentRefSubs
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenComponentRefSubs,2,0) {(void*) boxptr_NFSCodeFlattenImports_flattenComponentRefSubs,0}};
@@ -141,14 +141,14 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenComponentR
 #define boxptr_NFSCodeFlattenImports_flattenClassDef omc_NFSCodeFlattenImports_flattenClassDef
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSCodeFlattenImports_flattenClass(threadData_t *threadData, modelica_metatype _inClass, modelica_metatype _inEnv, modelica_metatype *out_outEnv);
 #define boxptr_NFSCodeFlattenImports_flattenClass omc_NFSCodeFlattenImports_flattenClass
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenClass,2,0) {(void*) boxptr_NFSCodeFlattenImports_flattenClass,0}};
 #define boxvar_NFSCodeFlattenImports_flattenClass MMC_REFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenClass)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFSCodeFlattenImports_flattenProgram(threadData_t *threadData, modelica_metatype _inProgram, modelica_metatype _inEnv, modelica_metatype *out_outEnv);
 #define boxptr_NFSCodeFlattenImports_flattenProgram omc_NFSCodeFlattenImports_flattenProgram
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFSCodeFlattenImports_flattenProgram,2,0) {(void*) boxptr_NFSCodeFlattenImports_flattenProgram,0}};

@@ -107,6 +107,58 @@ ADD_METARECORD_DEFINITIONS struct record_description RemoveSimpleEquations_Simpl
 #else /* Only use the file as a header */
 extern struct record_description RemoveSimpleEquations_SimpleContainer_ALIAS__desc;
 #endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc_added
+#define RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc_added
+ADD_METARECORD_DEFINITIONS const char* RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc__fields[4] = {"rows","prevVar","negate","stack"};
+ADD_METARECORD_DEFINITIONS struct record_description RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc = {
+  "RemoveSimpleEquations_AliasWork_ALIAS__ROWS",
+  "RemoveSimpleEquations.AliasWork.ALIAS_ROWS",
+  RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc_added
+#define RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc_added
+ADD_METARECORD_DEFINITIONS const char* RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc__fields[4] = {"var","container","negate","stack"};
+ADD_METARECORD_DEFINITIONS struct record_description RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc = {
+  "RemoveSimpleEquations_AliasWork_ALIAS__SECOND",
+  "RemoveSimpleEquations.AliasWork.ALIAS_SECOND",
+  RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc_added
+#define RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc_added
+ADD_METARECORD_DEFINITIONS const char* RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc__fields[4] = {"var","container","negate","stack"};
+ADD_METARECORD_DEFINITIONS struct record_description RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc = {
+  "RemoveSimpleEquations_AliasWork_ALIAS__SECOND",
+  "RemoveSimpleEquations.AliasWork.ALIAS_SECOND",
+  RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description RemoveSimpleEquations_AliasWork_ALIAS__SECOND__desc;
+#endif
+#ifdef ADD_METARECORD_DEFINITIONS
+#ifndef RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc_added
+#define RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc_added
+ADD_METARECORD_DEFINITIONS const char* RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc__fields[4] = {"rows","prevVar","negate","stack"};
+ADD_METARECORD_DEFINITIONS struct record_description RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc = {
+  "RemoveSimpleEquations_AliasWork_ALIAS__ROWS",
+  "RemoveSimpleEquations.AliasWork.ALIAS_ROWS",
+  RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc__fields
+};
+#endif
+#else /* Only use the file as a header */
+extern struct record_description RemoveSimpleEquations_AliasWork_ALIAS__ROWS__desc;
+#endif
 #ifdef __cplusplus
 }
 #endif

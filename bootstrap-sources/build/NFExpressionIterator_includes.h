@@ -11,6 +11,7 @@ extern "C" {
 #include "NFExpression.h"
 #include "NFExpressionIterator.h"
 #include "NFSimplifyExp.h"
+#include "Util.h"
 #ifdef __cplusplus
 }
 #endif

@@ -32,7 +32,7 @@ modelica_metatype boxptr_FFI_callFunction(threadData_t *threadData, modelica_met
 {
   modelica_integer tmp1;
   modelica_metatype _returnValue = NULL;
-  tmp1 = mmc_unbox_integer(_fnHandle);
+  tmp1 = omc_unbox_integer(_fnHandle);
   _returnValue = omc_FFI_callFunction(threadData, tmp1, _args, _specs, _returnType, out_outputArgs);
   /* skip box _returnValue; NFExpression */
   /* skip box _outputArgs; list<NFExpression> */

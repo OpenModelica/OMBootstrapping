@@ -13,6 +13,8 @@ extern "C" {
 #include "FNode.h"
 #include "Flags.h"
 #include "List.h"
+#include "Mutable.h"
+#include "MutableWeak.h"
 #include "SCodeUtil.h"
 #ifdef __cplusplus
 }

@@ -12,21 +12,21 @@ extern "C" {
 
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Pointer_apply(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmutable, modelica_fnptr _func);
 #define boxptr_Pointer_apply omc_Pointer_apply
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Pointer_apply,2,0) {(void*) boxptr_Pointer_apply,0}};
 #define boxvar_Pointer_apply MMC_REFSTRUCTLIT(boxvar_lit_Pointer_apply)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Pointer_clone(threadData_t *threadData, modelica_metatype __omcQ_24in_5Fmutable);
 #define boxptr_Pointer_clone omc_Pointer_clone
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Pointer_clone,2,0) {(void*) boxptr_Pointer_clone,0}};
 #define boxvar_Pointer_clone MMC_REFSTRUCTLIT(boxvar_lit_Pointer_clone)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Pointer_access(threadData_t *threadData, modelica_metatype _mutable);
 #define boxptr_Pointer_access omc_Pointer_access
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Pointer_access,2,0) {(void*) boxptr_Pointer_access,0}};
@@ -39,7 +39,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Pointer_access,2,0) {(void*) boxptr_Poi
  * extern modelica_metatype pointerAccess(modelica_metatype (*_mutable*));
  */
 
-DLLDirection
+DLLModelDirection
 void omc_Pointer_update(threadData_t *threadData, modelica_metatype _mutable, modelica_metatype _data);
 #define boxptr_Pointer_update omc_Pointer_update
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Pointer_update,2,0) {(void*) boxptr_Pointer_update,0}};
@@ -52,7 +52,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Pointer_update,2,0) {(void*) boxptr_Poi
  * extern void pointerUpdate(OpenModelica_threadData_ThreadData*, modelica_metatype (*_mutable*), modelica_metatype (*_data*));
  */
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Pointer_createImmutable(threadData_t *threadData, modelica_metatype _data);
 #define boxptr_Pointer_createImmutable omc_Pointer_createImmutable
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Pointer_createImmutable,2,0) {(void*) boxptr_Pointer_createImmutable,0}};
@@ -65,7 +65,7 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Pointer_createImmutable,2,0) {(void*) b
  * extern modelica_metatype mmc_mk_some(modelica_metatype (*_data*));
  */
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_Pointer_create(threadData_t *threadData, modelica_metatype _data);
 #define boxptr_Pointer_create omc_Pointer_create
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Pointer_create,2,0) {(void*) boxptr_Pointer_create,0}};

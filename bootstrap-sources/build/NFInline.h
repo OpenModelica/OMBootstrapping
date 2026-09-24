@@ -59,17 +59,17 @@ extern struct record_description SourceInfo_SOURCEINFO__desc;
 #define boxptr_NFInline_replaceCrefNode omc_NFInline_replaceCrefNode
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFInline_inlineCall(threadData_t *threadData, modelica_metatype _callExp, modelica_boolean _forceInline);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFInline_inlineCall(threadData_t *threadData, modelica_metatype _callExp, modelica_metatype _forceInline);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInline_inlineCall,2,0) {(void*) boxptr_NFInline_inlineCall,0}};
 #define boxvar_NFInline_inlineCall MMC_REFSTRUCTLIT(boxvar_lit_NFInline_inlineCall)
 
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_NFInline_inlineCallExp(threadData_t *threadData, modelica_metatype _callExp, modelica_boolean _forceInline);
-DLLDirection
+DLLModelDirection
 modelica_metatype boxptr_NFInline_inlineCallExp(threadData_t *threadData, modelica_metatype _callExp, modelica_metatype _forceInline);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_NFInline_inlineCallExp,2,0) {(void*) boxptr_NFInline_inlineCallExp,0}};
 #define boxvar_NFInline_inlineCallExp MMC_REFSTRUCTLIT(boxvar_lit_NFInline_inlineCallExp)

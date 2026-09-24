@@ -44,7 +44,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BaseHashSet_valueArrayNthT(threa
 {
   modelica_metatype _key = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _key has no default value.
   { /* match expression */
@@ -64,9 +65,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BaseHashSet_valueArrayNthT(threa
           modelica_metatype tmpMeta6;
           modelica_integer tmp7;
           modelica_metatype tmpMeta8;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 3);
           _n = tmp7  /* pattern as ty=Integer */;
           _arr = tmpMeta8;
           /* Pattern matching succeeded */
@@ -81,31 +82,33 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BaseHashSet_valueArrayNthT(threa
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _key = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _key;
+  omc_ret_ = _key;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BaseHashSet_valueArrayNthT(threadData_t *threadData, modelica_metatype _valueArray, modelica_metatype _pos)
 {
   modelica_integer tmp1;
   modelica_metatype _key = NULL;
-  tmp1 = mmc_unbox_integer(_pos);
+  tmp1 = omc_unbox_integer(_pos);
   _key = omc_BaseHashSet_valueArrayNthT(threadData, _valueArray, tmp1);
   /* skip box _key; Option<polymorphic<Key>> */
   return _key;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_valueArrayNth(threadData_t *threadData, modelica_metatype _valueArray, modelica_integer _pos)
 {
   modelica_metatype _key = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _key has no default value.
   { /* match expression */
@@ -129,9 +132,9 @@ modelica_metatype omc_BaseHashSet_valueArrayNth(threadData_t *threadData, modeli
           modelica_metatype tmpMeta8;
           modelica_metatype tmpMeta9;
           modelica_metatype tmpMeta10;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmp7 = mmc_unbox_integer(tmpMeta6);
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmp7 = omc_unbox_integer(tmpMeta6);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 3);
           _n = tmp7  /* pattern as ty=Integer */;
           _arr = tmpMeta8;
           /* Pattern matching succeeded */
@@ -140,7 +143,7 @@ modelica_metatype omc_BaseHashSet_valueArrayNth(threadData_t *threadData, modeli
           /* Pattern-matching assignment */
           tmpMeta9 = arrayGet(_arr,((modelica_integer) 1) + _pos) /* DAE.ASUB */;
           if (optionNone(tmpMeta9)) goto goto_2;
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta9), 1));
+          tmpMeta10 = OMC_BOX_FIELD(tmpMeta9, 1);
           _k = tmpMeta10;
           tmpMeta1 = _k;
           goto tmp3_done;
@@ -151,26 +154,27 @@ modelica_metatype omc_BaseHashSet_valueArrayNth(threadData_t *threadData, modeli
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _key = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _key;
+  omc_ret_ = _key;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BaseHashSet_valueArrayNth(threadData_t *threadData, modelica_metatype _valueArray, modelica_metatype _pos)
 {
   modelica_integer tmp1;
   modelica_metatype _key = NULL;
-  tmp1 = mmc_unbox_integer(_pos);
+  tmp1 = omc_unbox_integer(_pos);
   _key = omc_BaseHashSet_valueArrayNth(threadData, _valueArray, tmp1);
   /* skip box _key; polymorphic<Key> */
   return _key;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_valueArrayClearnth(threadData_t *threadData, modelica_metatype _valueArray, modelica_integer _pos)
 {
   modelica_metatype _outValueArray = NULL;
@@ -186,7 +190,8 @@ modelica_metatype omc_BaseHashSet_valueArrayClearnth(threadData_t *threadData, m
   modelica_metatype tmpMeta6;
   modelica_boolean tmp7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outValueArray has no default value.
   // _arr_1 has no default value.
@@ -195,37 +200,38 @@ modelica_metatype omc_BaseHashSet_valueArrayClearnth(threadData_t *threadData, m
   // _size has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _valueArray;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
   _n = tmp3  /* pattern as ty=Integer */;
   _size = tmp5  /* pattern as ty=Integer */;
   _arr = tmpMeta6;
 
   /* Pattern-matching assignment */
   tmp7 = (_pos < _size);
-  if (1 /* true */ != tmp7) MMC_THROW_INTERNAL();
+  if (1 /* true */ != tmp7) OMC_THROW_INTERNAL();
 
   _arr_1 = arrayUpdate(_arr, ((modelica_integer) 1) + _pos, mmc_mk_none());
 
-  tmpMeta8 = mmc_mk_box3(0, mmc_mk_integer(_n), mmc_mk_integer(_size), _arr_1);
+  tmpMeta8 = omc_mk_box3(0, omc_mk_integer(_n), omc_mk_integer(_size), _arr_1);
   _outValueArray = tmpMeta8;
   _return: OMC_LABEL_UNUSED
-  return _outValueArray;
+  omc_ret_ = _outValueArray;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BaseHashSet_valueArrayClearnth(threadData_t *threadData, modelica_metatype _valueArray, modelica_metatype _pos)
 {
   modelica_integer tmp1;
   modelica_metatype _outValueArray = NULL;
-  tmp1 = mmc_unbox_integer(_pos);
+  tmp1 = omc_unbox_integer(_pos);
   _outValueArray = omc_BaseHashSet_valueArrayClearnth(threadData, _valueArray, tmp1);
   /* skip box _outValueArray; tuple<#Integer, #Integer, array<Option<polymorphic<Key>>>> */
   return _outValueArray;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_valueArraySetnth(threadData_t *threadData, modelica_metatype _valueArray, modelica_integer _pos, modelica_metatype _entry)
 {
   modelica_metatype _outValueArray = NULL;
@@ -241,7 +247,8 @@ modelica_metatype omc_BaseHashSet_valueArraySetnth(threadData_t *threadData, mod
   modelica_metatype tmpMeta6;
   modelica_boolean tmp7;
   modelica_metatype tmpMeta8;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outValueArray has no default value.
   // _arr_1 has no default value.
@@ -250,37 +257,38 @@ modelica_metatype omc_BaseHashSet_valueArraySetnth(threadData_t *threadData, mod
   // _size has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _valueArray;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
   _n = tmp3  /* pattern as ty=Integer */;
   _size = tmp5  /* pattern as ty=Integer */;
   _arr = tmpMeta6;
 
   /* Pattern-matching assignment */
   tmp7 = (_pos < _size);
-  if (1 /* true */ != tmp7) MMC_THROW_INTERNAL();
+  if (1 /* true */ != tmp7) OMC_THROW_INTERNAL();
 
   _arr_1 = arrayUpdate(_arr, ((modelica_integer) 1) + _pos, mmc_mk_some(_entry));
 
-  tmpMeta8 = mmc_mk_box3(0, mmc_mk_integer(_n), mmc_mk_integer(_size), _arr_1);
+  tmpMeta8 = omc_mk_box3(0, omc_mk_integer(_n), omc_mk_integer(_size), _arr_1);
   _outValueArray = tmpMeta8;
   _return: OMC_LABEL_UNUSED
-  return _outValueArray;
+  omc_ret_ = _outValueArray;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BaseHashSet_valueArraySetnth(threadData_t *threadData, modelica_metatype _valueArray, modelica_metatype _pos, modelica_metatype _entry)
 {
   modelica_integer tmp1;
   modelica_metatype _outValueArray = NULL;
-  tmp1 = mmc_unbox_integer(_pos);
+  tmp1 = omc_unbox_integer(_pos);
   _outValueArray = omc_BaseHashSet_valueArraySetnth(threadData, _valueArray, tmp1, _entry);
   /* skip box _outValueArray; tuple<#Integer, #Integer, array<Option<polymorphic<Key>>>> */
   return _outValueArray;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_valueArrayAdd(threadData_t *threadData, modelica_metatype _valueArray, modelica_metatype _entry)
 {
   modelica_metatype _outValueArray = NULL;
@@ -298,7 +306,8 @@ modelica_metatype omc_BaseHashSet_valueArrayAdd(threadData_t *threadData, modeli
   modelica_integer tmp5;
   modelica_metatype tmpMeta6;
   modelica_metatype tmpMeta7;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outValueArray has no default value.
   // _n has no default value.
@@ -310,11 +319,11 @@ modelica_metatype omc_BaseHashSet_valueArrayAdd(threadData_t *threadData, modeli
   // _rexpandsize has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _valueArray;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 3);
   _n = tmp3  /* pattern as ty=Integer */;
   _size = tmp5  /* pattern as ty=Integer */;
   _arr = tmpMeta6;
@@ -336,81 +345,74 @@ modelica_metatype omc_BaseHashSet_valueArrayAdd(threadData_t *threadData, modeli
 
   _arr = arrayUpdate(_arr, ((modelica_integer) 1) + _n, mmc_mk_some(_entry));
 
-  tmpMeta7 = mmc_mk_box3(0, mmc_mk_integer(((modelica_integer) 1) + _n), mmc_mk_integer(_size), _arr);
+  tmpMeta7 = omc_mk_box3(0, omc_mk_integer(((modelica_integer) 1) + _n), omc_mk_integer(_size), _arr);
   _outValueArray = tmpMeta7;
   _return: OMC_LABEL_UNUSED
-  return _outValueArray;
+  omc_ret_ = _outValueArray;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_BaseHashSet_valueArrayLength(threadData_t *threadData, modelica_metatype _valueArray)
 {
   modelica_integer _sz;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_integer tmp3;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _sz has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _valueArray;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmp3 = mmc_unbox_integer(tmpMeta2);
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmp3 = omc_unbox_integer(tmpMeta2);
   _sz = tmp3  /* pattern as ty=Integer */;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _sz;
+  omc_ret_ = _sz;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BaseHashSet_valueArrayLength(threadData_t *threadData, modelica_metatype _valueArray)
 {
   modelica_integer _sz;
   modelica_metatype out_sz;
   _sz = omc_BaseHashSet_valueArrayLength(threadData, _valueArray);
-  out_sz = mmc_mk_icon(_sz);
+  out_sz = omc_mk_icon(_sz);
   return out_sz;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_BaseHashSet_currentSize(threadData_t *threadData, modelica_metatype _hashSet)
 {
   modelica_integer _sz;
   modelica_metatype _va = NULL;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _sz has no default value.
   // _va has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _hashSet;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 2);
   _va = tmpMeta2;
 
   _sz = omc_BaseHashSet_valueArrayLength(threadData, _va);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _sz;
+  omc_ret_ = _sz;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BaseHashSet_currentSize(threadData_t *threadData, modelica_metatype _hashSet)
 {
   modelica_integer _sz;
   modelica_metatype out_sz;
   _sz = omc_BaseHashSet_currentSize(threadData, _hashSet);
-  out_sz = mmc_mk_icon(_sz);
+  out_sz = omc_mk_icon(_sz);
   return out_sz;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_valueArrayList(threadData_t *threadData, modelica_metatype _inValueArray)
 {
   modelica_metatype _outList = NULL;
@@ -428,7 +430,8 @@ modelica_metatype omc_BaseHashSet_valueArrayList(threadData_t *threadData, model
   modelica_integer tmp9;
   modelica_integer tmp10;
   modelica_integer tmp11;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   tmpMeta1 = MMC_REFSTRUCTLIT(mmc_nil);
   _outList = tmpMeta1;
@@ -437,9 +440,9 @@ modelica_metatype omc_BaseHashSet_valueArrayList(threadData_t *threadData, model
   // _e has no default value.
   /* Pattern-matching assignment */
   tmpMeta2 = _inValueArray;
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 1));
-  tmp4 = mmc_unbox_integer(tmpMeta3);
-  tmpMeta5 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 3));
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta2, 1);
+  tmp4 = omc_unbox_integer(tmpMeta3);
+  tmpMeta5 = OMC_BOX_FIELD(tmpMeta2, 3);
   _size = tmp4  /* pattern as ty=Integer */;
   _arr = tmpMeta5;
 
@@ -454,8 +457,8 @@ modelica_metatype omc_BaseHashSet_valueArrayList(threadData_t *threadData, model
       {
         /* Pattern-matching assignment */
         tmpMeta6 = arrayGet(_arr,_i) /* DAE.ASUB */;
-        if (optionNone(tmpMeta6)) MMC_THROW_INTERNAL();
-        tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
+        if (optionNone(tmpMeta6)) OMC_THROW_INTERNAL();
+        tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
         _e = tmpMeta7;
 
         tmpMeta8 = mmc_mk_cons(_e, _outList);
@@ -466,15 +469,17 @@ modelica_metatype omc_BaseHashSet_valueArrayList(threadData_t *threadData, model
 
   _outList = listReverse(_outList);
   _return: OMC_LABEL_UNUSED
-  return _outList;
+  omc_ret_ = _outList;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_hashSetList(threadData_t *threadData, modelica_metatype _hashSet)
 {
   modelica_metatype _lst = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _lst has no default value.
   { /* match expression */
@@ -490,7 +495,7 @@ modelica_metatype omc_BaseHashSet_hashSetList(threadData_t *threadData, modelica
         switch (MMC_SWITCH_CAST(tmp4)) {
         case 0: {
           modelica_metatype tmpMeta6;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
           
           _varr = tmpMeta6;
           /* Pattern matching succeeded */
@@ -503,37 +508,32 @@ modelica_metatype omc_BaseHashSet_hashSetList(threadData_t *threadData, modelica
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _lst = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _lst;
+  omc_ret_ = _lst;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_BaseHashSet_dumpHashSet(threadData_t *threadData, modelica_metatype _hashSet)
 {
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
-  fputs(MMC_STRINGDATA(_OMC_LIT0),stdout);
+  fputs(omc_string_data(_OMC_LIT0),stdout);
 
   omc_BaseHashSet_printHashSet(threadData, _hashSet);
 
-  fputs(MMC_STRINGDATA(_OMC_LIT1),stdout);
+  fputs(omc_string_data(_OMC_LIT1),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
-DLLDirection
+DLLModelDirection
 void omc_BaseHashSet_printHashSet(threadData_t *threadData, modelica_metatype _hashSet)
 {
   modelica_fnptr _printKey;
@@ -541,15 +541,12 @@ void omc_BaseHashSet_printHashSet(threadData_t *threadData, modelica_metatype _h
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
   modelica_metatype tmpMeta4;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   /* Pattern-matching assignment */
   tmpMeta1 = _hashSet;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 3));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 5);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta2, 3);
   _printKey = tmpMeta3;
 
   {
@@ -572,23 +569,20 @@ void omc_BaseHashSet_printHashSet(threadData_t *threadData, modelica_metatype _h
         tmp7--;
       }
       if (tmp7 == 0) {
-        __omcQ_24tmpVar2 = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_printKey), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_printKey), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_printKey), 2))), _e) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_printKey), 1)))) (threadData, _e);
+        __omcQ_24tmpVar2 = (OMC_BOX_FIELD(_printKey, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_printKey, 1))) (threadData, (OMC_BOX_FIELD(_printKey, 2)), _e) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_printKey, 1))) (threadData, _e);
         *tmp5 = mmc_mk_cons(__omcQ_24tmpVar2,0);
         tmp5 = &MMC_CDR(*tmp5);
       } else if (tmp7 == 1) {
         break;
       } else {
-        MMC_THROW_INTERNAL();
+        OMC_THROW_INTERNAL();
       }
     }
     *tmp5 = mmc_mk_nil();
     tmpMeta4 = __omcQ_24tmpVar3;
   }
-  fputs(MMC_STRINGDATA(stringDelimitList(tmpMeta4, _OMC_LIT1)),stdout);
+  fputs(omc_string_data(stringDelimitList(tmpMeta4, _OMC_LIT1)),stdout);
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
   return;
 }
 
@@ -603,10 +597,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BaseHashSet_get2(threadData_t *th
   modelica_metatype tmpMeta4;
   modelica_integer tmp5;
   modelica_metatype tmpMeta6;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _index = ((modelica_integer) -1);
   _found = 1 /* true */;
@@ -618,13 +610,13 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BaseHashSet_get2(threadData_t *th
       _t = MMC_CAR(tmpMeta1);
       /* Pattern-matching assignment */
       tmpMeta2 = _t;
-      tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 1));
-      tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta2), 2));
-      tmp5 = mmc_unbox_integer(tmpMeta4);
+      tmpMeta3 = OMC_BOX_FIELD(tmpMeta2, 1);
+      tmpMeta4 = OMC_BOX_FIELD(tmpMeta2, 2);
+      tmp5 = omc_unbox_integer(tmpMeta4);
       _key2 = tmpMeta3;
       _index = tmp5  /* pattern as ty=Integer */;
 
-      if(mmc_unbox_boolean((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyEqual), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyEqual), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyEqual), 2))), _key, _key2) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keyEqual), 1)))) (threadData, _key, _key2)))
+      if(omc_unbox_boolean((OMC_BOX_FIELD(_keyEqual, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_keyEqual, 1))) (threadData, (OMC_BOX_FIELD(_keyEqual, 2)), _key, _key2) : ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_keyEqual, 1))) (threadData, _key, _key2)))
       {
         goto _return;
       }
@@ -634,10 +626,8 @@ PROTECTED_FUNCTION_STATIC modelica_integer omc_BaseHashSet_get2(threadData_t *th
   _found = 0 /* false */;
   _return: OMC_LABEL_UNUSED
   if (out_found) { *out_found = _found; }
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _index;
+  omc_ret_ = _index;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BaseHashSet_get2(threadData_t *threadData, modelica_metatype _key, modelica_metatype _keyIndices, modelica_fnptr _keyEqual, modelica_metatype *out_found)
 {
@@ -645,8 +635,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BaseHashSet_get2(threadData_t
   modelica_integer _index;
   modelica_metatype out_index;
   _index = omc_BaseHashSet_get2(threadData, _key, _keyIndices, _keyEqual, &_found);
-  out_index = mmc_mk_icon(_index);
-  if (out_found) { *out_found = mmc_mk_icon(_found); }
+  out_index = omc_mk_icon(_index);
+  if (out_found) { *out_found = omc_mk_icon(_found); }
   return out_index;
 }
 
@@ -655,8 +645,9 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BaseHashSet_get1(threadData_t *t
   modelica_metatype _okey = NULL;
   modelica_integer _indx;
   modelica_integer tmp1_c1 __attribute__((unused)) = 0;
+  modelica_metatype omc_ret_;
   modelica_metatype tmpMeta[2] __attribute__((unused)) = {0};
-  MMC_SO();
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _okey has no default value.
   // _indx has no default value.
@@ -695,13 +686,13 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BaseHashSet_get1(threadData_t *t
           modelica_metatype tmpMeta10;
           modelica_metatype tmpMeta11;
           modelica_metatype tmpMeta12;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 1));
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 2));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 5);
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta10, 1);
+          tmpMeta12 = OMC_BOX_FIELD(tmpMeta10, 2);
           
           _hashvec = tmpMeta6;
           _varr = tmpMeta7;
@@ -709,7 +700,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BaseHashSet_get1(threadData_t *t
           _hashFunc = tmpMeta11;
           _keyEqual = tmpMeta12;
           /* Pattern matching succeeded */
-          _hashindx = modelica_integer_mod(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 2))), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 1)))) (threadData, _key)), _bsize);
+          _hashindx = modelica_integer_mod(omc_unbox_integer((OMC_BOX_FIELD(_hashFunc, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_hashFunc, 1))) (threadData, (OMC_BOX_FIELD(_hashFunc, 2)), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_hashFunc, 1))) (threadData, _key)), _bsize);
 
           _indexes = arrayGet(_hashvec,((modelica_integer) 1) + _hashindx) /* DAE.ASUB */;
 
@@ -726,7 +717,7 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BaseHashSet_get1(threadData_t *t
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
@@ -735,7 +726,8 @@ PROTECTED_FUNCTION_STATIC modelica_metatype omc_BaseHashSet_get1(threadData_t *t
   _indx = tmp1_c1;
   _return: OMC_LABEL_UNUSED
   if (out_indx) { *out_indx = _indx; }
-  return _okey;
+  omc_ret_ = _okey;
+  return omc_ret_;
 }
 PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BaseHashSet_get1(threadData_t *threadData, modelica_metatype _key, modelica_metatype _hashSet, modelica_metatype *out_indx)
 {
@@ -743,32 +735,32 @@ PROTECTED_FUNCTION_STATIC modelica_metatype boxptr_BaseHashSet_get1(threadData_t
   modelica_metatype _okey = NULL;
   _okey = omc_BaseHashSet_get1(threadData, _key, _hashSet, &_indx);
   /* skip box _okey; Option<polymorphic<Key>> */
-  if (out_indx) { *out_indx = mmc_mk_icon(_indx); }
+  if (out_indx) { *out_indx = omc_mk_icon(_indx); }
   return _okey;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_get(threadData_t *threadData, modelica_metatype _key, modelica_metatype _hashSet)
 {
   modelica_metatype _okey = NULL;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _okey has no default value.
   _okey = omc_BaseHashSet_get1(threadData, _key, _hashSet, NULL);
   _return: OMC_LABEL_UNUSED
-  return _okey;
+  omc_ret_ = _okey;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_BaseHashSet_hasAll(threadData_t *threadData, modelica_metatype _keys, modelica_metatype _hashSet)
 {
   modelica_boolean _b;
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   _b = 1 /* true */;
   {
@@ -785,29 +777,25 @@ modelica_boolean omc_BaseHashSet_hasAll(threadData_t *threadData, modelica_metat
     }
   }
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _b;
+  omc_ret_ = _b;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BaseHashSet_hasAll(threadData_t *threadData, modelica_metatype _keys, modelica_metatype _hashSet)
 {
   modelica_boolean _b;
   modelica_metatype out_b;
   _b = omc_BaseHashSet_hasAll(threadData, _keys, _hashSet);
-  out_b = mmc_mk_icon(_b);
+  out_b = omc_mk_icon(_b);
   return out_b;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_boolean omc_BaseHashSet_has(threadData_t *threadData, modelica_metatype _key, modelica_metatype _hashSet)
 {
   modelica_boolean _b;
   modelica_boolean tmp1 = 0;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_boolean omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _b has no default value.
   { /* match expression */
@@ -825,9 +813,9 @@ modelica_boolean omc_BaseHashSet_has(threadData_t *threadData, modelica_metatype
           modelica_metatype tmpMeta6;
           modelica_metatype tmpMeta7;
           modelica_integer tmp8;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta6), 1));
-          tmp8 = mmc_unbox_integer(tmpMeta7);
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta7 = OMC_BOX_FIELD(tmpMeta6, 1);
+          tmp8 = omc_unbox_integer(tmpMeta7);
           if (0 != tmp8) goto tmp3_end;
           
           /* Pattern matching succeeded */
@@ -847,28 +835,26 @@ modelica_boolean omc_BaseHashSet_has(threadData_t *threadData, modelica_metatype
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _b = tmp1;
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _b;
+  omc_ret_ = _b;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BaseHashSet_has(threadData_t *threadData, modelica_metatype _key, modelica_metatype _hashSet)
 {
   modelica_boolean _b;
   modelica_metatype out_b;
   _b = omc_BaseHashSet_has(threadData, _key, _hashSet);
-  out_b = mmc_mk_icon(_b);
+  out_b = omc_mk_icon(_b);
   return out_b;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_delete(threadData_t *threadData, modelica_metatype _key, modelica_metatype _hashSet)
 {
   modelica_metatype _outHashSet = NULL;
@@ -891,7 +877,8 @@ modelica_metatype omc_BaseHashSet_delete(threadData_t *threadData, modelica_meta
   modelica_metatype tmpMeta10;
   modelica_metatype tmpMeta11;
   modelica_metatype tmpMeta12;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHashSet has no default value.
   // _indx has no default value.
@@ -903,13 +890,13 @@ modelica_metatype omc_BaseHashSet_delete(threadData_t *threadData, modelica_meta
   // _fntpl has no default value.
   /* Pattern-matching assignment */
   tmpMeta1 = _hashSet;
-  tmpMeta2 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 1));
-  tmpMeta3 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 2));
-  tmpMeta4 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 3));
-  tmp5 = mmc_unbox_integer(tmpMeta4);
-  tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 4));
-  tmp7 = mmc_unbox_integer(tmpMeta6);
-  tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta1), 5));
+  tmpMeta2 = OMC_BOX_FIELD(tmpMeta1, 1);
+  tmpMeta3 = OMC_BOX_FIELD(tmpMeta1, 2);
+  tmpMeta4 = OMC_BOX_FIELD(tmpMeta1, 3);
+  tmp5 = omc_unbox_integer(tmpMeta4);
+  tmpMeta6 = OMC_BOX_FIELD(tmpMeta1, 4);
+  tmp7 = omc_unbox_integer(tmpMeta6);
+  tmpMeta8 = OMC_BOX_FIELD(tmpMeta1, 5);
   _hashvec = tmpMeta2;
   _varr = tmpMeta3;
   _bsize = tmp5  /* pattern as ty=Integer */;
@@ -918,24 +905,26 @@ modelica_metatype omc_BaseHashSet_delete(threadData_t *threadData, modelica_meta
 
   /* Pattern-matching tuple assignment */
   tmpMeta10 = omc_BaseHashSet_get1(threadData, _key, _hashSet, &tmp9);
-  if (optionNone(tmpMeta10)) MMC_THROW_INTERNAL();
-  tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 1));
+  if (optionNone(tmpMeta10)) OMC_THROW_INTERNAL();
+  tmpMeta11 = OMC_BOX_FIELD(tmpMeta10, 1);
   _indx = tmp9;
 
   _varr_1 = omc_BaseHashSet_valueArrayClearnth(threadData, _varr, _indx);
 
-  tmpMeta12 = mmc_mk_box5(0, _hashvec, _varr_1, mmc_mk_integer(_bsize), mmc_mk_integer(_n), _fntpl);
+  tmpMeta12 = omc_mk_box5(0, _hashvec, _varr_1, omc_mk_integer(_bsize), omc_mk_integer(_n), _fntpl);
   _outHashSet = tmpMeta12;
   _return: OMC_LABEL_UNUSED
-  return _outHashSet;
+  omc_ret_ = _outHashSet;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_addUnique(threadData_t *threadData, modelica_metatype _key, modelica_metatype _hashSet)
 {
   modelica_metatype _outHashSet = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHashSet has no default value.
   { /* match expression */
@@ -978,12 +967,12 @@ modelica_metatype omc_BaseHashSet_addUnique(threadData_t *threadData, modelica_m
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
           modelica_metatype tmpMeta14;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 2));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 3));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_1), 5));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 1));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_1, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_1, 2);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_1, 3);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_1, 5);
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta10, 1);
           
           _hashvec = tmpMeta6;
           _varr = tmpMeta7;
@@ -993,7 +982,7 @@ modelica_metatype omc_BaseHashSet_addUnique(threadData_t *threadData, modelica_m
           /* Pattern matching succeeded */
           /* Check guard condition after assignments */
           if (!(!omc_BaseHashSet_has(threadData, _key, _hashSet))) goto tmp3_end;
-          _indx = modelica_integer_mod(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 2))), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 1)))) (threadData, _key)), _bsize);
+          _indx = modelica_integer_mod(omc_unbox_integer((OMC_BOX_FIELD(_hashFunc, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_hashFunc, 1))) (threadData, (OMC_BOX_FIELD(_hashFunc, 2)), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_hashFunc, 1))) (threadData, _key)), _bsize);
 
           _newpos = omc_BaseHashSet_valueArrayLength(threadData, _varr);
 
@@ -1001,12 +990,12 @@ modelica_metatype omc_BaseHashSet_addUnique(threadData_t *threadData, modelica_m
 
           _indexes = arrayGet(_hashvec,((modelica_integer) 1) + _indx) /* DAE.ASUB */;
 
-          tmpMeta13 = mmc_mk_box2(0, _key, mmc_mk_integer(_newpos));
+          tmpMeta13 = omc_mk_box2(0, _key, omc_mk_integer(_newpos));
           tmpMeta12 = mmc_mk_cons(tmpMeta13, _indexes);
           _hashvec_1 = arrayUpdate(_hashvec, ((modelica_integer) 1) + _indx, tmpMeta12);
 
           _n_1 = omc_BaseHashSet_valueArrayLength(threadData, _varr_1);
-          tmpMeta14 = mmc_mk_box5(0, _hashvec_1, _varr_1, mmc_mk_integer(_bsize), mmc_mk_integer(_n_1), _fntpl);
+          tmpMeta14 = omc_mk_box5(0, _hashvec_1, _varr_1, omc_mk_integer(_bsize), omc_mk_integer(_n_1), _fntpl);
           tmpMeta1 = tmpMeta14;
           goto tmp3_done;
         }
@@ -1016,22 +1005,24 @@ modelica_metatype omc_BaseHashSet_addUnique(threadData_t *threadData, modelica_m
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outHashSet = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outHashSet;
+  omc_ret_ = _outHashSet;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_addNoUpdCheck(threadData_t *threadData, modelica_metatype _entry, modelica_metatype _hashSet)
 {
   modelica_metatype _outHashSet = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHashSet has no default value.
   { /* match expression */
@@ -1077,12 +1068,12 @@ modelica_metatype omc_BaseHashSet_addNoUpdCheck(threadData_t *threadData, modeli
           modelica_metatype tmpMeta12;
           modelica_metatype tmpMeta13;
           modelica_metatype tmpMeta14;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 5));
-          tmpMeta11 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta10), 1));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 5);
+          tmpMeta11 = OMC_BOX_FIELD(tmpMeta10, 1);
           
           _key = tmp4_1;
           _hashvec = tmpMeta6;
@@ -1091,7 +1082,7 @@ modelica_metatype omc_BaseHashSet_addNoUpdCheck(threadData_t *threadData, modeli
           _fntpl = tmpMeta10;
           _hashFunc = tmpMeta11;
           /* Pattern matching succeeded */
-          _indx = modelica_integer_mod(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 2))), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 1)))) (threadData, _key)), _bsize);
+          _indx = modelica_integer_mod(omc_unbox_integer((OMC_BOX_FIELD(_hashFunc, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_hashFunc, 1))) (threadData, (OMC_BOX_FIELD(_hashFunc, 2)), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_hashFunc, 1))) (threadData, _key)), _bsize);
 
           _newpos = omc_BaseHashSet_valueArrayLength(threadData, _varr);
 
@@ -1099,12 +1090,12 @@ modelica_metatype omc_BaseHashSet_addNoUpdCheck(threadData_t *threadData, modeli
 
           _indexes = arrayGet(_hashvec,((modelica_integer) 1) + _indx) /* DAE.ASUB */;
 
-          tmpMeta13 = mmc_mk_box2(0, _key, mmc_mk_integer(_newpos));
+          tmpMeta13 = omc_mk_box2(0, _key, omc_mk_integer(_newpos));
           tmpMeta12 = mmc_mk_cons(tmpMeta13, _indexes);
           _hashvec_1 = arrayUpdate(_hashvec, ((modelica_integer) 1) + _indx, tmpMeta12);
 
           _n_1 = omc_BaseHashSet_valueArrayLength(threadData, _varr_1);
-          tmpMeta14 = mmc_mk_box5(0, _hashvec_1, _varr_1, mmc_mk_integer(_bsize), mmc_mk_integer(_n_1), _fntpl);
+          tmpMeta14 = omc_mk_box5(0, _hashvec_1, _varr_1, omc_mk_integer(_bsize), omc_mk_integer(_n_1), _fntpl);
           tmpMeta1 = tmpMeta14;
           goto tmp3_done;
         }
@@ -1114,22 +1105,24 @@ modelica_metatype omc_BaseHashSet_addNoUpdCheck(threadData_t *threadData, modeli
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outHashSet = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outHashSet;
+  omc_ret_ = _outHashSet;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_add(threadData_t *threadData, modelica_metatype _entry, modelica_metatype _hashSet)
 {
   modelica_metatype _outHashSet = NULL;
   modelica_metatype tmpMeta1;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _outHashSet has no default value.
   { /* match expression */
@@ -1180,14 +1173,14 @@ modelica_metatype omc_BaseHashSet_add(threadData_t *threadData, modelica_metatyp
           modelica_metatype tmpMeta14;
           modelica_metatype tmpMeta15;
           modelica_metatype tmpMeta16;
-          tmpMeta6 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 1));
-          tmpMeta7 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 2));
-          tmpMeta8 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmp9 = mmc_unbox_integer(tmpMeta8);
-          tmpMeta10 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 4));
-          tmp11 = mmc_unbox_integer(tmpMeta10);
-          tmpMeta12 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 5));
-          tmpMeta13 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta12), 1));
+          tmpMeta6 = OMC_BOX_FIELD(tmp4_2, 1);
+          tmpMeta7 = OMC_BOX_FIELD(tmp4_2, 2);
+          tmpMeta8 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmp9 = omc_unbox_integer(tmpMeta8);
+          tmpMeta10 = OMC_BOX_FIELD(tmp4_2, 4);
+          tmp11 = omc_unbox_integer(tmpMeta10);
+          tmpMeta12 = OMC_BOX_FIELD(tmp4_2, 5);
+          tmpMeta13 = OMC_BOX_FIELD(tmpMeta12, 1);
           
           _key = tmp4_1;
           _hashvec = tmpMeta6;
@@ -1205,7 +1198,7 @@ modelica_metatype omc_BaseHashSet_add(threadData_t *threadData, modelica_metatyp
           }
           else
           {
-            _indx = modelica_integer_mod(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 2))), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 1)))) (threadData, _key)), _bsize);
+            _indx = modelica_integer_mod(omc_unbox_integer((OMC_BOX_FIELD(_hashFunc, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_hashFunc, 1))) (threadData, (OMC_BOX_FIELD(_hashFunc, 2)), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_hashFunc, 1))) (threadData, _key)), _bsize);
 
             _newpos = omc_BaseHashSet_valueArrayLength(threadData, _varr);
 
@@ -1213,13 +1206,13 @@ modelica_metatype omc_BaseHashSet_add(threadData_t *threadData, modelica_metatyp
 
             _indexes = arrayGet(_hashvec,((modelica_integer) 1) + _indx) /* DAE.ASUB */;
 
-            tmpMeta15 = mmc_mk_box2(0, _key, mmc_mk_integer(_newpos));
+            tmpMeta15 = omc_mk_box2(0, _key, omc_mk_integer(_newpos));
             tmpMeta14 = mmc_mk_cons(tmpMeta15, _indexes);
             _hashvec = arrayUpdate(_hashvec, ((modelica_integer) 1) + _indx, tmpMeta14);
 
             _n = omc_BaseHashSet_valueArrayLength(threadData, _varr);
           }
-          tmpMeta16 = mmc_mk_box5(0, _hashvec, _varr, mmc_mk_integer(_bsize), mmc_mk_integer(_n), _fntpl);
+          tmpMeta16 = omc_mk_box5(0, _hashvec, _varr, omc_mk_integer(_bsize), omc_mk_integer(_n), _fntpl);
           tmpMeta1 = tmpMeta16;
           goto tmp3_done;
         }
@@ -1229,35 +1222,35 @@ modelica_metatype omc_BaseHashSet_add(threadData_t *threadData, modelica_metatyp
           modelica_metatype tmpMeta19;
           modelica_metatype tmpMeta20;
           modelica_metatype tmpMeta21;
-          modelica_metatype tmpMeta22;
-          tmpMeta17 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 3));
-          tmp18 = mmc_unbox_integer(tmpMeta17);
-          tmpMeta19 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmp4_2), 5));
-          tmpMeta20 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta19), 1));
-          tmpMeta21 = MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(tmpMeta19), 3));
+          modelica_string tmp22;
+          tmpMeta17 = OMC_BOX_FIELD(tmp4_2, 3);
+          tmp18 = omc_unbox_integer(tmpMeta17);
+          tmpMeta19 = OMC_BOX_FIELD(tmp4_2, 5);
+          tmpMeta20 = OMC_BOX_FIELD(tmpMeta19, 1);
+          tmpMeta21 = OMC_BOX_FIELD(tmpMeta19, 3);
           _key = tmp4_1;
           _bsize = tmp18  /* pattern as ty=Integer */;
           _hashFunc = tmpMeta20;
           _keystrFunc = tmpMeta21;
           /* Pattern matching succeeded */
-          fputs(MMC_STRINGDATA(_OMC_LIT2),stdout);
+          fputs(omc_string_data(_OMC_LIT2),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT3),stdout);
+          fputs(omc_string_data(_OMC_LIT3),stdout);
 
-          fputs(MMC_STRINGDATA(intString(_bsize)),stdout);
+          fputs(omc_string_data(intString(_bsize)),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT4),stdout);
+          fputs(omc_string_data(_OMC_LIT4),stdout);
 
-          _s = (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keystrFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keystrFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keystrFunc), 2))), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_keystrFunc), 1)))) (threadData, _key);
+          omc_string_store(&(_s), (OMC_BOX_FIELD(_keystrFunc, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_keystrFunc, 1))) (threadData, (OMC_BOX_FIELD(_keystrFunc, 2)), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_keystrFunc, 1))) (threadData, _key));
 
-          tmpMeta22 = stringAppend(_s,_OMC_LIT5);
-          fputs(MMC_STRINGDATA(tmpMeta22),stdout);
+          tmp22 = stringAppend(_s,_OMC_LIT5);
+          fputs(omc_string_data(tmp22),stdout);
 
-          _hval = modelica_integer_mod(mmc_unbox_integer((MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 2))) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 1)))) (threadData, (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 2))), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (MMC_FETCH(MMC_OFFSET(MMC_UNTAGPTR(_hashFunc), 1)))) (threadData, _key)), _bsize);
+          _hval = modelica_integer_mod(omc_unbox_integer((OMC_BOX_FIELD(_hashFunc, 2)) ? ((modelica_metatype(*)(threadData_t*, modelica_metatype, modelica_metatype)) (OMC_BOX_FIELD(_hashFunc, 1))) (threadData, (OMC_BOX_FIELD(_hashFunc, 2)), _key) : ((modelica_metatype(*)(threadData_t*, modelica_metatype)) (OMC_BOX_FIELD(_hashFunc, 1))) (threadData, _key)), _bsize);
 
-          fputs(MMC_STRINGDATA(intString(_hval)),stdout);
+          fputs(omc_string_data(intString(_hval)),stdout);
 
-          fputs(MMC_STRINGDATA(_OMC_LIT1),stdout);
+          fputs(omc_string_data(_OMC_LIT1),stdout);
           goto goto_2;
           goto tmp3_done;
         }
@@ -1267,17 +1260,18 @@ modelica_metatype omc_BaseHashSet_add(threadData_t *threadData, modelica_metatyp
       }
       goto goto_2;
       goto_2:;
-      MMC_THROW_INTERNAL();
+      OMC_THROW_INTERNAL();
       goto tmp3_done;
       tmp3_done:;
     }
   }
   _outHashSet = tmpMeta1;
   _return: OMC_LABEL_UNUSED
-  return _outHashSet;
+  omc_ret_ = _outHashSet;
+  return omc_ret_;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_metatype omc_BaseHashSet_emptyHashSetWork(threadData_t *threadData, modelica_integer _szBucket, modelica_metatype _fntpl)
 {
   modelica_metatype _hashSet = NULL;
@@ -1287,7 +1281,8 @@ modelica_metatype omc_BaseHashSet_emptyHashSetWork(threadData_t *threadData, mod
   modelica_metatype tmpMeta1;
   modelica_metatype tmpMeta2;
   modelica_metatype tmpMeta3;
-  MMC_SO();
+  modelica_metatype omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _hashSet has no default value.
   // _arr has no default value.
@@ -1300,47 +1295,44 @@ modelica_metatype omc_BaseHashSet_emptyHashSetWork(threadData_t *threadData, mod
 
   _emptyarr = arrayCreate(_szArr, mmc_mk_none());
 
-  tmpMeta2 = mmc_mk_box3(0, mmc_mk_integer(((modelica_integer) 0)), mmc_mk_integer(_szArr), _emptyarr);
-  tmpMeta3 = mmc_mk_box5(0, _arr, tmpMeta2, mmc_mk_integer(_szBucket), mmc_mk_integer(((modelica_integer) 0)), _fntpl);
+  tmpMeta2 = omc_mk_box3(0, omc_mk_integer(((modelica_integer) 0)), omc_mk_integer(_szArr), _emptyarr);
+  tmpMeta3 = omc_mk_box5(0, _arr, tmpMeta2, omc_mk_integer(_szBucket), omc_mk_integer(((modelica_integer) 0)), _fntpl);
   _hashSet = tmpMeta3;
   _return: OMC_LABEL_UNUSED
-  return _hashSet;
+  omc_ret_ = _hashSet;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BaseHashSet_emptyHashSetWork(threadData_t *threadData, modelica_metatype _szBucket, modelica_metatype _fntpl)
 {
   modelica_integer tmp1;
   modelica_metatype _hashSet = NULL;
-  tmp1 = mmc_unbox_integer(_szBucket);
+  tmp1 = omc_unbox_integer(_szBucket);
   _hashSet = omc_BaseHashSet_emptyHashSetWork(threadData, tmp1, _fntpl);
   /* skip box _hashSet; tuple<array<list<tuple<polymorphic<Key>, #Integer>>>, tuple<#Integer, #Integer, array<Option<polymorphic<Key>>>>, #Integer, #Integer, tuple<.BaseHashSet.FuncHash<function>(polymorphic<Key> key) => #Integer, .BaseHashSet.FuncEq<function>(polymorphic<Key> key1, polymorphic<Key> key2) => #Boolean, .BaseHashSet.FuncKeyString<function>(polymorphic<Key> key) => String>> */
   return _hashSet;
 }
 
-DLLDirection
+DLLModelDirection
 modelica_integer omc_BaseHashSet_bucketToValuesSize(threadData_t *threadData, modelica_integer _szBucket)
 {
   modelica_integer _szArr;
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  MemPoolState omc_pool_state = omc_util_get_pool_state();
-  #endif
-  MMC_SO();
+  modelica_integer omc_ret_;
+  OMC_SO();
   _tailrecursive: OMC_LABEL_UNUSED
   // _szArr has no default value.
   _szArr = ((modelica_integer)floor((0.6) * (((modelica_real)_szBucket))));
   _return: OMC_LABEL_UNUSED
-  #if defined(OMC_MINIMAL_RUNTIME) || defined(OMC_FMI_RUNTIME)
-  omc_util_restore_pool_state(omc_pool_state);
-  #endif
-  return _szArr;
+  omc_ret_ = _szArr;
+  return omc_ret_;
 }
 modelica_metatype boxptr_BaseHashSet_bucketToValuesSize(threadData_t *threadData, modelica_metatype _szBucket)
 {
   modelica_integer tmp1;
   modelica_integer _szArr;
   modelica_metatype out_szArr;
-  tmp1 = mmc_unbox_integer(_szBucket);
+  tmp1 = omc_unbox_integer(_szBucket);
   _szArr = omc_BaseHashSet_bucketToValuesSize(threadData, tmp1);
-  out_szArr = mmc_mk_icon(_szArr);
+  out_szArr = omc_mk_icon(_szArr);
   return out_szArr;
 }
 
